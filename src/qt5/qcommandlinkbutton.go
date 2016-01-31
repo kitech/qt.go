@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.go
 //
@@ -33,7 +33,7 @@ extern void C_ZN18QCommandLinkButton14setDescriptionERK7QString(void* qthis, voi
   // proto:  void QCommandLinkButton::~QCommandLinkButton();
 extern void C_ZN18QCommandLinkButtonD2Ev(void* qthis); // 4
   // proto:  QString QCommandLinkButton::description();
-extern void C_ZNK18QCommandLinkButton11descriptionEv(void* qthis); // 4
+extern void* C_ZNK18QCommandLinkButton11descriptionEv(void* qthis); // 4
   // proto:  void QCommandLinkButton::QCommandLinkButton(QWidget * parent);
 extern void* C_ZN18QCommandLinkButtonC2EP7QWidget(void* arg0); // 3
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, const QString & description, QWidget * parent);
@@ -61,7 +61,7 @@ type QCommandLinkButton struct {
 }
 
 // setDescription(const class QString &)
-func (this *QCommandLinkButton) setDescription(args ...interface{}) () {
+func (this *QCommandLinkButton) Setdescription(args ...interface{}) () {
   // setDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -81,10 +81,11 @@ func (this *QCommandLinkButton) setDescription(args ...interface{}) () {
     qtrt.ErrorResolve("QCommandLinkButton", "setDescription", args)
   }
 
+  return
 }
 
 // ~QCommandLinkButton()
-func (this *QCommandLinkButton) FreeQCommandLinkButton(args ...interface{}) () {
+func (this *QCommandLinkButton) Freeqcommandlinkbutton(args ...interface{}) () {
   // ~QCommandLinkButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -101,10 +102,11 @@ func (this *QCommandLinkButton) FreeQCommandLinkButton(args ...interface{}) () {
     qtrt.ErrorResolve("QCommandLinkButton", "~QCommandLinkButton", args)
   }
 
+  return
 }
 
 // description()
-func (this *QCommandLinkButton) description(args ...interface{}) () {
+func (this *QCommandLinkButton) Description(args ...interface{}) (ret interface{}) {
   // description()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -116,12 +118,16 @@ func (this *QCommandLinkButton) description(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCommandLinkButton11descriptionEv
     // invoke: QString description()
-    var ret = C.C_ZNK18QCommandLinkButton11descriptionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QCommandLinkButton11descriptionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "description", args)
   }
 
+  return
 }
 
 // QCommandLinkButton(class QWidget *)
@@ -185,7 +191,7 @@ func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
 }
 
 // metaObject()
-func (this *QCommandLinkButton) metaObject(args ...interface{}) () {
+func (this *QCommandLinkButton) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -202,6 +208,7 @@ func (this *QCommandLinkButton) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QCommandLinkButton", "metaObject", args)
   }
 
+  return
 }
 
 // <= body block end

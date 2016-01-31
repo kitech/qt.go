@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qcontiguouscache.h
 // dst-file: /src/core/qcontiguouscache.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QContiguousCacheData * QContiguousCacheData::allocateData(int size, int alignment);
-extern void C_ZN20QContiguousCacheData12allocateDataEii(int32_t arg0, int32_t arg1); // 4
+extern void* C_ZN20QContiguousCacheData12allocateDataEii(int32_t arg0, int32_t arg1); // 4
   // proto: static void QContiguousCacheData::freeData(QContiguousCacheData * data);
 extern void C_ZN20QContiguousCacheData8freeDataEPS_(void* arg0); // 4
 */
@@ -51,7 +51,7 @@ type QContiguousCacheData struct {
 }
 
 // allocateData(int, int)
-func (this *QContiguousCacheData) allocateData_s(args ...interface{}) () {
+func (this *QContiguousCacheData) Allocatedata_S(args ...interface{}) (ret interface{}) {
   // allocateData(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -69,16 +69,20 @@ func (this *QContiguousCacheData) allocateData_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN20QContiguousCacheData12allocateDataEii(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN20QContiguousCacheData12allocateDataEii(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QContiguousCacheData{}) // "QContiguousCacheData *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QContiguousCacheData", "allocateData", args)
   }
 
+  return
 }
 
 // freeData(struct QContiguousCacheData *)
-func (this *QContiguousCacheData) freeData_s(args ...interface{}) () {
+func (this *QContiguousCacheData) Freedata_S(args ...interface{}) () {
   // freeData(struct QContiguousCacheData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -98,6 +102,7 @@ func (this *QContiguousCacheData) freeData_s(args ...interface{}) () {
     qtrt.ErrorResolve("QContiguousCacheData", "freeData", args)
   }
 
+  return
 }
 
 // <= body block end

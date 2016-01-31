@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qjsonobject.h
 // dst-file: /src/core/qjsonobject.go
 //
@@ -37,17 +37,17 @@ extern void C_ZNK11QJsonObject9constFindERK7QString(void* qthis, void* arg0); //
   // proto:  QJsonObject::iterator QJsonObject::find(const QString & key);
 extern void C_ZN11QJsonObject4findERK7QString(void* qthis, void* arg0); // 4
   // proto:  int QJsonObject::size();
-extern void C_ZNK11QJsonObject4sizeEv(void* qthis); // 4
+extern int32_t C_ZNK11QJsonObject4sizeEv(void* qthis); // 4
   // proto:  QJsonObject::iterator QJsonObject::end();
 extern void C_ZN11QJsonObject3endEv(void* qthis); // 2
   // proto:  bool QJsonObject::contains(const QString & key);
-extern void C_ZNK11QJsonObject8containsERK7QString(void* qthis, void* arg0); // 4
+extern bool C_ZNK11QJsonObject8containsERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QJsonObject::isEmpty();
-extern void C_ZNK11QJsonObject7isEmptyEv(void* qthis); // 4
+extern bool C_ZNK11QJsonObject7isEmptyEv(void* qthis); // 4
   // proto:  QJsonValue QJsonObject::take(const QString & key);
 extern void C_ZN11QJsonObject4takeERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QJsonObject::empty();
-extern void C_ZNK11QJsonObject5emptyEv(void* qthis); // 2
+extern bool C_ZNK11QJsonObject5emptyEv(void* qthis); // 2
   // proto:  QJsonObject::iterator QJsonObject::begin();
 extern void C_ZN11QJsonObject5beginEv(void* qthis); // 2
   // proto:  QVariantHash QJsonObject::toVariantHash();
@@ -59,13 +59,13 @@ extern void C_ZN11QJsonObjectD2Ev(void* qthis); // 4
   // proto:  QVariantMap QJsonObject::toVariantMap();
 extern void C_ZNK11QJsonObject12toVariantMapEv(void* qthis); // 4
   // proto:  int QJsonObject::count();
-extern void C_ZNK11QJsonObject5countEv(void* qthis); // 2
+extern int32_t C_ZNK11QJsonObject5countEv(void* qthis); // 2
   // proto:  void QJsonObject::QJsonObject();
 extern void* C_ZN11QJsonObjectC2Ev(); // 3
   // proto:  void QJsonObject::remove(const QString & key);
 extern void C_ZN11QJsonObject6removeERK7QString(void* qthis, void* arg0); // 4
   // proto:  int QJsonObject::length();
-extern void C_ZNK11QJsonObject6lengthEv(void* qthis); // 2
+extern int32_t C_ZNK11QJsonObject6lengthEv(void* qthis); // 2
   // proto:  QJsonObject::const_iterator QJsonObject::constEnd();
 extern void C_ZNK11QJsonObject8constEndEv(void* qthis); // 2
 */
@@ -87,7 +87,7 @@ type QJsonObject struct {
 }
 
 // constBegin()
-func (this *QJsonObject) constBegin(args ...interface{}) () {
+func (this *QJsonObject) Constbegin(args ...interface{}) () {
   // constBegin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -104,10 +104,11 @@ func (this *QJsonObject) constBegin(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "constBegin", args)
   }
 
+  return
 }
 
 // value(const class QString &)
-func (this *QJsonObject) value(args ...interface{}) () {
+func (this *QJsonObject) Value(args ...interface{}) () {
   // value(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -127,10 +128,11 @@ func (this *QJsonObject) value(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "value", args)
   }
 
+  return
 }
 
 // constFind(const class QString &)
-func (this *QJsonObject) constFind(args ...interface{}) () {
+func (this *QJsonObject) Constfind(args ...interface{}) () {
   // constFind(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -150,10 +152,11 @@ func (this *QJsonObject) constFind(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "constFind", args)
   }
 
+  return
 }
 
 // find(const class QString &)
-func (this *QJsonObject) find(args ...interface{}) () {
+func (this *QJsonObject) Find(args ...interface{}) () {
   // find(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -173,10 +176,11 @@ func (this *QJsonObject) find(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "find", args)
   }
 
+  return
 }
 
 // size()
-func (this *QJsonObject) size(args ...interface{}) () {
+func (this *QJsonObject) Size(args ...interface{}) (ret interface{}) {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -188,16 +192,20 @@ func (this *QJsonObject) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject4sizeEv
     // invoke: int size()
-    var ret = C.C_ZNK11QJsonObject4sizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QJsonObject4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonObject", "size", args)
   }
 
+  return
 }
 
 // end()
-func (this *QJsonObject) end(args ...interface{}) () {
+func (this *QJsonObject) End(args ...interface{}) () {
   // end()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -214,10 +222,11 @@ func (this *QJsonObject) end(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "end", args)
   }
 
+  return
 }
 
 // contains(const class QString &)
-func (this *QJsonObject) contains(args ...interface{}) () {
+func (this *QJsonObject) Contains(args ...interface{}) (ret interface{}) {
   // contains(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -232,16 +241,20 @@ func (this *QJsonObject) contains(args ...interface{}) () {
     // invoke: bool contains(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QJsonObject8containsERK7QString(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QJsonObject8containsERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonObject", "contains", args)
   }
 
+  return
 }
 
 // isEmpty()
-func (this *QJsonObject) isEmpty(args ...interface{}) () {
+func (this *QJsonObject) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -253,16 +266,20 @@ func (this *QJsonObject) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject7isEmptyEv
     // invoke: bool isEmpty()
-    var ret = C.C_ZNK11QJsonObject7isEmptyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QJsonObject7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonObject", "isEmpty", args)
   }
 
+  return
 }
 
 // take(const class QString &)
-func (this *QJsonObject) take(args ...interface{}) () {
+func (this *QJsonObject) Take(args ...interface{}) () {
   // take(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -282,10 +299,11 @@ func (this *QJsonObject) take(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "take", args)
   }
 
+  return
 }
 
 // empty()
-func (this *QJsonObject) empty(args ...interface{}) () {
+func (this *QJsonObject) Empty(args ...interface{}) (ret interface{}) {
   // empty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -297,16 +315,20 @@ func (this *QJsonObject) empty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject5emptyEv
     // invoke: bool empty()
-    var ret = C.C_ZNK11QJsonObject5emptyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QJsonObject5emptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonObject", "empty", args)
   }
 
+  return
 }
 
 // begin()
-func (this *QJsonObject) begin(args ...interface{}) () {
+func (this *QJsonObject) Begin(args ...interface{}) () {
   // begin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -323,10 +345,11 @@ func (this *QJsonObject) begin(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "begin", args)
   }
 
+  return
 }
 
 // toVariantHash()
-func (this *QJsonObject) toVariantHash(args ...interface{}) () {
+func (this *QJsonObject) Tovarianthash(args ...interface{}) () {
   // toVariantHash()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -343,10 +366,11 @@ func (this *QJsonObject) toVariantHash(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "toVariantHash", args)
   }
 
+  return
 }
 
 // keys()
-func (this *QJsonObject) keys(args ...interface{}) () {
+func (this *QJsonObject) Keys(args ...interface{}) () {
   // keys()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -363,10 +387,11 @@ func (this *QJsonObject) keys(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "keys", args)
   }
 
+  return
 }
 
 // ~QJsonObject()
-func (this *QJsonObject) FreeQJsonObject(args ...interface{}) () {
+func (this *QJsonObject) Freeqjsonobject(args ...interface{}) () {
   // ~QJsonObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -383,10 +408,11 @@ func (this *QJsonObject) FreeQJsonObject(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "~QJsonObject", args)
   }
 
+  return
 }
 
 // toVariantMap()
-func (this *QJsonObject) toVariantMap(args ...interface{}) () {
+func (this *QJsonObject) Tovariantmap(args ...interface{}) () {
   // toVariantMap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -403,10 +429,11 @@ func (this *QJsonObject) toVariantMap(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "toVariantMap", args)
   }
 
+  return
 }
 
 // count()
-func (this *QJsonObject) count(args ...interface{}) () {
+func (this *QJsonObject) Count(args ...interface{}) (ret interface{}) {
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -418,12 +445,16 @@ func (this *QJsonObject) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject5countEv
     // invoke: int count()
-    var ret = C.C_ZNK11QJsonObject5countEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QJsonObject5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonObject", "count", args)
   }
 
+  return
 }
 
 // QJsonObject()
@@ -451,7 +482,7 @@ func NewQJsonObject(args ...interface{}) *QJsonObject {
 }
 
 // remove(const class QString &)
-func (this *QJsonObject) remove(args ...interface{}) () {
+func (this *QJsonObject) Remove(args ...interface{}) () {
   // remove(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -471,10 +502,11 @@ func (this *QJsonObject) remove(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "remove", args)
   }
 
+  return
 }
 
 // length()
-func (this *QJsonObject) length(args ...interface{}) () {
+func (this *QJsonObject) Length(args ...interface{}) (ret interface{}) {
   // length()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -486,16 +518,20 @@ func (this *QJsonObject) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject6lengthEv
     // invoke: int length()
-    var ret = C.C_ZNK11QJsonObject6lengthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QJsonObject6lengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonObject", "length", args)
   }
 
+  return
 }
 
 // constEnd()
-func (this *QJsonObject) constEnd(args ...interface{}) () {
+func (this *QJsonObject) Constend(args ...interface{}) () {
   // constEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -512,6 +548,7 @@ func (this *QJsonObject) constEnd(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonObject", "constEnd", args)
   }
 
+  return
 }
 
 // <= body block end

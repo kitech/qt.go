@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qdockwidget.h
 // dst-file: /src/widgets/qdockwidget.go
 //
@@ -31,11 +31,11 @@ import "qtrt"
   // proto:  void QDockWidget::setWidget(QWidget * widget);
 extern void C_ZN11QDockWidget9setWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  bool QDockWidget::isFloating();
-extern void C_ZNK11QDockWidget10isFloatingEv(void* qthis); // 2
+extern bool C_ZNK11QDockWidget10isFloatingEv(void* qthis); // 2
   // proto:  QAction * QDockWidget::toggleViewAction();
-extern void C_ZNK11QDockWidget16toggleViewActionEv(void* qthis); // 4
+extern void* C_ZNK11QDockWidget16toggleViewActionEv(void* qthis); // 4
   // proto:  QWidget * QDockWidget::widget();
-extern void C_ZNK11QDockWidget6widgetEv(void* qthis); // 4
+extern void* C_ZNK11QDockWidget6widgetEv(void* qthis); // 4
   // proto:  void QDockWidget::setTitleBarWidget(QWidget * widget);
 extern void C_ZN11QDockWidget17setTitleBarWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QDockWidget::~QDockWidget();
@@ -45,7 +45,7 @@ extern void C_ZNK11QDockWidget10metaObjectEv(void* qthis); // 4
   // proto:  Qt::DockWidgetAreas QDockWidget::allowedAreas();
 extern void C_ZNK11QDockWidget12allowedAreasEv(void* qthis); // 4
   // proto:  QWidget * QDockWidget::titleBarWidget();
-extern void C_ZNK11QDockWidget14titleBarWidgetEv(void* qthis); // 4
+extern void* C_ZNK11QDockWidget14titleBarWidgetEv(void* qthis); // 4
   // proto:  void QDockWidget::setFloating(bool floating);
 extern void C_ZN11QDockWidget11setFloatingEb(void* qthis, bool arg0); // 4
   // proto:  DockWidgetFeatures QDockWidget::features();
@@ -74,7 +74,7 @@ type QDockWidget struct {
 }
 
 // setWidget(class QWidget *)
-func (this *QDockWidget) setWidget(args ...interface{}) () {
+func (this *QDockWidget) Setwidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -94,10 +94,11 @@ func (this *QDockWidget) setWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QDockWidget", "setWidget", args)
   }
 
+  return
 }
 
 // isFloating()
-func (this *QDockWidget) isFloating(args ...interface{}) () {
+func (this *QDockWidget) Isfloating(args ...interface{}) (ret interface{}) {
   // isFloating()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -109,16 +110,20 @@ func (this *QDockWidget) isFloating(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDockWidget10isFloatingEv
     // invoke: bool isFloating()
-    var ret = C.C_ZNK11QDockWidget10isFloatingEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QDockWidget10isFloatingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDockWidget", "isFloating", args)
   }
 
+  return
 }
 
 // toggleViewAction()
-func (this *QDockWidget) toggleViewAction(args ...interface{}) () {
+func (this *QDockWidget) Toggleviewaction(args ...interface{}) (ret interface{}) {
   // toggleViewAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -130,16 +135,20 @@ func (this *QDockWidget) toggleViewAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDockWidget16toggleViewActionEv
     // invoke: QAction * toggleViewAction()
-    var ret = C.C_ZNK11QDockWidget16toggleViewActionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QDockWidget16toggleViewActionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QAction{}) // "QAction *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDockWidget", "toggleViewAction", args)
   }
 
+  return
 }
 
 // widget()
-func (this *QDockWidget) widget(args ...interface{}) () {
+func (this *QDockWidget) Widget(args ...interface{}) (ret interface{}) {
   // widget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -151,16 +160,20 @@ func (this *QDockWidget) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDockWidget6widgetEv
     // invoke: QWidget * widget()
-    var ret = C.C_ZNK11QDockWidget6widgetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QDockWidget6widgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDockWidget", "widget", args)
   }
 
+  return
 }
 
 // setTitleBarWidget(class QWidget *)
-func (this *QDockWidget) setTitleBarWidget(args ...interface{}) () {
+func (this *QDockWidget) Settitlebarwidget(args ...interface{}) () {
   // setTitleBarWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -180,10 +193,11 @@ func (this *QDockWidget) setTitleBarWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QDockWidget", "setTitleBarWidget", args)
   }
 
+  return
 }
 
 // ~QDockWidget()
-func (this *QDockWidget) FreeQDockWidget(args ...interface{}) () {
+func (this *QDockWidget) Freeqdockwidget(args ...interface{}) () {
   // ~QDockWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -200,10 +214,11 @@ func (this *QDockWidget) FreeQDockWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QDockWidget", "~QDockWidget", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QDockWidget) metaObject(args ...interface{}) () {
+func (this *QDockWidget) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -220,10 +235,11 @@ func (this *QDockWidget) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QDockWidget", "metaObject", args)
   }
 
+  return
 }
 
 // allowedAreas()
-func (this *QDockWidget) allowedAreas(args ...interface{}) () {
+func (this *QDockWidget) Allowedareas(args ...interface{}) () {
   // allowedAreas()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -240,10 +256,11 @@ func (this *QDockWidget) allowedAreas(args ...interface{}) () {
     qtrt.ErrorResolve("QDockWidget", "allowedAreas", args)
   }
 
+  return
 }
 
 // titleBarWidget()
-func (this *QDockWidget) titleBarWidget(args ...interface{}) () {
+func (this *QDockWidget) Titlebarwidget(args ...interface{}) (ret interface{}) {
   // titleBarWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -255,16 +272,20 @@ func (this *QDockWidget) titleBarWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDockWidget14titleBarWidgetEv
     // invoke: QWidget * titleBarWidget()
-    var ret = C.C_ZNK11QDockWidget14titleBarWidgetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QDockWidget14titleBarWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDockWidget", "titleBarWidget", args)
   }
 
+  return
 }
 
 // setFloating(_Bool)
-func (this *QDockWidget) setFloating(args ...interface{}) () {
+func (this *QDockWidget) Setfloating(args ...interface{}) () {
   // setFloating(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -284,10 +305,11 @@ func (this *QDockWidget) setFloating(args ...interface{}) () {
     qtrt.ErrorResolve("QDockWidget", "setFloating", args)
   }
 
+  return
 }
 
 // features()
-func (this *QDockWidget) features(args ...interface{}) () {
+func (this *QDockWidget) Features(args ...interface{}) () {
   // features()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -304,6 +326,7 @@ func (this *QDockWidget) features(args ...interface{}) () {
     qtrt.ErrorResolve("QDockWidget", "features", args)
   }
 
+  return
 }
 
 // <= body block end

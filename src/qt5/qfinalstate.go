@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qfinalstate.h
 // dst-file: /src/core/qfinalstate.go
 //
@@ -80,7 +80,7 @@ func NewQFinalState(args ...interface{}) *QFinalState {
 }
 
 // ~QFinalState()
-func (this *QFinalState) FreeQFinalState(args ...interface{}) () {
+func (this *QFinalState) Freeqfinalstate(args ...interface{}) () {
   // ~QFinalState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,10 +97,11 @@ func (this *QFinalState) FreeQFinalState(args ...interface{}) () {
     qtrt.ErrorResolve("QFinalState", "~QFinalState", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QFinalState) metaObject(args ...interface{}) () {
+func (this *QFinalState) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,6 +118,7 @@ func (this *QFinalState) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QFinalState", "metaObject", args)
   }
 
+  return
 }
 
 // <= body block end

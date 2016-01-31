@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.go
 //
@@ -29,13 +29,13 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QStateMachine * QAbstractState::machine();
-extern void C_ZNK14QAbstractState7machineEv(void* qthis); // 4
+extern void* C_ZNK14QAbstractState7machineEv(void* qthis); // 4
   // proto:  bool QAbstractState::active();
-extern void C_ZNK14QAbstractState6activeEv(void* qthis); // 4
+extern bool C_ZNK14QAbstractState6activeEv(void* qthis); // 4
   // proto:  const QMetaObject * QAbstractState::metaObject();
 extern void C_ZNK14QAbstractState10metaObjectEv(void* qthis); // 4
   // proto:  QState * QAbstractState::parentState();
-extern void C_ZNK14QAbstractState11parentStateEv(void* qthis); // 4
+extern void* C_ZNK14QAbstractState11parentStateEv(void* qthis); // 4
   // proto:  void QAbstractState::~QAbstractState();
 extern void C_ZN14QAbstractStateD2Ev(void* qthis); // 4
 */
@@ -60,7 +60,7 @@ type QAbstractState struct {
 }
 
 // machine()
-func (this *QAbstractState) machine(args ...interface{}) () {
+func (this *QAbstractState) Machine(args ...interface{}) (ret interface{}) {
   // machine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -72,16 +72,20 @@ func (this *QAbstractState) machine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QAbstractState7machineEv
     // invoke: QStateMachine * machine()
-    var ret = C.C_ZNK14QAbstractState7machineEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QAbstractState7machineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QStateMachine{}) // "QStateMachine *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractState", "machine", args)
   }
 
+  return
 }
 
 // active()
-func (this *QAbstractState) active(args ...interface{}) () {
+func (this *QAbstractState) Active(args ...interface{}) (ret interface{}) {
   // active()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -93,16 +97,20 @@ func (this *QAbstractState) active(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QAbstractState6activeEv
     // invoke: bool active()
-    var ret = C.C_ZNK14QAbstractState6activeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QAbstractState6activeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractState", "active", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QAbstractState) metaObject(args ...interface{}) () {
+func (this *QAbstractState) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -119,10 +127,11 @@ func (this *QAbstractState) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractState", "metaObject", args)
   }
 
+  return
 }
 
 // parentState()
-func (this *QAbstractState) parentState(args ...interface{}) () {
+func (this *QAbstractState) Parentstate(args ...interface{}) (ret interface{}) {
   // parentState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -134,16 +143,20 @@ func (this *QAbstractState) parentState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QAbstractState11parentStateEv
     // invoke: QState * parentState()
-    var ret = C.C_ZNK14QAbstractState11parentStateEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QAbstractState11parentStateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QState{}) // "QState *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractState", "parentState", args)
   }
 
+  return
 }
 
 // ~QAbstractState()
-func (this *QAbstractState) FreeQAbstractState(args ...interface{}) () {
+func (this *QAbstractState) Freeqabstractstate(args ...interface{}) () {
   // ~QAbstractState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -160,6 +173,7 @@ func (this *QAbstractState) FreeQAbstractState(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractState", "~QAbstractState", args)
   }
 
+  return
 }
 
 // <= body block end

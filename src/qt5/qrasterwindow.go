@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qrasterwindow.h
 // dst-file: /src/gui/qrasterwindow.go
 //
@@ -51,7 +51,7 @@ type QRasterWindow struct {
 }
 
 // metaObject()
-func (this *QRasterWindow) metaObject(args ...interface{}) () {
+func (this *QRasterWindow) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -68,6 +68,7 @@ func (this *QRasterWindow) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QRasterWindow", "metaObject", args)
   }
 
+  return
 }
 
 // QRasterWindow(class QWindow *)

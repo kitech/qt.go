@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qvector4d.h
 // dst-file: /src/gui/qvector4d.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QVector2D QVector4D::toVector2D();
-extern void C_ZNK9QVector4D10toVector2DEv(void* qthis); // 4
+extern void* C_ZNK9QVector4D10toVector2DEv(void* qthis); // 4
   // proto:  QVector3D QVector4D::toVector3D();
-extern void C_ZNK9QVector4D10toVector3DEv(void* qthis); // 4
+extern void* C_ZNK9QVector4D10toVector3DEv(void* qthis); // 4
   // proto:  void QVector4D::QVector4D();
 extern void* C_ZN9QVector4DC2Ev(); // 1
   // proto:  void QVector4D::QVector4D(const QVector2D & vector);
@@ -49,17 +49,17 @@ extern void* C_ZN9QVector4DC2ERK9QVector3D(void* arg0); // 3
   // proto:  void QVector4D::QVector4D(const QPoint & point);
 extern void* C_ZN9QVector4DC2ERK6QPoint(void* arg0); // 1
   // proto: static float QVector4D::dotProduct(const QVector4D & v1, const QVector4D & v2);
-extern void C_ZN9QVector4D10dotProductERKS_S1_(void* arg0, void* arg1); // 4
+extern float C_ZN9QVector4D10dotProductERKS_S1_(void* arg0, void* arg1); // 4
   // proto:  void QVector4D::normalize();
 extern void C_ZN9QVector4D9normalizeEv(void* qthis); // 4
   // proto:  QPointF QVector4D::toPointF();
-extern void C_ZNK9QVector4D8toPointFEv(void* qthis); // 2
+extern void* C_ZNK9QVector4D8toPointFEv(void* qthis); // 2
   // proto:  float QVector4D::lengthSquared();
-extern void C_ZNK9QVector4D13lengthSquaredEv(void* qthis); // 4
+extern float C_ZNK9QVector4D13lengthSquaredEv(void* qthis); // 4
   // proto:  void QVector4D::setW(float w);
 extern void C_ZN9QVector4D4setWEf(void* qthis, float arg0); // 2
   // proto:  QVector4D QVector4D::normalized();
-extern void C_ZNK9QVector4D10normalizedEv(void* qthis); // 4
+extern void* C_ZNK9QVector4D10normalizedEv(void* qthis); // 4
   // proto:  void QVector4D::setX(float x);
 extern void C_ZN9QVector4D4setXEf(void* qthis, float arg0); // 2
   // proto:  void QVector4D::setY(float y);
@@ -67,23 +67,23 @@ extern void C_ZN9QVector4D4setYEf(void* qthis, float arg0); // 2
   // proto:  void QVector4D::setZ(float z);
 extern void C_ZN9QVector4D4setZEf(void* qthis, float arg0); // 2
   // proto:  QPoint QVector4D::toPoint();
-extern void C_ZNK9QVector4D7toPointEv(void* qthis); // 2
+extern void* C_ZNK9QVector4D7toPointEv(void* qthis); // 2
   // proto:  QVector2D QVector4D::toVector2DAffine();
-extern void C_ZNK9QVector4D16toVector2DAffineEv(void* qthis); // 4
+extern void* C_ZNK9QVector4D16toVector2DAffineEv(void* qthis); // 4
   // proto:  QVector3D QVector4D::toVector3DAffine();
-extern void C_ZNK9QVector4D16toVector3DAffineEv(void* qthis); // 4
+extern void* C_ZNK9QVector4D16toVector3DAffineEv(void* qthis); // 4
   // proto:  bool QVector4D::isNull();
-extern void C_ZNK9QVector4D6isNullEv(void* qthis); // 2
+extern bool C_ZNK9QVector4D6isNullEv(void* qthis); // 2
   // proto:  float QVector4D::length();
-extern void C_ZNK9QVector4D6lengthEv(void* qthis); // 4
+extern float C_ZNK9QVector4D6lengthEv(void* qthis); // 4
   // proto:  float QVector4D::w();
-extern void C_ZNK9QVector4D1wEv(void* qthis); // 2
+extern float C_ZNK9QVector4D1wEv(void* qthis); // 2
   // proto:  float QVector4D::y();
 extern void C_ZNK9QVector4D1yEv(void* qthis); // 2
   // proto:  float QVector4D::x();
 extern void C_ZNK9QVector4D1xEv(void* qthis); // 2
   // proto:  float QVector4D::z();
-extern void C_ZNK9QVector4D1zEv(void* qthis); // 2
+extern float C_ZNK9QVector4D1zEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -103,7 +103,7 @@ type QVector4D struct {
 }
 
 // toVector2D()
-func (this *QVector4D) toVector2D(args ...interface{}) () {
+func (this *QVector4D) Tovector2D(args ...interface{}) (ret interface{}) {
   // toVector2D()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -115,16 +115,20 @@ func (this *QVector4D) toVector2D(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D10toVector2DEv
     // invoke: QVector2D toVector2D()
-    var ret = C.C_ZNK9QVector4D10toVector2DEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector4D10toVector2DEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector2D{}) // "QVector2D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "toVector2D", args)
   }
 
+  return
 }
 
 // toVector3D()
-func (this *QVector4D) toVector3D(args ...interface{}) () {
+func (this *QVector4D) Tovector3D(args ...interface{}) (ret interface{}) {
   // toVector3D()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -136,12 +140,16 @@ func (this *QVector4D) toVector3D(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D10toVector3DEv
     // invoke: QVector3D toVector3D()
-    var ret = C.C_ZNK9QVector4D10toVector3DEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector4D10toVector3DEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "toVector3D", args)
   }
 
+  return
 }
 
 // QVector4D()
@@ -271,7 +279,7 @@ func NewQVector4D(args ...interface{}) *QVector4D {
 }
 
 // dotProduct(const class QVector4D &, const class QVector4D &)
-func (this *QVector4D) dotProduct_s(args ...interface{}) () {
+func (this *QVector4D) Dotproduct_S(args ...interface{}) (ret interface{}) {
   // dotProduct(const class QVector4D &, const class QVector4D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -289,16 +297,20 @@ func (this *QVector4D) dotProduct_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector4D).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN9QVector4D10dotProductERKS_S1_(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QVector4D10dotProductERKS_S1_(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "dotProduct", args)
   }
 
+  return
 }
 
 // normalize()
-func (this *QVector4D) normalize(args ...interface{}) () {
+func (this *QVector4D) Normalize(args ...interface{}) () {
   // normalize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -315,10 +327,11 @@ func (this *QVector4D) normalize(args ...interface{}) () {
     qtrt.ErrorResolve("QVector4D", "normalize", args)
   }
 
+  return
 }
 
 // toPointF()
-func (this *QVector4D) toPointF(args ...interface{}) () {
+func (this *QVector4D) Topointf(args ...interface{}) (ret interface{}) {
   // toPointF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -330,16 +343,20 @@ func (this *QVector4D) toPointF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D8toPointFEv
     // invoke: QPointF toPointF()
-    var ret = C.C_ZNK9QVector4D8toPointFEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector4D8toPointFEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "toPointF", args)
   }
 
+  return
 }
 
 // lengthSquared()
-func (this *QVector4D) lengthSquared(args ...interface{}) () {
+func (this *QVector4D) Lengthsquared(args ...interface{}) (ret interface{}) {
   // lengthSquared()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -351,16 +368,20 @@ func (this *QVector4D) lengthSquared(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D13lengthSquaredEv
     // invoke: float lengthSquared()
-    var ret = C.C_ZNK9QVector4D13lengthSquaredEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector4D13lengthSquaredEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "lengthSquared", args)
   }
 
+  return
 }
 
 // setW(float)
-func (this *QVector4D) setW(args ...interface{}) () {
+func (this *QVector4D) Setw(args ...interface{}) () {
   // setW(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -380,10 +401,11 @@ func (this *QVector4D) setW(args ...interface{}) () {
     qtrt.ErrorResolve("QVector4D", "setW", args)
   }
 
+  return
 }
 
 // normalized()
-func (this *QVector4D) normalized(args ...interface{}) () {
+func (this *QVector4D) Normalized(args ...interface{}) (ret interface{}) {
   // normalized()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -395,16 +417,20 @@ func (this *QVector4D) normalized(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D10normalizedEv
     // invoke: QVector4D normalized()
-    var ret = C.C_ZNK9QVector4D10normalizedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector4D10normalizedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector4D{}) // "QVector4D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "normalized", args)
   }
 
+  return
 }
 
 // setX(float)
-func (this *QVector4D) setX(args ...interface{}) () {
+func (this *QVector4D) Setx(args ...interface{}) () {
   // setX(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -424,10 +450,11 @@ func (this *QVector4D) setX(args ...interface{}) () {
     qtrt.ErrorResolve("QVector4D", "setX", args)
   }
 
+  return
 }
 
 // setY(float)
-func (this *QVector4D) setY(args ...interface{}) () {
+func (this *QVector4D) Sety(args ...interface{}) () {
   // setY(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -447,10 +474,11 @@ func (this *QVector4D) setY(args ...interface{}) () {
     qtrt.ErrorResolve("QVector4D", "setY", args)
   }
 
+  return
 }
 
 // setZ(float)
-func (this *QVector4D) setZ(args ...interface{}) () {
+func (this *QVector4D) Setz(args ...interface{}) () {
   // setZ(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -470,10 +498,11 @@ func (this *QVector4D) setZ(args ...interface{}) () {
     qtrt.ErrorResolve("QVector4D", "setZ", args)
   }
 
+  return
 }
 
 // toPoint()
-func (this *QVector4D) toPoint(args ...interface{}) () {
+func (this *QVector4D) Topoint(args ...interface{}) (ret interface{}) {
   // toPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -485,16 +514,20 @@ func (this *QVector4D) toPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D7toPointEv
     // invoke: QPoint toPoint()
-    var ret = C.C_ZNK9QVector4D7toPointEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector4D7toPointEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPoint{}) // "QPoint"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "toPoint", args)
   }
 
+  return
 }
 
 // toVector2DAffine()
-func (this *QVector4D) toVector2DAffine(args ...interface{}) () {
+func (this *QVector4D) Tovector2Daffine(args ...interface{}) (ret interface{}) {
   // toVector2DAffine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -506,16 +539,20 @@ func (this *QVector4D) toVector2DAffine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D16toVector2DAffineEv
     // invoke: QVector2D toVector2DAffine()
-    var ret = C.C_ZNK9QVector4D16toVector2DAffineEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector4D16toVector2DAffineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector2D{}) // "QVector2D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "toVector2DAffine", args)
   }
 
+  return
 }
 
 // toVector3DAffine()
-func (this *QVector4D) toVector3DAffine(args ...interface{}) () {
+func (this *QVector4D) Tovector3Daffine(args ...interface{}) (ret interface{}) {
   // toVector3DAffine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -527,16 +564,20 @@ func (this *QVector4D) toVector3DAffine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D16toVector3DAffineEv
     // invoke: QVector3D toVector3DAffine()
-    var ret = C.C_ZNK9QVector4D16toVector3DAffineEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector4D16toVector3DAffineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "toVector3DAffine", args)
   }
 
+  return
 }
 
 // isNull()
-func (this *QVector4D) isNull(args ...interface{}) () {
+func (this *QVector4D) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -548,16 +589,20 @@ func (this *QVector4D) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D6isNullEv
     // invoke: bool isNull()
-    var ret = C.C_ZNK9QVector4D6isNullEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector4D6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "isNull", args)
   }
 
+  return
 }
 
 // length()
-func (this *QVector4D) length(args ...interface{}) () {
+func (this *QVector4D) Length(args ...interface{}) (ret interface{}) {
   // length()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -569,16 +614,20 @@ func (this *QVector4D) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D6lengthEv
     // invoke: float length()
-    var ret = C.C_ZNK9QVector4D6lengthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector4D6lengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "length", args)
   }
 
+  return
 }
 
 // w()
-func (this *QVector4D) w(args ...interface{}) () {
+func (this *QVector4D) W(args ...interface{}) (ret interface{}) {
   // w()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -590,16 +639,20 @@ func (this *QVector4D) w(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D1wEv
     // invoke: float w()
-    var ret = C.C_ZNK9QVector4D1wEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector4D1wEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "w", args)
   }
 
+  return
 }
 
 // y()
-func (this *QVector4D) y(args ...interface{}) () {
+func (this *QVector4D) Y(args ...interface{}) () {
   // y()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -616,10 +669,11 @@ func (this *QVector4D) y(args ...interface{}) () {
     qtrt.ErrorResolve("QVector4D", "y", args)
   }
 
+  return
 }
 
 // x()
-func (this *QVector4D) x(args ...interface{}) () {
+func (this *QVector4D) X(args ...interface{}) () {
   // x()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -636,10 +690,11 @@ func (this *QVector4D) x(args ...interface{}) () {
     qtrt.ErrorResolve("QVector4D", "x", args)
   }
 
+  return
 }
 
 // z()
-func (this *QVector4D) z(args ...interface{}) () {
+func (this *QVector4D) Z(args ...interface{}) (ret interface{}) {
   // z()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -651,12 +706,16 @@ func (this *QVector4D) z(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D1zEv
     // invoke: float z()
-    var ret = C.C_ZNK9QVector4D1zEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector4D1zEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector4D", "z", args)
   }
 
+  return
 }
 
 // <= body block end

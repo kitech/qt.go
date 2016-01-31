@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qgenericpluginfactory.h
 // dst-file: /src/gui/qgenericpluginfactory.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto: static QStringList QGenericPluginFactory::keys();
 extern void C_ZN21QGenericPluginFactory4keysEv(); // 4
   // proto: static QObject * QGenericPluginFactory::create(const QString & , const QString & );
-extern void C_ZN21QGenericPluginFactory6createERK7QStringS2_(void* arg0, void* arg1); // 4
+extern void* C_ZN21QGenericPluginFactory6createERK7QStringS2_(void* arg0, void* arg1); // 4
 */
 import "C"
 // } // <= ext block end
@@ -51,7 +51,7 @@ type QGenericPluginFactory struct {
 }
 
 // keys()
-func (this *QGenericPluginFactory) keys_s(args ...interface{}) () {
+func (this *QGenericPluginFactory) Keys_S(args ...interface{}) () {
   // keys()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -68,10 +68,11 @@ func (this *QGenericPluginFactory) keys_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGenericPluginFactory", "keys", args)
   }
 
+  return
 }
 
 // create(const class QString &, const class QString &)
-func (this *QGenericPluginFactory) create_s(args ...interface{}) () {
+func (this *QGenericPluginFactory) Create_S(args ...interface{}) (ret interface{}) {
   // create(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -89,12 +90,16 @@ func (this *QGenericPluginFactory) create_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN21QGenericPluginFactory6createERK7QStringS2_(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN21QGenericPluginFactory6createERK7QStringS2_(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QObject{}) // "QObject *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGenericPluginFactory", "create", args)
   }
 
+  return
 }
 
 // <= body block end

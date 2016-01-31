@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.go
 //
@@ -29,15 +29,15 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QString QIconEngine::iconName();
-extern void C_ZNK11QIconEngine8iconNameEv(void* qthis); // 4
+extern void* C_ZNK11QIconEngine8iconNameEv(void* qthis); // 4
   // proto:  bool QIconEngine::write(QDataStream & out);
-extern void C_ZNK11QIconEngine5writeER11QDataStream(void* qthis, void* arg0); // 4
+extern bool C_ZNK11QIconEngine5writeER11QDataStream(void* qthis, void* arg0); // 4
   // proto:  bool QIconEngine::read(QDataStream & in);
-extern void C_ZN11QIconEngine4readER11QDataStream(void* qthis, void* arg0); // 4
+extern bool C_ZN11QIconEngine4readER11QDataStream(void* qthis, void* arg0); // 4
   // proto:  void QIconEngine::virtual_hook(int id, void * data);
 extern void C_ZN11QIconEngine12virtual_hookEiPv(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  QString QIconEngine::key();
-extern void C_ZNK11QIconEngine3keyEv(void* qthis); // 4
+extern void* C_ZNK11QIconEngine3keyEv(void* qthis); // 4
   // proto:  void QIconEngine::~QIconEngine();
 extern void C_ZN11QIconEngineD2Ev(void* qthis); // 4
 */
@@ -59,7 +59,7 @@ type QIconEngine struct {
 }
 
 // iconName()
-func (this *QIconEngine) iconName(args ...interface{}) () {
+func (this *QIconEngine) Iconname(args ...interface{}) (ret interface{}) {
   // iconName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -71,16 +71,20 @@ func (this *QIconEngine) iconName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QIconEngine8iconNameEv
     // invoke: QString iconName()
-    var ret = C.C_ZNK11QIconEngine8iconNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QIconEngine8iconNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QIconEngine", "iconName", args)
   }
 
+  return
 }
 
 // write(class QDataStream &)
-func (this *QIconEngine) write(args ...interface{}) () {
+func (this *QIconEngine) Write(args ...interface{}) (ret interface{}) {
   // write(class QDataStream &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -95,16 +99,20 @@ func (this *QIconEngine) write(args ...interface{}) () {
     // invoke: bool write(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QIconEngine5writeER11QDataStream(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QIconEngine5writeER11QDataStream(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QIconEngine", "write", args)
   }
 
+  return
 }
 
 // read(class QDataStream &)
-func (this *QIconEngine) read(args ...interface{}) () {
+func (this *QIconEngine) Read(args ...interface{}) (ret interface{}) {
   // read(class QDataStream &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -119,16 +127,20 @@ func (this *QIconEngine) read(args ...interface{}) () {
     // invoke: bool read(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QIconEngine4readER11QDataStream(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QIconEngine4readER11QDataStream(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QIconEngine", "read", args)
   }
 
+  return
 }
 
 // virtual_hook(int, void *)
-func (this *QIconEngine) virtual_hook(args ...interface{}) () {
+func (this *QIconEngine) Virtual_Hook(args ...interface{}) () {
   // virtual_hook(int, void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -151,10 +163,11 @@ func (this *QIconEngine) virtual_hook(args ...interface{}) () {
     qtrt.ErrorResolve("QIconEngine", "virtual_hook", args)
   }
 
+  return
 }
 
 // key()
-func (this *QIconEngine) key(args ...interface{}) () {
+func (this *QIconEngine) Key(args ...interface{}) (ret interface{}) {
   // key()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -166,16 +179,20 @@ func (this *QIconEngine) key(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QIconEngine3keyEv
     // invoke: QString key()
-    var ret = C.C_ZNK11QIconEngine3keyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QIconEngine3keyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QIconEngine", "key", args)
   }
 
+  return
 }
 
 // ~QIconEngine()
-func (this *QIconEngine) FreeQIconEngine(args ...interface{}) () {
+func (this *QIconEngine) Freeqiconengine(args ...interface{}) () {
   // ~QIconEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -192,6 +209,7 @@ func (this *QIconEngine) FreeQIconEngine(args ...interface{}) () {
     qtrt.ErrorResolve("QIconEngine", "~QIconEngine", args)
   }
 
+  return
 }
 
 // <= body block end

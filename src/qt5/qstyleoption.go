@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qstyleoption.h
 // dst-file: /src/widgets/qstyleoption.go
 //
@@ -45,7 +45,7 @@ extern void* C_ZN20QStyleOptionTitleBarC2Ev(); // 3
   // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(const QStyleOptionTitleBar & other);
 extern void* C_ZN20QStyleOptionTitleBarC2ERKS_(void* arg0); // 1
   // proto: static qreal QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
-extern void C_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform(void* arg0); // 4
+extern double C_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform(void* arg0); // 4
   // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem();
 extern void* C_ZN24QStyleOptionGraphicsItemC2Ev(); // 3
   // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem & other);
@@ -391,7 +391,7 @@ func NewQStyleOptionMenuItem(args ...interface{}) *QStyleOptionMenuItem {
 }
 
 // ~QStyleHintReturnVariant()
-func (this *QStyleHintReturnVariant) FreeQStyleHintReturnVariant(args ...interface{}) () {
+func (this *QStyleHintReturnVariant) Freeqstylehintreturnvariant(args ...interface{}) () {
   // ~QStyleHintReturnVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -408,6 +408,7 @@ func (this *QStyleHintReturnVariant) FreeQStyleHintReturnVariant(args ...interfa
     qtrt.ErrorResolve("QStyleHintReturnVariant", "~QStyleHintReturnVariant", args)
   }
 
+  return
 }
 
 // QStyleHintReturnVariant()
@@ -471,7 +472,7 @@ func NewQStyleOptionTitleBar(args ...interface{}) *QStyleOptionTitleBar {
 }
 
 // levelOfDetailFromTransform(const class QTransform &)
-func (this *QStyleOptionGraphicsItem) levelOfDetailFromTransform_s(args ...interface{}) () {
+func (this *QStyleOptionGraphicsItem) Levelofdetailfromtransform_S(args ...interface{}) (ret interface{}) {
   // levelOfDetailFromTransform(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -486,12 +487,16 @@ func (this *QStyleOptionGraphicsItem) levelOfDetailFromTransform_s(args ...inter
     // invoke: qreal levelOfDetailFromTransform(const class QTransform &)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStyleOptionGraphicsItem", "levelOfDetailFromTransform", args)
   }
 
+  return
 }
 
 // QStyleOptionGraphicsItem()
@@ -531,7 +536,7 @@ func NewQStyleOptionGraphicsItem(args ...interface{}) *QStyleOptionGraphicsItem 
 }
 
 // ~QStyleOption()
-func (this *QStyleOption) FreeQStyleOption(args ...interface{}) () {
+func (this *QStyleOption) Freeqstyleoption(args ...interface{}) () {
   // ~QStyleOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -548,10 +553,11 @@ func (this *QStyleOption) FreeQStyleOption(args ...interface{}) () {
     qtrt.ErrorResolve("QStyleOption", "~QStyleOption", args)
   }
 
+  return
 }
 
 // init(const class QWidget *)
-func (this *QStyleOption) init(args ...interface{}) () {
+func (this *QStyleOption) Init(args ...interface{}) () {
   // init(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -571,6 +577,7 @@ func (this *QStyleOption) init(args ...interface{}) () {
     qtrt.ErrorResolve("QStyleOption", "init", args)
   }
 
+  return
 }
 
 // QStyleOption(const class QStyleOption &)
@@ -616,7 +623,7 @@ func NewQStyleOption(args ...interface{}) *QStyleOption {
 }
 
 // initFrom(const class QWidget *)
-func (this *QStyleOption) initFrom(args ...interface{}) () {
+func (this *QStyleOption) Initfrom(args ...interface{}) () {
   // initFrom(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -636,6 +643,7 @@ func (this *QStyleOption) initFrom(args ...interface{}) () {
     qtrt.ErrorResolve("QStyleOption", "initFrom", args)
   }
 
+  return
 }
 
 // QStyleOptionDockWidget()
@@ -855,7 +863,7 @@ func NewQStyleHintReturn(args ...interface{}) *QStyleHintReturn {
 }
 
 // ~QStyleHintReturn()
-func (this *QStyleHintReturn) FreeQStyleHintReturn(args ...interface{}) () {
+func (this *QStyleHintReturn) Freeqstylehintreturn(args ...interface{}) () {
   // ~QStyleHintReturn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -872,6 +880,7 @@ func (this *QStyleHintReturn) FreeQStyleHintReturn(args ...interface{}) () {
     qtrt.ErrorResolve("QStyleHintReturn", "~QStyleHintReturn", args)
   }
 
+  return
 }
 
 // QStyleOptionHeader()
@@ -1187,7 +1196,7 @@ func NewQStyleHintReturnMask(args ...interface{}) *QStyleHintReturnMask {
 }
 
 // ~QStyleHintReturnMask()
-func (this *QStyleHintReturnMask) FreeQStyleHintReturnMask(args ...interface{}) () {
+func (this *QStyleHintReturnMask) Freeqstylehintreturnmask(args ...interface{}) () {
   // ~QStyleHintReturnMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1204,6 +1213,7 @@ func (this *QStyleHintReturnMask) FreeQStyleHintReturnMask(args ...interface{}) 
     qtrt.ErrorResolve("QStyleHintReturnMask", "~QStyleHintReturnMask", args)
   }
 
+  return
 }
 
 // QStyleOptionToolButton()

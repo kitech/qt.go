@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qpaintengine.h
 // dst-file: /src/gui/qpaintengine.go
 //
@@ -29,33 +29,33 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  qreal QTextItem::descent();
-extern void C_ZNK9QTextItem7descentEv(void* qthis); // 4
+extern double C_ZNK9QTextItem7descentEv(void* qthis); // 4
   // proto:  QString QTextItem::text();
-extern void C_ZNK9QTextItem4textEv(void* qthis); // 4
+extern void* C_ZNK9QTextItem4textEv(void* qthis); // 4
   // proto:  qreal QTextItem::width();
-extern void C_ZNK9QTextItem5widthEv(void* qthis); // 4
+extern double C_ZNK9QTextItem5widthEv(void* qthis); // 4
   // proto:  RenderFlags QTextItem::renderFlags();
 extern void C_ZNK9QTextItem11renderFlagsEv(void* qthis); // 4
   // proto:  QFont QTextItem::font();
-extern void C_ZNK9QTextItem4fontEv(void* qthis); // 4
+extern void* C_ZNK9QTextItem4fontEv(void* qthis); // 4
   // proto:  qreal QTextItem::ascent();
-extern void C_ZNK9QTextItem6ascentEv(void* qthis); // 4
+extern double C_ZNK9QTextItem6ascentEv(void* qthis); // 4
   // proto:  qreal QPaintEngineState::opacity();
-extern void C_ZNK17QPaintEngineState7opacityEv(void* qthis); // 4
+extern double C_ZNK17QPaintEngineState7opacityEv(void* qthis); // 4
   // proto:  bool QPaintEngineState::penNeedsResolving();
-extern void C_ZNK17QPaintEngineState17penNeedsResolvingEv(void* qthis); // 4
+extern bool C_ZNK17QPaintEngineState17penNeedsResolvingEv(void* qthis); // 4
   // proto:  bool QPaintEngineState::isClipEnabled();
-extern void C_ZNK17QPaintEngineState13isClipEnabledEv(void* qthis); // 4
+extern bool C_ZNK17QPaintEngineState13isClipEnabledEv(void* qthis); // 4
   // proto:  QMatrix QPaintEngineState::matrix();
-extern void C_ZNK17QPaintEngineState6matrixEv(void* qthis); // 4
+extern void* C_ZNK17QPaintEngineState6matrixEv(void* qthis); // 4
   // proto:  QPen QPaintEngineState::pen();
-extern void C_ZNK17QPaintEngineState3penEv(void* qthis); // 4
+extern void* C_ZNK17QPaintEngineState3penEv(void* qthis); // 4
   // proto:  QBrush QPaintEngineState::backgroundBrush();
-extern void C_ZNK17QPaintEngineState15backgroundBrushEv(void* qthis); // 4
+extern void* C_ZNK17QPaintEngineState15backgroundBrushEv(void* qthis); // 4
   // proto:  QPainter::CompositionMode QPaintEngineState::compositionMode();
 extern void C_ZNK17QPaintEngineState15compositionModeEv(void* qthis); // 4
   // proto:  QTransform QPaintEngineState::transform();
-extern void C_ZNK17QPaintEngineState9transformEv(void* qthis); // 4
+extern void* C_ZNK17QPaintEngineState9transformEv(void* qthis); // 4
   // proto:  QPainter::RenderHints QPaintEngineState::renderHints();
 extern void C_ZNK17QPaintEngineState11renderHintsEv(void* qthis); // 4
   // proto:  QPaintEngine::DirtyFlags QPaintEngineState::state();
@@ -65,21 +65,21 @@ extern void C_ZNK17QPaintEngineState14backgroundModeEv(void* qthis); // 4
   // proto:  Qt::ClipOperation QPaintEngineState::clipOperation();
 extern void C_ZNK17QPaintEngineState13clipOperationEv(void* qthis); // 4
   // proto:  QBrush QPaintEngineState::brush();
-extern void C_ZNK17QPaintEngineState5brushEv(void* qthis); // 4
+extern void* C_ZNK17QPaintEngineState5brushEv(void* qthis); // 4
   // proto:  QPainterPath QPaintEngineState::clipPath();
-extern void C_ZNK17QPaintEngineState8clipPathEv(void* qthis); // 4
+extern void* C_ZNK17QPaintEngineState8clipPathEv(void* qthis); // 4
   // proto:  QFont QPaintEngineState::font();
-extern void C_ZNK17QPaintEngineState4fontEv(void* qthis); // 4
+extern void* C_ZNK17QPaintEngineState4fontEv(void* qthis); // 4
   // proto:  QRegion QPaintEngineState::clipRegion();
-extern void C_ZNK17QPaintEngineState10clipRegionEv(void* qthis); // 4
+extern void* C_ZNK17QPaintEngineState10clipRegionEv(void* qthis); // 4
   // proto:  QPointF QPaintEngineState::brushOrigin();
-extern void C_ZNK17QPaintEngineState11brushOriginEv(void* qthis); // 4
+extern void* C_ZNK17QPaintEngineState11brushOriginEv(void* qthis); // 4
   // proto:  QPainter * QPaintEngineState::painter();
-extern void C_ZNK17QPaintEngineState7painterEv(void* qthis); // 4
+extern void* C_ZNK17QPaintEngineState7painterEv(void* qthis); // 4
   // proto:  bool QPaintEngineState::brushNeedsResolving();
-extern void C_ZNK17QPaintEngineState19brushNeedsResolvingEv(void* qthis); // 4
+extern bool C_ZNK17QPaintEngineState19brushNeedsResolvingEv(void* qthis); // 4
   // proto:  QPaintDevice * QPaintEngine::paintDevice();
-extern void C_ZNK12QPaintEngine11paintDeviceEv(void* qthis); // 4
+extern void* C_ZNK12QPaintEngine11paintDeviceEv(void* qthis); // 4
   // proto:  void QPaintEngine::drawRects(const QRectF * rects, int rectCount);
 extern void C_ZN12QPaintEngine9drawRectsEPK6QRectFi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QPaintEngine::drawRects(const QRect * rects, int rectCount);
@@ -89,13 +89,13 @@ extern void C_ZN12QPaintEngine10drawPointsEPK7QPointFi(void* qthis, void* arg0, 
   // proto:  void QPaintEngine::drawPoints(const QPoint * points, int pointCount);
 extern void C_ZN12QPaintEngine10drawPointsEPK6QPointi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QRect QPaintEngine::systemRect();
-extern void C_ZNK12QPaintEngine10systemRectEv(void* qthis); // 4
+extern void* C_ZNK12QPaintEngine10systemRectEv(void* qthis); // 4
   // proto:  void QPaintEngine::drawPath(const QPainterPath & path);
 extern void C_ZN12QPaintEngine8drawPathERK12QPainterPath(void* qthis, void* arg0); // 4
   // proto:  void QPaintEngine::setPaintDevice(QPaintDevice * device);
 extern void C_ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice(void* qthis, void* arg0); // 4
   // proto:  QPainter * QPaintEngine::painter();
-extern void C_ZNK12QPaintEngine7painterEv(void* qthis); // 4
+extern void* C_ZNK12QPaintEngine7painterEv(void* qthis); // 4
   // proto:  void QPaintEngine::drawTiledPixmap(const QRectF & r, const QPixmap & pixmap, const QPointF & s);
 extern void C_ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QPaintEngine::setActive(bool newState);
@@ -107,15 +107,15 @@ extern void C_ZN12QPaintEngine9syncStateEv(void* qthis); // 4
   // proto:  void QPaintEngine::~QPaintEngine();
 extern void C_ZN12QPaintEngineD2Ev(void* qthis); // 4
   // proto:  QRegion QPaintEngine::systemClip();
-extern void C_ZNK12QPaintEngine10systemClipEv(void* qthis); // 4
+extern void* C_ZNK12QPaintEngine10systemClipEv(void* qthis); // 4
   // proto:  void QPaintEngine::fix_neg_rect(int * x, int * y, int * w, int * h);
-extern void C_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 2
+extern void C_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 2
   // proto:  void QPaintEngine::setSystemClip(const QRegion & baseClip);
 extern void C_ZN12QPaintEngine13setSystemClipERK7QRegion(void* qthis, void* arg0); // 4
   // proto:  QPoint QPaintEngine::coordinateOffset();
-extern void C_ZNK12QPaintEngine16coordinateOffsetEv(void* qthis); // 4
+extern void* C_ZNK12QPaintEngine16coordinateOffsetEv(void* qthis); // 4
   // proto:  bool QPaintEngine::isActive();
-extern void C_ZNK12QPaintEngine8isActiveEv(void* qthis); // 2
+extern bool C_ZNK12QPaintEngine8isActiveEv(void* qthis); // 2
   // proto:  void QPaintEngine::drawEllipse(const QRectF & r);
 extern void C_ZN12QPaintEngine11drawEllipseERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QPaintEngine::drawEllipse(const QRect & r);
@@ -123,7 +123,7 @@ extern void C_ZN12QPaintEngine11drawEllipseERK5QRect(void* qthis, void* arg0); /
   // proto:  void QPaintEngine::drawTextItem(const QPointF & p, const QTextItem & textItem);
 extern void C_ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem(void* qthis, void* arg0, void* arg1); // 4
   // proto:  bool QPaintEngine::isExtended();
-extern void C_ZNK12QPaintEngine10isExtendedEv(void* qthis); // 2
+extern bool C_ZNK12QPaintEngine10isExtendedEv(void* qthis); // 2
   // proto:  void QPaintEngine::drawLines(const QLine * lines, int lineCount);
 extern void C_ZN12QPaintEngine9drawLinesEPK5QLinei(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QPaintEngine::drawLines(const QLineF * lines, int lineCount);
@@ -159,7 +159,7 @@ type QPaintEngine struct {
 }
 
 // descent()
-func (this *QTextItem) descent(args ...interface{}) () {
+func (this *QTextItem) Descent(args ...interface{}) (ret interface{}) {
   // descent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -171,16 +171,20 @@ func (this *QTextItem) descent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem7descentEv
     // invoke: qreal descent()
-    var ret = C.C_ZNK9QTextItem7descentEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTextItem7descentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextItem", "descent", args)
   }
 
+  return
 }
 
 // text()
-func (this *QTextItem) text(args ...interface{}) () {
+func (this *QTextItem) Text(args ...interface{}) (ret interface{}) {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -192,16 +196,20 @@ func (this *QTextItem) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem4textEv
     // invoke: QString text()
-    var ret = C.C_ZNK9QTextItem4textEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTextItem4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextItem", "text", args)
   }
 
+  return
 }
 
 // width()
-func (this *QTextItem) width(args ...interface{}) () {
+func (this *QTextItem) Width(args ...interface{}) (ret interface{}) {
   // width()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -213,16 +221,20 @@ func (this *QTextItem) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem5widthEv
     // invoke: qreal width()
-    var ret = C.C_ZNK9QTextItem5widthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTextItem5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextItem", "width", args)
   }
 
+  return
 }
 
 // renderFlags()
-func (this *QTextItem) renderFlags(args ...interface{}) () {
+func (this *QTextItem) Renderflags(args ...interface{}) () {
   // renderFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,10 +251,11 @@ func (this *QTextItem) renderFlags(args ...interface{}) () {
     qtrt.ErrorResolve("QTextItem", "renderFlags", args)
   }
 
+  return
 }
 
 // font()
-func (this *QTextItem) font(args ...interface{}) () {
+func (this *QTextItem) Font(args ...interface{}) (ret interface{}) {
   // font()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -254,16 +267,20 @@ func (this *QTextItem) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem4fontEv
     // invoke: QFont font()
-    var ret = C.C_ZNK9QTextItem4fontEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTextItem4fontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QFont{}) // "QFont"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextItem", "font", args)
   }
 
+  return
 }
 
 // ascent()
-func (this *QTextItem) ascent(args ...interface{}) () {
+func (this *QTextItem) Ascent(args ...interface{}) (ret interface{}) {
   // ascent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -275,16 +292,20 @@ func (this *QTextItem) ascent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem6ascentEv
     // invoke: qreal ascent()
-    var ret = C.C_ZNK9QTextItem6ascentEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTextItem6ascentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextItem", "ascent", args)
   }
 
+  return
 }
 
 // opacity()
-func (this *QPaintEngineState) opacity(args ...interface{}) () {
+func (this *QPaintEngineState) Opacity(args ...interface{}) (ret interface{}) {
   // opacity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -296,16 +317,20 @@ func (this *QPaintEngineState) opacity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState7opacityEv
     // invoke: qreal opacity()
-    var ret = C.C_ZNK17QPaintEngineState7opacityEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState7opacityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "opacity", args)
   }
 
+  return
 }
 
 // penNeedsResolving()
-func (this *QPaintEngineState) penNeedsResolving(args ...interface{}) () {
+func (this *QPaintEngineState) Penneedsresolving(args ...interface{}) (ret interface{}) {
   // penNeedsResolving()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -317,16 +342,20 @@ func (this *QPaintEngineState) penNeedsResolving(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState17penNeedsResolvingEv
     // invoke: bool penNeedsResolving()
-    var ret = C.C_ZNK17QPaintEngineState17penNeedsResolvingEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState17penNeedsResolvingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "penNeedsResolving", args)
   }
 
+  return
 }
 
 // isClipEnabled()
-func (this *QPaintEngineState) isClipEnabled(args ...interface{}) () {
+func (this *QPaintEngineState) Isclipenabled(args ...interface{}) (ret interface{}) {
   // isClipEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -338,16 +367,20 @@ func (this *QPaintEngineState) isClipEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState13isClipEnabledEv
     // invoke: bool isClipEnabled()
-    var ret = C.C_ZNK17QPaintEngineState13isClipEnabledEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState13isClipEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "isClipEnabled", args)
   }
 
+  return
 }
 
 // matrix()
-func (this *QPaintEngineState) matrix(args ...interface{}) () {
+func (this *QPaintEngineState) Matrix(args ...interface{}) (ret interface{}) {
   // matrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -359,16 +392,20 @@ func (this *QPaintEngineState) matrix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState6matrixEv
     // invoke: QMatrix matrix()
-    var ret = C.C_ZNK17QPaintEngineState6matrixEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState6matrixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMatrix{}) // "QMatrix"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "matrix", args)
   }
 
+  return
 }
 
 // pen()
-func (this *QPaintEngineState) pen(args ...interface{}) () {
+func (this *QPaintEngineState) Pen(args ...interface{}) (ret interface{}) {
   // pen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -380,16 +417,20 @@ func (this *QPaintEngineState) pen(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState3penEv
     // invoke: QPen pen()
-    var ret = C.C_ZNK17QPaintEngineState3penEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState3penEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPen{}) // "QPen"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "pen", args)
   }
 
+  return
 }
 
 // backgroundBrush()
-func (this *QPaintEngineState) backgroundBrush(args ...interface{}) () {
+func (this *QPaintEngineState) Backgroundbrush(args ...interface{}) (ret interface{}) {
   // backgroundBrush()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -401,16 +442,20 @@ func (this *QPaintEngineState) backgroundBrush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState15backgroundBrushEv
     // invoke: QBrush backgroundBrush()
-    var ret = C.C_ZNK17QPaintEngineState15backgroundBrushEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState15backgroundBrushEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QBrush{}) // "QBrush"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "backgroundBrush", args)
   }
 
+  return
 }
 
 // compositionMode()
-func (this *QPaintEngineState) compositionMode(args ...interface{}) () {
+func (this *QPaintEngineState) Compositionmode(args ...interface{}) () {
   // compositionMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -427,10 +472,11 @@ func (this *QPaintEngineState) compositionMode(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngineState", "compositionMode", args)
   }
 
+  return
 }
 
 // transform()
-func (this *QPaintEngineState) transform(args ...interface{}) () {
+func (this *QPaintEngineState) Transform(args ...interface{}) (ret interface{}) {
   // transform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -442,16 +488,20 @@ func (this *QPaintEngineState) transform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState9transformEv
     // invoke: QTransform transform()
-    var ret = C.C_ZNK17QPaintEngineState9transformEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState9transformEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTransform{}) // "QTransform"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "transform", args)
   }
 
+  return
 }
 
 // renderHints()
-func (this *QPaintEngineState) renderHints(args ...interface{}) () {
+func (this *QPaintEngineState) Renderhints(args ...interface{}) () {
   // renderHints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -468,10 +518,11 @@ func (this *QPaintEngineState) renderHints(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngineState", "renderHints", args)
   }
 
+  return
 }
 
 // state()
-func (this *QPaintEngineState) state(args ...interface{}) () {
+func (this *QPaintEngineState) State(args ...interface{}) () {
   // state()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -488,10 +539,11 @@ func (this *QPaintEngineState) state(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngineState", "state", args)
   }
 
+  return
 }
 
 // backgroundMode()
-func (this *QPaintEngineState) backgroundMode(args ...interface{}) () {
+func (this *QPaintEngineState) Backgroundmode(args ...interface{}) () {
   // backgroundMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -508,10 +560,11 @@ func (this *QPaintEngineState) backgroundMode(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngineState", "backgroundMode", args)
   }
 
+  return
 }
 
 // clipOperation()
-func (this *QPaintEngineState) clipOperation(args ...interface{}) () {
+func (this *QPaintEngineState) Clipoperation(args ...interface{}) () {
   // clipOperation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -528,10 +581,11 @@ func (this *QPaintEngineState) clipOperation(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngineState", "clipOperation", args)
   }
 
+  return
 }
 
 // brush()
-func (this *QPaintEngineState) brush(args ...interface{}) () {
+func (this *QPaintEngineState) Brush(args ...interface{}) (ret interface{}) {
   // brush()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -543,16 +597,20 @@ func (this *QPaintEngineState) brush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState5brushEv
     // invoke: QBrush brush()
-    var ret = C.C_ZNK17QPaintEngineState5brushEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState5brushEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QBrush{}) // "QBrush"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "brush", args)
   }
 
+  return
 }
 
 // clipPath()
-func (this *QPaintEngineState) clipPath(args ...interface{}) () {
+func (this *QPaintEngineState) Clippath(args ...interface{}) (ret interface{}) {
   // clipPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -564,16 +622,20 @@ func (this *QPaintEngineState) clipPath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState8clipPathEv
     // invoke: QPainterPath clipPath()
-    var ret = C.C_ZNK17QPaintEngineState8clipPathEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState8clipPathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "clipPath", args)
   }
 
+  return
 }
 
 // font()
-func (this *QPaintEngineState) font(args ...interface{}) () {
+func (this *QPaintEngineState) Font(args ...interface{}) (ret interface{}) {
   // font()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -585,16 +647,20 @@ func (this *QPaintEngineState) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState4fontEv
     // invoke: QFont font()
-    var ret = C.C_ZNK17QPaintEngineState4fontEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState4fontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QFont{}) // "QFont"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "font", args)
   }
 
+  return
 }
 
 // clipRegion()
-func (this *QPaintEngineState) clipRegion(args ...interface{}) () {
+func (this *QPaintEngineState) Clipregion(args ...interface{}) (ret interface{}) {
   // clipRegion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -606,16 +672,20 @@ func (this *QPaintEngineState) clipRegion(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState10clipRegionEv
     // invoke: QRegion clipRegion()
-    var ret = C.C_ZNK17QPaintEngineState10clipRegionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState10clipRegionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRegion{}) // "QRegion"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "clipRegion", args)
   }
 
+  return
 }
 
 // brushOrigin()
-func (this *QPaintEngineState) brushOrigin(args ...interface{}) () {
+func (this *QPaintEngineState) Brushorigin(args ...interface{}) (ret interface{}) {
   // brushOrigin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -627,16 +697,20 @@ func (this *QPaintEngineState) brushOrigin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState11brushOriginEv
     // invoke: QPointF brushOrigin()
-    var ret = C.C_ZNK17QPaintEngineState11brushOriginEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState11brushOriginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "brushOrigin", args)
   }
 
+  return
 }
 
 // painter()
-func (this *QPaintEngineState) painter(args ...interface{}) () {
+func (this *QPaintEngineState) Painter(args ...interface{}) (ret interface{}) {
   // painter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -648,16 +722,20 @@ func (this *QPaintEngineState) painter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState7painterEv
     // invoke: QPainter * painter()
-    var ret = C.C_ZNK17QPaintEngineState7painterEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState7painterEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPainter{}) // "QPainter *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "painter", args)
   }
 
+  return
 }
 
 // brushNeedsResolving()
-func (this *QPaintEngineState) brushNeedsResolving(args ...interface{}) () {
+func (this *QPaintEngineState) Brushneedsresolving(args ...interface{}) (ret interface{}) {
   // brushNeedsResolving()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -669,16 +747,20 @@ func (this *QPaintEngineState) brushNeedsResolving(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState19brushNeedsResolvingEv
     // invoke: bool brushNeedsResolving()
-    var ret = C.C_ZNK17QPaintEngineState19brushNeedsResolvingEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QPaintEngineState19brushNeedsResolvingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngineState", "brushNeedsResolving", args)
   }
 
+  return
 }
 
 // paintDevice()
-func (this *QPaintEngine) paintDevice(args ...interface{}) () {
+func (this *QPaintEngine) Paintdevice(args ...interface{}) (ret interface{}) {
   // paintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -690,16 +772,20 @@ func (this *QPaintEngine) paintDevice(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine11paintDeviceEv
     // invoke: QPaintDevice * paintDevice()
-    var ret = C.C_ZNK12QPaintEngine11paintDeviceEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintEngine11paintDeviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPaintDevice{}) // "QPaintDevice *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngine", "paintDevice", args)
   }
 
+  return
 }
 
 // drawRects(const class QRectF *, int)
-func (this *QPaintEngine) drawRects(args ...interface{}) () {
+func (this *QPaintEngine) Drawrects(args ...interface{}) () {
   // drawRects(const class QRectF *, int)
   // drawRects(const class QRect *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -734,10 +820,11 @@ func (this *QPaintEngine) drawRects(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "drawRects", args)
   }
 
+  return
 }
 
 // drawPoints(const class QPointF *, int)
-func (this *QPaintEngine) drawPoints(args ...interface{}) () {
+func (this *QPaintEngine) Drawpoints(args ...interface{}) () {
   // drawPoints(const class QPointF *, int)
   // drawPoints(const class QPoint *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -772,10 +859,11 @@ func (this *QPaintEngine) drawPoints(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "drawPoints", args)
   }
 
+  return
 }
 
 // systemRect()
-func (this *QPaintEngine) systemRect(args ...interface{}) () {
+func (this *QPaintEngine) Systemrect(args ...interface{}) (ret interface{}) {
   // systemRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -787,16 +875,20 @@ func (this *QPaintEngine) systemRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine10systemRectEv
     // invoke: QRect systemRect()
-    var ret = C.C_ZNK12QPaintEngine10systemRectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintEngine10systemRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngine", "systemRect", args)
   }
 
+  return
 }
 
 // drawPath(const class QPainterPath &)
-func (this *QPaintEngine) drawPath(args ...interface{}) () {
+func (this *QPaintEngine) Drawpath(args ...interface{}) () {
   // drawPath(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -816,10 +908,11 @@ func (this *QPaintEngine) drawPath(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "drawPath", args)
   }
 
+  return
 }
 
 // setPaintDevice(class QPaintDevice *)
-func (this *QPaintEngine) setPaintDevice(args ...interface{}) () {
+func (this *QPaintEngine) Setpaintdevice(args ...interface{}) () {
   // setPaintDevice(class QPaintDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -839,10 +932,11 @@ func (this *QPaintEngine) setPaintDevice(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "setPaintDevice", args)
   }
 
+  return
 }
 
 // painter()
-func (this *QPaintEngine) painter(args ...interface{}) () {
+func (this *QPaintEngine) Painter(args ...interface{}) (ret interface{}) {
   // painter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -854,16 +948,20 @@ func (this *QPaintEngine) painter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine7painterEv
     // invoke: QPainter * painter()
-    var ret = C.C_ZNK12QPaintEngine7painterEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintEngine7painterEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPainter{}) // "QPainter *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngine", "painter", args)
   }
 
+  return
 }
 
 // drawTiledPixmap(const class QRectF &, const class QPixmap &, const class QPointF &)
-func (this *QPaintEngine) drawTiledPixmap(args ...interface{}) () {
+func (this *QPaintEngine) Drawtiledpixmap(args ...interface{}) () {
   // drawTiledPixmap(const class QRectF &, const class QPixmap &, const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -889,10 +987,11 @@ func (this *QPaintEngine) drawTiledPixmap(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "drawTiledPixmap", args)
   }
 
+  return
 }
 
 // setActive(_Bool)
-func (this *QPaintEngine) setActive(args ...interface{}) () {
+func (this *QPaintEngine) Setactive(args ...interface{}) () {
   // setActive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -912,10 +1011,11 @@ func (this *QPaintEngine) setActive(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "setActive", args)
   }
 
+  return
 }
 
 // setSystemRect(const class QRect &)
-func (this *QPaintEngine) setSystemRect(args ...interface{}) () {
+func (this *QPaintEngine) Setsystemrect(args ...interface{}) () {
   // setSystemRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -935,10 +1035,11 @@ func (this *QPaintEngine) setSystemRect(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "setSystemRect", args)
   }
 
+  return
 }
 
 // syncState()
-func (this *QPaintEngine) syncState(args ...interface{}) () {
+func (this *QPaintEngine) Syncstate(args ...interface{}) () {
   // syncState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -955,10 +1056,11 @@ func (this *QPaintEngine) syncState(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "syncState", args)
   }
 
+  return
 }
 
 // ~QPaintEngine()
-func (this *QPaintEngine) FreeQPaintEngine(args ...interface{}) () {
+func (this *QPaintEngine) Freeqpaintengine(args ...interface{}) () {
   // ~QPaintEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -975,10 +1077,11 @@ func (this *QPaintEngine) FreeQPaintEngine(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "~QPaintEngine", args)
   }
 
+  return
 }
 
 // systemClip()
-func (this *QPaintEngine) systemClip(args ...interface{}) () {
+func (this *QPaintEngine) Systemclip(args ...interface{}) (ret interface{}) {
   // systemClip()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -990,16 +1093,20 @@ func (this *QPaintEngine) systemClip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine10systemClipEv
     // invoke: QRegion systemClip()
-    var ret = C.C_ZNK12QPaintEngine10systemClipEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintEngine10systemClipEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRegion{}) // "QRegion"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngine", "systemClip", args)
   }
 
+  return
 }
 
 // fix_neg_rect(int *, int *, int *, int *)
-func (this *QPaintEngine) fix_neg_rect(args ...interface{}) () {
+func (this *QPaintEngine) Fix_Neg_Rect(args ...interface{}) () {
   // fix_neg_rect(int *, int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1015,23 +1122,24 @@ func (this *QPaintEngine) fix_neg_rect(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_
     // invoke: void fix_neg_rect(int *, int *, int *, int *)
-    var arg0 = (*C.int32_t)(args[0].(*int32))
+    var arg0 = (unsafe.Pointer)(args[0].(*int32))
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.int32_t)(args[1].(*int32))
+    var arg1 = (unsafe.Pointer)(args[1].(*int32))
     if false {fmt.Println(arg1)}
-    var arg2 = (*C.int32_t)(args[2].(*int32))
+    var arg2 = (unsafe.Pointer)(args[2].(*int32))
     if false {fmt.Println(arg2)}
-    var arg3 = (*C.int32_t)(args[3].(*int32))
+    var arg3 = (unsafe.Pointer)(args[3].(*int32))
     if false {fmt.Println(arg3)}
     C.C_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QPaintEngine", "fix_neg_rect", args)
   }
 
+  return
 }
 
 // setSystemClip(const class QRegion &)
-func (this *QPaintEngine) setSystemClip(args ...interface{}) () {
+func (this *QPaintEngine) Setsystemclip(args ...interface{}) () {
   // setSystemClip(const class QRegion &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1051,10 +1159,11 @@ func (this *QPaintEngine) setSystemClip(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "setSystemClip", args)
   }
 
+  return
 }
 
 // coordinateOffset()
-func (this *QPaintEngine) coordinateOffset(args ...interface{}) () {
+func (this *QPaintEngine) Coordinateoffset(args ...interface{}) (ret interface{}) {
   // coordinateOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1066,16 +1175,20 @@ func (this *QPaintEngine) coordinateOffset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine16coordinateOffsetEv
     // invoke: QPoint coordinateOffset()
-    var ret = C.C_ZNK12QPaintEngine16coordinateOffsetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintEngine16coordinateOffsetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPoint{}) // "QPoint"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngine", "coordinateOffset", args)
   }
 
+  return
 }
 
 // isActive()
-func (this *QPaintEngine) isActive(args ...interface{}) () {
+func (this *QPaintEngine) Isactive(args ...interface{}) (ret interface{}) {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1087,16 +1200,20 @@ func (this *QPaintEngine) isActive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine8isActiveEv
     // invoke: bool isActive()
-    var ret = C.C_ZNK12QPaintEngine8isActiveEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintEngine8isActiveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngine", "isActive", args)
   }
 
+  return
 }
 
 // drawEllipse(const class QRectF &)
-func (this *QPaintEngine) drawEllipse(args ...interface{}) () {
+func (this *QPaintEngine) Drawellipse(args ...interface{}) () {
   // drawEllipse(const class QRectF &)
   // drawEllipse(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1125,10 +1242,11 @@ func (this *QPaintEngine) drawEllipse(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "drawEllipse", args)
   }
 
+  return
 }
 
 // drawTextItem(const class QPointF &, const class QTextItem &)
-func (this *QPaintEngine) drawTextItem(args ...interface{}) () {
+func (this *QPaintEngine) Drawtextitem(args ...interface{}) () {
   // drawTextItem(const class QPointF &, const class QTextItem &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1151,10 +1269,11 @@ func (this *QPaintEngine) drawTextItem(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "drawTextItem", args)
   }
 
+  return
 }
 
 // isExtended()
-func (this *QPaintEngine) isExtended(args ...interface{}) () {
+func (this *QPaintEngine) Isextended(args ...interface{}) (ret interface{}) {
   // isExtended()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1166,16 +1285,20 @@ func (this *QPaintEngine) isExtended(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine10isExtendedEv
     // invoke: bool isExtended()
-    var ret = C.C_ZNK12QPaintEngine10isExtendedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintEngine10isExtendedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintEngine", "isExtended", args)
   }
 
+  return
 }
 
 // drawLines(const class QLine *, int)
-func (this *QPaintEngine) drawLines(args ...interface{}) () {
+func (this *QPaintEngine) Drawlines(args ...interface{}) () {
   // drawLines(const class QLine *, int)
   // drawLines(const class QLineF *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1210,6 +1333,7 @@ func (this *QPaintEngine) drawLines(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintEngine", "drawLines", args)
   }
 
+  return
 }
 
 // <= body block end

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qsettings.h
 // dst-file: /src/core/qsettings.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QSettings::contains(const QString & key);
-extern void C_ZNK9QSettings8containsERK7QString(void* qthis, void* arg0); // 4
+extern bool C_ZNK9QSettings8containsERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QSettings::setIniCodec(QTextCodec * codec);
 extern void C_ZN9QSettings11setIniCodecEP10QTextCodec(void* qthis, void* arg0); // 4
   // proto:  void QSettings::setIniCodec(const char * codecName);
-extern void C_ZN9QSettings11setIniCodecEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZN9QSettings11setIniCodecEPKc(void* qthis, void* arg0); // 4
   // proto:  void QSettings::sync();
 extern void C_ZN9QSettings4syncEv(void* qthis); // 4
   // proto:  void QSettings::~QSettings();
@@ -45,15 +45,15 @@ extern void C_ZN9QSettings13defaultFormatEv(); // 4
   // proto:  void QSettings::remove(const QString & key);
 extern void C_ZN9QSettings6removeERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QSettings::fallbacksEnabled();
-extern void C_ZNK9QSettings16fallbacksEnabledEv(void* qthis); // 4
+extern bool C_ZNK9QSettings16fallbacksEnabledEv(void* qthis); // 4
   // proto:  QStringList QSettings::allKeys();
 extern void C_ZNK9QSettings7allKeysEv(void* qthis); // 4
   // proto:  QString QSettings::applicationName();
-extern void C_ZNK9QSettings15applicationNameEv(void* qthis); // 4
+extern void* C_ZNK9QSettings15applicationNameEv(void* qthis); // 4
   // proto:  QString QSettings::group();
-extern void C_ZNK9QSettings5groupEv(void* qthis); // 4
+extern void* C_ZNK9QSettings5groupEv(void* qthis); // 4
   // proto:  bool QSettings::isWritable();
-extern void C_ZNK9QSettings10isWritableEv(void* qthis); // 4
+extern bool C_ZNK9QSettings10isWritableEv(void* qthis); // 4
   // proto:  QSettings::Format QSettings::format();
 extern void C_ZNK9QSettings6formatEv(void* qthis); // 4
   // proto:  void QSettings::setArrayIndex(int i);
@@ -81,23 +81,23 @@ extern void C_ZN9QSettings15beginWriteArrayERK7QStringi(void* qthis, void* arg0,
   // proto:  void QSettings::endGroup();
 extern void C_ZN9QSettings8endGroupEv(void* qthis); // 4
   // proto:  QString QSettings::fileName();
-extern void C_ZNK9QSettings8fileNameEv(void* qthis); // 4
+extern void* C_ZNK9QSettings8fileNameEv(void* qthis); // 4
   // proto:  QStringList QSettings::childKeys();
 extern void C_ZNK9QSettings9childKeysEv(void* qthis); // 4
   // proto:  QString QSettings::organizationName();
-extern void C_ZNK9QSettings16organizationNameEv(void* qthis); // 4
+extern void* C_ZNK9QSettings16organizationNameEv(void* qthis); // 4
   // proto:  void QSettings::QSettings(QObject * parent);
 extern void* C_ZN9QSettingsC2EP7QObject(void* arg0); // 3
   // proto:  void QSettings::QSettings(const QString & organization, const QString & application, QObject * parent);
 extern void* C_ZN9QSettingsC2ERK7QStringS2_P7QObject(void* arg0, void* arg1, void* arg2); // 3
   // proto:  QTextCodec * QSettings::iniCodec();
-extern void C_ZNK9QSettings8iniCodecEv(void* qthis); // 4
+extern void* C_ZNK9QSettings8iniCodecEv(void* qthis); // 4
   // proto:  void QSettings::clear();
 extern void C_ZN9QSettings5clearEv(void* qthis); // 4
   // proto:  QVariant QSettings::value(const QString & key, const QVariant & defaultValue);
-extern void C_ZNK9QSettings5valueERK7QStringRK8QVariant(void* qthis, void* arg0, void* arg1); // 4
+extern void* C_ZNK9QSettings5valueERK7QStringRK8QVariant(void* qthis, void* arg0, void* arg1); // 4
   // proto:  int QSettings::beginReadArray(const QString & prefix);
-extern void C_ZN9QSettings14beginReadArrayERK7QString(void* qthis, void* arg0); // 4
+extern int32_t C_ZN9QSettings14beginReadArrayERK7QString(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -117,7 +117,7 @@ type QSettings struct {
 }
 
 // contains(const class QString &)
-func (this *QSettings) contains(args ...interface{}) () {
+func (this *QSettings) Contains(args ...interface{}) (ret interface{}) {
   // contains(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -132,16 +132,20 @@ func (this *QSettings) contains(args ...interface{}) () {
     // invoke: bool contains(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QSettings8containsERK7QString(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QSettings8containsERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSettings", "contains", args)
   }
 
+  return
 }
 
 // setIniCodec(class QTextCodec *)
-func (this *QSettings) setIniCodec(args ...interface{}) () {
+func (this *QSettings) Setinicodec(args ...interface{}) () {
   // setIniCodec(class QTextCodec *)
   // setIniCodec(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -163,17 +167,20 @@ func (this *QSettings) setIniCodec(args ...interface{}) () {
   case 1:
     // invoke: _ZN9QSettings11setIniCodecEPKc
     // invoke: void setIniCodec(const char *)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[1][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
     C.C_ZN9QSettings11setIniCodecEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSettings", "setIniCodec", args)
   }
 
+  return
 }
 
 // sync()
-func (this *QSettings) sync(args ...interface{}) () {
+func (this *QSettings) Sync(args ...interface{}) () {
   // sync()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -190,10 +197,11 @@ func (this *QSettings) sync(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "sync", args)
   }
 
+  return
 }
 
 // ~QSettings()
-func (this *QSettings) FreeQSettings(args ...interface{}) () {
+func (this *QSettings) Freeqsettings(args ...interface{}) () {
   // ~QSettings()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -210,10 +218,11 @@ func (this *QSettings) FreeQSettings(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "~QSettings", args)
   }
 
+  return
 }
 
 // beginGroup(const class QString &)
-func (this *QSettings) beginGroup(args ...interface{}) () {
+func (this *QSettings) Begingroup(args ...interface{}) () {
   // beginGroup(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -233,10 +242,11 @@ func (this *QSettings) beginGroup(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "beginGroup", args)
   }
 
+  return
 }
 
 // defaultFormat()
-func (this *QSettings) defaultFormat_s(args ...interface{}) () {
+func (this *QSettings) Defaultformat_S(args ...interface{}) () {
   // defaultFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -253,10 +263,11 @@ func (this *QSettings) defaultFormat_s(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "defaultFormat", args)
   }
 
+  return
 }
 
 // remove(const class QString &)
-func (this *QSettings) remove(args ...interface{}) () {
+func (this *QSettings) Remove(args ...interface{}) () {
   // remove(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -276,10 +287,11 @@ func (this *QSettings) remove(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "remove", args)
   }
 
+  return
 }
 
 // fallbacksEnabled()
-func (this *QSettings) fallbacksEnabled(args ...interface{}) () {
+func (this *QSettings) Fallbacksenabled(args ...interface{}) (ret interface{}) {
   // fallbacksEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -291,16 +303,20 @@ func (this *QSettings) fallbacksEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings16fallbacksEnabledEv
     // invoke: bool fallbacksEnabled()
-    var ret = C.C_ZNK9QSettings16fallbacksEnabledEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QSettings16fallbacksEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSettings", "fallbacksEnabled", args)
   }
 
+  return
 }
 
 // allKeys()
-func (this *QSettings) allKeys(args ...interface{}) () {
+func (this *QSettings) Allkeys(args ...interface{}) () {
   // allKeys()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -317,10 +333,11 @@ func (this *QSettings) allKeys(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "allKeys", args)
   }
 
+  return
 }
 
 // applicationName()
-func (this *QSettings) applicationName(args ...interface{}) () {
+func (this *QSettings) Applicationname(args ...interface{}) (ret interface{}) {
   // applicationName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -332,16 +349,20 @@ func (this *QSettings) applicationName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings15applicationNameEv
     // invoke: QString applicationName()
-    var ret = C.C_ZNK9QSettings15applicationNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QSettings15applicationNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSettings", "applicationName", args)
   }
 
+  return
 }
 
 // group()
-func (this *QSettings) group(args ...interface{}) () {
+func (this *QSettings) Group(args ...interface{}) (ret interface{}) {
   // group()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -353,16 +374,20 @@ func (this *QSettings) group(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings5groupEv
     // invoke: QString group()
-    var ret = C.C_ZNK9QSettings5groupEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QSettings5groupEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSettings", "group", args)
   }
 
+  return
 }
 
 // isWritable()
-func (this *QSettings) isWritable(args ...interface{}) () {
+func (this *QSettings) Iswritable(args ...interface{}) (ret interface{}) {
   // isWritable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -374,16 +399,20 @@ func (this *QSettings) isWritable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings10isWritableEv
     // invoke: bool isWritable()
-    var ret = C.C_ZNK9QSettings10isWritableEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QSettings10isWritableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSettings", "isWritable", args)
   }
 
+  return
 }
 
 // format()
-func (this *QSettings) format(args ...interface{}) () {
+func (this *QSettings) Format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -400,10 +429,11 @@ func (this *QSettings) format(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "format", args)
   }
 
+  return
 }
 
 // setArrayIndex(int)
-func (this *QSettings) setArrayIndex(args ...interface{}) () {
+func (this *QSettings) Setarrayindex(args ...interface{}) () {
   // setArrayIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -423,10 +453,11 @@ func (this *QSettings) setArrayIndex(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "setArrayIndex", args)
   }
 
+  return
 }
 
 // endArray()
-func (this *QSettings) endArray(args ...interface{}) () {
+func (this *QSettings) Endarray(args ...interface{}) () {
   // endArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -443,10 +474,11 @@ func (this *QSettings) endArray(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "endArray", args)
   }
 
+  return
 }
 
 // childGroups()
-func (this *QSettings) childGroups(args ...interface{}) () {
+func (this *QSettings) Childgroups(args ...interface{}) () {
   // childGroups()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -463,10 +495,11 @@ func (this *QSettings) childGroups(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "childGroups", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QSettings) metaObject(args ...interface{}) () {
+func (this *QSettings) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -483,10 +516,11 @@ func (this *QSettings) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "metaObject", args)
   }
 
+  return
 }
 
 // scope()
-func (this *QSettings) scope(args ...interface{}) () {
+func (this *QSettings) Scope(args ...interface{}) () {
   // scope()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -503,10 +537,11 @@ func (this *QSettings) scope(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "scope", args)
   }
 
+  return
 }
 
 // setUserIniPath(const class QString &)
-func (this *QSettings) setUserIniPath_s(args ...interface{}) () {
+func (this *QSettings) Setuserinipath_S(args ...interface{}) () {
   // setUserIniPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -526,10 +561,11 @@ func (this *QSettings) setUserIniPath_s(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "setUserIniPath", args)
   }
 
+  return
 }
 
 // setSystemIniPath(const class QString &)
-func (this *QSettings) setSystemIniPath_s(args ...interface{}) () {
+func (this *QSettings) Setsysteminipath_S(args ...interface{}) () {
   // setSystemIniPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -549,10 +585,11 @@ func (this *QSettings) setSystemIniPath_s(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "setSystemIniPath", args)
   }
 
+  return
 }
 
 // setFallbacksEnabled(_Bool)
-func (this *QSettings) setFallbacksEnabled(args ...interface{}) () {
+func (this *QSettings) Setfallbacksenabled(args ...interface{}) () {
   // setFallbacksEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -572,10 +609,11 @@ func (this *QSettings) setFallbacksEnabled(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "setFallbacksEnabled", args)
   }
 
+  return
 }
 
 // status()
-func (this *QSettings) status(args ...interface{}) () {
+func (this *QSettings) Status(args ...interface{}) () {
   // status()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -592,10 +630,11 @@ func (this *QSettings) status(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "status", args)
   }
 
+  return
 }
 
 // setValue(const class QString &, const class QVariant &)
-func (this *QSettings) setValue(args ...interface{}) () {
+func (this *QSettings) Setvalue(args ...interface{}) () {
   // setValue(const class QString &, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -618,10 +657,11 @@ func (this *QSettings) setValue(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "setValue", args)
   }
 
+  return
 }
 
 // beginWriteArray(const class QString &, int)
-func (this *QSettings) beginWriteArray(args ...interface{}) () {
+func (this *QSettings) Beginwritearray(args ...interface{}) () {
   // beginWriteArray(const class QString &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -644,10 +684,11 @@ func (this *QSettings) beginWriteArray(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "beginWriteArray", args)
   }
 
+  return
 }
 
 // endGroup()
-func (this *QSettings) endGroup(args ...interface{}) () {
+func (this *QSettings) Endgroup(args ...interface{}) () {
   // endGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -664,10 +705,11 @@ func (this *QSettings) endGroup(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "endGroup", args)
   }
 
+  return
 }
 
 // fileName()
-func (this *QSettings) fileName(args ...interface{}) () {
+func (this *QSettings) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -679,16 +721,20 @@ func (this *QSettings) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings8fileNameEv
     // invoke: QString fileName()
-    var ret = C.C_ZNK9QSettings8fileNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QSettings8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSettings", "fileName", args)
   }
 
+  return
 }
 
 // childKeys()
-func (this *QSettings) childKeys(args ...interface{}) () {
+func (this *QSettings) Childkeys(args ...interface{}) () {
   // childKeys()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -705,10 +751,11 @@ func (this *QSettings) childKeys(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "childKeys", args)
   }
 
+  return
 }
 
 // organizationName()
-func (this *QSettings) organizationName(args ...interface{}) () {
+func (this *QSettings) Organizationname(args ...interface{}) (ret interface{}) {
   // organizationName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -720,12 +767,16 @@ func (this *QSettings) organizationName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings16organizationNameEv
     // invoke: QString organizationName()
-    var ret = C.C_ZNK9QSettings16organizationNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QSettings16organizationNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSettings", "organizationName", args)
   }
 
+  return
 }
 
 // QSettings(class QObject *)
@@ -774,7 +825,7 @@ func NewQSettings(args ...interface{}) *QSettings {
 }
 
 // iniCodec()
-func (this *QSettings) iniCodec(args ...interface{}) () {
+func (this *QSettings) Inicodec(args ...interface{}) (ret interface{}) {
   // iniCodec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -786,16 +837,20 @@ func (this *QSettings) iniCodec(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings8iniCodecEv
     // invoke: QTextCodec * iniCodec()
-    var ret = C.C_ZNK9QSettings8iniCodecEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QSettings8iniCodecEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSettings", "iniCodec", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QSettings) clear(args ...interface{}) () {
+func (this *QSettings) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -812,10 +867,11 @@ func (this *QSettings) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QSettings", "clear", args)
   }
 
+  return
 }
 
 // value(const class QString &, const class QVariant &)
-func (this *QSettings) value(args ...interface{}) () {
+func (this *QSettings) Value(args ...interface{}) (ret interface{}) {
   // value(const class QString &, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -833,16 +889,20 @@ func (this *QSettings) value(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK9QSettings5valueERK7QStringRK8QVariant(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QSettings5valueERK7QStringRK8QVariant(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSettings", "value", args)
   }
 
+  return
 }
 
 // beginReadArray(const class QString &)
-func (this *QSettings) beginReadArray(args ...interface{}) () {
+func (this *QSettings) Beginreadarray(args ...interface{}) (ret interface{}) {
   // beginReadArray(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -857,12 +917,16 @@ func (this *QSettings) beginReadArray(args ...interface{}) () {
     // invoke: int beginReadArray(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN9QSettings14beginReadArrayERK7QString(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QSettings14beginReadArrayERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSettings", "beginReadArray", args)
   }
 
+  return
 }
 
 // <= body block end

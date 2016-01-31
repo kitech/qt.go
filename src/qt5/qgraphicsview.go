@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qgraphicsview.h
 // dst-file: /src/widgets/qgraphicsview.go
 //
@@ -61,11 +61,11 @@ extern void C_ZNK13QGraphicsView12resizeAnchorEv(void* qthis); // 4
   // proto:  void QGraphicsView::scale(qreal sx, qreal sy);
 extern void C_ZN13QGraphicsView5scaleEdd(void* qthis, double arg0, double arg1); // 4
   // proto:  QMatrix QGraphicsView::matrix();
-extern void C_ZNK13QGraphicsView6matrixEv(void* qthis); // 4
+extern void* C_ZNK13QGraphicsView6matrixEv(void* qthis); // 4
   // proto:  void QGraphicsView::setScene(QGraphicsScene * scene);
 extern void C_ZN13QGraphicsView8setSceneEP14QGraphicsScene(void* qthis, void* arg0); // 4
   // proto:  QSize QGraphicsView::sizeHint();
-extern void C_ZNK13QGraphicsView8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK13QGraphicsView8sizeHintEv(void* qthis); // 4
   // proto:  QList<QGraphicsItem *> QGraphicsView::items(int x, int y);
 extern void C_ZNK13QGraphicsView5itemsEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  QList<QGraphicsItem *> QGraphicsView::items(const QPoint & pos);
@@ -79,17 +79,17 @@ extern void C_ZN13QGraphicsView12setSceneRectEdddd(void* qthis, double arg0, dou
   // proto:  void QGraphicsView::setSceneRect(const QRectF & rect);
 extern void C_ZN13QGraphicsView12setSceneRectERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QPolygon QGraphicsView::mapFromScene(const QPolygonF & polygon);
-extern void C_ZNK13QGraphicsView12mapFromSceneERK9QPolygonF(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QGraphicsView12mapFromSceneERK9QPolygonF(void* qthis, void* arg0); // 4
   // proto:  QPainterPath QGraphicsView::mapFromScene(const QPainterPath & path);
-extern void C_ZNK13QGraphicsView12mapFromSceneERK12QPainterPath(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QGraphicsView12mapFromSceneERK12QPainterPath(void* qthis, void* arg0); // 4
   // proto:  QPoint QGraphicsView::mapFromScene(qreal x, qreal y);
-extern void C_ZNK13QGraphicsView12mapFromSceneEdd(void* qthis, double arg0, double arg1); // 2
+extern void* C_ZNK13QGraphicsView12mapFromSceneEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  QPolygon QGraphicsView::mapFromScene(const QRectF & rect);
-extern void C_ZNK13QGraphicsView12mapFromSceneERK6QRectF(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QGraphicsView12mapFromSceneERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QPoint QGraphicsView::mapFromScene(const QPointF & point);
-extern void C_ZNK13QGraphicsView12mapFromSceneERK7QPointF(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QGraphicsView12mapFromSceneERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPolygon QGraphicsView::mapFromScene(qreal x, qreal y, qreal w, qreal h);
-extern void C_ZNK13QGraphicsView12mapFromSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void* C_ZNK13QGraphicsView12mapFromSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  QGraphicsView::DragMode QGraphicsView::dragMode();
 extern void C_ZNK13QGraphicsView8dragModeEv(void* qthis); // 4
   // proto:  QGraphicsScene * QGraphicsView::scene();
@@ -103,11 +103,11 @@ extern void* C_ZN13QGraphicsViewC2EP7QWidget(void* arg0); // 3
   // proto:  void QGraphicsView::QGraphicsView(QGraphicsScene * scene, QWidget * parent);
 extern void* C_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget(void* arg0, void* arg1); // 3
   // proto:  QRect QGraphicsView::rubberBandRect();
-extern void C_ZNK13QGraphicsView14rubberBandRectEv(void* qthis); // 4
+extern void* C_ZNK13QGraphicsView14rubberBandRectEv(void* qthis); // 4
   // proto:  QTransform QGraphicsView::transform();
-extern void C_ZNK13QGraphicsView9transformEv(void* qthis); // 4
+extern void* C_ZNK13QGraphicsView9transformEv(void* qthis); // 4
   // proto:  QBrush QGraphicsView::foregroundBrush();
-extern void C_ZNK13QGraphicsView15foregroundBrushEv(void* qthis); // 4
+extern void* C_ZNK13QGraphicsView15foregroundBrushEv(void* qthis); // 4
   // proto:  void QGraphicsView::setForegroundBrush(const QBrush & brush);
 extern void C_ZN13QGraphicsView18setForegroundBrushERK6QBrush(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsView::ensureVisible(const QRectF & rect, int xmargin, int ymargin);
@@ -119,23 +119,23 @@ extern void C_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii(void* qthis, 
   // proto:  void QGraphicsView::setInteractive(bool allowed);
 extern void C_ZN13QGraphicsView14setInteractiveEb(void* qthis, bool arg0); // 4
   // proto:  bool QGraphicsView::isTransformed();
-extern void C_ZNK13QGraphicsView13isTransformedEv(void* qthis); // 4
+extern bool C_ZNK13QGraphicsView13isTransformedEv(void* qthis); // 4
   // proto:  bool QGraphicsView::isInteractive();
-extern void C_ZNK13QGraphicsView13isInteractiveEv(void* qthis); // 4
+extern bool C_ZNK13QGraphicsView13isInteractiveEv(void* qthis); // 4
   // proto:  QBrush QGraphicsView::backgroundBrush();
-extern void C_ZNK13QGraphicsView15backgroundBrushEv(void* qthis); // 4
+extern void* C_ZNK13QGraphicsView15backgroundBrushEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsView::mapToScene(const QPainterPath & path);
-extern void C_ZNK13QGraphicsView10mapToSceneERK12QPainterPath(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QGraphicsView10mapToSceneERK12QPainterPath(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsView::mapToScene(int x, int y);
-extern void C_ZNK13QGraphicsView10mapToSceneEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void* C_ZNK13QGraphicsView10mapToSceneEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  QPolygonF QGraphicsView::mapToScene(const QRect & rect);
-extern void C_ZNK13QGraphicsView10mapToSceneERK5QRect(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QGraphicsView10mapToSceneERK5QRect(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsView::mapToScene(const QPolygon & polygon);
-extern void C_ZNK13QGraphicsView10mapToSceneERK8QPolygon(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QGraphicsView10mapToSceneERK8QPolygon(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsView::mapToScene(int x, int y, int w, int h);
-extern void C_ZNK13QGraphicsView10mapToSceneEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
+extern void* C_ZNK13QGraphicsView10mapToSceneEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
   // proto:  QPointF QGraphicsView::mapToScene(const QPoint & point);
-extern void C_ZNK13QGraphicsView10mapToSceneERK6QPoint(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QGraphicsView10mapToSceneERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsView::resetMatrix();
 extern void C_ZN13QGraphicsView11resetMatrixEv(void* qthis); // 4
   // proto:  void QGraphicsView::centerOn(const QPointF & pos);
@@ -149,11 +149,11 @@ extern void C_ZN13QGraphicsView9translateEdd(void* qthis, double arg0, double ar
   // proto:  QGraphicsView::ViewportUpdateMode QGraphicsView::viewportUpdateMode();
 extern void C_ZNK13QGraphicsView18viewportUpdateModeEv(void* qthis); // 4
   // proto:  QRectF QGraphicsView::sceneRect();
-extern void C_ZNK13QGraphicsView9sceneRectEv(void* qthis); // 4
+extern void* C_ZNK13QGraphicsView9sceneRectEv(void* qthis); // 4
   // proto:  CacheMode QGraphicsView::cacheMode();
 extern void C_ZNK13QGraphicsView9cacheModeEv(void* qthis); // 4
   // proto:  QTransform QGraphicsView::viewportTransform();
-extern void C_ZNK13QGraphicsView17viewportTransformEv(void* qthis); // 4
+extern void* C_ZNK13QGraphicsView17viewportTransformEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -174,7 +174,7 @@ type QGraphicsView struct {
 }
 
 // setBackgroundBrush(const class QBrush &)
-func (this *QGraphicsView) setBackgroundBrush(args ...interface{}) () {
+func (this *QGraphicsView) Setbackgroundbrush(args ...interface{}) () {
   // setBackgroundBrush(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -194,10 +194,11 @@ func (this *QGraphicsView) setBackgroundBrush(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "setBackgroundBrush", args)
   }
 
+  return
 }
 
 // alignment()
-func (this *QGraphicsView) alignment(args ...interface{}) () {
+func (this *QGraphicsView) Alignment(args ...interface{}) () {
   // alignment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -214,10 +215,11 @@ func (this *QGraphicsView) alignment(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "alignment", args)
   }
 
+  return
 }
 
 // resetCachedContent()
-func (this *QGraphicsView) resetCachedContent(args ...interface{}) () {
+func (this *QGraphicsView) Resetcachedcontent(args ...interface{}) () {
   // resetCachedContent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -234,10 +236,11 @@ func (this *QGraphicsView) resetCachedContent(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "resetCachedContent", args)
   }
 
+  return
 }
 
 // renderHints()
-func (this *QGraphicsView) renderHints(args ...interface{}) () {
+func (this *QGraphicsView) Renderhints(args ...interface{}) () {
   // renderHints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -254,10 +257,11 @@ func (this *QGraphicsView) renderHints(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "renderHints", args)
   }
 
+  return
 }
 
 // setMatrix(const class QMatrix &, _Bool)
-func (this *QGraphicsView) setMatrix(args ...interface{}) () {
+func (this *QGraphicsView) Setmatrix(args ...interface{}) () {
   // setMatrix(const class QMatrix &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -280,10 +284,11 @@ func (this *QGraphicsView) setMatrix(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "setMatrix", args)
   }
 
+  return
 }
 
 // shear(qreal, qreal)
-func (this *QGraphicsView) shear(args ...interface{}) () {
+func (this *QGraphicsView) Shear(args ...interface{}) () {
   // shear(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,10 +311,11 @@ func (this *QGraphicsView) shear(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "shear", args)
   }
 
+  return
 }
 
 // resetTransform()
-func (this *QGraphicsView) resetTransform(args ...interface{}) () {
+func (this *QGraphicsView) Resettransform(args ...interface{}) () {
   // resetTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -326,10 +332,11 @@ func (this *QGraphicsView) resetTransform(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "resetTransform", args)
   }
 
+  return
 }
 
 // rotate(qreal)
-func (this *QGraphicsView) rotate(args ...interface{}) () {
+func (this *QGraphicsView) Rotate(args ...interface{}) () {
   // rotate(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -349,10 +356,11 @@ func (this *QGraphicsView) rotate(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "rotate", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QGraphicsView) metaObject(args ...interface{}) () {
+func (this *QGraphicsView) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -369,10 +377,11 @@ func (this *QGraphicsView) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "metaObject", args)
   }
 
+  return
 }
 
 // itemAt(int, int)
-func (this *QGraphicsView) itemAt(args ...interface{}) () {
+func (this *QGraphicsView) Itemat(args ...interface{}) () {
   // itemAt(int, int)
   // itemAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -404,10 +413,11 @@ func (this *QGraphicsView) itemAt(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "itemAt", args)
   }
 
+  return
 }
 
 // optimizationFlags()
-func (this *QGraphicsView) optimizationFlags(args ...interface{}) () {
+func (this *QGraphicsView) Optimizationflags(args ...interface{}) () {
   // optimizationFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -424,10 +434,11 @@ func (this *QGraphicsView) optimizationFlags(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "optimizationFlags", args)
   }
 
+  return
 }
 
 // updateSceneRect(const class QRectF &)
-func (this *QGraphicsView) updateSceneRect(args ...interface{}) () {
+func (this *QGraphicsView) Updatescenerect(args ...interface{}) () {
   // updateSceneRect(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -447,10 +458,11 @@ func (this *QGraphicsView) updateSceneRect(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "updateSceneRect", args)
   }
 
+  return
 }
 
 // setTransform(const class QTransform &, _Bool)
-func (this *QGraphicsView) setTransform(args ...interface{}) () {
+func (this *QGraphicsView) Settransform(args ...interface{}) () {
   // setTransform(const class QTransform &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -473,10 +485,11 @@ func (this *QGraphicsView) setTransform(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "setTransform", args)
   }
 
+  return
 }
 
 // resizeAnchor()
-func (this *QGraphicsView) resizeAnchor(args ...interface{}) () {
+func (this *QGraphicsView) Resizeanchor(args ...interface{}) () {
   // resizeAnchor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -493,10 +506,11 @@ func (this *QGraphicsView) resizeAnchor(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "resizeAnchor", args)
   }
 
+  return
 }
 
 // scale(qreal, qreal)
-func (this *QGraphicsView) scale(args ...interface{}) () {
+func (this *QGraphicsView) Scale(args ...interface{}) () {
   // scale(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -519,10 +533,11 @@ func (this *QGraphicsView) scale(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "scale", args)
   }
 
+  return
 }
 
 // matrix()
-func (this *QGraphicsView) matrix(args ...interface{}) () {
+func (this *QGraphicsView) Matrix(args ...interface{}) (ret interface{}) {
   // matrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -534,16 +549,20 @@ func (this *QGraphicsView) matrix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView6matrixEv
     // invoke: QMatrix matrix()
-    var ret = C.C_ZNK13QGraphicsView6matrixEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView6matrixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMatrix{}) // "QMatrix"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsView", "matrix", args)
   }
 
+  return
 }
 
 // setScene(class QGraphicsScene *)
-func (this *QGraphicsView) setScene(args ...interface{}) () {
+func (this *QGraphicsView) Setscene(args ...interface{}) () {
   // setScene(class QGraphicsScene *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -563,10 +582,11 @@ func (this *QGraphicsView) setScene(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "setScene", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QGraphicsView) sizeHint(args ...interface{}) () {
+func (this *QGraphicsView) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -578,16 +598,20 @@ func (this *QGraphicsView) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK13QGraphicsView8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsView", "sizeHint", args)
   }
 
+  return
 }
 
 // items(int, int)
-func (this *QGraphicsView) items(args ...interface{}) () {
+func (this *QGraphicsView) Items(args ...interface{}) () {
   // items(int, int)
   // items(const class QPoint &)
   // items()
@@ -625,10 +649,11 @@ func (this *QGraphicsView) items(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "items", args)
   }
 
+  return
 }
 
 // rubberBandSelectionMode()
-func (this *QGraphicsView) rubberBandSelectionMode(args ...interface{}) () {
+func (this *QGraphicsView) Rubberbandselectionmode(args ...interface{}) () {
   // rubberBandSelectionMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -645,10 +670,11 @@ func (this *QGraphicsView) rubberBandSelectionMode(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "rubberBandSelectionMode", args)
   }
 
+  return
 }
 
 // setSceneRect(qreal, qreal, qreal, qreal)
-func (this *QGraphicsView) setSceneRect(args ...interface{}) () {
+func (this *QGraphicsView) Setscenerect(args ...interface{}) () {
   // setSceneRect(qreal, qreal, qreal, qreal)
   // setSceneRect(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -686,10 +712,11 @@ func (this *QGraphicsView) setSceneRect(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "setSceneRect", args)
   }
 
+  return
 }
 
 // mapFromScene(const class QPolygonF &)
-func (this *QGraphicsView) mapFromScene(args ...interface{}) () {
+func (this *QGraphicsView) Mapfromscene(args ...interface{}) (ret interface{}) {
   // mapFromScene(const class QPolygonF &)
   // mapFromScene(const class QPainterPath &)
   // mapFromScene(qreal, qreal)
@@ -723,15 +750,21 @@ func (this *QGraphicsView) mapFromScene(args ...interface{}) () {
     // invoke: QPolygon mapFromScene(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QGraphicsView12mapFromSceneERK9QPolygonF(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView12mapFromSceneERK9QPolygonF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK13QGraphicsView12mapFromSceneERK12QPainterPath
     // invoke: QPainterPath mapFromScene(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QGraphicsView12mapFromSceneERK12QPainterPath(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView12mapFromSceneERK12QPainterPath(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 2:
     // invoke: _ZNK13QGraphicsView12mapFromSceneEdd
     // invoke: QPoint mapFromScene(qreal, qreal)
@@ -739,22 +772,31 @@ func (this *QGraphicsView) mapFromScene(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK13QGraphicsView12mapFromSceneEdd(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView12mapFromSceneEdd(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPoint{}) // "QPoint"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 3:
     // invoke: _ZNK13QGraphicsView12mapFromSceneERK6QRectF
     // invoke: QPolygon mapFromScene(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QGraphicsView12mapFromSceneERK6QRectF(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView12mapFromSceneERK6QRectF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 4:
     // invoke: _ZNK13QGraphicsView12mapFromSceneERK7QPointF
     // invoke: QPoint mapFromScene(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QGraphicsView12mapFromSceneERK7QPointF(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView12mapFromSceneERK7QPointF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPoint{}) // "QPoint"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 5:
     // invoke: _ZNK13QGraphicsView12mapFromSceneEdddd
     // invoke: QPolygon mapFromScene(qreal, qreal, qreal, qreal)
@@ -766,16 +808,20 @@ func (this *QGraphicsView) mapFromScene(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    var ret = C.C_ZNK13QGraphicsView12mapFromSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView12mapFromSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsView", "mapFromScene", args)
   }
 
+  return
 }
 
 // dragMode()
-func (this *QGraphicsView) dragMode(args ...interface{}) () {
+func (this *QGraphicsView) Dragmode(args ...interface{}) () {
   // dragMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -792,10 +838,11 @@ func (this *QGraphicsView) dragMode(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "dragMode", args)
   }
 
+  return
 }
 
 // scene()
-func (this *QGraphicsView) scene(args ...interface{}) () {
+func (this *QGraphicsView) Scene(args ...interface{}) () {
   // scene()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -812,10 +859,11 @@ func (this *QGraphicsView) scene(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "scene", args)
   }
 
+  return
 }
 
 // ~QGraphicsView()
-func (this *QGraphicsView) FreeQGraphicsView(args ...interface{}) () {
+func (this *QGraphicsView) Freeqgraphicsview(args ...interface{}) () {
   // ~QGraphicsView()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -832,10 +880,11 @@ func (this *QGraphicsView) FreeQGraphicsView(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "~QGraphicsView", args)
   }
 
+  return
 }
 
 // transformationAnchor()
-func (this *QGraphicsView) transformationAnchor(args ...interface{}) () {
+func (this *QGraphicsView) Transformationanchor(args ...interface{}) () {
   // transformationAnchor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -852,6 +901,7 @@ func (this *QGraphicsView) transformationAnchor(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "transformationAnchor", args)
   }
 
+  return
 }
 
 // QGraphicsView(class QWidget *)
@@ -897,7 +947,7 @@ func NewQGraphicsView(args ...interface{}) *QGraphicsView {
 }
 
 // rubberBandRect()
-func (this *QGraphicsView) rubberBandRect(args ...interface{}) () {
+func (this *QGraphicsView) Rubberbandrect(args ...interface{}) (ret interface{}) {
   // rubberBandRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -909,16 +959,20 @@ func (this *QGraphicsView) rubberBandRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView14rubberBandRectEv
     // invoke: QRect rubberBandRect()
-    var ret = C.C_ZNK13QGraphicsView14rubberBandRectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView14rubberBandRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsView", "rubberBandRect", args)
   }
 
+  return
 }
 
 // transform()
-func (this *QGraphicsView) transform(args ...interface{}) () {
+func (this *QGraphicsView) Transform(args ...interface{}) (ret interface{}) {
   // transform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -930,16 +984,20 @@ func (this *QGraphicsView) transform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView9transformEv
     // invoke: QTransform transform()
-    var ret = C.C_ZNK13QGraphicsView9transformEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView9transformEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTransform{}) // "QTransform"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsView", "transform", args)
   }
 
+  return
 }
 
 // foregroundBrush()
-func (this *QGraphicsView) foregroundBrush(args ...interface{}) () {
+func (this *QGraphicsView) Foregroundbrush(args ...interface{}) (ret interface{}) {
   // foregroundBrush()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -951,16 +1009,20 @@ func (this *QGraphicsView) foregroundBrush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView15foregroundBrushEv
     // invoke: QBrush foregroundBrush()
-    var ret = C.C_ZNK13QGraphicsView15foregroundBrushEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView15foregroundBrushEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QBrush{}) // "QBrush"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsView", "foregroundBrush", args)
   }
 
+  return
 }
 
 // setForegroundBrush(const class QBrush &)
-func (this *QGraphicsView) setForegroundBrush(args ...interface{}) () {
+func (this *QGraphicsView) Setforegroundbrush(args ...interface{}) () {
   // setForegroundBrush(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -980,10 +1042,11 @@ func (this *QGraphicsView) setForegroundBrush(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "setForegroundBrush", args)
   }
 
+  return
 }
 
 // ensureVisible(const class QRectF &, int, int)
-func (this *QGraphicsView) ensureVisible(args ...interface{}) () {
+func (this *QGraphicsView) Ensurevisible(args ...interface{}) () {
   // ensureVisible(const class QRectF &, int, int)
   // ensureVisible(qreal, qreal, qreal, qreal, int, int)
   // ensureVisible(const class QGraphicsItem *, int, int)
@@ -1048,10 +1111,11 @@ func (this *QGraphicsView) ensureVisible(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "ensureVisible", args)
   }
 
+  return
 }
 
 // setInteractive(_Bool)
-func (this *QGraphicsView) setInteractive(args ...interface{}) () {
+func (this *QGraphicsView) Setinteractive(args ...interface{}) () {
   // setInteractive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1071,10 +1135,11 @@ func (this *QGraphicsView) setInteractive(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "setInteractive", args)
   }
 
+  return
 }
 
 // isTransformed()
-func (this *QGraphicsView) isTransformed(args ...interface{}) () {
+func (this *QGraphicsView) Istransformed(args ...interface{}) (ret interface{}) {
   // isTransformed()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1086,16 +1151,20 @@ func (this *QGraphicsView) isTransformed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView13isTransformedEv
     // invoke: bool isTransformed()
-    var ret = C.C_ZNK13QGraphicsView13isTransformedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView13isTransformedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsView", "isTransformed", args)
   }
 
+  return
 }
 
 // isInteractive()
-func (this *QGraphicsView) isInteractive(args ...interface{}) () {
+func (this *QGraphicsView) Isinteractive(args ...interface{}) (ret interface{}) {
   // isInteractive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1107,16 +1176,20 @@ func (this *QGraphicsView) isInteractive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView13isInteractiveEv
     // invoke: bool isInteractive()
-    var ret = C.C_ZNK13QGraphicsView13isInteractiveEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView13isInteractiveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsView", "isInteractive", args)
   }
 
+  return
 }
 
 // backgroundBrush()
-func (this *QGraphicsView) backgroundBrush(args ...interface{}) () {
+func (this *QGraphicsView) Backgroundbrush(args ...interface{}) (ret interface{}) {
   // backgroundBrush()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1128,16 +1201,20 @@ func (this *QGraphicsView) backgroundBrush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView15backgroundBrushEv
     // invoke: QBrush backgroundBrush()
-    var ret = C.C_ZNK13QGraphicsView15backgroundBrushEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView15backgroundBrushEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QBrush{}) // "QBrush"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsView", "backgroundBrush", args)
   }
 
+  return
 }
 
 // mapToScene(const class QPainterPath &)
-func (this *QGraphicsView) mapToScene(args ...interface{}) () {
+func (this *QGraphicsView) Maptoscene(args ...interface{}) (ret interface{}) {
   // mapToScene(const class QPainterPath &)
   // mapToScene(int, int)
   // mapToScene(const class QRect &)
@@ -1171,8 +1248,11 @@ func (this *QGraphicsView) mapToScene(args ...interface{}) () {
     // invoke: QPainterPath mapToScene(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QGraphicsView10mapToSceneERK12QPainterPath(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView10mapToSceneERK12QPainterPath(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK13QGraphicsView10mapToSceneEii
     // invoke: QPointF mapToScene(int, int)
@@ -1180,22 +1260,31 @@ func (this *QGraphicsView) mapToScene(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK13QGraphicsView10mapToSceneEii(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView10mapToSceneEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 2:
     // invoke: _ZNK13QGraphicsView10mapToSceneERK5QRect
     // invoke: QPolygonF mapToScene(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QGraphicsView10mapToSceneERK5QRect(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView10mapToSceneERK5QRect(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 3:
     // invoke: _ZNK13QGraphicsView10mapToSceneERK8QPolygon
     // invoke: QPolygonF mapToScene(const class QPolygon &)
     var arg0 = args[0].(QPolygon).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QGraphicsView10mapToSceneERK8QPolygon(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView10mapToSceneERK8QPolygon(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 4:
     // invoke: _ZNK13QGraphicsView10mapToSceneEiiii
     // invoke: QPolygonF mapToScene(int, int, int, int)
@@ -1207,23 +1296,30 @@ func (this *QGraphicsView) mapToScene(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    var ret = C.C_ZNK13QGraphicsView10mapToSceneEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView10mapToSceneEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 5:
     // invoke: _ZNK13QGraphicsView10mapToSceneERK6QPoint
     // invoke: QPointF mapToScene(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QGraphicsView10mapToSceneERK6QPoint(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView10mapToSceneERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsView", "mapToScene", args)
   }
 
+  return
 }
 
 // resetMatrix()
-func (this *QGraphicsView) resetMatrix(args ...interface{}) () {
+func (this *QGraphicsView) Resetmatrix(args ...interface{}) () {
   // resetMatrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1240,10 +1336,11 @@ func (this *QGraphicsView) resetMatrix(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "resetMatrix", args)
   }
 
+  return
 }
 
 // centerOn(const class QPointF &)
-func (this *QGraphicsView) centerOn(args ...interface{}) () {
+func (this *QGraphicsView) Centeron(args ...interface{}) () {
   // centerOn(const class QPointF &)
   // centerOn(const class QGraphicsItem *)
   // centerOn(qreal, qreal)
@@ -1284,10 +1381,11 @@ func (this *QGraphicsView) centerOn(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "centerOn", args)
   }
 
+  return
 }
 
 // translate(qreal, qreal)
-func (this *QGraphicsView) translate(args ...interface{}) () {
+func (this *QGraphicsView) Translate(args ...interface{}) () {
   // translate(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1310,10 +1408,11 @@ func (this *QGraphicsView) translate(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "translate", args)
   }
 
+  return
 }
 
 // viewportUpdateMode()
-func (this *QGraphicsView) viewportUpdateMode(args ...interface{}) () {
+func (this *QGraphicsView) Viewportupdatemode(args ...interface{}) () {
   // viewportUpdateMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1330,10 +1429,11 @@ func (this *QGraphicsView) viewportUpdateMode(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "viewportUpdateMode", args)
   }
 
+  return
 }
 
 // sceneRect()
-func (this *QGraphicsView) sceneRect(args ...interface{}) () {
+func (this *QGraphicsView) Scenerect(args ...interface{}) (ret interface{}) {
   // sceneRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1345,16 +1445,20 @@ func (this *QGraphicsView) sceneRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView9sceneRectEv
     // invoke: QRectF sceneRect()
-    var ret = C.C_ZNK13QGraphicsView9sceneRectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView9sceneRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsView", "sceneRect", args)
   }
 
+  return
 }
 
 // cacheMode()
-func (this *QGraphicsView) cacheMode(args ...interface{}) () {
+func (this *QGraphicsView) Cachemode(args ...interface{}) () {
   // cacheMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1371,10 +1475,11 @@ func (this *QGraphicsView) cacheMode(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsView", "cacheMode", args)
   }
 
+  return
 }
 
 // viewportTransform()
-func (this *QGraphicsView) viewportTransform(args ...interface{}) () {
+func (this *QGraphicsView) Viewporttransform(args ...interface{}) (ret interface{}) {
   // viewportTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1386,12 +1491,16 @@ func (this *QGraphicsView) viewportTransform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView17viewportTransformEv
     // invoke: QTransform viewportTransform()
-    var ret = C.C_ZNK13QGraphicsView17viewportTransformEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGraphicsView17viewportTransformEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTransform{}) // "QTransform"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsView", "viewportTransform", args)
   }
 
+  return
 }
 
 // <= body block end

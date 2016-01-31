@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qicon.h
 // dst-file: /src/gui/qicon.go
 //
@@ -29,21 +29,21 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QString QIcon::themeName();
-extern void C_ZN5QIcon9themeNameEv(); // 4
+extern void* C_ZN5QIcon9themeNameEv(); // 4
   // proto: static void QIcon::setThemeName(const QString & path);
 extern void C_ZN5QIcon12setThemeNameERK7QString(void* arg0); // 4
   // proto:  void QIcon::swap(QIcon & other);
 extern void C_ZN5QIcon4swapERS_(void* qthis, void* arg0); // 2
   // proto:  bool QIcon::isDetached();
-extern void C_ZNK5QIcon10isDetachedEv(void* qthis); // 4
+extern bool C_ZNK5QIcon10isDetachedEv(void* qthis); // 4
   // proto:  qint64 QIcon::cacheKey();
-extern void C_ZNK5QIcon8cacheKeyEv(void* qthis); // 4
+extern int64_t C_ZNK5QIcon8cacheKeyEv(void* qthis); // 4
   // proto: static void QIcon::setThemeSearchPaths(const QStringList & searchpath);
 extern void C_ZN5QIcon19setThemeSearchPathsERK11QStringList(void* arg0); // 4
   // proto:  void QIcon::detach();
 extern void C_ZN5QIcon6detachEv(void* qthis); // 4
   // proto:  QString QIcon::name();
-extern void C_ZNK5QIcon4nameEv(void* qthis); // 4
+extern void* C_ZNK5QIcon4nameEv(void* qthis); // 4
   // proto: static QStringList QIcon::themeSearchPaths();
 extern void C_ZN5QIcon16themeSearchPathsEv(); // 4
   // proto:  void QIcon::~QIcon();
@@ -59,11 +59,11 @@ extern void* C_ZN5QIconC2Ev(); // 3
   // proto:  void QIcon::QIcon(QIconEngine * engine);
 extern void* C_ZN5QIconC2EP11QIconEngine(void* arg0); // 3
   // proto: static bool QIcon::hasThemeIcon(const QString & name);
-extern void C_ZN5QIcon12hasThemeIconERK7QString(void* arg0); // 4
+extern bool C_ZN5QIcon12hasThemeIconERK7QString(void* arg0); // 4
   // proto:  bool QIcon::isNull();
-extern void C_ZNK5QIcon6isNullEv(void* qthis); // 4
+extern bool C_ZNK5QIcon6isNullEv(void* qthis); // 4
   // proto: static QIcon QIcon::fromTheme(const QString & name, const QIcon & fallback);
-extern void C_ZN5QIcon9fromThemeERK7QStringRKS_(void* arg0, void* arg1); // 4
+extern void* C_ZN5QIcon9fromThemeERK7QStringRKS_(void* arg0, void* arg1); // 4
 */
 import "C"
 // } // <= ext block end
@@ -83,7 +83,7 @@ type QIcon struct {
 }
 
 // themeName()
-func (this *QIcon) themeName_s(args ...interface{}) () {
+func (this *QIcon) Themename_S(args ...interface{}) (ret interface{}) {
   // themeName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -95,16 +95,20 @@ func (this *QIcon) themeName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QIcon9themeNameEv
     // invoke: QString themeName()
-    var ret = C.C_ZN5QIcon9themeNameEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN5QIcon9themeNameEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QIcon", "themeName", args)
   }
 
+  return
 }
 
 // setThemeName(const class QString &)
-func (this *QIcon) setThemeName_s(args ...interface{}) () {
+func (this *QIcon) Setthemename_S(args ...interface{}) () {
   // setThemeName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -124,10 +128,11 @@ func (this *QIcon) setThemeName_s(args ...interface{}) () {
     qtrt.ErrorResolve("QIcon", "setThemeName", args)
   }
 
+  return
 }
 
 // swap(class QIcon &)
-func (this *QIcon) swap(args ...interface{}) () {
+func (this *QIcon) Swap(args ...interface{}) () {
   // swap(class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -147,10 +152,11 @@ func (this *QIcon) swap(args ...interface{}) () {
     qtrt.ErrorResolve("QIcon", "swap", args)
   }
 
+  return
 }
 
 // isDetached()
-func (this *QIcon) isDetached(args ...interface{}) () {
+func (this *QIcon) Isdetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,16 +168,20 @@ func (this *QIcon) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QIcon10isDetachedEv
     // invoke: bool isDetached()
-    var ret = C.C_ZNK5QIcon10isDetachedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK5QIcon10isDetachedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QIcon", "isDetached", args)
   }
 
+  return
 }
 
 // cacheKey()
-func (this *QIcon) cacheKey(args ...interface{}) () {
+func (this *QIcon) Cachekey(args ...interface{}) (ret interface{}) {
   // cacheKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,16 +193,20 @@ func (this *QIcon) cacheKey(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QIcon8cacheKeyEv
     // invoke: qint64 cacheKey()
-    var ret = C.C_ZNK5QIcon8cacheKeyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK5QIcon8cacheKeyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int64Ty(false) // "qint64"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QIcon", "cacheKey", args)
   }
 
+  return
 }
 
 // setThemeSearchPaths(const class QStringList &)
-func (this *QIcon) setThemeSearchPaths_s(args ...interface{}) () {
+func (this *QIcon) Setthemesearchpaths_S(args ...interface{}) () {
   // setThemeSearchPaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -212,10 +226,11 @@ func (this *QIcon) setThemeSearchPaths_s(args ...interface{}) () {
     qtrt.ErrorResolve("QIcon", "setThemeSearchPaths", args)
   }
 
+  return
 }
 
 // detach()
-func (this *QIcon) detach(args ...interface{}) () {
+func (this *QIcon) Detach(args ...interface{}) () {
   // detach()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -232,10 +247,11 @@ func (this *QIcon) detach(args ...interface{}) () {
     qtrt.ErrorResolve("QIcon", "detach", args)
   }
 
+  return
 }
 
 // name()
-func (this *QIcon) name(args ...interface{}) () {
+func (this *QIcon) Name(args ...interface{}) (ret interface{}) {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -247,16 +263,20 @@ func (this *QIcon) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QIcon4nameEv
     // invoke: QString name()
-    var ret = C.C_ZNK5QIcon4nameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK5QIcon4nameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QIcon", "name", args)
   }
 
+  return
 }
 
 // themeSearchPaths()
-func (this *QIcon) themeSearchPaths_s(args ...interface{}) () {
+func (this *QIcon) Themesearchpaths_S(args ...interface{}) () {
   // themeSearchPaths()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -273,10 +293,11 @@ func (this *QIcon) themeSearchPaths_s(args ...interface{}) () {
     qtrt.ErrorResolve("QIcon", "themeSearchPaths", args)
   }
 
+  return
 }
 
 // ~QIcon()
-func (this *QIcon) FreeQIcon(args ...interface{}) () {
+func (this *QIcon) Freeqicon(args ...interface{}) () {
   // ~QIcon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,6 +314,7 @@ func (this *QIcon) FreeQIcon(args ...interface{}) () {
     qtrt.ErrorResolve("QIcon", "~QIcon", args)
   }
 
+  return
 }
 
 // QIcon(const class QString &)
@@ -368,7 +390,7 @@ func NewQIcon(args ...interface{}) *QIcon {
 }
 
 // hasThemeIcon(const class QString &)
-func (this *QIcon) hasThemeIcon_s(args ...interface{}) () {
+func (this *QIcon) Hasthemeicon_S(args ...interface{}) (ret interface{}) {
   // hasThemeIcon(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -383,16 +405,20 @@ func (this *QIcon) hasThemeIcon_s(args ...interface{}) () {
     // invoke: bool hasThemeIcon(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN5QIcon12hasThemeIconERK7QString(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN5QIcon12hasThemeIconERK7QString(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QIcon", "hasThemeIcon", args)
   }
 
+  return
 }
 
 // isNull()
-func (this *QIcon) isNull(args ...interface{}) () {
+func (this *QIcon) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -404,16 +430,20 @@ func (this *QIcon) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QIcon6isNullEv
     // invoke: bool isNull()
-    var ret = C.C_ZNK5QIcon6isNullEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK5QIcon6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QIcon", "isNull", args)
   }
 
+  return
 }
 
 // fromTheme(const class QString &, const class QIcon &)
-func (this *QIcon) fromTheme_s(args ...interface{}) () {
+func (this *QIcon) Fromtheme_S(args ...interface{}) (ret interface{}) {
   // fromTheme(const class QString &, const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -431,12 +461,16 @@ func (this *QIcon) fromTheme_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QIcon).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN5QIcon9fromThemeERK7QStringRKS_(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN5QIcon9fromThemeERK7QStringRKS_(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QIcon{}) // "QIcon"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QIcon", "fromTheme", args)
   }
 
+  return
 }
 
 // <= body block end

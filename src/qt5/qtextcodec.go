@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qtextcodec.h
 // dst-file: /src/core/qtextcodec.go
 //
@@ -31,59 +31,59 @@ import "qtrt"
   // proto:  void QTextEncoder::QTextEncoder(const QTextCodec * codec);
 extern void* C_ZN12QTextEncoderC2EPK10QTextCodec(void* arg0); // 1
   // proto:  bool QTextEncoder::hasFailure();
-extern void C_ZNK12QTextEncoder10hasFailureEv(void* qthis); // 4
+extern bool C_ZNK12QTextEncoder10hasFailureEv(void* qthis); // 4
   // proto:  QByteArray QTextEncoder::fromUnicode(const QChar * uc, int len);
-extern void C_ZN12QTextEncoder11fromUnicodeEPK5QChari(void* qthis, void* arg0, int32_t arg1); // 4
+extern void* C_ZN12QTextEncoder11fromUnicodeEPK5QChari(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QByteArray QTextEncoder::fromUnicode(const QString & str);
-extern void C_ZN12QTextEncoder11fromUnicodeERK7QString(void* qthis, void* arg0); // 4
+extern void* C_ZN12QTextEncoder11fromUnicodeERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QTextEncoder::~QTextEncoder();
 extern void C_ZN12QTextEncoderD2Ev(void* qthis); // 4
   // proto: static void QTextCodec::setCodecForLocale(QTextCodec * c);
 extern void C_ZN10QTextCodec17setCodecForLocaleEPS_(void* arg0); // 4
   // proto: static QTextCodec * QTextCodec::codecForName(const QByteArray & name);
-extern void C_ZN10QTextCodec12codecForNameERK10QByteArray(void* arg0); // 4
+extern void* C_ZN10QTextCodec12codecForNameERK10QByteArray(void* arg0); // 4
   // proto: static QTextCodec * QTextCodec::codecForName(const char * name);
-extern void C_ZN10QTextCodec12codecForNameEPKc(unsigned char* arg0); // 2
+extern void* C_ZN10QTextCodec12codecForNameEPKc(void* arg0); // 2
   // proto:  bool QTextCodec::canEncode(QChar );
-extern void C_ZNK10QTextCodec9canEncodeE5QChar(void* qthis, void* arg0); // 4
+extern bool C_ZNK10QTextCodec9canEncodeE5QChar(void* qthis, void* arg0); // 4
   // proto:  bool QTextCodec::canEncode(const QString & );
-extern void C_ZNK10QTextCodec9canEncodeERK7QString(void* qthis, void* arg0); // 4
+extern bool C_ZNK10QTextCodec9canEncodeERK7QString(void* qthis, void* arg0); // 4
   // proto: static QTextCodec * QTextCodec::codecForLocale();
-extern void C_ZN10QTextCodec14codecForLocaleEv(); // 4
+extern void* C_ZN10QTextCodec14codecForLocaleEv(); // 4
   // proto: static QTextCodec * QTextCodec::codecForHtml(const QByteArray & ba);
-extern void C_ZN10QTextCodec12codecForHtmlERK10QByteArray(void* arg0); // 4
+extern void* C_ZN10QTextCodec12codecForHtmlERK10QByteArray(void* arg0); // 4
   // proto: static QTextCodec * QTextCodec::codecForHtml(const QByteArray & ba, QTextCodec * defaultCodec);
-extern void C_ZN10QTextCodec12codecForHtmlERK10QByteArrayPS_(void* arg0, void* arg1); // 4
+extern void* C_ZN10QTextCodec12codecForHtmlERK10QByteArrayPS_(void* arg0, void* arg1); // 4
   // proto: static QList<QByteArray> QTextCodec::availableCodecs();
 extern void C_ZN10QTextCodec15availableCodecsEv(); // 4
   // proto: static QTextCodec * QTextCodec::codecForUtfText(const QByteArray & ba, QTextCodec * defaultCodec);
-extern void C_ZN10QTextCodec15codecForUtfTextERK10QByteArrayPS_(void* arg0, void* arg1); // 4
+extern void* C_ZN10QTextCodec15codecForUtfTextERK10QByteArrayPS_(void* arg0, void* arg1); // 4
   // proto: static QTextCodec * QTextCodec::codecForUtfText(const QByteArray & ba);
-extern void C_ZN10QTextCodec15codecForUtfTextERK10QByteArray(void* arg0); // 4
+extern void* C_ZN10QTextCodec15codecForUtfTextERK10QByteArray(void* arg0); // 4
   // proto: static QList<int> QTextCodec::availableMibs();
 extern void C_ZN10QTextCodec13availableMibsEv(); // 4
   // proto:  QByteArray QTextCodec::fromUnicode(const QString & uc);
-extern void C_ZNK10QTextCodec11fromUnicodeERK7QString(void* qthis, void* arg0); // 4
+extern void* C_ZNK10QTextCodec11fromUnicodeERK7QString(void* qthis, void* arg0); // 4
   // proto:  QList<QByteArray> QTextCodec::aliases();
 extern void C_ZNK10QTextCodec7aliasesEv(void* qthis); // 4
   // proto: static QTextCodec * QTextCodec::codecForMib(int mib);
-extern void C_ZN10QTextCodec11codecForMibEi(int32_t arg0); // 4
+extern void* C_ZN10QTextCodec11codecForMibEi(int32_t arg0); // 4
   // proto:  QString QTextCodec::toUnicode(const QByteArray & );
-extern void C_ZNK10QTextCodec9toUnicodeERK10QByteArray(void* qthis, void* arg0); // 4
+extern void* C_ZNK10QTextCodec9toUnicodeERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  QString QTextCodec::toUnicode(const char * chars);
-extern void C_ZNK10QTextCodec9toUnicodeEPKc(void* qthis, unsigned char* arg0); // 4
+extern void* C_ZNK10QTextCodec9toUnicodeEPKc(void* qthis, void* arg0); // 4
   // proto:  void QTextDecoder::QTextDecoder(const QTextCodec * codec);
 extern void* C_ZN12QTextDecoderC2EPK10QTextCodec(void* arg0); // 1
   // proto:  bool QTextDecoder::hasFailure();
-extern void C_ZNK12QTextDecoder10hasFailureEv(void* qthis); // 4
+extern bool C_ZNK12QTextDecoder10hasFailureEv(void* qthis); // 4
   // proto:  void QTextDecoder::~QTextDecoder();
 extern void C_ZN12QTextDecoderD2Ev(void* qthis); // 4
   // proto:  QString QTextDecoder::toUnicode(const QByteArray & ba);
-extern void C_ZN12QTextDecoder9toUnicodeERK10QByteArray(void* qthis, void* arg0); // 4
+extern void* C_ZN12QTextDecoder9toUnicodeERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  QString QTextDecoder::toUnicode(const char * chars, int len);
-extern void C_ZN12QTextDecoder9toUnicodeEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void* C_ZN12QTextDecoder9toUnicodeEPKci(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QTextDecoder::toUnicode(QString * target, const char * chars, int len);
-extern void C_ZN12QTextDecoder9toUnicodeEP7QStringPKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2); // 4
+extern void C_ZN12QTextDecoder9toUnicodeEP7QStringPKci(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
 */
 import "C"
 // } // <= ext block end
@@ -142,7 +142,7 @@ func NewQTextEncoder(args ...interface{}) *QTextEncoder {
 }
 
 // hasFailure()
-func (this *QTextEncoder) hasFailure(args ...interface{}) () {
+func (this *QTextEncoder) Hasfailure(args ...interface{}) (ret interface{}) {
   // hasFailure()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -154,16 +154,20 @@ func (this *QTextEncoder) hasFailure(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTextEncoder10hasFailureEv
     // invoke: bool hasFailure()
-    var ret = C.C_ZNK12QTextEncoder10hasFailureEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTextEncoder10hasFailureEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextEncoder", "hasFailure", args)
   }
 
+  return
 }
 
 // fromUnicode(const class QChar *, int)
-func (this *QTextEncoder) fromUnicode(args ...interface{}) () {
+func (this *QTextEncoder) Fromunicode(args ...interface{}) (ret interface{}) {
   // fromUnicode(const class QChar *, int)
   // fromUnicode(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -184,23 +188,30 @@ func (this *QTextEncoder) fromUnicode(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN12QTextEncoder11fromUnicodeEPK5QChari(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QTextEncoder11fromUnicodeEPK5QChari(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN12QTextEncoder11fromUnicodeERK7QString
     // invoke: QByteArray fromUnicode(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QTextEncoder11fromUnicodeERK7QString(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QTextEncoder11fromUnicodeERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextEncoder", "fromUnicode", args)
   }
 
+  return
 }
 
 // ~QTextEncoder()
-func (this *QTextEncoder) FreeQTextEncoder(args ...interface{}) () {
+func (this *QTextEncoder) Freeqtextencoder(args ...interface{}) () {
   // ~QTextEncoder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -217,10 +228,11 @@ func (this *QTextEncoder) FreeQTextEncoder(args ...interface{}) () {
     qtrt.ErrorResolve("QTextEncoder", "~QTextEncoder", args)
   }
 
+  return
 }
 
 // setCodecForLocale(class QTextCodec *)
-func (this *QTextCodec) setCodecForLocale_s(args ...interface{}) () {
+func (this *QTextCodec) Setcodecforlocale_S(args ...interface{}) () {
   // setCodecForLocale(class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -240,10 +252,11 @@ func (this *QTextCodec) setCodecForLocale_s(args ...interface{}) () {
     qtrt.ErrorResolve("QTextCodec", "setCodecForLocale", args)
   }
 
+  return
 }
 
 // codecForName(const class QByteArray &)
-func (this *QTextCodec) codecForName_s(args ...interface{}) () {
+func (this *QTextCodec) Codecforname_S(args ...interface{}) (ret interface{}) {
   // codecForName(const class QByteArray &)
   // codecForName(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -261,23 +274,32 @@ func (this *QTextCodec) codecForName_s(args ...interface{}) () {
     // invoke: QTextCodec * codecForName(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN10QTextCodec12codecForNameERK10QByteArray(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QTextCodec12codecForNameERK10QByteArray(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN10QTextCodec12codecForNameEPKc
     // invoke: QTextCodec * codecForName(const char *)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
-    var ret = C.C_ZN10QTextCodec12codecForNameEPKc(arg0)
-    if false {reflect.TypeOf(ret)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[1][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
+    var ret0 = C.C_ZN10QTextCodec12codecForNameEPKc(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForName", args)
   }
 
+  return
 }
 
 // canEncode(class QChar)
-func (this *QTextCodec) canEncode(args ...interface{}) () {
+func (this *QTextCodec) Canencode(args ...interface{}) (ret interface{}) {
   // canEncode(class QChar)
   // canEncode(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -295,23 +317,30 @@ func (this *QTextCodec) canEncode(args ...interface{}) () {
     // invoke: bool canEncode(class QChar)
     var arg0 = args[0].(QChar).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK10QTextCodec9canEncodeE5QChar(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QTextCodec9canEncodeE5QChar(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK10QTextCodec9canEncodeERK7QString
     // invoke: bool canEncode(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK10QTextCodec9canEncodeERK7QString(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QTextCodec9canEncodeERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextCodec", "canEncode", args)
   }
 
+  return
 }
 
 // codecForLocale()
-func (this *QTextCodec) codecForLocale_s(args ...interface{}) () {
+func (this *QTextCodec) Codecforlocale_S(args ...interface{}) (ret interface{}) {
   // codecForLocale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -323,16 +352,20 @@ func (this *QTextCodec) codecForLocale_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextCodec14codecForLocaleEv
     // invoke: QTextCodec * codecForLocale()
-    var ret = C.C_ZN10QTextCodec14codecForLocaleEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QTextCodec14codecForLocaleEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForLocale", args)
   }
 
+  return
 }
 
 // codecForHtml(const class QByteArray &)
-func (this *QTextCodec) codecForHtml_s(args ...interface{}) () {
+func (this *QTextCodec) Codecforhtml_S(args ...interface{}) (ret interface{}) {
   // codecForHtml(const class QByteArray &)
   // codecForHtml(const class QByteArray &, class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -351,8 +384,11 @@ func (this *QTextCodec) codecForHtml_s(args ...interface{}) () {
     // invoke: QTextCodec * codecForHtml(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN10QTextCodec12codecForHtmlERK10QByteArray(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QTextCodec12codecForHtmlERK10QByteArray(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN10QTextCodec12codecForHtmlERK10QByteArrayPS_
     // invoke: QTextCodec * codecForHtml(const class QByteArray &, class QTextCodec *)
@@ -360,16 +396,20 @@ func (this *QTextCodec) codecForHtml_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTextCodec).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN10QTextCodec12codecForHtmlERK10QByteArrayPS_(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QTextCodec12codecForHtmlERK10QByteArrayPS_(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForHtml", args)
   }
 
+  return
 }
 
 // availableCodecs()
-func (this *QTextCodec) availableCodecs_s(args ...interface{}) () {
+func (this *QTextCodec) Availablecodecs_S(args ...interface{}) () {
   // availableCodecs()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -386,10 +426,11 @@ func (this *QTextCodec) availableCodecs_s(args ...interface{}) () {
     qtrt.ErrorResolve("QTextCodec", "availableCodecs", args)
   }
 
+  return
 }
 
 // codecForUtfText(const class QByteArray &, class QTextCodec *)
-func (this *QTextCodec) codecForUtfText_s(args ...interface{}) () {
+func (this *QTextCodec) Codecforutftext_S(args ...interface{}) (ret interface{}) {
   // codecForUtfText(const class QByteArray &, class QTextCodec *)
   // codecForUtfText(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -410,23 +451,30 @@ func (this *QTextCodec) codecForUtfText_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTextCodec).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN10QTextCodec15codecForUtfTextERK10QByteArrayPS_(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QTextCodec15codecForUtfTextERK10QByteArrayPS_(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN10QTextCodec15codecForUtfTextERK10QByteArray
     // invoke: QTextCodec * codecForUtfText(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN10QTextCodec15codecForUtfTextERK10QByteArray(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QTextCodec15codecForUtfTextERK10QByteArray(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForUtfText", args)
   }
 
+  return
 }
 
 // availableMibs()
-func (this *QTextCodec) availableMibs_s(args ...interface{}) () {
+func (this *QTextCodec) Availablemibs_S(args ...interface{}) () {
   // availableMibs()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -443,10 +491,11 @@ func (this *QTextCodec) availableMibs_s(args ...interface{}) () {
     qtrt.ErrorResolve("QTextCodec", "availableMibs", args)
   }
 
+  return
 }
 
 // fromUnicode(const class QString &)
-func (this *QTextCodec) fromUnicode(args ...interface{}) () {
+func (this *QTextCodec) Fromunicode(args ...interface{}) (ret interface{}) {
   // fromUnicode(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -461,16 +510,20 @@ func (this *QTextCodec) fromUnicode(args ...interface{}) () {
     // invoke: QByteArray fromUnicode(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK10QTextCodec11fromUnicodeERK7QString(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QTextCodec11fromUnicodeERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextCodec", "fromUnicode", args)
   }
 
+  return
 }
 
 // aliases()
-func (this *QTextCodec) aliases(args ...interface{}) () {
+func (this *QTextCodec) Aliases(args ...interface{}) () {
   // aliases()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -487,10 +540,11 @@ func (this *QTextCodec) aliases(args ...interface{}) () {
     qtrt.ErrorResolve("QTextCodec", "aliases", args)
   }
 
+  return
 }
 
 // codecForMib(int)
-func (this *QTextCodec) codecForMib_s(args ...interface{}) () {
+func (this *QTextCodec) Codecformib_S(args ...interface{}) (ret interface{}) {
   // codecForMib(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -505,16 +559,20 @@ func (this *QTextCodec) codecForMib_s(args ...interface{}) () {
     // invoke: QTextCodec * codecForMib(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN10QTextCodec11codecForMibEi(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QTextCodec11codecForMibEi(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForMib", args)
   }
 
+  return
 }
 
 // toUnicode(const class QByteArray &)
-func (this *QTextCodec) toUnicode(args ...interface{}) () {
+func (this *QTextCodec) Tounicode(args ...interface{}) (ret interface{}) {
   // toUnicode(const class QByteArray &)
   // toUnicode(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -532,19 +590,28 @@ func (this *QTextCodec) toUnicode(args ...interface{}) () {
     // invoke: QString toUnicode(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK10QTextCodec9toUnicodeERK10QByteArray(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QTextCodec9toUnicodeERK10QByteArray(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK10QTextCodec9toUnicodeEPKc
     // invoke: QString toUnicode(const char *)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK10QTextCodec9toUnicodeEPKc(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[1][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
+    var ret0 = C.C_ZNK10QTextCodec9toUnicodeEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextCodec", "toUnicode", args)
   }
 
+  return
 }
 
 // QTextDecoder(const class QTextCodec *)
@@ -575,7 +642,7 @@ func NewQTextDecoder(args ...interface{}) *QTextDecoder {
 }
 
 // hasFailure()
-func (this *QTextDecoder) hasFailure(args ...interface{}) () {
+func (this *QTextDecoder) Hasfailure(args ...interface{}) (ret interface{}) {
   // hasFailure()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -587,16 +654,20 @@ func (this *QTextDecoder) hasFailure(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTextDecoder10hasFailureEv
     // invoke: bool hasFailure()
-    var ret = C.C_ZNK12QTextDecoder10hasFailureEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTextDecoder10hasFailureEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDecoder", "hasFailure", args)
   }
 
+  return
 }
 
 // ~QTextDecoder()
-func (this *QTextDecoder) FreeQTextDecoder(args ...interface{}) () {
+func (this *QTextDecoder) Freeqtextdecoder(args ...interface{}) () {
   // ~QTextDecoder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -613,10 +684,11 @@ func (this *QTextDecoder) FreeQTextDecoder(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDecoder", "~QTextDecoder", args)
   }
 
+  return
 }
 
 // toUnicode(const class QByteArray &)
-func (this *QTextDecoder) toUnicode(args ...interface{}) () {
+func (this *QTextDecoder) Tounicode(args ...interface{}) (ret interface{}) {
   // toUnicode(const class QByteArray &)
   // toUnicode(const char *, int)
   // toUnicode(class QString *, const char *, int)
@@ -640,24 +712,34 @@ func (this *QTextDecoder) toUnicode(args ...interface{}) () {
     // invoke: QString toUnicode(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QTextDecoder9toUnicodeERK10QByteArray(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QTextDecoder9toUnicodeERK10QByteArray(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN12QTextDecoder9toUnicodeEPKci
     // invoke: QString toUnicode(const char *, int)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[1][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN12QTextDecoder9toUnicodeEPKci(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QTextDecoder9toUnicodeEPKci(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 2:
     // invoke: _ZN12QTextDecoder9toUnicodeEP7QStringPKci
     // invoke: void toUnicode(class QString *, const char *, int)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[2][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
     C.C_ZN12QTextDecoder9toUnicodeEP7QStringPKci(this.qclsinst, arg0, arg1, arg2)
@@ -665,6 +747,7 @@ func (this *QTextDecoder) toUnicode(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDecoder", "toUnicode", args)
   }
 
+  return
 }
 
 // <= body block end

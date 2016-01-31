@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qlabel.h
 // dst-file: /src/widgets/qlabel.go
 //
@@ -31,27 +31,27 @@ import "qtrt"
   // proto:  void QLabel::setBuddy(QWidget * );
 extern void C_ZN6QLabel8setBuddyEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  QString QLabel::text();
-extern void C_ZNK6QLabel4textEv(void* qthis); // 4
+extern void* C_ZNK6QLabel4textEv(void* qthis); // 4
   // proto:  void QLabel::setPixmap(const QPixmap & );
 extern void C_ZN6QLabel9setPixmapERK7QPixmap(void* qthis, void* arg0); // 4
   // proto:  bool QLabel::wordWrap();
-extern void C_ZNK6QLabel8wordWrapEv(void* qthis); // 4
+extern bool C_ZNK6QLabel8wordWrapEv(void* qthis); // 4
   // proto:  bool QLabel::hasSelectedText();
-extern void C_ZNK6QLabel15hasSelectedTextEv(void* qthis); // 4
+extern bool C_ZNK6QLabel15hasSelectedTextEv(void* qthis); // 4
   // proto:  void QLabel::setOpenExternalLinks(bool open);
 extern void C_ZN6QLabel20setOpenExternalLinksEb(void* qthis, bool arg0); // 4
   // proto:  Qt::Alignment QLabel::alignment();
 extern void C_ZNK6QLabel9alignmentEv(void* qthis); // 4
   // proto:  const QPixmap * QLabel::pixmap();
-extern void C_ZNK6QLabel6pixmapEv(void* qthis); // 4
+extern void* C_ZNK6QLabel6pixmapEv(void* qthis); // 4
   // proto:  QWidget * QLabel::buddy();
-extern void C_ZNK6QLabel5buddyEv(void* qthis); // 4
+extern void* C_ZNK6QLabel5buddyEv(void* qthis); // 4
   // proto:  QMovie * QLabel::movie();
-extern void C_ZNK6QLabel5movieEv(void* qthis); // 4
+extern void* C_ZNK6QLabel5movieEv(void* qthis); // 4
   // proto:  void QLabel::setPicture(const QPicture & );
 extern void C_ZN6QLabel10setPictureERK8QPicture(void* qthis, void* arg0); // 4
   // proto:  bool QLabel::hasScaledContents();
-extern void C_ZNK6QLabel17hasScaledContentsEv(void* qthis); // 4
+extern bool C_ZNK6QLabel17hasScaledContentsEv(void* qthis); // 4
   // proto:  void QLabel::~QLabel();
 extern void C_ZN6QLabelD2Ev(void* qthis); // 4
   // proto:  void QLabel::setWordWrap(bool on);
@@ -59,7 +59,7 @@ extern void C_ZN6QLabel11setWordWrapEb(void* qthis, bool arg0); // 4
   // proto:  Qt::TextInteractionFlags QLabel::textInteractionFlags();
 extern void C_ZNK6QLabel20textInteractionFlagsEv(void* qthis); // 4
   // proto:  const QPicture * QLabel::picture();
-extern void C_ZNK6QLabel7pictureEv(void* qthis); // 4
+extern void* C_ZNK6QLabel7pictureEv(void* qthis); // 4
   // proto:  void QLabel::setIndent(int );
 extern void C_ZN6QLabel9setIndentEi(void* qthis, int32_t arg0); // 4
   // proto:  void QLabel::setMovie(QMovie * movie);
@@ -67,35 +67,35 @@ extern void C_ZN6QLabel8setMovieEP6QMovie(void* qthis, void* arg0); // 4
   // proto:  void QLabel::setMargin(int );
 extern void C_ZN6QLabel9setMarginEi(void* qthis, int32_t arg0); // 4
   // proto:  QSize QLabel::sizeHint();
-extern void C_ZNK6QLabel8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK6QLabel8sizeHintEv(void* qthis); // 4
   // proto:  void QLabel::setScaledContents(bool );
 extern void C_ZN6QLabel17setScaledContentsEb(void* qthis, bool arg0); // 4
   // proto:  int QLabel::indent();
-extern void C_ZNK6QLabel6indentEv(void* qthis); // 4
+extern int32_t C_ZNK6QLabel6indentEv(void* qthis); // 4
   // proto:  const QMetaObject * QLabel::metaObject();
 extern void C_ZNK6QLabel10metaObjectEv(void* qthis); // 4
   // proto:  void QLabel::setSelection(int , int );
 extern void C_ZN6QLabel12setSelectionEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  QSize QLabel::minimumSizeHint();
-extern void C_ZNK6QLabel15minimumSizeHintEv(void* qthis); // 4
+extern void* C_ZNK6QLabel15minimumSizeHintEv(void* qthis); // 4
   // proto:  bool QLabel::openExternalLinks();
-extern void C_ZNK6QLabel17openExternalLinksEv(void* qthis); // 4
+extern bool C_ZNK6QLabel17openExternalLinksEv(void* qthis); // 4
   // proto:  void QLabel::setText(const QString & );
 extern void C_ZN6QLabel7setTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QLabel::selectedText();
-extern void C_ZNK6QLabel12selectedTextEv(void* qthis); // 4
+extern void* C_ZNK6QLabel12selectedTextEv(void* qthis); // 4
   // proto:  int QLabel::heightForWidth(int );
-extern void C_ZNK6QLabel14heightForWidthEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK6QLabel14heightForWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  void QLabel::setNum(int );
 extern void C_ZN6QLabel6setNumEi(void* qthis, int32_t arg0); // 4
   // proto:  void QLabel::setNum(double );
 extern void C_ZN6QLabel6setNumEd(void* qthis, double arg0); // 4
   // proto:  int QLabel::selectionStart();
-extern void C_ZNK6QLabel14selectionStartEv(void* qthis); // 4
+extern int32_t C_ZNK6QLabel14selectionStartEv(void* qthis); // 4
   // proto:  Qt::TextFormat QLabel::textFormat();
 extern void C_ZNK6QLabel10textFormatEv(void* qthis); // 4
   // proto:  int QLabel::margin();
-extern void C_ZNK6QLabel6marginEv(void* qthis); // 4
+extern int32_t C_ZNK6QLabel6marginEv(void* qthis); // 4
   // proto:  void QLabel::clear();
 extern void C_ZN6QLabel5clearEv(void* qthis); // 4
 */
@@ -119,7 +119,7 @@ type QLabel struct {
 }
 
 // setBuddy(class QWidget *)
-func (this *QLabel) setBuddy(args ...interface{}) () {
+func (this *QLabel) Setbuddy(args ...interface{}) () {
   // setBuddy(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -139,10 +139,11 @@ func (this *QLabel) setBuddy(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "setBuddy", args)
   }
 
+  return
 }
 
 // text()
-func (this *QLabel) text(args ...interface{}) () {
+func (this *QLabel) Text(args ...interface{}) (ret interface{}) {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -154,16 +155,20 @@ func (this *QLabel) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel4textEv
     // invoke: QString text()
-    var ret = C.C_ZNK6QLabel4textEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "text", args)
   }
 
+  return
 }
 
 // setPixmap(const class QPixmap &)
-func (this *QLabel) setPixmap(args ...interface{}) () {
+func (this *QLabel) Setpixmap(args ...interface{}) () {
   // setPixmap(const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,10 +188,11 @@ func (this *QLabel) setPixmap(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "setPixmap", args)
   }
 
+  return
 }
 
 // wordWrap()
-func (this *QLabel) wordWrap(args ...interface{}) () {
+func (this *QLabel) Wordwrap(args ...interface{}) (ret interface{}) {
   // wordWrap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -198,16 +204,20 @@ func (this *QLabel) wordWrap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel8wordWrapEv
     // invoke: bool wordWrap()
-    var ret = C.C_ZNK6QLabel8wordWrapEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel8wordWrapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "wordWrap", args)
   }
 
+  return
 }
 
 // hasSelectedText()
-func (this *QLabel) hasSelectedText(args ...interface{}) () {
+func (this *QLabel) Hasselectedtext(args ...interface{}) (ret interface{}) {
   // hasSelectedText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -219,16 +229,20 @@ func (this *QLabel) hasSelectedText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel15hasSelectedTextEv
     // invoke: bool hasSelectedText()
-    var ret = C.C_ZNK6QLabel15hasSelectedTextEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel15hasSelectedTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "hasSelectedText", args)
   }
 
+  return
 }
 
 // setOpenExternalLinks(_Bool)
-func (this *QLabel) setOpenExternalLinks(args ...interface{}) () {
+func (this *QLabel) Setopenexternallinks(args ...interface{}) () {
   // setOpenExternalLinks(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -248,10 +262,11 @@ func (this *QLabel) setOpenExternalLinks(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "setOpenExternalLinks", args)
   }
 
+  return
 }
 
 // alignment()
-func (this *QLabel) alignment(args ...interface{}) () {
+func (this *QLabel) Alignment(args ...interface{}) () {
   // alignment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -268,10 +283,11 @@ func (this *QLabel) alignment(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "alignment", args)
   }
 
+  return
 }
 
 // pixmap()
-func (this *QLabel) pixmap(args ...interface{}) () {
+func (this *QLabel) Pixmap(args ...interface{}) (ret interface{}) {
   // pixmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -283,16 +299,20 @@ func (this *QLabel) pixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel6pixmapEv
     // invoke: const QPixmap * pixmap()
-    var ret = C.C_ZNK6QLabel6pixmapEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel6pixmapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPixmap{}) // "const QPixmap *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "pixmap", args)
   }
 
+  return
 }
 
 // buddy()
-func (this *QLabel) buddy(args ...interface{}) () {
+func (this *QLabel) Buddy(args ...interface{}) (ret interface{}) {
   // buddy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -304,16 +324,20 @@ func (this *QLabel) buddy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel5buddyEv
     // invoke: QWidget * buddy()
-    var ret = C.C_ZNK6QLabel5buddyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel5buddyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "buddy", args)
   }
 
+  return
 }
 
 // movie()
-func (this *QLabel) movie(args ...interface{}) () {
+func (this *QLabel) Movie(args ...interface{}) (ret interface{}) {
   // movie()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -325,16 +349,20 @@ func (this *QLabel) movie(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel5movieEv
     // invoke: QMovie * movie()
-    var ret = C.C_ZNK6QLabel5movieEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel5movieEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMovie{}) // "QMovie *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "movie", args)
   }
 
+  return
 }
 
 // setPicture(const class QPicture &)
-func (this *QLabel) setPicture(args ...interface{}) () {
+func (this *QLabel) Setpicture(args ...interface{}) () {
   // setPicture(const class QPicture &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -354,10 +382,11 @@ func (this *QLabel) setPicture(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "setPicture", args)
   }
 
+  return
 }
 
 // hasScaledContents()
-func (this *QLabel) hasScaledContents(args ...interface{}) () {
+func (this *QLabel) Hasscaledcontents(args ...interface{}) (ret interface{}) {
   // hasScaledContents()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -369,16 +398,20 @@ func (this *QLabel) hasScaledContents(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel17hasScaledContentsEv
     // invoke: bool hasScaledContents()
-    var ret = C.C_ZNK6QLabel17hasScaledContentsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel17hasScaledContentsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "hasScaledContents", args)
   }
 
+  return
 }
 
 // ~QLabel()
-func (this *QLabel) FreeQLabel(args ...interface{}) () {
+func (this *QLabel) Freeqlabel(args ...interface{}) () {
   // ~QLabel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -395,10 +428,11 @@ func (this *QLabel) FreeQLabel(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "~QLabel", args)
   }
 
+  return
 }
 
 // setWordWrap(_Bool)
-func (this *QLabel) setWordWrap(args ...interface{}) () {
+func (this *QLabel) Setwordwrap(args ...interface{}) () {
   // setWordWrap(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -418,10 +452,11 @@ func (this *QLabel) setWordWrap(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "setWordWrap", args)
   }
 
+  return
 }
 
 // textInteractionFlags()
-func (this *QLabel) textInteractionFlags(args ...interface{}) () {
+func (this *QLabel) Textinteractionflags(args ...interface{}) () {
   // textInteractionFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -438,10 +473,11 @@ func (this *QLabel) textInteractionFlags(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "textInteractionFlags", args)
   }
 
+  return
 }
 
 // picture()
-func (this *QLabel) picture(args ...interface{}) () {
+func (this *QLabel) Picture(args ...interface{}) (ret interface{}) {
   // picture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -453,16 +489,20 @@ func (this *QLabel) picture(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel7pictureEv
     // invoke: const QPicture * picture()
-    var ret = C.C_ZNK6QLabel7pictureEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel7pictureEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPicture{}) // "const QPicture *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "picture", args)
   }
 
+  return
 }
 
 // setIndent(int)
-func (this *QLabel) setIndent(args ...interface{}) () {
+func (this *QLabel) Setindent(args ...interface{}) () {
   // setIndent(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -482,10 +522,11 @@ func (this *QLabel) setIndent(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "setIndent", args)
   }
 
+  return
 }
 
 // setMovie(class QMovie *)
-func (this *QLabel) setMovie(args ...interface{}) () {
+func (this *QLabel) Setmovie(args ...interface{}) () {
   // setMovie(class QMovie *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -505,10 +546,11 @@ func (this *QLabel) setMovie(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "setMovie", args)
   }
 
+  return
 }
 
 // setMargin(int)
-func (this *QLabel) setMargin(args ...interface{}) () {
+func (this *QLabel) Setmargin(args ...interface{}) () {
   // setMargin(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -528,10 +570,11 @@ func (this *QLabel) setMargin(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "setMargin", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QLabel) sizeHint(args ...interface{}) () {
+func (this *QLabel) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -543,16 +586,20 @@ func (this *QLabel) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK6QLabel8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "sizeHint", args)
   }
 
+  return
 }
 
 // setScaledContents(_Bool)
-func (this *QLabel) setScaledContents(args ...interface{}) () {
+func (this *QLabel) Setscaledcontents(args ...interface{}) () {
   // setScaledContents(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -572,10 +619,11 @@ func (this *QLabel) setScaledContents(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "setScaledContents", args)
   }
 
+  return
 }
 
 // indent()
-func (this *QLabel) indent(args ...interface{}) () {
+func (this *QLabel) Indent(args ...interface{}) (ret interface{}) {
   // indent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -587,16 +635,20 @@ func (this *QLabel) indent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel6indentEv
     // invoke: int indent()
-    var ret = C.C_ZNK6QLabel6indentEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel6indentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "indent", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QLabel) metaObject(args ...interface{}) () {
+func (this *QLabel) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -613,10 +665,11 @@ func (this *QLabel) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "metaObject", args)
   }
 
+  return
 }
 
 // setSelection(int, int)
-func (this *QLabel) setSelection(args ...interface{}) () {
+func (this *QLabel) Setselection(args ...interface{}) () {
   // setSelection(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -639,10 +692,11 @@ func (this *QLabel) setSelection(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "setSelection", args)
   }
 
+  return
 }
 
 // minimumSizeHint()
-func (this *QLabel) minimumSizeHint(args ...interface{}) () {
+func (this *QLabel) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -654,16 +708,20 @@ func (this *QLabel) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret = C.C_ZNK6QLabel15minimumSizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "minimumSizeHint", args)
   }
 
+  return
 }
 
 // openExternalLinks()
-func (this *QLabel) openExternalLinks(args ...interface{}) () {
+func (this *QLabel) Openexternallinks(args ...interface{}) (ret interface{}) {
   // openExternalLinks()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -675,16 +733,20 @@ func (this *QLabel) openExternalLinks(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel17openExternalLinksEv
     // invoke: bool openExternalLinks()
-    var ret = C.C_ZNK6QLabel17openExternalLinksEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel17openExternalLinksEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "openExternalLinks", args)
   }
 
+  return
 }
 
 // setText(const class QString &)
-func (this *QLabel) setText(args ...interface{}) () {
+func (this *QLabel) Settext(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -704,10 +766,11 @@ func (this *QLabel) setText(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "setText", args)
   }
 
+  return
 }
 
 // selectedText()
-func (this *QLabel) selectedText(args ...interface{}) () {
+func (this *QLabel) Selectedtext(args ...interface{}) (ret interface{}) {
   // selectedText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -719,16 +782,20 @@ func (this *QLabel) selectedText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel12selectedTextEv
     // invoke: QString selectedText()
-    var ret = C.C_ZNK6QLabel12selectedTextEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel12selectedTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "selectedText", args)
   }
 
+  return
 }
 
 // heightForWidth(int)
-func (this *QLabel) heightForWidth(args ...interface{}) () {
+func (this *QLabel) Heightforwidth(args ...interface{}) (ret interface{}) {
   // heightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -743,16 +810,20 @@ func (this *QLabel) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK6QLabel14heightForWidthEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel14heightForWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "heightForWidth", args)
   }
 
+  return
 }
 
 // setNum(int)
-func (this *QLabel) setNum(args ...interface{}) () {
+func (this *QLabel) Setnum(args ...interface{}) () {
   // setNum(int)
   // setNum(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -781,10 +852,11 @@ func (this *QLabel) setNum(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "setNum", args)
   }
 
+  return
 }
 
 // selectionStart()
-func (this *QLabel) selectionStart(args ...interface{}) () {
+func (this *QLabel) Selectionstart(args ...interface{}) (ret interface{}) {
   // selectionStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -796,16 +868,20 @@ func (this *QLabel) selectionStart(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel14selectionStartEv
     // invoke: int selectionStart()
-    var ret = C.C_ZNK6QLabel14selectionStartEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel14selectionStartEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "selectionStart", args)
   }
 
+  return
 }
 
 // textFormat()
-func (this *QLabel) textFormat(args ...interface{}) () {
+func (this *QLabel) Textformat(args ...interface{}) () {
   // textFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -822,10 +898,11 @@ func (this *QLabel) textFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "textFormat", args)
   }
 
+  return
 }
 
 // margin()
-func (this *QLabel) margin(args ...interface{}) () {
+func (this *QLabel) Margin(args ...interface{}) (ret interface{}) {
   // margin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -837,16 +914,20 @@ func (this *QLabel) margin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel6marginEv
     // invoke: int margin()
-    var ret = C.C_ZNK6QLabel6marginEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QLabel6marginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLabel", "margin", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QLabel) clear(args ...interface{}) () {
+func (this *QLabel) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -863,6 +944,7 @@ func (this *QLabel) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QLabel", "clear", args)
   }
 
+  return
 }
 
 // <= body block end

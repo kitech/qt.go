@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qpagelayout.h
 // dst-file: /src/gui/qpagelayout.go
 //
@@ -31,15 +31,15 @@ import "qtrt"
   // proto:  QPageLayout::Orientation QPageLayout::orientation();
 extern void C_ZNK11QPageLayout11orientationEv(void* qthis); // 4
   // proto:  QPageSize QPageLayout::pageSize();
-extern void C_ZNK11QPageLayout8pageSizeEv(void* qthis); // 4
+extern void* C_ZNK11QPageLayout8pageSizeEv(void* qthis); // 4
   // proto:  void QPageLayout::setPageSize(const QPageSize & pageSize, const QMarginsF & minMargins);
 extern void C_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QRect QPageLayout::paintRectPoints();
-extern void C_ZNK11QPageLayout15paintRectPointsEv(void* qthis); // 4
+extern void* C_ZNK11QPageLayout15paintRectPointsEv(void* qthis); // 4
   // proto:  QMarginsF QPageLayout::margins();
-extern void C_ZNK11QPageLayout7marginsEv(void* qthis); // 4
+extern void* C_ZNK11QPageLayout7marginsEv(void* qthis); // 4
   // proto:  QMarginsF QPageLayout::minimumMargins();
-extern void C_ZNK11QPageLayout14minimumMarginsEv(void* qthis); // 4
+extern void* C_ZNK11QPageLayout14minimumMarginsEv(void* qthis); // 4
   // proto:  void QPageLayout::setMinimumMargins(const QMarginsF & minMargins);
 extern void C_ZN11QPageLayout17setMinimumMarginsERK9QMarginsF(void* qthis, void* arg0); // 4
   // proto:  void QPageLayout::QPageLayout(const QPageLayout & other);
@@ -47,43 +47,43 @@ extern void* C_ZN11QPageLayoutC2ERKS_(void* arg0); // 3
   // proto:  void QPageLayout::QPageLayout();
 extern void* C_ZN11QPageLayoutC2Ev(); // 3
   // proto:  QRect QPageLayout::fullRectPoints();
-extern void C_ZNK11QPageLayout14fullRectPointsEv(void* qthis); // 4
+extern void* C_ZNK11QPageLayout14fullRectPointsEv(void* qthis); // 4
   // proto:  QRectF QPageLayout::fullRect();
-extern void C_ZNK11QPageLayout8fullRectEv(void* qthis); // 4
+extern void* C_ZNK11QPageLayout8fullRectEv(void* qthis); // 4
   // proto:  QMargins QPageLayout::marginsPoints();
-extern void C_ZNK11QPageLayout13marginsPointsEv(void* qthis); // 4
+extern void* C_ZNK11QPageLayout13marginsPointsEv(void* qthis); // 4
   // proto:  void QPageLayout::swap(QPageLayout & other);
 extern void C_ZN11QPageLayout4swapERS_(void* qthis, void* arg0); // 2
   // proto:  void QPageLayout::~QPageLayout();
 extern void C_ZN11QPageLayoutD2Ev(void* qthis); // 4
   // proto:  QMarginsF QPageLayout::maximumMargins();
-extern void C_ZNK11QPageLayout14maximumMarginsEv(void* qthis); // 4
+extern void* C_ZNK11QPageLayout14maximumMarginsEv(void* qthis); // 4
   // proto:  QRect QPageLayout::fullRectPixels(int resolution);
-extern void C_ZNK11QPageLayout14fullRectPixelsEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK11QPageLayout14fullRectPixelsEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QPageLayout::setTopMargin(qreal topMargin);
-extern void C_ZN11QPageLayout12setTopMarginEd(void* qthis, double arg0); // 4
+extern bool C_ZN11QPageLayout12setTopMarginEd(void* qthis, double arg0); // 4
   // proto:  bool QPageLayout::isValid();
-extern void C_ZNK11QPageLayout7isValidEv(void* qthis); // 4
+extern bool C_ZNK11QPageLayout7isValidEv(void* qthis); // 4
   // proto:  QPageLayout::Unit QPageLayout::units();
 extern void C_ZNK11QPageLayout5unitsEv(void* qthis); // 4
   // proto:  QRect QPageLayout::paintRectPixels(int resolution);
-extern void C_ZNK11QPageLayout15paintRectPixelsEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK11QPageLayout15paintRectPixelsEi(void* qthis, int32_t arg0); // 4
   // proto:  QRectF QPageLayout::paintRect();
-extern void C_ZNK11QPageLayout9paintRectEv(void* qthis); // 4
+extern void* C_ZNK11QPageLayout9paintRectEv(void* qthis); // 4
   // proto:  bool QPageLayout::setLeftMargin(qreal leftMargin);
-extern void C_ZN11QPageLayout13setLeftMarginEd(void* qthis, double arg0); // 4
+extern bool C_ZN11QPageLayout13setLeftMarginEd(void* qthis, double arg0); // 4
   // proto:  bool QPageLayout::setRightMargin(qreal rightMargin);
-extern void C_ZN11QPageLayout14setRightMarginEd(void* qthis, double arg0); // 4
+extern bool C_ZN11QPageLayout14setRightMarginEd(void* qthis, double arg0); // 4
   // proto:  bool QPageLayout::isEquivalentTo(const QPageLayout & other);
-extern void C_ZNK11QPageLayout14isEquivalentToERKS_(void* qthis, void* arg0); // 4
+extern bool C_ZNK11QPageLayout14isEquivalentToERKS_(void* qthis, void* arg0); // 4
   // proto:  QMargins QPageLayout::marginsPixels(int resolution);
-extern void C_ZNK11QPageLayout13marginsPixelsEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK11QPageLayout13marginsPixelsEi(void* qthis, int32_t arg0); // 4
   // proto:  QPageLayout::Mode QPageLayout::mode();
 extern void C_ZNK11QPageLayout4modeEv(void* qthis); // 4
   // proto:  bool QPageLayout::setMargins(const QMarginsF & margins);
-extern void C_ZN11QPageLayout10setMarginsERK9QMarginsF(void* qthis, void* arg0); // 4
+extern bool C_ZN11QPageLayout10setMarginsERK9QMarginsF(void* qthis, void* arg0); // 4
   // proto:  bool QPageLayout::setBottomMargin(qreal bottomMargin);
-extern void C_ZN11QPageLayout15setBottomMarginEd(void* qthis, double arg0); // 4
+extern bool C_ZN11QPageLayout15setBottomMarginEd(void* qthis, double arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -103,7 +103,7 @@ type QPageLayout struct {
 }
 
 // orientation()
-func (this *QPageLayout) orientation(args ...interface{}) () {
+func (this *QPageLayout) Orientation(args ...interface{}) () {
   // orientation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -120,10 +120,11 @@ func (this *QPageLayout) orientation(args ...interface{}) () {
     qtrt.ErrorResolve("QPageLayout", "orientation", args)
   }
 
+  return
 }
 
 // pageSize()
-func (this *QPageLayout) pageSize(args ...interface{}) () {
+func (this *QPageLayout) Pagesize(args ...interface{}) (ret interface{}) {
   // pageSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -135,16 +136,20 @@ func (this *QPageLayout) pageSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout8pageSizeEv
     // invoke: QPageSize pageSize()
-    var ret = C.C_ZNK11QPageLayout8pageSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout8pageSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPageSize{}) // "QPageSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "pageSize", args)
   }
 
+  return
 }
 
 // setPageSize(const class QPageSize &, const class QMarginsF &)
-func (this *QPageLayout) setPageSize(args ...interface{}) () {
+func (this *QPageLayout) Setpagesize(args ...interface{}) () {
   // setPageSize(const class QPageSize &, const class QMarginsF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -167,10 +172,11 @@ func (this *QPageLayout) setPageSize(args ...interface{}) () {
     qtrt.ErrorResolve("QPageLayout", "setPageSize", args)
   }
 
+  return
 }
 
 // paintRectPoints()
-func (this *QPageLayout) paintRectPoints(args ...interface{}) () {
+func (this *QPageLayout) Paintrectpoints(args ...interface{}) (ret interface{}) {
   // paintRectPoints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,16 +188,20 @@ func (this *QPageLayout) paintRectPoints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout15paintRectPointsEv
     // invoke: QRect paintRectPoints()
-    var ret = C.C_ZNK11QPageLayout15paintRectPointsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout15paintRectPointsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "paintRectPoints", args)
   }
 
+  return
 }
 
 // margins()
-func (this *QPageLayout) margins(args ...interface{}) () {
+func (this *QPageLayout) Margins(args ...interface{}) (ret interface{}) {
   // margins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -203,16 +213,20 @@ func (this *QPageLayout) margins(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout7marginsEv
     // invoke: QMarginsF margins()
-    var ret = C.C_ZNK11QPageLayout7marginsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout7marginsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMarginsF{}) // "QMarginsF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "margins", args)
   }
 
+  return
 }
 
 // minimumMargins()
-func (this *QPageLayout) minimumMargins(args ...interface{}) () {
+func (this *QPageLayout) Minimummargins(args ...interface{}) (ret interface{}) {
   // minimumMargins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -224,16 +238,20 @@ func (this *QPageLayout) minimumMargins(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout14minimumMarginsEv
     // invoke: QMarginsF minimumMargins()
-    var ret = C.C_ZNK11QPageLayout14minimumMarginsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout14minimumMarginsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMarginsF{}) // "QMarginsF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "minimumMargins", args)
   }
 
+  return
 }
 
 // setMinimumMargins(const class QMarginsF &)
-func (this *QPageLayout) setMinimumMargins(args ...interface{}) () {
+func (this *QPageLayout) Setminimummargins(args ...interface{}) () {
   // setMinimumMargins(const class QMarginsF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -253,6 +271,7 @@ func (this *QPageLayout) setMinimumMargins(args ...interface{}) () {
     qtrt.ErrorResolve("QPageLayout", "setMinimumMargins", args)
   }
 
+  return
 }
 
 // QPageLayout(const class QPageLayout &)
@@ -292,7 +311,7 @@ func NewQPageLayout(args ...interface{}) *QPageLayout {
 }
 
 // fullRectPoints()
-func (this *QPageLayout) fullRectPoints(args ...interface{}) () {
+func (this *QPageLayout) Fullrectpoints(args ...interface{}) (ret interface{}) {
   // fullRectPoints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -304,16 +323,20 @@ func (this *QPageLayout) fullRectPoints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout14fullRectPointsEv
     // invoke: QRect fullRectPoints()
-    var ret = C.C_ZNK11QPageLayout14fullRectPointsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout14fullRectPointsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "fullRectPoints", args)
   }
 
+  return
 }
 
 // fullRect()
-func (this *QPageLayout) fullRect(args ...interface{}) () {
+func (this *QPageLayout) Fullrect(args ...interface{}) (ret interface{}) {
   // fullRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -325,16 +348,20 @@ func (this *QPageLayout) fullRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout8fullRectEv
     // invoke: QRectF fullRect()
-    var ret = C.C_ZNK11QPageLayout8fullRectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout8fullRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "fullRect", args)
   }
 
+  return
 }
 
 // marginsPoints()
-func (this *QPageLayout) marginsPoints(args ...interface{}) () {
+func (this *QPageLayout) Marginspoints(args ...interface{}) (ret interface{}) {
   // marginsPoints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -346,16 +373,20 @@ func (this *QPageLayout) marginsPoints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout13marginsPointsEv
     // invoke: QMargins marginsPoints()
-    var ret = C.C_ZNK11QPageLayout13marginsPointsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout13marginsPointsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMargins{}) // "QMargins"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "marginsPoints", args)
   }
 
+  return
 }
 
 // swap(class QPageLayout &)
-func (this *QPageLayout) swap(args ...interface{}) () {
+func (this *QPageLayout) Swap(args ...interface{}) () {
   // swap(class QPageLayout &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -375,10 +406,11 @@ func (this *QPageLayout) swap(args ...interface{}) () {
     qtrt.ErrorResolve("QPageLayout", "swap", args)
   }
 
+  return
 }
 
 // ~QPageLayout()
-func (this *QPageLayout) FreeQPageLayout(args ...interface{}) () {
+func (this *QPageLayout) Freeqpagelayout(args ...interface{}) () {
   // ~QPageLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -395,10 +427,11 @@ func (this *QPageLayout) FreeQPageLayout(args ...interface{}) () {
     qtrt.ErrorResolve("QPageLayout", "~QPageLayout", args)
   }
 
+  return
 }
 
 // maximumMargins()
-func (this *QPageLayout) maximumMargins(args ...interface{}) () {
+func (this *QPageLayout) Maximummargins(args ...interface{}) (ret interface{}) {
   // maximumMargins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -410,16 +443,20 @@ func (this *QPageLayout) maximumMargins(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout14maximumMarginsEv
     // invoke: QMarginsF maximumMargins()
-    var ret = C.C_ZNK11QPageLayout14maximumMarginsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout14maximumMarginsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMarginsF{}) // "QMarginsF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "maximumMargins", args)
   }
 
+  return
 }
 
 // fullRectPixels(int)
-func (this *QPageLayout) fullRectPixels(args ...interface{}) () {
+func (this *QPageLayout) Fullrectpixels(args ...interface{}) (ret interface{}) {
   // fullRectPixels(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -434,16 +471,20 @@ func (this *QPageLayout) fullRectPixels(args ...interface{}) () {
     // invoke: QRect fullRectPixels(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QPageLayout14fullRectPixelsEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout14fullRectPixelsEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "fullRectPixels", args)
   }
 
+  return
 }
 
 // setTopMargin(qreal)
-func (this *QPageLayout) setTopMargin(args ...interface{}) () {
+func (this *QPageLayout) Settopmargin(args ...interface{}) (ret interface{}) {
   // setTopMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -458,16 +499,20 @@ func (this *QPageLayout) setTopMargin(args ...interface{}) () {
     // invoke: bool setTopMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QPageLayout12setTopMarginEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QPageLayout12setTopMarginEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "setTopMargin", args)
   }
 
+  return
 }
 
 // isValid()
-func (this *QPageLayout) isValid(args ...interface{}) () {
+func (this *QPageLayout) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -479,16 +524,20 @@ func (this *QPageLayout) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout7isValidEv
     // invoke: bool isValid()
-    var ret = C.C_ZNK11QPageLayout7isValidEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "isValid", args)
   }
 
+  return
 }
 
 // units()
-func (this *QPageLayout) units(args ...interface{}) () {
+func (this *QPageLayout) Units(args ...interface{}) () {
   // units()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -505,10 +554,11 @@ func (this *QPageLayout) units(args ...interface{}) () {
     qtrt.ErrorResolve("QPageLayout", "units", args)
   }
 
+  return
 }
 
 // paintRectPixels(int)
-func (this *QPageLayout) paintRectPixels(args ...interface{}) () {
+func (this *QPageLayout) Paintrectpixels(args ...interface{}) (ret interface{}) {
   // paintRectPixels(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -523,16 +573,20 @@ func (this *QPageLayout) paintRectPixels(args ...interface{}) () {
     // invoke: QRect paintRectPixels(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QPageLayout15paintRectPixelsEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout15paintRectPixelsEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "paintRectPixels", args)
   }
 
+  return
 }
 
 // paintRect()
-func (this *QPageLayout) paintRect(args ...interface{}) () {
+func (this *QPageLayout) Paintrect(args ...interface{}) (ret interface{}) {
   // paintRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -544,16 +598,20 @@ func (this *QPageLayout) paintRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout9paintRectEv
     // invoke: QRectF paintRect()
-    var ret = C.C_ZNK11QPageLayout9paintRectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout9paintRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "paintRect", args)
   }
 
+  return
 }
 
 // setLeftMargin(qreal)
-func (this *QPageLayout) setLeftMargin(args ...interface{}) () {
+func (this *QPageLayout) Setleftmargin(args ...interface{}) (ret interface{}) {
   // setLeftMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -568,16 +626,20 @@ func (this *QPageLayout) setLeftMargin(args ...interface{}) () {
     // invoke: bool setLeftMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QPageLayout13setLeftMarginEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QPageLayout13setLeftMarginEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "setLeftMargin", args)
   }
 
+  return
 }
 
 // setRightMargin(qreal)
-func (this *QPageLayout) setRightMargin(args ...interface{}) () {
+func (this *QPageLayout) Setrightmargin(args ...interface{}) (ret interface{}) {
   // setRightMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -592,16 +654,20 @@ func (this *QPageLayout) setRightMargin(args ...interface{}) () {
     // invoke: bool setRightMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QPageLayout14setRightMarginEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QPageLayout14setRightMarginEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "setRightMargin", args)
   }
 
+  return
 }
 
 // isEquivalentTo(const class QPageLayout &)
-func (this *QPageLayout) isEquivalentTo(args ...interface{}) () {
+func (this *QPageLayout) Isequivalentto(args ...interface{}) (ret interface{}) {
   // isEquivalentTo(const class QPageLayout &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -616,16 +682,20 @@ func (this *QPageLayout) isEquivalentTo(args ...interface{}) () {
     // invoke: bool isEquivalentTo(const class QPageLayout &)
     var arg0 = args[0].(QPageLayout).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QPageLayout14isEquivalentToERKS_(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout14isEquivalentToERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "isEquivalentTo", args)
   }
 
+  return
 }
 
 // marginsPixels(int)
-func (this *QPageLayout) marginsPixels(args ...interface{}) () {
+func (this *QPageLayout) Marginspixels(args ...interface{}) (ret interface{}) {
   // marginsPixels(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -640,16 +710,20 @@ func (this *QPageLayout) marginsPixels(args ...interface{}) () {
     // invoke: QMargins marginsPixels(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QPageLayout13marginsPixelsEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPageLayout13marginsPixelsEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMargins{}) // "QMargins"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "marginsPixels", args)
   }
 
+  return
 }
 
 // mode()
-func (this *QPageLayout) mode(args ...interface{}) () {
+func (this *QPageLayout) Mode(args ...interface{}) () {
   // mode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -666,10 +740,11 @@ func (this *QPageLayout) mode(args ...interface{}) () {
     qtrt.ErrorResolve("QPageLayout", "mode", args)
   }
 
+  return
 }
 
 // setMargins(const class QMarginsF &)
-func (this *QPageLayout) setMargins(args ...interface{}) () {
+func (this *QPageLayout) Setmargins(args ...interface{}) (ret interface{}) {
   // setMargins(const class QMarginsF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -684,16 +759,20 @@ func (this *QPageLayout) setMargins(args ...interface{}) () {
     // invoke: bool setMargins(const class QMarginsF &)
     var arg0 = args[0].(QMarginsF).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QPageLayout10setMarginsERK9QMarginsF(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QPageLayout10setMarginsERK9QMarginsF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "setMargins", args)
   }
 
+  return
 }
 
 // setBottomMargin(qreal)
-func (this *QPageLayout) setBottomMargin(args ...interface{}) () {
+func (this *QPageLayout) Setbottommargin(args ...interface{}) (ret interface{}) {
   // setBottomMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -708,12 +787,16 @@ func (this *QPageLayout) setBottomMargin(args ...interface{}) () {
     // invoke: bool setBottomMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QPageLayout15setBottomMarginEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QPageLayout15setBottomMarginEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPageLayout", "setBottomMargin", args)
   }
 
+  return
 }
 
 // <= body block end

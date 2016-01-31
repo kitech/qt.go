@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qthreadpool.h
 // dst-file: /src/core/qthreadpool.go
 //
@@ -37,17 +37,17 @@ extern void C_ZN11QThreadPool6cancelEP9QRunnable(void* qthis, void* arg0); // 4
   // proto:  void QThreadPool::QThreadPool(QObject * parent);
 extern void* C_ZN11QThreadPoolC2EP7QObject(void* arg0); // 3
   // proto:  bool QThreadPool::waitForDone(int msecs);
-extern void C_ZN11QThreadPool11waitForDoneEi(void* qthis, int32_t arg0); // 4
+extern bool C_ZN11QThreadPool11waitForDoneEi(void* qthis, int32_t arg0); // 4
   // proto:  void QThreadPool::start(QRunnable * runnable, int priority);
 extern void C_ZN11QThreadPool5startEP9QRunnablei(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  int QThreadPool::activeThreadCount();
-extern void C_ZNK11QThreadPool17activeThreadCountEv(void* qthis); // 4
+extern int32_t C_ZNK11QThreadPool17activeThreadCountEv(void* qthis); // 4
   // proto:  void QThreadPool::setMaxThreadCount(int maxThreadCount);
 extern void C_ZN11QThreadPool17setMaxThreadCountEi(void* qthis, int32_t arg0); // 4
   // proto:  void QThreadPool::~QThreadPool();
 extern void C_ZN11QThreadPoolD2Ev(void* qthis); // 4
   // proto: static QThreadPool * QThreadPool::globalInstance();
-extern void C_ZN11QThreadPool14globalInstanceEv(); // 4
+extern void* C_ZN11QThreadPool14globalInstanceEv(); // 4
   // proto:  const QMetaObject * QThreadPool::metaObject();
 extern void C_ZNK11QThreadPool10metaObjectEv(void* qthis); // 4
   // proto:  void QThreadPool::clear();
@@ -55,11 +55,11 @@ extern void C_ZN11QThreadPool5clearEv(void* qthis); // 4
   // proto:  void QThreadPool::releaseThread();
 extern void C_ZN11QThreadPool13releaseThreadEv(void* qthis); // 4
   // proto:  bool QThreadPool::tryStart(QRunnable * runnable);
-extern void C_ZN11QThreadPool8tryStartEP9QRunnable(void* qthis, void* arg0); // 4
+extern bool C_ZN11QThreadPool8tryStartEP9QRunnable(void* qthis, void* arg0); // 4
   // proto:  int QThreadPool::maxThreadCount();
-extern void C_ZNK11QThreadPool14maxThreadCountEv(void* qthis); // 4
+extern int32_t C_ZNK11QThreadPool14maxThreadCountEv(void* qthis); // 4
   // proto:  int QThreadPool::expiryTimeout();
-extern void C_ZNK11QThreadPool13expiryTimeoutEv(void* qthis); // 4
+extern int32_t C_ZNK11QThreadPool13expiryTimeoutEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -79,7 +79,7 @@ type QThreadPool struct {
 }
 
 // setExpiryTimeout(int)
-func (this *QThreadPool) setExpiryTimeout(args ...interface{}) () {
+func (this *QThreadPool) Setexpirytimeout(args ...interface{}) () {
   // setExpiryTimeout(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -99,10 +99,11 @@ func (this *QThreadPool) setExpiryTimeout(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadPool", "setExpiryTimeout", args)
   }
 
+  return
 }
 
 // reserveThread()
-func (this *QThreadPool) reserveThread(args ...interface{}) () {
+func (this *QThreadPool) Reservethread(args ...interface{}) () {
   // reserveThread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -119,10 +120,11 @@ func (this *QThreadPool) reserveThread(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadPool", "reserveThread", args)
   }
 
+  return
 }
 
 // cancel(class QRunnable *)
-func (this *QThreadPool) cancel(args ...interface{}) () {
+func (this *QThreadPool) Cancel(args ...interface{}) () {
   // cancel(class QRunnable *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -142,6 +144,7 @@ func (this *QThreadPool) cancel(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadPool", "cancel", args)
   }
 
+  return
 }
 
 // QThreadPool(class QObject *)
@@ -172,7 +175,7 @@ func NewQThreadPool(args ...interface{}) *QThreadPool {
 }
 
 // waitForDone(int)
-func (this *QThreadPool) waitForDone(args ...interface{}) () {
+func (this *QThreadPool) Waitfordone(args ...interface{}) (ret interface{}) {
   // waitForDone(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -187,16 +190,20 @@ func (this *QThreadPool) waitForDone(args ...interface{}) () {
     // invoke: bool waitForDone(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QThreadPool11waitForDoneEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QThreadPool11waitForDoneEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QThreadPool", "waitForDone", args)
   }
 
+  return
 }
 
 // start(class QRunnable *, int)
-func (this *QThreadPool) start(args ...interface{}) () {
+func (this *QThreadPool) Start(args ...interface{}) () {
   // start(class QRunnable *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -219,10 +226,11 @@ func (this *QThreadPool) start(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadPool", "start", args)
   }
 
+  return
 }
 
 // activeThreadCount()
-func (this *QThreadPool) activeThreadCount(args ...interface{}) () {
+func (this *QThreadPool) Activethreadcount(args ...interface{}) (ret interface{}) {
   // activeThreadCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -234,16 +242,20 @@ func (this *QThreadPool) activeThreadCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QThreadPool17activeThreadCountEv
     // invoke: int activeThreadCount()
-    var ret = C.C_ZNK11QThreadPool17activeThreadCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QThreadPool17activeThreadCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QThreadPool", "activeThreadCount", args)
   }
 
+  return
 }
 
 // setMaxThreadCount(int)
-func (this *QThreadPool) setMaxThreadCount(args ...interface{}) () {
+func (this *QThreadPool) Setmaxthreadcount(args ...interface{}) () {
   // setMaxThreadCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -263,10 +275,11 @@ func (this *QThreadPool) setMaxThreadCount(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadPool", "setMaxThreadCount", args)
   }
 
+  return
 }
 
 // ~QThreadPool()
-func (this *QThreadPool) FreeQThreadPool(args ...interface{}) () {
+func (this *QThreadPool) Freeqthreadpool(args ...interface{}) () {
   // ~QThreadPool()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -283,10 +296,11 @@ func (this *QThreadPool) FreeQThreadPool(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadPool", "~QThreadPool", args)
   }
 
+  return
 }
 
 // globalInstance()
-func (this *QThreadPool) globalInstance_s(args ...interface{}) () {
+func (this *QThreadPool) Globalinstance_S(args ...interface{}) (ret interface{}) {
   // globalInstance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -298,16 +312,20 @@ func (this *QThreadPool) globalInstance_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QThreadPool14globalInstanceEv
     // invoke: QThreadPool * globalInstance()
-    var ret = C.C_ZN11QThreadPool14globalInstanceEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QThreadPool14globalInstanceEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QThreadPool{}) // "QThreadPool *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QThreadPool", "globalInstance", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QThreadPool) metaObject(args ...interface{}) () {
+func (this *QThreadPool) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -324,10 +342,11 @@ func (this *QThreadPool) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadPool", "metaObject", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QThreadPool) clear(args ...interface{}) () {
+func (this *QThreadPool) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -344,10 +363,11 @@ func (this *QThreadPool) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadPool", "clear", args)
   }
 
+  return
 }
 
 // releaseThread()
-func (this *QThreadPool) releaseThread(args ...interface{}) () {
+func (this *QThreadPool) Releasethread(args ...interface{}) () {
   // releaseThread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -364,10 +384,11 @@ func (this *QThreadPool) releaseThread(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadPool", "releaseThread", args)
   }
 
+  return
 }
 
 // tryStart(class QRunnable *)
-func (this *QThreadPool) tryStart(args ...interface{}) () {
+func (this *QThreadPool) Trystart(args ...interface{}) (ret interface{}) {
   // tryStart(class QRunnable *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -382,16 +403,20 @@ func (this *QThreadPool) tryStart(args ...interface{}) () {
     // invoke: bool tryStart(class QRunnable *)
     var arg0 = args[0].(QRunnable).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QThreadPool8tryStartEP9QRunnable(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QThreadPool8tryStartEP9QRunnable(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QThreadPool", "tryStart", args)
   }
 
+  return
 }
 
 // maxThreadCount()
-func (this *QThreadPool) maxThreadCount(args ...interface{}) () {
+func (this *QThreadPool) Maxthreadcount(args ...interface{}) (ret interface{}) {
   // maxThreadCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -403,16 +428,20 @@ func (this *QThreadPool) maxThreadCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QThreadPool14maxThreadCountEv
     // invoke: int maxThreadCount()
-    var ret = C.C_ZNK11QThreadPool14maxThreadCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QThreadPool14maxThreadCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QThreadPool", "maxThreadCount", args)
   }
 
+  return
 }
 
 // expiryTimeout()
-func (this *QThreadPool) expiryTimeout(args ...interface{}) () {
+func (this *QThreadPool) Expirytimeout(args ...interface{}) (ret interface{}) {
   // expiryTimeout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -424,12 +453,16 @@ func (this *QThreadPool) expiryTimeout(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QThreadPool13expiryTimeoutEv
     // invoke: int expiryTimeout()
-    var ret = C.C_ZNK11QThreadPool13expiryTimeoutEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QThreadPool13expiryTimeoutEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QThreadPool", "expiryTimeout", args)
   }
 
+  return
 }
 
 // <= body block end

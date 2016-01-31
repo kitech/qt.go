@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qstandardpaths.h
 // dst-file: /src/core/qstandardpaths.go
 //
@@ -33,9 +33,9 @@ extern void C_ZN14QStandardPaths18setTestModeEnabledEb(bool arg0); // 4
   // proto: static void QStandardPaths::enableTestMode(bool testMode);
 extern void C_ZN14QStandardPaths14enableTestModeEb(bool arg0); // 4
   // proto: static QString QStandardPaths::findExecutable(const QString & executableName, const QStringList & paths);
-extern void C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(void* arg0, void* arg1); // 4
+extern void* C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(void* arg0, void* arg1); // 4
   // proto: static bool QStandardPaths::isTestModeEnabled();
-extern void C_ZN14QStandardPaths17isTestModeEnabledEv(); // 4
+extern bool C_ZN14QStandardPaths17isTestModeEnabledEv(); // 4
 */
 import "C"
 // } // <= ext block end
@@ -55,7 +55,7 @@ type QStandardPaths struct {
 }
 
 // setTestModeEnabled(_Bool)
-func (this *QStandardPaths) setTestModeEnabled_s(args ...interface{}) () {
+func (this *QStandardPaths) Settestmodeenabled_S(args ...interface{}) () {
   // setTestModeEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -75,10 +75,11 @@ func (this *QStandardPaths) setTestModeEnabled_s(args ...interface{}) () {
     qtrt.ErrorResolve("QStandardPaths", "setTestModeEnabled", args)
   }
 
+  return
 }
 
 // enableTestMode(_Bool)
-func (this *QStandardPaths) enableTestMode_s(args ...interface{}) () {
+func (this *QStandardPaths) Enabletestmode_S(args ...interface{}) () {
   // enableTestMode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -98,10 +99,11 @@ func (this *QStandardPaths) enableTestMode_s(args ...interface{}) () {
     qtrt.ErrorResolve("QStandardPaths", "enableTestMode", args)
   }
 
+  return
 }
 
 // findExecutable(const class QString &, const class QStringList &)
-func (this *QStandardPaths) findExecutable_s(args ...interface{}) () {
+func (this *QStandardPaths) Findexecutable_S(args ...interface{}) (ret interface{}) {
   // findExecutable(const class QString &, const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -119,16 +121,20 @@ func (this *QStandardPaths) findExecutable_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStringList).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStandardPaths", "findExecutable", args)
   }
 
+  return
 }
 
 // isTestModeEnabled()
-func (this *QStandardPaths) isTestModeEnabled_s(args ...interface{}) () {
+func (this *QStandardPaths) Istestmodeenabled_S(args ...interface{}) (ret interface{}) {
   // isTestModeEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -140,12 +146,16 @@ func (this *QStandardPaths) isTestModeEnabled_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QStandardPaths17isTestModeEnabledEv
     // invoke: bool isTestModeEnabled()
-    var ret = C.C_ZN14QStandardPaths17isTestModeEnabledEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QStandardPaths17isTestModeEnabledEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStandardPaths", "isTestModeEnabled", args)
   }
 
+  return
 }
 
 // <= body block end

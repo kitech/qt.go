@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qfileselector.h
 // dst-file: /src/core/qfileselector.go
 //
@@ -41,9 +41,9 @@ extern void C_ZN13QFileSelector17setExtraSelectorsERK11QStringList(void* qthis, 
   // proto:  void QFileSelector::~QFileSelector();
 extern void C_ZN13QFileSelectorD2Ev(void* qthis); // 4
   // proto:  QString QFileSelector::select(const QString & filePath);
-extern void C_ZNK13QFileSelector6selectERK7QString(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QFileSelector6selectERK7QString(void* qthis, void* arg0); // 4
   // proto:  QUrl QFileSelector::select(const QUrl & filePath);
-extern void C_ZNK13QFileSelector6selectERK4QUrl(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QFileSelector6selectERK4QUrl(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -90,7 +90,7 @@ func NewQFileSelector(args ...interface{}) *QFileSelector {
 }
 
 // metaObject()
-func (this *QFileSelector) metaObject(args ...interface{}) () {
+func (this *QFileSelector) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -107,10 +107,11 @@ func (this *QFileSelector) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QFileSelector", "metaObject", args)
   }
 
+  return
 }
 
 // allSelectors()
-func (this *QFileSelector) allSelectors(args ...interface{}) () {
+func (this *QFileSelector) Allselectors(args ...interface{}) () {
   // allSelectors()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -127,10 +128,11 @@ func (this *QFileSelector) allSelectors(args ...interface{}) () {
     qtrt.ErrorResolve("QFileSelector", "allSelectors", args)
   }
 
+  return
 }
 
 // extraSelectors()
-func (this *QFileSelector) extraSelectors(args ...interface{}) () {
+func (this *QFileSelector) Extraselectors(args ...interface{}) () {
   // extraSelectors()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -147,10 +149,11 @@ func (this *QFileSelector) extraSelectors(args ...interface{}) () {
     qtrt.ErrorResolve("QFileSelector", "extraSelectors", args)
   }
 
+  return
 }
 
 // setExtraSelectors(const class QStringList &)
-func (this *QFileSelector) setExtraSelectors(args ...interface{}) () {
+func (this *QFileSelector) Setextraselectors(args ...interface{}) () {
   // setExtraSelectors(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -170,10 +173,11 @@ func (this *QFileSelector) setExtraSelectors(args ...interface{}) () {
     qtrt.ErrorResolve("QFileSelector", "setExtraSelectors", args)
   }
 
+  return
 }
 
 // ~QFileSelector()
-func (this *QFileSelector) FreeQFileSelector(args ...interface{}) () {
+func (this *QFileSelector) Freeqfileselector(args ...interface{}) () {
   // ~QFileSelector()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -190,10 +194,11 @@ func (this *QFileSelector) FreeQFileSelector(args ...interface{}) () {
     qtrt.ErrorResolve("QFileSelector", "~QFileSelector", args)
   }
 
+  return
 }
 
 // select(const class QString &)
-func (this *QFileSelector) select_(args ...interface{}) () {
+func (this *QFileSelector) Select_(args ...interface{}) (ret interface{}) {
   // select(const class QString &)
   // select(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -211,19 +216,26 @@ func (this *QFileSelector) select_(args ...interface{}) () {
     // invoke: QString select(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QFileSelector6selectERK7QString(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QFileSelector6selectERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK13QFileSelector6selectERK4QUrl
     // invoke: QUrl select(const class QUrl &)
     var arg0 = args[0].(QUrl).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QFileSelector6selectERK4QUrl(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QFileSelector6selectERK4QUrl(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QUrl{}) // "QUrl"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFileSelector", "select", args)
   }
 
+  return
 }
 
 // <= body block end

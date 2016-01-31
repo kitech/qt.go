@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qgraphicsgridlayout.h
 // dst-file: /src/widgets/qgraphicsgridlayout.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QGraphicsGridLayout::columnCount();
-extern void C_ZNK19QGraphicsGridLayout11columnCountEv(void* qthis); // 4
+extern int32_t C_ZNK19QGraphicsGridLayout11columnCountEv(void* qthis); // 4
   // proto:  void QGraphicsGridLayout::invalidate();
 extern void C_ZN19QGraphicsGridLayout10invalidateEv(void* qthis); // 4
   // proto:  qreal QGraphicsGridLayout::rowSpacing(int row);
-extern void C_ZNK19QGraphicsGridLayout10rowSpacingEi(void* qthis, int32_t arg0); // 4
+extern double C_ZNK19QGraphicsGridLayout10rowSpacingEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsGridLayout::setRowFixedHeight(int row, qreal height);
 extern void C_ZN19QGraphicsGridLayout17setRowFixedHeightEid(void* qthis, int32_t arg0, double arg1); // 4
   // proto:  Qt::Alignment QGraphicsGridLayout::columnAlignment(int column);
@@ -43,13 +43,13 @@ extern void C_ZN19QGraphicsGridLayout8removeAtEi(void* qthis, int32_t arg0); // 
   // proto:  void QGraphicsGridLayout::setColumnSpacing(int column, qreal spacing);
 extern void C_ZN19QGraphicsGridLayout16setColumnSpacingEid(void* qthis, int32_t arg0, double arg1); // 4
   // proto:  qreal QGraphicsGridLayout::verticalSpacing();
-extern void C_ZNK19QGraphicsGridLayout15verticalSpacingEv(void* qthis); // 4
+extern double C_ZNK19QGraphicsGridLayout15verticalSpacingEv(void* qthis); // 4
   // proto:  qreal QGraphicsGridLayout::rowMaximumHeight(int row);
-extern void C_ZNK19QGraphicsGridLayout16rowMaximumHeightEi(void* qthis, int32_t arg0); // 4
+extern double C_ZNK19QGraphicsGridLayout16rowMaximumHeightEi(void* qthis, int32_t arg0); // 4
   // proto:  qreal QGraphicsGridLayout::rowPreferredHeight(int row);
-extern void C_ZNK19QGraphicsGridLayout18rowPreferredHeightEi(void* qthis, int32_t arg0); // 4
+extern double C_ZNK19QGraphicsGridLayout18rowPreferredHeightEi(void* qthis, int32_t arg0); // 4
   // proto:  qreal QGraphicsGridLayout::columnMaximumWidth(int column);
-extern void C_ZNK19QGraphicsGridLayout18columnMaximumWidthEi(void* qthis, int32_t arg0); // 4
+extern double C_ZNK19QGraphicsGridLayout18columnMaximumWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsGridLayout::QGraphicsGridLayout(QGraphicsLayoutItem * parent);
 extern void* C_ZN19QGraphicsGridLayoutC2EP19QGraphicsLayoutItem(void* arg0); // 3
   // proto:  void QGraphicsGridLayout::setRowStretchFactor(int row, int stretch);
@@ -67,27 +67,27 @@ extern void C_ZN19QGraphicsGridLayout22setColumnStretchFactorEii(void* qthis, in
   // proto:  void QGraphicsGridLayout::setVerticalSpacing(qreal spacing);
 extern void C_ZN19QGraphicsGridLayout18setVerticalSpacingEd(void* qthis, double arg0); // 4
   // proto:  qreal QGraphicsGridLayout::rowMinimumHeight(int row);
-extern void C_ZNK19QGraphicsGridLayout16rowMinimumHeightEi(void* qthis, int32_t arg0); // 4
+extern double C_ZNK19QGraphicsGridLayout16rowMinimumHeightEi(void* qthis, int32_t arg0); // 4
   // proto:  qreal QGraphicsGridLayout::horizontalSpacing();
-extern void C_ZNK19QGraphicsGridLayout17horizontalSpacingEv(void* qthis); // 4
+extern double C_ZNK19QGraphicsGridLayout17horizontalSpacingEv(void* qthis); // 4
   // proto:  int QGraphicsGridLayout::rowStretchFactor(int row);
-extern void C_ZNK19QGraphicsGridLayout16rowStretchFactorEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK19QGraphicsGridLayout16rowStretchFactorEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsGridLayout::setColumnPreferredWidth(int column, qreal width);
 extern void C_ZN19QGraphicsGridLayout23setColumnPreferredWidthEid(void* qthis, int32_t arg0, double arg1); // 4
   // proto:  qreal QGraphicsGridLayout::columnSpacing(int column);
-extern void C_ZNK19QGraphicsGridLayout13columnSpacingEi(void* qthis, int32_t arg0); // 4
+extern double C_ZNK19QGraphicsGridLayout13columnSpacingEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsGridLayout::setColumnMinimumWidth(int column, qreal width);
 extern void C_ZN19QGraphicsGridLayout21setColumnMinimumWidthEid(void* qthis, int32_t arg0, double arg1); // 4
   // proto:  int QGraphicsGridLayout::columnStretchFactor(int column);
-extern void C_ZNK19QGraphicsGridLayout19columnStretchFactorEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK19QGraphicsGridLayout19columnStretchFactorEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsGridLayout::setRowSpacing(int row, qreal spacing);
 extern void C_ZN19QGraphicsGridLayout13setRowSpacingEid(void* qthis, int32_t arg0, double arg1); // 4
   // proto:  int QGraphicsGridLayout::rowCount();
-extern void C_ZNK19QGraphicsGridLayout8rowCountEv(void* qthis); // 4
+extern int32_t C_ZNK19QGraphicsGridLayout8rowCountEv(void* qthis); // 4
   // proto:  void QGraphicsGridLayout::removeItem(QGraphicsLayoutItem * item);
 extern void C_ZN19QGraphicsGridLayout10removeItemEP19QGraphicsLayoutItem(void* qthis, void* arg0); // 4
   // proto:  int QGraphicsGridLayout::count();
-extern void C_ZNK19QGraphicsGridLayout5countEv(void* qthis); // 4
+extern int32_t C_ZNK19QGraphicsGridLayout5countEv(void* qthis); // 4
   // proto:  void QGraphicsGridLayout::~QGraphicsGridLayout();
 extern void C_ZN19QGraphicsGridLayoutD2Ev(void* qthis); // 4
   // proto:  void QGraphicsGridLayout::setColumnFixedWidth(int column, qreal width);
@@ -97,13 +97,13 @@ extern void C_ZNK19QGraphicsGridLayout6itemAtEii(void* qthis, int32_t arg0, int3
   // proto:  QGraphicsLayoutItem * QGraphicsGridLayout::itemAt(int index);
 extern void C_ZNK19QGraphicsGridLayout6itemAtEi(void* qthis, int32_t arg0); // 4
   // proto:  qreal QGraphicsGridLayout::columnMinimumWidth(int column);
-extern void C_ZNK19QGraphicsGridLayout18columnMinimumWidthEi(void* qthis, int32_t arg0); // 4
+extern double C_ZNK19QGraphicsGridLayout18columnMinimumWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsGridLayout::setHorizontalSpacing(qreal spacing);
 extern void C_ZN19QGraphicsGridLayout20setHorizontalSpacingEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsGridLayout::setRowMaximumHeight(int row, qreal height);
 extern void C_ZN19QGraphicsGridLayout19setRowMaximumHeightEid(void* qthis, int32_t arg0, double arg1); // 4
   // proto:  qreal QGraphicsGridLayout::columnPreferredWidth(int column);
-extern void C_ZNK19QGraphicsGridLayout20columnPreferredWidthEi(void* qthis, int32_t arg0); // 4
+extern double C_ZNK19QGraphicsGridLayout20columnPreferredWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsGridLayout::setColumnMaximumWidth(int column, qreal width);
 extern void C_ZN19QGraphicsGridLayout21setColumnMaximumWidthEid(void* qthis, int32_t arg0, double arg1); // 4
   // proto:  void QGraphicsGridLayout::setRowMinimumHeight(int row, qreal height);
@@ -129,7 +129,7 @@ type QGraphicsGridLayout struct {
 }
 
 // columnCount()
-func (this *QGraphicsGridLayout) columnCount(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Columncount(args ...interface{}) (ret interface{}) {
   // columnCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -141,16 +141,20 @@ func (this *QGraphicsGridLayout) columnCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout11columnCountEv
     // invoke: int columnCount()
-    var ret = C.C_ZNK19QGraphicsGridLayout11columnCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout11columnCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnCount", args)
   }
 
+  return
 }
 
 // invalidate()
-func (this *QGraphicsGridLayout) invalidate(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Invalidate(args ...interface{}) () {
   // invalidate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -167,10 +171,11 @@ func (this *QGraphicsGridLayout) invalidate(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "invalidate", args)
   }
 
+  return
 }
 
 // rowSpacing(int)
-func (this *QGraphicsGridLayout) rowSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Rowspacing(args ...interface{}) (ret interface{}) {
   // rowSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -185,16 +190,20 @@ func (this *QGraphicsGridLayout) rowSpacing(args ...interface{}) () {
     // invoke: qreal rowSpacing(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK19QGraphicsGridLayout10rowSpacingEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout10rowSpacingEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowSpacing", args)
   }
 
+  return
 }
 
 // setRowFixedHeight(int, qreal)
-func (this *QGraphicsGridLayout) setRowFixedHeight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setrowfixedheight(args ...interface{}) () {
   // setRowFixedHeight(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -217,10 +226,11 @@ func (this *QGraphicsGridLayout) setRowFixedHeight(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setRowFixedHeight", args)
   }
 
+  return
 }
 
 // columnAlignment(int)
-func (this *QGraphicsGridLayout) columnAlignment(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Columnalignment(args ...interface{}) () {
   // columnAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -240,10 +250,11 @@ func (this *QGraphicsGridLayout) columnAlignment(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnAlignment", args)
   }
 
+  return
 }
 
 // removeAt(int)
-func (this *QGraphicsGridLayout) removeAt(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Removeat(args ...interface{}) () {
   // removeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -263,10 +274,11 @@ func (this *QGraphicsGridLayout) removeAt(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "removeAt", args)
   }
 
+  return
 }
 
 // setColumnSpacing(int, qreal)
-func (this *QGraphicsGridLayout) setColumnSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setcolumnspacing(args ...interface{}) () {
   // setColumnSpacing(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -289,10 +301,11 @@ func (this *QGraphicsGridLayout) setColumnSpacing(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setColumnSpacing", args)
   }
 
+  return
 }
 
 // verticalSpacing()
-func (this *QGraphicsGridLayout) verticalSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Verticalspacing(args ...interface{}) (ret interface{}) {
   // verticalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -304,16 +317,20 @@ func (this *QGraphicsGridLayout) verticalSpacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout15verticalSpacingEv
     // invoke: qreal verticalSpacing()
-    var ret = C.C_ZNK19QGraphicsGridLayout15verticalSpacingEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout15verticalSpacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "verticalSpacing", args)
   }
 
+  return
 }
 
 // rowMaximumHeight(int)
-func (this *QGraphicsGridLayout) rowMaximumHeight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Rowmaximumheight(args ...interface{}) (ret interface{}) {
   // rowMaximumHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -328,16 +345,20 @@ func (this *QGraphicsGridLayout) rowMaximumHeight(args ...interface{}) () {
     // invoke: qreal rowMaximumHeight(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK19QGraphicsGridLayout16rowMaximumHeightEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout16rowMaximumHeightEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowMaximumHeight", args)
   }
 
+  return
 }
 
 // rowPreferredHeight(int)
-func (this *QGraphicsGridLayout) rowPreferredHeight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Rowpreferredheight(args ...interface{}) (ret interface{}) {
   // rowPreferredHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -352,16 +373,20 @@ func (this *QGraphicsGridLayout) rowPreferredHeight(args ...interface{}) () {
     // invoke: qreal rowPreferredHeight(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK19QGraphicsGridLayout18rowPreferredHeightEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout18rowPreferredHeightEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowPreferredHeight", args)
   }
 
+  return
 }
 
 // columnMaximumWidth(int)
-func (this *QGraphicsGridLayout) columnMaximumWidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Columnmaximumwidth(args ...interface{}) (ret interface{}) {
   // columnMaximumWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -376,12 +401,16 @@ func (this *QGraphicsGridLayout) columnMaximumWidth(args ...interface{}) () {
     // invoke: qreal columnMaximumWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK19QGraphicsGridLayout18columnMaximumWidthEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout18columnMaximumWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnMaximumWidth", args)
   }
 
+  return
 }
 
 // QGraphicsGridLayout(class QGraphicsLayoutItem *)
@@ -412,7 +441,7 @@ func NewQGraphicsGridLayout(args ...interface{}) *QGraphicsGridLayout {
 }
 
 // setRowStretchFactor(int, int)
-func (this *QGraphicsGridLayout) setRowStretchFactor(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setrowstretchfactor(args ...interface{}) () {
   // setRowStretchFactor(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -435,10 +464,11 @@ func (this *QGraphicsGridLayout) setRowStretchFactor(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setRowStretchFactor", args)
   }
 
+  return
 }
 
 // alignment(class QGraphicsLayoutItem *)
-func (this *QGraphicsGridLayout) alignment(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Alignment(args ...interface{}) () {
   // alignment(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -458,10 +488,11 @@ func (this *QGraphicsGridLayout) alignment(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "alignment", args)
   }
 
+  return
 }
 
 // rowAlignment(int)
-func (this *QGraphicsGridLayout) rowAlignment(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Rowalignment(args ...interface{}) () {
   // rowAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -481,10 +512,11 @@ func (this *QGraphicsGridLayout) rowAlignment(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowAlignment", args)
   }
 
+  return
 }
 
 // setSpacing(qreal)
-func (this *QGraphicsGridLayout) setSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setspacing(args ...interface{}) () {
   // setSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -504,10 +536,11 @@ func (this *QGraphicsGridLayout) setSpacing(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setSpacing", args)
   }
 
+  return
 }
 
 // setGeometry(const class QRectF &)
-func (this *QGraphicsGridLayout) setGeometry(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setgeometry(args ...interface{}) () {
   // setGeometry(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -527,10 +560,11 @@ func (this *QGraphicsGridLayout) setGeometry(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setGeometry", args)
   }
 
+  return
 }
 
 // setColumnStretchFactor(int, int)
-func (this *QGraphicsGridLayout) setColumnStretchFactor(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setcolumnstretchfactor(args ...interface{}) () {
   // setColumnStretchFactor(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -553,10 +587,11 @@ func (this *QGraphicsGridLayout) setColumnStretchFactor(args ...interface{}) () 
     qtrt.ErrorResolve("QGraphicsGridLayout", "setColumnStretchFactor", args)
   }
 
+  return
 }
 
 // setVerticalSpacing(qreal)
-func (this *QGraphicsGridLayout) setVerticalSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setverticalspacing(args ...interface{}) () {
   // setVerticalSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -576,10 +611,11 @@ func (this *QGraphicsGridLayout) setVerticalSpacing(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setVerticalSpacing", args)
   }
 
+  return
 }
 
 // rowMinimumHeight(int)
-func (this *QGraphicsGridLayout) rowMinimumHeight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Rowminimumheight(args ...interface{}) (ret interface{}) {
   // rowMinimumHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -594,16 +630,20 @@ func (this *QGraphicsGridLayout) rowMinimumHeight(args ...interface{}) () {
     // invoke: qreal rowMinimumHeight(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK19QGraphicsGridLayout16rowMinimumHeightEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout16rowMinimumHeightEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowMinimumHeight", args)
   }
 
+  return
 }
 
 // horizontalSpacing()
-func (this *QGraphicsGridLayout) horizontalSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Horizontalspacing(args ...interface{}) (ret interface{}) {
   // horizontalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -615,16 +655,20 @@ func (this *QGraphicsGridLayout) horizontalSpacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout17horizontalSpacingEv
     // invoke: qreal horizontalSpacing()
-    var ret = C.C_ZNK19QGraphicsGridLayout17horizontalSpacingEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout17horizontalSpacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "horizontalSpacing", args)
   }
 
+  return
 }
 
 // rowStretchFactor(int)
-func (this *QGraphicsGridLayout) rowStretchFactor(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Rowstretchfactor(args ...interface{}) (ret interface{}) {
   // rowStretchFactor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -639,16 +683,20 @@ func (this *QGraphicsGridLayout) rowStretchFactor(args ...interface{}) () {
     // invoke: int rowStretchFactor(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK19QGraphicsGridLayout16rowStretchFactorEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout16rowStretchFactorEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowStretchFactor", args)
   }
 
+  return
 }
 
 // setColumnPreferredWidth(int, qreal)
-func (this *QGraphicsGridLayout) setColumnPreferredWidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setcolumnpreferredwidth(args ...interface{}) () {
   // setColumnPreferredWidth(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -671,10 +719,11 @@ func (this *QGraphicsGridLayout) setColumnPreferredWidth(args ...interface{}) ()
     qtrt.ErrorResolve("QGraphicsGridLayout", "setColumnPreferredWidth", args)
   }
 
+  return
 }
 
 // columnSpacing(int)
-func (this *QGraphicsGridLayout) columnSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Columnspacing(args ...interface{}) (ret interface{}) {
   // columnSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -689,16 +738,20 @@ func (this *QGraphicsGridLayout) columnSpacing(args ...interface{}) () {
     // invoke: qreal columnSpacing(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK19QGraphicsGridLayout13columnSpacingEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout13columnSpacingEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnSpacing", args)
   }
 
+  return
 }
 
 // setColumnMinimumWidth(int, qreal)
-func (this *QGraphicsGridLayout) setColumnMinimumWidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setcolumnminimumwidth(args ...interface{}) () {
   // setColumnMinimumWidth(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -721,10 +774,11 @@ func (this *QGraphicsGridLayout) setColumnMinimumWidth(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setColumnMinimumWidth", args)
   }
 
+  return
 }
 
 // columnStretchFactor(int)
-func (this *QGraphicsGridLayout) columnStretchFactor(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Columnstretchfactor(args ...interface{}) (ret interface{}) {
   // columnStretchFactor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -739,16 +793,20 @@ func (this *QGraphicsGridLayout) columnStretchFactor(args ...interface{}) () {
     // invoke: int columnStretchFactor(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK19QGraphicsGridLayout19columnStretchFactorEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout19columnStretchFactorEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnStretchFactor", args)
   }
 
+  return
 }
 
 // setRowSpacing(int, qreal)
-func (this *QGraphicsGridLayout) setRowSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setrowspacing(args ...interface{}) () {
   // setRowSpacing(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -771,10 +829,11 @@ func (this *QGraphicsGridLayout) setRowSpacing(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setRowSpacing", args)
   }
 
+  return
 }
 
 // rowCount()
-func (this *QGraphicsGridLayout) rowCount(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Rowcount(args ...interface{}) (ret interface{}) {
   // rowCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -786,16 +845,20 @@ func (this *QGraphicsGridLayout) rowCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout8rowCountEv
     // invoke: int rowCount()
-    var ret = C.C_ZNK19QGraphicsGridLayout8rowCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout8rowCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowCount", args)
   }
 
+  return
 }
 
 // removeItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsGridLayout) removeItem(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Removeitem(args ...interface{}) () {
   // removeItem(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -815,10 +878,11 @@ func (this *QGraphicsGridLayout) removeItem(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "removeItem", args)
   }
 
+  return
 }
 
 // count()
-func (this *QGraphicsGridLayout) count(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Count(args ...interface{}) (ret interface{}) {
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -830,16 +894,20 @@ func (this *QGraphicsGridLayout) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout5countEv
     // invoke: int count()
-    var ret = C.C_ZNK19QGraphicsGridLayout5countEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "count", args)
   }
 
+  return
 }
 
 // ~QGraphicsGridLayout()
-func (this *QGraphicsGridLayout) FreeQGraphicsGridLayout(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Freeqgraphicsgridlayout(args ...interface{}) () {
   // ~QGraphicsGridLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -856,10 +924,11 @@ func (this *QGraphicsGridLayout) FreeQGraphicsGridLayout(args ...interface{}) ()
     qtrt.ErrorResolve("QGraphicsGridLayout", "~QGraphicsGridLayout", args)
   }
 
+  return
 }
 
 // setColumnFixedWidth(int, qreal)
-func (this *QGraphicsGridLayout) setColumnFixedWidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setcolumnfixedwidth(args ...interface{}) () {
   // setColumnFixedWidth(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -882,10 +951,11 @@ func (this *QGraphicsGridLayout) setColumnFixedWidth(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setColumnFixedWidth", args)
   }
 
+  return
 }
 
 // itemAt(int, int)
-func (this *QGraphicsGridLayout) itemAt(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Itemat(args ...interface{}) () {
   // itemAt(int, int)
   // itemAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -917,10 +987,11 @@ func (this *QGraphicsGridLayout) itemAt(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "itemAt", args)
   }
 
+  return
 }
 
 // columnMinimumWidth(int)
-func (this *QGraphicsGridLayout) columnMinimumWidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Columnminimumwidth(args ...interface{}) (ret interface{}) {
   // columnMinimumWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -935,16 +1006,20 @@ func (this *QGraphicsGridLayout) columnMinimumWidth(args ...interface{}) () {
     // invoke: qreal columnMinimumWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK19QGraphicsGridLayout18columnMinimumWidthEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout18columnMinimumWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnMinimumWidth", args)
   }
 
+  return
 }
 
 // setHorizontalSpacing(qreal)
-func (this *QGraphicsGridLayout) setHorizontalSpacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Sethorizontalspacing(args ...interface{}) () {
   // setHorizontalSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -964,10 +1039,11 @@ func (this *QGraphicsGridLayout) setHorizontalSpacing(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setHorizontalSpacing", args)
   }
 
+  return
 }
 
 // setRowMaximumHeight(int, qreal)
-func (this *QGraphicsGridLayout) setRowMaximumHeight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setrowmaximumheight(args ...interface{}) () {
   // setRowMaximumHeight(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -990,10 +1066,11 @@ func (this *QGraphicsGridLayout) setRowMaximumHeight(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setRowMaximumHeight", args)
   }
 
+  return
 }
 
 // columnPreferredWidth(int)
-func (this *QGraphicsGridLayout) columnPreferredWidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Columnpreferredwidth(args ...interface{}) (ret interface{}) {
   // columnPreferredWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1008,16 +1085,20 @@ func (this *QGraphicsGridLayout) columnPreferredWidth(args ...interface{}) () {
     // invoke: qreal columnPreferredWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK19QGraphicsGridLayout20columnPreferredWidthEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QGraphicsGridLayout20columnPreferredWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnPreferredWidth", args)
   }
 
+  return
 }
 
 // setColumnMaximumWidth(int, qreal)
-func (this *QGraphicsGridLayout) setColumnMaximumWidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setcolumnmaximumwidth(args ...interface{}) () {
   // setColumnMaximumWidth(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1040,10 +1121,11 @@ func (this *QGraphicsGridLayout) setColumnMaximumWidth(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setColumnMaximumWidth", args)
   }
 
+  return
 }
 
 // setRowMinimumHeight(int, qreal)
-func (this *QGraphicsGridLayout) setRowMinimumHeight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setrowminimumheight(args ...interface{}) () {
   // setRowMinimumHeight(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1066,10 +1148,11 @@ func (this *QGraphicsGridLayout) setRowMinimumHeight(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setRowMinimumHeight", args)
   }
 
+  return
 }
 
 // setRowPreferredHeight(int, qreal)
-func (this *QGraphicsGridLayout) setRowPreferredHeight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Setrowpreferredheight(args ...interface{}) () {
   // setRowPreferredHeight(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1092,6 +1175,7 @@ func (this *QGraphicsGridLayout) setRowPreferredHeight(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsGridLayout", "setRowPreferredHeight", args)
   }
 
+  return
 }
 
 // <= body block end

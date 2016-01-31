@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.go
 //
@@ -29,15 +29,15 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QVariant QVariantAnimation::keyValueAt(qreal step);
-extern void C_ZNK17QVariantAnimation10keyValueAtEd(void* qthis, double arg0); // 4
+extern void* C_ZNK17QVariantAnimation10keyValueAtEd(void* qthis, double arg0); // 4
   // proto:  QVariant QVariantAnimation::currentValue();
-extern void C_ZNK17QVariantAnimation12currentValueEv(void* qthis); // 4
+extern void* C_ZNK17QVariantAnimation12currentValueEv(void* qthis); // 4
   // proto:  void QVariantAnimation::setEasingCurve(const QEasingCurve & easing);
 extern void C_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(void* qthis, void* arg0); // 4
   // proto:  void QVariantAnimation::QVariantAnimation(QObject * parent);
 extern void* C_ZN17QVariantAnimationC2EP7QObject(void* arg0); // 3
   // proto:  int QVariantAnimation::duration();
-extern void C_ZNK17QVariantAnimation8durationEv(void* qthis); // 4
+extern int32_t C_ZNK17QVariantAnimation8durationEv(void* qthis); // 4
   // proto:  void QVariantAnimation::setStartValue(const QVariant & value);
 extern void C_ZN17QVariantAnimation13setStartValueERK8QVariant(void* qthis, void* arg0); // 4
   // proto:  KeyValues QVariantAnimation::keyValues();
@@ -45,19 +45,19 @@ extern void C_ZNK17QVariantAnimation9keyValuesEv(void* qthis); // 4
   // proto:  void QVariantAnimation::~QVariantAnimation();
 extern void C_ZN17QVariantAnimationD2Ev(void* qthis); // 4
   // proto:  QVariant QVariantAnimation::endValue();
-extern void C_ZNK17QVariantAnimation8endValueEv(void* qthis); // 4
+extern void* C_ZNK17QVariantAnimation8endValueEv(void* qthis); // 4
   // proto:  const QMetaObject * QVariantAnimation::metaObject();
 extern void C_ZNK17QVariantAnimation10metaObjectEv(void* qthis); // 4
   // proto:  void QVariantAnimation::setKeyValueAt(qreal step, const QVariant & value);
 extern void C_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(void* qthis, double arg0, void* arg1); // 4
   // proto:  QEasingCurve QVariantAnimation::easingCurve();
-extern void C_ZNK17QVariantAnimation11easingCurveEv(void* qthis); // 4
+extern void* C_ZNK17QVariantAnimation11easingCurveEv(void* qthis); // 4
   // proto:  void QVariantAnimation::setEndValue(const QVariant & value);
 extern void C_ZN17QVariantAnimation11setEndValueERK8QVariant(void* qthis, void* arg0); // 4
   // proto:  void QVariantAnimation::setDuration(int msecs);
 extern void C_ZN17QVariantAnimation11setDurationEi(void* qthis, int32_t arg0); // 4
   // proto:  QVariant QVariantAnimation::startValue();
-extern void C_ZNK17QVariantAnimation10startValueEv(void* qthis); // 4
+extern void* C_ZNK17QVariantAnimation10startValueEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -78,7 +78,7 @@ type QVariantAnimation struct {
 }
 
 // keyValueAt(qreal)
-func (this *QVariantAnimation) keyValueAt(args ...interface{}) () {
+func (this *QVariantAnimation) Keyvalueat(args ...interface{}) (ret interface{}) {
   // keyValueAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -93,16 +93,20 @@ func (this *QVariantAnimation) keyValueAt(args ...interface{}) () {
     // invoke: QVariant keyValueAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK17QVariantAnimation10keyValueAtEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QVariantAnimation10keyValueAtEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVariantAnimation", "keyValueAt", args)
   }
 
+  return
 }
 
 // currentValue()
-func (this *QVariantAnimation) currentValue(args ...interface{}) () {
+func (this *QVariantAnimation) Currentvalue(args ...interface{}) (ret interface{}) {
   // currentValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -114,16 +118,20 @@ func (this *QVariantAnimation) currentValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation12currentValueEv
     // invoke: QVariant currentValue()
-    var ret = C.C_ZNK17QVariantAnimation12currentValueEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QVariantAnimation12currentValueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVariantAnimation", "currentValue", args)
   }
 
+  return
 }
 
 // setEasingCurve(const class QEasingCurve &)
-func (this *QVariantAnimation) setEasingCurve(args ...interface{}) () {
+func (this *QVariantAnimation) Seteasingcurve(args ...interface{}) () {
   // setEasingCurve(const class QEasingCurve &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -143,6 +151,7 @@ func (this *QVariantAnimation) setEasingCurve(args ...interface{}) () {
     qtrt.ErrorResolve("QVariantAnimation", "setEasingCurve", args)
   }
 
+  return
 }
 
 // QVariantAnimation(class QObject *)
@@ -173,7 +182,7 @@ func NewQVariantAnimation(args ...interface{}) *QVariantAnimation {
 }
 
 // duration()
-func (this *QVariantAnimation) duration(args ...interface{}) () {
+func (this *QVariantAnimation) Duration(args ...interface{}) (ret interface{}) {
   // duration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -185,16 +194,20 @@ func (this *QVariantAnimation) duration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation8durationEv
     // invoke: int duration()
-    var ret = C.C_ZNK17QVariantAnimation8durationEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QVariantAnimation8durationEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVariantAnimation", "duration", args)
   }
 
+  return
 }
 
 // setStartValue(const class QVariant &)
-func (this *QVariantAnimation) setStartValue(args ...interface{}) () {
+func (this *QVariantAnimation) Setstartvalue(args ...interface{}) () {
   // setStartValue(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -214,10 +227,11 @@ func (this *QVariantAnimation) setStartValue(args ...interface{}) () {
     qtrt.ErrorResolve("QVariantAnimation", "setStartValue", args)
   }
 
+  return
 }
 
 // keyValues()
-func (this *QVariantAnimation) keyValues(args ...interface{}) () {
+func (this *QVariantAnimation) Keyvalues(args ...interface{}) () {
   // keyValues()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -234,10 +248,11 @@ func (this *QVariantAnimation) keyValues(args ...interface{}) () {
     qtrt.ErrorResolve("QVariantAnimation", "keyValues", args)
   }
 
+  return
 }
 
 // ~QVariantAnimation()
-func (this *QVariantAnimation) FreeQVariantAnimation(args ...interface{}) () {
+func (this *QVariantAnimation) Freeqvariantanimation(args ...interface{}) () {
   // ~QVariantAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -254,10 +269,11 @@ func (this *QVariantAnimation) FreeQVariantAnimation(args ...interface{}) () {
     qtrt.ErrorResolve("QVariantAnimation", "~QVariantAnimation", args)
   }
 
+  return
 }
 
 // endValue()
-func (this *QVariantAnimation) endValue(args ...interface{}) () {
+func (this *QVariantAnimation) Endvalue(args ...interface{}) (ret interface{}) {
   // endValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -269,16 +285,20 @@ func (this *QVariantAnimation) endValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation8endValueEv
     // invoke: QVariant endValue()
-    var ret = C.C_ZNK17QVariantAnimation8endValueEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QVariantAnimation8endValueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVariantAnimation", "endValue", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QVariantAnimation) metaObject(args ...interface{}) () {
+func (this *QVariantAnimation) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -295,10 +315,11 @@ func (this *QVariantAnimation) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QVariantAnimation", "metaObject", args)
   }
 
+  return
 }
 
 // setKeyValueAt(qreal, const class QVariant &)
-func (this *QVariantAnimation) setKeyValueAt(args ...interface{}) () {
+func (this *QVariantAnimation) Setkeyvalueat(args ...interface{}) () {
   // setKeyValueAt(qreal, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -321,10 +342,11 @@ func (this *QVariantAnimation) setKeyValueAt(args ...interface{}) () {
     qtrt.ErrorResolve("QVariantAnimation", "setKeyValueAt", args)
   }
 
+  return
 }
 
 // easingCurve()
-func (this *QVariantAnimation) easingCurve(args ...interface{}) () {
+func (this *QVariantAnimation) Easingcurve(args ...interface{}) (ret interface{}) {
   // easingCurve()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -336,16 +358,20 @@ func (this *QVariantAnimation) easingCurve(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation11easingCurveEv
     // invoke: QEasingCurve easingCurve()
-    var ret = C.C_ZNK17QVariantAnimation11easingCurveEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QVariantAnimation11easingCurveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QEasingCurve{}) // "QEasingCurve"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVariantAnimation", "easingCurve", args)
   }
 
+  return
 }
 
 // setEndValue(const class QVariant &)
-func (this *QVariantAnimation) setEndValue(args ...interface{}) () {
+func (this *QVariantAnimation) Setendvalue(args ...interface{}) () {
   // setEndValue(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -365,10 +391,11 @@ func (this *QVariantAnimation) setEndValue(args ...interface{}) () {
     qtrt.ErrorResolve("QVariantAnimation", "setEndValue", args)
   }
 
+  return
 }
 
 // setDuration(int)
-func (this *QVariantAnimation) setDuration(args ...interface{}) () {
+func (this *QVariantAnimation) Setduration(args ...interface{}) () {
   // setDuration(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -388,10 +415,11 @@ func (this *QVariantAnimation) setDuration(args ...interface{}) () {
     qtrt.ErrorResolve("QVariantAnimation", "setDuration", args)
   }
 
+  return
 }
 
 // startValue()
-func (this *QVariantAnimation) startValue(args ...interface{}) () {
+func (this *QVariantAnimation) Startvalue(args ...interface{}) (ret interface{}) {
   // startValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -403,12 +431,16 @@ func (this *QVariantAnimation) startValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation10startValueEv
     // invoke: QVariant startValue()
-    var ret = C.C_ZNK17QVariantAnimation10startValueEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QVariantAnimation10startValueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVariantAnimation", "startValue", args)
   }
 
+  return
 }
 
 // <= body block end

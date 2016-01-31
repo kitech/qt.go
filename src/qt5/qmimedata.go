@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.go
 //
@@ -31,23 +31,23 @@ import "qtrt"
   // proto:  void QMimeData::~QMimeData();
 extern void C_ZN9QMimeDataD2Ev(void* qthis); // 4
   // proto:  QVariant QMimeData::imageData();
-extern void C_ZNK9QMimeData9imageDataEv(void* qthis); // 4
+extern void* C_ZNK9QMimeData9imageDataEv(void* qthis); // 4
   // proto:  QString QMimeData::text();
-extern void C_ZNK9QMimeData4textEv(void* qthis); // 4
+extern void* C_ZNK9QMimeData4textEv(void* qthis); // 4
   // proto:  void QMimeData::setHtml(const QString & html);
 extern void C_ZN9QMimeData7setHtmlERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QMimeData::hasHtml();
-extern void C_ZNK9QMimeData7hasHtmlEv(void* qthis); // 4
+extern bool C_ZNK9QMimeData7hasHtmlEv(void* qthis); // 4
   // proto:  bool QMimeData::hasText();
-extern void C_ZNK9QMimeData7hasTextEv(void* qthis); // 4
+extern bool C_ZNK9QMimeData7hasTextEv(void* qthis); // 4
   // proto:  void QMimeData::QMimeData();
 extern void* C_ZN9QMimeDataC2Ev(); // 3
   // proto:  bool QMimeData::hasUrls();
-extern void C_ZNK9QMimeData7hasUrlsEv(void* qthis); // 4
+extern bool C_ZNK9QMimeData7hasUrlsEv(void* qthis); // 4
   // proto:  void QMimeData::setImageData(const QVariant & image);
 extern void C_ZN9QMimeData12setImageDataERK8QVariant(void* qthis, void* arg0); // 4
   // proto:  QString QMimeData::html();
-extern void C_ZNK9QMimeData4htmlEv(void* qthis); // 4
+extern void* C_ZNK9QMimeData4htmlEv(void* qthis); // 4
   // proto:  void QMimeData::setColorData(const QVariant & color);
 extern void C_ZN9QMimeData12setColorDataERK8QVariant(void* qthis, void* arg0); // 4
   // proto:  void QMimeData::setData(const QString & mimetype, const QByteArray & data);
@@ -55,23 +55,23 @@ extern void C_ZN9QMimeData7setDataERK7QStringRK10QByteArray(void* qthis, void* a
   // proto:  void QMimeData::removeFormat(const QString & mimetype);
 extern void C_ZN9QMimeData12removeFormatERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QMimeData::hasFormat(const QString & mimetype);
-extern void C_ZNK9QMimeData9hasFormatERK7QString(void* qthis, void* arg0); // 4
+extern bool C_ZNK9QMimeData9hasFormatERK7QString(void* qthis, void* arg0); // 4
   // proto:  QByteArray QMimeData::data(const QString & mimetype);
-extern void C_ZNK9QMimeData4dataERK7QString(void* qthis, void* arg0); // 4
+extern void* C_ZNK9QMimeData4dataERK7QString(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QMimeData::metaObject();
 extern void C_ZNK9QMimeData10metaObjectEv(void* qthis); // 4
   // proto:  void QMimeData::setText(const QString & text);
 extern void C_ZN9QMimeData7setTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QVariant QMimeData::colorData();
-extern void C_ZNK9QMimeData9colorDataEv(void* qthis); // 4
+extern void* C_ZNK9QMimeData9colorDataEv(void* qthis); // 4
   // proto:  bool QMimeData::hasColor();
-extern void C_ZNK9QMimeData8hasColorEv(void* qthis); // 4
+extern bool C_ZNK9QMimeData8hasColorEv(void* qthis); // 4
   // proto:  QList<QUrl> QMimeData::urls();
 extern void C_ZNK9QMimeData4urlsEv(void* qthis); // 4
   // proto:  QStringList QMimeData::formats();
 extern void C_ZNK9QMimeData7formatsEv(void* qthis); // 4
   // proto:  bool QMimeData::hasImage();
-extern void C_ZNK9QMimeData8hasImageEv(void* qthis); // 4
+extern bool C_ZNK9QMimeData8hasImageEv(void* qthis); // 4
   // proto:  void QMimeData::clear();
 extern void C_ZN9QMimeData5clearEv(void* qthis); // 4
 */
@@ -93,7 +93,7 @@ type QMimeData struct {
 }
 
 // ~QMimeData()
-func (this *QMimeData) FreeQMimeData(args ...interface{}) () {
+func (this *QMimeData) Freeqmimedata(args ...interface{}) () {
   // ~QMimeData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -110,10 +110,11 @@ func (this *QMimeData) FreeQMimeData(args ...interface{}) () {
     qtrt.ErrorResolve("QMimeData", "~QMimeData", args)
   }
 
+  return
 }
 
 // imageData()
-func (this *QMimeData) imageData(args ...interface{}) () {
+func (this *QMimeData) Imagedata(args ...interface{}) (ret interface{}) {
   // imageData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -125,16 +126,20 @@ func (this *QMimeData) imageData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData9imageDataEv
     // invoke: QVariant imageData()
-    var ret = C.C_ZNK9QMimeData9imageDataEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMimeData9imageDataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMimeData", "imageData", args)
   }
 
+  return
 }
 
 // text()
-func (this *QMimeData) text(args ...interface{}) () {
+func (this *QMimeData) Text(args ...interface{}) (ret interface{}) {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -146,16 +151,20 @@ func (this *QMimeData) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData4textEv
     // invoke: QString text()
-    var ret = C.C_ZNK9QMimeData4textEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMimeData4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMimeData", "text", args)
   }
 
+  return
 }
 
 // setHtml(const class QString &)
-func (this *QMimeData) setHtml(args ...interface{}) () {
+func (this *QMimeData) Sethtml(args ...interface{}) () {
   // setHtml(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -175,10 +184,11 @@ func (this *QMimeData) setHtml(args ...interface{}) () {
     qtrt.ErrorResolve("QMimeData", "setHtml", args)
   }
 
+  return
 }
 
 // hasHtml()
-func (this *QMimeData) hasHtml(args ...interface{}) () {
+func (this *QMimeData) Hashtml(args ...interface{}) (ret interface{}) {
   // hasHtml()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -190,16 +200,20 @@ func (this *QMimeData) hasHtml(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData7hasHtmlEv
     // invoke: bool hasHtml()
-    var ret = C.C_ZNK9QMimeData7hasHtmlEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMimeData7hasHtmlEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMimeData", "hasHtml", args)
   }
 
+  return
 }
 
 // hasText()
-func (this *QMimeData) hasText(args ...interface{}) () {
+func (this *QMimeData) Hastext(args ...interface{}) (ret interface{}) {
   // hasText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -211,12 +225,16 @@ func (this *QMimeData) hasText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData7hasTextEv
     // invoke: bool hasText()
-    var ret = C.C_ZNK9QMimeData7hasTextEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMimeData7hasTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMimeData", "hasText", args)
   }
 
+  return
 }
 
 // QMimeData()
@@ -244,7 +262,7 @@ func NewQMimeData(args ...interface{}) *QMimeData {
 }
 
 // hasUrls()
-func (this *QMimeData) hasUrls(args ...interface{}) () {
+func (this *QMimeData) Hasurls(args ...interface{}) (ret interface{}) {
   // hasUrls()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -256,16 +274,20 @@ func (this *QMimeData) hasUrls(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData7hasUrlsEv
     // invoke: bool hasUrls()
-    var ret = C.C_ZNK9QMimeData7hasUrlsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMimeData7hasUrlsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMimeData", "hasUrls", args)
   }
 
+  return
 }
 
 // setImageData(const class QVariant &)
-func (this *QMimeData) setImageData(args ...interface{}) () {
+func (this *QMimeData) Setimagedata(args ...interface{}) () {
   // setImageData(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -285,10 +307,11 @@ func (this *QMimeData) setImageData(args ...interface{}) () {
     qtrt.ErrorResolve("QMimeData", "setImageData", args)
   }
 
+  return
 }
 
 // html()
-func (this *QMimeData) html(args ...interface{}) () {
+func (this *QMimeData) Html(args ...interface{}) (ret interface{}) {
   // html()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -300,16 +323,20 @@ func (this *QMimeData) html(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData4htmlEv
     // invoke: QString html()
-    var ret = C.C_ZNK9QMimeData4htmlEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMimeData4htmlEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMimeData", "html", args)
   }
 
+  return
 }
 
 // setColorData(const class QVariant &)
-func (this *QMimeData) setColorData(args ...interface{}) () {
+func (this *QMimeData) Setcolordata(args ...interface{}) () {
   // setColorData(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -329,10 +356,11 @@ func (this *QMimeData) setColorData(args ...interface{}) () {
     qtrt.ErrorResolve("QMimeData", "setColorData", args)
   }
 
+  return
 }
 
 // setData(const class QString &, const class QByteArray &)
-func (this *QMimeData) setData(args ...interface{}) () {
+func (this *QMimeData) Setdata(args ...interface{}) () {
   // setData(const class QString &, const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -355,10 +383,11 @@ func (this *QMimeData) setData(args ...interface{}) () {
     qtrt.ErrorResolve("QMimeData", "setData", args)
   }
 
+  return
 }
 
 // removeFormat(const class QString &)
-func (this *QMimeData) removeFormat(args ...interface{}) () {
+func (this *QMimeData) Removeformat(args ...interface{}) () {
   // removeFormat(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,10 +407,11 @@ func (this *QMimeData) removeFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QMimeData", "removeFormat", args)
   }
 
+  return
 }
 
 // hasFormat(const class QString &)
-func (this *QMimeData) hasFormat(args ...interface{}) () {
+func (this *QMimeData) Hasformat(args ...interface{}) (ret interface{}) {
   // hasFormat(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -396,16 +426,20 @@ func (this *QMimeData) hasFormat(args ...interface{}) () {
     // invoke: bool hasFormat(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QMimeData9hasFormatERK7QString(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMimeData9hasFormatERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMimeData", "hasFormat", args)
   }
 
+  return
 }
 
 // data(const class QString &)
-func (this *QMimeData) data(args ...interface{}) () {
+func (this *QMimeData) Data(args ...interface{}) (ret interface{}) {
   // data(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -420,16 +454,20 @@ func (this *QMimeData) data(args ...interface{}) () {
     // invoke: QByteArray data(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QMimeData4dataERK7QString(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMimeData4dataERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMimeData", "data", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QMimeData) metaObject(args ...interface{}) () {
+func (this *QMimeData) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -446,10 +484,11 @@ func (this *QMimeData) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QMimeData", "metaObject", args)
   }
 
+  return
 }
 
 // setText(const class QString &)
-func (this *QMimeData) setText(args ...interface{}) () {
+func (this *QMimeData) Settext(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -469,10 +508,11 @@ func (this *QMimeData) setText(args ...interface{}) () {
     qtrt.ErrorResolve("QMimeData", "setText", args)
   }
 
+  return
 }
 
 // colorData()
-func (this *QMimeData) colorData(args ...interface{}) () {
+func (this *QMimeData) Colordata(args ...interface{}) (ret interface{}) {
   // colorData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -484,16 +524,20 @@ func (this *QMimeData) colorData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData9colorDataEv
     // invoke: QVariant colorData()
-    var ret = C.C_ZNK9QMimeData9colorDataEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMimeData9colorDataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMimeData", "colorData", args)
   }
 
+  return
 }
 
 // hasColor()
-func (this *QMimeData) hasColor(args ...interface{}) () {
+func (this *QMimeData) Hascolor(args ...interface{}) (ret interface{}) {
   // hasColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -505,16 +549,20 @@ func (this *QMimeData) hasColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData8hasColorEv
     // invoke: bool hasColor()
-    var ret = C.C_ZNK9QMimeData8hasColorEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMimeData8hasColorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMimeData", "hasColor", args)
   }
 
+  return
 }
 
 // urls()
-func (this *QMimeData) urls(args ...interface{}) () {
+func (this *QMimeData) Urls(args ...interface{}) () {
   // urls()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -531,10 +579,11 @@ func (this *QMimeData) urls(args ...interface{}) () {
     qtrt.ErrorResolve("QMimeData", "urls", args)
   }
 
+  return
 }
 
 // formats()
-func (this *QMimeData) formats(args ...interface{}) () {
+func (this *QMimeData) Formats(args ...interface{}) () {
   // formats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -551,10 +600,11 @@ func (this *QMimeData) formats(args ...interface{}) () {
     qtrt.ErrorResolve("QMimeData", "formats", args)
   }
 
+  return
 }
 
 // hasImage()
-func (this *QMimeData) hasImage(args ...interface{}) () {
+func (this *QMimeData) Hasimage(args ...interface{}) (ret interface{}) {
   // hasImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -566,16 +616,20 @@ func (this *QMimeData) hasImage(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData8hasImageEv
     // invoke: bool hasImage()
-    var ret = C.C_ZNK9QMimeData8hasImageEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMimeData8hasImageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMimeData", "hasImage", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QMimeData) clear(args ...interface{}) () {
+func (this *QMimeData) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -592,6 +646,7 @@ func (this *QMimeData) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QMimeData", "clear", args)
   }
 
+  return
 }
 
 // <= body block end

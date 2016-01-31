@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.go
 //
@@ -33,7 +33,7 @@ extern void C_ZN8QSurfaceD2Ev(void* qthis); // 4
   // proto:  QSurface::SurfaceClass QSurface::surfaceClass();
 extern void C_ZNK8QSurface12surfaceClassEv(void* qthis); // 4
   // proto:  bool QSurface::supportsOpenGL();
-extern void C_ZNK8QSurface14supportsOpenGLEv(void* qthis); // 4
+extern bool C_ZNK8QSurface14supportsOpenGLEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -53,7 +53,7 @@ type QSurface struct {
 }
 
 // ~QSurface()
-func (this *QSurface) FreeQSurface(args ...interface{}) () {
+func (this *QSurface) Freeqsurface(args ...interface{}) () {
   // ~QSurface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -70,10 +70,11 @@ func (this *QSurface) FreeQSurface(args ...interface{}) () {
     qtrt.ErrorResolve("QSurface", "~QSurface", args)
   }
 
+  return
 }
 
 // surfaceClass()
-func (this *QSurface) surfaceClass(args ...interface{}) () {
+func (this *QSurface) Surfaceclass(args ...interface{}) () {
   // surfaceClass()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -90,10 +91,11 @@ func (this *QSurface) surfaceClass(args ...interface{}) () {
     qtrt.ErrorResolve("QSurface", "surfaceClass", args)
   }
 
+  return
 }
 
 // supportsOpenGL()
-func (this *QSurface) supportsOpenGL(args ...interface{}) () {
+func (this *QSurface) Supportsopengl(args ...interface{}) (ret interface{}) {
   // supportsOpenGL()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -105,12 +107,16 @@ func (this *QSurface) supportsOpenGL(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QSurface14supportsOpenGLEv
     // invoke: bool supportsOpenGL()
-    var ret = C.C_ZNK8QSurface14supportsOpenGLEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QSurface14supportsOpenGLEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurface", "supportsOpenGL", args)
   }
 
+  return
 }
 
 // <= body block end

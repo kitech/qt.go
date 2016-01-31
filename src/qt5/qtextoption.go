@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qtextoption.h
 // dst-file: /src/gui/qtextoption.go
 //
@@ -33,13 +33,13 @@ extern void C_ZN11QTextOptionD2Ev(void* qthis); // 4
   // proto:  void QTextOption::setUseDesignMetrics(bool b);
 extern void C_ZN11QTextOption19setUseDesignMetricsEb(void* qthis, bool arg0); // 2
   // proto:  bool QTextOption::useDesignMetrics();
-extern void C_ZNK11QTextOption16useDesignMetricsEv(void* qthis); // 2
+extern bool C_ZNK11QTextOption16useDesignMetricsEv(void* qthis); // 2
   // proto:  void QTextOption::setTabStop(qreal tabStop);
 extern void C_ZN11QTextOption10setTabStopEd(void* qthis, double arg0); // 2
   // proto:  QList<QTextOption::Tab> QTextOption::tabs();
 extern void C_ZNK11QTextOption4tabsEv(void* qthis); // 4
   // proto:  qreal QTextOption::tabStop();
-extern void C_ZNK11QTextOption7tabStopEv(void* qthis); // 2
+extern double C_ZNK11QTextOption7tabStopEv(void* qthis); // 2
   // proto:  QList<qreal> QTextOption::tabArray();
 extern void C_ZNK11QTextOption8tabArrayEv(void* qthis); // 4
   // proto:  Flags QTextOption::flags();
@@ -73,7 +73,7 @@ type QTextOption struct {
 }
 
 // ~QTextOption()
-func (this *QTextOption) FreeQTextOption(args ...interface{}) () {
+func (this *QTextOption) Freeqtextoption(args ...interface{}) () {
   // ~QTextOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -90,10 +90,11 @@ func (this *QTextOption) FreeQTextOption(args ...interface{}) () {
     qtrt.ErrorResolve("QTextOption", "~QTextOption", args)
   }
 
+  return
 }
 
 // setUseDesignMetrics(_Bool)
-func (this *QTextOption) setUseDesignMetrics(args ...interface{}) () {
+func (this *QTextOption) Setusedesignmetrics(args ...interface{}) () {
   // setUseDesignMetrics(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -113,10 +114,11 @@ func (this *QTextOption) setUseDesignMetrics(args ...interface{}) () {
     qtrt.ErrorResolve("QTextOption", "setUseDesignMetrics", args)
   }
 
+  return
 }
 
 // useDesignMetrics()
-func (this *QTextOption) useDesignMetrics(args ...interface{}) () {
+func (this *QTextOption) Usedesignmetrics(args ...interface{}) (ret interface{}) {
   // useDesignMetrics()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -128,16 +130,20 @@ func (this *QTextOption) useDesignMetrics(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextOption16useDesignMetricsEv
     // invoke: bool useDesignMetrics()
-    var ret = C.C_ZNK11QTextOption16useDesignMetricsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextOption16useDesignMetricsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextOption", "useDesignMetrics", args)
   }
 
+  return
 }
 
 // setTabStop(qreal)
-func (this *QTextOption) setTabStop(args ...interface{}) () {
+func (this *QTextOption) Settabstop(args ...interface{}) () {
   // setTabStop(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -157,10 +163,11 @@ func (this *QTextOption) setTabStop(args ...interface{}) () {
     qtrt.ErrorResolve("QTextOption", "setTabStop", args)
   }
 
+  return
 }
 
 // tabs()
-func (this *QTextOption) tabs(args ...interface{}) () {
+func (this *QTextOption) Tabs(args ...interface{}) () {
   // tabs()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -177,10 +184,11 @@ func (this *QTextOption) tabs(args ...interface{}) () {
     qtrt.ErrorResolve("QTextOption", "tabs", args)
   }
 
+  return
 }
 
 // tabStop()
-func (this *QTextOption) tabStop(args ...interface{}) () {
+func (this *QTextOption) Tabstop(args ...interface{}) (ret interface{}) {
   // tabStop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -192,16 +200,20 @@ func (this *QTextOption) tabStop(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextOption7tabStopEv
     // invoke: qreal tabStop()
-    var ret = C.C_ZNK11QTextOption7tabStopEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextOption7tabStopEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextOption", "tabStop", args)
   }
 
+  return
 }
 
 // tabArray()
-func (this *QTextOption) tabArray(args ...interface{}) () {
+func (this *QTextOption) Tabarray(args ...interface{}) () {
   // tabArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -218,10 +230,11 @@ func (this *QTextOption) tabArray(args ...interface{}) () {
     qtrt.ErrorResolve("QTextOption", "tabArray", args)
   }
 
+  return
 }
 
 // flags()
-func (this *QTextOption) flags(args ...interface{}) () {
+func (this *QTextOption) Flags(args ...interface{}) () {
   // flags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -238,6 +251,7 @@ func (this *QTextOption) flags(args ...interface{}) () {
     qtrt.ErrorResolve("QTextOption", "flags", args)
   }
 
+  return
 }
 
 // QTextOption(const class QTextOption &)
@@ -277,7 +291,7 @@ func NewQTextOption(args ...interface{}) *QTextOption {
 }
 
 // wrapMode()
-func (this *QTextOption) wrapMode(args ...interface{}) () {
+func (this *QTextOption) Wrapmode(args ...interface{}) () {
   // wrapMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -294,10 +308,11 @@ func (this *QTextOption) wrapMode(args ...interface{}) () {
     qtrt.ErrorResolve("QTextOption", "wrapMode", args)
   }
 
+  return
 }
 
 // alignment()
-func (this *QTextOption) alignment(args ...interface{}) () {
+func (this *QTextOption) Alignment(args ...interface{}) () {
   // alignment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -314,10 +329,11 @@ func (this *QTextOption) alignment(args ...interface{}) () {
     qtrt.ErrorResolve("QTextOption", "alignment", args)
   }
 
+  return
 }
 
 // textDirection()
-func (this *QTextOption) textDirection(args ...interface{}) () {
+func (this *QTextOption) Textdirection(args ...interface{}) () {
   // textDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -334,6 +350,7 @@ func (this *QTextOption) textDirection(args ...interface{}) () {
     qtrt.ErrorResolve("QTextOption", "textDirection", args)
   }
 
+  return
 }
 
 // <= body block end

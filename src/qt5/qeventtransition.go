@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qeventtransition.h
 // dst-file: /src/core/qeventtransition.go
 //
@@ -35,7 +35,7 @@ extern void C_ZN16QEventTransition14setEventSourceEP7QObject(void* qthis, void* 
   // proto:  void QEventTransition::QEventTransition(QState * sourceState);
 extern void* C_ZN16QEventTransitionC2EP6QState(void* arg0); // 3
   // proto:  QObject * QEventTransition::eventSource();
-extern void C_ZNK16QEventTransition11eventSourceEv(void* qthis); // 4
+extern void* C_ZNK16QEventTransition11eventSourceEv(void* qthis); // 4
   // proto:  QEvent::Type QEventTransition::eventType();
 extern void C_ZNK16QEventTransition9eventTypeEv(void* qthis); // 4
   // proto:  void QEventTransition::~QEventTransition();
@@ -59,7 +59,7 @@ type QEventTransition struct {
 }
 
 // metaObject()
-func (this *QEventTransition) metaObject(args ...interface{}) () {
+func (this *QEventTransition) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -76,10 +76,11 @@ func (this *QEventTransition) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QEventTransition", "metaObject", args)
   }
 
+  return
 }
 
 // setEventSource(class QObject *)
-func (this *QEventTransition) setEventSource(args ...interface{}) () {
+func (this *QEventTransition) Seteventsource(args ...interface{}) () {
   // setEventSource(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -99,6 +100,7 @@ func (this *QEventTransition) setEventSource(args ...interface{}) () {
     qtrt.ErrorResolve("QEventTransition", "setEventSource", args)
   }
 
+  return
 }
 
 // QEventTransition(class QState *)
@@ -129,7 +131,7 @@ func NewQEventTransition(args ...interface{}) *QEventTransition {
 }
 
 // eventSource()
-func (this *QEventTransition) eventSource(args ...interface{}) () {
+func (this *QEventTransition) Eventsource(args ...interface{}) (ret interface{}) {
   // eventSource()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -141,16 +143,20 @@ func (this *QEventTransition) eventSource(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QEventTransition11eventSourceEv
     // invoke: QObject * eventSource()
-    var ret = C.C_ZNK16QEventTransition11eventSourceEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK16QEventTransition11eventSourceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QObject{}) // "QObject *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QEventTransition", "eventSource", args)
   }
 
+  return
 }
 
 // eventType()
-func (this *QEventTransition) eventType(args ...interface{}) () {
+func (this *QEventTransition) Eventtype(args ...interface{}) () {
   // eventType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -167,10 +173,11 @@ func (this *QEventTransition) eventType(args ...interface{}) () {
     qtrt.ErrorResolve("QEventTransition", "eventType", args)
   }
 
+  return
 }
 
 // ~QEventTransition()
-func (this *QEventTransition) FreeQEventTransition(args ...interface{}) () {
+func (this *QEventTransition) Freeqeventtransition(args ...interface{}) () {
   // ~QEventTransition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -187,6 +194,7 @@ func (this *QEventTransition) FreeQEventTransition(args ...interface{}) () {
     qtrt.ErrorResolve("QEventTransition", "~QEventTransition", args)
   }
 
+  return
 }
 
 // <= body block end

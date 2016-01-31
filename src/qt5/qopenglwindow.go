@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.go
 //
@@ -35,9 +35,9 @@ extern void C_ZNK13QOpenGLWindow12shareContextEv(void* qthis); // 4
   // proto:  void QOpenGLWindow::doneCurrent();
 extern void C_ZN13QOpenGLWindow11doneCurrentEv(void* qthis); // 4
   // proto:  bool QOpenGLWindow::isValid();
-extern void C_ZNK13QOpenGLWindow7isValidEv(void* qthis); // 4
+extern bool C_ZNK13QOpenGLWindow7isValidEv(void* qthis); // 4
   // proto:  GLuint QOpenGLWindow::defaultFramebufferObject();
-extern void C_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(void* qthis); // 4
+extern int32_t C_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(void* qthis); // 4
   // proto:  void QOpenGLWindow::~QOpenGLWindow();
 extern void C_ZN13QOpenGLWindowD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QOpenGLWindow::metaObject();
@@ -45,7 +45,7 @@ extern void C_ZNK13QOpenGLWindow10metaObjectEv(void* qthis); // 4
   // proto:  void QOpenGLWindow::makeCurrent();
 extern void C_ZN13QOpenGLWindow11makeCurrentEv(void* qthis); // 4
   // proto:  QImage QOpenGLWindow::grabFramebuffer();
-extern void C_ZN13QOpenGLWindow15grabFramebufferEv(void* qthis); // 4
+extern void* C_ZN13QOpenGLWindow15grabFramebufferEv(void* qthis); // 4
   // proto:  QOpenGLContext * QOpenGLWindow::context();
 extern void C_ZNK13QOpenGLWindow7contextEv(void* qthis); // 4
 */
@@ -68,7 +68,7 @@ type QOpenGLWindow struct {
 }
 
 // updateBehavior()
-func (this *QOpenGLWindow) updateBehavior(args ...interface{}) () {
+func (this *QOpenGLWindow) Updatebehavior(args ...interface{}) () {
   // updateBehavior()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -85,10 +85,11 @@ func (this *QOpenGLWindow) updateBehavior(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLWindow", "updateBehavior", args)
   }
 
+  return
 }
 
 // shareContext()
-func (this *QOpenGLWindow) shareContext(args ...interface{}) () {
+func (this *QOpenGLWindow) Sharecontext(args ...interface{}) () {
   // shareContext()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -105,10 +106,11 @@ func (this *QOpenGLWindow) shareContext(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLWindow", "shareContext", args)
   }
 
+  return
 }
 
 // doneCurrent()
-func (this *QOpenGLWindow) doneCurrent(args ...interface{}) () {
+func (this *QOpenGLWindow) Donecurrent(args ...interface{}) () {
   // doneCurrent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -125,10 +127,11 @@ func (this *QOpenGLWindow) doneCurrent(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLWindow", "doneCurrent", args)
   }
 
+  return
 }
 
 // isValid()
-func (this *QOpenGLWindow) isValid(args ...interface{}) () {
+func (this *QOpenGLWindow) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -140,16 +143,20 @@ func (this *QOpenGLWindow) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow7isValidEv
     // invoke: bool isValid()
-    var ret = C.C_ZNK13QOpenGLWindow7isValidEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QOpenGLWindow7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "isValid", args)
   }
 
+  return
 }
 
 // defaultFramebufferObject()
-func (this *QOpenGLWindow) defaultFramebufferObject(args ...interface{}) () {
+func (this *QOpenGLWindow) Defaultframebufferobject(args ...interface{}) (ret interface{}) {
   // defaultFramebufferObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -161,16 +168,20 @@ func (this *QOpenGLWindow) defaultFramebufferObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow24defaultFramebufferObjectEv
     // invoke: GLuint defaultFramebufferObject()
-    var ret = C.C_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "GLuint"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "defaultFramebufferObject", args)
   }
 
+  return
 }
 
 // ~QOpenGLWindow()
-func (this *QOpenGLWindow) FreeQOpenGLWindow(args ...interface{}) () {
+func (this *QOpenGLWindow) Freeqopenglwindow(args ...interface{}) () {
   // ~QOpenGLWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -187,10 +198,11 @@ func (this *QOpenGLWindow) FreeQOpenGLWindow(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLWindow", "~QOpenGLWindow", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QOpenGLWindow) metaObject(args ...interface{}) () {
+func (this *QOpenGLWindow) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -207,10 +219,11 @@ func (this *QOpenGLWindow) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLWindow", "metaObject", args)
   }
 
+  return
 }
 
 // makeCurrent()
-func (this *QOpenGLWindow) makeCurrent(args ...interface{}) () {
+func (this *QOpenGLWindow) Makecurrent(args ...interface{}) () {
   // makeCurrent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -227,10 +240,11 @@ func (this *QOpenGLWindow) makeCurrent(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLWindow", "makeCurrent", args)
   }
 
+  return
 }
 
 // grabFramebuffer()
-func (this *QOpenGLWindow) grabFramebuffer(args ...interface{}) () {
+func (this *QOpenGLWindow) Grabframebuffer(args ...interface{}) (ret interface{}) {
   // grabFramebuffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -242,16 +256,20 @@ func (this *QOpenGLWindow) grabFramebuffer(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWindow15grabFramebufferEv
     // invoke: QImage grabFramebuffer()
-    var ret = C.C_ZN13QOpenGLWindow15grabFramebufferEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QOpenGLWindow15grabFramebufferEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QImage{}) // "QImage"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "grabFramebuffer", args)
   }
 
+  return
 }
 
 // context()
-func (this *QOpenGLWindow) context(args ...interface{}) () {
+func (this *QOpenGLWindow) Context(args ...interface{}) () {
   // context()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -268,6 +286,7 @@ func (this *QOpenGLWindow) context(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLWindow", "context", args)
   }
 
+  return
 }
 
 // <= body block end

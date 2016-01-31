@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qmargins.h
 // dst-file: /src/core/qmargins.go
 //
@@ -29,21 +29,21 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  qreal QMarginsF::right();
-extern void C_ZNK9QMarginsF5rightEv(void* qthis); // 2
+extern double C_ZNK9QMarginsF5rightEv(void* qthis); // 2
   // proto:  qreal QMarginsF::bottom();
-extern void C_ZNK9QMarginsF6bottomEv(void* qthis); // 2
+extern double C_ZNK9QMarginsF6bottomEv(void* qthis); // 2
   // proto:  void QMarginsF::setBottom(qreal bottom);
 extern void C_ZN9QMarginsF9setBottomEd(void* qthis, double arg0); // 2
   // proto:  qreal QMarginsF::top();
-extern void C_ZNK9QMarginsF3topEv(void* qthis); // 2
+extern double C_ZNK9QMarginsF3topEv(void* qthis); // 2
   // proto:  QMargins QMarginsF::toMargins();
-extern void C_ZNK9QMarginsF9toMarginsEv(void* qthis); // 2
+extern void* C_ZNK9QMarginsF9toMarginsEv(void* qthis); // 2
   // proto:  void QMarginsF::setRight(qreal right);
 extern void C_ZN9QMarginsF8setRightEd(void* qthis, double arg0); // 2
   // proto:  void QMarginsF::setTop(qreal top);
 extern void C_ZN9QMarginsF6setTopEd(void* qthis, double arg0); // 2
   // proto:  bool QMarginsF::isNull();
-extern void C_ZNK9QMarginsF6isNullEv(void* qthis); // 2
+extern bool C_ZNK9QMarginsF6isNullEv(void* qthis); // 2
   // proto:  void QMarginsF::setLeft(qreal left);
 extern void C_ZN9QMarginsF7setLeftEd(void* qthis, double arg0); // 2
   // proto:  void QMarginsF::QMarginsF();
@@ -53,11 +53,11 @@ extern void* C_ZN9QMarginsFC2Edddd(double arg0, double arg1, double arg2, double
   // proto:  void QMarginsF::QMarginsF(const QMargins & margins);
 extern void* C_ZN9QMarginsFC2ERK8QMargins(void* arg0); // 1
   // proto:  qreal QMarginsF::left();
-extern void C_ZNK9QMarginsF4leftEv(void* qthis); // 2
+extern double C_ZNK9QMarginsF4leftEv(void* qthis); // 2
   // proto:  int QMargins::right();
-extern void C_ZNK8QMargins5rightEv(void* qthis); // 2
+extern int32_t C_ZNK8QMargins5rightEv(void* qthis); // 2
   // proto:  int QMargins::bottom();
-extern void C_ZNK8QMargins6bottomEv(void* qthis); // 2
+extern int32_t C_ZNK8QMargins6bottomEv(void* qthis); // 2
   // proto:  void QMargins::setBottom(int bottom);
 extern void C_ZN8QMargins9setBottomEi(void* qthis, int32_t arg0); // 2
   // proto:  void QMargins::setRight(int right);
@@ -65,7 +65,7 @@ extern void C_ZN8QMargins8setRightEi(void* qthis, int32_t arg0); // 2
   // proto:  void QMargins::setTop(int top);
 extern void C_ZN8QMargins6setTopEi(void* qthis, int32_t arg0); // 2
   // proto:  bool QMargins::isNull();
-extern void C_ZNK8QMargins6isNullEv(void* qthis); // 2
+extern bool C_ZNK8QMargins6isNullEv(void* qthis); // 2
   // proto:  void QMargins::QMargins();
 extern void* C_ZN8QMarginsC2Ev(); // 1
   // proto:  void QMargins::QMargins(int left, int top, int right, int bottom);
@@ -73,9 +73,9 @@ extern void* C_ZN8QMarginsC2Eiiii(int32_t arg0, int32_t arg1, int32_t arg2, int3
   // proto:  void QMargins::setLeft(int left);
 extern void C_ZN8QMargins7setLeftEi(void* qthis, int32_t arg0); // 2
   // proto:  int QMargins::top();
-extern void C_ZNK8QMargins3topEv(void* qthis); // 2
+extern int32_t C_ZNK8QMargins3topEv(void* qthis); // 2
   // proto:  int QMargins::left();
-extern void C_ZNK8QMargins4leftEv(void* qthis); // 2
+extern int32_t C_ZNK8QMargins4leftEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -101,7 +101,7 @@ type QMargins struct {
 }
 
 // right()
-func (this *QMarginsF) right(args ...interface{}) () {
+func (this *QMarginsF) Right(args ...interface{}) (ret interface{}) {
   // right()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -113,16 +113,20 @@ func (this *QMarginsF) right(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMarginsF5rightEv
     // invoke: qreal right()
-    var ret = C.C_ZNK9QMarginsF5rightEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMarginsF5rightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMarginsF", "right", args)
   }
 
+  return
 }
 
 // bottom()
-func (this *QMarginsF) bottom(args ...interface{}) () {
+func (this *QMarginsF) Bottom(args ...interface{}) (ret interface{}) {
   // bottom()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -134,16 +138,20 @@ func (this *QMarginsF) bottom(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMarginsF6bottomEv
     // invoke: qreal bottom()
-    var ret = C.C_ZNK9QMarginsF6bottomEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMarginsF6bottomEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMarginsF", "bottom", args)
   }
 
+  return
 }
 
 // setBottom(qreal)
-func (this *QMarginsF) setBottom(args ...interface{}) () {
+func (this *QMarginsF) Setbottom(args ...interface{}) () {
   // setBottom(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -163,10 +171,11 @@ func (this *QMarginsF) setBottom(args ...interface{}) () {
     qtrt.ErrorResolve("QMarginsF", "setBottom", args)
   }
 
+  return
 }
 
 // top()
-func (this *QMarginsF) top(args ...interface{}) () {
+func (this *QMarginsF) Top(args ...interface{}) (ret interface{}) {
   // top()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -178,16 +187,20 @@ func (this *QMarginsF) top(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMarginsF3topEv
     // invoke: qreal top()
-    var ret = C.C_ZNK9QMarginsF3topEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMarginsF3topEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMarginsF", "top", args)
   }
 
+  return
 }
 
 // toMargins()
-func (this *QMarginsF) toMargins(args ...interface{}) () {
+func (this *QMarginsF) Tomargins(args ...interface{}) (ret interface{}) {
   // toMargins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -199,16 +212,20 @@ func (this *QMarginsF) toMargins(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMarginsF9toMarginsEv
     // invoke: QMargins toMargins()
-    var ret = C.C_ZNK9QMarginsF9toMarginsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMarginsF9toMarginsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMargins{}) // "QMargins"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMarginsF", "toMargins", args)
   }
 
+  return
 }
 
 // setRight(qreal)
-func (this *QMarginsF) setRight(args ...interface{}) () {
+func (this *QMarginsF) Setright(args ...interface{}) () {
   // setRight(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -228,10 +245,11 @@ func (this *QMarginsF) setRight(args ...interface{}) () {
     qtrt.ErrorResolve("QMarginsF", "setRight", args)
   }
 
+  return
 }
 
 // setTop(qreal)
-func (this *QMarginsF) setTop(args ...interface{}) () {
+func (this *QMarginsF) Settop(args ...interface{}) () {
   // setTop(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -251,10 +269,11 @@ func (this *QMarginsF) setTop(args ...interface{}) () {
     qtrt.ErrorResolve("QMarginsF", "setTop", args)
   }
 
+  return
 }
 
 // isNull()
-func (this *QMarginsF) isNull(args ...interface{}) () {
+func (this *QMarginsF) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -266,16 +285,20 @@ func (this *QMarginsF) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMarginsF6isNullEv
     // invoke: bool isNull()
-    var ret = C.C_ZNK9QMarginsF6isNullEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMarginsF6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMarginsF", "isNull", args)
   }
 
+  return
 }
 
 // setLeft(qreal)
-func (this *QMarginsF) setLeft(args ...interface{}) () {
+func (this *QMarginsF) Setleft(args ...interface{}) () {
   // setLeft(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -295,6 +318,7 @@ func (this *QMarginsF) setLeft(args ...interface{}) () {
     qtrt.ErrorResolve("QMarginsF", "setLeft", args)
   }
 
+  return
 }
 
 // QMarginsF()
@@ -355,7 +379,7 @@ func NewQMarginsF(args ...interface{}) *QMarginsF {
 }
 
 // left()
-func (this *QMarginsF) left(args ...interface{}) () {
+func (this *QMarginsF) Left(args ...interface{}) (ret interface{}) {
   // left()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -367,16 +391,20 @@ func (this *QMarginsF) left(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMarginsF4leftEv
     // invoke: qreal left()
-    var ret = C.C_ZNK9QMarginsF4leftEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QMarginsF4leftEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMarginsF", "left", args)
   }
 
+  return
 }
 
 // right()
-func (this *QMargins) right(args ...interface{}) () {
+func (this *QMargins) Right(args ...interface{}) (ret interface{}) {
   // right()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -388,16 +416,20 @@ func (this *QMargins) right(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMargins5rightEv
     // invoke: int right()
-    var ret = C.C_ZNK8QMargins5rightEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMargins5rightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMargins", "right", args)
   }
 
+  return
 }
 
 // bottom()
-func (this *QMargins) bottom(args ...interface{}) () {
+func (this *QMargins) Bottom(args ...interface{}) (ret interface{}) {
   // bottom()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -409,16 +441,20 @@ func (this *QMargins) bottom(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMargins6bottomEv
     // invoke: int bottom()
-    var ret = C.C_ZNK8QMargins6bottomEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMargins6bottomEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMargins", "bottom", args)
   }
 
+  return
 }
 
 // setBottom(int)
-func (this *QMargins) setBottom(args ...interface{}) () {
+func (this *QMargins) Setbottom(args ...interface{}) () {
   // setBottom(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -438,10 +474,11 @@ func (this *QMargins) setBottom(args ...interface{}) () {
     qtrt.ErrorResolve("QMargins", "setBottom", args)
   }
 
+  return
 }
 
 // setRight(int)
-func (this *QMargins) setRight(args ...interface{}) () {
+func (this *QMargins) Setright(args ...interface{}) () {
   // setRight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -461,10 +498,11 @@ func (this *QMargins) setRight(args ...interface{}) () {
     qtrt.ErrorResolve("QMargins", "setRight", args)
   }
 
+  return
 }
 
 // setTop(int)
-func (this *QMargins) setTop(args ...interface{}) () {
+func (this *QMargins) Settop(args ...interface{}) () {
   // setTop(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -484,10 +522,11 @@ func (this *QMargins) setTop(args ...interface{}) () {
     qtrt.ErrorResolve("QMargins", "setTop", args)
   }
 
+  return
 }
 
 // isNull()
-func (this *QMargins) isNull(args ...interface{}) () {
+func (this *QMargins) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -499,12 +538,16 @@ func (this *QMargins) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMargins6isNullEv
     // invoke: bool isNull()
-    var ret = C.C_ZNK8QMargins6isNullEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMargins6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMargins", "isNull", args)
   }
 
+  return
 }
 
 // QMargins()
@@ -553,7 +596,7 @@ func NewQMargins(args ...interface{}) *QMargins {
 }
 
 // setLeft(int)
-func (this *QMargins) setLeft(args ...interface{}) () {
+func (this *QMargins) Setleft(args ...interface{}) () {
   // setLeft(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -573,10 +616,11 @@ func (this *QMargins) setLeft(args ...interface{}) () {
     qtrt.ErrorResolve("QMargins", "setLeft", args)
   }
 
+  return
 }
 
 // top()
-func (this *QMargins) top(args ...interface{}) () {
+func (this *QMargins) Top(args ...interface{}) (ret interface{}) {
   // top()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -588,16 +632,20 @@ func (this *QMargins) top(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMargins3topEv
     // invoke: int top()
-    var ret = C.C_ZNK8QMargins3topEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMargins3topEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMargins", "top", args)
   }
 
+  return
 }
 
 // left()
-func (this *QMargins) left(args ...interface{}) () {
+func (this *QMargins) Left(args ...interface{}) (ret interface{}) {
   // left()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -609,12 +657,16 @@ func (this *QMargins) left(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMargins4leftEv
     // invoke: int left()
-    var ret = C.C_ZNK8QMargins4leftEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMargins4leftEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMargins", "left", args)
   }
 
+  return
 }
 
 // <= body block end

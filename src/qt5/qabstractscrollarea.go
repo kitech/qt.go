@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qabstractscrollarea.h
 // dst-file: /src/widgets/qabstractscrollarea.go
 //
@@ -31,9 +31,9 @@ import "qtrt"
   // proto:  Qt::ScrollBarPolicy QAbstractScrollArea::horizontalScrollBarPolicy();
 extern void C_ZNK19QAbstractScrollArea25horizontalScrollBarPolicyEv(void* qthis); // 4
   // proto:  QSize QAbstractScrollArea::maximumViewportSize();
-extern void C_ZNK19QAbstractScrollArea19maximumViewportSizeEv(void* qthis); // 4
+extern void* C_ZNK19QAbstractScrollArea19maximumViewportSizeEv(void* qthis); // 4
   // proto:  QWidget * QAbstractScrollArea::cornerWidget();
-extern void C_ZNK19QAbstractScrollArea12cornerWidgetEv(void* qthis); // 4
+extern void* C_ZNK19QAbstractScrollArea12cornerWidgetEv(void* qthis); // 4
   // proto:  void QAbstractScrollArea::setVerticalScrollBar(QScrollBar * scrollbar);
 extern void C_ZN19QAbstractScrollArea20setVerticalScrollBarEP10QScrollBar(void* qthis, void* arg0); // 4
   // proto:  void QAbstractScrollArea::setHorizontalScrollBar(QScrollBar * scrollbar);
@@ -49,19 +49,19 @@ extern void* C_ZN19QAbstractScrollAreaC2EP7QWidget(void* arg0); // 3
   // proto:  void QAbstractScrollArea::~QAbstractScrollArea();
 extern void C_ZN19QAbstractScrollAreaD2Ev(void* qthis); // 4
   // proto:  QScrollBar * QAbstractScrollArea::verticalScrollBar();
-extern void C_ZNK19QAbstractScrollArea17verticalScrollBarEv(void* qthis); // 4
+extern void* C_ZNK19QAbstractScrollArea17verticalScrollBarEv(void* qthis); // 4
   // proto:  QScrollBar * QAbstractScrollArea::horizontalScrollBar();
-extern void C_ZNK19QAbstractScrollArea19horizontalScrollBarEv(void* qthis); // 4
+extern void* C_ZNK19QAbstractScrollArea19horizontalScrollBarEv(void* qthis); // 4
   // proto:  QWidget * QAbstractScrollArea::viewport();
-extern void C_ZNK19QAbstractScrollArea8viewportEv(void* qthis); // 4
+extern void* C_ZNK19QAbstractScrollArea8viewportEv(void* qthis); // 4
   // proto:  const QMetaObject * QAbstractScrollArea::metaObject();
 extern void C_ZNK19QAbstractScrollArea10metaObjectEv(void* qthis); // 4
   // proto:  Qt::ScrollBarPolicy QAbstractScrollArea::verticalScrollBarPolicy();
 extern void C_ZNK19QAbstractScrollArea23verticalScrollBarPolicyEv(void* qthis); // 4
   // proto:  QSize QAbstractScrollArea::sizeHint();
-extern void C_ZNK19QAbstractScrollArea8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK19QAbstractScrollArea8sizeHintEv(void* qthis); // 4
   // proto:  QSize QAbstractScrollArea::minimumSizeHint();
-extern void C_ZNK19QAbstractScrollArea15minimumSizeHintEv(void* qthis); // 4
+extern void* C_ZNK19QAbstractScrollArea15minimumSizeHintEv(void* qthis); // 4
   // proto:  QAbstractScrollArea::SizeAdjustPolicy QAbstractScrollArea::sizeAdjustPolicy();
 extern void C_ZNK19QAbstractScrollArea16sizeAdjustPolicyEv(void* qthis); // 4
 */
@@ -83,7 +83,7 @@ type QAbstractScrollArea struct {
 }
 
 // horizontalScrollBarPolicy()
-func (this *QAbstractScrollArea) horizontalScrollBarPolicy(args ...interface{}) () {
+func (this *QAbstractScrollArea) Horizontalscrollbarpolicy(args ...interface{}) () {
   // horizontalScrollBarPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -100,10 +100,11 @@ func (this *QAbstractScrollArea) horizontalScrollBarPolicy(args ...interface{}) 
     qtrt.ErrorResolve("QAbstractScrollArea", "horizontalScrollBarPolicy", args)
   }
 
+  return
 }
 
 // maximumViewportSize()
-func (this *QAbstractScrollArea) maximumViewportSize(args ...interface{}) () {
+func (this *QAbstractScrollArea) Maximumviewportsize(args ...interface{}) (ret interface{}) {
   // maximumViewportSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -115,16 +116,20 @@ func (this *QAbstractScrollArea) maximumViewportSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea19maximumViewportSizeEv
     // invoke: QSize maximumViewportSize()
-    var ret = C.C_ZNK19QAbstractScrollArea19maximumViewportSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QAbstractScrollArea19maximumViewportSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "maximumViewportSize", args)
   }
 
+  return
 }
 
 // cornerWidget()
-func (this *QAbstractScrollArea) cornerWidget(args ...interface{}) () {
+func (this *QAbstractScrollArea) Cornerwidget(args ...interface{}) (ret interface{}) {
   // cornerWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -136,16 +141,20 @@ func (this *QAbstractScrollArea) cornerWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea12cornerWidgetEv
     // invoke: QWidget * cornerWidget()
-    var ret = C.C_ZNK19QAbstractScrollArea12cornerWidgetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QAbstractScrollArea12cornerWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "cornerWidget", args)
   }
 
+  return
 }
 
 // setVerticalScrollBar(class QScrollBar *)
-func (this *QAbstractScrollArea) setVerticalScrollBar(args ...interface{}) () {
+func (this *QAbstractScrollArea) Setverticalscrollbar(args ...interface{}) () {
   // setVerticalScrollBar(class QScrollBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -165,10 +174,11 @@ func (this *QAbstractScrollArea) setVerticalScrollBar(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractScrollArea", "setVerticalScrollBar", args)
   }
 
+  return
 }
 
 // setHorizontalScrollBar(class QScrollBar *)
-func (this *QAbstractScrollArea) setHorizontalScrollBar(args ...interface{}) () {
+func (this *QAbstractScrollArea) Sethorizontalscrollbar(args ...interface{}) () {
   // setHorizontalScrollBar(class QScrollBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -188,10 +198,11 @@ func (this *QAbstractScrollArea) setHorizontalScrollBar(args ...interface{}) () 
     qtrt.ErrorResolve("QAbstractScrollArea", "setHorizontalScrollBar", args)
   }
 
+  return
 }
 
 // setViewport(class QWidget *)
-func (this *QAbstractScrollArea) setViewport(args ...interface{}) () {
+func (this *QAbstractScrollArea) Setviewport(args ...interface{}) () {
   // setViewport(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -211,10 +222,11 @@ func (this *QAbstractScrollArea) setViewport(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractScrollArea", "setViewport", args)
   }
 
+  return
 }
 
 // setCornerWidget(class QWidget *)
-func (this *QAbstractScrollArea) setCornerWidget(args ...interface{}) () {
+func (this *QAbstractScrollArea) Setcornerwidget(args ...interface{}) () {
   // setCornerWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -234,10 +246,11 @@ func (this *QAbstractScrollArea) setCornerWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractScrollArea", "setCornerWidget", args)
   }
 
+  return
 }
 
 // setupViewport(class QWidget *)
-func (this *QAbstractScrollArea) setupViewport(args ...interface{}) () {
+func (this *QAbstractScrollArea) Setupviewport(args ...interface{}) () {
   // setupViewport(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -257,6 +270,7 @@ func (this *QAbstractScrollArea) setupViewport(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractScrollArea", "setupViewport", args)
   }
 
+  return
 }
 
 // QAbstractScrollArea(class QWidget *)
@@ -287,7 +301,7 @@ func NewQAbstractScrollArea(args ...interface{}) *QAbstractScrollArea {
 }
 
 // ~QAbstractScrollArea()
-func (this *QAbstractScrollArea) FreeQAbstractScrollArea(args ...interface{}) () {
+func (this *QAbstractScrollArea) Freeqabstractscrollarea(args ...interface{}) () {
   // ~QAbstractScrollArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -304,10 +318,11 @@ func (this *QAbstractScrollArea) FreeQAbstractScrollArea(args ...interface{}) ()
     qtrt.ErrorResolve("QAbstractScrollArea", "~QAbstractScrollArea", args)
   }
 
+  return
 }
 
 // verticalScrollBar()
-func (this *QAbstractScrollArea) verticalScrollBar(args ...interface{}) () {
+func (this *QAbstractScrollArea) Verticalscrollbar(args ...interface{}) (ret interface{}) {
   // verticalScrollBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -319,16 +334,20 @@ func (this *QAbstractScrollArea) verticalScrollBar(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea17verticalScrollBarEv
     // invoke: QScrollBar * verticalScrollBar()
-    var ret = C.C_ZNK19QAbstractScrollArea17verticalScrollBarEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QAbstractScrollArea17verticalScrollBarEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QScrollBar{}) // "QScrollBar *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "verticalScrollBar", args)
   }
 
+  return
 }
 
 // horizontalScrollBar()
-func (this *QAbstractScrollArea) horizontalScrollBar(args ...interface{}) () {
+func (this *QAbstractScrollArea) Horizontalscrollbar(args ...interface{}) (ret interface{}) {
   // horizontalScrollBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -340,16 +359,20 @@ func (this *QAbstractScrollArea) horizontalScrollBar(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea19horizontalScrollBarEv
     // invoke: QScrollBar * horizontalScrollBar()
-    var ret = C.C_ZNK19QAbstractScrollArea19horizontalScrollBarEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QAbstractScrollArea19horizontalScrollBarEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QScrollBar{}) // "QScrollBar *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "horizontalScrollBar", args)
   }
 
+  return
 }
 
 // viewport()
-func (this *QAbstractScrollArea) viewport(args ...interface{}) () {
+func (this *QAbstractScrollArea) Viewport(args ...interface{}) (ret interface{}) {
   // viewport()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -361,16 +384,20 @@ func (this *QAbstractScrollArea) viewport(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea8viewportEv
     // invoke: QWidget * viewport()
-    var ret = C.C_ZNK19QAbstractScrollArea8viewportEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QAbstractScrollArea8viewportEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "viewport", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QAbstractScrollArea) metaObject(args ...interface{}) () {
+func (this *QAbstractScrollArea) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -387,10 +414,11 @@ func (this *QAbstractScrollArea) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractScrollArea", "metaObject", args)
   }
 
+  return
 }
 
 // verticalScrollBarPolicy()
-func (this *QAbstractScrollArea) verticalScrollBarPolicy(args ...interface{}) () {
+func (this *QAbstractScrollArea) Verticalscrollbarpolicy(args ...interface{}) () {
   // verticalScrollBarPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -407,10 +435,11 @@ func (this *QAbstractScrollArea) verticalScrollBarPolicy(args ...interface{}) ()
     qtrt.ErrorResolve("QAbstractScrollArea", "verticalScrollBarPolicy", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QAbstractScrollArea) sizeHint(args ...interface{}) () {
+func (this *QAbstractScrollArea) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -422,16 +451,20 @@ func (this *QAbstractScrollArea) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK19QAbstractScrollArea8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QAbstractScrollArea8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "sizeHint", args)
   }
 
+  return
 }
 
 // minimumSizeHint()
-func (this *QAbstractScrollArea) minimumSizeHint(args ...interface{}) () {
+func (this *QAbstractScrollArea) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -443,16 +476,20 @@ func (this *QAbstractScrollArea) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret = C.C_ZNK19QAbstractScrollArea15minimumSizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QAbstractScrollArea15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "minimumSizeHint", args)
   }
 
+  return
 }
 
 // sizeAdjustPolicy()
-func (this *QAbstractScrollArea) sizeAdjustPolicy(args ...interface{}) () {
+func (this *QAbstractScrollArea) Sizeadjustpolicy(args ...interface{}) () {
   // sizeAdjustPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -469,6 +506,7 @@ func (this *QAbstractScrollArea) sizeAdjustPolicy(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractScrollArea", "sizeAdjustPolicy", args)
   }
 
+  return
 }
 
 // <= body block end

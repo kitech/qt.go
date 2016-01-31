@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qstylepainter.h
 // dst-file: /src/widgets/qstylepainter.go
 //
@@ -37,11 +37,11 @@ extern void* C_ZN13QStylePainterC2EP12QPaintDeviceP7QWidget(void* arg0, void* ar
   // proto:  void QStylePainter::QStylePainter();
 extern void* C_ZN13QStylePainterC2Ev(); // 1
   // proto:  bool QStylePainter::begin(QPaintDevice * pd, QWidget * w);
-extern void C_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(void* qthis, void* arg0, void* arg1); // 2
+extern bool C_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(void* qthis, void* arg0, void* arg1); // 2
   // proto:  bool QStylePainter::begin(QWidget * w);
-extern void C_ZN13QStylePainter5beginEP7QWidget(void* qthis, void* arg0); // 2
+extern bool C_ZN13QStylePainter5beginEP7QWidget(void* qthis, void* arg0); // 2
   // proto:  QStyle * QStylePainter::style();
-extern void C_ZNK13QStylePainter5styleEv(void* qthis); // 2
+extern void* C_ZNK13QStylePainter5styleEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -61,7 +61,7 @@ type QStylePainter struct {
 }
 
 // drawItemPixmap(const class QRect &, int, const class QPixmap &)
-func (this *QStylePainter) drawItemPixmap(args ...interface{}) () {
+func (this *QStylePainter) Drawitempixmap(args ...interface{}) () {
   // drawItemPixmap(const class QRect &, int, const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -87,6 +87,7 @@ func (this *QStylePainter) drawItemPixmap(args ...interface{}) () {
     qtrt.ErrorResolve("QStylePainter", "drawItemPixmap", args)
   }
 
+  return
 }
 
 // QStylePainter(class QWidget *)
@@ -141,7 +142,7 @@ func NewQStylePainter(args ...interface{}) *QStylePainter {
 }
 
 // begin(class QPaintDevice *, class QWidget *)
-func (this *QStylePainter) begin(args ...interface{}) () {
+func (this *QStylePainter) Begin(args ...interface{}) (ret interface{}) {
   // begin(class QPaintDevice *, class QWidget *)
   // begin(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -162,23 +163,30 @@ func (this *QStylePainter) begin(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN13QStylePainter5beginEP7QWidget
     // invoke: bool begin(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN13QStylePainter5beginEP7QWidget(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QStylePainter5beginEP7QWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStylePainter", "begin", args)
   }
 
+  return
 }
 
 // style()
-func (this *QStylePainter) style(args ...interface{}) () {
+func (this *QStylePainter) Style(args ...interface{}) (ret interface{}) {
   // style()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -190,12 +198,16 @@ func (this *QStylePainter) style(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStylePainter5styleEv
     // invoke: QStyle * style()
-    var ret = C.C_ZNK13QStylePainter5styleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QStylePainter5styleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QStyle{}) // "QStyle *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStylePainter", "style", args)
   }
 
+  return
 }
 
 // <= body block end

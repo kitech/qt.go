@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.go
 //
@@ -41,7 +41,7 @@ extern void C_ZNK8QMdiArea15activationOrderEv(void* qthis); // 4
   // proto:  void QMdiArea::setTabsMovable(bool movable);
 extern void C_ZN8QMdiArea14setTabsMovableEb(void* qthis, bool arg0); // 4
   // proto:  bool QMdiArea::tabsClosable();
-extern void C_ZNK8QMdiArea12tabsClosableEv(void* qthis); // 4
+extern bool C_ZNK8QMdiArea12tabsClosableEv(void* qthis); // 4
   // proto:  void QMdiArea::closeActiveSubWindow();
 extern void C_ZN8QMdiArea20closeActiveSubWindowEv(void* qthis); // 4
   // proto:  void QMdiArea::setDocumentMode(bool enabled);
@@ -53,31 +53,31 @@ extern void C_ZN8QMdiArea13setBackgroundERK6QBrush(void* qthis, void* arg0); // 
   // proto:  void QMdiArea::~QMdiArea();
 extern void C_ZN8QMdiAreaD2Ev(void* qthis); // 4
   // proto:  bool QMdiArea::documentMode();
-extern void C_ZNK8QMdiArea12documentModeEv(void* qthis); // 4
+extern bool C_ZNK8QMdiArea12documentModeEv(void* qthis); // 4
   // proto:  bool QMdiArea::tabsMovable();
-extern void C_ZNK8QMdiArea11tabsMovableEv(void* qthis); // 4
+extern bool C_ZNK8QMdiArea11tabsMovableEv(void* qthis); // 4
   // proto:  void QMdiArea::setTabsClosable(bool closable);
 extern void C_ZN8QMdiArea15setTabsClosableEb(void* qthis, bool arg0); // 4
   // proto:  void QMdiArea::QMdiArea(QWidget * parent);
 extern void* C_ZN8QMdiAreaC2EP7QWidget(void* arg0); // 3
   // proto:  QBrush QMdiArea::background();
-extern void C_ZNK8QMdiArea10backgroundEv(void* qthis); // 4
+extern void* C_ZNK8QMdiArea10backgroundEv(void* qthis); // 4
   // proto:  QSize QMdiArea::sizeHint();
-extern void C_ZNK8QMdiArea8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK8QMdiArea8sizeHintEv(void* qthis); // 4
   // proto:  void QMdiArea::removeSubWindow(QWidget * widget);
 extern void C_ZN8QMdiArea15removeSubWindowEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QMdiArea::setActiveSubWindow(QMdiSubWindow * window);
 extern void C_ZN8QMdiArea18setActiveSubWindowEP13QMdiSubWindow(void* qthis, void* arg0); // 4
   // proto:  QMdiSubWindow * QMdiArea::currentSubWindow();
-extern void C_ZNK8QMdiArea16currentSubWindowEv(void* qthis); // 4
+extern void* C_ZNK8QMdiArea16currentSubWindowEv(void* qthis); // 4
   // proto:  QMdiSubWindow * QMdiArea::activeSubWindow();
-extern void C_ZNK8QMdiArea15activeSubWindowEv(void* qthis); // 4
+extern void* C_ZNK8QMdiArea15activeSubWindowEv(void* qthis); // 4
   // proto:  void QMdiArea::activateNextSubWindow();
 extern void C_ZN8QMdiArea21activateNextSubWindowEv(void* qthis); // 4
   // proto:  const QMetaObject * QMdiArea::metaObject();
 extern void C_ZNK8QMdiArea10metaObjectEv(void* qthis); // 4
   // proto:  QSize QMdiArea::minimumSizeHint();
-extern void C_ZNK8QMdiArea15minimumSizeHintEv(void* qthis); // 4
+extern void* C_ZNK8QMdiArea15minimumSizeHintEv(void* qthis); // 4
   // proto:  QMdiArea::ViewMode QMdiArea::viewMode();
 extern void C_ZNK8QMdiArea8viewModeEv(void* qthis); // 4
   // proto:  void QMdiArea::activatePreviousSubWindow();
@@ -102,7 +102,7 @@ type QMdiArea struct {
 }
 
 // tileSubWindows()
-func (this *QMdiArea) tileSubWindows(args ...interface{}) () {
+func (this *QMdiArea) Tilesubwindows(args ...interface{}) () {
   // tileSubWindows()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -119,10 +119,11 @@ func (this *QMdiArea) tileSubWindows(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "tileSubWindows", args)
   }
 
+  return
 }
 
 // closeAllSubWindows()
-func (this *QMdiArea) closeAllSubWindows(args ...interface{}) () {
+func (this *QMdiArea) Closeallsubwindows(args ...interface{}) () {
   // closeAllSubWindows()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -139,10 +140,11 @@ func (this *QMdiArea) closeAllSubWindows(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "closeAllSubWindows", args)
   }
 
+  return
 }
 
 // cascadeSubWindows()
-func (this *QMdiArea) cascadeSubWindows(args ...interface{}) () {
+func (this *QMdiArea) Cascadesubwindows(args ...interface{}) () {
   // cascadeSubWindows()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -159,10 +161,11 @@ func (this *QMdiArea) cascadeSubWindows(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "cascadeSubWindows", args)
   }
 
+  return
 }
 
 // tabPosition()
-func (this *QMdiArea) tabPosition(args ...interface{}) () {
+func (this *QMdiArea) Tabposition(args ...interface{}) () {
   // tabPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,10 +182,11 @@ func (this *QMdiArea) tabPosition(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "tabPosition", args)
   }
 
+  return
 }
 
 // activationOrder()
-func (this *QMdiArea) activationOrder(args ...interface{}) () {
+func (this *QMdiArea) Activationorder(args ...interface{}) () {
   // activationOrder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -199,10 +203,11 @@ func (this *QMdiArea) activationOrder(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "activationOrder", args)
   }
 
+  return
 }
 
 // setTabsMovable(_Bool)
-func (this *QMdiArea) setTabsMovable(args ...interface{}) () {
+func (this *QMdiArea) Settabsmovable(args ...interface{}) () {
   // setTabsMovable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -222,10 +227,11 @@ func (this *QMdiArea) setTabsMovable(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "setTabsMovable", args)
   }
 
+  return
 }
 
 // tabsClosable()
-func (this *QMdiArea) tabsClosable(args ...interface{}) () {
+func (this *QMdiArea) Tabsclosable(args ...interface{}) (ret interface{}) {
   // tabsClosable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -237,16 +243,20 @@ func (this *QMdiArea) tabsClosable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea12tabsClosableEv
     // invoke: bool tabsClosable()
-    var ret = C.C_ZNK8QMdiArea12tabsClosableEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMdiArea12tabsClosableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMdiArea", "tabsClosable", args)
   }
 
+  return
 }
 
 // closeActiveSubWindow()
-func (this *QMdiArea) closeActiveSubWindow(args ...interface{}) () {
+func (this *QMdiArea) Closeactivesubwindow(args ...interface{}) () {
   // closeActiveSubWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -263,10 +273,11 @@ func (this *QMdiArea) closeActiveSubWindow(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "closeActiveSubWindow", args)
   }
 
+  return
 }
 
 // setDocumentMode(_Bool)
-func (this *QMdiArea) setDocumentMode(args ...interface{}) () {
+func (this *QMdiArea) Setdocumentmode(args ...interface{}) () {
   // setDocumentMode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -286,10 +297,11 @@ func (this *QMdiArea) setDocumentMode(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "setDocumentMode", args)
   }
 
+  return
 }
 
 // tabShape()
-func (this *QMdiArea) tabShape(args ...interface{}) () {
+func (this *QMdiArea) Tabshape(args ...interface{}) () {
   // tabShape()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,10 +318,11 @@ func (this *QMdiArea) tabShape(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "tabShape", args)
   }
 
+  return
 }
 
 // setBackground(const class QBrush &)
-func (this *QMdiArea) setBackground(args ...interface{}) () {
+func (this *QMdiArea) Setbackground(args ...interface{}) () {
   // setBackground(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -329,10 +342,11 @@ func (this *QMdiArea) setBackground(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "setBackground", args)
   }
 
+  return
 }
 
 // ~QMdiArea()
-func (this *QMdiArea) FreeQMdiArea(args ...interface{}) () {
+func (this *QMdiArea) Freeqmdiarea(args ...interface{}) () {
   // ~QMdiArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -349,10 +363,11 @@ func (this *QMdiArea) FreeQMdiArea(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "~QMdiArea", args)
   }
 
+  return
 }
 
 // documentMode()
-func (this *QMdiArea) documentMode(args ...interface{}) () {
+func (this *QMdiArea) Documentmode(args ...interface{}) (ret interface{}) {
   // documentMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -364,16 +379,20 @@ func (this *QMdiArea) documentMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea12documentModeEv
     // invoke: bool documentMode()
-    var ret = C.C_ZNK8QMdiArea12documentModeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMdiArea12documentModeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMdiArea", "documentMode", args)
   }
 
+  return
 }
 
 // tabsMovable()
-func (this *QMdiArea) tabsMovable(args ...interface{}) () {
+func (this *QMdiArea) Tabsmovable(args ...interface{}) (ret interface{}) {
   // tabsMovable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -385,16 +404,20 @@ func (this *QMdiArea) tabsMovable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea11tabsMovableEv
     // invoke: bool tabsMovable()
-    var ret = C.C_ZNK8QMdiArea11tabsMovableEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMdiArea11tabsMovableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMdiArea", "tabsMovable", args)
   }
 
+  return
 }
 
 // setTabsClosable(_Bool)
-func (this *QMdiArea) setTabsClosable(args ...interface{}) () {
+func (this *QMdiArea) Settabsclosable(args ...interface{}) () {
   // setTabsClosable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -414,6 +437,7 @@ func (this *QMdiArea) setTabsClosable(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "setTabsClosable", args)
   }
 
+  return
 }
 
 // QMdiArea(class QWidget *)
@@ -444,7 +468,7 @@ func NewQMdiArea(args ...interface{}) *QMdiArea {
 }
 
 // background()
-func (this *QMdiArea) background(args ...interface{}) () {
+func (this *QMdiArea) Background(args ...interface{}) (ret interface{}) {
   // background()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -456,16 +480,20 @@ func (this *QMdiArea) background(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea10backgroundEv
     // invoke: QBrush background()
-    var ret = C.C_ZNK8QMdiArea10backgroundEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMdiArea10backgroundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QBrush{}) // "QBrush"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMdiArea", "background", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QMdiArea) sizeHint(args ...interface{}) () {
+func (this *QMdiArea) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -477,16 +505,20 @@ func (this *QMdiArea) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK8QMdiArea8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMdiArea8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMdiArea", "sizeHint", args)
   }
 
+  return
 }
 
 // removeSubWindow(class QWidget *)
-func (this *QMdiArea) removeSubWindow(args ...interface{}) () {
+func (this *QMdiArea) Removesubwindow(args ...interface{}) () {
   // removeSubWindow(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -506,10 +538,11 @@ func (this *QMdiArea) removeSubWindow(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "removeSubWindow", args)
   }
 
+  return
 }
 
 // setActiveSubWindow(class QMdiSubWindow *)
-func (this *QMdiArea) setActiveSubWindow(args ...interface{}) () {
+func (this *QMdiArea) Setactivesubwindow(args ...interface{}) () {
   // setActiveSubWindow(class QMdiSubWindow *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -529,10 +562,11 @@ func (this *QMdiArea) setActiveSubWindow(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "setActiveSubWindow", args)
   }
 
+  return
 }
 
 // currentSubWindow()
-func (this *QMdiArea) currentSubWindow(args ...interface{}) () {
+func (this *QMdiArea) Currentsubwindow(args ...interface{}) (ret interface{}) {
   // currentSubWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -544,16 +578,20 @@ func (this *QMdiArea) currentSubWindow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea16currentSubWindowEv
     // invoke: QMdiSubWindow * currentSubWindow()
-    var ret = C.C_ZNK8QMdiArea16currentSubWindowEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMdiArea16currentSubWindowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMdiSubWindow{}) // "QMdiSubWindow *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMdiArea", "currentSubWindow", args)
   }
 
+  return
 }
 
 // activeSubWindow()
-func (this *QMdiArea) activeSubWindow(args ...interface{}) () {
+func (this *QMdiArea) Activesubwindow(args ...interface{}) (ret interface{}) {
   // activeSubWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -565,16 +603,20 @@ func (this *QMdiArea) activeSubWindow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea15activeSubWindowEv
     // invoke: QMdiSubWindow * activeSubWindow()
-    var ret = C.C_ZNK8QMdiArea15activeSubWindowEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMdiArea15activeSubWindowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMdiSubWindow{}) // "QMdiSubWindow *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMdiArea", "activeSubWindow", args)
   }
 
+  return
 }
 
 // activateNextSubWindow()
-func (this *QMdiArea) activateNextSubWindow(args ...interface{}) () {
+func (this *QMdiArea) Activatenextsubwindow(args ...interface{}) () {
   // activateNextSubWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -591,10 +633,11 @@ func (this *QMdiArea) activateNextSubWindow(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "activateNextSubWindow", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QMdiArea) metaObject(args ...interface{}) () {
+func (this *QMdiArea) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -611,10 +654,11 @@ func (this *QMdiArea) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "metaObject", args)
   }
 
+  return
 }
 
 // minimumSizeHint()
-func (this *QMdiArea) minimumSizeHint(args ...interface{}) () {
+func (this *QMdiArea) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -626,16 +670,20 @@ func (this *QMdiArea) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret = C.C_ZNK8QMdiArea15minimumSizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QMdiArea15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMdiArea", "minimumSizeHint", args)
   }
 
+  return
 }
 
 // viewMode()
-func (this *QMdiArea) viewMode(args ...interface{}) () {
+func (this *QMdiArea) Viewmode(args ...interface{}) () {
   // viewMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -652,10 +700,11 @@ func (this *QMdiArea) viewMode(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "viewMode", args)
   }
 
+  return
 }
 
 // activatePreviousSubWindow()
-func (this *QMdiArea) activatePreviousSubWindow(args ...interface{}) () {
+func (this *QMdiArea) Activateprevioussubwindow(args ...interface{}) () {
   // activatePreviousSubWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -672,6 +721,7 @@ func (this *QMdiArea) activatePreviousSubWindow(args ...interface{}) () {
     qtrt.ErrorResolve("QMdiArea", "activatePreviousSubWindow", args)
   }
 
+  return
 }
 
 // <= body block end

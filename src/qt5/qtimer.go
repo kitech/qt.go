@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.go
 //
@@ -35,7 +35,7 @@ extern void C_ZN6QTimerD2Ev(void* qthis); // 4
   // proto:  void QTimer::setSingleShot(bool singleShot);
 extern void C_ZN6QTimer13setSingleShotEb(void* qthis, bool arg0); // 2
   // proto:  bool QTimer::isSingleShot();
-extern void C_ZNK6QTimer12isSingleShotEv(void* qthis); // 2
+extern bool C_ZNK6QTimer12isSingleShotEv(void* qthis); // 2
   // proto:  void QTimer::start(int msec);
 extern void C_ZN6QTimer5startEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTimer::start();
@@ -43,21 +43,21 @@ extern void C_ZN6QTimer5startEv(void* qthis); // 4
   // proto:  void QTimer::QTimer(QObject * parent);
 extern void* C_ZN6QTimerC2EP7QObject(void* arg0); // 3
   // proto:  int QTimer::timerId();
-extern void C_ZNK6QTimer7timerIdEv(void* qthis); // 2
+extern int32_t C_ZNK6QTimer7timerIdEv(void* qthis); // 2
   // proto:  void QTimer::setInterval(int msec);
 extern void C_ZN6QTimer11setIntervalEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTimer::stop();
 extern void C_ZN6QTimer4stopEv(void* qthis); // 4
   // proto:  int QTimer::remainingTime();
-extern void C_ZNK6QTimer13remainingTimeEv(void* qthis); // 4
+extern int32_t C_ZNK6QTimer13remainingTimeEv(void* qthis); // 4
   // proto:  bool QTimer::isActive();
-extern void C_ZNK6QTimer8isActiveEv(void* qthis); // 2
+extern bool C_ZNK6QTimer8isActiveEv(void* qthis); // 2
   // proto:  const QMetaObject * QTimer::metaObject();
 extern void C_ZNK6QTimer10metaObjectEv(void* qthis); // 4
   // proto:  int QTimer::interval();
-extern void C_ZNK6QTimer8intervalEv(void* qthis); // 2
+extern int32_t C_ZNK6QTimer8intervalEv(void* qthis); // 2
   // proto: static void QTimer::singleShot(int msec, const QObject * receiver, const char * member);
-extern void C_ZN6QTimer10singleShotEiPK7QObjectPKc(int32_t arg0, void* arg1, unsigned char* arg2); // 4
+extern void C_ZN6QTimer10singleShotEiPK7QObjectPKc(int32_t arg0, void* arg1, void* arg2); // 4
 */
 import "C"
 // } // <= ext block end
@@ -78,7 +78,7 @@ type QTimer struct {
 }
 
 // timerType()
-func (this *QTimer) timerType(args ...interface{}) () {
+func (this *QTimer) Timertype(args ...interface{}) () {
   // timerType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -95,10 +95,11 @@ func (this *QTimer) timerType(args ...interface{}) () {
     qtrt.ErrorResolve("QTimer", "timerType", args)
   }
 
+  return
 }
 
 // ~QTimer()
-func (this *QTimer) FreeQTimer(args ...interface{}) () {
+func (this *QTimer) Freeqtimer(args ...interface{}) () {
   // ~QTimer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -115,10 +116,11 @@ func (this *QTimer) FreeQTimer(args ...interface{}) () {
     qtrt.ErrorResolve("QTimer", "~QTimer", args)
   }
 
+  return
 }
 
 // setSingleShot(_Bool)
-func (this *QTimer) setSingleShot(args ...interface{}) () {
+func (this *QTimer) Setsingleshot(args ...interface{}) () {
   // setSingleShot(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -138,10 +140,11 @@ func (this *QTimer) setSingleShot(args ...interface{}) () {
     qtrt.ErrorResolve("QTimer", "setSingleShot", args)
   }
 
+  return
 }
 
 // isSingleShot()
-func (this *QTimer) isSingleShot(args ...interface{}) () {
+func (this *QTimer) Issingleshot(args ...interface{}) (ret interface{}) {
   // isSingleShot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -153,16 +156,20 @@ func (this *QTimer) isSingleShot(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QTimer12isSingleShotEv
     // invoke: bool isSingleShot()
-    var ret = C.C_ZNK6QTimer12isSingleShotEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QTimer12isSingleShotEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimer", "isSingleShot", args)
   }
 
+  return
 }
 
 // start(int)
-func (this *QTimer) start(args ...interface{}) () {
+func (this *QTimer) Start(args ...interface{}) () {
   // start(int)
   // start()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -188,6 +195,7 @@ func (this *QTimer) start(args ...interface{}) () {
     qtrt.ErrorResolve("QTimer", "start", args)
   }
 
+  return
 }
 
 // QTimer(class QObject *)
@@ -218,7 +226,7 @@ func NewQTimer(args ...interface{}) *QTimer {
 }
 
 // timerId()
-func (this *QTimer) timerId(args ...interface{}) () {
+func (this *QTimer) Timerid(args ...interface{}) (ret interface{}) {
   // timerId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -230,16 +238,20 @@ func (this *QTimer) timerId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QTimer7timerIdEv
     // invoke: int timerId()
-    var ret = C.C_ZNK6QTimer7timerIdEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QTimer7timerIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimer", "timerId", args)
   }
 
+  return
 }
 
 // setInterval(int)
-func (this *QTimer) setInterval(args ...interface{}) () {
+func (this *QTimer) Setinterval(args ...interface{}) () {
   // setInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -259,10 +271,11 @@ func (this *QTimer) setInterval(args ...interface{}) () {
     qtrt.ErrorResolve("QTimer", "setInterval", args)
   }
 
+  return
 }
 
 // stop()
-func (this *QTimer) stop(args ...interface{}) () {
+func (this *QTimer) Stop(args ...interface{}) () {
   // stop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -279,10 +292,11 @@ func (this *QTimer) stop(args ...interface{}) () {
     qtrt.ErrorResolve("QTimer", "stop", args)
   }
 
+  return
 }
 
 // remainingTime()
-func (this *QTimer) remainingTime(args ...interface{}) () {
+func (this *QTimer) Remainingtime(args ...interface{}) (ret interface{}) {
   // remainingTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -294,16 +308,20 @@ func (this *QTimer) remainingTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QTimer13remainingTimeEv
     // invoke: int remainingTime()
-    var ret = C.C_ZNK6QTimer13remainingTimeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QTimer13remainingTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimer", "remainingTime", args)
   }
 
+  return
 }
 
 // isActive()
-func (this *QTimer) isActive(args ...interface{}) () {
+func (this *QTimer) Isactive(args ...interface{}) (ret interface{}) {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -315,16 +333,20 @@ func (this *QTimer) isActive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QTimer8isActiveEv
     // invoke: bool isActive()
-    var ret = C.C_ZNK6QTimer8isActiveEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QTimer8isActiveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimer", "isActive", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QTimer) metaObject(args ...interface{}) () {
+func (this *QTimer) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -341,10 +363,11 @@ func (this *QTimer) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QTimer", "metaObject", args)
   }
 
+  return
 }
 
 // interval()
-func (this *QTimer) interval(args ...interface{}) () {
+func (this *QTimer) Interval(args ...interface{}) (ret interface{}) {
   // interval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -356,16 +379,20 @@ func (this *QTimer) interval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QTimer8intervalEv
     // invoke: int interval()
-    var ret = C.C_ZNK6QTimer8intervalEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QTimer8intervalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimer", "interval", args)
   }
 
+  return
 }
 
 // singleShot(int, const class QObject *, const char *)
-func (this *QTimer) singleShot_s(args ...interface{}) () {
+func (this *QTimer) Singleshot_S(args ...interface{}) () {
   // singleShot(int, const class QObject *, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -384,13 +411,16 @@ func (this *QTimer) singleShot_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).Pointer()))
-    if false {fmt.Println(arg2)}
+    argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[0][2])
+    var arg2 = argif2.(unsafe.Pointer)
+    if false {fmt.Println(argif2, arg2)}
+    if free2 {defer C.free(arg2)}
     C.C_ZN6QTimer10singleShotEiPK7QObjectPKc(arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTimer", "singleShot", args)
   }
 
+  return
 }
 
 // <= body block end

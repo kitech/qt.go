@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qmouseeventtransition.h
 // dst-file: /src/widgets/qmouseeventtransition.go
 //
@@ -35,7 +35,7 @@ extern void C_ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath(void* q
   // proto:  Qt::KeyboardModifiers QMouseEventTransition::modifierMask();
 extern void C_ZNK21QMouseEventTransition12modifierMaskEv(void* qthis); // 4
   // proto:  QPainterPath QMouseEventTransition::hitTestPath();
-extern void C_ZNK21QMouseEventTransition11hitTestPathEv(void* qthis); // 4
+extern void* C_ZNK21QMouseEventTransition11hitTestPathEv(void* qthis); // 4
   // proto:  void QMouseEventTransition::~QMouseEventTransition();
 extern void C_ZN21QMouseEventTransitionD2Ev(void* qthis); // 4
   // proto:  Qt::MouseButton QMouseEventTransition::button();
@@ -61,7 +61,7 @@ type QMouseEventTransition struct {
 }
 
 // metaObject()
-func (this *QMouseEventTransition) metaObject(args ...interface{}) () {
+func (this *QMouseEventTransition) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -78,10 +78,11 @@ func (this *QMouseEventTransition) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QMouseEventTransition", "metaObject", args)
   }
 
+  return
 }
 
 // setHitTestPath(const class QPainterPath &)
-func (this *QMouseEventTransition) setHitTestPath(args ...interface{}) () {
+func (this *QMouseEventTransition) Sethittestpath(args ...interface{}) () {
   // setHitTestPath(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -101,10 +102,11 @@ func (this *QMouseEventTransition) setHitTestPath(args ...interface{}) () {
     qtrt.ErrorResolve("QMouseEventTransition", "setHitTestPath", args)
   }
 
+  return
 }
 
 // modifierMask()
-func (this *QMouseEventTransition) modifierMask(args ...interface{}) () {
+func (this *QMouseEventTransition) Modifiermask(args ...interface{}) () {
   // modifierMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -121,10 +123,11 @@ func (this *QMouseEventTransition) modifierMask(args ...interface{}) () {
     qtrt.ErrorResolve("QMouseEventTransition", "modifierMask", args)
   }
 
+  return
 }
 
 // hitTestPath()
-func (this *QMouseEventTransition) hitTestPath(args ...interface{}) () {
+func (this *QMouseEventTransition) Hittestpath(args ...interface{}) (ret interface{}) {
   // hitTestPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -136,16 +139,20 @@ func (this *QMouseEventTransition) hitTestPath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QMouseEventTransition11hitTestPathEv
     // invoke: QPainterPath hitTestPath()
-    var ret = C.C_ZNK21QMouseEventTransition11hitTestPathEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK21QMouseEventTransition11hitTestPathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "hitTestPath", args)
   }
 
+  return
 }
 
 // ~QMouseEventTransition()
-func (this *QMouseEventTransition) FreeQMouseEventTransition(args ...interface{}) () {
+func (this *QMouseEventTransition) Freeqmouseeventtransition(args ...interface{}) () {
   // ~QMouseEventTransition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,10 +169,11 @@ func (this *QMouseEventTransition) FreeQMouseEventTransition(args ...interface{}
     qtrt.ErrorResolve("QMouseEventTransition", "~QMouseEventTransition", args)
   }
 
+  return
 }
 
 // button()
-func (this *QMouseEventTransition) button(args ...interface{}) () {
+func (this *QMouseEventTransition) Button(args ...interface{}) () {
   // button()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,6 +190,7 @@ func (this *QMouseEventTransition) button(args ...interface{}) () {
     qtrt.ErrorResolve("QMouseEventTransition", "button", args)
   }
 
+  return
 }
 
 // QMouseEventTransition(class QState *)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qjsondocument.h
 // dst-file: /src/core/qjsondocument.go
 //
@@ -37,25 +37,25 @@ extern void* C_ZN13QJsonDocumentC2Ev(); // 3
   // proto:  QJsonObject QJsonDocument::object();
 extern void C_ZNK13QJsonDocument6objectEv(void* qthis); // 4
   // proto:  bool QJsonDocument::isArray();
-extern void C_ZNK13QJsonDocument7isArrayEv(void* qthis); // 4
+extern bool C_ZNK13QJsonDocument7isArrayEv(void* qthis); // 4
   // proto:  bool QJsonDocument::isNull();
-extern void C_ZNK13QJsonDocument6isNullEv(void* qthis); // 4
+extern bool C_ZNK13QJsonDocument6isNullEv(void* qthis); // 4
   // proto:  bool QJsonDocument::isEmpty();
-extern void C_ZNK13QJsonDocument7isEmptyEv(void* qthis); // 4
+extern bool C_ZNK13QJsonDocument7isEmptyEv(void* qthis); // 4
   // proto:  const char * QJsonDocument::rawData(int * size);
-extern void C_ZNK13QJsonDocument7rawDataEPi(void* qthis, int32_t* arg0); // 4
+extern void* C_ZNK13QJsonDocument7rawDataEPi(void* qthis, void* arg0); // 4
   // proto:  QVariant QJsonDocument::toVariant();
-extern void C_ZNK13QJsonDocument9toVariantEv(void* qthis); // 4
+extern void* C_ZNK13QJsonDocument9toVariantEv(void* qthis); // 4
   // proto:  QJsonArray QJsonDocument::array();
 extern void C_ZNK13QJsonDocument5arrayEv(void* qthis); // 4
   // proto:  QByteArray QJsonDocument::toJson();
-extern void C_ZNK13QJsonDocument6toJsonEv(void* qthis); // 4
+extern void* C_ZNK13QJsonDocument6toJsonEv(void* qthis); // 4
   // proto:  QByteArray QJsonDocument::toBinaryData();
-extern void C_ZNK13QJsonDocument12toBinaryDataEv(void* qthis); // 4
+extern void* C_ZNK13QJsonDocument12toBinaryDataEv(void* qthis); // 4
   // proto:  bool QJsonDocument::isObject();
-extern void C_ZNK13QJsonDocument8isObjectEv(void* qthis); // 4
+extern bool C_ZNK13QJsonDocument8isObjectEv(void* qthis); // 4
   // proto:  QString QJsonParseError::errorString();
-extern void C_ZNK15QJsonParseError11errorStringEv(void* qthis); // 4
+extern void* C_ZNK15QJsonParseError11errorStringEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -81,7 +81,7 @@ type QJsonParseError struct {
 }
 
 // fromVariant(const class QVariant &)
-func (this *QJsonDocument) fromVariant_s(args ...interface{}) () {
+func (this *QJsonDocument) Fromvariant_S(args ...interface{}) () {
   // fromVariant(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -101,10 +101,11 @@ func (this *QJsonDocument) fromVariant_s(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonDocument", "fromVariant", args)
   }
 
+  return
 }
 
 // ~QJsonDocument()
-func (this *QJsonDocument) FreeQJsonDocument(args ...interface{}) () {
+func (this *QJsonDocument) Freeqjsondocument(args ...interface{}) () {
   // ~QJsonDocument()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -121,6 +122,7 @@ func (this *QJsonDocument) FreeQJsonDocument(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonDocument", "~QJsonDocument", args)
   }
 
+  return
 }
 
 // QJsonDocument()
@@ -148,7 +150,7 @@ func NewQJsonDocument(args ...interface{}) *QJsonDocument {
 }
 
 // object()
-func (this *QJsonDocument) object(args ...interface{}) () {
+func (this *QJsonDocument) Object(args ...interface{}) () {
   // object()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -165,10 +167,11 @@ func (this *QJsonDocument) object(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonDocument", "object", args)
   }
 
+  return
 }
 
 // isArray()
-func (this *QJsonDocument) isArray(args ...interface{}) () {
+func (this *QJsonDocument) Isarray(args ...interface{}) (ret interface{}) {
   // isArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -180,16 +183,20 @@ func (this *QJsonDocument) isArray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument7isArrayEv
     // invoke: bool isArray()
-    var ret = C.C_ZNK13QJsonDocument7isArrayEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QJsonDocument7isArrayEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonDocument", "isArray", args)
   }
 
+  return
 }
 
 // isNull()
-func (this *QJsonDocument) isNull(args ...interface{}) () {
+func (this *QJsonDocument) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -201,16 +208,20 @@ func (this *QJsonDocument) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument6isNullEv
     // invoke: bool isNull()
-    var ret = C.C_ZNK13QJsonDocument6isNullEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QJsonDocument6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonDocument", "isNull", args)
   }
 
+  return
 }
 
 // isEmpty()
-func (this *QJsonDocument) isEmpty(args ...interface{}) () {
+func (this *QJsonDocument) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -222,16 +233,20 @@ func (this *QJsonDocument) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument7isEmptyEv
     // invoke: bool isEmpty()
-    var ret = C.C_ZNK13QJsonDocument7isEmptyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QJsonDocument7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonDocument", "isEmpty", args)
   }
 
+  return
 }
 
 // rawData(int *)
-func (this *QJsonDocument) rawData(args ...interface{}) () {
+func (this *QJsonDocument) Rawdata(args ...interface{}) (ret interface{}) {
   // rawData(int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -244,18 +259,22 @@ func (this *QJsonDocument) rawData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument7rawDataEPi
     // invoke: const char * rawData(int *)
-    var arg0 = (*C.int32_t)(args[0].(*int32))
+    var arg0 = (unsafe.Pointer)(args[0].(*int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QJsonDocument7rawDataEPi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QJsonDocument7rawDataEPi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.ByteTy(true) // "const char *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonDocument", "rawData", args)
   }
 
+  return
 }
 
 // toVariant()
-func (this *QJsonDocument) toVariant(args ...interface{}) () {
+func (this *QJsonDocument) Tovariant(args ...interface{}) (ret interface{}) {
   // toVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -267,16 +286,20 @@ func (this *QJsonDocument) toVariant(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument9toVariantEv
     // invoke: QVariant toVariant()
-    var ret = C.C_ZNK13QJsonDocument9toVariantEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QJsonDocument9toVariantEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonDocument", "toVariant", args)
   }
 
+  return
 }
 
 // array()
-func (this *QJsonDocument) array(args ...interface{}) () {
+func (this *QJsonDocument) Array(args ...interface{}) () {
   // array()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,10 +316,11 @@ func (this *QJsonDocument) array(args ...interface{}) () {
     qtrt.ErrorResolve("QJsonDocument", "array", args)
   }
 
+  return
 }
 
 // toJson()
-func (this *QJsonDocument) toJson(args ...interface{}) () {
+func (this *QJsonDocument) Tojson(args ...interface{}) (ret interface{}) {
   // toJson()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -308,16 +332,20 @@ func (this *QJsonDocument) toJson(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument6toJsonEv
     // invoke: QByteArray toJson()
-    var ret = C.C_ZNK13QJsonDocument6toJsonEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QJsonDocument6toJsonEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonDocument", "toJson", args)
   }
 
+  return
 }
 
 // toBinaryData()
-func (this *QJsonDocument) toBinaryData(args ...interface{}) () {
+func (this *QJsonDocument) Tobinarydata(args ...interface{}) (ret interface{}) {
   // toBinaryData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -329,16 +357,20 @@ func (this *QJsonDocument) toBinaryData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument12toBinaryDataEv
     // invoke: QByteArray toBinaryData()
-    var ret = C.C_ZNK13QJsonDocument12toBinaryDataEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QJsonDocument12toBinaryDataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonDocument", "toBinaryData", args)
   }
 
+  return
 }
 
 // isObject()
-func (this *QJsonDocument) isObject(args ...interface{}) () {
+func (this *QJsonDocument) Isobject(args ...interface{}) (ret interface{}) {
   // isObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -350,16 +382,20 @@ func (this *QJsonDocument) isObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument8isObjectEv
     // invoke: bool isObject()
-    var ret = C.C_ZNK13QJsonDocument8isObjectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QJsonDocument8isObjectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonDocument", "isObject", args)
   }
 
+  return
 }
 
 // errorString()
-func (this *QJsonParseError) errorString(args ...interface{}) () {
+func (this *QJsonParseError) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -371,12 +407,16 @@ func (this *QJsonParseError) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QJsonParseError11errorStringEv
     // invoke: QString errorString()
-    var ret = C.C_ZNK15QJsonParseError11errorStringEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QJsonParseError11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QJsonParseError", "errorString", args)
   }
 
+  return
 }
 
 // <= body block end

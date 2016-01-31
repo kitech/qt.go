@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qradiobutton.h
 // dst-file: /src/widgets/qradiobutton.go
 //
@@ -31,9 +31,9 @@ import "qtrt"
   // proto:  const QMetaObject * QRadioButton::metaObject();
 extern void C_ZNK12QRadioButton10metaObjectEv(void* qthis); // 4
   // proto:  QSize QRadioButton::minimumSizeHint();
-extern void C_ZNK12QRadioButton15minimumSizeHintEv(void* qthis); // 4
+extern void* C_ZNK12QRadioButton15minimumSizeHintEv(void* qthis); // 4
   // proto:  QSize QRadioButton::sizeHint();
-extern void C_ZNK12QRadioButton8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK12QRadioButton8sizeHintEv(void* qthis); // 4
   // proto:  void QRadioButton::~QRadioButton();
 extern void C_ZN12QRadioButtonD2Ev(void* qthis); // 4
   // proto:  void QRadioButton::QRadioButton(QWidget * parent);
@@ -59,7 +59,7 @@ type QRadioButton struct {
 }
 
 // metaObject()
-func (this *QRadioButton) metaObject(args ...interface{}) () {
+func (this *QRadioButton) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -76,10 +76,11 @@ func (this *QRadioButton) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QRadioButton", "metaObject", args)
   }
 
+  return
 }
 
 // minimumSizeHint()
-func (this *QRadioButton) minimumSizeHint(args ...interface{}) () {
+func (this *QRadioButton) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -91,16 +92,20 @@ func (this *QRadioButton) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QRadioButton15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret = C.C_ZNK12QRadioButton15minimumSizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QRadioButton15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRadioButton", "minimumSizeHint", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QRadioButton) sizeHint(args ...interface{}) () {
+func (this *QRadioButton) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -112,16 +117,20 @@ func (this *QRadioButton) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QRadioButton8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK12QRadioButton8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QRadioButton8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRadioButton", "sizeHint", args)
   }
 
+  return
 }
 
 // ~QRadioButton()
-func (this *QRadioButton) FreeQRadioButton(args ...interface{}) () {
+func (this *QRadioButton) Freeqradiobutton(args ...interface{}) () {
   // ~QRadioButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -138,6 +147,7 @@ func (this *QRadioButton) FreeQRadioButton(args ...interface{}) () {
     qtrt.ErrorResolve("QRadioButton", "~QRadioButton", args)
   }
 
+  return
 }
 
 // QRadioButton(class QWidget *)

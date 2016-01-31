@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QPictureFormatPlugin::savePicture(const QString & format, const QString & filename, const QPicture & pic);
-extern void C_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern bool C_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  const QMetaObject * QPictureFormatPlugin::metaObject();
 extern void C_ZNK20QPictureFormatPlugin10metaObjectEv(void* qthis); // 4
   // proto:  bool QPictureFormatPlugin::loadPicture(const QString & format, const QString & filename, QPicture * pic);
-extern void C_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern bool C_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
 extern void* C_ZN20QPictureFormatPluginC2EP7QObject(void* arg0); // 3
   // proto:  void QPictureFormatPlugin::~QPictureFormatPlugin();
@@ -57,7 +57,7 @@ type QPictureFormatPlugin struct {
 }
 
 // savePicture(const class QString &, const class QString &, const class QPicture &)
-func (this *QPictureFormatPlugin) savePicture(args ...interface{}) () {
+func (this *QPictureFormatPlugin) Savepicture(args ...interface{}) (ret interface{}) {
   // savePicture(const class QString &, const class QString &, const class QPicture &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -78,16 +78,20 @@ func (this *QPictureFormatPlugin) savePicture(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPicture).qclsinst
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "savePicture", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QPictureFormatPlugin) metaObject(args ...interface{}) () {
+func (this *QPictureFormatPlugin) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -104,10 +108,11 @@ func (this *QPictureFormatPlugin) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QPictureFormatPlugin", "metaObject", args)
   }
 
+  return
 }
 
 // loadPicture(const class QString &, const class QString &, class QPicture *)
-func (this *QPictureFormatPlugin) loadPicture(args ...interface{}) () {
+func (this *QPictureFormatPlugin) Loadpicture(args ...interface{}) (ret interface{}) {
   // loadPicture(const class QString &, const class QString &, class QPicture *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -128,12 +133,16 @@ func (this *QPictureFormatPlugin) loadPicture(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPicture).qclsinst
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "loadPicture", args)
   }
 
+  return
 }
 
 // QPictureFormatPlugin(class QObject *)
@@ -164,7 +173,7 @@ func NewQPictureFormatPlugin(args ...interface{}) *QPictureFormatPlugin {
 }
 
 // ~QPictureFormatPlugin()
-func (this *QPictureFormatPlugin) FreeQPictureFormatPlugin(args ...interface{}) () {
+func (this *QPictureFormatPlugin) Freeqpictureformatplugin(args ...interface{}) () {
   // ~QPictureFormatPlugin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -181,6 +190,7 @@ func (this *QPictureFormatPlugin) FreeQPictureFormatPlugin(args ...interface{}) 
     qtrt.ErrorResolve("QPictureFormatPlugin", "~QPictureFormatPlugin", args)
   }
 
+  return
 }
 
 // <= body block end

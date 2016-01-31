@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qshortcut.h
 // dst-file: /src/widgets/qshortcut.go
 //
@@ -31,11 +31,11 @@ import "qtrt"
   // proto:  void QShortcut::~QShortcut();
 extern void C_ZN9QShortcutD2Ev(void* qthis); // 4
   // proto:  int QShortcut::id();
-extern void C_ZNK9QShortcut2idEv(void* qthis); // 4
+extern int32_t C_ZNK9QShortcut2idEv(void* qthis); // 4
   // proto:  bool QShortcut::isEnabled();
-extern void C_ZNK9QShortcut9isEnabledEv(void* qthis); // 4
+extern bool C_ZNK9QShortcut9isEnabledEv(void* qthis); // 4
   // proto:  QString QShortcut::whatsThis();
-extern void C_ZNK9QShortcut9whatsThisEv(void* qthis); // 4
+extern void* C_ZNK9QShortcut9whatsThisEv(void* qthis); // 4
   // proto:  void QShortcut::setKey(const QKeySequence & key);
 extern void C_ZN9QShortcut6setKeyERK12QKeySequence(void* qthis, void* arg0); // 4
   // proto:  void QShortcut::setEnabled(bool enable);
@@ -47,15 +47,15 @@ extern void* C_ZN9QShortcutC2EP7QWidget(void* arg0); // 3
   // proto:  void QShortcut::setWhatsThis(const QString & text);
 extern void C_ZN9QShortcut12setWhatsThisERK7QString(void* qthis, void* arg0); // 4
   // proto:  QKeySequence QShortcut::key();
-extern void C_ZNK9QShortcut3keyEv(void* qthis); // 4
+extern void* C_ZNK9QShortcut3keyEv(void* qthis); // 4
   // proto:  const QMetaObject * QShortcut::metaObject();
 extern void C_ZNK9QShortcut10metaObjectEv(void* qthis); // 4
   // proto:  QWidget * QShortcut::parentWidget();
-extern void C_ZNK9QShortcut12parentWidgetEv(void* qthis); // 2
+extern void* C_ZNK9QShortcut12parentWidgetEv(void* qthis); // 2
   // proto:  Qt::ShortcutContext QShortcut::context();
 extern void C_ZNK9QShortcut7contextEv(void* qthis); // 4
   // proto:  bool QShortcut::autoRepeat();
-extern void C_ZNK9QShortcut10autoRepeatEv(void* qthis); // 4
+extern bool C_ZNK9QShortcut10autoRepeatEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -77,7 +77,7 @@ type QShortcut struct {
 }
 
 // ~QShortcut()
-func (this *QShortcut) FreeQShortcut(args ...interface{}) () {
+func (this *QShortcut) Freeqshortcut(args ...interface{}) () {
   // ~QShortcut()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -94,10 +94,11 @@ func (this *QShortcut) FreeQShortcut(args ...interface{}) () {
     qtrt.ErrorResolve("QShortcut", "~QShortcut", args)
   }
 
+  return
 }
 
 // id()
-func (this *QShortcut) id(args ...interface{}) () {
+func (this *QShortcut) Id(args ...interface{}) (ret interface{}) {
   // id()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -109,16 +110,20 @@ func (this *QShortcut) id(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut2idEv
     // invoke: int id()
-    var ret = C.C_ZNK9QShortcut2idEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QShortcut2idEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QShortcut", "id", args)
   }
 
+  return
 }
 
 // isEnabled()
-func (this *QShortcut) isEnabled(args ...interface{}) () {
+func (this *QShortcut) Isenabled(args ...interface{}) (ret interface{}) {
   // isEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -130,16 +135,20 @@ func (this *QShortcut) isEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut9isEnabledEv
     // invoke: bool isEnabled()
-    var ret = C.C_ZNK9QShortcut9isEnabledEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QShortcut9isEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QShortcut", "isEnabled", args)
   }
 
+  return
 }
 
 // whatsThis()
-func (this *QShortcut) whatsThis(args ...interface{}) () {
+func (this *QShortcut) Whatsthis(args ...interface{}) (ret interface{}) {
   // whatsThis()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -151,16 +160,20 @@ func (this *QShortcut) whatsThis(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut9whatsThisEv
     // invoke: QString whatsThis()
-    var ret = C.C_ZNK9QShortcut9whatsThisEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QShortcut9whatsThisEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QShortcut", "whatsThis", args)
   }
 
+  return
 }
 
 // setKey(const class QKeySequence &)
-func (this *QShortcut) setKey(args ...interface{}) () {
+func (this *QShortcut) Setkey(args ...interface{}) () {
   // setKey(const class QKeySequence &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -180,10 +193,11 @@ func (this *QShortcut) setKey(args ...interface{}) () {
     qtrt.ErrorResolve("QShortcut", "setKey", args)
   }
 
+  return
 }
 
 // setEnabled(_Bool)
-func (this *QShortcut) setEnabled(args ...interface{}) () {
+func (this *QShortcut) Setenabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -203,10 +217,11 @@ func (this *QShortcut) setEnabled(args ...interface{}) () {
     qtrt.ErrorResolve("QShortcut", "setEnabled", args)
   }
 
+  return
 }
 
 // setAutoRepeat(_Bool)
-func (this *QShortcut) setAutoRepeat(args ...interface{}) () {
+func (this *QShortcut) Setautorepeat(args ...interface{}) () {
   // setAutoRepeat(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -226,6 +241,7 @@ func (this *QShortcut) setAutoRepeat(args ...interface{}) () {
     qtrt.ErrorResolve("QShortcut", "setAutoRepeat", args)
   }
 
+  return
 }
 
 // QShortcut(class QWidget *)
@@ -256,7 +272,7 @@ func NewQShortcut(args ...interface{}) *QShortcut {
 }
 
 // setWhatsThis(const class QString &)
-func (this *QShortcut) setWhatsThis(args ...interface{}) () {
+func (this *QShortcut) Setwhatsthis(args ...interface{}) () {
   // setWhatsThis(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -276,10 +292,11 @@ func (this *QShortcut) setWhatsThis(args ...interface{}) () {
     qtrt.ErrorResolve("QShortcut", "setWhatsThis", args)
   }
 
+  return
 }
 
 // key()
-func (this *QShortcut) key(args ...interface{}) () {
+func (this *QShortcut) Key(args ...interface{}) (ret interface{}) {
   // key()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -291,16 +308,20 @@ func (this *QShortcut) key(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut3keyEv
     // invoke: QKeySequence key()
-    var ret = C.C_ZNK9QShortcut3keyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QShortcut3keyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QKeySequence{}) // "QKeySequence"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QShortcut", "key", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QShortcut) metaObject(args ...interface{}) () {
+func (this *QShortcut) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -317,10 +338,11 @@ func (this *QShortcut) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QShortcut", "metaObject", args)
   }
 
+  return
 }
 
 // parentWidget()
-func (this *QShortcut) parentWidget(args ...interface{}) () {
+func (this *QShortcut) Parentwidget(args ...interface{}) (ret interface{}) {
   // parentWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -332,16 +354,20 @@ func (this *QShortcut) parentWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut12parentWidgetEv
     // invoke: QWidget * parentWidget()
-    var ret = C.C_ZNK9QShortcut12parentWidgetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QShortcut12parentWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QShortcut", "parentWidget", args)
   }
 
+  return
 }
 
 // context()
-func (this *QShortcut) context(args ...interface{}) () {
+func (this *QShortcut) Context(args ...interface{}) () {
   // context()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -358,10 +384,11 @@ func (this *QShortcut) context(args ...interface{}) () {
     qtrt.ErrorResolve("QShortcut", "context", args)
   }
 
+  return
 }
 
 // autoRepeat()
-func (this *QShortcut) autoRepeat(args ...interface{}) () {
+func (this *QShortcut) Autorepeat(args ...interface{}) (ret interface{}) {
   // autoRepeat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -373,12 +400,16 @@ func (this *QShortcut) autoRepeat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut10autoRepeatEv
     // invoke: bool autoRepeat()
-    var ret = C.C_ZNK9QShortcut10autoRepeatEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QShortcut10autoRepeatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QShortcut", "autoRepeat", args)
   }
 
+  return
 }
 
 // <= body block end

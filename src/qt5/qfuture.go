@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qfuture.h
 // dst-file: /src/core/qfuture.go
 //
@@ -29,39 +29,39 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QString QFuture<void>::progressText();
-extern void C_ZNK7QFutureIvE12progressTextEv(void* qthis); // 2
+extern void* C_ZNK7QFutureIvE12progressTextEv(void* qthis); // 2
   // proto:  int QFuture<void>::resultCount();
-extern void C_ZNK7QFutureIvE11resultCountEv(void* qthis); // 2
+extern int32_t C_ZNK7QFutureIvE11resultCountEv(void* qthis); // 2
   // proto:  void QFuture<void>::~QFuture();
 extern void C_ZN7QFutureIvED2Ev(void* qthis); // 4
   // proto:  void QFuture<void>::resume();
 extern void C_ZN7QFutureIvE6resumeEv(void* qthis); // 2
   // proto:  bool QFuture<void>::isFinished();
-extern void C_ZNK7QFutureIvE10isFinishedEv(void* qthis); // 2
+extern bool C_ZNK7QFutureIvE10isFinishedEv(void* qthis); // 2
   // proto:  void QFuture<void>::waitForFinished();
 extern void C_ZN7QFutureIvE15waitForFinishedEv(void* qthis); // 2
   // proto:  bool QFuture<void>::isCanceled();
-extern void C_ZNK7QFutureIvE10isCanceledEv(void* qthis); // 2
+extern bool C_ZNK7QFutureIvE10isCanceledEv(void* qthis); // 2
   // proto:  int QFuture<void>::progressMaximum();
-extern void C_ZNK7QFutureIvE15progressMaximumEv(void* qthis); // 2
+extern int32_t C_ZNK7QFutureIvE15progressMaximumEv(void* qthis); // 2
   // proto:  int QFuture<void>::progressMinimum();
-extern void C_ZNK7QFutureIvE15progressMinimumEv(void* qthis); // 2
+extern int32_t C_ZNK7QFutureIvE15progressMinimumEv(void* qthis); // 2
   // proto:  void QFuture<void>::pause();
 extern void C_ZN7QFutureIvE5pauseEv(void* qthis); // 2
   // proto:  bool QFuture<void>::isStarted();
-extern void C_ZNK7QFutureIvE9isStartedEv(void* qthis); // 2
+extern bool C_ZNK7QFutureIvE9isStartedEv(void* qthis); // 2
   // proto:  bool QFuture<void>::isPaused();
-extern void C_ZNK7QFutureIvE8isPausedEv(void* qthis); // 2
+extern bool C_ZNK7QFutureIvE8isPausedEv(void* qthis); // 2
   // proto:  void QFuture<void>::cancel();
 extern void C_ZN7QFutureIvE6cancelEv(void* qthis); // 2
   // proto:  bool QFuture<void>::isRunning();
-extern void C_ZNK7QFutureIvE9isRunningEv(void* qthis); // 2
+extern bool C_ZNK7QFutureIvE9isRunningEv(void* qthis); // 2
   // proto:  void QFuture<void>::QFuture(QFutureInterfaceBase * p);
 extern void* C_ZN7QFutureIvEC2EP20QFutureInterfaceBase(void* arg0); // 1
   // proto:  void QFuture<void>::QFuture();
 extern void* C_ZN7QFutureIvEC2Ev(); // 1
   // proto:  int QFuture<void>::progressValue();
-extern void C_ZNK7QFutureIvE13progressValueEv(void* qthis); // 2
+extern int32_t C_ZNK7QFutureIvE13progressValueEv(void* qthis); // 2
   // proto:  void QFuture<void>::togglePaused();
 extern void C_ZN7QFutureIvE12togglePausedEv(void* qthis); // 2
   // proto:  void QFuture<void>::setPaused(bool paused);
@@ -85,7 +85,7 @@ type QFutureLvoidG struct {
 }
 
 // progressText()
-func (this *QFutureLvoidG) progressText(args ...interface{}) () {
+func (this *QFutureLvoidG) Progresstext(args ...interface{}) (ret interface{}) {
   // progressText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,16 +97,20 @@ func (this *QFutureLvoidG) progressText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE12progressTextEv
     // invoke: QString progressText()
-    var ret = C.C_ZNK7QFutureIvE12progressTextEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QFutureIvE12progressTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFuture<void>", "progressText", args)
   }
 
+  return
 }
 
 // resultCount()
-func (this *QFutureLvoidG) resultCount(args ...interface{}) () {
+func (this *QFutureLvoidG) Resultcount(args ...interface{}) (ret interface{}) {
   // resultCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -118,16 +122,20 @@ func (this *QFutureLvoidG) resultCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE11resultCountEv
     // invoke: int resultCount()
-    var ret = C.C_ZNK7QFutureIvE11resultCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QFutureIvE11resultCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFuture<void>", "resultCount", args)
   }
 
+  return
 }
 
 // ~QFuture()
-func (this *QFutureLvoidG) FreeQFutureLvoidG(args ...interface{}) () {
+func (this *QFutureLvoidG) Freeqfuturelvoidg(args ...interface{}) () {
   // ~QFuture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -144,10 +152,11 @@ func (this *QFutureLvoidG) FreeQFutureLvoidG(args ...interface{}) () {
     qtrt.ErrorResolve("QFuture<void>", "~QFuture", args)
   }
 
+  return
 }
 
 // resume()
-func (this *QFutureLvoidG) resume(args ...interface{}) () {
+func (this *QFutureLvoidG) Resume(args ...interface{}) () {
   // resume()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -164,10 +173,11 @@ func (this *QFutureLvoidG) resume(args ...interface{}) () {
     qtrt.ErrorResolve("QFuture<void>", "resume", args)
   }
 
+  return
 }
 
 // isFinished()
-func (this *QFutureLvoidG) isFinished(args ...interface{}) () {
+func (this *QFutureLvoidG) Isfinished(args ...interface{}) (ret interface{}) {
   // isFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,16 +189,20 @@ func (this *QFutureLvoidG) isFinished(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE10isFinishedEv
     // invoke: bool isFinished()
-    var ret = C.C_ZNK7QFutureIvE10isFinishedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QFutureIvE10isFinishedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFuture<void>", "isFinished", args)
   }
 
+  return
 }
 
 // waitForFinished()
-func (this *QFutureLvoidG) waitForFinished(args ...interface{}) () {
+func (this *QFutureLvoidG) Waitforfinished(args ...interface{}) () {
   // waitForFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -205,10 +219,11 @@ func (this *QFutureLvoidG) waitForFinished(args ...interface{}) () {
     qtrt.ErrorResolve("QFuture<void>", "waitForFinished", args)
   }
 
+  return
 }
 
 // isCanceled()
-func (this *QFutureLvoidG) isCanceled(args ...interface{}) () {
+func (this *QFutureLvoidG) Iscanceled(args ...interface{}) (ret interface{}) {
   // isCanceled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -220,16 +235,20 @@ func (this *QFutureLvoidG) isCanceled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE10isCanceledEv
     // invoke: bool isCanceled()
-    var ret = C.C_ZNK7QFutureIvE10isCanceledEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QFutureIvE10isCanceledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFuture<void>", "isCanceled", args)
   }
 
+  return
 }
 
 // progressMaximum()
-func (this *QFutureLvoidG) progressMaximum(args ...interface{}) () {
+func (this *QFutureLvoidG) Progressmaximum(args ...interface{}) (ret interface{}) {
   // progressMaximum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -241,16 +260,20 @@ func (this *QFutureLvoidG) progressMaximum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE15progressMaximumEv
     // invoke: int progressMaximum()
-    var ret = C.C_ZNK7QFutureIvE15progressMaximumEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QFutureIvE15progressMaximumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFuture<void>", "progressMaximum", args)
   }
 
+  return
 }
 
 // progressMinimum()
-func (this *QFutureLvoidG) progressMinimum(args ...interface{}) () {
+func (this *QFutureLvoidG) Progressminimum(args ...interface{}) (ret interface{}) {
   // progressMinimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -262,16 +285,20 @@ func (this *QFutureLvoidG) progressMinimum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE15progressMinimumEv
     // invoke: int progressMinimum()
-    var ret = C.C_ZNK7QFutureIvE15progressMinimumEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QFutureIvE15progressMinimumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFuture<void>", "progressMinimum", args)
   }
 
+  return
 }
 
 // pause()
-func (this *QFutureLvoidG) pause(args ...interface{}) () {
+func (this *QFutureLvoidG) Pause(args ...interface{}) () {
   // pause()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -288,10 +315,11 @@ func (this *QFutureLvoidG) pause(args ...interface{}) () {
     qtrt.ErrorResolve("QFuture<void>", "pause", args)
   }
 
+  return
 }
 
 // isStarted()
-func (this *QFutureLvoidG) isStarted(args ...interface{}) () {
+func (this *QFutureLvoidG) Isstarted(args ...interface{}) (ret interface{}) {
   // isStarted()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -303,16 +331,20 @@ func (this *QFutureLvoidG) isStarted(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE9isStartedEv
     // invoke: bool isStarted()
-    var ret = C.C_ZNK7QFutureIvE9isStartedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QFutureIvE9isStartedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFuture<void>", "isStarted", args)
   }
 
+  return
 }
 
 // isPaused()
-func (this *QFutureLvoidG) isPaused(args ...interface{}) () {
+func (this *QFutureLvoidG) Ispaused(args ...interface{}) (ret interface{}) {
   // isPaused()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -324,16 +356,20 @@ func (this *QFutureLvoidG) isPaused(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE8isPausedEv
     // invoke: bool isPaused()
-    var ret = C.C_ZNK7QFutureIvE8isPausedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QFutureIvE8isPausedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFuture<void>", "isPaused", args)
   }
 
+  return
 }
 
 // cancel()
-func (this *QFutureLvoidG) cancel(args ...interface{}) () {
+func (this *QFutureLvoidG) Cancel(args ...interface{}) () {
   // cancel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -350,10 +386,11 @@ func (this *QFutureLvoidG) cancel(args ...interface{}) () {
     qtrt.ErrorResolve("QFuture<void>", "cancel", args)
   }
 
+  return
 }
 
 // isRunning()
-func (this *QFutureLvoidG) isRunning(args ...interface{}) () {
+func (this *QFutureLvoidG) Isrunning(args ...interface{}) (ret interface{}) {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -365,12 +402,16 @@ func (this *QFutureLvoidG) isRunning(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE9isRunningEv
     // invoke: bool isRunning()
-    var ret = C.C_ZNK7QFutureIvE9isRunningEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QFutureIvE9isRunningEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFuture<void>", "isRunning", args)
   }
 
+  return
 }
 
 // QFuture(class QFutureInterfaceBase *)
@@ -410,7 +451,7 @@ func NewQFutureLvoidG(args ...interface{}) *QFutureLvoidG {
 }
 
 // progressValue()
-func (this *QFutureLvoidG) progressValue(args ...interface{}) () {
+func (this *QFutureLvoidG) Progressvalue(args ...interface{}) (ret interface{}) {
   // progressValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -422,16 +463,20 @@ func (this *QFutureLvoidG) progressValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE13progressValueEv
     // invoke: int progressValue()
-    var ret = C.C_ZNK7QFutureIvE13progressValueEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QFutureIvE13progressValueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFuture<void>", "progressValue", args)
   }
 
+  return
 }
 
 // togglePaused()
-func (this *QFutureLvoidG) togglePaused(args ...interface{}) () {
+func (this *QFutureLvoidG) Togglepaused(args ...interface{}) () {
   // togglePaused()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -448,10 +493,11 @@ func (this *QFutureLvoidG) togglePaused(args ...interface{}) () {
     qtrt.ErrorResolve("QFuture<void>", "togglePaused", args)
   }
 
+  return
 }
 
 // setPaused(_Bool)
-func (this *QFutureLvoidG) setPaused(args ...interface{}) () {
+func (this *QFutureLvoidG) Setpaused(args ...interface{}) () {
   // setPaused(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -471,6 +517,7 @@ func (this *QFutureLvoidG) setPaused(args ...interface{}) () {
     qtrt.ErrorResolve("QFuture<void>", "setPaused", args)
   }
 
+  return
 }
 
 // <= body block end

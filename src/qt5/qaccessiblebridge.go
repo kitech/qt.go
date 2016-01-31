@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qaccessiblebridge.h
 // dst-file: /src/gui/qaccessiblebridge.go
 //
@@ -59,7 +59,7 @@ type QAccessibleBridge struct {
 }
 
 // metaObject()
-func (this *QAccessibleBridgePlugin) metaObject(args ...interface{}) () {
+func (this *QAccessibleBridgePlugin) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -76,6 +76,7 @@ func (this *QAccessibleBridgePlugin) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QAccessibleBridgePlugin", "metaObject", args)
   }
 
+  return
 }
 
 // QAccessibleBridgePlugin(class QObject *)
@@ -106,7 +107,7 @@ func NewQAccessibleBridgePlugin(args ...interface{}) *QAccessibleBridgePlugin {
 }
 
 // ~QAccessibleBridgePlugin()
-func (this *QAccessibleBridgePlugin) FreeQAccessibleBridgePlugin(args ...interface{}) () {
+func (this *QAccessibleBridgePlugin) Freeqaccessiblebridgeplugin(args ...interface{}) () {
   // ~QAccessibleBridgePlugin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -123,6 +124,7 @@ func (this *QAccessibleBridgePlugin) FreeQAccessibleBridgePlugin(args ...interfa
     qtrt.ErrorResolve("QAccessibleBridgePlugin", "~QAccessibleBridgePlugin", args)
   }
 
+  return
 }
 
 // <= body block end

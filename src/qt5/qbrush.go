@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qbrush.h
 // dst-file: /src/gui/qbrush.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  qreal QRadialGradient::centerRadius();
-extern void C_ZNK15QRadialGradient12centerRadiusEv(void* qthis); // 4
+extern double C_ZNK15QRadialGradient12centerRadiusEv(void* qthis); // 4
   // proto:  void QRadialGradient::setFocalPoint(const QPointF & focalPoint);
 extern void C_ZN15QRadialGradient13setFocalPointERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QRadialGradient::setFocalPoint(qreal x, qreal y);
@@ -37,7 +37,7 @@ extern void C_ZN15QRadialGradient13setFocalPointEdd(void* qthis, double arg0, do
   // proto:  void QRadialGradient::setRadius(qreal radius);
 extern void C_ZN15QRadialGradient9setRadiusEd(void* qthis, double arg0); // 4
   // proto:  QPointF QRadialGradient::focalPoint();
-extern void C_ZNK15QRadialGradient10focalPointEv(void* qthis); // 4
+extern void* C_ZNK15QRadialGradient10focalPointEv(void* qthis); // 4
   // proto:  void QRadialGradient::QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy);
 extern void* C_ZN15QRadialGradientC2Eddddd(double arg0, double arg1, double arg2, double arg3, double arg4); // 3
   // proto:  void QRadialGradient::QRadialGradient();
@@ -59,13 +59,13 @@ extern void C_ZN15QRadialGradient9setCenterEdd(void* qthis, double arg0, double 
   // proto:  void QRadialGradient::setCenterRadius(qreal radius);
 extern void C_ZN15QRadialGradient15setCenterRadiusEd(void* qthis, double arg0); // 4
   // proto:  qreal QRadialGradient::radius();
-extern void C_ZNK15QRadialGradient6radiusEv(void* qthis); // 4
+extern double C_ZNK15QRadialGradient6radiusEv(void* qthis); // 4
   // proto:  void QRadialGradient::setFocalRadius(qreal radius);
 extern void C_ZN15QRadialGradient14setFocalRadiusEd(void* qthis, double arg0); // 4
   // proto:  qreal QRadialGradient::focalRadius();
-extern void C_ZNK15QRadialGradient11focalRadiusEv(void* qthis); // 4
+extern double C_ZNK15QRadialGradient11focalRadiusEv(void* qthis); // 4
   // proto:  QPointF QRadialGradient::center();
-extern void C_ZNK15QRadialGradient6centerEv(void* qthis); // 4
+extern void* C_ZNK15QRadialGradient6centerEv(void* qthis); // 4
   // proto:  void QConicalGradient::QConicalGradient(qreal cx, qreal cy, qreal startAngle);
 extern void* C_ZN16QConicalGradientC2Eddd(double arg0, double arg1, double arg2); // 3
   // proto:  void QConicalGradient::QConicalGradient(const QPointF & center, qreal startAngle);
@@ -77,9 +77,9 @@ extern void C_ZN16QConicalGradient9setCenterERK7QPointF(void* qthis, void* arg0)
   // proto:  void QConicalGradient::setCenter(qreal x, qreal y);
 extern void C_ZN16QConicalGradient9setCenterEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  qreal QConicalGradient::angle();
-extern void C_ZNK16QConicalGradient5angleEv(void* qthis); // 4
+extern double C_ZNK16QConicalGradient5angleEv(void* qthis); // 4
   // proto:  QPointF QConicalGradient::center();
-extern void C_ZNK16QConicalGradient6centerEv(void* qthis); // 4
+extern void* C_ZNK16QConicalGradient6centerEv(void* qthis); // 4
   // proto:  void QConicalGradient::setAngle(qreal angle);
 extern void C_ZN16QConicalGradient8setAngleEd(void* qthis, double arg0); // 4
   // proto:  void QBrush::setTexture(const QPixmap & pixmap);
@@ -89,21 +89,21 @@ extern void C_ZN6QBrush12setTransformERK10QTransform(void* qthis, void* arg0); /
   // proto:  void QBrush::setMatrix(const QMatrix & mat);
 extern void C_ZN6QBrush9setMatrixERK7QMatrix(void* qthis, void* arg0); // 4
   // proto:  bool QBrush::isOpaque();
-extern void C_ZNK6QBrush8isOpaqueEv(void* qthis); // 4
+extern bool C_ZNK6QBrush8isOpaqueEv(void* qthis); // 4
   // proto:  Qt::BrushStyle QBrush::style();
 extern void C_ZNK6QBrush5styleEv(void* qthis); // 2
   // proto:  const QMatrix & QBrush::matrix();
-extern void C_ZNK6QBrush6matrixEv(void* qthis); // 2
+extern void* C_ZNK6QBrush6matrixEv(void* qthis); // 2
   // proto:  const QGradient * QBrush::gradient();
-extern void C_ZNK6QBrush8gradientEv(void* qthis); // 4
+extern void* C_ZNK6QBrush8gradientEv(void* qthis); // 4
   // proto:  QImage QBrush::textureImage();
-extern void C_ZNK6QBrush12textureImageEv(void* qthis); // 4
+extern void* C_ZNK6QBrush12textureImageEv(void* qthis); // 4
   // proto:  QTransform QBrush::transform();
-extern void C_ZNK6QBrush9transformEv(void* qthis); // 2
+extern void* C_ZNK6QBrush9transformEv(void* qthis); // 2
   // proto:  QPixmap QBrush::texture();
-extern void C_ZNK6QBrush7textureEv(void* qthis); // 4
+extern void* C_ZNK6QBrush7textureEv(void* qthis); // 4
   // proto:  const QColor & QBrush::color();
-extern void C_ZNK6QBrush5colorEv(void* qthis); // 2
+extern void* C_ZNK6QBrush5colorEv(void* qthis); // 2
   // proto:  void QBrush::swap(QBrush & other);
 extern void C_ZN6QBrush4swapERS_(void* qthis, void* arg0); // 2
   // proto:  void QBrush::QBrush();
@@ -119,7 +119,7 @@ extern void* C_ZN6QBrushC2ERK6QColorRK7QPixmap(void* arg0, void* arg1); // 3
   // proto:  void QBrush::QBrush(const QGradient & gradient);
 extern void* C_ZN6QBrushC2ERK9QGradient(void* arg0); // 3
   // proto:  bool QBrush::isDetached();
-extern void C_ZNK6QBrush10isDetachedEv(void* qthis); // 2
+extern bool C_ZNK6QBrush10isDetachedEv(void* qthis); // 2
   // proto:  void QBrush::setTextureImage(const QImage & image);
 extern void C_ZN6QBrush15setTextureImageERK6QImage(void* qthis, void* arg0); // 4
   // proto:  void QBrush::~QBrush();
@@ -141,9 +141,9 @@ extern void C_ZNK9QGradient6spreadEv(void* qthis); // 2
   // proto:  QGradient::Type QGradient::type();
 extern void C_ZNK9QGradient4typeEv(void* qthis); // 2
   // proto:  QPointF QLinearGradient::start();
-extern void C_ZNK15QLinearGradient5startEv(void* qthis); // 4
+extern void* C_ZNK15QLinearGradient5startEv(void* qthis); // 4
   // proto:  QPointF QLinearGradient::finalStop();
-extern void C_ZNK15QLinearGradient9finalStopEv(void* qthis); // 4
+extern void* C_ZNK15QLinearGradient9finalStopEv(void* qthis); // 4
   // proto:  void QLinearGradient::setFinalStop(qreal x, qreal y);
 extern void C_ZN15QLinearGradient12setFinalStopEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QLinearGradient::setFinalStop(const QPointF & stop);
@@ -207,7 +207,7 @@ type QLinearGradient struct {
 }
 
 // centerRadius()
-func (this *QRadialGradient) centerRadius(args ...interface{}) () {
+func (this *QRadialGradient) Centerradius(args ...interface{}) (ret interface{}) {
   // centerRadius()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -219,16 +219,20 @@ func (this *QRadialGradient) centerRadius(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QRadialGradient12centerRadiusEv
     // invoke: qreal centerRadius()
-    var ret = C.C_ZNK15QRadialGradient12centerRadiusEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QRadialGradient12centerRadiusEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRadialGradient", "centerRadius", args)
   }
 
+  return
 }
 
 // setFocalPoint(const class QPointF &)
-func (this *QRadialGradient) setFocalPoint(args ...interface{}) () {
+func (this *QRadialGradient) Setfocalpoint(args ...interface{}) () {
   // setFocalPoint(const class QPointF &)
   // setFocalPoint(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -260,10 +264,11 @@ func (this *QRadialGradient) setFocalPoint(args ...interface{}) () {
     qtrt.ErrorResolve("QRadialGradient", "setFocalPoint", args)
   }
 
+  return
 }
 
 // setRadius(qreal)
-func (this *QRadialGradient) setRadius(args ...interface{}) () {
+func (this *QRadialGradient) Setradius(args ...interface{}) () {
   // setRadius(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -283,10 +288,11 @@ func (this *QRadialGradient) setRadius(args ...interface{}) () {
     qtrt.ErrorResolve("QRadialGradient", "setRadius", args)
   }
 
+  return
 }
 
 // focalPoint()
-func (this *QRadialGradient) focalPoint(args ...interface{}) () {
+func (this *QRadialGradient) Focalpoint(args ...interface{}) (ret interface{}) {
   // focalPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -298,12 +304,16 @@ func (this *QRadialGradient) focalPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QRadialGradient10focalPointEv
     // invoke: QPointF focalPoint()
-    var ret = C.C_ZNK15QRadialGradient10focalPointEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QRadialGradient10focalPointEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRadialGradient", "focalPoint", args)
   }
 
+  return
 }
 
 // QRadialGradient(qreal, qreal, qreal, qreal, qreal)
@@ -454,7 +464,7 @@ func NewQRadialGradient(args ...interface{}) *QRadialGradient {
 }
 
 // setCenter(const class QPointF &)
-func (this *QRadialGradient) setCenter(args ...interface{}) () {
+func (this *QRadialGradient) Setcenter(args ...interface{}) () {
   // setCenter(const class QPointF &)
   // setCenter(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -486,10 +496,11 @@ func (this *QRadialGradient) setCenter(args ...interface{}) () {
     qtrt.ErrorResolve("QRadialGradient", "setCenter", args)
   }
 
+  return
 }
 
 // setCenterRadius(qreal)
-func (this *QRadialGradient) setCenterRadius(args ...interface{}) () {
+func (this *QRadialGradient) Setcenterradius(args ...interface{}) () {
   // setCenterRadius(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -509,10 +520,11 @@ func (this *QRadialGradient) setCenterRadius(args ...interface{}) () {
     qtrt.ErrorResolve("QRadialGradient", "setCenterRadius", args)
   }
 
+  return
 }
 
 // radius()
-func (this *QRadialGradient) radius(args ...interface{}) () {
+func (this *QRadialGradient) Radius(args ...interface{}) (ret interface{}) {
   // radius()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -524,16 +536,20 @@ func (this *QRadialGradient) radius(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QRadialGradient6radiusEv
     // invoke: qreal radius()
-    var ret = C.C_ZNK15QRadialGradient6radiusEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QRadialGradient6radiusEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRadialGradient", "radius", args)
   }
 
+  return
 }
 
 // setFocalRadius(qreal)
-func (this *QRadialGradient) setFocalRadius(args ...interface{}) () {
+func (this *QRadialGradient) Setfocalradius(args ...interface{}) () {
   // setFocalRadius(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -553,10 +569,11 @@ func (this *QRadialGradient) setFocalRadius(args ...interface{}) () {
     qtrt.ErrorResolve("QRadialGradient", "setFocalRadius", args)
   }
 
+  return
 }
 
 // focalRadius()
-func (this *QRadialGradient) focalRadius(args ...interface{}) () {
+func (this *QRadialGradient) Focalradius(args ...interface{}) (ret interface{}) {
   // focalRadius()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -568,16 +585,20 @@ func (this *QRadialGradient) focalRadius(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QRadialGradient11focalRadiusEv
     // invoke: qreal focalRadius()
-    var ret = C.C_ZNK15QRadialGradient11focalRadiusEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QRadialGradient11focalRadiusEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRadialGradient", "focalRadius", args)
   }
 
+  return
 }
 
 // center()
-func (this *QRadialGradient) center(args ...interface{}) () {
+func (this *QRadialGradient) Center(args ...interface{}) (ret interface{}) {
   // center()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -589,12 +610,16 @@ func (this *QRadialGradient) center(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QRadialGradient6centerEv
     // invoke: QPointF center()
-    var ret = C.C_ZNK15QRadialGradient6centerEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QRadialGradient6centerEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRadialGradient", "center", args)
   }
 
+  return
 }
 
 // QConicalGradient(qreal, qreal, qreal)
@@ -655,7 +680,7 @@ func NewQConicalGradient(args ...interface{}) *QConicalGradient {
 }
 
 // setCenter(const class QPointF &)
-func (this *QConicalGradient) setCenter(args ...interface{}) () {
+func (this *QConicalGradient) Setcenter(args ...interface{}) () {
   // setCenter(const class QPointF &)
   // setCenter(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -687,10 +712,11 @@ func (this *QConicalGradient) setCenter(args ...interface{}) () {
     qtrt.ErrorResolve("QConicalGradient", "setCenter", args)
   }
 
+  return
 }
 
 // angle()
-func (this *QConicalGradient) angle(args ...interface{}) () {
+func (this *QConicalGradient) Angle(args ...interface{}) (ret interface{}) {
   // angle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -702,16 +728,20 @@ func (this *QConicalGradient) angle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QConicalGradient5angleEv
     // invoke: qreal angle()
-    var ret = C.C_ZNK16QConicalGradient5angleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK16QConicalGradient5angleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QConicalGradient", "angle", args)
   }
 
+  return
 }
 
 // center()
-func (this *QConicalGradient) center(args ...interface{}) () {
+func (this *QConicalGradient) Center(args ...interface{}) (ret interface{}) {
   // center()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -723,16 +753,20 @@ func (this *QConicalGradient) center(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QConicalGradient6centerEv
     // invoke: QPointF center()
-    var ret = C.C_ZNK16QConicalGradient6centerEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK16QConicalGradient6centerEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QConicalGradient", "center", args)
   }
 
+  return
 }
 
 // setAngle(qreal)
-func (this *QConicalGradient) setAngle(args ...interface{}) () {
+func (this *QConicalGradient) Setangle(args ...interface{}) () {
   // setAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -752,10 +786,11 @@ func (this *QConicalGradient) setAngle(args ...interface{}) () {
     qtrt.ErrorResolve("QConicalGradient", "setAngle", args)
   }
 
+  return
 }
 
 // setTexture(const class QPixmap &)
-func (this *QBrush) setTexture(args ...interface{}) () {
+func (this *QBrush) Settexture(args ...interface{}) () {
   // setTexture(const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -775,10 +810,11 @@ func (this *QBrush) setTexture(args ...interface{}) () {
     qtrt.ErrorResolve("QBrush", "setTexture", args)
   }
 
+  return
 }
 
 // setTransform(const class QTransform &)
-func (this *QBrush) setTransform(args ...interface{}) () {
+func (this *QBrush) Settransform(args ...interface{}) () {
   // setTransform(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -798,10 +834,11 @@ func (this *QBrush) setTransform(args ...interface{}) () {
     qtrt.ErrorResolve("QBrush", "setTransform", args)
   }
 
+  return
 }
 
 // setMatrix(const class QMatrix &)
-func (this *QBrush) setMatrix(args ...interface{}) () {
+func (this *QBrush) Setmatrix(args ...interface{}) () {
   // setMatrix(const class QMatrix &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -821,10 +858,11 @@ func (this *QBrush) setMatrix(args ...interface{}) () {
     qtrt.ErrorResolve("QBrush", "setMatrix", args)
   }
 
+  return
 }
 
 // isOpaque()
-func (this *QBrush) isOpaque(args ...interface{}) () {
+func (this *QBrush) Isopaque(args ...interface{}) (ret interface{}) {
   // isOpaque()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -836,16 +874,20 @@ func (this *QBrush) isOpaque(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QBrush8isOpaqueEv
     // invoke: bool isOpaque()
-    var ret = C.C_ZNK6QBrush8isOpaqueEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QBrush8isOpaqueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBrush", "isOpaque", args)
   }
 
+  return
 }
 
 // style()
-func (this *QBrush) style(args ...interface{}) () {
+func (this *QBrush) Style(args ...interface{}) () {
   // style()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -862,10 +904,11 @@ func (this *QBrush) style(args ...interface{}) () {
     qtrt.ErrorResolve("QBrush", "style", args)
   }
 
+  return
 }
 
 // matrix()
-func (this *QBrush) matrix(args ...interface{}) () {
+func (this *QBrush) Matrix(args ...interface{}) (ret interface{}) {
   // matrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -877,16 +920,20 @@ func (this *QBrush) matrix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QBrush6matrixEv
     // invoke: const QMatrix & matrix()
-    var ret = C.C_ZNK6QBrush6matrixEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QBrush6matrixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMatrix{}) // "const QMatrix &"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBrush", "matrix", args)
   }
 
+  return
 }
 
 // gradient()
-func (this *QBrush) gradient(args ...interface{}) () {
+func (this *QBrush) Gradient(args ...interface{}) (ret interface{}) {
   // gradient()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -898,16 +945,20 @@ func (this *QBrush) gradient(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QBrush8gradientEv
     // invoke: const QGradient * gradient()
-    var ret = C.C_ZNK6QBrush8gradientEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QBrush8gradientEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QGradient{}) // "const QGradient *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBrush", "gradient", args)
   }
 
+  return
 }
 
 // textureImage()
-func (this *QBrush) textureImage(args ...interface{}) () {
+func (this *QBrush) Textureimage(args ...interface{}) (ret interface{}) {
   // textureImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -919,16 +970,20 @@ func (this *QBrush) textureImage(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QBrush12textureImageEv
     // invoke: QImage textureImage()
-    var ret = C.C_ZNK6QBrush12textureImageEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QBrush12textureImageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QImage{}) // "QImage"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBrush", "textureImage", args)
   }
 
+  return
 }
 
 // transform()
-func (this *QBrush) transform(args ...interface{}) () {
+func (this *QBrush) Transform(args ...interface{}) (ret interface{}) {
   // transform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -940,16 +995,20 @@ func (this *QBrush) transform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QBrush9transformEv
     // invoke: QTransform transform()
-    var ret = C.C_ZNK6QBrush9transformEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QBrush9transformEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTransform{}) // "QTransform"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBrush", "transform", args)
   }
 
+  return
 }
 
 // texture()
-func (this *QBrush) texture(args ...interface{}) () {
+func (this *QBrush) Texture(args ...interface{}) (ret interface{}) {
   // texture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -961,16 +1020,20 @@ func (this *QBrush) texture(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QBrush7textureEv
     // invoke: QPixmap texture()
-    var ret = C.C_ZNK6QBrush7textureEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QBrush7textureEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPixmap{}) // "QPixmap"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBrush", "texture", args)
   }
 
+  return
 }
 
 // color()
-func (this *QBrush) color(args ...interface{}) () {
+func (this *QBrush) Color(args ...interface{}) (ret interface{}) {
   // color()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -982,16 +1045,20 @@ func (this *QBrush) color(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QBrush5colorEv
     // invoke: const QColor & color()
-    var ret = C.C_ZNK6QBrush5colorEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QBrush5colorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QColor{}) // "const QColor &"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBrush", "color", args)
   }
 
+  return
 }
 
 // swap(class QBrush &)
-func (this *QBrush) swap(args ...interface{}) () {
+func (this *QBrush) Swap(args ...interface{}) () {
   // swap(class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1011,6 +1078,7 @@ func (this *QBrush) swap(args ...interface{}) () {
     qtrt.ErrorResolve("QBrush", "swap", args)
   }
 
+  return
 }
 
 // QBrush()
@@ -1101,7 +1169,7 @@ func NewQBrush(args ...interface{}) *QBrush {
 }
 
 // isDetached()
-func (this *QBrush) isDetached(args ...interface{}) () {
+func (this *QBrush) Isdetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1113,16 +1181,20 @@ func (this *QBrush) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QBrush10isDetachedEv
     // invoke: bool isDetached()
-    var ret = C.C_ZNK6QBrush10isDetachedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QBrush10isDetachedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBrush", "isDetached", args)
   }
 
+  return
 }
 
 // setTextureImage(const class QImage &)
-func (this *QBrush) setTextureImage(args ...interface{}) () {
+func (this *QBrush) Settextureimage(args ...interface{}) () {
   // setTextureImage(const class QImage &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1142,10 +1214,11 @@ func (this *QBrush) setTextureImage(args ...interface{}) () {
     qtrt.ErrorResolve("QBrush", "setTextureImage", args)
   }
 
+  return
 }
 
 // ~QBrush()
-func (this *QBrush) FreeQBrush(args ...interface{}) () {
+func (this *QBrush) Freeqbrush(args ...interface{}) () {
   // ~QBrush()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1162,10 +1235,11 @@ func (this *QBrush) FreeQBrush(args ...interface{}) () {
     qtrt.ErrorResolve("QBrush", "~QBrush", args)
   }
 
+  return
 }
 
 // setColor(const class QColor &)
-func (this *QBrush) setColor(args ...interface{}) () {
+func (this *QBrush) Setcolor(args ...interface{}) () {
   // setColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1185,10 +1259,11 @@ func (this *QBrush) setColor(args ...interface{}) () {
     qtrt.ErrorResolve("QBrush", "setColor", args)
   }
 
+  return
 }
 
 // interpolationMode()
-func (this *QGradient) interpolationMode(args ...interface{}) () {
+func (this *QGradient) Interpolationmode(args ...interface{}) () {
   // interpolationMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1205,6 +1280,7 @@ func (this *QGradient) interpolationMode(args ...interface{}) () {
     qtrt.ErrorResolve("QGradient", "interpolationMode", args)
   }
 
+  return
 }
 
 // QGradient()
@@ -1232,7 +1308,7 @@ func NewQGradient(args ...interface{}) *QGradient {
 }
 
 // setColorAt(qreal, const class QColor &)
-func (this *QGradient) setColorAt(args ...interface{}) () {
+func (this *QGradient) Setcolorat(args ...interface{}) () {
   // setColorAt(qreal, const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1255,10 +1331,11 @@ func (this *QGradient) setColorAt(args ...interface{}) () {
     qtrt.ErrorResolve("QGradient", "setColorAt", args)
   }
 
+  return
 }
 
 // stops()
-func (this *QGradient) stops(args ...interface{}) () {
+func (this *QGradient) Stops(args ...interface{}) () {
   // stops()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1275,10 +1352,11 @@ func (this *QGradient) stops(args ...interface{}) () {
     qtrt.ErrorResolve("QGradient", "stops", args)
   }
 
+  return
 }
 
 // coordinateMode()
-func (this *QGradient) coordinateMode(args ...interface{}) () {
+func (this *QGradient) Coordinatemode(args ...interface{}) () {
   // coordinateMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1295,10 +1373,11 @@ func (this *QGradient) coordinateMode(args ...interface{}) () {
     qtrt.ErrorResolve("QGradient", "coordinateMode", args)
   }
 
+  return
 }
 
 // spread()
-func (this *QGradient) spread(args ...interface{}) () {
+func (this *QGradient) Spread(args ...interface{}) () {
   // spread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1315,10 +1394,11 @@ func (this *QGradient) spread(args ...interface{}) () {
     qtrt.ErrorResolve("QGradient", "spread", args)
   }
 
+  return
 }
 
 // type()
-func (this *QGradient) type_(args ...interface{}) () {
+func (this *QGradient) Type_(args ...interface{}) () {
   // type()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1335,10 +1415,11 @@ func (this *QGradient) type_(args ...interface{}) () {
     qtrt.ErrorResolve("QGradient", "type", args)
   }
 
+  return
 }
 
 // start()
-func (this *QLinearGradient) start(args ...interface{}) () {
+func (this *QLinearGradient) Start(args ...interface{}) (ret interface{}) {
   // start()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1350,16 +1431,20 @@ func (this *QLinearGradient) start(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QLinearGradient5startEv
     // invoke: QPointF start()
-    var ret = C.C_ZNK15QLinearGradient5startEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QLinearGradient5startEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLinearGradient", "start", args)
   }
 
+  return
 }
 
 // finalStop()
-func (this *QLinearGradient) finalStop(args ...interface{}) () {
+func (this *QLinearGradient) Finalstop(args ...interface{}) (ret interface{}) {
   // finalStop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1371,16 +1456,20 @@ func (this *QLinearGradient) finalStop(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QLinearGradient9finalStopEv
     // invoke: QPointF finalStop()
-    var ret = C.C_ZNK15QLinearGradient9finalStopEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QLinearGradient9finalStopEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLinearGradient", "finalStop", args)
   }
 
+  return
 }
 
 // setFinalStop(qreal, qreal)
-func (this *QLinearGradient) setFinalStop(args ...interface{}) () {
+func (this *QLinearGradient) Setfinalstop(args ...interface{}) () {
   // setFinalStop(qreal, qreal)
   // setFinalStop(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1412,10 +1501,11 @@ func (this *QLinearGradient) setFinalStop(args ...interface{}) () {
     qtrt.ErrorResolve("QLinearGradient", "setFinalStop", args)
   }
 
+  return
 }
 
 // setStart(const class QPointF &)
-func (this *QLinearGradient) setStart(args ...interface{}) () {
+func (this *QLinearGradient) Setstart(args ...interface{}) () {
   // setStart(const class QPointF &)
   // setStart(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1447,6 +1537,7 @@ func (this *QLinearGradient) setStart(args ...interface{}) () {
     qtrt.ErrorResolve("QLinearGradient", "setStart", args)
   }
 
+  return
 }
 
 // QLinearGradient()

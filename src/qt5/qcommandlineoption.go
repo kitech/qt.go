@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.go
 //
@@ -33,7 +33,7 @@ extern void C_ZN18QCommandLineOption14setDescriptionERK7QString(void* qthis, voi
   // proto:  QStringList QCommandLineOption::defaultValues();
 extern void C_ZNK18QCommandLineOption13defaultValuesEv(void* qthis); // 4
   // proto:  QString QCommandLineOption::description();
-extern void C_ZNK18QCommandLineOption11descriptionEv(void* qthis); // 4
+extern void* C_ZNK18QCommandLineOption11descriptionEv(void* qthis); // 4
   // proto:  void QCommandLineOption::QCommandLineOption(const QStringList & names, const QString & description, const QString & valueName, const QString & defaultValue);
 extern void* C_ZN18QCommandLineOptionC2ERK11QStringListRK7QStringS5_S5_(void* arg0, void* arg1, void* arg2, void* arg3); // 3
   // proto:  void QCommandLineOption::QCommandLineOption(const QStringList & names);
@@ -55,7 +55,7 @@ extern void C_ZN18QCommandLineOption12setValueNameERK7QString(void* qthis, void*
   // proto:  QStringList QCommandLineOption::names();
 extern void C_ZNK18QCommandLineOption5namesEv(void* qthis); // 4
   // proto:  QString QCommandLineOption::valueName();
-extern void C_ZNK18QCommandLineOption9valueNameEv(void* qthis); // 4
+extern void* C_ZNK18QCommandLineOption9valueNameEv(void* qthis); // 4
   // proto:  void QCommandLineOption::swap(QCommandLineOption & other);
 extern void C_ZN18QCommandLineOption4swapERS_(void* qthis, void* arg0); // 2
 */
@@ -77,7 +77,7 @@ type QCommandLineOption struct {
 }
 
 // setDescription(const class QString &)
-func (this *QCommandLineOption) setDescription(args ...interface{}) () {
+func (this *QCommandLineOption) Setdescription(args ...interface{}) () {
   // setDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,10 +97,11 @@ func (this *QCommandLineOption) setDescription(args ...interface{}) () {
     qtrt.ErrorResolve("QCommandLineOption", "setDescription", args)
   }
 
+  return
 }
 
 // defaultValues()
-func (this *QCommandLineOption) defaultValues(args ...interface{}) () {
+func (this *QCommandLineOption) Defaultvalues(args ...interface{}) () {
   // defaultValues()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,10 +118,11 @@ func (this *QCommandLineOption) defaultValues(args ...interface{}) () {
     qtrt.ErrorResolve("QCommandLineOption", "defaultValues", args)
   }
 
+  return
 }
 
 // description()
-func (this *QCommandLineOption) description(args ...interface{}) () {
+func (this *QCommandLineOption) Description(args ...interface{}) (ret interface{}) {
   // description()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -132,12 +134,16 @@ func (this *QCommandLineOption) description(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCommandLineOption11descriptionEv
     // invoke: QString description()
-    var ret = C.C_ZNK18QCommandLineOption11descriptionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QCommandLineOption11descriptionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCommandLineOption", "description", args)
   }
 
+  return
 }
 
 // QCommandLineOption(const class QStringList &, const class QString &, const class QString &, const class QString &)
@@ -234,7 +240,7 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
 }
 
 // setDefaultValue(const class QString &)
-func (this *QCommandLineOption) setDefaultValue(args ...interface{}) () {
+func (this *QCommandLineOption) Setdefaultvalue(args ...interface{}) () {
   // setDefaultValue(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -254,10 +260,11 @@ func (this *QCommandLineOption) setDefaultValue(args ...interface{}) () {
     qtrt.ErrorResolve("QCommandLineOption", "setDefaultValue", args)
   }
 
+  return
 }
 
 // ~QCommandLineOption()
-func (this *QCommandLineOption) FreeQCommandLineOption(args ...interface{}) () {
+func (this *QCommandLineOption) Freeqcommandlineoption(args ...interface{}) () {
   // ~QCommandLineOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -274,10 +281,11 @@ func (this *QCommandLineOption) FreeQCommandLineOption(args ...interface{}) () {
     qtrt.ErrorResolve("QCommandLineOption", "~QCommandLineOption", args)
   }
 
+  return
 }
 
 // setDefaultValues(const class QStringList &)
-func (this *QCommandLineOption) setDefaultValues(args ...interface{}) () {
+func (this *QCommandLineOption) Setdefaultvalues(args ...interface{}) () {
   // setDefaultValues(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -297,10 +305,11 @@ func (this *QCommandLineOption) setDefaultValues(args ...interface{}) () {
     qtrt.ErrorResolve("QCommandLineOption", "setDefaultValues", args)
   }
 
+  return
 }
 
 // setValueName(const class QString &)
-func (this *QCommandLineOption) setValueName(args ...interface{}) () {
+func (this *QCommandLineOption) Setvaluename(args ...interface{}) () {
   // setValueName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -320,10 +329,11 @@ func (this *QCommandLineOption) setValueName(args ...interface{}) () {
     qtrt.ErrorResolve("QCommandLineOption", "setValueName", args)
   }
 
+  return
 }
 
 // names()
-func (this *QCommandLineOption) names(args ...interface{}) () {
+func (this *QCommandLineOption) Names(args ...interface{}) () {
   // names()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -340,10 +350,11 @@ func (this *QCommandLineOption) names(args ...interface{}) () {
     qtrt.ErrorResolve("QCommandLineOption", "names", args)
   }
 
+  return
 }
 
 // valueName()
-func (this *QCommandLineOption) valueName(args ...interface{}) () {
+func (this *QCommandLineOption) Valuename(args ...interface{}) (ret interface{}) {
   // valueName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -355,16 +366,20 @@ func (this *QCommandLineOption) valueName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCommandLineOption9valueNameEv
     // invoke: QString valueName()
-    var ret = C.C_ZNK18QCommandLineOption9valueNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QCommandLineOption9valueNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCommandLineOption", "valueName", args)
   }
 
+  return
 }
 
 // swap(class QCommandLineOption &)
-func (this *QCommandLineOption) swap(args ...interface{}) () {
+func (this *QCommandLineOption) Swap(args ...interface{}) () {
   // swap(class QCommandLineOption &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -384,6 +399,7 @@ func (this *QCommandLineOption) swap(args ...interface{}) () {
     qtrt.ErrorResolve("QCommandLineOption", "swap", args)
   }
 
+  return
 }
 
 // <= body block end

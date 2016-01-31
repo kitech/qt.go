@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qplugin.h
 // dst-file: /src/core/qplugin.go
 //
@@ -49,7 +49,7 @@ type QStaticPlugin struct {
 }
 
 // metaData()
-func (this *QStaticPlugin) metaData(args ...interface{}) () {
+func (this *QStaticPlugin) Metadata(args ...interface{}) () {
   // metaData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -66,6 +66,7 @@ func (this *QStaticPlugin) metaData(args ...interface{}) () {
     qtrt.ErrorResolve("QStaticPlugin", "metaData", args)
   }
 
+  return
 }
 
 // <= body block end

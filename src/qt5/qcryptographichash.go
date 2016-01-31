@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qcryptographichash.h
 // dst-file: /src/core/qcryptographichash.go
 //
@@ -31,13 +31,13 @@ import "qtrt"
   // proto:  void QCryptographicHash::reset();
 extern void C_ZN18QCryptographicHash5resetEv(void* qthis); // 4
   // proto:  void QCryptographicHash::addData(const char * data, int length);
-extern void C_ZN18QCryptographicHash7addDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void C_ZN18QCryptographicHash7addDataEPKci(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  bool QCryptographicHash::addData(QIODevice * device);
-extern void C_ZN18QCryptographicHash7addDataEP9QIODevice(void* qthis, void* arg0); // 4
+extern bool C_ZN18QCryptographicHash7addDataEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  void QCryptographicHash::addData(const QByteArray & data);
 extern void C_ZN18QCryptographicHash7addDataERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  QByteArray QCryptographicHash::result();
-extern void C_ZNK18QCryptographicHash6resultEv(void* qthis); // 4
+extern void* C_ZNK18QCryptographicHash6resultEv(void* qthis); // 4
   // proto:  void QCryptographicHash::~QCryptographicHash();
 extern void C_ZN18QCryptographicHashD2Ev(void* qthis); // 4
 */
@@ -59,7 +59,7 @@ type QCryptographicHash struct {
 }
 
 // reset()
-func (this *QCryptographicHash) reset(args ...interface{}) () {
+func (this *QCryptographicHash) Reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -76,10 +76,11 @@ func (this *QCryptographicHash) reset(args ...interface{}) () {
     qtrt.ErrorResolve("QCryptographicHash", "reset", args)
   }
 
+  return
 }
 
 // addData(const char *, int)
-func (this *QCryptographicHash) addData(args ...interface{}) () {
+func (this *QCryptographicHash) Adddata(args ...interface{}) () {
   // addData(const char *, int)
   // addData(class QIODevice *)
   // addData(const class QByteArray &)
@@ -99,8 +100,10 @@ func (this *QCryptographicHash) addData(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCryptographicHash7addDataEPKci
     // invoke: void addData(const char *, int)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     C.C_ZN18QCryptographicHash7addDataEPKci(this.qclsinst, arg0, arg1)
@@ -109,8 +112,8 @@ func (this *QCryptographicHash) addData(args ...interface{}) () {
     // invoke: bool addData(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN18QCryptographicHash7addDataEP9QIODevice(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN18QCryptographicHash7addDataEP9QIODevice(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
   case 2:
     // invoke: _ZN18QCryptographicHash7addDataERK10QByteArray
     // invoke: void addData(const class QByteArray &)
@@ -121,10 +124,11 @@ func (this *QCryptographicHash) addData(args ...interface{}) () {
     qtrt.ErrorResolve("QCryptographicHash", "addData", args)
   }
 
+  return
 }
 
 // result()
-func (this *QCryptographicHash) result(args ...interface{}) () {
+func (this *QCryptographicHash) Result(args ...interface{}) (ret interface{}) {
   // result()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -136,16 +140,20 @@ func (this *QCryptographicHash) result(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCryptographicHash6resultEv
     // invoke: QByteArray result()
-    var ret = C.C_ZNK18QCryptographicHash6resultEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QCryptographicHash6resultEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCryptographicHash", "result", args)
   }
 
+  return
 }
 
 // ~QCryptographicHash()
-func (this *QCryptographicHash) FreeQCryptographicHash(args ...interface{}) () {
+func (this *QCryptographicHash) Freeqcryptographichash(args ...interface{}) () {
   // ~QCryptographicHash()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,6 +170,7 @@ func (this *QCryptographicHash) FreeQCryptographicHash(args ...interface{}) () {
     qtrt.ErrorResolve("QCryptographicHash", "~QCryptographicHash", args)
   }
 
+  return
 }
 
 // <= body block end

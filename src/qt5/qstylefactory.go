@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qstylefactory.h
 // dst-file: /src/widgets/qstylefactory.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto: static QStringList QStyleFactory::keys();
 extern void C_ZN13QStyleFactory4keysEv(); // 4
   // proto: static QStyle * QStyleFactory::create(const QString & );
-extern void C_ZN13QStyleFactory6createERK7QString(void* arg0); // 4
+extern void* C_ZN13QStyleFactory6createERK7QString(void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -51,7 +51,7 @@ type QStyleFactory struct {
 }
 
 // keys()
-func (this *QStyleFactory) keys_s(args ...interface{}) () {
+func (this *QStyleFactory) Keys_S(args ...interface{}) () {
   // keys()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -68,10 +68,11 @@ func (this *QStyleFactory) keys_s(args ...interface{}) () {
     qtrt.ErrorResolve("QStyleFactory", "keys", args)
   }
 
+  return
 }
 
 // create(const class QString &)
-func (this *QStyleFactory) create_s(args ...interface{}) () {
+func (this *QStyleFactory) Create_S(args ...interface{}) (ret interface{}) {
   // create(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -86,12 +87,16 @@ func (this *QStyleFactory) create_s(args ...interface{}) () {
     // invoke: QStyle * create(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN13QStyleFactory6createERK7QString(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QStyleFactory6createERK7QString(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QStyle{}) // "QStyle *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStyleFactory", "create", args)
   }
 
+  return
 }
 
 // <= body block end

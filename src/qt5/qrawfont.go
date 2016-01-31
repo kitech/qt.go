@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qrawfont.h
 // dst-file: /src/gui/qrawfont.go
 //
@@ -29,63 +29,63 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QRectF QRawFont::boundingRect(quint32 glyphIndex);
-extern void C_ZNK8QRawFont12boundingRectEj(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK8QRawFont12boundingRectEj(void* qthis, int32_t arg0); // 4
   // proto:  qreal QRawFont::underlinePosition();
-extern void C_ZNK8QRawFont17underlinePositionEv(void* qthis); // 4
+extern double C_ZNK8QRawFont17underlinePositionEv(void* qthis); // 4
   // proto:  qreal QRawFont::ascent();
-extern void C_ZNK8QRawFont6ascentEv(void* qthis); // 4
+extern double C_ZNK8QRawFont6ascentEv(void* qthis); // 4
   // proto:  qreal QRawFont::lineThickness();
-extern void C_ZNK8QRawFont13lineThicknessEv(void* qthis); // 4
+extern double C_ZNK8QRawFont13lineThicknessEv(void* qthis); // 4
   // proto:  QFont::Style QRawFont::style();
 extern void C_ZNK8QRawFont5styleEv(void* qthis); // 4
   // proto:  qreal QRawFont::descent();
-extern void C_ZNK8QRawFont7descentEv(void* qthis); // 4
+extern double C_ZNK8QRawFont7descentEv(void* qthis); // 4
   // proto:  void QRawFont::QRawFont();
 extern void* C_ZN8QRawFontC2Ev(); // 3
   // proto:  void QRawFont::QRawFont(const QRawFont & other);
 extern void* C_ZN8QRawFontC2ERKS_(void* arg0); // 3
   // proto:  qreal QRawFont::leading();
-extern void C_ZNK8QRawFont7leadingEv(void* qthis); // 4
+extern double C_ZNK8QRawFont7leadingEv(void* qthis); // 4
   // proto:  bool QRawFont::advancesForGlyphIndexes(const quint32 * glyphIndexes, QPointF * advances, int numGlyphs);
-extern void C_ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi(void* qthis, int32_t* arg0, void* arg1, int32_t arg2); // 4
+extern bool C_ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
   // proto:  QByteArray QRawFont::fontTable(const char * tagName);
-extern void C_ZNK8QRawFont9fontTableEPKc(void* qthis, unsigned char* arg0); // 4
+extern void* C_ZNK8QRawFont9fontTableEPKc(void* qthis, void* arg0); // 4
   // proto:  void QRawFont::swap(QRawFont & other);
 extern void C_ZN8QRawFont4swapERS_(void* qthis, void* arg0); // 2
   // proto:  qreal QRawFont::pixelSize();
-extern void C_ZNK8QRawFont9pixelSizeEv(void* qthis); // 4
+extern double C_ZNK8QRawFont9pixelSizeEv(void* qthis); // 4
   // proto:  bool QRawFont::glyphIndexesForChars(const QChar * chars, int numChars, quint32 * glyphIndexes, int * numGlyphs);
-extern void C_ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi(void* qthis, void* arg0, int32_t arg1, int32_t* arg2, int32_t* arg3); // 4
+extern bool C_ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi(void* qthis, void* arg0, int32_t arg1, void* arg2, void* arg3); // 4
   // proto:  bool QRawFont::supportsCharacter(QChar character);
-extern void C_ZNK8QRawFont17supportsCharacterE5QChar(void* qthis, void* arg0); // 4
+extern bool C_ZNK8QRawFont17supportsCharacterE5QChar(void* qthis, void* arg0); // 4
   // proto:  bool QRawFont::supportsCharacter(uint ucs4);
-extern void C_ZNK8QRawFont17supportsCharacterEj(void* qthis, int32_t arg0); // 4
+extern bool C_ZNK8QRawFont17supportsCharacterEj(void* qthis, int32_t arg0); // 4
   // proto:  QVector<quint32> QRawFont::glyphIndexesForString(const QString & text);
 extern void C_ZNK8QRawFont21glyphIndexesForStringERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QRawFont::isValid();
-extern void C_ZNK8QRawFont7isValidEv(void* qthis); // 4
+extern bool C_ZNK8QRawFont7isValidEv(void* qthis); // 4
   // proto:  QString QRawFont::familyName();
-extern void C_ZNK8QRawFont10familyNameEv(void* qthis); // 4
+extern void* C_ZNK8QRawFont10familyNameEv(void* qthis); // 4
   // proto:  int QRawFont::weight();
-extern void C_ZNK8QRawFont6weightEv(void* qthis); // 4
+extern int32_t C_ZNK8QRawFont6weightEv(void* qthis); // 4
   // proto:  QFont::HintingPreference QRawFont::hintingPreference();
 extern void C_ZNK8QRawFont17hintingPreferenceEv(void* qthis); // 4
   // proto:  QPainterPath QRawFont::pathForGlyph(quint32 glyphIndex);
-extern void C_ZNK8QRawFont12pathForGlyphEj(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK8QRawFont12pathForGlyphEj(void* qthis, int32_t arg0); // 4
   // proto:  void QRawFont::setPixelSize(qreal pixelSize);
 extern void C_ZN8QRawFont12setPixelSizeEd(void* qthis, double arg0); // 4
   // proto:  void QRawFont::~QRawFont();
 extern void C_ZN8QRawFontD2Ev(void* qthis); // 4
   // proto:  qreal QRawFont::maxCharWidth();
-extern void C_ZNK8QRawFont12maxCharWidthEv(void* qthis); // 4
+extern double C_ZNK8QRawFont12maxCharWidthEv(void* qthis); // 4
   // proto:  qreal QRawFont::averageCharWidth();
-extern void C_ZNK8QRawFont16averageCharWidthEv(void* qthis); // 4
+extern double C_ZNK8QRawFont16averageCharWidthEv(void* qthis); // 4
   // proto:  qreal QRawFont::unitsPerEm();
-extern void C_ZNK8QRawFont10unitsPerEmEv(void* qthis); // 4
+extern double C_ZNK8QRawFont10unitsPerEmEv(void* qthis); // 4
   // proto:  qreal QRawFont::xHeight();
-extern void C_ZNK8QRawFont7xHeightEv(void* qthis); // 4
+extern double C_ZNK8QRawFont7xHeightEv(void* qthis); // 4
   // proto:  QString QRawFont::styleName();
-extern void C_ZNK8QRawFont9styleNameEv(void* qthis); // 4
+extern void* C_ZNK8QRawFont9styleNameEv(void* qthis); // 4
   // proto:  QList<QFontDatabase::WritingSystem> QRawFont::supportedWritingSystems();
 extern void C_ZNK8QRawFont23supportedWritingSystemsEv(void* qthis); // 4
 */
@@ -107,7 +107,7 @@ type QRawFont struct {
 }
 
 // boundingRect(quint32)
-func (this *QRawFont) boundingRect(args ...interface{}) () {
+func (this *QRawFont) Boundingrect(args ...interface{}) (ret interface{}) {
   // boundingRect(quint32)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -122,16 +122,20 @@ func (this *QRawFont) boundingRect(args ...interface{}) () {
     // invoke: QRectF boundingRect(quint32)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK8QRawFont12boundingRectEj(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont12boundingRectEj(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "boundingRect", args)
   }
 
+  return
 }
 
 // underlinePosition()
-func (this *QRawFont) underlinePosition(args ...interface{}) () {
+func (this *QRawFont) Underlineposition(args ...interface{}) (ret interface{}) {
   // underlinePosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -143,16 +147,20 @@ func (this *QRawFont) underlinePosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont17underlinePositionEv
     // invoke: qreal underlinePosition()
-    var ret = C.C_ZNK8QRawFont17underlinePositionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont17underlinePositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "underlinePosition", args)
   }
 
+  return
 }
 
 // ascent()
-func (this *QRawFont) ascent(args ...interface{}) () {
+func (this *QRawFont) Ascent(args ...interface{}) (ret interface{}) {
   // ascent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -164,16 +172,20 @@ func (this *QRawFont) ascent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont6ascentEv
     // invoke: qreal ascent()
-    var ret = C.C_ZNK8QRawFont6ascentEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont6ascentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "ascent", args)
   }
 
+  return
 }
 
 // lineThickness()
-func (this *QRawFont) lineThickness(args ...interface{}) () {
+func (this *QRawFont) Linethickness(args ...interface{}) (ret interface{}) {
   // lineThickness()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -185,16 +197,20 @@ func (this *QRawFont) lineThickness(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont13lineThicknessEv
     // invoke: qreal lineThickness()
-    var ret = C.C_ZNK8QRawFont13lineThicknessEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont13lineThicknessEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "lineThickness", args)
   }
 
+  return
 }
 
 // style()
-func (this *QRawFont) style(args ...interface{}) () {
+func (this *QRawFont) Style(args ...interface{}) () {
   // style()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -211,10 +227,11 @@ func (this *QRawFont) style(args ...interface{}) () {
     qtrt.ErrorResolve("QRawFont", "style", args)
   }
 
+  return
 }
 
 // descent()
-func (this *QRawFont) descent(args ...interface{}) () {
+func (this *QRawFont) Descent(args ...interface{}) (ret interface{}) {
   // descent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -226,12 +243,16 @@ func (this *QRawFont) descent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont7descentEv
     // invoke: qreal descent()
-    var ret = C.C_ZNK8QRawFont7descentEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont7descentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "descent", args)
   }
 
+  return
 }
 
 // QRawFont()
@@ -271,7 +292,7 @@ func NewQRawFont(args ...interface{}) *QRawFont {
 }
 
 // leading()
-func (this *QRawFont) leading(args ...interface{}) () {
+func (this *QRawFont) Leading(args ...interface{}) (ret interface{}) {
   // leading()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -283,16 +304,20 @@ func (this *QRawFont) leading(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont7leadingEv
     // invoke: qreal leading()
-    var ret = C.C_ZNK8QRawFont7leadingEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont7leadingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "leading", args)
   }
 
+  return
 }
 
 // advancesForGlyphIndexes(const quint32 *, class QPointF *, int)
-func (this *QRawFont) advancesForGlyphIndexes(args ...interface{}) () {
+func (this *QRawFont) Advancesforglyphindexes(args ...interface{}) (ret interface{}) {
   // advancesForGlyphIndexes(const quint32 *, class QPointF *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -307,22 +332,26 @@ func (this *QRawFont) advancesForGlyphIndexes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi
     // invoke: bool advancesForGlyphIndexes(const quint32 *, class QPointF *, int)
-    var arg0 = (*C.int32_t)(args[0].(*int32))
+    var arg0 = (unsafe.Pointer)(args[0].(*int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPointF).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "advancesForGlyphIndexes", args)
   }
 
+  return
 }
 
 // fontTable(const char *)
-func (this *QRawFont) fontTable(args ...interface{}) () {
+func (this *QRawFont) Fonttable(args ...interface{}) (ret interface{}) {
   // fontTable(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -335,18 +364,24 @@ func (this *QRawFont) fontTable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont9fontTableEPKc
     // invoke: QByteArray fontTable(const char *)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK8QRawFont9fontTableEPKc(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
+    var ret0 = C.C_ZNK8QRawFont9fontTableEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "fontTable", args)
   }
 
+  return
 }
 
 // swap(class QRawFont &)
-func (this *QRawFont) swap(args ...interface{}) () {
+func (this *QRawFont) Swap(args ...interface{}) () {
   // swap(class QRawFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -366,10 +401,11 @@ func (this *QRawFont) swap(args ...interface{}) () {
     qtrt.ErrorResolve("QRawFont", "swap", args)
   }
 
+  return
 }
 
 // pixelSize()
-func (this *QRawFont) pixelSize(args ...interface{}) () {
+func (this *QRawFont) Pixelsize(args ...interface{}) (ret interface{}) {
   // pixelSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -381,16 +417,20 @@ func (this *QRawFont) pixelSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont9pixelSizeEv
     // invoke: qreal pixelSize()
-    var ret = C.C_ZNK8QRawFont9pixelSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont9pixelSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "pixelSize", args)
   }
 
+  return
 }
 
 // glyphIndexesForChars(const class QChar *, int, quint32 *, int *)
-func (this *QRawFont) glyphIndexesForChars(args ...interface{}) () {
+func (this *QRawFont) Glyphindexesforchars(args ...interface{}) (ret interface{}) {
   // glyphIndexesForChars(const class QChar *, int, quint32 *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -410,20 +450,24 @@ func (this *QRawFont) glyphIndexesForChars(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = (*C.int32_t)(args[2].(*int32))
+    var arg2 = (unsafe.Pointer)(args[2].(*int32))
     if false {fmt.Println(arg2)}
-    var arg3 = (*C.int32_t)(args[3].(*int32))
+    var arg3 = (unsafe.Pointer)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    var ret = C.C_ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi(this.qclsinst, arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "glyphIndexesForChars", args)
   }
 
+  return
 }
 
 // supportsCharacter(class QChar)
-func (this *QRawFont) supportsCharacter(args ...interface{}) () {
+func (this *QRawFont) Supportscharacter(args ...interface{}) (ret interface{}) {
   // supportsCharacter(class QChar)
   // supportsCharacter(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -441,23 +485,30 @@ func (this *QRawFont) supportsCharacter(args ...interface{}) () {
     // invoke: bool supportsCharacter(class QChar)
     var arg0 = args[0].(QChar).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK8QRawFont17supportsCharacterE5QChar(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont17supportsCharacterE5QChar(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK8QRawFont17supportsCharacterEj
     // invoke: bool supportsCharacter(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK8QRawFont17supportsCharacterEj(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont17supportsCharacterEj(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "supportsCharacter", args)
   }
 
+  return
 }
 
 // glyphIndexesForString(const class QString &)
-func (this *QRawFont) glyphIndexesForString(args ...interface{}) () {
+func (this *QRawFont) Glyphindexesforstring(args ...interface{}) () {
   // glyphIndexesForString(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -477,10 +528,11 @@ func (this *QRawFont) glyphIndexesForString(args ...interface{}) () {
     qtrt.ErrorResolve("QRawFont", "glyphIndexesForString", args)
   }
 
+  return
 }
 
 // isValid()
-func (this *QRawFont) isValid(args ...interface{}) () {
+func (this *QRawFont) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -492,16 +544,20 @@ func (this *QRawFont) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont7isValidEv
     // invoke: bool isValid()
-    var ret = C.C_ZNK8QRawFont7isValidEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "isValid", args)
   }
 
+  return
 }
 
 // familyName()
-func (this *QRawFont) familyName(args ...interface{}) () {
+func (this *QRawFont) Familyname(args ...interface{}) (ret interface{}) {
   // familyName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -513,16 +569,20 @@ func (this *QRawFont) familyName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont10familyNameEv
     // invoke: QString familyName()
-    var ret = C.C_ZNK8QRawFont10familyNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont10familyNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "familyName", args)
   }
 
+  return
 }
 
 // weight()
-func (this *QRawFont) weight(args ...interface{}) () {
+func (this *QRawFont) Weight(args ...interface{}) (ret interface{}) {
   // weight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -534,16 +594,20 @@ func (this *QRawFont) weight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont6weightEv
     // invoke: int weight()
-    var ret = C.C_ZNK8QRawFont6weightEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont6weightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "weight", args)
   }
 
+  return
 }
 
 // hintingPreference()
-func (this *QRawFont) hintingPreference(args ...interface{}) () {
+func (this *QRawFont) Hintingpreference(args ...interface{}) () {
   // hintingPreference()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -560,10 +624,11 @@ func (this *QRawFont) hintingPreference(args ...interface{}) () {
     qtrt.ErrorResolve("QRawFont", "hintingPreference", args)
   }
 
+  return
 }
 
 // pathForGlyph(quint32)
-func (this *QRawFont) pathForGlyph(args ...interface{}) () {
+func (this *QRawFont) Pathforglyph(args ...interface{}) (ret interface{}) {
   // pathForGlyph(quint32)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -578,16 +643,20 @@ func (this *QRawFont) pathForGlyph(args ...interface{}) () {
     // invoke: QPainterPath pathForGlyph(quint32)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK8QRawFont12pathForGlyphEj(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont12pathForGlyphEj(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "pathForGlyph", args)
   }
 
+  return
 }
 
 // setPixelSize(qreal)
-func (this *QRawFont) setPixelSize(args ...interface{}) () {
+func (this *QRawFont) Setpixelsize(args ...interface{}) () {
   // setPixelSize(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -607,10 +676,11 @@ func (this *QRawFont) setPixelSize(args ...interface{}) () {
     qtrt.ErrorResolve("QRawFont", "setPixelSize", args)
   }
 
+  return
 }
 
 // ~QRawFont()
-func (this *QRawFont) FreeQRawFont(args ...interface{}) () {
+func (this *QRawFont) Freeqrawfont(args ...interface{}) () {
   // ~QRawFont()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -627,10 +697,11 @@ func (this *QRawFont) FreeQRawFont(args ...interface{}) () {
     qtrt.ErrorResolve("QRawFont", "~QRawFont", args)
   }
 
+  return
 }
 
 // maxCharWidth()
-func (this *QRawFont) maxCharWidth(args ...interface{}) () {
+func (this *QRawFont) Maxcharwidth(args ...interface{}) (ret interface{}) {
   // maxCharWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -642,16 +713,20 @@ func (this *QRawFont) maxCharWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont12maxCharWidthEv
     // invoke: qreal maxCharWidth()
-    var ret = C.C_ZNK8QRawFont12maxCharWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont12maxCharWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "maxCharWidth", args)
   }
 
+  return
 }
 
 // averageCharWidth()
-func (this *QRawFont) averageCharWidth(args ...interface{}) () {
+func (this *QRawFont) Averagecharwidth(args ...interface{}) (ret interface{}) {
   // averageCharWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -663,16 +738,20 @@ func (this *QRawFont) averageCharWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont16averageCharWidthEv
     // invoke: qreal averageCharWidth()
-    var ret = C.C_ZNK8QRawFont16averageCharWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont16averageCharWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "averageCharWidth", args)
   }
 
+  return
 }
 
 // unitsPerEm()
-func (this *QRawFont) unitsPerEm(args ...interface{}) () {
+func (this *QRawFont) Unitsperem(args ...interface{}) (ret interface{}) {
   // unitsPerEm()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -684,16 +763,20 @@ func (this *QRawFont) unitsPerEm(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont10unitsPerEmEv
     // invoke: qreal unitsPerEm()
-    var ret = C.C_ZNK8QRawFont10unitsPerEmEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont10unitsPerEmEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "unitsPerEm", args)
   }
 
+  return
 }
 
 // xHeight()
-func (this *QRawFont) xHeight(args ...interface{}) () {
+func (this *QRawFont) Xheight(args ...interface{}) (ret interface{}) {
   // xHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -705,16 +788,20 @@ func (this *QRawFont) xHeight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont7xHeightEv
     // invoke: qreal xHeight()
-    var ret = C.C_ZNK8QRawFont7xHeightEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont7xHeightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "xHeight", args)
   }
 
+  return
 }
 
 // styleName()
-func (this *QRawFont) styleName(args ...interface{}) () {
+func (this *QRawFont) Stylename(args ...interface{}) (ret interface{}) {
   // styleName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -726,16 +813,20 @@ func (this *QRawFont) styleName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont9styleNameEv
     // invoke: QString styleName()
-    var ret = C.C_ZNK8QRawFont9styleNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QRawFont9styleNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRawFont", "styleName", args)
   }
 
+  return
 }
 
 // supportedWritingSystems()
-func (this *QRawFont) supportedWritingSystems(args ...interface{}) () {
+func (this *QRawFont) Supportedwritingsystems(args ...interface{}) () {
   // supportedWritingSystems()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -752,6 +843,7 @@ func (this *QRawFont) supportedWritingSystems(args ...interface{}) () {
     qtrt.ErrorResolve("QRawFont", "supportedWritingSystems", args)
   }
 
+  return
 }
 
 // <= body block end

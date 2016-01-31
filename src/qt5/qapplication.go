@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.go
 //
@@ -29,51 +29,51 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QWidget * QApplication::activePopupWidget();
-extern void C_ZN12QApplication17activePopupWidgetEv(); // 4
+extern void* C_ZN12QApplication17activePopupWidgetEv(); // 4
   // proto: static void QApplication::closeAllWindows();
 extern void C_ZN12QApplication15closeAllWindowsEv(); // 4
   // proto: static int QApplication::startDragDistance();
-extern void C_ZN12QApplication17startDragDistanceEv(); // 4
+extern int32_t C_ZN12QApplication17startDragDistanceEv(); // 4
   // proto: static int QApplication::wheelScrollLines();
-extern void C_ZN12QApplication16wheelScrollLinesEv(); // 4
+extern int32_t C_ZN12QApplication16wheelScrollLinesEv(); // 4
   // proto: static void QApplication::setColorSpec(int );
 extern void C_ZN12QApplication12setColorSpecEi(int32_t arg0); // 4
   // proto:  bool QApplication::autoSipEnabled();
-extern void C_ZNK12QApplication14autoSipEnabledEv(void* qthis); // 4
+extern bool C_ZNK12QApplication14autoSipEnabledEv(void* qthis); // 4
   // proto: static QStyle * QApplication::setStyle(const QString & );
-extern void C_ZN12QApplication8setStyleERK7QString(void* arg0); // 4
+extern void* C_ZN12QApplication8setStyleERK7QString(void* arg0); // 4
   // proto: static void QApplication::setStyle(QStyle * );
 extern void C_ZN12QApplication8setStyleEP6QStyle(void* arg0); // 4
   // proto:  bool QApplication::notify(QObject * , QEvent * );
-extern void C_ZN12QApplication6notifyEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
+extern bool C_ZN12QApplication6notifyEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
   // proto: static QWidget * QApplication::focusWidget();
-extern void C_ZN12QApplication11focusWidgetEv(); // 4
+extern void* C_ZN12QApplication11focusWidgetEv(); // 4
   // proto: static QWidgetList QApplication::allWidgets();
 extern void C_ZN12QApplication10allWidgetsEv(); // 4
   // proto: static QWidget * QApplication::widgetAt(int x, int y);
-extern void C_ZN12QApplication8widgetAtEii(int32_t arg0, int32_t arg1); // 2
+extern void* C_ZN12QApplication8widgetAtEii(int32_t arg0, int32_t arg1); // 2
   // proto: static QWidget * QApplication::widgetAt(const QPoint & p);
-extern void C_ZN12QApplication8widgetAtERK6QPoint(void* arg0); // 4
+extern void* C_ZN12QApplication8widgetAtERK6QPoint(void* arg0); // 4
   // proto: static void QApplication::aboutQt();
 extern void C_ZN12QApplication7aboutQtEv(); // 4
   // proto: static void QApplication::setPalette(const QPalette & , const char * className);
-extern void C_ZN12QApplication10setPaletteERK8QPalettePKc(void* arg0, unsigned char* arg1); // 4
+extern void C_ZN12QApplication10setPaletteERK8QPalettePKc(void* arg0, void* arg1); // 4
   // proto: static QPalette QApplication::palette(const char * className);
-extern void C_ZN12QApplication7paletteEPKc(unsigned char* arg0); // 4
+extern void* C_ZN12QApplication7paletteEPKc(void* arg0); // 4
   // proto: static QPalette QApplication::palette(const QWidget * );
-extern void C_ZN12QApplication7paletteEPK7QWidget(void* arg0); // 4
+extern void* C_ZN12QApplication7paletteEPK7QWidget(void* arg0); // 4
   // proto: static QFont QApplication::font();
-extern void C_ZN12QApplication4fontEv(); // 4
+extern void* C_ZN12QApplication4fontEv(); // 4
   // proto: static QFont QApplication::font(const char * className);
-extern void C_ZN12QApplication4fontEPKc(unsigned char* arg0); // 4
+extern void* C_ZN12QApplication4fontEPKc(void* arg0); // 4
   // proto: static QFont QApplication::font(const QWidget * );
-extern void C_ZN12QApplication4fontEPK7QWidget(void* arg0); // 4
+extern void* C_ZN12QApplication4fontEPK7QWidget(void* arg0); // 4
   // proto: static void QApplication::setDoubleClickInterval(int );
 extern void C_ZN12QApplication22setDoubleClickIntervalEi(int32_t arg0); // 4
   // proto: static QWidgetList QApplication::topLevelWidgets();
 extern void C_ZN12QApplication15topLevelWidgetsEv(); // 4
   // proto: static QDesktopWidget * QApplication::desktop();
-extern void C_ZN12QApplication7desktopEv(); // 4
+extern void* C_ZN12QApplication7desktopEv(); // 4
   // proto: static void QApplication::beep();
 extern void C_ZN12QApplication4beepEv(); // 4
   // proto:  const QMetaObject * QApplication::metaObject();
@@ -81,29 +81,29 @@ extern void C_ZNK12QApplication10metaObjectEv(void* qthis); // 4
   // proto: static void QApplication::setCursorFlashTime(int );
 extern void C_ZN12QApplication18setCursorFlashTimeEi(int32_t arg0); // 4
   // proto: static QWidget * QApplication::activeWindow();
-extern void C_ZN12QApplication12activeWindowEv(); // 4
+extern void* C_ZN12QApplication12activeWindowEv(); // 4
   // proto: static QWidget * QApplication::topLevelAt(const QPoint & p);
-extern void C_ZN12QApplication10topLevelAtERK6QPoint(void* arg0); // 4
+extern void* C_ZN12QApplication10topLevelAtERK6QPoint(void* arg0); // 4
   // proto: static QWidget * QApplication::topLevelAt(int x, int y);
-extern void C_ZN12QApplication10topLevelAtEii(int32_t arg0, int32_t arg1); // 2
+extern void* C_ZN12QApplication10topLevelAtEii(int32_t arg0, int32_t arg1); // 2
   // proto: static QFontMetrics QApplication::fontMetrics();
-extern void C_ZN12QApplication11fontMetricsEv(); // 4
+extern void* C_ZN12QApplication11fontMetricsEv(); // 4
   // proto: static void QApplication::setKeyboardInputInterval(int );
 extern void C_ZN12QApplication24setKeyboardInputIntervalEi(int32_t arg0); // 4
   // proto: static int QApplication::colorSpec();
-extern void C_ZN12QApplication9colorSpecEv(); // 4
+extern int32_t C_ZN12QApplication9colorSpecEv(); // 4
   // proto: static QStyle * QApplication::style();
-extern void C_ZN12QApplication5styleEv(); // 4
+extern void* C_ZN12QApplication5styleEv(); // 4
   // proto: static void QApplication::alert(QWidget * widget, int duration);
 extern void C_ZN12QApplication5alertEP7QWidgeti(void* arg0, int32_t arg1); // 4
   // proto: static QWidget * QApplication::activeModalWidget();
-extern void C_ZN12QApplication17activeModalWidgetEv(); // 4
+extern void* C_ZN12QApplication17activeModalWidgetEv(); // 4
   // proto:  QString QApplication::styleSheet();
-extern void C_ZNK12QApplication10styleSheetEv(void* qthis); // 4
+extern void* C_ZNK12QApplication10styleSheetEv(void* qthis); // 4
   // proto: static QIcon QApplication::windowIcon();
-extern void C_ZN12QApplication10windowIconEv(); // 4
+extern void* C_ZN12QApplication10windowIconEv(); // 4
   // proto: static int QApplication::cursorFlashTime();
-extern void C_ZN12QApplication15cursorFlashTimeEv(); // 4
+extern int32_t C_ZN12QApplication15cursorFlashTimeEv(); // 4
   // proto: static void QApplication::setGlobalStrut(const QSize & );
 extern void C_ZN12QApplication14setGlobalStrutERK5QSize(void* arg0); // 4
   // proto: static void QApplication::setActiveWindow(QWidget * act);
@@ -111,19 +111,19 @@ extern void C_ZN12QApplication15setActiveWindowEP7QWidget(void* arg0); // 4
   // proto:  void QApplication::~QApplication();
 extern void C_ZN12QApplicationD2Ev(void* qthis); // 4
   // proto: static QSize QApplication::globalStrut();
-extern void C_ZN12QApplication11globalStrutEv(); // 4
+extern void* C_ZN12QApplication11globalStrutEv(); // 4
   // proto: static void QApplication::setStartDragDistance(int l);
 extern void C_ZN12QApplication20setStartDragDistanceEi(int32_t arg0); // 4
   // proto: static void QApplication::setWheelScrollLines(int );
 extern void C_ZN12QApplication19setWheelScrollLinesEi(int32_t arg0); // 4
   // proto: static int QApplication::keyboardInputInterval();
-extern void C_ZN12QApplication21keyboardInputIntervalEv(); // 4
+extern int32_t C_ZN12QApplication21keyboardInputIntervalEv(); // 4
   // proto: static void QApplication::setStartDragTime(int ms);
 extern void C_ZN12QApplication16setStartDragTimeEi(int32_t arg0); // 4
   // proto:  void QApplication::QApplication(int & argc, char ** argv, int );
-extern void* C_ZN12QApplicationC2ERiPPci(int32_t* arg0, unsigned char* arg1, int32_t arg2); // 3
+extern void* C_ZN12QApplicationC2ERiPPci(void* arg0, void* arg1, int32_t arg2); // 3
   // proto: static int QApplication::startDragTime();
-extern void C_ZN12QApplication13startDragTimeEv(); // 4
+extern int32_t C_ZN12QApplication13startDragTimeEv(); // 4
   // proto: static void QApplication::setWindowIcon(const QIcon & icon);
 extern void C_ZN12QApplication13setWindowIconERK5QIcon(void* arg0); // 4
   // proto:  void QApplication::setAutoSipEnabled(const bool enabled);
@@ -131,11 +131,11 @@ extern void C_ZN12QApplication17setAutoSipEnabledEb(void* qthis, bool arg0); // 
   // proto:  void QApplication::setStyleSheet(const QString & sheet);
 extern void C_ZN12QApplication13setStyleSheetERK7QString(void* qthis, void* arg0); // 4
   // proto: static int QApplication::exec();
-extern void C_ZN12QApplication4execEv(); // 4
+extern int32_t C_ZN12QApplication4execEv(); // 4
   // proto: static void QApplication::setFont(const QFont & , const char * className);
-extern void C_ZN12QApplication7setFontERK5QFontPKc(void* arg0, unsigned char* arg1); // 4
+extern void C_ZN12QApplication7setFontERK5QFontPKc(void* arg0, void* arg1); // 4
   // proto: static int QApplication::doubleClickInterval();
-extern void C_ZN12QApplication19doubleClickIntervalEv(); // 4
+extern int32_t C_ZN12QApplication19doubleClickIntervalEv(); // 4
 */
 import "C"
 // } // <= ext block end
@@ -156,7 +156,7 @@ type QApplication struct {
 }
 
 // activePopupWidget()
-func (this *QApplication) activePopupWidget_s(args ...interface{}) () {
+func (this *QApplication) Activepopupwidget_S(args ...interface{}) (ret interface{}) {
   // activePopupWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -168,16 +168,20 @@ func (this *QApplication) activePopupWidget_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication17activePopupWidgetEv
     // invoke: QWidget * activePopupWidget()
-    var ret = C.C_ZN12QApplication17activePopupWidgetEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication17activePopupWidgetEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "activePopupWidget", args)
   }
 
+  return
 }
 
 // closeAllWindows()
-func (this *QApplication) closeAllWindows_s(args ...interface{}) () {
+func (this *QApplication) Closeallwindows_S(args ...interface{}) () {
   // closeAllWindows()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -194,10 +198,11 @@ func (this *QApplication) closeAllWindows_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "closeAllWindows", args)
   }
 
+  return
 }
 
 // startDragDistance()
-func (this *QApplication) startDragDistance_s(args ...interface{}) () {
+func (this *QApplication) Startdragdistance_S(args ...interface{}) (ret interface{}) {
   // startDragDistance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -209,16 +214,20 @@ func (this *QApplication) startDragDistance_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication17startDragDistanceEv
     // invoke: int startDragDistance()
-    var ret = C.C_ZN12QApplication17startDragDistanceEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication17startDragDistanceEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "startDragDistance", args)
   }
 
+  return
 }
 
 // wheelScrollLines()
-func (this *QApplication) wheelScrollLines_s(args ...interface{}) () {
+func (this *QApplication) Wheelscrolllines_S(args ...interface{}) (ret interface{}) {
   // wheelScrollLines()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -230,16 +239,20 @@ func (this *QApplication) wheelScrollLines_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication16wheelScrollLinesEv
     // invoke: int wheelScrollLines()
-    var ret = C.C_ZN12QApplication16wheelScrollLinesEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication16wheelScrollLinesEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "wheelScrollLines", args)
   }
 
+  return
 }
 
 // setColorSpec(int)
-func (this *QApplication) setColorSpec_s(args ...interface{}) () {
+func (this *QApplication) Setcolorspec_S(args ...interface{}) () {
   // setColorSpec(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -259,10 +272,11 @@ func (this *QApplication) setColorSpec_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setColorSpec", args)
   }
 
+  return
 }
 
 // autoSipEnabled()
-func (this *QApplication) autoSipEnabled(args ...interface{}) () {
+func (this *QApplication) Autosipenabled(args ...interface{}) (ret interface{}) {
   // autoSipEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -274,16 +288,20 @@ func (this *QApplication) autoSipEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QApplication14autoSipEnabledEv
     // invoke: bool autoSipEnabled()
-    var ret = C.C_ZNK12QApplication14autoSipEnabledEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QApplication14autoSipEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "autoSipEnabled", args)
   }
 
+  return
 }
 
 // setStyle(const class QString &)
-func (this *QApplication) setStyle_s(args ...interface{}) () {
+func (this *QApplication) Setstyle_S(args ...interface{}) (ret interface{}) {
   // setStyle(const class QString &)
   // setStyle(class QStyle *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -301,8 +319,11 @@ func (this *QApplication) setStyle_s(args ...interface{}) () {
     // invoke: QStyle * setStyle(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QApplication8setStyleERK7QString(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication8setStyleERK7QString(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QStyle{}) // "QStyle *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN12QApplication8setStyleEP6QStyle
     // invoke: void setStyle(class QStyle *)
@@ -313,10 +334,11 @@ func (this *QApplication) setStyle_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setStyle", args)
   }
 
+  return
 }
 
 // notify(class QObject *, class QEvent *)
-func (this *QApplication) notify(args ...interface{}) () {
+func (this *QApplication) Notify(args ...interface{}) (ret interface{}) {
   // notify(class QObject *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -334,16 +356,20 @@ func (this *QApplication) notify(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN12QApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "notify", args)
   }
 
+  return
 }
 
 // focusWidget()
-func (this *QApplication) focusWidget_s(args ...interface{}) () {
+func (this *QApplication) Focuswidget_S(args ...interface{}) (ret interface{}) {
   // focusWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -355,16 +381,20 @@ func (this *QApplication) focusWidget_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication11focusWidgetEv
     // invoke: QWidget * focusWidget()
-    var ret = C.C_ZN12QApplication11focusWidgetEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication11focusWidgetEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "focusWidget", args)
   }
 
+  return
 }
 
 // allWidgets()
-func (this *QApplication) allWidgets_s(args ...interface{}) () {
+func (this *QApplication) Allwidgets_S(args ...interface{}) () {
   // allWidgets()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -381,10 +411,11 @@ func (this *QApplication) allWidgets_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "allWidgets", args)
   }
 
+  return
 }
 
 // widgetAt(int, int)
-func (this *QApplication) widgetAt_s(args ...interface{}) () {
+func (this *QApplication) Widgetat_S(args ...interface{}) (ret interface{}) {
   // widgetAt(int, int)
   // widgetAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -405,23 +436,30 @@ func (this *QApplication) widgetAt_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN12QApplication8widgetAtEii(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication8widgetAtEii(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN12QApplication8widgetAtERK6QPoint
     // invoke: QWidget * widgetAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QApplication8widgetAtERK6QPoint(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication8widgetAtERK6QPoint(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "widgetAt", args)
   }
 
+  return
 }
 
 // aboutQt()
-func (this *QApplication) aboutQt_s(args ...interface{}) () {
+func (this *QApplication) Aboutqt_S(args ...interface{}) () {
   // aboutQt()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -438,10 +476,11 @@ func (this *QApplication) aboutQt_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "aboutQt", args)
   }
 
+  return
 }
 
 // setPalette(const class QPalette &, const char *)
-func (this *QApplication) setPalette_s(args ...interface{}) () {
+func (this *QApplication) Setpalette_S(args ...interface{}) () {
   // setPalette(const class QPalette &, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -457,17 +496,20 @@ func (this *QApplication) setPalette_s(args ...interface{}) () {
     // invoke: void setPalette(const class QPalette &, const char *)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
     C.C_ZN12QApplication10setPaletteERK8QPalettePKc(arg0, arg1)
   default:
     qtrt.ErrorResolve("QApplication", "setPalette", args)
   }
 
+  return
 }
 
 // palette(const char *)
-func (this *QApplication) palette_s(args ...interface{}) () {
+func (this *QApplication) Palette_S(args ...interface{}) (ret interface{}) {
   // palette(const char *)
   // palette(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -483,25 +525,34 @@ func (this *QApplication) palette_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication7paletteEPKc
     // invoke: QPalette palette(const char *)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QApplication7paletteEPKc(arg0)
-    if false {reflect.TypeOf(ret)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
+    var ret0 = C.C_ZN12QApplication7paletteEPKc(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPalette{}) // "QPalette"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN12QApplication7paletteEPK7QWidget
     // invoke: QPalette palette(const class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QApplication7paletteEPK7QWidget(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication7paletteEPK7QWidget(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPalette{}) // "QPalette"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "palette", args)
   }
 
+  return
 }
 
 // font()
-func (this *QApplication) font_s(args ...interface{}) () {
+func (this *QApplication) Font_S(args ...interface{}) (ret interface{}) {
   // font()
   // font(const char *)
   // font(const class QWidget *)
@@ -519,30 +570,42 @@ func (this *QApplication) font_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication4fontEv
     // invoke: QFont font()
-    var ret = C.C_ZN12QApplication4fontEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication4fontEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QFont{}) // "QFont"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN12QApplication4fontEPKc
     // invoke: QFont font(const char *)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QApplication4fontEPKc(arg0)
-    if false {reflect.TypeOf(ret)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[1][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
+    var ret0 = C.C_ZN12QApplication4fontEPKc(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QFont{}) // "QFont"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 2:
     // invoke: _ZN12QApplication4fontEPK7QWidget
     // invoke: QFont font(const class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QApplication4fontEPK7QWidget(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication4fontEPK7QWidget(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QFont{}) // "QFont"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "font", args)
   }
 
+  return
 }
 
 // setDoubleClickInterval(int)
-func (this *QApplication) setDoubleClickInterval_s(args ...interface{}) () {
+func (this *QApplication) Setdoubleclickinterval_S(args ...interface{}) () {
   // setDoubleClickInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -562,10 +625,11 @@ func (this *QApplication) setDoubleClickInterval_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setDoubleClickInterval", args)
   }
 
+  return
 }
 
 // topLevelWidgets()
-func (this *QApplication) topLevelWidgets_s(args ...interface{}) () {
+func (this *QApplication) Toplevelwidgets_S(args ...interface{}) () {
   // topLevelWidgets()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -582,10 +646,11 @@ func (this *QApplication) topLevelWidgets_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "topLevelWidgets", args)
   }
 
+  return
 }
 
 // desktop()
-func (this *QApplication) desktop_s(args ...interface{}) () {
+func (this *QApplication) Desktop_S(args ...interface{}) (ret interface{}) {
   // desktop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -597,16 +662,20 @@ func (this *QApplication) desktop_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication7desktopEv
     // invoke: QDesktopWidget * desktop()
-    var ret = C.C_ZN12QApplication7desktopEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication7desktopEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDesktopWidget{}) // "QDesktopWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "desktop", args)
   }
 
+  return
 }
 
 // beep()
-func (this *QApplication) beep_s(args ...interface{}) () {
+func (this *QApplication) Beep_S(args ...interface{}) () {
   // beep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -623,10 +692,11 @@ func (this *QApplication) beep_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "beep", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QApplication) metaObject(args ...interface{}) () {
+func (this *QApplication) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -643,10 +713,11 @@ func (this *QApplication) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "metaObject", args)
   }
 
+  return
 }
 
 // setCursorFlashTime(int)
-func (this *QApplication) setCursorFlashTime_s(args ...interface{}) () {
+func (this *QApplication) Setcursorflashtime_S(args ...interface{}) () {
   // setCursorFlashTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -666,10 +737,11 @@ func (this *QApplication) setCursorFlashTime_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setCursorFlashTime", args)
   }
 
+  return
 }
 
 // activeWindow()
-func (this *QApplication) activeWindow_s(args ...interface{}) () {
+func (this *QApplication) Activewindow_S(args ...interface{}) (ret interface{}) {
   // activeWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -681,16 +753,20 @@ func (this *QApplication) activeWindow_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication12activeWindowEv
     // invoke: QWidget * activeWindow()
-    var ret = C.C_ZN12QApplication12activeWindowEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication12activeWindowEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "activeWindow", args)
   }
 
+  return
 }
 
 // topLevelAt(const class QPoint &)
-func (this *QApplication) topLevelAt_s(args ...interface{}) () {
+func (this *QApplication) Toplevelat_S(args ...interface{}) (ret interface{}) {
   // topLevelAt(const class QPoint &)
   // topLevelAt(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -709,8 +785,11 @@ func (this *QApplication) topLevelAt_s(args ...interface{}) () {
     // invoke: QWidget * topLevelAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QApplication10topLevelAtERK6QPoint(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication10topLevelAtERK6QPoint(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN12QApplication10topLevelAtEii
     // invoke: QWidget * topLevelAt(int, int)
@@ -718,16 +797,20 @@ func (this *QApplication) topLevelAt_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN12QApplication10topLevelAtEii(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication10topLevelAtEii(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "topLevelAt", args)
   }
 
+  return
 }
 
 // fontMetrics()
-func (this *QApplication) fontMetrics_s(args ...interface{}) () {
+func (this *QApplication) Fontmetrics_S(args ...interface{}) (ret interface{}) {
   // fontMetrics()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -739,16 +822,20 @@ func (this *QApplication) fontMetrics_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication11fontMetricsEv
     // invoke: QFontMetrics fontMetrics()
-    var ret = C.C_ZN12QApplication11fontMetricsEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication11fontMetricsEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QFontMetrics{}) // "QFontMetrics"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "fontMetrics", args)
   }
 
+  return
 }
 
 // setKeyboardInputInterval(int)
-func (this *QApplication) setKeyboardInputInterval_s(args ...interface{}) () {
+func (this *QApplication) Setkeyboardinputinterval_S(args ...interface{}) () {
   // setKeyboardInputInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -768,10 +855,11 @@ func (this *QApplication) setKeyboardInputInterval_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setKeyboardInputInterval", args)
   }
 
+  return
 }
 
 // colorSpec()
-func (this *QApplication) colorSpec_s(args ...interface{}) () {
+func (this *QApplication) Colorspec_S(args ...interface{}) (ret interface{}) {
   // colorSpec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -783,16 +871,20 @@ func (this *QApplication) colorSpec_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication9colorSpecEv
     // invoke: int colorSpec()
-    var ret = C.C_ZN12QApplication9colorSpecEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication9colorSpecEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "colorSpec", args)
   }
 
+  return
 }
 
 // style()
-func (this *QApplication) style_s(args ...interface{}) () {
+func (this *QApplication) Style_S(args ...interface{}) (ret interface{}) {
   // style()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -804,16 +896,20 @@ func (this *QApplication) style_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication5styleEv
     // invoke: QStyle * style()
-    var ret = C.C_ZN12QApplication5styleEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication5styleEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QStyle{}) // "QStyle *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "style", args)
   }
 
+  return
 }
 
 // alert(class QWidget *, int)
-func (this *QApplication) alert_s(args ...interface{}) () {
+func (this *QApplication) Alert_S(args ...interface{}) () {
   // alert(class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -836,10 +932,11 @@ func (this *QApplication) alert_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "alert", args)
   }
 
+  return
 }
 
 // activeModalWidget()
-func (this *QApplication) activeModalWidget_s(args ...interface{}) () {
+func (this *QApplication) Activemodalwidget_S(args ...interface{}) (ret interface{}) {
   // activeModalWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -851,16 +948,20 @@ func (this *QApplication) activeModalWidget_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication17activeModalWidgetEv
     // invoke: QWidget * activeModalWidget()
-    var ret = C.C_ZN12QApplication17activeModalWidgetEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication17activeModalWidgetEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "activeModalWidget", args)
   }
 
+  return
 }
 
 // styleSheet()
-func (this *QApplication) styleSheet(args ...interface{}) () {
+func (this *QApplication) Stylesheet(args ...interface{}) (ret interface{}) {
   // styleSheet()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -872,16 +973,20 @@ func (this *QApplication) styleSheet(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QApplication10styleSheetEv
     // invoke: QString styleSheet()
-    var ret = C.C_ZNK12QApplication10styleSheetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QApplication10styleSheetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "styleSheet", args)
   }
 
+  return
 }
 
 // windowIcon()
-func (this *QApplication) windowIcon_s(args ...interface{}) () {
+func (this *QApplication) Windowicon_S(args ...interface{}) (ret interface{}) {
   // windowIcon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -893,16 +998,20 @@ func (this *QApplication) windowIcon_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication10windowIconEv
     // invoke: QIcon windowIcon()
-    var ret = C.C_ZN12QApplication10windowIconEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication10windowIconEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QIcon{}) // "QIcon"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "windowIcon", args)
   }
 
+  return
 }
 
 // cursorFlashTime()
-func (this *QApplication) cursorFlashTime_s(args ...interface{}) () {
+func (this *QApplication) Cursorflashtime_S(args ...interface{}) (ret interface{}) {
   // cursorFlashTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -914,16 +1023,20 @@ func (this *QApplication) cursorFlashTime_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication15cursorFlashTimeEv
     // invoke: int cursorFlashTime()
-    var ret = C.C_ZN12QApplication15cursorFlashTimeEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication15cursorFlashTimeEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "cursorFlashTime", args)
   }
 
+  return
 }
 
 // setGlobalStrut(const class QSize &)
-func (this *QApplication) setGlobalStrut_s(args ...interface{}) () {
+func (this *QApplication) Setglobalstrut_S(args ...interface{}) () {
   // setGlobalStrut(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -943,10 +1056,11 @@ func (this *QApplication) setGlobalStrut_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setGlobalStrut", args)
   }
 
+  return
 }
 
 // setActiveWindow(class QWidget *)
-func (this *QApplication) setActiveWindow_s(args ...interface{}) () {
+func (this *QApplication) Setactivewindow_S(args ...interface{}) () {
   // setActiveWindow(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -966,10 +1080,11 @@ func (this *QApplication) setActiveWindow_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setActiveWindow", args)
   }
 
+  return
 }
 
 // ~QApplication()
-func (this *QApplication) FreeQApplication(args ...interface{}) () {
+func (this *QApplication) Freeqapplication(args ...interface{}) () {
   // ~QApplication()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -986,10 +1101,11 @@ func (this *QApplication) FreeQApplication(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "~QApplication", args)
   }
 
+  return
 }
 
 // globalStrut()
-func (this *QApplication) globalStrut_s(args ...interface{}) () {
+func (this *QApplication) Globalstrut_S(args ...interface{}) (ret interface{}) {
   // globalStrut()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1001,16 +1117,20 @@ func (this *QApplication) globalStrut_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication11globalStrutEv
     // invoke: QSize globalStrut()
-    var ret = C.C_ZN12QApplication11globalStrutEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication11globalStrutEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "globalStrut", args)
   }
 
+  return
 }
 
 // setStartDragDistance(int)
-func (this *QApplication) setStartDragDistance_s(args ...interface{}) () {
+func (this *QApplication) Setstartdragdistance_S(args ...interface{}) () {
   // setStartDragDistance(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1030,10 +1150,11 @@ func (this *QApplication) setStartDragDistance_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setStartDragDistance", args)
   }
 
+  return
 }
 
 // setWheelScrollLines(int)
-func (this *QApplication) setWheelScrollLines_s(args ...interface{}) () {
+func (this *QApplication) Setwheelscrolllines_S(args ...interface{}) () {
   // setWheelScrollLines(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1053,10 +1174,11 @@ func (this *QApplication) setWheelScrollLines_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setWheelScrollLines", args)
   }
 
+  return
 }
 
 // keyboardInputInterval()
-func (this *QApplication) keyboardInputInterval_s(args ...interface{}) () {
+func (this *QApplication) Keyboardinputinterval_S(args ...interface{}) (ret interface{}) {
   // keyboardInputInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1068,16 +1190,20 @@ func (this *QApplication) keyboardInputInterval_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication21keyboardInputIntervalEv
     // invoke: int keyboardInputInterval()
-    var ret = C.C_ZN12QApplication21keyboardInputIntervalEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication21keyboardInputIntervalEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "keyboardInputInterval", args)
   }
 
+  return
 }
 
 // setStartDragTime(int)
-func (this *QApplication) setStartDragTime_s(args ...interface{}) () {
+func (this *QApplication) Setstartdragtime_S(args ...interface{}) () {
   // setStartDragTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1097,6 +1223,7 @@ func (this *QApplication) setStartDragTime_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setStartDragTime", args)
   }
 
+  return
 }
 
 // QApplication(int &, char **, int)
@@ -1115,10 +1242,12 @@ func NewQApplication(args ...interface{}) *QApplication {
   case 0:
     // invoke: _ZN12QApplicationC1ERiPPci
     // invoke: void QApplication(int &, char **, int)
-    var arg0 = (*C.int32_t)(args[0].(*int32))
+    var arg0 = (unsafe.Pointer)(args[0].(*int32))
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
@@ -1133,7 +1262,7 @@ func NewQApplication(args ...interface{}) *QApplication {
 }
 
 // startDragTime()
-func (this *QApplication) startDragTime_s(args ...interface{}) () {
+func (this *QApplication) Startdragtime_S(args ...interface{}) (ret interface{}) {
   // startDragTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1145,16 +1274,20 @@ func (this *QApplication) startDragTime_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication13startDragTimeEv
     // invoke: int startDragTime()
-    var ret = C.C_ZN12QApplication13startDragTimeEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication13startDragTimeEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "startDragTime", args)
   }
 
+  return
 }
 
 // setWindowIcon(const class QIcon &)
-func (this *QApplication) setWindowIcon_s(args ...interface{}) () {
+func (this *QApplication) Setwindowicon_S(args ...interface{}) () {
   // setWindowIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1174,10 +1307,11 @@ func (this *QApplication) setWindowIcon_s(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setWindowIcon", args)
   }
 
+  return
 }
 
 // setAutoSipEnabled(const _Bool)
-func (this *QApplication) setAutoSipEnabled(args ...interface{}) () {
+func (this *QApplication) Setautosipenabled(args ...interface{}) () {
   // setAutoSipEnabled(const _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1197,10 +1331,11 @@ func (this *QApplication) setAutoSipEnabled(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setAutoSipEnabled", args)
   }
 
+  return
 }
 
 // setStyleSheet(const class QString &)
-func (this *QApplication) setStyleSheet(args ...interface{}) () {
+func (this *QApplication) Setstylesheet(args ...interface{}) () {
   // setStyleSheet(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1220,10 +1355,11 @@ func (this *QApplication) setStyleSheet(args ...interface{}) () {
     qtrt.ErrorResolve("QApplication", "setStyleSheet", args)
   }
 
+  return
 }
 
 // exec()
-func (this *QApplication) exec_s(args ...interface{}) () {
+func (this *QApplication) Exec_S(args ...interface{}) (ret interface{}) {
   // exec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1235,16 +1371,20 @@ func (this *QApplication) exec_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication4execEv
     // invoke: int exec()
-    var ret = C.C_ZN12QApplication4execEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication4execEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "exec", args)
   }
 
+  return
 }
 
 // setFont(const class QFont &, const char *)
-func (this *QApplication) setFont_s(args ...interface{}) () {
+func (this *QApplication) Setfont_S(args ...interface{}) () {
   // setFont(const class QFont &, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1260,17 +1400,20 @@ func (this *QApplication) setFont_s(args ...interface{}) () {
     // invoke: void setFont(const class QFont &, const char *)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
     C.C_ZN12QApplication7setFontERK5QFontPKc(arg0, arg1)
   default:
     qtrt.ErrorResolve("QApplication", "setFont", args)
   }
 
+  return
 }
 
 // doubleClickInterval()
-func (this *QApplication) doubleClickInterval_s(args ...interface{}) () {
+func (this *QApplication) Doubleclickinterval_S(args ...interface{}) (ret interface{}) {
   // doubleClickInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1282,12 +1425,16 @@ func (this *QApplication) doubleClickInterval_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication19doubleClickIntervalEv
     // invoke: int doubleClickInterval()
-    var ret = C.C_ZN12QApplication19doubleClickIntervalEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QApplication19doubleClickIntervalEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QApplication", "doubleClickInterval", args)
   }
 
+  return
 }
 
 // <= body block end

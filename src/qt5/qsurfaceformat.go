@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qsurfaceformat.h
 // dst-file: /src/gui/qsurfaceformat.go
 //
@@ -33,19 +33,19 @@ extern void* C_ZN14QSurfaceFormatC2ERKS_(void* arg0); // 3
   // proto:  void QSurfaceFormat::QSurfaceFormat();
 extern void* C_ZN14QSurfaceFormatC2Ev(); // 3
   // proto:  int QSurfaceFormat::swapInterval();
-extern void C_ZNK14QSurfaceFormat12swapIntervalEv(void* qthis); // 4
+extern int32_t C_ZNK14QSurfaceFormat12swapIntervalEv(void* qthis); // 4
   // proto:  int QSurfaceFormat::depthBufferSize();
-extern void C_ZNK14QSurfaceFormat15depthBufferSizeEv(void* qthis); // 4
+extern int32_t C_ZNK14QSurfaceFormat15depthBufferSizeEv(void* qthis); // 4
   // proto: static QSurfaceFormat QSurfaceFormat::defaultFormat();
-extern void C_ZN14QSurfaceFormat13defaultFormatEv(); // 4
+extern void* C_ZN14QSurfaceFormat13defaultFormatEv(); // 4
   // proto:  int QSurfaceFormat::alphaBufferSize();
-extern void C_ZNK14QSurfaceFormat15alphaBufferSizeEv(void* qthis); // 4
+extern int32_t C_ZNK14QSurfaceFormat15alphaBufferSizeEv(void* qthis); // 4
   // proto:  void QSurfaceFormat::setSamples(int numSamples);
 extern void C_ZN14QSurfaceFormat10setSamplesEi(void* qthis, int32_t arg0); // 4
   // proto:  void QSurfaceFormat::setVersion(int major, int minor);
 extern void C_ZN14QSurfaceFormat10setVersionEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  int QSurfaceFormat::minorVersion();
-extern void C_ZNK14QSurfaceFormat12minorVersionEv(void* qthis); // 4
+extern int32_t C_ZNK14QSurfaceFormat12minorVersionEv(void* qthis); // 4
   // proto:  void QSurfaceFormat::setSwapInterval(int interval);
 extern void C_ZN14QSurfaceFormat15setSwapIntervalEi(void* qthis, int32_t arg0); // 4
   // proto:  void QSurfaceFormat::setMinorVersion(int minorVersion);
@@ -59,25 +59,25 @@ extern void C_ZN14QSurfaceFormat16setDefaultFormatERKS_(void* arg0); // 4
   // proto:  QPair<int, int> QSurfaceFormat::version();
 extern void C_ZNK14QSurfaceFormat7versionEv(void* qthis); // 4
   // proto:  int QSurfaceFormat::samples();
-extern void C_ZNK14QSurfaceFormat7samplesEv(void* qthis); // 4
+extern int32_t C_ZNK14QSurfaceFormat7samplesEv(void* qthis); // 4
   // proto:  QSurfaceFormat::SwapBehavior QSurfaceFormat::swapBehavior();
 extern void C_ZNK14QSurfaceFormat12swapBehaviorEv(void* qthis); // 4
   // proto:  QSurfaceFormat::OpenGLContextProfile QSurfaceFormat::profile();
 extern void C_ZNK14QSurfaceFormat7profileEv(void* qthis); // 4
   // proto:  int QSurfaceFormat::majorVersion();
-extern void C_ZNK14QSurfaceFormat12majorVersionEv(void* qthis); // 4
+extern int32_t C_ZNK14QSurfaceFormat12majorVersionEv(void* qthis); // 4
   // proto:  void QSurfaceFormat::setStencilBufferSize(int size);
 extern void C_ZN14QSurfaceFormat20setStencilBufferSizeEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QSurfaceFormat::hasAlpha();
-extern void C_ZNK14QSurfaceFormat8hasAlphaEv(void* qthis); // 4
+extern bool C_ZNK14QSurfaceFormat8hasAlphaEv(void* qthis); // 4
   // proto:  bool QSurfaceFormat::stereo();
-extern void C_ZNK14QSurfaceFormat6stereoEv(void* qthis); // 2
+extern bool C_ZNK14QSurfaceFormat6stereoEv(void* qthis); // 2
   // proto:  void QSurfaceFormat::setStereo(bool enable);
 extern void C_ZN14QSurfaceFormat9setStereoEb(void* qthis, bool arg0); // 4
   // proto:  int QSurfaceFormat::redBufferSize();
-extern void C_ZNK14QSurfaceFormat13redBufferSizeEv(void* qthis); // 4
+extern int32_t C_ZNK14QSurfaceFormat13redBufferSizeEv(void* qthis); // 4
   // proto:  int QSurfaceFormat::greenBufferSize();
-extern void C_ZNK14QSurfaceFormat15greenBufferSizeEv(void* qthis); // 4
+extern int32_t C_ZNK14QSurfaceFormat15greenBufferSizeEv(void* qthis); // 4
   // proto:  void QSurfaceFormat::setMajorVersion(int majorVersion);
 extern void C_ZN14QSurfaceFormat15setMajorVersionEi(void* qthis, int32_t arg0); // 4
   // proto:  void QSurfaceFormat::~QSurfaceFormat();
@@ -85,11 +85,11 @@ extern void C_ZN14QSurfaceFormatD2Ev(void* qthis); // 4
   // proto:  void QSurfaceFormat::setAlphaBufferSize(int size);
 extern void C_ZN14QSurfaceFormat18setAlphaBufferSizeEi(void* qthis, int32_t arg0); // 4
   // proto:  int QSurfaceFormat::stencilBufferSize();
-extern void C_ZNK14QSurfaceFormat17stencilBufferSizeEv(void* qthis); // 4
+extern int32_t C_ZNK14QSurfaceFormat17stencilBufferSizeEv(void* qthis); // 4
   // proto:  QSurfaceFormat::FormatOptions QSurfaceFormat::options();
 extern void C_ZNK14QSurfaceFormat7optionsEv(void* qthis); // 4
   // proto:  int QSurfaceFormat::blueBufferSize();
-extern void C_ZNK14QSurfaceFormat14blueBufferSizeEv(void* qthis); // 4
+extern int32_t C_ZNK14QSurfaceFormat14blueBufferSizeEv(void* qthis); // 4
   // proto:  void QSurfaceFormat::setDepthBufferSize(int size);
 extern void C_ZN14QSurfaceFormat18setDepthBufferSizeEi(void* qthis, int32_t arg0); // 4
   // proto:  void QSurfaceFormat::setGreenBufferSize(int size);
@@ -151,7 +151,7 @@ func NewQSurfaceFormat(args ...interface{}) *QSurfaceFormat {
 }
 
 // swapInterval()
-func (this *QSurfaceFormat) swapInterval(args ...interface{}) () {
+func (this *QSurfaceFormat) Swapinterval(args ...interface{}) (ret interface{}) {
   // swapInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -163,16 +163,20 @@ func (this *QSurfaceFormat) swapInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QSurfaceFormat12swapIntervalEv
     // invoke: int swapInterval()
-    var ret = C.C_ZNK14QSurfaceFormat12swapIntervalEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QSurfaceFormat12swapIntervalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "swapInterval", args)
   }
 
+  return
 }
 
 // depthBufferSize()
-func (this *QSurfaceFormat) depthBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Depthbuffersize(args ...interface{}) (ret interface{}) {
   // depthBufferSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -184,16 +188,20 @@ func (this *QSurfaceFormat) depthBufferSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QSurfaceFormat15depthBufferSizeEv
     // invoke: int depthBufferSize()
-    var ret = C.C_ZNK14QSurfaceFormat15depthBufferSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QSurfaceFormat15depthBufferSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "depthBufferSize", args)
   }
 
+  return
 }
 
 // defaultFormat()
-func (this *QSurfaceFormat) defaultFormat_s(args ...interface{}) () {
+func (this *QSurfaceFormat) Defaultformat_S(args ...interface{}) (ret interface{}) {
   // defaultFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -205,16 +213,20 @@ func (this *QSurfaceFormat) defaultFormat_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QSurfaceFormat13defaultFormatEv
     // invoke: QSurfaceFormat defaultFormat()
-    var ret = C.C_ZN14QSurfaceFormat13defaultFormatEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QSurfaceFormat13defaultFormatEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSurfaceFormat{}) // "QSurfaceFormat"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "defaultFormat", args)
   }
 
+  return
 }
 
 // alphaBufferSize()
-func (this *QSurfaceFormat) alphaBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Alphabuffersize(args ...interface{}) (ret interface{}) {
   // alphaBufferSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -226,16 +238,20 @@ func (this *QSurfaceFormat) alphaBufferSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QSurfaceFormat15alphaBufferSizeEv
     // invoke: int alphaBufferSize()
-    var ret = C.C_ZNK14QSurfaceFormat15alphaBufferSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QSurfaceFormat15alphaBufferSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "alphaBufferSize", args)
   }
 
+  return
 }
 
 // setSamples(int)
-func (this *QSurfaceFormat) setSamples(args ...interface{}) () {
+func (this *QSurfaceFormat) Setsamples(args ...interface{}) () {
   // setSamples(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -255,10 +271,11 @@ func (this *QSurfaceFormat) setSamples(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setSamples", args)
   }
 
+  return
 }
 
 // setVersion(int, int)
-func (this *QSurfaceFormat) setVersion(args ...interface{}) () {
+func (this *QSurfaceFormat) Setversion(args ...interface{}) () {
   // setVersion(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -281,10 +298,11 @@ func (this *QSurfaceFormat) setVersion(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setVersion", args)
   }
 
+  return
 }
 
 // minorVersion()
-func (this *QSurfaceFormat) minorVersion(args ...interface{}) () {
+func (this *QSurfaceFormat) Minorversion(args ...interface{}) (ret interface{}) {
   // minorVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -296,16 +314,20 @@ func (this *QSurfaceFormat) minorVersion(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QSurfaceFormat12minorVersionEv
     // invoke: int minorVersion()
-    var ret = C.C_ZNK14QSurfaceFormat12minorVersionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QSurfaceFormat12minorVersionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "minorVersion", args)
   }
 
+  return
 }
 
 // setSwapInterval(int)
-func (this *QSurfaceFormat) setSwapInterval(args ...interface{}) () {
+func (this *QSurfaceFormat) Setswapinterval(args ...interface{}) () {
   // setSwapInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -325,10 +347,11 @@ func (this *QSurfaceFormat) setSwapInterval(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setSwapInterval", args)
   }
 
+  return
 }
 
 // setMinorVersion(int)
-func (this *QSurfaceFormat) setMinorVersion(args ...interface{}) () {
+func (this *QSurfaceFormat) Setminorversion(args ...interface{}) () {
   // setMinorVersion(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -348,10 +371,11 @@ func (this *QSurfaceFormat) setMinorVersion(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setMinorVersion", args)
   }
 
+  return
 }
 
 // setBlueBufferSize(int)
-func (this *QSurfaceFormat) setBlueBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Setbluebuffersize(args ...interface{}) () {
   // setBlueBufferSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -371,10 +395,11 @@ func (this *QSurfaceFormat) setBlueBufferSize(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setBlueBufferSize", args)
   }
 
+  return
 }
 
 // setRedBufferSize(int)
-func (this *QSurfaceFormat) setRedBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Setredbuffersize(args ...interface{}) () {
   // setRedBufferSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -394,10 +419,11 @@ func (this *QSurfaceFormat) setRedBufferSize(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setRedBufferSize", args)
   }
 
+  return
 }
 
 // setDefaultFormat(const class QSurfaceFormat &)
-func (this *QSurfaceFormat) setDefaultFormat_s(args ...interface{}) () {
+func (this *QSurfaceFormat) Setdefaultformat_S(args ...interface{}) () {
   // setDefaultFormat(const class QSurfaceFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -417,10 +443,11 @@ func (this *QSurfaceFormat) setDefaultFormat_s(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setDefaultFormat", args)
   }
 
+  return
 }
 
 // version()
-func (this *QSurfaceFormat) version(args ...interface{}) () {
+func (this *QSurfaceFormat) Version(args ...interface{}) () {
   // version()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -437,10 +464,11 @@ func (this *QSurfaceFormat) version(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "version", args)
   }
 
+  return
 }
 
 // samples()
-func (this *QSurfaceFormat) samples(args ...interface{}) () {
+func (this *QSurfaceFormat) Samples(args ...interface{}) (ret interface{}) {
   // samples()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -452,16 +480,20 @@ func (this *QSurfaceFormat) samples(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QSurfaceFormat7samplesEv
     // invoke: int samples()
-    var ret = C.C_ZNK14QSurfaceFormat7samplesEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QSurfaceFormat7samplesEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "samples", args)
   }
 
+  return
 }
 
 // swapBehavior()
-func (this *QSurfaceFormat) swapBehavior(args ...interface{}) () {
+func (this *QSurfaceFormat) Swapbehavior(args ...interface{}) () {
   // swapBehavior()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -478,10 +510,11 @@ func (this *QSurfaceFormat) swapBehavior(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "swapBehavior", args)
   }
 
+  return
 }
 
 // profile()
-func (this *QSurfaceFormat) profile(args ...interface{}) () {
+func (this *QSurfaceFormat) Profile(args ...interface{}) () {
   // profile()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -498,10 +531,11 @@ func (this *QSurfaceFormat) profile(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "profile", args)
   }
 
+  return
 }
 
 // majorVersion()
-func (this *QSurfaceFormat) majorVersion(args ...interface{}) () {
+func (this *QSurfaceFormat) Majorversion(args ...interface{}) (ret interface{}) {
   // majorVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -513,16 +547,20 @@ func (this *QSurfaceFormat) majorVersion(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QSurfaceFormat12majorVersionEv
     // invoke: int majorVersion()
-    var ret = C.C_ZNK14QSurfaceFormat12majorVersionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QSurfaceFormat12majorVersionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "majorVersion", args)
   }
 
+  return
 }
 
 // setStencilBufferSize(int)
-func (this *QSurfaceFormat) setStencilBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Setstencilbuffersize(args ...interface{}) () {
   // setStencilBufferSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -542,10 +580,11 @@ func (this *QSurfaceFormat) setStencilBufferSize(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setStencilBufferSize", args)
   }
 
+  return
 }
 
 // hasAlpha()
-func (this *QSurfaceFormat) hasAlpha(args ...interface{}) () {
+func (this *QSurfaceFormat) Hasalpha(args ...interface{}) (ret interface{}) {
   // hasAlpha()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -557,16 +596,20 @@ func (this *QSurfaceFormat) hasAlpha(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QSurfaceFormat8hasAlphaEv
     // invoke: bool hasAlpha()
-    var ret = C.C_ZNK14QSurfaceFormat8hasAlphaEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QSurfaceFormat8hasAlphaEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "hasAlpha", args)
   }
 
+  return
 }
 
 // stereo()
-func (this *QSurfaceFormat) stereo(args ...interface{}) () {
+func (this *QSurfaceFormat) Stereo(args ...interface{}) (ret interface{}) {
   // stereo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -578,16 +621,20 @@ func (this *QSurfaceFormat) stereo(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QSurfaceFormat6stereoEv
     // invoke: bool stereo()
-    var ret = C.C_ZNK14QSurfaceFormat6stereoEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QSurfaceFormat6stereoEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "stereo", args)
   }
 
+  return
 }
 
 // setStereo(_Bool)
-func (this *QSurfaceFormat) setStereo(args ...interface{}) () {
+func (this *QSurfaceFormat) Setstereo(args ...interface{}) () {
   // setStereo(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -607,10 +654,11 @@ func (this *QSurfaceFormat) setStereo(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setStereo", args)
   }
 
+  return
 }
 
 // redBufferSize()
-func (this *QSurfaceFormat) redBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Redbuffersize(args ...interface{}) (ret interface{}) {
   // redBufferSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -622,16 +670,20 @@ func (this *QSurfaceFormat) redBufferSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QSurfaceFormat13redBufferSizeEv
     // invoke: int redBufferSize()
-    var ret = C.C_ZNK14QSurfaceFormat13redBufferSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QSurfaceFormat13redBufferSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "redBufferSize", args)
   }
 
+  return
 }
 
 // greenBufferSize()
-func (this *QSurfaceFormat) greenBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Greenbuffersize(args ...interface{}) (ret interface{}) {
   // greenBufferSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -643,16 +695,20 @@ func (this *QSurfaceFormat) greenBufferSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QSurfaceFormat15greenBufferSizeEv
     // invoke: int greenBufferSize()
-    var ret = C.C_ZNK14QSurfaceFormat15greenBufferSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QSurfaceFormat15greenBufferSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "greenBufferSize", args)
   }
 
+  return
 }
 
 // setMajorVersion(int)
-func (this *QSurfaceFormat) setMajorVersion(args ...interface{}) () {
+func (this *QSurfaceFormat) Setmajorversion(args ...interface{}) () {
   // setMajorVersion(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -672,10 +728,11 @@ func (this *QSurfaceFormat) setMajorVersion(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setMajorVersion", args)
   }
 
+  return
 }
 
 // ~QSurfaceFormat()
-func (this *QSurfaceFormat) FreeQSurfaceFormat(args ...interface{}) () {
+func (this *QSurfaceFormat) Freeqsurfaceformat(args ...interface{}) () {
   // ~QSurfaceFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -692,10 +749,11 @@ func (this *QSurfaceFormat) FreeQSurfaceFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "~QSurfaceFormat", args)
   }
 
+  return
 }
 
 // setAlphaBufferSize(int)
-func (this *QSurfaceFormat) setAlphaBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Setalphabuffersize(args ...interface{}) () {
   // setAlphaBufferSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -715,10 +773,11 @@ func (this *QSurfaceFormat) setAlphaBufferSize(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setAlphaBufferSize", args)
   }
 
+  return
 }
 
 // stencilBufferSize()
-func (this *QSurfaceFormat) stencilBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Stencilbuffersize(args ...interface{}) (ret interface{}) {
   // stencilBufferSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -730,16 +789,20 @@ func (this *QSurfaceFormat) stencilBufferSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QSurfaceFormat17stencilBufferSizeEv
     // invoke: int stencilBufferSize()
-    var ret = C.C_ZNK14QSurfaceFormat17stencilBufferSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QSurfaceFormat17stencilBufferSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "stencilBufferSize", args)
   }
 
+  return
 }
 
 // options()
-func (this *QSurfaceFormat) options(args ...interface{}) () {
+func (this *QSurfaceFormat) Options(args ...interface{}) () {
   // options()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -756,10 +819,11 @@ func (this *QSurfaceFormat) options(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "options", args)
   }
 
+  return
 }
 
 // blueBufferSize()
-func (this *QSurfaceFormat) blueBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Bluebuffersize(args ...interface{}) (ret interface{}) {
   // blueBufferSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -771,16 +835,20 @@ func (this *QSurfaceFormat) blueBufferSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QSurfaceFormat14blueBufferSizeEv
     // invoke: int blueBufferSize()
-    var ret = C.C_ZNK14QSurfaceFormat14blueBufferSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QSurfaceFormat14blueBufferSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "blueBufferSize", args)
   }
 
+  return
 }
 
 // setDepthBufferSize(int)
-func (this *QSurfaceFormat) setDepthBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Setdepthbuffersize(args ...interface{}) () {
   // setDepthBufferSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -800,10 +868,11 @@ func (this *QSurfaceFormat) setDepthBufferSize(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setDepthBufferSize", args)
   }
 
+  return
 }
 
 // setGreenBufferSize(int)
-func (this *QSurfaceFormat) setGreenBufferSize(args ...interface{}) () {
+func (this *QSurfaceFormat) Setgreenbuffersize(args ...interface{}) () {
   // setGreenBufferSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -823,10 +892,11 @@ func (this *QSurfaceFormat) setGreenBufferSize(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "setGreenBufferSize", args)
   }
 
+  return
 }
 
 // renderableType()
-func (this *QSurfaceFormat) renderableType(args ...interface{}) () {
+func (this *QSurfaceFormat) Renderabletype(args ...interface{}) () {
   // renderableType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -843,6 +913,7 @@ func (this *QSurfaceFormat) renderableType(args ...interface{}) () {
     qtrt.ErrorResolve("QSurfaceFormat", "renderableType", args)
   }
 
+  return
 }
 
 // <= body block end

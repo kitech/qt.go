@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qboxlayout.h
 // dst-file: /src/widgets/qboxlayout.go
 //
@@ -51,9 +51,9 @@ extern void C_ZNK10QBoxLayout19expandingDirectionsEv(void* qthis); // 4
   // proto:  void QBoxLayout::insertSpacing(int index, int size);
 extern void C_ZN10QBoxLayout13insertSpacingEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  int QBoxLayout::stretch(int index);
-extern void C_ZNK10QBoxLayout7stretchEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK10QBoxLayout7stretchEi(void* qthis, int32_t arg0); // 4
   // proto:  int QBoxLayout::minimumHeightForWidth(int );
-extern void C_ZNK10QBoxLayout21minimumHeightForWidthEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK10QBoxLayout21minimumHeightForWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  const QMetaObject * QBoxLayout::metaObject();
 extern void C_ZNK10QBoxLayout10metaObjectEv(void* qthis); // 4
   // proto:  void QBoxLayout::addStretch(int stretch);
@@ -65,7 +65,7 @@ extern void C_ZNK10QBoxLayout9directionEv(void* qthis); // 4
   // proto:  void QBoxLayout::addItem(QLayoutItem * );
 extern void C_ZN10QBoxLayout7addItemEP11QLayoutItem(void* qthis, void* arg0); // 4
   // proto:  QLayoutItem * QBoxLayout::takeAt(int );
-extern void C_ZN10QBoxLayout6takeAtEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZN10QBoxLayout6takeAtEi(void* qthis, int32_t arg0); // 4
   // proto:  void QBoxLayout::insertItem(int index, QLayoutItem * );
 extern void C_ZN10QBoxLayout10insertItemEiP11QLayoutItem(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QBoxLayout::setSpacing(int spacing);
@@ -73,33 +73,33 @@ extern void C_ZN10QBoxLayout10setSpacingEi(void* qthis, int32_t arg0); // 4
   // proto:  void QBoxLayout::setGeometry(const QRect & );
 extern void C_ZN10QBoxLayout11setGeometryERK5QRect(void* qthis, void* arg0); // 4
   // proto:  int QBoxLayout::spacing();
-extern void C_ZNK10QBoxLayout7spacingEv(void* qthis); // 4
+extern int32_t C_ZNK10QBoxLayout7spacingEv(void* qthis); // 4
   // proto:  void QBoxLayout::~QBoxLayout();
 extern void C_ZN10QBoxLayoutD2Ev(void* qthis); // 4
   // proto:  int QBoxLayout::count();
-extern void C_ZNK10QBoxLayout5countEv(void* qthis); // 4
+extern int32_t C_ZNK10QBoxLayout5countEv(void* qthis); // 4
   // proto:  void QBoxLayout::addSpacing(int size);
 extern void C_ZN10QBoxLayout10addSpacingEi(void* qthis, int32_t arg0); // 4
   // proto:  QSize QBoxLayout::sizeHint();
-extern void C_ZNK10QBoxLayout8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK10QBoxLayout8sizeHintEv(void* qthis); // 4
   // proto:  bool QBoxLayout::hasHeightForWidth();
-extern void C_ZNK10QBoxLayout17hasHeightForWidthEv(void* qthis); // 4
+extern bool C_ZNK10QBoxLayout17hasHeightForWidthEv(void* qthis); // 4
   // proto:  QLayoutItem * QBoxLayout::itemAt(int );
-extern void C_ZNK10QBoxLayout6itemAtEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK10QBoxLayout6itemAtEi(void* qthis, int32_t arg0); // 4
   // proto:  QSize QBoxLayout::minimumSize();
-extern void C_ZNK10QBoxLayout11minimumSizeEv(void* qthis); // 4
+extern void* C_ZNK10QBoxLayout11minimumSizeEv(void* qthis); // 4
   // proto:  int QBoxLayout::heightForWidth(int );
-extern void C_ZNK10QBoxLayout14heightForWidthEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK10QBoxLayout14heightForWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  void QBoxLayout::insertSpacerItem(int index, QSpacerItem * spacerItem);
 extern void C_ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QBoxLayout::addLayout(QLayout * layout, int stretch);
 extern void C_ZN10QBoxLayout9addLayoutEP7QLayouti(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  bool QBoxLayout::setStretchFactor(QLayout * l, int stretch);
-extern void C_ZN10QBoxLayout16setStretchFactorEP7QLayouti(void* qthis, void* arg0, int32_t arg1); // 4
+extern bool C_ZN10QBoxLayout16setStretchFactorEP7QLayouti(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  bool QBoxLayout::setStretchFactor(QWidget * w, int stretch);
-extern void C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(void* qthis, void* arg0, int32_t arg1); // 4
+extern bool C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QSize QBoxLayout::maximumSize();
-extern void C_ZNK10QBoxLayout11maximumSizeEv(void* qthis); // 4
+extern void* C_ZNK10QBoxLayout11maximumSizeEv(void* qthis); // 4
   // proto:  void QVBoxLayout::QVBoxLayout();
 extern void* C_ZN11QVBoxLayoutC2Ev(); // 3
   // proto:  void QVBoxLayout::QVBoxLayout(QWidget * parent);
@@ -175,7 +175,7 @@ func NewQHBoxLayout(args ...interface{}) *QHBoxLayout {
 }
 
 // metaObject()
-func (this *QHBoxLayout) metaObject(args ...interface{}) () {
+func (this *QHBoxLayout) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -192,10 +192,11 @@ func (this *QHBoxLayout) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QHBoxLayout", "metaObject", args)
   }
 
+  return
 }
 
 // ~QHBoxLayout()
-func (this *QHBoxLayout) FreeQHBoxLayout(args ...interface{}) () {
+func (this *QHBoxLayout) Freeqhboxlayout(args ...interface{}) () {
   // ~QHBoxLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -212,10 +213,11 @@ func (this *QHBoxLayout) FreeQHBoxLayout(args ...interface{}) () {
     qtrt.ErrorResolve("QHBoxLayout", "~QHBoxLayout", args)
   }
 
+  return
 }
 
 // invalidate()
-func (this *QBoxLayout) invalidate(args ...interface{}) () {
+func (this *QBoxLayout) Invalidate(args ...interface{}) () {
   // invalidate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -232,10 +234,11 @@ func (this *QBoxLayout) invalidate(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "invalidate", args)
   }
 
+  return
 }
 
 // setStretch(int, int)
-func (this *QBoxLayout) setStretch(args ...interface{}) () {
+func (this *QBoxLayout) Setstretch(args ...interface{}) () {
   // setStretch(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -258,10 +261,11 @@ func (this *QBoxLayout) setStretch(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "setStretch", args)
   }
 
+  return
 }
 
 // insertLayout(int, class QLayout *, int)
-func (this *QBoxLayout) insertLayout(args ...interface{}) () {
+func (this *QBoxLayout) Insertlayout(args ...interface{}) () {
   // insertLayout(int, class QLayout *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -287,10 +291,11 @@ func (this *QBoxLayout) insertLayout(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "insertLayout", args)
   }
 
+  return
 }
 
 // insertStretch(int, int)
-func (this *QBoxLayout) insertStretch(args ...interface{}) () {
+func (this *QBoxLayout) Insertstretch(args ...interface{}) () {
   // insertStretch(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -313,10 +318,11 @@ func (this *QBoxLayout) insertStretch(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "insertStretch", args)
   }
 
+  return
 }
 
 // addSpacerItem(class QSpacerItem *)
-func (this *QBoxLayout) addSpacerItem(args ...interface{}) () {
+func (this *QBoxLayout) Addspaceritem(args ...interface{}) () {
   // addSpacerItem(class QSpacerItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -336,10 +342,11 @@ func (this *QBoxLayout) addSpacerItem(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "addSpacerItem", args)
   }
 
+  return
 }
 
 // expandingDirections()
-func (this *QBoxLayout) expandingDirections(args ...interface{}) () {
+func (this *QBoxLayout) Expandingdirections(args ...interface{}) () {
   // expandingDirections()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -356,10 +363,11 @@ func (this *QBoxLayout) expandingDirections(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "expandingDirections", args)
   }
 
+  return
 }
 
 // insertSpacing(int, int)
-func (this *QBoxLayout) insertSpacing(args ...interface{}) () {
+func (this *QBoxLayout) Insertspacing(args ...interface{}) () {
   // insertSpacing(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -382,10 +390,11 @@ func (this *QBoxLayout) insertSpacing(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "insertSpacing", args)
   }
 
+  return
 }
 
 // stretch(int)
-func (this *QBoxLayout) stretch(args ...interface{}) () {
+func (this *QBoxLayout) Stretch(args ...interface{}) (ret interface{}) {
   // stretch(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -400,16 +409,20 @@ func (this *QBoxLayout) stretch(args ...interface{}) () {
     // invoke: int stretch(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK10QBoxLayout7stretchEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QBoxLayout7stretchEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBoxLayout", "stretch", args)
   }
 
+  return
 }
 
 // minimumHeightForWidth(int)
-func (this *QBoxLayout) minimumHeightForWidth(args ...interface{}) () {
+func (this *QBoxLayout) Minimumheightforwidth(args ...interface{}) (ret interface{}) {
   // minimumHeightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -424,16 +437,20 @@ func (this *QBoxLayout) minimumHeightForWidth(args ...interface{}) () {
     // invoke: int minimumHeightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK10QBoxLayout21minimumHeightForWidthEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QBoxLayout21minimumHeightForWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBoxLayout", "minimumHeightForWidth", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QBoxLayout) metaObject(args ...interface{}) () {
+func (this *QBoxLayout) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -450,10 +467,11 @@ func (this *QBoxLayout) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "metaObject", args)
   }
 
+  return
 }
 
 // addStretch(int)
-func (this *QBoxLayout) addStretch(args ...interface{}) () {
+func (this *QBoxLayout) Addstretch(args ...interface{}) () {
   // addStretch(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -473,10 +491,11 @@ func (this *QBoxLayout) addStretch(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "addStretch", args)
   }
 
+  return
 }
 
 // addStrut(int)
-func (this *QBoxLayout) addStrut(args ...interface{}) () {
+func (this *QBoxLayout) Addstrut(args ...interface{}) () {
   // addStrut(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -496,10 +515,11 @@ func (this *QBoxLayout) addStrut(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "addStrut", args)
   }
 
+  return
 }
 
 // direction()
-func (this *QBoxLayout) direction(args ...interface{}) () {
+func (this *QBoxLayout) Direction(args ...interface{}) () {
   // direction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -516,10 +536,11 @@ func (this *QBoxLayout) direction(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "direction", args)
   }
 
+  return
 }
 
 // addItem(class QLayoutItem *)
-func (this *QBoxLayout) addItem(args ...interface{}) () {
+func (this *QBoxLayout) Additem(args ...interface{}) () {
   // addItem(class QLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -539,10 +560,11 @@ func (this *QBoxLayout) addItem(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "addItem", args)
   }
 
+  return
 }
 
 // takeAt(int)
-func (this *QBoxLayout) takeAt(args ...interface{}) () {
+func (this *QBoxLayout) Takeat(args ...interface{}) (ret interface{}) {
   // takeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -557,16 +579,20 @@ func (this *QBoxLayout) takeAt(args ...interface{}) () {
     // invoke: QLayoutItem * takeAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN10QBoxLayout6takeAtEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QBoxLayout6takeAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBoxLayout", "takeAt", args)
   }
 
+  return
 }
 
 // insertItem(int, class QLayoutItem *)
-func (this *QBoxLayout) insertItem(args ...interface{}) () {
+func (this *QBoxLayout) Insertitem(args ...interface{}) () {
   // insertItem(int, class QLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -589,10 +615,11 @@ func (this *QBoxLayout) insertItem(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "insertItem", args)
   }
 
+  return
 }
 
 // setSpacing(int)
-func (this *QBoxLayout) setSpacing(args ...interface{}) () {
+func (this *QBoxLayout) Setspacing(args ...interface{}) () {
   // setSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -612,10 +639,11 @@ func (this *QBoxLayout) setSpacing(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "setSpacing", args)
   }
 
+  return
 }
 
 // setGeometry(const class QRect &)
-func (this *QBoxLayout) setGeometry(args ...interface{}) () {
+func (this *QBoxLayout) Setgeometry(args ...interface{}) () {
   // setGeometry(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -635,10 +663,11 @@ func (this *QBoxLayout) setGeometry(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "setGeometry", args)
   }
 
+  return
 }
 
 // spacing()
-func (this *QBoxLayout) spacing(args ...interface{}) () {
+func (this *QBoxLayout) Spacing(args ...interface{}) (ret interface{}) {
   // spacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -650,16 +679,20 @@ func (this *QBoxLayout) spacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout7spacingEv
     // invoke: int spacing()
-    var ret = C.C_ZNK10QBoxLayout7spacingEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QBoxLayout7spacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBoxLayout", "spacing", args)
   }
 
+  return
 }
 
 // ~QBoxLayout()
-func (this *QBoxLayout) FreeQBoxLayout(args ...interface{}) () {
+func (this *QBoxLayout) Freeqboxlayout(args ...interface{}) () {
   // ~QBoxLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -676,10 +709,11 @@ func (this *QBoxLayout) FreeQBoxLayout(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "~QBoxLayout", args)
   }
 
+  return
 }
 
 // count()
-func (this *QBoxLayout) count(args ...interface{}) () {
+func (this *QBoxLayout) Count(args ...interface{}) (ret interface{}) {
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -691,16 +725,20 @@ func (this *QBoxLayout) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout5countEv
     // invoke: int count()
-    var ret = C.C_ZNK10QBoxLayout5countEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QBoxLayout5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBoxLayout", "count", args)
   }
 
+  return
 }
 
 // addSpacing(int)
-func (this *QBoxLayout) addSpacing(args ...interface{}) () {
+func (this *QBoxLayout) Addspacing(args ...interface{}) () {
   // addSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -720,10 +758,11 @@ func (this *QBoxLayout) addSpacing(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "addSpacing", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QBoxLayout) sizeHint(args ...interface{}) () {
+func (this *QBoxLayout) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -735,16 +774,20 @@ func (this *QBoxLayout) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK10QBoxLayout8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QBoxLayout8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBoxLayout", "sizeHint", args)
   }
 
+  return
 }
 
 // hasHeightForWidth()
-func (this *QBoxLayout) hasHeightForWidth(args ...interface{}) () {
+func (this *QBoxLayout) Hasheightforwidth(args ...interface{}) (ret interface{}) {
   // hasHeightForWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -756,16 +799,20 @@ func (this *QBoxLayout) hasHeightForWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    var ret = C.C_ZNK10QBoxLayout17hasHeightForWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QBoxLayout17hasHeightForWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBoxLayout", "hasHeightForWidth", args)
   }
 
+  return
 }
 
 // itemAt(int)
-func (this *QBoxLayout) itemAt(args ...interface{}) () {
+func (this *QBoxLayout) Itemat(args ...interface{}) (ret interface{}) {
   // itemAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -780,16 +827,20 @@ func (this *QBoxLayout) itemAt(args ...interface{}) () {
     // invoke: QLayoutItem * itemAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK10QBoxLayout6itemAtEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QBoxLayout6itemAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBoxLayout", "itemAt", args)
   }
 
+  return
 }
 
 // minimumSize()
-func (this *QBoxLayout) minimumSize(args ...interface{}) () {
+func (this *QBoxLayout) Minimumsize(args ...interface{}) (ret interface{}) {
   // minimumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -801,16 +852,20 @@ func (this *QBoxLayout) minimumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout11minimumSizeEv
     // invoke: QSize minimumSize()
-    var ret = C.C_ZNK10QBoxLayout11minimumSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QBoxLayout11minimumSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBoxLayout", "minimumSize", args)
   }
 
+  return
 }
 
 // heightForWidth(int)
-func (this *QBoxLayout) heightForWidth(args ...interface{}) () {
+func (this *QBoxLayout) Heightforwidth(args ...interface{}) (ret interface{}) {
   // heightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -825,16 +880,20 @@ func (this *QBoxLayout) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK10QBoxLayout14heightForWidthEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QBoxLayout14heightForWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBoxLayout", "heightForWidth", args)
   }
 
+  return
 }
 
 // insertSpacerItem(int, class QSpacerItem *)
-func (this *QBoxLayout) insertSpacerItem(args ...interface{}) () {
+func (this *QBoxLayout) Insertspaceritem(args ...interface{}) () {
   // insertSpacerItem(int, class QSpacerItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -857,10 +916,11 @@ func (this *QBoxLayout) insertSpacerItem(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "insertSpacerItem", args)
   }
 
+  return
 }
 
 // addLayout(class QLayout *, int)
-func (this *QBoxLayout) addLayout(args ...interface{}) () {
+func (this *QBoxLayout) Addlayout(args ...interface{}) () {
   // addLayout(class QLayout *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -883,10 +943,11 @@ func (this *QBoxLayout) addLayout(args ...interface{}) () {
     qtrt.ErrorResolve("QBoxLayout", "addLayout", args)
   }
 
+  return
 }
 
 // setStretchFactor(class QLayout *, int)
-func (this *QBoxLayout) setStretchFactor(args ...interface{}) () {
+func (this *QBoxLayout) Setstretchfactor(args ...interface{}) (ret interface{}) {
   // setStretchFactor(class QLayout *, int)
   // setStretchFactor(class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -908,8 +969,11 @@ func (this *QBoxLayout) setStretchFactor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN10QBoxLayout16setStretchFactorEP7QLayouti(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QBoxLayout16setStretchFactorEP7QLayouti(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN10QBoxLayout16setStretchFactorEP7QWidgeti
     // invoke: bool setStretchFactor(class QWidget *, int)
@@ -917,16 +981,20 @@ func (this *QBoxLayout) setStretchFactor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBoxLayout", "setStretchFactor", args)
   }
 
+  return
 }
 
 // maximumSize()
-func (this *QBoxLayout) maximumSize(args ...interface{}) () {
+func (this *QBoxLayout) Maximumsize(args ...interface{}) (ret interface{}) {
   // maximumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -938,12 +1006,16 @@ func (this *QBoxLayout) maximumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout11maximumSizeEv
     // invoke: QSize maximumSize()
-    var ret = C.C_ZNK10QBoxLayout11maximumSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QBoxLayout11maximumSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBoxLayout", "maximumSize", args)
   }
 
+  return
 }
 
 // QVBoxLayout()
@@ -983,7 +1055,7 @@ func NewQVBoxLayout(args ...interface{}) *QVBoxLayout {
 }
 
 // ~QVBoxLayout()
-func (this *QVBoxLayout) FreeQVBoxLayout(args ...interface{}) () {
+func (this *QVBoxLayout) Freeqvboxlayout(args ...interface{}) () {
   // ~QVBoxLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1000,10 +1072,11 @@ func (this *QVBoxLayout) FreeQVBoxLayout(args ...interface{}) () {
     qtrt.ErrorResolve("QVBoxLayout", "~QVBoxLayout", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QVBoxLayout) metaObject(args ...interface{}) () {
+func (this *QVBoxLayout) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1020,6 +1093,7 @@ func (this *QVBoxLayout) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QVBoxLayout", "metaObject", args)
   }
 
+  return
 }
 
 // <= body block end

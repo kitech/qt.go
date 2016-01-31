@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qsavefile.h
 // dst-file: /src/core/qsavefile.go
 //
@@ -39,7 +39,7 @@ extern void C_ZN9QSaveFile13cancelWritingEv(void* qthis); // 4
   // proto:  void QSaveFile::setFileName(const QString & name);
 extern void C_ZN9QSaveFile11setFileNameERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QSaveFile::fileName();
-extern void C_ZNK9QSaveFile8fileNameEv(void* qthis); // 4
+extern void* C_ZNK9QSaveFile8fileNameEv(void* qthis); // 4
   // proto:  void QSaveFile::QSaveFile(const QString & name);
 extern void* C_ZN9QSaveFileC2ERK7QString(void* arg0); // 3
   // proto:  void QSaveFile::QSaveFile(const QString & name, QObject * parent);
@@ -47,9 +47,9 @@ extern void* C_ZN9QSaveFileC2ERK7QStringP7QObject(void* arg0, void* arg1); // 3
   // proto:  void QSaveFile::QSaveFile(QObject * parent);
 extern void* C_ZN9QSaveFileC2EP7QObject(void* arg0); // 3
   // proto:  bool QSaveFile::directWriteFallback();
-extern void C_ZNK9QSaveFile19directWriteFallbackEv(void* qthis); // 4
+extern bool C_ZNK9QSaveFile19directWriteFallbackEv(void* qthis); // 4
   // proto:  bool QSaveFile::commit();
-extern void C_ZN9QSaveFile6commitEv(void* qthis); // 4
+extern bool C_ZN9QSaveFile6commitEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -69,7 +69,7 @@ type QSaveFile struct {
 }
 
 // metaObject()
-func (this *QSaveFile) metaObject(args ...interface{}) () {
+func (this *QSaveFile) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -86,10 +86,11 @@ func (this *QSaveFile) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QSaveFile", "metaObject", args)
   }
 
+  return
 }
 
 // setDirectWriteFallback(_Bool)
-func (this *QSaveFile) setDirectWriteFallback(args ...interface{}) () {
+func (this *QSaveFile) Setdirectwritefallback(args ...interface{}) () {
   // setDirectWriteFallback(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -109,10 +110,11 @@ func (this *QSaveFile) setDirectWriteFallback(args ...interface{}) () {
     qtrt.ErrorResolve("QSaveFile", "setDirectWriteFallback", args)
   }
 
+  return
 }
 
 // ~QSaveFile()
-func (this *QSaveFile) FreeQSaveFile(args ...interface{}) () {
+func (this *QSaveFile) Freeqsavefile(args ...interface{}) () {
   // ~QSaveFile()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -129,10 +131,11 @@ func (this *QSaveFile) FreeQSaveFile(args ...interface{}) () {
     qtrt.ErrorResolve("QSaveFile", "~QSaveFile", args)
   }
 
+  return
 }
 
 // cancelWriting()
-func (this *QSaveFile) cancelWriting(args ...interface{}) () {
+func (this *QSaveFile) Cancelwriting(args ...interface{}) () {
   // cancelWriting()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -149,10 +152,11 @@ func (this *QSaveFile) cancelWriting(args ...interface{}) () {
     qtrt.ErrorResolve("QSaveFile", "cancelWriting", args)
   }
 
+  return
 }
 
 // setFileName(const class QString &)
-func (this *QSaveFile) setFileName(args ...interface{}) () {
+func (this *QSaveFile) Setfilename(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -172,10 +176,11 @@ func (this *QSaveFile) setFileName(args ...interface{}) () {
     qtrt.ErrorResolve("QSaveFile", "setFileName", args)
   }
 
+  return
 }
 
 // fileName()
-func (this *QSaveFile) fileName(args ...interface{}) () {
+func (this *QSaveFile) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -187,12 +192,16 @@ func (this *QSaveFile) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSaveFile8fileNameEv
     // invoke: QString fileName()
-    var ret = C.C_ZNK9QSaveFile8fileNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QSaveFile8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSaveFile", "fileName", args)
   }
 
+  return
 }
 
 // QSaveFile(const class QString &)
@@ -250,7 +259,7 @@ func NewQSaveFile(args ...interface{}) *QSaveFile {
 }
 
 // directWriteFallback()
-func (this *QSaveFile) directWriteFallback(args ...interface{}) () {
+func (this *QSaveFile) Directwritefallback(args ...interface{}) (ret interface{}) {
   // directWriteFallback()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -262,16 +271,20 @@ func (this *QSaveFile) directWriteFallback(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSaveFile19directWriteFallbackEv
     // invoke: bool directWriteFallback()
-    var ret = C.C_ZNK9QSaveFile19directWriteFallbackEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QSaveFile19directWriteFallbackEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSaveFile", "directWriteFallback", args)
   }
 
+  return
 }
 
 // commit()
-func (this *QSaveFile) commit(args ...interface{}) () {
+func (this *QSaveFile) Commit(args ...interface{}) (ret interface{}) {
   // commit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -283,12 +296,16 @@ func (this *QSaveFile) commit(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSaveFile6commitEv
     // invoke: bool commit()
-    var ret = C.C_ZN9QSaveFile6commitEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QSaveFile6commitEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSaveFile", "commit", args)
   }
 
+  return
 }
 
 // <= body block end

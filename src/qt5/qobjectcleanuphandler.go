@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qobjectcleanuphandler.h
 // dst-file: /src/core/qobjectcleanuphandler.go
 //
@@ -35,9 +35,9 @@ extern void C_ZN21QObjectCleanupHandler5clearEv(void* qthis); // 4
   // proto:  void QObjectCleanupHandler::QObjectCleanupHandler();
 extern void* C_ZN21QObjectCleanupHandlerC2Ev(); // 3
   // proto:  QObject * QObjectCleanupHandler::add(QObject * object);
-extern void C_ZN21QObjectCleanupHandler3addEP7QObject(void* qthis, void* arg0); // 4
+extern void* C_ZN21QObjectCleanupHandler3addEP7QObject(void* qthis, void* arg0); // 4
   // proto:  bool QObjectCleanupHandler::isEmpty();
-extern void C_ZNK21QObjectCleanupHandler7isEmptyEv(void* qthis); // 4
+extern bool C_ZNK21QObjectCleanupHandler7isEmptyEv(void* qthis); // 4
   // proto:  void QObjectCleanupHandler::remove(QObject * object);
 extern void C_ZN21QObjectCleanupHandler6removeEP7QObject(void* qthis, void* arg0); // 4
   // proto:  void QObjectCleanupHandler::~QObjectCleanupHandler();
@@ -61,7 +61,7 @@ type QObjectCleanupHandler struct {
 }
 
 // metaObject()
-func (this *QObjectCleanupHandler) metaObject(args ...interface{}) () {
+func (this *QObjectCleanupHandler) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -78,10 +78,11 @@ func (this *QObjectCleanupHandler) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QObjectCleanupHandler", "metaObject", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QObjectCleanupHandler) clear(args ...interface{}) () {
+func (this *QObjectCleanupHandler) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -98,6 +99,7 @@ func (this *QObjectCleanupHandler) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QObjectCleanupHandler", "clear", args)
   }
 
+  return
 }
 
 // QObjectCleanupHandler()
@@ -125,7 +127,7 @@ func NewQObjectCleanupHandler(args ...interface{}) *QObjectCleanupHandler {
 }
 
 // add(class QObject *)
-func (this *QObjectCleanupHandler) add(args ...interface{}) () {
+func (this *QObjectCleanupHandler) Add(args ...interface{}) (ret interface{}) {
   // add(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -140,16 +142,20 @@ func (this *QObjectCleanupHandler) add(args ...interface{}) () {
     // invoke: QObject * add(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN21QObjectCleanupHandler3addEP7QObject(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN21QObjectCleanupHandler3addEP7QObject(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QObject{}) // "QObject *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "add", args)
   }
 
+  return
 }
 
 // isEmpty()
-func (this *QObjectCleanupHandler) isEmpty(args ...interface{}) () {
+func (this *QObjectCleanupHandler) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -161,16 +167,20 @@ func (this *QObjectCleanupHandler) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QObjectCleanupHandler7isEmptyEv
     // invoke: bool isEmpty()
-    var ret = C.C_ZNK21QObjectCleanupHandler7isEmptyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK21QObjectCleanupHandler7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "isEmpty", args)
   }
 
+  return
 }
 
 // remove(class QObject *)
-func (this *QObjectCleanupHandler) remove(args ...interface{}) () {
+func (this *QObjectCleanupHandler) Remove(args ...interface{}) () {
   // remove(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -190,10 +200,11 @@ func (this *QObjectCleanupHandler) remove(args ...interface{}) () {
     qtrt.ErrorResolve("QObjectCleanupHandler", "remove", args)
   }
 
+  return
 }
 
 // ~QObjectCleanupHandler()
-func (this *QObjectCleanupHandler) FreeQObjectCleanupHandler(args ...interface{}) () {
+func (this *QObjectCleanupHandler) Freeqobjectcleanuphandler(args ...interface{}) () {
   // ~QObjectCleanupHandler()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -210,6 +221,7 @@ func (this *QObjectCleanupHandler) FreeQObjectCleanupHandler(args ...interface{}
     qtrt.ErrorResolve("QObjectCleanupHandler", "~QObjectCleanupHandler", args)
   }
 
+  return
 }
 
 // <= body block end

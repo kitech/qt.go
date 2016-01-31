@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.go
 //
@@ -31,15 +31,15 @@ import "qtrt"
   // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
 extern void C_ZNK25QSequentialAnimationGroup10metaObjectEv(void* qthis); // 4
   // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
-extern void C_ZN25QSequentialAnimationGroup11insertPauseEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void* C_ZN25QSequentialAnimationGroup11insertPauseEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
-extern void C_ZN25QSequentialAnimationGroup8addPauseEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZN25QSequentialAnimationGroup8addPauseEi(void* qthis, int32_t arg0); // 4
   // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
 extern void C_ZN25QSequentialAnimationGroupD2Ev(void* qthis); // 4
   // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
 extern void* C_ZN25QSequentialAnimationGroupC2EP7QObject(void* arg0); // 3
   // proto:  int QSequentialAnimationGroup::duration();
-extern void C_ZNK25QSequentialAnimationGroup8durationEv(void* qthis); // 4
+extern int32_t C_ZNK25QSequentialAnimationGroup8durationEv(void* qthis); // 4
   // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
 extern void C_ZNK25QSequentialAnimationGroup16currentAnimationEv(void* qthis); // 4
 */
@@ -62,7 +62,7 @@ type QSequentialAnimationGroup struct {
 }
 
 // metaObject()
-func (this *QSequentialAnimationGroup) metaObject(args ...interface{}) () {
+func (this *QSequentialAnimationGroup) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -79,10 +79,11 @@ func (this *QSequentialAnimationGroup) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QSequentialAnimationGroup", "metaObject", args)
   }
 
+  return
 }
 
 // insertPause(int, int)
-func (this *QSequentialAnimationGroup) insertPause(args ...interface{}) () {
+func (this *QSequentialAnimationGroup) Insertpause(args ...interface{}) (ret interface{}) {
   // insertPause(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -100,16 +101,20 @@ func (this *QSequentialAnimationGroup) insertPause(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN25QSequentialAnimationGroup11insertPauseEii(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN25QSequentialAnimationGroup11insertPauseEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPauseAnimation{}) // "QPauseAnimation *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "insertPause", args)
   }
 
+  return
 }
 
 // addPause(int)
-func (this *QSequentialAnimationGroup) addPause(args ...interface{}) () {
+func (this *QSequentialAnimationGroup) Addpause(args ...interface{}) (ret interface{}) {
   // addPause(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -124,16 +129,20 @@ func (this *QSequentialAnimationGroup) addPause(args ...interface{}) () {
     // invoke: QPauseAnimation * addPause(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN25QSequentialAnimationGroup8addPauseEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN25QSequentialAnimationGroup8addPauseEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPauseAnimation{}) // "QPauseAnimation *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "addPause", args)
   }
 
+  return
 }
 
 // ~QSequentialAnimationGroup()
-func (this *QSequentialAnimationGroup) FreeQSequentialAnimationGroup(args ...interface{}) () {
+func (this *QSequentialAnimationGroup) Freeqsequentialanimationgroup(args ...interface{}) () {
   // ~QSequentialAnimationGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -150,6 +159,7 @@ func (this *QSequentialAnimationGroup) FreeQSequentialAnimationGroup(args ...int
     qtrt.ErrorResolve("QSequentialAnimationGroup", "~QSequentialAnimationGroup", args)
   }
 
+  return
 }
 
 // QSequentialAnimationGroup(class QObject *)
@@ -180,7 +190,7 @@ func NewQSequentialAnimationGroup(args ...interface{}) *QSequentialAnimationGrou
 }
 
 // duration()
-func (this *QSequentialAnimationGroup) duration(args ...interface{}) () {
+func (this *QSequentialAnimationGroup) Duration(args ...interface{}) (ret interface{}) {
   // duration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -192,16 +202,20 @@ func (this *QSequentialAnimationGroup) duration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK25QSequentialAnimationGroup8durationEv
     // invoke: int duration()
-    var ret = C.C_ZNK25QSequentialAnimationGroup8durationEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK25QSequentialAnimationGroup8durationEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "duration", args)
   }
 
+  return
 }
 
 // currentAnimation()
-func (this *QSequentialAnimationGroup) currentAnimation(args ...interface{}) () {
+func (this *QSequentialAnimationGroup) Currentanimation(args ...interface{}) () {
   // currentAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -218,6 +232,7 @@ func (this *QSequentialAnimationGroup) currentAnimation(args ...interface{}) () 
     qtrt.ErrorResolve("QSequentialAnimationGroup", "currentAnimation", args)
   }
 
+  return
 }
 
 // <= body block end

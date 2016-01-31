@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qstatictext.h
 // dst-file: /src/gui/qstatictext.go
 //
@@ -33,7 +33,7 @@ extern void C_ZN11QStaticText4swapERS_(void* qthis, void* arg0); // 2
   // proto:  void QStaticText::prepare(const QTransform & matrix, const QFont & font);
 extern void C_ZN11QStaticText7prepareERK10QTransformRK5QFont(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QString QStaticText::text();
-extern void C_ZNK11QStaticText4textEv(void* qthis); // 4
+extern void* C_ZNK11QStaticText4textEv(void* qthis); // 4
   // proto:  void QStaticText::setText(const QString & text);
 extern void C_ZN11QStaticText7setTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QStaticText::~QStaticText();
@@ -49,15 +49,15 @@ extern void* C_ZN11QStaticTextC2ERK7QString(void* arg0); // 3
   // proto:  void QStaticText::QStaticText(const QStaticText & other);
 extern void* C_ZN11QStaticTextC2ERKS_(void* arg0); // 3
   // proto:  qreal QStaticText::textWidth();
-extern void C_ZNK11QStaticText9textWidthEv(void* qthis); // 4
+extern double C_ZNK11QStaticText9textWidthEv(void* qthis); // 4
   // proto:  Qt::TextFormat QStaticText::textFormat();
 extern void C_ZNK11QStaticText10textFormatEv(void* qthis); // 4
   // proto:  QTextOption QStaticText::textOption();
-extern void C_ZNK11QStaticText10textOptionEv(void* qthis); // 4
+extern void* C_ZNK11QStaticText10textOptionEv(void* qthis); // 4
   // proto:  QStaticText::PerformanceHint QStaticText::performanceHint();
 extern void C_ZNK11QStaticText15performanceHintEv(void* qthis); // 4
   // proto:  QSizeF QStaticText::size();
-extern void C_ZNK11QStaticText4sizeEv(void* qthis); // 4
+extern void* C_ZNK11QStaticText4sizeEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -77,7 +77,7 @@ type QStaticText struct {
 }
 
 // swap(class QStaticText &)
-func (this *QStaticText) swap(args ...interface{}) () {
+func (this *QStaticText) Swap(args ...interface{}) () {
   // swap(class QStaticText &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,10 +97,11 @@ func (this *QStaticText) swap(args ...interface{}) () {
     qtrt.ErrorResolve("QStaticText", "swap", args)
   }
 
+  return
 }
 
 // prepare(const class QTransform &, const class QFont &)
-func (this *QStaticText) prepare(args ...interface{}) () {
+func (this *QStaticText) Prepare(args ...interface{}) () {
   // prepare(const class QTransform &, const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -123,10 +124,11 @@ func (this *QStaticText) prepare(args ...interface{}) () {
     qtrt.ErrorResolve("QStaticText", "prepare", args)
   }
 
+  return
 }
 
 // text()
-func (this *QStaticText) text(args ...interface{}) () {
+func (this *QStaticText) Text(args ...interface{}) (ret interface{}) {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -138,16 +140,20 @@ func (this *QStaticText) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStaticText4textEv
     // invoke: QString text()
-    var ret = C.C_ZNK11QStaticText4textEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QStaticText4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStaticText", "text", args)
   }
 
+  return
 }
 
 // setText(const class QString &)
-func (this *QStaticText) setText(args ...interface{}) () {
+func (this *QStaticText) Settext(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -167,10 +173,11 @@ func (this *QStaticText) setText(args ...interface{}) () {
     qtrt.ErrorResolve("QStaticText", "setText", args)
   }
 
+  return
 }
 
 // ~QStaticText()
-func (this *QStaticText) FreeQStaticText(args ...interface{}) () {
+func (this *QStaticText) Freeqstatictext(args ...interface{}) () {
   // ~QStaticText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -187,10 +194,11 @@ func (this *QStaticText) FreeQStaticText(args ...interface{}) () {
     qtrt.ErrorResolve("QStaticText", "~QStaticText", args)
   }
 
+  return
 }
 
 // setTextWidth(qreal)
-func (this *QStaticText) setTextWidth(args ...interface{}) () {
+func (this *QStaticText) Settextwidth(args ...interface{}) () {
   // setTextWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -210,10 +218,11 @@ func (this *QStaticText) setTextWidth(args ...interface{}) () {
     qtrt.ErrorResolve("QStaticText", "setTextWidth", args)
   }
 
+  return
 }
 
 // setTextOption(const class QTextOption &)
-func (this *QStaticText) setTextOption(args ...interface{}) () {
+func (this *QStaticText) Settextoption(args ...interface{}) () {
   // setTextOption(const class QTextOption &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -233,6 +242,7 @@ func (this *QStaticText) setTextOption(args ...interface{}) () {
     qtrt.ErrorResolve("QStaticText", "setTextOption", args)
   }
 
+  return
 }
 
 // QStaticText()
@@ -284,7 +294,7 @@ func NewQStaticText(args ...interface{}) *QStaticText {
 }
 
 // textWidth()
-func (this *QStaticText) textWidth(args ...interface{}) () {
+func (this *QStaticText) Textwidth(args ...interface{}) (ret interface{}) {
   // textWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -296,16 +306,20 @@ func (this *QStaticText) textWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStaticText9textWidthEv
     // invoke: qreal textWidth()
-    var ret = C.C_ZNK11QStaticText9textWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QStaticText9textWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStaticText", "textWidth", args)
   }
 
+  return
 }
 
 // textFormat()
-func (this *QStaticText) textFormat(args ...interface{}) () {
+func (this *QStaticText) Textformat(args ...interface{}) () {
   // textFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -322,10 +336,11 @@ func (this *QStaticText) textFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QStaticText", "textFormat", args)
   }
 
+  return
 }
 
 // textOption()
-func (this *QStaticText) textOption(args ...interface{}) () {
+func (this *QStaticText) Textoption(args ...interface{}) (ret interface{}) {
   // textOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -337,16 +352,20 @@ func (this *QStaticText) textOption(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStaticText10textOptionEv
     // invoke: QTextOption textOption()
-    var ret = C.C_ZNK11QStaticText10textOptionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QStaticText10textOptionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextOption{}) // "QTextOption"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStaticText", "textOption", args)
   }
 
+  return
 }
 
 // performanceHint()
-func (this *QStaticText) performanceHint(args ...interface{}) () {
+func (this *QStaticText) Performancehint(args ...interface{}) () {
   // performanceHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -363,10 +382,11 @@ func (this *QStaticText) performanceHint(args ...interface{}) () {
     qtrt.ErrorResolve("QStaticText", "performanceHint", args)
   }
 
+  return
 }
 
 // size()
-func (this *QStaticText) size(args ...interface{}) () {
+func (this *QStaticText) Size(args ...interface{}) (ret interface{}) {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,12 +398,16 @@ func (this *QStaticText) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStaticText4sizeEv
     // invoke: QSizeF size()
-    var ret = C.C_ZNK11QStaticText4sizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QStaticText4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStaticText", "size", args)
   }
 
+  return
 }
 
 // <= body block end

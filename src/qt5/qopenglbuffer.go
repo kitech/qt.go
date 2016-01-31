@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QOpenGLBuffer::isCreated();
-extern void C_ZNK13QOpenGLBuffer9isCreatedEv(void* qthis); // 4
+extern bool C_ZNK13QOpenGLBuffer9isCreatedEv(void* qthis); // 4
   // proto:  bool QOpenGLBuffer::unmap();
-extern void C_ZN13QOpenGLBuffer5unmapEv(void* qthis); // 4
+extern bool C_ZN13QOpenGLBuffer5unmapEv(void* qthis); // 4
   // proto:  GLuint QOpenGLBuffer::bufferId();
-extern void C_ZNK13QOpenGLBuffer8bufferIdEv(void* qthis); // 4
+extern int32_t C_ZNK13QOpenGLBuffer8bufferIdEv(void* qthis); // 4
   // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);
-extern void C_ZN13QOpenGLBuffer4readEiPvi(void* qthis, int32_t arg0, void* arg1, int32_t arg2); // 4
+extern bool C_ZN13QOpenGLBuffer4readEiPvi(void* qthis, int32_t arg0, void* arg1, int32_t arg2); // 4
   // proto:  bool QOpenGLBuffer::bind();
-extern void C_ZN13QOpenGLBuffer4bindEv(void* qthis); // 4
+extern bool C_ZN13QOpenGLBuffer4bindEv(void* qthis); // 4
   // proto:  bool QOpenGLBuffer::create();
-extern void C_ZN13QOpenGLBuffer6createEv(void* qthis); // 4
+extern bool C_ZN13QOpenGLBuffer6createEv(void* qthis); // 4
   // proto:  void QOpenGLBuffer::write(int offset, const void * data, int count);
 extern void C_ZN13QOpenGLBuffer5writeEiPKvi(void* qthis, int32_t arg0, void* arg1, int32_t arg2); // 4
   // proto:  QOpenGLBuffer::UsagePattern QOpenGLBuffer::usagePattern();
@@ -53,7 +53,7 @@ extern void C_ZN13QOpenGLBuffer7releaseEv(void* qthis); // 4
   // proto:  void QOpenGLBuffer::destroy();
 extern void C_ZN13QOpenGLBuffer7destroyEv(void* qthis); // 4
   // proto:  int QOpenGLBuffer::size();
-extern void C_ZNK13QOpenGLBuffer4sizeEv(void* qthis); // 4
+extern int32_t C_ZNK13QOpenGLBuffer4sizeEv(void* qthis); // 4
   // proto:  QOpenGLBuffer::Type QOpenGLBuffer::type();
 extern void C_ZNK13QOpenGLBuffer4typeEv(void* qthis); // 4
   // proto:  void QOpenGLBuffer::~QOpenGLBuffer();
@@ -81,7 +81,7 @@ type QOpenGLBuffer struct {
 }
 
 // isCreated()
-func (this *QOpenGLBuffer) isCreated(args ...interface{}) () {
+func (this *QOpenGLBuffer) Iscreated(args ...interface{}) (ret interface{}) {
   // isCreated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -93,16 +93,20 @@ func (this *QOpenGLBuffer) isCreated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer9isCreatedEv
     // invoke: bool isCreated()
-    var ret = C.C_ZNK13QOpenGLBuffer9isCreatedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QOpenGLBuffer9isCreatedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "isCreated", args)
   }
 
+  return
 }
 
 // unmap()
-func (this *QOpenGLBuffer) unmap(args ...interface{}) () {
+func (this *QOpenGLBuffer) Unmap(args ...interface{}) (ret interface{}) {
   // unmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -114,16 +118,20 @@ func (this *QOpenGLBuffer) unmap(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLBuffer5unmapEv
     // invoke: bool unmap()
-    var ret = C.C_ZN13QOpenGLBuffer5unmapEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QOpenGLBuffer5unmapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "unmap", args)
   }
 
+  return
 }
 
 // bufferId()
-func (this *QOpenGLBuffer) bufferId(args ...interface{}) () {
+func (this *QOpenGLBuffer) Bufferid(args ...interface{}) (ret interface{}) {
   // bufferId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -135,16 +143,20 @@ func (this *QOpenGLBuffer) bufferId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer8bufferIdEv
     // invoke: GLuint bufferId()
-    var ret = C.C_ZNK13QOpenGLBuffer8bufferIdEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QOpenGLBuffer8bufferIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "GLuint"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "bufferId", args)
   }
 
+  return
 }
 
 // read(int, void *, int)
-func (this *QOpenGLBuffer) read(args ...interface{}) () {
+func (this *QOpenGLBuffer) Read(args ...interface{}) (ret interface{}) {
   // read(int, void *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -165,16 +177,20 @@ func (this *QOpenGLBuffer) read(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZN13QOpenGLBuffer4readEiPvi(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QOpenGLBuffer4readEiPvi(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "read", args)
   }
 
+  return
 }
 
 // bind()
-func (this *QOpenGLBuffer) bind(args ...interface{}) () {
+func (this *QOpenGLBuffer) Bind(args ...interface{}) (ret interface{}) {
   // bind()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -186,16 +202,20 @@ func (this *QOpenGLBuffer) bind(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLBuffer4bindEv
     // invoke: bool bind()
-    var ret = C.C_ZN13QOpenGLBuffer4bindEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QOpenGLBuffer4bindEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "bind", args)
   }
 
+  return
 }
 
 // create()
-func (this *QOpenGLBuffer) create(args ...interface{}) () {
+func (this *QOpenGLBuffer) Create(args ...interface{}) (ret interface{}) {
   // create()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -207,16 +227,20 @@ func (this *QOpenGLBuffer) create(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLBuffer6createEv
     // invoke: bool create()
-    var ret = C.C_ZN13QOpenGLBuffer6createEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QOpenGLBuffer6createEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "create", args)
   }
 
+  return
 }
 
 // write(int, const void *, int)
-func (this *QOpenGLBuffer) write(args ...interface{}) () {
+func (this *QOpenGLBuffer) Write(args ...interface{}) () {
   // write(int, const void *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -242,10 +266,11 @@ func (this *QOpenGLBuffer) write(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLBuffer", "write", args)
   }
 
+  return
 }
 
 // usagePattern()
-func (this *QOpenGLBuffer) usagePattern(args ...interface{}) () {
+func (this *QOpenGLBuffer) Usagepattern(args ...interface{}) () {
   // usagePattern()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -262,10 +287,11 @@ func (this *QOpenGLBuffer) usagePattern(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLBuffer", "usagePattern", args)
   }
 
+  return
 }
 
 // allocate(int)
-func (this *QOpenGLBuffer) allocate(args ...interface{}) () {
+func (this *QOpenGLBuffer) Allocate(args ...interface{}) () {
   // allocate(int)
   // allocate(const void *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -297,10 +323,11 @@ func (this *QOpenGLBuffer) allocate(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLBuffer", "allocate", args)
   }
 
+  return
 }
 
 // release()
-func (this *QOpenGLBuffer) release(args ...interface{}) () {
+func (this *QOpenGLBuffer) Release(args ...interface{}) () {
   // release()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -317,10 +344,11 @@ func (this *QOpenGLBuffer) release(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLBuffer", "release", args)
   }
 
+  return
 }
 
 // destroy()
-func (this *QOpenGLBuffer) destroy(args ...interface{}) () {
+func (this *QOpenGLBuffer) Destroy(args ...interface{}) () {
   // destroy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -337,10 +365,11 @@ func (this *QOpenGLBuffer) destroy(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLBuffer", "destroy", args)
   }
 
+  return
 }
 
 // size()
-func (this *QOpenGLBuffer) size(args ...interface{}) () {
+func (this *QOpenGLBuffer) Size(args ...interface{}) (ret interface{}) {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -352,16 +381,20 @@ func (this *QOpenGLBuffer) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer4sizeEv
     // invoke: int size()
-    var ret = C.C_ZNK13QOpenGLBuffer4sizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QOpenGLBuffer4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "size", args)
   }
 
+  return
 }
 
 // type()
-func (this *QOpenGLBuffer) type_(args ...interface{}) () {
+func (this *QOpenGLBuffer) Type_(args ...interface{}) () {
   // type()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,10 +411,11 @@ func (this *QOpenGLBuffer) type_(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLBuffer", "type", args)
   }
 
+  return
 }
 
 // ~QOpenGLBuffer()
-func (this *QOpenGLBuffer) FreeQOpenGLBuffer(args ...interface{}) () {
+func (this *QOpenGLBuffer) Freeqopenglbuffer(args ...interface{}) () {
   // ~QOpenGLBuffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -398,6 +432,7 @@ func (this *QOpenGLBuffer) FreeQOpenGLBuffer(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLBuffer", "~QOpenGLBuffer", args)
   }
 
+  return
 }
 
 // QOpenGLBuffer()

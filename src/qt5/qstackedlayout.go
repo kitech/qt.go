@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qstackedlayout.h
 // dst-file: /src/widgets/qstackedlayout.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QStackedLayout::addWidget(QWidget * w);
-extern void C_ZN14QStackedLayout9addWidgetEP7QWidget(void* qthis, void* arg0); // 4
+extern int32_t C_ZN14QStackedLayout9addWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QStackedLayout::setCurrentIndex(int index);
 extern void C_ZN14QStackedLayout15setCurrentIndexEi(void* qthis, int32_t arg0); // 4
   // proto:  QWidget * QStackedLayout::currentWidget();
-extern void C_ZNK14QStackedLayout13currentWidgetEv(void* qthis); // 4
+extern void* C_ZNK14QStackedLayout13currentWidgetEv(void* qthis); // 4
   // proto:  void QStackedLayout::setGeometry(const QRect & rect);
 extern void C_ZN14QStackedLayout11setGeometryERK5QRect(void* qthis, void* arg0); // 4
   // proto:  void QStackedLayout::~QStackedLayout();
@@ -41,13 +41,13 @@ extern void C_ZN14QStackedLayoutD2Ev(void* qthis); // 4
   // proto:  void QStackedLayout::setCurrentWidget(QWidget * w);
 extern void C_ZN14QStackedLayout16setCurrentWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  QWidget * QStackedLayout::widget(int );
-extern void C_ZNK14QStackedLayout6widgetEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK14QStackedLayout6widgetEi(void* qthis, int32_t arg0); // 4
   // proto:  void QStackedLayout::addItem(QLayoutItem * item);
 extern void C_ZN14QStackedLayout7addItemEP11QLayoutItem(void* qthis, void* arg0); // 4
   // proto:  QLayoutItem * QStackedLayout::takeAt(int );
-extern void C_ZN14QStackedLayout6takeAtEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZN14QStackedLayout6takeAtEi(void* qthis, int32_t arg0); // 4
   // proto:  int QStackedLayout::insertWidget(int index, QWidget * w);
-extern void C_ZN14QStackedLayout12insertWidgetEiP7QWidget(void* qthis, int32_t arg0, void* arg1); // 4
+extern int32_t C_ZN14QStackedLayout12insertWidgetEiP7QWidget(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QStackedLayout::QStackedLayout();
 extern void* C_ZN14QStackedLayoutC2Ev(); // 3
   // proto:  void QStackedLayout::QStackedLayout(QLayout * parentLayout);
@@ -55,23 +55,23 @@ extern void* C_ZN14QStackedLayoutC2EP7QLayout(void* arg0); // 3
   // proto:  void QStackedLayout::QStackedLayout(QWidget * parent);
 extern void* C_ZN14QStackedLayoutC2EP7QWidget(void* arg0); // 3
   // proto:  QSize QStackedLayout::sizeHint();
-extern void C_ZNK14QStackedLayout8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK14QStackedLayout8sizeHintEv(void* qthis); // 4
   // proto:  QStackedLayout::StackingMode QStackedLayout::stackingMode();
 extern void C_ZNK14QStackedLayout12stackingModeEv(void* qthis); // 4
   // proto:  int QStackedLayout::count();
-extern void C_ZNK14QStackedLayout5countEv(void* qthis); // 4
+extern int32_t C_ZNK14QStackedLayout5countEv(void* qthis); // 4
   // proto:  const QMetaObject * QStackedLayout::metaObject();
 extern void C_ZNK14QStackedLayout10metaObjectEv(void* qthis); // 4
   // proto:  bool QStackedLayout::hasHeightForWidth();
-extern void C_ZNK14QStackedLayout17hasHeightForWidthEv(void* qthis); // 4
+extern bool C_ZNK14QStackedLayout17hasHeightForWidthEv(void* qthis); // 4
   // proto:  QLayoutItem * QStackedLayout::itemAt(int );
-extern void C_ZNK14QStackedLayout6itemAtEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK14QStackedLayout6itemAtEi(void* qthis, int32_t arg0); // 4
   // proto:  QSize QStackedLayout::minimumSize();
-extern void C_ZNK14QStackedLayout11minimumSizeEv(void* qthis); // 4
+extern void* C_ZNK14QStackedLayout11minimumSizeEv(void* qthis); // 4
   // proto:  int QStackedLayout::heightForWidth(int width);
-extern void C_ZNK14QStackedLayout14heightForWidthEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK14QStackedLayout14heightForWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  int QStackedLayout::currentIndex();
-extern void C_ZNK14QStackedLayout12currentIndexEv(void* qthis); // 4
+extern int32_t C_ZNK14QStackedLayout12currentIndexEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -93,7 +93,7 @@ type QStackedLayout struct {
 }
 
 // addWidget(class QWidget *)
-func (this *QStackedLayout) addWidget(args ...interface{}) () {
+func (this *QStackedLayout) Addwidget(args ...interface{}) (ret interface{}) {
   // addWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -108,16 +108,20 @@ func (this *QStackedLayout) addWidget(args ...interface{}) () {
     // invoke: int addWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN14QStackedLayout9addWidgetEP7QWidget(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QStackedLayout9addWidgetEP7QWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStackedLayout", "addWidget", args)
   }
 
+  return
 }
 
 // setCurrentIndex(int)
-func (this *QStackedLayout) setCurrentIndex(args ...interface{}) () {
+func (this *QStackedLayout) Setcurrentindex(args ...interface{}) () {
   // setCurrentIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -137,10 +141,11 @@ func (this *QStackedLayout) setCurrentIndex(args ...interface{}) () {
     qtrt.ErrorResolve("QStackedLayout", "setCurrentIndex", args)
   }
 
+  return
 }
 
 // currentWidget()
-func (this *QStackedLayout) currentWidget(args ...interface{}) () {
+func (this *QStackedLayout) Currentwidget(args ...interface{}) (ret interface{}) {
   // currentWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -152,16 +157,20 @@ func (this *QStackedLayout) currentWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout13currentWidgetEv
     // invoke: QWidget * currentWidget()
-    var ret = C.C_ZNK14QStackedLayout13currentWidgetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QStackedLayout13currentWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStackedLayout", "currentWidget", args)
   }
 
+  return
 }
 
 // setGeometry(const class QRect &)
-func (this *QStackedLayout) setGeometry(args ...interface{}) () {
+func (this *QStackedLayout) Setgeometry(args ...interface{}) () {
   // setGeometry(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -181,10 +190,11 @@ func (this *QStackedLayout) setGeometry(args ...interface{}) () {
     qtrt.ErrorResolve("QStackedLayout", "setGeometry", args)
   }
 
+  return
 }
 
 // ~QStackedLayout()
-func (this *QStackedLayout) FreeQStackedLayout(args ...interface{}) () {
+func (this *QStackedLayout) Freeqstackedlayout(args ...interface{}) () {
   // ~QStackedLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -201,10 +211,11 @@ func (this *QStackedLayout) FreeQStackedLayout(args ...interface{}) () {
     qtrt.ErrorResolve("QStackedLayout", "~QStackedLayout", args)
   }
 
+  return
 }
 
 // setCurrentWidget(class QWidget *)
-func (this *QStackedLayout) setCurrentWidget(args ...interface{}) () {
+func (this *QStackedLayout) Setcurrentwidget(args ...interface{}) () {
   // setCurrentWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -224,10 +235,11 @@ func (this *QStackedLayout) setCurrentWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QStackedLayout", "setCurrentWidget", args)
   }
 
+  return
 }
 
 // widget(int)
-func (this *QStackedLayout) widget(args ...interface{}) () {
+func (this *QStackedLayout) Widget(args ...interface{}) (ret interface{}) {
   // widget(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -242,16 +254,20 @@ func (this *QStackedLayout) widget(args ...interface{}) () {
     // invoke: QWidget * widget(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK14QStackedLayout6widgetEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QStackedLayout6widgetEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStackedLayout", "widget", args)
   }
 
+  return
 }
 
 // addItem(class QLayoutItem *)
-func (this *QStackedLayout) addItem(args ...interface{}) () {
+func (this *QStackedLayout) Additem(args ...interface{}) () {
   // addItem(class QLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -271,10 +287,11 @@ func (this *QStackedLayout) addItem(args ...interface{}) () {
     qtrt.ErrorResolve("QStackedLayout", "addItem", args)
   }
 
+  return
 }
 
 // takeAt(int)
-func (this *QStackedLayout) takeAt(args ...interface{}) () {
+func (this *QStackedLayout) Takeat(args ...interface{}) (ret interface{}) {
   // takeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -289,16 +306,20 @@ func (this *QStackedLayout) takeAt(args ...interface{}) () {
     // invoke: QLayoutItem * takeAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN14QStackedLayout6takeAtEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QStackedLayout6takeAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStackedLayout", "takeAt", args)
   }
 
+  return
 }
 
 // insertWidget(int, class QWidget *)
-func (this *QStackedLayout) insertWidget(args ...interface{}) () {
+func (this *QStackedLayout) Insertwidget(args ...interface{}) (ret interface{}) {
   // insertWidget(int, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -316,12 +337,16 @@ func (this *QStackedLayout) insertWidget(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN14QStackedLayout12insertWidgetEiP7QWidget(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QStackedLayout12insertWidgetEiP7QWidget(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStackedLayout", "insertWidget", args)
   }
 
+  return
 }
 
 // QStackedLayout()
@@ -373,7 +398,7 @@ func NewQStackedLayout(args ...interface{}) *QStackedLayout {
 }
 
 // sizeHint()
-func (this *QStackedLayout) sizeHint(args ...interface{}) () {
+func (this *QStackedLayout) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -385,16 +410,20 @@ func (this *QStackedLayout) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK14QStackedLayout8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QStackedLayout8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStackedLayout", "sizeHint", args)
   }
 
+  return
 }
 
 // stackingMode()
-func (this *QStackedLayout) stackingMode(args ...interface{}) () {
+func (this *QStackedLayout) Stackingmode(args ...interface{}) () {
   // stackingMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -411,10 +440,11 @@ func (this *QStackedLayout) stackingMode(args ...interface{}) () {
     qtrt.ErrorResolve("QStackedLayout", "stackingMode", args)
   }
 
+  return
 }
 
 // count()
-func (this *QStackedLayout) count(args ...interface{}) () {
+func (this *QStackedLayout) Count(args ...interface{}) (ret interface{}) {
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -426,16 +456,20 @@ func (this *QStackedLayout) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout5countEv
     // invoke: int count()
-    var ret = C.C_ZNK14QStackedLayout5countEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QStackedLayout5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStackedLayout", "count", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QStackedLayout) metaObject(args ...interface{}) () {
+func (this *QStackedLayout) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -452,10 +486,11 @@ func (this *QStackedLayout) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QStackedLayout", "metaObject", args)
   }
 
+  return
 }
 
 // hasHeightForWidth()
-func (this *QStackedLayout) hasHeightForWidth(args ...interface{}) () {
+func (this *QStackedLayout) Hasheightforwidth(args ...interface{}) (ret interface{}) {
   // hasHeightForWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -467,16 +502,20 @@ func (this *QStackedLayout) hasHeightForWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    var ret = C.C_ZNK14QStackedLayout17hasHeightForWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QStackedLayout17hasHeightForWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStackedLayout", "hasHeightForWidth", args)
   }
 
+  return
 }
 
 // itemAt(int)
-func (this *QStackedLayout) itemAt(args ...interface{}) () {
+func (this *QStackedLayout) Itemat(args ...interface{}) (ret interface{}) {
   // itemAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -491,16 +530,20 @@ func (this *QStackedLayout) itemAt(args ...interface{}) () {
     // invoke: QLayoutItem * itemAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK14QStackedLayout6itemAtEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QStackedLayout6itemAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStackedLayout", "itemAt", args)
   }
 
+  return
 }
 
 // minimumSize()
-func (this *QStackedLayout) minimumSize(args ...interface{}) () {
+func (this *QStackedLayout) Minimumsize(args ...interface{}) (ret interface{}) {
   // minimumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -512,16 +555,20 @@ func (this *QStackedLayout) minimumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout11minimumSizeEv
     // invoke: QSize minimumSize()
-    var ret = C.C_ZNK14QStackedLayout11minimumSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QStackedLayout11minimumSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStackedLayout", "minimumSize", args)
   }
 
+  return
 }
 
 // heightForWidth(int)
-func (this *QStackedLayout) heightForWidth(args ...interface{}) () {
+func (this *QStackedLayout) Heightforwidth(args ...interface{}) (ret interface{}) {
   // heightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -536,16 +583,20 @@ func (this *QStackedLayout) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK14QStackedLayout14heightForWidthEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QStackedLayout14heightForWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStackedLayout", "heightForWidth", args)
   }
 
+  return
 }
 
 // currentIndex()
-func (this *QStackedLayout) currentIndex(args ...interface{}) () {
+func (this *QStackedLayout) Currentindex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -557,12 +608,16 @@ func (this *QStackedLayout) currentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout12currentIndexEv
     // invoke: int currentIndex()
-    var ret = C.C_ZNK14QStackedLayout12currentIndexEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QStackedLayout12currentIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStackedLayout", "currentIndex", args)
   }
 
+  return
 }
 
 // <= body block end

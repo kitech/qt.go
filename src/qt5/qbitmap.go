@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qbitmap.h
 // dst-file: /src/gui/qbitmap.go
 //
@@ -37,15 +37,15 @@ extern void* C_ZN7QBitmapC2Ev(); // 3
   // proto:  void QBitmap::QBitmap(const QPixmap & );
 extern void* C_ZN7QBitmapC2ERK7QPixmap(void* arg0); // 3
   // proto:  void QBitmap::QBitmap(const QString & fileName, const char * format);
-extern void* C_ZN7QBitmapC2ERK7QStringPKc(void* arg0, unsigned char* arg1); // 3
+extern void* C_ZN7QBitmapC2ERK7QStringPKc(void* arg0, void* arg1); // 3
   // proto:  void QBitmap::QBitmap(const QSize & );
 extern void* C_ZN7QBitmapC2ERK5QSize(void* arg0); // 3
   // proto:  void QBitmap::QBitmap(int w, int h);
 extern void* C_ZN7QBitmapC2Eii(int32_t arg0, int32_t arg1); // 3
   // proto:  QBitmap QBitmap::transformed(const QTransform & matrix);
-extern void C_ZNK7QBitmap11transformedERK10QTransform(void* qthis, void* arg0); // 4
+extern void* C_ZNK7QBitmap11transformedERK10QTransform(void* qthis, void* arg0); // 4
   // proto:  QBitmap QBitmap::transformed(const QMatrix & );
-extern void C_ZNK7QBitmap11transformedERK7QMatrix(void* qthis, void* arg0); // 4
+extern void* C_ZNK7QBitmap11transformedERK7QMatrix(void* qthis, void* arg0); // 4
   // proto:  void QBitmap::swap(QBitmap & other);
 extern void C_ZN7QBitmap4swapERS_(void* qthis, void* arg0); // 2
 */
@@ -67,7 +67,7 @@ type QBitmap struct {
 }
 
 // clear()
-func (this *QBitmap) clear(args ...interface{}) () {
+func (this *QBitmap) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -84,10 +84,11 @@ func (this *QBitmap) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QBitmap", "clear", args)
   }
 
+  return
 }
 
 // ~QBitmap()
-func (this *QBitmap) FreeQBitmap(args ...interface{}) () {
+func (this *QBitmap) Freeqbitmap(args ...interface{}) () {
   // ~QBitmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -104,6 +105,7 @@ func (this *QBitmap) FreeQBitmap(args ...interface{}) () {
     qtrt.ErrorResolve("QBitmap", "~QBitmap", args)
   }
 
+  return
 }
 
 // QBitmap()
@@ -151,8 +153,10 @@ func NewQBitmap(args ...interface{}) *QBitmap {
     // invoke: void QBitmap(const class QString &, const char *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[2][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBitmapC2ERK7QStringPKc(arg0, arg1)
@@ -185,7 +189,7 @@ func NewQBitmap(args ...interface{}) *QBitmap {
 }
 
 // transformed(const class QTransform &)
-func (this *QBitmap) transformed(args ...interface{}) () {
+func (this *QBitmap) Transformed(args ...interface{}) (ret interface{}) {
   // transformed(const class QTransform &)
   // transformed(const class QMatrix &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -203,23 +207,30 @@ func (this *QBitmap) transformed(args ...interface{}) () {
     // invoke: QBitmap transformed(const class QTransform &)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK7QBitmap11transformedERK10QTransform(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QBitmap11transformedERK10QTransform(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QBitmap{}) // "QBitmap"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK7QBitmap11transformedERK7QMatrix
     // invoke: QBitmap transformed(const class QMatrix &)
     var arg0 = args[0].(QMatrix).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK7QBitmap11transformedERK7QMatrix(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QBitmap11transformedERK7QMatrix(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QBitmap{}) // "QBitmap"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBitmap", "transformed", args)
   }
 
+  return
 }
 
 // swap(class QBitmap &)
-func (this *QBitmap) swap(args ...interface{}) () {
+func (this *QBitmap) Swap(args ...interface{}) () {
   // swap(class QBitmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,6 +250,7 @@ func (this *QBitmap) swap(args ...interface{}) () {
     qtrt.ErrorResolve("QBitmap", "swap", args)
   }
 
+  return
 }
 
 // <= body block end

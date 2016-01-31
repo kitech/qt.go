@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qtreewidgetitemiterator.h
 // dst-file: /src/widgets/qtreewidgetitemiterator.go
 //
@@ -51,7 +51,7 @@ type QTreeWidgetItemIterator struct {
 }
 
 // ~QTreeWidgetItemIterator()
-func (this *QTreeWidgetItemIterator) FreeQTreeWidgetItemIterator(args ...interface{}) () {
+func (this *QTreeWidgetItemIterator) Freeqtreewidgetitemiterator(args ...interface{}) () {
   // ~QTreeWidgetItemIterator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -68,6 +68,7 @@ func (this *QTreeWidgetItemIterator) FreeQTreeWidgetItemIterator(args ...interfa
     qtrt.ErrorResolve("QTreeWidgetItemIterator", "~QTreeWidgetItemIterator", args)
   }
 
+  return
 }
 
 // QTreeWidgetItemIterator(const class QTreeWidgetItemIterator &)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qbuffer.h
 // dst-file: /src/core/qbuffer.go
 //
@@ -29,13 +29,13 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  qint64 QBuffer::pos();
-extern void C_ZNK7QBuffer3posEv(void* qthis); // 4
+extern int64_t C_ZNK7QBuffer3posEv(void* qthis); // 4
   // proto:  void QBuffer::close();
 extern void C_ZN7QBuffer5closeEv(void* qthis); // 4
   // proto:  qint64 QBuffer::size();
-extern void C_ZNK7QBuffer4sizeEv(void* qthis); // 4
+extern int64_t C_ZNK7QBuffer4sizeEv(void* qthis); // 4
   // proto:  bool QBuffer::canReadLine();
-extern void C_ZNK7QBuffer11canReadLineEv(void* qthis); // 4
+extern bool C_ZNK7QBuffer11canReadLineEv(void* qthis); // 4
   // proto:  void QBuffer::setBuffer(QByteArray * a);
 extern void C_ZN7QBuffer9setBufferEP10QByteArray(void* qthis, void* arg0); // 4
   // proto:  void QBuffer::QBuffer(QByteArray * buf, QObject * parent);
@@ -43,21 +43,21 @@ extern void* C_ZN7QBufferC2EP10QByteArrayP7QObject(void* arg0, void* arg1); // 3
   // proto:  void QBuffer::QBuffer(QObject * parent);
 extern void* C_ZN7QBufferC2EP7QObject(void* arg0); // 3
   // proto:  void QBuffer::setData(const char * data, int len);
-extern void C_ZN7QBuffer7setDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 2
+extern void C_ZN7QBuffer7setDataEPKci(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  void QBuffer::setData(const QByteArray & data);
 extern void C_ZN7QBuffer7setDataERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  void QBuffer::~QBuffer();
 extern void C_ZN7QBufferD2Ev(void* qthis); // 4
   // proto:  QByteArray & QBuffer::buffer();
-extern void C_ZN7QBuffer6bufferEv(void* qthis); // 4
+extern void* C_ZN7QBuffer6bufferEv(void* qthis); // 4
   // proto:  const QByteArray & QBuffer::data();
-extern void C_ZNK7QBuffer4dataEv(void* qthis); // 4
+extern void* C_ZNK7QBuffer4dataEv(void* qthis); // 4
   // proto:  const QMetaObject * QBuffer::metaObject();
 extern void C_ZNK7QBuffer10metaObjectEv(void* qthis); // 4
   // proto:  bool QBuffer::seek(qint64 off);
-extern void C_ZN7QBuffer4seekEx(void* qthis, int64_t arg0); // 4
+extern bool C_ZN7QBuffer4seekEx(void* qthis, int64_t arg0); // 4
   // proto:  bool QBuffer::atEnd();
-extern void C_ZNK7QBuffer5atEndEv(void* qthis); // 4
+extern bool C_ZNK7QBuffer5atEndEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -77,7 +77,7 @@ type QBuffer struct {
 }
 
 // pos()
-func (this *QBuffer) pos(args ...interface{}) () {
+func (this *QBuffer) Pos(args ...interface{}) (ret interface{}) {
   // pos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -89,16 +89,20 @@ func (this *QBuffer) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QBuffer3posEv
     // invoke: qint64 pos()
-    var ret = C.C_ZNK7QBuffer3posEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QBuffer3posEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int64Ty(false) // "qint64"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBuffer", "pos", args)
   }
 
+  return
 }
 
 // close()
-func (this *QBuffer) close(args ...interface{}) () {
+func (this *QBuffer) Close(args ...interface{}) () {
   // close()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -115,10 +119,11 @@ func (this *QBuffer) close(args ...interface{}) () {
     qtrt.ErrorResolve("QBuffer", "close", args)
   }
 
+  return
 }
 
 // size()
-func (this *QBuffer) size(args ...interface{}) () {
+func (this *QBuffer) Size(args ...interface{}) (ret interface{}) {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -130,16 +135,20 @@ func (this *QBuffer) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QBuffer4sizeEv
     // invoke: qint64 size()
-    var ret = C.C_ZNK7QBuffer4sizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QBuffer4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int64Ty(false) // "qint64"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBuffer", "size", args)
   }
 
+  return
 }
 
 // canReadLine()
-func (this *QBuffer) canReadLine(args ...interface{}) () {
+func (this *QBuffer) Canreadline(args ...interface{}) (ret interface{}) {
   // canReadLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -151,16 +160,20 @@ func (this *QBuffer) canReadLine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QBuffer11canReadLineEv
     // invoke: bool canReadLine()
-    var ret = C.C_ZNK7QBuffer11canReadLineEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QBuffer11canReadLineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBuffer", "canReadLine", args)
   }
 
+  return
 }
 
 // setBuffer(class QByteArray *)
-func (this *QBuffer) setBuffer(args ...interface{}) () {
+func (this *QBuffer) Setbuffer(args ...interface{}) () {
   // setBuffer(class QByteArray *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -180,6 +193,7 @@ func (this *QBuffer) setBuffer(args ...interface{}) () {
     qtrt.ErrorResolve("QBuffer", "setBuffer", args)
   }
 
+  return
 }
 
 // QBuffer(class QByteArray *, class QObject *)
@@ -225,7 +239,7 @@ func NewQBuffer(args ...interface{}) *QBuffer {
 }
 
 // setData(const char *, int)
-func (this *QBuffer) setData(args ...interface{}) () {
+func (this *QBuffer) Setdata(args ...interface{}) () {
   // setData(const char *, int)
   // setData(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -242,8 +256,10 @@ func (this *QBuffer) setData(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QBuffer7setDataEPKci
     // invoke: void setData(const char *, int)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     C.C_ZN7QBuffer7setDataEPKci(this.qclsinst, arg0, arg1)
@@ -257,10 +273,11 @@ func (this *QBuffer) setData(args ...interface{}) () {
     qtrt.ErrorResolve("QBuffer", "setData", args)
   }
 
+  return
 }
 
 // ~QBuffer()
-func (this *QBuffer) FreeQBuffer(args ...interface{}) () {
+func (this *QBuffer) Freeqbuffer(args ...interface{}) () {
   // ~QBuffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -277,10 +294,11 @@ func (this *QBuffer) FreeQBuffer(args ...interface{}) () {
     qtrt.ErrorResolve("QBuffer", "~QBuffer", args)
   }
 
+  return
 }
 
 // buffer()
-func (this *QBuffer) buffer(args ...interface{}) () {
+func (this *QBuffer) Buffer(args ...interface{}) (ret interface{}) {
   // buffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -292,16 +310,20 @@ func (this *QBuffer) buffer(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QBuffer6bufferEv
     // invoke: QByteArray & buffer()
-    var ret = C.C_ZN7QBuffer6bufferEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN7QBuffer6bufferEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBuffer", "buffer", args)
   }
 
+  return
 }
 
 // data()
-func (this *QBuffer) data(args ...interface{}) () {
+func (this *QBuffer) Data(args ...interface{}) (ret interface{}) {
   // data()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -313,16 +335,20 @@ func (this *QBuffer) data(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QBuffer4dataEv
     // invoke: const QByteArray & data()
-    var ret = C.C_ZNK7QBuffer4dataEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QBuffer4dataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBuffer", "data", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QBuffer) metaObject(args ...interface{}) () {
+func (this *QBuffer) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -339,10 +365,11 @@ func (this *QBuffer) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QBuffer", "metaObject", args)
   }
 
+  return
 }
 
 // seek(qint64)
-func (this *QBuffer) seek(args ...interface{}) () {
+func (this *QBuffer) Seek(args ...interface{}) (ret interface{}) {
   // seek(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -357,16 +384,20 @@ func (this *QBuffer) seek(args ...interface{}) () {
     // invoke: bool seek(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN7QBuffer4seekEx(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN7QBuffer4seekEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBuffer", "seek", args)
   }
 
+  return
 }
 
 // atEnd()
-func (this *QBuffer) atEnd(args ...interface{}) () {
+func (this *QBuffer) Atend(args ...interface{}) (ret interface{}) {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,12 +409,16 @@ func (this *QBuffer) atEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QBuffer5atEndEv
     // invoke: bool atEnd()
-    var ret = C.C_ZNK7QBuffer5atEndEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QBuffer5atEndEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBuffer", "atEnd", args)
   }
 
+  return
 }
 
 // <= body block end

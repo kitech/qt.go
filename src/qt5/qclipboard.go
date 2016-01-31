@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QClipboard::ownsClipboard();
-extern void C_ZNK10QClipboard13ownsClipboardEv(void* qthis); // 4
+extern bool C_ZNK10QClipboard13ownsClipboardEv(void* qthis); // 4
   // proto:  bool QClipboard::supportsFindBuffer();
-extern void C_ZNK10QClipboard18supportsFindBufferEv(void* qthis); // 4
+extern bool C_ZNK10QClipboard18supportsFindBufferEv(void* qthis); // 4
   // proto:  bool QClipboard::ownsFindBuffer();
-extern void C_ZNK10QClipboard14ownsFindBufferEv(void* qthis); // 4
+extern bool C_ZNK10QClipboard14ownsFindBufferEv(void* qthis); // 4
   // proto:  bool QClipboard::supportsSelection();
-extern void C_ZNK10QClipboard17supportsSelectionEv(void* qthis); // 4
+extern bool C_ZNK10QClipboard17supportsSelectionEv(void* qthis); // 4
   // proto:  const QMetaObject * QClipboard::metaObject();
 extern void C_ZNK10QClipboard10metaObjectEv(void* qthis); // 4
   // proto:  bool QClipboard::ownsSelection();
-extern void C_ZNK10QClipboard13ownsSelectionEv(void* qthis); // 4
+extern bool C_ZNK10QClipboard13ownsSelectionEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -63,7 +63,7 @@ type QClipboard struct {
 }
 
 // ownsClipboard()
-func (this *QClipboard) ownsClipboard(args ...interface{}) () {
+func (this *QClipboard) Ownsclipboard(args ...interface{}) (ret interface{}) {
   // ownsClipboard()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -75,16 +75,20 @@ func (this *QClipboard) ownsClipboard(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard13ownsClipboardEv
     // invoke: bool ownsClipboard()
-    var ret = C.C_ZNK10QClipboard13ownsClipboardEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QClipboard13ownsClipboardEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QClipboard", "ownsClipboard", args)
   }
 
+  return
 }
 
 // supportsFindBuffer()
-func (this *QClipboard) supportsFindBuffer(args ...interface{}) () {
+func (this *QClipboard) Supportsfindbuffer(args ...interface{}) (ret interface{}) {
   // supportsFindBuffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -96,16 +100,20 @@ func (this *QClipboard) supportsFindBuffer(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard18supportsFindBufferEv
     // invoke: bool supportsFindBuffer()
-    var ret = C.C_ZNK10QClipboard18supportsFindBufferEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QClipboard18supportsFindBufferEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QClipboard", "supportsFindBuffer", args)
   }
 
+  return
 }
 
 // ownsFindBuffer()
-func (this *QClipboard) ownsFindBuffer(args ...interface{}) () {
+func (this *QClipboard) Ownsfindbuffer(args ...interface{}) (ret interface{}) {
   // ownsFindBuffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,16 +125,20 @@ func (this *QClipboard) ownsFindBuffer(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard14ownsFindBufferEv
     // invoke: bool ownsFindBuffer()
-    var ret = C.C_ZNK10QClipboard14ownsFindBufferEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QClipboard14ownsFindBufferEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QClipboard", "ownsFindBuffer", args)
   }
 
+  return
 }
 
 // supportsSelection()
-func (this *QClipboard) supportsSelection(args ...interface{}) () {
+func (this *QClipboard) Supportsselection(args ...interface{}) (ret interface{}) {
   // supportsSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -138,16 +150,20 @@ func (this *QClipboard) supportsSelection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard17supportsSelectionEv
     // invoke: bool supportsSelection()
-    var ret = C.C_ZNK10QClipboard17supportsSelectionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QClipboard17supportsSelectionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QClipboard", "supportsSelection", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QClipboard) metaObject(args ...interface{}) () {
+func (this *QClipboard) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -164,10 +180,11 @@ func (this *QClipboard) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QClipboard", "metaObject", args)
   }
 
+  return
 }
 
 // ownsSelection()
-func (this *QClipboard) ownsSelection(args ...interface{}) () {
+func (this *QClipboard) Ownsselection(args ...interface{}) (ret interface{}) {
   // ownsSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,12 +196,16 @@ func (this *QClipboard) ownsSelection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard13ownsSelectionEv
     // invoke: bool ownsSelection()
-    var ret = C.C_ZNK10QClipboard13ownsSelectionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QClipboard13ownsSelectionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QClipboard", "ownsSelection", args)
   }
 
+  return
 }
 
 // <= body block end

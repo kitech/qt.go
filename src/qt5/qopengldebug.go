@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qopengldebug.h
 // dst-file: /src/gui/qopengldebug.go
 //
@@ -39,15 +39,15 @@ extern void C_ZN19QOpenGLDebugMessageD2Ev(void* qthis); // 4
   // proto:  QOpenGLDebugMessage::Source QOpenGLDebugMessage::source();
 extern void C_ZNK19QOpenGLDebugMessage6sourceEv(void* qthis); // 4
   // proto:  QString QOpenGLDebugMessage::message();
-extern void C_ZNK19QOpenGLDebugMessage7messageEv(void* qthis); // 4
+extern void* C_ZNK19QOpenGLDebugMessage7messageEv(void* qthis); // 4
   // proto:  QOpenGLDebugMessage::Type QOpenGLDebugMessage::type();
 extern void C_ZNK19QOpenGLDebugMessage4typeEv(void* qthis); // 4
   // proto:  GLuint QOpenGLDebugMessage::id();
-extern void C_ZNK19QOpenGLDebugMessage2idEv(void* qthis); // 4
+extern int32_t C_ZNK19QOpenGLDebugMessage2idEv(void* qthis); // 4
   // proto:  QOpenGLDebugMessage::Severity QOpenGLDebugMessage::severity();
 extern void C_ZNK19QOpenGLDebugMessage8severityEv(void* qthis); // 4
   // proto:  qint64 QOpenGLDebugLogger::maximumMessageLength();
-extern void C_ZNK18QOpenGLDebugLogger20maximumMessageLengthEv(void* qthis); // 4
+extern int64_t C_ZNK18QOpenGLDebugLogger20maximumMessageLengthEv(void* qthis); // 4
   // proto:  void QOpenGLDebugLogger::~QOpenGLDebugLogger();
 extern void C_ZN18QOpenGLDebugLoggerD2Ev(void* qthis); // 4
   // proto:  QOpenGLDebugLogger::LoggingMode QOpenGLDebugLogger::loggingMode();
@@ -61,13 +61,13 @@ extern void C_ZN18QOpenGLDebugLogger8popGroupEv(void* qthis); // 4
   // proto:  void QOpenGLDebugLogger::QOpenGLDebugLogger(QObject * parent);
 extern void* C_ZN18QOpenGLDebugLoggerC2EP7QObject(void* arg0); // 3
   // proto:  bool QOpenGLDebugLogger::initialize();
-extern void C_ZN18QOpenGLDebugLogger10initializeEv(void* qthis); // 4
+extern bool C_ZN18QOpenGLDebugLogger10initializeEv(void* qthis); // 4
   // proto:  void QOpenGLDebugLogger::logMessage(const QOpenGLDebugMessage & debugMessage);
 extern void C_ZN18QOpenGLDebugLogger10logMessageERK19QOpenGLDebugMessage(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QOpenGLDebugLogger::metaObject();
 extern void C_ZNK18QOpenGLDebugLogger10metaObjectEv(void* qthis); // 4
   // proto:  bool QOpenGLDebugLogger::isLogging();
-extern void C_ZNK18QOpenGLDebugLogger9isLoggingEv(void* qthis); // 4
+extern bool C_ZNK18QOpenGLDebugLogger9isLoggingEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -94,7 +94,7 @@ type QOpenGLDebugLogger struct {
 }
 
 // swap(class QOpenGLDebugMessage &)
-func (this *QOpenGLDebugMessage) swap(args ...interface{}) () {
+func (this *QOpenGLDebugMessage) Swap(args ...interface{}) () {
   // swap(class QOpenGLDebugMessage &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -114,6 +114,7 @@ func (this *QOpenGLDebugMessage) swap(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLDebugMessage", "swap", args)
   }
 
+  return
 }
 
 // QOpenGLDebugMessage(const class QOpenGLDebugMessage &)
@@ -153,7 +154,7 @@ func NewQOpenGLDebugMessage(args ...interface{}) *QOpenGLDebugMessage {
 }
 
 // ~QOpenGLDebugMessage()
-func (this *QOpenGLDebugMessage) FreeQOpenGLDebugMessage(args ...interface{}) () {
+func (this *QOpenGLDebugMessage) Freeqopengldebugmessage(args ...interface{}) () {
   // ~QOpenGLDebugMessage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -170,10 +171,11 @@ func (this *QOpenGLDebugMessage) FreeQOpenGLDebugMessage(args ...interface{}) ()
     qtrt.ErrorResolve("QOpenGLDebugMessage", "~QOpenGLDebugMessage", args)
   }
 
+  return
 }
 
 // source()
-func (this *QOpenGLDebugMessage) source(args ...interface{}) () {
+func (this *QOpenGLDebugMessage) Source(args ...interface{}) () {
   // source()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -190,10 +192,11 @@ func (this *QOpenGLDebugMessage) source(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLDebugMessage", "source", args)
   }
 
+  return
 }
 
 // message()
-func (this *QOpenGLDebugMessage) message(args ...interface{}) () {
+func (this *QOpenGLDebugMessage) Message(args ...interface{}) (ret interface{}) {
   // message()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -205,16 +208,20 @@ func (this *QOpenGLDebugMessage) message(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QOpenGLDebugMessage7messageEv
     // invoke: QString message()
-    var ret = C.C_ZNK19QOpenGLDebugMessage7messageEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QOpenGLDebugMessage7messageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLDebugMessage", "message", args)
   }
 
+  return
 }
 
 // type()
-func (this *QOpenGLDebugMessage) type_(args ...interface{}) () {
+func (this *QOpenGLDebugMessage) Type_(args ...interface{}) () {
   // type()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -231,10 +238,11 @@ func (this *QOpenGLDebugMessage) type_(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLDebugMessage", "type", args)
   }
 
+  return
 }
 
 // id()
-func (this *QOpenGLDebugMessage) id(args ...interface{}) () {
+func (this *QOpenGLDebugMessage) Id(args ...interface{}) (ret interface{}) {
   // id()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -246,16 +254,20 @@ func (this *QOpenGLDebugMessage) id(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QOpenGLDebugMessage2idEv
     // invoke: GLuint id()
-    var ret = C.C_ZNK19QOpenGLDebugMessage2idEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QOpenGLDebugMessage2idEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "GLuint"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLDebugMessage", "id", args)
   }
 
+  return
 }
 
 // severity()
-func (this *QOpenGLDebugMessage) severity(args ...interface{}) () {
+func (this *QOpenGLDebugMessage) Severity(args ...interface{}) () {
   // severity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -272,10 +284,11 @@ func (this *QOpenGLDebugMessage) severity(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLDebugMessage", "severity", args)
   }
 
+  return
 }
 
 // maximumMessageLength()
-func (this *QOpenGLDebugLogger) maximumMessageLength(args ...interface{}) () {
+func (this *QOpenGLDebugLogger) Maximummessagelength(args ...interface{}) (ret interface{}) {
   // maximumMessageLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -287,16 +300,20 @@ func (this *QOpenGLDebugLogger) maximumMessageLength(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLDebugLogger20maximumMessageLengthEv
     // invoke: qint64 maximumMessageLength()
-    var ret = C.C_ZNK18QOpenGLDebugLogger20maximumMessageLengthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QOpenGLDebugLogger20maximumMessageLengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int64Ty(false) // "qint64"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "maximumMessageLength", args)
   }
 
+  return
 }
 
 // ~QOpenGLDebugLogger()
-func (this *QOpenGLDebugLogger) FreeQOpenGLDebugLogger(args ...interface{}) () {
+func (this *QOpenGLDebugLogger) Freeqopengldebuglogger(args ...interface{}) () {
   // ~QOpenGLDebugLogger()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -313,10 +330,11 @@ func (this *QOpenGLDebugLogger) FreeQOpenGLDebugLogger(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLDebugLogger", "~QOpenGLDebugLogger", args)
   }
 
+  return
 }
 
 // loggingMode()
-func (this *QOpenGLDebugLogger) loggingMode(args ...interface{}) () {
+func (this *QOpenGLDebugLogger) Loggingmode(args ...interface{}) () {
   // loggingMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -333,10 +351,11 @@ func (this *QOpenGLDebugLogger) loggingMode(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLDebugLogger", "loggingMode", args)
   }
 
+  return
 }
 
 // stopLogging()
-func (this *QOpenGLDebugLogger) stopLogging(args ...interface{}) () {
+func (this *QOpenGLDebugLogger) Stoplogging(args ...interface{}) () {
   // stopLogging()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -353,10 +372,11 @@ func (this *QOpenGLDebugLogger) stopLogging(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLDebugLogger", "stopLogging", args)
   }
 
+  return
 }
 
 // loggedMessages()
-func (this *QOpenGLDebugLogger) loggedMessages(args ...interface{}) () {
+func (this *QOpenGLDebugLogger) Loggedmessages(args ...interface{}) () {
   // loggedMessages()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -373,10 +393,11 @@ func (this *QOpenGLDebugLogger) loggedMessages(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLDebugLogger", "loggedMessages", args)
   }
 
+  return
 }
 
 // popGroup()
-func (this *QOpenGLDebugLogger) popGroup(args ...interface{}) () {
+func (this *QOpenGLDebugLogger) Popgroup(args ...interface{}) () {
   // popGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -393,6 +414,7 @@ func (this *QOpenGLDebugLogger) popGroup(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLDebugLogger", "popGroup", args)
   }
 
+  return
 }
 
 // QOpenGLDebugLogger(class QObject *)
@@ -423,7 +445,7 @@ func NewQOpenGLDebugLogger(args ...interface{}) *QOpenGLDebugLogger {
 }
 
 // initialize()
-func (this *QOpenGLDebugLogger) initialize(args ...interface{}) () {
+func (this *QOpenGLDebugLogger) Initialize(args ...interface{}) (ret interface{}) {
   // initialize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -435,16 +457,20 @@ func (this *QOpenGLDebugLogger) initialize(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QOpenGLDebugLogger10initializeEv
     // invoke: bool initialize()
-    var ret = C.C_ZN18QOpenGLDebugLogger10initializeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN18QOpenGLDebugLogger10initializeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "initialize", args)
   }
 
+  return
 }
 
 // logMessage(const class QOpenGLDebugMessage &)
-func (this *QOpenGLDebugLogger) logMessage(args ...interface{}) () {
+func (this *QOpenGLDebugLogger) Logmessage(args ...interface{}) () {
   // logMessage(const class QOpenGLDebugMessage &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -464,10 +490,11 @@ func (this *QOpenGLDebugLogger) logMessage(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLDebugLogger", "logMessage", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QOpenGLDebugLogger) metaObject(args ...interface{}) () {
+func (this *QOpenGLDebugLogger) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -484,10 +511,11 @@ func (this *QOpenGLDebugLogger) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLDebugLogger", "metaObject", args)
   }
 
+  return
 }
 
 // isLogging()
-func (this *QOpenGLDebugLogger) isLogging(args ...interface{}) () {
+func (this *QOpenGLDebugLogger) Islogging(args ...interface{}) (ret interface{}) {
   // isLogging()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -499,12 +527,16 @@ func (this *QOpenGLDebugLogger) isLogging(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLDebugLogger9isLoggingEv
     // invoke: bool isLogging()
-    var ret = C.C_ZNK18QOpenGLDebugLogger9isLoggingEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QOpenGLDebugLogger9isLoggingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "isLogging", args)
   }
 
+  return
 }
 
 // <= body block end

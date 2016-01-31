@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qimagereader.h
 // dst-file: /src/gui/qimagereader.go
 //
@@ -31,13 +31,13 @@ import "qtrt"
   // proto:  void QImageReader::setAutoDetectImageFormat(bool enabled);
 extern void C_ZN12QImageReader24setAutoDetectImageFormatEb(void* qthis, bool arg0); // 4
   // proto:  QString QImageReader::text(const QString & key);
-extern void C_ZNK12QImageReader4textERK7QString(void* qthis, void* arg0); // 4
+extern void* C_ZNK12QImageReader4textERK7QString(void* qthis, void* arg0); // 4
   // proto:  QRect QImageReader::currentImageRect();
-extern void C_ZNK12QImageReader16currentImageRectEv(void* qthis); // 4
+extern void* C_ZNK12QImageReader16currentImageRectEv(void* qthis); // 4
   // proto: static QList<QByteArray> QImageReader::supportedMimeTypes();
 extern void C_ZN12QImageReader18supportedMimeTypesEv(); // 4
   // proto:  QByteArray QImageReader::subType();
-extern void C_ZNK12QImageReader7subTypeEv(void* qthis); // 4
+extern void* C_ZNK12QImageReader7subTypeEv(void* qthis); // 4
   // proto:  void QImageReader::setDecideFormatFromContent(bool ignored);
 extern void C_ZN12QImageReader26setDecideFormatFromContentEb(void* qthis, bool arg0); // 4
   // proto:  void QImageReader::setScaledSize(const QSize & size);
@@ -45,15 +45,15 @@ extern void C_ZN12QImageReader13setScaledSizeERK5QSize(void* qthis, void* arg0);
   // proto:  void QImageReader::setScaledClipRect(const QRect & rect);
 extern void C_ZN12QImageReader17setScaledClipRectERK5QRect(void* qthis, void* arg0); // 4
   // proto:  bool QImageReader::canRead();
-extern void C_ZNK12QImageReader7canReadEv(void* qthis); // 4
+extern bool C_ZNK12QImageReader7canReadEv(void* qthis); // 4
   // proto:  QString QImageReader::fileName();
-extern void C_ZNK12QImageReader8fileNameEv(void* qthis); // 4
+extern void* C_ZNK12QImageReader8fileNameEv(void* qthis); // 4
   // proto:  int QImageReader::quality();
-extern void C_ZNK12QImageReader7qualityEv(void* qthis); // 4
+extern int32_t C_ZNK12QImageReader7qualityEv(void* qthis); // 4
   // proto:  int QImageReader::imageCount();
-extern void C_ZNK12QImageReader10imageCountEv(void* qthis); // 4
+extern int32_t C_ZNK12QImageReader10imageCountEv(void* qthis); // 4
   // proto:  QSize QImageReader::size();
-extern void C_ZNK12QImageReader4sizeEv(void* qthis); // 4
+extern void* C_ZNK12QImageReader4sizeEv(void* qthis); // 4
   // proto:  void QImageReader::QImageReader(const QString & fileName, const QByteArray & format);
 extern void* C_ZN12QImageReaderC2ERK7QStringRK10QByteArray(void* arg0, void* arg1); // 3
   // proto:  void QImageReader::QImageReader(QIODevice * device, const QByteArray & format);
@@ -61,47 +61,47 @@ extern void* C_ZN12QImageReaderC2EP9QIODeviceRK10QByteArray(void* arg0, void* ar
   // proto:  void QImageReader::QImageReader();
 extern void* C_ZN12QImageReaderC2Ev(); // 3
   // proto:  int QImageReader::loopCount();
-extern void C_ZNK12QImageReader9loopCountEv(void* qthis); // 4
+extern int32_t C_ZNK12QImageReader9loopCountEv(void* qthis); // 4
   // proto:  QRect QImageReader::scaledClipRect();
-extern void C_ZNK12QImageReader14scaledClipRectEv(void* qthis); // 4
+extern void* C_ZNK12QImageReader14scaledClipRectEv(void* qthis); // 4
   // proto:  bool QImageReader::autoDetectImageFormat();
-extern void C_ZNK12QImageReader21autoDetectImageFormatEv(void* qthis); // 4
+extern bool C_ZNK12QImageReader21autoDetectImageFormatEv(void* qthis); // 4
   // proto:  bool QImageReader::jumpToNextImage();
-extern void C_ZN12QImageReader15jumpToNextImageEv(void* qthis); // 4
+extern bool C_ZN12QImageReader15jumpToNextImageEv(void* qthis); // 4
   // proto:  QStringList QImageReader::textKeys();
 extern void C_ZNK12QImageReader8textKeysEv(void* qthis); // 4
   // proto:  QColor QImageReader::backgroundColor();
-extern void C_ZNK12QImageReader15backgroundColorEv(void* qthis); // 4
+extern void* C_ZNK12QImageReader15backgroundColorEv(void* qthis); // 4
   // proto:  void QImageReader::setDevice(QIODevice * device);
 extern void C_ZN12QImageReader9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  QImageIOHandler::Transformations QImageReader::transformation();
 extern void C_ZNK12QImageReader14transformationEv(void* qthis); // 4
   // proto:  bool QImageReader::autoTransform();
-extern void C_ZNK12QImageReader13autoTransformEv(void* qthis); // 4
+extern bool C_ZNK12QImageReader13autoTransformEv(void* qthis); // 4
   // proto:  bool QImageReader::jumpToImage(int imageNumber);
-extern void C_ZN12QImageReader11jumpToImageEi(void* qthis, int32_t arg0); // 4
+extern bool C_ZN12QImageReader11jumpToImageEi(void* qthis, int32_t arg0); // 4
   // proto: static QList<QByteArray> QImageReader::supportedImageFormats();
 extern void C_ZN12QImageReader21supportedImageFormatsEv(); // 4
   // proto:  void QImageReader::setAutoTransform(bool enabled);
 extern void C_ZN12QImageReader16setAutoTransformEb(void* qthis, bool arg0); // 4
   // proto:  QRect QImageReader::clipRect();
-extern void C_ZNK12QImageReader8clipRectEv(void* qthis); // 4
+extern void* C_ZNK12QImageReader8clipRectEv(void* qthis); // 4
   // proto:  QString QImageReader::errorString();
-extern void C_ZNK12QImageReader11errorStringEv(void* qthis); // 4
+extern void* C_ZNK12QImageReader11errorStringEv(void* qthis); // 4
   // proto:  QByteArray QImageReader::format();
-extern void C_ZNK12QImageReader6formatEv(void* qthis); // 4
+extern void* C_ZNK12QImageReader6formatEv(void* qthis); // 4
   // proto:  QImage QImageReader::read();
-extern void C_ZN12QImageReader4readEv(void* qthis); // 4
+extern void* C_ZN12QImageReader4readEv(void* qthis); // 4
   // proto:  bool QImageReader::read(QImage * image);
-extern void C_ZN12QImageReader4readEP6QImage(void* qthis, void* arg0); // 4
+extern bool C_ZN12QImageReader4readEP6QImage(void* qthis, void* arg0); // 4
   // proto:  void QImageReader::setBackgroundColor(const QColor & color);
 extern void C_ZN12QImageReader18setBackgroundColorERK6QColor(void* qthis, void* arg0); // 4
   // proto:  int QImageReader::currentImageNumber();
-extern void C_ZNK12QImageReader18currentImageNumberEv(void* qthis); // 4
+extern int32_t C_ZNK12QImageReader18currentImageNumberEv(void* qthis); // 4
   // proto:  QIODevice * QImageReader::device();
-extern void C_ZNK12QImageReader6deviceEv(void* qthis); // 4
+extern void* C_ZNK12QImageReader6deviceEv(void* qthis); // 4
   // proto:  bool QImageReader::supportsAnimation();
-extern void C_ZNK12QImageReader17supportsAnimationEv(void* qthis); // 4
+extern bool C_ZNK12QImageReader17supportsAnimationEv(void* qthis); // 4
   // proto:  QList<QByteArray> QImageReader::supportedSubTypes();
 extern void C_ZNK12QImageReader17supportedSubTypesEv(void* qthis); // 4
   // proto:  void QImageReader::setClipRect(const QRect & rect);
@@ -109,7 +109,7 @@ extern void C_ZN12QImageReader11setClipRectERK5QRect(void* qthis, void* arg0); /
   // proto:  void QImageReader::setFileName(const QString & fileName);
 extern void C_ZN12QImageReader11setFileNameERK7QString(void* qthis, void* arg0); // 4
   // proto:  int QImageReader::nextImageDelay();
-extern void C_ZNK12QImageReader14nextImageDelayEv(void* qthis); // 4
+extern int32_t C_ZNK12QImageReader14nextImageDelayEv(void* qthis); // 4
   // proto:  void QImageReader::~QImageReader();
 extern void C_ZN12QImageReaderD2Ev(void* qthis); // 4
   // proto:  void QImageReader::setFormat(const QByteArray & format);
@@ -117,17 +117,17 @@ extern void C_ZN12QImageReader9setFormatERK10QByteArray(void* qthis, void* arg0)
   // proto:  void QImageReader::setQuality(int quality);
 extern void C_ZN12QImageReader10setQualityEi(void* qthis, int32_t arg0); // 4
   // proto:  QSize QImageReader::scaledSize();
-extern void C_ZNK12QImageReader10scaledSizeEv(void* qthis); // 4
+extern void* C_ZNK12QImageReader10scaledSizeEv(void* qthis); // 4
   // proto: static QByteArray QImageReader::imageFormat(QIODevice * device);
-extern void C_ZN12QImageReader11imageFormatEP9QIODevice(void* arg0); // 4
+extern void* C_ZN12QImageReader11imageFormatEP9QIODevice(void* arg0); // 4
   // proto: static QByteArray QImageReader::imageFormat(const QString & fileName);
-extern void C_ZN12QImageReader11imageFormatERK7QString(void* arg0); // 4
+extern void* C_ZN12QImageReader11imageFormatERK7QString(void* arg0); // 4
   // proto:  QImage::Format QImageReader::imageFormat();
 extern void C_ZNK12QImageReader11imageFormatEv(void* qthis); // 4
   // proto:  QImageReader::ImageReaderError QImageReader::error();
 extern void C_ZNK12QImageReader5errorEv(void* qthis); // 4
   // proto:  bool QImageReader::decideFormatFromContent();
-extern void C_ZNK12QImageReader23decideFormatFromContentEv(void* qthis); // 4
+extern bool C_ZNK12QImageReader23decideFormatFromContentEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -147,7 +147,7 @@ type QImageReader struct {
 }
 
 // setAutoDetectImageFormat(_Bool)
-func (this *QImageReader) setAutoDetectImageFormat(args ...interface{}) () {
+func (this *QImageReader) Setautodetectimageformat(args ...interface{}) () {
   // setAutoDetectImageFormat(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -167,10 +167,11 @@ func (this *QImageReader) setAutoDetectImageFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "setAutoDetectImageFormat", args)
   }
 
+  return
 }
 
 // text(const class QString &)
-func (this *QImageReader) text(args ...interface{}) () {
+func (this *QImageReader) Text(args ...interface{}) (ret interface{}) {
   // text(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -185,16 +186,20 @@ func (this *QImageReader) text(args ...interface{}) () {
     // invoke: QString text(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK12QImageReader4textERK7QString(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader4textERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "text", args)
   }
 
+  return
 }
 
 // currentImageRect()
-func (this *QImageReader) currentImageRect(args ...interface{}) () {
+func (this *QImageReader) Currentimagerect(args ...interface{}) (ret interface{}) {
   // currentImageRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -206,16 +211,20 @@ func (this *QImageReader) currentImageRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader16currentImageRectEv
     // invoke: QRect currentImageRect()
-    var ret = C.C_ZNK12QImageReader16currentImageRectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader16currentImageRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "currentImageRect", args)
   }
 
+  return
 }
 
 // supportedMimeTypes()
-func (this *QImageReader) supportedMimeTypes_s(args ...interface{}) () {
+func (this *QImageReader) Supportedmimetypes_S(args ...interface{}) () {
   // supportedMimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -232,10 +241,11 @@ func (this *QImageReader) supportedMimeTypes_s(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "supportedMimeTypes", args)
   }
 
+  return
 }
 
 // subType()
-func (this *QImageReader) subType(args ...interface{}) () {
+func (this *QImageReader) Subtype(args ...interface{}) (ret interface{}) {
   // subType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -247,16 +257,20 @@ func (this *QImageReader) subType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader7subTypeEv
     // invoke: QByteArray subType()
-    var ret = C.C_ZNK12QImageReader7subTypeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader7subTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "subType", args)
   }
 
+  return
 }
 
 // setDecideFormatFromContent(_Bool)
-func (this *QImageReader) setDecideFormatFromContent(args ...interface{}) () {
+func (this *QImageReader) Setdecideformatfromcontent(args ...interface{}) () {
   // setDecideFormatFromContent(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -276,10 +290,11 @@ func (this *QImageReader) setDecideFormatFromContent(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "setDecideFormatFromContent", args)
   }
 
+  return
 }
 
 // setScaledSize(const class QSize &)
-func (this *QImageReader) setScaledSize(args ...interface{}) () {
+func (this *QImageReader) Setscaledsize(args ...interface{}) () {
   // setScaledSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -299,10 +314,11 @@ func (this *QImageReader) setScaledSize(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "setScaledSize", args)
   }
 
+  return
 }
 
 // setScaledClipRect(const class QRect &)
-func (this *QImageReader) setScaledClipRect(args ...interface{}) () {
+func (this *QImageReader) Setscaledcliprect(args ...interface{}) () {
   // setScaledClipRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -322,10 +338,11 @@ func (this *QImageReader) setScaledClipRect(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "setScaledClipRect", args)
   }
 
+  return
 }
 
 // canRead()
-func (this *QImageReader) canRead(args ...interface{}) () {
+func (this *QImageReader) Canread(args ...interface{}) (ret interface{}) {
   // canRead()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -337,16 +354,20 @@ func (this *QImageReader) canRead(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader7canReadEv
     // invoke: bool canRead()
-    var ret = C.C_ZNK12QImageReader7canReadEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader7canReadEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "canRead", args)
   }
 
+  return
 }
 
 // fileName()
-func (this *QImageReader) fileName(args ...interface{}) () {
+func (this *QImageReader) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -358,16 +379,20 @@ func (this *QImageReader) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader8fileNameEv
     // invoke: QString fileName()
-    var ret = C.C_ZNK12QImageReader8fileNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "fileName", args)
   }
 
+  return
 }
 
 // quality()
-func (this *QImageReader) quality(args ...interface{}) () {
+func (this *QImageReader) Quality(args ...interface{}) (ret interface{}) {
   // quality()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -379,16 +404,20 @@ func (this *QImageReader) quality(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader7qualityEv
     // invoke: int quality()
-    var ret = C.C_ZNK12QImageReader7qualityEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader7qualityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "quality", args)
   }
 
+  return
 }
 
 // imageCount()
-func (this *QImageReader) imageCount(args ...interface{}) () {
+func (this *QImageReader) Imagecount(args ...interface{}) (ret interface{}) {
   // imageCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -400,16 +429,20 @@ func (this *QImageReader) imageCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader10imageCountEv
     // invoke: int imageCount()
-    var ret = C.C_ZNK12QImageReader10imageCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader10imageCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "imageCount", args)
   }
 
+  return
 }
 
 // size()
-func (this *QImageReader) size(args ...interface{}) () {
+func (this *QImageReader) Size(args ...interface{}) (ret interface{}) {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -421,12 +454,16 @@ func (this *QImageReader) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader4sizeEv
     // invoke: QSize size()
-    var ret = C.C_ZNK12QImageReader4sizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "size", args)
   }
 
+  return
 }
 
 // QImageReader(const class QString &, const class QByteArray &)
@@ -484,7 +521,7 @@ func NewQImageReader(args ...interface{}) *QImageReader {
 }
 
 // loopCount()
-func (this *QImageReader) loopCount(args ...interface{}) () {
+func (this *QImageReader) Loopcount(args ...interface{}) (ret interface{}) {
   // loopCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -496,16 +533,20 @@ func (this *QImageReader) loopCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader9loopCountEv
     // invoke: int loopCount()
-    var ret = C.C_ZNK12QImageReader9loopCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader9loopCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "loopCount", args)
   }
 
+  return
 }
 
 // scaledClipRect()
-func (this *QImageReader) scaledClipRect(args ...interface{}) () {
+func (this *QImageReader) Scaledcliprect(args ...interface{}) (ret interface{}) {
   // scaledClipRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -517,16 +558,20 @@ func (this *QImageReader) scaledClipRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader14scaledClipRectEv
     // invoke: QRect scaledClipRect()
-    var ret = C.C_ZNK12QImageReader14scaledClipRectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader14scaledClipRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "scaledClipRect", args)
   }
 
+  return
 }
 
 // autoDetectImageFormat()
-func (this *QImageReader) autoDetectImageFormat(args ...interface{}) () {
+func (this *QImageReader) Autodetectimageformat(args ...interface{}) (ret interface{}) {
   // autoDetectImageFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -538,16 +583,20 @@ func (this *QImageReader) autoDetectImageFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader21autoDetectImageFormatEv
     // invoke: bool autoDetectImageFormat()
-    var ret = C.C_ZNK12QImageReader21autoDetectImageFormatEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader21autoDetectImageFormatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "autoDetectImageFormat", args)
   }
 
+  return
 }
 
 // jumpToNextImage()
-func (this *QImageReader) jumpToNextImage(args ...interface{}) () {
+func (this *QImageReader) Jumptonextimage(args ...interface{}) (ret interface{}) {
   // jumpToNextImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -559,16 +608,20 @@ func (this *QImageReader) jumpToNextImage(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QImageReader15jumpToNextImageEv
     // invoke: bool jumpToNextImage()
-    var ret = C.C_ZN12QImageReader15jumpToNextImageEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QImageReader15jumpToNextImageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "jumpToNextImage", args)
   }
 
+  return
 }
 
 // textKeys()
-func (this *QImageReader) textKeys(args ...interface{}) () {
+func (this *QImageReader) Textkeys(args ...interface{}) () {
   // textKeys()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -585,10 +638,11 @@ func (this *QImageReader) textKeys(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "textKeys", args)
   }
 
+  return
 }
 
 // backgroundColor()
-func (this *QImageReader) backgroundColor(args ...interface{}) () {
+func (this *QImageReader) Backgroundcolor(args ...interface{}) (ret interface{}) {
   // backgroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -600,16 +654,20 @@ func (this *QImageReader) backgroundColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader15backgroundColorEv
     // invoke: QColor backgroundColor()
-    var ret = C.C_ZNK12QImageReader15backgroundColorEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader15backgroundColorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QColor{}) // "QColor"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "backgroundColor", args)
   }
 
+  return
 }
 
 // setDevice(class QIODevice *)
-func (this *QImageReader) setDevice(args ...interface{}) () {
+func (this *QImageReader) Setdevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -629,10 +687,11 @@ func (this *QImageReader) setDevice(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "setDevice", args)
   }
 
+  return
 }
 
 // transformation()
-func (this *QImageReader) transformation(args ...interface{}) () {
+func (this *QImageReader) Transformation(args ...interface{}) () {
   // transformation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -649,10 +708,11 @@ func (this *QImageReader) transformation(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "transformation", args)
   }
 
+  return
 }
 
 // autoTransform()
-func (this *QImageReader) autoTransform(args ...interface{}) () {
+func (this *QImageReader) Autotransform(args ...interface{}) (ret interface{}) {
   // autoTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -664,16 +724,20 @@ func (this *QImageReader) autoTransform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader13autoTransformEv
     // invoke: bool autoTransform()
-    var ret = C.C_ZNK12QImageReader13autoTransformEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader13autoTransformEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "autoTransform", args)
   }
 
+  return
 }
 
 // jumpToImage(int)
-func (this *QImageReader) jumpToImage(args ...interface{}) () {
+func (this *QImageReader) Jumptoimage(args ...interface{}) (ret interface{}) {
   // jumpToImage(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -688,16 +752,20 @@ func (this *QImageReader) jumpToImage(args ...interface{}) () {
     // invoke: bool jumpToImage(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QImageReader11jumpToImageEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QImageReader11jumpToImageEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "jumpToImage", args)
   }
 
+  return
 }
 
 // supportedImageFormats()
-func (this *QImageReader) supportedImageFormats_s(args ...interface{}) () {
+func (this *QImageReader) Supportedimageformats_S(args ...interface{}) () {
   // supportedImageFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -714,10 +782,11 @@ func (this *QImageReader) supportedImageFormats_s(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "supportedImageFormats", args)
   }
 
+  return
 }
 
 // setAutoTransform(_Bool)
-func (this *QImageReader) setAutoTransform(args ...interface{}) () {
+func (this *QImageReader) Setautotransform(args ...interface{}) () {
   // setAutoTransform(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -737,10 +806,11 @@ func (this *QImageReader) setAutoTransform(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "setAutoTransform", args)
   }
 
+  return
 }
 
 // clipRect()
-func (this *QImageReader) clipRect(args ...interface{}) () {
+func (this *QImageReader) Cliprect(args ...interface{}) (ret interface{}) {
   // clipRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -752,16 +822,20 @@ func (this *QImageReader) clipRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader8clipRectEv
     // invoke: QRect clipRect()
-    var ret = C.C_ZNK12QImageReader8clipRectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader8clipRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "clipRect", args)
   }
 
+  return
 }
 
 // errorString()
-func (this *QImageReader) errorString(args ...interface{}) () {
+func (this *QImageReader) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -773,16 +847,20 @@ func (this *QImageReader) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader11errorStringEv
     // invoke: QString errorString()
-    var ret = C.C_ZNK12QImageReader11errorStringEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "errorString", args)
   }
 
+  return
 }
 
 // format()
-func (this *QImageReader) format(args ...interface{}) () {
+func (this *QImageReader) Format(args ...interface{}) (ret interface{}) {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -794,16 +872,20 @@ func (this *QImageReader) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader6formatEv
     // invoke: QByteArray format()
-    var ret = C.C_ZNK12QImageReader6formatEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader6formatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "format", args)
   }
 
+  return
 }
 
 // read()
-func (this *QImageReader) read(args ...interface{}) () {
+func (this *QImageReader) Read(args ...interface{}) (ret interface{}) {
   // read()
   // read(class QImage *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -818,23 +900,30 @@ func (this *QImageReader) read(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QImageReader4readEv
     // invoke: QImage read()
-    var ret = C.C_ZN12QImageReader4readEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QImageReader4readEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QImage{}) // "QImage"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN12QImageReader4readEP6QImage
     // invoke: bool read(class QImage *)
     var arg0 = args[0].(QImage).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QImageReader4readEP6QImage(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QImageReader4readEP6QImage(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "read", args)
   }
 
+  return
 }
 
 // setBackgroundColor(const class QColor &)
-func (this *QImageReader) setBackgroundColor(args ...interface{}) () {
+func (this *QImageReader) Setbackgroundcolor(args ...interface{}) () {
   // setBackgroundColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -854,10 +943,11 @@ func (this *QImageReader) setBackgroundColor(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "setBackgroundColor", args)
   }
 
+  return
 }
 
 // currentImageNumber()
-func (this *QImageReader) currentImageNumber(args ...interface{}) () {
+func (this *QImageReader) Currentimagenumber(args ...interface{}) (ret interface{}) {
   // currentImageNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -869,16 +959,20 @@ func (this *QImageReader) currentImageNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader18currentImageNumberEv
     // invoke: int currentImageNumber()
-    var ret = C.C_ZNK12QImageReader18currentImageNumberEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader18currentImageNumberEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "currentImageNumber", args)
   }
 
+  return
 }
 
 // device()
-func (this *QImageReader) device(args ...interface{}) () {
+func (this *QImageReader) Device(args ...interface{}) (ret interface{}) {
   // device()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -890,16 +984,20 @@ func (this *QImageReader) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader6deviceEv
     // invoke: QIODevice * device()
-    var ret = C.C_ZNK12QImageReader6deviceEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader6deviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QIODevice{}) // "QIODevice *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "device", args)
   }
 
+  return
 }
 
 // supportsAnimation()
-func (this *QImageReader) supportsAnimation(args ...interface{}) () {
+func (this *QImageReader) Supportsanimation(args ...interface{}) (ret interface{}) {
   // supportsAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -911,16 +1009,20 @@ func (this *QImageReader) supportsAnimation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader17supportsAnimationEv
     // invoke: bool supportsAnimation()
-    var ret = C.C_ZNK12QImageReader17supportsAnimationEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader17supportsAnimationEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "supportsAnimation", args)
   }
 
+  return
 }
 
 // supportedSubTypes()
-func (this *QImageReader) supportedSubTypes(args ...interface{}) () {
+func (this *QImageReader) Supportedsubtypes(args ...interface{}) () {
   // supportedSubTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -937,10 +1039,11 @@ func (this *QImageReader) supportedSubTypes(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "supportedSubTypes", args)
   }
 
+  return
 }
 
 // setClipRect(const class QRect &)
-func (this *QImageReader) setClipRect(args ...interface{}) () {
+func (this *QImageReader) Setcliprect(args ...interface{}) () {
   // setClipRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -960,10 +1063,11 @@ func (this *QImageReader) setClipRect(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "setClipRect", args)
   }
 
+  return
 }
 
 // setFileName(const class QString &)
-func (this *QImageReader) setFileName(args ...interface{}) () {
+func (this *QImageReader) Setfilename(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -983,10 +1087,11 @@ func (this *QImageReader) setFileName(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "setFileName", args)
   }
 
+  return
 }
 
 // nextImageDelay()
-func (this *QImageReader) nextImageDelay(args ...interface{}) () {
+func (this *QImageReader) Nextimagedelay(args ...interface{}) (ret interface{}) {
   // nextImageDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -998,16 +1103,20 @@ func (this *QImageReader) nextImageDelay(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader14nextImageDelayEv
     // invoke: int nextImageDelay()
-    var ret = C.C_ZNK12QImageReader14nextImageDelayEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader14nextImageDelayEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "nextImageDelay", args)
   }
 
+  return
 }
 
 // ~QImageReader()
-func (this *QImageReader) FreeQImageReader(args ...interface{}) () {
+func (this *QImageReader) Freeqimagereader(args ...interface{}) () {
   // ~QImageReader()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1024,10 +1133,11 @@ func (this *QImageReader) FreeQImageReader(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "~QImageReader", args)
   }
 
+  return
 }
 
 // setFormat(const class QByteArray &)
-func (this *QImageReader) setFormat(args ...interface{}) () {
+func (this *QImageReader) Setformat(args ...interface{}) () {
   // setFormat(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1047,10 +1157,11 @@ func (this *QImageReader) setFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "setFormat", args)
   }
 
+  return
 }
 
 // setQuality(int)
-func (this *QImageReader) setQuality(args ...interface{}) () {
+func (this *QImageReader) Setquality(args ...interface{}) () {
   // setQuality(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1070,10 +1181,11 @@ func (this *QImageReader) setQuality(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "setQuality", args)
   }
 
+  return
 }
 
 // scaledSize()
-func (this *QImageReader) scaledSize(args ...interface{}) () {
+func (this *QImageReader) Scaledsize(args ...interface{}) (ret interface{}) {
   // scaledSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1085,16 +1197,20 @@ func (this *QImageReader) scaledSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader10scaledSizeEv
     // invoke: QSize scaledSize()
-    var ret = C.C_ZNK12QImageReader10scaledSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader10scaledSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "scaledSize", args)
   }
 
+  return
 }
 
 // imageFormat(class QIODevice *)
-func (this *QImageReader) imageFormat_s(args ...interface{}) () {
+func (this *QImageReader) Imageformat_S(args ...interface{}) (ret interface{}) {
   // imageFormat(class QIODevice *)
   // imageFormat(const class QString &)
   // imageFormat()
@@ -1114,15 +1230,21 @@ func (this *QImageReader) imageFormat_s(args ...interface{}) () {
     // invoke: QByteArray imageFormat(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QImageReader11imageFormatEP9QIODevice(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QImageReader11imageFormatEP9QIODevice(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN12QImageReader11imageFormatERK7QString
     // invoke: QByteArray imageFormat(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN12QImageReader11imageFormatERK7QString(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QImageReader11imageFormatERK7QString(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 2:
     // invoke: _ZNK12QImageReader11imageFormatEv
     // invoke: QImage::Format imageFormat()
@@ -1131,10 +1253,11 @@ func (this *QImageReader) imageFormat_s(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "imageFormat", args)
   }
 
+  return
 }
 
 // error()
-func (this *QImageReader) error(args ...interface{}) () {
+func (this *QImageReader) Error(args ...interface{}) () {
   // error()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1151,10 +1274,11 @@ func (this *QImageReader) error(args ...interface{}) () {
     qtrt.ErrorResolve("QImageReader", "error", args)
   }
 
+  return
 }
 
 // decideFormatFromContent()
-func (this *QImageReader) decideFormatFromContent(args ...interface{}) () {
+func (this *QImageReader) Decideformatfromcontent(args ...interface{}) (ret interface{}) {
   // decideFormatFromContent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1166,12 +1290,16 @@ func (this *QImageReader) decideFormatFromContent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageReader23decideFormatFromContentEv
     // invoke: bool decideFormatFromContent()
-    var ret = C.C_ZNK12QImageReader23decideFormatFromContentEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QImageReader23decideFormatFromContentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QImageReader", "decideFormatFromContent", args)
   }
 
+  return
 }
 
 // <= body block end

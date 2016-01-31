@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QBitArray::size();
-extern void C_ZNK9QBitArray4sizeEv(void* qthis); // 2
+extern int32_t C_ZNK9QBitArray4sizeEv(void* qthis); // 2
   // proto:  bool QBitArray::testBit(int i);
-extern void C_ZNK9QBitArray7testBitEi(void* qthis, int32_t arg0); // 2
+extern bool C_ZNK9QBitArray7testBitEi(void* qthis, int32_t arg0); // 2
   // proto:  bool QBitArray::at(int i);
-extern void C_ZNK9QBitArray2atEi(void* qthis, int32_t arg0); // 2
+extern bool C_ZNK9QBitArray2atEi(void* qthis, int32_t arg0); // 2
   // proto:  bool QBitArray::toggleBit(int i);
-extern void C_ZN9QBitArray9toggleBitEi(void* qthis, int32_t arg0); // 2
+extern bool C_ZN9QBitArray9toggleBitEi(void* qthis, int32_t arg0); // 2
   // proto:  void QBitArray::fill(bool val, int first, int last);
 extern void C_ZN9QBitArray4fillEbii(void* qthis, bool arg0, int32_t arg1, int32_t arg2); // 4
   // proto:  bool QBitArray::fill(bool val, int size);
-extern void C_ZN9QBitArray4fillEbi(void* qthis, bool arg0, int32_t arg1); // 2
+extern bool C_ZN9QBitArray4fillEbi(void* qthis, bool arg0, int32_t arg1); // 2
   // proto:  void QBitArray::clearBit(int i);
 extern void C_ZN9QBitArray8clearBitEi(void* qthis, int32_t arg0); // 2
   // proto:  void QBitArray::QBitArray();
@@ -51,13 +51,13 @@ extern void* C_ZN9QBitArrayC2ERKS_(void* arg0); // 1
   // proto:  void QBitArray::swap(QBitArray & other);
 extern void C_ZN9QBitArray4swapERS_(void* qthis, void* arg0); // 2
   // proto:  bool QBitArray::isEmpty();
-extern void C_ZNK9QBitArray7isEmptyEv(void* qthis); // 2
+extern bool C_ZNK9QBitArray7isEmptyEv(void* qthis); // 2
   // proto:  void QBitArray::setBit(int i, bool val);
 extern void C_ZN9QBitArray6setBitEib(void* qthis, int32_t arg0, bool arg1); // 2
   // proto:  void QBitArray::setBit(int i);
 extern void C_ZN9QBitArray6setBitEi(void* qthis, int32_t arg0); // 2
   // proto:  bool QBitArray::isDetached();
-extern void C_ZNK9QBitArray10isDetachedEv(void* qthis); // 2
+extern bool C_ZNK9QBitArray10isDetachedEv(void* qthis); // 2
   // proto:  void QBitArray::truncate(int pos);
 extern void C_ZN9QBitArray8truncateEi(void* qthis, int32_t arg0); // 2
   // proto:  void QBitArray::detach();
@@ -65,13 +65,13 @@ extern void C_ZN9QBitArray6detachEv(void* qthis); // 2
   // proto:  void QBitArray::resize(int size);
 extern void C_ZN9QBitArray6resizeEi(void* qthis, int32_t arg0); // 4
   // proto:  int QBitArray::count(bool on);
-extern void C_ZNK9QBitArray5countEb(void* qthis, bool arg0); // 4
+extern int32_t C_ZNK9QBitArray5countEb(void* qthis, bool arg0); // 4
   // proto:  int QBitArray::count();
-extern void C_ZNK9QBitArray5countEv(void* qthis); // 2
+extern int32_t C_ZNK9QBitArray5countEv(void* qthis); // 2
   // proto:  void QBitArray::clear();
 extern void C_ZN9QBitArray5clearEv(void* qthis); // 2
   // proto:  bool QBitArray::isNull();
-extern void C_ZNK9QBitArray6isNullEv(void* qthis); // 2
+extern bool C_ZNK9QBitArray6isNullEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -97,7 +97,7 @@ type QBitArray struct {
 }
 
 // size()
-func (this *QBitArray) size(args ...interface{}) () {
+func (this *QBitArray) Size(args ...interface{}) (ret interface{}) {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -109,16 +109,20 @@ func (this *QBitArray) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QBitArray4sizeEv
     // invoke: int size()
-    var ret = C.C_ZNK9QBitArray4sizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QBitArray4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBitArray", "size", args)
   }
 
+  return
 }
 
 // testBit(int)
-func (this *QBitArray) testBit(args ...interface{}) () {
+func (this *QBitArray) Testbit(args ...interface{}) (ret interface{}) {
   // testBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -133,16 +137,20 @@ func (this *QBitArray) testBit(args ...interface{}) () {
     // invoke: bool testBit(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QBitArray7testBitEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QBitArray7testBitEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBitArray", "testBit", args)
   }
 
+  return
 }
 
 // at(int)
-func (this *QBitArray) at(args ...interface{}) () {
+func (this *QBitArray) At(args ...interface{}) (ret interface{}) {
   // at(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -157,16 +165,20 @@ func (this *QBitArray) at(args ...interface{}) () {
     // invoke: bool at(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QBitArray2atEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QBitArray2atEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBitArray", "at", args)
   }
 
+  return
 }
 
 // toggleBit(int)
-func (this *QBitArray) toggleBit(args ...interface{}) () {
+func (this *QBitArray) Togglebit(args ...interface{}) (ret interface{}) {
   // toggleBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -181,16 +193,20 @@ func (this *QBitArray) toggleBit(args ...interface{}) () {
     // invoke: bool toggleBit(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN9QBitArray9toggleBitEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QBitArray9toggleBitEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBitArray", "toggleBit", args)
   }
 
+  return
 }
 
 // fill(_Bool, int, int)
-func (this *QBitArray) fill(args ...interface{}) () {
+func (this *QBitArray) Fill(args ...interface{}) () {
   // fill(_Bool, int, int)
   // fill(_Bool, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -223,16 +239,17 @@ func (this *QBitArray) fill(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN9QBitArray4fillEbi(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QBitArray4fillEbi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
   default:
     qtrt.ErrorResolve("QBitArray", "fill", args)
   }
 
+  return
 }
 
 // clearBit(int)
-func (this *QBitArray) clearBit(args ...interface{}) () {
+func (this *QBitArray) Clearbit(args ...interface{}) () {
   // clearBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -252,6 +269,7 @@ func (this *QBitArray) clearBit(args ...interface{}) () {
     qtrt.ErrorResolve("QBitArray", "clearBit", args)
   }
 
+  return
 }
 
 // QBitArray()
@@ -306,7 +324,7 @@ func NewQBitArray(args ...interface{}) *QBitArray {
 }
 
 // swap(class QBitArray &)
-func (this *QBitArray) swap(args ...interface{}) () {
+func (this *QBitArray) Swap(args ...interface{}) () {
   // swap(class QBitArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -326,10 +344,11 @@ func (this *QBitArray) swap(args ...interface{}) () {
     qtrt.ErrorResolve("QBitArray", "swap", args)
   }
 
+  return
 }
 
 // isEmpty()
-func (this *QBitArray) isEmpty(args ...interface{}) () {
+func (this *QBitArray) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -341,16 +360,20 @@ func (this *QBitArray) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QBitArray7isEmptyEv
     // invoke: bool isEmpty()
-    var ret = C.C_ZNK9QBitArray7isEmptyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QBitArray7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBitArray", "isEmpty", args)
   }
 
+  return
 }
 
 // setBit(int, _Bool)
-func (this *QBitArray) setBit(args ...interface{}) () {
+func (this *QBitArray) Setbit(args ...interface{}) () {
   // setBit(int, _Bool)
   // setBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -382,10 +405,11 @@ func (this *QBitArray) setBit(args ...interface{}) () {
     qtrt.ErrorResolve("QBitArray", "setBit", args)
   }
 
+  return
 }
 
 // isDetached()
-func (this *QBitArray) isDetached(args ...interface{}) () {
+func (this *QBitArray) Isdetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -397,16 +421,20 @@ func (this *QBitArray) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QBitArray10isDetachedEv
     // invoke: bool isDetached()
-    var ret = C.C_ZNK9QBitArray10isDetachedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QBitArray10isDetachedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBitArray", "isDetached", args)
   }
 
+  return
 }
 
 // truncate(int)
-func (this *QBitArray) truncate(args ...interface{}) () {
+func (this *QBitArray) Truncate(args ...interface{}) () {
   // truncate(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -426,10 +454,11 @@ func (this *QBitArray) truncate(args ...interface{}) () {
     qtrt.ErrorResolve("QBitArray", "truncate", args)
   }
 
+  return
 }
 
 // detach()
-func (this *QBitArray) detach(args ...interface{}) () {
+func (this *QBitArray) Detach(args ...interface{}) () {
   // detach()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -446,10 +475,11 @@ func (this *QBitArray) detach(args ...interface{}) () {
     qtrt.ErrorResolve("QBitArray", "detach", args)
   }
 
+  return
 }
 
 // resize(int)
-func (this *QBitArray) resize(args ...interface{}) () {
+func (this *QBitArray) Resize(args ...interface{}) () {
   // resize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -469,10 +499,11 @@ func (this *QBitArray) resize(args ...interface{}) () {
     qtrt.ErrorResolve("QBitArray", "resize", args)
   }
 
+  return
 }
 
 // count(_Bool)
-func (this *QBitArray) count(args ...interface{}) () {
+func (this *QBitArray) Count(args ...interface{}) (ret interface{}) {
   // count(_Bool)
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -489,21 +520,28 @@ func (this *QBitArray) count(args ...interface{}) () {
     // invoke: int count(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QBitArray5countEb(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QBitArray5countEb(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK9QBitArray5countEv
     // invoke: int count()
-    var ret = C.C_ZNK9QBitArray5countEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QBitArray5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBitArray", "count", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QBitArray) clear(args ...interface{}) () {
+func (this *QBitArray) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -520,10 +558,11 @@ func (this *QBitArray) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QBitArray", "clear", args)
   }
 
+  return
 }
 
 // isNull()
-func (this *QBitArray) isNull(args ...interface{}) () {
+func (this *QBitArray) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -535,12 +574,16 @@ func (this *QBitArray) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QBitArray6isNullEv
     // invoke: bool isNull()
-    var ret = C.C_ZNK9QBitArray6isNullEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QBitArray6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBitArray", "isNull", args)
   }
 
+  return
 }
 
 // <= body block end

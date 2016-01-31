@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QCompleter::setCurrentRow(int row);
-extern void C_ZN10QCompleter13setCurrentRowEi(void* qthis, int32_t arg0); // 4
+extern bool C_ZN10QCompleter13setCurrentRowEi(void* qthis, int32_t arg0); // 4
   // proto:  QAbstractItemModel * QCompleter::completionModel();
 extern void C_ZNK10QCompleter15completionModelEv(void* qthis); // 4
   // proto:  int QCompleter::completionRole();
-extern void C_ZNK10QCompleter14completionRoleEv(void* qthis); // 4
+extern int32_t C_ZNK10QCompleter14completionRoleEv(void* qthis); // 4
   // proto:  int QCompleter::maxVisibleItems();
-extern void C_ZNK10QCompleter15maxVisibleItemsEv(void* qthis); // 4
+extern int32_t C_ZNK10QCompleter15maxVisibleItemsEv(void* qthis); // 4
   // proto:  bool QCompleter::wrapAround();
-extern void C_ZNK10QCompleter10wrapAroundEv(void* qthis); // 4
+extern bool C_ZNK10QCompleter10wrapAroundEv(void* qthis); // 4
   // proto:  QString QCompleter::completionPrefix();
-extern void C_ZNK10QCompleter16completionPrefixEv(void* qthis); // 4
+extern void* C_ZNK10QCompleter16completionPrefixEv(void* qthis); // 4
   // proto:  void QCompleter::setCompletionColumn(int column);
 extern void C_ZN10QCompleter19setCompletionColumnEi(void* qthis, int32_t arg0); // 4
   // proto:  QStringList QCompleter::splitPath(const QString & path);
@@ -59,13 +59,13 @@ extern void C_ZNK10QCompleter14completionModeEv(void* qthis); // 4
   // proto:  Qt::CaseSensitivity QCompleter::caseSensitivity();
 extern void C_ZNK10QCompleter15caseSensitivityEv(void* qthis); // 4
   // proto:  QWidget * QCompleter::widget();
-extern void C_ZNK10QCompleter6widgetEv(void* qthis); // 4
+extern void* C_ZNK10QCompleter6widgetEv(void* qthis); // 4
   // proto:  QAbstractItemView * QCompleter::popup();
 extern void C_ZNK10QCompleter5popupEv(void* qthis); // 4
   // proto:  void QCompleter::complete(const QRect & rect);
 extern void C_ZN10QCompleter8completeERK5QRect(void* qthis, void* arg0); // 4
   // proto:  int QCompleter::completionColumn();
-extern void C_ZNK10QCompleter16completionColumnEv(void* qthis); // 4
+extern int32_t C_ZNK10QCompleter16completionColumnEv(void* qthis); // 4
   // proto:  void QCompleter::setModel(QAbstractItemModel * c);
 extern void C_ZN10QCompleter8setModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
   // proto:  void QCompleter::QCompleter(QObject * parent);
@@ -77,21 +77,21 @@ extern void* C_ZN10QCompleterC2ERK11QStringListP7QObject(void* arg0, void* arg1)
   // proto:  QCompleter::ModelSorting QCompleter::modelSorting();
 extern void C_ZNK10QCompleter12modelSortingEv(void* qthis); // 4
   // proto:  int QCompleter::currentRow();
-extern void C_ZNK10QCompleter10currentRowEv(void* qthis); // 4
+extern int32_t C_ZNK10QCompleter10currentRowEv(void* qthis); // 4
   // proto:  const QMetaObject * QCompleter::metaObject();
 extern void C_ZNK10QCompleter10metaObjectEv(void* qthis); // 4
   // proto:  QString QCompleter::currentCompletion();
-extern void C_ZNK10QCompleter17currentCompletionEv(void* qthis); // 4
+extern void* C_ZNK10QCompleter17currentCompletionEv(void* qthis); // 4
   // proto:  void QCompleter::setMaxVisibleItems(int maxItems);
 extern void C_ZN10QCompleter18setMaxVisibleItemsEi(void* qthis, int32_t arg0); // 4
   // proto:  int QCompleter::completionCount();
-extern void C_ZNK10QCompleter15completionCountEv(void* qthis); // 4
+extern int32_t C_ZNK10QCompleter15completionCountEv(void* qthis); // 4
   // proto:  void QCompleter::setCompletionRole(int role);
 extern void C_ZN10QCompleter17setCompletionRoleEi(void* qthis, int32_t arg0); // 4
   // proto:  QModelIndex QCompleter::currentIndex();
-extern void C_ZNK10QCompleter12currentIndexEv(void* qthis); // 4
+extern void* C_ZNK10QCompleter12currentIndexEv(void* qthis); // 4
   // proto:  QString QCompleter::pathFromIndex(const QModelIndex & index);
-extern void C_ZNK10QCompleter13pathFromIndexERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void* C_ZNK10QCompleter13pathFromIndexERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  Qt::MatchFlags QCompleter::filterMode();
 extern void C_ZNK10QCompleter10filterModeEv(void* qthis); // 4
   // proto:  QAbstractItemModel * QCompleter::model();
@@ -117,7 +117,7 @@ type QCompleter struct {
 }
 
 // setCurrentRow(int)
-func (this *QCompleter) setCurrentRow(args ...interface{}) () {
+func (this *QCompleter) Setcurrentrow(args ...interface{}) (ret interface{}) {
   // setCurrentRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -132,16 +132,20 @@ func (this *QCompleter) setCurrentRow(args ...interface{}) () {
     // invoke: bool setCurrentRow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN10QCompleter13setCurrentRowEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QCompleter13setCurrentRowEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCompleter", "setCurrentRow", args)
   }
 
+  return
 }
 
 // completionModel()
-func (this *QCompleter) completionModel(args ...interface{}) () {
+func (this *QCompleter) Completionmodel(args ...interface{}) () {
   // completionModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -158,10 +162,11 @@ func (this *QCompleter) completionModel(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "completionModel", args)
   }
 
+  return
 }
 
 // completionRole()
-func (this *QCompleter) completionRole(args ...interface{}) () {
+func (this *QCompleter) Completionrole(args ...interface{}) (ret interface{}) {
   // completionRole()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -173,16 +178,20 @@ func (this *QCompleter) completionRole(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter14completionRoleEv
     // invoke: int completionRole()
-    var ret = C.C_ZNK10QCompleter14completionRoleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QCompleter14completionRoleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCompleter", "completionRole", args)
   }
 
+  return
 }
 
 // maxVisibleItems()
-func (this *QCompleter) maxVisibleItems(args ...interface{}) () {
+func (this *QCompleter) Maxvisibleitems(args ...interface{}) (ret interface{}) {
   // maxVisibleItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -194,16 +203,20 @@ func (this *QCompleter) maxVisibleItems(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter15maxVisibleItemsEv
     // invoke: int maxVisibleItems()
-    var ret = C.C_ZNK10QCompleter15maxVisibleItemsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QCompleter15maxVisibleItemsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCompleter", "maxVisibleItems", args)
   }
 
+  return
 }
 
 // wrapAround()
-func (this *QCompleter) wrapAround(args ...interface{}) () {
+func (this *QCompleter) Wraparound(args ...interface{}) (ret interface{}) {
   // wrapAround()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -215,16 +228,20 @@ func (this *QCompleter) wrapAround(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter10wrapAroundEv
     // invoke: bool wrapAround()
-    var ret = C.C_ZNK10QCompleter10wrapAroundEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QCompleter10wrapAroundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCompleter", "wrapAround", args)
   }
 
+  return
 }
 
 // completionPrefix()
-func (this *QCompleter) completionPrefix(args ...interface{}) () {
+func (this *QCompleter) Completionprefix(args ...interface{}) (ret interface{}) {
   // completionPrefix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -236,16 +253,20 @@ func (this *QCompleter) completionPrefix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter16completionPrefixEv
     // invoke: QString completionPrefix()
-    var ret = C.C_ZNK10QCompleter16completionPrefixEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QCompleter16completionPrefixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCompleter", "completionPrefix", args)
   }
 
+  return
 }
 
 // setCompletionColumn(int)
-func (this *QCompleter) setCompletionColumn(args ...interface{}) () {
+func (this *QCompleter) Setcompletioncolumn(args ...interface{}) () {
   // setCompletionColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -265,10 +286,11 @@ func (this *QCompleter) setCompletionColumn(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "setCompletionColumn", args)
   }
 
+  return
 }
 
 // splitPath(const class QString &)
-func (this *QCompleter) splitPath(args ...interface{}) () {
+func (this *QCompleter) Splitpath(args ...interface{}) () {
   // splitPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -288,10 +310,11 @@ func (this *QCompleter) splitPath(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "splitPath", args)
   }
 
+  return
 }
 
 // setWidget(class QWidget *)
-func (this *QCompleter) setWidget(args ...interface{}) () {
+func (this *QCompleter) Setwidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -311,10 +334,11 @@ func (this *QCompleter) setWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "setWidget", args)
   }
 
+  return
 }
 
 // setPopup(class QAbstractItemView *)
-func (this *QCompleter) setPopup(args ...interface{}) () {
+func (this *QCompleter) Setpopup(args ...interface{}) () {
   // setPopup(class QAbstractItemView *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -334,10 +358,11 @@ func (this *QCompleter) setPopup(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "setPopup", args)
   }
 
+  return
 }
 
 // setWrapAround(_Bool)
-func (this *QCompleter) setWrapAround(args ...interface{}) () {
+func (this *QCompleter) Setwraparound(args ...interface{}) () {
   // setWrapAround(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -357,10 +382,11 @@ func (this *QCompleter) setWrapAround(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "setWrapAround", args)
   }
 
+  return
 }
 
 // setCompletionPrefix(const class QString &)
-func (this *QCompleter) setCompletionPrefix(args ...interface{}) () {
+func (this *QCompleter) Setcompletionprefix(args ...interface{}) () {
   // setCompletionPrefix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -380,10 +406,11 @@ func (this *QCompleter) setCompletionPrefix(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "setCompletionPrefix", args)
   }
 
+  return
 }
 
 // ~QCompleter()
-func (this *QCompleter) FreeQCompleter(args ...interface{}) () {
+func (this *QCompleter) Freeqcompleter(args ...interface{}) () {
   // ~QCompleter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -400,10 +427,11 @@ func (this *QCompleter) FreeQCompleter(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "~QCompleter", args)
   }
 
+  return
 }
 
 // completionMode()
-func (this *QCompleter) completionMode(args ...interface{}) () {
+func (this *QCompleter) Completionmode(args ...interface{}) () {
   // completionMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -420,10 +448,11 @@ func (this *QCompleter) completionMode(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "completionMode", args)
   }
 
+  return
 }
 
 // caseSensitivity()
-func (this *QCompleter) caseSensitivity(args ...interface{}) () {
+func (this *QCompleter) Casesensitivity(args ...interface{}) () {
   // caseSensitivity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -440,10 +469,11 @@ func (this *QCompleter) caseSensitivity(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "caseSensitivity", args)
   }
 
+  return
 }
 
 // widget()
-func (this *QCompleter) widget(args ...interface{}) () {
+func (this *QCompleter) Widget(args ...interface{}) (ret interface{}) {
   // widget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -455,16 +485,20 @@ func (this *QCompleter) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter6widgetEv
     // invoke: QWidget * widget()
-    var ret = C.C_ZNK10QCompleter6widgetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QCompleter6widgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCompleter", "widget", args)
   }
 
+  return
 }
 
 // popup()
-func (this *QCompleter) popup(args ...interface{}) () {
+func (this *QCompleter) Popup(args ...interface{}) () {
   // popup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -481,10 +515,11 @@ func (this *QCompleter) popup(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "popup", args)
   }
 
+  return
 }
 
 // complete(const class QRect &)
-func (this *QCompleter) complete(args ...interface{}) () {
+func (this *QCompleter) Complete(args ...interface{}) () {
   // complete(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -504,10 +539,11 @@ func (this *QCompleter) complete(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "complete", args)
   }
 
+  return
 }
 
 // completionColumn()
-func (this *QCompleter) completionColumn(args ...interface{}) () {
+func (this *QCompleter) Completioncolumn(args ...interface{}) (ret interface{}) {
   // completionColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -519,16 +555,20 @@ func (this *QCompleter) completionColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter16completionColumnEv
     // invoke: int completionColumn()
-    var ret = C.C_ZNK10QCompleter16completionColumnEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QCompleter16completionColumnEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCompleter", "completionColumn", args)
   }
 
+  return
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QCompleter) setModel(args ...interface{}) () {
+func (this *QCompleter) Setmodel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -548,6 +588,7 @@ func (this *QCompleter) setModel(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "setModel", args)
   }
 
+  return
 }
 
 // QCompleter(class QObject *)
@@ -608,7 +649,7 @@ func NewQCompleter(args ...interface{}) *QCompleter {
 }
 
 // modelSorting()
-func (this *QCompleter) modelSorting(args ...interface{}) () {
+func (this *QCompleter) Modelsorting(args ...interface{}) () {
   // modelSorting()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -625,10 +666,11 @@ func (this *QCompleter) modelSorting(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "modelSorting", args)
   }
 
+  return
 }
 
 // currentRow()
-func (this *QCompleter) currentRow(args ...interface{}) () {
+func (this *QCompleter) Currentrow(args ...interface{}) (ret interface{}) {
   // currentRow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -640,16 +682,20 @@ func (this *QCompleter) currentRow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter10currentRowEv
     // invoke: int currentRow()
-    var ret = C.C_ZNK10QCompleter10currentRowEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QCompleter10currentRowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCompleter", "currentRow", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QCompleter) metaObject(args ...interface{}) () {
+func (this *QCompleter) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -666,10 +712,11 @@ func (this *QCompleter) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "metaObject", args)
   }
 
+  return
 }
 
 // currentCompletion()
-func (this *QCompleter) currentCompletion(args ...interface{}) () {
+func (this *QCompleter) Currentcompletion(args ...interface{}) (ret interface{}) {
   // currentCompletion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -681,16 +728,20 @@ func (this *QCompleter) currentCompletion(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter17currentCompletionEv
     // invoke: QString currentCompletion()
-    var ret = C.C_ZNK10QCompleter17currentCompletionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QCompleter17currentCompletionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCompleter", "currentCompletion", args)
   }
 
+  return
 }
 
 // setMaxVisibleItems(int)
-func (this *QCompleter) setMaxVisibleItems(args ...interface{}) () {
+func (this *QCompleter) Setmaxvisibleitems(args ...interface{}) () {
   // setMaxVisibleItems(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -710,10 +761,11 @@ func (this *QCompleter) setMaxVisibleItems(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "setMaxVisibleItems", args)
   }
 
+  return
 }
 
 // completionCount()
-func (this *QCompleter) completionCount(args ...interface{}) () {
+func (this *QCompleter) Completioncount(args ...interface{}) (ret interface{}) {
   // completionCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -725,16 +777,20 @@ func (this *QCompleter) completionCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter15completionCountEv
     // invoke: int completionCount()
-    var ret = C.C_ZNK10QCompleter15completionCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QCompleter15completionCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCompleter", "completionCount", args)
   }
 
+  return
 }
 
 // setCompletionRole(int)
-func (this *QCompleter) setCompletionRole(args ...interface{}) () {
+func (this *QCompleter) Setcompletionrole(args ...interface{}) () {
   // setCompletionRole(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -754,10 +810,11 @@ func (this *QCompleter) setCompletionRole(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "setCompletionRole", args)
   }
 
+  return
 }
 
 // currentIndex()
-func (this *QCompleter) currentIndex(args ...interface{}) () {
+func (this *QCompleter) Currentindex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -769,16 +826,20 @@ func (this *QCompleter) currentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter12currentIndexEv
     // invoke: QModelIndex currentIndex()
-    var ret = C.C_ZNK10QCompleter12currentIndexEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QCompleter12currentIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCompleter", "currentIndex", args)
   }
 
+  return
 }
 
 // pathFromIndex(const class QModelIndex &)
-func (this *QCompleter) pathFromIndex(args ...interface{}) () {
+func (this *QCompleter) Pathfromindex(args ...interface{}) (ret interface{}) {
   // pathFromIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -793,16 +854,20 @@ func (this *QCompleter) pathFromIndex(args ...interface{}) () {
     // invoke: QString pathFromIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK10QCompleter13pathFromIndexERK11QModelIndex(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK10QCompleter13pathFromIndexERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCompleter", "pathFromIndex", args)
   }
 
+  return
 }
 
 // filterMode()
-func (this *QCompleter) filterMode(args ...interface{}) () {
+func (this *QCompleter) Filtermode(args ...interface{}) () {
   // filterMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -819,10 +884,11 @@ func (this *QCompleter) filterMode(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "filterMode", args)
   }
 
+  return
 }
 
 // model()
-func (this *QCompleter) model(args ...interface{}) () {
+func (this *QCompleter) Model(args ...interface{}) () {
   // model()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -839,6 +905,7 @@ func (this *QCompleter) model(args ...interface{}) () {
     qtrt.ErrorResolve("QCompleter", "model", args)
   }
 
+  return
 }
 
 // <= body block end

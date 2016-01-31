@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qsysinfo.h
 // dst-file: /src/core/qsysinfo.go
 //
@@ -29,23 +29,23 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QString QSysInfo::kernelVersion();
-extern void C_ZN8QSysInfo13kernelVersionEv(); // 4
+extern void* C_ZN8QSysInfo13kernelVersionEv(); // 4
   // proto: static QString QSysInfo::buildCpuArchitecture();
-extern void C_ZN8QSysInfo20buildCpuArchitectureEv(); // 4
+extern void* C_ZN8QSysInfo20buildCpuArchitectureEv(); // 4
   // proto: static QString QSysInfo::prettyProductName();
-extern void C_ZN8QSysInfo17prettyProductNameEv(); // 4
+extern void* C_ZN8QSysInfo17prettyProductNameEv(); // 4
   // proto: static QString QSysInfo::productVersion();
-extern void C_ZN8QSysInfo14productVersionEv(); // 4
+extern void* C_ZN8QSysInfo14productVersionEv(); // 4
   // proto: static QString QSysInfo::buildAbi();
-extern void C_ZN8QSysInfo8buildAbiEv(); // 4
+extern void* C_ZN8QSysInfo8buildAbiEv(); // 4
   // proto: static QString QSysInfo::kernelType();
-extern void C_ZN8QSysInfo10kernelTypeEv(); // 4
+extern void* C_ZN8QSysInfo10kernelTypeEv(); // 4
   // proto: static QString QSysInfo::productType();
-extern void C_ZN8QSysInfo11productTypeEv(); // 4
+extern void* C_ZN8QSysInfo11productTypeEv(); // 4
   // proto: static QSysInfo::WinVersion QSysInfo::windowsVersion();
 extern void C_ZN8QSysInfo14windowsVersionEv(); // 2
   // proto: static QString QSysInfo::currentCpuArchitecture();
-extern void C_ZN8QSysInfo22currentCpuArchitectureEv(); // 4
+extern void* C_ZN8QSysInfo22currentCpuArchitectureEv(); // 4
   // proto: static QSysInfo::MacVersion QSysInfo::macVersion();
 extern void C_ZN8QSysInfo10macVersionEv(); // 2
 */
@@ -67,7 +67,7 @@ type QSysInfo struct {
 }
 
 // kernelVersion()
-func (this *QSysInfo) kernelVersion_s(args ...interface{}) () {
+func (this *QSysInfo) Kernelversion_S(args ...interface{}) (ret interface{}) {
   // kernelVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -79,16 +79,20 @@ func (this *QSysInfo) kernelVersion_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo13kernelVersionEv
     // invoke: QString kernelVersion()
-    var ret = C.C_ZN8QSysInfo13kernelVersionEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN8QSysInfo13kernelVersionEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSysInfo", "kernelVersion", args)
   }
 
+  return
 }
 
 // buildCpuArchitecture()
-func (this *QSysInfo) buildCpuArchitecture_s(args ...interface{}) () {
+func (this *QSysInfo) Buildcpuarchitecture_S(args ...interface{}) (ret interface{}) {
   // buildCpuArchitecture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -100,16 +104,20 @@ func (this *QSysInfo) buildCpuArchitecture_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo20buildCpuArchitectureEv
     // invoke: QString buildCpuArchitecture()
-    var ret = C.C_ZN8QSysInfo20buildCpuArchitectureEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN8QSysInfo20buildCpuArchitectureEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSysInfo", "buildCpuArchitecture", args)
   }
 
+  return
 }
 
 // prettyProductName()
-func (this *QSysInfo) prettyProductName_s(args ...interface{}) () {
+func (this *QSysInfo) Prettyproductname_S(args ...interface{}) (ret interface{}) {
   // prettyProductName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -121,16 +129,20 @@ func (this *QSysInfo) prettyProductName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo17prettyProductNameEv
     // invoke: QString prettyProductName()
-    var ret = C.C_ZN8QSysInfo17prettyProductNameEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN8QSysInfo17prettyProductNameEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSysInfo", "prettyProductName", args)
   }
 
+  return
 }
 
 // productVersion()
-func (this *QSysInfo) productVersion_s(args ...interface{}) () {
+func (this *QSysInfo) Productversion_S(args ...interface{}) (ret interface{}) {
   // productVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -142,16 +154,20 @@ func (this *QSysInfo) productVersion_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo14productVersionEv
     // invoke: QString productVersion()
-    var ret = C.C_ZN8QSysInfo14productVersionEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN8QSysInfo14productVersionEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSysInfo", "productVersion", args)
   }
 
+  return
 }
 
 // buildAbi()
-func (this *QSysInfo) buildAbi_s(args ...interface{}) () {
+func (this *QSysInfo) Buildabi_S(args ...interface{}) (ret interface{}) {
   // buildAbi()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -163,16 +179,20 @@ func (this *QSysInfo) buildAbi_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo8buildAbiEv
     // invoke: QString buildAbi()
-    var ret = C.C_ZN8QSysInfo8buildAbiEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN8QSysInfo8buildAbiEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSysInfo", "buildAbi", args)
   }
 
+  return
 }
 
 // kernelType()
-func (this *QSysInfo) kernelType_s(args ...interface{}) () {
+func (this *QSysInfo) Kerneltype_S(args ...interface{}) (ret interface{}) {
   // kernelType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -184,16 +204,20 @@ func (this *QSysInfo) kernelType_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo10kernelTypeEv
     // invoke: QString kernelType()
-    var ret = C.C_ZN8QSysInfo10kernelTypeEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN8QSysInfo10kernelTypeEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSysInfo", "kernelType", args)
   }
 
+  return
 }
 
 // productType()
-func (this *QSysInfo) productType_s(args ...interface{}) () {
+func (this *QSysInfo) Producttype_S(args ...interface{}) (ret interface{}) {
   // productType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -205,16 +229,20 @@ func (this *QSysInfo) productType_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo11productTypeEv
     // invoke: QString productType()
-    var ret = C.C_ZN8QSysInfo11productTypeEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN8QSysInfo11productTypeEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSysInfo", "productType", args)
   }
 
+  return
 }
 
 // windowsVersion()
-func (this *QSysInfo) windowsVersion_s(args ...interface{}) () {
+func (this *QSysInfo) Windowsversion_S(args ...interface{}) () {
   // windowsVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -231,10 +259,11 @@ func (this *QSysInfo) windowsVersion_s(args ...interface{}) () {
     qtrt.ErrorResolve("QSysInfo", "windowsVersion", args)
   }
 
+  return
 }
 
 // currentCpuArchitecture()
-func (this *QSysInfo) currentCpuArchitecture_s(args ...interface{}) () {
+func (this *QSysInfo) Currentcpuarchitecture_S(args ...interface{}) (ret interface{}) {
   // currentCpuArchitecture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -246,16 +275,20 @@ func (this *QSysInfo) currentCpuArchitecture_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo22currentCpuArchitectureEv
     // invoke: QString currentCpuArchitecture()
-    var ret = C.C_ZN8QSysInfo22currentCpuArchitectureEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN8QSysInfo22currentCpuArchitectureEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSysInfo", "currentCpuArchitecture", args)
   }
 
+  return
 }
 
 // macVersion()
-func (this *QSysInfo) macVersion_s(args ...interface{}) () {
+func (this *QSysInfo) Macversion_S(args ...interface{}) () {
   // macVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -272,6 +305,7 @@ func (this *QSysInfo) macVersion_s(args ...interface{}) () {
     qtrt.ErrorResolve("QSysInfo", "macVersion", args)
   }
 
+  return
 }
 
 // <= body block end

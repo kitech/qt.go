@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.go
 //
@@ -53,7 +53,7 @@ type QIconEnginePlugin struct {
 }
 
 // metaObject()
-func (this *QIconEnginePlugin) metaObject(args ...interface{}) () {
+func (this *QIconEnginePlugin) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -70,6 +70,7 @@ func (this *QIconEnginePlugin) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QIconEnginePlugin", "metaObject", args)
   }
 
+  return
 }
 
 // QIconEnginePlugin(class QObject *)
@@ -100,7 +101,7 @@ func NewQIconEnginePlugin(args ...interface{}) *QIconEnginePlugin {
 }
 
 // ~QIconEnginePlugin()
-func (this *QIconEnginePlugin) FreeQIconEnginePlugin(args ...interface{}) () {
+func (this *QIconEnginePlugin) Freeqiconengineplugin(args ...interface{}) () {
   // ~QIconEnginePlugin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,6 +118,7 @@ func (this *QIconEnginePlugin) FreeQIconEnginePlugin(args ...interface{}) () {
     qtrt.ErrorResolve("QIconEnginePlugin", "~QIconEnginePlugin", args)
   }
 
+  return
 }
 
 // <= body block end

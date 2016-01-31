@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.go
 //
@@ -35,7 +35,7 @@ extern void C_ZNK19QAbstractTransition12targetStatesEv(void* qthis); // 4
   // proto:  void QAbstractTransition::removeAnimation(QAbstractAnimation * animation);
 extern void C_ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
   // proto:  QStateMachine * QAbstractTransition::machine();
-extern void C_ZNK19QAbstractTransition7machineEv(void* qthis); // 4
+extern void* C_ZNK19QAbstractTransition7machineEv(void* qthis); // 4
   // proto:  QAbstractState * QAbstractTransition::targetState();
 extern void C_ZNK19QAbstractTransition11targetStateEv(void* qthis); // 4
   // proto:  QList<QAbstractAnimation *> QAbstractTransition::animations();
@@ -51,7 +51,7 @@ extern void C_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation(void* 
   // proto:  void QAbstractTransition::QAbstractTransition(QState * sourceState);
 extern void* C_ZN19QAbstractTransitionC2EP6QState(void* arg0); // 3
   // proto:  QState * QAbstractTransition::sourceState();
-extern void C_ZNK19QAbstractTransition11sourceStateEv(void* qthis); // 4
+extern void* C_ZNK19QAbstractTransition11sourceStateEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -74,7 +74,7 @@ type QAbstractTransition struct {
 }
 
 // transitionType()
-func (this *QAbstractTransition) transitionType(args ...interface{}) () {
+func (this *QAbstractTransition) Transitiontype(args ...interface{}) () {
   // transitionType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -91,10 +91,11 @@ func (this *QAbstractTransition) transitionType(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractTransition", "transitionType", args)
   }
 
+  return
 }
 
 // targetStates()
-func (this *QAbstractTransition) targetStates(args ...interface{}) () {
+func (this *QAbstractTransition) Targetstates(args ...interface{}) () {
   // targetStates()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -111,10 +112,11 @@ func (this *QAbstractTransition) targetStates(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractTransition", "targetStates", args)
   }
 
+  return
 }
 
 // removeAnimation(class QAbstractAnimation *)
-func (this *QAbstractTransition) removeAnimation(args ...interface{}) () {
+func (this *QAbstractTransition) Removeanimation(args ...interface{}) () {
   // removeAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -134,10 +136,11 @@ func (this *QAbstractTransition) removeAnimation(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractTransition", "removeAnimation", args)
   }
 
+  return
 }
 
 // machine()
-func (this *QAbstractTransition) machine(args ...interface{}) () {
+func (this *QAbstractTransition) Machine(args ...interface{}) (ret interface{}) {
   // machine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -149,16 +152,20 @@ func (this *QAbstractTransition) machine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractTransition7machineEv
     // invoke: QStateMachine * machine()
-    var ret = C.C_ZNK19QAbstractTransition7machineEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QAbstractTransition7machineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QStateMachine{}) // "QStateMachine *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractTransition", "machine", args)
   }
 
+  return
 }
 
 // targetState()
-func (this *QAbstractTransition) targetState(args ...interface{}) () {
+func (this *QAbstractTransition) Targetstate(args ...interface{}) () {
   // targetState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -175,10 +182,11 @@ func (this *QAbstractTransition) targetState(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractTransition", "targetState", args)
   }
 
+  return
 }
 
 // animations()
-func (this *QAbstractTransition) animations(args ...interface{}) () {
+func (this *QAbstractTransition) Animations(args ...interface{}) () {
   // animations()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -195,10 +203,11 @@ func (this *QAbstractTransition) animations(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractTransition", "animations", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QAbstractTransition) metaObject(args ...interface{}) () {
+func (this *QAbstractTransition) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -215,10 +224,11 @@ func (this *QAbstractTransition) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractTransition", "metaObject", args)
   }
 
+  return
 }
 
 // setTargetState(class QAbstractState *)
-func (this *QAbstractTransition) setTargetState(args ...interface{}) () {
+func (this *QAbstractTransition) Settargetstate(args ...interface{}) () {
   // setTargetState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -238,10 +248,11 @@ func (this *QAbstractTransition) setTargetState(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractTransition", "setTargetState", args)
   }
 
+  return
 }
 
 // ~QAbstractTransition()
-func (this *QAbstractTransition) FreeQAbstractTransition(args ...interface{}) () {
+func (this *QAbstractTransition) Freeqabstracttransition(args ...interface{}) () {
   // ~QAbstractTransition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -258,10 +269,11 @@ func (this *QAbstractTransition) FreeQAbstractTransition(args ...interface{}) ()
     qtrt.ErrorResolve("QAbstractTransition", "~QAbstractTransition", args)
   }
 
+  return
 }
 
 // addAnimation(class QAbstractAnimation *)
-func (this *QAbstractTransition) addAnimation(args ...interface{}) () {
+func (this *QAbstractTransition) Addanimation(args ...interface{}) () {
   // addAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -281,6 +293,7 @@ func (this *QAbstractTransition) addAnimation(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractTransition", "addAnimation", args)
   }
 
+  return
 }
 
 // QAbstractTransition(class QState *)
@@ -311,7 +324,7 @@ func NewQAbstractTransition(args ...interface{}) *QAbstractTransition {
 }
 
 // sourceState()
-func (this *QAbstractTransition) sourceState(args ...interface{}) () {
+func (this *QAbstractTransition) Sourcestate(args ...interface{}) (ret interface{}) {
   // sourceState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -323,12 +336,16 @@ func (this *QAbstractTransition) sourceState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractTransition11sourceStateEv
     // invoke: QState * sourceState()
-    var ret = C.C_ZNK19QAbstractTransition11sourceStateEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QAbstractTransition11sourceStateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QState{}) // "QState *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractTransition", "sourceState", args)
   }
 
+  return
 }
 
 // <= body block end

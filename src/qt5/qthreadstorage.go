@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qthreadstorage.h
 // dst-file: /src/core/qthreadstorage.go
 //
@@ -55,7 +55,7 @@ type QThreadStorageData struct {
 }
 
 // ~QThreadStorageData()
-func (this *QThreadStorageData) FreeQThreadStorageData(args ...interface{}) () {
+func (this *QThreadStorageData) Freeqthreadstoragedata(args ...interface{}) () {
   // ~QThreadStorageData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -72,10 +72,11 @@ func (this *QThreadStorageData) FreeQThreadStorageData(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadStorageData", "~QThreadStorageData", args)
   }
 
+  return
 }
 
 // set(void *)
-func (this *QThreadStorageData) set(args ...interface{}) () {
+func (this *QThreadStorageData) Set(args ...interface{}) () {
   // set(void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -95,10 +96,11 @@ func (this *QThreadStorageData) set(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadStorageData", "set", args)
   }
 
+  return
 }
 
 // finish(void **)
-func (this *QThreadStorageData) finish_s(args ...interface{}) () {
+func (this *QThreadStorageData) Finish_S(args ...interface{}) () {
   // finish(void **)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -118,10 +120,11 @@ func (this *QThreadStorageData) finish_s(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadStorageData", "finish", args)
   }
 
+  return
 }
 
 // get()
-func (this *QThreadStorageData) get(args ...interface{}) () {
+func (this *QThreadStorageData) Get(args ...interface{}) () {
   // get()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -138,6 +141,7 @@ func (this *QThreadStorageData) get(args ...interface{}) () {
     qtrt.ErrorResolve("QThreadStorageData", "get", args)
   }
 
+  return
 }
 
 // <= body block end

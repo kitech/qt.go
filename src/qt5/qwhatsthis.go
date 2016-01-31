@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qwhatsthis.h
 // dst-file: /src/widgets/qwhatsthis.go
 //
@@ -35,11 +35,11 @@ extern void C_ZN10QWhatsThis18leaveWhatsThisModeEv(); // 4
   // proto: static void QWhatsThis::hideText();
 extern void C_ZN10QWhatsThis8hideTextEv(); // 4
   // proto: static QAction * QWhatsThis::createAction(QObject * parent);
-extern void C_ZN10QWhatsThis12createActionEP7QObject(void* arg0); // 4
+extern void* C_ZN10QWhatsThis12createActionEP7QObject(void* arg0); // 4
   // proto: static void QWhatsThis::showText(const QPoint & pos, const QString & text, QWidget * w);
 extern void C_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget(void* arg0, void* arg1, void* arg2); // 4
   // proto: static bool QWhatsThis::inWhatsThisMode();
-extern void C_ZN10QWhatsThis15inWhatsThisModeEv(); // 4
+extern bool C_ZN10QWhatsThis15inWhatsThisModeEv(); // 4
 */
 import "C"
 // } // <= ext block end
@@ -59,7 +59,7 @@ type QWhatsThis struct {
 }
 
 // enterWhatsThisMode()
-func (this *QWhatsThis) enterWhatsThisMode_s(args ...interface{}) () {
+func (this *QWhatsThis) Enterwhatsthismode_S(args ...interface{}) () {
   // enterWhatsThisMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -76,10 +76,11 @@ func (this *QWhatsThis) enterWhatsThisMode_s(args ...interface{}) () {
     qtrt.ErrorResolve("QWhatsThis", "enterWhatsThisMode", args)
   }
 
+  return
 }
 
 // leaveWhatsThisMode()
-func (this *QWhatsThis) leaveWhatsThisMode_s(args ...interface{}) () {
+func (this *QWhatsThis) Leavewhatsthismode_S(args ...interface{}) () {
   // leaveWhatsThisMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -96,10 +97,11 @@ func (this *QWhatsThis) leaveWhatsThisMode_s(args ...interface{}) () {
     qtrt.ErrorResolve("QWhatsThis", "leaveWhatsThisMode", args)
   }
 
+  return
 }
 
 // hideText()
-func (this *QWhatsThis) hideText_s(args ...interface{}) () {
+func (this *QWhatsThis) Hidetext_S(args ...interface{}) () {
   // hideText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -116,10 +118,11 @@ func (this *QWhatsThis) hideText_s(args ...interface{}) () {
     qtrt.ErrorResolve("QWhatsThis", "hideText", args)
   }
 
+  return
 }
 
 // createAction(class QObject *)
-func (this *QWhatsThis) createAction_s(args ...interface{}) () {
+func (this *QWhatsThis) Createaction_S(args ...interface{}) (ret interface{}) {
   // createAction(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -134,16 +137,20 @@ func (this *QWhatsThis) createAction_s(args ...interface{}) () {
     // invoke: QAction * createAction(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN10QWhatsThis12createActionEP7QObject(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QWhatsThis12createActionEP7QObject(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QAction{}) // "QAction *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QWhatsThis", "createAction", args)
   }
 
+  return
 }
 
 // showText(const class QPoint &, const class QString &, class QWidget *)
-func (this *QWhatsThis) showText_s(args ...interface{}) () {
+func (this *QWhatsThis) Showtext_S(args ...interface{}) () {
   // showText(const class QPoint &, const class QString &, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -169,10 +176,11 @@ func (this *QWhatsThis) showText_s(args ...interface{}) () {
     qtrt.ErrorResolve("QWhatsThis", "showText", args)
   }
 
+  return
 }
 
 // inWhatsThisMode()
-func (this *QWhatsThis) inWhatsThisMode_s(args ...interface{}) () {
+func (this *QWhatsThis) Inwhatsthismode_S(args ...interface{}) (ret interface{}) {
   // inWhatsThisMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -184,12 +192,16 @@ func (this *QWhatsThis) inWhatsThisMode_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QWhatsThis15inWhatsThisModeEv
     // invoke: bool inWhatsThisMode()
-    var ret = C.C_ZN10QWhatsThis15inWhatsThisModeEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN10QWhatsThis15inWhatsThisModeEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QWhatsThis", "inWhatsThisMode", args)
   }
 
+  return
 }
 
 // <= body block end

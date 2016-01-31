@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qprogressdialog.h
 // dst-file: /src/widgets/qprogressdialog.go
 //
@@ -31,21 +31,21 @@ import "qtrt"
   // proto:  void QProgressDialog::setLabel(QLabel * label);
 extern void C_ZN15QProgressDialog8setLabelEP6QLabel(void* qthis, void* arg0); // 4
   // proto:  int QProgressDialog::minimumDuration();
-extern void C_ZNK15QProgressDialog15minimumDurationEv(void* qthis); // 4
+extern int32_t C_ZNK15QProgressDialog15minimumDurationEv(void* qthis); // 4
   // proto:  QString QProgressDialog::labelText();
-extern void C_ZNK15QProgressDialog9labelTextEv(void* qthis); // 4
+extern void* C_ZNK15QProgressDialog9labelTextEv(void* qthis); // 4
   // proto:  int QProgressDialog::minimum();
-extern void C_ZNK15QProgressDialog7minimumEv(void* qthis); // 4
+extern int32_t C_ZNK15QProgressDialog7minimumEv(void* qthis); // 4
   // proto:  void QProgressDialog::cancel();
 extern void C_ZN15QProgressDialog6cancelEv(void* qthis); // 4
   // proto:  void QProgressDialog::open(QObject * receiver, const char * member);
-extern void C_ZN15QProgressDialog4openEP7QObjectPKc(void* qthis, void* arg0, unsigned char* arg1); // 4
+extern void C_ZN15QProgressDialog4openEP7QObjectPKc(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QProgressDialog::setLabelText(const QString & text);
 extern void C_ZN15QProgressDialog12setLabelTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QProgressDialog::autoReset();
-extern void C_ZNK15QProgressDialog9autoResetEv(void* qthis); // 4
+extern bool C_ZNK15QProgressDialog9autoResetEv(void* qthis); // 4
   // proto:  bool QProgressDialog::wasCanceled();
-extern void C_ZNK15QProgressDialog11wasCanceledEv(void* qthis); // 4
+extern bool C_ZNK15QProgressDialog11wasCanceledEv(void* qthis); // 4
   // proto:  void QProgressDialog::setCancelButtonText(const QString & text);
 extern void C_ZN15QProgressDialog19setCancelButtonTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QProgressDialog::setMinimumDuration(int ms);
@@ -59,7 +59,7 @@ extern void C_ZN15QProgressDialog8setValueEi(void* qthis, int32_t arg0); // 4
   // proto:  void QProgressDialog::setCancelButton(QPushButton * button);
 extern void C_ZN15QProgressDialog15setCancelButtonEP11QPushButton(void* qthis, void* arg0); // 4
   // proto:  bool QProgressDialog::autoClose();
-extern void C_ZNK15QProgressDialog9autoCloseEv(void* qthis); // 4
+extern bool C_ZNK15QProgressDialog9autoCloseEv(void* qthis); // 4
   // proto:  const QMetaObject * QProgressDialog::metaObject();
 extern void C_ZNK15QProgressDialog10metaObjectEv(void* qthis); // 4
   // proto:  void QProgressDialog::setRange(int minimum, int maximum);
@@ -67,13 +67,13 @@ extern void C_ZN15QProgressDialog8setRangeEii(void* qthis, int32_t arg0, int32_t
   // proto:  void QProgressDialog::reset();
 extern void C_ZN15QProgressDialog5resetEv(void* qthis); // 4
   // proto:  QSize QProgressDialog::sizeHint();
-extern void C_ZNK15QProgressDialog8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK15QProgressDialog8sizeHintEv(void* qthis); // 4
   // proto:  void QProgressDialog::setAutoReset(bool reset);
 extern void C_ZN15QProgressDialog12setAutoResetEb(void* qthis, bool arg0); // 4
   // proto:  int QProgressDialog::maximum();
-extern void C_ZNK15QProgressDialog7maximumEv(void* qthis); // 4
+extern int32_t C_ZNK15QProgressDialog7maximumEv(void* qthis); // 4
   // proto:  int QProgressDialog::value();
-extern void C_ZNK15QProgressDialog5valueEv(void* qthis); // 4
+extern int32_t C_ZNK15QProgressDialog5valueEv(void* qthis); // 4
   // proto:  void QProgressDialog::setAutoClose(bool close);
 extern void C_ZN15QProgressDialog12setAutoCloseEb(void* qthis, bool arg0); // 4
   // proto:  void QProgressDialog::~QProgressDialog();
@@ -100,7 +100,7 @@ type QProgressDialog struct {
 }
 
 // setLabel(class QLabel *)
-func (this *QProgressDialog) setLabel(args ...interface{}) () {
+func (this *QProgressDialog) Setlabel(args ...interface{}) () {
   // setLabel(class QLabel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -120,10 +120,11 @@ func (this *QProgressDialog) setLabel(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "setLabel", args)
   }
 
+  return
 }
 
 // minimumDuration()
-func (this *QProgressDialog) minimumDuration(args ...interface{}) () {
+func (this *QProgressDialog) Minimumduration(args ...interface{}) (ret interface{}) {
   // minimumDuration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -135,16 +136,20 @@ func (this *QProgressDialog) minimumDuration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog15minimumDurationEv
     // invoke: int minimumDuration()
-    var ret = C.C_ZNK15QProgressDialog15minimumDurationEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QProgressDialog15minimumDurationEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProgressDialog", "minimumDuration", args)
   }
 
+  return
 }
 
 // labelText()
-func (this *QProgressDialog) labelText(args ...interface{}) () {
+func (this *QProgressDialog) Labeltext(args ...interface{}) (ret interface{}) {
   // labelText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -156,16 +161,20 @@ func (this *QProgressDialog) labelText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog9labelTextEv
     // invoke: QString labelText()
-    var ret = C.C_ZNK15QProgressDialog9labelTextEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QProgressDialog9labelTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProgressDialog", "labelText", args)
   }
 
+  return
 }
 
 // minimum()
-func (this *QProgressDialog) minimum(args ...interface{}) () {
+func (this *QProgressDialog) Minimum(args ...interface{}) (ret interface{}) {
   // minimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -177,16 +186,20 @@ func (this *QProgressDialog) minimum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog7minimumEv
     // invoke: int minimum()
-    var ret = C.C_ZNK15QProgressDialog7minimumEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QProgressDialog7minimumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProgressDialog", "minimum", args)
   }
 
+  return
 }
 
 // cancel()
-func (this *QProgressDialog) cancel(args ...interface{}) () {
+func (this *QProgressDialog) Cancel(args ...interface{}) () {
   // cancel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -203,10 +216,11 @@ func (this *QProgressDialog) cancel(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "cancel", args)
   }
 
+  return
 }
 
 // open(class QObject *, const char *)
-func (this *QProgressDialog) open(args ...interface{}) () {
+func (this *QProgressDialog) Open(args ...interface{}) () {
   // open(class QObject *, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -222,17 +236,20 @@ func (this *QProgressDialog) open(args ...interface{}) () {
     // invoke: void open(class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
     C.C_ZN15QProgressDialog4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QProgressDialog", "open", args)
   }
 
+  return
 }
 
 // setLabelText(const class QString &)
-func (this *QProgressDialog) setLabelText(args ...interface{}) () {
+func (this *QProgressDialog) Setlabeltext(args ...interface{}) () {
   // setLabelText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -252,10 +269,11 @@ func (this *QProgressDialog) setLabelText(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "setLabelText", args)
   }
 
+  return
 }
 
 // autoReset()
-func (this *QProgressDialog) autoReset(args ...interface{}) () {
+func (this *QProgressDialog) Autoreset(args ...interface{}) (ret interface{}) {
   // autoReset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -267,16 +285,20 @@ func (this *QProgressDialog) autoReset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog9autoResetEv
     // invoke: bool autoReset()
-    var ret = C.C_ZNK15QProgressDialog9autoResetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QProgressDialog9autoResetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProgressDialog", "autoReset", args)
   }
 
+  return
 }
 
 // wasCanceled()
-func (this *QProgressDialog) wasCanceled(args ...interface{}) () {
+func (this *QProgressDialog) Wascanceled(args ...interface{}) (ret interface{}) {
   // wasCanceled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -288,16 +310,20 @@ func (this *QProgressDialog) wasCanceled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog11wasCanceledEv
     // invoke: bool wasCanceled()
-    var ret = C.C_ZNK15QProgressDialog11wasCanceledEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QProgressDialog11wasCanceledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProgressDialog", "wasCanceled", args)
   }
 
+  return
 }
 
 // setCancelButtonText(const class QString &)
-func (this *QProgressDialog) setCancelButtonText(args ...interface{}) () {
+func (this *QProgressDialog) Setcancelbuttontext(args ...interface{}) () {
   // setCancelButtonText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -317,10 +343,11 @@ func (this *QProgressDialog) setCancelButtonText(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "setCancelButtonText", args)
   }
 
+  return
 }
 
 // setMinimumDuration(int)
-func (this *QProgressDialog) setMinimumDuration(args ...interface{}) () {
+func (this *QProgressDialog) Setminimumduration(args ...interface{}) () {
   // setMinimumDuration(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -340,10 +367,11 @@ func (this *QProgressDialog) setMinimumDuration(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "setMinimumDuration", args)
   }
 
+  return
 }
 
 // setMaximum(int)
-func (this *QProgressDialog) setMaximum(args ...interface{}) () {
+func (this *QProgressDialog) Setmaximum(args ...interface{}) () {
   // setMaximum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -363,10 +391,11 @@ func (this *QProgressDialog) setMaximum(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "setMaximum", args)
   }
 
+  return
 }
 
 // setBar(class QProgressBar *)
-func (this *QProgressDialog) setBar(args ...interface{}) () {
+func (this *QProgressDialog) Setbar(args ...interface{}) () {
   // setBar(class QProgressBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -386,10 +415,11 @@ func (this *QProgressDialog) setBar(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "setBar", args)
   }
 
+  return
 }
 
 // setValue(int)
-func (this *QProgressDialog) setValue(args ...interface{}) () {
+func (this *QProgressDialog) Setvalue(args ...interface{}) () {
   // setValue(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -409,10 +439,11 @@ func (this *QProgressDialog) setValue(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "setValue", args)
   }
 
+  return
 }
 
 // setCancelButton(class QPushButton *)
-func (this *QProgressDialog) setCancelButton(args ...interface{}) () {
+func (this *QProgressDialog) Setcancelbutton(args ...interface{}) () {
   // setCancelButton(class QPushButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -432,10 +463,11 @@ func (this *QProgressDialog) setCancelButton(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "setCancelButton", args)
   }
 
+  return
 }
 
 // autoClose()
-func (this *QProgressDialog) autoClose(args ...interface{}) () {
+func (this *QProgressDialog) Autoclose(args ...interface{}) (ret interface{}) {
   // autoClose()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -447,16 +479,20 @@ func (this *QProgressDialog) autoClose(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog9autoCloseEv
     // invoke: bool autoClose()
-    var ret = C.C_ZNK15QProgressDialog9autoCloseEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QProgressDialog9autoCloseEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProgressDialog", "autoClose", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QProgressDialog) metaObject(args ...interface{}) () {
+func (this *QProgressDialog) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -473,10 +509,11 @@ func (this *QProgressDialog) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "metaObject", args)
   }
 
+  return
 }
 
 // setRange(int, int)
-func (this *QProgressDialog) setRange(args ...interface{}) () {
+func (this *QProgressDialog) Setrange(args ...interface{}) () {
   // setRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -499,10 +536,11 @@ func (this *QProgressDialog) setRange(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "setRange", args)
   }
 
+  return
 }
 
 // reset()
-func (this *QProgressDialog) reset(args ...interface{}) () {
+func (this *QProgressDialog) Reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -519,10 +557,11 @@ func (this *QProgressDialog) reset(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "reset", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QProgressDialog) sizeHint(args ...interface{}) () {
+func (this *QProgressDialog) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -534,16 +573,20 @@ func (this *QProgressDialog) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK15QProgressDialog8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QProgressDialog8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProgressDialog", "sizeHint", args)
   }
 
+  return
 }
 
 // setAutoReset(_Bool)
-func (this *QProgressDialog) setAutoReset(args ...interface{}) () {
+func (this *QProgressDialog) Setautoreset(args ...interface{}) () {
   // setAutoReset(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -563,10 +606,11 @@ func (this *QProgressDialog) setAutoReset(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "setAutoReset", args)
   }
 
+  return
 }
 
 // maximum()
-func (this *QProgressDialog) maximum(args ...interface{}) () {
+func (this *QProgressDialog) Maximum(args ...interface{}) (ret interface{}) {
   // maximum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -578,16 +622,20 @@ func (this *QProgressDialog) maximum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog7maximumEv
     // invoke: int maximum()
-    var ret = C.C_ZNK15QProgressDialog7maximumEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QProgressDialog7maximumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProgressDialog", "maximum", args)
   }
 
+  return
 }
 
 // value()
-func (this *QProgressDialog) value(args ...interface{}) () {
+func (this *QProgressDialog) Value(args ...interface{}) (ret interface{}) {
   // value()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -599,16 +647,20 @@ func (this *QProgressDialog) value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog5valueEv
     // invoke: int value()
-    var ret = C.C_ZNK15QProgressDialog5valueEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QProgressDialog5valueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProgressDialog", "value", args)
   }
 
+  return
 }
 
 // setAutoClose(_Bool)
-func (this *QProgressDialog) setAutoClose(args ...interface{}) () {
+func (this *QProgressDialog) Setautoclose(args ...interface{}) () {
   // setAutoClose(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -628,10 +680,11 @@ func (this *QProgressDialog) setAutoClose(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "setAutoClose", args)
   }
 
+  return
 }
 
 // ~QProgressDialog()
-func (this *QProgressDialog) FreeQProgressDialog(args ...interface{}) () {
+func (this *QProgressDialog) Freeqprogressdialog(args ...interface{}) () {
   // ~QProgressDialog()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -648,10 +701,11 @@ func (this *QProgressDialog) FreeQProgressDialog(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "~QProgressDialog", args)
   }
 
+  return
 }
 
 // setMinimum(int)
-func (this *QProgressDialog) setMinimum(args ...interface{}) () {
+func (this *QProgressDialog) Setminimum(args ...interface{}) () {
   // setMinimum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -671,6 +725,7 @@ func (this *QProgressDialog) setMinimum(args ...interface{}) () {
     qtrt.ErrorResolve("QProgressDialog", "setMinimum", args)
   }
 
+  return
 }
 
 // <= body block end

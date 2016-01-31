@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qgraphicsitemanimation.h
 // dst-file: /src/widgets/qgraphicsitemanimation.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  qreal QGraphicsItemAnimation::verticalScaleAt(qreal step);
-extern void C_ZNK22QGraphicsItemAnimation15verticalScaleAtEd(void* qthis, double arg0); // 4
+extern double C_ZNK22QGraphicsItemAnimation15verticalScaleAtEd(void* qthis, double arg0); // 4
   // proto:  qreal QGraphicsItemAnimation::horizontalScaleAt(qreal step);
-extern void C_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd(void* qthis, double arg0); // 4
+extern double C_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsItemAnimation::setShearAt(qreal step, qreal sh, qreal sv);
 extern void C_ZN22QGraphicsItemAnimation10setShearAtEddd(void* qthis, double arg0, double arg1, double arg2); // 4
   // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::posList();
@@ -41,27 +41,27 @@ extern void C_ZNK22QGraphicsItemAnimation15translationListEv(void* qthis); // 4
   // proto:  void QGraphicsItemAnimation::QGraphicsItemAnimation(QObject * parent);
 extern void* C_ZN22QGraphicsItemAnimationC2EP7QObject(void* arg0); // 3
   // proto:  qreal QGraphicsItemAnimation::rotationAt(qreal step);
-extern void C_ZNK22QGraphicsItemAnimation10rotationAtEd(void* qthis, double arg0); // 4
+extern double C_ZNK22QGraphicsItemAnimation10rotationAtEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsItemAnimation::setPosAt(qreal step, const QPointF & pos);
 extern void C_ZN22QGraphicsItemAnimation8setPosAtEdRK7QPointF(void* qthis, double arg0, void* arg1); // 4
   // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::scaleList();
 extern void C_ZNK22QGraphicsItemAnimation9scaleListEv(void* qthis); // 4
   // proto:  QTimeLine * QGraphicsItemAnimation::timeLine();
-extern void C_ZNK22QGraphicsItemAnimation8timeLineEv(void* qthis); // 4
+extern void* C_ZNK22QGraphicsItemAnimation8timeLineEv(void* qthis); // 4
   // proto:  qreal QGraphicsItemAnimation::yTranslationAt(qreal step);
-extern void C_ZNK22QGraphicsItemAnimation14yTranslationAtEd(void* qthis, double arg0); // 4
+extern double C_ZNK22QGraphicsItemAnimation14yTranslationAtEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsItemAnimation::setStep(qreal x);
 extern void C_ZN22QGraphicsItemAnimation7setStepEd(void* qthis, double arg0); // 4
   // proto:  qreal QGraphicsItemAnimation::xTranslationAt(qreal step);
-extern void C_ZNK22QGraphicsItemAnimation14xTranslationAtEd(void* qthis, double arg0); // 4
+extern double C_ZNK22QGraphicsItemAnimation14xTranslationAtEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsItemAnimation::setRotationAt(qreal step, qreal angle);
 extern void C_ZN22QGraphicsItemAnimation13setRotationAtEdd(void* qthis, double arg0, double arg1); // 4
   // proto:  void QGraphicsItemAnimation::setTimeLine(QTimeLine * timeLine);
 extern void C_ZN22QGraphicsItemAnimation11setTimeLineEP9QTimeLine(void* qthis, void* arg0); // 4
   // proto:  QMatrix QGraphicsItemAnimation::matrixAt(qreal step);
-extern void C_ZNK22QGraphicsItemAnimation8matrixAtEd(void* qthis, double arg0); // 4
+extern void* C_ZNK22QGraphicsItemAnimation8matrixAtEd(void* qthis, double arg0); // 4
   // proto:  qreal QGraphicsItemAnimation::horizontalShearAt(qreal step);
-extern void C_ZNK22QGraphicsItemAnimation17horizontalShearAtEd(void* qthis, double arg0); // 4
+extern double C_ZNK22QGraphicsItemAnimation17horizontalShearAtEd(void* qthis, double arg0); // 4
   // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::shearList();
 extern void C_ZNK22QGraphicsItemAnimation9shearListEv(void* qthis); // 4
   // proto:  void QGraphicsItemAnimation::setScaleAt(qreal step, qreal sx, qreal sy);
@@ -81,11 +81,11 @@ extern void C_ZN22QGraphicsItemAnimation7setItemEP13QGraphicsItem(void* qthis, v
   // proto:  void QGraphicsItemAnimation::~QGraphicsItemAnimation();
 extern void C_ZN22QGraphicsItemAnimationD2Ev(void* qthis); // 4
   // proto:  QPointF QGraphicsItemAnimation::posAt(qreal step);
-extern void C_ZNK22QGraphicsItemAnimation5posAtEd(void* qthis, double arg0); // 4
+extern void* C_ZNK22QGraphicsItemAnimation5posAtEd(void* qthis, double arg0); // 4
   // proto:  QGraphicsItem * QGraphicsItemAnimation::item();
 extern void C_ZNK22QGraphicsItemAnimation4itemEv(void* qthis); // 4
   // proto:  qreal QGraphicsItemAnimation::verticalShearAt(qreal step);
-extern void C_ZNK22QGraphicsItemAnimation15verticalShearAtEd(void* qthis, double arg0); // 4
+extern double C_ZNK22QGraphicsItemAnimation15verticalShearAtEd(void* qthis, double arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -105,7 +105,7 @@ type QGraphicsItemAnimation struct {
 }
 
 // verticalScaleAt(qreal)
-func (this *QGraphicsItemAnimation) verticalScaleAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Verticalscaleat(args ...interface{}) (ret interface{}) {
   // verticalScaleAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -120,16 +120,20 @@ func (this *QGraphicsItemAnimation) verticalScaleAt(args ...interface{}) () {
     // invoke: qreal verticalScaleAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK22QGraphicsItemAnimation15verticalScaleAtEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK22QGraphicsItemAnimation15verticalScaleAtEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "verticalScaleAt", args)
   }
 
+  return
 }
 
 // horizontalScaleAt(qreal)
-func (this *QGraphicsItemAnimation) horizontalScaleAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Horizontalscaleat(args ...interface{}) (ret interface{}) {
   // horizontalScaleAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -144,16 +148,20 @@ func (this *QGraphicsItemAnimation) horizontalScaleAt(args ...interface{}) () {
     // invoke: qreal horizontalScaleAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "horizontalScaleAt", args)
   }
 
+  return
 }
 
 // setShearAt(qreal, qreal, qreal)
-func (this *QGraphicsItemAnimation) setShearAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Setshearat(args ...interface{}) () {
   // setShearAt(qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,10 +187,11 @@ func (this *QGraphicsItemAnimation) setShearAt(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setShearAt", args)
   }
 
+  return
 }
 
 // posList()
-func (this *QGraphicsItemAnimation) posList(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Poslist(args ...interface{}) () {
   // posList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -199,10 +208,11 @@ func (this *QGraphicsItemAnimation) posList(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "posList", args)
   }
 
+  return
 }
 
 // translationList()
-func (this *QGraphicsItemAnimation) translationList(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Translationlist(args ...interface{}) () {
   // translationList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -219,6 +229,7 @@ func (this *QGraphicsItemAnimation) translationList(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "translationList", args)
   }
 
+  return
 }
 
 // QGraphicsItemAnimation(class QObject *)
@@ -249,7 +260,7 @@ func NewQGraphicsItemAnimation(args ...interface{}) *QGraphicsItemAnimation {
 }
 
 // rotationAt(qreal)
-func (this *QGraphicsItemAnimation) rotationAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Rotationat(args ...interface{}) (ret interface{}) {
   // rotationAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -264,16 +275,20 @@ func (this *QGraphicsItemAnimation) rotationAt(args ...interface{}) () {
     // invoke: qreal rotationAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK22QGraphicsItemAnimation10rotationAtEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK22QGraphicsItemAnimation10rotationAtEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "rotationAt", args)
   }
 
+  return
 }
 
 // setPosAt(qreal, const class QPointF &)
-func (this *QGraphicsItemAnimation) setPosAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Setposat(args ...interface{}) () {
   // setPosAt(qreal, const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -296,10 +311,11 @@ func (this *QGraphicsItemAnimation) setPosAt(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setPosAt", args)
   }
 
+  return
 }
 
 // scaleList()
-func (this *QGraphicsItemAnimation) scaleList(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Scalelist(args ...interface{}) () {
   // scaleList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -316,10 +332,11 @@ func (this *QGraphicsItemAnimation) scaleList(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "scaleList", args)
   }
 
+  return
 }
 
 // timeLine()
-func (this *QGraphicsItemAnimation) timeLine(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Timeline(args ...interface{}) (ret interface{}) {
   // timeLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -331,16 +348,20 @@ func (this *QGraphicsItemAnimation) timeLine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation8timeLineEv
     // invoke: QTimeLine * timeLine()
-    var ret = C.C_ZNK22QGraphicsItemAnimation8timeLineEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK22QGraphicsItemAnimation8timeLineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTimeLine{}) // "QTimeLine *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "timeLine", args)
   }
 
+  return
 }
 
 // yTranslationAt(qreal)
-func (this *QGraphicsItemAnimation) yTranslationAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Ytranslationat(args ...interface{}) (ret interface{}) {
   // yTranslationAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -355,16 +376,20 @@ func (this *QGraphicsItemAnimation) yTranslationAt(args ...interface{}) () {
     // invoke: qreal yTranslationAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK22QGraphicsItemAnimation14yTranslationAtEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK22QGraphicsItemAnimation14yTranslationAtEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "yTranslationAt", args)
   }
 
+  return
 }
 
 // setStep(qreal)
-func (this *QGraphicsItemAnimation) setStep(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Setstep(args ...interface{}) () {
   // setStep(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -384,10 +409,11 @@ func (this *QGraphicsItemAnimation) setStep(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setStep", args)
   }
 
+  return
 }
 
 // xTranslationAt(qreal)
-func (this *QGraphicsItemAnimation) xTranslationAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Xtranslationat(args ...interface{}) (ret interface{}) {
   // xTranslationAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -402,16 +428,20 @@ func (this *QGraphicsItemAnimation) xTranslationAt(args ...interface{}) () {
     // invoke: qreal xTranslationAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK22QGraphicsItemAnimation14xTranslationAtEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK22QGraphicsItemAnimation14xTranslationAtEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "xTranslationAt", args)
   }
 
+  return
 }
 
 // setRotationAt(qreal, qreal)
-func (this *QGraphicsItemAnimation) setRotationAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Setrotationat(args ...interface{}) () {
   // setRotationAt(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -434,10 +464,11 @@ func (this *QGraphicsItemAnimation) setRotationAt(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setRotationAt", args)
   }
 
+  return
 }
 
 // setTimeLine(class QTimeLine *)
-func (this *QGraphicsItemAnimation) setTimeLine(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Settimeline(args ...interface{}) () {
   // setTimeLine(class QTimeLine *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -457,10 +488,11 @@ func (this *QGraphicsItemAnimation) setTimeLine(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setTimeLine", args)
   }
 
+  return
 }
 
 // matrixAt(qreal)
-func (this *QGraphicsItemAnimation) matrixAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Matrixat(args ...interface{}) (ret interface{}) {
   // matrixAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -475,16 +507,20 @@ func (this *QGraphicsItemAnimation) matrixAt(args ...interface{}) () {
     // invoke: QMatrix matrixAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK22QGraphicsItemAnimation8matrixAtEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK22QGraphicsItemAnimation8matrixAtEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMatrix{}) // "QMatrix"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "matrixAt", args)
   }
 
+  return
 }
 
 // horizontalShearAt(qreal)
-func (this *QGraphicsItemAnimation) horizontalShearAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Horizontalshearat(args ...interface{}) (ret interface{}) {
   // horizontalShearAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -499,16 +535,20 @@ func (this *QGraphicsItemAnimation) horizontalShearAt(args ...interface{}) () {
     // invoke: qreal horizontalShearAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK22QGraphicsItemAnimation17horizontalShearAtEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK22QGraphicsItemAnimation17horizontalShearAtEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "horizontalShearAt", args)
   }
 
+  return
 }
 
 // shearList()
-func (this *QGraphicsItemAnimation) shearList(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Shearlist(args ...interface{}) () {
   // shearList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -525,10 +565,11 @@ func (this *QGraphicsItemAnimation) shearList(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "shearList", args)
   }
 
+  return
 }
 
 // setScaleAt(qreal, qreal, qreal)
-func (this *QGraphicsItemAnimation) setScaleAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Setscaleat(args ...interface{}) () {
   // setScaleAt(qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -554,10 +595,11 @@ func (this *QGraphicsItemAnimation) setScaleAt(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setScaleAt", args)
   }
 
+  return
 }
 
 // rotationList()
-func (this *QGraphicsItemAnimation) rotationList(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Rotationlist(args ...interface{}) () {
   // rotationList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -574,10 +616,11 @@ func (this *QGraphicsItemAnimation) rotationList(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "rotationList", args)
   }
 
+  return
 }
 
 // setTranslationAt(qreal, qreal, qreal)
-func (this *QGraphicsItemAnimation) setTranslationAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Settranslationat(args ...interface{}) () {
   // setTranslationAt(qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -603,10 +646,11 @@ func (this *QGraphicsItemAnimation) setTranslationAt(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setTranslationAt", args)
   }
 
+  return
 }
 
 // reset()
-func (this *QGraphicsItemAnimation) reset(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -623,10 +667,11 @@ func (this *QGraphicsItemAnimation) reset(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "reset", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QGraphicsItemAnimation) metaObject(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -643,10 +688,11 @@ func (this *QGraphicsItemAnimation) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "metaObject", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QGraphicsItemAnimation) clear(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -663,10 +709,11 @@ func (this *QGraphicsItemAnimation) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "clear", args)
   }
 
+  return
 }
 
 // setItem(class QGraphicsItem *)
-func (this *QGraphicsItemAnimation) setItem(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Setitem(args ...interface{}) () {
   // setItem(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -686,10 +733,11 @@ func (this *QGraphicsItemAnimation) setItem(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setItem", args)
   }
 
+  return
 }
 
 // ~QGraphicsItemAnimation()
-func (this *QGraphicsItemAnimation) FreeQGraphicsItemAnimation(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Freeqgraphicsitemanimation(args ...interface{}) () {
   // ~QGraphicsItemAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -706,10 +754,11 @@ func (this *QGraphicsItemAnimation) FreeQGraphicsItemAnimation(args ...interface
     qtrt.ErrorResolve("QGraphicsItemAnimation", "~QGraphicsItemAnimation", args)
   }
 
+  return
 }
 
 // posAt(qreal)
-func (this *QGraphicsItemAnimation) posAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Posat(args ...interface{}) (ret interface{}) {
   // posAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -724,16 +773,20 @@ func (this *QGraphicsItemAnimation) posAt(args ...interface{}) () {
     // invoke: QPointF posAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK22QGraphicsItemAnimation5posAtEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK22QGraphicsItemAnimation5posAtEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "posAt", args)
   }
 
+  return
 }
 
 // item()
-func (this *QGraphicsItemAnimation) item(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Item(args ...interface{}) () {
   // item()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -750,10 +803,11 @@ func (this *QGraphicsItemAnimation) item(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsItemAnimation", "item", args)
   }
 
+  return
 }
 
 // verticalShearAt(qreal)
-func (this *QGraphicsItemAnimation) verticalShearAt(args ...interface{}) () {
+func (this *QGraphicsItemAnimation) Verticalshearat(args ...interface{}) (ret interface{}) {
   // verticalShearAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -768,12 +822,16 @@ func (this *QGraphicsItemAnimation) verticalShearAt(args ...interface{}) () {
     // invoke: qreal verticalShearAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK22QGraphicsItemAnimation15verticalShearAtEd(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK22QGraphicsItemAnimation15verticalShearAtEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "verticalShearAt", args)
   }
 
+  return
 }
 
 // <= body block end

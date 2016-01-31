@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QFrame::frameStyle();
-extern void C_ZNK6QFrame10frameStyleEv(void* qthis); // 4
+extern int32_t C_ZNK6QFrame10frameStyleEv(void* qthis); // 4
   // proto:  void QFrame::~QFrame();
 extern void C_ZN6QFrameD2Ev(void* qthis); // 4
   // proto:  int QFrame::frameWidth();
-extern void C_ZNK6QFrame10frameWidthEv(void* qthis); // 4
+extern int32_t C_ZNK6QFrame10frameWidthEv(void* qthis); // 4
   // proto:  void QFrame::setLineWidth(int );
 extern void C_ZN6QFrame12setLineWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  const QMetaObject * QFrame::metaObject();
@@ -41,21 +41,21 @@ extern void C_ZNK6QFrame10metaObjectEv(void* qthis); // 4
   // proto:  void QFrame::setFrameStyle(int );
 extern void C_ZN6QFrame13setFrameStyleEi(void* qthis, int32_t arg0); // 4
   // proto:  QRect QFrame::frameRect();
-extern void C_ZNK6QFrame9frameRectEv(void* qthis); // 4
+extern void* C_ZNK6QFrame9frameRectEv(void* qthis); // 4
   // proto:  QFrame::Shadow QFrame::frameShadow();
 extern void C_ZNK6QFrame11frameShadowEv(void* qthis); // 4
   // proto:  void QFrame::setFrameRect(const QRect & );
 extern void C_ZN6QFrame12setFrameRectERK5QRect(void* qthis, void* arg0); // 4
   // proto:  int QFrame::midLineWidth();
-extern void C_ZNK6QFrame12midLineWidthEv(void* qthis); // 4
+extern int32_t C_ZNK6QFrame12midLineWidthEv(void* qthis); // 4
   // proto:  QSize QFrame::sizeHint();
-extern void C_ZNK6QFrame8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK6QFrame8sizeHintEv(void* qthis); // 4
   // proto:  QFrame::Shape QFrame::frameShape();
 extern void C_ZNK6QFrame10frameShapeEv(void* qthis); // 4
   // proto:  void QFrame::setMidLineWidth(int );
 extern void C_ZN6QFrame15setMidLineWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  int QFrame::lineWidth();
-extern void C_ZNK6QFrame9lineWidthEv(void* qthis); // 4
+extern int32_t C_ZNK6QFrame9lineWidthEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -75,7 +75,7 @@ type QFrame struct {
 }
 
 // frameStyle()
-func (this *QFrame) frameStyle(args ...interface{}) () {
+func (this *QFrame) Framestyle(args ...interface{}) (ret interface{}) {
   // frameStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -87,16 +87,20 @@ func (this *QFrame) frameStyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame10frameStyleEv
     // invoke: int frameStyle()
-    var ret = C.C_ZNK6QFrame10frameStyleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QFrame10frameStyleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFrame", "frameStyle", args)
   }
 
+  return
 }
 
 // ~QFrame()
-func (this *QFrame) FreeQFrame(args ...interface{}) () {
+func (this *QFrame) Freeqframe(args ...interface{}) () {
   // ~QFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -113,10 +117,11 @@ func (this *QFrame) FreeQFrame(args ...interface{}) () {
     qtrt.ErrorResolve("QFrame", "~QFrame", args)
   }
 
+  return
 }
 
 // frameWidth()
-func (this *QFrame) frameWidth(args ...interface{}) () {
+func (this *QFrame) Framewidth(args ...interface{}) (ret interface{}) {
   // frameWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -128,16 +133,20 @@ func (this *QFrame) frameWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame10frameWidthEv
     // invoke: int frameWidth()
-    var ret = C.C_ZNK6QFrame10frameWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QFrame10frameWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFrame", "frameWidth", args)
   }
 
+  return
 }
 
 // setLineWidth(int)
-func (this *QFrame) setLineWidth(args ...interface{}) () {
+func (this *QFrame) Setlinewidth(args ...interface{}) () {
   // setLineWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -157,10 +166,11 @@ func (this *QFrame) setLineWidth(args ...interface{}) () {
     qtrt.ErrorResolve("QFrame", "setLineWidth", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QFrame) metaObject(args ...interface{}) () {
+func (this *QFrame) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -177,10 +187,11 @@ func (this *QFrame) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QFrame", "metaObject", args)
   }
 
+  return
 }
 
 // setFrameStyle(int)
-func (this *QFrame) setFrameStyle(args ...interface{}) () {
+func (this *QFrame) Setframestyle(args ...interface{}) () {
   // setFrameStyle(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -200,10 +211,11 @@ func (this *QFrame) setFrameStyle(args ...interface{}) () {
     qtrt.ErrorResolve("QFrame", "setFrameStyle", args)
   }
 
+  return
 }
 
 // frameRect()
-func (this *QFrame) frameRect(args ...interface{}) () {
+func (this *QFrame) Framerect(args ...interface{}) (ret interface{}) {
   // frameRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -215,16 +227,20 @@ func (this *QFrame) frameRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame9frameRectEv
     // invoke: QRect frameRect()
-    var ret = C.C_ZNK6QFrame9frameRectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QFrame9frameRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFrame", "frameRect", args)
   }
 
+  return
 }
 
 // frameShadow()
-func (this *QFrame) frameShadow(args ...interface{}) () {
+func (this *QFrame) Frameshadow(args ...interface{}) () {
   // frameShadow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -241,10 +257,11 @@ func (this *QFrame) frameShadow(args ...interface{}) () {
     qtrt.ErrorResolve("QFrame", "frameShadow", args)
   }
 
+  return
 }
 
 // setFrameRect(const class QRect &)
-func (this *QFrame) setFrameRect(args ...interface{}) () {
+func (this *QFrame) Setframerect(args ...interface{}) () {
   // setFrameRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -264,10 +281,11 @@ func (this *QFrame) setFrameRect(args ...interface{}) () {
     qtrt.ErrorResolve("QFrame", "setFrameRect", args)
   }
 
+  return
 }
 
 // midLineWidth()
-func (this *QFrame) midLineWidth(args ...interface{}) () {
+func (this *QFrame) Midlinewidth(args ...interface{}) (ret interface{}) {
   // midLineWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -279,16 +297,20 @@ func (this *QFrame) midLineWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame12midLineWidthEv
     // invoke: int midLineWidth()
-    var ret = C.C_ZNK6QFrame12midLineWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QFrame12midLineWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFrame", "midLineWidth", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QFrame) sizeHint(args ...interface{}) () {
+func (this *QFrame) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -300,16 +322,20 @@ func (this *QFrame) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK6QFrame8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QFrame8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFrame", "sizeHint", args)
   }
 
+  return
 }
 
 // frameShape()
-func (this *QFrame) frameShape(args ...interface{}) () {
+func (this *QFrame) Frameshape(args ...interface{}) () {
   // frameShape()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -326,10 +352,11 @@ func (this *QFrame) frameShape(args ...interface{}) () {
     qtrt.ErrorResolve("QFrame", "frameShape", args)
   }
 
+  return
 }
 
 // setMidLineWidth(int)
-func (this *QFrame) setMidLineWidth(args ...interface{}) () {
+func (this *QFrame) Setmidlinewidth(args ...interface{}) () {
   // setMidLineWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -349,10 +376,11 @@ func (this *QFrame) setMidLineWidth(args ...interface{}) () {
     qtrt.ErrorResolve("QFrame", "setMidLineWidth", args)
   }
 
+  return
 }
 
 // lineWidth()
-func (this *QFrame) lineWidth(args ...interface{}) () {
+func (this *QFrame) Linewidth(args ...interface{}) (ret interface{}) {
   // lineWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -364,12 +392,16 @@ func (this *QFrame) lineWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame9lineWidthEv
     // invoke: int lineWidth()
-    var ret = C.C_ZNK6QFrame9lineWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QFrame9lineWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFrame", "lineWidth", args)
   }
 
+  return
 }
 
 // <= body block end

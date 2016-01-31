@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qaccessibleplugin.h
 // dst-file: /src/gui/qaccessibleplugin.go
 //
@@ -80,7 +80,7 @@ func NewQAccessiblePlugin(args ...interface{}) *QAccessiblePlugin {
 }
 
 // metaObject()
-func (this *QAccessiblePlugin) metaObject(args ...interface{}) () {
+func (this *QAccessiblePlugin) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,10 +97,11 @@ func (this *QAccessiblePlugin) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QAccessiblePlugin", "metaObject", args)
   }
 
+  return
 }
 
 // ~QAccessiblePlugin()
-func (this *QAccessiblePlugin) FreeQAccessiblePlugin(args ...interface{}) () {
+func (this *QAccessiblePlugin) Freeqaccessibleplugin(args ...interface{}) () {
   // ~QAccessiblePlugin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,6 +118,7 @@ func (this *QAccessiblePlugin) FreeQAccessiblePlugin(args ...interface{}) () {
     qtrt.ErrorResolve("QAccessiblePlugin", "~QAccessiblePlugin", args)
   }
 
+  return
 }
 
 // <= body block end

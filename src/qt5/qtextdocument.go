@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qtextdocument.h
 // dst-file: /src/gui/qtextdocument.go
 //
@@ -29,39 +29,39 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QSizeF QTextDocument::pageSize();
-extern void C_ZNK13QTextDocument8pageSizeEv(void* qthis); // 4
+extern void* C_ZNK13QTextDocument8pageSizeEv(void* qthis); // 4
   // proto:  int QTextDocument::availableRedoSteps();
-extern void C_ZNK13QTextDocument18availableRedoStepsEv(void* qthis); // 4
+extern int32_t C_ZNK13QTextDocument18availableRedoStepsEv(void* qthis); // 4
   // proto:  QString QTextDocument::defaultStyleSheet();
-extern void C_ZNK13QTextDocument17defaultStyleSheetEv(void* qthis); // 4
+extern void* C_ZNK13QTextDocument17defaultStyleSheetEv(void* qthis); // 4
   // proto:  QVariant QTextDocument::resource(int type, const QUrl & name);
-extern void C_ZNK13QTextDocument8resourceEiRK4QUrl(void* qthis, int32_t arg0, void* arg1); // 4
+extern void* C_ZNK13QTextDocument8resourceEiRK4QUrl(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  qreal QTextDocument::indentWidth();
-extern void C_ZNK13QTextDocument11indentWidthEv(void* qthis); // 4
+extern double C_ZNK13QTextDocument11indentWidthEv(void* qthis); // 4
   // proto:  const QMetaObject * QTextDocument::metaObject();
 extern void C_ZNK13QTextDocument10metaObjectEv(void* qthis); // 4
   // proto:  QTextBlock QTextDocument::lastBlock();
-extern void C_ZNK13QTextDocument9lastBlockEv(void* qthis); // 4
+extern void* C_ZNK13QTextDocument9lastBlockEv(void* qthis); // 4
   // proto:  void QTextDocument::setUndoRedoEnabled(bool enable);
 extern void C_ZN13QTextDocument18setUndoRedoEnabledEb(void* qthis, bool arg0); // 4
   // proto:  bool QTextDocument::isUndoAvailable();
-extern void C_ZNK13QTextDocument15isUndoAvailableEv(void* qthis); // 4
+extern bool C_ZNK13QTextDocument15isUndoAvailableEv(void* qthis); // 4
   // proto:  void QTextDocument::setDefaultFont(const QFont & font);
 extern void C_ZN13QTextDocument14setDefaultFontERK5QFont(void* qthis, void* arg0); // 4
   // proto:  bool QTextDocument::useDesignMetrics();
-extern void C_ZNK13QTextDocument16useDesignMetricsEv(void* qthis); // 4
+extern bool C_ZNK13QTextDocument16useDesignMetricsEv(void* qthis); // 4
   // proto:  qreal QTextDocument::textWidth();
-extern void C_ZNK13QTextDocument9textWidthEv(void* qthis); // 4
+extern double C_ZNK13QTextDocument9textWidthEv(void* qthis); // 4
   // proto:  int QTextDocument::characterCount();
-extern void C_ZNK13QTextDocument14characterCountEv(void* qthis); // 4
+extern int32_t C_ZNK13QTextDocument14characterCountEv(void* qthis); // 4
   // proto:  bool QTextDocument::isUndoRedoEnabled();
-extern void C_ZNK13QTextDocument17isUndoRedoEnabledEv(void* qthis); // 4
+extern bool C_ZNK13QTextDocument17isUndoRedoEnabledEv(void* qthis); // 4
   // proto:  void QTextDocument::print(QPagedPaintDevice * printer);
 extern void C_ZNK13QTextDocument5printEP17QPagedPaintDevice(void* qthis, void* arg0); // 4
   // proto:  QTextObject * QTextDocument::objectForFormat(const QTextFormat & );
-extern void C_ZNK13QTextDocument15objectForFormatERK11QTextFormat(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QTextDocument15objectForFormatERK11QTextFormat(void* qthis, void* arg0); // 4
   // proto:  QString QTextDocument::toPlainText();
-extern void C_ZNK13QTextDocument11toPlainTextEv(void* qthis); // 4
+extern void* C_ZNK13QTextDocument11toPlainTextEv(void* qthis); // 4
   // proto:  void QTextDocument::undo();
 extern void C_ZN13QTextDocument4undoEv(void* qthis); // 4
   // proto:  void QTextDocument::undo(QTextCursor * cursor);
@@ -71,15 +71,15 @@ extern void C_ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF(void* qthis, v
   // proto:  void QTextDocument::setModified(bool m);
 extern void C_ZN13QTextDocument11setModifiedEb(void* qthis, bool arg0); // 4
   // proto:  int QTextDocument::blockCount();
-extern void C_ZNK13QTextDocument10blockCountEv(void* qthis); // 4
+extern int32_t C_ZNK13QTextDocument10blockCountEv(void* qthis); // 4
   // proto:  QFont QTextDocument::defaultFont();
-extern void C_ZNK13QTextDocument11defaultFontEv(void* qthis); // 4
+extern void* C_ZNK13QTextDocument11defaultFontEv(void* qthis); // 4
   // proto:  bool QTextDocument::isRedoAvailable();
-extern void C_ZNK13QTextDocument15isRedoAvailableEv(void* qthis); // 4
+extern bool C_ZNK13QTextDocument15isRedoAvailableEv(void* qthis); // 4
   // proto:  QTextFrame * QTextDocument::frameAt(int pos);
-extern void C_ZNK13QTextDocument7frameAtEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK13QTextDocument7frameAtEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTextDocument::pageCount();
-extern void C_ZNK13QTextDocument9pageCountEv(void* qthis); // 4
+extern int32_t C_ZNK13QTextDocument9pageCountEv(void* qthis); // 4
   // proto:  void QTextDocument::QTextDocument(QObject * parent);
 extern void* C_ZN13QTextDocumentC2EP7QObject(void* arg0); // 3
   // proto:  void QTextDocument::QTextDocument(const QString & text, QObject * parent);
@@ -87,33 +87,33 @@ extern void* C_ZN13QTextDocumentC2ERK7QStringP7QObject(void* arg0, void* arg1); 
   // proto:  void QTextDocument::~QTextDocument();
 extern void C_ZN13QTextDocumentD2Ev(void* qthis); // 4
   // proto:  int QTextDocument::availableUndoSteps();
-extern void C_ZNK13QTextDocument18availableUndoStepsEv(void* qthis); // 4
+extern int32_t C_ZNK13QTextDocument18availableUndoStepsEv(void* qthis); // 4
   // proto:  int QTextDocument::maximumBlockCount();
-extern void C_ZNK13QTextDocument17maximumBlockCountEv(void* qthis); // 4
+extern int32_t C_ZNK13QTextDocument17maximumBlockCountEv(void* qthis); // 4
   // proto:  int QTextDocument::lineCount();
-extern void C_ZNK13QTextDocument9lineCountEv(void* qthis); // 4
+extern int32_t C_ZNK13QTextDocument9lineCountEv(void* qthis); // 4
   // proto:  QTextBlock QTextDocument::findBlock(int pos);
-extern void C_ZNK13QTextDocument9findBlockEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK13QTextDocument9findBlockEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTextDocument::redo(QTextCursor * cursor);
 extern void C_ZN13QTextDocument4redoEP11QTextCursor(void* qthis, void* arg0); // 4
   // proto:  void QTextDocument::redo();
 extern void C_ZN13QTextDocument4redoEv(void* qthis); // 4
   // proto:  QSizeF QTextDocument::size();
-extern void C_ZNK13QTextDocument4sizeEv(void* qthis); // 4
+extern void* C_ZNK13QTextDocument4sizeEv(void* qthis); // 4
   // proto:  bool QTextDocument::isModified();
-extern void C_ZNK13QTextDocument10isModifiedEv(void* qthis); // 4
+extern bool C_ZNK13QTextDocument10isModifiedEv(void* qthis); // 4
   // proto:  QTextBlock QTextDocument::findBlockByLineNumber(int blockNumber);
-extern void C_ZNK13QTextDocument21findBlockByLineNumberEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK13QTextDocument21findBlockByLineNumberEi(void* qthis, int32_t arg0); // 4
   // proto:  QUrl QTextDocument::baseUrl();
-extern void C_ZNK13QTextDocument7baseUrlEv(void* qthis); // 4
+extern void* C_ZNK13QTextDocument7baseUrlEv(void* qthis); // 4
   // proto:  qreal QTextDocument::documentMargin();
-extern void C_ZNK13QTextDocument14documentMarginEv(void* qthis); // 4
+extern double C_ZNK13QTextDocument14documentMarginEv(void* qthis); // 4
   // proto:  QChar QTextDocument::characterAt(int pos);
-extern void C_ZNK13QTextDocument11characterAtEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK13QTextDocument11characterAtEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTextDocument::setDocumentMargin(qreal margin);
 extern void C_ZN13QTextDocument17setDocumentMarginEd(void* qthis, double arg0); // 4
   // proto:  QTextFrame * QTextDocument::rootFrame();
-extern void C_ZNK13QTextDocument9rootFrameEv(void* qthis); // 4
+extern void* C_ZNK13QTextDocument9rootFrameEv(void* qthis); // 4
   // proto:  QAbstractTextDocumentLayout * QTextDocument::documentLayout();
 extern void C_ZNK13QTextDocument14documentLayoutEv(void* qthis); // 4
   // proto:  Qt::CursorMoveStyle QTextDocument::defaultCursorMoveStyle();
@@ -127,17 +127,17 @@ extern void C_ZN13QTextDocument11addResourceEiRK4QUrlRK8QVariant(void* qthis, in
   // proto:  void QTextDocument::setDocumentLayout(QAbstractTextDocumentLayout * layout);
 extern void C_ZN13QTextDocument17setDocumentLayoutEP27QAbstractTextDocumentLayout(void* qthis, void* arg0); // 4
   // proto:  QTextOption QTextDocument::defaultTextOption();
-extern void C_ZNK13QTextDocument17defaultTextOptionEv(void* qthis); // 4
+extern void* C_ZNK13QTextDocument17defaultTextOptionEv(void* qthis); // 4
   // proto:  QString QTextDocument::toHtml(const QByteArray & encoding);
-extern void C_ZNK13QTextDocument6toHtmlERK10QByteArray(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QTextDocument6toHtmlERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  QTextBlock QTextDocument::firstBlock();
-extern void C_ZNK13QTextDocument10firstBlockEv(void* qthis); // 4
+extern void* C_ZNK13QTextDocument10firstBlockEv(void* qthis); // 4
   // proto:  QTextBlock QTextDocument::findBlockByNumber(int blockNumber);
-extern void C_ZNK13QTextDocument17findBlockByNumberEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK13QTextDocument17findBlockByNumberEi(void* qthis, int32_t arg0); // 4
   // proto:  qreal QTextDocument::idealWidth();
-extern void C_ZNK13QTextDocument10idealWidthEv(void* qthis); // 4
+extern double C_ZNK13QTextDocument10idealWidthEv(void* qthis); // 4
   // proto:  QTextBlock QTextDocument::end();
-extern void C_ZNK13QTextDocument3endEv(void* qthis); // 4
+extern void* C_ZNK13QTextDocument3endEv(void* qthis); // 4
   // proto:  void QTextDocument::setPageSize(const QSizeF & size);
 extern void C_ZN13QTextDocument11setPageSizeERK6QSizeF(void* qthis, void* arg0); // 4
   // proto:  void QTextDocument::setDefaultStyleSheet(const QString & sheet);
@@ -147,21 +147,21 @@ extern void C_ZN13QTextDocument14appendUndoItemEP17QAbstractUndoItem(void* qthis
   // proto:  QTextDocumentPrivate * QTextDocument::docHandle();
 extern void C_ZNK13QTextDocument9docHandleEv(void* qthis); // 4
   // proto:  bool QTextDocument::isEmpty();
-extern void C_ZNK13QTextDocument7isEmptyEv(void* qthis); // 4
+extern bool C_ZNK13QTextDocument7isEmptyEv(void* qthis); // 4
   // proto:  void QTextDocument::markContentsDirty(int from, int length);
 extern void C_ZN13QTextDocument17markContentsDirtyEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  int QTextDocument::revision();
-extern void C_ZNK13QTextDocument8revisionEv(void* qthis); // 4
+extern int32_t C_ZNK13QTextDocument8revisionEv(void* qthis); // 4
   // proto:  void QTextDocument::setBaseUrl(const QUrl & url);
 extern void C_ZN13QTextDocument10setBaseUrlERK4QUrl(void* qthis, void* arg0); // 4
   // proto:  QTextBlock QTextDocument::begin();
-extern void C_ZNK13QTextDocument5beginEv(void* qthis); // 4
+extern void* C_ZNK13QTextDocument5beginEv(void* qthis); // 4
   // proto:  void QTextDocument::setPlainText(const QString & text);
 extern void C_ZN13QTextDocument12setPlainTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QTextDocument * QTextDocument::clone(QObject * parent);
-extern void C_ZNK13QTextDocument5cloneEP7QObject(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QTextDocument5cloneEP7QObject(void* qthis, void* arg0); // 4
   // proto:  QTextObject * QTextDocument::object(int objectIndex);
-extern void C_ZNK13QTextDocument6objectEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK13QTextDocument6objectEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTextDocument::setTextWidth(qreal width);
 extern void C_ZN13QTextDocument12setTextWidthEd(void* qthis, double arg0); // 4
   // proto:  void QTextDocument::adjustSize();
@@ -211,7 +211,7 @@ type QAbstractUndoItem struct {
 }
 
 // pageSize()
-func (this *QTextDocument) pageSize(args ...interface{}) () {
+func (this *QTextDocument) Pagesize(args ...interface{}) (ret interface{}) {
   // pageSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -223,16 +223,20 @@ func (this *QTextDocument) pageSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument8pageSizeEv
     // invoke: QSizeF pageSize()
-    var ret = C.C_ZNK13QTextDocument8pageSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument8pageSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "pageSize", args)
   }
 
+  return
 }
 
 // availableRedoSteps()
-func (this *QTextDocument) availableRedoSteps(args ...interface{}) () {
+func (this *QTextDocument) Availableredosteps(args ...interface{}) (ret interface{}) {
   // availableRedoSteps()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -244,16 +248,20 @@ func (this *QTextDocument) availableRedoSteps(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument18availableRedoStepsEv
     // invoke: int availableRedoSteps()
-    var ret = C.C_ZNK13QTextDocument18availableRedoStepsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument18availableRedoStepsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "availableRedoSteps", args)
   }
 
+  return
 }
 
 // defaultStyleSheet()
-func (this *QTextDocument) defaultStyleSheet(args ...interface{}) () {
+func (this *QTextDocument) Defaultstylesheet(args ...interface{}) (ret interface{}) {
   // defaultStyleSheet()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -265,16 +273,20 @@ func (this *QTextDocument) defaultStyleSheet(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument17defaultStyleSheetEv
     // invoke: QString defaultStyleSheet()
-    var ret = C.C_ZNK13QTextDocument17defaultStyleSheetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument17defaultStyleSheetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "defaultStyleSheet", args)
   }
 
+  return
 }
 
 // resource(int, const class QUrl &)
-func (this *QTextDocument) resource(args ...interface{}) () {
+func (this *QTextDocument) Resource(args ...interface{}) (ret interface{}) {
   // resource(int, const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -292,16 +304,20 @@ func (this *QTextDocument) resource(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QUrl).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK13QTextDocument8resourceEiRK4QUrl(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument8resourceEiRK4QUrl(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "resource", args)
   }
 
+  return
 }
 
 // indentWidth()
-func (this *QTextDocument) indentWidth(args ...interface{}) () {
+func (this *QTextDocument) Indentwidth(args ...interface{}) (ret interface{}) {
   // indentWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -313,16 +329,20 @@ func (this *QTextDocument) indentWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument11indentWidthEv
     // invoke: qreal indentWidth()
-    var ret = C.C_ZNK13QTextDocument11indentWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument11indentWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "indentWidth", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QTextDocument) metaObject(args ...interface{}) () {
+func (this *QTextDocument) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -339,10 +359,11 @@ func (this *QTextDocument) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "metaObject", args)
   }
 
+  return
 }
 
 // lastBlock()
-func (this *QTextDocument) lastBlock(args ...interface{}) () {
+func (this *QTextDocument) Lastblock(args ...interface{}) (ret interface{}) {
   // lastBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -354,16 +375,20 @@ func (this *QTextDocument) lastBlock(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument9lastBlockEv
     // invoke: QTextBlock lastBlock()
-    var ret = C.C_ZNK13QTextDocument9lastBlockEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument9lastBlockEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextBlock{}) // "QTextBlock"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "lastBlock", args)
   }
 
+  return
 }
 
 // setUndoRedoEnabled(_Bool)
-func (this *QTextDocument) setUndoRedoEnabled(args ...interface{}) () {
+func (this *QTextDocument) Setundoredoenabled(args ...interface{}) () {
   // setUndoRedoEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -383,10 +408,11 @@ func (this *QTextDocument) setUndoRedoEnabled(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setUndoRedoEnabled", args)
   }
 
+  return
 }
 
 // isUndoAvailable()
-func (this *QTextDocument) isUndoAvailable(args ...interface{}) () {
+func (this *QTextDocument) Isundoavailable(args ...interface{}) (ret interface{}) {
   // isUndoAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -398,16 +424,20 @@ func (this *QTextDocument) isUndoAvailable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument15isUndoAvailableEv
     // invoke: bool isUndoAvailable()
-    var ret = C.C_ZNK13QTextDocument15isUndoAvailableEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument15isUndoAvailableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "isUndoAvailable", args)
   }
 
+  return
 }
 
 // setDefaultFont(const class QFont &)
-func (this *QTextDocument) setDefaultFont(args ...interface{}) () {
+func (this *QTextDocument) Setdefaultfont(args ...interface{}) () {
   // setDefaultFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -427,10 +457,11 @@ func (this *QTextDocument) setDefaultFont(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setDefaultFont", args)
   }
 
+  return
 }
 
 // useDesignMetrics()
-func (this *QTextDocument) useDesignMetrics(args ...interface{}) () {
+func (this *QTextDocument) Usedesignmetrics(args ...interface{}) (ret interface{}) {
   // useDesignMetrics()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -442,16 +473,20 @@ func (this *QTextDocument) useDesignMetrics(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument16useDesignMetricsEv
     // invoke: bool useDesignMetrics()
-    var ret = C.C_ZNK13QTextDocument16useDesignMetricsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument16useDesignMetricsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "useDesignMetrics", args)
   }
 
+  return
 }
 
 // textWidth()
-func (this *QTextDocument) textWidth(args ...interface{}) () {
+func (this *QTextDocument) Textwidth(args ...interface{}) (ret interface{}) {
   // textWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -463,16 +498,20 @@ func (this *QTextDocument) textWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument9textWidthEv
     // invoke: qreal textWidth()
-    var ret = C.C_ZNK13QTextDocument9textWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument9textWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "textWidth", args)
   }
 
+  return
 }
 
 // characterCount()
-func (this *QTextDocument) characterCount(args ...interface{}) () {
+func (this *QTextDocument) Charactercount(args ...interface{}) (ret interface{}) {
   // characterCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -484,16 +523,20 @@ func (this *QTextDocument) characterCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument14characterCountEv
     // invoke: int characterCount()
-    var ret = C.C_ZNK13QTextDocument14characterCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument14characterCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "characterCount", args)
   }
 
+  return
 }
 
 // isUndoRedoEnabled()
-func (this *QTextDocument) isUndoRedoEnabled(args ...interface{}) () {
+func (this *QTextDocument) Isundoredoenabled(args ...interface{}) (ret interface{}) {
   // isUndoRedoEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -505,16 +548,20 @@ func (this *QTextDocument) isUndoRedoEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument17isUndoRedoEnabledEv
     // invoke: bool isUndoRedoEnabled()
-    var ret = C.C_ZNK13QTextDocument17isUndoRedoEnabledEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument17isUndoRedoEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "isUndoRedoEnabled", args)
   }
 
+  return
 }
 
 // print(class QPagedPaintDevice *)
-func (this *QTextDocument) print(args ...interface{}) () {
+func (this *QTextDocument) Print(args ...interface{}) () {
   // print(class QPagedPaintDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -534,10 +581,11 @@ func (this *QTextDocument) print(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "print", args)
   }
 
+  return
 }
 
 // objectForFormat(const class QTextFormat &)
-func (this *QTextDocument) objectForFormat(args ...interface{}) () {
+func (this *QTextDocument) Objectforformat(args ...interface{}) (ret interface{}) {
   // objectForFormat(const class QTextFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -552,16 +600,20 @@ func (this *QTextDocument) objectForFormat(args ...interface{}) () {
     // invoke: QTextObject * objectForFormat(const class QTextFormat &)
     var arg0 = args[0].(QTextFormat).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QTextDocument15objectForFormatERK11QTextFormat(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument15objectForFormatERK11QTextFormat(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextObject{}) // "QTextObject *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "objectForFormat", args)
   }
 
+  return
 }
 
 // toPlainText()
-func (this *QTextDocument) toPlainText(args ...interface{}) () {
+func (this *QTextDocument) Toplaintext(args ...interface{}) (ret interface{}) {
   // toPlainText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -573,16 +625,20 @@ func (this *QTextDocument) toPlainText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument11toPlainTextEv
     // invoke: QString toPlainText()
-    var ret = C.C_ZNK13QTextDocument11toPlainTextEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument11toPlainTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "toPlainText", args)
   }
 
+  return
 }
 
 // undo()
-func (this *QTextDocument) undo(args ...interface{}) () {
+func (this *QTextDocument) Undo(args ...interface{}) () {
   // undo()
   // undo(class QTextCursor *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -608,10 +664,11 @@ func (this *QTextDocument) undo(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "undo", args)
   }
 
+  return
 }
 
 // drawContents(class QPainter *, const class QRectF &)
-func (this *QTextDocument) drawContents(args ...interface{}) () {
+func (this *QTextDocument) Drawcontents(args ...interface{}) () {
   // drawContents(class QPainter *, const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -634,10 +691,11 @@ func (this *QTextDocument) drawContents(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "drawContents", args)
   }
 
+  return
 }
 
 // setModified(_Bool)
-func (this *QTextDocument) setModified(args ...interface{}) () {
+func (this *QTextDocument) Setmodified(args ...interface{}) () {
   // setModified(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -657,10 +715,11 @@ func (this *QTextDocument) setModified(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setModified", args)
   }
 
+  return
 }
 
 // blockCount()
-func (this *QTextDocument) blockCount(args ...interface{}) () {
+func (this *QTextDocument) Blockcount(args ...interface{}) (ret interface{}) {
   // blockCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -672,16 +731,20 @@ func (this *QTextDocument) blockCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument10blockCountEv
     // invoke: int blockCount()
-    var ret = C.C_ZNK13QTextDocument10blockCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument10blockCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "blockCount", args)
   }
 
+  return
 }
 
 // defaultFont()
-func (this *QTextDocument) defaultFont(args ...interface{}) () {
+func (this *QTextDocument) Defaultfont(args ...interface{}) (ret interface{}) {
   // defaultFont()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -693,16 +756,20 @@ func (this *QTextDocument) defaultFont(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument11defaultFontEv
     // invoke: QFont defaultFont()
-    var ret = C.C_ZNK13QTextDocument11defaultFontEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument11defaultFontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QFont{}) // "QFont"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "defaultFont", args)
   }
 
+  return
 }
 
 // isRedoAvailable()
-func (this *QTextDocument) isRedoAvailable(args ...interface{}) () {
+func (this *QTextDocument) Isredoavailable(args ...interface{}) (ret interface{}) {
   // isRedoAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -714,16 +781,20 @@ func (this *QTextDocument) isRedoAvailable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument15isRedoAvailableEv
     // invoke: bool isRedoAvailable()
-    var ret = C.C_ZNK13QTextDocument15isRedoAvailableEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument15isRedoAvailableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "isRedoAvailable", args)
   }
 
+  return
 }
 
 // frameAt(int)
-func (this *QTextDocument) frameAt(args ...interface{}) () {
+func (this *QTextDocument) Frameat(args ...interface{}) (ret interface{}) {
   // frameAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -738,16 +809,20 @@ func (this *QTextDocument) frameAt(args ...interface{}) () {
     // invoke: QTextFrame * frameAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QTextDocument7frameAtEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument7frameAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextFrame{}) // "QTextFrame *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "frameAt", args)
   }
 
+  return
 }
 
 // pageCount()
-func (this *QTextDocument) pageCount(args ...interface{}) () {
+func (this *QTextDocument) Pagecount(args ...interface{}) (ret interface{}) {
   // pageCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -759,12 +834,16 @@ func (this *QTextDocument) pageCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument9pageCountEv
     // invoke: int pageCount()
-    var ret = C.C_ZNK13QTextDocument9pageCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument9pageCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "pageCount", args)
   }
 
+  return
 }
 
 // QTextDocument(class QObject *)
@@ -810,7 +889,7 @@ func NewQTextDocument(args ...interface{}) *QTextDocument {
 }
 
 // ~QTextDocument()
-func (this *QTextDocument) FreeQTextDocument(args ...interface{}) () {
+func (this *QTextDocument) Freeqtextdocument(args ...interface{}) () {
   // ~QTextDocument()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -827,10 +906,11 @@ func (this *QTextDocument) FreeQTextDocument(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "~QTextDocument", args)
   }
 
+  return
 }
 
 // availableUndoSteps()
-func (this *QTextDocument) availableUndoSteps(args ...interface{}) () {
+func (this *QTextDocument) Availableundosteps(args ...interface{}) (ret interface{}) {
   // availableUndoSteps()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -842,16 +922,20 @@ func (this *QTextDocument) availableUndoSteps(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument18availableUndoStepsEv
     // invoke: int availableUndoSteps()
-    var ret = C.C_ZNK13QTextDocument18availableUndoStepsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument18availableUndoStepsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "availableUndoSteps", args)
   }
 
+  return
 }
 
 // maximumBlockCount()
-func (this *QTextDocument) maximumBlockCount(args ...interface{}) () {
+func (this *QTextDocument) Maximumblockcount(args ...interface{}) (ret interface{}) {
   // maximumBlockCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -863,16 +947,20 @@ func (this *QTextDocument) maximumBlockCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument17maximumBlockCountEv
     // invoke: int maximumBlockCount()
-    var ret = C.C_ZNK13QTextDocument17maximumBlockCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument17maximumBlockCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "maximumBlockCount", args)
   }
 
+  return
 }
 
 // lineCount()
-func (this *QTextDocument) lineCount(args ...interface{}) () {
+func (this *QTextDocument) Linecount(args ...interface{}) (ret interface{}) {
   // lineCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -884,16 +972,20 @@ func (this *QTextDocument) lineCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument9lineCountEv
     // invoke: int lineCount()
-    var ret = C.C_ZNK13QTextDocument9lineCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument9lineCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "lineCount", args)
   }
 
+  return
 }
 
 // findBlock(int)
-func (this *QTextDocument) findBlock(args ...interface{}) () {
+func (this *QTextDocument) Findblock(args ...interface{}) (ret interface{}) {
   // findBlock(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -908,16 +1000,20 @@ func (this *QTextDocument) findBlock(args ...interface{}) () {
     // invoke: QTextBlock findBlock(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QTextDocument9findBlockEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument9findBlockEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextBlock{}) // "QTextBlock"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "findBlock", args)
   }
 
+  return
 }
 
 // redo(class QTextCursor *)
-func (this *QTextDocument) redo(args ...interface{}) () {
+func (this *QTextDocument) Redo(args ...interface{}) () {
   // redo(class QTextCursor *)
   // redo()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -943,10 +1039,11 @@ func (this *QTextDocument) redo(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "redo", args)
   }
 
+  return
 }
 
 // size()
-func (this *QTextDocument) size(args ...interface{}) () {
+func (this *QTextDocument) Size(args ...interface{}) (ret interface{}) {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -958,16 +1055,20 @@ func (this *QTextDocument) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument4sizeEv
     // invoke: QSizeF size()
-    var ret = C.C_ZNK13QTextDocument4sizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "size", args)
   }
 
+  return
 }
 
 // isModified()
-func (this *QTextDocument) isModified(args ...interface{}) () {
+func (this *QTextDocument) Ismodified(args ...interface{}) (ret interface{}) {
   // isModified()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -979,16 +1080,20 @@ func (this *QTextDocument) isModified(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument10isModifiedEv
     // invoke: bool isModified()
-    var ret = C.C_ZNK13QTextDocument10isModifiedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument10isModifiedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "isModified", args)
   }
 
+  return
 }
 
 // findBlockByLineNumber(int)
-func (this *QTextDocument) findBlockByLineNumber(args ...interface{}) () {
+func (this *QTextDocument) Findblockbylinenumber(args ...interface{}) (ret interface{}) {
   // findBlockByLineNumber(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1003,16 +1108,20 @@ func (this *QTextDocument) findBlockByLineNumber(args ...interface{}) () {
     // invoke: QTextBlock findBlockByLineNumber(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QTextDocument21findBlockByLineNumberEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument21findBlockByLineNumberEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextBlock{}) // "QTextBlock"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "findBlockByLineNumber", args)
   }
 
+  return
 }
 
 // baseUrl()
-func (this *QTextDocument) baseUrl(args ...interface{}) () {
+func (this *QTextDocument) Baseurl(args ...interface{}) (ret interface{}) {
   // baseUrl()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1024,16 +1133,20 @@ func (this *QTextDocument) baseUrl(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument7baseUrlEv
     // invoke: QUrl baseUrl()
-    var ret = C.C_ZNK13QTextDocument7baseUrlEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument7baseUrlEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QUrl{}) // "QUrl"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "baseUrl", args)
   }
 
+  return
 }
 
 // documentMargin()
-func (this *QTextDocument) documentMargin(args ...interface{}) () {
+func (this *QTextDocument) Documentmargin(args ...interface{}) (ret interface{}) {
   // documentMargin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1045,16 +1158,20 @@ func (this *QTextDocument) documentMargin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument14documentMarginEv
     // invoke: qreal documentMargin()
-    var ret = C.C_ZNK13QTextDocument14documentMarginEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument14documentMarginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "documentMargin", args)
   }
 
+  return
 }
 
 // characterAt(int)
-func (this *QTextDocument) characterAt(args ...interface{}) () {
+func (this *QTextDocument) Characterat(args ...interface{}) (ret interface{}) {
   // characterAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1069,16 +1186,20 @@ func (this *QTextDocument) characterAt(args ...interface{}) () {
     // invoke: QChar characterAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QTextDocument11characterAtEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument11characterAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QChar{}) // "QChar"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "characterAt", args)
   }
 
+  return
 }
 
 // setDocumentMargin(qreal)
-func (this *QTextDocument) setDocumentMargin(args ...interface{}) () {
+func (this *QTextDocument) Setdocumentmargin(args ...interface{}) () {
   // setDocumentMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1098,10 +1219,11 @@ func (this *QTextDocument) setDocumentMargin(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setDocumentMargin", args)
   }
 
+  return
 }
 
 // rootFrame()
-func (this *QTextDocument) rootFrame(args ...interface{}) () {
+func (this *QTextDocument) Rootframe(args ...interface{}) (ret interface{}) {
   // rootFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1113,16 +1235,20 @@ func (this *QTextDocument) rootFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument9rootFrameEv
     // invoke: QTextFrame * rootFrame()
-    var ret = C.C_ZNK13QTextDocument9rootFrameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument9rootFrameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextFrame{}) // "QTextFrame *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "rootFrame", args)
   }
 
+  return
 }
 
 // documentLayout()
-func (this *QTextDocument) documentLayout(args ...interface{}) () {
+func (this *QTextDocument) Documentlayout(args ...interface{}) () {
   // documentLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1139,10 +1265,11 @@ func (this *QTextDocument) documentLayout(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "documentLayout", args)
   }
 
+  return
 }
 
 // defaultCursorMoveStyle()
-func (this *QTextDocument) defaultCursorMoveStyle(args ...interface{}) () {
+func (this *QTextDocument) Defaultcursormovestyle(args ...interface{}) () {
   // defaultCursorMoveStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1159,10 +1286,11 @@ func (this *QTextDocument) defaultCursorMoveStyle(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "defaultCursorMoveStyle", args)
   }
 
+  return
 }
 
 // setHtml(const class QString &)
-func (this *QTextDocument) setHtml(args ...interface{}) () {
+func (this *QTextDocument) Sethtml(args ...interface{}) () {
   // setHtml(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1182,10 +1310,11 @@ func (this *QTextDocument) setHtml(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setHtml", args)
   }
 
+  return
 }
 
 // setMaximumBlockCount(int)
-func (this *QTextDocument) setMaximumBlockCount(args ...interface{}) () {
+func (this *QTextDocument) Setmaximumblockcount(args ...interface{}) () {
   // setMaximumBlockCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1205,10 +1334,11 @@ func (this *QTextDocument) setMaximumBlockCount(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setMaximumBlockCount", args)
   }
 
+  return
 }
 
 // addResource(int, const class QUrl &, const class QVariant &)
-func (this *QTextDocument) addResource(args ...interface{}) () {
+func (this *QTextDocument) Addresource(args ...interface{}) () {
   // addResource(int, const class QUrl &, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1234,10 +1364,11 @@ func (this *QTextDocument) addResource(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "addResource", args)
   }
 
+  return
 }
 
 // setDocumentLayout(class QAbstractTextDocumentLayout *)
-func (this *QTextDocument) setDocumentLayout(args ...interface{}) () {
+func (this *QTextDocument) Setdocumentlayout(args ...interface{}) () {
   // setDocumentLayout(class QAbstractTextDocumentLayout *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1257,10 +1388,11 @@ func (this *QTextDocument) setDocumentLayout(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setDocumentLayout", args)
   }
 
+  return
 }
 
 // defaultTextOption()
-func (this *QTextDocument) defaultTextOption(args ...interface{}) () {
+func (this *QTextDocument) Defaulttextoption(args ...interface{}) (ret interface{}) {
   // defaultTextOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1272,16 +1404,20 @@ func (this *QTextDocument) defaultTextOption(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument17defaultTextOptionEv
     // invoke: QTextOption defaultTextOption()
-    var ret = C.C_ZNK13QTextDocument17defaultTextOptionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument17defaultTextOptionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextOption{}) // "QTextOption"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "defaultTextOption", args)
   }
 
+  return
 }
 
 // toHtml(const class QByteArray &)
-func (this *QTextDocument) toHtml(args ...interface{}) () {
+func (this *QTextDocument) Tohtml(args ...interface{}) (ret interface{}) {
   // toHtml(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1296,16 +1432,20 @@ func (this *QTextDocument) toHtml(args ...interface{}) () {
     // invoke: QString toHtml(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QTextDocument6toHtmlERK10QByteArray(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument6toHtmlERK10QByteArray(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "toHtml", args)
   }
 
+  return
 }
 
 // firstBlock()
-func (this *QTextDocument) firstBlock(args ...interface{}) () {
+func (this *QTextDocument) Firstblock(args ...interface{}) (ret interface{}) {
   // firstBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1317,16 +1457,20 @@ func (this *QTextDocument) firstBlock(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument10firstBlockEv
     // invoke: QTextBlock firstBlock()
-    var ret = C.C_ZNK13QTextDocument10firstBlockEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument10firstBlockEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextBlock{}) // "QTextBlock"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "firstBlock", args)
   }
 
+  return
 }
 
 // findBlockByNumber(int)
-func (this *QTextDocument) findBlockByNumber(args ...interface{}) () {
+func (this *QTextDocument) Findblockbynumber(args ...interface{}) (ret interface{}) {
   // findBlockByNumber(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1341,16 +1485,20 @@ func (this *QTextDocument) findBlockByNumber(args ...interface{}) () {
     // invoke: QTextBlock findBlockByNumber(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QTextDocument17findBlockByNumberEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument17findBlockByNumberEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextBlock{}) // "QTextBlock"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "findBlockByNumber", args)
   }
 
+  return
 }
 
 // idealWidth()
-func (this *QTextDocument) idealWidth(args ...interface{}) () {
+func (this *QTextDocument) Idealwidth(args ...interface{}) (ret interface{}) {
   // idealWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1362,16 +1510,20 @@ func (this *QTextDocument) idealWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument10idealWidthEv
     // invoke: qreal idealWidth()
-    var ret = C.C_ZNK13QTextDocument10idealWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument10idealWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "idealWidth", args)
   }
 
+  return
 }
 
 // end()
-func (this *QTextDocument) end(args ...interface{}) () {
+func (this *QTextDocument) End(args ...interface{}) (ret interface{}) {
   // end()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1383,16 +1535,20 @@ func (this *QTextDocument) end(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument3endEv
     // invoke: QTextBlock end()
-    var ret = C.C_ZNK13QTextDocument3endEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument3endEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextBlock{}) // "QTextBlock"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "end", args)
   }
 
+  return
 }
 
 // setPageSize(const class QSizeF &)
-func (this *QTextDocument) setPageSize(args ...interface{}) () {
+func (this *QTextDocument) Setpagesize(args ...interface{}) () {
   // setPageSize(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1412,10 +1568,11 @@ func (this *QTextDocument) setPageSize(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setPageSize", args)
   }
 
+  return
 }
 
 // setDefaultStyleSheet(const class QString &)
-func (this *QTextDocument) setDefaultStyleSheet(args ...interface{}) () {
+func (this *QTextDocument) Setdefaultstylesheet(args ...interface{}) () {
   // setDefaultStyleSheet(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1435,10 +1592,11 @@ func (this *QTextDocument) setDefaultStyleSheet(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setDefaultStyleSheet", args)
   }
 
+  return
 }
 
 // appendUndoItem(class QAbstractUndoItem *)
-func (this *QTextDocument) appendUndoItem(args ...interface{}) () {
+func (this *QTextDocument) Appendundoitem(args ...interface{}) () {
   // appendUndoItem(class QAbstractUndoItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1458,10 +1616,11 @@ func (this *QTextDocument) appendUndoItem(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "appendUndoItem", args)
   }
 
+  return
 }
 
 // docHandle()
-func (this *QTextDocument) docHandle(args ...interface{}) () {
+func (this *QTextDocument) Dochandle(args ...interface{}) () {
   // docHandle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1478,10 +1637,11 @@ func (this *QTextDocument) docHandle(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "docHandle", args)
   }
 
+  return
 }
 
 // isEmpty()
-func (this *QTextDocument) isEmpty(args ...interface{}) () {
+func (this *QTextDocument) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1493,16 +1653,20 @@ func (this *QTextDocument) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument7isEmptyEv
     // invoke: bool isEmpty()
-    var ret = C.C_ZNK13QTextDocument7isEmptyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "isEmpty", args)
   }
 
+  return
 }
 
 // markContentsDirty(int, int)
-func (this *QTextDocument) markContentsDirty(args ...interface{}) () {
+func (this *QTextDocument) Markcontentsdirty(args ...interface{}) () {
   // markContentsDirty(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1525,10 +1689,11 @@ func (this *QTextDocument) markContentsDirty(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "markContentsDirty", args)
   }
 
+  return
 }
 
 // revision()
-func (this *QTextDocument) revision(args ...interface{}) () {
+func (this *QTextDocument) Revision(args ...interface{}) (ret interface{}) {
   // revision()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1540,16 +1705,20 @@ func (this *QTextDocument) revision(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument8revisionEv
     // invoke: int revision()
-    var ret = C.C_ZNK13QTextDocument8revisionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument8revisionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "revision", args)
   }
 
+  return
 }
 
 // setBaseUrl(const class QUrl &)
-func (this *QTextDocument) setBaseUrl(args ...interface{}) () {
+func (this *QTextDocument) Setbaseurl(args ...interface{}) () {
   // setBaseUrl(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1569,10 +1738,11 @@ func (this *QTextDocument) setBaseUrl(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setBaseUrl", args)
   }
 
+  return
 }
 
 // begin()
-func (this *QTextDocument) begin(args ...interface{}) () {
+func (this *QTextDocument) Begin(args ...interface{}) (ret interface{}) {
   // begin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1584,16 +1754,20 @@ func (this *QTextDocument) begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument5beginEv
     // invoke: QTextBlock begin()
-    var ret = C.C_ZNK13QTextDocument5beginEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument5beginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextBlock{}) // "QTextBlock"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "begin", args)
   }
 
+  return
 }
 
 // setPlainText(const class QString &)
-func (this *QTextDocument) setPlainText(args ...interface{}) () {
+func (this *QTextDocument) Setplaintext(args ...interface{}) () {
   // setPlainText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1613,10 +1787,11 @@ func (this *QTextDocument) setPlainText(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setPlainText", args)
   }
 
+  return
 }
 
 // clone(class QObject *)
-func (this *QTextDocument) clone(args ...interface{}) () {
+func (this *QTextDocument) Clone(args ...interface{}) (ret interface{}) {
   // clone(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1631,16 +1806,20 @@ func (this *QTextDocument) clone(args ...interface{}) () {
     // invoke: QTextDocument * clone(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QTextDocument5cloneEP7QObject(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument5cloneEP7QObject(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextDocument{}) // "QTextDocument *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "clone", args)
   }
 
+  return
 }
 
 // object(int)
-func (this *QTextDocument) object(args ...interface{}) () {
+func (this *QTextDocument) Object(args ...interface{}) (ret interface{}) {
   // object(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1655,16 +1834,20 @@ func (this *QTextDocument) object(args ...interface{}) () {
     // invoke: QTextObject * object(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QTextDocument6objectEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QTextDocument6objectEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextObject{}) // "QTextObject *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocument", "object", args)
   }
 
+  return
 }
 
 // setTextWidth(qreal)
-func (this *QTextDocument) setTextWidth(args ...interface{}) () {
+func (this *QTextDocument) Settextwidth(args ...interface{}) () {
   // setTextWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1684,10 +1867,11 @@ func (this *QTextDocument) setTextWidth(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setTextWidth", args)
   }
 
+  return
 }
 
 // adjustSize()
-func (this *QTextDocument) adjustSize(args ...interface{}) () {
+func (this *QTextDocument) Adjustsize(args ...interface{}) () {
   // adjustSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1704,10 +1888,11 @@ func (this *QTextDocument) adjustSize(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "adjustSize", args)
   }
 
+  return
 }
 
 // allFormats()
-func (this *QTextDocument) allFormats(args ...interface{}) () {
+func (this *QTextDocument) Allformats(args ...interface{}) () {
   // allFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1724,10 +1909,11 @@ func (this *QTextDocument) allFormats(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "allFormats", args)
   }
 
+  return
 }
 
 // setDefaultTextOption(const class QTextOption &)
-func (this *QTextDocument) setDefaultTextOption(args ...interface{}) () {
+func (this *QTextDocument) Setdefaulttextoption(args ...interface{}) () {
   // setDefaultTextOption(const class QTextOption &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1747,10 +1933,11 @@ func (this *QTextDocument) setDefaultTextOption(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setDefaultTextOption", args)
   }
 
+  return
 }
 
 // setUseDesignMetrics(_Bool)
-func (this *QTextDocument) setUseDesignMetrics(args ...interface{}) () {
+func (this *QTextDocument) Setusedesignmetrics(args ...interface{}) () {
   // setUseDesignMetrics(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1770,10 +1957,11 @@ func (this *QTextDocument) setUseDesignMetrics(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setUseDesignMetrics", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QTextDocument) clear(args ...interface{}) () {
+func (this *QTextDocument) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1790,10 +1978,11 @@ func (this *QTextDocument) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "clear", args)
   }
 
+  return
 }
 
 // setIndentWidth(qreal)
-func (this *QTextDocument) setIndentWidth(args ...interface{}) () {
+func (this *QTextDocument) Setindentwidth(args ...interface{}) () {
   // setIndentWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1813,6 +2002,7 @@ func (this *QTextDocument) setIndentWidth(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocument", "setIndentWidth", args)
   }
 
+  return
 }
 
 // <= body block end

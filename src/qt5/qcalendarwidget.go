@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qcalendarwidget.h
 // dst-file: /src/widgets/qcalendarwidget.go
 //
@@ -33,7 +33,7 @@ extern void C_ZNK15QCalendarWidget22horizontalHeaderFormatEv(void* qthis); // 4
   // proto:  void QCalendarWidget::setMaximumDate(const QDate & date);
 extern void C_ZN15QCalendarWidget14setMaximumDateERK5QDate(void* qthis, void* arg0); // 4
   // proto:  QTextCharFormat QCalendarWidget::headerTextFormat();
-extern void C_ZNK15QCalendarWidget16headerTextFormatEv(void* qthis); // 4
+extern void* C_ZNK15QCalendarWidget16headerTextFormatEv(void* qthis); // 4
   // proto:  void QCalendarWidget::showSelectedDate();
 extern void C_ZN15QCalendarWidget16showSelectedDateEv(void* qthis); // 4
   // proto:  void QCalendarWidget::setGridVisible(bool show);
@@ -43,19 +43,19 @@ extern void C_ZN15QCalendarWidget22setDateEditAcceptDelayEi(void* qthis, int32_t
   // proto:  void QCalendarWidget::setDateRange(const QDate & min, const QDate & max);
 extern void C_ZN15QCalendarWidget12setDateRangeERK5QDateS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  bool QCalendarWidget::isDateEditEnabled();
-extern void C_ZNK15QCalendarWidget17isDateEditEnabledEv(void* qthis); // 4
+extern bool C_ZNK15QCalendarWidget17isDateEditEnabledEv(void* qthis); // 4
   // proto:  void QCalendarWidget::~QCalendarWidget();
 extern void C_ZN15QCalendarWidgetD2Ev(void* qthis); // 4
   // proto:  QTextCharFormat QCalendarWidget::dateTextFormat(const QDate & date);
-extern void C_ZNK15QCalendarWidget14dateTextFormatERK5QDate(void* qthis, void* arg0); // 4
+extern void* C_ZNK15QCalendarWidget14dateTextFormatERK5QDate(void* qthis, void* arg0); // 4
   // proto:  QMap<QDate, QTextCharFormat> QCalendarWidget::dateTextFormat();
 extern void C_ZNK15QCalendarWidget14dateTextFormatEv(void* qthis); // 4
   // proto:  bool QCalendarWidget::isNavigationBarVisible();
-extern void C_ZNK15QCalendarWidget22isNavigationBarVisibleEv(void* qthis); // 4
+extern bool C_ZNK15QCalendarWidget22isNavigationBarVisibleEv(void* qthis); // 4
   // proto:  Qt::DayOfWeek QCalendarWidget::firstDayOfWeek();
 extern void C_ZNK15QCalendarWidget14firstDayOfWeekEv(void* qthis); // 4
   // proto:  int QCalendarWidget::monthShown();
-extern void C_ZNK15QCalendarWidget10monthShownEv(void* qthis); // 4
+extern int32_t C_ZNK15QCalendarWidget10monthShownEv(void* qthis); // 4
   // proto:  void QCalendarWidget::setNavigationBarVisible(bool visible);
 extern void C_ZN15QCalendarWidget23setNavigationBarVisibleEb(void* qthis, bool arg0); // 4
   // proto:  void QCalendarWidget::showNextYear();
@@ -63,15 +63,15 @@ extern void C_ZN15QCalendarWidget12showNextYearEv(void* qthis); // 4
   // proto:  void QCalendarWidget::setMinimumDate(const QDate & date);
 extern void C_ZN15QCalendarWidget14setMinimumDateERK5QDate(void* qthis, void* arg0); // 4
   // proto:  int QCalendarWidget::yearShown();
-extern void C_ZNK15QCalendarWidget9yearShownEv(void* qthis); // 4
+extern int32_t C_ZNK15QCalendarWidget9yearShownEv(void* qthis); // 4
   // proto:  void QCalendarWidget::setHeaderTextFormat(const QTextCharFormat & format);
 extern void C_ZN15QCalendarWidget19setHeaderTextFormatERK15QTextCharFormat(void* qthis, void* arg0); // 4
   // proto:  QCalendarWidget::VerticalHeaderFormat QCalendarWidget::verticalHeaderFormat();
 extern void C_ZNK15QCalendarWidget20verticalHeaderFormatEv(void* qthis); // 4
   // proto:  QDate QCalendarWidget::minimumDate();
-extern void C_ZNK15QCalendarWidget11minimumDateEv(void* qthis); // 4
+extern void* C_ZNK15QCalendarWidget11minimumDateEv(void* qthis); // 4
   // proto:  QSize QCalendarWidget::sizeHint();
-extern void C_ZNK15QCalendarWidget8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK15QCalendarWidget8sizeHintEv(void* qthis); // 4
   // proto:  void QCalendarWidget::setSelectedDate(const QDate & date);
 extern void C_ZN15QCalendarWidget15setSelectedDateERK5QDate(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QCalendarWidget::metaObject();
@@ -83,19 +83,19 @@ extern void C_ZN15QCalendarWidget14setCurrentPageEii(void* qthis, int32_t arg0, 
   // proto:  void QCalendarWidget::setDateTextFormat(const QDate & date, const QTextCharFormat & format);
 extern void C_ZN15QCalendarWidget17setDateTextFormatERK5QDateRK15QTextCharFormat(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QDate QCalendarWidget::selectedDate();
-extern void C_ZNK15QCalendarWidget12selectedDateEv(void* qthis); // 4
+extern void* C_ZNK15QCalendarWidget12selectedDateEv(void* qthis); // 4
   // proto:  QDate QCalendarWidget::maximumDate();
-extern void C_ZNK15QCalendarWidget11maximumDateEv(void* qthis); // 4
+extern void* C_ZNK15QCalendarWidget11maximumDateEv(void* qthis); // 4
   // proto:  QSize QCalendarWidget::minimumSizeHint();
-extern void C_ZNK15QCalendarWidget15minimumSizeHintEv(void* qthis); // 4
+extern void* C_ZNK15QCalendarWidget15minimumSizeHintEv(void* qthis); // 4
   // proto:  void QCalendarWidget::showPreviousMonth();
 extern void C_ZN15QCalendarWidget17showPreviousMonthEv(void* qthis); // 4
   // proto:  int QCalendarWidget::dateEditAcceptDelay();
-extern void C_ZNK15QCalendarWidget19dateEditAcceptDelayEv(void* qthis); // 4
+extern int32_t C_ZNK15QCalendarWidget19dateEditAcceptDelayEv(void* qthis); // 4
   // proto:  void QCalendarWidget::showPreviousYear();
 extern void C_ZN15QCalendarWidget16showPreviousYearEv(void* qthis); // 4
   // proto:  bool QCalendarWidget::isGridVisible();
-extern void C_ZNK15QCalendarWidget13isGridVisibleEv(void* qthis); // 4
+extern bool C_ZNK15QCalendarWidget13isGridVisibleEv(void* qthis); // 4
   // proto:  void QCalendarWidget::setDateEditEnabled(bool enable);
 extern void C_ZN15QCalendarWidget18setDateEditEnabledEb(void* qthis, bool arg0); // 4
   // proto:  void QCalendarWidget::QCalendarWidget(QWidget * parent);
@@ -127,7 +127,7 @@ type QCalendarWidget struct {
 }
 
 // horizontalHeaderFormat()
-func (this *QCalendarWidget) horizontalHeaderFormat(args ...interface{}) () {
+func (this *QCalendarWidget) Horizontalheaderformat(args ...interface{}) () {
   // horizontalHeaderFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -144,10 +144,11 @@ func (this *QCalendarWidget) horizontalHeaderFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "horizontalHeaderFormat", args)
   }
 
+  return
 }
 
 // setMaximumDate(const class QDate &)
-func (this *QCalendarWidget) setMaximumDate(args ...interface{}) () {
+func (this *QCalendarWidget) Setmaximumdate(args ...interface{}) () {
   // setMaximumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -167,10 +168,11 @@ func (this *QCalendarWidget) setMaximumDate(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "setMaximumDate", args)
   }
 
+  return
 }
 
 // headerTextFormat()
-func (this *QCalendarWidget) headerTextFormat(args ...interface{}) () {
+func (this *QCalendarWidget) Headertextformat(args ...interface{}) (ret interface{}) {
   // headerTextFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,16 +184,20 @@ func (this *QCalendarWidget) headerTextFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget16headerTextFormatEv
     // invoke: QTextCharFormat headerTextFormat()
-    var ret = C.C_ZNK15QCalendarWidget16headerTextFormatEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget16headerTextFormatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCharFormat{}) // "QTextCharFormat"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCalendarWidget", "headerTextFormat", args)
   }
 
+  return
 }
 
 // showSelectedDate()
-func (this *QCalendarWidget) showSelectedDate(args ...interface{}) () {
+func (this *QCalendarWidget) Showselecteddate(args ...interface{}) () {
   // showSelectedDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -208,10 +214,11 @@ func (this *QCalendarWidget) showSelectedDate(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "showSelectedDate", args)
   }
 
+  return
 }
 
 // setGridVisible(_Bool)
-func (this *QCalendarWidget) setGridVisible(args ...interface{}) () {
+func (this *QCalendarWidget) Setgridvisible(args ...interface{}) () {
   // setGridVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -231,10 +238,11 @@ func (this *QCalendarWidget) setGridVisible(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "setGridVisible", args)
   }
 
+  return
 }
 
 // setDateEditAcceptDelay(int)
-func (this *QCalendarWidget) setDateEditAcceptDelay(args ...interface{}) () {
+func (this *QCalendarWidget) Setdateeditacceptdelay(args ...interface{}) () {
   // setDateEditAcceptDelay(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -254,10 +262,11 @@ func (this *QCalendarWidget) setDateEditAcceptDelay(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "setDateEditAcceptDelay", args)
   }
 
+  return
 }
 
 // setDateRange(const class QDate &, const class QDate &)
-func (this *QCalendarWidget) setDateRange(args ...interface{}) () {
+func (this *QCalendarWidget) Setdaterange(args ...interface{}) () {
   // setDateRange(const class QDate &, const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -280,10 +289,11 @@ func (this *QCalendarWidget) setDateRange(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "setDateRange", args)
   }
 
+  return
 }
 
 // isDateEditEnabled()
-func (this *QCalendarWidget) isDateEditEnabled(args ...interface{}) () {
+func (this *QCalendarWidget) Isdateeditenabled(args ...interface{}) (ret interface{}) {
   // isDateEditEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -295,16 +305,20 @@ func (this *QCalendarWidget) isDateEditEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget17isDateEditEnabledEv
     // invoke: bool isDateEditEnabled()
-    var ret = C.C_ZNK15QCalendarWidget17isDateEditEnabledEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget17isDateEditEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCalendarWidget", "isDateEditEnabled", args)
   }
 
+  return
 }
 
 // ~QCalendarWidget()
-func (this *QCalendarWidget) FreeQCalendarWidget(args ...interface{}) () {
+func (this *QCalendarWidget) Freeqcalendarwidget(args ...interface{}) () {
   // ~QCalendarWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -321,10 +335,11 @@ func (this *QCalendarWidget) FreeQCalendarWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "~QCalendarWidget", args)
   }
 
+  return
 }
 
 // dateTextFormat(const class QDate &)
-func (this *QCalendarWidget) dateTextFormat(args ...interface{}) () {
+func (this *QCalendarWidget) Datetextformat(args ...interface{}) (ret interface{}) {
   // dateTextFormat(const class QDate &)
   // dateTextFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -341,8 +356,11 @@ func (this *QCalendarWidget) dateTextFormat(args ...interface{}) () {
     // invoke: QTextCharFormat dateTextFormat(const class QDate &)
     var arg0 = args[0].(QDate).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QCalendarWidget14dateTextFormatERK5QDate(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget14dateTextFormatERK5QDate(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCharFormat{}) // "QTextCharFormat"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK15QCalendarWidget14dateTextFormatEv
     // invoke: QMap<QDate, QTextCharFormat> dateTextFormat()
@@ -351,10 +369,11 @@ func (this *QCalendarWidget) dateTextFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "dateTextFormat", args)
   }
 
+  return
 }
 
 // isNavigationBarVisible()
-func (this *QCalendarWidget) isNavigationBarVisible(args ...interface{}) () {
+func (this *QCalendarWidget) Isnavigationbarvisible(args ...interface{}) (ret interface{}) {
   // isNavigationBarVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -366,16 +385,20 @@ func (this *QCalendarWidget) isNavigationBarVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget22isNavigationBarVisibleEv
     // invoke: bool isNavigationBarVisible()
-    var ret = C.C_ZNK15QCalendarWidget22isNavigationBarVisibleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget22isNavigationBarVisibleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCalendarWidget", "isNavigationBarVisible", args)
   }
 
+  return
 }
 
 // firstDayOfWeek()
-func (this *QCalendarWidget) firstDayOfWeek(args ...interface{}) () {
+func (this *QCalendarWidget) Firstdayofweek(args ...interface{}) () {
   // firstDayOfWeek()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -392,10 +415,11 @@ func (this *QCalendarWidget) firstDayOfWeek(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "firstDayOfWeek", args)
   }
 
+  return
 }
 
 // monthShown()
-func (this *QCalendarWidget) monthShown(args ...interface{}) () {
+func (this *QCalendarWidget) Monthshown(args ...interface{}) (ret interface{}) {
   // monthShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -407,16 +431,20 @@ func (this *QCalendarWidget) monthShown(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget10monthShownEv
     // invoke: int monthShown()
-    var ret = C.C_ZNK15QCalendarWidget10monthShownEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget10monthShownEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCalendarWidget", "monthShown", args)
   }
 
+  return
 }
 
 // setNavigationBarVisible(_Bool)
-func (this *QCalendarWidget) setNavigationBarVisible(args ...interface{}) () {
+func (this *QCalendarWidget) Setnavigationbarvisible(args ...interface{}) () {
   // setNavigationBarVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -436,10 +464,11 @@ func (this *QCalendarWidget) setNavigationBarVisible(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "setNavigationBarVisible", args)
   }
 
+  return
 }
 
 // showNextYear()
-func (this *QCalendarWidget) showNextYear(args ...interface{}) () {
+func (this *QCalendarWidget) Shownextyear(args ...interface{}) () {
   // showNextYear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -456,10 +485,11 @@ func (this *QCalendarWidget) showNextYear(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "showNextYear", args)
   }
 
+  return
 }
 
 // setMinimumDate(const class QDate &)
-func (this *QCalendarWidget) setMinimumDate(args ...interface{}) () {
+func (this *QCalendarWidget) Setminimumdate(args ...interface{}) () {
   // setMinimumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -479,10 +509,11 @@ func (this *QCalendarWidget) setMinimumDate(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "setMinimumDate", args)
   }
 
+  return
 }
 
 // yearShown()
-func (this *QCalendarWidget) yearShown(args ...interface{}) () {
+func (this *QCalendarWidget) Yearshown(args ...interface{}) (ret interface{}) {
   // yearShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -494,16 +525,20 @@ func (this *QCalendarWidget) yearShown(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget9yearShownEv
     // invoke: int yearShown()
-    var ret = C.C_ZNK15QCalendarWidget9yearShownEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget9yearShownEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCalendarWidget", "yearShown", args)
   }
 
+  return
 }
 
 // setHeaderTextFormat(const class QTextCharFormat &)
-func (this *QCalendarWidget) setHeaderTextFormat(args ...interface{}) () {
+func (this *QCalendarWidget) Setheadertextformat(args ...interface{}) () {
   // setHeaderTextFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -523,10 +558,11 @@ func (this *QCalendarWidget) setHeaderTextFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "setHeaderTextFormat", args)
   }
 
+  return
 }
 
 // verticalHeaderFormat()
-func (this *QCalendarWidget) verticalHeaderFormat(args ...interface{}) () {
+func (this *QCalendarWidget) Verticalheaderformat(args ...interface{}) () {
   // verticalHeaderFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -543,10 +579,11 @@ func (this *QCalendarWidget) verticalHeaderFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "verticalHeaderFormat", args)
   }
 
+  return
 }
 
 // minimumDate()
-func (this *QCalendarWidget) minimumDate(args ...interface{}) () {
+func (this *QCalendarWidget) Minimumdate(args ...interface{}) (ret interface{}) {
   // minimumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -558,16 +595,20 @@ func (this *QCalendarWidget) minimumDate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget11minimumDateEv
     // invoke: QDate minimumDate()
-    var ret = C.C_ZNK15QCalendarWidget11minimumDateEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget11minimumDateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDate{}) // "QDate"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCalendarWidget", "minimumDate", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QCalendarWidget) sizeHint(args ...interface{}) () {
+func (this *QCalendarWidget) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -579,16 +620,20 @@ func (this *QCalendarWidget) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK15QCalendarWidget8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCalendarWidget", "sizeHint", args)
   }
 
+  return
 }
 
 // setSelectedDate(const class QDate &)
-func (this *QCalendarWidget) setSelectedDate(args ...interface{}) () {
+func (this *QCalendarWidget) Setselecteddate(args ...interface{}) () {
   // setSelectedDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -608,10 +653,11 @@ func (this *QCalendarWidget) setSelectedDate(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "setSelectedDate", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QCalendarWidget) metaObject(args ...interface{}) () {
+func (this *QCalendarWidget) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -628,10 +674,11 @@ func (this *QCalendarWidget) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "metaObject", args)
   }
 
+  return
 }
 
 // selectionMode()
-func (this *QCalendarWidget) selectionMode(args ...interface{}) () {
+func (this *QCalendarWidget) Selectionmode(args ...interface{}) () {
   // selectionMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -648,10 +695,11 @@ func (this *QCalendarWidget) selectionMode(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "selectionMode", args)
   }
 
+  return
 }
 
 // setCurrentPage(int, int)
-func (this *QCalendarWidget) setCurrentPage(args ...interface{}) () {
+func (this *QCalendarWidget) Setcurrentpage(args ...interface{}) () {
   // setCurrentPage(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -674,10 +722,11 @@ func (this *QCalendarWidget) setCurrentPage(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "setCurrentPage", args)
   }
 
+  return
 }
 
 // setDateTextFormat(const class QDate &, const class QTextCharFormat &)
-func (this *QCalendarWidget) setDateTextFormat(args ...interface{}) () {
+func (this *QCalendarWidget) Setdatetextformat(args ...interface{}) () {
   // setDateTextFormat(const class QDate &, const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -700,10 +749,11 @@ func (this *QCalendarWidget) setDateTextFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "setDateTextFormat", args)
   }
 
+  return
 }
 
 // selectedDate()
-func (this *QCalendarWidget) selectedDate(args ...interface{}) () {
+func (this *QCalendarWidget) Selecteddate(args ...interface{}) (ret interface{}) {
   // selectedDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -715,16 +765,20 @@ func (this *QCalendarWidget) selectedDate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget12selectedDateEv
     // invoke: QDate selectedDate()
-    var ret = C.C_ZNK15QCalendarWidget12selectedDateEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget12selectedDateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDate{}) // "QDate"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCalendarWidget", "selectedDate", args)
   }
 
+  return
 }
 
 // maximumDate()
-func (this *QCalendarWidget) maximumDate(args ...interface{}) () {
+func (this *QCalendarWidget) Maximumdate(args ...interface{}) (ret interface{}) {
   // maximumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -736,16 +790,20 @@ func (this *QCalendarWidget) maximumDate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget11maximumDateEv
     // invoke: QDate maximumDate()
-    var ret = C.C_ZNK15QCalendarWidget11maximumDateEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget11maximumDateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDate{}) // "QDate"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCalendarWidget", "maximumDate", args)
   }
 
+  return
 }
 
 // minimumSizeHint()
-func (this *QCalendarWidget) minimumSizeHint(args ...interface{}) () {
+func (this *QCalendarWidget) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -757,16 +815,20 @@ func (this *QCalendarWidget) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret = C.C_ZNK15QCalendarWidget15minimumSizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCalendarWidget", "minimumSizeHint", args)
   }
 
+  return
 }
 
 // showPreviousMonth()
-func (this *QCalendarWidget) showPreviousMonth(args ...interface{}) () {
+func (this *QCalendarWidget) Showpreviousmonth(args ...interface{}) () {
   // showPreviousMonth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -783,10 +845,11 @@ func (this *QCalendarWidget) showPreviousMonth(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "showPreviousMonth", args)
   }
 
+  return
 }
 
 // dateEditAcceptDelay()
-func (this *QCalendarWidget) dateEditAcceptDelay(args ...interface{}) () {
+func (this *QCalendarWidget) Dateeditacceptdelay(args ...interface{}) (ret interface{}) {
   // dateEditAcceptDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -798,16 +861,20 @@ func (this *QCalendarWidget) dateEditAcceptDelay(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget19dateEditAcceptDelayEv
     // invoke: int dateEditAcceptDelay()
-    var ret = C.C_ZNK15QCalendarWidget19dateEditAcceptDelayEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget19dateEditAcceptDelayEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCalendarWidget", "dateEditAcceptDelay", args)
   }
 
+  return
 }
 
 // showPreviousYear()
-func (this *QCalendarWidget) showPreviousYear(args ...interface{}) () {
+func (this *QCalendarWidget) Showpreviousyear(args ...interface{}) () {
   // showPreviousYear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -824,10 +891,11 @@ func (this *QCalendarWidget) showPreviousYear(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "showPreviousYear", args)
   }
 
+  return
 }
 
 // isGridVisible()
-func (this *QCalendarWidget) isGridVisible(args ...interface{}) () {
+func (this *QCalendarWidget) Isgridvisible(args ...interface{}) (ret interface{}) {
   // isGridVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -839,16 +907,20 @@ func (this *QCalendarWidget) isGridVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget13isGridVisibleEv
     // invoke: bool isGridVisible()
-    var ret = C.C_ZNK15QCalendarWidget13isGridVisibleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QCalendarWidget13isGridVisibleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCalendarWidget", "isGridVisible", args)
   }
 
+  return
 }
 
 // setDateEditEnabled(_Bool)
-func (this *QCalendarWidget) setDateEditEnabled(args ...interface{}) () {
+func (this *QCalendarWidget) Setdateeditenabled(args ...interface{}) () {
   // setDateEditEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -868,6 +940,7 @@ func (this *QCalendarWidget) setDateEditEnabled(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "setDateEditEnabled", args)
   }
 
+  return
 }
 
 // QCalendarWidget(class QWidget *)
@@ -898,7 +971,7 @@ func NewQCalendarWidget(args ...interface{}) *QCalendarWidget {
 }
 
 // showNextMonth()
-func (this *QCalendarWidget) showNextMonth(args ...interface{}) () {
+func (this *QCalendarWidget) Shownextmonth(args ...interface{}) () {
   // showNextMonth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -915,10 +988,11 @@ func (this *QCalendarWidget) showNextMonth(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "showNextMonth", args)
   }
 
+  return
 }
 
 // showToday()
-func (this *QCalendarWidget) showToday(args ...interface{}) () {
+func (this *QCalendarWidget) Showtoday(args ...interface{}) () {
   // showToday()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -935,6 +1009,7 @@ func (this *QCalendarWidget) showToday(args ...interface{}) () {
     qtrt.ErrorResolve("QCalendarWidget", "showToday", args)
   }
 
+  return
 }
 
 // <= body block end

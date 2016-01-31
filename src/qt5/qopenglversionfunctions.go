@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qopenglversionfunctions.h
 // dst-file: /src/gui/qopenglversionfunctions.go
 //
@@ -35,7 +35,7 @@ extern void C_ZN24QAbstractOpenGLFunctions6d_funcEv(void* qthis); // 4
   // proto:  void QAbstractOpenGLFunctions::~QAbstractOpenGLFunctions();
 extern void C_ZN24QAbstractOpenGLFunctionsD2Ev(void* qthis); // 4
   // proto:  bool QAbstractOpenGLFunctions::initializeOpenGLFunctions();
-extern void C_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv(void* qthis); // 4
+extern bool C_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv(void* qthis); // 4
   // proto:  void QOpenGLVersionStatus::QOpenGLVersionStatus();
 extern void* C_ZN20QOpenGLVersionStatusC2Ev(); // 1
 */
@@ -96,7 +96,7 @@ func NewQOpenGLVersionFunctionsBackend(args ...interface{}) *QOpenGLVersionFunct
 }
 
 // d_func()
-func (this *QAbstractOpenGLFunctions) d_func(args ...interface{}) () {
+func (this *QAbstractOpenGLFunctions) D_Func(args ...interface{}) () {
   // d_func()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -113,10 +113,11 @@ func (this *QAbstractOpenGLFunctions) d_func(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractOpenGLFunctions", "d_func", args)
   }
 
+  return
 }
 
 // ~QAbstractOpenGLFunctions()
-func (this *QAbstractOpenGLFunctions) FreeQAbstractOpenGLFunctions(args ...interface{}) () {
+func (this *QAbstractOpenGLFunctions) Freeqabstractopenglfunctions(args ...interface{}) () {
   // ~QAbstractOpenGLFunctions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -133,10 +134,11 @@ func (this *QAbstractOpenGLFunctions) FreeQAbstractOpenGLFunctions(args ...inter
     qtrt.ErrorResolve("QAbstractOpenGLFunctions", "~QAbstractOpenGLFunctions", args)
   }
 
+  return
 }
 
 // initializeOpenGLFunctions()
-func (this *QAbstractOpenGLFunctions) initializeOpenGLFunctions(args ...interface{}) () {
+func (this *QAbstractOpenGLFunctions) Initializeopenglfunctions(args ...interface{}) (ret interface{}) {
   // initializeOpenGLFunctions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -148,12 +150,16 @@ func (this *QAbstractOpenGLFunctions) initializeOpenGLFunctions(args ...interfac
   case 0:
     // invoke: _ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv
     // invoke: bool initializeOpenGLFunctions()
-    var ret = C.C_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractOpenGLFunctions", "initializeOpenGLFunctions", args)
   }
 
+  return
 }
 
 // QOpenGLVersionStatus()

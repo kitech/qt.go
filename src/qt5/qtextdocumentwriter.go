@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qtextdocumentwriter.h
 // dst-file: /src/gui/qtextdocumentwriter.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QByteArray QTextDocumentWriter::format();
-extern void C_ZNK19QTextDocumentWriter6formatEv(void* qthis); // 4
+extern void* C_ZNK19QTextDocumentWriter6formatEv(void* qthis); // 4
   // proto:  void QTextDocumentWriter::setFormat(const QByteArray & format);
 extern void C_ZN19QTextDocumentWriter9setFormatERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  void QTextDocumentWriter::setFileName(const QString & fileName);
@@ -41,19 +41,19 @@ extern void* C_ZN19QTextDocumentWriterC2EP9QIODeviceRK10QByteArray(void* arg0, v
   // proto:  void QTextDocumentWriter::QTextDocumentWriter(const QString & fileName, const QByteArray & format);
 extern void* C_ZN19QTextDocumentWriterC2ERK7QStringRK10QByteArray(void* arg0, void* arg1); // 3
   // proto:  QString QTextDocumentWriter::fileName();
-extern void C_ZNK19QTextDocumentWriter8fileNameEv(void* qthis); // 4
+extern void* C_ZNK19QTextDocumentWriter8fileNameEv(void* qthis); // 4
   // proto:  bool QTextDocumentWriter::write(const QTextDocumentFragment & fragment);
-extern void C_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment(void* qthis, void* arg0); // 4
+extern bool C_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment(void* qthis, void* arg0); // 4
   // proto:  bool QTextDocumentWriter::write(const QTextDocument * document);
-extern void C_ZN19QTextDocumentWriter5writeEPK13QTextDocument(void* qthis, void* arg0); // 4
+extern bool C_ZN19QTextDocumentWriter5writeEPK13QTextDocument(void* qthis, void* arg0); // 4
   // proto:  QTextCodec * QTextDocumentWriter::codec();
-extern void C_ZNK19QTextDocumentWriter5codecEv(void* qthis); // 4
+extern void* C_ZNK19QTextDocumentWriter5codecEv(void* qthis); // 4
   // proto:  void QTextDocumentWriter::~QTextDocumentWriter();
 extern void C_ZN19QTextDocumentWriterD2Ev(void* qthis); // 4
   // proto:  void QTextDocumentWriter::setDevice(QIODevice * device);
 extern void C_ZN19QTextDocumentWriter9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  QIODevice * QTextDocumentWriter::device();
-extern void C_ZNK19QTextDocumentWriter6deviceEv(void* qthis); // 4
+extern void* C_ZNK19QTextDocumentWriter6deviceEv(void* qthis); // 4
   // proto:  void QTextDocumentWriter::setCodec(QTextCodec * codec);
 extern void C_ZN19QTextDocumentWriter8setCodecEP10QTextCodec(void* qthis, void* arg0); // 4
   // proto: static QList<QByteArray> QTextDocumentWriter::supportedDocumentFormats();
@@ -77,7 +77,7 @@ type QTextDocumentWriter struct {
 }
 
 // format()
-func (this *QTextDocumentWriter) format(args ...interface{}) () {
+func (this *QTextDocumentWriter) Format(args ...interface{}) (ret interface{}) {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -89,16 +89,20 @@ func (this *QTextDocumentWriter) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QTextDocumentWriter6formatEv
     // invoke: QByteArray format()
-    var ret = C.C_ZNK19QTextDocumentWriter6formatEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QTextDocumentWriter6formatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "format", args)
   }
 
+  return
 }
 
 // setFormat(const class QByteArray &)
-func (this *QTextDocumentWriter) setFormat(args ...interface{}) () {
+func (this *QTextDocumentWriter) Setformat(args ...interface{}) () {
   // setFormat(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -118,10 +122,11 @@ func (this *QTextDocumentWriter) setFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocumentWriter", "setFormat", args)
   }
 
+  return
 }
 
 // setFileName(const class QString &)
-func (this *QTextDocumentWriter) setFileName(args ...interface{}) () {
+func (this *QTextDocumentWriter) Setfilename(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -141,6 +146,7 @@ func (this *QTextDocumentWriter) setFileName(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocumentWriter", "setFileName", args)
   }
 
+  return
 }
 
 // QTextDocumentWriter()
@@ -198,7 +204,7 @@ func NewQTextDocumentWriter(args ...interface{}) *QTextDocumentWriter {
 }
 
 // fileName()
-func (this *QTextDocumentWriter) fileName(args ...interface{}) () {
+func (this *QTextDocumentWriter) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -210,16 +216,20 @@ func (this *QTextDocumentWriter) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QTextDocumentWriter8fileNameEv
     // invoke: QString fileName()
-    var ret = C.C_ZNK19QTextDocumentWriter8fileNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QTextDocumentWriter8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "fileName", args)
   }
 
+  return
 }
 
 // write(const class QTextDocumentFragment &)
-func (this *QTextDocumentWriter) write(args ...interface{}) () {
+func (this *QTextDocumentWriter) Write(args ...interface{}) (ret interface{}) {
   // write(const class QTextDocumentFragment &)
   // write(const class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -237,23 +247,30 @@ func (this *QTextDocumentWriter) write(args ...interface{}) () {
     // invoke: bool write(const class QTextDocumentFragment &)
     var arg0 = args[0].(QTextDocumentFragment).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN19QTextDocumentWriter5writeEPK13QTextDocument
     // invoke: bool write(const class QTextDocument *)
     var arg0 = args[0].(QTextDocument).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN19QTextDocumentWriter5writeEPK13QTextDocument(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN19QTextDocumentWriter5writeEPK13QTextDocument(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "write", args)
   }
 
+  return
 }
 
 // codec()
-func (this *QTextDocumentWriter) codec(args ...interface{}) () {
+func (this *QTextDocumentWriter) Codec(args ...interface{}) (ret interface{}) {
   // codec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -265,16 +282,20 @@ func (this *QTextDocumentWriter) codec(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QTextDocumentWriter5codecEv
     // invoke: QTextCodec * codec()
-    var ret = C.C_ZNK19QTextDocumentWriter5codecEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QTextDocumentWriter5codecEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "codec", args)
   }
 
+  return
 }
 
 // ~QTextDocumentWriter()
-func (this *QTextDocumentWriter) FreeQTextDocumentWriter(args ...interface{}) () {
+func (this *QTextDocumentWriter) Freeqtextdocumentwriter(args ...interface{}) () {
   // ~QTextDocumentWriter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -291,10 +312,11 @@ func (this *QTextDocumentWriter) FreeQTextDocumentWriter(args ...interface{}) ()
     qtrt.ErrorResolve("QTextDocumentWriter", "~QTextDocumentWriter", args)
   }
 
+  return
 }
 
 // setDevice(class QIODevice *)
-func (this *QTextDocumentWriter) setDevice(args ...interface{}) () {
+func (this *QTextDocumentWriter) Setdevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -314,10 +336,11 @@ func (this *QTextDocumentWriter) setDevice(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocumentWriter", "setDevice", args)
   }
 
+  return
 }
 
 // device()
-func (this *QTextDocumentWriter) device(args ...interface{}) () {
+func (this *QTextDocumentWriter) Device(args ...interface{}) (ret interface{}) {
   // device()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -329,16 +352,20 @@ func (this *QTextDocumentWriter) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QTextDocumentWriter6deviceEv
     // invoke: QIODevice * device()
-    var ret = C.C_ZNK19QTextDocumentWriter6deviceEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK19QTextDocumentWriter6deviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QIODevice{}) // "QIODevice *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "device", args)
   }
 
+  return
 }
 
 // setCodec(class QTextCodec *)
-func (this *QTextDocumentWriter) setCodec(args ...interface{}) () {
+func (this *QTextDocumentWriter) Setcodec(args ...interface{}) () {
   // setCodec(class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -358,10 +385,11 @@ func (this *QTextDocumentWriter) setCodec(args ...interface{}) () {
     qtrt.ErrorResolve("QTextDocumentWriter", "setCodec", args)
   }
 
+  return
 }
 
 // supportedDocumentFormats()
-func (this *QTextDocumentWriter) supportedDocumentFormats_s(args ...interface{}) () {
+func (this *QTextDocumentWriter) Supporteddocumentformats_S(args ...interface{}) () {
   // supportedDocumentFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,6 +406,7 @@ func (this *QTextDocumentWriter) supportedDocumentFormats_s(args ...interface{})
     qtrt.ErrorResolve("QTextDocumentWriter", "supportedDocumentFormats", args)
   }
 
+  return
 }
 
 // <= body block end

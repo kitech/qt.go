@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qsystemsemaphore.h
 // dst-file: /src/core/qsystemsemaphore.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QString QSystemSemaphore::errorString();
-extern void C_ZNK16QSystemSemaphore11errorStringEv(void* qthis); // 4
+extern void* C_ZNK16QSystemSemaphore11errorStringEv(void* qthis); // 4
   // proto:  bool QSystemSemaphore::acquire();
-extern void C_ZN16QSystemSemaphore7acquireEv(void* qthis); // 4
+extern bool C_ZN16QSystemSemaphore7acquireEv(void* qthis); // 4
   // proto:  void QSystemSemaphore::~QSystemSemaphore();
 extern void C_ZN16QSystemSemaphoreD2Ev(void* qthis); // 4
   // proto:  QString QSystemSemaphore::key();
-extern void C_ZNK16QSystemSemaphore3keyEv(void* qthis); // 4
+extern void* C_ZNK16QSystemSemaphore3keyEv(void* qthis); // 4
   // proto:  QSystemSemaphore::SystemSemaphoreError QSystemSemaphore::error();
 extern void C_ZNK16QSystemSemaphore5errorEv(void* qthis); // 4
   // proto:  bool QSystemSemaphore::release(int n);
-extern void C_ZN16QSystemSemaphore7releaseEi(void* qthis, int32_t arg0); // 4
+extern bool C_ZN16QSystemSemaphore7releaseEi(void* qthis, int32_t arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -59,7 +59,7 @@ type QSystemSemaphore struct {
 }
 
 // errorString()
-func (this *QSystemSemaphore) errorString(args ...interface{}) () {
+func (this *QSystemSemaphore) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -71,16 +71,20 @@ func (this *QSystemSemaphore) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QSystemSemaphore11errorStringEv
     // invoke: QString errorString()
-    var ret = C.C_ZNK16QSystemSemaphore11errorStringEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK16QSystemSemaphore11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "errorString", args)
   }
 
+  return
 }
 
 // acquire()
-func (this *QSystemSemaphore) acquire(args ...interface{}) () {
+func (this *QSystemSemaphore) Acquire(args ...interface{}) (ret interface{}) {
   // acquire()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -92,16 +96,20 @@ func (this *QSystemSemaphore) acquire(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QSystemSemaphore7acquireEv
     // invoke: bool acquire()
-    var ret = C.C_ZN16QSystemSemaphore7acquireEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QSystemSemaphore7acquireEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "acquire", args)
   }
 
+  return
 }
 
 // ~QSystemSemaphore()
-func (this *QSystemSemaphore) FreeQSystemSemaphore(args ...interface{}) () {
+func (this *QSystemSemaphore) Freeqsystemsemaphore(args ...interface{}) () {
   // ~QSystemSemaphore()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -118,10 +126,11 @@ func (this *QSystemSemaphore) FreeQSystemSemaphore(args ...interface{}) () {
     qtrt.ErrorResolve("QSystemSemaphore", "~QSystemSemaphore", args)
   }
 
+  return
 }
 
 // key()
-func (this *QSystemSemaphore) key(args ...interface{}) () {
+func (this *QSystemSemaphore) Key(args ...interface{}) (ret interface{}) {
   // key()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -133,16 +142,20 @@ func (this *QSystemSemaphore) key(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QSystemSemaphore3keyEv
     // invoke: QString key()
-    var ret = C.C_ZNK16QSystemSemaphore3keyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK16QSystemSemaphore3keyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "key", args)
   }
 
+  return
 }
 
 // error()
-func (this *QSystemSemaphore) error(args ...interface{}) () {
+func (this *QSystemSemaphore) Error(args ...interface{}) () {
   // error()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -159,10 +172,11 @@ func (this *QSystemSemaphore) error(args ...interface{}) () {
     qtrt.ErrorResolve("QSystemSemaphore", "error", args)
   }
 
+  return
 }
 
 // release(int)
-func (this *QSystemSemaphore) release(args ...interface{}) () {
+func (this *QSystemSemaphore) Release(args ...interface{}) (ret interface{}) {
   // release(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -177,12 +191,16 @@ func (this *QSystemSemaphore) release(args ...interface{}) () {
     // invoke: bool release(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN16QSystemSemaphore7releaseEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QSystemSemaphore7releaseEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "release", args)
   }
 
+  return
 }
 
 // <= body block end

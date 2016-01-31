@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qtoolbutton.h
 // dst-file: /src/widgets/qtoolbutton.go
 //
@@ -39,19 +39,19 @@ extern void C_ZN11QToolButtonD2Ev(void* qthis); // 4
   // proto:  void QToolButton::setAutoRaise(bool enable);
 extern void C_ZN11QToolButton12setAutoRaiseEb(void* qthis, bool arg0); // 4
   // proto:  QMenu * QToolButton::menu();
-extern void C_ZNK11QToolButton4menuEv(void* qthis); // 4
+extern void* C_ZNK11QToolButton4menuEv(void* qthis); // 4
   // proto:  bool QToolButton::autoRaise();
-extern void C_ZNK11QToolButton9autoRaiseEv(void* qthis); // 4
+extern bool C_ZNK11QToolButton9autoRaiseEv(void* qthis); // 4
   // proto:  QAction * QToolButton::defaultAction();
-extern void C_ZNK11QToolButton13defaultActionEv(void* qthis); // 4
+extern void* C_ZNK11QToolButton13defaultActionEv(void* qthis); // 4
   // proto:  void QToolButton::setDefaultAction(QAction * );
 extern void C_ZN11QToolButton16setDefaultActionEP7QAction(void* qthis, void* arg0); // 4
   // proto:  QSize QToolButton::sizeHint();
-extern void C_ZNK11QToolButton8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK11QToolButton8sizeHintEv(void* qthis); // 4
   // proto:  const QMetaObject * QToolButton::metaObject();
 extern void C_ZNK11QToolButton10metaObjectEv(void* qthis); // 4
   // proto:  QSize QToolButton::minimumSizeHint();
-extern void C_ZNK11QToolButton15minimumSizeHintEv(void* qthis); // 4
+extern void* C_ZNK11QToolButton15minimumSizeHintEv(void* qthis); // 4
   // proto:  Qt::ArrowType QToolButton::arrowType();
 extern void C_ZNK11QToolButton9arrowTypeEv(void* qthis); // 4
   // proto:  Qt::ToolButtonStyle QToolButton::toolButtonStyle();
@@ -78,7 +78,7 @@ type QToolButton struct {
 }
 
 // showMenu()
-func (this *QToolButton) showMenu(args ...interface{}) () {
+func (this *QToolButton) Showmenu(args ...interface{}) () {
   // showMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -95,6 +95,7 @@ func (this *QToolButton) showMenu(args ...interface{}) () {
     qtrt.ErrorResolve("QToolButton", "showMenu", args)
   }
 
+  return
 }
 
 // QToolButton(class QWidget *)
@@ -125,7 +126,7 @@ func NewQToolButton(args ...interface{}) *QToolButton {
 }
 
 // setMenu(class QMenu *)
-func (this *QToolButton) setMenu(args ...interface{}) () {
+func (this *QToolButton) Setmenu(args ...interface{}) () {
   // setMenu(class QMenu *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -145,10 +146,11 @@ func (this *QToolButton) setMenu(args ...interface{}) () {
     qtrt.ErrorResolve("QToolButton", "setMenu", args)
   }
 
+  return
 }
 
 // ~QToolButton()
-func (this *QToolButton) FreeQToolButton(args ...interface{}) () {
+func (this *QToolButton) Freeqtoolbutton(args ...interface{}) () {
   // ~QToolButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -165,10 +167,11 @@ func (this *QToolButton) FreeQToolButton(args ...interface{}) () {
     qtrt.ErrorResolve("QToolButton", "~QToolButton", args)
   }
 
+  return
 }
 
 // setAutoRaise(_Bool)
-func (this *QToolButton) setAutoRaise(args ...interface{}) () {
+func (this *QToolButton) Setautoraise(args ...interface{}) () {
   // setAutoRaise(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -188,10 +191,11 @@ func (this *QToolButton) setAutoRaise(args ...interface{}) () {
     qtrt.ErrorResolve("QToolButton", "setAutoRaise", args)
   }
 
+  return
 }
 
 // menu()
-func (this *QToolButton) menu(args ...interface{}) () {
+func (this *QToolButton) Menu(args ...interface{}) (ret interface{}) {
   // menu()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -203,16 +207,20 @@ func (this *QToolButton) menu(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton4menuEv
     // invoke: QMenu * menu()
-    var ret = C.C_ZNK11QToolButton4menuEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QToolButton4menuEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QToolButton", "menu", args)
   }
 
+  return
 }
 
 // autoRaise()
-func (this *QToolButton) autoRaise(args ...interface{}) () {
+func (this *QToolButton) Autoraise(args ...interface{}) (ret interface{}) {
   // autoRaise()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -224,16 +232,20 @@ func (this *QToolButton) autoRaise(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton9autoRaiseEv
     // invoke: bool autoRaise()
-    var ret = C.C_ZNK11QToolButton9autoRaiseEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QToolButton9autoRaiseEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QToolButton", "autoRaise", args)
   }
 
+  return
 }
 
 // defaultAction()
-func (this *QToolButton) defaultAction(args ...interface{}) () {
+func (this *QToolButton) Defaultaction(args ...interface{}) (ret interface{}) {
   // defaultAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -245,16 +257,20 @@ func (this *QToolButton) defaultAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton13defaultActionEv
     // invoke: QAction * defaultAction()
-    var ret = C.C_ZNK11QToolButton13defaultActionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QToolButton13defaultActionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QAction{}) // "QAction *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QToolButton", "defaultAction", args)
   }
 
+  return
 }
 
 // setDefaultAction(class QAction *)
-func (this *QToolButton) setDefaultAction(args ...interface{}) () {
+func (this *QToolButton) Setdefaultaction(args ...interface{}) () {
   // setDefaultAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -274,10 +290,11 @@ func (this *QToolButton) setDefaultAction(args ...interface{}) () {
     qtrt.ErrorResolve("QToolButton", "setDefaultAction", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QToolButton) sizeHint(args ...interface{}) () {
+func (this *QToolButton) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -289,16 +306,20 @@ func (this *QToolButton) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK11QToolButton8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QToolButton8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QToolButton", "sizeHint", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QToolButton) metaObject(args ...interface{}) () {
+func (this *QToolButton) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -315,10 +336,11 @@ func (this *QToolButton) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QToolButton", "metaObject", args)
   }
 
+  return
 }
 
 // minimumSizeHint()
-func (this *QToolButton) minimumSizeHint(args ...interface{}) () {
+func (this *QToolButton) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -330,16 +352,20 @@ func (this *QToolButton) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret = C.C_ZNK11QToolButton15minimumSizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QToolButton15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QToolButton", "minimumSizeHint", args)
   }
 
+  return
 }
 
 // arrowType()
-func (this *QToolButton) arrowType(args ...interface{}) () {
+func (this *QToolButton) Arrowtype(args ...interface{}) () {
   // arrowType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -356,10 +382,11 @@ func (this *QToolButton) arrowType(args ...interface{}) () {
     qtrt.ErrorResolve("QToolButton", "arrowType", args)
   }
 
+  return
 }
 
 // toolButtonStyle()
-func (this *QToolButton) toolButtonStyle(args ...interface{}) () {
+func (this *QToolButton) Toolbuttonstyle(args ...interface{}) () {
   // toolButtonStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -376,10 +403,11 @@ func (this *QToolButton) toolButtonStyle(args ...interface{}) () {
     qtrt.ErrorResolve("QToolButton", "toolButtonStyle", args)
   }
 
+  return
 }
 
 // popupMode()
-func (this *QToolButton) popupMode(args ...interface{}) () {
+func (this *QToolButton) Popupmode(args ...interface{}) () {
   // popupMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -396,6 +424,7 @@ func (this *QToolButton) popupMode(args ...interface{}) () {
     qtrt.ErrorResolve("QToolButton", "popupMode", args)
   }
 
+  return
 }
 
 // <= body block end

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QPalette QToolTip::palette();
-extern void C_ZN8QToolTip7paletteEv(); // 4
+extern void* C_ZN8QToolTip7paletteEv(); // 4
   // proto: static void QToolTip::hideText();
 extern void C_ZN8QToolTip8hideTextEv(); // 2
   // proto: static QString QToolTip::text();
-extern void C_ZN8QToolTip4textEv(); // 4
+extern void* C_ZN8QToolTip4textEv(); // 4
   // proto: static void QToolTip::setPalette(const QPalette & );
 extern void C_ZN8QToolTip10setPaletteERK8QPalette(void* arg0); // 4
   // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect);
@@ -43,11 +43,11 @@ extern void C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(void* a
   // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w);
 extern void C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget(void* arg0, void* arg1, void* arg2); // 4
   // proto: static bool QToolTip::isVisible();
-extern void C_ZN8QToolTip9isVisibleEv(); // 4
+extern bool C_ZN8QToolTip9isVisibleEv(); // 4
   // proto: static void QToolTip::setFont(const QFont & );
 extern void C_ZN8QToolTip7setFontERK5QFont(void* arg0); // 4
   // proto: static QFont QToolTip::font();
-extern void C_ZN8QToolTip4fontEv(); // 4
+extern void* C_ZN8QToolTip4fontEv(); // 4
 */
 import "C"
 // } // <= ext block end
@@ -67,7 +67,7 @@ type QToolTip struct {
 }
 
 // palette()
-func (this *QToolTip) palette_s(args ...interface{}) () {
+func (this *QToolTip) Palette_S(args ...interface{}) (ret interface{}) {
   // palette()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -79,16 +79,20 @@ func (this *QToolTip) palette_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip7paletteEv
     // invoke: QPalette palette()
-    var ret = C.C_ZN8QToolTip7paletteEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN8QToolTip7paletteEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPalette{}) // "QPalette"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QToolTip", "palette", args)
   }
 
+  return
 }
 
 // hideText()
-func (this *QToolTip) hideText_s(args ...interface{}) () {
+func (this *QToolTip) Hidetext_S(args ...interface{}) () {
   // hideText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -105,10 +109,11 @@ func (this *QToolTip) hideText_s(args ...interface{}) () {
     qtrt.ErrorResolve("QToolTip", "hideText", args)
   }
 
+  return
 }
 
 // text()
-func (this *QToolTip) text_s(args ...interface{}) () {
+func (this *QToolTip) Text_S(args ...interface{}) (ret interface{}) {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -120,16 +125,20 @@ func (this *QToolTip) text_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip4textEv
     // invoke: QString text()
-    var ret = C.C_ZN8QToolTip4textEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN8QToolTip4textEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QToolTip", "text", args)
   }
 
+  return
 }
 
 // setPalette(const class QPalette &)
-func (this *QToolTip) setPalette_s(args ...interface{}) () {
+func (this *QToolTip) Setpalette_S(args ...interface{}) () {
   // setPalette(const class QPalette &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -149,10 +158,11 @@ func (this *QToolTip) setPalette_s(args ...interface{}) () {
     qtrt.ErrorResolve("QToolTip", "setPalette", args)
   }
 
+  return
 }
 
 // showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &)
-func (this *QToolTip) showText_s(args ...interface{}) () {
+func (this *QToolTip) Showtext_S(args ...interface{}) () {
   // showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &)
   // showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &, int)
   // showText(const class QPoint &, const class QString &, class QWidget *)
@@ -217,10 +227,11 @@ func (this *QToolTip) showText_s(args ...interface{}) () {
     qtrt.ErrorResolve("QToolTip", "showText", args)
   }
 
+  return
 }
 
 // isVisible()
-func (this *QToolTip) isVisible_s(args ...interface{}) () {
+func (this *QToolTip) Isvisible_S(args ...interface{}) (ret interface{}) {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -232,16 +243,20 @@ func (this *QToolTip) isVisible_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip9isVisibleEv
     // invoke: bool isVisible()
-    var ret = C.C_ZN8QToolTip9isVisibleEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN8QToolTip9isVisibleEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QToolTip", "isVisible", args)
   }
 
+  return
 }
 
 // setFont(const class QFont &)
-func (this *QToolTip) setFont_s(args ...interface{}) () {
+func (this *QToolTip) Setfont_S(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -261,10 +276,11 @@ func (this *QToolTip) setFont_s(args ...interface{}) () {
     qtrt.ErrorResolve("QToolTip", "setFont", args)
   }
 
+  return
 }
 
 // font()
-func (this *QToolTip) font_s(args ...interface{}) () {
+func (this *QToolTip) Font_S(args ...interface{}) (ret interface{}) {
   // font()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -276,12 +292,16 @@ func (this *QToolTip) font_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip4fontEv
     // invoke: QFont font()
-    var ret = C.C_ZN8QToolTip4fontEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN8QToolTip4fontEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QFont{}) // "QFont"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QToolTip", "font", args)
   }
 
+  return
 }
 
 // <= body block end

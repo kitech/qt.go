@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qtextdocumentfragment.h
 // dst-file: /src/gui/qtextdocumentfragment.go
 //
@@ -29,15 +29,15 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QString QTextDocumentFragment::toHtml(const QByteArray & encoding);
-extern void C_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray(void* qthis, void* arg0); // 4
+extern void* C_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray(void* qthis, void* arg0); // 4
   // proto: static QTextDocumentFragment QTextDocumentFragment::fromPlainText(const QString & plainText);
-extern void C_ZN21QTextDocumentFragment13fromPlainTextERK7QString(void* arg0); // 4
+extern void* C_ZN21QTextDocumentFragment13fromPlainTextERK7QString(void* arg0); // 4
   // proto:  void QTextDocumentFragment::~QTextDocumentFragment();
 extern void C_ZN21QTextDocumentFragmentD2Ev(void* qthis); // 4
   // proto:  bool QTextDocumentFragment::isEmpty();
-extern void C_ZNK21QTextDocumentFragment7isEmptyEv(void* qthis); // 4
+extern bool C_ZNK21QTextDocumentFragment7isEmptyEv(void* qthis); // 4
   // proto:  QString QTextDocumentFragment::toPlainText();
-extern void C_ZNK21QTextDocumentFragment11toPlainTextEv(void* qthis); // 4
+extern void* C_ZNK21QTextDocumentFragment11toPlainTextEv(void* qthis); // 4
   // proto:  void QTextDocumentFragment::QTextDocumentFragment(const QTextDocument * document);
 extern void* C_ZN21QTextDocumentFragmentC2EPK13QTextDocument(void* arg0); // 3
   // proto:  void QTextDocumentFragment::QTextDocumentFragment();
@@ -47,9 +47,9 @@ extern void* C_ZN21QTextDocumentFragmentC2ERKS_(void* arg0); // 3
   // proto:  void QTextDocumentFragment::QTextDocumentFragment(const QTextCursor & range);
 extern void* C_ZN21QTextDocumentFragmentC2ERK11QTextCursor(void* arg0); // 3
   // proto: static QTextDocumentFragment QTextDocumentFragment::fromHtml(const QString & html);
-extern void C_ZN21QTextDocumentFragment8fromHtmlERK7QString(void* arg0); // 4
+extern void* C_ZN21QTextDocumentFragment8fromHtmlERK7QString(void* arg0); // 4
   // proto: static QTextDocumentFragment QTextDocumentFragment::fromHtml(const QString & html, const QTextDocument * resourceProvider);
-extern void C_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument(void* arg0, void* arg1); // 4
+extern void* C_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument(void* arg0, void* arg1); // 4
 */
 import "C"
 // } // <= ext block end
@@ -69,7 +69,7 @@ type QTextDocumentFragment struct {
 }
 
 // toHtml(const class QByteArray &)
-func (this *QTextDocumentFragment) toHtml(args ...interface{}) () {
+func (this *QTextDocumentFragment) Tohtml(args ...interface{}) (ret interface{}) {
   // toHtml(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -84,16 +84,20 @@ func (this *QTextDocumentFragment) toHtml(args ...interface{}) () {
     // invoke: QString toHtml(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "toHtml", args)
   }
 
+  return
 }
 
 // fromPlainText(const class QString &)
-func (this *QTextDocumentFragment) fromPlainText_s(args ...interface{}) () {
+func (this *QTextDocumentFragment) Fromplaintext_S(args ...interface{}) (ret interface{}) {
   // fromPlainText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -108,16 +112,20 @@ func (this *QTextDocumentFragment) fromPlainText_s(args ...interface{}) () {
     // invoke: QTextDocumentFragment fromPlainText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN21QTextDocumentFragment13fromPlainTextERK7QString(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN21QTextDocumentFragment13fromPlainTextERK7QString(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextDocumentFragment{}) // "QTextDocumentFragment"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "fromPlainText", args)
   }
 
+  return
 }
 
 // ~QTextDocumentFragment()
-func (this *QTextDocumentFragment) FreeQTextDocumentFragment(args ...interface{}) () {
+func (this *QTextDocumentFragment) Freeqtextdocumentfragment(args ...interface{}) () {
   // ~QTextDocumentFragment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -134,10 +142,11 @@ func (this *QTextDocumentFragment) FreeQTextDocumentFragment(args ...interface{}
     qtrt.ErrorResolve("QTextDocumentFragment", "~QTextDocumentFragment", args)
   }
 
+  return
 }
 
 // isEmpty()
-func (this *QTextDocumentFragment) isEmpty(args ...interface{}) () {
+func (this *QTextDocumentFragment) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -149,16 +158,20 @@ func (this *QTextDocumentFragment) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QTextDocumentFragment7isEmptyEv
     // invoke: bool isEmpty()
-    var ret = C.C_ZNK21QTextDocumentFragment7isEmptyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK21QTextDocumentFragment7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "isEmpty", args)
   }
 
+  return
 }
 
 // toPlainText()
-func (this *QTextDocumentFragment) toPlainText(args ...interface{}) () {
+func (this *QTextDocumentFragment) Toplaintext(args ...interface{}) (ret interface{}) {
   // toPlainText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -170,12 +183,16 @@ func (this *QTextDocumentFragment) toPlainText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QTextDocumentFragment11toPlainTextEv
     // invoke: QString toPlainText()
-    var ret = C.C_ZNK21QTextDocumentFragment11toPlainTextEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK21QTextDocumentFragment11toPlainTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "toPlainText", args)
   }
 
+  return
 }
 
 // QTextDocumentFragment(const class QTextDocument *)
@@ -239,7 +256,7 @@ func NewQTextDocumentFragment(args ...interface{}) *QTextDocumentFragment {
 }
 
 // fromHtml(const class QString &)
-func (this *QTextDocumentFragment) fromHtml_s(args ...interface{}) () {
+func (this *QTextDocumentFragment) Fromhtml_S(args ...interface{}) (ret interface{}) {
   // fromHtml(const class QString &)
   // fromHtml(const class QString &, const class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -258,8 +275,11 @@ func (this *QTextDocumentFragment) fromHtml_s(args ...interface{}) () {
     // invoke: QTextDocumentFragment fromHtml(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN21QTextDocumentFragment8fromHtmlERK7QString(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN21QTextDocumentFragment8fromHtmlERK7QString(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextDocumentFragment{}) // "QTextDocumentFragment"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument
     // invoke: QTextDocumentFragment fromHtml(const class QString &, const class QTextDocument *)
@@ -267,12 +287,16 @@ func (this *QTextDocumentFragment) fromHtml_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTextDocument).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextDocumentFragment{}) // "QTextDocumentFragment"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "fromHtml", args)
   }
 
+  return
 }
 
 // <= body block end

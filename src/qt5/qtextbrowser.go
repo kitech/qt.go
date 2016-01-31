@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qtextbrowser.h
 // dst-file: /src/widgets/qtextbrowser.go
 //
@@ -29,25 +29,25 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QTextBrowser::openLinks();
-extern void C_ZNK12QTextBrowser9openLinksEv(void* qthis); // 4
+extern bool C_ZNK12QTextBrowser9openLinksEv(void* qthis); // 4
   // proto:  bool QTextBrowser::isBackwardAvailable();
-extern void C_ZNK12QTextBrowser19isBackwardAvailableEv(void* qthis); // 4
+extern bool C_ZNK12QTextBrowser19isBackwardAvailableEv(void* qthis); // 4
   // proto:  void QTextBrowser::home();
 extern void C_ZN12QTextBrowser4homeEv(void* qthis); // 4
   // proto:  void QTextBrowser::setSource(const QUrl & name);
 extern void C_ZN12QTextBrowser9setSourceERK4QUrl(void* qthis, void* arg0); // 4
   // proto:  bool QTextBrowser::openExternalLinks();
-extern void C_ZNK12QTextBrowser17openExternalLinksEv(void* qthis); // 4
+extern bool C_ZNK12QTextBrowser17openExternalLinksEv(void* qthis); // 4
   // proto:  QStringList QTextBrowser::searchPaths();
 extern void C_ZNK12QTextBrowser11searchPathsEv(void* qthis); // 4
   // proto:  void QTextBrowser::setOpenLinks(bool open);
 extern void C_ZN12QTextBrowser12setOpenLinksEb(void* qthis, bool arg0); // 4
   // proto:  QUrl QTextBrowser::historyUrl(int );
-extern void C_ZNK12QTextBrowser10historyUrlEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK12QTextBrowser10historyUrlEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QTextBrowser::isForwardAvailable();
-extern void C_ZNK12QTextBrowser18isForwardAvailableEv(void* qthis); // 4
+extern bool C_ZNK12QTextBrowser18isForwardAvailableEv(void* qthis); // 4
   // proto:  QUrl QTextBrowser::source();
-extern void C_ZNK12QTextBrowser6sourceEv(void* qthis); // 4
+extern void* C_ZNK12QTextBrowser6sourceEv(void* qthis); // 4
   // proto:  void QTextBrowser::forward();
 extern void C_ZN12QTextBrowser7forwardEv(void* qthis); // 4
   // proto:  void QTextBrowser::setSearchPaths(const QStringList & paths);
@@ -55,19 +55,19 @@ extern void C_ZN12QTextBrowser14setSearchPathsERK11QStringList(void* qthis, void
   // proto:  void QTextBrowser::QTextBrowser(QWidget * parent);
 extern void* C_ZN12QTextBrowserC2EP7QWidget(void* arg0); // 3
   // proto:  int QTextBrowser::forwardHistoryCount();
-extern void C_ZNK12QTextBrowser19forwardHistoryCountEv(void* qthis); // 4
+extern int32_t C_ZNK12QTextBrowser19forwardHistoryCountEv(void* qthis); // 4
   // proto:  QVariant QTextBrowser::loadResource(int type, const QUrl & name);
-extern void C_ZN12QTextBrowser12loadResourceEiRK4QUrl(void* qthis, int32_t arg0, void* arg1); // 4
+extern void* C_ZN12QTextBrowser12loadResourceEiRK4QUrl(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QTextBrowser::~QTextBrowser();
 extern void C_ZN12QTextBrowserD2Ev(void* qthis); // 4
   // proto:  int QTextBrowser::backwardHistoryCount();
-extern void C_ZNK12QTextBrowser20backwardHistoryCountEv(void* qthis); // 4
+extern int32_t C_ZNK12QTextBrowser20backwardHistoryCountEv(void* qthis); // 4
   // proto:  void QTextBrowser::setOpenExternalLinks(bool open);
 extern void C_ZN12QTextBrowser20setOpenExternalLinksEb(void* qthis, bool arg0); // 4
   // proto:  const QMetaObject * QTextBrowser::metaObject();
 extern void C_ZNK12QTextBrowser10metaObjectEv(void* qthis); // 4
   // proto:  QString QTextBrowser::historyTitle(int );
-extern void C_ZNK12QTextBrowser12historyTitleEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK12QTextBrowser12historyTitleEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTextBrowser::reload();
 extern void C_ZN12QTextBrowser6reloadEv(void* qthis); // 4
   // proto:  void QTextBrowser::clearHistory();
@@ -99,7 +99,7 @@ type QTextBrowser struct {
 }
 
 // openLinks()
-func (this *QTextBrowser) openLinks(args ...interface{}) () {
+func (this *QTextBrowser) Openlinks(args ...interface{}) (ret interface{}) {
   // openLinks()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -111,16 +111,20 @@ func (this *QTextBrowser) openLinks(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTextBrowser9openLinksEv
     // invoke: bool openLinks()
-    var ret = C.C_ZNK12QTextBrowser9openLinksEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTextBrowser9openLinksEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextBrowser", "openLinks", args)
   }
 
+  return
 }
 
 // isBackwardAvailable()
-func (this *QTextBrowser) isBackwardAvailable(args ...interface{}) () {
+func (this *QTextBrowser) Isbackwardavailable(args ...interface{}) (ret interface{}) {
   // isBackwardAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -132,16 +136,20 @@ func (this *QTextBrowser) isBackwardAvailable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTextBrowser19isBackwardAvailableEv
     // invoke: bool isBackwardAvailable()
-    var ret = C.C_ZNK12QTextBrowser19isBackwardAvailableEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTextBrowser19isBackwardAvailableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextBrowser", "isBackwardAvailable", args)
   }
 
+  return
 }
 
 // home()
-func (this *QTextBrowser) home(args ...interface{}) () {
+func (this *QTextBrowser) Home(args ...interface{}) () {
   // home()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -158,10 +166,11 @@ func (this *QTextBrowser) home(args ...interface{}) () {
     qtrt.ErrorResolve("QTextBrowser", "home", args)
   }
 
+  return
 }
 
 // setSource(const class QUrl &)
-func (this *QTextBrowser) setSource(args ...interface{}) () {
+func (this *QTextBrowser) Setsource(args ...interface{}) () {
   // setSource(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -181,10 +190,11 @@ func (this *QTextBrowser) setSource(args ...interface{}) () {
     qtrt.ErrorResolve("QTextBrowser", "setSource", args)
   }
 
+  return
 }
 
 // openExternalLinks()
-func (this *QTextBrowser) openExternalLinks(args ...interface{}) () {
+func (this *QTextBrowser) Openexternallinks(args ...interface{}) (ret interface{}) {
   // openExternalLinks()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -196,16 +206,20 @@ func (this *QTextBrowser) openExternalLinks(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTextBrowser17openExternalLinksEv
     // invoke: bool openExternalLinks()
-    var ret = C.C_ZNK12QTextBrowser17openExternalLinksEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTextBrowser17openExternalLinksEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextBrowser", "openExternalLinks", args)
   }
 
+  return
 }
 
 // searchPaths()
-func (this *QTextBrowser) searchPaths(args ...interface{}) () {
+func (this *QTextBrowser) Searchpaths(args ...interface{}) () {
   // searchPaths()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -222,10 +236,11 @@ func (this *QTextBrowser) searchPaths(args ...interface{}) () {
     qtrt.ErrorResolve("QTextBrowser", "searchPaths", args)
   }
 
+  return
 }
 
 // setOpenLinks(_Bool)
-func (this *QTextBrowser) setOpenLinks(args ...interface{}) () {
+func (this *QTextBrowser) Setopenlinks(args ...interface{}) () {
   // setOpenLinks(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -245,10 +260,11 @@ func (this *QTextBrowser) setOpenLinks(args ...interface{}) () {
     qtrt.ErrorResolve("QTextBrowser", "setOpenLinks", args)
   }
 
+  return
 }
 
 // historyUrl(int)
-func (this *QTextBrowser) historyUrl(args ...interface{}) () {
+func (this *QTextBrowser) Historyurl(args ...interface{}) (ret interface{}) {
   // historyUrl(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -263,16 +279,20 @@ func (this *QTextBrowser) historyUrl(args ...interface{}) () {
     // invoke: QUrl historyUrl(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK12QTextBrowser10historyUrlEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTextBrowser10historyUrlEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QUrl{}) // "QUrl"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextBrowser", "historyUrl", args)
   }
 
+  return
 }
 
 // isForwardAvailable()
-func (this *QTextBrowser) isForwardAvailable(args ...interface{}) () {
+func (this *QTextBrowser) Isforwardavailable(args ...interface{}) (ret interface{}) {
   // isForwardAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -284,16 +304,20 @@ func (this *QTextBrowser) isForwardAvailable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTextBrowser18isForwardAvailableEv
     // invoke: bool isForwardAvailable()
-    var ret = C.C_ZNK12QTextBrowser18isForwardAvailableEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTextBrowser18isForwardAvailableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextBrowser", "isForwardAvailable", args)
   }
 
+  return
 }
 
 // source()
-func (this *QTextBrowser) source(args ...interface{}) () {
+func (this *QTextBrowser) Source(args ...interface{}) (ret interface{}) {
   // source()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -305,16 +329,20 @@ func (this *QTextBrowser) source(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTextBrowser6sourceEv
     // invoke: QUrl source()
-    var ret = C.C_ZNK12QTextBrowser6sourceEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTextBrowser6sourceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QUrl{}) // "QUrl"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextBrowser", "source", args)
   }
 
+  return
 }
 
 // forward()
-func (this *QTextBrowser) forward(args ...interface{}) () {
+func (this *QTextBrowser) Forward(args ...interface{}) () {
   // forward()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -331,10 +359,11 @@ func (this *QTextBrowser) forward(args ...interface{}) () {
     qtrt.ErrorResolve("QTextBrowser", "forward", args)
   }
 
+  return
 }
 
 // setSearchPaths(const class QStringList &)
-func (this *QTextBrowser) setSearchPaths(args ...interface{}) () {
+func (this *QTextBrowser) Setsearchpaths(args ...interface{}) () {
   // setSearchPaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -354,6 +383,7 @@ func (this *QTextBrowser) setSearchPaths(args ...interface{}) () {
     qtrt.ErrorResolve("QTextBrowser", "setSearchPaths", args)
   }
 
+  return
 }
 
 // QTextBrowser(class QWidget *)
@@ -384,7 +414,7 @@ func NewQTextBrowser(args ...interface{}) *QTextBrowser {
 }
 
 // forwardHistoryCount()
-func (this *QTextBrowser) forwardHistoryCount(args ...interface{}) () {
+func (this *QTextBrowser) Forwardhistorycount(args ...interface{}) (ret interface{}) {
   // forwardHistoryCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -396,16 +426,20 @@ func (this *QTextBrowser) forwardHistoryCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTextBrowser19forwardHistoryCountEv
     // invoke: int forwardHistoryCount()
-    var ret = C.C_ZNK12QTextBrowser19forwardHistoryCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTextBrowser19forwardHistoryCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextBrowser", "forwardHistoryCount", args)
   }
 
+  return
 }
 
 // loadResource(int, const class QUrl &)
-func (this *QTextBrowser) loadResource(args ...interface{}) () {
+func (this *QTextBrowser) Loadresource(args ...interface{}) (ret interface{}) {
   // loadResource(int, const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -423,16 +457,20 @@ func (this *QTextBrowser) loadResource(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QUrl).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN12QTextBrowser12loadResourceEiRK4QUrl(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QTextBrowser12loadResourceEiRK4QUrl(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextBrowser", "loadResource", args)
   }
 
+  return
 }
 
 // ~QTextBrowser()
-func (this *QTextBrowser) FreeQTextBrowser(args ...interface{}) () {
+func (this *QTextBrowser) Freeqtextbrowser(args ...interface{}) () {
   // ~QTextBrowser()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -449,10 +487,11 @@ func (this *QTextBrowser) FreeQTextBrowser(args ...interface{}) () {
     qtrt.ErrorResolve("QTextBrowser", "~QTextBrowser", args)
   }
 
+  return
 }
 
 // backwardHistoryCount()
-func (this *QTextBrowser) backwardHistoryCount(args ...interface{}) () {
+func (this *QTextBrowser) Backwardhistorycount(args ...interface{}) (ret interface{}) {
   // backwardHistoryCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -464,16 +503,20 @@ func (this *QTextBrowser) backwardHistoryCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTextBrowser20backwardHistoryCountEv
     // invoke: int backwardHistoryCount()
-    var ret = C.C_ZNK12QTextBrowser20backwardHistoryCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTextBrowser20backwardHistoryCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextBrowser", "backwardHistoryCount", args)
   }
 
+  return
 }
 
 // setOpenExternalLinks(_Bool)
-func (this *QTextBrowser) setOpenExternalLinks(args ...interface{}) () {
+func (this *QTextBrowser) Setopenexternallinks(args ...interface{}) () {
   // setOpenExternalLinks(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -493,10 +536,11 @@ func (this *QTextBrowser) setOpenExternalLinks(args ...interface{}) () {
     qtrt.ErrorResolve("QTextBrowser", "setOpenExternalLinks", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QTextBrowser) metaObject(args ...interface{}) () {
+func (this *QTextBrowser) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -513,10 +557,11 @@ func (this *QTextBrowser) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QTextBrowser", "metaObject", args)
   }
 
+  return
 }
 
 // historyTitle(int)
-func (this *QTextBrowser) historyTitle(args ...interface{}) () {
+func (this *QTextBrowser) Historytitle(args ...interface{}) (ret interface{}) {
   // historyTitle(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -531,16 +576,20 @@ func (this *QTextBrowser) historyTitle(args ...interface{}) () {
     // invoke: QString historyTitle(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK12QTextBrowser12historyTitleEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTextBrowser12historyTitleEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextBrowser", "historyTitle", args)
   }
 
+  return
 }
 
 // reload()
-func (this *QTextBrowser) reload(args ...interface{}) () {
+func (this *QTextBrowser) Reload(args ...interface{}) () {
   // reload()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -557,10 +606,11 @@ func (this *QTextBrowser) reload(args ...interface{}) () {
     qtrt.ErrorResolve("QTextBrowser", "reload", args)
   }
 
+  return
 }
 
 // clearHistory()
-func (this *QTextBrowser) clearHistory(args ...interface{}) () {
+func (this *QTextBrowser) Clearhistory(args ...interface{}) () {
   // clearHistory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -577,10 +627,11 @@ func (this *QTextBrowser) clearHistory(args ...interface{}) () {
     qtrt.ErrorResolve("QTextBrowser", "clearHistory", args)
   }
 
+  return
 }
 
 // backward()
-func (this *QTextBrowser) backward(args ...interface{}) () {
+func (this *QTextBrowser) Backward(args ...interface{}) () {
   // backward()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -597,6 +648,7 @@ func (this *QTextBrowser) backward(args ...interface{}) () {
     qtrt.ErrorResolve("QTextBrowser", "backward", args)
   }
 
+  return
 }
 
 // <= body block end

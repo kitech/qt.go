@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.go
 //
@@ -35,7 +35,7 @@ extern void C_ZN12QMutexLocker6unlockEv(void* qthis); // 2
   // proto:  void QMutexLocker::QMutexLocker(QBasicMutex * m);
 extern void* C_ZN12QMutexLockerC2EP11QBasicMutex(void* arg0); // 1
   // proto:  QMutex * QMutexLocker::mutex();
-extern void C_ZNK12QMutexLocker5mutexEv(void* qthis); // 2
+extern void* C_ZNK12QMutexLocker5mutexEv(void* qthis); // 2
   // proto:  void QMutexLocker::relock();
 extern void C_ZN12QMutexLocker6relockEv(void* qthis); // 2
   // proto:  void QBasicMutex::lock();
@@ -43,9 +43,9 @@ extern void C_ZN11QBasicMutex4lockEv(void* qthis); // 2
   // proto:  void QBasicMutex::unlock();
 extern void C_ZN11QBasicMutex6unlockEv(void* qthis); // 2
   // proto:  bool QBasicMutex::tryLock();
-extern void C_ZN11QBasicMutex7tryLockEv(void* qthis); // 2
+extern bool C_ZN11QBasicMutex7tryLockEv(void* qthis); // 2
   // proto:  bool QBasicMutex::isRecursive();
-extern void C_ZN11QBasicMutex11isRecursiveEv(void* qthis); // 4
+extern bool C_ZN11QBasicMutex11isRecursiveEv(void* qthis); // 4
   // proto:  void QMutex::lock();
 extern void C_ZN6QMutex4lockEv(void* qthis); // 4
   // proto:  void QMutex::~QMutex();
@@ -53,7 +53,7 @@ extern void C_ZN6QMutexD2Ev(void* qthis); // 4
   // proto:  void QMutex::unlock();
 extern void C_ZN6QMutex6unlockEv(void* qthis); // 4
   // proto:  bool QMutex::tryLock(int timeout);
-extern void C_ZN6QMutex7tryLockEi(void* qthis, int32_t arg0); // 4
+extern bool C_ZN6QMutex7tryLockEi(void* qthis, int32_t arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -85,7 +85,7 @@ type QMutex struct {
 }
 
 // ~QMutexLocker()
-func (this *QMutexLocker) FreeQMutexLocker(args ...interface{}) () {
+func (this *QMutexLocker) Freeqmutexlocker(args ...interface{}) () {
   // ~QMutexLocker()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -102,10 +102,11 @@ func (this *QMutexLocker) FreeQMutexLocker(args ...interface{}) () {
     qtrt.ErrorResolve("QMutexLocker", "~QMutexLocker", args)
   }
 
+  return
 }
 
 // unlock()
-func (this *QMutexLocker) unlock(args ...interface{}) () {
+func (this *QMutexLocker) Unlock(args ...interface{}) () {
   // unlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -122,6 +123,7 @@ func (this *QMutexLocker) unlock(args ...interface{}) () {
     qtrt.ErrorResolve("QMutexLocker", "unlock", args)
   }
 
+  return
 }
 
 // QMutexLocker(class QBasicMutex *)
@@ -152,7 +154,7 @@ func NewQMutexLocker(args ...interface{}) *QMutexLocker {
 }
 
 // mutex()
-func (this *QMutexLocker) mutex(args ...interface{}) () {
+func (this *QMutexLocker) Mutex(args ...interface{}) (ret interface{}) {
   // mutex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -164,16 +166,20 @@ func (this *QMutexLocker) mutex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QMutexLocker5mutexEv
     // invoke: QMutex * mutex()
-    var ret = C.C_ZNK12QMutexLocker5mutexEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QMutexLocker5mutexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMutex{}) // "QMutex *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMutexLocker", "mutex", args)
   }
 
+  return
 }
 
 // relock()
-func (this *QMutexLocker) relock(args ...interface{}) () {
+func (this *QMutexLocker) Relock(args ...interface{}) () {
   // relock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -190,10 +196,11 @@ func (this *QMutexLocker) relock(args ...interface{}) () {
     qtrt.ErrorResolve("QMutexLocker", "relock", args)
   }
 
+  return
 }
 
 // lock()
-func (this *QBasicMutex) lock(args ...interface{}) () {
+func (this *QBasicMutex) Lock(args ...interface{}) () {
   // lock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -210,10 +217,11 @@ func (this *QBasicMutex) lock(args ...interface{}) () {
     qtrt.ErrorResolve("QBasicMutex", "lock", args)
   }
 
+  return
 }
 
 // unlock()
-func (this *QBasicMutex) unlock(args ...interface{}) () {
+func (this *QBasicMutex) Unlock(args ...interface{}) () {
   // unlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -230,10 +238,11 @@ func (this *QBasicMutex) unlock(args ...interface{}) () {
     qtrt.ErrorResolve("QBasicMutex", "unlock", args)
   }
 
+  return
 }
 
 // tryLock()
-func (this *QBasicMutex) tryLock(args ...interface{}) () {
+func (this *QBasicMutex) Trylock(args ...interface{}) (ret interface{}) {
   // tryLock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -245,16 +254,20 @@ func (this *QBasicMutex) tryLock(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QBasicMutex7tryLockEv
     // invoke: bool tryLock()
-    var ret = C.C_ZN11QBasicMutex7tryLockEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QBasicMutex7tryLockEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBasicMutex", "tryLock", args)
   }
 
+  return
 }
 
 // isRecursive()
-func (this *QBasicMutex) isRecursive(args ...interface{}) () {
+func (this *QBasicMutex) Isrecursive(args ...interface{}) (ret interface{}) {
   // isRecursive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -266,16 +279,20 @@ func (this *QBasicMutex) isRecursive(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QBasicMutex11isRecursiveEv
     // invoke: bool isRecursive()
-    var ret = C.C_ZN11QBasicMutex11isRecursiveEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QBasicMutex11isRecursiveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QBasicMutex", "isRecursive", args)
   }
 
+  return
 }
 
 // lock()
-func (this *QMutex) lock(args ...interface{}) () {
+func (this *QMutex) Lock(args ...interface{}) () {
   // lock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -292,10 +309,11 @@ func (this *QMutex) lock(args ...interface{}) () {
     qtrt.ErrorResolve("QMutex", "lock", args)
   }
 
+  return
 }
 
 // ~QMutex()
-func (this *QMutex) FreeQMutex(args ...interface{}) () {
+func (this *QMutex) Freeqmutex(args ...interface{}) () {
   // ~QMutex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -312,10 +330,11 @@ func (this *QMutex) FreeQMutex(args ...interface{}) () {
     qtrt.ErrorResolve("QMutex", "~QMutex", args)
   }
 
+  return
 }
 
 // unlock()
-func (this *QMutex) unlock(args ...interface{}) () {
+func (this *QMutex) Unlock(args ...interface{}) () {
   // unlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -332,10 +351,11 @@ func (this *QMutex) unlock(args ...interface{}) () {
     qtrt.ErrorResolve("QMutex", "unlock", args)
   }
 
+  return
 }
 
 // tryLock(int)
-func (this *QMutex) tryLock(args ...interface{}) () {
+func (this *QMutex) Trylock(args ...interface{}) (ret interface{}) {
   // tryLock(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -350,12 +370,16 @@ func (this *QMutex) tryLock(args ...interface{}) () {
     // invoke: bool tryLock(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN6QMutex7tryLockEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN6QMutex7tryLockEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMutex", "tryLock", args)
   }
 
+  return
 }
 
 // <= body block end

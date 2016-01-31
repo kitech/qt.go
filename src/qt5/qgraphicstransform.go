@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qgraphicstransform.h
 // dst-file: /src/widgets/qgraphicstransform.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QVector3D QGraphicsRotation::origin();
-extern void C_ZNK17QGraphicsRotation6originEv(void* qthis); // 4
+extern void* C_ZNK17QGraphicsRotation6originEv(void* qthis); // 4
   // proto:  const QMetaObject * QGraphicsRotation::metaObject();
 extern void C_ZNK17QGraphicsRotation10metaObjectEv(void* qthis); // 4
   // proto:  void QGraphicsRotation::applyTo(QMatrix4x4 * matrix);
@@ -43,19 +43,19 @@ extern void C_ZN17QGraphicsRotation8setAngleEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsRotation::~QGraphicsRotation();
 extern void C_ZN17QGraphicsRotationD2Ev(void* qthis); // 4
   // proto:  qreal QGraphicsRotation::angle();
-extern void C_ZNK17QGraphicsRotation5angleEv(void* qthis); // 4
+extern double C_ZNK17QGraphicsRotation5angleEv(void* qthis); // 4
   // proto:  QVector3D QGraphicsRotation::axis();
-extern void C_ZNK17QGraphicsRotation4axisEv(void* qthis); // 4
+extern void* C_ZNK17QGraphicsRotation4axisEv(void* qthis); // 4
   // proto:  void QGraphicsRotation::setAxis(const QVector3D & axis);
 extern void C_ZN17QGraphicsRotation7setAxisERK9QVector3D(void* qthis, void* arg0); // 4
   // proto:  QVector3D QGraphicsScale::origin();
-extern void C_ZNK14QGraphicsScale6originEv(void* qthis); // 4
+extern void* C_ZNK14QGraphicsScale6originEv(void* qthis); // 4
   // proto:  qreal QGraphicsScale::zScale();
-extern void C_ZNK14QGraphicsScale6zScaleEv(void* qthis); // 4
+extern double C_ZNK14QGraphicsScale6zScaleEv(void* qthis); // 4
   // proto:  void QGraphicsScale::QGraphicsScale(QObject * parent);
 extern void* C_ZN14QGraphicsScaleC2EP7QObject(void* arg0); // 3
   // proto:  qreal QGraphicsScale::yScale();
-extern void C_ZNK14QGraphicsScale6yScaleEv(void* qthis); // 4
+extern double C_ZNK14QGraphicsScale6yScaleEv(void* qthis); // 4
   // proto:  void QGraphicsScale::~QGraphicsScale();
 extern void C_ZN14QGraphicsScaleD2Ev(void* qthis); // 4
   // proto:  void QGraphicsScale::setZScale(qreal );
@@ -63,7 +63,7 @@ extern void C_ZN14QGraphicsScale9setZScaleEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsScale::setYScale(qreal );
 extern void C_ZN14QGraphicsScale9setYScaleEd(void* qthis, double arg0); // 4
   // proto:  qreal QGraphicsScale::xScale();
-extern void C_ZNK14QGraphicsScale6xScaleEv(void* qthis); // 4
+extern double C_ZNK14QGraphicsScale6xScaleEv(void* qthis); // 4
   // proto:  const QMetaObject * QGraphicsScale::metaObject();
 extern void C_ZNK14QGraphicsScale10metaObjectEv(void* qthis); // 4
   // proto:  void QGraphicsScale::applyTo(QMatrix4x4 * matrix);
@@ -117,7 +117,7 @@ type QGraphicsTransform struct {
 }
 
 // origin()
-func (this *QGraphicsRotation) origin(args ...interface{}) () {
+func (this *QGraphicsRotation) Origin(args ...interface{}) (ret interface{}) {
   // origin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -129,16 +129,20 @@ func (this *QGraphicsRotation) origin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsRotation6originEv
     // invoke: QVector3D origin()
-    var ret = C.C_ZNK17QGraphicsRotation6originEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QGraphicsRotation6originEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "origin", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QGraphicsRotation) metaObject(args ...interface{}) () {
+func (this *QGraphicsRotation) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -155,10 +159,11 @@ func (this *QGraphicsRotation) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsRotation", "metaObject", args)
   }
 
+  return
 }
 
 // applyTo(class QMatrix4x4 *)
-func (this *QGraphicsRotation) applyTo(args ...interface{}) () {
+func (this *QGraphicsRotation) Applyto(args ...interface{}) () {
   // applyTo(class QMatrix4x4 *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -178,10 +183,11 @@ func (this *QGraphicsRotation) applyTo(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsRotation", "applyTo", args)
   }
 
+  return
 }
 
 // setOrigin(const class QVector3D &)
-func (this *QGraphicsRotation) setOrigin(args ...interface{}) () {
+func (this *QGraphicsRotation) Setorigin(args ...interface{}) () {
   // setOrigin(const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -201,6 +207,7 @@ func (this *QGraphicsRotation) setOrigin(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsRotation", "setOrigin", args)
   }
 
+  return
 }
 
 // QGraphicsRotation(class QObject *)
@@ -231,7 +238,7 @@ func NewQGraphicsRotation(args ...interface{}) *QGraphicsRotation {
 }
 
 // setAngle(qreal)
-func (this *QGraphicsRotation) setAngle(args ...interface{}) () {
+func (this *QGraphicsRotation) Setangle(args ...interface{}) () {
   // setAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -251,10 +258,11 @@ func (this *QGraphicsRotation) setAngle(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsRotation", "setAngle", args)
   }
 
+  return
 }
 
 // ~QGraphicsRotation()
-func (this *QGraphicsRotation) FreeQGraphicsRotation(args ...interface{}) () {
+func (this *QGraphicsRotation) Freeqgraphicsrotation(args ...interface{}) () {
   // ~QGraphicsRotation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -271,10 +279,11 @@ func (this *QGraphicsRotation) FreeQGraphicsRotation(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsRotation", "~QGraphicsRotation", args)
   }
 
+  return
 }
 
 // angle()
-func (this *QGraphicsRotation) angle(args ...interface{}) () {
+func (this *QGraphicsRotation) Angle(args ...interface{}) (ret interface{}) {
   // angle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -286,16 +295,20 @@ func (this *QGraphicsRotation) angle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsRotation5angleEv
     // invoke: qreal angle()
-    var ret = C.C_ZNK17QGraphicsRotation5angleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QGraphicsRotation5angleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "angle", args)
   }
 
+  return
 }
 
 // axis()
-func (this *QGraphicsRotation) axis(args ...interface{}) () {
+func (this *QGraphicsRotation) Axis(args ...interface{}) (ret interface{}) {
   // axis()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -307,16 +320,20 @@ func (this *QGraphicsRotation) axis(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsRotation4axisEv
     // invoke: QVector3D axis()
-    var ret = C.C_ZNK17QGraphicsRotation4axisEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QGraphicsRotation4axisEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "axis", args)
   }
 
+  return
 }
 
 // setAxis(const class QVector3D &)
-func (this *QGraphicsRotation) setAxis(args ...interface{}) () {
+func (this *QGraphicsRotation) Setaxis(args ...interface{}) () {
   // setAxis(const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -336,10 +353,11 @@ func (this *QGraphicsRotation) setAxis(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsRotation", "setAxis", args)
   }
 
+  return
 }
 
 // origin()
-func (this *QGraphicsScale) origin(args ...interface{}) () {
+func (this *QGraphicsScale) Origin(args ...interface{}) (ret interface{}) {
   // origin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -351,16 +369,20 @@ func (this *QGraphicsScale) origin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QGraphicsScale6originEv
     // invoke: QVector3D origin()
-    var ret = C.C_ZNK14QGraphicsScale6originEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QGraphicsScale6originEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsScale", "origin", args)
   }
 
+  return
 }
 
 // zScale()
-func (this *QGraphicsScale) zScale(args ...interface{}) () {
+func (this *QGraphicsScale) Zscale(args ...interface{}) (ret interface{}) {
   // zScale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -372,12 +394,16 @@ func (this *QGraphicsScale) zScale(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QGraphicsScale6zScaleEv
     // invoke: qreal zScale()
-    var ret = C.C_ZNK14QGraphicsScale6zScaleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QGraphicsScale6zScaleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsScale", "zScale", args)
   }
 
+  return
 }
 
 // QGraphicsScale(class QObject *)
@@ -408,7 +434,7 @@ func NewQGraphicsScale(args ...interface{}) *QGraphicsScale {
 }
 
 // yScale()
-func (this *QGraphicsScale) yScale(args ...interface{}) () {
+func (this *QGraphicsScale) Yscale(args ...interface{}) (ret interface{}) {
   // yScale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -420,16 +446,20 @@ func (this *QGraphicsScale) yScale(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QGraphicsScale6yScaleEv
     // invoke: qreal yScale()
-    var ret = C.C_ZNK14QGraphicsScale6yScaleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QGraphicsScale6yScaleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsScale", "yScale", args)
   }
 
+  return
 }
 
 // ~QGraphicsScale()
-func (this *QGraphicsScale) FreeQGraphicsScale(args ...interface{}) () {
+func (this *QGraphicsScale) Freeqgraphicsscale(args ...interface{}) () {
   // ~QGraphicsScale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -446,10 +476,11 @@ func (this *QGraphicsScale) FreeQGraphicsScale(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsScale", "~QGraphicsScale", args)
   }
 
+  return
 }
 
 // setZScale(qreal)
-func (this *QGraphicsScale) setZScale(args ...interface{}) () {
+func (this *QGraphicsScale) Setzscale(args ...interface{}) () {
   // setZScale(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -469,10 +500,11 @@ func (this *QGraphicsScale) setZScale(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsScale", "setZScale", args)
   }
 
+  return
 }
 
 // setYScale(qreal)
-func (this *QGraphicsScale) setYScale(args ...interface{}) () {
+func (this *QGraphicsScale) Setyscale(args ...interface{}) () {
   // setYScale(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -492,10 +524,11 @@ func (this *QGraphicsScale) setYScale(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsScale", "setYScale", args)
   }
 
+  return
 }
 
 // xScale()
-func (this *QGraphicsScale) xScale(args ...interface{}) () {
+func (this *QGraphicsScale) Xscale(args ...interface{}) (ret interface{}) {
   // xScale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -507,16 +540,20 @@ func (this *QGraphicsScale) xScale(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QGraphicsScale6xScaleEv
     // invoke: qreal xScale()
-    var ret = C.C_ZNK14QGraphicsScale6xScaleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QGraphicsScale6xScaleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsScale", "xScale", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QGraphicsScale) metaObject(args ...interface{}) () {
+func (this *QGraphicsScale) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -533,10 +570,11 @@ func (this *QGraphicsScale) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsScale", "metaObject", args)
   }
 
+  return
 }
 
 // applyTo(class QMatrix4x4 *)
-func (this *QGraphicsScale) applyTo(args ...interface{}) () {
+func (this *QGraphicsScale) Applyto(args ...interface{}) () {
   // applyTo(class QMatrix4x4 *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -556,10 +594,11 @@ func (this *QGraphicsScale) applyTo(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsScale", "applyTo", args)
   }
 
+  return
 }
 
 // setOrigin(const class QVector3D &)
-func (this *QGraphicsScale) setOrigin(args ...interface{}) () {
+func (this *QGraphicsScale) Setorigin(args ...interface{}) () {
   // setOrigin(const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -579,10 +618,11 @@ func (this *QGraphicsScale) setOrigin(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsScale", "setOrigin", args)
   }
 
+  return
 }
 
 // setXScale(qreal)
-func (this *QGraphicsScale) setXScale(args ...interface{}) () {
+func (this *QGraphicsScale) Setxscale(args ...interface{}) () {
   // setXScale(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -602,10 +642,11 @@ func (this *QGraphicsScale) setXScale(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsScale", "setXScale", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QGraphicsTransform) metaObject(args ...interface{}) () {
+func (this *QGraphicsTransform) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -622,6 +663,7 @@ func (this *QGraphicsTransform) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsTransform", "metaObject", args)
   }
 
+  return
 }
 
 // QGraphicsTransform(class QObject *)
@@ -652,7 +694,7 @@ func NewQGraphicsTransform(args ...interface{}) *QGraphicsTransform {
 }
 
 // ~QGraphicsTransform()
-func (this *QGraphicsTransform) FreeQGraphicsTransform(args ...interface{}) () {
+func (this *QGraphicsTransform) Freeqgraphicstransform(args ...interface{}) () {
   // ~QGraphicsTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -669,6 +711,7 @@ func (this *QGraphicsTransform) FreeQGraphicsTransform(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsTransform", "~QGraphicsTransform", args)
   }
 
+  return
 }
 
 // <= body block end

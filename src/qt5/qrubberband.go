@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qrubberband.h
 // dst-file: /src/widgets/qrubberband.go
 //
@@ -65,7 +65,7 @@ type QRubberBand struct {
 }
 
 // move(int, int)
-func (this *QRubberBand) move_(args ...interface{}) () {
+func (this *QRubberBand) Move_(args ...interface{}) () {
   // move(int, int)
   // move(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,10 +97,11 @@ func (this *QRubberBand) move_(args ...interface{}) () {
     qtrt.ErrorResolve("QRubberBand", "move", args)
   }
 
+  return
 }
 
 // ~QRubberBand()
-func (this *QRubberBand) FreeQRubberBand(args ...interface{}) () {
+func (this *QRubberBand) Freeqrubberband(args ...interface{}) () {
   // ~QRubberBand()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,10 +118,11 @@ func (this *QRubberBand) FreeQRubberBand(args ...interface{}) () {
     qtrt.ErrorResolve("QRubberBand", "~QRubberBand", args)
   }
 
+  return
 }
 
 // setGeometry(const class QRect &)
-func (this *QRubberBand) setGeometry(args ...interface{}) () {
+func (this *QRubberBand) Setgeometry(args ...interface{}) () {
   // setGeometry(const class QRect &)
   // setGeometry(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -158,10 +160,11 @@ func (this *QRubberBand) setGeometry(args ...interface{}) () {
     qtrt.ErrorResolve("QRubberBand", "setGeometry", args)
   }
 
+  return
 }
 
 // shape()
-func (this *QRubberBand) shape(args ...interface{}) () {
+func (this *QRubberBand) Shape(args ...interface{}) () {
   // shape()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -178,10 +181,11 @@ func (this *QRubberBand) shape(args ...interface{}) () {
     qtrt.ErrorResolve("QRubberBand", "shape", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QRubberBand) metaObject(args ...interface{}) () {
+func (this *QRubberBand) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -198,10 +202,11 @@ func (this *QRubberBand) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QRubberBand", "metaObject", args)
   }
 
+  return
 }
 
 // resize(const class QSize &)
-func (this *QRubberBand) resize(args ...interface{}) () {
+func (this *QRubberBand) Resize(args ...interface{}) () {
   // resize(const class QSize &)
   // resize(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -233,6 +238,7 @@ func (this *QRubberBand) resize(args ...interface{}) () {
     qtrt.ErrorResolve("QRubberBand", "resize", args)
   }
 
+  return
 }
 
 // <= body block end

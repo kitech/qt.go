@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qkeysequenceedit.h
 // dst-file: /src/widgets/qkeysequenceedit.go
 //
@@ -37,7 +37,7 @@ extern void C_ZN16QKeySequenceEdit5clearEv(void* qthis); // 4
   // proto:  const QMetaObject * QKeySequenceEdit::metaObject();
 extern void C_ZNK16QKeySequenceEdit10metaObjectEv(void* qthis); // 4
   // proto:  QKeySequence QKeySequenceEdit::keySequence();
-extern void C_ZNK16QKeySequenceEdit11keySequenceEv(void* qthis); // 4
+extern void* C_ZNK16QKeySequenceEdit11keySequenceEv(void* qthis); // 4
   // proto:  void QKeySequenceEdit::~QKeySequenceEdit();
 extern void C_ZN16QKeySequenceEditD2Ev(void* qthis); // 4
   // proto:  void QKeySequenceEdit::setKeySequence(const QKeySequence & keySequence);
@@ -105,7 +105,7 @@ func NewQKeySequenceEdit(args ...interface{}) *QKeySequenceEdit {
 }
 
 // clear()
-func (this *QKeySequenceEdit) clear(args ...interface{}) () {
+func (this *QKeySequenceEdit) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -122,10 +122,11 @@ func (this *QKeySequenceEdit) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QKeySequenceEdit", "clear", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QKeySequenceEdit) metaObject(args ...interface{}) () {
+func (this *QKeySequenceEdit) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -142,10 +143,11 @@ func (this *QKeySequenceEdit) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QKeySequenceEdit", "metaObject", args)
   }
 
+  return
 }
 
 // keySequence()
-func (this *QKeySequenceEdit) keySequence(args ...interface{}) () {
+func (this *QKeySequenceEdit) Keysequence(args ...interface{}) (ret interface{}) {
   // keySequence()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -157,16 +159,20 @@ func (this *QKeySequenceEdit) keySequence(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QKeySequenceEdit11keySequenceEv
     // invoke: QKeySequence keySequence()
-    var ret = C.C_ZNK16QKeySequenceEdit11keySequenceEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK16QKeySequenceEdit11keySequenceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QKeySequence{}) // "QKeySequence"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "keySequence", args)
   }
 
+  return
 }
 
 // ~QKeySequenceEdit()
-func (this *QKeySequenceEdit) FreeQKeySequenceEdit(args ...interface{}) () {
+func (this *QKeySequenceEdit) Freeqkeysequenceedit(args ...interface{}) () {
   // ~QKeySequenceEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,10 +189,11 @@ func (this *QKeySequenceEdit) FreeQKeySequenceEdit(args ...interface{}) () {
     qtrt.ErrorResolve("QKeySequenceEdit", "~QKeySequenceEdit", args)
   }
 
+  return
 }
 
 // setKeySequence(const class QKeySequence &)
-func (this *QKeySequenceEdit) setKeySequence(args ...interface{}) () {
+func (this *QKeySequenceEdit) Setkeysequence(args ...interface{}) () {
   // setKeySequence(const class QKeySequence &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -206,6 +213,7 @@ func (this *QKeySequenceEdit) setKeySequence(args ...interface{}) () {
     qtrt.ErrorResolve("QKeySequenceEdit", "setKeySequence", args)
   }
 
+  return
 }
 
 // <= body block end

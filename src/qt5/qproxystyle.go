@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.go
 //
@@ -39,9 +39,9 @@ extern void C_ZN11QProxyStyle6polishER8QPalette(void* qthis, void* arg0); // 4
   // proto:  void QProxyStyle::polish(QApplication * app);
 extern void C_ZN11QProxyStyle6polishEP12QApplication(void* qthis, void* arg0); // 4
   // proto:  QStyle * QProxyStyle::baseStyle();
-extern void C_ZNK11QProxyStyle9baseStyleEv(void* qthis); // 4
+extern void* C_ZNK11QProxyStyle9baseStyleEv(void* qthis); // 4
   // proto:  QPalette QProxyStyle::standardPalette();
-extern void C_ZNK11QProxyStyle15standardPaletteEv(void* qthis); // 4
+extern void* C_ZNK11QProxyStyle15standardPaletteEv(void* qthis); // 4
   // proto:  void QProxyStyle::setBaseStyle(QStyle * style);
 extern void C_ZN11QProxyStyle12setBaseStyleEP6QStyle(void* qthis, void* arg0); // 4
   // proto:  void QProxyStyle::drawItemPixmap(QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap);
@@ -51,9 +51,9 @@ extern void C_ZNK11QProxyStyle10metaObjectEv(void* qthis); // 4
   // proto:  void QProxyStyle::~QProxyStyle();
 extern void C_ZN11QProxyStyleD2Ev(void* qthis); // 4
   // proto:  QRect QProxyStyle::itemTextRect(const QFontMetrics & fm, const QRect & r, int flags, bool enabled, const QString & text);
-extern void C_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(void* qthis, void* arg0, void* arg1, int32_t arg2, bool arg3, void* arg4); // 4
+extern void* C_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(void* qthis, void* arg0, void* arg1, int32_t arg2, bool arg3, void* arg4); // 4
   // proto:  QRect QProxyStyle::itemPixmapRect(const QRect & r, int flags, const QPixmap & pixmap);
-extern void C_ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
+extern void* C_ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
   // proto:  void QProxyStyle::unpolish(QWidget * widget);
 extern void C_ZN11QProxyStyle8unpolishEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QProxyStyle::unpolish(QApplication * app);
@@ -116,7 +116,7 @@ func NewQProxyStyle(args ...interface{}) *QProxyStyle {
 }
 
 // polish(class QWidget *)
-func (this *QProxyStyle) polish(args ...interface{}) () {
+func (this *QProxyStyle) Polish(args ...interface{}) () {
   // polish(class QWidget *)
   // polish(class QPalette &)
   // polish(class QApplication *)
@@ -154,10 +154,11 @@ func (this *QProxyStyle) polish(args ...interface{}) () {
     qtrt.ErrorResolve("QProxyStyle", "polish", args)
   }
 
+  return
 }
 
 // baseStyle()
-func (this *QProxyStyle) baseStyle(args ...interface{}) () {
+func (this *QProxyStyle) Basestyle(args ...interface{}) (ret interface{}) {
   // baseStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -169,16 +170,20 @@ func (this *QProxyStyle) baseStyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QProxyStyle9baseStyleEv
     // invoke: QStyle * baseStyle()
-    var ret = C.C_ZNK11QProxyStyle9baseStyleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QProxyStyle9baseStyleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QStyle{}) // "QStyle *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProxyStyle", "baseStyle", args)
   }
 
+  return
 }
 
 // standardPalette()
-func (this *QProxyStyle) standardPalette(args ...interface{}) () {
+func (this *QProxyStyle) Standardpalette(args ...interface{}) (ret interface{}) {
   // standardPalette()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -190,16 +195,20 @@ func (this *QProxyStyle) standardPalette(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QProxyStyle15standardPaletteEv
     // invoke: QPalette standardPalette()
-    var ret = C.C_ZNK11QProxyStyle15standardPaletteEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QProxyStyle15standardPaletteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPalette{}) // "QPalette"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProxyStyle", "standardPalette", args)
   }
 
+  return
 }
 
 // setBaseStyle(class QStyle *)
-func (this *QProxyStyle) setBaseStyle(args ...interface{}) () {
+func (this *QProxyStyle) Setbasestyle(args ...interface{}) () {
   // setBaseStyle(class QStyle *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -219,10 +228,11 @@ func (this *QProxyStyle) setBaseStyle(args ...interface{}) () {
     qtrt.ErrorResolve("QProxyStyle", "setBaseStyle", args)
   }
 
+  return
 }
 
 // drawItemPixmap(class QPainter *, const class QRect &, int, const class QPixmap &)
-func (this *QProxyStyle) drawItemPixmap(args ...interface{}) () {
+func (this *QProxyStyle) Drawitempixmap(args ...interface{}) () {
   // drawItemPixmap(class QPainter *, const class QRect &, int, const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -251,10 +261,11 @@ func (this *QProxyStyle) drawItemPixmap(args ...interface{}) () {
     qtrt.ErrorResolve("QProxyStyle", "drawItemPixmap", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QProxyStyle) metaObject(args ...interface{}) () {
+func (this *QProxyStyle) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -271,10 +282,11 @@ func (this *QProxyStyle) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QProxyStyle", "metaObject", args)
   }
 
+  return
 }
 
 // ~QProxyStyle()
-func (this *QProxyStyle) FreeQProxyStyle(args ...interface{}) () {
+func (this *QProxyStyle) Freeqproxystyle(args ...interface{}) () {
   // ~QProxyStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -291,10 +303,11 @@ func (this *QProxyStyle) FreeQProxyStyle(args ...interface{}) () {
     qtrt.ErrorResolve("QProxyStyle", "~QProxyStyle", args)
   }
 
+  return
 }
 
 // itemTextRect(const class QFontMetrics &, const class QRect &, int, _Bool, const class QString &)
-func (this *QProxyStyle) itemTextRect(args ...interface{}) () {
+func (this *QProxyStyle) Itemtextrect(args ...interface{}) (ret interface{}) {
   // itemTextRect(const class QFontMetrics &, const class QRect &, int, _Bool, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -321,16 +334,20 @@ func (this *QProxyStyle) itemTextRect(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QString).qclsinst
     if false {fmt.Println(arg4)}
-    var ret = C.C_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProxyStyle", "itemTextRect", args)
   }
 
+  return
 }
 
 // itemPixmapRect(const class QRect &, int, const class QPixmap &)
-func (this *QProxyStyle) itemPixmapRect(args ...interface{}) () {
+func (this *QProxyStyle) Itempixmaprect(args ...interface{}) (ret interface{}) {
   // itemPixmapRect(const class QRect &, int, const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -351,16 +368,20 @@ func (this *QProxyStyle) itemPixmapRect(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPixmap).qclsinst
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QProxyStyle", "itemPixmapRect", args)
   }
 
+  return
 }
 
 // unpolish(class QWidget *)
-func (this *QProxyStyle) unpolish(args ...interface{}) () {
+func (this *QProxyStyle) Unpolish(args ...interface{}) () {
   // unpolish(class QWidget *)
   // unpolish(class QApplication *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -389,6 +410,7 @@ func (this *QProxyStyle) unpolish(args ...interface{}) () {
     qtrt.ErrorResolve("QProxyStyle", "unpolish", args)
   }
 
+  return
 }
 
 // <= body block end

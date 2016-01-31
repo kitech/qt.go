@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qanimationgroup.h
 // dst-file: /src/core/qanimationgroup.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QAnimationGroup::animationCount();
-extern void C_ZNK15QAnimationGroup14animationCountEv(void* qthis); // 4
+extern int32_t C_ZNK15QAnimationGroup14animationCountEv(void* qthis); // 4
   // proto:  void QAnimationGroup::addAnimation(QAbstractAnimation * animation);
 extern void C_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
   // proto:  int QAnimationGroup::indexOfAnimation(QAbstractAnimation * animation);
-extern void C_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
+extern int32_t C_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
   // proto:  void QAnimationGroup::~QAnimationGroup();
 extern void C_ZN15QAnimationGroupD2Ev(void* qthis); // 4
   // proto:  void QAnimationGroup::clear();
@@ -67,7 +67,7 @@ type QAnimationGroup struct {
 }
 
 // animationCount()
-func (this *QAnimationGroup) animationCount(args ...interface{}) () {
+func (this *QAnimationGroup) Animationcount(args ...interface{}) (ret interface{}) {
   // animationCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -79,16 +79,20 @@ func (this *QAnimationGroup) animationCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAnimationGroup14animationCountEv
     // invoke: int animationCount()
-    var ret = C.C_ZNK15QAnimationGroup14animationCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QAnimationGroup14animationCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAnimationGroup", "animationCount", args)
   }
 
+  return
 }
 
 // addAnimation(class QAbstractAnimation *)
-func (this *QAnimationGroup) addAnimation(args ...interface{}) () {
+func (this *QAnimationGroup) Addanimation(args ...interface{}) () {
   // addAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -108,10 +112,11 @@ func (this *QAnimationGroup) addAnimation(args ...interface{}) () {
     qtrt.ErrorResolve("QAnimationGroup", "addAnimation", args)
   }
 
+  return
 }
 
 // indexOfAnimation(class QAbstractAnimation *)
-func (this *QAnimationGroup) indexOfAnimation(args ...interface{}) () {
+func (this *QAnimationGroup) Indexofanimation(args ...interface{}) (ret interface{}) {
   // indexOfAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -126,16 +131,20 @@ func (this *QAnimationGroup) indexOfAnimation(args ...interface{}) () {
     // invoke: int indexOfAnimation(class QAbstractAnimation *)
     var arg0 = args[0].(QAbstractAnimation).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAnimationGroup", "indexOfAnimation", args)
   }
 
+  return
 }
 
 // ~QAnimationGroup()
-func (this *QAnimationGroup) FreeQAnimationGroup(args ...interface{}) () {
+func (this *QAnimationGroup) Freeqanimationgroup(args ...interface{}) () {
   // ~QAnimationGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -152,10 +161,11 @@ func (this *QAnimationGroup) FreeQAnimationGroup(args ...interface{}) () {
     qtrt.ErrorResolve("QAnimationGroup", "~QAnimationGroup", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QAnimationGroup) clear(args ...interface{}) () {
+func (this *QAnimationGroup) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -172,10 +182,11 @@ func (this *QAnimationGroup) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QAnimationGroup", "clear", args)
   }
 
+  return
 }
 
 // animationAt(int)
-func (this *QAnimationGroup) animationAt(args ...interface{}) () {
+func (this *QAnimationGroup) Animationat(args ...interface{}) () {
   // animationAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -195,10 +206,11 @@ func (this *QAnimationGroup) animationAt(args ...interface{}) () {
     qtrt.ErrorResolve("QAnimationGroup", "animationAt", args)
   }
 
+  return
 }
 
 // insertAnimation(int, class QAbstractAnimation *)
-func (this *QAnimationGroup) insertAnimation(args ...interface{}) () {
+func (this *QAnimationGroup) Insertanimation(args ...interface{}) () {
   // insertAnimation(int, class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -221,10 +233,11 @@ func (this *QAnimationGroup) insertAnimation(args ...interface{}) () {
     qtrt.ErrorResolve("QAnimationGroup", "insertAnimation", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QAnimationGroup) metaObject(args ...interface{}) () {
+func (this *QAnimationGroup) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -241,10 +254,11 @@ func (this *QAnimationGroup) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QAnimationGroup", "metaObject", args)
   }
 
+  return
 }
 
 // removeAnimation(class QAbstractAnimation *)
-func (this *QAnimationGroup) removeAnimation(args ...interface{}) () {
+func (this *QAnimationGroup) Removeanimation(args ...interface{}) () {
   // removeAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -264,10 +278,11 @@ func (this *QAnimationGroup) removeAnimation(args ...interface{}) () {
     qtrt.ErrorResolve("QAnimationGroup", "removeAnimation", args)
   }
 
+  return
 }
 
 // takeAnimation(int)
-func (this *QAnimationGroup) takeAnimation(args ...interface{}) () {
+func (this *QAnimationGroup) Takeanimation(args ...interface{}) () {
   // takeAnimation(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -287,6 +302,7 @@ func (this *QAnimationGroup) takeAnimation(args ...interface{}) () {
     qtrt.ErrorResolve("QAnimationGroup", "takeAnimation", args)
   }
 
+  return
 }
 
 // <= body block end

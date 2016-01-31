@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.go
 //
@@ -55,7 +55,7 @@ type QPaintDeviceWindow struct {
 }
 
 // update(const class QRect &)
-func (this *QPaintDeviceWindow) update(args ...interface{}) () {
+func (this *QPaintDeviceWindow) Update(args ...interface{}) () {
   // update(const class QRect &)
   // update(const class QRegion &)
   // update()
@@ -90,10 +90,11 @@ func (this *QPaintDeviceWindow) update(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintDeviceWindow", "update", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QPaintDeviceWindow) metaObject(args ...interface{}) () {
+func (this *QPaintDeviceWindow) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -110,6 +111,7 @@ func (this *QPaintDeviceWindow) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintDeviceWindow", "metaObject", args)
   }
 
+  return
 }
 
 // <= body block end

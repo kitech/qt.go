@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QRectF QGraphicsWidget::boundingRect();
-extern void C_ZNK15QGraphicsWidget12boundingRectEv(void* qthis); // 4
+extern void* C_ZNK15QGraphicsWidget12boundingRectEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::setLayout(QGraphicsLayout * layout);
 extern void C_ZN15QGraphicsWidget9setLayoutEP15QGraphicsLayout(void* qthis, void* arg0); // 4
   // proto:  QList<QAction *> QGraphicsWidget::actions();
@@ -37,15 +37,15 @@ extern void C_ZNK15QGraphicsWidget7actionsEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::setStyle(QStyle * style);
 extern void C_ZN15QGraphicsWidget8setStyleEP6QStyle(void* qthis, void* arg0); // 4
   // proto:  QPainterPath QGraphicsWidget::shape();
-extern void C_ZNK15QGraphicsWidget5shapeEv(void* qthis); // 4
+extern void* C_ZNK15QGraphicsWidget5shapeEv(void* qthis); // 4
   // proto:  QRectF QGraphicsWidget::windowFrameGeometry();
-extern void C_ZNK15QGraphicsWidget19windowFrameGeometryEv(void* qthis); // 4
+extern void* C_ZNK15QGraphicsWidget19windowFrameGeometryEv(void* qthis); // 4
   // proto:  QGraphicsWidget * QGraphicsWidget::focusWidget();
 extern void C_ZNK15QGraphicsWidget11focusWidgetEv(void* qthis); // 4
   // proto:  QFont QGraphicsWidget::font();
-extern void C_ZNK15QGraphicsWidget4fontEv(void* qthis); // 4
+extern void* C_ZNK15QGraphicsWidget4fontEv(void* qthis); // 4
   // proto:  QStyle * QGraphicsWidget::style();
-extern void C_ZNK15QGraphicsWidget5styleEv(void* qthis); // 4
+extern void* C_ZNK15QGraphicsWidget5styleEv(void* qthis); // 4
   // proto:  QGraphicsLayout * QGraphicsWidget::layout();
 extern void C_ZNK15QGraphicsWidget6layoutEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::unsetLayoutDirection();
@@ -71,11 +71,11 @@ extern void C_ZNK15QGraphicsWidget11focusPolicyEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::paintWindowFrame(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 extern void C_ZN15QGraphicsWidget16paintWindowFrameEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  bool QGraphicsWidget::close();
-extern void C_ZN15QGraphicsWidget5closeEv(void* qthis); // 4
+extern bool C_ZN15QGraphicsWidget5closeEv(void* qthis); // 4
   // proto:  QPalette QGraphicsWidget::palette();
-extern void C_ZNK15QGraphicsWidget7paletteEv(void* qthis); // 4
+extern void* C_ZNK15QGraphicsWidget7paletteEv(void* qthis); // 4
   // proto:  QString QGraphicsWidget::windowTitle();
-extern void C_ZNK15QGraphicsWidget11windowTitleEv(void* qthis); // 4
+extern void* C_ZNK15QGraphicsWidget11windowTitleEv(void* qthis); // 4
   // proto:  Qt::WindowFlags QGraphicsWidget::windowFlags();
 extern void C_ZNK15QGraphicsWidget11windowFlagsEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::setContentsMargins(qreal left, qreal top, qreal right, qreal bottom);
@@ -83,9 +83,9 @@ extern void C_ZN15QGraphicsWidget18setContentsMarginsEdddd(void* qthis, double a
   // proto:  void QGraphicsWidget::adjustSize();
 extern void C_ZN15QGraphicsWidget10adjustSizeEv(void* qthis); // 4
   // proto:  QRectF QGraphicsWidget::windowFrameRect();
-extern void C_ZNK15QGraphicsWidget15windowFrameRectEv(void* qthis); // 4
+extern void* C_ZNK15QGraphicsWidget15windowFrameRectEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::getWindowFrameMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
-extern void C_ZNK15QGraphicsWidget21getWindowFrameMarginsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
+extern void C_ZNK15QGraphicsWidget21getWindowFrameMarginsEPdS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
   // proto:  void QGraphicsWidget::addAction(QAction * action);
 extern void C_ZN15QGraphicsWidget9addActionEP7QAction(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsWidget::setAutoFillBackground(bool enabled);
@@ -95,11 +95,11 @@ extern void C_ZN15QGraphicsWidget10setPaletteERK8QPalette(void* qthis, void* arg
   // proto:  void QGraphicsWidget::~QGraphicsWidget();
 extern void C_ZN15QGraphicsWidgetD2Ev(void* qthis); // 4
   // proto:  bool QGraphicsWidget::isActiveWindow();
-extern void C_ZNK15QGraphicsWidget14isActiveWindowEv(void* qthis); // 4
+extern bool C_ZNK15QGraphicsWidget14isActiveWindowEv(void* qthis); // 4
   // proto:  QSizeF QGraphicsWidget::size();
-extern void C_ZNK15QGraphicsWidget4sizeEv(void* qthis); // 4
+extern void* C_ZNK15QGraphicsWidget4sizeEv(void* qthis); // 4
   // proto:  bool QGraphicsWidget::autoFillBackground();
-extern void C_ZNK15QGraphicsWidget18autoFillBackgroundEv(void* qthis); // 4
+extern bool C_ZNK15QGraphicsWidget18autoFillBackgroundEv(void* qthis); // 4
   // proto:  Qt::LayoutDirection QGraphicsWidget::layoutDirection();
 extern void C_ZNK15QGraphicsWidget15layoutDirectionEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::setShortcutEnabled(int id, bool enabled);
@@ -107,9 +107,9 @@ extern void C_ZN15QGraphicsWidget18setShortcutEnabledEib(void* qthis, int32_t ar
   // proto:  void QGraphicsWidget::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 extern void C_ZN15QGraphicsWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  QRectF QGraphicsWidget::rect();
-extern void C_ZNK15QGraphicsWidget4rectEv(void* qthis); // 2
+extern void* C_ZNK15QGraphicsWidget4rectEv(void* qthis); // 2
   // proto:  int QGraphicsWidget::type();
-extern void C_ZNK15QGraphicsWidget4typeEv(void* qthis); // 4
+extern int32_t C_ZNK15QGraphicsWidget4typeEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::resize(qreal w, qreal h);
 extern void C_ZN15QGraphicsWidget6resizeEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QGraphicsWidget::resize(const QSizeF & size);
@@ -123,7 +123,7 @@ extern void C_ZN15QGraphicsWidget14setWindowTitleERK7QString(void* qthis, void* 
   // proto:  void QGraphicsWidget::setWindowFrameMargins(qreal left, qreal top, qreal right, qreal bottom);
 extern void C_ZN15QGraphicsWidget21setWindowFrameMarginsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
   // proto:  void QGraphicsWidget::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
-extern void C_ZNK15QGraphicsWidget18getContentsMarginsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
+extern void C_ZNK15QGraphicsWidget18getContentsMarginsEPdS0_S0_S0_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
   // proto:  void QGraphicsWidget::setFont(const QFont & font);
 extern void C_ZN15QGraphicsWidget7setFontERK5QFont(void* qthis, void* arg0); // 4
 */
@@ -147,7 +147,7 @@ type QGraphicsWidget struct {
 }
 
 // boundingRect()
-func (this *QGraphicsWidget) boundingRect(args ...interface{}) () {
+func (this *QGraphicsWidget) Boundingrect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -159,16 +159,20 @@ func (this *QGraphicsWidget) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret = C.C_ZNK15QGraphicsWidget12boundingRectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget12boundingRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "boundingRect", args)
   }
 
+  return
 }
 
 // setLayout(class QGraphicsLayout *)
-func (this *QGraphicsWidget) setLayout(args ...interface{}) () {
+func (this *QGraphicsWidget) Setlayout(args ...interface{}) () {
   // setLayout(class QGraphicsLayout *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -188,10 +192,11 @@ func (this *QGraphicsWidget) setLayout(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "setLayout", args)
   }
 
+  return
 }
 
 // actions()
-func (this *QGraphicsWidget) actions(args ...interface{}) () {
+func (this *QGraphicsWidget) Actions(args ...interface{}) () {
   // actions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -208,10 +213,11 @@ func (this *QGraphicsWidget) actions(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "actions", args)
   }
 
+  return
 }
 
 // setStyle(class QStyle *)
-func (this *QGraphicsWidget) setStyle(args ...interface{}) () {
+func (this *QGraphicsWidget) Setstyle(args ...interface{}) () {
   // setStyle(class QStyle *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -231,10 +237,11 @@ func (this *QGraphicsWidget) setStyle(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "setStyle", args)
   }
 
+  return
 }
 
 // shape()
-func (this *QGraphicsWidget) shape(args ...interface{}) () {
+func (this *QGraphicsWidget) Shape(args ...interface{}) (ret interface{}) {
   // shape()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -246,16 +253,20 @@ func (this *QGraphicsWidget) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget5shapeEv
     // invoke: QPainterPath shape()
-    var ret = C.C_ZNK15QGraphicsWidget5shapeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget5shapeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "shape", args)
   }
 
+  return
 }
 
 // windowFrameGeometry()
-func (this *QGraphicsWidget) windowFrameGeometry(args ...interface{}) () {
+func (this *QGraphicsWidget) Windowframegeometry(args ...interface{}) (ret interface{}) {
   // windowFrameGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -267,16 +278,20 @@ func (this *QGraphicsWidget) windowFrameGeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget19windowFrameGeometryEv
     // invoke: QRectF windowFrameGeometry()
-    var ret = C.C_ZNK15QGraphicsWidget19windowFrameGeometryEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget19windowFrameGeometryEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowFrameGeometry", args)
   }
 
+  return
 }
 
 // focusWidget()
-func (this *QGraphicsWidget) focusWidget(args ...interface{}) () {
+func (this *QGraphicsWidget) Focuswidget(args ...interface{}) () {
   // focusWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,10 +308,11 @@ func (this *QGraphicsWidget) focusWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "focusWidget", args)
   }
 
+  return
 }
 
 // font()
-func (this *QGraphicsWidget) font(args ...interface{}) () {
+func (this *QGraphicsWidget) Font(args ...interface{}) (ret interface{}) {
   // font()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -308,16 +324,20 @@ func (this *QGraphicsWidget) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4fontEv
     // invoke: QFont font()
-    var ret = C.C_ZNK15QGraphicsWidget4fontEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget4fontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QFont{}) // "QFont"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "font", args)
   }
 
+  return
 }
 
 // style()
-func (this *QGraphicsWidget) style(args ...interface{}) () {
+func (this *QGraphicsWidget) Style(args ...interface{}) (ret interface{}) {
   // style()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -329,16 +349,20 @@ func (this *QGraphicsWidget) style(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget5styleEv
     // invoke: QStyle * style()
-    var ret = C.C_ZNK15QGraphicsWidget5styleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget5styleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QStyle{}) // "QStyle *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "style", args)
   }
 
+  return
 }
 
 // layout()
-func (this *QGraphicsWidget) layout(args ...interface{}) () {
+func (this *QGraphicsWidget) Layout(args ...interface{}) () {
   // layout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -355,10 +379,11 @@ func (this *QGraphicsWidget) layout(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "layout", args)
   }
 
+  return
 }
 
 // unsetLayoutDirection()
-func (this *QGraphicsWidget) unsetLayoutDirection(args ...interface{}) () {
+func (this *QGraphicsWidget) Unsetlayoutdirection(args ...interface{}) () {
   // unsetLayoutDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -375,10 +400,11 @@ func (this *QGraphicsWidget) unsetLayoutDirection(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "unsetLayoutDirection", args)
   }
 
+  return
 }
 
 // insertAction(class QAction *, class QAction *)
-func (this *QGraphicsWidget) insertAction(args ...interface{}) () {
+func (this *QGraphicsWidget) Insertaction(args ...interface{}) () {
   // insertAction(class QAction *, class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -401,10 +427,11 @@ func (this *QGraphicsWidget) insertAction(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "insertAction", args)
   }
 
+  return
 }
 
 // unsetWindowFrameMargins()
-func (this *QGraphicsWidget) unsetWindowFrameMargins(args ...interface{}) () {
+func (this *QGraphicsWidget) Unsetwindowframemargins(args ...interface{}) () {
   // unsetWindowFrameMargins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -421,10 +448,11 @@ func (this *QGraphicsWidget) unsetWindowFrameMargins(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "unsetWindowFrameMargins", args)
   }
 
+  return
 }
 
 // setShortcutAutoRepeat(int, _Bool)
-func (this *QGraphicsWidget) setShortcutAutoRepeat(args ...interface{}) () {
+func (this *QGraphicsWidget) Setshortcutautorepeat(args ...interface{}) () {
   // setShortcutAutoRepeat(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -447,10 +475,11 @@ func (this *QGraphicsWidget) setShortcutAutoRepeat(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "setShortcutAutoRepeat", args)
   }
 
+  return
 }
 
 // setGeometry(const class QRectF &)
-func (this *QGraphicsWidget) setGeometry(args ...interface{}) () {
+func (this *QGraphicsWidget) Setgeometry(args ...interface{}) () {
   // setGeometry(const class QRectF &)
   // setGeometry(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -488,10 +517,11 @@ func (this *QGraphicsWidget) setGeometry(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "setGeometry", args)
   }
 
+  return
 }
 
 // windowType()
-func (this *QGraphicsWidget) windowType(args ...interface{}) () {
+func (this *QGraphicsWidget) Windowtype(args ...interface{}) () {
   // windowType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -508,10 +538,11 @@ func (this *QGraphicsWidget) windowType(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "windowType", args)
   }
 
+  return
 }
 
 // removeAction(class QAction *)
-func (this *QGraphicsWidget) removeAction(args ...interface{}) () {
+func (this *QGraphicsWidget) Removeaction(args ...interface{}) () {
   // removeAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -531,10 +562,11 @@ func (this *QGraphicsWidget) removeAction(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "removeAction", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QGraphicsWidget) metaObject(args ...interface{}) () {
+func (this *QGraphicsWidget) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -551,10 +583,11 @@ func (this *QGraphicsWidget) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "metaObject", args)
   }
 
+  return
 }
 
 // focusPolicy()
-func (this *QGraphicsWidget) focusPolicy(args ...interface{}) () {
+func (this *QGraphicsWidget) Focuspolicy(args ...interface{}) () {
   // focusPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -571,10 +604,11 @@ func (this *QGraphicsWidget) focusPolicy(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "focusPolicy", args)
   }
 
+  return
 }
 
 // paintWindowFrame(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-func (this *QGraphicsWidget) paintWindowFrame(args ...interface{}) () {
+func (this *QGraphicsWidget) Paintwindowframe(args ...interface{}) () {
   // paintWindowFrame(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -600,10 +634,11 @@ func (this *QGraphicsWidget) paintWindowFrame(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "paintWindowFrame", args)
   }
 
+  return
 }
 
 // close()
-func (this *QGraphicsWidget) close(args ...interface{}) () {
+func (this *QGraphicsWidget) Close(args ...interface{}) (ret interface{}) {
   // close()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -615,16 +650,20 @@ func (this *QGraphicsWidget) close(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget5closeEv
     // invoke: bool close()
-    var ret = C.C_ZN15QGraphicsWidget5closeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGraphicsWidget5closeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "close", args)
   }
 
+  return
 }
 
 // palette()
-func (this *QGraphicsWidget) palette(args ...interface{}) () {
+func (this *QGraphicsWidget) Palette(args ...interface{}) (ret interface{}) {
   // palette()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -636,16 +675,20 @@ func (this *QGraphicsWidget) palette(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget7paletteEv
     // invoke: QPalette palette()
-    var ret = C.C_ZNK15QGraphicsWidget7paletteEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget7paletteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPalette{}) // "QPalette"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "palette", args)
   }
 
+  return
 }
 
 // windowTitle()
-func (this *QGraphicsWidget) windowTitle(args ...interface{}) () {
+func (this *QGraphicsWidget) Windowtitle(args ...interface{}) (ret interface{}) {
   // windowTitle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -657,16 +700,20 @@ func (this *QGraphicsWidget) windowTitle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget11windowTitleEv
     // invoke: QString windowTitle()
-    var ret = C.C_ZNK15QGraphicsWidget11windowTitleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget11windowTitleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowTitle", args)
   }
 
+  return
 }
 
 // windowFlags()
-func (this *QGraphicsWidget) windowFlags(args ...interface{}) () {
+func (this *QGraphicsWidget) Windowflags(args ...interface{}) () {
   // windowFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -683,10 +730,11 @@ func (this *QGraphicsWidget) windowFlags(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "windowFlags", args)
   }
 
+  return
 }
 
 // setContentsMargins(qreal, qreal, qreal, qreal)
-func (this *QGraphicsWidget) setContentsMargins(args ...interface{}) () {
+func (this *QGraphicsWidget) Setcontentsmargins(args ...interface{}) () {
   // setContentsMargins(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -715,10 +763,11 @@ func (this *QGraphicsWidget) setContentsMargins(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "setContentsMargins", args)
   }
 
+  return
 }
 
 // adjustSize()
-func (this *QGraphicsWidget) adjustSize(args ...interface{}) () {
+func (this *QGraphicsWidget) Adjustsize(args ...interface{}) () {
   // adjustSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -735,10 +784,11 @@ func (this *QGraphicsWidget) adjustSize(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "adjustSize", args)
   }
 
+  return
 }
 
 // windowFrameRect()
-func (this *QGraphicsWidget) windowFrameRect(args ...interface{}) () {
+func (this *QGraphicsWidget) Windowframerect(args ...interface{}) (ret interface{}) {
   // windowFrameRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -750,16 +800,20 @@ func (this *QGraphicsWidget) windowFrameRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget15windowFrameRectEv
     // invoke: QRectF windowFrameRect()
-    var ret = C.C_ZNK15QGraphicsWidget15windowFrameRectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget15windowFrameRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowFrameRect", args)
   }
 
+  return
 }
 
 // getWindowFrameMargins(qreal *, qreal *, qreal *, qreal *)
-func (this *QGraphicsWidget) getWindowFrameMargins(args ...interface{}) () {
+func (this *QGraphicsWidget) Getwindowframemargins(args ...interface{}) () {
   // getWindowFrameMargins(qreal *, qreal *, qreal *, qreal *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -775,23 +829,24 @@ func (this *QGraphicsWidget) getWindowFrameMargins(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget21getWindowFrameMarginsEPdS0_S0_S0_
     // invoke: void getWindowFrameMargins(qreal *, qreal *, qreal *, qreal *)
-    var arg0 = (*C.double)(args[0].(*float64))
+    var arg0 = (unsafe.Pointer)(args[0].(*float64))
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.double)(args[1].(*float64))
+    var arg1 = (unsafe.Pointer)(args[1].(*float64))
     if false {fmt.Println(arg1)}
-    var arg2 = (*C.double)(args[2].(*float64))
+    var arg2 = (unsafe.Pointer)(args[2].(*float64))
     if false {fmt.Println(arg2)}
-    var arg3 = (*C.double)(args[3].(*float64))
+    var arg3 = (unsafe.Pointer)(args[3].(*float64))
     if false {fmt.Println(arg3)}
     C.C_ZNK15QGraphicsWidget21getWindowFrameMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "getWindowFrameMargins", args)
   }
 
+  return
 }
 
 // addAction(class QAction *)
-func (this *QGraphicsWidget) addAction(args ...interface{}) () {
+func (this *QGraphicsWidget) Addaction(args ...interface{}) () {
   // addAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -811,10 +866,11 @@ func (this *QGraphicsWidget) addAction(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "addAction", args)
   }
 
+  return
 }
 
 // setAutoFillBackground(_Bool)
-func (this *QGraphicsWidget) setAutoFillBackground(args ...interface{}) () {
+func (this *QGraphicsWidget) Setautofillbackground(args ...interface{}) () {
   // setAutoFillBackground(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -834,10 +890,11 @@ func (this *QGraphicsWidget) setAutoFillBackground(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "setAutoFillBackground", args)
   }
 
+  return
 }
 
 // setPalette(const class QPalette &)
-func (this *QGraphicsWidget) setPalette(args ...interface{}) () {
+func (this *QGraphicsWidget) Setpalette(args ...interface{}) () {
   // setPalette(const class QPalette &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -857,10 +914,11 @@ func (this *QGraphicsWidget) setPalette(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "setPalette", args)
   }
 
+  return
 }
 
 // ~QGraphicsWidget()
-func (this *QGraphicsWidget) FreeQGraphicsWidget(args ...interface{}) () {
+func (this *QGraphicsWidget) Freeqgraphicswidget(args ...interface{}) () {
   // ~QGraphicsWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -877,10 +935,11 @@ func (this *QGraphicsWidget) FreeQGraphicsWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "~QGraphicsWidget", args)
   }
 
+  return
 }
 
 // isActiveWindow()
-func (this *QGraphicsWidget) isActiveWindow(args ...interface{}) () {
+func (this *QGraphicsWidget) Isactivewindow(args ...interface{}) (ret interface{}) {
   // isActiveWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -892,16 +951,20 @@ func (this *QGraphicsWidget) isActiveWindow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget14isActiveWindowEv
     // invoke: bool isActiveWindow()
-    var ret = C.C_ZNK15QGraphicsWidget14isActiveWindowEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget14isActiveWindowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "isActiveWindow", args)
   }
 
+  return
 }
 
 // size()
-func (this *QGraphicsWidget) size(args ...interface{}) () {
+func (this *QGraphicsWidget) Size(args ...interface{}) (ret interface{}) {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -913,16 +976,20 @@ func (this *QGraphicsWidget) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4sizeEv
     // invoke: QSizeF size()
-    var ret = C.C_ZNK15QGraphicsWidget4sizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "size", args)
   }
 
+  return
 }
 
 // autoFillBackground()
-func (this *QGraphicsWidget) autoFillBackground(args ...interface{}) () {
+func (this *QGraphicsWidget) Autofillbackground(args ...interface{}) (ret interface{}) {
   // autoFillBackground()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -934,16 +1001,20 @@ func (this *QGraphicsWidget) autoFillBackground(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget18autoFillBackgroundEv
     // invoke: bool autoFillBackground()
-    var ret = C.C_ZNK15QGraphicsWidget18autoFillBackgroundEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget18autoFillBackgroundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "autoFillBackground", args)
   }
 
+  return
 }
 
 // layoutDirection()
-func (this *QGraphicsWidget) layoutDirection(args ...interface{}) () {
+func (this *QGraphicsWidget) Layoutdirection(args ...interface{}) () {
   // layoutDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -960,10 +1031,11 @@ func (this *QGraphicsWidget) layoutDirection(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "layoutDirection", args)
   }
 
+  return
 }
 
 // setShortcutEnabled(int, _Bool)
-func (this *QGraphicsWidget) setShortcutEnabled(args ...interface{}) () {
+func (this *QGraphicsWidget) Setshortcutenabled(args ...interface{}) () {
   // setShortcutEnabled(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -986,10 +1058,11 @@ func (this *QGraphicsWidget) setShortcutEnabled(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "setShortcutEnabled", args)
   }
 
+  return
 }
 
 // paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-func (this *QGraphicsWidget) paint(args ...interface{}) () {
+func (this *QGraphicsWidget) Paint(args ...interface{}) () {
   // paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1015,10 +1088,11 @@ func (this *QGraphicsWidget) paint(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "paint", args)
   }
 
+  return
 }
 
 // rect()
-func (this *QGraphicsWidget) rect(args ...interface{}) () {
+func (this *QGraphicsWidget) Rect(args ...interface{}) (ret interface{}) {
   // rect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1030,16 +1104,20 @@ func (this *QGraphicsWidget) rect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4rectEv
     // invoke: QRectF rect()
-    var ret = C.C_ZNK15QGraphicsWidget4rectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget4rectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "rect", args)
   }
 
+  return
 }
 
 // type()
-func (this *QGraphicsWidget) type_(args ...interface{}) () {
+func (this *QGraphicsWidget) Type_(args ...interface{}) (ret interface{}) {
   // type()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1051,16 +1129,20 @@ func (this *QGraphicsWidget) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4typeEv
     // invoke: int type()
-    var ret = C.C_ZNK15QGraphicsWidget4typeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGraphicsWidget4typeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "type", args)
   }
 
+  return
 }
 
 // resize(qreal, qreal)
-func (this *QGraphicsWidget) resize(args ...interface{}) () {
+func (this *QGraphicsWidget) Resize(args ...interface{}) () {
   // resize(qreal, qreal)
   // resize(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1092,10 +1174,11 @@ func (this *QGraphicsWidget) resize(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "resize", args)
   }
 
+  return
 }
 
 // releaseShortcut(int)
-func (this *QGraphicsWidget) releaseShortcut(args ...interface{}) () {
+func (this *QGraphicsWidget) Releaseshortcut(args ...interface{}) () {
   // releaseShortcut(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1115,10 +1198,11 @@ func (this *QGraphicsWidget) releaseShortcut(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "releaseShortcut", args)
   }
 
+  return
 }
 
 // setTabOrder(class QGraphicsWidget *, class QGraphicsWidget *)
-func (this *QGraphicsWidget) setTabOrder_s(args ...interface{}) () {
+func (this *QGraphicsWidget) Settaborder_S(args ...interface{}) () {
   // setTabOrder(class QGraphicsWidget *, class QGraphicsWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1141,10 +1225,11 @@ func (this *QGraphicsWidget) setTabOrder_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "setTabOrder", args)
   }
 
+  return
 }
 
 // setWindowTitle(const class QString &)
-func (this *QGraphicsWidget) setWindowTitle(args ...interface{}) () {
+func (this *QGraphicsWidget) Setwindowtitle(args ...interface{}) () {
   // setWindowTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1164,10 +1249,11 @@ func (this *QGraphicsWidget) setWindowTitle(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "setWindowTitle", args)
   }
 
+  return
 }
 
 // setWindowFrameMargins(qreal, qreal, qreal, qreal)
-func (this *QGraphicsWidget) setWindowFrameMargins(args ...interface{}) () {
+func (this *QGraphicsWidget) Setwindowframemargins(args ...interface{}) () {
   // setWindowFrameMargins(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1196,10 +1282,11 @@ func (this *QGraphicsWidget) setWindowFrameMargins(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "setWindowFrameMargins", args)
   }
 
+  return
 }
 
 // getContentsMargins(qreal *, qreal *, qreal *, qreal *)
-func (this *QGraphicsWidget) getContentsMargins(args ...interface{}) () {
+func (this *QGraphicsWidget) Getcontentsmargins(args ...interface{}) () {
   // getContentsMargins(qreal *, qreal *, qreal *, qreal *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1215,23 +1302,24 @@ func (this *QGraphicsWidget) getContentsMargins(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget18getContentsMarginsEPdS0_S0_S0_
     // invoke: void getContentsMargins(qreal *, qreal *, qreal *, qreal *)
-    var arg0 = (*C.double)(args[0].(*float64))
+    var arg0 = (unsafe.Pointer)(args[0].(*float64))
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.double)(args[1].(*float64))
+    var arg1 = (unsafe.Pointer)(args[1].(*float64))
     if false {fmt.Println(arg1)}
-    var arg2 = (*C.double)(args[2].(*float64))
+    var arg2 = (unsafe.Pointer)(args[2].(*float64))
     if false {fmt.Println(arg2)}
-    var arg3 = (*C.double)(args[3].(*float64))
+    var arg3 = (unsafe.Pointer)(args[3].(*float64))
     if false {fmt.Println(arg3)}
     C.C_ZNK15QGraphicsWidget18getContentsMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "getContentsMargins", args)
   }
 
+  return
 }
 
 // setFont(const class QFont &)
-func (this *QGraphicsWidget) setFont(args ...interface{}) () {
+func (this *QGraphicsWidget) Setfont(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1251,6 +1339,7 @@ func (this *QGraphicsWidget) setFont(args ...interface{}) () {
     qtrt.ErrorResolve("QGraphicsWidget", "setFont", args)
   }
 
+  return
 }
 
 // <= body block end

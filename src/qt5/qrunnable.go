@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qrunnable.h
 // dst-file: /src/core/qrunnable.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto:  void QRunnable::setAutoDelete(bool _autoDelete);
 extern void C_ZN9QRunnable13setAutoDeleteEb(void* qthis, bool arg0); // 2
   // proto:  bool QRunnable::autoDelete();
-extern void C_ZNK9QRunnable10autoDeleteEv(void* qthis); // 2
+extern bool C_ZNK9QRunnable10autoDeleteEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -51,7 +51,7 @@ type QRunnable struct {
 }
 
 // setAutoDelete(_Bool)
-func (this *QRunnable) setAutoDelete(args ...interface{}) () {
+func (this *QRunnable) Setautodelete(args ...interface{}) () {
   // setAutoDelete(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -71,10 +71,11 @@ func (this *QRunnable) setAutoDelete(args ...interface{}) () {
     qtrt.ErrorResolve("QRunnable", "setAutoDelete", args)
   }
 
+  return
 }
 
 // autoDelete()
-func (this *QRunnable) autoDelete(args ...interface{}) () {
+func (this *QRunnable) Autodelete(args ...interface{}) (ret interface{}) {
   // autoDelete()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -86,12 +87,16 @@ func (this *QRunnable) autoDelete(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QRunnable10autoDeleteEv
     // invoke: bool autoDelete()
-    var ret = C.C_ZNK9QRunnable10autoDeleteEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QRunnable10autoDeleteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QRunnable", "autoDelete", args)
   }
 
+  return
 }
 
 // <= body block end

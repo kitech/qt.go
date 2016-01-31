@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.go
 //
@@ -31,17 +31,17 @@ import "qtrt"
   // proto:  void QDataStream::~QDataStream();
 extern void C_ZN11QDataStreamD2Ev(void* qthis); // 4
   // proto:  int QDataStream::skipRawData(int len);
-extern void C_ZN11QDataStream11skipRawDataEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZN11QDataStream11skipRawDataEi(void* qthis, int32_t arg0); // 4
   // proto:  void QDataStream::setVersion(int );
 extern void C_ZN11QDataStream10setVersionEi(void* qthis, int32_t arg0); // 2
   // proto:  QDataStream & QDataStream::writeBytes(const char * , uint len);
-extern void C_ZN11QDataStream10writeBytesEPKcj(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void* C_ZN11QDataStream10writeBytesEPKcj(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QDataStream::unsetDevice();
 extern void C_ZN11QDataStream11unsetDeviceEv(void* qthis); // 4
   // proto:  int QDataStream::version();
-extern void C_ZNK11QDataStream7versionEv(void* qthis); // 2
+extern int32_t C_ZNK11QDataStream7versionEv(void* qthis); // 2
   // proto:  QDataStream & QDataStream::readBytes(char *& , uint & len);
-extern void C_ZN11QDataStream9readBytesERPcRj(void* qthis, unsigned char* arg0, int32_t* arg1); // 4
+extern void* C_ZN11QDataStream9readBytesERPcRj(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QDataStream::setDevice(QIODevice * );
 extern void C_ZN11QDataStream9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  QDataStream::ByteOrder QDataStream::byteOrder();
@@ -49,17 +49,17 @@ extern void C_ZNK11QDataStream9byteOrderEv(void* qthis); // 2
   // proto:  QDataStream::Status QDataStream::status();
 extern void C_ZNK11QDataStream6statusEv(void* qthis); // 4
   // proto:  int QDataStream::readRawData(char * , int len);
-extern void C_ZN11QDataStream11readRawDataEPci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern int32_t C_ZN11QDataStream11readRawDataEPci(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QDataStream::FloatingPointPrecision QDataStream::floatingPointPrecision();
 extern void C_ZNK11QDataStream22floatingPointPrecisionEv(void* qthis); // 4
   // proto:  int QDataStream::writeRawData(const char * , int len);
-extern void C_ZN11QDataStream12writeRawDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern int32_t C_ZN11QDataStream12writeRawDataEPKci(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QIODevice * QDataStream::device();
-extern void C_ZNK11QDataStream6deviceEv(void* qthis); // 2
+extern void* C_ZNK11QDataStream6deviceEv(void* qthis); // 2
   // proto:  void QDataStream::resetStatus();
 extern void C_ZN11QDataStream11resetStatusEv(void* qthis); // 4
   // proto:  bool QDataStream::atEnd();
-extern void C_ZNK11QDataStream5atEndEv(void* qthis); // 4
+extern bool C_ZNK11QDataStream5atEndEv(void* qthis); // 4
   // proto:  void QDataStream::QDataStream(const QByteArray & );
 extern void* C_ZN11QDataStreamC2ERK10QByteArray(void* arg0); // 3
   // proto:  void QDataStream::QDataStream();
@@ -85,7 +85,7 @@ type QDataStream struct {
 }
 
 // ~QDataStream()
-func (this *QDataStream) FreeQDataStream(args ...interface{}) () {
+func (this *QDataStream) Freeqdatastream(args ...interface{}) () {
   // ~QDataStream()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -102,10 +102,11 @@ func (this *QDataStream) FreeQDataStream(args ...interface{}) () {
     qtrt.ErrorResolve("QDataStream", "~QDataStream", args)
   }
 
+  return
 }
 
 // skipRawData(int)
-func (this *QDataStream) skipRawData(args ...interface{}) () {
+func (this *QDataStream) Skiprawdata(args ...interface{}) (ret interface{}) {
   // skipRawData(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -120,16 +121,20 @@ func (this *QDataStream) skipRawData(args ...interface{}) () {
     // invoke: int skipRawData(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QDataStream11skipRawDataEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QDataStream11skipRawDataEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataStream", "skipRawData", args)
   }
 
+  return
 }
 
 // setVersion(int)
-func (this *QDataStream) setVersion(args ...interface{}) () {
+func (this *QDataStream) Setversion(args ...interface{}) () {
   // setVersion(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -149,10 +154,11 @@ func (this *QDataStream) setVersion(args ...interface{}) () {
     qtrt.ErrorResolve("QDataStream", "setVersion", args)
   }
 
+  return
 }
 
 // writeBytes(const char *, uint)
-func (this *QDataStream) writeBytes(args ...interface{}) () {
+func (this *QDataStream) Writebytes(args ...interface{}) (ret interface{}) {
   // writeBytes(const char *, uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -166,20 +172,26 @@ func (this *QDataStream) writeBytes(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream10writeBytesEPKcj
     // invoke: QDataStream & writeBytes(const char *, uint)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN11QDataStream10writeBytesEPKcj(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QDataStream10writeBytesEPKcj(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDataStream{}) // "QDataStream &"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataStream", "writeBytes", args)
   }
 
+  return
 }
 
 // unsetDevice()
-func (this *QDataStream) unsetDevice(args ...interface{}) () {
+func (this *QDataStream) Unsetdevice(args ...interface{}) () {
   // unsetDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -196,10 +208,11 @@ func (this *QDataStream) unsetDevice(args ...interface{}) () {
     qtrt.ErrorResolve("QDataStream", "unsetDevice", args)
   }
 
+  return
 }
 
 // version()
-func (this *QDataStream) version(args ...interface{}) () {
+func (this *QDataStream) Version(args ...interface{}) (ret interface{}) {
   // version()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -211,16 +224,20 @@ func (this *QDataStream) version(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream7versionEv
     // invoke: int version()
-    var ret = C.C_ZNK11QDataStream7versionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QDataStream7versionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataStream", "version", args)
   }
 
+  return
 }
 
 // readBytes(char *&, uint &)
-func (this *QDataStream) readBytes(args ...interface{}) () {
+func (this *QDataStream) Readbytes(args ...interface{}) (ret interface{}) {
   // readBytes(char *&, uint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -234,20 +251,26 @@ func (this *QDataStream) readBytes(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream9readBytesERPcRj
     // invoke: QDataStream & readBytes(char *&, uint &)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
-    var arg1 = (*C.int32_t)(args[1].(*int32))
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
+    var arg1 = (unsafe.Pointer)(args[1].(*int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN11QDataStream9readBytesERPcRj(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QDataStream9readBytesERPcRj(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDataStream{}) // "QDataStream &"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataStream", "readBytes", args)
   }
 
+  return
 }
 
 // setDevice(class QIODevice *)
-func (this *QDataStream) setDevice(args ...interface{}) () {
+func (this *QDataStream) Setdevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -267,10 +290,11 @@ func (this *QDataStream) setDevice(args ...interface{}) () {
     qtrt.ErrorResolve("QDataStream", "setDevice", args)
   }
 
+  return
 }
 
 // byteOrder()
-func (this *QDataStream) byteOrder(args ...interface{}) () {
+func (this *QDataStream) Byteorder(args ...interface{}) () {
   // byteOrder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -287,10 +311,11 @@ func (this *QDataStream) byteOrder(args ...interface{}) () {
     qtrt.ErrorResolve("QDataStream", "byteOrder", args)
   }
 
+  return
 }
 
 // status()
-func (this *QDataStream) status(args ...interface{}) () {
+func (this *QDataStream) Status(args ...interface{}) () {
   // status()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -307,10 +332,11 @@ func (this *QDataStream) status(args ...interface{}) () {
     qtrt.ErrorResolve("QDataStream", "status", args)
   }
 
+  return
 }
 
 // readRawData(char *, int)
-func (this *QDataStream) readRawData(args ...interface{}) () {
+func (this *QDataStream) Readrawdata(args ...interface{}) (ret interface{}) {
   // readRawData(char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -324,20 +350,26 @@ func (this *QDataStream) readRawData(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream11readRawDataEPci
     // invoke: int readRawData(char *, int)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN11QDataStream11readRawDataEPci(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QDataStream11readRawDataEPci(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataStream", "readRawData", args)
   }
 
+  return
 }
 
 // floatingPointPrecision()
-func (this *QDataStream) floatingPointPrecision(args ...interface{}) () {
+func (this *QDataStream) Floatingpointprecision(args ...interface{}) () {
   // floatingPointPrecision()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -354,10 +386,11 @@ func (this *QDataStream) floatingPointPrecision(args ...interface{}) () {
     qtrt.ErrorResolve("QDataStream", "floatingPointPrecision", args)
   }
 
+  return
 }
 
 // writeRawData(const char *, int)
-func (this *QDataStream) writeRawData(args ...interface{}) () {
+func (this *QDataStream) Writerawdata(args ...interface{}) (ret interface{}) {
   // writeRawData(const char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -371,20 +404,26 @@ func (this *QDataStream) writeRawData(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream12writeRawDataEPKci
     // invoke: int writeRawData(const char *, int)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN11QDataStream12writeRawDataEPKci(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QDataStream12writeRawDataEPKci(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataStream", "writeRawData", args)
   }
 
+  return
 }
 
 // device()
-func (this *QDataStream) device(args ...interface{}) () {
+func (this *QDataStream) Device(args ...interface{}) (ret interface{}) {
   // device()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -396,16 +435,20 @@ func (this *QDataStream) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream6deviceEv
     // invoke: QIODevice * device()
-    var ret = C.C_ZNK11QDataStream6deviceEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QDataStream6deviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QIODevice{}) // "QIODevice *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataStream", "device", args)
   }
 
+  return
 }
 
 // resetStatus()
-func (this *QDataStream) resetStatus(args ...interface{}) () {
+func (this *QDataStream) Resetstatus(args ...interface{}) () {
   // resetStatus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -422,10 +465,11 @@ func (this *QDataStream) resetStatus(args ...interface{}) () {
     qtrt.ErrorResolve("QDataStream", "resetStatus", args)
   }
 
+  return
 }
 
 // atEnd()
-func (this *QDataStream) atEnd(args ...interface{}) () {
+func (this *QDataStream) Atend(args ...interface{}) (ret interface{}) {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -437,12 +481,16 @@ func (this *QDataStream) atEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream5atEndEv
     // invoke: bool atEnd()
-    var ret = C.C_ZNK11QDataStream5atEndEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QDataStream5atEndEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataStream", "atEnd", args)
   }
 
+  return
 }
 
 // QDataStream(const class QByteArray &)

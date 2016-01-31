@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.go
 //
@@ -41,7 +41,7 @@ extern void C_ZN6QState13addTransitionEP14QAbstractState(void* qthis, void* arg0
   // proto:  void QState::addTransition(QAbstractTransition * transition);
 extern void C_ZN6QState13addTransitionEP19QAbstractTransition(void* qthis, void* arg0); // 4
   // proto:  QSignalTransition * QState::addTransition(const QObject * sender, const char * signal, QAbstractState * target);
-extern void C_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(void* qthis, void* arg0, unsigned char* arg1, void* arg2); // 4
+extern void* C_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QState::setErrorState(QAbstractState * state);
 extern void C_ZN6QState13setErrorStateEP14QAbstractState(void* qthis, void* arg0); // 4
   // proto:  QAbstractState * QState::initialState();
@@ -49,7 +49,7 @@ extern void C_ZNK6QState12initialStateEv(void* qthis); // 4
   // proto:  QState::ChildMode QState::childMode();
 extern void C_ZNK6QState9childModeEv(void* qthis); // 4
   // proto:  void QState::assignProperty(QObject * object, const char * name, const QVariant & value);
-extern void C_ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant(void* qthis, void* arg0, unsigned char* arg1, void* arg2); // 4
+extern void C_ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QState::~QState();
 extern void C_ZN6QStateD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QState::metaObject();
@@ -107,7 +107,7 @@ func NewQState(args ...interface{}) *QState {
 }
 
 // transitions()
-func (this *QState) transitions(args ...interface{}) () {
+func (this *QState) Transitions(args ...interface{}) () {
   // transitions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -124,10 +124,11 @@ func (this *QState) transitions(args ...interface{}) () {
     qtrt.ErrorResolve("QState", "transitions", args)
   }
 
+  return
 }
 
 // errorState()
-func (this *QState) errorState(args ...interface{}) () {
+func (this *QState) Errorstate(args ...interface{}) () {
   // errorState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -144,10 +145,11 @@ func (this *QState) errorState(args ...interface{}) () {
     qtrt.ErrorResolve("QState", "errorState", args)
   }
 
+  return
 }
 
 // removeTransition(class QAbstractTransition *)
-func (this *QState) removeTransition(args ...interface{}) () {
+func (this *QState) Removetransition(args ...interface{}) () {
   // removeTransition(class QAbstractTransition *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -167,10 +169,11 @@ func (this *QState) removeTransition(args ...interface{}) () {
     qtrt.ErrorResolve("QState", "removeTransition", args)
   }
 
+  return
 }
 
 // addTransition(class QAbstractState *)
-func (this *QState) addTransition(args ...interface{}) () {
+func (this *QState) Addtransition(args ...interface{}) () {
   // addTransition(class QAbstractState *)
   // addTransition(class QAbstractTransition *)
   // addTransition(const class QObject *, const char *, class QAbstractState *)
@@ -205,20 +208,23 @@ func (this *QState) addTransition(args ...interface{}) () {
     // invoke: QSignalTransition * addTransition(const class QObject *, const char *, class QAbstractState *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[2][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
     var arg2 = args[2].(QAbstractState).qclsinst
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
   default:
     qtrt.ErrorResolve("QState", "addTransition", args)
   }
 
+  return
 }
 
 // setErrorState(class QAbstractState *)
-func (this *QState) setErrorState(args ...interface{}) () {
+func (this *QState) Seterrorstate(args ...interface{}) () {
   // setErrorState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -238,10 +244,11 @@ func (this *QState) setErrorState(args ...interface{}) () {
     qtrt.ErrorResolve("QState", "setErrorState", args)
   }
 
+  return
 }
 
 // initialState()
-func (this *QState) initialState(args ...interface{}) () {
+func (this *QState) Initialstate(args ...interface{}) () {
   // initialState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -258,10 +265,11 @@ func (this *QState) initialState(args ...interface{}) () {
     qtrt.ErrorResolve("QState", "initialState", args)
   }
 
+  return
 }
 
 // childMode()
-func (this *QState) childMode(args ...interface{}) () {
+func (this *QState) Childmode(args ...interface{}) () {
   // childMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -278,10 +286,11 @@ func (this *QState) childMode(args ...interface{}) () {
     qtrt.ErrorResolve("QState", "childMode", args)
   }
 
+  return
 }
 
 // assignProperty(class QObject *, const char *, const class QVariant &)
-func (this *QState) assignProperty(args ...interface{}) () {
+func (this *QState) Assignproperty(args ...interface{}) () {
   // assignProperty(class QObject *, const char *, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -298,8 +307,10 @@ func (this *QState) assignProperty(args ...interface{}) () {
     // invoke: void assignProperty(class QObject *, const char *, const class QVariant &)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
     var arg2 = args[2].(QVariant).qclsinst
     if false {fmt.Println(arg2)}
     C.C_ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant(this.qclsinst, arg0, arg1, arg2)
@@ -307,10 +318,11 @@ func (this *QState) assignProperty(args ...interface{}) () {
     qtrt.ErrorResolve("QState", "assignProperty", args)
   }
 
+  return
 }
 
 // ~QState()
-func (this *QState) FreeQState(args ...interface{}) () {
+func (this *QState) Freeqstate(args ...interface{}) () {
   // ~QState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -327,10 +339,11 @@ func (this *QState) FreeQState(args ...interface{}) () {
     qtrt.ErrorResolve("QState", "~QState", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QState) metaObject(args ...interface{}) () {
+func (this *QState) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -347,10 +360,11 @@ func (this *QState) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QState", "metaObject", args)
   }
 
+  return
 }
 
 // setInitialState(class QAbstractState *)
-func (this *QState) setInitialState(args ...interface{}) () {
+func (this *QState) Setinitialstate(args ...interface{}) () {
   // setInitialState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -370,6 +384,7 @@ func (this *QState) setInitialState(args ...interface{}) () {
     qtrt.ErrorResolve("QState", "setInitialState", args)
   }
 
+  return
 }
 
 // <= body block end

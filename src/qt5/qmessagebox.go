@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.go
 //
@@ -35,39 +35,39 @@ extern void C_ZNK11QMessageBox20textInteractionFlagsEv(void* qthis); // 4
   // proto:  void QMessageBox::setDetailedText(const QString & text);
 extern void C_ZN11QMessageBox15setDetailedTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QMessageBox::text();
-extern void C_ZNK11QMessageBox4textEv(void* qthis); // 4
+extern void* C_ZNK11QMessageBox4textEv(void* qthis); // 4
   // proto:  void QMessageBox::setButtonText(int button, const QString & text);
 extern void C_ZN11QMessageBox13setButtonTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  QPixmap QMessageBox::iconPixmap();
-extern void C_ZNK11QMessageBox10iconPixmapEv(void* qthis); // 4
+extern void* C_ZNK11QMessageBox10iconPixmapEv(void* qthis); // 4
   // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern void C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
+extern int32_t C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
   // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern void C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
+extern int32_t C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
   // proto:  QString QMessageBox::detailedText();
-extern void C_ZNK11QMessageBox12detailedTextEv(void* qthis); // 4
+extern void* C_ZNK11QMessageBox12detailedTextEv(void* qthis); // 4
   // proto:  QMessageBox::StandardButton QMessageBox::standardButton(QAbstractButton * button);
 extern void C_ZNK11QMessageBox14standardButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  void QMessageBox::removeButton(QAbstractButton * button);
 extern void C_ZN11QMessageBox12removeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  void QMessageBox::open(QObject * receiver, const char * member);
-extern void C_ZN11QMessageBox4openEP7QObjectPKc(void* qthis, void* arg0, unsigned char* arg1); // 4
+extern void C_ZN11QMessageBox4openEP7QObjectPKc(void* qthis, void* arg0, void* arg1); // 4
   // proto: static void QMessageBox::aboutQt(QWidget * parent, const QString & title);
 extern void C_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(void* arg0, void* arg1); // 4
   // proto:  QString QMessageBox::informativeText();
-extern void C_ZNK11QMessageBox15informativeTextEv(void* qthis); // 4
+extern void* C_ZNK11QMessageBox15informativeTextEv(void* qthis); // 4
   // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern void C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
+extern int32_t C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
   // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern void C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
+extern int32_t C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
   // proto:  QMessageBox::ButtonRole QMessageBox::buttonRole(QAbstractButton * button);
 extern void C_ZNK11QMessageBox10buttonRoleEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  QList<QAbstractButton *> QMessageBox::buttons();
 extern void C_ZNK11QMessageBox7buttonsEv(void* qthis); // 4
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern void C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
+extern int32_t C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern void C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
+extern int32_t C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
   // proto:  QAbstractButton * QMessageBox::escapeButton();
 extern void C_ZNK11QMessageBox12escapeButtonEv(void* qthis); // 4
   // proto:  void QMessageBox::setIconPixmap(const QPixmap & pixmap);
@@ -77,13 +77,13 @@ extern void C_ZN11QMessageBox14setWindowTitleERK7QString(void* qthis, void* arg0
   // proto:  QAbstractButton * QMessageBox::clickedButton();
 extern void C_ZNK11QMessageBox13clickedButtonEv(void* qthis); // 4
   // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern void C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
+extern int32_t C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
   // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern void C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
+extern int32_t C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
   // proto:  void QMessageBox::setInformativeText(const QString & text);
 extern void C_ZN11QMessageBox18setInformativeTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QCheckBox * QMessageBox::checkBox();
-extern void C_ZNK11QMessageBox8checkBoxEv(void* qthis); // 4
+extern void* C_ZNK11QMessageBox8checkBoxEv(void* qthis); // 4
   // proto:  void QMessageBox::setEscapeButton(QAbstractButton * button);
 extern void C_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  QMessageBox::Icon QMessageBox::icon();
@@ -97,11 +97,11 @@ extern void C_ZN11QMessageBoxD2Ev(void* qthis); // 4
   // proto:  void QMessageBox::setText(const QString & text);
 extern void C_ZN11QMessageBox7setTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QMessageBox::buttonText(int button);
-extern void C_ZNK11QMessageBox10buttonTextEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK11QMessageBox10buttonTextEi(void* qthis, int32_t arg0); // 4
   // proto:  StandardButtons QMessageBox::standardButtons();
 extern void C_ZNK11QMessageBox15standardButtonsEv(void* qthis); // 4
   // proto:  QPushButton * QMessageBox::defaultButton();
-extern void C_ZNK11QMessageBox13defaultButtonEv(void* qthis); // 4
+extern void* C_ZNK11QMessageBox13defaultButtonEv(void* qthis); // 4
   // proto:  void QMessageBox::setDefaultButton(QPushButton * button);
 extern void C_ZN11QMessageBox16setDefaultButtonEP11QPushButton(void* qthis, void* arg0); // 4
   // proto:  void QMessageBox::QMessageBox(QWidget * parent);
@@ -128,7 +128,7 @@ type QMessageBox struct {
 }
 
 // setCheckBox(class QCheckBox *)
-func (this *QMessageBox) setCheckBox(args ...interface{}) () {
+func (this *QMessageBox) Setcheckbox(args ...interface{}) () {
   // setCheckBox(class QCheckBox *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -148,10 +148,11 @@ func (this *QMessageBox) setCheckBox(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "setCheckBox", args)
   }
 
+  return
 }
 
 // textInteractionFlags()
-func (this *QMessageBox) textInteractionFlags(args ...interface{}) () {
+func (this *QMessageBox) Textinteractionflags(args ...interface{}) () {
   // textInteractionFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -168,10 +169,11 @@ func (this *QMessageBox) textInteractionFlags(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "textInteractionFlags", args)
   }
 
+  return
 }
 
 // setDetailedText(const class QString &)
-func (this *QMessageBox) setDetailedText(args ...interface{}) () {
+func (this *QMessageBox) Setdetailedtext(args ...interface{}) () {
   // setDetailedText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -191,10 +193,11 @@ func (this *QMessageBox) setDetailedText(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "setDetailedText", args)
   }
 
+  return
 }
 
 // text()
-func (this *QMessageBox) text(args ...interface{}) () {
+func (this *QMessageBox) Text(args ...interface{}) (ret interface{}) {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -206,16 +209,20 @@ func (this *QMessageBox) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox4textEv
     // invoke: QString text()
-    var ret = C.C_ZNK11QMessageBox4textEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QMessageBox4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMessageBox", "text", args)
   }
 
+  return
 }
 
 // setButtonText(int, const class QString &)
-func (this *QMessageBox) setButtonText(args ...interface{}) () {
+func (this *QMessageBox) Setbuttontext(args ...interface{}) () {
   // setButtonText(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -238,10 +245,11 @@ func (this *QMessageBox) setButtonText(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "setButtonText", args)
   }
 
+  return
 }
 
 // iconPixmap()
-func (this *QMessageBox) iconPixmap(args ...interface{}) () {
+func (this *QMessageBox) Iconpixmap(args ...interface{}) (ret interface{}) {
   // iconPixmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -253,16 +261,20 @@ func (this *QMessageBox) iconPixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox10iconPixmapEv
     // invoke: QPixmap iconPixmap()
-    var ret = C.C_ZNK11QMessageBox10iconPixmapEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QMessageBox10iconPixmapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPixmap{}) // "QPixmap"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMessageBox", "iconPixmap", args)
   }
 
+  return
 }
 
 // warning(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-func (this *QMessageBox) warning_s(args ...interface{}) () {
+func (this *QMessageBox) Warning_S(args ...interface{}) (ret interface{}) {
   // warning(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
   // warning(class QWidget *, const class QString &, const class QString &, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -306,8 +318,11 @@ func (this *QMessageBox) warning_s(args ...interface{}) () {
     if false {fmt.Println(arg6)}
     var arg7 = C.int32_t(args[7].(int32))
     if false {fmt.Println(arg7)}
-    var ret = C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii
     // invoke: int warning(class QWidget *, const class QString &, const class QString &, int, int, int)
@@ -323,16 +338,20 @@ func (this *QMessageBox) warning_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    var ret = C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMessageBox", "warning", args)
   }
 
+  return
 }
 
 // detailedText()
-func (this *QMessageBox) detailedText(args ...interface{}) () {
+func (this *QMessageBox) Detailedtext(args ...interface{}) (ret interface{}) {
   // detailedText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -344,16 +363,20 @@ func (this *QMessageBox) detailedText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox12detailedTextEv
     // invoke: QString detailedText()
-    var ret = C.C_ZNK11QMessageBox12detailedTextEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QMessageBox12detailedTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMessageBox", "detailedText", args)
   }
 
+  return
 }
 
 // standardButton(class QAbstractButton *)
-func (this *QMessageBox) standardButton(args ...interface{}) () {
+func (this *QMessageBox) Standardbutton(args ...interface{}) () {
   // standardButton(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -373,10 +396,11 @@ func (this *QMessageBox) standardButton(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "standardButton", args)
   }
 
+  return
 }
 
 // removeButton(class QAbstractButton *)
-func (this *QMessageBox) removeButton(args ...interface{}) () {
+func (this *QMessageBox) Removebutton(args ...interface{}) () {
   // removeButton(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -396,10 +420,11 @@ func (this *QMessageBox) removeButton(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "removeButton", args)
   }
 
+  return
 }
 
 // open(class QObject *, const char *)
-func (this *QMessageBox) open(args ...interface{}) () {
+func (this *QMessageBox) Open(args ...interface{}) () {
   // open(class QObject *, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -415,17 +440,20 @@ func (this *QMessageBox) open(args ...interface{}) () {
     // invoke: void open(class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
     C.C_ZN11QMessageBox4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMessageBox", "open", args)
   }
 
+  return
 }
 
 // aboutQt(class QWidget *, const class QString &)
-func (this *QMessageBox) aboutQt_s(args ...interface{}) () {
+func (this *QMessageBox) Aboutqt_S(args ...interface{}) () {
   // aboutQt(class QWidget *, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -448,10 +476,11 @@ func (this *QMessageBox) aboutQt_s(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "aboutQt", args)
   }
 
+  return
 }
 
 // informativeText()
-func (this *QMessageBox) informativeText(args ...interface{}) () {
+func (this *QMessageBox) Informativetext(args ...interface{}) (ret interface{}) {
   // informativeText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -463,16 +492,20 @@ func (this *QMessageBox) informativeText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox15informativeTextEv
     // invoke: QString informativeText()
-    var ret = C.C_ZNK11QMessageBox15informativeTextEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QMessageBox15informativeTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMessageBox", "informativeText", args)
   }
 
+  return
 }
 
 // question(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-func (this *QMessageBox) question_s(args ...interface{}) () {
+func (this *QMessageBox) Question_S(args ...interface{}) (ret interface{}) {
   // question(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
   // question(class QWidget *, const class QString &, const class QString &, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -516,8 +549,11 @@ func (this *QMessageBox) question_s(args ...interface{}) () {
     if false {fmt.Println(arg6)}
     var arg7 = C.int32_t(args[7].(int32))
     if false {fmt.Println(arg7)}
-    var ret = C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii
     // invoke: int question(class QWidget *, const class QString &, const class QString &, int, int, int)
@@ -533,16 +569,20 @@ func (this *QMessageBox) question_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    var ret = C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMessageBox", "question", args)
   }
 
+  return
 }
 
 // buttonRole(class QAbstractButton *)
-func (this *QMessageBox) buttonRole(args ...interface{}) () {
+func (this *QMessageBox) Buttonrole(args ...interface{}) () {
   // buttonRole(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -562,10 +602,11 @@ func (this *QMessageBox) buttonRole(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "buttonRole", args)
   }
 
+  return
 }
 
 // buttons()
-func (this *QMessageBox) buttons(args ...interface{}) () {
+func (this *QMessageBox) Buttons(args ...interface{}) () {
   // buttons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -582,10 +623,11 @@ func (this *QMessageBox) buttons(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "buttons", args)
   }
 
+  return
 }
 
 // critical(class QWidget *, const class QString &, const class QString &, int, int, int)
-func (this *QMessageBox) critical_s(args ...interface{}) () {
+func (this *QMessageBox) Critical_S(args ...interface{}) (ret interface{}) {
   // critical(class QWidget *, const class QString &, const class QString &, int, int, int)
   // critical(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -625,8 +667,11 @@ func (this *QMessageBox) critical_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    var ret = C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii
     // invoke: int critical(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
@@ -646,16 +691,20 @@ func (this *QMessageBox) critical_s(args ...interface{}) () {
     if false {fmt.Println(arg6)}
     var arg7 = C.int32_t(args[7].(int32))
     if false {fmt.Println(arg7)}
-    var ret = C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMessageBox", "critical", args)
   }
 
+  return
 }
 
 // escapeButton()
-func (this *QMessageBox) escapeButton(args ...interface{}) () {
+func (this *QMessageBox) Escapebutton(args ...interface{}) () {
   // escapeButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -672,10 +721,11 @@ func (this *QMessageBox) escapeButton(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "escapeButton", args)
   }
 
+  return
 }
 
 // setIconPixmap(const class QPixmap &)
-func (this *QMessageBox) setIconPixmap(args ...interface{}) () {
+func (this *QMessageBox) Seticonpixmap(args ...interface{}) () {
   // setIconPixmap(const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -695,10 +745,11 @@ func (this *QMessageBox) setIconPixmap(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "setIconPixmap", args)
   }
 
+  return
 }
 
 // setWindowTitle(const class QString &)
-func (this *QMessageBox) setWindowTitle(args ...interface{}) () {
+func (this *QMessageBox) Setwindowtitle(args ...interface{}) () {
   // setWindowTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -718,10 +769,11 @@ func (this *QMessageBox) setWindowTitle(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "setWindowTitle", args)
   }
 
+  return
 }
 
 // clickedButton()
-func (this *QMessageBox) clickedButton(args ...interface{}) () {
+func (this *QMessageBox) Clickedbutton(args ...interface{}) () {
   // clickedButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -738,10 +790,11 @@ func (this *QMessageBox) clickedButton(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "clickedButton", args)
   }
 
+  return
 }
 
 // information(class QWidget *, const class QString &, const class QString &, int, int, int)
-func (this *QMessageBox) information_s(args ...interface{}) () {
+func (this *QMessageBox) Information_S(args ...interface{}) (ret interface{}) {
   // information(class QWidget *, const class QString &, const class QString &, int, int, int)
   // information(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -781,8 +834,11 @@ func (this *QMessageBox) information_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    var ret = C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii
     // invoke: int information(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
@@ -802,16 +858,20 @@ func (this *QMessageBox) information_s(args ...interface{}) () {
     if false {fmt.Println(arg6)}
     var arg7 = C.int32_t(args[7].(int32))
     if false {fmt.Println(arg7)}
-    var ret = C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMessageBox", "information", args)
   }
 
+  return
 }
 
 // setInformativeText(const class QString &)
-func (this *QMessageBox) setInformativeText(args ...interface{}) () {
+func (this *QMessageBox) Setinformativetext(args ...interface{}) () {
   // setInformativeText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -831,10 +891,11 @@ func (this *QMessageBox) setInformativeText(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "setInformativeText", args)
   }
 
+  return
 }
 
 // checkBox()
-func (this *QMessageBox) checkBox(args ...interface{}) () {
+func (this *QMessageBox) Checkbox(args ...interface{}) (ret interface{}) {
   // checkBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -846,16 +907,20 @@ func (this *QMessageBox) checkBox(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox8checkBoxEv
     // invoke: QCheckBox * checkBox()
-    var ret = C.C_ZNK11QMessageBox8checkBoxEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QMessageBox8checkBoxEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QCheckBox{}) // "QCheckBox *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMessageBox", "checkBox", args)
   }
 
+  return
 }
 
 // setEscapeButton(class QAbstractButton *)
-func (this *QMessageBox) setEscapeButton(args ...interface{}) () {
+func (this *QMessageBox) Setescapebutton(args ...interface{}) () {
   // setEscapeButton(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -875,10 +940,11 @@ func (this *QMessageBox) setEscapeButton(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "setEscapeButton", args)
   }
 
+  return
 }
 
 // icon()
-func (this *QMessageBox) icon(args ...interface{}) () {
+func (this *QMessageBox) Icon(args ...interface{}) () {
   // icon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -895,10 +961,11 @@ func (this *QMessageBox) icon(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "icon", args)
   }
 
+  return
 }
 
 // about(class QWidget *, const class QString &, const class QString &)
-func (this *QMessageBox) about_s(args ...interface{}) () {
+func (this *QMessageBox) About_S(args ...interface{}) () {
   // about(class QWidget *, const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -924,10 +991,11 @@ func (this *QMessageBox) about_s(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "about", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QMessageBox) metaObject(args ...interface{}) () {
+func (this *QMessageBox) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -944,10 +1012,11 @@ func (this *QMessageBox) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "metaObject", args)
   }
 
+  return
 }
 
 // ~QMessageBox()
-func (this *QMessageBox) FreeQMessageBox(args ...interface{}) () {
+func (this *QMessageBox) Freeqmessagebox(args ...interface{}) () {
   // ~QMessageBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -964,10 +1033,11 @@ func (this *QMessageBox) FreeQMessageBox(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "~QMessageBox", args)
   }
 
+  return
 }
 
 // setText(const class QString &)
-func (this *QMessageBox) setText(args ...interface{}) () {
+func (this *QMessageBox) Settext(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -987,10 +1057,11 @@ func (this *QMessageBox) setText(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "setText", args)
   }
 
+  return
 }
 
 // buttonText(int)
-func (this *QMessageBox) buttonText(args ...interface{}) () {
+func (this *QMessageBox) Buttontext(args ...interface{}) (ret interface{}) {
   // buttonText(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1005,16 +1076,20 @@ func (this *QMessageBox) buttonText(args ...interface{}) () {
     // invoke: QString buttonText(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QMessageBox10buttonTextEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QMessageBox10buttonTextEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMessageBox", "buttonText", args)
   }
 
+  return
 }
 
 // standardButtons()
-func (this *QMessageBox) standardButtons(args ...interface{}) () {
+func (this *QMessageBox) Standardbuttons(args ...interface{}) () {
   // standardButtons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1031,10 +1106,11 @@ func (this *QMessageBox) standardButtons(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "standardButtons", args)
   }
 
+  return
 }
 
 // defaultButton()
-func (this *QMessageBox) defaultButton(args ...interface{}) () {
+func (this *QMessageBox) Defaultbutton(args ...interface{}) (ret interface{}) {
   // defaultButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1046,16 +1122,20 @@ func (this *QMessageBox) defaultButton(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox13defaultButtonEv
     // invoke: QPushButton * defaultButton()
-    var ret = C.C_ZNK11QMessageBox13defaultButtonEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QMessageBox13defaultButtonEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPushButton{}) // "QPushButton *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QMessageBox", "defaultButton", args)
   }
 
+  return
 }
 
 // setDefaultButton(class QPushButton *)
-func (this *QMessageBox) setDefaultButton(args ...interface{}) () {
+func (this *QMessageBox) Setdefaultbutton(args ...interface{}) () {
   // setDefaultButton(class QPushButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1075,6 +1155,7 @@ func (this *QMessageBox) setDefaultButton(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "setDefaultButton", args)
   }
 
+  return
 }
 
 // QMessageBox(class QWidget *)
@@ -1105,7 +1186,7 @@ func NewQMessageBox(args ...interface{}) *QMessageBox {
 }
 
 // textFormat()
-func (this *QMessageBox) textFormat(args ...interface{}) () {
+func (this *QMessageBox) Textformat(args ...interface{}) () {
   // textFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1122,6 +1203,7 @@ func (this *QMessageBox) textFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QMessageBox", "textFormat", args)
   }
 
+  return
 }
 
 // <= body block end

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qtextstream.h
 // dst-file: /src/core/qtextstream.go
 //
@@ -35,41 +35,41 @@ extern void* C_ZN22QTextStreamManipulatorC2EM11QTextStreamFv5QCharES1_(void* arg
   // proto:  void QTextStreamManipulator::exec(QTextStream & s);
 extern void C_ZN22QTextStreamManipulator4execER11QTextStream(void* qthis, void* arg0); // 2
   // proto:  bool QTextStream::autoDetectUnicode();
-extern void C_ZNK11QTextStream17autoDetectUnicodeEv(void* qthis); // 4
+extern bool C_ZNK11QTextStream17autoDetectUnicodeEv(void* qthis); // 4
   // proto:  QLocale QTextStream::locale();
-extern void C_ZNK11QTextStream6localeEv(void* qthis); // 4
+extern void* C_ZNK11QTextStream6localeEv(void* qthis); // 4
   // proto:  void QTextStream::skipWhiteSpace();
 extern void C_ZN11QTextStream14skipWhiteSpaceEv(void* qthis); // 4
   // proto:  qint64 QTextStream::pos();
-extern void C_ZNK11QTextStream3posEv(void* qthis); // 4
+extern int64_t C_ZNK11QTextStream3posEv(void* qthis); // 4
   // proto:  void QTextStream::setRealNumberPrecision(int precision);
 extern void C_ZN11QTextStream22setRealNumberPrecisionEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTextStream::flush();
 extern void C_ZN11QTextStream5flushEv(void* qthis); // 4
   // proto:  bool QTextStream::seek(qint64 pos);
-extern void C_ZN11QTextStream4seekEx(void* qthis, int64_t arg0); // 4
+extern bool C_ZN11QTextStream4seekEx(void* qthis, int64_t arg0); // 4
   // proto:  QTextStream::FieldAlignment QTextStream::fieldAlignment();
 extern void C_ZNK11QTextStream14fieldAlignmentEv(void* qthis); // 4
   // proto:  int QTextStream::fieldWidth();
-extern void C_ZNK11QTextStream10fieldWidthEv(void* qthis); // 4
+extern int32_t C_ZNK11QTextStream10fieldWidthEv(void* qthis); // 4
   // proto:  void QTextStream::setAutoDetectUnicode(bool enabled);
 extern void C_ZN11QTextStream20setAutoDetectUnicodeEb(void* qthis, bool arg0); // 4
   // proto:  NumberFlags QTextStream::numberFlags();
 extern void C_ZNK11QTextStream11numberFlagsEv(void* qthis); // 4
   // proto:  bool QTextStream::generateByteOrderMark();
-extern void C_ZNK11QTextStream21generateByteOrderMarkEv(void* qthis); // 4
+extern bool C_ZNK11QTextStream21generateByteOrderMarkEv(void* qthis); // 4
   // proto:  QTextCodec * QTextStream::codec();
-extern void C_ZNK11QTextStream5codecEv(void* qthis); // 4
+extern void* C_ZNK11QTextStream5codecEv(void* qthis); // 4
   // proto:  void QTextStream::setCodec(QTextCodec * codec);
 extern void C_ZN11QTextStream8setCodecEP10QTextCodec(void* qthis, void* arg0); // 4
   // proto:  void QTextStream::setCodec(const char * codecName);
-extern void C_ZN11QTextStream8setCodecEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZN11QTextStream8setCodecEPKc(void* qthis, void* arg0); // 4
   // proto:  int QTextStream::realNumberPrecision();
-extern void C_ZNK11QTextStream19realNumberPrecisionEv(void* qthis); // 4
+extern int32_t C_ZNK11QTextStream19realNumberPrecisionEv(void* qthis); // 4
   // proto:  void QTextStream::setDevice(QIODevice * device);
 extern void C_ZN11QTextStream9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  QChar QTextStream::padChar();
-extern void C_ZNK11QTextStream7padCharEv(void* qthis); // 4
+extern void* C_ZNK11QTextStream7padCharEv(void* qthis); // 4
   // proto:  void QTextStream::QTextStream(QIODevice * device);
 extern void* C_ZN11QTextStreamC2EP9QIODevice(void* arg0); // 3
   // proto:  void QTextStream::QTextStream();
@@ -77,11 +77,11 @@ extern void* C_ZN11QTextStreamC2Ev(); // 3
   // proto:  QTextStream::Status QTextStream::status();
 extern void C_ZNK11QTextStream6statusEv(void* qthis); // 4
   // proto:  QString * QTextStream::string();
-extern void C_ZNK11QTextStream6stringEv(void* qthis); // 4
+extern void* C_ZNK11QTextStream6stringEv(void* qthis); // 4
   // proto:  void QTextStream::setGenerateByteOrderMark(bool generate);
 extern void C_ZN11QTextStream24setGenerateByteOrderMarkEb(void* qthis, bool arg0); // 4
   // proto:  QString QTextStream::read(qint64 maxlen);
-extern void C_ZN11QTextStream4readEx(void* qthis, int64_t arg0); // 4
+extern void* C_ZN11QTextStream4readEx(void* qthis, int64_t arg0); // 4
   // proto:  void QTextStream::~QTextStream();
 extern void C_ZN11QTextStreamD2Ev(void* qthis); // 4
   // proto:  QTextStream::RealNumberNotation QTextStream::realNumberNotation();
@@ -91,25 +91,25 @@ extern void C_ZN11QTextStream10setPadCharE5QChar(void* qthis, void* arg0); // 4
   // proto:  void QTextStream::setFieldWidth(int width);
 extern void C_ZN11QTextStream13setFieldWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  QIODevice * QTextStream::device();
-extern void C_ZNK11QTextStream6deviceEv(void* qthis); // 4
+extern void* C_ZNK11QTextStream6deviceEv(void* qthis); // 4
   // proto:  QString QTextStream::readLine(qint64 maxlen);
-extern void C_ZN11QTextStream8readLineEx(void* qthis, int64_t arg0); // 4
+extern void* C_ZN11QTextStream8readLineEx(void* qthis, int64_t arg0); // 4
   // proto:  void QTextStream::reset();
 extern void C_ZN11QTextStream5resetEv(void* qthis); // 4
   // proto:  QString QTextStream::readAll();
-extern void C_ZN11QTextStream7readAllEv(void* qthis); // 4
+extern void* C_ZN11QTextStream7readAllEv(void* qthis); // 4
   // proto:  bool QTextStream::readLineInto(QString * line, qint64 maxlen);
-extern void C_ZN11QTextStream12readLineIntoEP7QStringx(void* qthis, void* arg0, int64_t arg1); // 4
+extern bool C_ZN11QTextStream12readLineIntoEP7QStringx(void* qthis, void* arg0, int64_t arg1); // 4
   // proto:  void QTextStream::setLocale(const QLocale & locale);
 extern void C_ZN11QTextStream9setLocaleERK7QLocale(void* qthis, void* arg0); // 4
   // proto:  void QTextStream::resetStatus();
 extern void C_ZN11QTextStream11resetStatusEv(void* qthis); // 4
   // proto:  bool QTextStream::atEnd();
-extern void C_ZNK11QTextStream5atEndEv(void* qthis); // 4
+extern bool C_ZNK11QTextStream5atEndEv(void* qthis); // 4
   // proto:  void QTextStream::setIntegerBase(int base);
 extern void C_ZN11QTextStream14setIntegerBaseEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTextStream::integerBase();
-extern void C_ZNK11QTextStream11integerBaseEv(void* qthis); // 4
+extern int32_t C_ZNK11QTextStream11integerBaseEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -180,7 +180,7 @@ func NewQTextStreamManipulator(args ...interface{}) *QTextStreamManipulator {
 }
 
 // exec(class QTextStream &)
-func (this *QTextStreamManipulator) exec(args ...interface{}) () {
+func (this *QTextStreamManipulator) Exec(args ...interface{}) () {
   // exec(class QTextStream &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -200,10 +200,11 @@ func (this *QTextStreamManipulator) exec(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStreamManipulator", "exec", args)
   }
 
+  return
 }
 
 // autoDetectUnicode()
-func (this *QTextStream) autoDetectUnicode(args ...interface{}) () {
+func (this *QTextStream) Autodetectunicode(args ...interface{}) (ret interface{}) {
   // autoDetectUnicode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -215,16 +216,20 @@ func (this *QTextStream) autoDetectUnicode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextStream17autoDetectUnicodeEv
     // invoke: bool autoDetectUnicode()
-    var ret = C.C_ZNK11QTextStream17autoDetectUnicodeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextStream17autoDetectUnicodeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "autoDetectUnicode", args)
   }
 
+  return
 }
 
 // locale()
-func (this *QTextStream) locale(args ...interface{}) () {
+func (this *QTextStream) Locale(args ...interface{}) (ret interface{}) {
   // locale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -236,16 +241,20 @@ func (this *QTextStream) locale(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextStream6localeEv
     // invoke: QLocale locale()
-    var ret = C.C_ZNK11QTextStream6localeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextStream6localeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QLocale{}) // "QLocale"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "locale", args)
   }
 
+  return
 }
 
 // skipWhiteSpace()
-func (this *QTextStream) skipWhiteSpace(args ...interface{}) () {
+func (this *QTextStream) Skipwhitespace(args ...interface{}) () {
   // skipWhiteSpace()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -262,10 +271,11 @@ func (this *QTextStream) skipWhiteSpace(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "skipWhiteSpace", args)
   }
 
+  return
 }
 
 // pos()
-func (this *QTextStream) pos(args ...interface{}) () {
+func (this *QTextStream) Pos(args ...interface{}) (ret interface{}) {
   // pos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -277,16 +287,20 @@ func (this *QTextStream) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextStream3posEv
     // invoke: qint64 pos()
-    var ret = C.C_ZNK11QTextStream3posEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextStream3posEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int64Ty(false) // "qint64"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "pos", args)
   }
 
+  return
 }
 
 // setRealNumberPrecision(int)
-func (this *QTextStream) setRealNumberPrecision(args ...interface{}) () {
+func (this *QTextStream) Setrealnumberprecision(args ...interface{}) () {
   // setRealNumberPrecision(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,10 +320,11 @@ func (this *QTextStream) setRealNumberPrecision(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "setRealNumberPrecision", args)
   }
 
+  return
 }
 
 // flush()
-func (this *QTextStream) flush(args ...interface{}) () {
+func (this *QTextStream) Flush(args ...interface{}) () {
   // flush()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -326,10 +341,11 @@ func (this *QTextStream) flush(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "flush", args)
   }
 
+  return
 }
 
 // seek(qint64)
-func (this *QTextStream) seek(args ...interface{}) () {
+func (this *QTextStream) Seek(args ...interface{}) (ret interface{}) {
   // seek(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -344,16 +360,20 @@ func (this *QTextStream) seek(args ...interface{}) () {
     // invoke: bool seek(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QTextStream4seekEx(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QTextStream4seekEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "seek", args)
   }
 
+  return
 }
 
 // fieldAlignment()
-func (this *QTextStream) fieldAlignment(args ...interface{}) () {
+func (this *QTextStream) Fieldalignment(args ...interface{}) () {
   // fieldAlignment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -370,10 +390,11 @@ func (this *QTextStream) fieldAlignment(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "fieldAlignment", args)
   }
 
+  return
 }
 
 // fieldWidth()
-func (this *QTextStream) fieldWidth(args ...interface{}) () {
+func (this *QTextStream) Fieldwidth(args ...interface{}) (ret interface{}) {
   // fieldWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -385,16 +406,20 @@ func (this *QTextStream) fieldWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextStream10fieldWidthEv
     // invoke: int fieldWidth()
-    var ret = C.C_ZNK11QTextStream10fieldWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextStream10fieldWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "fieldWidth", args)
   }
 
+  return
 }
 
 // setAutoDetectUnicode(_Bool)
-func (this *QTextStream) setAutoDetectUnicode(args ...interface{}) () {
+func (this *QTextStream) Setautodetectunicode(args ...interface{}) () {
   // setAutoDetectUnicode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -414,10 +439,11 @@ func (this *QTextStream) setAutoDetectUnicode(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "setAutoDetectUnicode", args)
   }
 
+  return
 }
 
 // numberFlags()
-func (this *QTextStream) numberFlags(args ...interface{}) () {
+func (this *QTextStream) Numberflags(args ...interface{}) () {
   // numberFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -434,10 +460,11 @@ func (this *QTextStream) numberFlags(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "numberFlags", args)
   }
 
+  return
 }
 
 // generateByteOrderMark()
-func (this *QTextStream) generateByteOrderMark(args ...interface{}) () {
+func (this *QTextStream) Generatebyteordermark(args ...interface{}) (ret interface{}) {
   // generateByteOrderMark()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -449,16 +476,20 @@ func (this *QTextStream) generateByteOrderMark(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextStream21generateByteOrderMarkEv
     // invoke: bool generateByteOrderMark()
-    var ret = C.C_ZNK11QTextStream21generateByteOrderMarkEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextStream21generateByteOrderMarkEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "generateByteOrderMark", args)
   }
 
+  return
 }
 
 // codec()
-func (this *QTextStream) codec(args ...interface{}) () {
+func (this *QTextStream) Codec(args ...interface{}) (ret interface{}) {
   // codec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -470,16 +501,20 @@ func (this *QTextStream) codec(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextStream5codecEv
     // invoke: QTextCodec * codec()
-    var ret = C.C_ZNK11QTextStream5codecEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextStream5codecEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "codec", args)
   }
 
+  return
 }
 
 // setCodec(class QTextCodec *)
-func (this *QTextStream) setCodec(args ...interface{}) () {
+func (this *QTextStream) Setcodec(args ...interface{}) () {
   // setCodec(class QTextCodec *)
   // setCodec(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -501,17 +536,20 @@ func (this *QTextStream) setCodec(args ...interface{}) () {
   case 1:
     // invoke: _ZN11QTextStream8setCodecEPKc
     // invoke: void setCodec(const char *)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[1][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
     C.C_ZN11QTextStream8setCodecEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "setCodec", args)
   }
 
+  return
 }
 
 // realNumberPrecision()
-func (this *QTextStream) realNumberPrecision(args ...interface{}) () {
+func (this *QTextStream) Realnumberprecision(args ...interface{}) (ret interface{}) {
   // realNumberPrecision()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -523,16 +561,20 @@ func (this *QTextStream) realNumberPrecision(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextStream19realNumberPrecisionEv
     // invoke: int realNumberPrecision()
-    var ret = C.C_ZNK11QTextStream19realNumberPrecisionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextStream19realNumberPrecisionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "realNumberPrecision", args)
   }
 
+  return
 }
 
 // setDevice(class QIODevice *)
-func (this *QTextStream) setDevice(args ...interface{}) () {
+func (this *QTextStream) Setdevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -552,10 +594,11 @@ func (this *QTextStream) setDevice(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "setDevice", args)
   }
 
+  return
 }
 
 // padChar()
-func (this *QTextStream) padChar(args ...interface{}) () {
+func (this *QTextStream) Padchar(args ...interface{}) (ret interface{}) {
   // padChar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -567,12 +610,16 @@ func (this *QTextStream) padChar(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextStream7padCharEv
     // invoke: QChar padChar()
-    var ret = C.C_ZNK11QTextStream7padCharEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextStream7padCharEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QChar{}) // "QChar"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "padChar", args)
   }
 
+  return
 }
 
 // QTextStream(class QIODevice *)
@@ -612,7 +659,7 @@ func NewQTextStream(args ...interface{}) *QTextStream {
 }
 
 // status()
-func (this *QTextStream) status(args ...interface{}) () {
+func (this *QTextStream) Status(args ...interface{}) () {
   // status()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -629,10 +676,11 @@ func (this *QTextStream) status(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "status", args)
   }
 
+  return
 }
 
 // string()
-func (this *QTextStream) string(args ...interface{}) () {
+func (this *QTextStream) String(args ...interface{}) (ret interface{}) {
   // string()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -644,16 +692,20 @@ func (this *QTextStream) string(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextStream6stringEv
     // invoke: QString * string()
-    var ret = C.C_ZNK11QTextStream6stringEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextStream6stringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "string", args)
   }
 
+  return
 }
 
 // setGenerateByteOrderMark(_Bool)
-func (this *QTextStream) setGenerateByteOrderMark(args ...interface{}) () {
+func (this *QTextStream) Setgeneratebyteordermark(args ...interface{}) () {
   // setGenerateByteOrderMark(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -673,10 +725,11 @@ func (this *QTextStream) setGenerateByteOrderMark(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "setGenerateByteOrderMark", args)
   }
 
+  return
 }
 
 // read(qint64)
-func (this *QTextStream) read(args ...interface{}) () {
+func (this *QTextStream) Read(args ...interface{}) (ret interface{}) {
   // read(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -691,16 +744,20 @@ func (this *QTextStream) read(args ...interface{}) () {
     // invoke: QString read(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QTextStream4readEx(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QTextStream4readEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "read", args)
   }
 
+  return
 }
 
 // ~QTextStream()
-func (this *QTextStream) FreeQTextStream(args ...interface{}) () {
+func (this *QTextStream) Freeqtextstream(args ...interface{}) () {
   // ~QTextStream()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -717,10 +774,11 @@ func (this *QTextStream) FreeQTextStream(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "~QTextStream", args)
   }
 
+  return
 }
 
 // realNumberNotation()
-func (this *QTextStream) realNumberNotation(args ...interface{}) () {
+func (this *QTextStream) Realnumbernotation(args ...interface{}) () {
   // realNumberNotation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -737,10 +795,11 @@ func (this *QTextStream) realNumberNotation(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "realNumberNotation", args)
   }
 
+  return
 }
 
 // setPadChar(class QChar)
-func (this *QTextStream) setPadChar(args ...interface{}) () {
+func (this *QTextStream) Setpadchar(args ...interface{}) () {
   // setPadChar(class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -760,10 +819,11 @@ func (this *QTextStream) setPadChar(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "setPadChar", args)
   }
 
+  return
 }
 
 // setFieldWidth(int)
-func (this *QTextStream) setFieldWidth(args ...interface{}) () {
+func (this *QTextStream) Setfieldwidth(args ...interface{}) () {
   // setFieldWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -783,10 +843,11 @@ func (this *QTextStream) setFieldWidth(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "setFieldWidth", args)
   }
 
+  return
 }
 
 // device()
-func (this *QTextStream) device(args ...interface{}) () {
+func (this *QTextStream) Device(args ...interface{}) (ret interface{}) {
   // device()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -798,16 +859,20 @@ func (this *QTextStream) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextStream6deviceEv
     // invoke: QIODevice * device()
-    var ret = C.C_ZNK11QTextStream6deviceEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextStream6deviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QIODevice{}) // "QIODevice *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "device", args)
   }
 
+  return
 }
 
 // readLine(qint64)
-func (this *QTextStream) readLine(args ...interface{}) () {
+func (this *QTextStream) Readline(args ...interface{}) (ret interface{}) {
   // readLine(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -822,16 +887,20 @@ func (this *QTextStream) readLine(args ...interface{}) () {
     // invoke: QString readLine(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QTextStream8readLineEx(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QTextStream8readLineEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "readLine", args)
   }
 
+  return
 }
 
 // reset()
-func (this *QTextStream) reset(args ...interface{}) () {
+func (this *QTextStream) Reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -848,10 +917,11 @@ func (this *QTextStream) reset(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "reset", args)
   }
 
+  return
 }
 
 // readAll()
-func (this *QTextStream) readAll(args ...interface{}) () {
+func (this *QTextStream) Readall(args ...interface{}) (ret interface{}) {
   // readAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -863,16 +933,20 @@ func (this *QTextStream) readAll(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextStream7readAllEv
     // invoke: QString readAll()
-    var ret = C.C_ZN11QTextStream7readAllEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QTextStream7readAllEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "readAll", args)
   }
 
+  return
 }
 
 // readLineInto(class QString *, qint64)
-func (this *QTextStream) readLineInto(args ...interface{}) () {
+func (this *QTextStream) Readlineinto(args ...interface{}) (ret interface{}) {
   // readLineInto(class QString *, qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -890,16 +964,20 @@ func (this *QTextStream) readLineInto(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int64_t(args[1].(int64))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN11QTextStream12readLineIntoEP7QStringx(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QTextStream12readLineIntoEP7QStringx(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "readLineInto", args)
   }
 
+  return
 }
 
 // setLocale(const class QLocale &)
-func (this *QTextStream) setLocale(args ...interface{}) () {
+func (this *QTextStream) Setlocale(args ...interface{}) () {
   // setLocale(const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -919,10 +997,11 @@ func (this *QTextStream) setLocale(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "setLocale", args)
   }
 
+  return
 }
 
 // resetStatus()
-func (this *QTextStream) resetStatus(args ...interface{}) () {
+func (this *QTextStream) Resetstatus(args ...interface{}) () {
   // resetStatus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -939,10 +1018,11 @@ func (this *QTextStream) resetStatus(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "resetStatus", args)
   }
 
+  return
 }
 
 // atEnd()
-func (this *QTextStream) atEnd(args ...interface{}) () {
+func (this *QTextStream) Atend(args ...interface{}) (ret interface{}) {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -954,16 +1034,20 @@ func (this *QTextStream) atEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextStream5atEndEv
     // invoke: bool atEnd()
-    var ret = C.C_ZNK11QTextStream5atEndEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextStream5atEndEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "atEnd", args)
   }
 
+  return
 }
 
 // setIntegerBase(int)
-func (this *QTextStream) setIntegerBase(args ...interface{}) () {
+func (this *QTextStream) Setintegerbase(args ...interface{}) () {
   // setIntegerBase(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -983,10 +1067,11 @@ func (this *QTextStream) setIntegerBase(args ...interface{}) () {
     qtrt.ErrorResolve("QTextStream", "setIntegerBase", args)
   }
 
+  return
 }
 
 // integerBase()
-func (this *QTextStream) integerBase(args ...interface{}) () {
+func (this *QTextStream) Integerbase(args ...interface{}) (ret interface{}) {
   // integerBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -998,12 +1083,16 @@ func (this *QTextStream) integerBase(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextStream11integerBaseEv
     // invoke: int integerBase()
-    var ret = C.C_ZNK11QTextStream11integerBaseEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTextStream11integerBaseEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextStream", "integerBase", args)
   }
 
+  return
 }
 
 // <= body block end

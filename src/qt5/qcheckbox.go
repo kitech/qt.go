@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qcheckbox.h
 // dst-file: /src/widgets/qcheckbox.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QCheckBox::isTristate();
-extern void C_ZNK9QCheckBox10isTristateEv(void* qthis); // 4
+extern bool C_ZNK9QCheckBox10isTristateEv(void* qthis); // 4
   // proto:  void QCheckBox::~QCheckBox();
 extern void C_ZN9QCheckBoxD2Ev(void* qthis); // 4
   // proto:  void QCheckBox::setTristate(bool y);
@@ -39,11 +39,11 @@ extern void* C_ZN9QCheckBoxC2ERK7QStringP7QWidget(void* arg0, void* arg1); // 3
   // proto:  void QCheckBox::QCheckBox(QWidget * parent);
 extern void* C_ZN9QCheckBoxC2EP7QWidget(void* arg0); // 3
   // proto:  QSize QCheckBox::sizeHint();
-extern void C_ZNK9QCheckBox8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK9QCheckBox8sizeHintEv(void* qthis); // 4
   // proto:  const QMetaObject * QCheckBox::metaObject();
 extern void C_ZNK9QCheckBox10metaObjectEv(void* qthis); // 4
   // proto:  QSize QCheckBox::minimumSizeHint();
-extern void C_ZNK9QCheckBox15minimumSizeHintEv(void* qthis); // 4
+extern void* C_ZNK9QCheckBox15minimumSizeHintEv(void* qthis); // 4
   // proto:  Qt::CheckState QCheckBox::checkState();
 extern void C_ZNK9QCheckBox10checkStateEv(void* qthis); // 4
 */
@@ -66,7 +66,7 @@ type QCheckBox struct {
 }
 
 // isTristate()
-func (this *QCheckBox) isTristate(args ...interface{}) () {
+func (this *QCheckBox) Istristate(args ...interface{}) (ret interface{}) {
   // isTristate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -78,16 +78,20 @@ func (this *QCheckBox) isTristate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QCheckBox10isTristateEv
     // invoke: bool isTristate()
-    var ret = C.C_ZNK9QCheckBox10isTristateEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QCheckBox10isTristateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCheckBox", "isTristate", args)
   }
 
+  return
 }
 
 // ~QCheckBox()
-func (this *QCheckBox) FreeQCheckBox(args ...interface{}) () {
+func (this *QCheckBox) Freeqcheckbox(args ...interface{}) () {
   // ~QCheckBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -104,10 +108,11 @@ func (this *QCheckBox) FreeQCheckBox(args ...interface{}) () {
     qtrt.ErrorResolve("QCheckBox", "~QCheckBox", args)
   }
 
+  return
 }
 
 // setTristate(_Bool)
-func (this *QCheckBox) setTristate(args ...interface{}) () {
+func (this *QCheckBox) Settristate(args ...interface{}) () {
   // setTristate(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -127,6 +132,7 @@ func (this *QCheckBox) setTristate(args ...interface{}) () {
     qtrt.ErrorResolve("QCheckBox", "setTristate", args)
   }
 
+  return
 }
 
 // QCheckBox(const class QString &, class QWidget *)
@@ -172,7 +178,7 @@ func NewQCheckBox(args ...interface{}) *QCheckBox {
 }
 
 // sizeHint()
-func (this *QCheckBox) sizeHint(args ...interface{}) () {
+func (this *QCheckBox) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -184,16 +190,20 @@ func (this *QCheckBox) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QCheckBox8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK9QCheckBox8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QCheckBox8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCheckBox", "sizeHint", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QCheckBox) metaObject(args ...interface{}) () {
+func (this *QCheckBox) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -210,10 +220,11 @@ func (this *QCheckBox) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QCheckBox", "metaObject", args)
   }
 
+  return
 }
 
 // minimumSizeHint()
-func (this *QCheckBox) minimumSizeHint(args ...interface{}) () {
+func (this *QCheckBox) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -225,16 +236,20 @@ func (this *QCheckBox) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QCheckBox15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret = C.C_ZNK9QCheckBox15minimumSizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QCheckBox15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCheckBox", "minimumSizeHint", args)
   }
 
+  return
 }
 
 // checkState()
-func (this *QCheckBox) checkState(args ...interface{}) () {
+func (this *QCheckBox) Checkstate(args ...interface{}) () {
   // checkState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -251,6 +266,7 @@ func (this *QCheckBox) checkState(args ...interface{}) () {
     qtrt.ErrorResolve("QCheckBox", "checkState", args)
   }
 
+  return
 }
 
 // <= body block end

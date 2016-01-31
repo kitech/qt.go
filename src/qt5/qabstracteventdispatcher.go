@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qabstracteventdispatcher.h
 // dst-file: /src/core/qabstracteventdispatcher.go
 //
@@ -41,7 +41,7 @@ extern void C_ZN24QAbstractEventDispatcher8instanceEP7QThread(void* arg0); // 4
   // proto:  void QAbstractEventDispatcher::removeNativeEventFilter(QAbstractNativeEventFilter * filterObj);
 extern void C_ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstractNativeEventFilter(void* qthis, void* arg0); // 4
   // proto:  bool QAbstractEventDispatcher::filterNativeEvent(const QByteArray & eventType, void * message, long * result);
-extern void C_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(void* qthis, void* arg0, void* arg1, int32_t* arg2); // 4
+extern bool C_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QAbstractEventDispatcher::QAbstractEventDispatcher(QObject * parent);
 extern void* C_ZN24QAbstractEventDispatcherC2EP7QObject(void* arg0); // 3
   // proto:  const QMetaObject * QAbstractEventDispatcher::metaObject();
@@ -67,7 +67,7 @@ type QAbstractEventDispatcher struct {
 }
 
 // installNativeEventFilter(class QAbstractNativeEventFilter *)
-func (this *QAbstractEventDispatcher) installNativeEventFilter(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Installnativeeventfilter(args ...interface{}) () {
   // installNativeEventFilter(class QAbstractNativeEventFilter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -87,10 +87,11 @@ func (this *QAbstractEventDispatcher) installNativeEventFilter(args ...interface
     qtrt.ErrorResolve("QAbstractEventDispatcher", "installNativeEventFilter", args)
   }
 
+  return
 }
 
 // ~QAbstractEventDispatcher()
-func (this *QAbstractEventDispatcher) FreeQAbstractEventDispatcher(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Freeqabstracteventdispatcher(args ...interface{}) () {
   // ~QAbstractEventDispatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -107,10 +108,11 @@ func (this *QAbstractEventDispatcher) FreeQAbstractEventDispatcher(args ...inter
     qtrt.ErrorResolve("QAbstractEventDispatcher", "~QAbstractEventDispatcher", args)
   }
 
+  return
 }
 
 // closingDown()
-func (this *QAbstractEventDispatcher) closingDown(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Closingdown(args ...interface{}) () {
   // closingDown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -127,10 +129,11 @@ func (this *QAbstractEventDispatcher) closingDown(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractEventDispatcher", "closingDown", args)
   }
 
+  return
 }
 
 // startingUp()
-func (this *QAbstractEventDispatcher) startingUp(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Startingup(args ...interface{}) () {
   // startingUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -147,10 +150,11 @@ func (this *QAbstractEventDispatcher) startingUp(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractEventDispatcher", "startingUp", args)
   }
 
+  return
 }
 
 // instance(class QThread *)
-func (this *QAbstractEventDispatcher) instance_s(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Instance_S(args ...interface{}) () {
   // instance(class QThread *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -170,10 +174,11 @@ func (this *QAbstractEventDispatcher) instance_s(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractEventDispatcher", "instance", args)
   }
 
+  return
 }
 
 // removeNativeEventFilter(class QAbstractNativeEventFilter *)
-func (this *QAbstractEventDispatcher) removeNativeEventFilter(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Removenativeeventfilter(args ...interface{}) () {
   // removeNativeEventFilter(class QAbstractNativeEventFilter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -193,10 +198,11 @@ func (this *QAbstractEventDispatcher) removeNativeEventFilter(args ...interface{
     qtrt.ErrorResolve("QAbstractEventDispatcher", "removeNativeEventFilter", args)
   }
 
+  return
 }
 
 // filterNativeEvent(const class QByteArray &, void *, long *)
-func (this *QAbstractEventDispatcher) filterNativeEvent(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Filternativeevent(args ...interface{}) (ret interface{}) {
   // filterNativeEvent(const class QByteArray &, void *, long *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -215,14 +221,18 @@ func (this *QAbstractEventDispatcher) filterNativeEvent(args ...interface{}) () 
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
-    var arg2 = (*C.int32_t)(args[2].(*int32))
+    var arg2 = (unsafe.Pointer)(args[2].(*int32))
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "filterNativeEvent", args)
   }
 
+  return
 }
 
 // QAbstractEventDispatcher(class QObject *)
@@ -253,7 +263,7 @@ func NewQAbstractEventDispatcher(args ...interface{}) *QAbstractEventDispatcher 
 }
 
 // metaObject()
-func (this *QAbstractEventDispatcher) metaObject(args ...interface{}) () {
+func (this *QAbstractEventDispatcher) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -270,6 +280,7 @@ func (this *QAbstractEventDispatcher) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QAbstractEventDispatcher", "metaObject", args)
   }
 
+  return
 }
 
 // <= body block end

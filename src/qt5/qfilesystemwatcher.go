@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.go
 //
@@ -41,13 +41,13 @@ extern void C_ZN18QFileSystemWatcher11removePathsERK11QStringList(void* qthis, v
   // proto:  QStringList QFileSystemWatcher::directories();
 extern void C_ZNK18QFileSystemWatcher11directoriesEv(void* qthis); // 4
   // proto:  bool QFileSystemWatcher::addPath(const QString & file);
-extern void C_ZN18QFileSystemWatcher7addPathERK7QString(void* qthis, void* arg0); // 4
+extern bool C_ZN18QFileSystemWatcher7addPathERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QFileSystemWatcher::~QFileSystemWatcher();
 extern void C_ZN18QFileSystemWatcherD2Ev(void* qthis); // 4
   // proto:  QStringList QFileSystemWatcher::addPaths(const QStringList & files);
 extern void C_ZN18QFileSystemWatcher8addPathsERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  bool QFileSystemWatcher::removePath(const QString & file);
-extern void C_ZN18QFileSystemWatcher10removePathERK7QString(void* qthis, void* arg0); // 4
+extern bool C_ZN18QFileSystemWatcher10removePathERK7QString(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -69,7 +69,7 @@ type QFileSystemWatcher struct {
 }
 
 // files()
-func (this *QFileSystemWatcher) files(args ...interface{}) () {
+func (this *QFileSystemWatcher) Files(args ...interface{}) () {
   // files()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -86,10 +86,11 @@ func (this *QFileSystemWatcher) files(args ...interface{}) () {
     qtrt.ErrorResolve("QFileSystemWatcher", "files", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QFileSystemWatcher) metaObject(args ...interface{}) () {
+func (this *QFileSystemWatcher) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -106,6 +107,7 @@ func (this *QFileSystemWatcher) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QFileSystemWatcher", "metaObject", args)
   }
 
+  return
 }
 
 // QFileSystemWatcher(class QObject *)
@@ -151,7 +153,7 @@ func NewQFileSystemWatcher(args ...interface{}) *QFileSystemWatcher {
 }
 
 // removePaths(const class QStringList &)
-func (this *QFileSystemWatcher) removePaths(args ...interface{}) () {
+func (this *QFileSystemWatcher) Removepaths(args ...interface{}) () {
   // removePaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -171,10 +173,11 @@ func (this *QFileSystemWatcher) removePaths(args ...interface{}) () {
     qtrt.ErrorResolve("QFileSystemWatcher", "removePaths", args)
   }
 
+  return
 }
 
 // directories()
-func (this *QFileSystemWatcher) directories(args ...interface{}) () {
+func (this *QFileSystemWatcher) Directories(args ...interface{}) () {
   // directories()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -191,10 +194,11 @@ func (this *QFileSystemWatcher) directories(args ...interface{}) () {
     qtrt.ErrorResolve("QFileSystemWatcher", "directories", args)
   }
 
+  return
 }
 
 // addPath(const class QString &)
-func (this *QFileSystemWatcher) addPath(args ...interface{}) () {
+func (this *QFileSystemWatcher) Addpath(args ...interface{}) (ret interface{}) {
   // addPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -209,16 +213,20 @@ func (this *QFileSystemWatcher) addPath(args ...interface{}) () {
     // invoke: bool addPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN18QFileSystemWatcher7addPathERK7QString(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN18QFileSystemWatcher7addPathERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "addPath", args)
   }
 
+  return
 }
 
 // ~QFileSystemWatcher()
-func (this *QFileSystemWatcher) FreeQFileSystemWatcher(args ...interface{}) () {
+func (this *QFileSystemWatcher) Freeqfilesystemwatcher(args ...interface{}) () {
   // ~QFileSystemWatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -235,10 +243,11 @@ func (this *QFileSystemWatcher) FreeQFileSystemWatcher(args ...interface{}) () {
     qtrt.ErrorResolve("QFileSystemWatcher", "~QFileSystemWatcher", args)
   }
 
+  return
 }
 
 // addPaths(const class QStringList &)
-func (this *QFileSystemWatcher) addPaths(args ...interface{}) () {
+func (this *QFileSystemWatcher) Addpaths(args ...interface{}) () {
   // addPaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -258,10 +267,11 @@ func (this *QFileSystemWatcher) addPaths(args ...interface{}) () {
     qtrt.ErrorResolve("QFileSystemWatcher", "addPaths", args)
   }
 
+  return
 }
 
 // removePath(const class QString &)
-func (this *QFileSystemWatcher) removePath(args ...interface{}) () {
+func (this *QFileSystemWatcher) Removepath(args ...interface{}) (ret interface{}) {
   // removePath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -276,12 +286,16 @@ func (this *QFileSystemWatcher) removePath(args ...interface{}) () {
     // invoke: bool removePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN18QFileSystemWatcher10removePathERK7QString(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN18QFileSystemWatcher10removePathERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "removePath", args)
   }
 
+  return
 }
 
 // <= body block end

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qbuttongroup.h
 // dst-file: /src/widgets/qbuttongroup.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QButtonGroup::exclusive();
-extern void C_ZNK12QButtonGroup9exclusiveEv(void* qthis); // 4
+extern bool C_ZNK12QButtonGroup9exclusiveEv(void* qthis); // 4
   // proto:  void QButtonGroup::QButtonGroup(QObject * parent);
 extern void* C_ZN12QButtonGroupC2EP7QObject(void* arg0); // 3
   // proto:  void QButtonGroup::addButton(QAbstractButton * , int id);
@@ -39,13 +39,13 @@ extern void C_ZN12QButtonGroupD2Ev(void* qthis); // 4
   // proto:  void QButtonGroup::removeButton(QAbstractButton * );
 extern void C_ZN12QButtonGroup12removeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  int QButtonGroup::id(QAbstractButton * button);
-extern void C_ZNK12QButtonGroup2idEP15QAbstractButton(void* qthis, void* arg0); // 4
+extern int32_t C_ZNK12QButtonGroup2idEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  QList<QAbstractButton *> QButtonGroup::buttons();
 extern void C_ZNK12QButtonGroup7buttonsEv(void* qthis); // 4
   // proto:  QAbstractButton * QButtonGroup::checkedButton();
 extern void C_ZNK12QButtonGroup13checkedButtonEv(void* qthis); // 4
   // proto:  int QButtonGroup::checkedId();
-extern void C_ZNK12QButtonGroup9checkedIdEv(void* qthis); // 4
+extern int32_t C_ZNK12QButtonGroup9checkedIdEv(void* qthis); // 4
   // proto:  const QMetaObject * QButtonGroup::metaObject();
 extern void C_ZNK12QButtonGroup10metaObjectEv(void* qthis); // 4
   // proto:  void QButtonGroup::setExclusive(bool );
@@ -77,7 +77,7 @@ type QButtonGroup struct {
 }
 
 // exclusive()
-func (this *QButtonGroup) exclusive(args ...interface{}) () {
+func (this *QButtonGroup) Exclusive(args ...interface{}) (ret interface{}) {
   // exclusive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -89,12 +89,16 @@ func (this *QButtonGroup) exclusive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QButtonGroup9exclusiveEv
     // invoke: bool exclusive()
-    var ret = C.C_ZNK12QButtonGroup9exclusiveEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QButtonGroup9exclusiveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QButtonGroup", "exclusive", args)
   }
 
+  return
 }
 
 // QButtonGroup(class QObject *)
@@ -125,7 +129,7 @@ func NewQButtonGroup(args ...interface{}) *QButtonGroup {
 }
 
 // addButton(class QAbstractButton *, int)
-func (this *QButtonGroup) addButton(args ...interface{}) () {
+func (this *QButtonGroup) Addbutton(args ...interface{}) () {
   // addButton(class QAbstractButton *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -148,10 +152,11 @@ func (this *QButtonGroup) addButton(args ...interface{}) () {
     qtrt.ErrorResolve("QButtonGroup", "addButton", args)
   }
 
+  return
 }
 
 // ~QButtonGroup()
-func (this *QButtonGroup) FreeQButtonGroup(args ...interface{}) () {
+func (this *QButtonGroup) Freeqbuttongroup(args ...interface{}) () {
   // ~QButtonGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -168,10 +173,11 @@ func (this *QButtonGroup) FreeQButtonGroup(args ...interface{}) () {
     qtrt.ErrorResolve("QButtonGroup", "~QButtonGroup", args)
   }
 
+  return
 }
 
 // removeButton(class QAbstractButton *)
-func (this *QButtonGroup) removeButton(args ...interface{}) () {
+func (this *QButtonGroup) Removebutton(args ...interface{}) () {
   // removeButton(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -191,10 +197,11 @@ func (this *QButtonGroup) removeButton(args ...interface{}) () {
     qtrt.ErrorResolve("QButtonGroup", "removeButton", args)
   }
 
+  return
 }
 
 // id(class QAbstractButton *)
-func (this *QButtonGroup) id(args ...interface{}) () {
+func (this *QButtonGroup) Id(args ...interface{}) (ret interface{}) {
   // id(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -209,16 +216,20 @@ func (this *QButtonGroup) id(args ...interface{}) () {
     // invoke: int id(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK12QButtonGroup2idEP15QAbstractButton(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QButtonGroup2idEP15QAbstractButton(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QButtonGroup", "id", args)
   }
 
+  return
 }
 
 // buttons()
-func (this *QButtonGroup) buttons(args ...interface{}) () {
+func (this *QButtonGroup) Buttons(args ...interface{}) () {
   // buttons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -235,10 +246,11 @@ func (this *QButtonGroup) buttons(args ...interface{}) () {
     qtrt.ErrorResolve("QButtonGroup", "buttons", args)
   }
 
+  return
 }
 
 // checkedButton()
-func (this *QButtonGroup) checkedButton(args ...interface{}) () {
+func (this *QButtonGroup) Checkedbutton(args ...interface{}) () {
   // checkedButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -255,10 +267,11 @@ func (this *QButtonGroup) checkedButton(args ...interface{}) () {
     qtrt.ErrorResolve("QButtonGroup", "checkedButton", args)
   }
 
+  return
 }
 
 // checkedId()
-func (this *QButtonGroup) checkedId(args ...interface{}) () {
+func (this *QButtonGroup) Checkedid(args ...interface{}) (ret interface{}) {
   // checkedId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -270,16 +283,20 @@ func (this *QButtonGroup) checkedId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QButtonGroup9checkedIdEv
     // invoke: int checkedId()
-    var ret = C.C_ZNK12QButtonGroup9checkedIdEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QButtonGroup9checkedIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QButtonGroup", "checkedId", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QButtonGroup) metaObject(args ...interface{}) () {
+func (this *QButtonGroup) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -296,10 +313,11 @@ func (this *QButtonGroup) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QButtonGroup", "metaObject", args)
   }
 
+  return
 }
 
 // setExclusive(_Bool)
-func (this *QButtonGroup) setExclusive(args ...interface{}) () {
+func (this *QButtonGroup) Setexclusive(args ...interface{}) () {
   // setExclusive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -319,10 +337,11 @@ func (this *QButtonGroup) setExclusive(args ...interface{}) () {
     qtrt.ErrorResolve("QButtonGroup", "setExclusive", args)
   }
 
+  return
 }
 
 // button(int)
-func (this *QButtonGroup) button(args ...interface{}) () {
+func (this *QButtonGroup) Button(args ...interface{}) () {
   // button(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -342,10 +361,11 @@ func (this *QButtonGroup) button(args ...interface{}) () {
     qtrt.ErrorResolve("QButtonGroup", "button", args)
   }
 
+  return
 }
 
 // setId(class QAbstractButton *, int)
-func (this *QButtonGroup) setId(args ...interface{}) () {
+func (this *QButtonGroup) Setid(args ...interface{}) () {
   // setId(class QAbstractButton *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -368,6 +388,7 @@ func (this *QButtonGroup) setId(args ...interface{}) () {
     qtrt.ErrorResolve("QButtonGroup", "setId", args)
   }
 
+  return
 }
 
 // <= body block end

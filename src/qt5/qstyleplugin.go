@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qstyleplugin.h
 // dst-file: /src/widgets/qstyleplugin.go
 //
@@ -53,7 +53,7 @@ type QStylePlugin struct {
 }
 
 // ~QStylePlugin()
-func (this *QStylePlugin) FreeQStylePlugin(args ...interface{}) () {
+func (this *QStylePlugin) Freeqstyleplugin(args ...interface{}) () {
   // ~QStylePlugin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -70,10 +70,11 @@ func (this *QStylePlugin) FreeQStylePlugin(args ...interface{}) () {
     qtrt.ErrorResolve("QStylePlugin", "~QStylePlugin", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QStylePlugin) metaObject(args ...interface{}) () {
+func (this *QStylePlugin) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -90,6 +91,7 @@ func (this *QStylePlugin) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QStylePlugin", "metaObject", args)
   }
 
+  return
 }
 
 // QStylePlugin(class QObject *)

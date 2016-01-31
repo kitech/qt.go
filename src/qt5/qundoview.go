@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qundoview.h
 // dst-file: /src/widgets/qundoview.go
 //
@@ -33,7 +33,7 @@ extern void C_ZN9QUndoView12setCleanIconERK5QIcon(void* qthis, void* arg0); // 4
   // proto:  void QUndoView::~QUndoView();
 extern void C_ZN9QUndoViewD2Ev(void* qthis); // 4
   // proto:  QIcon QUndoView::cleanIcon();
-extern void C_ZNK9QUndoView9cleanIconEv(void* qthis); // 4
+extern void* C_ZNK9QUndoView9cleanIconEv(void* qthis); // 4
   // proto:  void QUndoView::QUndoView(QWidget * parent);
 extern void* C_ZN9QUndoViewC2EP7QWidget(void* arg0); // 3
   // proto:  void QUndoView::QUndoView(QUndoGroup * group, QWidget * parent);
@@ -41,7 +41,7 @@ extern void* C_ZN9QUndoViewC2EP10QUndoGroupP7QWidget(void* arg0, void* arg1); //
   // proto:  void QUndoView::QUndoView(QUndoStack * stack, QWidget * parent);
 extern void* C_ZN9QUndoViewC2EP10QUndoStackP7QWidget(void* arg0, void* arg1); // 3
   // proto:  QString QUndoView::emptyLabel();
-extern void C_ZNK9QUndoView10emptyLabelEv(void* qthis); // 4
+extern void* C_ZNK9QUndoView10emptyLabelEv(void* qthis); // 4
   // proto:  void QUndoView::setEmptyLabel(const QString & label);
 extern void C_ZN9QUndoView13setEmptyLabelERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QUndoView::setStack(QUndoStack * stack);
@@ -51,9 +51,9 @@ extern void C_ZNK9QUndoView10metaObjectEv(void* qthis); // 4
   // proto:  void QUndoView::setGroup(QUndoGroup * group);
 extern void C_ZN9QUndoView8setGroupEP10QUndoGroup(void* qthis, void* arg0); // 4
   // proto:  QUndoGroup * QUndoView::group();
-extern void C_ZNK9QUndoView5groupEv(void* qthis); // 4
+extern void* C_ZNK9QUndoView5groupEv(void* qthis); // 4
   // proto:  QUndoStack * QUndoView::stack();
-extern void C_ZNK9QUndoView5stackEv(void* qthis); // 4
+extern void* C_ZNK9QUndoView5stackEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -73,7 +73,7 @@ type QUndoView struct {
 }
 
 // setCleanIcon(const class QIcon &)
-func (this *QUndoView) setCleanIcon(args ...interface{}) () {
+func (this *QUndoView) Setcleanicon(args ...interface{}) () {
   // setCleanIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -93,10 +93,11 @@ func (this *QUndoView) setCleanIcon(args ...interface{}) () {
     qtrt.ErrorResolve("QUndoView", "setCleanIcon", args)
   }
 
+  return
 }
 
 // ~QUndoView()
-func (this *QUndoView) FreeQUndoView(args ...interface{}) () {
+func (this *QUndoView) Freequndoview(args ...interface{}) () {
   // ~QUndoView()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -113,10 +114,11 @@ func (this *QUndoView) FreeQUndoView(args ...interface{}) () {
     qtrt.ErrorResolve("QUndoView", "~QUndoView", args)
   }
 
+  return
 }
 
 // cleanIcon()
-func (this *QUndoView) cleanIcon(args ...interface{}) () {
+func (this *QUndoView) Cleanicon(args ...interface{}) (ret interface{}) {
   // cleanIcon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -128,12 +130,16 @@ func (this *QUndoView) cleanIcon(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUndoView9cleanIconEv
     // invoke: QIcon cleanIcon()
-    var ret = C.C_ZNK9QUndoView9cleanIconEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QUndoView9cleanIconEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QIcon{}) // "QIcon"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QUndoView", "cleanIcon", args)
   }
 
+  return
 }
 
 // QUndoView(class QWidget *)
@@ -194,7 +200,7 @@ func NewQUndoView(args ...interface{}) *QUndoView {
 }
 
 // emptyLabel()
-func (this *QUndoView) emptyLabel(args ...interface{}) () {
+func (this *QUndoView) Emptylabel(args ...interface{}) (ret interface{}) {
   // emptyLabel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -206,16 +212,20 @@ func (this *QUndoView) emptyLabel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUndoView10emptyLabelEv
     // invoke: QString emptyLabel()
-    var ret = C.C_ZNK9QUndoView10emptyLabelEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QUndoView10emptyLabelEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QUndoView", "emptyLabel", args)
   }
 
+  return
 }
 
 // setEmptyLabel(const class QString &)
-func (this *QUndoView) setEmptyLabel(args ...interface{}) () {
+func (this *QUndoView) Setemptylabel(args ...interface{}) () {
   // setEmptyLabel(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -235,10 +245,11 @@ func (this *QUndoView) setEmptyLabel(args ...interface{}) () {
     qtrt.ErrorResolve("QUndoView", "setEmptyLabel", args)
   }
 
+  return
 }
 
 // setStack(class QUndoStack *)
-func (this *QUndoView) setStack(args ...interface{}) () {
+func (this *QUndoView) Setstack(args ...interface{}) () {
   // setStack(class QUndoStack *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -258,10 +269,11 @@ func (this *QUndoView) setStack(args ...interface{}) () {
     qtrt.ErrorResolve("QUndoView", "setStack", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QUndoView) metaObject(args ...interface{}) () {
+func (this *QUndoView) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -278,10 +290,11 @@ func (this *QUndoView) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QUndoView", "metaObject", args)
   }
 
+  return
 }
 
 // setGroup(class QUndoGroup *)
-func (this *QUndoView) setGroup(args ...interface{}) () {
+func (this *QUndoView) Setgroup(args ...interface{}) () {
   // setGroup(class QUndoGroup *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -301,10 +314,11 @@ func (this *QUndoView) setGroup(args ...interface{}) () {
     qtrt.ErrorResolve("QUndoView", "setGroup", args)
   }
 
+  return
 }
 
 // group()
-func (this *QUndoView) group(args ...interface{}) () {
+func (this *QUndoView) Group(args ...interface{}) (ret interface{}) {
   // group()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -316,16 +330,20 @@ func (this *QUndoView) group(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUndoView5groupEv
     // invoke: QUndoGroup * group()
-    var ret = C.C_ZNK9QUndoView5groupEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QUndoView5groupEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QUndoGroup{}) // "QUndoGroup *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QUndoView", "group", args)
   }
 
+  return
 }
 
 // stack()
-func (this *QUndoView) stack(args ...interface{}) () {
+func (this *QUndoView) Stack(args ...interface{}) (ret interface{}) {
   // stack()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -337,12 +355,16 @@ func (this *QUndoView) stack(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUndoView5stackEv
     // invoke: QUndoStack * stack()
-    var ret = C.C_ZNK9QUndoView5stackEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QUndoView5stackEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QUndoStack{}) // "QUndoStack *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QUndoView", "stack", args)
   }
 
+  return
 }
 
 // <= body block end

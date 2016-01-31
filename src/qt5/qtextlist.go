@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.go
 //
@@ -29,23 +29,23 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QString QTextList::itemText(const QTextBlock & );
-extern void C_ZNK9QTextList8itemTextERK10QTextBlock(void* qthis, void* arg0); // 4
+extern void* C_ZNK9QTextList8itemTextERK10QTextBlock(void* qthis, void* arg0); // 4
   // proto:  int QTextList::count();
-extern void C_ZNK9QTextList5countEv(void* qthis); // 4
+extern int32_t C_ZNK9QTextList5countEv(void* qthis); // 4
   // proto:  void QTextList::setFormat(const QTextListFormat & format);
 extern void C_ZN9QTextList9setFormatERK15QTextListFormat(void* qthis, void* arg0); // 2
   // proto:  QTextListFormat QTextList::format();
-extern void C_ZNK9QTextList6formatEv(void* qthis); // 2
+extern void* C_ZNK9QTextList6formatEv(void* qthis); // 2
   // proto:  void QTextList::remove(const QTextBlock & );
 extern void C_ZN9QTextList6removeERK10QTextBlock(void* qthis, void* arg0); // 4
   // proto:  int QTextList::itemNumber(const QTextBlock & );
-extern void C_ZNK9QTextList10itemNumberERK10QTextBlock(void* qthis, void* arg0); // 4
+extern int32_t C_ZNK9QTextList10itemNumberERK10QTextBlock(void* qthis, void* arg0); // 4
   // proto:  QTextBlock QTextList::item(int i);
-extern void C_ZNK9QTextList4itemEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK9QTextList4itemEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTextList::add(const QTextBlock & block);
 extern void C_ZN9QTextList3addERK10QTextBlock(void* qthis, void* arg0); // 4
   // proto:  bool QTextList::isEmpty();
-extern void C_ZNK9QTextList7isEmptyEv(void* qthis); // 2
+extern bool C_ZNK9QTextList7isEmptyEv(void* qthis); // 2
   // proto:  void QTextList::removeItem(int i);
 extern void C_ZN9QTextList10removeItemEi(void* qthis, int32_t arg0); // 4
   // proto:  const QMetaObject * QTextList::metaObject();
@@ -73,7 +73,7 @@ type QTextList struct {
 }
 
 // itemText(const class QTextBlock &)
-func (this *QTextList) itemText(args ...interface{}) () {
+func (this *QTextList) Itemtext(args ...interface{}) (ret interface{}) {
   // itemText(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -88,16 +88,20 @@ func (this *QTextList) itemText(args ...interface{}) () {
     // invoke: QString itemText(const class QTextBlock &)
     var arg0 = args[0].(QTextBlock).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QTextList8itemTextERK10QTextBlock(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTextList8itemTextERK10QTextBlock(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextList", "itemText", args)
   }
 
+  return
 }
 
 // count()
-func (this *QTextList) count(args ...interface{}) () {
+func (this *QTextList) Count(args ...interface{}) (ret interface{}) {
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -109,16 +113,20 @@ func (this *QTextList) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextList5countEv
     // invoke: int count()
-    var ret = C.C_ZNK9QTextList5countEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTextList5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextList", "count", args)
   }
 
+  return
 }
 
 // setFormat(const class QTextListFormat &)
-func (this *QTextList) setFormat(args ...interface{}) () {
+func (this *QTextList) Setformat(args ...interface{}) () {
   // setFormat(const class QTextListFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -138,10 +146,11 @@ func (this *QTextList) setFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QTextList", "setFormat", args)
   }
 
+  return
 }
 
 // format()
-func (this *QTextList) format(args ...interface{}) () {
+func (this *QTextList) Format(args ...interface{}) (ret interface{}) {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -153,16 +162,20 @@ func (this *QTextList) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextList6formatEv
     // invoke: QTextListFormat format()
-    var ret = C.C_ZNK9QTextList6formatEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTextList6formatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextListFormat{}) // "QTextListFormat"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextList", "format", args)
   }
 
+  return
 }
 
 // remove(const class QTextBlock &)
-func (this *QTextList) remove(args ...interface{}) () {
+func (this *QTextList) Remove(args ...interface{}) () {
   // remove(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,10 +195,11 @@ func (this *QTextList) remove(args ...interface{}) () {
     qtrt.ErrorResolve("QTextList", "remove", args)
   }
 
+  return
 }
 
 // itemNumber(const class QTextBlock &)
-func (this *QTextList) itemNumber(args ...interface{}) () {
+func (this *QTextList) Itemnumber(args ...interface{}) (ret interface{}) {
   // itemNumber(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -200,16 +214,20 @@ func (this *QTextList) itemNumber(args ...interface{}) () {
     // invoke: int itemNumber(const class QTextBlock &)
     var arg0 = args[0].(QTextBlock).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QTextList10itemNumberERK10QTextBlock(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTextList10itemNumberERK10QTextBlock(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextList", "itemNumber", args)
   }
 
+  return
 }
 
 // item(int)
-func (this *QTextList) item(args ...interface{}) () {
+func (this *QTextList) Item(args ...interface{}) (ret interface{}) {
   // item(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -224,16 +242,20 @@ func (this *QTextList) item(args ...interface{}) () {
     // invoke: QTextBlock item(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QTextList4itemEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTextList4itemEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextBlock{}) // "QTextBlock"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextList", "item", args)
   }
 
+  return
 }
 
 // add(const class QTextBlock &)
-func (this *QTextList) add(args ...interface{}) () {
+func (this *QTextList) Add(args ...interface{}) () {
   // add(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -253,10 +275,11 @@ func (this *QTextList) add(args ...interface{}) () {
     qtrt.ErrorResolve("QTextList", "add", args)
   }
 
+  return
 }
 
 // isEmpty()
-func (this *QTextList) isEmpty(args ...interface{}) () {
+func (this *QTextList) Isempty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -268,16 +291,20 @@ func (this *QTextList) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextList7isEmptyEv
     // invoke: bool isEmpty()
-    var ret = C.C_ZNK9QTextList7isEmptyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTextList7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTextList", "isEmpty", args)
   }
 
+  return
 }
 
 // removeItem(int)
-func (this *QTextList) removeItem(args ...interface{}) () {
+func (this *QTextList) Removeitem(args ...interface{}) () {
   // removeItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -297,10 +324,11 @@ func (this *QTextList) removeItem(args ...interface{}) () {
     qtrt.ErrorResolve("QTextList", "removeItem", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QTextList) metaObject(args ...interface{}) () {
+func (this *QTextList) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -317,10 +345,11 @@ func (this *QTextList) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QTextList", "metaObject", args)
   }
 
+  return
 }
 
 // ~QTextList()
-func (this *QTextList) FreeQTextList(args ...interface{}) () {
+func (this *QTextList) Freeqtextlist(args ...interface{}) () {
   // ~QTextList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -337,6 +366,7 @@ func (this *QTextList) FreeQTextList(args ...interface{}) () {
     qtrt.ErrorResolve("QTextList", "~QTextList", args)
   }
 
+  return
 }
 
 // QTextList(class QTextDocument *)

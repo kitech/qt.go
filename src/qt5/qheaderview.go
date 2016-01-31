@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qheaderview.h
 // dst-file: /src/widgets/qheaderview.go
 //
@@ -29,13 +29,13 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QHeaderView::cascadingSectionResizes();
-extern void C_ZNK11QHeaderView23cascadingSectionResizesEv(void* qthis); // 4
+extern bool C_ZNK11QHeaderView23cascadingSectionResizesEv(void* qthis); // 4
   // proto:  void QHeaderView::setResizeContentsPrecision(int precision);
 extern void C_ZN11QHeaderView26setResizeContentsPrecisionEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QHeaderView::sectionsHidden();
-extern void C_ZNK11QHeaderView14sectionsHiddenEv(void* qthis); // 4
+extern bool C_ZNK11QHeaderView14sectionsHiddenEv(void* qthis); // 4
   // proto:  int QHeaderView::sectionSizeHint(int logicalIndex);
-extern void C_ZNK11QHeaderView15sectionSizeHintEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK11QHeaderView15sectionSizeHintEi(void* qthis, int32_t arg0); // 4
   // proto:  Qt::SortOrder QHeaderView::sortIndicatorOrder();
 extern void C_ZNK11QHeaderView18sortIndicatorOrderEv(void* qthis); // 4
   // proto:  void QHeaderView::resetDefaultSectionSize();
@@ -45,11 +45,11 @@ extern void C_ZN11QHeaderView9setOffsetEi(void* qthis, int32_t arg0); // 4
   // proto:  void QHeaderView::reset();
 extern void C_ZN11QHeaderView5resetEv(void* qthis); // 4
   // proto:  int QHeaderView::sectionPosition(int logicalIndex);
-extern void C_ZNK11QHeaderView15sectionPositionEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK11QHeaderView15sectionPositionEi(void* qthis, int32_t arg0); // 4
   // proto:  int QHeaderView::logicalIndex(int visualIndex);
-extern void C_ZNK11QHeaderView12logicalIndexEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK11QHeaderView12logicalIndexEi(void* qthis, int32_t arg0); // 4
   // proto:  int QHeaderView::sectionSize(int logicalIndex);
-extern void C_ZNK11QHeaderView11sectionSizeEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK11QHeaderView11sectionSizeEi(void* qthis, int32_t arg0); // 4
   // proto:  const QMetaObject * QHeaderView::metaObject();
 extern void C_ZNK11QHeaderView10metaObjectEv(void* qthis); // 4
   // proto:  void QHeaderView::hideSection(int logicalIndex);
@@ -61,7 +61,7 @@ extern void C_ZNK11QHeaderView17sectionResizeModeEi(void* qthis, int32_t arg0); 
   // proto:  void QHeaderView::~QHeaderView();
 extern void C_ZN11QHeaderViewD2Ev(void* qthis); // 4
   // proto:  bool QHeaderView::restoreState(const QByteArray & state);
-extern void C_ZN11QHeaderView12restoreStateERK10QByteArray(void* qthis, void* arg0); // 4
+extern bool C_ZN11QHeaderView12restoreStateERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  void QHeaderView::setOffsetToSectionPosition(int visualIndex);
 extern void C_ZN11QHeaderView26setOffsetToSectionPositionEi(void* qthis, int32_t arg0); // 4
   // proto:  void QHeaderView::doItemsLayout();
@@ -69,57 +69,57 @@ extern void C_ZN11QHeaderView13doItemsLayoutEv(void* qthis); // 4
   // proto:  void QHeaderView::setHighlightSections(bool highlight);
 extern void C_ZN11QHeaderView20setHighlightSectionsEb(void* qthis, bool arg0); // 4
   // proto:  int QHeaderView::resizeContentsPrecision();
-extern void C_ZNK11QHeaderView23resizeContentsPrecisionEv(void* qthis); // 4
+extern int32_t C_ZNK11QHeaderView23resizeContentsPrecisionEv(void* qthis); // 4
   // proto:  bool QHeaderView::sectionsClickable();
-extern void C_ZNK11QHeaderView17sectionsClickableEv(void* qthis); // 4
+extern bool C_ZNK11QHeaderView17sectionsClickableEv(void* qthis); // 4
   // proto:  int QHeaderView::logicalIndexAt(const QPoint & pos);
-extern void C_ZNK11QHeaderView14logicalIndexAtERK6QPoint(void* qthis, void* arg0); // 2
+extern int32_t C_ZNK11QHeaderView14logicalIndexAtERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  int QHeaderView::logicalIndexAt(int position);
-extern void C_ZNK11QHeaderView14logicalIndexAtEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK11QHeaderView14logicalIndexAtEi(void* qthis, int32_t arg0); // 4
   // proto:  int QHeaderView::logicalIndexAt(int x, int y);
-extern void C_ZNK11QHeaderView14logicalIndexAtEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern int32_t C_ZNK11QHeaderView14logicalIndexAtEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  int QHeaderView::offset();
-extern void C_ZNK11QHeaderView6offsetEv(void* qthis); // 4
+extern int32_t C_ZNK11QHeaderView6offsetEv(void* qthis); // 4
   // proto:  void QHeaderView::setMinimumSectionSize(int size);
 extern void C_ZN11QHeaderView21setMinimumSectionSizeEi(void* qthis, int32_t arg0); // 4
   // proto:  QSize QHeaderView::sizeHint();
-extern void C_ZNK11QHeaderView8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK11QHeaderView8sizeHintEv(void* qthis); // 4
   // proto:  void QHeaderView::setVisible(bool v);
 extern void C_ZN11QHeaderView10setVisibleEb(void* qthis, bool arg0); // 4
   // proto:  void QHeaderView::setCascadingSectionResizes(bool enable);
 extern void C_ZN11QHeaderView26setCascadingSectionResizesEb(void* qthis, bool arg0); // 4
   // proto:  bool QHeaderView::sectionsMovable();
-extern void C_ZNK11QHeaderView15sectionsMovableEv(void* qthis); // 4
+extern bool C_ZNK11QHeaderView15sectionsMovableEv(void* qthis); // 4
   // proto:  int QHeaderView::length();
-extern void C_ZNK11QHeaderView6lengthEv(void* qthis); // 4
+extern int32_t C_ZNK11QHeaderView6lengthEv(void* qthis); // 4
   // proto:  int QHeaderView::sortIndicatorSection();
-extern void C_ZNK11QHeaderView20sortIndicatorSectionEv(void* qthis); // 4
+extern int32_t C_ZNK11QHeaderView20sortIndicatorSectionEv(void* qthis); // 4
   // proto:  void QHeaderView::resizeSection(int logicalIndex, int size);
 extern void C_ZN11QHeaderView13resizeSectionEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QHeaderView::setSectionsMovable(bool movable);
 extern void C_ZN11QHeaderView18setSectionsMovableEb(void* qthis, bool arg0); // 4
   // proto:  int QHeaderView::maximumSectionSize();
-extern void C_ZNK11QHeaderView18maximumSectionSizeEv(void* qthis); // 4
+extern int32_t C_ZNK11QHeaderView18maximumSectionSizeEv(void* qthis); // 4
   // proto:  void QHeaderView::moveSection(int from, int to);
 extern void C_ZN11QHeaderView11moveSectionEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  bool QHeaderView::isSectionHidden(int logicalIndex);
-extern void C_ZNK11QHeaderView15isSectionHiddenEi(void* qthis, int32_t arg0); // 4
+extern bool C_ZNK11QHeaderView15isSectionHiddenEi(void* qthis, int32_t arg0); // 4
   // proto:  int QHeaderView::visualIndexAt(int position);
-extern void C_ZNK11QHeaderView13visualIndexAtEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK11QHeaderView13visualIndexAtEi(void* qthis, int32_t arg0); // 4
   // proto:  void QHeaderView::setSortIndicatorShown(bool show);
 extern void C_ZN11QHeaderView21setSortIndicatorShownEb(void* qthis, bool arg0); // 4
   // proto:  Qt::Alignment QHeaderView::defaultAlignment();
 extern void C_ZNK11QHeaderView16defaultAlignmentEv(void* qthis); // 4
   // proto:  int QHeaderView::hiddenSectionCount();
-extern void C_ZNK11QHeaderView18hiddenSectionCountEv(void* qthis); // 4
+extern int32_t C_ZNK11QHeaderView18hiddenSectionCountEv(void* qthis); // 4
   // proto:  void QHeaderView::setStretchLastSection(bool stretch);
 extern void C_ZN11QHeaderView21setStretchLastSectionEb(void* qthis, bool arg0); // 4
   // proto:  int QHeaderView::count();
-extern void C_ZNK11QHeaderView5countEv(void* qthis); // 4
+extern int32_t C_ZNK11QHeaderView5countEv(void* qthis); // 4
   // proto:  int QHeaderView::minimumSectionSize();
-extern void C_ZNK11QHeaderView18minimumSectionSizeEv(void* qthis); // 4
+extern int32_t C_ZNK11QHeaderView18minimumSectionSizeEv(void* qthis); // 4
   // proto:  QByteArray QHeaderView::saveState();
-extern void C_ZNK11QHeaderView9saveStateEv(void* qthis); // 4
+extern void* C_ZNK11QHeaderView9saveStateEv(void* qthis); // 4
   // proto:  Qt::Orientation QHeaderView::orientation();
 extern void C_ZNK11QHeaderView11orientationEv(void* qthis); // 4
   // proto:  void QHeaderView::setSectionHidden(int logicalIndex, bool hide);
@@ -127,9 +127,9 @@ extern void C_ZN11QHeaderView16setSectionHiddenEib(void* qthis, int32_t arg0, bo
   // proto:  void QHeaderView::setOffsetToLastSection();
 extern void C_ZN11QHeaderView22setOffsetToLastSectionEv(void* qthis); // 4
   // proto:  bool QHeaderView::stretchLastSection();
-extern void C_ZNK11QHeaderView18stretchLastSectionEv(void* qthis); // 4
+extern bool C_ZNK11QHeaderView18stretchLastSectionEv(void* qthis); // 4
   // proto:  bool QHeaderView::isSortIndicatorShown();
-extern void C_ZNK11QHeaderView20isSortIndicatorShownEv(void* qthis); // 4
+extern bool C_ZNK11QHeaderView20isSortIndicatorShownEv(void* qthis); // 4
   // proto:  void QHeaderView::showSection(int logicalIndex);
 extern void C_ZN11QHeaderView11showSectionEi(void* qthis, int32_t arg0); // 2
   // proto:  void QHeaderView::swapSections(int first, int second);
@@ -141,17 +141,17 @@ extern void C_ZN11QHeaderView8setModelEP18QAbstractItemModel(void* qthis, void* 
   // proto:  void QHeaderView::setDefaultSectionSize(int size);
 extern void C_ZN11QHeaderView21setDefaultSectionSizeEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QHeaderView::sectionsMoved();
-extern void C_ZNK11QHeaderView13sectionsMovedEv(void* qthis); // 4
+extern bool C_ZNK11QHeaderView13sectionsMovedEv(void* qthis); // 4
   // proto:  int QHeaderView::sectionViewportPosition(int logicalIndex);
-extern void C_ZNK11QHeaderView23sectionViewportPositionEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK11QHeaderView23sectionViewportPositionEi(void* qthis, int32_t arg0); // 4
   // proto:  int QHeaderView::stretchSectionCount();
-extern void C_ZNK11QHeaderView19stretchSectionCountEv(void* qthis); // 4
+extern int32_t C_ZNK11QHeaderView19stretchSectionCountEv(void* qthis); // 4
   // proto:  int QHeaderView::visualIndex(int logicalIndex);
-extern void C_ZNK11QHeaderView11visualIndexEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK11QHeaderView11visualIndexEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QHeaderView::highlightSections();
-extern void C_ZNK11QHeaderView17highlightSectionsEv(void* qthis); // 4
+extern bool C_ZNK11QHeaderView17highlightSectionsEv(void* qthis); // 4
   // proto:  int QHeaderView::defaultSectionSize();
-extern void C_ZNK11QHeaderView18defaultSectionSizeEv(void* qthis); // 4
+extern int32_t C_ZNK11QHeaderView18defaultSectionSizeEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -181,7 +181,7 @@ type QHeaderView struct {
 }
 
 // cascadingSectionResizes()
-func (this *QHeaderView) cascadingSectionResizes(args ...interface{}) () {
+func (this *QHeaderView) Cascadingsectionresizes(args ...interface{}) (ret interface{}) {
   // cascadingSectionResizes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -193,16 +193,20 @@ func (this *QHeaderView) cascadingSectionResizes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView23cascadingSectionResizesEv
     // invoke: bool cascadingSectionResizes()
-    var ret = C.C_ZNK11QHeaderView23cascadingSectionResizesEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView23cascadingSectionResizesEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "cascadingSectionResizes", args)
   }
 
+  return
 }
 
 // setResizeContentsPrecision(int)
-func (this *QHeaderView) setResizeContentsPrecision(args ...interface{}) () {
+func (this *QHeaderView) Setresizecontentsprecision(args ...interface{}) () {
   // setResizeContentsPrecision(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -222,10 +226,11 @@ func (this *QHeaderView) setResizeContentsPrecision(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setResizeContentsPrecision", args)
   }
 
+  return
 }
 
 // sectionsHidden()
-func (this *QHeaderView) sectionsHidden(args ...interface{}) () {
+func (this *QHeaderView) Sectionshidden(args ...interface{}) (ret interface{}) {
   // sectionsHidden()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -237,16 +242,20 @@ func (this *QHeaderView) sectionsHidden(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView14sectionsHiddenEv
     // invoke: bool sectionsHidden()
-    var ret = C.C_ZNK11QHeaderView14sectionsHiddenEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView14sectionsHiddenEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionsHidden", args)
   }
 
+  return
 }
 
 // sectionSizeHint(int)
-func (this *QHeaderView) sectionSizeHint(args ...interface{}) () {
+func (this *QHeaderView) Sectionsizehint(args ...interface{}) (ret interface{}) {
   // sectionSizeHint(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -261,16 +270,20 @@ func (this *QHeaderView) sectionSizeHint(args ...interface{}) () {
     // invoke: int sectionSizeHint(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QHeaderView15sectionSizeHintEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView15sectionSizeHintEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionSizeHint", args)
   }
 
+  return
 }
 
 // sortIndicatorOrder()
-func (this *QHeaderView) sortIndicatorOrder(args ...interface{}) () {
+func (this *QHeaderView) Sortindicatororder(args ...interface{}) () {
   // sortIndicatorOrder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -287,10 +300,11 @@ func (this *QHeaderView) sortIndicatorOrder(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "sortIndicatorOrder", args)
   }
 
+  return
 }
 
 // resetDefaultSectionSize()
-func (this *QHeaderView) resetDefaultSectionSize(args ...interface{}) () {
+func (this *QHeaderView) Resetdefaultsectionsize(args ...interface{}) () {
   // resetDefaultSectionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -307,10 +321,11 @@ func (this *QHeaderView) resetDefaultSectionSize(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "resetDefaultSectionSize", args)
   }
 
+  return
 }
 
 // setOffset(int)
-func (this *QHeaderView) setOffset(args ...interface{}) () {
+func (this *QHeaderView) Setoffset(args ...interface{}) () {
   // setOffset(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -330,10 +345,11 @@ func (this *QHeaderView) setOffset(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setOffset", args)
   }
 
+  return
 }
 
 // reset()
-func (this *QHeaderView) reset(args ...interface{}) () {
+func (this *QHeaderView) Reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -350,10 +366,11 @@ func (this *QHeaderView) reset(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "reset", args)
   }
 
+  return
 }
 
 // sectionPosition(int)
-func (this *QHeaderView) sectionPosition(args ...interface{}) () {
+func (this *QHeaderView) Sectionposition(args ...interface{}) (ret interface{}) {
   // sectionPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -368,16 +385,20 @@ func (this *QHeaderView) sectionPosition(args ...interface{}) () {
     // invoke: int sectionPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QHeaderView15sectionPositionEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView15sectionPositionEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionPosition", args)
   }
 
+  return
 }
 
 // logicalIndex(int)
-func (this *QHeaderView) logicalIndex(args ...interface{}) () {
+func (this *QHeaderView) Logicalindex(args ...interface{}) (ret interface{}) {
   // logicalIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -392,16 +413,20 @@ func (this *QHeaderView) logicalIndex(args ...interface{}) () {
     // invoke: int logicalIndex(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QHeaderView12logicalIndexEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView12logicalIndexEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "logicalIndex", args)
   }
 
+  return
 }
 
 // sectionSize(int)
-func (this *QHeaderView) sectionSize(args ...interface{}) () {
+func (this *QHeaderView) Sectionsize(args ...interface{}) (ret interface{}) {
   // sectionSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -416,16 +441,20 @@ func (this *QHeaderView) sectionSize(args ...interface{}) () {
     // invoke: int sectionSize(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QHeaderView11sectionSizeEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView11sectionSizeEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionSize", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QHeaderView) metaObject(args ...interface{}) () {
+func (this *QHeaderView) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -442,10 +471,11 @@ func (this *QHeaderView) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "metaObject", args)
   }
 
+  return
 }
 
 // hideSection(int)
-func (this *QHeaderView) hideSection(args ...interface{}) () {
+func (this *QHeaderView) Hidesection(args ...interface{}) () {
   // hideSection(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -465,10 +495,11 @@ func (this *QHeaderView) hideSection(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "hideSection", args)
   }
 
+  return
 }
 
 // setMaximumSectionSize(int)
-func (this *QHeaderView) setMaximumSectionSize(args ...interface{}) () {
+func (this *QHeaderView) Setmaximumsectionsize(args ...interface{}) () {
   // setMaximumSectionSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -488,10 +519,11 @@ func (this *QHeaderView) setMaximumSectionSize(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setMaximumSectionSize", args)
   }
 
+  return
 }
 
 // sectionResizeMode(int)
-func (this *QHeaderView) sectionResizeMode(args ...interface{}) () {
+func (this *QHeaderView) Sectionresizemode(args ...interface{}) () {
   // sectionResizeMode(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -511,10 +543,11 @@ func (this *QHeaderView) sectionResizeMode(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "sectionResizeMode", args)
   }
 
+  return
 }
 
 // ~QHeaderView()
-func (this *QHeaderView) FreeQHeaderView(args ...interface{}) () {
+func (this *QHeaderView) Freeqheaderview(args ...interface{}) () {
   // ~QHeaderView()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -531,10 +564,11 @@ func (this *QHeaderView) FreeQHeaderView(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "~QHeaderView", args)
   }
 
+  return
 }
 
 // restoreState(const class QByteArray &)
-func (this *QHeaderView) restoreState(args ...interface{}) () {
+func (this *QHeaderView) Restorestate(args ...interface{}) (ret interface{}) {
   // restoreState(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -549,16 +583,20 @@ func (this *QHeaderView) restoreState(args ...interface{}) () {
     // invoke: bool restoreState(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QHeaderView12restoreStateERK10QByteArray(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QHeaderView12restoreStateERK10QByteArray(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "restoreState", args)
   }
 
+  return
 }
 
 // setOffsetToSectionPosition(int)
-func (this *QHeaderView) setOffsetToSectionPosition(args ...interface{}) () {
+func (this *QHeaderView) Setoffsettosectionposition(args ...interface{}) () {
   // setOffsetToSectionPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -578,10 +616,11 @@ func (this *QHeaderView) setOffsetToSectionPosition(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setOffsetToSectionPosition", args)
   }
 
+  return
 }
 
 // doItemsLayout()
-func (this *QHeaderView) doItemsLayout(args ...interface{}) () {
+func (this *QHeaderView) Doitemslayout(args ...interface{}) () {
   // doItemsLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -598,10 +637,11 @@ func (this *QHeaderView) doItemsLayout(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "doItemsLayout", args)
   }
 
+  return
 }
 
 // setHighlightSections(_Bool)
-func (this *QHeaderView) setHighlightSections(args ...interface{}) () {
+func (this *QHeaderView) Sethighlightsections(args ...interface{}) () {
   // setHighlightSections(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -621,10 +661,11 @@ func (this *QHeaderView) setHighlightSections(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setHighlightSections", args)
   }
 
+  return
 }
 
 // resizeContentsPrecision()
-func (this *QHeaderView) resizeContentsPrecision(args ...interface{}) () {
+func (this *QHeaderView) Resizecontentsprecision(args ...interface{}) (ret interface{}) {
   // resizeContentsPrecision()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -636,16 +677,20 @@ func (this *QHeaderView) resizeContentsPrecision(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView23resizeContentsPrecisionEv
     // invoke: int resizeContentsPrecision()
-    var ret = C.C_ZNK11QHeaderView23resizeContentsPrecisionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView23resizeContentsPrecisionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "resizeContentsPrecision", args)
   }
 
+  return
 }
 
 // sectionsClickable()
-func (this *QHeaderView) sectionsClickable(args ...interface{}) () {
+func (this *QHeaderView) Sectionsclickable(args ...interface{}) (ret interface{}) {
   // sectionsClickable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -657,16 +702,20 @@ func (this *QHeaderView) sectionsClickable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView17sectionsClickableEv
     // invoke: bool sectionsClickable()
-    var ret = C.C_ZNK11QHeaderView17sectionsClickableEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView17sectionsClickableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionsClickable", args)
   }
 
+  return
 }
 
 // logicalIndexAt(const class QPoint &)
-func (this *QHeaderView) logicalIndexAt(args ...interface{}) () {
+func (this *QHeaderView) Logicalindexat(args ...interface{}) (ret interface{}) {
   // logicalIndexAt(const class QPoint &)
   // logicalIndexAt(int)
   // logicalIndexAt(int, int)
@@ -688,15 +737,21 @@ func (this *QHeaderView) logicalIndexAt(args ...interface{}) () {
     // invoke: int logicalIndexAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QHeaderView14logicalIndexAtERK6QPoint(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView14logicalIndexAtERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK11QHeaderView14logicalIndexAtEi
     // invoke: int logicalIndexAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QHeaderView14logicalIndexAtEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView14logicalIndexAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 2:
     // invoke: _ZNK11QHeaderView14logicalIndexAtEii
     // invoke: int logicalIndexAt(int, int)
@@ -704,16 +759,20 @@ func (this *QHeaderView) logicalIndexAt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK11QHeaderView14logicalIndexAtEii(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView14logicalIndexAtEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "logicalIndexAt", args)
   }
 
+  return
 }
 
 // offset()
-func (this *QHeaderView) offset(args ...interface{}) () {
+func (this *QHeaderView) Offset(args ...interface{}) (ret interface{}) {
   // offset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -725,16 +784,20 @@ func (this *QHeaderView) offset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView6offsetEv
     // invoke: int offset()
-    var ret = C.C_ZNK11QHeaderView6offsetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView6offsetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "offset", args)
   }
 
+  return
 }
 
 // setMinimumSectionSize(int)
-func (this *QHeaderView) setMinimumSectionSize(args ...interface{}) () {
+func (this *QHeaderView) Setminimumsectionsize(args ...interface{}) () {
   // setMinimumSectionSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -754,10 +817,11 @@ func (this *QHeaderView) setMinimumSectionSize(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setMinimumSectionSize", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QHeaderView) sizeHint(args ...interface{}) () {
+func (this *QHeaderView) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -769,16 +833,20 @@ func (this *QHeaderView) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK11QHeaderView8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "sizeHint", args)
   }
 
+  return
 }
 
 // setVisible(_Bool)
-func (this *QHeaderView) setVisible(args ...interface{}) () {
+func (this *QHeaderView) Setvisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -798,10 +866,11 @@ func (this *QHeaderView) setVisible(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setVisible", args)
   }
 
+  return
 }
 
 // setCascadingSectionResizes(_Bool)
-func (this *QHeaderView) setCascadingSectionResizes(args ...interface{}) () {
+func (this *QHeaderView) Setcascadingsectionresizes(args ...interface{}) () {
   // setCascadingSectionResizes(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -821,10 +890,11 @@ func (this *QHeaderView) setCascadingSectionResizes(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setCascadingSectionResizes", args)
   }
 
+  return
 }
 
 // sectionsMovable()
-func (this *QHeaderView) sectionsMovable(args ...interface{}) () {
+func (this *QHeaderView) Sectionsmovable(args ...interface{}) (ret interface{}) {
   // sectionsMovable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -836,16 +906,20 @@ func (this *QHeaderView) sectionsMovable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView15sectionsMovableEv
     // invoke: bool sectionsMovable()
-    var ret = C.C_ZNK11QHeaderView15sectionsMovableEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView15sectionsMovableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionsMovable", args)
   }
 
+  return
 }
 
 // length()
-func (this *QHeaderView) length(args ...interface{}) () {
+func (this *QHeaderView) Length(args ...interface{}) (ret interface{}) {
   // length()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -857,16 +931,20 @@ func (this *QHeaderView) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView6lengthEv
     // invoke: int length()
-    var ret = C.C_ZNK11QHeaderView6lengthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView6lengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "length", args)
   }
 
+  return
 }
 
 // sortIndicatorSection()
-func (this *QHeaderView) sortIndicatorSection(args ...interface{}) () {
+func (this *QHeaderView) Sortindicatorsection(args ...interface{}) (ret interface{}) {
   // sortIndicatorSection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -878,16 +956,20 @@ func (this *QHeaderView) sortIndicatorSection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView20sortIndicatorSectionEv
     // invoke: int sortIndicatorSection()
-    var ret = C.C_ZNK11QHeaderView20sortIndicatorSectionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView20sortIndicatorSectionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "sortIndicatorSection", args)
   }
 
+  return
 }
 
 // resizeSection(int, int)
-func (this *QHeaderView) resizeSection(args ...interface{}) () {
+func (this *QHeaderView) Resizesection(args ...interface{}) () {
   // resizeSection(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -910,10 +992,11 @@ func (this *QHeaderView) resizeSection(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "resizeSection", args)
   }
 
+  return
 }
 
 // setSectionsMovable(_Bool)
-func (this *QHeaderView) setSectionsMovable(args ...interface{}) () {
+func (this *QHeaderView) Setsectionsmovable(args ...interface{}) () {
   // setSectionsMovable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -933,10 +1016,11 @@ func (this *QHeaderView) setSectionsMovable(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setSectionsMovable", args)
   }
 
+  return
 }
 
 // maximumSectionSize()
-func (this *QHeaderView) maximumSectionSize(args ...interface{}) () {
+func (this *QHeaderView) Maximumsectionsize(args ...interface{}) (ret interface{}) {
   // maximumSectionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -948,16 +1032,20 @@ func (this *QHeaderView) maximumSectionSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView18maximumSectionSizeEv
     // invoke: int maximumSectionSize()
-    var ret = C.C_ZNK11QHeaderView18maximumSectionSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView18maximumSectionSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "maximumSectionSize", args)
   }
 
+  return
 }
 
 // moveSection(int, int)
-func (this *QHeaderView) moveSection(args ...interface{}) () {
+func (this *QHeaderView) Movesection(args ...interface{}) () {
   // moveSection(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -980,10 +1068,11 @@ func (this *QHeaderView) moveSection(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "moveSection", args)
   }
 
+  return
 }
 
 // isSectionHidden(int)
-func (this *QHeaderView) isSectionHidden(args ...interface{}) () {
+func (this *QHeaderView) Issectionhidden(args ...interface{}) (ret interface{}) {
   // isSectionHidden(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -998,16 +1087,20 @@ func (this *QHeaderView) isSectionHidden(args ...interface{}) () {
     // invoke: bool isSectionHidden(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QHeaderView15isSectionHiddenEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView15isSectionHiddenEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "isSectionHidden", args)
   }
 
+  return
 }
 
 // visualIndexAt(int)
-func (this *QHeaderView) visualIndexAt(args ...interface{}) () {
+func (this *QHeaderView) Visualindexat(args ...interface{}) (ret interface{}) {
   // visualIndexAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1022,16 +1115,20 @@ func (this *QHeaderView) visualIndexAt(args ...interface{}) () {
     // invoke: int visualIndexAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QHeaderView13visualIndexAtEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView13visualIndexAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "visualIndexAt", args)
   }
 
+  return
 }
 
 // setSortIndicatorShown(_Bool)
-func (this *QHeaderView) setSortIndicatorShown(args ...interface{}) () {
+func (this *QHeaderView) Setsortindicatorshown(args ...interface{}) () {
   // setSortIndicatorShown(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1051,10 +1148,11 @@ func (this *QHeaderView) setSortIndicatorShown(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setSortIndicatorShown", args)
   }
 
+  return
 }
 
 // defaultAlignment()
-func (this *QHeaderView) defaultAlignment(args ...interface{}) () {
+func (this *QHeaderView) Defaultalignment(args ...interface{}) () {
   // defaultAlignment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1071,10 +1169,11 @@ func (this *QHeaderView) defaultAlignment(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "defaultAlignment", args)
   }
 
+  return
 }
 
 // hiddenSectionCount()
-func (this *QHeaderView) hiddenSectionCount(args ...interface{}) () {
+func (this *QHeaderView) Hiddensectioncount(args ...interface{}) (ret interface{}) {
   // hiddenSectionCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1086,16 +1185,20 @@ func (this *QHeaderView) hiddenSectionCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView18hiddenSectionCountEv
     // invoke: int hiddenSectionCount()
-    var ret = C.C_ZNK11QHeaderView18hiddenSectionCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView18hiddenSectionCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "hiddenSectionCount", args)
   }
 
+  return
 }
 
 // setStretchLastSection(_Bool)
-func (this *QHeaderView) setStretchLastSection(args ...interface{}) () {
+func (this *QHeaderView) Setstretchlastsection(args ...interface{}) () {
   // setStretchLastSection(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1115,10 +1218,11 @@ func (this *QHeaderView) setStretchLastSection(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setStretchLastSection", args)
   }
 
+  return
 }
 
 // count()
-func (this *QHeaderView) count(args ...interface{}) () {
+func (this *QHeaderView) Count(args ...interface{}) (ret interface{}) {
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1130,16 +1234,20 @@ func (this *QHeaderView) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView5countEv
     // invoke: int count()
-    var ret = C.C_ZNK11QHeaderView5countEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "count", args)
   }
 
+  return
 }
 
 // minimumSectionSize()
-func (this *QHeaderView) minimumSectionSize(args ...interface{}) () {
+func (this *QHeaderView) Minimumsectionsize(args ...interface{}) (ret interface{}) {
   // minimumSectionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1151,16 +1259,20 @@ func (this *QHeaderView) minimumSectionSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView18minimumSectionSizeEv
     // invoke: int minimumSectionSize()
-    var ret = C.C_ZNK11QHeaderView18minimumSectionSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView18minimumSectionSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "minimumSectionSize", args)
   }
 
+  return
 }
 
 // saveState()
-func (this *QHeaderView) saveState(args ...interface{}) () {
+func (this *QHeaderView) Savestate(args ...interface{}) (ret interface{}) {
   // saveState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1172,16 +1284,20 @@ func (this *QHeaderView) saveState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView9saveStateEv
     // invoke: QByteArray saveState()
-    var ret = C.C_ZNK11QHeaderView9saveStateEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView9saveStateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "saveState", args)
   }
 
+  return
 }
 
 // orientation()
-func (this *QHeaderView) orientation(args ...interface{}) () {
+func (this *QHeaderView) Orientation(args ...interface{}) () {
   // orientation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1198,10 +1314,11 @@ func (this *QHeaderView) orientation(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "orientation", args)
   }
 
+  return
 }
 
 // setSectionHidden(int, _Bool)
-func (this *QHeaderView) setSectionHidden(args ...interface{}) () {
+func (this *QHeaderView) Setsectionhidden(args ...interface{}) () {
   // setSectionHidden(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1224,10 +1341,11 @@ func (this *QHeaderView) setSectionHidden(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setSectionHidden", args)
   }
 
+  return
 }
 
 // setOffsetToLastSection()
-func (this *QHeaderView) setOffsetToLastSection(args ...interface{}) () {
+func (this *QHeaderView) Setoffsettolastsection(args ...interface{}) () {
   // setOffsetToLastSection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1244,10 +1362,11 @@ func (this *QHeaderView) setOffsetToLastSection(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setOffsetToLastSection", args)
   }
 
+  return
 }
 
 // stretchLastSection()
-func (this *QHeaderView) stretchLastSection(args ...interface{}) () {
+func (this *QHeaderView) Stretchlastsection(args ...interface{}) (ret interface{}) {
   // stretchLastSection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1259,16 +1378,20 @@ func (this *QHeaderView) stretchLastSection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView18stretchLastSectionEv
     // invoke: bool stretchLastSection()
-    var ret = C.C_ZNK11QHeaderView18stretchLastSectionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView18stretchLastSectionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "stretchLastSection", args)
   }
 
+  return
 }
 
 // isSortIndicatorShown()
-func (this *QHeaderView) isSortIndicatorShown(args ...interface{}) () {
+func (this *QHeaderView) Issortindicatorshown(args ...interface{}) (ret interface{}) {
   // isSortIndicatorShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1280,16 +1403,20 @@ func (this *QHeaderView) isSortIndicatorShown(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView20isSortIndicatorShownEv
     // invoke: bool isSortIndicatorShown()
-    var ret = C.C_ZNK11QHeaderView20isSortIndicatorShownEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView20isSortIndicatorShownEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "isSortIndicatorShown", args)
   }
 
+  return
 }
 
 // showSection(int)
-func (this *QHeaderView) showSection(args ...interface{}) () {
+func (this *QHeaderView) Showsection(args ...interface{}) () {
   // showSection(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1309,10 +1436,11 @@ func (this *QHeaderView) showSection(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "showSection", args)
   }
 
+  return
 }
 
 // swapSections(int, int)
-func (this *QHeaderView) swapSections(args ...interface{}) () {
+func (this *QHeaderView) Swapsections(args ...interface{}) () {
   // swapSections(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1335,10 +1463,11 @@ func (this *QHeaderView) swapSections(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "swapSections", args)
   }
 
+  return
 }
 
 // setSectionsClickable(_Bool)
-func (this *QHeaderView) setSectionsClickable(args ...interface{}) () {
+func (this *QHeaderView) Setsectionsclickable(args ...interface{}) () {
   // setSectionsClickable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1358,10 +1487,11 @@ func (this *QHeaderView) setSectionsClickable(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setSectionsClickable", args)
   }
 
+  return
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QHeaderView) setModel(args ...interface{}) () {
+func (this *QHeaderView) Setmodel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1381,10 +1511,11 @@ func (this *QHeaderView) setModel(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setModel", args)
   }
 
+  return
 }
 
 // setDefaultSectionSize(int)
-func (this *QHeaderView) setDefaultSectionSize(args ...interface{}) () {
+func (this *QHeaderView) Setdefaultsectionsize(args ...interface{}) () {
   // setDefaultSectionSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1404,10 +1535,11 @@ func (this *QHeaderView) setDefaultSectionSize(args ...interface{}) () {
     qtrt.ErrorResolve("QHeaderView", "setDefaultSectionSize", args)
   }
 
+  return
 }
 
 // sectionsMoved()
-func (this *QHeaderView) sectionsMoved(args ...interface{}) () {
+func (this *QHeaderView) Sectionsmoved(args ...interface{}) (ret interface{}) {
   // sectionsMoved()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1419,16 +1551,20 @@ func (this *QHeaderView) sectionsMoved(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView13sectionsMovedEv
     // invoke: bool sectionsMoved()
-    var ret = C.C_ZNK11QHeaderView13sectionsMovedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView13sectionsMovedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionsMoved", args)
   }
 
+  return
 }
 
 // sectionViewportPosition(int)
-func (this *QHeaderView) sectionViewportPosition(args ...interface{}) () {
+func (this *QHeaderView) Sectionviewportposition(args ...interface{}) (ret interface{}) {
   // sectionViewportPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1443,16 +1579,20 @@ func (this *QHeaderView) sectionViewportPosition(args ...interface{}) () {
     // invoke: int sectionViewportPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QHeaderView23sectionViewportPositionEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView23sectionViewportPositionEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionViewportPosition", args)
   }
 
+  return
 }
 
 // stretchSectionCount()
-func (this *QHeaderView) stretchSectionCount(args ...interface{}) () {
+func (this *QHeaderView) Stretchsectioncount(args ...interface{}) (ret interface{}) {
   // stretchSectionCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1464,16 +1604,20 @@ func (this *QHeaderView) stretchSectionCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView19stretchSectionCountEv
     // invoke: int stretchSectionCount()
-    var ret = C.C_ZNK11QHeaderView19stretchSectionCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView19stretchSectionCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "stretchSectionCount", args)
   }
 
+  return
 }
 
 // visualIndex(int)
-func (this *QHeaderView) visualIndex(args ...interface{}) () {
+func (this *QHeaderView) Visualindex(args ...interface{}) (ret interface{}) {
   // visualIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1488,16 +1632,20 @@ func (this *QHeaderView) visualIndex(args ...interface{}) () {
     // invoke: int visualIndex(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QHeaderView11visualIndexEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView11visualIndexEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "visualIndex", args)
   }
 
+  return
 }
 
 // highlightSections()
-func (this *QHeaderView) highlightSections(args ...interface{}) () {
+func (this *QHeaderView) Highlightsections(args ...interface{}) (ret interface{}) {
   // highlightSections()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1509,16 +1657,20 @@ func (this *QHeaderView) highlightSections(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView17highlightSectionsEv
     // invoke: bool highlightSections()
-    var ret = C.C_ZNK11QHeaderView17highlightSectionsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView17highlightSectionsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "highlightSections", args)
   }
 
+  return
 }
 
 // defaultSectionSize()
-func (this *QHeaderView) defaultSectionSize(args ...interface{}) () {
+func (this *QHeaderView) Defaultsectionsize(args ...interface{}) (ret interface{}) {
   // defaultSectionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1530,12 +1682,16 @@ func (this *QHeaderView) defaultSectionSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHeaderView18defaultSectionSizeEv
     // invoke: int defaultSectionSize()
-    var ret = C.C_ZNK11QHeaderView18defaultSectionSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QHeaderView18defaultSectionSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QHeaderView", "defaultSectionSize", args)
   }
 
+  return
 }
 
 // <= body block end

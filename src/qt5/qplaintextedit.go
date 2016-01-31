@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qplaintextedit.h
 // dst-file: /src/widgets/qplaintextedit.go
 //
@@ -31,19 +31,19 @@ import "qtrt"
   // proto:  void QPlainTextDocumentLayout::ensureBlockLayout(const QTextBlock & block);
 extern void C_ZNK24QPlainTextDocumentLayout17ensureBlockLayoutERK10QTextBlock(void* qthis, void* arg0); // 4
   // proto:  int QPlainTextDocumentLayout::pageCount();
-extern void C_ZNK24QPlainTextDocumentLayout9pageCountEv(void* qthis); // 4
+extern int32_t C_ZNK24QPlainTextDocumentLayout9pageCountEv(void* qthis); // 4
   // proto:  QRectF QPlainTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
-extern void C_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock(void* qthis, void* arg0); // 4
+extern void* C_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock(void* qthis, void* arg0); // 4
   // proto:  QRectF QPlainTextDocumentLayout::frameBoundingRect(QTextFrame * );
-extern void C_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame(void* qthis, void* arg0); // 4
+extern void* C_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame(void* qthis, void* arg0); // 4
   // proto:  int QPlainTextDocumentLayout::cursorWidth();
-extern void C_ZNK24QPlainTextDocumentLayout11cursorWidthEv(void* qthis); // 4
+extern int32_t C_ZNK24QPlainTextDocumentLayout11cursorWidthEv(void* qthis); // 4
   // proto:  void QPlainTextDocumentLayout::requestUpdate();
 extern void C_ZN24QPlainTextDocumentLayout13requestUpdateEv(void* qthis); // 4
   // proto:  void QPlainTextDocumentLayout::setCursorWidth(int width);
 extern void C_ZN24QPlainTextDocumentLayout14setCursorWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  QSizeF QPlainTextDocumentLayout::documentSize();
-extern void C_ZNK24QPlainTextDocumentLayout12documentSizeEv(void* qthis); // 4
+extern void* C_ZNK24QPlainTextDocumentLayout12documentSizeEv(void* qthis); // 4
   // proto:  void QPlainTextDocumentLayout::~QPlainTextDocumentLayout();
 extern void C_ZN24QPlainTextDocumentLayoutD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QPlainTextDocumentLayout::metaObject();
@@ -53,7 +53,7 @@ extern void* C_ZN24QPlainTextDocumentLayoutC2EP13QTextDocument(void* arg0); // 3
   // proto:  void QPlainTextEdit::appendPlainText(const QString & text);
 extern void C_ZN14QPlainTextEdit15appendPlainTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QPlainTextEdit::documentTitle();
-extern void C_ZNK14QPlainTextEdit13documentTitleEv(void* qthis); // 2
+extern void* C_ZNK14QPlainTextEdit13documentTitleEv(void* qthis); // 2
   // proto:  void QPlainTextEdit::setTabStopWidth(int width);
 extern void C_ZN14QPlainTextEdit15setTabStopWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  void QPlainTextEdit::ensureCursorVisible();
@@ -61,15 +61,15 @@ extern void C_ZN14QPlainTextEdit19ensureCursorVisibleEv(void* qthis); // 4
   // proto:  void QPlainTextEdit::setCurrentCharFormat(const QTextCharFormat & format);
 extern void C_ZN14QPlainTextEdit20setCurrentCharFormatERK15QTextCharFormat(void* qthis, void* arg0); // 4
   // proto:  int QPlainTextEdit::tabStopWidth();
-extern void C_ZNK14QPlainTextEdit12tabStopWidthEv(void* qthis); // 4
+extern int32_t C_ZNK14QPlainTextEdit12tabStopWidthEv(void* qthis); // 4
   // proto:  bool QPlainTextEdit::isUndoRedoEnabled();
-extern void C_ZNK14QPlainTextEdit17isUndoRedoEnabledEv(void* qthis); // 2
+extern bool C_ZNK14QPlainTextEdit17isUndoRedoEnabledEv(void* qthis); // 2
   // proto:  void QPlainTextEdit::cut();
 extern void C_ZN14QPlainTextEdit3cutEv(void* qthis); // 4
   // proto:  QMenu * QPlainTextEdit::createStandardContextMenu();
-extern void C_ZN14QPlainTextEdit25createStandardContextMenuEv(void* qthis); // 4
+extern void* C_ZN14QPlainTextEdit25createStandardContextMenuEv(void* qthis); // 4
   // proto:  QMenu * QPlainTextEdit::createStandardContextMenu(const QPoint & position);
-extern void C_ZN14QPlainTextEdit25createStandardContextMenuERK6QPoint(void* qthis, void* arg0); // 4
+extern void* C_ZN14QPlainTextEdit25createStandardContextMenuERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  QList<QTextEdit::ExtraSelection> QPlainTextEdit::extraSelections();
 extern void C_ZNK14QPlainTextEdit15extraSelectionsEv(void* qthis); // 4
   // proto:  void QPlainTextEdit::mergeCurrentCharFormat(const QTextCharFormat & modifier);
@@ -79,31 +79,31 @@ extern void C_ZNK14QPlainTextEdit10metaObjectEv(void* qthis); // 4
   // proto:  void QPlainTextEdit::setTabChangesFocus(bool b);
 extern void C_ZN14QPlainTextEdit18setTabChangesFocusEb(void* qthis, bool arg0); // 4
   // proto:  bool QPlainTextEdit::centerOnScroll();
-extern void C_ZNK14QPlainTextEdit14centerOnScrollEv(void* qthis); // 4
+extern bool C_ZNK14QPlainTextEdit14centerOnScrollEv(void* qthis); // 4
   // proto:  QString QPlainTextEdit::toPlainText();
-extern void C_ZNK14QPlainTextEdit11toPlainTextEv(void* qthis); // 2
+extern void* C_ZNK14QPlainTextEdit11toPlainTextEv(void* qthis); // 2
   // proto:  void QPlainTextEdit::zoomIn(int range);
 extern void C_ZN14QPlainTextEdit6zoomInEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QPlainTextEdit::backgroundVisible();
-extern void C_ZNK14QPlainTextEdit17backgroundVisibleEv(void* qthis); // 4
+extern bool C_ZNK14QPlainTextEdit17backgroundVisibleEv(void* qthis); // 4
   // proto:  void QPlainTextEdit::zoomOut(int range);
 extern void C_ZN14QPlainTextEdit7zoomOutEi(void* qthis, int32_t arg0); // 4
   // proto:  QRect QPlainTextEdit::cursorRect(const QTextCursor & cursor);
-extern void C_ZNK14QPlainTextEdit10cursorRectERK11QTextCursor(void* qthis, void* arg0); // 4
+extern void* C_ZNK14QPlainTextEdit10cursorRectERK11QTextCursor(void* qthis, void* arg0); // 4
   // proto:  QRect QPlainTextEdit::cursorRect();
-extern void C_ZNK14QPlainTextEdit10cursorRectEv(void* qthis); // 4
+extern void* C_ZNK14QPlainTextEdit10cursorRectEv(void* qthis); // 4
   // proto:  void QPlainTextEdit::setUndoRedoEnabled(bool enable);
 extern void C_ZN14QPlainTextEdit18setUndoRedoEnabledEb(void* qthis, bool arg0); // 2
   // proto:  QTextCursor QPlainTextEdit::textCursor();
-extern void C_ZNK14QPlainTextEdit10textCursorEv(void* qthis); // 4
+extern void* C_ZNK14QPlainTextEdit10textCursorEv(void* qthis); // 4
   // proto:  QString QPlainTextEdit::anchorAt(const QPoint & pos);
-extern void C_ZNK14QPlainTextEdit8anchorAtERK6QPoint(void* qthis, void* arg0); // 4
+extern void* C_ZNK14QPlainTextEdit8anchorAtERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  void QPlainTextEdit::setDocument(QTextDocument * document);
 extern void C_ZN14QPlainTextEdit11setDocumentEP13QTextDocument(void* qthis, void* arg0); // 4
   // proto:  void QPlainTextEdit::print(QPagedPaintDevice * printer);
 extern void C_ZNK14QPlainTextEdit5printEP17QPagedPaintDevice(void* qthis, void* arg0); // 4
   // proto:  QVariant QPlainTextEdit::loadResource(int type, const QUrl & name);
-extern void C_ZN14QPlainTextEdit12loadResourceEiRK4QUrl(void* qthis, int32_t arg0, void* arg1); // 4
+extern void* C_ZN14QPlainTextEdit12loadResourceEiRK4QUrl(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QPlainTextEdit::setCenterOnScroll(bool enabled);
 extern void C_ZN14QPlainTextEdit17setCenterOnScrollEb(void* qthis, bool arg0); // 4
   // proto:  void QPlainTextEdit::undo();
@@ -111,23 +111,23 @@ extern void C_ZN14QPlainTextEdit4undoEv(void* qthis); // 4
   // proto:  void QPlainTextEdit::paste();
 extern void C_ZN14QPlainTextEdit5pasteEv(void* qthis); // 4
   // proto:  int QPlainTextEdit::blockCount();
-extern void C_ZNK14QPlainTextEdit10blockCountEv(void* qthis); // 4
+extern int32_t C_ZNK14QPlainTextEdit10blockCountEv(void* qthis); // 4
   // proto:  QString QPlainTextEdit::placeholderText();
-extern void C_ZNK14QPlainTextEdit15placeholderTextEv(void* qthis); // 4
+extern void* C_ZNK14QPlainTextEdit15placeholderTextEv(void* qthis); // 4
   // proto:  void QPlainTextEdit::selectAll();
 extern void C_ZN14QPlainTextEdit9selectAllEv(void* qthis); // 4
   // proto:  int QPlainTextEdit::maximumBlockCount();
-extern void C_ZNK14QPlainTextEdit17maximumBlockCountEv(void* qthis); // 2
+extern int32_t C_ZNK14QPlainTextEdit17maximumBlockCountEv(void* qthis); // 2
   // proto:  void QPlainTextEdit::redo();
 extern void C_ZN14QPlainTextEdit4redoEv(void* qthis); // 4
   // proto:  void QPlainTextEdit::setBackgroundVisible(bool visible);
 extern void C_ZN14QPlainTextEdit20setBackgroundVisibleEb(void* qthis, bool arg0); // 4
   // proto:  bool QPlainTextEdit::isReadOnly();
-extern void C_ZNK14QPlainTextEdit10isReadOnlyEv(void* qthis); // 4
+extern bool C_ZNK14QPlainTextEdit10isReadOnlyEv(void* qthis); // 4
   // proto:  void QPlainTextEdit::setTextCursor(const QTextCursor & cursor);
 extern void C_ZN14QPlainTextEdit13setTextCursorERK11QTextCursor(void* qthis, void* arg0); // 4
   // proto:  bool QPlainTextEdit::overwriteMode();
-extern void C_ZNK14QPlainTextEdit13overwriteModeEv(void* qthis); // 4
+extern bool C_ZNK14QPlainTextEdit13overwriteModeEv(void* qthis); // 4
   // proto:  void QPlainTextEdit::setCursorWidth(int width);
 extern void C_ZN14QPlainTextEdit14setCursorWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  void QPlainTextEdit::appendHtml(const QString & html);
@@ -135,7 +135,7 @@ extern void C_ZN14QPlainTextEdit10appendHtmlERK7QString(void* qthis, void* arg0)
   // proto:  Qt::TextInteractionFlags QPlainTextEdit::textInteractionFlags();
 extern void C_ZNK14QPlainTextEdit20textInteractionFlagsEv(void* qthis); // 4
   // proto:  bool QPlainTextEdit::canPaste();
-extern void C_ZNK14QPlainTextEdit8canPasteEv(void* qthis); // 4
+extern bool C_ZNK14QPlainTextEdit8canPasteEv(void* qthis); // 4
   // proto:  void QPlainTextEdit::setOverwriteMode(bool overwrite);
 extern void C_ZN14QPlainTextEdit16setOverwriteModeEb(void* qthis, bool arg0); // 4
   // proto:  void QPlainTextEdit::copy();
@@ -155,19 +155,19 @@ extern void C_ZN14QPlainTextEdit12setPlainTextERK7QString(void* qthis, void* arg
   // proto:  void QPlainTextEdit::insertPlainText(const QString & text);
 extern void C_ZN14QPlainTextEdit15insertPlainTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  int QPlainTextEdit::cursorWidth();
-extern void C_ZNK14QPlainTextEdit11cursorWidthEv(void* qthis); // 4
+extern int32_t C_ZNK14QPlainTextEdit11cursorWidthEv(void* qthis); // 4
   // proto:  bool QPlainTextEdit::tabChangesFocus();
-extern void C_ZNK14QPlainTextEdit15tabChangesFocusEv(void* qthis); // 4
+extern bool C_ZNK14QPlainTextEdit15tabChangesFocusEv(void* qthis); // 4
   // proto:  QTextOption::WrapMode QPlainTextEdit::wordWrapMode();
 extern void C_ZNK14QPlainTextEdit12wordWrapModeEv(void* qthis); // 4
   // proto:  QTextCursor QPlainTextEdit::cursorForPosition(const QPoint & pos);
-extern void C_ZNK14QPlainTextEdit17cursorForPositionERK6QPoint(void* qthis, void* arg0); // 4
+extern void* C_ZNK14QPlainTextEdit17cursorForPositionERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  void QPlainTextEdit::setDocumentTitle(const QString & title);
 extern void C_ZN14QPlainTextEdit16setDocumentTitleERK7QString(void* qthis, void* arg0); // 2
   // proto:  QTextDocument * QPlainTextEdit::document();
-extern void C_ZNK14QPlainTextEdit8documentEv(void* qthis); // 4
+extern void* C_ZNK14QPlainTextEdit8documentEv(void* qthis); // 4
   // proto:  QTextCharFormat QPlainTextEdit::currentCharFormat();
-extern void C_ZNK14QPlainTextEdit17currentCharFormatEv(void* qthis); // 4
+extern void* C_ZNK14QPlainTextEdit17currentCharFormatEv(void* qthis); // 4
   // proto:  QPlainTextEdit::LineWrapMode QPlainTextEdit::lineWrapMode();
 extern void C_ZNK14QPlainTextEdit12lineWrapModeEv(void* qthis); // 4
   // proto:  void QPlainTextEdit::clear();
@@ -210,7 +210,7 @@ type QPlainTextEdit struct {
 }
 
 // ensureBlockLayout(const class QTextBlock &)
-func (this *QPlainTextDocumentLayout) ensureBlockLayout(args ...interface{}) () {
+func (this *QPlainTextDocumentLayout) Ensureblocklayout(args ...interface{}) () {
   // ensureBlockLayout(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -230,10 +230,11 @@ func (this *QPlainTextDocumentLayout) ensureBlockLayout(args ...interface{}) () 
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "ensureBlockLayout", args)
   }
 
+  return
 }
 
 // pageCount()
-func (this *QPlainTextDocumentLayout) pageCount(args ...interface{}) () {
+func (this *QPlainTextDocumentLayout) Pagecount(args ...interface{}) (ret interface{}) {
   // pageCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -245,16 +246,20 @@ func (this *QPlainTextDocumentLayout) pageCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QPlainTextDocumentLayout9pageCountEv
     // invoke: int pageCount()
-    var ret = C.C_ZNK24QPlainTextDocumentLayout9pageCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QPlainTextDocumentLayout9pageCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "pageCount", args)
   }
 
+  return
 }
 
 // blockBoundingRect(const class QTextBlock &)
-func (this *QPlainTextDocumentLayout) blockBoundingRect(args ...interface{}) () {
+func (this *QPlainTextDocumentLayout) Blockboundingrect(args ...interface{}) (ret interface{}) {
   // blockBoundingRect(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -269,16 +274,20 @@ func (this *QPlainTextDocumentLayout) blockBoundingRect(args ...interface{}) () 
     // invoke: QRectF blockBoundingRect(const class QTextBlock &)
     var arg0 = args[0].(QTextBlock).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "blockBoundingRect", args)
   }
 
+  return
 }
 
 // frameBoundingRect(class QTextFrame *)
-func (this *QPlainTextDocumentLayout) frameBoundingRect(args ...interface{}) () {
+func (this *QPlainTextDocumentLayout) Frameboundingrect(args ...interface{}) (ret interface{}) {
   // frameBoundingRect(class QTextFrame *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,16 +302,20 @@ func (this *QPlainTextDocumentLayout) frameBoundingRect(args ...interface{}) () 
     // invoke: QRectF frameBoundingRect(class QTextFrame *)
     var arg0 = args[0].(QTextFrame).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRectF{}) // "QRectF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "frameBoundingRect", args)
   }
 
+  return
 }
 
 // cursorWidth()
-func (this *QPlainTextDocumentLayout) cursorWidth(args ...interface{}) () {
+func (this *QPlainTextDocumentLayout) Cursorwidth(args ...interface{}) (ret interface{}) {
   // cursorWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -314,16 +327,20 @@ func (this *QPlainTextDocumentLayout) cursorWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QPlainTextDocumentLayout11cursorWidthEv
     // invoke: int cursorWidth()
-    var ret = C.C_ZNK24QPlainTextDocumentLayout11cursorWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QPlainTextDocumentLayout11cursorWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "cursorWidth", args)
   }
 
+  return
 }
 
 // requestUpdate()
-func (this *QPlainTextDocumentLayout) requestUpdate(args ...interface{}) () {
+func (this *QPlainTextDocumentLayout) Requestupdate(args ...interface{}) () {
   // requestUpdate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -340,10 +357,11 @@ func (this *QPlainTextDocumentLayout) requestUpdate(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "requestUpdate", args)
   }
 
+  return
 }
 
 // setCursorWidth(int)
-func (this *QPlainTextDocumentLayout) setCursorWidth(args ...interface{}) () {
+func (this *QPlainTextDocumentLayout) Setcursorwidth(args ...interface{}) () {
   // setCursorWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -363,10 +381,11 @@ func (this *QPlainTextDocumentLayout) setCursorWidth(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "setCursorWidth", args)
   }
 
+  return
 }
 
 // documentSize()
-func (this *QPlainTextDocumentLayout) documentSize(args ...interface{}) () {
+func (this *QPlainTextDocumentLayout) Documentsize(args ...interface{}) (ret interface{}) {
   // documentSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,16 +397,20 @@ func (this *QPlainTextDocumentLayout) documentSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QPlainTextDocumentLayout12documentSizeEv
     // invoke: QSizeF documentSize()
-    var ret = C.C_ZNK24QPlainTextDocumentLayout12documentSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QPlainTextDocumentLayout12documentSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "documentSize", args)
   }
 
+  return
 }
 
 // ~QPlainTextDocumentLayout()
-func (this *QPlainTextDocumentLayout) FreeQPlainTextDocumentLayout(args ...interface{}) () {
+func (this *QPlainTextDocumentLayout) Freeqplaintextdocumentlayout(args ...interface{}) () {
   // ~QPlainTextDocumentLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -404,10 +427,11 @@ func (this *QPlainTextDocumentLayout) FreeQPlainTextDocumentLayout(args ...inter
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "~QPlainTextDocumentLayout", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QPlainTextDocumentLayout) metaObject(args ...interface{}) () {
+func (this *QPlainTextDocumentLayout) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -424,6 +448,7 @@ func (this *QPlainTextDocumentLayout) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "metaObject", args)
   }
 
+  return
 }
 
 // QPlainTextDocumentLayout(class QTextDocument *)
@@ -454,7 +479,7 @@ func NewQPlainTextDocumentLayout(args ...interface{}) *QPlainTextDocumentLayout 
 }
 
 // appendPlainText(const class QString &)
-func (this *QPlainTextEdit) appendPlainText(args ...interface{}) () {
+func (this *QPlainTextEdit) Appendplaintext(args ...interface{}) () {
   // appendPlainText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -474,10 +499,11 @@ func (this *QPlainTextEdit) appendPlainText(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "appendPlainText", args)
   }
 
+  return
 }
 
 // documentTitle()
-func (this *QPlainTextEdit) documentTitle(args ...interface{}) () {
+func (this *QPlainTextEdit) Documenttitle(args ...interface{}) (ret interface{}) {
   // documentTitle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -489,16 +515,20 @@ func (this *QPlainTextEdit) documentTitle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit13documentTitleEv
     // invoke: QString documentTitle()
-    var ret = C.C_ZNK14QPlainTextEdit13documentTitleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit13documentTitleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "documentTitle", args)
   }
 
+  return
 }
 
 // setTabStopWidth(int)
-func (this *QPlainTextEdit) setTabStopWidth(args ...interface{}) () {
+func (this *QPlainTextEdit) Settabstopwidth(args ...interface{}) () {
   // setTabStopWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -518,10 +548,11 @@ func (this *QPlainTextEdit) setTabStopWidth(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setTabStopWidth", args)
   }
 
+  return
 }
 
 // ensureCursorVisible()
-func (this *QPlainTextEdit) ensureCursorVisible(args ...interface{}) () {
+func (this *QPlainTextEdit) Ensurecursorvisible(args ...interface{}) () {
   // ensureCursorVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -538,10 +569,11 @@ func (this *QPlainTextEdit) ensureCursorVisible(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "ensureCursorVisible", args)
   }
 
+  return
 }
 
 // setCurrentCharFormat(const class QTextCharFormat &)
-func (this *QPlainTextEdit) setCurrentCharFormat(args ...interface{}) () {
+func (this *QPlainTextEdit) Setcurrentcharformat(args ...interface{}) () {
   // setCurrentCharFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -561,10 +593,11 @@ func (this *QPlainTextEdit) setCurrentCharFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setCurrentCharFormat", args)
   }
 
+  return
 }
 
 // tabStopWidth()
-func (this *QPlainTextEdit) tabStopWidth(args ...interface{}) () {
+func (this *QPlainTextEdit) Tabstopwidth(args ...interface{}) (ret interface{}) {
   // tabStopWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -576,16 +609,20 @@ func (this *QPlainTextEdit) tabStopWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit12tabStopWidthEv
     // invoke: int tabStopWidth()
-    var ret = C.C_ZNK14QPlainTextEdit12tabStopWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit12tabStopWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "tabStopWidth", args)
   }
 
+  return
 }
 
 // isUndoRedoEnabled()
-func (this *QPlainTextEdit) isUndoRedoEnabled(args ...interface{}) () {
+func (this *QPlainTextEdit) Isundoredoenabled(args ...interface{}) (ret interface{}) {
   // isUndoRedoEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -597,16 +634,20 @@ func (this *QPlainTextEdit) isUndoRedoEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit17isUndoRedoEnabledEv
     // invoke: bool isUndoRedoEnabled()
-    var ret = C.C_ZNK14QPlainTextEdit17isUndoRedoEnabledEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit17isUndoRedoEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "isUndoRedoEnabled", args)
   }
 
+  return
 }
 
 // cut()
-func (this *QPlainTextEdit) cut(args ...interface{}) () {
+func (this *QPlainTextEdit) Cut(args ...interface{}) () {
   // cut()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -623,10 +664,11 @@ func (this *QPlainTextEdit) cut(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "cut", args)
   }
 
+  return
 }
 
 // createStandardContextMenu()
-func (this *QPlainTextEdit) createStandardContextMenu(args ...interface{}) () {
+func (this *QPlainTextEdit) Createstandardcontextmenu(args ...interface{}) (ret interface{}) {
   // createStandardContextMenu()
   // createStandardContextMenu(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -641,23 +683,30 @@ func (this *QPlainTextEdit) createStandardContextMenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QPlainTextEdit25createStandardContextMenuEv
     // invoke: QMenu * createStandardContextMenu()
-    var ret = C.C_ZN14QPlainTextEdit25createStandardContextMenuEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QPlainTextEdit25createStandardContextMenuEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN14QPlainTextEdit25createStandardContextMenuERK6QPoint
     // invoke: QMenu * createStandardContextMenu(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN14QPlainTextEdit25createStandardContextMenuERK6QPoint(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QPlainTextEdit25createStandardContextMenuERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "createStandardContextMenu", args)
   }
 
+  return
 }
 
 // extraSelections()
-func (this *QPlainTextEdit) extraSelections(args ...interface{}) () {
+func (this *QPlainTextEdit) Extraselections(args ...interface{}) () {
   // extraSelections()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -674,10 +723,11 @@ func (this *QPlainTextEdit) extraSelections(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "extraSelections", args)
   }
 
+  return
 }
 
 // mergeCurrentCharFormat(const class QTextCharFormat &)
-func (this *QPlainTextEdit) mergeCurrentCharFormat(args ...interface{}) () {
+func (this *QPlainTextEdit) Mergecurrentcharformat(args ...interface{}) () {
   // mergeCurrentCharFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -697,10 +747,11 @@ func (this *QPlainTextEdit) mergeCurrentCharFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "mergeCurrentCharFormat", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QPlainTextEdit) metaObject(args ...interface{}) () {
+func (this *QPlainTextEdit) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -717,10 +768,11 @@ func (this *QPlainTextEdit) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "metaObject", args)
   }
 
+  return
 }
 
 // setTabChangesFocus(_Bool)
-func (this *QPlainTextEdit) setTabChangesFocus(args ...interface{}) () {
+func (this *QPlainTextEdit) Settabchangesfocus(args ...interface{}) () {
   // setTabChangesFocus(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -740,10 +792,11 @@ func (this *QPlainTextEdit) setTabChangesFocus(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setTabChangesFocus", args)
   }
 
+  return
 }
 
 // centerOnScroll()
-func (this *QPlainTextEdit) centerOnScroll(args ...interface{}) () {
+func (this *QPlainTextEdit) Centeronscroll(args ...interface{}) (ret interface{}) {
   // centerOnScroll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -755,16 +808,20 @@ func (this *QPlainTextEdit) centerOnScroll(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit14centerOnScrollEv
     // invoke: bool centerOnScroll()
-    var ret = C.C_ZNK14QPlainTextEdit14centerOnScrollEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit14centerOnScrollEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "centerOnScroll", args)
   }
 
+  return
 }
 
 // toPlainText()
-func (this *QPlainTextEdit) toPlainText(args ...interface{}) () {
+func (this *QPlainTextEdit) Toplaintext(args ...interface{}) (ret interface{}) {
   // toPlainText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -776,16 +833,20 @@ func (this *QPlainTextEdit) toPlainText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit11toPlainTextEv
     // invoke: QString toPlainText()
-    var ret = C.C_ZNK14QPlainTextEdit11toPlainTextEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit11toPlainTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "toPlainText", args)
   }
 
+  return
 }
 
 // zoomIn(int)
-func (this *QPlainTextEdit) zoomIn(args ...interface{}) () {
+func (this *QPlainTextEdit) Zoomin(args ...interface{}) () {
   // zoomIn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -805,10 +866,11 @@ func (this *QPlainTextEdit) zoomIn(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "zoomIn", args)
   }
 
+  return
 }
 
 // backgroundVisible()
-func (this *QPlainTextEdit) backgroundVisible(args ...interface{}) () {
+func (this *QPlainTextEdit) Backgroundvisible(args ...interface{}) (ret interface{}) {
   // backgroundVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -820,16 +882,20 @@ func (this *QPlainTextEdit) backgroundVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit17backgroundVisibleEv
     // invoke: bool backgroundVisible()
-    var ret = C.C_ZNK14QPlainTextEdit17backgroundVisibleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit17backgroundVisibleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "backgroundVisible", args)
   }
 
+  return
 }
 
 // zoomOut(int)
-func (this *QPlainTextEdit) zoomOut(args ...interface{}) () {
+func (this *QPlainTextEdit) Zoomout(args ...interface{}) () {
   // zoomOut(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -849,10 +915,11 @@ func (this *QPlainTextEdit) zoomOut(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "zoomOut", args)
   }
 
+  return
 }
 
 // cursorRect(const class QTextCursor &)
-func (this *QPlainTextEdit) cursorRect(args ...interface{}) () {
+func (this *QPlainTextEdit) Cursorrect(args ...interface{}) (ret interface{}) {
   // cursorRect(const class QTextCursor &)
   // cursorRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -869,21 +936,28 @@ func (this *QPlainTextEdit) cursorRect(args ...interface{}) () {
     // invoke: QRect cursorRect(const class QTextCursor &)
     var arg0 = args[0].(QTextCursor).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK14QPlainTextEdit10cursorRectERK11QTextCursor(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit10cursorRectERK11QTextCursor(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK14QPlainTextEdit10cursorRectEv
     // invoke: QRect cursorRect()
-    var ret = C.C_ZNK14QPlainTextEdit10cursorRectEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit10cursorRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "cursorRect", args)
   }
 
+  return
 }
 
 // setUndoRedoEnabled(_Bool)
-func (this *QPlainTextEdit) setUndoRedoEnabled(args ...interface{}) () {
+func (this *QPlainTextEdit) Setundoredoenabled(args ...interface{}) () {
   // setUndoRedoEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -903,10 +977,11 @@ func (this *QPlainTextEdit) setUndoRedoEnabled(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setUndoRedoEnabled", args)
   }
 
+  return
 }
 
 // textCursor()
-func (this *QPlainTextEdit) textCursor(args ...interface{}) () {
+func (this *QPlainTextEdit) Textcursor(args ...interface{}) (ret interface{}) {
   // textCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -918,16 +993,20 @@ func (this *QPlainTextEdit) textCursor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit10textCursorEv
     // invoke: QTextCursor textCursor()
-    var ret = C.C_ZNK14QPlainTextEdit10textCursorEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit10textCursorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCursor{}) // "QTextCursor"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "textCursor", args)
   }
 
+  return
 }
 
 // anchorAt(const class QPoint &)
-func (this *QPlainTextEdit) anchorAt(args ...interface{}) () {
+func (this *QPlainTextEdit) Anchorat(args ...interface{}) (ret interface{}) {
   // anchorAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -942,16 +1021,20 @@ func (this *QPlainTextEdit) anchorAt(args ...interface{}) () {
     // invoke: QString anchorAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK14QPlainTextEdit8anchorAtERK6QPoint(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit8anchorAtERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "anchorAt", args)
   }
 
+  return
 }
 
 // setDocument(class QTextDocument *)
-func (this *QPlainTextEdit) setDocument(args ...interface{}) () {
+func (this *QPlainTextEdit) Setdocument(args ...interface{}) () {
   // setDocument(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -971,10 +1054,11 @@ func (this *QPlainTextEdit) setDocument(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setDocument", args)
   }
 
+  return
 }
 
 // print(class QPagedPaintDevice *)
-func (this *QPlainTextEdit) print(args ...interface{}) () {
+func (this *QPlainTextEdit) Print(args ...interface{}) () {
   // print(class QPagedPaintDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -994,10 +1078,11 @@ func (this *QPlainTextEdit) print(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "print", args)
   }
 
+  return
 }
 
 // loadResource(int, const class QUrl &)
-func (this *QPlainTextEdit) loadResource(args ...interface{}) () {
+func (this *QPlainTextEdit) Loadresource(args ...interface{}) (ret interface{}) {
   // loadResource(int, const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1015,16 +1100,20 @@ func (this *QPlainTextEdit) loadResource(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QUrl).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN14QPlainTextEdit12loadResourceEiRK4QUrl(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QPlainTextEdit12loadResourceEiRK4QUrl(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "loadResource", args)
   }
 
+  return
 }
 
 // setCenterOnScroll(_Bool)
-func (this *QPlainTextEdit) setCenterOnScroll(args ...interface{}) () {
+func (this *QPlainTextEdit) Setcenteronscroll(args ...interface{}) () {
   // setCenterOnScroll(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1044,10 +1133,11 @@ func (this *QPlainTextEdit) setCenterOnScroll(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setCenterOnScroll", args)
   }
 
+  return
 }
 
 // undo()
-func (this *QPlainTextEdit) undo(args ...interface{}) () {
+func (this *QPlainTextEdit) Undo(args ...interface{}) () {
   // undo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1064,10 +1154,11 @@ func (this *QPlainTextEdit) undo(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "undo", args)
   }
 
+  return
 }
 
 // paste()
-func (this *QPlainTextEdit) paste(args ...interface{}) () {
+func (this *QPlainTextEdit) Paste(args ...interface{}) () {
   // paste()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1084,10 +1175,11 @@ func (this *QPlainTextEdit) paste(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "paste", args)
   }
 
+  return
 }
 
 // blockCount()
-func (this *QPlainTextEdit) blockCount(args ...interface{}) () {
+func (this *QPlainTextEdit) Blockcount(args ...interface{}) (ret interface{}) {
   // blockCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1099,16 +1191,20 @@ func (this *QPlainTextEdit) blockCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit10blockCountEv
     // invoke: int blockCount()
-    var ret = C.C_ZNK14QPlainTextEdit10blockCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit10blockCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "blockCount", args)
   }
 
+  return
 }
 
 // placeholderText()
-func (this *QPlainTextEdit) placeholderText(args ...interface{}) () {
+func (this *QPlainTextEdit) Placeholdertext(args ...interface{}) (ret interface{}) {
   // placeholderText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1120,16 +1216,20 @@ func (this *QPlainTextEdit) placeholderText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit15placeholderTextEv
     // invoke: QString placeholderText()
-    var ret = C.C_ZNK14QPlainTextEdit15placeholderTextEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit15placeholderTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "placeholderText", args)
   }
 
+  return
 }
 
 // selectAll()
-func (this *QPlainTextEdit) selectAll(args ...interface{}) () {
+func (this *QPlainTextEdit) Selectall(args ...interface{}) () {
   // selectAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1146,10 +1246,11 @@ func (this *QPlainTextEdit) selectAll(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "selectAll", args)
   }
 
+  return
 }
 
 // maximumBlockCount()
-func (this *QPlainTextEdit) maximumBlockCount(args ...interface{}) () {
+func (this *QPlainTextEdit) Maximumblockcount(args ...interface{}) (ret interface{}) {
   // maximumBlockCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1161,16 +1262,20 @@ func (this *QPlainTextEdit) maximumBlockCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit17maximumBlockCountEv
     // invoke: int maximumBlockCount()
-    var ret = C.C_ZNK14QPlainTextEdit17maximumBlockCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit17maximumBlockCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "maximumBlockCount", args)
   }
 
+  return
 }
 
 // redo()
-func (this *QPlainTextEdit) redo(args ...interface{}) () {
+func (this *QPlainTextEdit) Redo(args ...interface{}) () {
   // redo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1187,10 +1292,11 @@ func (this *QPlainTextEdit) redo(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "redo", args)
   }
 
+  return
 }
 
 // setBackgroundVisible(_Bool)
-func (this *QPlainTextEdit) setBackgroundVisible(args ...interface{}) () {
+func (this *QPlainTextEdit) Setbackgroundvisible(args ...interface{}) () {
   // setBackgroundVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1210,10 +1316,11 @@ func (this *QPlainTextEdit) setBackgroundVisible(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setBackgroundVisible", args)
   }
 
+  return
 }
 
 // isReadOnly()
-func (this *QPlainTextEdit) isReadOnly(args ...interface{}) () {
+func (this *QPlainTextEdit) Isreadonly(args ...interface{}) (ret interface{}) {
   // isReadOnly()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1225,16 +1332,20 @@ func (this *QPlainTextEdit) isReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit10isReadOnlyEv
     // invoke: bool isReadOnly()
-    var ret = C.C_ZNK14QPlainTextEdit10isReadOnlyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit10isReadOnlyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "isReadOnly", args)
   }
 
+  return
 }
 
 // setTextCursor(const class QTextCursor &)
-func (this *QPlainTextEdit) setTextCursor(args ...interface{}) () {
+func (this *QPlainTextEdit) Settextcursor(args ...interface{}) () {
   // setTextCursor(const class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1254,10 +1365,11 @@ func (this *QPlainTextEdit) setTextCursor(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setTextCursor", args)
   }
 
+  return
 }
 
 // overwriteMode()
-func (this *QPlainTextEdit) overwriteMode(args ...interface{}) () {
+func (this *QPlainTextEdit) Overwritemode(args ...interface{}) (ret interface{}) {
   // overwriteMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1269,16 +1381,20 @@ func (this *QPlainTextEdit) overwriteMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit13overwriteModeEv
     // invoke: bool overwriteMode()
-    var ret = C.C_ZNK14QPlainTextEdit13overwriteModeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit13overwriteModeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "overwriteMode", args)
   }
 
+  return
 }
 
 // setCursorWidth(int)
-func (this *QPlainTextEdit) setCursorWidth(args ...interface{}) () {
+func (this *QPlainTextEdit) Setcursorwidth(args ...interface{}) () {
   // setCursorWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1298,10 +1414,11 @@ func (this *QPlainTextEdit) setCursorWidth(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setCursorWidth", args)
   }
 
+  return
 }
 
 // appendHtml(const class QString &)
-func (this *QPlainTextEdit) appendHtml(args ...interface{}) () {
+func (this *QPlainTextEdit) Appendhtml(args ...interface{}) () {
   // appendHtml(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1321,10 +1438,11 @@ func (this *QPlainTextEdit) appendHtml(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "appendHtml", args)
   }
 
+  return
 }
 
 // textInteractionFlags()
-func (this *QPlainTextEdit) textInteractionFlags(args ...interface{}) () {
+func (this *QPlainTextEdit) Textinteractionflags(args ...interface{}) () {
   // textInteractionFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1341,10 +1459,11 @@ func (this *QPlainTextEdit) textInteractionFlags(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "textInteractionFlags", args)
   }
 
+  return
 }
 
 // canPaste()
-func (this *QPlainTextEdit) canPaste(args ...interface{}) () {
+func (this *QPlainTextEdit) Canpaste(args ...interface{}) (ret interface{}) {
   // canPaste()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1356,16 +1475,20 @@ func (this *QPlainTextEdit) canPaste(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit8canPasteEv
     // invoke: bool canPaste()
-    var ret = C.C_ZNK14QPlainTextEdit8canPasteEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit8canPasteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "canPaste", args)
   }
 
+  return
 }
 
 // setOverwriteMode(_Bool)
-func (this *QPlainTextEdit) setOverwriteMode(args ...interface{}) () {
+func (this *QPlainTextEdit) Setoverwritemode(args ...interface{}) () {
   // setOverwriteMode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1385,10 +1508,11 @@ func (this *QPlainTextEdit) setOverwriteMode(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setOverwriteMode", args)
   }
 
+  return
 }
 
 // copy()
-func (this *QPlainTextEdit) copy(args ...interface{}) () {
+func (this *QPlainTextEdit) Copy(args ...interface{}) () {
   // copy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1405,10 +1529,11 @@ func (this *QPlainTextEdit) copy(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "copy", args)
   }
 
+  return
 }
 
 // ~QPlainTextEdit()
-func (this *QPlainTextEdit) FreeQPlainTextEdit(args ...interface{}) () {
+func (this *QPlainTextEdit) Freeqplaintextedit(args ...interface{}) () {
   // ~QPlainTextEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1425,10 +1550,11 @@ func (this *QPlainTextEdit) FreeQPlainTextEdit(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "~QPlainTextEdit", args)
   }
 
+  return
 }
 
 // setPlaceholderText(const class QString &)
-func (this *QPlainTextEdit) setPlaceholderText(args ...interface{}) () {
+func (this *QPlainTextEdit) Setplaceholdertext(args ...interface{}) () {
   // setPlaceholderText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1448,10 +1574,11 @@ func (this *QPlainTextEdit) setPlaceholderText(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setPlaceholderText", args)
   }
 
+  return
 }
 
 // setMaximumBlockCount(int)
-func (this *QPlainTextEdit) setMaximumBlockCount(args ...interface{}) () {
+func (this *QPlainTextEdit) Setmaximumblockcount(args ...interface{}) () {
   // setMaximumBlockCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1471,6 +1598,7 @@ func (this *QPlainTextEdit) setMaximumBlockCount(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setMaximumBlockCount", args)
   }
 
+  return
 }
 
 // QPlainTextEdit(const class QString &, class QWidget *)
@@ -1516,7 +1644,7 @@ func NewQPlainTextEdit(args ...interface{}) *QPlainTextEdit {
 }
 
 // setPlainText(const class QString &)
-func (this *QPlainTextEdit) setPlainText(args ...interface{}) () {
+func (this *QPlainTextEdit) Setplaintext(args ...interface{}) () {
   // setPlainText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1536,10 +1664,11 @@ func (this *QPlainTextEdit) setPlainText(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setPlainText", args)
   }
 
+  return
 }
 
 // insertPlainText(const class QString &)
-func (this *QPlainTextEdit) insertPlainText(args ...interface{}) () {
+func (this *QPlainTextEdit) Insertplaintext(args ...interface{}) () {
   // insertPlainText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1559,10 +1688,11 @@ func (this *QPlainTextEdit) insertPlainText(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "insertPlainText", args)
   }
 
+  return
 }
 
 // cursorWidth()
-func (this *QPlainTextEdit) cursorWidth(args ...interface{}) () {
+func (this *QPlainTextEdit) Cursorwidth(args ...interface{}) (ret interface{}) {
   // cursorWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1574,16 +1704,20 @@ func (this *QPlainTextEdit) cursorWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit11cursorWidthEv
     // invoke: int cursorWidth()
-    var ret = C.C_ZNK14QPlainTextEdit11cursorWidthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit11cursorWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "cursorWidth", args)
   }
 
+  return
 }
 
 // tabChangesFocus()
-func (this *QPlainTextEdit) tabChangesFocus(args ...interface{}) () {
+func (this *QPlainTextEdit) Tabchangesfocus(args ...interface{}) (ret interface{}) {
   // tabChangesFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1595,16 +1729,20 @@ func (this *QPlainTextEdit) tabChangesFocus(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit15tabChangesFocusEv
     // invoke: bool tabChangesFocus()
-    var ret = C.C_ZNK14QPlainTextEdit15tabChangesFocusEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit15tabChangesFocusEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "tabChangesFocus", args)
   }
 
+  return
 }
 
 // wordWrapMode()
-func (this *QPlainTextEdit) wordWrapMode(args ...interface{}) () {
+func (this *QPlainTextEdit) Wordwrapmode(args ...interface{}) () {
   // wordWrapMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1621,10 +1759,11 @@ func (this *QPlainTextEdit) wordWrapMode(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "wordWrapMode", args)
   }
 
+  return
 }
 
 // cursorForPosition(const class QPoint &)
-func (this *QPlainTextEdit) cursorForPosition(args ...interface{}) () {
+func (this *QPlainTextEdit) Cursorforposition(args ...interface{}) (ret interface{}) {
   // cursorForPosition(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1639,16 +1778,20 @@ func (this *QPlainTextEdit) cursorForPosition(args ...interface{}) () {
     // invoke: QTextCursor cursorForPosition(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK14QPlainTextEdit17cursorForPositionERK6QPoint(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit17cursorForPositionERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCursor{}) // "QTextCursor"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "cursorForPosition", args)
   }
 
+  return
 }
 
 // setDocumentTitle(const class QString &)
-func (this *QPlainTextEdit) setDocumentTitle(args ...interface{}) () {
+func (this *QPlainTextEdit) Setdocumenttitle(args ...interface{}) () {
   // setDocumentTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1668,10 +1811,11 @@ func (this *QPlainTextEdit) setDocumentTitle(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setDocumentTitle", args)
   }
 
+  return
 }
 
 // document()
-func (this *QPlainTextEdit) document(args ...interface{}) () {
+func (this *QPlainTextEdit) Document(args ...interface{}) (ret interface{}) {
   // document()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1683,16 +1827,20 @@ func (this *QPlainTextEdit) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit8documentEv
     // invoke: QTextDocument * document()
-    var ret = C.C_ZNK14QPlainTextEdit8documentEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit8documentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextDocument{}) // "QTextDocument *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "document", args)
   }
 
+  return
 }
 
 // currentCharFormat()
-func (this *QPlainTextEdit) currentCharFormat(args ...interface{}) () {
+func (this *QPlainTextEdit) Currentcharformat(args ...interface{}) (ret interface{}) {
   // currentCharFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1704,16 +1852,20 @@ func (this *QPlainTextEdit) currentCharFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QPlainTextEdit17currentCharFormatEv
     // invoke: QTextCharFormat currentCharFormat()
-    var ret = C.C_ZNK14QPlainTextEdit17currentCharFormatEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QPlainTextEdit17currentCharFormatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextCharFormat{}) // "QTextCharFormat"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "currentCharFormat", args)
   }
 
+  return
 }
 
 // lineWrapMode()
-func (this *QPlainTextEdit) lineWrapMode(args ...interface{}) () {
+func (this *QPlainTextEdit) Linewrapmode(args ...interface{}) () {
   // lineWrapMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1730,10 +1882,11 @@ func (this *QPlainTextEdit) lineWrapMode(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "lineWrapMode", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QPlainTextEdit) clear(args ...interface{}) () {
+func (this *QPlainTextEdit) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1750,10 +1903,11 @@ func (this *QPlainTextEdit) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "clear", args)
   }
 
+  return
 }
 
 // centerCursor()
-func (this *QPlainTextEdit) centerCursor(args ...interface{}) () {
+func (this *QPlainTextEdit) Centercursor(args ...interface{}) () {
   // centerCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1770,10 +1924,11 @@ func (this *QPlainTextEdit) centerCursor(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "centerCursor", args)
   }
 
+  return
 }
 
 // setReadOnly(_Bool)
-func (this *QPlainTextEdit) setReadOnly(args ...interface{}) () {
+func (this *QPlainTextEdit) Setreadonly(args ...interface{}) () {
   // setReadOnly(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1793,6 +1948,7 @@ func (this *QPlainTextEdit) setReadOnly(args ...interface{}) () {
     qtrt.ErrorResolve("QPlainTextEdit", "setReadOnly", args)
   }
 
+  return
 }
 
 // <= body block end

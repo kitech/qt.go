@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.go
 //
@@ -35,7 +35,7 @@ extern void C_ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate(vo
   // proto:  void QDataWidgetMapper::revert();
 extern void C_ZN17QDataWidgetMapper6revertEv(void* qthis); // 4
   // proto:  int QDataWidgetMapper::mappedSection(QWidget * widget);
-extern void C_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(void* qthis, void* arg0); // 4
+extern int32_t C_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QDataWidgetMapper::setCurrentIndex(int index);
 extern void C_ZN17QDataWidgetMapper15setCurrentIndexEi(void* qthis, int32_t arg0); // 4
   // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section, const QByteArray & propertyName);
@@ -45,11 +45,11 @@ extern void C_ZN17QDataWidgetMapper10addMappingEP7QWidgeti(void* qthis, void* ar
   // proto:  void QDataWidgetMapper::toPrevious();
 extern void C_ZN17QDataWidgetMapper10toPreviousEv(void* qthis); // 4
   // proto:  bool QDataWidgetMapper::submit();
-extern void C_ZN17QDataWidgetMapper6submitEv(void* qthis); // 4
+extern bool C_ZN17QDataWidgetMapper6submitEv(void* qthis); // 4
   // proto:  QModelIndex QDataWidgetMapper::rootIndex();
-extern void C_ZNK17QDataWidgetMapper9rootIndexEv(void* qthis); // 4
+extern void* C_ZNK17QDataWidgetMapper9rootIndexEv(void* qthis); // 4
   // proto:  QByteArray QDataWidgetMapper::mappedPropertyName(QWidget * widget);
-extern void C_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(void* qthis, void* arg0); // 4
+extern void* C_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QDataWidgetMapper::clearMapping();
 extern void C_ZN17QDataWidgetMapper12clearMappingEv(void* qthis); // 4
   // proto:  void QDataWidgetMapper::toLast();
@@ -73,9 +73,9 @@ extern void C_ZN17QDataWidgetMapperD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QDataWidgetMapper::metaObject();
 extern void C_ZNK17QDataWidgetMapper10metaObjectEv(void* qthis); // 4
   // proto:  QWidget * QDataWidgetMapper::mappedWidgetAt(int section);
-extern void C_ZNK17QDataWidgetMapper14mappedWidgetAtEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK17QDataWidgetMapper14mappedWidgetAtEi(void* qthis, int32_t arg0); // 4
   // proto:  int QDataWidgetMapper::currentIndex();
-extern void C_ZNK17QDataWidgetMapper12currentIndexEv(void* qthis); // 4
+extern int32_t C_ZNK17QDataWidgetMapper12currentIndexEv(void* qthis); // 4
   // proto:  QAbstractItemModel * QDataWidgetMapper::model();
 extern void C_ZNK17QDataWidgetMapper5modelEv(void* qthis); // 4
   // proto:  void QDataWidgetMapper::setCurrentModelIndex(const QModelIndex & index);
@@ -102,7 +102,7 @@ type QDataWidgetMapper struct {
 }
 
 // orientation()
-func (this *QDataWidgetMapper) orientation(args ...interface{}) () {
+func (this *QDataWidgetMapper) Orientation(args ...interface{}) () {
   // orientation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -119,10 +119,11 @@ func (this *QDataWidgetMapper) orientation(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "orientation", args)
   }
 
+  return
 }
 
 // setItemDelegate(class QAbstractItemDelegate *)
-func (this *QDataWidgetMapper) setItemDelegate(args ...interface{}) () {
+func (this *QDataWidgetMapper) Setitemdelegate(args ...interface{}) () {
   // setItemDelegate(class QAbstractItemDelegate *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -142,10 +143,11 @@ func (this *QDataWidgetMapper) setItemDelegate(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "setItemDelegate", args)
   }
 
+  return
 }
 
 // revert()
-func (this *QDataWidgetMapper) revert(args ...interface{}) () {
+func (this *QDataWidgetMapper) Revert(args ...interface{}) () {
   // revert()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,10 +164,11 @@ func (this *QDataWidgetMapper) revert(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "revert", args)
   }
 
+  return
 }
 
 // mappedSection(class QWidget *)
-func (this *QDataWidgetMapper) mappedSection(args ...interface{}) () {
+func (this *QDataWidgetMapper) Mappedsection(args ...interface{}) (ret interface{}) {
   // mappedSection(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -180,16 +183,20 @@ func (this *QDataWidgetMapper) mappedSection(args ...interface{}) () {
     // invoke: int mappedSection(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "mappedSection", args)
   }
 
+  return
 }
 
 // setCurrentIndex(int)
-func (this *QDataWidgetMapper) setCurrentIndex(args ...interface{}) () {
+func (this *QDataWidgetMapper) Setcurrentindex(args ...interface{}) () {
   // setCurrentIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -209,10 +216,11 @@ func (this *QDataWidgetMapper) setCurrentIndex(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "setCurrentIndex", args)
   }
 
+  return
 }
 
 // addMapping(class QWidget *, int, const class QByteArray &)
-func (this *QDataWidgetMapper) addMapping(args ...interface{}) () {
+func (this *QDataWidgetMapper) Addmapping(args ...interface{}) () {
   // addMapping(class QWidget *, int, const class QByteArray &)
   // addMapping(class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -250,10 +258,11 @@ func (this *QDataWidgetMapper) addMapping(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "addMapping", args)
   }
 
+  return
 }
 
 // toPrevious()
-func (this *QDataWidgetMapper) toPrevious(args ...interface{}) () {
+func (this *QDataWidgetMapper) Toprevious(args ...interface{}) () {
   // toPrevious()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -270,10 +279,11 @@ func (this *QDataWidgetMapper) toPrevious(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "toPrevious", args)
   }
 
+  return
 }
 
 // submit()
-func (this *QDataWidgetMapper) submit(args ...interface{}) () {
+func (this *QDataWidgetMapper) Submit(args ...interface{}) (ret interface{}) {
   // submit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -285,16 +295,20 @@ func (this *QDataWidgetMapper) submit(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QDataWidgetMapper6submitEv
     // invoke: bool submit()
-    var ret = C.C_ZN17QDataWidgetMapper6submitEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN17QDataWidgetMapper6submitEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "submit", args)
   }
 
+  return
 }
 
 // rootIndex()
-func (this *QDataWidgetMapper) rootIndex(args ...interface{}) () {
+func (this *QDataWidgetMapper) Rootindex(args ...interface{}) (ret interface{}) {
   // rootIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,16 +320,20 @@ func (this *QDataWidgetMapper) rootIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper9rootIndexEv
     // invoke: QModelIndex rootIndex()
-    var ret = C.C_ZNK17QDataWidgetMapper9rootIndexEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QDataWidgetMapper9rootIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "rootIndex", args)
   }
 
+  return
 }
 
 // mappedPropertyName(class QWidget *)
-func (this *QDataWidgetMapper) mappedPropertyName(args ...interface{}) () {
+func (this *QDataWidgetMapper) Mappedpropertyname(args ...interface{}) (ret interface{}) {
   // mappedPropertyName(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -330,16 +348,20 @@ func (this *QDataWidgetMapper) mappedPropertyName(args ...interface{}) () {
     // invoke: QByteArray mappedPropertyName(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "mappedPropertyName", args)
   }
 
+  return
 }
 
 // clearMapping()
-func (this *QDataWidgetMapper) clearMapping(args ...interface{}) () {
+func (this *QDataWidgetMapper) Clearmapping(args ...interface{}) () {
   // clearMapping()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -356,10 +378,11 @@ func (this *QDataWidgetMapper) clearMapping(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "clearMapping", args)
   }
 
+  return
 }
 
 // toLast()
-func (this *QDataWidgetMapper) toLast(args ...interface{}) () {
+func (this *QDataWidgetMapper) Tolast(args ...interface{}) () {
   // toLast()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -376,10 +399,11 @@ func (this *QDataWidgetMapper) toLast(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "toLast", args)
   }
 
+  return
 }
 
 // submitPolicy()
-func (this *QDataWidgetMapper) submitPolicy(args ...interface{}) () {
+func (this *QDataWidgetMapper) Submitpolicy(args ...interface{}) () {
   // submitPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -396,6 +420,7 @@ func (this *QDataWidgetMapper) submitPolicy(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "submitPolicy", args)
   }
 
+  return
 }
 
 // QDataWidgetMapper(class QObject *)
@@ -426,7 +451,7 @@ func NewQDataWidgetMapper(args ...interface{}) *QDataWidgetMapper {
 }
 
 // setRootIndex(const class QModelIndex &)
-func (this *QDataWidgetMapper) setRootIndex(args ...interface{}) () {
+func (this *QDataWidgetMapper) Setrootindex(args ...interface{}) () {
   // setRootIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -446,10 +471,11 @@ func (this *QDataWidgetMapper) setRootIndex(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "setRootIndex", args)
   }
 
+  return
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QDataWidgetMapper) setModel(args ...interface{}) () {
+func (this *QDataWidgetMapper) Setmodel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -469,10 +495,11 @@ func (this *QDataWidgetMapper) setModel(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "setModel", args)
   }
 
+  return
 }
 
 // toFirst()
-func (this *QDataWidgetMapper) toFirst(args ...interface{}) () {
+func (this *QDataWidgetMapper) Tofirst(args ...interface{}) () {
   // toFirst()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -489,10 +516,11 @@ func (this *QDataWidgetMapper) toFirst(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "toFirst", args)
   }
 
+  return
 }
 
 // itemDelegate()
-func (this *QDataWidgetMapper) itemDelegate(args ...interface{}) () {
+func (this *QDataWidgetMapper) Itemdelegate(args ...interface{}) () {
   // itemDelegate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -509,10 +537,11 @@ func (this *QDataWidgetMapper) itemDelegate(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "itemDelegate", args)
   }
 
+  return
 }
 
 // toNext()
-func (this *QDataWidgetMapper) toNext(args ...interface{}) () {
+func (this *QDataWidgetMapper) Tonext(args ...interface{}) () {
   // toNext()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -529,10 +558,11 @@ func (this *QDataWidgetMapper) toNext(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "toNext", args)
   }
 
+  return
 }
 
 // ~QDataWidgetMapper()
-func (this *QDataWidgetMapper) FreeQDataWidgetMapper(args ...interface{}) () {
+func (this *QDataWidgetMapper) Freeqdatawidgetmapper(args ...interface{}) () {
   // ~QDataWidgetMapper()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -549,10 +579,11 @@ func (this *QDataWidgetMapper) FreeQDataWidgetMapper(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "~QDataWidgetMapper", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QDataWidgetMapper) metaObject(args ...interface{}) () {
+func (this *QDataWidgetMapper) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -569,10 +600,11 @@ func (this *QDataWidgetMapper) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "metaObject", args)
   }
 
+  return
 }
 
 // mappedWidgetAt(int)
-func (this *QDataWidgetMapper) mappedWidgetAt(args ...interface{}) () {
+func (this *QDataWidgetMapper) Mappedwidgetat(args ...interface{}) (ret interface{}) {
   // mappedWidgetAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -587,16 +619,20 @@ func (this *QDataWidgetMapper) mappedWidgetAt(args ...interface{}) () {
     // invoke: QWidget * mappedWidgetAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK17QDataWidgetMapper14mappedWidgetAtEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QDataWidgetMapper14mappedWidgetAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "mappedWidgetAt", args)
   }
 
+  return
 }
 
 // currentIndex()
-func (this *QDataWidgetMapper) currentIndex(args ...interface{}) () {
+func (this *QDataWidgetMapper) Currentindex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -608,16 +644,20 @@ func (this *QDataWidgetMapper) currentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper12currentIndexEv
     // invoke: int currentIndex()
-    var ret = C.C_ZNK17QDataWidgetMapper12currentIndexEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QDataWidgetMapper12currentIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "currentIndex", args)
   }
 
+  return
 }
 
 // model()
-func (this *QDataWidgetMapper) model(args ...interface{}) () {
+func (this *QDataWidgetMapper) Model(args ...interface{}) () {
   // model()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -634,10 +674,11 @@ func (this *QDataWidgetMapper) model(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "model", args)
   }
 
+  return
 }
 
 // setCurrentModelIndex(const class QModelIndex &)
-func (this *QDataWidgetMapper) setCurrentModelIndex(args ...interface{}) () {
+func (this *QDataWidgetMapper) Setcurrentmodelindex(args ...interface{}) () {
   // setCurrentModelIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -657,10 +698,11 @@ func (this *QDataWidgetMapper) setCurrentModelIndex(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "setCurrentModelIndex", args)
   }
 
+  return
 }
 
 // removeMapping(class QWidget *)
-func (this *QDataWidgetMapper) removeMapping(args ...interface{}) () {
+func (this *QDataWidgetMapper) Removemapping(args ...interface{}) () {
   // removeMapping(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -680,6 +722,7 @@ func (this *QDataWidgetMapper) removeMapping(args ...interface{}) () {
     qtrt.ErrorResolve("QDataWidgetMapper", "removeMapping", args)
   }
 
+  return
 }
 
 // <= body block end

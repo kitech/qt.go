@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qscopedpointer.h
 // dst-file: /src/core/qscopedpointer.go
 //
@@ -49,7 +49,7 @@ type QScopedPointerPodDeleter struct {
 }
 
 // cleanup(void *)
-func (this *QScopedPointerPodDeleter) cleanup_s(args ...interface{}) () {
+func (this *QScopedPointerPodDeleter) Cleanup_S(args ...interface{}) () {
   // cleanup(void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -69,6 +69,7 @@ func (this *QScopedPointerPodDeleter) cleanup_s(args ...interface{}) () {
     qtrt.ErrorResolve("QScopedPointerPodDeleter", "cleanup", args)
   }
 
+  return
 }
 
 // <= body block end

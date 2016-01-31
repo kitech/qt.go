@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.go
 //
@@ -63,7 +63,7 @@ type QCommonStyle struct {
 }
 
 // polish(class QWidget *)
-func (this *QCommonStyle) polish(args ...interface{}) () {
+func (this *QCommonStyle) Polish(args ...interface{}) () {
   // polish(class QWidget *)
   // polish(class QPalette &)
   // polish(class QApplication *)
@@ -101,6 +101,7 @@ func (this *QCommonStyle) polish(args ...interface{}) () {
     qtrt.ErrorResolve("QCommonStyle", "polish", args)
   }
 
+  return
 }
 
 // QCommonStyle()
@@ -128,7 +129,7 @@ func NewQCommonStyle(args ...interface{}) *QCommonStyle {
 }
 
 // ~QCommonStyle()
-func (this *QCommonStyle) FreeQCommonStyle(args ...interface{}) () {
+func (this *QCommonStyle) Freeqcommonstyle(args ...interface{}) () {
   // ~QCommonStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -145,10 +146,11 @@ func (this *QCommonStyle) FreeQCommonStyle(args ...interface{}) () {
     qtrt.ErrorResolve("QCommonStyle", "~QCommonStyle", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QCommonStyle) metaObject(args ...interface{}) () {
+func (this *QCommonStyle) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -165,10 +167,11 @@ func (this *QCommonStyle) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QCommonStyle", "metaObject", args)
   }
 
+  return
 }
 
 // unpolish(class QWidget *)
-func (this *QCommonStyle) unpolish(args ...interface{}) () {
+func (this *QCommonStyle) Unpolish(args ...interface{}) () {
   // unpolish(class QWidget *)
   // unpolish(class QApplication *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -197,6 +200,7 @@ func (this *QCommonStyle) unpolish(args ...interface{}) () {
     qtrt.ErrorResolve("QCommonStyle", "unpolish", args)
   }
 
+  return
 }
 
 // <= body block end

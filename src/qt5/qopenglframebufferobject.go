@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qopenglframebufferobject.h
 // dst-file: /src/gui/qopenglframebufferobject.go
 //
@@ -33,15 +33,15 @@ extern void C_ZN30QOpenGLFramebufferObjectFormat9setMipmapEb(void* qthis, bool a
   // proto:  void QOpenGLFramebufferObjectFormat::setSamples(int samples);
 extern void C_ZN30QOpenGLFramebufferObjectFormat10setSamplesEi(void* qthis, int32_t arg0); // 4
   // proto:  GLenum QOpenGLFramebufferObjectFormat::textureTarget();
-extern void C_ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(void* qthis); // 4
+extern int32_t C_ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(void* qthis); // 4
   // proto:  void QOpenGLFramebufferObjectFormat::setInternalTextureFormat(GLenum internalTextureFormat);
 extern void C_ZN30QOpenGLFramebufferObjectFormat24setInternalTextureFormatEj(void* qthis, int32_t arg0); // 4
   // proto:  bool QOpenGLFramebufferObjectFormat::mipmap();
-extern void C_ZNK30QOpenGLFramebufferObjectFormat6mipmapEv(void* qthis); // 4
+extern bool C_ZNK30QOpenGLFramebufferObjectFormat6mipmapEv(void* qthis); // 4
   // proto:  QOpenGLFramebufferObject::Attachment QOpenGLFramebufferObjectFormat::attachment();
 extern void C_ZNK30QOpenGLFramebufferObjectFormat10attachmentEv(void* qthis); // 4
   // proto:  int QOpenGLFramebufferObjectFormat::samples();
-extern void C_ZNK30QOpenGLFramebufferObjectFormat7samplesEv(void* qthis); // 4
+extern int32_t C_ZNK30QOpenGLFramebufferObjectFormat7samplesEv(void* qthis); // 4
   // proto:  void QOpenGLFramebufferObjectFormat::~QOpenGLFramebufferObjectFormat();
 extern void C_ZN30QOpenGLFramebufferObjectFormatD2Ev(void* qthis); // 4
   // proto:  void QOpenGLFramebufferObjectFormat::setTextureTarget(GLenum target);
@@ -51,15 +51,15 @@ extern void* C_ZN30QOpenGLFramebufferObjectFormatC2ERKS_(void* arg0); // 3
   // proto:  void QOpenGLFramebufferObjectFormat::QOpenGLFramebufferObjectFormat();
 extern void* C_ZN30QOpenGLFramebufferObjectFormatC2Ev(); // 3
   // proto:  GLenum QOpenGLFramebufferObjectFormat::internalTextureFormat();
-extern void C_ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(void* qthis); // 4
+extern int32_t C_ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(void* qthis); // 4
   // proto: static bool QOpenGLFramebufferObject::hasOpenGLFramebufferObjects();
-extern void C_ZN24QOpenGLFramebufferObject27hasOpenGLFramebufferObjectsEv(); // 4
+extern bool C_ZN24QOpenGLFramebufferObject27hasOpenGLFramebufferObjectsEv(); // 4
   // proto:  int QOpenGLFramebufferObject::height();
-extern void C_ZNK24QOpenGLFramebufferObject6heightEv(void* qthis); // 2
+extern int32_t C_ZNK24QOpenGLFramebufferObject6heightEv(void* qthis); // 2
   // proto:  QSize QOpenGLFramebufferObject::size();
-extern void C_ZNK24QOpenGLFramebufferObject4sizeEv(void* qthis); // 4
+extern void* C_ZNK24QOpenGLFramebufferObject4sizeEv(void* qthis); // 4
   // proto: static bool QOpenGLFramebufferObject::hasOpenGLFramebufferBlit();
-extern void C_ZN24QOpenGLFramebufferObject24hasOpenGLFramebufferBlitEv(); // 4
+extern bool C_ZN24QOpenGLFramebufferObject24hasOpenGLFramebufferBlitEv(); // 4
   // proto: static void QOpenGLFramebufferObject::blitFramebuffer(QOpenGLFramebufferObject * target, const QRect & targetRect, QOpenGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers, GLenum filter);
 extern void C_ZN24QOpenGLFramebufferObject15blitFramebufferEPS_RK5QRectS0_S3_jj(void* arg0, void* arg1, void* arg2, void* arg3, int32_t arg4, int32_t arg5); // 4
   // proto: static void QOpenGLFramebufferObject::blitFramebuffer(QOpenGLFramebufferObject * target, QOpenGLFramebufferObject * source, GLbitfield buffers, GLenum filter);
@@ -67,19 +67,19 @@ extern void C_ZN24QOpenGLFramebufferObject15blitFramebufferEPS_S0_jj(void* arg0,
   // proto:  QOpenGLFramebufferObjectFormat QOpenGLFramebufferObject::format();
 extern void C_ZNK24QOpenGLFramebufferObject6formatEv(void* qthis); // 4
   // proto:  GLuint QOpenGLFramebufferObject::takeTexture();
-extern void C_ZN24QOpenGLFramebufferObject11takeTextureEv(void* qthis); // 4
+extern int32_t C_ZN24QOpenGLFramebufferObject11takeTextureEv(void* qthis); // 4
   // proto:  GLuint QOpenGLFramebufferObject::texture();
-extern void C_ZNK24QOpenGLFramebufferObject7textureEv(void* qthis); // 4
+extern int32_t C_ZNK24QOpenGLFramebufferObject7textureEv(void* qthis); // 4
   // proto:  int QOpenGLFramebufferObject::width();
-extern void C_ZNK24QOpenGLFramebufferObject5widthEv(void* qthis); // 2
+extern int32_t C_ZNK24QOpenGLFramebufferObject5widthEv(void* qthis); // 2
   // proto:  QOpenGLFramebufferObject::Attachment QOpenGLFramebufferObject::attachment();
 extern void C_ZNK24QOpenGLFramebufferObject10attachmentEv(void* qthis); // 4
   // proto:  void QOpenGLFramebufferObject::~QOpenGLFramebufferObject();
 extern void C_ZN24QOpenGLFramebufferObjectD2Ev(void* qthis); // 4
   // proto:  GLuint QOpenGLFramebufferObject::handle();
-extern void C_ZNK24QOpenGLFramebufferObject6handleEv(void* qthis); // 4
+extern int32_t C_ZNK24QOpenGLFramebufferObject6handleEv(void* qthis); // 4
   // proto:  bool QOpenGLFramebufferObject::isValid();
-extern void C_ZNK24QOpenGLFramebufferObject7isValidEv(void* qthis); // 4
+extern bool C_ZNK24QOpenGLFramebufferObject7isValidEv(void* qthis); // 4
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(int width, int height, GLenum target);
 extern void* C_ZN24QOpenGLFramebufferObjectC2Eiij(int32_t arg0, int32_t arg1, int32_t arg2); // 3
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(int width, int height, const QOpenGLFramebufferObjectFormat & format);
@@ -89,17 +89,17 @@ extern void* C_ZN24QOpenGLFramebufferObjectC2ERK5QSizeRK30QOpenGLFramebufferObje
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(const QSize & size, GLenum target);
 extern void* C_ZN24QOpenGLFramebufferObjectC2ERK5QSizej(void* arg0, int32_t arg1); // 3
   // proto: static bool QOpenGLFramebufferObject::bindDefault();
-extern void C_ZN24QOpenGLFramebufferObject11bindDefaultEv(); // 4
+extern bool C_ZN24QOpenGLFramebufferObject11bindDefaultEv(); // 4
   // proto:  bool QOpenGLFramebufferObject::isBound();
-extern void C_ZNK24QOpenGLFramebufferObject7isBoundEv(void* qthis); // 4
+extern bool C_ZNK24QOpenGLFramebufferObject7isBoundEv(void* qthis); // 4
   // proto:  bool QOpenGLFramebufferObject::bind();
-extern void C_ZN24QOpenGLFramebufferObject4bindEv(void* qthis); // 4
+extern bool C_ZN24QOpenGLFramebufferObject4bindEv(void* qthis); // 4
   // proto:  QImage QOpenGLFramebufferObject::toImage(bool flipped);
-extern void C_ZNK24QOpenGLFramebufferObject7toImageEb(void* qthis, bool arg0); // 4
+extern void* C_ZNK24QOpenGLFramebufferObject7toImageEb(void* qthis, bool arg0); // 4
   // proto:  QImage QOpenGLFramebufferObject::toImage();
-extern void C_ZNK24QOpenGLFramebufferObject7toImageEv(void* qthis); // 4
+extern void* C_ZNK24QOpenGLFramebufferObject7toImageEv(void* qthis); // 4
   // proto:  bool QOpenGLFramebufferObject::release();
-extern void C_ZN24QOpenGLFramebufferObject7releaseEv(void* qthis); // 4
+extern bool C_ZN24QOpenGLFramebufferObject7releaseEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -125,7 +125,7 @@ type QOpenGLFramebufferObject struct {
 }
 
 // setMipmap(_Bool)
-func (this *QOpenGLFramebufferObjectFormat) setMipmap(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) Setmipmap(args ...interface{}) () {
   // setMipmap(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -145,10 +145,11 @@ func (this *QOpenGLFramebufferObjectFormat) setMipmap(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "setMipmap", args)
   }
 
+  return
 }
 
 // setSamples(int)
-func (this *QOpenGLFramebufferObjectFormat) setSamples(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) Setsamples(args ...interface{}) () {
   // setSamples(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -168,10 +169,11 @@ func (this *QOpenGLFramebufferObjectFormat) setSamples(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "setSamples", args)
   }
 
+  return
 }
 
 // textureTarget()
-func (this *QOpenGLFramebufferObjectFormat) textureTarget(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) Texturetarget(args ...interface{}) (ret interface{}) {
   // textureTarget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,16 +185,20 @@ func (this *QOpenGLFramebufferObjectFormat) textureTarget(args ...interface{}) (
   case 0:
     // invoke: _ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv
     // invoke: GLenum textureTarget()
-    var ret = C.C_ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "GLenum"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "textureTarget", args)
   }
 
+  return
 }
 
 // setInternalTextureFormat(GLenum)
-func (this *QOpenGLFramebufferObjectFormat) setInternalTextureFormat(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) Setinternaltextureformat(args ...interface{}) () {
   // setInternalTextureFormat(GLenum)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -212,10 +218,11 @@ func (this *QOpenGLFramebufferObjectFormat) setInternalTextureFormat(args ...int
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "setInternalTextureFormat", args)
   }
 
+  return
 }
 
 // mipmap()
-func (this *QOpenGLFramebufferObjectFormat) mipmap(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) Mipmap(args ...interface{}) (ret interface{}) {
   // mipmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -227,16 +234,20 @@ func (this *QOpenGLFramebufferObjectFormat) mipmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK30QOpenGLFramebufferObjectFormat6mipmapEv
     // invoke: bool mipmap()
-    var ret = C.C_ZNK30QOpenGLFramebufferObjectFormat6mipmapEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK30QOpenGLFramebufferObjectFormat6mipmapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "mipmap", args)
   }
 
+  return
 }
 
 // attachment()
-func (this *QOpenGLFramebufferObjectFormat) attachment(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) Attachment(args ...interface{}) () {
   // attachment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -253,10 +264,11 @@ func (this *QOpenGLFramebufferObjectFormat) attachment(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "attachment", args)
   }
 
+  return
 }
 
 // samples()
-func (this *QOpenGLFramebufferObjectFormat) samples(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) Samples(args ...interface{}) (ret interface{}) {
   // samples()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -268,16 +280,20 @@ func (this *QOpenGLFramebufferObjectFormat) samples(args ...interface{}) () {
   case 0:
     // invoke: _ZNK30QOpenGLFramebufferObjectFormat7samplesEv
     // invoke: int samples()
-    var ret = C.C_ZNK30QOpenGLFramebufferObjectFormat7samplesEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK30QOpenGLFramebufferObjectFormat7samplesEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "samples", args)
   }
 
+  return
 }
 
 // ~QOpenGLFramebufferObjectFormat()
-func (this *QOpenGLFramebufferObjectFormat) FreeQOpenGLFramebufferObjectFormat(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) Freeqopenglframebufferobjectformat(args ...interface{}) () {
   // ~QOpenGLFramebufferObjectFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -294,10 +310,11 @@ func (this *QOpenGLFramebufferObjectFormat) FreeQOpenGLFramebufferObjectFormat(a
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "~QOpenGLFramebufferObjectFormat", args)
   }
 
+  return
 }
 
 // setTextureTarget(GLenum)
-func (this *QOpenGLFramebufferObjectFormat) setTextureTarget(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) Settexturetarget(args ...interface{}) () {
   // setTextureTarget(GLenum)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -317,6 +334,7 @@ func (this *QOpenGLFramebufferObjectFormat) setTextureTarget(args ...interface{}
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "setTextureTarget", args)
   }
 
+  return
 }
 
 // QOpenGLFramebufferObjectFormat(const class QOpenGLFramebufferObjectFormat &)
@@ -356,7 +374,7 @@ func NewQOpenGLFramebufferObjectFormat(args ...interface{}) *QOpenGLFramebufferO
 }
 
 // internalTextureFormat()
-func (this *QOpenGLFramebufferObjectFormat) internalTextureFormat(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) Internaltextureformat(args ...interface{}) (ret interface{}) {
   // internalTextureFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -368,16 +386,20 @@ func (this *QOpenGLFramebufferObjectFormat) internalTextureFormat(args ...interf
   case 0:
     // invoke: _ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv
     // invoke: GLenum internalTextureFormat()
-    var ret = C.C_ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "GLenum"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "internalTextureFormat", args)
   }
 
+  return
 }
 
 // hasOpenGLFramebufferObjects()
-func (this *QOpenGLFramebufferObject) hasOpenGLFramebufferObjects_s(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Hasopenglframebufferobjects_S(args ...interface{}) (ret interface{}) {
   // hasOpenGLFramebufferObjects()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -389,16 +411,20 @@ func (this *QOpenGLFramebufferObject) hasOpenGLFramebufferObjects_s(args ...inte
   case 0:
     // invoke: _ZN24QOpenGLFramebufferObject27hasOpenGLFramebufferObjectsEv
     // invoke: bool hasOpenGLFramebufferObjects()
-    var ret = C.C_ZN24QOpenGLFramebufferObject27hasOpenGLFramebufferObjectsEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN24QOpenGLFramebufferObject27hasOpenGLFramebufferObjectsEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "hasOpenGLFramebufferObjects", args)
   }
 
+  return
 }
 
 // height()
-func (this *QOpenGLFramebufferObject) height(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Height(args ...interface{}) (ret interface{}) {
   // height()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -410,16 +436,20 @@ func (this *QOpenGLFramebufferObject) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject6heightEv
     // invoke: int height()
-    var ret = C.C_ZNK24QOpenGLFramebufferObject6heightEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QOpenGLFramebufferObject6heightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "height", args)
   }
 
+  return
 }
 
 // size()
-func (this *QOpenGLFramebufferObject) size(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Size(args ...interface{}) (ret interface{}) {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -431,16 +461,20 @@ func (this *QOpenGLFramebufferObject) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject4sizeEv
     // invoke: QSize size()
-    var ret = C.C_ZNK24QOpenGLFramebufferObject4sizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QOpenGLFramebufferObject4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "size", args)
   }
 
+  return
 }
 
 // hasOpenGLFramebufferBlit()
-func (this *QOpenGLFramebufferObject) hasOpenGLFramebufferBlit_s(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Hasopenglframebufferblit_S(args ...interface{}) (ret interface{}) {
   // hasOpenGLFramebufferBlit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -452,16 +486,20 @@ func (this *QOpenGLFramebufferObject) hasOpenGLFramebufferBlit_s(args ...interfa
   case 0:
     // invoke: _ZN24QOpenGLFramebufferObject24hasOpenGLFramebufferBlitEv
     // invoke: bool hasOpenGLFramebufferBlit()
-    var ret = C.C_ZN24QOpenGLFramebufferObject24hasOpenGLFramebufferBlitEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN24QOpenGLFramebufferObject24hasOpenGLFramebufferBlitEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "hasOpenGLFramebufferBlit", args)
   }
 
+  return
 }
 
 // blitFramebuffer(class QOpenGLFramebufferObject *, const class QRect &, class QOpenGLFramebufferObject *, const class QRect &, GLbitfield, GLenum)
-func (this *QOpenGLFramebufferObject) blitFramebuffer_s(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Blitframebuffer_S(args ...interface{}) () {
   // blitFramebuffer(class QOpenGLFramebufferObject *, const class QRect &, class QOpenGLFramebufferObject *, const class QRect &, GLbitfield, GLenum)
   // blitFramebuffer(class QOpenGLFramebufferObject *, class QOpenGLFramebufferObject *, GLbitfield, GLenum)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -514,10 +552,11 @@ func (this *QOpenGLFramebufferObject) blitFramebuffer_s(args ...interface{}) () 
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "blitFramebuffer", args)
   }
 
+  return
 }
 
 // format()
-func (this *QOpenGLFramebufferObject) format(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -534,10 +573,11 @@ func (this *QOpenGLFramebufferObject) format(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "format", args)
   }
 
+  return
 }
 
 // takeTexture()
-func (this *QOpenGLFramebufferObject) takeTexture(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Taketexture(args ...interface{}) (ret interface{}) {
   // takeTexture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -549,16 +589,20 @@ func (this *QOpenGLFramebufferObject) takeTexture(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QOpenGLFramebufferObject11takeTextureEv
     // invoke: GLuint takeTexture()
-    var ret = C.C_ZN24QOpenGLFramebufferObject11takeTextureEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN24QOpenGLFramebufferObject11takeTextureEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "GLuint"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "takeTexture", args)
   }
 
+  return
 }
 
 // texture()
-func (this *QOpenGLFramebufferObject) texture(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Texture(args ...interface{}) (ret interface{}) {
   // texture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -570,16 +614,20 @@ func (this *QOpenGLFramebufferObject) texture(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject7textureEv
     // invoke: GLuint texture()
-    var ret = C.C_ZNK24QOpenGLFramebufferObject7textureEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QOpenGLFramebufferObject7textureEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "GLuint"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "texture", args)
   }
 
+  return
 }
 
 // width()
-func (this *QOpenGLFramebufferObject) width(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Width(args ...interface{}) (ret interface{}) {
   // width()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -591,16 +639,20 @@ func (this *QOpenGLFramebufferObject) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject5widthEv
     // invoke: int width()
-    var ret = C.C_ZNK24QOpenGLFramebufferObject5widthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QOpenGLFramebufferObject5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "width", args)
   }
 
+  return
 }
 
 // attachment()
-func (this *QOpenGLFramebufferObject) attachment(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Attachment(args ...interface{}) () {
   // attachment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -617,10 +669,11 @@ func (this *QOpenGLFramebufferObject) attachment(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "attachment", args)
   }
 
+  return
 }
 
 // ~QOpenGLFramebufferObject()
-func (this *QOpenGLFramebufferObject) FreeQOpenGLFramebufferObject(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Freeqopenglframebufferobject(args ...interface{}) () {
   // ~QOpenGLFramebufferObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -637,10 +690,11 @@ func (this *QOpenGLFramebufferObject) FreeQOpenGLFramebufferObject(args ...inter
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "~QOpenGLFramebufferObject", args)
   }
 
+  return
 }
 
 // handle()
-func (this *QOpenGLFramebufferObject) handle(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Handle(args ...interface{}) (ret interface{}) {
   // handle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -652,16 +706,20 @@ func (this *QOpenGLFramebufferObject) handle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject6handleEv
     // invoke: GLuint handle()
-    var ret = C.C_ZNK24QOpenGLFramebufferObject6handleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QOpenGLFramebufferObject6handleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "GLuint"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "handle", args)
   }
 
+  return
 }
 
 // isValid()
-func (this *QOpenGLFramebufferObject) isValid(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Isvalid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -673,12 +731,16 @@ func (this *QOpenGLFramebufferObject) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject7isValidEv
     // invoke: bool isValid()
-    var ret = C.C_ZNK24QOpenGLFramebufferObject7isValidEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QOpenGLFramebufferObject7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "isValid", args)
   }
 
+  return
 }
 
 // QOpenGLFramebufferObject(int, int, GLenum)
@@ -763,7 +825,7 @@ func NewQOpenGLFramebufferObject(args ...interface{}) *QOpenGLFramebufferObject 
 }
 
 // bindDefault()
-func (this *QOpenGLFramebufferObject) bindDefault_s(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Binddefault_S(args ...interface{}) (ret interface{}) {
   // bindDefault()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -775,16 +837,20 @@ func (this *QOpenGLFramebufferObject) bindDefault_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QOpenGLFramebufferObject11bindDefaultEv
     // invoke: bool bindDefault()
-    var ret = C.C_ZN24QOpenGLFramebufferObject11bindDefaultEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN24QOpenGLFramebufferObject11bindDefaultEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "bindDefault", args)
   }
 
+  return
 }
 
 // isBound()
-func (this *QOpenGLFramebufferObject) isBound(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Isbound(args ...interface{}) (ret interface{}) {
   // isBound()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -796,16 +862,20 @@ func (this *QOpenGLFramebufferObject) isBound(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject7isBoundEv
     // invoke: bool isBound()
-    var ret = C.C_ZNK24QOpenGLFramebufferObject7isBoundEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QOpenGLFramebufferObject7isBoundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "isBound", args)
   }
 
+  return
 }
 
 // bind()
-func (this *QOpenGLFramebufferObject) bind(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Bind(args ...interface{}) (ret interface{}) {
   // bind()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -817,16 +887,20 @@ func (this *QOpenGLFramebufferObject) bind(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QOpenGLFramebufferObject4bindEv
     // invoke: bool bind()
-    var ret = C.C_ZN24QOpenGLFramebufferObject4bindEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN24QOpenGLFramebufferObject4bindEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "bind", args)
   }
 
+  return
 }
 
 // toImage(_Bool)
-func (this *QOpenGLFramebufferObject) toImage(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Toimage(args ...interface{}) (ret interface{}) {
   // toImage(_Bool)
   // toImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -843,21 +917,28 @@ func (this *QOpenGLFramebufferObject) toImage(args ...interface{}) () {
     // invoke: QImage toImage(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK24QOpenGLFramebufferObject7toImageEb(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QOpenGLFramebufferObject7toImageEb(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QImage{}) // "QImage"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK24QOpenGLFramebufferObject7toImageEv
     // invoke: QImage toImage()
-    var ret = C.C_ZNK24QOpenGLFramebufferObject7toImageEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK24QOpenGLFramebufferObject7toImageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QImage{}) // "QImage"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "toImage", args)
   }
 
+  return
 }
 
 // release()
-func (this *QOpenGLFramebufferObject) release(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Release(args ...interface{}) (ret interface{}) {
   // release()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -869,12 +950,16 @@ func (this *QOpenGLFramebufferObject) release(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QOpenGLFramebufferObject7releaseEv
     // invoke: bool release()
-    var ret = C.C_ZN24QOpenGLFramebufferObject7releaseEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN24QOpenGLFramebufferObject7releaseEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "release", args)
   }
 
+  return
 }
 
 // <= body block end

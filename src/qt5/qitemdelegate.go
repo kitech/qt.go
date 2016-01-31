@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qitemdelegate.h
 // dst-file: /src/widgets/qitemdelegate.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QItemEditorFactory * QItemDelegate::itemEditorFactory();
-extern void C_ZNK13QItemDelegate17itemEditorFactoryEv(void* qthis); // 4
+extern void* C_ZNK13QItemDelegate17itemEditorFactoryEv(void* qthis); // 4
   // proto:  QWidget * QItemDelegate::createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index);
-extern void C_ZNK13QItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void* C_ZNK13QItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QItemDelegate::updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index);
 extern void C_ZNK13QItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QItemDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index);
@@ -41,11 +41,11 @@ extern void C_ZNK13QItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK1
   // proto:  void QItemDelegate::~QItemDelegate();
 extern void C_ZN13QItemDelegateD2Ev(void* qthis); // 4
   // proto:  bool QItemDelegate::hasClipping();
-extern void C_ZNK13QItemDelegate11hasClippingEv(void* qthis); // 4
+extern bool C_ZNK13QItemDelegate11hasClippingEv(void* qthis); // 4
   // proto:  void QItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
 extern void C_ZNK13QItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QSize QItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
-extern void C_ZNK13QItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1); // 4
+extern void* C_ZNK13QItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QItemDelegate::setClipping(bool clip);
 extern void C_ZN13QItemDelegate11setClippingEb(void* qthis, bool arg0); // 4
   // proto:  const QMetaObject * QItemDelegate::metaObject();
@@ -73,7 +73,7 @@ type QItemDelegate struct {
 }
 
 // itemEditorFactory()
-func (this *QItemDelegate) itemEditorFactory(args ...interface{}) () {
+func (this *QItemDelegate) Itemeditorfactory(args ...interface{}) (ret interface{}) {
   // itemEditorFactory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -85,16 +85,20 @@ func (this *QItemDelegate) itemEditorFactory(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QItemDelegate17itemEditorFactoryEv
     // invoke: QItemEditorFactory * itemEditorFactory()
-    var ret = C.C_ZNK13QItemDelegate17itemEditorFactoryEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QItemDelegate17itemEditorFactoryEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QItemEditorFactory{}) // "QItemEditorFactory *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QItemDelegate", "itemEditorFactory", args)
   }
 
+  return
 }
 
 // createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QItemDelegate) createEditor(args ...interface{}) () {
+func (this *QItemDelegate) Createeditor(args ...interface{}) (ret interface{}) {
   // createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -115,16 +119,20 @@ func (this *QItemDelegate) createEditor(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZNK13QItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QItemDelegate", "createEditor", args)
   }
 
+  return
 }
 
 // updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QItemDelegate) updateEditorGeometry(args ...interface{}) () {
+func (this *QItemDelegate) Updateeditorgeometry(args ...interface{}) () {
   // updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -150,10 +158,11 @@ func (this *QItemDelegate) updateEditorGeometry(args ...interface{}) () {
     qtrt.ErrorResolve("QItemDelegate", "updateEditorGeometry", args)
   }
 
+  return
 }
 
 // paint(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QItemDelegate) paint(args ...interface{}) () {
+func (this *QItemDelegate) Paint(args ...interface{}) () {
   // paint(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,10 +188,11 @@ func (this *QItemDelegate) paint(args ...interface{}) () {
     qtrt.ErrorResolve("QItemDelegate", "paint", args)
   }
 
+  return
 }
 
 // setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
-func (this *QItemDelegate) setModelData(args ...interface{}) () {
+func (this *QItemDelegate) Setmodeldata(args ...interface{}) () {
   // setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -208,10 +218,11 @@ func (this *QItemDelegate) setModelData(args ...interface{}) () {
     qtrt.ErrorResolve("QItemDelegate", "setModelData", args)
   }
 
+  return
 }
 
 // ~QItemDelegate()
-func (this *QItemDelegate) FreeQItemDelegate(args ...interface{}) () {
+func (this *QItemDelegate) Freeqitemdelegate(args ...interface{}) () {
   // ~QItemDelegate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -228,10 +239,11 @@ func (this *QItemDelegate) FreeQItemDelegate(args ...interface{}) () {
     qtrt.ErrorResolve("QItemDelegate", "~QItemDelegate", args)
   }
 
+  return
 }
 
 // hasClipping()
-func (this *QItemDelegate) hasClipping(args ...interface{}) () {
+func (this *QItemDelegate) Hasclipping(args ...interface{}) (ret interface{}) {
   // hasClipping()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -243,16 +255,20 @@ func (this *QItemDelegate) hasClipping(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QItemDelegate11hasClippingEv
     // invoke: bool hasClipping()
-    var ret = C.C_ZNK13QItemDelegate11hasClippingEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QItemDelegate11hasClippingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QItemDelegate", "hasClipping", args)
   }
 
+  return
 }
 
 // setEditorData(class QWidget *, const class QModelIndex &)
-func (this *QItemDelegate) setEditorData(args ...interface{}) () {
+func (this *QItemDelegate) Seteditordata(args ...interface{}) () {
   // setEditorData(class QWidget *, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -275,10 +291,11 @@ func (this *QItemDelegate) setEditorData(args ...interface{}) () {
     qtrt.ErrorResolve("QItemDelegate", "setEditorData", args)
   }
 
+  return
 }
 
 // sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QItemDelegate) sizeHint(args ...interface{}) () {
+func (this *QItemDelegate) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -296,16 +313,20 @@ func (this *QItemDelegate) sizeHint(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK13QItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QItemDelegate", "sizeHint", args)
   }
 
+  return
 }
 
 // setClipping(_Bool)
-func (this *QItemDelegate) setClipping(args ...interface{}) () {
+func (this *QItemDelegate) Setclipping(args ...interface{}) () {
   // setClipping(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -325,10 +346,11 @@ func (this *QItemDelegate) setClipping(args ...interface{}) () {
     qtrt.ErrorResolve("QItemDelegate", "setClipping", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QItemDelegate) metaObject(args ...interface{}) () {
+func (this *QItemDelegate) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -345,10 +367,11 @@ func (this *QItemDelegate) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QItemDelegate", "metaObject", args)
   }
 
+  return
 }
 
 // setItemEditorFactory(class QItemEditorFactory *)
-func (this *QItemDelegate) setItemEditorFactory(args ...interface{}) () {
+func (this *QItemDelegate) Setitemeditorfactory(args ...interface{}) () {
   // setItemEditorFactory(class QItemEditorFactory *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -368,6 +391,7 @@ func (this *QItemDelegate) setItemEditorFactory(args ...interface{}) () {
     qtrt.ErrorResolve("QItemDelegate", "setItemEditorFactory", args)
   }
 
+  return
 }
 
 // QItemDelegate(class QObject *)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.go
 //
@@ -37,41 +37,41 @@ extern void C_ZN16QCoreApplication19setOrganizationNameERK7QString(void* arg0); 
   // proto: static void QCoreApplication::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
 extern void C_ZN16QCoreApplication18setEventDispatcherEP24QAbstractEventDispatcher(void* arg0); // 4
   // proto: static QString QCoreApplication::applicationDirPath();
-extern void C_ZN16QCoreApplication18applicationDirPathEv(); // 4
+extern void* C_ZN16QCoreApplication18applicationDirPathEv(); // 4
   // proto: static qint64 QCoreApplication::applicationPid();
-extern void C_ZN16QCoreApplication14applicationPidEv(); // 4
+extern int64_t C_ZN16QCoreApplication14applicationPidEv(); // 4
   // proto:  bool QCoreApplication::notify(QObject * , QEvent * );
-extern void C_ZN16QCoreApplication6notifyEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
+extern bool C_ZN16QCoreApplication6notifyEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QCoreApplication::installNativeEventFilter(QAbstractNativeEventFilter * filterObj);
 extern void C_ZN16QCoreApplication24installNativeEventFilterEP26QAbstractNativeEventFilter(void* qthis, void* arg0); // 4
   // proto: static void QCoreApplication::flush();
 extern void C_ZN16QCoreApplication5flushEv(); // 4
   // proto: static bool QCoreApplication::isQuitLockEnabled();
-extern void C_ZN16QCoreApplication17isQuitLockEnabledEv(); // 4
+extern bool C_ZN16QCoreApplication17isQuitLockEnabledEv(); // 4
   // proto: static bool QCoreApplication::closingDown();
-extern void C_ZN16QCoreApplication11closingDownEv(); // 4
+extern bool C_ZN16QCoreApplication11closingDownEv(); // 4
   // proto: static QString QCoreApplication::applicationName();
-extern void C_ZN16QCoreApplication15applicationNameEv(); // 4
+extern void* C_ZN16QCoreApplication15applicationNameEv(); // 4
   // proto: static void QCoreApplication::quit();
 extern void C_ZN16QCoreApplication4quitEv(); // 4
   // proto: static QString QCoreApplication::applicationVersion();
-extern void C_ZN16QCoreApplication18applicationVersionEv(); // 4
+extern void* C_ZN16QCoreApplication18applicationVersionEv(); // 4
   // proto: static int QCoreApplication::exec();
-extern void C_ZN16QCoreApplication4execEv(); // 4
+extern int32_t C_ZN16QCoreApplication4execEv(); // 4
   // proto: static QCoreApplication * QCoreApplication::instance();
-extern void C_ZN16QCoreApplication8instanceEv(); // 2
+extern void* C_ZN16QCoreApplication8instanceEv(); // 2
   // proto: static QString QCoreApplication::organizationDomain();
-extern void C_ZN16QCoreApplication18organizationDomainEv(); // 4
+extern void* C_ZN16QCoreApplication18organizationDomainEv(); // 4
   // proto: static void QCoreApplication::exit(int retcode);
 extern void C_ZN16QCoreApplication4exitEi(int32_t arg0); // 4
   // proto: static QStringList QCoreApplication::arguments();
 extern void C_ZN16QCoreApplication9argumentsEv(); // 4
   // proto: static QString QCoreApplication::applicationFilePath();
-extern void C_ZN16QCoreApplication19applicationFilePathEv(); // 4
+extern void* C_ZN16QCoreApplication19applicationFilePathEv(); // 4
   // proto: static void QCoreApplication::setSetuidAllowed(bool allow);
 extern void C_ZN16QCoreApplication16setSetuidAllowedEb(bool arg0); // 4
   // proto: static QString QCoreApplication::translate(const char * context, const char * key, const char * disambiguation, int n);
-extern void C_ZN16QCoreApplication9translateEPKcS1_S1_i(unsigned char* arg0, unsigned char* arg1, unsigned char* arg2, int32_t arg3); // 4
+extern void* C_ZN16QCoreApplication9translateEPKcS1_S1_i(void* arg0, void* arg1, void* arg2, int32_t arg3); // 4
   // proto: static void QCoreApplication::setQuitLockEnabled(bool enabled);
 extern void C_ZN16QCoreApplication18setQuitLockEnabledEb(bool arg0); // 4
   // proto: static void QCoreApplication::setApplicationVersion(const QString & version);
@@ -79,9 +79,9 @@ extern void C_ZN16QCoreApplication21setApplicationVersionERK7QString(void* arg0)
   // proto:  void QCoreApplication::removeNativeEventFilter(QAbstractNativeEventFilter * filterObj);
 extern void C_ZN16QCoreApplication23removeNativeEventFilterEP26QAbstractNativeEventFilter(void* qthis, void* arg0); // 4
   // proto: static bool QCoreApplication::installTranslator(QTranslator * messageFile);
-extern void C_ZN16QCoreApplication17installTranslatorEP11QTranslator(void* arg0); // 4
+extern bool C_ZN16QCoreApplication17installTranslatorEP11QTranslator(void* arg0); // 4
   // proto:  void QCoreApplication::QCoreApplication(int & argc, char ** argv, int );
-extern void* C_ZN16QCoreApplicationC2ERiPPci(int32_t* arg0, unsigned char* arg1, int32_t arg2); // 3
+extern void* C_ZN16QCoreApplicationC2ERiPPci(void* arg0, void* arg1, int32_t arg2); // 3
   // proto: static void QCoreApplication::setOrganizationDomain(const QString & orgDomain);
 extern void C_ZN16QCoreApplication21setOrganizationDomainERK7QString(void* arg0); // 4
   // proto: static void QCoreApplication::removePostedEvents(QObject * receiver, int eventType);
@@ -93,23 +93,23 @@ extern void C_ZN16QCoreApplication18setApplicationNameERK7QString(void* arg0); /
   // proto: static void QCoreApplication::addLibraryPath(const QString & );
 extern void C_ZN16QCoreApplication14addLibraryPathERK7QString(void* arg0); // 4
   // proto: static bool QCoreApplication::removeTranslator(QTranslator * messageFile);
-extern void C_ZN16QCoreApplication16removeTranslatorEP11QTranslator(void* arg0); // 4
+extern bool C_ZN16QCoreApplication16removeTranslatorEP11QTranslator(void* arg0); // 4
   // proto: static QStringList QCoreApplication::libraryPaths();
 extern void C_ZN16QCoreApplication12libraryPathsEv(); // 4
   // proto: static QString QCoreApplication::organizationName();
-extern void C_ZN16QCoreApplication16organizationNameEv(); // 4
+extern void* C_ZN16QCoreApplication16organizationNameEv(); // 4
   // proto: static void QCoreApplication::sendPostedEvents(QObject * receiver, int event_type);
 extern void C_ZN16QCoreApplication16sendPostedEventsEP7QObjecti(void* arg0, int32_t arg1); // 4
   // proto:  void QCoreApplication::~QCoreApplication();
 extern void C_ZN16QCoreApplicationD2Ev(void* qthis); // 4
   // proto: static bool QCoreApplication::isSetuidAllowed();
-extern void C_ZN16QCoreApplication15isSetuidAllowedEv(); // 4
+extern bool C_ZN16QCoreApplication15isSetuidAllowedEv(); // 4
   // proto: static bool QCoreApplication::sendEvent(QObject * receiver, QEvent * event);
-extern void C_ZN16QCoreApplication9sendEventEP7QObjectP6QEvent(void* arg0, void* arg1); // 2
+extern bool C_ZN16QCoreApplication9sendEventEP7QObjectP6QEvent(void* arg0, void* arg1); // 2
   // proto: static bool QCoreApplication::startingUp();
-extern void C_ZN16QCoreApplication10startingUpEv(); // 4
+extern bool C_ZN16QCoreApplication10startingUpEv(); // 4
   // proto: static bool QCoreApplication::hasPendingEvents();
-extern void C_ZN16QCoreApplication16hasPendingEventsEv(); // 4
+extern bool C_ZN16QCoreApplication16hasPendingEventsEv(); // 4
   // proto: static void QCoreApplication::postEvent(QObject * receiver, QEvent * event, int priority);
 extern void C_ZN16QCoreApplication9postEventEP7QObjectP6QEventi(void* arg0, void* arg1, int32_t arg2); // 4
   // proto: static void QCoreApplication::removeLibraryPath(const QString & );
@@ -138,7 +138,7 @@ type QCoreApplication struct {
 }
 
 // setLibraryPaths(const class QStringList &)
-func (this *QCoreApplication) setLibraryPaths_s(args ...interface{}) () {
+func (this *QCoreApplication) Setlibrarypaths_S(args ...interface{}) () {
   // setLibraryPaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -158,10 +158,11 @@ func (this *QCoreApplication) setLibraryPaths_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "setLibraryPaths", args)
   }
 
+  return
 }
 
 // eventDispatcher()
-func (this *QCoreApplication) eventDispatcher_s(args ...interface{}) () {
+func (this *QCoreApplication) Eventdispatcher_S(args ...interface{}) () {
   // eventDispatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -178,10 +179,11 @@ func (this *QCoreApplication) eventDispatcher_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "eventDispatcher", args)
   }
 
+  return
 }
 
 // setOrganizationName(const class QString &)
-func (this *QCoreApplication) setOrganizationName_s(args ...interface{}) () {
+func (this *QCoreApplication) Setorganizationname_S(args ...interface{}) () {
   // setOrganizationName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -201,10 +203,11 @@ func (this *QCoreApplication) setOrganizationName_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "setOrganizationName", args)
   }
 
+  return
 }
 
 // setEventDispatcher(class QAbstractEventDispatcher *)
-func (this *QCoreApplication) setEventDispatcher_s(args ...interface{}) () {
+func (this *QCoreApplication) Seteventdispatcher_S(args ...interface{}) () {
   // setEventDispatcher(class QAbstractEventDispatcher *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -224,10 +227,11 @@ func (this *QCoreApplication) setEventDispatcher_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "setEventDispatcher", args)
   }
 
+  return
 }
 
 // applicationDirPath()
-func (this *QCoreApplication) applicationDirPath_s(args ...interface{}) () {
+func (this *QCoreApplication) Applicationdirpath_S(args ...interface{}) (ret interface{}) {
   // applicationDirPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,16 +243,20 @@ func (this *QCoreApplication) applicationDirPath_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication18applicationDirPathEv
     // invoke: QString applicationDirPath()
-    var ret = C.C_ZN16QCoreApplication18applicationDirPathEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication18applicationDirPathEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationDirPath", args)
   }
 
+  return
 }
 
 // applicationPid()
-func (this *QCoreApplication) applicationPid_s(args ...interface{}) () {
+func (this *QCoreApplication) Applicationpid_S(args ...interface{}) (ret interface{}) {
   // applicationPid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -260,16 +268,20 @@ func (this *QCoreApplication) applicationPid_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication14applicationPidEv
     // invoke: qint64 applicationPid()
-    var ret = C.C_ZN16QCoreApplication14applicationPidEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication14applicationPidEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int64Ty(false) // "qint64"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationPid", args)
   }
 
+  return
 }
 
 // notify(class QObject *, class QEvent *)
-func (this *QCoreApplication) notify(args ...interface{}) () {
+func (this *QCoreApplication) Notify(args ...interface{}) (ret interface{}) {
   // notify(class QObject *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -287,16 +299,20 @@ func (this *QCoreApplication) notify(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN16QCoreApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "notify", args)
   }
 
+  return
 }
 
 // installNativeEventFilter(class QAbstractNativeEventFilter *)
-func (this *QCoreApplication) installNativeEventFilter(args ...interface{}) () {
+func (this *QCoreApplication) Installnativeeventfilter(args ...interface{}) () {
   // installNativeEventFilter(class QAbstractNativeEventFilter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -316,10 +332,11 @@ func (this *QCoreApplication) installNativeEventFilter(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "installNativeEventFilter", args)
   }
 
+  return
 }
 
 // flush()
-func (this *QCoreApplication) flush_s(args ...interface{}) () {
+func (this *QCoreApplication) Flush_S(args ...interface{}) () {
   // flush()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -336,10 +353,11 @@ func (this *QCoreApplication) flush_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "flush", args)
   }
 
+  return
 }
 
 // isQuitLockEnabled()
-func (this *QCoreApplication) isQuitLockEnabled_s(args ...interface{}) () {
+func (this *QCoreApplication) Isquitlockenabled_S(args ...interface{}) (ret interface{}) {
   // isQuitLockEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -351,16 +369,20 @@ func (this *QCoreApplication) isQuitLockEnabled_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication17isQuitLockEnabledEv
     // invoke: bool isQuitLockEnabled()
-    var ret = C.C_ZN16QCoreApplication17isQuitLockEnabledEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication17isQuitLockEnabledEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "isQuitLockEnabled", args)
   }
 
+  return
 }
 
 // closingDown()
-func (this *QCoreApplication) closingDown_s(args ...interface{}) () {
+func (this *QCoreApplication) Closingdown_S(args ...interface{}) (ret interface{}) {
   // closingDown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -372,16 +394,20 @@ func (this *QCoreApplication) closingDown_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication11closingDownEv
     // invoke: bool closingDown()
-    var ret = C.C_ZN16QCoreApplication11closingDownEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication11closingDownEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "closingDown", args)
   }
 
+  return
 }
 
 // applicationName()
-func (this *QCoreApplication) applicationName_s(args ...interface{}) () {
+func (this *QCoreApplication) Applicationname_S(args ...interface{}) (ret interface{}) {
   // applicationName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -393,16 +419,20 @@ func (this *QCoreApplication) applicationName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication15applicationNameEv
     // invoke: QString applicationName()
-    var ret = C.C_ZN16QCoreApplication15applicationNameEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication15applicationNameEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationName", args)
   }
 
+  return
 }
 
 // quit()
-func (this *QCoreApplication) quit_s(args ...interface{}) () {
+func (this *QCoreApplication) Quit_S(args ...interface{}) () {
   // quit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -419,10 +449,11 @@ func (this *QCoreApplication) quit_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "quit", args)
   }
 
+  return
 }
 
 // applicationVersion()
-func (this *QCoreApplication) applicationVersion_s(args ...interface{}) () {
+func (this *QCoreApplication) Applicationversion_S(args ...interface{}) (ret interface{}) {
   // applicationVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -434,16 +465,20 @@ func (this *QCoreApplication) applicationVersion_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication18applicationVersionEv
     // invoke: QString applicationVersion()
-    var ret = C.C_ZN16QCoreApplication18applicationVersionEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication18applicationVersionEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationVersion", args)
   }
 
+  return
 }
 
 // exec()
-func (this *QCoreApplication) exec_s(args ...interface{}) () {
+func (this *QCoreApplication) Exec_S(args ...interface{}) (ret interface{}) {
   // exec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -455,16 +490,20 @@ func (this *QCoreApplication) exec_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication4execEv
     // invoke: int exec()
-    var ret = C.C_ZN16QCoreApplication4execEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication4execEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "exec", args)
   }
 
+  return
 }
 
 // instance()
-func (this *QCoreApplication) instance_s(args ...interface{}) () {
+func (this *QCoreApplication) Instance_S(args ...interface{}) (ret interface{}) {
   // instance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -476,16 +515,20 @@ func (this *QCoreApplication) instance_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication8instanceEv
     // invoke: QCoreApplication * instance()
-    var ret = C.C_ZN16QCoreApplication8instanceEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication8instanceEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QCoreApplication{}) // "QCoreApplication *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "instance", args)
   }
 
+  return
 }
 
 // organizationDomain()
-func (this *QCoreApplication) organizationDomain_s(args ...interface{}) () {
+func (this *QCoreApplication) Organizationdomain_S(args ...interface{}) (ret interface{}) {
   // organizationDomain()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -497,16 +540,20 @@ func (this *QCoreApplication) organizationDomain_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication18organizationDomainEv
     // invoke: QString organizationDomain()
-    var ret = C.C_ZN16QCoreApplication18organizationDomainEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication18organizationDomainEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "organizationDomain", args)
   }
 
+  return
 }
 
 // exit(int)
-func (this *QCoreApplication) exit_s(args ...interface{}) () {
+func (this *QCoreApplication) Exit_S(args ...interface{}) () {
   // exit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -526,10 +573,11 @@ func (this *QCoreApplication) exit_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "exit", args)
   }
 
+  return
 }
 
 // arguments()
-func (this *QCoreApplication) arguments_s(args ...interface{}) () {
+func (this *QCoreApplication) Arguments_S(args ...interface{}) () {
   // arguments()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -546,10 +594,11 @@ func (this *QCoreApplication) arguments_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "arguments", args)
   }
 
+  return
 }
 
 // applicationFilePath()
-func (this *QCoreApplication) applicationFilePath_s(args ...interface{}) () {
+func (this *QCoreApplication) Applicationfilepath_S(args ...interface{}) (ret interface{}) {
   // applicationFilePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -561,16 +610,20 @@ func (this *QCoreApplication) applicationFilePath_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication19applicationFilePathEv
     // invoke: QString applicationFilePath()
-    var ret = C.C_ZN16QCoreApplication19applicationFilePathEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication19applicationFilePathEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationFilePath", args)
   }
 
+  return
 }
 
 // setSetuidAllowed(_Bool)
-func (this *QCoreApplication) setSetuidAllowed_s(args ...interface{}) () {
+func (this *QCoreApplication) Setsetuidallowed_S(args ...interface{}) () {
   // setSetuidAllowed(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -590,10 +643,11 @@ func (this *QCoreApplication) setSetuidAllowed_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "setSetuidAllowed", args)
   }
 
+  return
 }
 
 // translate(const char *, const char *, const char *, int)
-func (this *QCoreApplication) translate_s(args ...interface{}) () {
+func (this *QCoreApplication) Translate_S(args ...interface{}) (ret interface{}) {
   // translate(const char *, const char *, const char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -609,24 +663,34 @@ func (this *QCoreApplication) translate_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication9translateEPKcS1_S1_i
     // invoke: QString translate(const char *, const char *, const char *, int)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
-    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).Pointer()))
-    if false {fmt.Println(arg2)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
+    argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[0][2])
+    var arg2 = argif2.(unsafe.Pointer)
+    if false {fmt.Println(argif2, arg2)}
+    if free2 {defer C.free(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    var ret = C.C_ZN16QCoreApplication9translateEPKcS1_S1_i(arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication9translateEPKcS1_S1_i(arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "translate", args)
   }
 
+  return
 }
 
 // setQuitLockEnabled(_Bool)
-func (this *QCoreApplication) setQuitLockEnabled_s(args ...interface{}) () {
+func (this *QCoreApplication) Setquitlockenabled_S(args ...interface{}) () {
   // setQuitLockEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -646,10 +710,11 @@ func (this *QCoreApplication) setQuitLockEnabled_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "setQuitLockEnabled", args)
   }
 
+  return
 }
 
 // setApplicationVersion(const class QString &)
-func (this *QCoreApplication) setApplicationVersion_s(args ...interface{}) () {
+func (this *QCoreApplication) Setapplicationversion_S(args ...interface{}) () {
   // setApplicationVersion(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -669,10 +734,11 @@ func (this *QCoreApplication) setApplicationVersion_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "setApplicationVersion", args)
   }
 
+  return
 }
 
 // removeNativeEventFilter(class QAbstractNativeEventFilter *)
-func (this *QCoreApplication) removeNativeEventFilter(args ...interface{}) () {
+func (this *QCoreApplication) Removenativeeventfilter(args ...interface{}) () {
   // removeNativeEventFilter(class QAbstractNativeEventFilter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -692,10 +758,11 @@ func (this *QCoreApplication) removeNativeEventFilter(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "removeNativeEventFilter", args)
   }
 
+  return
 }
 
 // installTranslator(class QTranslator *)
-func (this *QCoreApplication) installTranslator_s(args ...interface{}) () {
+func (this *QCoreApplication) Installtranslator_S(args ...interface{}) (ret interface{}) {
   // installTranslator(class QTranslator *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -710,12 +777,16 @@ func (this *QCoreApplication) installTranslator_s(args ...interface{}) () {
     // invoke: bool installTranslator(class QTranslator *)
     var arg0 = args[0].(QTranslator).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN16QCoreApplication17installTranslatorEP11QTranslator(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication17installTranslatorEP11QTranslator(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "installTranslator", args)
   }
 
+  return
 }
 
 // QCoreApplication(int &, char **, int)
@@ -734,10 +805,12 @@ func NewQCoreApplication(args ...interface{}) *QCoreApplication {
   case 0:
     // invoke: _ZN16QCoreApplicationC1ERiPPci
     // invoke: void QCoreApplication(int &, char **, int)
-    var arg0 = (*C.int32_t)(args[0].(*int32))
+    var arg0 = (unsafe.Pointer)(args[0].(*int32))
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
@@ -752,7 +825,7 @@ func NewQCoreApplication(args ...interface{}) *QCoreApplication {
 }
 
 // setOrganizationDomain(const class QString &)
-func (this *QCoreApplication) setOrganizationDomain_s(args ...interface{}) () {
+func (this *QCoreApplication) Setorganizationdomain_S(args ...interface{}) () {
   // setOrganizationDomain(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -772,10 +845,11 @@ func (this *QCoreApplication) setOrganizationDomain_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "setOrganizationDomain", args)
   }
 
+  return
 }
 
 // removePostedEvents(class QObject *, int)
-func (this *QCoreApplication) removePostedEvents_s(args ...interface{}) () {
+func (this *QCoreApplication) Removepostedevents_S(args ...interface{}) () {
   // removePostedEvents(class QObject *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -798,10 +872,11 @@ func (this *QCoreApplication) removePostedEvents_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "removePostedEvents", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QCoreApplication) metaObject(args ...interface{}) () {
+func (this *QCoreApplication) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -818,10 +893,11 @@ func (this *QCoreApplication) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "metaObject", args)
   }
 
+  return
 }
 
 // setApplicationName(const class QString &)
-func (this *QCoreApplication) setApplicationName_s(args ...interface{}) () {
+func (this *QCoreApplication) Setapplicationname_S(args ...interface{}) () {
   // setApplicationName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -841,10 +917,11 @@ func (this *QCoreApplication) setApplicationName_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "setApplicationName", args)
   }
 
+  return
 }
 
 // addLibraryPath(const class QString &)
-func (this *QCoreApplication) addLibraryPath_s(args ...interface{}) () {
+func (this *QCoreApplication) Addlibrarypath_S(args ...interface{}) () {
   // addLibraryPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -864,10 +941,11 @@ func (this *QCoreApplication) addLibraryPath_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "addLibraryPath", args)
   }
 
+  return
 }
 
 // removeTranslator(class QTranslator *)
-func (this *QCoreApplication) removeTranslator_s(args ...interface{}) () {
+func (this *QCoreApplication) Removetranslator_S(args ...interface{}) (ret interface{}) {
   // removeTranslator(class QTranslator *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -882,16 +960,20 @@ func (this *QCoreApplication) removeTranslator_s(args ...interface{}) () {
     // invoke: bool removeTranslator(class QTranslator *)
     var arg0 = args[0].(QTranslator).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN16QCoreApplication16removeTranslatorEP11QTranslator(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication16removeTranslatorEP11QTranslator(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "removeTranslator", args)
   }
 
+  return
 }
 
 // libraryPaths()
-func (this *QCoreApplication) libraryPaths_s(args ...interface{}) () {
+func (this *QCoreApplication) Librarypaths_S(args ...interface{}) () {
   // libraryPaths()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -908,10 +990,11 @@ func (this *QCoreApplication) libraryPaths_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "libraryPaths", args)
   }
 
+  return
 }
 
 // organizationName()
-func (this *QCoreApplication) organizationName_s(args ...interface{}) () {
+func (this *QCoreApplication) Organizationname_S(args ...interface{}) (ret interface{}) {
   // organizationName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -923,16 +1006,20 @@ func (this *QCoreApplication) organizationName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication16organizationNameEv
     // invoke: QString organizationName()
-    var ret = C.C_ZN16QCoreApplication16organizationNameEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication16organizationNameEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "organizationName", args)
   }
 
+  return
 }
 
 // sendPostedEvents(class QObject *, int)
-func (this *QCoreApplication) sendPostedEvents_s(args ...interface{}) () {
+func (this *QCoreApplication) Sendpostedevents_S(args ...interface{}) () {
   // sendPostedEvents(class QObject *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -955,10 +1042,11 @@ func (this *QCoreApplication) sendPostedEvents_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "sendPostedEvents", args)
   }
 
+  return
 }
 
 // ~QCoreApplication()
-func (this *QCoreApplication) FreeQCoreApplication(args ...interface{}) () {
+func (this *QCoreApplication) Freeqcoreapplication(args ...interface{}) () {
   // ~QCoreApplication()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -975,10 +1063,11 @@ func (this *QCoreApplication) FreeQCoreApplication(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "~QCoreApplication", args)
   }
 
+  return
 }
 
 // isSetuidAllowed()
-func (this *QCoreApplication) isSetuidAllowed_s(args ...interface{}) () {
+func (this *QCoreApplication) Issetuidallowed_S(args ...interface{}) (ret interface{}) {
   // isSetuidAllowed()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -990,16 +1079,20 @@ func (this *QCoreApplication) isSetuidAllowed_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication15isSetuidAllowedEv
     // invoke: bool isSetuidAllowed()
-    var ret = C.C_ZN16QCoreApplication15isSetuidAllowedEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication15isSetuidAllowedEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "isSetuidAllowed", args)
   }
 
+  return
 }
 
 // sendEvent(class QObject *, class QEvent *)
-func (this *QCoreApplication) sendEvent_s(args ...interface{}) () {
+func (this *QCoreApplication) Sendevent_S(args ...interface{}) (ret interface{}) {
   // sendEvent(class QObject *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1017,16 +1110,20 @@ func (this *QCoreApplication) sendEvent_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN16QCoreApplication9sendEventEP7QObjectP6QEvent(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication9sendEventEP7QObjectP6QEvent(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "sendEvent", args)
   }
 
+  return
 }
 
 // startingUp()
-func (this *QCoreApplication) startingUp_s(args ...interface{}) () {
+func (this *QCoreApplication) Startingup_S(args ...interface{}) (ret interface{}) {
   // startingUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1038,16 +1135,20 @@ func (this *QCoreApplication) startingUp_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication10startingUpEv
     // invoke: bool startingUp()
-    var ret = C.C_ZN16QCoreApplication10startingUpEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication10startingUpEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "startingUp", args)
   }
 
+  return
 }
 
 // hasPendingEvents()
-func (this *QCoreApplication) hasPendingEvents_s(args ...interface{}) () {
+func (this *QCoreApplication) Haspendingevents_S(args ...interface{}) (ret interface{}) {
   // hasPendingEvents()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1059,16 +1160,20 @@ func (this *QCoreApplication) hasPendingEvents_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication16hasPendingEventsEv
     // invoke: bool hasPendingEvents()
-    var ret = C.C_ZN16QCoreApplication16hasPendingEventsEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QCoreApplication16hasPendingEventsEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QCoreApplication", "hasPendingEvents", args)
   }
 
+  return
 }
 
 // postEvent(class QObject *, class QEvent *, int)
-func (this *QCoreApplication) postEvent_s(args ...interface{}) () {
+func (this *QCoreApplication) Postevent_S(args ...interface{}) () {
   // postEvent(class QObject *, class QEvent *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1094,10 +1199,11 @@ func (this *QCoreApplication) postEvent_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "postEvent", args)
   }
 
+  return
 }
 
 // removeLibraryPath(const class QString &)
-func (this *QCoreApplication) removeLibraryPath_s(args ...interface{}) () {
+func (this *QCoreApplication) Removelibrarypath_S(args ...interface{}) () {
   // removeLibraryPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1117,6 +1223,7 @@ func (this *QCoreApplication) removeLibraryPath_s(args ...interface{}) () {
     qtrt.ErrorResolve("QCoreApplication", "removeLibraryPath", args)
   }
 
+  return
 }
 
 // <= body block end

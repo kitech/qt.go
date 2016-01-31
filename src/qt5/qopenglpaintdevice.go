@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qopenglpaintdevice.h
 // dst-file: /src/gui/qopenglpaintdevice.go
 //
@@ -37,19 +37,19 @@ extern void C_ZN18QOpenGLPaintDevice18ensureActiveTargetEv(void* qthis); // 4
   // proto:  void QOpenGLPaintDevice::setDevicePixelRatio(qreal devicePixelRatio);
 extern void C_ZN18QOpenGLPaintDevice19setDevicePixelRatioEd(void* qthis, double arg0); // 4
   // proto:  qreal QOpenGLPaintDevice::dotsPerMeterY();
-extern void C_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(void* qthis); // 4
+extern double C_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(void* qthis); // 4
   // proto:  void QOpenGLPaintDevice::setSize(const QSize & size);
 extern void C_ZN18QOpenGLPaintDevice7setSizeERK5QSize(void* qthis, void* arg0); // 4
   // proto:  int QOpenGLPaintDevice::devType();
-extern void C_ZNK18QOpenGLPaintDevice7devTypeEv(void* qthis); // 2
+extern int32_t C_ZNK18QOpenGLPaintDevice7devTypeEv(void* qthis); // 2
   // proto:  QOpenGLContext * QOpenGLPaintDevice::context();
 extern void C_ZNK18QOpenGLPaintDevice7contextEv(void* qthis); // 4
   // proto:  void QOpenGLPaintDevice::~QOpenGLPaintDevice();
 extern void C_ZN18QOpenGLPaintDeviceD2Ev(void* qthis); // 4
   // proto:  bool QOpenGLPaintDevice::paintFlipped();
-extern void C_ZNK18QOpenGLPaintDevice12paintFlippedEv(void* qthis); // 4
+extern bool C_ZNK18QOpenGLPaintDevice12paintFlippedEv(void* qthis); // 4
   // proto:  QPaintEngine * QOpenGLPaintDevice::paintEngine();
-extern void C_ZNK18QOpenGLPaintDevice11paintEngineEv(void* qthis); // 4
+extern void* C_ZNK18QOpenGLPaintDevice11paintEngineEv(void* qthis); // 4
   // proto:  void QOpenGLPaintDevice::setPaintFlipped(bool flipped);
 extern void C_ZN18QOpenGLPaintDevice15setPaintFlippedEb(void* qthis, bool arg0); // 4
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QSize & size);
@@ -59,9 +59,9 @@ extern void* C_ZN18QOpenGLPaintDeviceC2Ev(); // 3
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height);
 extern void* C_ZN18QOpenGLPaintDeviceC2Eii(int32_t arg0, int32_t arg1); // 3
   // proto:  qreal QOpenGLPaintDevice::dotsPerMeterX();
-extern void C_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(void* qthis); // 4
+extern double C_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(void* qthis); // 4
   // proto:  QSize QOpenGLPaintDevice::size();
-extern void C_ZNK18QOpenGLPaintDevice4sizeEv(void* qthis); // 4
+extern void* C_ZNK18QOpenGLPaintDevice4sizeEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -81,7 +81,7 @@ type QOpenGLPaintDevice struct {
 }
 
 // setDotsPerMeterX(qreal)
-func (this *QOpenGLPaintDevice) setDotsPerMeterX(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Setdotspermeterx(args ...interface{}) () {
   // setDotsPerMeterX(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -101,10 +101,11 @@ func (this *QOpenGLPaintDevice) setDotsPerMeterX(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDotsPerMeterX", args)
   }
 
+  return
 }
 
 // setDotsPerMeterY(qreal)
-func (this *QOpenGLPaintDevice) setDotsPerMeterY(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Setdotspermetery(args ...interface{}) () {
   // setDotsPerMeterY(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -124,10 +125,11 @@ func (this *QOpenGLPaintDevice) setDotsPerMeterY(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDotsPerMeterY", args)
   }
 
+  return
 }
 
 // ensureActiveTarget()
-func (this *QOpenGLPaintDevice) ensureActiveTarget(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Ensureactivetarget(args ...interface{}) () {
   // ensureActiveTarget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -144,10 +146,11 @@ func (this *QOpenGLPaintDevice) ensureActiveTarget(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLPaintDevice", "ensureActiveTarget", args)
   }
 
+  return
 }
 
 // setDevicePixelRatio(qreal)
-func (this *QOpenGLPaintDevice) setDevicePixelRatio(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Setdevicepixelratio(args ...interface{}) () {
   // setDevicePixelRatio(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -167,10 +170,11 @@ func (this *QOpenGLPaintDevice) setDevicePixelRatio(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDevicePixelRatio", args)
   }
 
+  return
 }
 
 // dotsPerMeterY()
-func (this *QOpenGLPaintDevice) dotsPerMeterY(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Dotspermetery(args ...interface{}) (ret interface{}) {
   // dotsPerMeterY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,16 +186,20 @@ func (this *QOpenGLPaintDevice) dotsPerMeterY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice13dotsPerMeterYEv
     // invoke: qreal dotsPerMeterY()
-    var ret = C.C_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "dotsPerMeterY", args)
   }
 
+  return
 }
 
 // setSize(const class QSize &)
-func (this *QOpenGLPaintDevice) setSize(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Setsize(args ...interface{}) () {
   // setSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -211,10 +219,11 @@ func (this *QOpenGLPaintDevice) setSize(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setSize", args)
   }
 
+  return
 }
 
 // devType()
-func (this *QOpenGLPaintDevice) devType(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Devtype(args ...interface{}) (ret interface{}) {
   // devType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -226,16 +235,20 @@ func (this *QOpenGLPaintDevice) devType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice7devTypeEv
     // invoke: int devType()
-    var ret = C.C_ZNK18QOpenGLPaintDevice7devTypeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QOpenGLPaintDevice7devTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "devType", args)
   }
 
+  return
 }
 
 // context()
-func (this *QOpenGLPaintDevice) context(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Context(args ...interface{}) () {
   // context()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -252,10 +265,11 @@ func (this *QOpenGLPaintDevice) context(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLPaintDevice", "context", args)
   }
 
+  return
 }
 
 // ~QOpenGLPaintDevice()
-func (this *QOpenGLPaintDevice) FreeQOpenGLPaintDevice(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Freeqopenglpaintdevice(args ...interface{}) () {
   // ~QOpenGLPaintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -272,10 +286,11 @@ func (this *QOpenGLPaintDevice) FreeQOpenGLPaintDevice(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLPaintDevice", "~QOpenGLPaintDevice", args)
   }
 
+  return
 }
 
 // paintFlipped()
-func (this *QOpenGLPaintDevice) paintFlipped(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Paintflipped(args ...interface{}) (ret interface{}) {
   // paintFlipped()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -287,16 +302,20 @@ func (this *QOpenGLPaintDevice) paintFlipped(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice12paintFlippedEv
     // invoke: bool paintFlipped()
-    var ret = C.C_ZNK18QOpenGLPaintDevice12paintFlippedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QOpenGLPaintDevice12paintFlippedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "paintFlipped", args)
   }
 
+  return
 }
 
 // paintEngine()
-func (this *QOpenGLPaintDevice) paintEngine(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Paintengine(args ...interface{}) (ret interface{}) {
   // paintEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -308,16 +327,20 @@ func (this *QOpenGLPaintDevice) paintEngine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice11paintEngineEv
     // invoke: QPaintEngine * paintEngine()
-    var ret = C.C_ZNK18QOpenGLPaintDevice11paintEngineEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QOpenGLPaintDevice11paintEngineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPaintEngine{}) // "QPaintEngine *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "paintEngine", args)
   }
 
+  return
 }
 
 // setPaintFlipped(_Bool)
-func (this *QOpenGLPaintDevice) setPaintFlipped(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Setpaintflipped(args ...interface{}) () {
   // setPaintFlipped(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -337,6 +360,7 @@ func (this *QOpenGLPaintDevice) setPaintFlipped(args ...interface{}) () {
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setPaintFlipped", args)
   }
 
+  return
 }
 
 // QOpenGLPaintDevice(const class QSize &)
@@ -391,7 +415,7 @@ func NewQOpenGLPaintDevice(args ...interface{}) *QOpenGLPaintDevice {
 }
 
 // dotsPerMeterX()
-func (this *QOpenGLPaintDevice) dotsPerMeterX(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Dotspermeterx(args ...interface{}) (ret interface{}) {
   // dotsPerMeterX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -403,16 +427,20 @@ func (this *QOpenGLPaintDevice) dotsPerMeterX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice13dotsPerMeterXEv
     // invoke: qreal dotsPerMeterX()
-    var ret = C.C_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "dotsPerMeterX", args)
   }
 
+  return
 }
 
 // size()
-func (this *QOpenGLPaintDevice) size(args ...interface{}) () {
+func (this *QOpenGLPaintDevice) Size(args ...interface{}) (ret interface{}) {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -424,12 +452,16 @@ func (this *QOpenGLPaintDevice) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice4sizeEv
     // invoke: QSize size()
-    var ret = C.C_ZNK18QOpenGLPaintDevice4sizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QOpenGLPaintDevice4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "size", args)
   }
 
+  return
 }
 
 // <= body block end

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qdatetimeedit.h
 // dst-file: /src/widgets/qdatetimeedit.go
 //
@@ -59,17 +59,17 @@ extern void C_ZN13QDateTimeEdit12setDateRangeERK5QDateS2_(void* qthis, void* arg
   // proto:  void QDateTimeEdit::setMinimumTime(const QTime & min);
 extern void C_ZN13QDateTimeEdit14setMinimumTimeERK5QTime(void* qthis, void* arg0); // 4
   // proto:  QString QDateTimeEdit::displayFormat();
-extern void C_ZNK13QDateTimeEdit13displayFormatEv(void* qthis); // 4
+extern void* C_ZNK13QDateTimeEdit13displayFormatEv(void* qthis); // 4
   // proto:  QDateTimeEdit::Section QDateTimeEdit::currentSection();
 extern void C_ZNK13QDateTimeEdit14currentSectionEv(void* qthis); // 4
   // proto:  QTime QDateTimeEdit::maximumTime();
-extern void C_ZNK13QDateTimeEdit11maximumTimeEv(void* qthis); // 4
+extern void* C_ZNK13QDateTimeEdit11maximumTimeEv(void* qthis); // 4
   // proto:  int QDateTimeEdit::currentSectionIndex();
-extern void C_ZNK13QDateTimeEdit19currentSectionIndexEv(void* qthis); // 4
+extern int32_t C_ZNK13QDateTimeEdit19currentSectionIndexEv(void* qthis); // 4
   // proto:  bool QDateTimeEdit::event(QEvent * event);
-extern void C_ZN13QDateTimeEdit5eventEP6QEvent(void* qthis, void* arg0); // 4
+extern bool C_ZN13QDateTimeEdit5eventEP6QEvent(void* qthis, void* arg0); // 4
   // proto:  QDate QDateTimeEdit::minimumDate();
-extern void C_ZNK13QDateTimeEdit11minimumDateEv(void* qthis); // 4
+extern void* C_ZNK13QDateTimeEdit11minimumDateEv(void* qthis); // 4
   // proto:  void QDateTimeEdit::setDateTimeRange(const QDateTime & min, const QDateTime & max);
 extern void C_ZN13QDateTimeEdit16setDateTimeRangeERK9QDateTimeS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QDateTimeEdit::clearMinimumDate();
@@ -91,11 +91,11 @@ extern void C_ZN13QDateTimeEdit16clearMinimumTimeEv(void* qthis); // 4
   // proto:  void QDateTimeEdit::setDate(const QDate & date);
 extern void C_ZN13QDateTimeEdit7setDateERK5QDate(void* qthis, void* arg0); // 4
   // proto:  bool QDateTimeEdit::calendarPopup();
-extern void C_ZNK13QDateTimeEdit13calendarPopupEv(void* qthis); // 4
+extern bool C_ZNK13QDateTimeEdit13calendarPopupEv(void* qthis); // 4
   // proto:  void QDateTimeEdit::stepBy(int steps);
 extern void C_ZN13QDateTimeEdit6stepByEi(void* qthis, int32_t arg0); // 4
   // proto:  QCalendarWidget * QDateTimeEdit::calendarWidget();
-extern void C_ZNK13QDateTimeEdit14calendarWidgetEv(void* qthis); // 4
+extern void* C_ZNK13QDateTimeEdit14calendarWidgetEv(void* qthis); // 4
   // proto:  void QDateTimeEdit::clearMinimumDateTime();
 extern void C_ZN13QDateTimeEdit20clearMinimumDateTimeEv(void* qthis); // 4
   // proto:  void QDateTimeEdit::setMaximumDateTime(const QDateTime & dt);
@@ -103,17 +103,17 @@ extern void C_ZN13QDateTimeEdit18setMaximumDateTimeERK9QDateTime(void* qthis, vo
   // proto:  void QDateTimeEdit::setMinimumDate(const QDate & min);
 extern void C_ZN13QDateTimeEdit14setMinimumDateERK5QDate(void* qthis, void* arg0); // 4
   // proto:  int QDateTimeEdit::sectionCount();
-extern void C_ZNK13QDateTimeEdit12sectionCountEv(void* qthis); // 4
+extern int32_t C_ZNK13QDateTimeEdit12sectionCountEv(void* qthis); // 4
   // proto:  void QDateTimeEdit::setTime(const QTime & time);
 extern void C_ZN13QDateTimeEdit7setTimeERK5QTime(void* qthis, void* arg0); // 4
   // proto:  void QDateTimeEdit::clearMaximumDateTime();
 extern void C_ZN13QDateTimeEdit20clearMaximumDateTimeEv(void* qthis); // 4
   // proto:  QDate QDateTimeEdit::date();
-extern void C_ZNK13QDateTimeEdit4dateEv(void* qthis); // 4
+extern void* C_ZNK13QDateTimeEdit4dateEv(void* qthis); // 4
   // proto:  QSize QDateTimeEdit::sizeHint();
-extern void C_ZNK13QDateTimeEdit8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK13QDateTimeEdit8sizeHintEv(void* qthis); // 4
   // proto:  QDate QDateTimeEdit::maximumDate();
-extern void C_ZNK13QDateTimeEdit11maximumDateEv(void* qthis); // 4
+extern void* C_ZNK13QDateTimeEdit11maximumDateEv(void* qthis); // 4
   // proto:  void QDateTimeEdit::QDateTimeEdit(const QTime & t, QWidget * parent);
 extern void* C_ZN13QDateTimeEditC2ERK5QTimeP7QWidget(void* arg0, void* arg1); // 3
   // proto:  void QDateTimeEdit::QDateTimeEdit(const QDate & d, QWidget * parent);
@@ -127,7 +127,7 @@ extern void C_ZNK13QDateTimeEdit10metaObjectEv(void* qthis); // 4
   // proto:  Qt::TimeSpec QDateTimeEdit::timeSpec();
 extern void C_ZNK13QDateTimeEdit8timeSpecEv(void* qthis); // 4
   // proto:  QDateTime QDateTimeEdit::dateTime();
-extern void C_ZNK13QDateTimeEdit8dateTimeEv(void* qthis); // 4
+extern void* C_ZNK13QDateTimeEdit8dateTimeEv(void* qthis); // 4
   // proto:  void QDateTimeEdit::clear();
 extern void C_ZN13QDateTimeEdit5clearEv(void* qthis); // 4
   // proto:  QDateTimeEdit::Section QDateTimeEdit::sectionAt(int index);
@@ -135,13 +135,13 @@ extern void C_ZNK13QDateTimeEdit9sectionAtEi(void* qthis, int32_t arg0); // 4
   // proto:  void QDateTimeEdit::clearMaximumTime();
 extern void C_ZN13QDateTimeEdit16clearMaximumTimeEv(void* qthis); // 4
   // proto:  QTime QDateTimeEdit::minimumTime();
-extern void C_ZNK13QDateTimeEdit11minimumTimeEv(void* qthis); // 4
+extern void* C_ZNK13QDateTimeEdit11minimumTimeEv(void* qthis); // 4
   // proto:  QDateTime QDateTimeEdit::maximumDateTime();
-extern void C_ZNK13QDateTimeEdit15maximumDateTimeEv(void* qthis); // 4
+extern void* C_ZNK13QDateTimeEdit15maximumDateTimeEv(void* qthis); // 4
   // proto:  QTime QDateTimeEdit::time();
-extern void C_ZNK13QDateTimeEdit4timeEv(void* qthis); // 4
+extern void* C_ZNK13QDateTimeEdit4timeEv(void* qthis); // 4
   // proto:  QDateTime QDateTimeEdit::minimumDateTime();
-extern void C_ZNK13QDateTimeEdit15minimumDateTimeEv(void* qthis); // 4
+extern void* C_ZNK13QDateTimeEdit15minimumDateTimeEv(void* qthis); // 4
   // proto:  void QDateTimeEdit::setCurrentSectionIndex(int index);
 extern void C_ZN13QDateTimeEdit22setCurrentSectionIndexEi(void* qthis, int32_t arg0); // 4
 */
@@ -180,7 +180,7 @@ type QDateTimeEdit struct {
 }
 
 // metaObject()
-func (this *QTimeEdit) metaObject(args ...interface{}) () {
+func (this *QTimeEdit) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -197,6 +197,7 @@ func (this *QTimeEdit) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeEdit", "metaObject", args)
   }
 
+  return
 }
 
 // QTimeEdit(class QWidget *)
@@ -242,7 +243,7 @@ func NewQTimeEdit(args ...interface{}) *QTimeEdit {
 }
 
 // ~QTimeEdit()
-func (this *QTimeEdit) FreeQTimeEdit(args ...interface{}) () {
+func (this *QTimeEdit) Freeqtimeedit(args ...interface{}) () {
   // ~QTimeEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -259,10 +260,11 @@ func (this *QTimeEdit) FreeQTimeEdit(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeEdit", "~QTimeEdit", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QDateEdit) metaObject(args ...interface{}) () {
+func (this *QDateEdit) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -279,6 +281,7 @@ func (this *QDateEdit) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QDateEdit", "metaObject", args)
   }
 
+  return
 }
 
 // QDateEdit(const class QDate &, class QWidget *)
@@ -324,7 +327,7 @@ func NewQDateEdit(args ...interface{}) *QDateEdit {
 }
 
 // ~QDateEdit()
-func (this *QDateEdit) FreeQDateEdit(args ...interface{}) () {
+func (this *QDateEdit) Freeqdateedit(args ...interface{}) () {
   // ~QDateEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -341,10 +344,11 @@ func (this *QDateEdit) FreeQDateEdit(args ...interface{}) () {
     qtrt.ErrorResolve("QDateEdit", "~QDateEdit", args)
   }
 
+  return
 }
 
 // setMaximumDate(const class QDate &)
-func (this *QDateTimeEdit) setMaximumDate(args ...interface{}) () {
+func (this *QDateTimeEdit) Setmaximumdate(args ...interface{}) () {
   // setMaximumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -364,10 +368,11 @@ func (this *QDateTimeEdit) setMaximumDate(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setMaximumDate", args)
   }
 
+  return
 }
 
 // setCalendarPopup(_Bool)
-func (this *QDateTimeEdit) setCalendarPopup(args ...interface{}) () {
+func (this *QDateTimeEdit) Setcalendarpopup(args ...interface{}) () {
   // setCalendarPopup(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -387,10 +392,11 @@ func (this *QDateTimeEdit) setCalendarPopup(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setCalendarPopup", args)
   }
 
+  return
 }
 
 // displayedSections()
-func (this *QDateTimeEdit) displayedSections(args ...interface{}) () {
+func (this *QDateTimeEdit) Displayedsections(args ...interface{}) () {
   // displayedSections()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -407,10 +413,11 @@ func (this *QDateTimeEdit) displayedSections(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "displayedSections", args)
   }
 
+  return
 }
 
 // setDateTime(const class QDateTime &)
-func (this *QDateTimeEdit) setDateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Setdatetime(args ...interface{}) () {
   // setDateTime(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -430,10 +437,11 @@ func (this *QDateTimeEdit) setDateTime(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setDateTime", args)
   }
 
+  return
 }
 
 // setTimeRange(const class QTime &, const class QTime &)
-func (this *QDateTimeEdit) setTimeRange(args ...interface{}) () {
+func (this *QDateTimeEdit) Settimerange(args ...interface{}) () {
   // setTimeRange(const class QTime &, const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -456,10 +464,11 @@ func (this *QDateTimeEdit) setTimeRange(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setTimeRange", args)
   }
 
+  return
 }
 
 // setDateRange(const class QDate &, const class QDate &)
-func (this *QDateTimeEdit) setDateRange(args ...interface{}) () {
+func (this *QDateTimeEdit) Setdaterange(args ...interface{}) () {
   // setDateRange(const class QDate &, const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -482,10 +491,11 @@ func (this *QDateTimeEdit) setDateRange(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setDateRange", args)
   }
 
+  return
 }
 
 // setMinimumTime(const class QTime &)
-func (this *QDateTimeEdit) setMinimumTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Setminimumtime(args ...interface{}) () {
   // setMinimumTime(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -505,10 +515,11 @@ func (this *QDateTimeEdit) setMinimumTime(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setMinimumTime", args)
   }
 
+  return
 }
 
 // displayFormat()
-func (this *QDateTimeEdit) displayFormat(args ...interface{}) () {
+func (this *QDateTimeEdit) Displayformat(args ...interface{}) (ret interface{}) {
   // displayFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -520,16 +531,20 @@ func (this *QDateTimeEdit) displayFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit13displayFormatEv
     // invoke: QString displayFormat()
-    var ret = C.C_ZNK13QDateTimeEdit13displayFormatEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit13displayFormatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "displayFormat", args)
   }
 
+  return
 }
 
 // currentSection()
-func (this *QDateTimeEdit) currentSection(args ...interface{}) () {
+func (this *QDateTimeEdit) Currentsection(args ...interface{}) () {
   // currentSection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -546,10 +561,11 @@ func (this *QDateTimeEdit) currentSection(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "currentSection", args)
   }
 
+  return
 }
 
 // maximumTime()
-func (this *QDateTimeEdit) maximumTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Maximumtime(args ...interface{}) (ret interface{}) {
   // maximumTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -561,16 +577,20 @@ func (this *QDateTimeEdit) maximumTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit11maximumTimeEv
     // invoke: QTime maximumTime()
-    var ret = C.C_ZNK13QDateTimeEdit11maximumTimeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit11maximumTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTime{}) // "QTime"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "maximumTime", args)
   }
 
+  return
 }
 
 // currentSectionIndex()
-func (this *QDateTimeEdit) currentSectionIndex(args ...interface{}) () {
+func (this *QDateTimeEdit) Currentsectionindex(args ...interface{}) (ret interface{}) {
   // currentSectionIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -582,16 +602,20 @@ func (this *QDateTimeEdit) currentSectionIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit19currentSectionIndexEv
     // invoke: int currentSectionIndex()
-    var ret = C.C_ZNK13QDateTimeEdit19currentSectionIndexEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit19currentSectionIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "currentSectionIndex", args)
   }
 
+  return
 }
 
 // event(class QEvent *)
-func (this *QDateTimeEdit) event(args ...interface{}) () {
+func (this *QDateTimeEdit) Event(args ...interface{}) (ret interface{}) {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -606,16 +630,20 @@ func (this *QDateTimeEdit) event(args ...interface{}) () {
     // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN13QDateTimeEdit5eventEP6QEvent(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QDateTimeEdit5eventEP6QEvent(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "event", args)
   }
 
+  return
 }
 
 // minimumDate()
-func (this *QDateTimeEdit) minimumDate(args ...interface{}) () {
+func (this *QDateTimeEdit) Minimumdate(args ...interface{}) (ret interface{}) {
   // minimumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -627,16 +655,20 @@ func (this *QDateTimeEdit) minimumDate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit11minimumDateEv
     // invoke: QDate minimumDate()
-    var ret = C.C_ZNK13QDateTimeEdit11minimumDateEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit11minimumDateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDate{}) // "QDate"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "minimumDate", args)
   }
 
+  return
 }
 
 // setDateTimeRange(const class QDateTime &, const class QDateTime &)
-func (this *QDateTimeEdit) setDateTimeRange(args ...interface{}) () {
+func (this *QDateTimeEdit) Setdatetimerange(args ...interface{}) () {
   // setDateTimeRange(const class QDateTime &, const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -659,10 +691,11 @@ func (this *QDateTimeEdit) setDateTimeRange(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setDateTimeRange", args)
   }
 
+  return
 }
 
 // clearMinimumDate()
-func (this *QDateTimeEdit) clearMinimumDate(args ...interface{}) () {
+func (this *QDateTimeEdit) Clearminimumdate(args ...interface{}) () {
   // clearMinimumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -679,10 +712,11 @@ func (this *QDateTimeEdit) clearMinimumDate(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "clearMinimumDate", args)
   }
 
+  return
 }
 
 // clearMaximumDate()
-func (this *QDateTimeEdit) clearMaximumDate(args ...interface{}) () {
+func (this *QDateTimeEdit) Clearmaximumdate(args ...interface{}) () {
   // clearMaximumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -699,10 +733,11 @@ func (this *QDateTimeEdit) clearMaximumDate(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "clearMaximumDate", args)
   }
 
+  return
 }
 
 // setDisplayFormat(const class QString &)
-func (this *QDateTimeEdit) setDisplayFormat(args ...interface{}) () {
+func (this *QDateTimeEdit) Setdisplayformat(args ...interface{}) () {
   // setDisplayFormat(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -722,10 +757,11 @@ func (this *QDateTimeEdit) setDisplayFormat(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setDisplayFormat", args)
   }
 
+  return
 }
 
 // setMinimumDateTime(const class QDateTime &)
-func (this *QDateTimeEdit) setMinimumDateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Setminimumdatetime(args ...interface{}) () {
   // setMinimumDateTime(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -745,10 +781,11 @@ func (this *QDateTimeEdit) setMinimumDateTime(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setMinimumDateTime", args)
   }
 
+  return
 }
 
 // setMaximumTime(const class QTime &)
-func (this *QDateTimeEdit) setMaximumTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Setmaximumtime(args ...interface{}) () {
   // setMaximumTime(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -768,10 +805,11 @@ func (this *QDateTimeEdit) setMaximumTime(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setMaximumTime", args)
   }
 
+  return
 }
 
 // ~QDateTimeEdit()
-func (this *QDateTimeEdit) FreeQDateTimeEdit(args ...interface{}) () {
+func (this *QDateTimeEdit) Freeqdatetimeedit(args ...interface{}) () {
   // ~QDateTimeEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -788,10 +826,11 @@ func (this *QDateTimeEdit) FreeQDateTimeEdit(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "~QDateTimeEdit", args)
   }
 
+  return
 }
 
 // setCalendarWidget(class QCalendarWidget *)
-func (this *QDateTimeEdit) setCalendarWidget(args ...interface{}) () {
+func (this *QDateTimeEdit) Setcalendarwidget(args ...interface{}) () {
   // setCalendarWidget(class QCalendarWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -811,10 +850,11 @@ func (this *QDateTimeEdit) setCalendarWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setCalendarWidget", args)
   }
 
+  return
 }
 
 // clearMinimumTime()
-func (this *QDateTimeEdit) clearMinimumTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Clearminimumtime(args ...interface{}) () {
   // clearMinimumTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -831,10 +871,11 @@ func (this *QDateTimeEdit) clearMinimumTime(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "clearMinimumTime", args)
   }
 
+  return
 }
 
 // setDate(const class QDate &)
-func (this *QDateTimeEdit) setDate(args ...interface{}) () {
+func (this *QDateTimeEdit) Setdate(args ...interface{}) () {
   // setDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -854,10 +895,11 @@ func (this *QDateTimeEdit) setDate(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setDate", args)
   }
 
+  return
 }
 
 // calendarPopup()
-func (this *QDateTimeEdit) calendarPopup(args ...interface{}) () {
+func (this *QDateTimeEdit) Calendarpopup(args ...interface{}) (ret interface{}) {
   // calendarPopup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -869,16 +911,20 @@ func (this *QDateTimeEdit) calendarPopup(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit13calendarPopupEv
     // invoke: bool calendarPopup()
-    var ret = C.C_ZNK13QDateTimeEdit13calendarPopupEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit13calendarPopupEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "calendarPopup", args)
   }
 
+  return
 }
 
 // stepBy(int)
-func (this *QDateTimeEdit) stepBy(args ...interface{}) () {
+func (this *QDateTimeEdit) Stepby(args ...interface{}) () {
   // stepBy(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -898,10 +944,11 @@ func (this *QDateTimeEdit) stepBy(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "stepBy", args)
   }
 
+  return
 }
 
 // calendarWidget()
-func (this *QDateTimeEdit) calendarWidget(args ...interface{}) () {
+func (this *QDateTimeEdit) Calendarwidget(args ...interface{}) (ret interface{}) {
   // calendarWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -913,16 +960,20 @@ func (this *QDateTimeEdit) calendarWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit14calendarWidgetEv
     // invoke: QCalendarWidget * calendarWidget()
-    var ret = C.C_ZNK13QDateTimeEdit14calendarWidgetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit14calendarWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QCalendarWidget{}) // "QCalendarWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "calendarWidget", args)
   }
 
+  return
 }
 
 // clearMinimumDateTime()
-func (this *QDateTimeEdit) clearMinimumDateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Clearminimumdatetime(args ...interface{}) () {
   // clearMinimumDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -939,10 +990,11 @@ func (this *QDateTimeEdit) clearMinimumDateTime(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "clearMinimumDateTime", args)
   }
 
+  return
 }
 
 // setMaximumDateTime(const class QDateTime &)
-func (this *QDateTimeEdit) setMaximumDateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Setmaximumdatetime(args ...interface{}) () {
   // setMaximumDateTime(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -962,10 +1014,11 @@ func (this *QDateTimeEdit) setMaximumDateTime(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setMaximumDateTime", args)
   }
 
+  return
 }
 
 // setMinimumDate(const class QDate &)
-func (this *QDateTimeEdit) setMinimumDate(args ...interface{}) () {
+func (this *QDateTimeEdit) Setminimumdate(args ...interface{}) () {
   // setMinimumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -985,10 +1038,11 @@ func (this *QDateTimeEdit) setMinimumDate(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setMinimumDate", args)
   }
 
+  return
 }
 
 // sectionCount()
-func (this *QDateTimeEdit) sectionCount(args ...interface{}) () {
+func (this *QDateTimeEdit) Sectioncount(args ...interface{}) (ret interface{}) {
   // sectionCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1000,16 +1054,20 @@ func (this *QDateTimeEdit) sectionCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit12sectionCountEv
     // invoke: int sectionCount()
-    var ret = C.C_ZNK13QDateTimeEdit12sectionCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit12sectionCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "sectionCount", args)
   }
 
+  return
 }
 
 // setTime(const class QTime &)
-func (this *QDateTimeEdit) setTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Settime(args ...interface{}) () {
   // setTime(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1029,10 +1087,11 @@ func (this *QDateTimeEdit) setTime(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setTime", args)
   }
 
+  return
 }
 
 // clearMaximumDateTime()
-func (this *QDateTimeEdit) clearMaximumDateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Clearmaximumdatetime(args ...interface{}) () {
   // clearMaximumDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1049,10 +1108,11 @@ func (this *QDateTimeEdit) clearMaximumDateTime(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "clearMaximumDateTime", args)
   }
 
+  return
 }
 
 // date()
-func (this *QDateTimeEdit) date(args ...interface{}) () {
+func (this *QDateTimeEdit) Date(args ...interface{}) (ret interface{}) {
   // date()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1064,16 +1124,20 @@ func (this *QDateTimeEdit) date(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit4dateEv
     // invoke: QDate date()
-    var ret = C.C_ZNK13QDateTimeEdit4dateEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit4dateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDate{}) // "QDate"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "date", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QDateTimeEdit) sizeHint(args ...interface{}) () {
+func (this *QDateTimeEdit) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1085,16 +1149,20 @@ func (this *QDateTimeEdit) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK13QDateTimeEdit8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "sizeHint", args)
   }
 
+  return
 }
 
 // maximumDate()
-func (this *QDateTimeEdit) maximumDate(args ...interface{}) () {
+func (this *QDateTimeEdit) Maximumdate(args ...interface{}) (ret interface{}) {
   // maximumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1106,12 +1174,16 @@ func (this *QDateTimeEdit) maximumDate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit11maximumDateEv
     // invoke: QDate maximumDate()
-    var ret = C.C_ZNK13QDateTimeEdit11maximumDateEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit11maximumDateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDate{}) // "QDate"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "maximumDate", args)
   }
 
+  return
 }
 
 // QDateTimeEdit(const class QTime &, class QWidget *)
@@ -1187,7 +1259,7 @@ func NewQDateTimeEdit(args ...interface{}) *QDateTimeEdit {
 }
 
 // metaObject()
-func (this *QDateTimeEdit) metaObject(args ...interface{}) () {
+func (this *QDateTimeEdit) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1204,10 +1276,11 @@ func (this *QDateTimeEdit) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "metaObject", args)
   }
 
+  return
 }
 
 // timeSpec()
-func (this *QDateTimeEdit) timeSpec(args ...interface{}) () {
+func (this *QDateTimeEdit) Timespec(args ...interface{}) () {
   // timeSpec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1224,10 +1297,11 @@ func (this *QDateTimeEdit) timeSpec(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "timeSpec", args)
   }
 
+  return
 }
 
 // dateTime()
-func (this *QDateTimeEdit) dateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Datetime(args ...interface{}) (ret interface{}) {
   // dateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1239,16 +1313,20 @@ func (this *QDateTimeEdit) dateTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit8dateTimeEv
     // invoke: QDateTime dateTime()
-    var ret = C.C_ZNK13QDateTimeEdit8dateTimeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit8dateTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "dateTime", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QDateTimeEdit) clear(args ...interface{}) () {
+func (this *QDateTimeEdit) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1265,10 +1343,11 @@ func (this *QDateTimeEdit) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "clear", args)
   }
 
+  return
 }
 
 // sectionAt(int)
-func (this *QDateTimeEdit) sectionAt(args ...interface{}) () {
+func (this *QDateTimeEdit) Sectionat(args ...interface{}) () {
   // sectionAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1288,10 +1367,11 @@ func (this *QDateTimeEdit) sectionAt(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "sectionAt", args)
   }
 
+  return
 }
 
 // clearMaximumTime()
-func (this *QDateTimeEdit) clearMaximumTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Clearmaximumtime(args ...interface{}) () {
   // clearMaximumTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1308,10 +1388,11 @@ func (this *QDateTimeEdit) clearMaximumTime(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "clearMaximumTime", args)
   }
 
+  return
 }
 
 // minimumTime()
-func (this *QDateTimeEdit) minimumTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Minimumtime(args ...interface{}) (ret interface{}) {
   // minimumTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1323,16 +1404,20 @@ func (this *QDateTimeEdit) minimumTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit11minimumTimeEv
     // invoke: QTime minimumTime()
-    var ret = C.C_ZNK13QDateTimeEdit11minimumTimeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit11minimumTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTime{}) // "QTime"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "minimumTime", args)
   }
 
+  return
 }
 
 // maximumDateTime()
-func (this *QDateTimeEdit) maximumDateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Maximumdatetime(args ...interface{}) (ret interface{}) {
   // maximumDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1344,16 +1429,20 @@ func (this *QDateTimeEdit) maximumDateTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit15maximumDateTimeEv
     // invoke: QDateTime maximumDateTime()
-    var ret = C.C_ZNK13QDateTimeEdit15maximumDateTimeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit15maximumDateTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "maximumDateTime", args)
   }
 
+  return
 }
 
 // time()
-func (this *QDateTimeEdit) time(args ...interface{}) () {
+func (this *QDateTimeEdit) Time(args ...interface{}) (ret interface{}) {
   // time()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1365,16 +1454,20 @@ func (this *QDateTimeEdit) time(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit4timeEv
     // invoke: QTime time()
-    var ret = C.C_ZNK13QDateTimeEdit4timeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit4timeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTime{}) // "QTime"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "time", args)
   }
 
+  return
 }
 
 // minimumDateTime()
-func (this *QDateTimeEdit) minimumDateTime(args ...interface{}) () {
+func (this *QDateTimeEdit) Minimumdatetime(args ...interface{}) (ret interface{}) {
   // minimumDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1386,16 +1479,20 @@ func (this *QDateTimeEdit) minimumDateTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit15minimumDateTimeEv
     // invoke: QDateTime minimumDateTime()
-    var ret = C.C_ZNK13QDateTimeEdit15minimumDateTimeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QDateTimeEdit15minimumDateTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "minimumDateTime", args)
   }
 
+  return
 }
 
 // setCurrentSectionIndex(int)
-func (this *QDateTimeEdit) setCurrentSectionIndex(args ...interface{}) () {
+func (this *QDateTimeEdit) Setcurrentsectionindex(args ...interface{}) () {
   // setCurrentSectionIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1415,6 +1512,7 @@ func (this *QDateTimeEdit) setCurrentSectionIndex(args ...interface{}) () {
     qtrt.ErrorResolve("QDateTimeEdit", "setCurrentSectionIndex", args)
   }
 
+  return
 }
 
 // <= body block end

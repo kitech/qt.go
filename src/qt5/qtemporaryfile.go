@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qtemporaryfile.h
 // dst-file: /src/core/qtemporaryfile.go
 //
@@ -29,19 +29,19 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QTemporaryFile::autoRemove();
-extern void C_ZNK14QTemporaryFile10autoRemoveEv(void* qthis); // 4
+extern bool C_ZNK14QTemporaryFile10autoRemoveEv(void* qthis); // 4
   // proto:  const QMetaObject * QTemporaryFile::metaObject();
 extern void C_ZNK14QTemporaryFile10metaObjectEv(void* qthis); // 4
   // proto: static QTemporaryFile * QTemporaryFile::createNativeFile(const QString & fileName);
-extern void C_ZN14QTemporaryFile16createNativeFileERK7QString(void* arg0); // 2
+extern void* C_ZN14QTemporaryFile16createNativeFileERK7QString(void* arg0); // 2
   // proto: static QTemporaryFile * QTemporaryFile::createNativeFile(QFile & file);
-extern void C_ZN14QTemporaryFile16createNativeFileER5QFile(void* arg0); // 4
+extern void* C_ZN14QTemporaryFile16createNativeFileER5QFile(void* arg0); // 4
   // proto:  void QTemporaryFile::~QTemporaryFile();
 extern void C_ZN14QTemporaryFileD2Ev(void* qthis); // 4
   // proto: static QTemporaryFile * QTemporaryFile::createLocalFile(QFile & file);
-extern void C_ZN14QTemporaryFile15createLocalFileER5QFile(void* arg0); // 2
+extern void* C_ZN14QTemporaryFile15createLocalFileER5QFile(void* arg0); // 2
   // proto: static QTemporaryFile * QTemporaryFile::createLocalFile(const QString & fileName);
-extern void C_ZN14QTemporaryFile15createLocalFileERK7QString(void* arg0); // 2
+extern void* C_ZN14QTemporaryFile15createLocalFileERK7QString(void* arg0); // 2
   // proto:  void QTemporaryFile::setAutoRemove(bool b);
 extern void C_ZN14QTemporaryFile13setAutoRemoveEb(void* qthis, bool arg0); // 4
   // proto:  void QTemporaryFile::QTemporaryFile(QObject * parent);
@@ -53,13 +53,13 @@ extern void* C_ZN14QTemporaryFileC2ERK7QStringP7QObject(void* arg0, void* arg1);
   // proto:  void QTemporaryFile::QTemporaryFile();
 extern void* C_ZN14QTemporaryFileC2Ev(); // 3
   // proto:  QString QTemporaryFile::fileName();
-extern void C_ZNK14QTemporaryFile8fileNameEv(void* qthis); // 4
+extern void* C_ZNK14QTemporaryFile8fileNameEv(void* qthis); // 4
   // proto:  bool QTemporaryFile::open();
-extern void C_ZN14QTemporaryFile4openEv(void* qthis); // 2
+extern bool C_ZN14QTemporaryFile4openEv(void* qthis); // 2
   // proto:  void QTemporaryFile::setFileTemplate(const QString & name);
 extern void C_ZN14QTemporaryFile15setFileTemplateERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QTemporaryFile::fileTemplate();
-extern void C_ZNK14QTemporaryFile12fileTemplateEv(void* qthis); // 4
+extern void* C_ZNK14QTemporaryFile12fileTemplateEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -79,7 +79,7 @@ type QTemporaryFile struct {
 }
 
 // autoRemove()
-func (this *QTemporaryFile) autoRemove(args ...interface{}) () {
+func (this *QTemporaryFile) Autoremove(args ...interface{}) (ret interface{}) {
   // autoRemove()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -91,16 +91,20 @@ func (this *QTemporaryFile) autoRemove(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QTemporaryFile10autoRemoveEv
     // invoke: bool autoRemove()
-    var ret = C.C_ZNK14QTemporaryFile10autoRemoveEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QTemporaryFile10autoRemoveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTemporaryFile", "autoRemove", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QTemporaryFile) metaObject(args ...interface{}) () {
+func (this *QTemporaryFile) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,10 +121,11 @@ func (this *QTemporaryFile) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QTemporaryFile", "metaObject", args)
   }
 
+  return
 }
 
 // createNativeFile(const class QString &)
-func (this *QTemporaryFile) createNativeFile_s(args ...interface{}) () {
+func (this *QTemporaryFile) Createnativefile_S(args ...interface{}) (ret interface{}) {
   // createNativeFile(const class QString &)
   // createNativeFile(class QFile &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -138,23 +143,30 @@ func (this *QTemporaryFile) createNativeFile_s(args ...interface{}) () {
     // invoke: QTemporaryFile * createNativeFile(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN14QTemporaryFile16createNativeFileERK7QString(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QTemporaryFile16createNativeFileERK7QString(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTemporaryFile{}) // "QTemporaryFile *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN14QTemporaryFile16createNativeFileER5QFile
     // invoke: QTemporaryFile * createNativeFile(class QFile &)
     var arg0 = args[0].(QFile).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN14QTemporaryFile16createNativeFileER5QFile(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QTemporaryFile16createNativeFileER5QFile(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTemporaryFile{}) // "QTemporaryFile *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTemporaryFile", "createNativeFile", args)
   }
 
+  return
 }
 
 // ~QTemporaryFile()
-func (this *QTemporaryFile) FreeQTemporaryFile(args ...interface{}) () {
+func (this *QTemporaryFile) Freeqtemporaryfile(args ...interface{}) () {
   // ~QTemporaryFile()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -171,10 +183,11 @@ func (this *QTemporaryFile) FreeQTemporaryFile(args ...interface{}) () {
     qtrt.ErrorResolve("QTemporaryFile", "~QTemporaryFile", args)
   }
 
+  return
 }
 
 // createLocalFile(class QFile &)
-func (this *QTemporaryFile) createLocalFile_s(args ...interface{}) () {
+func (this *QTemporaryFile) Createlocalfile_S(args ...interface{}) (ret interface{}) {
   // createLocalFile(class QFile &)
   // createLocalFile(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -192,23 +205,30 @@ func (this *QTemporaryFile) createLocalFile_s(args ...interface{}) () {
     // invoke: QTemporaryFile * createLocalFile(class QFile &)
     var arg0 = args[0].(QFile).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN14QTemporaryFile15createLocalFileER5QFile(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QTemporaryFile15createLocalFileER5QFile(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTemporaryFile{}) // "QTemporaryFile *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN14QTemporaryFile15createLocalFileERK7QString
     // invoke: QTemporaryFile * createLocalFile(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN14QTemporaryFile15createLocalFileERK7QString(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QTemporaryFile15createLocalFileERK7QString(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTemporaryFile{}) // "QTemporaryFile *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTemporaryFile", "createLocalFile", args)
   }
 
+  return
 }
 
 // setAutoRemove(_Bool)
-func (this *QTemporaryFile) setAutoRemove(args ...interface{}) () {
+func (this *QTemporaryFile) Setautoremove(args ...interface{}) () {
   // setAutoRemove(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -228,6 +248,7 @@ func (this *QTemporaryFile) setAutoRemove(args ...interface{}) () {
     qtrt.ErrorResolve("QTemporaryFile", "setAutoRemove", args)
   }
 
+  return
 }
 
 // QTemporaryFile(class QObject *)
@@ -294,7 +315,7 @@ func NewQTemporaryFile(args ...interface{}) *QTemporaryFile {
 }
 
 // fileName()
-func (this *QTemporaryFile) fileName(args ...interface{}) () {
+func (this *QTemporaryFile) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,16 +327,20 @@ func (this *QTemporaryFile) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QTemporaryFile8fileNameEv
     // invoke: QString fileName()
-    var ret = C.C_ZNK14QTemporaryFile8fileNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QTemporaryFile8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTemporaryFile", "fileName", args)
   }
 
+  return
 }
 
 // open()
-func (this *QTemporaryFile) open(args ...interface{}) () {
+func (this *QTemporaryFile) Open(args ...interface{}) (ret interface{}) {
   // open()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -327,16 +352,20 @@ func (this *QTemporaryFile) open(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QTemporaryFile4openEv
     // invoke: bool open()
-    var ret = C.C_ZN14QTemporaryFile4openEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN14QTemporaryFile4openEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTemporaryFile", "open", args)
   }
 
+  return
 }
 
 // setFileTemplate(const class QString &)
-func (this *QTemporaryFile) setFileTemplate(args ...interface{}) () {
+func (this *QTemporaryFile) Setfiletemplate(args ...interface{}) () {
   // setFileTemplate(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -356,10 +385,11 @@ func (this *QTemporaryFile) setFileTemplate(args ...interface{}) () {
     qtrt.ErrorResolve("QTemporaryFile", "setFileTemplate", args)
   }
 
+  return
 }
 
 // fileTemplate()
-func (this *QTemporaryFile) fileTemplate(args ...interface{}) () {
+func (this *QTemporaryFile) Filetemplate(args ...interface{}) (ret interface{}) {
   // fileTemplate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -371,12 +401,16 @@ func (this *QTemporaryFile) fileTemplate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QTemporaryFile12fileTemplateEv
     // invoke: QString fileTemplate()
-    var ret = C.C_ZNK14QTemporaryFile12fileTemplateEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QTemporaryFile12fileTemplateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTemporaryFile", "fileTemplate", args)
   }
 
+  return
 }
 
 // <= body block end

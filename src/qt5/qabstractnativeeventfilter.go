@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qabstractnativeeventfilter.h
 // dst-file: /src/core/qabstractnativeeventfilter.go
 //
@@ -51,7 +51,7 @@ type QAbstractNativeEventFilter struct {
 }
 
 // ~QAbstractNativeEventFilter()
-func (this *QAbstractNativeEventFilter) FreeQAbstractNativeEventFilter(args ...interface{}) () {
+func (this *QAbstractNativeEventFilter) Freeqabstractnativeeventfilter(args ...interface{}) () {
   // ~QAbstractNativeEventFilter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -68,6 +68,7 @@ func (this *QAbstractNativeEventFilter) FreeQAbstractNativeEventFilter(args ...i
     qtrt.ErrorResolve("QAbstractNativeEventFilter", "~QAbstractNativeEventFilter", args)
   }
 
+  return
 }
 
 // QAbstractNativeEventFilter()

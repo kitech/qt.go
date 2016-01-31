@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qslider.h
 // dst-file: /src/widgets/qslider.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QSlider::event(QEvent * event);
-extern void C_ZN7QSlider5eventEP6QEvent(void* qthis, void* arg0); // 4
+extern bool C_ZN7QSlider5eventEP6QEvent(void* qthis, void* arg0); // 4
   // proto:  void QSlider::~QSlider();
 extern void C_ZN7QSliderD2Ev(void* qthis); // 4
   // proto:  QSize QSlider::sizeHint();
-extern void C_ZNK7QSlider8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK7QSlider8sizeHintEv(void* qthis); // 4
   // proto:  int QSlider::tickInterval();
-extern void C_ZNK7QSlider12tickIntervalEv(void* qthis); // 4
+extern int32_t C_ZNK7QSlider12tickIntervalEv(void* qthis); // 4
   // proto:  const QMetaObject * QSlider::metaObject();
 extern void C_ZNK7QSlider10metaObjectEv(void* qthis); // 4
   // proto:  QSize QSlider::minimumSizeHint();
-extern void C_ZNK7QSlider15minimumSizeHintEv(void* qthis); // 4
+extern void* C_ZNK7QSlider15minimumSizeHintEv(void* qthis); // 4
   // proto:  void QSlider::QSlider(QWidget * parent);
 extern void* C_ZN7QSliderC2EP7QWidget(void* arg0); // 3
   // proto:  QSlider::TickPosition QSlider::tickPosition();
@@ -65,7 +65,7 @@ type QSlider struct {
 }
 
 // event(class QEvent *)
-func (this *QSlider) event(args ...interface{}) () {
+func (this *QSlider) Event(args ...interface{}) (ret interface{}) {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -80,16 +80,20 @@ func (this *QSlider) event(args ...interface{}) () {
     // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN7QSlider5eventEP6QEvent(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN7QSlider5eventEP6QEvent(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSlider", "event", args)
   }
 
+  return
 }
 
 // ~QSlider()
-func (this *QSlider) FreeQSlider(args ...interface{}) () {
+func (this *QSlider) Freeqslider(args ...interface{}) () {
   // ~QSlider()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -106,10 +110,11 @@ func (this *QSlider) FreeQSlider(args ...interface{}) () {
     qtrt.ErrorResolve("QSlider", "~QSlider", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QSlider) sizeHint(args ...interface{}) () {
+func (this *QSlider) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -121,16 +126,20 @@ func (this *QSlider) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QSlider8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK7QSlider8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QSlider8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSlider", "sizeHint", args)
   }
 
+  return
 }
 
 // tickInterval()
-func (this *QSlider) tickInterval(args ...interface{}) () {
+func (this *QSlider) Tickinterval(args ...interface{}) (ret interface{}) {
   // tickInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -142,16 +151,20 @@ func (this *QSlider) tickInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QSlider12tickIntervalEv
     // invoke: int tickInterval()
-    var ret = C.C_ZNK7QSlider12tickIntervalEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QSlider12tickIntervalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSlider", "tickInterval", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QSlider) metaObject(args ...interface{}) () {
+func (this *QSlider) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -168,10 +181,11 @@ func (this *QSlider) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QSlider", "metaObject", args)
   }
 
+  return
 }
 
 // minimumSizeHint()
-func (this *QSlider) minimumSizeHint(args ...interface{}) () {
+func (this *QSlider) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,12 +197,16 @@ func (this *QSlider) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QSlider15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret = C.C_ZNK7QSlider15minimumSizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QSlider15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSlider", "minimumSizeHint", args)
   }
 
+  return
 }
 
 // QSlider(class QWidget *)
@@ -219,7 +237,7 @@ func NewQSlider(args ...interface{}) *QSlider {
 }
 
 // tickPosition()
-func (this *QSlider) tickPosition(args ...interface{}) () {
+func (this *QSlider) Tickposition(args ...interface{}) () {
   // tickPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -236,10 +254,11 @@ func (this *QSlider) tickPosition(args ...interface{}) () {
     qtrt.ErrorResolve("QSlider", "tickPosition", args)
   }
 
+  return
 }
 
 // setTickInterval(int)
-func (this *QSlider) setTickInterval(args ...interface{}) () {
+func (this *QSlider) Settickinterval(args ...interface{}) () {
   // setTickInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -259,6 +278,7 @@ func (this *QSlider) setTickInterval(args ...interface{}) () {
     qtrt.ErrorResolve("QSlider", "setTickInterval", args)
   }
 
+  return
 }
 
 // <= body block end

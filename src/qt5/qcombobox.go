@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qcombobox.h
 // dst-file: /src/widgets/qcombobox.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QComboBox::hasFrame();
-extern void C_ZNK9QComboBox8hasFrameEv(void* qthis); // 4
+extern bool C_ZNK9QComboBox8hasFrameEv(void* qthis); // 4
   // proto:  bool QComboBox::duplicatesEnabled();
-extern void C_ZNK9QComboBox17duplicatesEnabledEv(void* qthis); // 4
+extern bool C_ZNK9QComboBox17duplicatesEnabledEv(void* qthis); // 4
   // proto:  void QComboBox::setView(QAbstractItemView * itemView);
 extern void C_ZN9QComboBox7setViewEP17QAbstractItemView(void* qthis, void* arg0); // 4
   // proto:  void QComboBox::QComboBox(QWidget * parent);
@@ -39,9 +39,9 @@ extern void* C_ZN9QComboBoxC2EP7QWidget(void* arg0); // 3
   // proto:  Qt::CaseSensitivity QComboBox::autoCompletionCaseSensitivity();
 extern void C_ZNK9QComboBox29autoCompletionCaseSensitivityEv(void* qthis); // 4
   // proto:  int QComboBox::count();
-extern void C_ZNK9QComboBox5countEv(void* qthis); // 4
+extern int32_t C_ZNK9QComboBox5countEv(void* qthis); // 4
   // proto:  QIcon QComboBox::itemIcon(int index);
-extern void C_ZNK9QComboBox8itemIconEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK9QComboBox8itemIconEi(void* qthis, int32_t arg0); // 4
   // proto:  void QComboBox::insertItem(int index, const QString & text, const QVariant & userData);
 extern void C_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(void* qthis, int32_t arg0, void* arg1, void* arg2); // 2
   // proto:  void QComboBox::insertItem(int index, const QIcon & icon, const QString & text, const QVariant & userData);
@@ -55,43 +55,43 @@ extern void C_ZN9QComboBox11setItemDataEiRK8QVarianti(void* qthis, int32_t arg0,
   // proto:  void QComboBox::setIconSize(const QSize & size);
 extern void C_ZN9QComboBox11setIconSizeERK5QSize(void* qthis, void* arg0); // 4
   // proto:  int QComboBox::currentIndex();
-extern void C_ZNK9QComboBox12currentIndexEv(void* qthis); // 4
+extern int32_t C_ZNK9QComboBox12currentIndexEv(void* qthis); // 4
   // proto:  QAbstractItemView * QComboBox::view();
 extern void C_ZNK9QComboBox4viewEv(void* qthis); // 4
   // proto:  bool QComboBox::isEditable();
-extern void C_ZNK9QComboBox10isEditableEv(void* qthis); // 4
+extern bool C_ZNK9QComboBox10isEditableEv(void* qthis); // 4
   // proto:  void QComboBox::setEditText(const QString & text);
 extern void C_ZN9QComboBox11setEditTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  int QComboBox::maxVisibleItems();
-extern void C_ZNK9QComboBox15maxVisibleItemsEv(void* qthis); // 4
+extern int32_t C_ZNK9QComboBox15maxVisibleItemsEv(void* qthis); // 4
   // proto:  void QComboBox::setCurrentText(const QString & text);
 extern void C_ZN9QComboBox14setCurrentTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QComboBox::event(QEvent * event);
-extern void C_ZN9QComboBox5eventEP6QEvent(void* qthis, void* arg0); // 4
+extern bool C_ZN9QComboBox5eventEP6QEvent(void* qthis, void* arg0); // 4
   // proto:  void QComboBox::setDuplicatesEnabled(bool enable);
 extern void C_ZN9QComboBox20setDuplicatesEnabledEb(void* qthis, bool arg0); // 4
   // proto:  void QComboBox::setEditable(bool editable);
 extern void C_ZN9QComboBox11setEditableEb(void* qthis, bool arg0); // 4
   // proto:  QVariant QComboBox::itemData(int index, int role);
-extern void C_ZNK9QComboBox8itemDataEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void* C_ZNK9QComboBox8itemDataEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  QSize QComboBox::iconSize();
-extern void C_ZNK9QComboBox8iconSizeEv(void* qthis); // 4
+extern void* C_ZNK9QComboBox8iconSizeEv(void* qthis); // 4
   // proto:  void QComboBox::addItem(const QIcon & icon, const QString & text, const QVariant & userData);
 extern void C_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant(void* qthis, void* arg0, void* arg1, void* arg2); // 2
   // proto:  void QComboBox::addItem(const QString & text, const QVariant & userData);
 extern void C_ZN9QComboBox7addItemERK7QStringRK8QVariant(void* qthis, void* arg0, void* arg1); // 2
   // proto:  QSize QComboBox::sizeHint();
-extern void C_ZNK9QComboBox8sizeHintEv(void* qthis); // 4
+extern void* C_ZNK9QComboBox8sizeHintEv(void* qthis); // 4
   // proto:  void QComboBox::setMaxVisibleItems(int maxItems);
 extern void C_ZN9QComboBox18setMaxVisibleItemsEi(void* qthis, int32_t arg0); // 4
   // proto:  QString QComboBox::currentText();
-extern void C_ZNK9QComboBox11currentTextEv(void* qthis); // 4
+extern void* C_ZNK9QComboBox11currentTextEv(void* qthis); // 4
   // proto:  void QComboBox::setMaxCount(int max);
 extern void C_ZN9QComboBox11setMaxCountEi(void* qthis, int32_t arg0); // 4
   // proto:  QModelIndex QComboBox::rootModelIndex();
-extern void C_ZNK9QComboBox14rootModelIndexEv(void* qthis); // 4
+extern void* C_ZNK9QComboBox14rootModelIndexEv(void* qthis); // 4
   // proto:  int QComboBox::modelColumn();
-extern void C_ZNK9QComboBox11modelColumnEv(void* qthis); // 4
+extern int32_t C_ZNK9QComboBox11modelColumnEv(void* qthis); // 4
   // proto:  void QComboBox::setItemText(int index, const QString & text);
 extern void C_ZN9QComboBox11setItemTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QComboBox::hidePopup();
@@ -99,7 +99,7 @@ extern void C_ZN9QComboBox9hidePopupEv(void* qthis); // 4
   // proto:  void QComboBox::showPopup();
 extern void C_ZN9QComboBox9showPopupEv(void* qthis); // 4
   // proto:  int QComboBox::minimumContentsLength();
-extern void C_ZNK9QComboBox21minimumContentsLengthEv(void* qthis); // 4
+extern int32_t C_ZNK9QComboBox21minimumContentsLengthEv(void* qthis); // 4
   // proto:  void QComboBox::addItems(const QStringList & texts);
 extern void C_ZN9QComboBox8addItemsERK11QStringList(void* qthis, void* arg0); // 2
   // proto:  void QComboBox::setCompleter(QCompleter * c);
@@ -111,21 +111,21 @@ extern void C_ZN9QComboBox17setRootModelIndexERK11QModelIndex(void* qthis, void*
   // proto:  void QComboBox::setValidator(const QValidator * v);
 extern void C_ZN9QComboBox12setValidatorEPK10QValidator(void* qthis, void* arg0); // 4
   // proto:  int QComboBox::maxCount();
-extern void C_ZNK9QComboBox8maxCountEv(void* qthis); // 4
+extern int32_t C_ZNK9QComboBox8maxCountEv(void* qthis); // 4
   // proto:  QCompleter * QComboBox::completer();
-extern void C_ZNK9QComboBox9completerEv(void* qthis); // 4
+extern void* C_ZNK9QComboBox9completerEv(void* qthis); // 4
   // proto:  QString QComboBox::itemText(int index);
-extern void C_ZNK9QComboBox8itemTextEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK9QComboBox8itemTextEi(void* qthis, int32_t arg0); // 4
   // proto:  QSize QComboBox::minimumSizeHint();
-extern void C_ZNK9QComboBox15minimumSizeHintEv(void* qthis); // 4
+extern void* C_ZNK9QComboBox15minimumSizeHintEv(void* qthis); // 4
   // proto:  void QComboBox::insertSeparator(int index);
 extern void C_ZN9QComboBox15insertSeparatorEi(void* qthis, int32_t arg0); // 4
   // proto:  QComboBox::SizeAdjustPolicy QComboBox::sizeAdjustPolicy();
 extern void C_ZNK9QComboBox16sizeAdjustPolicyEv(void* qthis); // 4
   // proto:  QLineEdit * QComboBox::lineEdit();
-extern void C_ZNK9QComboBox8lineEditEv(void* qthis); // 4
+extern void* C_ZNK9QComboBox8lineEditEv(void* qthis); // 4
   // proto:  QVariant QComboBox::currentData(int role);
-extern void C_ZNK9QComboBox11currentDataEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK9QComboBox11currentDataEi(void* qthis, int32_t arg0); // 4
   // proto:  void QComboBox::setItemDelegate(QAbstractItemDelegate * delegate);
 extern void C_ZN9QComboBox15setItemDelegateEP21QAbstractItemDelegate(void* qthis, void* arg0); // 4
   // proto:  void QComboBox::~QComboBox();
@@ -137,7 +137,7 @@ extern void C_ZN9QComboBox11setLineEditEP9QLineEdit(void* qthis, void* arg0); //
   // proto:  void QComboBox::setModelColumn(int visibleColumn);
 extern void C_ZN9QComboBox14setModelColumnEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QComboBox::autoCompletion();
-extern void C_ZNK9QComboBox14autoCompletionEv(void* qthis); // 4
+extern bool C_ZNK9QComboBox14autoCompletionEv(void* qthis); // 4
   // proto:  void QComboBox::setAutoCompletion(bool enable);
 extern void C_ZN9QComboBox17setAutoCompletionEb(void* qthis, bool arg0); // 4
   // proto:  void QComboBox::setMinimumContentsLength(int characters);
@@ -157,7 +157,7 @@ extern void C_ZN9QComboBox8setFrameEb(void* qthis, bool arg0); // 4
   // proto:  void QComboBox::clear();
 extern void C_ZN9QComboBox5clearEv(void* qthis); // 4
   // proto:  const QValidator * QComboBox::validator();
-extern void C_ZNK9QComboBox9validatorEv(void* qthis); // 4
+extern void* C_ZNK9QComboBox9validatorEv(void* qthis); // 4
   // proto:  QAbstractItemModel * QComboBox::model();
 extern void C_ZNK9QComboBox5modelEv(void* qthis); // 4
 */
@@ -184,7 +184,7 @@ type QComboBox struct {
 }
 
 // hasFrame()
-func (this *QComboBox) hasFrame(args ...interface{}) () {
+func (this *QComboBox) Hasframe(args ...interface{}) (ret interface{}) {
   // hasFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -196,16 +196,20 @@ func (this *QComboBox) hasFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox8hasFrameEv
     // invoke: bool hasFrame()
-    var ret = C.C_ZNK9QComboBox8hasFrameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox8hasFrameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "hasFrame", args)
   }
 
+  return
 }
 
 // duplicatesEnabled()
-func (this *QComboBox) duplicatesEnabled(args ...interface{}) () {
+func (this *QComboBox) Duplicatesenabled(args ...interface{}) (ret interface{}) {
   // duplicatesEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -217,16 +221,20 @@ func (this *QComboBox) duplicatesEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox17duplicatesEnabledEv
     // invoke: bool duplicatesEnabled()
-    var ret = C.C_ZNK9QComboBox17duplicatesEnabledEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox17duplicatesEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "duplicatesEnabled", args)
   }
 
+  return
 }
 
 // setView(class QAbstractItemView *)
-func (this *QComboBox) setView(args ...interface{}) () {
+func (this *QComboBox) Setview(args ...interface{}) () {
   // setView(class QAbstractItemView *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -246,6 +254,7 @@ func (this *QComboBox) setView(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setView", args)
   }
 
+  return
 }
 
 // QComboBox(class QWidget *)
@@ -276,7 +285,7 @@ func NewQComboBox(args ...interface{}) *QComboBox {
 }
 
 // autoCompletionCaseSensitivity()
-func (this *QComboBox) autoCompletionCaseSensitivity(args ...interface{}) () {
+func (this *QComboBox) Autocompletioncasesensitivity(args ...interface{}) () {
   // autoCompletionCaseSensitivity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,10 +302,11 @@ func (this *QComboBox) autoCompletionCaseSensitivity(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "autoCompletionCaseSensitivity", args)
   }
 
+  return
 }
 
 // count()
-func (this *QComboBox) count(args ...interface{}) () {
+func (this *QComboBox) Count(args ...interface{}) (ret interface{}) {
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -308,16 +318,20 @@ func (this *QComboBox) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox5countEv
     // invoke: int count()
-    var ret = C.C_ZNK9QComboBox5countEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "count", args)
   }
 
+  return
 }
 
 // itemIcon(int)
-func (this *QComboBox) itemIcon(args ...interface{}) () {
+func (this *QComboBox) Itemicon(args ...interface{}) (ret interface{}) {
   // itemIcon(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -332,16 +346,20 @@ func (this *QComboBox) itemIcon(args ...interface{}) () {
     // invoke: QIcon itemIcon(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QComboBox8itemIconEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox8itemIconEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QIcon{}) // "QIcon"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "itemIcon", args)
   }
 
+  return
 }
 
 // insertItem(int, const class QString &, const class QVariant &)
-func (this *QComboBox) insertItem(args ...interface{}) () {
+func (this *QComboBox) Insertitem(args ...interface{}) () {
   // insertItem(int, const class QString &, const class QVariant &)
   // insertItem(int, const class QIcon &, const class QString &, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -385,10 +403,11 @@ func (this *QComboBox) insertItem(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "insertItem", args)
   }
 
+  return
 }
 
 // removeItem(int)
-func (this *QComboBox) removeItem(args ...interface{}) () {
+func (this *QComboBox) Removeitem(args ...interface{}) () {
   // removeItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -408,10 +427,11 @@ func (this *QComboBox) removeItem(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "removeItem", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QComboBox) metaObject(args ...interface{}) () {
+func (this *QComboBox) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -428,10 +448,11 @@ func (this *QComboBox) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "metaObject", args)
   }
 
+  return
 }
 
 // setItemData(int, const class QVariant &, int)
-func (this *QComboBox) setItemData(args ...interface{}) () {
+func (this *QComboBox) Setitemdata(args ...interface{}) () {
   // setItemData(int, const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -457,10 +478,11 @@ func (this *QComboBox) setItemData(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setItemData", args)
   }
 
+  return
 }
 
 // setIconSize(const class QSize &)
-func (this *QComboBox) setIconSize(args ...interface{}) () {
+func (this *QComboBox) Seticonsize(args ...interface{}) () {
   // setIconSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -480,10 +502,11 @@ func (this *QComboBox) setIconSize(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setIconSize", args)
   }
 
+  return
 }
 
 // currentIndex()
-func (this *QComboBox) currentIndex(args ...interface{}) () {
+func (this *QComboBox) Currentindex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -495,16 +518,20 @@ func (this *QComboBox) currentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox12currentIndexEv
     // invoke: int currentIndex()
-    var ret = C.C_ZNK9QComboBox12currentIndexEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox12currentIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "currentIndex", args)
   }
 
+  return
 }
 
 // view()
-func (this *QComboBox) view(args ...interface{}) () {
+func (this *QComboBox) View(args ...interface{}) () {
   // view()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -521,10 +548,11 @@ func (this *QComboBox) view(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "view", args)
   }
 
+  return
 }
 
 // isEditable()
-func (this *QComboBox) isEditable(args ...interface{}) () {
+func (this *QComboBox) Iseditable(args ...interface{}) (ret interface{}) {
   // isEditable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -536,16 +564,20 @@ func (this *QComboBox) isEditable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox10isEditableEv
     // invoke: bool isEditable()
-    var ret = C.C_ZNK9QComboBox10isEditableEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox10isEditableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "isEditable", args)
   }
 
+  return
 }
 
 // setEditText(const class QString &)
-func (this *QComboBox) setEditText(args ...interface{}) () {
+func (this *QComboBox) Setedittext(args ...interface{}) () {
   // setEditText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -565,10 +597,11 @@ func (this *QComboBox) setEditText(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setEditText", args)
   }
 
+  return
 }
 
 // maxVisibleItems()
-func (this *QComboBox) maxVisibleItems(args ...interface{}) () {
+func (this *QComboBox) Maxvisibleitems(args ...interface{}) (ret interface{}) {
   // maxVisibleItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -580,16 +613,20 @@ func (this *QComboBox) maxVisibleItems(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox15maxVisibleItemsEv
     // invoke: int maxVisibleItems()
-    var ret = C.C_ZNK9QComboBox15maxVisibleItemsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox15maxVisibleItemsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "maxVisibleItems", args)
   }
 
+  return
 }
 
 // setCurrentText(const class QString &)
-func (this *QComboBox) setCurrentText(args ...interface{}) () {
+func (this *QComboBox) Setcurrenttext(args ...interface{}) () {
   // setCurrentText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -609,10 +646,11 @@ func (this *QComboBox) setCurrentText(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setCurrentText", args)
   }
 
+  return
 }
 
 // event(class QEvent *)
-func (this *QComboBox) event(args ...interface{}) () {
+func (this *QComboBox) Event(args ...interface{}) (ret interface{}) {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -627,16 +665,20 @@ func (this *QComboBox) event(args ...interface{}) () {
     // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN9QComboBox5eventEP6QEvent(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QComboBox5eventEP6QEvent(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "event", args)
   }
 
+  return
 }
 
 // setDuplicatesEnabled(_Bool)
-func (this *QComboBox) setDuplicatesEnabled(args ...interface{}) () {
+func (this *QComboBox) Setduplicatesenabled(args ...interface{}) () {
   // setDuplicatesEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -656,10 +698,11 @@ func (this *QComboBox) setDuplicatesEnabled(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setDuplicatesEnabled", args)
   }
 
+  return
 }
 
 // setEditable(_Bool)
-func (this *QComboBox) setEditable(args ...interface{}) () {
+func (this *QComboBox) Seteditable(args ...interface{}) () {
   // setEditable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -679,10 +722,11 @@ func (this *QComboBox) setEditable(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setEditable", args)
   }
 
+  return
 }
 
 // itemData(int, int)
-func (this *QComboBox) itemData(args ...interface{}) () {
+func (this *QComboBox) Itemdata(args ...interface{}) (ret interface{}) {
   // itemData(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -700,16 +744,20 @@ func (this *QComboBox) itemData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK9QComboBox8itemDataEii(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox8itemDataEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "itemData", args)
   }
 
+  return
 }
 
 // iconSize()
-func (this *QComboBox) iconSize(args ...interface{}) () {
+func (this *QComboBox) Iconsize(args ...interface{}) (ret interface{}) {
   // iconSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -721,16 +769,20 @@ func (this *QComboBox) iconSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox8iconSizeEv
     // invoke: QSize iconSize()
-    var ret = C.C_ZNK9QComboBox8iconSizeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox8iconSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "iconSize", args)
   }
 
+  return
 }
 
 // addItem(const class QIcon &, const class QString &, const class QVariant &)
-func (this *QComboBox) addItem(args ...interface{}) () {
+func (this *QComboBox) Additem(args ...interface{}) () {
   // addItem(const class QIcon &, const class QString &, const class QVariant &)
   // addItem(const class QString &, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -768,10 +820,11 @@ func (this *QComboBox) addItem(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "addItem", args)
   }
 
+  return
 }
 
 // sizeHint()
-func (this *QComboBox) sizeHint(args ...interface{}) () {
+func (this *QComboBox) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -783,16 +836,20 @@ func (this *QComboBox) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret = C.C_ZNK9QComboBox8sizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "sizeHint", args)
   }
 
+  return
 }
 
 // setMaxVisibleItems(int)
-func (this *QComboBox) setMaxVisibleItems(args ...interface{}) () {
+func (this *QComboBox) Setmaxvisibleitems(args ...interface{}) () {
   // setMaxVisibleItems(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -812,10 +869,11 @@ func (this *QComboBox) setMaxVisibleItems(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setMaxVisibleItems", args)
   }
 
+  return
 }
 
 // currentText()
-func (this *QComboBox) currentText(args ...interface{}) () {
+func (this *QComboBox) Currenttext(args ...interface{}) (ret interface{}) {
   // currentText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -827,16 +885,20 @@ func (this *QComboBox) currentText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox11currentTextEv
     // invoke: QString currentText()
-    var ret = C.C_ZNK9QComboBox11currentTextEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox11currentTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "currentText", args)
   }
 
+  return
 }
 
 // setMaxCount(int)
-func (this *QComboBox) setMaxCount(args ...interface{}) () {
+func (this *QComboBox) Setmaxcount(args ...interface{}) () {
   // setMaxCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -856,10 +918,11 @@ func (this *QComboBox) setMaxCount(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setMaxCount", args)
   }
 
+  return
 }
 
 // rootModelIndex()
-func (this *QComboBox) rootModelIndex(args ...interface{}) () {
+func (this *QComboBox) Rootmodelindex(args ...interface{}) (ret interface{}) {
   // rootModelIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -871,16 +934,20 @@ func (this *QComboBox) rootModelIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox14rootModelIndexEv
     // invoke: QModelIndex rootModelIndex()
-    var ret = C.C_ZNK9QComboBox14rootModelIndexEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox14rootModelIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "rootModelIndex", args)
   }
 
+  return
 }
 
 // modelColumn()
-func (this *QComboBox) modelColumn(args ...interface{}) () {
+func (this *QComboBox) Modelcolumn(args ...interface{}) (ret interface{}) {
   // modelColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -892,16 +959,20 @@ func (this *QComboBox) modelColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox11modelColumnEv
     // invoke: int modelColumn()
-    var ret = C.C_ZNK9QComboBox11modelColumnEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox11modelColumnEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "modelColumn", args)
   }
 
+  return
 }
 
 // setItemText(int, const class QString &)
-func (this *QComboBox) setItemText(args ...interface{}) () {
+func (this *QComboBox) Setitemtext(args ...interface{}) () {
   // setItemText(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -924,10 +995,11 @@ func (this *QComboBox) setItemText(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setItemText", args)
   }
 
+  return
 }
 
 // hidePopup()
-func (this *QComboBox) hidePopup(args ...interface{}) () {
+func (this *QComboBox) Hidepopup(args ...interface{}) () {
   // hidePopup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -944,10 +1016,11 @@ func (this *QComboBox) hidePopup(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "hidePopup", args)
   }
 
+  return
 }
 
 // showPopup()
-func (this *QComboBox) showPopup(args ...interface{}) () {
+func (this *QComboBox) Showpopup(args ...interface{}) () {
   // showPopup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -964,10 +1037,11 @@ func (this *QComboBox) showPopup(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "showPopup", args)
   }
 
+  return
 }
 
 // minimumContentsLength()
-func (this *QComboBox) minimumContentsLength(args ...interface{}) () {
+func (this *QComboBox) Minimumcontentslength(args ...interface{}) (ret interface{}) {
   // minimumContentsLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -979,16 +1053,20 @@ func (this *QComboBox) minimumContentsLength(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox21minimumContentsLengthEv
     // invoke: int minimumContentsLength()
-    var ret = C.C_ZNK9QComboBox21minimumContentsLengthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox21minimumContentsLengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "minimumContentsLength", args)
   }
 
+  return
 }
 
 // addItems(const class QStringList &)
-func (this *QComboBox) addItems(args ...interface{}) () {
+func (this *QComboBox) Additems(args ...interface{}) () {
   // addItems(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1008,10 +1086,11 @@ func (this *QComboBox) addItems(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "addItems", args)
   }
 
+  return
 }
 
 // setCompleter(class QCompleter *)
-func (this *QComboBox) setCompleter(args ...interface{}) () {
+func (this *QComboBox) Setcompleter(args ...interface{}) () {
   // setCompleter(class QCompleter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1031,10 +1110,11 @@ func (this *QComboBox) setCompleter(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setCompleter", args)
   }
 
+  return
 }
 
 // insertItems(int, const class QStringList &)
-func (this *QComboBox) insertItems(args ...interface{}) () {
+func (this *QComboBox) Insertitems(args ...interface{}) () {
   // insertItems(int, const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1057,10 +1137,11 @@ func (this *QComboBox) insertItems(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "insertItems", args)
   }
 
+  return
 }
 
 // setRootModelIndex(const class QModelIndex &)
-func (this *QComboBox) setRootModelIndex(args ...interface{}) () {
+func (this *QComboBox) Setrootmodelindex(args ...interface{}) () {
   // setRootModelIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1080,10 +1161,11 @@ func (this *QComboBox) setRootModelIndex(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setRootModelIndex", args)
   }
 
+  return
 }
 
 // setValidator(const class QValidator *)
-func (this *QComboBox) setValidator(args ...interface{}) () {
+func (this *QComboBox) Setvalidator(args ...interface{}) () {
   // setValidator(const class QValidator *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1103,10 +1185,11 @@ func (this *QComboBox) setValidator(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setValidator", args)
   }
 
+  return
 }
 
 // maxCount()
-func (this *QComboBox) maxCount(args ...interface{}) () {
+func (this *QComboBox) Maxcount(args ...interface{}) (ret interface{}) {
   // maxCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1118,16 +1201,20 @@ func (this *QComboBox) maxCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox8maxCountEv
     // invoke: int maxCount()
-    var ret = C.C_ZNK9QComboBox8maxCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox8maxCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "maxCount", args)
   }
 
+  return
 }
 
 // completer()
-func (this *QComboBox) completer(args ...interface{}) () {
+func (this *QComboBox) Completer(args ...interface{}) (ret interface{}) {
   // completer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1139,16 +1226,20 @@ func (this *QComboBox) completer(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox9completerEv
     // invoke: QCompleter * completer()
-    var ret = C.C_ZNK9QComboBox9completerEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox9completerEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QCompleter{}) // "QCompleter *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "completer", args)
   }
 
+  return
 }
 
 // itemText(int)
-func (this *QComboBox) itemText(args ...interface{}) () {
+func (this *QComboBox) Itemtext(args ...interface{}) (ret interface{}) {
   // itemText(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1163,16 +1254,20 @@ func (this *QComboBox) itemText(args ...interface{}) () {
     // invoke: QString itemText(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QComboBox8itemTextEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox8itemTextEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "itemText", args)
   }
 
+  return
 }
 
 // minimumSizeHint()
-func (this *QComboBox) minimumSizeHint(args ...interface{}) () {
+func (this *QComboBox) Minimumsizehint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1184,16 +1279,20 @@ func (this *QComboBox) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret = C.C_ZNK9QComboBox15minimumSizeHintEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "minimumSizeHint", args)
   }
 
+  return
 }
 
 // insertSeparator(int)
-func (this *QComboBox) insertSeparator(args ...interface{}) () {
+func (this *QComboBox) Insertseparator(args ...interface{}) () {
   // insertSeparator(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1213,10 +1312,11 @@ func (this *QComboBox) insertSeparator(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "insertSeparator", args)
   }
 
+  return
 }
 
 // sizeAdjustPolicy()
-func (this *QComboBox) sizeAdjustPolicy(args ...interface{}) () {
+func (this *QComboBox) Sizeadjustpolicy(args ...interface{}) () {
   // sizeAdjustPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1233,10 +1333,11 @@ func (this *QComboBox) sizeAdjustPolicy(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "sizeAdjustPolicy", args)
   }
 
+  return
 }
 
 // lineEdit()
-func (this *QComboBox) lineEdit(args ...interface{}) () {
+func (this *QComboBox) Lineedit(args ...interface{}) (ret interface{}) {
   // lineEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1248,16 +1349,20 @@ func (this *QComboBox) lineEdit(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox8lineEditEv
     // invoke: QLineEdit * lineEdit()
-    var ret = C.C_ZNK9QComboBox8lineEditEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox8lineEditEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QLineEdit{}) // "QLineEdit *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "lineEdit", args)
   }
 
+  return
 }
 
 // currentData(int)
-func (this *QComboBox) currentData(args ...interface{}) () {
+func (this *QComboBox) Currentdata(args ...interface{}) (ret interface{}) {
   // currentData(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1272,16 +1377,20 @@ func (this *QComboBox) currentData(args ...interface{}) () {
     // invoke: QVariant currentData(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QComboBox11currentDataEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox11currentDataEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "currentData", args)
   }
 
+  return
 }
 
 // setItemDelegate(class QAbstractItemDelegate *)
-func (this *QComboBox) setItemDelegate(args ...interface{}) () {
+func (this *QComboBox) Setitemdelegate(args ...interface{}) () {
   // setItemDelegate(class QAbstractItemDelegate *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1301,10 +1410,11 @@ func (this *QComboBox) setItemDelegate(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setItemDelegate", args)
   }
 
+  return
 }
 
 // ~QComboBox()
-func (this *QComboBox) FreeQComboBox(args ...interface{}) () {
+func (this *QComboBox) Freeqcombobox(args ...interface{}) () {
   // ~QComboBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1321,10 +1431,11 @@ func (this *QComboBox) FreeQComboBox(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "~QComboBox", args)
   }
 
+  return
 }
 
 // setCurrentIndex(int)
-func (this *QComboBox) setCurrentIndex(args ...interface{}) () {
+func (this *QComboBox) Setcurrentindex(args ...interface{}) () {
   // setCurrentIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1344,10 +1455,11 @@ func (this *QComboBox) setCurrentIndex(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setCurrentIndex", args)
   }
 
+  return
 }
 
 // setLineEdit(class QLineEdit *)
-func (this *QComboBox) setLineEdit(args ...interface{}) () {
+func (this *QComboBox) Setlineedit(args ...interface{}) () {
   // setLineEdit(class QLineEdit *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1367,10 +1479,11 @@ func (this *QComboBox) setLineEdit(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setLineEdit", args)
   }
 
+  return
 }
 
 // setModelColumn(int)
-func (this *QComboBox) setModelColumn(args ...interface{}) () {
+func (this *QComboBox) Setmodelcolumn(args ...interface{}) () {
   // setModelColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1390,10 +1503,11 @@ func (this *QComboBox) setModelColumn(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setModelColumn", args)
   }
 
+  return
 }
 
 // autoCompletion()
-func (this *QComboBox) autoCompletion(args ...interface{}) () {
+func (this *QComboBox) Autocompletion(args ...interface{}) (ret interface{}) {
   // autoCompletion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1405,16 +1519,20 @@ func (this *QComboBox) autoCompletion(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox14autoCompletionEv
     // invoke: bool autoCompletion()
-    var ret = C.C_ZNK9QComboBox14autoCompletionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox14autoCompletionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "autoCompletion", args)
   }
 
+  return
 }
 
 // setAutoCompletion(_Bool)
-func (this *QComboBox) setAutoCompletion(args ...interface{}) () {
+func (this *QComboBox) Setautocompletion(args ...interface{}) () {
   // setAutoCompletion(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1434,10 +1552,11 @@ func (this *QComboBox) setAutoCompletion(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setAutoCompletion", args)
   }
 
+  return
 }
 
 // setMinimumContentsLength(int)
-func (this *QComboBox) setMinimumContentsLength(args ...interface{}) () {
+func (this *QComboBox) Setminimumcontentslength(args ...interface{}) () {
   // setMinimumContentsLength(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1457,10 +1576,11 @@ func (this *QComboBox) setMinimumContentsLength(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setMinimumContentsLength", args)
   }
 
+  return
 }
 
 // clearEditText()
-func (this *QComboBox) clearEditText(args ...interface{}) () {
+func (this *QComboBox) Clearedittext(args ...interface{}) () {
   // clearEditText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1477,10 +1597,11 @@ func (this *QComboBox) clearEditText(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "clearEditText", args)
   }
 
+  return
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QComboBox) setModel(args ...interface{}) () {
+func (this *QComboBox) Setmodel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1500,10 +1621,11 @@ func (this *QComboBox) setModel(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setModel", args)
   }
 
+  return
 }
 
 // insertPolicy()
-func (this *QComboBox) insertPolicy(args ...interface{}) () {
+func (this *QComboBox) Insertpolicy(args ...interface{}) () {
   // insertPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1520,10 +1642,11 @@ func (this *QComboBox) insertPolicy(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "insertPolicy", args)
   }
 
+  return
 }
 
 // setItemIcon(int, const class QIcon &)
-func (this *QComboBox) setItemIcon(args ...interface{}) () {
+func (this *QComboBox) Setitemicon(args ...interface{}) () {
   // setItemIcon(int, const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1546,10 +1669,11 @@ func (this *QComboBox) setItemIcon(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setItemIcon", args)
   }
 
+  return
 }
 
 // itemDelegate()
-func (this *QComboBox) itemDelegate(args ...interface{}) () {
+func (this *QComboBox) Itemdelegate(args ...interface{}) () {
   // itemDelegate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1566,10 +1690,11 @@ func (this *QComboBox) itemDelegate(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "itemDelegate", args)
   }
 
+  return
 }
 
 // setFrame(_Bool)
-func (this *QComboBox) setFrame(args ...interface{}) () {
+func (this *QComboBox) Setframe(args ...interface{}) () {
   // setFrame(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1589,10 +1714,11 @@ func (this *QComboBox) setFrame(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "setFrame", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QComboBox) clear(args ...interface{}) () {
+func (this *QComboBox) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1609,10 +1735,11 @@ func (this *QComboBox) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "clear", args)
   }
 
+  return
 }
 
 // validator()
-func (this *QComboBox) validator(args ...interface{}) () {
+func (this *QComboBox) Validator(args ...interface{}) (ret interface{}) {
   // validator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1624,16 +1751,20 @@ func (this *QComboBox) validator(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QComboBox9validatorEv
     // invoke: const QValidator * validator()
-    var ret = C.C_ZNK9QComboBox9validatorEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QComboBox9validatorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QValidator{}) // "const QValidator *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QComboBox", "validator", args)
   }
 
+  return
 }
 
 // model()
-func (this *QComboBox) model(args ...interface{}) () {
+func (this *QComboBox) Model(args ...interface{}) () {
   // model()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1650,6 +1781,7 @@ func (this *QComboBox) model(args ...interface{}) () {
     qtrt.ErrorResolve("QComboBox", "model", args)
   }
 
+  return
 }
 
 // <= body block end

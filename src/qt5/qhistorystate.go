@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qhistorystate.h
 // dst-file: /src/core/qhistorystate.go
 //
@@ -61,7 +61,7 @@ type QHistoryState struct {
 }
 
 // historyType()
-func (this *QHistoryState) historyType(args ...interface{}) () {
+func (this *QHistoryState) Historytype(args ...interface{}) () {
   // historyType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -78,10 +78,11 @@ func (this *QHistoryState) historyType(args ...interface{}) () {
     qtrt.ErrorResolve("QHistoryState", "historyType", args)
   }
 
+  return
 }
 
 // ~QHistoryState()
-func (this *QHistoryState) FreeQHistoryState(args ...interface{}) () {
+func (this *QHistoryState) Freeqhistorystate(args ...interface{}) () {
   // ~QHistoryState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -98,10 +99,11 @@ func (this *QHistoryState) FreeQHistoryState(args ...interface{}) () {
     qtrt.ErrorResolve("QHistoryState", "~QHistoryState", args)
   }
 
+  return
 }
 
 // defaultState()
-func (this *QHistoryState) defaultState(args ...interface{}) () {
+func (this *QHistoryState) Defaultstate(args ...interface{}) () {
   // defaultState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -118,6 +120,7 @@ func (this *QHistoryState) defaultState(args ...interface{}) () {
     qtrt.ErrorResolve("QHistoryState", "defaultState", args)
   }
 
+  return
 }
 
 // QHistoryState(class QState *)
@@ -148,7 +151,7 @@ func NewQHistoryState(args ...interface{}) *QHistoryState {
 }
 
 // metaObject()
-func (this *QHistoryState) metaObject(args ...interface{}) () {
+func (this *QHistoryState) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -165,10 +168,11 @@ func (this *QHistoryState) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QHistoryState", "metaObject", args)
   }
 
+  return
 }
 
 // setDefaultState(class QAbstractState *)
-func (this *QHistoryState) setDefaultState(args ...interface{}) () {
+func (this *QHistoryState) Setdefaultstate(args ...interface{}) () {
   // setDefaultState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -188,6 +192,7 @@ func (this *QHistoryState) setDefaultState(args ...interface{}) () {
     qtrt.ErrorResolve("QHistoryState", "setDefaultState", args)
   }
 
+  return
 }
 
 // <= body block end

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qscroller.h
 // dst-file: /src/widgets/qscroller.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QScroller * QScroller::scroller(QObject * target);
-extern void C_ZN9QScroller8scrollerEP7QObject(void* arg0); // 4
+extern void* C_ZN9QScroller8scrollerEP7QObject(void* arg0); // 4
   // proto: static const QScroller * QScroller::scroller(const QObject * target);
-extern void C_ZN9QScroller8scrollerEPK7QObject(void* arg0); // 4
+extern void* C_ZN9QScroller8scrollerEPK7QObject(void* arg0); // 4
   // proto:  void QScroller::scrollTo(const QPointF & pos, int scrollTime);
 extern void C_ZN9QScroller8scrollToERK7QPointFi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QScroller::scrollTo(const QPointF & pos);
@@ -39,7 +39,7 @@ extern void C_ZN9QScroller8scrollToERK7QPointF(void* qthis, void* arg0); // 4
   // proto: static QList<QScroller *> QScroller::activeScrollers();
 extern void C_ZN9QScroller15activeScrollersEv(); // 4
   // proto: static bool QScroller::hasScroller(QObject * target);
-extern void C_ZN9QScroller11hasScrollerEP7QObject(void* arg0); // 4
+extern bool C_ZN9QScroller11hasScrollerEP7QObject(void* arg0); // 4
   // proto:  void QScroller::setSnapPositionsY(qreal first, qreal interval);
 extern void C_ZN9QScroller17setSnapPositionsYEdd(void* qthis, double arg0, double arg1); // 4
   // proto:  void QScroller::setSnapPositionsX(qreal first, qreal interval);
@@ -53,25 +53,25 @@ extern void C_ZN9QScroller18resendPrepareEventEv(void* qthis); // 4
   // proto:  void QScroller::stop();
 extern void C_ZN9QScroller4stopEv(void* qthis); // 4
   // proto:  QScrollerProperties QScroller::scrollerProperties();
-extern void C_ZNK9QScroller18scrollerPropertiesEv(void* qthis); // 4
+extern void* C_ZNK9QScroller18scrollerPropertiesEv(void* qthis); // 4
   // proto:  QPointF QScroller::finalPosition();
-extern void C_ZNK9QScroller13finalPositionEv(void* qthis); // 4
+extern void* C_ZNK9QScroller13finalPositionEv(void* qthis); // 4
   // proto:  void QScroller::ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime);
 extern void C_ZN9QScroller13ensureVisibleERK6QRectFddi(void* qthis, void* arg0, double arg1, double arg2, int32_t arg3); // 4
   // proto:  void QScroller::ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin);
 extern void C_ZN9QScroller13ensureVisibleERK6QRectFdd(void* qthis, void* arg0, double arg1, double arg2); // 4
   // proto:  QPointF QScroller::pixelPerMeter();
-extern void C_ZNK9QScroller13pixelPerMeterEv(void* qthis); // 4
+extern void* C_ZNK9QScroller13pixelPerMeterEv(void* qthis); // 4
   // proto:  const QMetaObject * QScroller::metaObject();
 extern void C_ZNK9QScroller10metaObjectEv(void* qthis); // 4
   // proto:  QObject * QScroller::target();
-extern void C_ZNK9QScroller6targetEv(void* qthis); // 4
+extern void* C_ZNK9QScroller6targetEv(void* qthis); // 4
   // proto: static Qt::GestureType QScroller::grabbedGesture(QObject * target);
 extern void C_ZN9QScroller14grabbedGestureEP7QObject(void* arg0); // 4
   // proto:  void QScroller::setScrollerProperties(const QScrollerProperties & prop);
 extern void C_ZN9QScroller21setScrollerPropertiesERK19QScrollerProperties(void* qthis, void* arg0); // 4
   // proto:  QPointF QScroller::velocity();
-extern void C_ZNK9QScroller8velocityEv(void* qthis); // 4
+extern void* C_ZNK9QScroller8velocityEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -93,7 +93,7 @@ type QScroller struct {
 }
 
 // scroller(class QObject *)
-func (this *QScroller) scroller_s(args ...interface{}) () {
+func (this *QScroller) Scroller_S(args ...interface{}) (ret interface{}) {
   // scroller(class QObject *)
   // scroller(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -111,23 +111,30 @@ func (this *QScroller) scroller_s(args ...interface{}) () {
     // invoke: QScroller * scroller(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN9QScroller8scrollerEP7QObject(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QScroller8scrollerEP7QObject(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QScroller{}) // "QScroller *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN9QScroller8scrollerEPK7QObject
     // invoke: const QScroller * scroller(const class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN9QScroller8scrollerEPK7QObject(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QScroller8scrollerEPK7QObject(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QScroller{}) // "const QScroller *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QScroller", "scroller", args)
   }
 
+  return
 }
 
 // scrollTo(const class QPointF &, int)
-func (this *QScroller) scrollTo(args ...interface{}) () {
+func (this *QScroller) Scrollto(args ...interface{}) () {
   // scrollTo(const class QPointF &, int)
   // scrollTo(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -159,10 +166,11 @@ func (this *QScroller) scrollTo(args ...interface{}) () {
     qtrt.ErrorResolve("QScroller", "scrollTo", args)
   }
 
+  return
 }
 
 // activeScrollers()
-func (this *QScroller) activeScrollers_s(args ...interface{}) () {
+func (this *QScroller) Activescrollers_S(args ...interface{}) () {
   // activeScrollers()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,10 +187,11 @@ func (this *QScroller) activeScrollers_s(args ...interface{}) () {
     qtrt.ErrorResolve("QScroller", "activeScrollers", args)
   }
 
+  return
 }
 
 // hasScroller(class QObject *)
-func (this *QScroller) hasScroller_s(args ...interface{}) () {
+func (this *QScroller) Hasscroller_S(args ...interface{}) (ret interface{}) {
   // hasScroller(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -197,16 +206,20 @@ func (this *QScroller) hasScroller_s(args ...interface{}) () {
     // invoke: bool hasScroller(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN9QScroller11hasScrollerEP7QObject(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QScroller11hasScrollerEP7QObject(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QScroller", "hasScroller", args)
   }
 
+  return
 }
 
 // setSnapPositionsY(qreal, qreal)
-func (this *QScroller) setSnapPositionsY(args ...interface{}) () {
+func (this *QScroller) Setsnappositionsy(args ...interface{}) () {
   // setSnapPositionsY(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -229,10 +242,11 @@ func (this *QScroller) setSnapPositionsY(args ...interface{}) () {
     qtrt.ErrorResolve("QScroller", "setSnapPositionsY", args)
   }
 
+  return
 }
 
 // setSnapPositionsX(qreal, qreal)
-func (this *QScroller) setSnapPositionsX(args ...interface{}) () {
+func (this *QScroller) Setsnappositionsx(args ...interface{}) () {
   // setSnapPositionsX(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -255,10 +269,11 @@ func (this *QScroller) setSnapPositionsX(args ...interface{}) () {
     qtrt.ErrorResolve("QScroller", "setSnapPositionsX", args)
   }
 
+  return
 }
 
 // ungrabGesture(class QObject *)
-func (this *QScroller) ungrabGesture_s(args ...interface{}) () {
+func (this *QScroller) Ungrabgesture_S(args ...interface{}) () {
   // ungrabGesture(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -278,10 +293,11 @@ func (this *QScroller) ungrabGesture_s(args ...interface{}) () {
     qtrt.ErrorResolve("QScroller", "ungrabGesture", args)
   }
 
+  return
 }
 
 // state()
-func (this *QScroller) state(args ...interface{}) () {
+func (this *QScroller) State(args ...interface{}) () {
   // state()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -298,10 +314,11 @@ func (this *QScroller) state(args ...interface{}) () {
     qtrt.ErrorResolve("QScroller", "state", args)
   }
 
+  return
 }
 
 // resendPrepareEvent()
-func (this *QScroller) resendPrepareEvent(args ...interface{}) () {
+func (this *QScroller) Resendprepareevent(args ...interface{}) () {
   // resendPrepareEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -318,10 +335,11 @@ func (this *QScroller) resendPrepareEvent(args ...interface{}) () {
     qtrt.ErrorResolve("QScroller", "resendPrepareEvent", args)
   }
 
+  return
 }
 
 // stop()
-func (this *QScroller) stop(args ...interface{}) () {
+func (this *QScroller) Stop(args ...interface{}) () {
   // stop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -338,10 +356,11 @@ func (this *QScroller) stop(args ...interface{}) () {
     qtrt.ErrorResolve("QScroller", "stop", args)
   }
 
+  return
 }
 
 // scrollerProperties()
-func (this *QScroller) scrollerProperties(args ...interface{}) () {
+func (this *QScroller) Scrollerproperties(args ...interface{}) (ret interface{}) {
   // scrollerProperties()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -353,16 +372,20 @@ func (this *QScroller) scrollerProperties(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QScroller18scrollerPropertiesEv
     // invoke: QScrollerProperties scrollerProperties()
-    var ret = C.C_ZNK9QScroller18scrollerPropertiesEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QScroller18scrollerPropertiesEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QScrollerProperties{}) // "QScrollerProperties"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QScroller", "scrollerProperties", args)
   }
 
+  return
 }
 
 // finalPosition()
-func (this *QScroller) finalPosition(args ...interface{}) () {
+func (this *QScroller) Finalposition(args ...interface{}) (ret interface{}) {
   // finalPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -374,16 +397,20 @@ func (this *QScroller) finalPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QScroller13finalPositionEv
     // invoke: QPointF finalPosition()
-    var ret = C.C_ZNK9QScroller13finalPositionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QScroller13finalPositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QScroller", "finalPosition", args)
   }
 
+  return
 }
 
 // ensureVisible(const class QRectF &, qreal, qreal, int)
-func (this *QScroller) ensureVisible(args ...interface{}) () {
+func (this *QScroller) Ensurevisible(args ...interface{}) () {
   // ensureVisible(const class QRectF &, qreal, qreal, int)
   // ensureVisible(const class QRectF &, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -427,10 +454,11 @@ func (this *QScroller) ensureVisible(args ...interface{}) () {
     qtrt.ErrorResolve("QScroller", "ensureVisible", args)
   }
 
+  return
 }
 
 // pixelPerMeter()
-func (this *QScroller) pixelPerMeter(args ...interface{}) () {
+func (this *QScroller) Pixelpermeter(args ...interface{}) (ret interface{}) {
   // pixelPerMeter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -442,16 +470,20 @@ func (this *QScroller) pixelPerMeter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QScroller13pixelPerMeterEv
     // invoke: QPointF pixelPerMeter()
-    var ret = C.C_ZNK9QScroller13pixelPerMeterEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QScroller13pixelPerMeterEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QScroller", "pixelPerMeter", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QScroller) metaObject(args ...interface{}) () {
+func (this *QScroller) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -468,10 +500,11 @@ func (this *QScroller) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QScroller", "metaObject", args)
   }
 
+  return
 }
 
 // target()
-func (this *QScroller) target(args ...interface{}) () {
+func (this *QScroller) Target(args ...interface{}) (ret interface{}) {
   // target()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -483,16 +516,20 @@ func (this *QScroller) target(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QScroller6targetEv
     // invoke: QObject * target()
-    var ret = C.C_ZNK9QScroller6targetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QScroller6targetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QObject{}) // "QObject *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QScroller", "target", args)
   }
 
+  return
 }
 
 // grabbedGesture(class QObject *)
-func (this *QScroller) grabbedGesture_s(args ...interface{}) () {
+func (this *QScroller) Grabbedgesture_S(args ...interface{}) () {
   // grabbedGesture(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -512,10 +549,11 @@ func (this *QScroller) grabbedGesture_s(args ...interface{}) () {
     qtrt.ErrorResolve("QScroller", "grabbedGesture", args)
   }
 
+  return
 }
 
 // setScrollerProperties(const class QScrollerProperties &)
-func (this *QScroller) setScrollerProperties(args ...interface{}) () {
+func (this *QScroller) Setscrollerproperties(args ...interface{}) () {
   // setScrollerProperties(const class QScrollerProperties &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -535,10 +573,11 @@ func (this *QScroller) setScrollerProperties(args ...interface{}) () {
     qtrt.ErrorResolve("QScroller", "setScrollerProperties", args)
   }
 
+  return
 }
 
 // velocity()
-func (this *QScroller) velocity(args ...interface{}) () {
+func (this *QScroller) Velocity(args ...interface{}) (ret interface{}) {
   // velocity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -550,12 +589,16 @@ func (this *QScroller) velocity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QScroller8velocityEv
     // invoke: QPointF velocity()
-    var ret = C.C_ZNK9QScroller8velocityEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QScroller8velocityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QScroller", "velocity", args)
   }
 
+  return
 }
 
 // <= body block end

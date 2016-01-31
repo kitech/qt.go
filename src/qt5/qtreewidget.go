@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qtreewidget.h
 // dst-file: /src/widgets/qtreewidget.go
 //
@@ -29,13 +29,13 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QTreeWidget::sortColumn();
-extern void C_ZNK11QTreeWidget10sortColumnEv(void* qthis); // 4
+extern int32_t C_ZNK11QTreeWidget10sortColumnEv(void* qthis); // 4
   // proto:  void QTreeWidget::setHeaderLabel(const QString & label);
 extern void C_ZN11QTreeWidget14setHeaderLabelERK7QString(void* qthis, void* arg0); // 2
   // proto:  void QTreeWidget::setFirstItemColumnSpanned(const QTreeWidgetItem * item, bool span);
 extern void C_ZN11QTreeWidget25setFirstItemColumnSpannedEPK15QTreeWidgetItemb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  int QTreeWidget::indexOfTopLevelItem(QTreeWidgetItem * item);
-extern void C_ZNK11QTreeWidget19indexOfTopLevelItemEP15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern int32_t C_ZNK11QTreeWidget19indexOfTopLevelItemEP15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidget::setHeaderLabels(const QStringList & labels);
 extern void C_ZN11QTreeWidget15setHeaderLabelsERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidget::setItemExpanded(const QTreeWidgetItem * item, bool expand);
@@ -45,13 +45,13 @@ extern void C_ZN11QTreeWidget15setItemSelectedEPK15QTreeWidgetItemb(void* qthis,
   // proto:  void QTreeWidget::QTreeWidget(QWidget * parent);
 extern void* C_ZN11QTreeWidgetC2EP7QWidget(void* arg0); // 3
   // proto:  QWidget * QTreeWidget::itemWidget(QTreeWidgetItem * item, int column);
-extern void C_ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void* C_ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QList<QTreeWidgetItem *> QTreeWidget::selectedItems();
 extern void C_ZNK11QTreeWidget13selectedItemsEv(void* qthis); // 4
   // proto:  void QTreeWidget::openPersistentEditor(QTreeWidgetItem * item, int column);
 extern void C_ZN11QTreeWidget20openPersistentEditorEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QRect QTreeWidget::visualItemRect(const QTreeWidgetItem * item);
-extern void C_ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void* C_ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidget::removeItemWidget(QTreeWidgetItem * item, int column);
 extern void C_ZN11QTreeWidget16removeItemWidgetEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  void QTreeWidget::setColumnCount(int columns);
@@ -67,37 +67,37 @@ extern void C_ZN11QTreeWidget8editItemEP15QTreeWidgetItemi(void* qthis, void* ar
   // proto:  void QTreeWidget::setSelectionModel(QItemSelectionModel * selectionModel);
 extern void C_ZN11QTreeWidget17setSelectionModelEP19QItemSelectionModel(void* qthis, void* arg0); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::currentItem();
-extern void C_ZNK11QTreeWidget11currentItemEv(void* qthis); // 4
+extern void* C_ZNK11QTreeWidget11currentItemEv(void* qthis); // 4
   // proto:  bool QTreeWidget::isItemSelected(const QTreeWidgetItem * item);
-extern void C_ZNK11QTreeWidget14isItemSelectedEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern bool C_ZNK11QTreeWidget14isItemSelectedEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::itemBelow(const QTreeWidgetItem * item);
-extern void C_ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void* C_ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  int QTreeWidget::currentColumn();
-extern void C_ZNK11QTreeWidget13currentColumnEv(void* qthis); // 4
+extern int32_t C_ZNK11QTreeWidget13currentColumnEv(void* qthis); // 4
   // proto:  bool QTreeWidget::isItemHidden(const QTreeWidgetItem * item);
-extern void C_ZNK11QTreeWidget12isItemHiddenEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern bool C_ZNK11QTreeWidget12isItemHiddenEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  int QTreeWidget::columnCount();
-extern void C_ZNK11QTreeWidget11columnCountEv(void* qthis); // 4
+extern int32_t C_ZNK11QTreeWidget11columnCountEv(void* qthis); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::itemAbove(const QTreeWidgetItem * item);
-extern void C_ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void* C_ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::invisibleRootItem();
-extern void C_ZNK11QTreeWidget17invisibleRootItemEv(void* qthis); // 4
+extern void* C_ZNK11QTreeWidget17invisibleRootItemEv(void* qthis); // 4
   // proto:  bool QTreeWidget::isFirstItemColumnSpanned(const QTreeWidgetItem * item);
-extern void C_ZNK11QTreeWidget24isFirstItemColumnSpannedEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern bool C_ZNK11QTreeWidget24isFirstItemColumnSpannedEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  bool QTreeWidget::isItemExpanded(const QTreeWidgetItem * item);
-extern void C_ZNK11QTreeWidget14isItemExpandedEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern bool C_ZNK11QTreeWidget14isItemExpandedEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::takeTopLevelItem(int index);
-extern void C_ZN11QTreeWidget16takeTopLevelItemEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZN11QTreeWidget16takeTopLevelItemEi(void* qthis, int32_t arg0); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::topLevelItem(int index);
-extern void C_ZNK11QTreeWidget12topLevelItemEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK11QTreeWidget12topLevelItemEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTreeWidget::topLevelItemCount();
-extern void C_ZNK11QTreeWidget17topLevelItemCountEv(void* qthis); // 4
+extern int32_t C_ZNK11QTreeWidget17topLevelItemCountEv(void* qthis); // 4
   // proto:  void QTreeWidget::insertTopLevelItem(int index, QTreeWidgetItem * item);
 extern void C_ZN11QTreeWidget18insertTopLevelItemEiP15QTreeWidgetItem(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QTreeWidget::addTopLevelItem(QTreeWidgetItem * item);
 extern void C_ZN11QTreeWidget15addTopLevelItemEP15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::headerItem();
-extern void C_ZNK11QTreeWidget10headerItemEv(void* qthis); // 4
+extern void* C_ZNK11QTreeWidget10headerItemEv(void* qthis); // 4
   // proto:  void QTreeWidget::setCurrentItem(QTreeWidgetItem * item);
 extern void C_ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidget::setCurrentItem(QTreeWidgetItem * item, int column);
@@ -107,9 +107,9 @@ extern void C_ZNK11QTreeWidget10metaObjectEv(void* qthis); // 4
   // proto:  void QTreeWidget::~QTreeWidget();
 extern void C_ZN11QTreeWidgetD2Ev(void* qthis); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::itemAt(int x, int y);
-extern void C_ZNK11QTreeWidget6itemAtEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void* C_ZNK11QTreeWidget6itemAtEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  QTreeWidgetItem * QTreeWidget::itemAt(const QPoint & p);
-extern void C_ZNK11QTreeWidget6itemAtERK6QPoint(void* qthis, void* arg0); // 4
+extern void* C_ZNK11QTreeWidget6itemAtERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidget::clear();
 extern void C_ZN11QTreeWidget5clearEv(void* qthis); // 4
   // proto:  void QTreeWidget::setItemHidden(const QTreeWidgetItem * item, bool hide);
@@ -121,29 +121,29 @@ extern void C_ZN11QTreeWidget13setHeaderItemEP15QTreeWidgetItem(void* qthis, voi
   // proto:  void QTreeWidgetItem::setTextAlignment(int column, int alignment);
 extern void C_ZN15QTreeWidgetItem16setTextAlignmentEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  int QTreeWidgetItem::columnCount();
-extern void C_ZNK15QTreeWidgetItem11columnCountEv(void* qthis); // 2
+extern int32_t C_ZNK15QTreeWidgetItem11columnCountEv(void* qthis); // 2
   // proto:  void QTreeWidgetItem::addChild(QTreeWidgetItem * child);
 extern void C_ZN15QTreeWidgetItem8addChildEPS_(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidgetItem::setSelected(bool select);
 extern void C_ZN15QTreeWidgetItem11setSelectedEb(void* qthis, bool arg0); // 2
   // proto:  QString QTreeWidgetItem::text(int column);
-extern void C_ZNK15QTreeWidgetItem4textEi(void* qthis, int32_t arg0); // 2
+extern void* C_ZNK15QTreeWidgetItem4textEi(void* qthis, int32_t arg0); // 2
   // proto:  QString QTreeWidgetItem::whatsThis(int column);
-extern void C_ZNK15QTreeWidgetItem9whatsThisEi(void* qthis, int32_t arg0); // 2
+extern void* C_ZNK15QTreeWidgetItem9whatsThisEi(void* qthis, int32_t arg0); // 2
   // proto:  int QTreeWidgetItem::type();
-extern void C_ZNK15QTreeWidgetItem4typeEv(void* qthis); // 2
+extern int32_t C_ZNK15QTreeWidgetItem4typeEv(void* qthis); // 2
   // proto:  QFont QTreeWidgetItem::font(int column);
-extern void C_ZNK15QTreeWidgetItem4fontEi(void* qthis, int32_t arg0); // 2
+extern void* C_ZNK15QTreeWidgetItem4fontEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTreeWidgetItem::~QTreeWidgetItem();
 extern void C_ZN15QTreeWidgetItemD2Ev(void* qthis); // 4
   // proto:  void QTreeWidgetItem::setForeground(int column, const QBrush & brush);
 extern void C_ZN15QTreeWidgetItem13setForegroundEiRK6QBrush(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  bool QTreeWidgetItem::isSelected();
-extern void C_ZNK15QTreeWidgetItem10isSelectedEv(void* qthis); // 2
+extern bool C_ZNK15QTreeWidgetItem10isSelectedEv(void* qthis); // 2
   // proto:  bool QTreeWidgetItem::isDisabled();
-extern void C_ZNK15QTreeWidgetItem10isDisabledEv(void* qthis); // 2
+extern bool C_ZNK15QTreeWidgetItem10isDisabledEv(void* qthis); // 2
   // proto:  int QTreeWidgetItem::indexOfChild(QTreeWidgetItem * child);
-extern void C_ZNK15QTreeWidgetItem12indexOfChildEPS_(void* qthis, void* arg0); // 2
+extern int32_t C_ZNK15QTreeWidgetItem12indexOfChildEPS_(void* qthis, void* arg0); // 2
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem * parent, int type);
 extern void* C_ZN15QTreeWidgetItemC2EPS_i(void* arg0, int32_t arg1); // 3
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(int type);
@@ -169,35 +169,35 @@ extern void C_ZN15QTreeWidgetItem11setExpandedEb(void* qthis, bool arg0); // 2
   // proto:  void QTreeWidgetItem::insertChild(int index, QTreeWidgetItem * child);
 extern void C_ZN15QTreeWidgetItem11insertChildEiPS_(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  QColor QTreeWidgetItem::backgroundColor(int column);
-extern void C_ZNK15QTreeWidgetItem15backgroundColorEi(void* qthis, int32_t arg0); // 2
+extern void* C_ZNK15QTreeWidgetItem15backgroundColorEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTreeWidgetItem::setBackground(int column, const QBrush & brush);
 extern void C_ZN15QTreeWidgetItem13setBackgroundEiRK6QBrush(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QColor QTreeWidgetItem::textColor(int column);
-extern void C_ZNK15QTreeWidgetItem9textColorEi(void* qthis, int32_t arg0); // 2
+extern void* C_ZNK15QTreeWidgetItem9textColorEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTreeWidgetItem::setIcon(int column, const QIcon & icon);
 extern void C_ZN15QTreeWidgetItem7setIconEiRK5QIcon(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  int QTreeWidgetItem::childCount();
-extern void C_ZNK15QTreeWidgetItem10childCountEv(void* qthis); // 2
+extern int32_t C_ZNK15QTreeWidgetItem10childCountEv(void* qthis); // 2
   // proto:  void QTreeWidgetItem::setData(int column, int role, const QVariant & value);
 extern void C_ZN15QTreeWidgetItem7setDataEiiRK8QVariant(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  QString QTreeWidgetItem::statusTip(int column);
-extern void C_ZNK15QTreeWidgetItem9statusTipEi(void* qthis, int32_t arg0); // 2
+extern void* C_ZNK15QTreeWidgetItem9statusTipEi(void* qthis, int32_t arg0); // 2
   // proto:  QBrush QTreeWidgetItem::foreground(int column);
-extern void C_ZNK15QTreeWidgetItem10foregroundEi(void* qthis, int32_t arg0); // 2
+extern void* C_ZNK15QTreeWidgetItem10foregroundEi(void* qthis, int32_t arg0); // 2
   // proto:  QTreeWidget * QTreeWidgetItem::treeWidget();
-extern void C_ZNK15QTreeWidgetItem10treeWidgetEv(void* qthis); // 2
+extern void* C_ZNK15QTreeWidgetItem10treeWidgetEv(void* qthis); // 2
   // proto:  QTreeWidgetItem * QTreeWidgetItem::parent();
-extern void C_ZNK15QTreeWidgetItem6parentEv(void* qthis); // 2
+extern void* C_ZNK15QTreeWidgetItem6parentEv(void* qthis); // 2
   // proto:  bool QTreeWidgetItem::isFirstColumnSpanned();
-extern void C_ZNK15QTreeWidgetItem20isFirstColumnSpannedEv(void* qthis); // 2
+extern bool C_ZNK15QTreeWidgetItem20isFirstColumnSpannedEv(void* qthis); // 2
   // proto:  void QTreeWidgetItem::setFirstColumnSpanned(bool span);
 extern void C_ZN15QTreeWidgetItem21setFirstColumnSpannedEb(void* qthis, bool arg0); // 2
   // proto:  QTreeWidgetItem * QTreeWidgetItem::clone();
-extern void C_ZNK15QTreeWidgetItem5cloneEv(void* qthis); // 4
+extern void* C_ZNK15QTreeWidgetItem5cloneEv(void* qthis); // 4
   // proto:  void QTreeWidgetItem::setBackgroundColor(int column, const QColor & color);
 extern void C_ZN15QTreeWidgetItem18setBackgroundColorEiRK6QColor(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QString QTreeWidgetItem::toolTip(int column);
-extern void C_ZNK15QTreeWidgetItem7toolTipEi(void* qthis, int32_t arg0); // 2
+extern void* C_ZNK15QTreeWidgetItem7toolTipEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTreeWidgetItem::setFont(int column, const QFont & font);
 extern void C_ZN15QTreeWidgetItem7setFontEiRK5QFont(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QTreeWidgetItem::ChildIndicatorPolicy QTreeWidgetItem::childIndicatorPolicy();
@@ -205,27 +205,27 @@ extern void C_ZNK15QTreeWidgetItem20childIndicatorPolicyEv(void* qthis); // 4
   // proto:  void QTreeWidgetItem::setWhatsThis(int column, const QString & whatsThis);
 extern void C_ZN15QTreeWidgetItem12setWhatsThisEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QBrush QTreeWidgetItem::background(int column);
-extern void C_ZNK15QTreeWidgetItem10backgroundEi(void* qthis, int32_t arg0); // 2
+extern void* C_ZNK15QTreeWidgetItem10backgroundEi(void* qthis, int32_t arg0); // 2
   // proto:  QTreeWidgetItem * QTreeWidgetItem::child(int index);
-extern void C_ZNK15QTreeWidgetItem5childEi(void* qthis, int32_t arg0); // 2
+extern void* C_ZNK15QTreeWidgetItem5childEi(void* qthis, int32_t arg0); // 2
   // proto:  QVariant QTreeWidgetItem::data(int column, int role);
-extern void C_ZNK15QTreeWidgetItem4dataEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void* C_ZNK15QTreeWidgetItem4dataEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QTreeWidgetItem::setTextColor(int column, const QColor & color);
 extern void C_ZN15QTreeWidgetItem12setTextColorEiRK6QColor(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QIcon QTreeWidgetItem::icon(int column);
-extern void C_ZNK15QTreeWidgetItem4iconEi(void* qthis, int32_t arg0); // 2
+extern void* C_ZNK15QTreeWidgetItem4iconEi(void* qthis, int32_t arg0); // 2
   // proto:  bool QTreeWidgetItem::isExpanded();
-extern void C_ZNK15QTreeWidgetItem10isExpandedEv(void* qthis); // 2
+extern bool C_ZNK15QTreeWidgetItem10isExpandedEv(void* qthis); // 2
   // proto:  void QTreeWidgetItem::setSizeHint(int column, const QSize & size);
 extern void C_ZN15QTreeWidgetItem11setSizeHintEiRK5QSize(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  void QTreeWidgetItem::setToolTip(int column, const QString & toolTip);
 extern void C_ZN15QTreeWidgetItem10setToolTipEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QSize QTreeWidgetItem::sizeHint(int column);
-extern void C_ZNK15QTreeWidgetItem8sizeHintEi(void* qthis, int32_t arg0); // 2
+extern void* C_ZNK15QTreeWidgetItem8sizeHintEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTreeWidgetItem::read(QDataStream & in);
 extern void C_ZN15QTreeWidgetItem4readER11QDataStream(void* qthis, void* arg0); // 4
   // proto:  bool QTreeWidgetItem::isHidden();
-extern void C_ZNK15QTreeWidgetItem8isHiddenEv(void* qthis); // 2
+extern bool C_ZNK15QTreeWidgetItem8isHiddenEv(void* qthis); // 2
   // proto:  void QTreeWidgetItem::setText(int column, const QString & text);
 extern void C_ZN15QTreeWidgetItem7setTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  void QTreeWidgetItem::setStatusTip(int column, const QString & statusTip);
@@ -241,9 +241,9 @@ extern void C_ZNK15QTreeWidgetItem10checkStateEi(void* qthis, int32_t arg0); // 
   // proto:  QList<QTreeWidgetItem *> QTreeWidgetItem::takeChildren();
 extern void C_ZN15QTreeWidgetItem12takeChildrenEv(void* qthis); // 4
   // proto:  QTreeWidgetItem * QTreeWidgetItem::takeChild(int index);
-extern void C_ZN15QTreeWidgetItem9takeChildEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZN15QTreeWidgetItem9takeChildEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTreeWidgetItem::textAlignment(int column);
-extern void C_ZNK15QTreeWidgetItem13textAlignmentEi(void* qthis, int32_t arg0); // 2
+extern int32_t C_ZNK15QTreeWidgetItem13textAlignmentEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTreeWidgetItem::setHidden(bool hide);
 extern void C_ZN15QTreeWidgetItem9setHiddenEb(void* qthis, bool arg0); // 2
 */
@@ -281,7 +281,7 @@ type QTreeWidgetItem struct {
 }
 
 // sortColumn()
-func (this *QTreeWidget) sortColumn(args ...interface{}) () {
+func (this *QTreeWidget) Sortcolumn(args ...interface{}) (ret interface{}) {
   // sortColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,16 +293,20 @@ func (this *QTreeWidget) sortColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget10sortColumnEv
     // invoke: int sortColumn()
-    var ret = C.C_ZNK11QTreeWidget10sortColumnEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget10sortColumnEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "sortColumn", args)
   }
 
+  return
 }
 
 // setHeaderLabel(const class QString &)
-func (this *QTreeWidget) setHeaderLabel(args ...interface{}) () {
+func (this *QTreeWidget) Setheaderlabel(args ...interface{}) () {
   // setHeaderLabel(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -322,10 +326,11 @@ func (this *QTreeWidget) setHeaderLabel(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "setHeaderLabel", args)
   }
 
+  return
 }
 
 // setFirstItemColumnSpanned(const class QTreeWidgetItem *, _Bool)
-func (this *QTreeWidget) setFirstItemColumnSpanned(args ...interface{}) () {
+func (this *QTreeWidget) Setfirstitemcolumnspanned(args ...interface{}) () {
   // setFirstItemColumnSpanned(const class QTreeWidgetItem *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -348,10 +353,11 @@ func (this *QTreeWidget) setFirstItemColumnSpanned(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "setFirstItemColumnSpanned", args)
   }
 
+  return
 }
 
 // indexOfTopLevelItem(class QTreeWidgetItem *)
-func (this *QTreeWidget) indexOfTopLevelItem(args ...interface{}) () {
+func (this *QTreeWidget) Indexoftoplevelitem(args ...interface{}) (ret interface{}) {
   // indexOfTopLevelItem(class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -366,16 +372,20 @@ func (this *QTreeWidget) indexOfTopLevelItem(args ...interface{}) () {
     // invoke: int indexOfTopLevelItem(class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QTreeWidget19indexOfTopLevelItemEP15QTreeWidgetItem(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget19indexOfTopLevelItemEP15QTreeWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "indexOfTopLevelItem", args)
   }
 
+  return
 }
 
 // setHeaderLabels(const class QStringList &)
-func (this *QTreeWidget) setHeaderLabels(args ...interface{}) () {
+func (this *QTreeWidget) Setheaderlabels(args ...interface{}) () {
   // setHeaderLabels(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -395,10 +405,11 @@ func (this *QTreeWidget) setHeaderLabels(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "setHeaderLabels", args)
   }
 
+  return
 }
 
 // setItemExpanded(const class QTreeWidgetItem *, _Bool)
-func (this *QTreeWidget) setItemExpanded(args ...interface{}) () {
+func (this *QTreeWidget) Setitemexpanded(args ...interface{}) () {
   // setItemExpanded(const class QTreeWidgetItem *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -421,10 +432,11 @@ func (this *QTreeWidget) setItemExpanded(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "setItemExpanded", args)
   }
 
+  return
 }
 
 // setItemSelected(const class QTreeWidgetItem *, _Bool)
-func (this *QTreeWidget) setItemSelected(args ...interface{}) () {
+func (this *QTreeWidget) Setitemselected(args ...interface{}) () {
   // setItemSelected(const class QTreeWidgetItem *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -447,6 +459,7 @@ func (this *QTreeWidget) setItemSelected(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "setItemSelected", args)
   }
 
+  return
 }
 
 // QTreeWidget(class QWidget *)
@@ -477,7 +490,7 @@ func NewQTreeWidget(args ...interface{}) *QTreeWidget {
 }
 
 // itemWidget(class QTreeWidgetItem *, int)
-func (this *QTreeWidget) itemWidget(args ...interface{}) () {
+func (this *QTreeWidget) Itemwidget(args ...interface{}) (ret interface{}) {
   // itemWidget(class QTreeWidgetItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -495,16 +508,20 @@ func (this *QTreeWidget) itemWidget(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "itemWidget", args)
   }
 
+  return
 }
 
 // selectedItems()
-func (this *QTreeWidget) selectedItems(args ...interface{}) () {
+func (this *QTreeWidget) Selecteditems(args ...interface{}) () {
   // selectedItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -521,10 +538,11 @@ func (this *QTreeWidget) selectedItems(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "selectedItems", args)
   }
 
+  return
 }
 
 // openPersistentEditor(class QTreeWidgetItem *, int)
-func (this *QTreeWidget) openPersistentEditor(args ...interface{}) () {
+func (this *QTreeWidget) Openpersistenteditor(args ...interface{}) () {
   // openPersistentEditor(class QTreeWidgetItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -547,10 +565,11 @@ func (this *QTreeWidget) openPersistentEditor(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "openPersistentEditor", args)
   }
 
+  return
 }
 
 // visualItemRect(const class QTreeWidgetItem *)
-func (this *QTreeWidget) visualItemRect(args ...interface{}) () {
+func (this *QTreeWidget) Visualitemrect(args ...interface{}) (ret interface{}) {
   // visualItemRect(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -565,16 +584,20 @@ func (this *QTreeWidget) visualItemRect(args ...interface{}) () {
     // invoke: QRect visualItemRect(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QRect{}) // "QRect"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "visualItemRect", args)
   }
 
+  return
 }
 
 // removeItemWidget(class QTreeWidgetItem *, int)
-func (this *QTreeWidget) removeItemWidget(args ...interface{}) () {
+func (this *QTreeWidget) Removeitemwidget(args ...interface{}) () {
   // removeItemWidget(class QTreeWidgetItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -597,10 +620,11 @@ func (this *QTreeWidget) removeItemWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "removeItemWidget", args)
   }
 
+  return
 }
 
 // setColumnCount(int)
-func (this *QTreeWidget) setColumnCount(args ...interface{}) () {
+func (this *QTreeWidget) Setcolumncount(args ...interface{}) () {
   // setColumnCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -620,10 +644,11 @@ func (this *QTreeWidget) setColumnCount(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "setColumnCount", args)
   }
 
+  return
 }
 
 // expandItem(const class QTreeWidgetItem *)
-func (this *QTreeWidget) expandItem(args ...interface{}) () {
+func (this *QTreeWidget) Expanditem(args ...interface{}) () {
   // expandItem(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -643,10 +668,11 @@ func (this *QTreeWidget) expandItem(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "expandItem", args)
   }
 
+  return
 }
 
 // collapseItem(const class QTreeWidgetItem *)
-func (this *QTreeWidget) collapseItem(args ...interface{}) () {
+func (this *QTreeWidget) Collapseitem(args ...interface{}) () {
   // collapseItem(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -666,10 +692,11 @@ func (this *QTreeWidget) collapseItem(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "collapseItem", args)
   }
 
+  return
 }
 
 // setItemWidget(class QTreeWidgetItem *, int, class QWidget *)
-func (this *QTreeWidget) setItemWidget(args ...interface{}) () {
+func (this *QTreeWidget) Setitemwidget(args ...interface{}) () {
   // setItemWidget(class QTreeWidgetItem *, int, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -695,10 +722,11 @@ func (this *QTreeWidget) setItemWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "setItemWidget", args)
   }
 
+  return
 }
 
 // editItem(class QTreeWidgetItem *, int)
-func (this *QTreeWidget) editItem(args ...interface{}) () {
+func (this *QTreeWidget) Edititem(args ...interface{}) () {
   // editItem(class QTreeWidgetItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -721,10 +749,11 @@ func (this *QTreeWidget) editItem(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "editItem", args)
   }
 
+  return
 }
 
 // setSelectionModel(class QItemSelectionModel *)
-func (this *QTreeWidget) setSelectionModel(args ...interface{}) () {
+func (this *QTreeWidget) Setselectionmodel(args ...interface{}) () {
   // setSelectionModel(class QItemSelectionModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -744,10 +773,11 @@ func (this *QTreeWidget) setSelectionModel(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "setSelectionModel", args)
   }
 
+  return
 }
 
 // currentItem()
-func (this *QTreeWidget) currentItem(args ...interface{}) () {
+func (this *QTreeWidget) Currentitem(args ...interface{}) (ret interface{}) {
   // currentItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -759,16 +789,20 @@ func (this *QTreeWidget) currentItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget11currentItemEv
     // invoke: QTreeWidgetItem * currentItem()
-    var ret = C.C_ZNK11QTreeWidget11currentItemEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget11currentItemEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "currentItem", args)
   }
 
+  return
 }
 
 // isItemSelected(const class QTreeWidgetItem *)
-func (this *QTreeWidget) isItemSelected(args ...interface{}) () {
+func (this *QTreeWidget) Isitemselected(args ...interface{}) (ret interface{}) {
   // isItemSelected(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -783,16 +817,20 @@ func (this *QTreeWidget) isItemSelected(args ...interface{}) () {
     // invoke: bool isItemSelected(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QTreeWidget14isItemSelectedEPK15QTreeWidgetItem(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget14isItemSelectedEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "isItemSelected", args)
   }
 
+  return
 }
 
 // itemBelow(const class QTreeWidgetItem *)
-func (this *QTreeWidget) itemBelow(args ...interface{}) () {
+func (this *QTreeWidget) Itembelow(args ...interface{}) (ret interface{}) {
   // itemBelow(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -807,16 +845,20 @@ func (this *QTreeWidget) itemBelow(args ...interface{}) () {
     // invoke: QTreeWidgetItem * itemBelow(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "itemBelow", args)
   }
 
+  return
 }
 
 // currentColumn()
-func (this *QTreeWidget) currentColumn(args ...interface{}) () {
+func (this *QTreeWidget) Currentcolumn(args ...interface{}) (ret interface{}) {
   // currentColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -828,16 +870,20 @@ func (this *QTreeWidget) currentColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget13currentColumnEv
     // invoke: int currentColumn()
-    var ret = C.C_ZNK11QTreeWidget13currentColumnEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget13currentColumnEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "currentColumn", args)
   }
 
+  return
 }
 
 // isItemHidden(const class QTreeWidgetItem *)
-func (this *QTreeWidget) isItemHidden(args ...interface{}) () {
+func (this *QTreeWidget) Isitemhidden(args ...interface{}) (ret interface{}) {
   // isItemHidden(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -852,16 +898,20 @@ func (this *QTreeWidget) isItemHidden(args ...interface{}) () {
     // invoke: bool isItemHidden(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QTreeWidget12isItemHiddenEPK15QTreeWidgetItem(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget12isItemHiddenEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "isItemHidden", args)
   }
 
+  return
 }
 
 // columnCount()
-func (this *QTreeWidget) columnCount(args ...interface{}) () {
+func (this *QTreeWidget) Columncount(args ...interface{}) (ret interface{}) {
   // columnCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -873,16 +923,20 @@ func (this *QTreeWidget) columnCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget11columnCountEv
     // invoke: int columnCount()
-    var ret = C.C_ZNK11QTreeWidget11columnCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget11columnCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "columnCount", args)
   }
 
+  return
 }
 
 // itemAbove(const class QTreeWidgetItem *)
-func (this *QTreeWidget) itemAbove(args ...interface{}) () {
+func (this *QTreeWidget) Itemabove(args ...interface{}) (ret interface{}) {
   // itemAbove(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -897,16 +951,20 @@ func (this *QTreeWidget) itemAbove(args ...interface{}) () {
     // invoke: QTreeWidgetItem * itemAbove(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "itemAbove", args)
   }
 
+  return
 }
 
 // invisibleRootItem()
-func (this *QTreeWidget) invisibleRootItem(args ...interface{}) () {
+func (this *QTreeWidget) Invisiblerootitem(args ...interface{}) (ret interface{}) {
   // invisibleRootItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -918,16 +976,20 @@ func (this *QTreeWidget) invisibleRootItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget17invisibleRootItemEv
     // invoke: QTreeWidgetItem * invisibleRootItem()
-    var ret = C.C_ZNK11QTreeWidget17invisibleRootItemEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget17invisibleRootItemEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "invisibleRootItem", args)
   }
 
+  return
 }
 
 // isFirstItemColumnSpanned(const class QTreeWidgetItem *)
-func (this *QTreeWidget) isFirstItemColumnSpanned(args ...interface{}) () {
+func (this *QTreeWidget) Isfirstitemcolumnspanned(args ...interface{}) (ret interface{}) {
   // isFirstItemColumnSpanned(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -942,16 +1004,20 @@ func (this *QTreeWidget) isFirstItemColumnSpanned(args ...interface{}) () {
     // invoke: bool isFirstItemColumnSpanned(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QTreeWidget24isFirstItemColumnSpannedEPK15QTreeWidgetItem(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget24isFirstItemColumnSpannedEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "isFirstItemColumnSpanned", args)
   }
 
+  return
 }
 
 // isItemExpanded(const class QTreeWidgetItem *)
-func (this *QTreeWidget) isItemExpanded(args ...interface{}) () {
+func (this *QTreeWidget) Isitemexpanded(args ...interface{}) (ret interface{}) {
   // isItemExpanded(const class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -966,16 +1032,20 @@ func (this *QTreeWidget) isItemExpanded(args ...interface{}) () {
     // invoke: bool isItemExpanded(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QTreeWidget14isItemExpandedEPK15QTreeWidgetItem(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget14isItemExpandedEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "isItemExpanded", args)
   }
 
+  return
 }
 
 // takeTopLevelItem(int)
-func (this *QTreeWidget) takeTopLevelItem(args ...interface{}) () {
+func (this *QTreeWidget) Taketoplevelitem(args ...interface{}) (ret interface{}) {
   // takeTopLevelItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -990,16 +1060,20 @@ func (this *QTreeWidget) takeTopLevelItem(args ...interface{}) () {
     // invoke: QTreeWidgetItem * takeTopLevelItem(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN11QTreeWidget16takeTopLevelItemEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN11QTreeWidget16takeTopLevelItemEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "takeTopLevelItem", args)
   }
 
+  return
 }
 
 // topLevelItem(int)
-func (this *QTreeWidget) topLevelItem(args ...interface{}) () {
+func (this *QTreeWidget) Toplevelitem(args ...interface{}) (ret interface{}) {
   // topLevelItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1014,16 +1088,20 @@ func (this *QTreeWidget) topLevelItem(args ...interface{}) () {
     // invoke: QTreeWidgetItem * topLevelItem(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QTreeWidget12topLevelItemEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget12topLevelItemEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "topLevelItem", args)
   }
 
+  return
 }
 
 // topLevelItemCount()
-func (this *QTreeWidget) topLevelItemCount(args ...interface{}) () {
+func (this *QTreeWidget) Toplevelitemcount(args ...interface{}) (ret interface{}) {
   // topLevelItemCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1035,16 +1113,20 @@ func (this *QTreeWidget) topLevelItemCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget17topLevelItemCountEv
     // invoke: int topLevelItemCount()
-    var ret = C.C_ZNK11QTreeWidget17topLevelItemCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget17topLevelItemCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "topLevelItemCount", args)
   }
 
+  return
 }
 
 // insertTopLevelItem(int, class QTreeWidgetItem *)
-func (this *QTreeWidget) insertTopLevelItem(args ...interface{}) () {
+func (this *QTreeWidget) Inserttoplevelitem(args ...interface{}) () {
   // insertTopLevelItem(int, class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1067,10 +1149,11 @@ func (this *QTreeWidget) insertTopLevelItem(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "insertTopLevelItem", args)
   }
 
+  return
 }
 
 // addTopLevelItem(class QTreeWidgetItem *)
-func (this *QTreeWidget) addTopLevelItem(args ...interface{}) () {
+func (this *QTreeWidget) Addtoplevelitem(args ...interface{}) () {
   // addTopLevelItem(class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1090,10 +1173,11 @@ func (this *QTreeWidget) addTopLevelItem(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "addTopLevelItem", args)
   }
 
+  return
 }
 
 // headerItem()
-func (this *QTreeWidget) headerItem(args ...interface{}) () {
+func (this *QTreeWidget) Headeritem(args ...interface{}) (ret interface{}) {
   // headerItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1105,16 +1189,20 @@ func (this *QTreeWidget) headerItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget10headerItemEv
     // invoke: QTreeWidgetItem * headerItem()
-    var ret = C.C_ZNK11QTreeWidget10headerItemEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget10headerItemEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "headerItem", args)
   }
 
+  return
 }
 
 // setCurrentItem(class QTreeWidgetItem *)
-func (this *QTreeWidget) setCurrentItem(args ...interface{}) () {
+func (this *QTreeWidget) Setcurrentitem(args ...interface{}) () {
   // setCurrentItem(class QTreeWidgetItem *)
   // setCurrentItem(class QTreeWidgetItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1146,10 +1234,11 @@ func (this *QTreeWidget) setCurrentItem(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "setCurrentItem", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QTreeWidget) metaObject(args ...interface{}) () {
+func (this *QTreeWidget) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1166,10 +1255,11 @@ func (this *QTreeWidget) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "metaObject", args)
   }
 
+  return
 }
 
 // ~QTreeWidget()
-func (this *QTreeWidget) FreeQTreeWidget(args ...interface{}) () {
+func (this *QTreeWidget) Freeqtreewidget(args ...interface{}) () {
   // ~QTreeWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1186,10 +1276,11 @@ func (this *QTreeWidget) FreeQTreeWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "~QTreeWidget", args)
   }
 
+  return
 }
 
 // itemAt(int, int)
-func (this *QTreeWidget) itemAt(args ...interface{}) () {
+func (this *QTreeWidget) Itemat(args ...interface{}) (ret interface{}) {
   // itemAt(int, int)
   // itemAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1210,23 +1301,30 @@ func (this *QTreeWidget) itemAt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK11QTreeWidget6itemAtEii(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget6itemAtEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK11QTreeWidget6itemAtERK6QPoint
     // invoke: QTreeWidgetItem * itemAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK11QTreeWidget6itemAtERK6QPoint(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTreeWidget6itemAtERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidget", "itemAt", args)
   }
 
+  return
 }
 
 // clear()
-func (this *QTreeWidget) clear(args ...interface{}) () {
+func (this *QTreeWidget) Clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1243,10 +1341,11 @@ func (this *QTreeWidget) clear(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "clear", args)
   }
 
+  return
 }
 
 // setItemHidden(const class QTreeWidgetItem *, _Bool)
-func (this *QTreeWidget) setItemHidden(args ...interface{}) () {
+func (this *QTreeWidget) Setitemhidden(args ...interface{}) () {
   // setItemHidden(const class QTreeWidgetItem *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1269,10 +1368,11 @@ func (this *QTreeWidget) setItemHidden(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "setItemHidden", args)
   }
 
+  return
 }
 
 // closePersistentEditor(class QTreeWidgetItem *, int)
-func (this *QTreeWidget) closePersistentEditor(args ...interface{}) () {
+func (this *QTreeWidget) Closepersistenteditor(args ...interface{}) () {
   // closePersistentEditor(class QTreeWidgetItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1295,10 +1395,11 @@ func (this *QTreeWidget) closePersistentEditor(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "closePersistentEditor", args)
   }
 
+  return
 }
 
 // setHeaderItem(class QTreeWidgetItem *)
-func (this *QTreeWidget) setHeaderItem(args ...interface{}) () {
+func (this *QTreeWidget) Setheaderitem(args ...interface{}) () {
   // setHeaderItem(class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1318,10 +1419,11 @@ func (this *QTreeWidget) setHeaderItem(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidget", "setHeaderItem", args)
   }
 
+  return
 }
 
 // setTextAlignment(int, int)
-func (this *QTreeWidgetItem) setTextAlignment(args ...interface{}) () {
+func (this *QTreeWidgetItem) Settextalignment(args ...interface{}) () {
   // setTextAlignment(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1344,10 +1446,11 @@ func (this *QTreeWidgetItem) setTextAlignment(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setTextAlignment", args)
   }
 
+  return
 }
 
 // columnCount()
-func (this *QTreeWidgetItem) columnCount(args ...interface{}) () {
+func (this *QTreeWidgetItem) Columncount(args ...interface{}) (ret interface{}) {
   // columnCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1359,16 +1462,20 @@ func (this *QTreeWidgetItem) columnCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem11columnCountEv
     // invoke: int columnCount()
-    var ret = C.C_ZNK15QTreeWidgetItem11columnCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem11columnCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "columnCount", args)
   }
 
+  return
 }
 
 // addChild(class QTreeWidgetItem *)
-func (this *QTreeWidgetItem) addChild(args ...interface{}) () {
+func (this *QTreeWidgetItem) Addchild(args ...interface{}) () {
   // addChild(class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1388,10 +1495,11 @@ func (this *QTreeWidgetItem) addChild(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "addChild", args)
   }
 
+  return
 }
 
 // setSelected(_Bool)
-func (this *QTreeWidgetItem) setSelected(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setselected(args ...interface{}) () {
   // setSelected(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1411,10 +1519,11 @@ func (this *QTreeWidgetItem) setSelected(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setSelected", args)
   }
 
+  return
 }
 
 // text(int)
-func (this *QTreeWidgetItem) text(args ...interface{}) () {
+func (this *QTreeWidgetItem) Text(args ...interface{}) (ret interface{}) {
   // text(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1429,16 +1538,20 @@ func (this *QTreeWidgetItem) text(args ...interface{}) () {
     // invoke: QString text(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem4textEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem4textEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "text", args)
   }
 
+  return
 }
 
 // whatsThis(int)
-func (this *QTreeWidgetItem) whatsThis(args ...interface{}) () {
+func (this *QTreeWidgetItem) Whatsthis(args ...interface{}) (ret interface{}) {
   // whatsThis(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1453,16 +1566,20 @@ func (this *QTreeWidgetItem) whatsThis(args ...interface{}) () {
     // invoke: QString whatsThis(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem9whatsThisEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem9whatsThisEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "whatsThis", args)
   }
 
+  return
 }
 
 // type()
-func (this *QTreeWidgetItem) type_(args ...interface{}) () {
+func (this *QTreeWidgetItem) Type_(args ...interface{}) (ret interface{}) {
   // type()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1474,16 +1591,20 @@ func (this *QTreeWidgetItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem4typeEv
     // invoke: int type()
-    var ret = C.C_ZNK15QTreeWidgetItem4typeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem4typeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "type", args)
   }
 
+  return
 }
 
 // font(int)
-func (this *QTreeWidgetItem) font(args ...interface{}) () {
+func (this *QTreeWidgetItem) Font(args ...interface{}) (ret interface{}) {
   // font(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1498,16 +1619,20 @@ func (this *QTreeWidgetItem) font(args ...interface{}) () {
     // invoke: QFont font(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem4fontEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem4fontEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QFont{}) // "QFont"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "font", args)
   }
 
+  return
 }
 
 // ~QTreeWidgetItem()
-func (this *QTreeWidgetItem) FreeQTreeWidgetItem(args ...interface{}) () {
+func (this *QTreeWidgetItem) Freeqtreewidgetitem(args ...interface{}) () {
   // ~QTreeWidgetItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1524,10 +1649,11 @@ func (this *QTreeWidgetItem) FreeQTreeWidgetItem(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "~QTreeWidgetItem", args)
   }
 
+  return
 }
 
 // setForeground(int, const class QBrush &)
-func (this *QTreeWidgetItem) setForeground(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setforeground(args ...interface{}) () {
   // setForeground(int, const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1550,10 +1676,11 @@ func (this *QTreeWidgetItem) setForeground(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setForeground", args)
   }
 
+  return
 }
 
 // isSelected()
-func (this *QTreeWidgetItem) isSelected(args ...interface{}) () {
+func (this *QTreeWidgetItem) Isselected(args ...interface{}) (ret interface{}) {
   // isSelected()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1565,16 +1692,20 @@ func (this *QTreeWidgetItem) isSelected(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem10isSelectedEv
     // invoke: bool isSelected()
-    var ret = C.C_ZNK15QTreeWidgetItem10isSelectedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem10isSelectedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "isSelected", args)
   }
 
+  return
 }
 
 // isDisabled()
-func (this *QTreeWidgetItem) isDisabled(args ...interface{}) () {
+func (this *QTreeWidgetItem) Isdisabled(args ...interface{}) (ret interface{}) {
   // isDisabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1586,16 +1717,20 @@ func (this *QTreeWidgetItem) isDisabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem10isDisabledEv
     // invoke: bool isDisabled()
-    var ret = C.C_ZNK15QTreeWidgetItem10isDisabledEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem10isDisabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "isDisabled", args)
   }
 
+  return
 }
 
 // indexOfChild(class QTreeWidgetItem *)
-func (this *QTreeWidgetItem) indexOfChild(args ...interface{}) () {
+func (this *QTreeWidgetItem) Indexofchild(args ...interface{}) (ret interface{}) {
   // indexOfChild(class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1610,12 +1745,16 @@ func (this *QTreeWidgetItem) indexOfChild(args ...interface{}) () {
     // invoke: int indexOfChild(class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem12indexOfChildEPS_(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem12indexOfChildEPS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "indexOfChild", args)
   }
 
+  return
 }
 
 // QTreeWidgetItem(class QTreeWidgetItem *, int)
@@ -1775,7 +1914,7 @@ func NewQTreeWidgetItem(args ...interface{}) *QTreeWidgetItem {
 }
 
 // write(class QDataStream &)
-func (this *QTreeWidgetItem) write(args ...interface{}) () {
+func (this *QTreeWidgetItem) Write(args ...interface{}) () {
   // write(class QDataStream &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1795,10 +1934,11 @@ func (this *QTreeWidgetItem) write(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "write", args)
   }
 
+  return
 }
 
 // setExpanded(_Bool)
-func (this *QTreeWidgetItem) setExpanded(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setexpanded(args ...interface{}) () {
   // setExpanded(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1818,10 +1958,11 @@ func (this *QTreeWidgetItem) setExpanded(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setExpanded", args)
   }
 
+  return
 }
 
 // insertChild(int, class QTreeWidgetItem *)
-func (this *QTreeWidgetItem) insertChild(args ...interface{}) () {
+func (this *QTreeWidgetItem) Insertchild(args ...interface{}) () {
   // insertChild(int, class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1844,10 +1985,11 @@ func (this *QTreeWidgetItem) insertChild(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "insertChild", args)
   }
 
+  return
 }
 
 // backgroundColor(int)
-func (this *QTreeWidgetItem) backgroundColor(args ...interface{}) () {
+func (this *QTreeWidgetItem) Backgroundcolor(args ...interface{}) (ret interface{}) {
   // backgroundColor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1862,16 +2004,20 @@ func (this *QTreeWidgetItem) backgroundColor(args ...interface{}) () {
     // invoke: QColor backgroundColor(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem15backgroundColorEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem15backgroundColorEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QColor{}) // "QColor"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "backgroundColor", args)
   }
 
+  return
 }
 
 // setBackground(int, const class QBrush &)
-func (this *QTreeWidgetItem) setBackground(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setbackground(args ...interface{}) () {
   // setBackground(int, const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1894,10 +2040,11 @@ func (this *QTreeWidgetItem) setBackground(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setBackground", args)
   }
 
+  return
 }
 
 // textColor(int)
-func (this *QTreeWidgetItem) textColor(args ...interface{}) () {
+func (this *QTreeWidgetItem) Textcolor(args ...interface{}) (ret interface{}) {
   // textColor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1912,16 +2059,20 @@ func (this *QTreeWidgetItem) textColor(args ...interface{}) () {
     // invoke: QColor textColor(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem9textColorEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem9textColorEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QColor{}) // "QColor"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "textColor", args)
   }
 
+  return
 }
 
 // setIcon(int, const class QIcon &)
-func (this *QTreeWidgetItem) setIcon(args ...interface{}) () {
+func (this *QTreeWidgetItem) Seticon(args ...interface{}) () {
   // setIcon(int, const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1944,10 +2095,11 @@ func (this *QTreeWidgetItem) setIcon(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setIcon", args)
   }
 
+  return
 }
 
 // childCount()
-func (this *QTreeWidgetItem) childCount(args ...interface{}) () {
+func (this *QTreeWidgetItem) Childcount(args ...interface{}) (ret interface{}) {
   // childCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1959,16 +2111,20 @@ func (this *QTreeWidgetItem) childCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem10childCountEv
     // invoke: int childCount()
-    var ret = C.C_ZNK15QTreeWidgetItem10childCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem10childCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "childCount", args)
   }
 
+  return
 }
 
 // setData(int, int, const class QVariant &)
-func (this *QTreeWidgetItem) setData(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setdata(args ...interface{}) () {
   // setData(int, int, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1994,10 +2150,11 @@ func (this *QTreeWidgetItem) setData(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setData", args)
   }
 
+  return
 }
 
 // statusTip(int)
-func (this *QTreeWidgetItem) statusTip(args ...interface{}) () {
+func (this *QTreeWidgetItem) Statustip(args ...interface{}) (ret interface{}) {
   // statusTip(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2012,16 +2169,20 @@ func (this *QTreeWidgetItem) statusTip(args ...interface{}) () {
     // invoke: QString statusTip(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem9statusTipEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem9statusTipEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "statusTip", args)
   }
 
+  return
 }
 
 // foreground(int)
-func (this *QTreeWidgetItem) foreground(args ...interface{}) () {
+func (this *QTreeWidgetItem) Foreground(args ...interface{}) (ret interface{}) {
   // foreground(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2036,16 +2197,20 @@ func (this *QTreeWidgetItem) foreground(args ...interface{}) () {
     // invoke: QBrush foreground(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem10foregroundEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem10foregroundEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QBrush{}) // "QBrush"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "foreground", args)
   }
 
+  return
 }
 
 // treeWidget()
-func (this *QTreeWidgetItem) treeWidget(args ...interface{}) () {
+func (this *QTreeWidgetItem) Treewidget(args ...interface{}) (ret interface{}) {
   // treeWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2057,16 +2222,20 @@ func (this *QTreeWidgetItem) treeWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem10treeWidgetEv
     // invoke: QTreeWidget * treeWidget()
-    var ret = C.C_ZNK15QTreeWidgetItem10treeWidgetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem10treeWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidget{}) // "QTreeWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "treeWidget", args)
   }
 
+  return
 }
 
 // parent()
-func (this *QTreeWidgetItem) parent(args ...interface{}) () {
+func (this *QTreeWidgetItem) Parent(args ...interface{}) (ret interface{}) {
   // parent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2078,16 +2247,20 @@ func (this *QTreeWidgetItem) parent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem6parentEv
     // invoke: QTreeWidgetItem * parent()
-    var ret = C.C_ZNK15QTreeWidgetItem6parentEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem6parentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "parent", args)
   }
 
+  return
 }
 
 // isFirstColumnSpanned()
-func (this *QTreeWidgetItem) isFirstColumnSpanned(args ...interface{}) () {
+func (this *QTreeWidgetItem) Isfirstcolumnspanned(args ...interface{}) (ret interface{}) {
   // isFirstColumnSpanned()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2099,16 +2272,20 @@ func (this *QTreeWidgetItem) isFirstColumnSpanned(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem20isFirstColumnSpannedEv
     // invoke: bool isFirstColumnSpanned()
-    var ret = C.C_ZNK15QTreeWidgetItem20isFirstColumnSpannedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem20isFirstColumnSpannedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "isFirstColumnSpanned", args)
   }
 
+  return
 }
 
 // setFirstColumnSpanned(_Bool)
-func (this *QTreeWidgetItem) setFirstColumnSpanned(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setfirstcolumnspanned(args ...interface{}) () {
   // setFirstColumnSpanned(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2128,10 +2305,11 @@ func (this *QTreeWidgetItem) setFirstColumnSpanned(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setFirstColumnSpanned", args)
   }
 
+  return
 }
 
 // clone()
-func (this *QTreeWidgetItem) clone(args ...interface{}) () {
+func (this *QTreeWidgetItem) Clone(args ...interface{}) (ret interface{}) {
   // clone()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2143,16 +2321,20 @@ func (this *QTreeWidgetItem) clone(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem5cloneEv
     // invoke: QTreeWidgetItem * clone()
-    var ret = C.C_ZNK15QTreeWidgetItem5cloneEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem5cloneEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "clone", args)
   }
 
+  return
 }
 
 // setBackgroundColor(int, const class QColor &)
-func (this *QTreeWidgetItem) setBackgroundColor(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setbackgroundcolor(args ...interface{}) () {
   // setBackgroundColor(int, const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2175,10 +2357,11 @@ func (this *QTreeWidgetItem) setBackgroundColor(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setBackgroundColor", args)
   }
 
+  return
 }
 
 // toolTip(int)
-func (this *QTreeWidgetItem) toolTip(args ...interface{}) () {
+func (this *QTreeWidgetItem) Tooltip(args ...interface{}) (ret interface{}) {
   // toolTip(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2193,16 +2376,20 @@ func (this *QTreeWidgetItem) toolTip(args ...interface{}) () {
     // invoke: QString toolTip(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem7toolTipEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem7toolTipEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "toolTip", args)
   }
 
+  return
 }
 
 // setFont(int, const class QFont &)
-func (this *QTreeWidgetItem) setFont(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setfont(args ...interface{}) () {
   // setFont(int, const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2225,10 +2412,11 @@ func (this *QTreeWidgetItem) setFont(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setFont", args)
   }
 
+  return
 }
 
 // childIndicatorPolicy()
-func (this *QTreeWidgetItem) childIndicatorPolicy(args ...interface{}) () {
+func (this *QTreeWidgetItem) Childindicatorpolicy(args ...interface{}) () {
   // childIndicatorPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2245,10 +2433,11 @@ func (this *QTreeWidgetItem) childIndicatorPolicy(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "childIndicatorPolicy", args)
   }
 
+  return
 }
 
 // setWhatsThis(int, const class QString &)
-func (this *QTreeWidgetItem) setWhatsThis(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setwhatsthis(args ...interface{}) () {
   // setWhatsThis(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2271,10 +2460,11 @@ func (this *QTreeWidgetItem) setWhatsThis(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setWhatsThis", args)
   }
 
+  return
 }
 
 // background(int)
-func (this *QTreeWidgetItem) background(args ...interface{}) () {
+func (this *QTreeWidgetItem) Background(args ...interface{}) (ret interface{}) {
   // background(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2289,16 +2479,20 @@ func (this *QTreeWidgetItem) background(args ...interface{}) () {
     // invoke: QBrush background(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem10backgroundEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem10backgroundEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QBrush{}) // "QBrush"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "background", args)
   }
 
+  return
 }
 
 // child(int)
-func (this *QTreeWidgetItem) child(args ...interface{}) () {
+func (this *QTreeWidgetItem) Child(args ...interface{}) (ret interface{}) {
   // child(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2313,16 +2507,20 @@ func (this *QTreeWidgetItem) child(args ...interface{}) () {
     // invoke: QTreeWidgetItem * child(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem5childEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem5childEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "child", args)
   }
 
+  return
 }
 
 // data(int, int)
-func (this *QTreeWidgetItem) data(args ...interface{}) () {
+func (this *QTreeWidgetItem) Data(args ...interface{}) (ret interface{}) {
   // data(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2340,16 +2538,20 @@ func (this *QTreeWidgetItem) data(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK15QTreeWidgetItem4dataEii(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem4dataEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "data", args)
   }
 
+  return
 }
 
 // setTextColor(int, const class QColor &)
-func (this *QTreeWidgetItem) setTextColor(args ...interface{}) () {
+func (this *QTreeWidgetItem) Settextcolor(args ...interface{}) () {
   // setTextColor(int, const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2372,10 +2574,11 @@ func (this *QTreeWidgetItem) setTextColor(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setTextColor", args)
   }
 
+  return
 }
 
 // icon(int)
-func (this *QTreeWidgetItem) icon(args ...interface{}) () {
+func (this *QTreeWidgetItem) Icon(args ...interface{}) (ret interface{}) {
   // icon(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2390,16 +2593,20 @@ func (this *QTreeWidgetItem) icon(args ...interface{}) () {
     // invoke: QIcon icon(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem4iconEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem4iconEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QIcon{}) // "QIcon"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "icon", args)
   }
 
+  return
 }
 
 // isExpanded()
-func (this *QTreeWidgetItem) isExpanded(args ...interface{}) () {
+func (this *QTreeWidgetItem) Isexpanded(args ...interface{}) (ret interface{}) {
   // isExpanded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2411,16 +2618,20 @@ func (this *QTreeWidgetItem) isExpanded(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem10isExpandedEv
     // invoke: bool isExpanded()
-    var ret = C.C_ZNK15QTreeWidgetItem10isExpandedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem10isExpandedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "isExpanded", args)
   }
 
+  return
 }
 
 // setSizeHint(int, const class QSize &)
-func (this *QTreeWidgetItem) setSizeHint(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setsizehint(args ...interface{}) () {
   // setSizeHint(int, const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2443,10 +2654,11 @@ func (this *QTreeWidgetItem) setSizeHint(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setSizeHint", args)
   }
 
+  return
 }
 
 // setToolTip(int, const class QString &)
-func (this *QTreeWidgetItem) setToolTip(args ...interface{}) () {
+func (this *QTreeWidgetItem) Settooltip(args ...interface{}) () {
   // setToolTip(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2469,10 +2681,11 @@ func (this *QTreeWidgetItem) setToolTip(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setToolTip", args)
   }
 
+  return
 }
 
 // sizeHint(int)
-func (this *QTreeWidgetItem) sizeHint(args ...interface{}) () {
+func (this *QTreeWidgetItem) Sizehint(args ...interface{}) (ret interface{}) {
   // sizeHint(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2487,16 +2700,20 @@ func (this *QTreeWidgetItem) sizeHint(args ...interface{}) () {
     // invoke: QSize sizeHint(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem8sizeHintEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem8sizeHintEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QSize{}) // "QSize"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "sizeHint", args)
   }
 
+  return
 }
 
 // read(class QDataStream &)
-func (this *QTreeWidgetItem) read(args ...interface{}) () {
+func (this *QTreeWidgetItem) Read(args ...interface{}) () {
   // read(class QDataStream &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2516,10 +2733,11 @@ func (this *QTreeWidgetItem) read(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "read", args)
   }
 
+  return
 }
 
 // isHidden()
-func (this *QTreeWidgetItem) isHidden(args ...interface{}) () {
+func (this *QTreeWidgetItem) Ishidden(args ...interface{}) (ret interface{}) {
   // isHidden()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2531,16 +2749,20 @@ func (this *QTreeWidgetItem) isHidden(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem8isHiddenEv
     // invoke: bool isHidden()
-    var ret = C.C_ZNK15QTreeWidgetItem8isHiddenEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem8isHiddenEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "isHidden", args)
   }
 
+  return
 }
 
 // setText(int, const class QString &)
-func (this *QTreeWidgetItem) setText(args ...interface{}) () {
+func (this *QTreeWidgetItem) Settext(args ...interface{}) () {
   // setText(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2563,10 +2785,11 @@ func (this *QTreeWidgetItem) setText(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setText", args)
   }
 
+  return
 }
 
 // setStatusTip(int, const class QString &)
-func (this *QTreeWidgetItem) setStatusTip(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setstatustip(args ...interface{}) () {
   // setStatusTip(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2589,10 +2812,11 @@ func (this *QTreeWidgetItem) setStatusTip(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setStatusTip", args)
   }
 
+  return
 }
 
 // removeChild(class QTreeWidgetItem *)
-func (this *QTreeWidgetItem) removeChild(args ...interface{}) () {
+func (this *QTreeWidgetItem) Removechild(args ...interface{}) () {
   // removeChild(class QTreeWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2612,10 +2836,11 @@ func (this *QTreeWidgetItem) removeChild(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "removeChild", args)
   }
 
+  return
 }
 
 // setDisabled(_Bool)
-func (this *QTreeWidgetItem) setDisabled(args ...interface{}) () {
+func (this *QTreeWidgetItem) Setdisabled(args ...interface{}) () {
   // setDisabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2635,10 +2860,11 @@ func (this *QTreeWidgetItem) setDisabled(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setDisabled", args)
   }
 
+  return
 }
 
 // flags()
-func (this *QTreeWidgetItem) flags(args ...interface{}) () {
+func (this *QTreeWidgetItem) Flags(args ...interface{}) () {
   // flags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2655,10 +2881,11 @@ func (this *QTreeWidgetItem) flags(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "flags", args)
   }
 
+  return
 }
 
 // checkState(int)
-func (this *QTreeWidgetItem) checkState(args ...interface{}) () {
+func (this *QTreeWidgetItem) Checkstate(args ...interface{}) () {
   // checkState(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2678,10 +2905,11 @@ func (this *QTreeWidgetItem) checkState(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "checkState", args)
   }
 
+  return
 }
 
 // takeChildren()
-func (this *QTreeWidgetItem) takeChildren(args ...interface{}) () {
+func (this *QTreeWidgetItem) Takechildren(args ...interface{}) () {
   // takeChildren()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2698,10 +2926,11 @@ func (this *QTreeWidgetItem) takeChildren(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "takeChildren", args)
   }
 
+  return
 }
 
 // takeChild(int)
-func (this *QTreeWidgetItem) takeChild(args ...interface{}) () {
+func (this *QTreeWidgetItem) Takechild(args ...interface{}) (ret interface{}) {
   // takeChild(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2716,16 +2945,20 @@ func (this *QTreeWidgetItem) takeChild(args ...interface{}) () {
     // invoke: QTreeWidgetItem * takeChild(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN15QTreeWidgetItem9takeChildEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QTreeWidgetItem9takeChildEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTreeWidgetItem{}) // "QTreeWidgetItem *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "takeChild", args)
   }
 
+  return
 }
 
 // textAlignment(int)
-func (this *QTreeWidgetItem) textAlignment(args ...interface{}) () {
+func (this *QTreeWidgetItem) Textalignment(args ...interface{}) (ret interface{}) {
   // textAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2740,16 +2973,20 @@ func (this *QTreeWidgetItem) textAlignment(args ...interface{}) () {
     // invoke: int textAlignment(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK15QTreeWidgetItem13textAlignmentEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QTreeWidgetItem13textAlignmentEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "textAlignment", args)
   }
 
+  return
 }
 
 // setHidden(_Bool)
-func (this *QTreeWidgetItem) setHidden(args ...interface{}) () {
+func (this *QTreeWidgetItem) Sethidden(args ...interface{}) () {
   // setHidden(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2769,6 +3006,7 @@ func (this *QTreeWidgetItem) setHidden(args ...interface{}) () {
     qtrt.ErrorResolve("QTreeWidgetItem", "setHidden", args)
   }
 
+  return
 }
 
 // <= body block end

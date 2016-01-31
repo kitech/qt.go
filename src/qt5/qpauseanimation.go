@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qpauseanimation.h
 // dst-file: /src/core/qpauseanimation.go
 //
@@ -35,7 +35,7 @@ extern void* C_ZN15QPauseAnimationC2EiP7QObject(int32_t arg0, void* arg1); // 3
   // proto:  void QPauseAnimation::QPauseAnimation(QObject * parent);
 extern void* C_ZN15QPauseAnimationC2EP7QObject(void* arg0); // 3
   // proto:  int QPauseAnimation::duration();
-extern void C_ZNK15QPauseAnimation8durationEv(void* qthis); // 4
+extern int32_t C_ZNK15QPauseAnimation8durationEv(void* qthis); // 4
   // proto:  const QMetaObject * QPauseAnimation::metaObject();
 extern void C_ZNK15QPauseAnimation10metaObjectEv(void* qthis); // 4
   // proto:  void QPauseAnimation::setDuration(int msecs);
@@ -59,7 +59,7 @@ type QPauseAnimation struct {
 }
 
 // ~QPauseAnimation()
-func (this *QPauseAnimation) FreeQPauseAnimation(args ...interface{}) () {
+func (this *QPauseAnimation) Freeqpauseanimation(args ...interface{}) () {
   // ~QPauseAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -76,6 +76,7 @@ func (this *QPauseAnimation) FreeQPauseAnimation(args ...interface{}) () {
     qtrt.ErrorResolve("QPauseAnimation", "~QPauseAnimation", args)
   }
 
+  return
 }
 
 // QPauseAnimation(int, class QObject *)
@@ -121,7 +122,7 @@ func NewQPauseAnimation(args ...interface{}) *QPauseAnimation {
 }
 
 // duration()
-func (this *QPauseAnimation) duration(args ...interface{}) () {
+func (this *QPauseAnimation) Duration(args ...interface{}) (ret interface{}) {
   // duration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -133,16 +134,20 @@ func (this *QPauseAnimation) duration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QPauseAnimation8durationEv
     // invoke: int duration()
-    var ret = C.C_ZNK15QPauseAnimation8durationEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QPauseAnimation8durationEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPauseAnimation", "duration", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QPauseAnimation) metaObject(args ...interface{}) () {
+func (this *QPauseAnimation) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -159,10 +164,11 @@ func (this *QPauseAnimation) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QPauseAnimation", "metaObject", args)
   }
 
+  return
 }
 
 // setDuration(int)
-func (this *QPauseAnimation) setDuration(args ...interface{}) () {
+func (this *QPauseAnimation) Setduration(args ...interface{}) () {
   // setDuration(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,6 +188,7 @@ func (this *QPauseAnimation) setDuration(args ...interface{}) () {
     qtrt.ErrorResolve("QPauseAnimation", "setDuration", args)
   }
 
+  return
 }
 
 // <= body block end

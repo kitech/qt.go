@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qstringlistmodel.h
 // dst-file: /src/core/qstringlistmodel.go
 //
@@ -35,25 +35,25 @@ extern void* C_ZN16QStringListModelC2ERK11QStringListP7QObject(void* arg0, void*
   // proto:  void QStringListModel::QStringListModel(QObject * parent);
 extern void* C_ZN16QStringListModelC2EP7QObject(void* arg0); // 3
   // proto:  QModelIndex QStringListModel::sibling(int row, int column, const QModelIndex & idx);
-extern void C_ZNK16QStringListModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void* C_ZNK16QStringListModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  int QStringListModel::rowCount(const QModelIndex & parent);
-extern void C_ZNK16QStringListModel8rowCountERK11QModelIndex(void* qthis, void* arg0); // 4
+extern int32_t C_ZNK16QStringListModel8rowCountERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  bool QStringListModel::insertRows(int row, int count, const QModelIndex & parent);
-extern void C_ZN16QStringListModel10insertRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern bool C_ZN16QStringListModel10insertRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  Qt::ItemFlags QStringListModel::flags(const QModelIndex & index);
 extern void C_ZNK16QStringListModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  bool QStringListModel::removeRows(int row, int count, const QModelIndex & parent);
-extern void C_ZN16QStringListModel10removeRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern bool C_ZN16QStringListModel10removeRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  void QStringListModel::setStringList(const QStringList & strings);
 extern void C_ZN16QStringListModel13setStringListERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  QVariant QStringListModel::data(const QModelIndex & index, int role);
-extern void C_ZNK16QStringListModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void* C_ZNK16QStringListModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QStringList QStringListModel::stringList();
 extern void C_ZNK16QStringListModel10stringListEv(void* qthis); // 4
   // proto:  Qt::DropActions QStringListModel::supportedDropActions();
 extern void C_ZNK16QStringListModel20supportedDropActionsEv(void* qthis); // 4
   // proto:  bool QStringListModel::setData(const QModelIndex & index, const QVariant & value, int role);
-extern void C_ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
+extern bool C_ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
 */
 import "C"
 // } // <= ext block end
@@ -73,7 +73,7 @@ type QStringListModel struct {
 }
 
 // metaObject()
-func (this *QStringListModel) metaObject(args ...interface{}) () {
+func (this *QStringListModel) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -90,6 +90,7 @@ func (this *QStringListModel) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QStringListModel", "metaObject", args)
   }
 
+  return
 }
 
 // QStringListModel(const class QStringList &, class QObject *)
@@ -135,7 +136,7 @@ func NewQStringListModel(args ...interface{}) *QStringListModel {
 }
 
 // sibling(int, int, const class QModelIndex &)
-func (this *QStringListModel) sibling(args ...interface{}) () {
+func (this *QStringListModel) Sibling(args ...interface{}) (ret interface{}) {
   // sibling(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -156,16 +157,20 @@ func (this *QStringListModel) sibling(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZNK16QStringListModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK16QStringListModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStringListModel", "sibling", args)
   }
 
+  return
 }
 
 // rowCount(const class QModelIndex &)
-func (this *QStringListModel) rowCount(args ...interface{}) () {
+func (this *QStringListModel) Rowcount(args ...interface{}) (ret interface{}) {
   // rowCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -180,16 +185,20 @@ func (this *QStringListModel) rowCount(args ...interface{}) () {
     // invoke: int rowCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK16QStringListModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK16QStringListModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStringListModel", "rowCount", args)
   }
 
+  return
 }
 
 // insertRows(int, int, const class QModelIndex &)
-func (this *QStringListModel) insertRows(args ...interface{}) () {
+func (this *QStringListModel) Insertrows(args ...interface{}) (ret interface{}) {
   // insertRows(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -210,16 +219,20 @@ func (this *QStringListModel) insertRows(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZN16QStringListModel10insertRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QStringListModel10insertRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStringListModel", "insertRows", args)
   }
 
+  return
 }
 
 // flags(const class QModelIndex &)
-func (this *QStringListModel) flags(args ...interface{}) () {
+func (this *QStringListModel) Flags(args ...interface{}) () {
   // flags(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,10 +252,11 @@ func (this *QStringListModel) flags(args ...interface{}) () {
     qtrt.ErrorResolve("QStringListModel", "flags", args)
   }
 
+  return
 }
 
 // removeRows(int, int, const class QModelIndex &)
-func (this *QStringListModel) removeRows(args ...interface{}) () {
+func (this *QStringListModel) Removerows(args ...interface{}) (ret interface{}) {
   // removeRows(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -263,16 +277,20 @@ func (this *QStringListModel) removeRows(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZN16QStringListModel10removeRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QStringListModel10removeRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStringListModel", "removeRows", args)
   }
 
+  return
 }
 
 // setStringList(const class QStringList &)
-func (this *QStringListModel) setStringList(args ...interface{}) () {
+func (this *QStringListModel) Setstringlist(args ...interface{}) () {
   // setStringList(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -292,10 +310,11 @@ func (this *QStringListModel) setStringList(args ...interface{}) () {
     qtrt.ErrorResolve("QStringListModel", "setStringList", args)
   }
 
+  return
 }
 
 // data(const class QModelIndex &, int)
-func (this *QStringListModel) data(args ...interface{}) () {
+func (this *QStringListModel) Data(args ...interface{}) (ret interface{}) {
   // data(const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -313,16 +332,20 @@ func (this *QStringListModel) data(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK16QStringListModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK16QStringListModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStringListModel", "data", args)
   }
 
+  return
 }
 
 // stringList()
-func (this *QStringListModel) stringList(args ...interface{}) () {
+func (this *QStringListModel) Stringlist(args ...interface{}) () {
   // stringList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -339,10 +362,11 @@ func (this *QStringListModel) stringList(args ...interface{}) () {
     qtrt.ErrorResolve("QStringListModel", "stringList", args)
   }
 
+  return
 }
 
 // supportedDropActions()
-func (this *QStringListModel) supportedDropActions(args ...interface{}) () {
+func (this *QStringListModel) Supporteddropactions(args ...interface{}) () {
   // supportedDropActions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -359,10 +383,11 @@ func (this *QStringListModel) supportedDropActions(args ...interface{}) () {
     qtrt.ErrorResolve("QStringListModel", "supportedDropActions", args)
   }
 
+  return
 }
 
 // setData(const class QModelIndex &, const class QVariant &, int)
-func (this *QStringListModel) setData(args ...interface{}) () {
+func (this *QStringListModel) Setdata(args ...interface{}) (ret interface{}) {
   // setData(const class QModelIndex &, const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -383,12 +408,16 @@ func (this *QStringListModel) setData(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStringListModel", "setData", args)
   }
 
+  return
 }
 
 // <= body block end

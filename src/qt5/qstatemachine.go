@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.go
 //
@@ -37,21 +37,21 @@ extern void C_ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation(void*
   // proto:  void QStateMachine::clearError();
 extern void C_ZN13QStateMachine10clearErrorEv(void* qthis); // 4
   // proto:  bool QStateMachine::isAnimated();
-extern void C_ZNK13QStateMachine10isAnimatedEv(void* qthis); // 4
+extern bool C_ZNK13QStateMachine10isAnimatedEv(void* qthis); // 4
   // proto:  void QStateMachine::addState(QAbstractState * state);
 extern void C_ZN13QStateMachine8addStateEP14QAbstractState(void* qthis, void* arg0); // 4
   // proto:  bool QStateMachine::eventFilter(QObject * watched, QEvent * event);
-extern void C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
+extern bool C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QStateMachine::start();
 extern void C_ZN13QStateMachine5startEv(void* qthis); // 4
   // proto:  bool QStateMachine::cancelDelayedEvent(int id);
-extern void C_ZN13QStateMachine18cancelDelayedEventEi(void* qthis, int32_t arg0); // 4
+extern bool C_ZN13QStateMachine18cancelDelayedEventEi(void* qthis, int32_t arg0); // 4
   // proto:  void QStateMachine::setRunning(bool running);
 extern void C_ZN13QStateMachine10setRunningEb(void* qthis, bool arg0); // 4
   // proto:  void QStateMachine::removeState(QAbstractState * state);
 extern void C_ZN13QStateMachine11removeStateEP14QAbstractState(void* qthis, void* arg0); // 4
   // proto:  QString QStateMachine::errorString();
-extern void C_ZNK13QStateMachine11errorStringEv(void* qthis); // 4
+extern void* C_ZNK13QStateMachine11errorStringEv(void* qthis); // 4
   // proto:  void QStateMachine::stop();
 extern void C_ZN13QStateMachine4stopEv(void* qthis); // 4
   // proto:  void QStateMachine::setAnimated(bool enabled);
@@ -61,13 +61,13 @@ extern void C_ZNK13QStateMachine10metaObjectEv(void* qthis); // 4
   // proto:  QSet<QAbstractState *> QStateMachine::configuration();
 extern void C_ZNK13QStateMachine13configurationEv(void* qthis); // 4
   // proto:  bool QStateMachine::isRunning();
-extern void C_ZNK13QStateMachine9isRunningEv(void* qthis); // 4
+extern bool C_ZNK13QStateMachine9isRunningEv(void* qthis); // 4
   // proto:  void QStateMachine::~QStateMachine();
 extern void C_ZN13QStateMachineD2Ev(void* qthis); // 4
   // proto:  void QStateMachine::QStateMachine(QObject * parent);
 extern void* C_ZN13QStateMachineC2EP7QObject(void* arg0); // 3
   // proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
-extern void C_ZN13QStateMachine16postDelayedEventEP6QEventi(void* qthis, void* arg0, int32_t arg1); // 4
+extern int32_t C_ZN13QStateMachine16postDelayedEventEP6QEventi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QStateMachine::Error QStateMachine::error();
 extern void C_ZNK13QStateMachine5errorEv(void* qthis); // 4
   // proto:  void QStateMachine::removeDefaultAnimation(QAbstractAnimation * animation);
@@ -94,7 +94,7 @@ type QStateMachine struct {
 }
 
 // defaultAnimations()
-func (this *QStateMachine) defaultAnimations(args ...interface{}) () {
+func (this *QStateMachine) Defaultanimations(args ...interface{}) () {
   // defaultAnimations()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -111,10 +111,11 @@ func (this *QStateMachine) defaultAnimations(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "defaultAnimations", args)
   }
 
+  return
 }
 
 // globalRestorePolicy()
-func (this *QStateMachine) globalRestorePolicy(args ...interface{}) () {
+func (this *QStateMachine) Globalrestorepolicy(args ...interface{}) () {
   // globalRestorePolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -131,10 +132,11 @@ func (this *QStateMachine) globalRestorePolicy(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "globalRestorePolicy", args)
   }
 
+  return
 }
 
 // addDefaultAnimation(class QAbstractAnimation *)
-func (this *QStateMachine) addDefaultAnimation(args ...interface{}) () {
+func (this *QStateMachine) Adddefaultanimation(args ...interface{}) () {
   // addDefaultAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -154,10 +156,11 @@ func (this *QStateMachine) addDefaultAnimation(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "addDefaultAnimation", args)
   }
 
+  return
 }
 
 // clearError()
-func (this *QStateMachine) clearError(args ...interface{}) () {
+func (this *QStateMachine) Clearerror(args ...interface{}) () {
   // clearError()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -174,10 +177,11 @@ func (this *QStateMachine) clearError(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "clearError", args)
   }
 
+  return
 }
 
 // isAnimated()
-func (this *QStateMachine) isAnimated(args ...interface{}) () {
+func (this *QStateMachine) Isanimated(args ...interface{}) (ret interface{}) {
   // isAnimated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -189,16 +193,20 @@ func (this *QStateMachine) isAnimated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine10isAnimatedEv
     // invoke: bool isAnimated()
-    var ret = C.C_ZNK13QStateMachine10isAnimatedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QStateMachine10isAnimatedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStateMachine", "isAnimated", args)
   }
 
+  return
 }
 
 // addState(class QAbstractState *)
-func (this *QStateMachine) addState(args ...interface{}) () {
+func (this *QStateMachine) Addstate(args ...interface{}) () {
   // addState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -218,10 +226,11 @@ func (this *QStateMachine) addState(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "addState", args)
   }
 
+  return
 }
 
 // eventFilter(class QObject *, class QEvent *)
-func (this *QStateMachine) eventFilter(args ...interface{}) () {
+func (this *QStateMachine) Eventfilter(args ...interface{}) (ret interface{}) {
   // eventFilter(class QObject *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,16 +248,20 @@ func (this *QStateMachine) eventFilter(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStateMachine", "eventFilter", args)
   }
 
+  return
 }
 
 // start()
-func (this *QStateMachine) start(args ...interface{}) () {
+func (this *QStateMachine) Start(args ...interface{}) () {
   // start()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -265,10 +278,11 @@ func (this *QStateMachine) start(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "start", args)
   }
 
+  return
 }
 
 // cancelDelayedEvent(int)
-func (this *QStateMachine) cancelDelayedEvent(args ...interface{}) () {
+func (this *QStateMachine) Canceldelayedevent(args ...interface{}) (ret interface{}) {
   // cancelDelayedEvent(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -283,16 +297,20 @@ func (this *QStateMachine) cancelDelayedEvent(args ...interface{}) () {
     // invoke: bool cancelDelayedEvent(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN13QStateMachine18cancelDelayedEventEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QStateMachine18cancelDelayedEventEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStateMachine", "cancelDelayedEvent", args)
   }
 
+  return
 }
 
 // setRunning(_Bool)
-func (this *QStateMachine) setRunning(args ...interface{}) () {
+func (this *QStateMachine) Setrunning(args ...interface{}) () {
   // setRunning(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -312,10 +330,11 @@ func (this *QStateMachine) setRunning(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "setRunning", args)
   }
 
+  return
 }
 
 // removeState(class QAbstractState *)
-func (this *QStateMachine) removeState(args ...interface{}) () {
+func (this *QStateMachine) Removestate(args ...interface{}) () {
   // removeState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -335,10 +354,11 @@ func (this *QStateMachine) removeState(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "removeState", args)
   }
 
+  return
 }
 
 // errorString()
-func (this *QStateMachine) errorString(args ...interface{}) () {
+func (this *QStateMachine) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -350,16 +370,20 @@ func (this *QStateMachine) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine11errorStringEv
     // invoke: QString errorString()
-    var ret = C.C_ZNK13QStateMachine11errorStringEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QStateMachine11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStateMachine", "errorString", args)
   }
 
+  return
 }
 
 // stop()
-func (this *QStateMachine) stop(args ...interface{}) () {
+func (this *QStateMachine) Stop(args ...interface{}) () {
   // stop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -376,10 +400,11 @@ func (this *QStateMachine) stop(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "stop", args)
   }
 
+  return
 }
 
 // setAnimated(_Bool)
-func (this *QStateMachine) setAnimated(args ...interface{}) () {
+func (this *QStateMachine) Setanimated(args ...interface{}) () {
   // setAnimated(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -399,10 +424,11 @@ func (this *QStateMachine) setAnimated(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "setAnimated", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QStateMachine) metaObject(args ...interface{}) () {
+func (this *QStateMachine) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -419,10 +445,11 @@ func (this *QStateMachine) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "metaObject", args)
   }
 
+  return
 }
 
 // configuration()
-func (this *QStateMachine) configuration(args ...interface{}) () {
+func (this *QStateMachine) Configuration(args ...interface{}) () {
   // configuration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -439,10 +466,11 @@ func (this *QStateMachine) configuration(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "configuration", args)
   }
 
+  return
 }
 
 // isRunning()
-func (this *QStateMachine) isRunning(args ...interface{}) () {
+func (this *QStateMachine) Isrunning(args ...interface{}) (ret interface{}) {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -454,16 +482,20 @@ func (this *QStateMachine) isRunning(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine9isRunningEv
     // invoke: bool isRunning()
-    var ret = C.C_ZNK13QStateMachine9isRunningEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QStateMachine9isRunningEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStateMachine", "isRunning", args)
   }
 
+  return
 }
 
 // ~QStateMachine()
-func (this *QStateMachine) FreeQStateMachine(args ...interface{}) () {
+func (this *QStateMachine) Freeqstatemachine(args ...interface{}) () {
   // ~QStateMachine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -480,6 +512,7 @@ func (this *QStateMachine) FreeQStateMachine(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "~QStateMachine", args)
   }
 
+  return
 }
 
 // QStateMachine(class QObject *)
@@ -510,7 +543,7 @@ func NewQStateMachine(args ...interface{}) *QStateMachine {
 }
 
 // postDelayedEvent(class QEvent *, int)
-func (this *QStateMachine) postDelayedEvent(args ...interface{}) () {
+func (this *QStateMachine) Postdelayedevent(args ...interface{}) (ret interface{}) {
   // postDelayedEvent(class QEvent *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -528,16 +561,20 @@ func (this *QStateMachine) postDelayedEvent(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN13QStateMachine16postDelayedEventEP6QEventi(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QStateMachine16postDelayedEventEP6QEventi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStateMachine", "postDelayedEvent", args)
   }
 
+  return
 }
 
 // error()
-func (this *QStateMachine) error(args ...interface{}) () {
+func (this *QStateMachine) Error(args ...interface{}) () {
   // error()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -554,10 +591,11 @@ func (this *QStateMachine) error(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "error", args)
   }
 
+  return
 }
 
 // removeDefaultAnimation(class QAbstractAnimation *)
-func (this *QStateMachine) removeDefaultAnimation(args ...interface{}) () {
+func (this *QStateMachine) Removedefaultanimation(args ...interface{}) () {
   // removeDefaultAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -577,6 +615,7 @@ func (this *QStateMachine) removeDefaultAnimation(args ...interface{}) () {
     qtrt.ErrorResolve("QStateMachine", "removeDefaultAnimation", args)
   }
 
+  return
 }
 
 // <= body block end

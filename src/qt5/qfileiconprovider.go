@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qfileiconprovider.h
 // dst-file: /src/widgets/qfileiconprovider.go
 //
@@ -33,11 +33,11 @@ extern void C_ZN17QFileIconProviderD2Ev(void* qthis); // 4
   // proto:  void QFileIconProvider::QFileIconProvider();
 extern void* C_ZN17QFileIconProviderC2Ev(); // 3
   // proto:  QString QFileIconProvider::type(const QFileInfo & info);
-extern void C_ZNK17QFileIconProvider4typeERK9QFileInfo(void* qthis, void* arg0); // 4
+extern void* C_ZNK17QFileIconProvider4typeERK9QFileInfo(void* qthis, void* arg0); // 4
   // proto:  Options QFileIconProvider::options();
 extern void C_ZNK17QFileIconProvider7optionsEv(void* qthis); // 4
   // proto:  QIcon QFileIconProvider::icon(const QFileInfo & info);
-extern void C_ZNK17QFileIconProvider4iconERK9QFileInfo(void* qthis, void* arg0); // 4
+extern void* C_ZNK17QFileIconProvider4iconERK9QFileInfo(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -57,7 +57,7 @@ type QFileIconProvider struct {
 }
 
 // ~QFileIconProvider()
-func (this *QFileIconProvider) FreeQFileIconProvider(args ...interface{}) () {
+func (this *QFileIconProvider) Freeqfileiconprovider(args ...interface{}) () {
   // ~QFileIconProvider()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -74,6 +74,7 @@ func (this *QFileIconProvider) FreeQFileIconProvider(args ...interface{}) () {
     qtrt.ErrorResolve("QFileIconProvider", "~QFileIconProvider", args)
   }
 
+  return
 }
 
 // QFileIconProvider()
@@ -101,7 +102,7 @@ func NewQFileIconProvider(args ...interface{}) *QFileIconProvider {
 }
 
 // type(const class QFileInfo &)
-func (this *QFileIconProvider) type_(args ...interface{}) () {
+func (this *QFileIconProvider) Type_(args ...interface{}) (ret interface{}) {
   // type(const class QFileInfo &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -116,16 +117,20 @@ func (this *QFileIconProvider) type_(args ...interface{}) () {
     // invoke: QString type(const class QFileInfo &)
     var arg0 = args[0].(QFileInfo).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK17QFileIconProvider4typeERK9QFileInfo(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QFileIconProvider4typeERK9QFileInfo(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFileIconProvider", "type", args)
   }
 
+  return
 }
 
 // options()
-func (this *QFileIconProvider) options(args ...interface{}) () {
+func (this *QFileIconProvider) Options(args ...interface{}) () {
   // options()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -142,10 +147,11 @@ func (this *QFileIconProvider) options(args ...interface{}) () {
     qtrt.ErrorResolve("QFileIconProvider", "options", args)
   }
 
+  return
 }
 
 // icon(const class QFileInfo &)
-func (this *QFileIconProvider) icon(args ...interface{}) () {
+func (this *QFileIconProvider) Icon(args ...interface{}) (ret interface{}) {
   // icon(const class QFileInfo &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -160,12 +166,16 @@ func (this *QFileIconProvider) icon(args ...interface{}) () {
     // invoke: QIcon icon(const class QFileInfo &)
     var arg0 = args[0].(QFileInfo).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK17QFileIconProvider4iconERK9QFileInfo(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK17QFileIconProvider4iconERK9QFileInfo(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QIcon{}) // "QIcon"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFileIconProvider", "icon", args)
   }
 
+  return
 }
 
 // <= body block end

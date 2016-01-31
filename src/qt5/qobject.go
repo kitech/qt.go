@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.go
 //
@@ -43,7 +43,7 @@ extern void C_ZNK11QObjectData17dynamicMetaObjectEv(void* qthis); // 4
   // proto:  void QObjectUserData::~QObjectUserData();
 extern void C_ZN15QObjectUserDataD2Ev(void* qthis); // 4
   // proto:  bool QObject::inherits(const char * classname);
-extern void C_ZNK7QObject8inheritsEPKc(void* qthis, unsigned char* arg0); // 2
+extern bool C_ZNK7QObject8inheritsEPKc(void* qthis, void* arg0); // 2
   // proto:  QList<QByteArray> QObject::dynamicPropertyNames();
 extern void C_ZNK7QObject20dynamicPropertyNamesEv(void* qthis); // 4
   // proto:  void QObject::installEventFilter(QObject * );
@@ -55,41 +55,41 @@ extern void C_ZN7QObject11deleteLaterEv(void* qthis); // 4
   // proto:  void QObject::~QObject();
 extern void C_ZN7QObjectD2Ev(void* qthis); // 4
   // proto:  QObject * QObject::parent();
-extern void C_ZNK7QObject6parentEv(void* qthis); // 2
+extern void* C_ZNK7QObject6parentEv(void* qthis); // 2
   // proto:  bool QObject::event(QEvent * );
-extern void C_ZN7QObject5eventEP6QEvent(void* qthis, void* arg0); // 4
+extern bool C_ZN7QObject5eventEP6QEvent(void* qthis, void* arg0); // 4
   // proto:  void QObject::moveToThread(QThread * thread);
 extern void C_ZN7QObject12moveToThreadEP7QThread(void* qthis, void* arg0); // 4
   // proto: static bool QObject::disconnect(const QObject * sender, const char * signal, const QObject * receiver, const char * member);
-extern void C_ZN7QObject10disconnectEPKS_PKcS1_S3_(void* arg0, unsigned char* arg1, void* arg2, unsigned char* arg3); // 4
+extern bool C_ZN7QObject10disconnectEPKS_PKcS1_S3_(void* arg0, void* arg1, void* arg2, void* arg3); // 4
   // proto:  bool QObject::disconnect(const char * signal, const QObject * receiver, const char * member);
-extern void C_ZNK7QObject10disconnectEPKcPKS_S1_(void* qthis, unsigned char* arg0, void* arg1, unsigned char* arg2); // 2
+extern bool C_ZNK7QObject10disconnectEPKcPKS_S1_(void* qthis, void* arg0, void* arg1, void* arg2); // 2
   // proto:  bool QObject::disconnect(const QObject * receiver, const char * member);
-extern void C_ZNK7QObject10disconnectEPKS_PKc(void* qthis, void* arg0, unsigned char* arg1); // 2
+extern bool C_ZNK7QObject10disconnectEPKS_PKc(void* qthis, void* arg0, void* arg1); // 2
   // proto: static bool QObject::disconnect(const QObject * sender, const QMetaMethod & signal, const QObject * receiver, const QMetaMethod & member);
-extern void C_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_(void* arg0, void* arg1, void* arg2, void* arg3); // 4
+extern bool C_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_(void* arg0, void* arg1, void* arg2, void* arg3); // 4
   // proto:  bool QObject::eventFilter(QObject * , QEvent * );
-extern void C_ZN7QObject11eventFilterEPS_P6QEvent(void* qthis, void* arg0, void* arg1); // 4
+extern bool C_ZN7QObject11eventFilterEPS_P6QEvent(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QObject::setParent(QObject * );
 extern void C_ZN7QObject9setParentEPS_(void* qthis, void* arg0); // 4
   // proto:  void QObject::QObject(QObject * parent);
 extern void* C_ZN7QObjectC2EPS_(void* arg0); // 3
   // proto:  bool QObject::isWidgetType();
-extern void C_ZNK7QObject12isWidgetTypeEv(void* qthis); // 2
+extern bool C_ZNK7QObject12isWidgetTypeEv(void* qthis); // 2
   // proto:  QObjectUserData * QObject::userData(uint id);
-extern void C_ZNK7QObject8userDataEj(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK7QObject8userDataEj(void* qthis, int32_t arg0); // 4
   // proto:  bool QObject::blockSignals(bool b);
-extern void C_ZN7QObject12blockSignalsEb(void* qthis, bool arg0); // 4
+extern bool C_ZN7QObject12blockSignalsEb(void* qthis, bool arg0); // 4
   // proto:  QString QObject::objectName();
-extern void C_ZNK7QObject10objectNameEv(void* qthis); // 4
+extern void* C_ZNK7QObject10objectNameEv(void* qthis); // 4
   // proto:  bool QObject::isWindowType();
-extern void C_ZNK7QObject12isWindowTypeEv(void* qthis); // 2
+extern bool C_ZNK7QObject12isWindowTypeEv(void* qthis); // 2
   // proto:  bool QObject::signalsBlocked();
-extern void C_ZNK7QObject14signalsBlockedEv(void* qthis); // 2
+extern bool C_ZNK7QObject14signalsBlockedEv(void* qthis); // 2
   // proto: static uint QObject::registerUserData();
-extern void C_ZN7QObject16registerUserDataEv(); // 4
+extern int32_t C_ZN7QObject16registerUserDataEv(); // 4
   // proto:  bool QObject::setProperty(const char * name, const QVariant & value);
-extern void C_ZN7QObject11setPropertyEPKcRK8QVariant(void* qthis, unsigned char* arg0, void* arg1); // 4
+extern bool C_ZN7QObject11setPropertyEPKcRK8QVariant(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QObject::setObjectName(const QString & name);
 extern void C_ZN7QObject13setObjectNameERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QObject::setUserData(uint id, QObjectUserData * data);
@@ -97,7 +97,7 @@ extern void C_ZN7QObject11setUserDataEjP15QObjectUserData(void* qthis, int32_t a
   // proto:  const QMetaObject * QObject::metaObject();
 extern void C_ZNK7QObject10metaObjectEv(void* qthis); // 4
   // proto:  QThread * QObject::thread();
-extern void C_ZNK7QObject6threadEv(void* qthis); // 4
+extern void* C_ZNK7QObject6threadEv(void* qthis); // 4
   // proto:  void QObject::removeEventFilter(QObject * );
 extern void C_ZN7QObject17removeEventFilterEPS_(void* qthis, void* arg0); // 4
   // proto:  const QObjectList & QObject::children();
@@ -107,7 +107,7 @@ extern void C_ZN7QObject9killTimerEi(void* qthis, int32_t arg0); // 4
   // proto:  void QObject::dumpObjectInfo();
 extern void C_ZN7QObject14dumpObjectInfoEv(void* qthis); // 4
   // proto:  QVariant QObject::property(const char * name);
-extern void C_ZNK7QObject8propertyEPKc(void* qthis, unsigned char* arg0); // 4
+extern void* C_ZNK7QObject8propertyEPKc(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -147,7 +147,7 @@ type QObject struct {
 }
 
 // ~QSignalBlocker()
-func (this *QSignalBlocker) FreeQSignalBlocker(args ...interface{}) () {
+func (this *QSignalBlocker) Freeqsignalblocker(args ...interface{}) () {
   // ~QSignalBlocker()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -164,10 +164,11 @@ func (this *QSignalBlocker) FreeQSignalBlocker(args ...interface{}) () {
     qtrt.ErrorResolve("QSignalBlocker", "~QSignalBlocker", args)
   }
 
+  return
 }
 
 // unblock()
-func (this *QSignalBlocker) unblock(args ...interface{}) () {
+func (this *QSignalBlocker) Unblock(args ...interface{}) () {
   // unblock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -184,10 +185,11 @@ func (this *QSignalBlocker) unblock(args ...interface{}) () {
     qtrt.ErrorResolve("QSignalBlocker", "unblock", args)
   }
 
+  return
 }
 
 // reblock()
-func (this *QSignalBlocker) reblock(args ...interface{}) () {
+func (this *QSignalBlocker) Reblock(args ...interface{}) () {
   // reblock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -204,6 +206,7 @@ func (this *QSignalBlocker) reblock(args ...interface{}) () {
     qtrt.ErrorResolve("QSignalBlocker", "reblock", args)
   }
 
+  return
 }
 
 // QSignalBlocker(class QObject &)
@@ -246,7 +249,7 @@ func NewQSignalBlocker(args ...interface{}) *QSignalBlocker {
 }
 
 // dynamicMetaObject()
-func (this *QObjectData) dynamicMetaObject(args ...interface{}) () {
+func (this *QObjectData) Dynamicmetaobject(args ...interface{}) () {
   // dynamicMetaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -263,10 +266,11 @@ func (this *QObjectData) dynamicMetaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QObjectData", "dynamicMetaObject", args)
   }
 
+  return
 }
 
 // ~QObjectUserData()
-func (this *QObjectUserData) FreeQObjectUserData(args ...interface{}) () {
+func (this *QObjectUserData) Freeqobjectuserdata(args ...interface{}) () {
   // ~QObjectUserData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -283,10 +287,11 @@ func (this *QObjectUserData) FreeQObjectUserData(args ...interface{}) () {
     qtrt.ErrorResolve("QObjectUserData", "~QObjectUserData", args)
   }
 
+  return
 }
 
 // inherits(const char *)
-func (this *QObject) inherits(args ...interface{}) () {
+func (this *QObject) Inherits(args ...interface{}) (ret interface{}) {
   // inherits(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -299,18 +304,24 @@ func (this *QObject) inherits(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject8inheritsEPKc
     // invoke: bool inherits(const char *)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK7QObject8inheritsEPKc(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
+    var ret0 = C.C_ZNK7QObject8inheritsEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "inherits", args)
   }
 
+  return
 }
 
 // dynamicPropertyNames()
-func (this *QObject) dynamicPropertyNames(args ...interface{}) () {
+func (this *QObject) Dynamicpropertynames(args ...interface{}) () {
   // dynamicPropertyNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -327,10 +338,11 @@ func (this *QObject) dynamicPropertyNames(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "dynamicPropertyNames", args)
   }
 
+  return
 }
 
 // installEventFilter(class QObject *)
-func (this *QObject) installEventFilter(args ...interface{}) () {
+func (this *QObject) Installeventfilter(args ...interface{}) () {
   // installEventFilter(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -350,10 +362,11 @@ func (this *QObject) installEventFilter(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "installEventFilter", args)
   }
 
+  return
 }
 
 // dumpObjectTree()
-func (this *QObject) dumpObjectTree(args ...interface{}) () {
+func (this *QObject) Dumpobjecttree(args ...interface{}) () {
   // dumpObjectTree()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -370,10 +383,11 @@ func (this *QObject) dumpObjectTree(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "dumpObjectTree", args)
   }
 
+  return
 }
 
 // deleteLater()
-func (this *QObject) deleteLater(args ...interface{}) () {
+func (this *QObject) Deletelater(args ...interface{}) () {
   // deleteLater()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -390,10 +404,11 @@ func (this *QObject) deleteLater(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "deleteLater", args)
   }
 
+  return
 }
 
 // ~QObject()
-func (this *QObject) FreeQObject(args ...interface{}) () {
+func (this *QObject) Freeqobject(args ...interface{}) () {
   // ~QObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -410,10 +425,11 @@ func (this *QObject) FreeQObject(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "~QObject", args)
   }
 
+  return
 }
 
 // parent()
-func (this *QObject) parent(args ...interface{}) () {
+func (this *QObject) Parent(args ...interface{}) (ret interface{}) {
   // parent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -425,16 +441,20 @@ func (this *QObject) parent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject6parentEv
     // invoke: QObject * parent()
-    var ret = C.C_ZNK7QObject6parentEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QObject6parentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QObject{}) // "QObject *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "parent", args)
   }
 
+  return
 }
 
 // event(class QEvent *)
-func (this *QObject) event(args ...interface{}) () {
+func (this *QObject) Event(args ...interface{}) (ret interface{}) {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -449,16 +469,20 @@ func (this *QObject) event(args ...interface{}) () {
     // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN7QObject5eventEP6QEvent(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN7QObject5eventEP6QEvent(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "event", args)
   }
 
+  return
 }
 
 // moveToThread(class QThread *)
-func (this *QObject) moveToThread(args ...interface{}) () {
+func (this *QObject) Movetothread(args ...interface{}) () {
   // moveToThread(class QThread *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -478,10 +502,11 @@ func (this *QObject) moveToThread(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "moveToThread", args)
   }
 
+  return
 }
 
 // disconnect(const class QObject *, const char *, const class QObject *, const char *)
-func (this *QObject) disconnect_s(args ...interface{}) () {
+func (this *QObject) Disconnect_S(args ...interface{}) (ret interface{}) {
   // disconnect(const class QObject *, const char *, const class QObject *, const char *)
   // disconnect(const char *, const class QObject *, const char *)
   // disconnect(const class QObject *, const char *)
@@ -514,34 +539,53 @@ func (this *QObject) disconnect_s(args ...interface{}) () {
     // invoke: bool disconnect(const class QObject *, const char *, const class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
     var arg2 = args[2].(QObject).qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[3].([]byte)).Pointer()))
-    if false {fmt.Println(arg3)}
-    var ret = C.C_ZN7QObject10disconnectEPKS_PKcS1_S3_(arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret)}
+    argif3, free3 := qtrt.HandyConvert2c(args[3], vtys[0][3])
+    var arg3 = argif3.(unsafe.Pointer)
+    if false {fmt.Println(argif3, arg3)}
+    if free3 {defer C.free(arg3)}
+    var ret0 = C.C_ZN7QObject10disconnectEPKS_PKcS1_S3_(arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK7QObject10disconnectEPKcPKS_S1_
     // invoke: bool disconnect(const char *, const class QObject *, const char *)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[1][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).Pointer()))
-    if false {fmt.Println(arg2)}
-    var ret = C.C_ZNK7QObject10disconnectEPKcPKS_S1_(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[1][2])
+    var arg2 = argif2.(unsafe.Pointer)
+    if false {fmt.Println(argif2, arg2)}
+    if free2 {defer C.free(arg2)}
+    var ret0 = C.C_ZNK7QObject10disconnectEPKcPKS_S1_(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 2:
     // invoke: _ZNK7QObject10disconnectEPKS_PKc
     // invoke: bool disconnect(const class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK7QObject10disconnectEPKS_PKc(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[2][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
+    var ret0 = C.C_ZNK7QObject10disconnectEPKS_PKc(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 3:
     // invoke: _ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_
     // invoke: bool disconnect(const class QObject *, const class QMetaMethod &, const class QObject *, const class QMetaMethod &)
@@ -553,16 +597,20 @@ func (this *QObject) disconnect_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QMetaMethod).qclsinst
     if false {fmt.Println(arg3)}
-    var ret = C.C_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_(arg0, arg1, arg2, arg3)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_(arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "disconnect", args)
   }
 
+  return
 }
 
 // eventFilter(class QObject *, class QEvent *)
-func (this *QObject) eventFilter(args ...interface{}) () {
+func (this *QObject) Eventfilter(args ...interface{}) (ret interface{}) {
   // eventFilter(class QObject *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -580,16 +628,20 @@ func (this *QObject) eventFilter(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN7QObject11eventFilterEPS_P6QEvent(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN7QObject11eventFilterEPS_P6QEvent(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "eventFilter", args)
   }
 
+  return
 }
 
 // setParent(class QObject *)
-func (this *QObject) setParent(args ...interface{}) () {
+func (this *QObject) Setparent(args ...interface{}) () {
   // setParent(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -609,6 +661,7 @@ func (this *QObject) setParent(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "setParent", args)
   }
 
+  return
 }
 
 // QObject(class QObject *)
@@ -639,7 +692,7 @@ func NewQObject(args ...interface{}) *QObject {
 }
 
 // isWidgetType()
-func (this *QObject) isWidgetType(args ...interface{}) () {
+func (this *QObject) Iswidgettype(args ...interface{}) (ret interface{}) {
   // isWidgetType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -651,16 +704,20 @@ func (this *QObject) isWidgetType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject12isWidgetTypeEv
     // invoke: bool isWidgetType()
-    var ret = C.C_ZNK7QObject12isWidgetTypeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QObject12isWidgetTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "isWidgetType", args)
   }
 
+  return
 }
 
 // userData(uint)
-func (this *QObject) userData(args ...interface{}) () {
+func (this *QObject) Userdata(args ...interface{}) (ret interface{}) {
   // userData(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -675,16 +732,20 @@ func (this *QObject) userData(args ...interface{}) () {
     // invoke: QObjectUserData * userData(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK7QObject8userDataEj(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QObject8userDataEj(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QObjectUserData{}) // "QObjectUserData *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "userData", args)
   }
 
+  return
 }
 
 // blockSignals(_Bool)
-func (this *QObject) blockSignals(args ...interface{}) () {
+func (this *QObject) Blocksignals(args ...interface{}) (ret interface{}) {
   // blockSignals(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -699,16 +760,20 @@ func (this *QObject) blockSignals(args ...interface{}) () {
     // invoke: bool blockSignals(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN7QObject12blockSignalsEb(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN7QObject12blockSignalsEb(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "blockSignals", args)
   }
 
+  return
 }
 
 // objectName()
-func (this *QObject) objectName(args ...interface{}) () {
+func (this *QObject) Objectname(args ...interface{}) (ret interface{}) {
   // objectName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -720,16 +785,20 @@ func (this *QObject) objectName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject10objectNameEv
     // invoke: QString objectName()
-    var ret = C.C_ZNK7QObject10objectNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QObject10objectNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "objectName", args)
   }
 
+  return
 }
 
 // isWindowType()
-func (this *QObject) isWindowType(args ...interface{}) () {
+func (this *QObject) Iswindowtype(args ...interface{}) (ret interface{}) {
   // isWindowType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -741,16 +810,20 @@ func (this *QObject) isWindowType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject12isWindowTypeEv
     // invoke: bool isWindowType()
-    var ret = C.C_ZNK7QObject12isWindowTypeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QObject12isWindowTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "isWindowType", args)
   }
 
+  return
 }
 
 // signalsBlocked()
-func (this *QObject) signalsBlocked(args ...interface{}) () {
+func (this *QObject) Signalsblocked(args ...interface{}) (ret interface{}) {
   // signalsBlocked()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -762,16 +835,20 @@ func (this *QObject) signalsBlocked(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject14signalsBlockedEv
     // invoke: bool signalsBlocked()
-    var ret = C.C_ZNK7QObject14signalsBlockedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QObject14signalsBlockedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "signalsBlocked", args)
   }
 
+  return
 }
 
 // registerUserData()
-func (this *QObject) registerUserData_s(args ...interface{}) () {
+func (this *QObject) Registeruserdata_S(args ...interface{}) (ret interface{}) {
   // registerUserData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -783,16 +860,20 @@ func (this *QObject) registerUserData_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QObject16registerUserDataEv
     // invoke: uint registerUserData()
-    var ret = C.C_ZN7QObject16registerUserDataEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN7QObject16registerUserDataEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "uint"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "registerUserData", args)
   }
 
+  return
 }
 
 // setProperty(const char *, const class QVariant &)
-func (this *QObject) setProperty(args ...interface{}) () {
+func (this *QObject) Setproperty(args ...interface{}) (ret interface{}) {
   // setProperty(const char *, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -806,20 +887,26 @@ func (this *QObject) setProperty(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QObject11setPropertyEPKcRK8QVariant
     // invoke: bool setProperty(const char *, const class QVariant &)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN7QObject11setPropertyEPKcRK8QVariant(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN7QObject11setPropertyEPKcRK8QVariant(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "setProperty", args)
   }
 
+  return
 }
 
 // setObjectName(const class QString &)
-func (this *QObject) setObjectName(args ...interface{}) () {
+func (this *QObject) Setobjectname(args ...interface{}) () {
   // setObjectName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -839,10 +926,11 @@ func (this *QObject) setObjectName(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "setObjectName", args)
   }
 
+  return
 }
 
 // setUserData(uint, class QObjectUserData *)
-func (this *QObject) setUserData(args ...interface{}) () {
+func (this *QObject) Setuserdata(args ...interface{}) () {
   // setUserData(uint, class QObjectUserData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -865,10 +953,11 @@ func (this *QObject) setUserData(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "setUserData", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QObject) metaObject(args ...interface{}) () {
+func (this *QObject) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -885,10 +974,11 @@ func (this *QObject) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "metaObject", args)
   }
 
+  return
 }
 
 // thread()
-func (this *QObject) thread(args ...interface{}) () {
+func (this *QObject) Thread(args ...interface{}) (ret interface{}) {
   // thread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -900,16 +990,20 @@ func (this *QObject) thread(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject6threadEv
     // invoke: QThread * thread()
-    var ret = C.C_ZNK7QObject6threadEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK7QObject6threadEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QThread{}) // "QThread *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "thread", args)
   }
 
+  return
 }
 
 // removeEventFilter(class QObject *)
-func (this *QObject) removeEventFilter(args ...interface{}) () {
+func (this *QObject) Removeeventfilter(args ...interface{}) () {
   // removeEventFilter(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -929,10 +1023,11 @@ func (this *QObject) removeEventFilter(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "removeEventFilter", args)
   }
 
+  return
 }
 
 // children()
-func (this *QObject) children(args ...interface{}) () {
+func (this *QObject) Children(args ...interface{}) () {
   // children()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -949,10 +1044,11 @@ func (this *QObject) children(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "children", args)
   }
 
+  return
 }
 
 // killTimer(int)
-func (this *QObject) killTimer(args ...interface{}) () {
+func (this *QObject) Killtimer(args ...interface{}) () {
   // killTimer(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -972,10 +1068,11 @@ func (this *QObject) killTimer(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "killTimer", args)
   }
 
+  return
 }
 
 // dumpObjectInfo()
-func (this *QObject) dumpObjectInfo(args ...interface{}) () {
+func (this *QObject) Dumpobjectinfo(args ...interface{}) () {
   // dumpObjectInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -992,10 +1089,11 @@ func (this *QObject) dumpObjectInfo(args ...interface{}) () {
     qtrt.ErrorResolve("QObject", "dumpObjectInfo", args)
   }
 
+  return
 }
 
 // property(const char *)
-func (this *QObject) property(args ...interface{}) () {
+func (this *QObject) Property(args ...interface{}) (ret interface{}) {
   // property(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1008,14 +1106,20 @@ func (this *QObject) property(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject8propertyEPKc
     // invoke: QVariant property(const char *)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
-    if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK7QObject8propertyEPKc(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    argif0, free0 := qtrt.HandyConvert2c(args[0], vtys[0][0])
+    var arg0 = argif0.(unsafe.Pointer)
+    if false {fmt.Println(argif0, arg0)}
+    if free0 {defer C.free(arg0)}
+    var ret0 = C.C_ZNK7QObject8propertyEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVariant{}) // "QVariant"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QObject", "property", args)
   }
 
+  return
 }
 
 // <= body block end

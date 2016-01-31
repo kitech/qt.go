@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qvector3d.h
 // dst-file: /src/gui/qvector3d.go
 //
@@ -29,27 +29,27 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QVector3D QVector3D::crossProduct(const QVector3D & v1, const QVector3D & v2);
-extern void C_ZN9QVector3D12crossProductERKS_S1_(void* arg0, void* arg1); // 4
+extern void* C_ZN9QVector3D12crossProductERKS_S1_(void* arg0, void* arg1); // 4
   // proto:  QVector2D QVector3D::toVector2D();
-extern void C_ZNK9QVector3D10toVector2DEv(void* qthis); // 4
+extern void* C_ZNK9QVector3D10toVector2DEv(void* qthis); // 4
   // proto:  float QVector3D::distanceToPlane(const QVector3D & plane, const QVector3D & normal);
-extern void C_ZNK9QVector3D15distanceToPlaneERKS_S1_(void* qthis, void* arg0, void* arg1); // 4
+extern float C_ZNK9QVector3D15distanceToPlaneERKS_S1_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  float QVector3D::distanceToPlane(const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3);
-extern void C_ZNK9QVector3D15distanceToPlaneERKS_S1_S1_(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern float C_ZNK9QVector3D15distanceToPlaneERKS_S1_S1_(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  QVector4D QVector3D::toVector4D();
-extern void C_ZNK9QVector3D10toVector4DEv(void* qthis); // 4
+extern void* C_ZNK9QVector3D10toVector4DEv(void* qthis); // 4
   // proto: static float QVector3D::dotProduct(const QVector3D & v1, const QVector3D & v2);
-extern void C_ZN9QVector3D10dotProductERKS_S1_(void* arg0, void* arg1); // 4
+extern float C_ZN9QVector3D10dotProductERKS_S1_(void* arg0, void* arg1); // 4
   // proto:  void QVector3D::normalize();
 extern void C_ZN9QVector3D9normalizeEv(void* qthis); // 4
   // proto:  QPointF QVector3D::toPointF();
-extern void C_ZNK9QVector3D8toPointFEv(void* qthis); // 2
+extern void* C_ZNK9QVector3D8toPointFEv(void* qthis); // 2
   // proto:  float QVector3D::lengthSquared();
-extern void C_ZNK9QVector3D13lengthSquaredEv(void* qthis); // 4
+extern float C_ZNK9QVector3D13lengthSquaredEv(void* qthis); // 4
   // proto: static QVector3D QVector3D::normal(const QVector3D & v1, const QVector3D & v2, const QVector3D & v3);
-extern void C_ZN9QVector3D6normalERKS_S1_S1_(void* arg0, void* arg1, void* arg2); // 4
+extern void* C_ZN9QVector3D6normalERKS_S1_S1_(void* arg0, void* arg1, void* arg2); // 4
   // proto: static QVector3D QVector3D::normal(const QVector3D & v1, const QVector3D & v2);
-extern void C_ZN9QVector3D6normalERKS_S1_(void* arg0, void* arg1); // 4
+extern void* C_ZN9QVector3D6normalERKS_S1_(void* arg0, void* arg1); // 4
   // proto:  void QVector3D::QVector3D(const QPointF & point);
 extern void* C_ZN9QVector3DC2ERK7QPointF(void* arg0); // 1
   // proto:  void QVector3D::QVector3D();
@@ -65,7 +65,7 @@ extern void* C_ZN9QVector3DC2ERK9QVector4D(void* arg0); // 3
   // proto:  void QVector3D::QVector3D(const QVector2D & vector, float zpos);
 extern void* C_ZN9QVector3DC2ERK9QVector2Df(void* arg0, float arg1); // 3
   // proto:  QVector3D QVector3D::normalized();
-extern void C_ZNK9QVector3D10normalizedEv(void* qthis); // 4
+extern void* C_ZNK9QVector3D10normalizedEv(void* qthis); // 4
   // proto:  float QVector3D::x();
 extern void C_ZNK9QVector3D1xEv(void* qthis); // 2
   // proto:  void QVector3D::setX(float x);
@@ -75,23 +75,23 @@ extern void C_ZN9QVector3D4setYEf(void* qthis, float arg0); // 2
   // proto:  void QVector3D::setZ(float z);
 extern void C_ZN9QVector3D4setZEf(void* qthis, float arg0); // 2
   // proto:  QPoint QVector3D::toPoint();
-extern void C_ZNK9QVector3D7toPointEv(void* qthis); // 2
+extern void* C_ZNK9QVector3D7toPointEv(void* qthis); // 2
   // proto:  QVector3D QVector3D::unproject(const QMatrix4x4 & modelView, const QMatrix4x4 & projection, const QRect & viewport);
-extern void C_ZNK9QVector3D9unprojectERK10QMatrix4x4S2_RK5QRect(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void* C_ZNK9QVector3D9unprojectERK10QMatrix4x4S2_RK5QRect(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  float QVector3D::distanceToLine(const QVector3D & point, const QVector3D & direction);
-extern void C_ZNK9QVector3D14distanceToLineERKS_S1_(void* qthis, void* arg0, void* arg1); // 4
+extern float C_ZNK9QVector3D14distanceToLineERKS_S1_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QVector3D QVector3D::project(const QMatrix4x4 & modelView, const QMatrix4x4 & projection, const QRect & viewport);
-extern void C_ZNK9QVector3D7projectERK10QMatrix4x4S2_RK5QRect(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void* C_ZNK9QVector3D7projectERK10QMatrix4x4S2_RK5QRect(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  bool QVector3D::isNull();
-extern void C_ZNK9QVector3D6isNullEv(void* qthis); // 2
+extern bool C_ZNK9QVector3D6isNullEv(void* qthis); // 2
   // proto:  float QVector3D::length();
-extern void C_ZNK9QVector3D6lengthEv(void* qthis); // 4
+extern float C_ZNK9QVector3D6lengthEv(void* qthis); // 4
   // proto:  float QVector3D::distanceToPoint(const QVector3D & point);
-extern void C_ZNK9QVector3D15distanceToPointERKS_(void* qthis, void* arg0); // 4
+extern float C_ZNK9QVector3D15distanceToPointERKS_(void* qthis, void* arg0); // 4
   // proto:  float QVector3D::y();
 extern void C_ZNK9QVector3D1yEv(void* qthis); // 2
   // proto:  float QVector3D::z();
-extern void C_ZNK9QVector3D1zEv(void* qthis); // 2
+extern float C_ZNK9QVector3D1zEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -111,7 +111,7 @@ type QVector3D struct {
 }
 
 // crossProduct(const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) crossProduct_s(args ...interface{}) () {
+func (this *QVector3D) Crossproduct_S(args ...interface{}) (ret interface{}) {
   // crossProduct(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -129,16 +129,20 @@ func (this *QVector3D) crossProduct_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector3D).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN9QVector3D12crossProductERKS_S1_(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QVector3D12crossProductERKS_S1_(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "crossProduct", args)
   }
 
+  return
 }
 
 // toVector2D()
-func (this *QVector3D) toVector2D(args ...interface{}) () {
+func (this *QVector3D) Tovector2D(args ...interface{}) (ret interface{}) {
   // toVector2D()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -150,16 +154,20 @@ func (this *QVector3D) toVector2D(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D10toVector2DEv
     // invoke: QVector2D toVector2D()
-    var ret = C.C_ZNK9QVector3D10toVector2DEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D10toVector2DEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector2D{}) // "QVector2D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "toVector2D", args)
   }
 
+  return
 }
 
 // distanceToPlane(const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) distanceToPlane(args ...interface{}) () {
+func (this *QVector3D) Distancetoplane(args ...interface{}) (ret interface{}) {
   // distanceToPlane(const class QVector3D &, const class QVector3D &)
   // distanceToPlane(const class QVector3D &, const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -182,8 +190,11 @@ func (this *QVector3D) distanceToPlane(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector3D).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK9QVector3D15distanceToPlaneERKS_S1_(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D15distanceToPlaneERKS_S1_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK9QVector3D15distanceToPlaneERKS_S1_S1_
     // invoke: float distanceToPlane(const class QVector3D &, const class QVector3D &, const class QVector3D &)
@@ -193,16 +204,20 @@ func (this *QVector3D) distanceToPlane(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QVector3D).qclsinst
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZNK9QVector3D15distanceToPlaneERKS_S1_S1_(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D15distanceToPlaneERKS_S1_S1_(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "distanceToPlane", args)
   }
 
+  return
 }
 
 // toVector4D()
-func (this *QVector3D) toVector4D(args ...interface{}) () {
+func (this *QVector3D) Tovector4D(args ...interface{}) (ret interface{}) {
   // toVector4D()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -214,16 +229,20 @@ func (this *QVector3D) toVector4D(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D10toVector4DEv
     // invoke: QVector4D toVector4D()
-    var ret = C.C_ZNK9QVector3D10toVector4DEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D10toVector4DEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector4D{}) // "QVector4D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "toVector4D", args)
   }
 
+  return
 }
 
 // dotProduct(const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) dotProduct_s(args ...interface{}) () {
+func (this *QVector3D) Dotproduct_S(args ...interface{}) (ret interface{}) {
   // dotProduct(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -241,16 +260,20 @@ func (this *QVector3D) dotProduct_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector3D).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN9QVector3D10dotProductERKS_S1_(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QVector3D10dotProductERKS_S1_(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "dotProduct", args)
   }
 
+  return
 }
 
 // normalize()
-func (this *QVector3D) normalize(args ...interface{}) () {
+func (this *QVector3D) Normalize(args ...interface{}) () {
   // normalize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -267,10 +290,11 @@ func (this *QVector3D) normalize(args ...interface{}) () {
     qtrt.ErrorResolve("QVector3D", "normalize", args)
   }
 
+  return
 }
 
 // toPointF()
-func (this *QVector3D) toPointF(args ...interface{}) () {
+func (this *QVector3D) Topointf(args ...interface{}) (ret interface{}) {
   // toPointF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -282,16 +306,20 @@ func (this *QVector3D) toPointF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D8toPointFEv
     // invoke: QPointF toPointF()
-    var ret = C.C_ZNK9QVector3D8toPointFEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D8toPointFEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "toPointF", args)
   }
 
+  return
 }
 
 // lengthSquared()
-func (this *QVector3D) lengthSquared(args ...interface{}) () {
+func (this *QVector3D) Lengthsquared(args ...interface{}) (ret interface{}) {
   // lengthSquared()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -303,16 +331,20 @@ func (this *QVector3D) lengthSquared(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D13lengthSquaredEv
     // invoke: float lengthSquared()
-    var ret = C.C_ZNK9QVector3D13lengthSquaredEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D13lengthSquaredEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "lengthSquared", args)
   }
 
+  return
 }
 
 // normal(const class QVector3D &, const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) normal_s(args ...interface{}) () {
+func (this *QVector3D) Normal_S(args ...interface{}) (ret interface{}) {
   // normal(const class QVector3D &, const class QVector3D &, const class QVector3D &)
   // normal(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -337,8 +369,11 @@ func (this *QVector3D) normal_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QVector3D).qclsinst
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZN9QVector3D6normalERKS_S1_S1_(arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QVector3D6normalERKS_S1_S1_(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZN9QVector3D6normalERKS_S1_
     // invoke: QVector3D normal(const class QVector3D &, const class QVector3D &)
@@ -346,12 +381,16 @@ func (this *QVector3D) normal_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector3D).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN9QVector3D6normalERKS_S1_(arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN9QVector3D6normalERKS_S1_(arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "normal", args)
   }
 
+  return
 }
 
 // QVector3D(const class QPointF &)
@@ -460,7 +499,7 @@ func NewQVector3D(args ...interface{}) *QVector3D {
 }
 
 // normalized()
-func (this *QVector3D) normalized(args ...interface{}) () {
+func (this *QVector3D) Normalized(args ...interface{}) (ret interface{}) {
   // normalized()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -472,16 +511,20 @@ func (this *QVector3D) normalized(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D10normalizedEv
     // invoke: QVector3D normalized()
-    var ret = C.C_ZNK9QVector3D10normalizedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D10normalizedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "normalized", args)
   }
 
+  return
 }
 
 // x()
-func (this *QVector3D) x(args ...interface{}) () {
+func (this *QVector3D) X(args ...interface{}) () {
   // x()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -498,10 +541,11 @@ func (this *QVector3D) x(args ...interface{}) () {
     qtrt.ErrorResolve("QVector3D", "x", args)
   }
 
+  return
 }
 
 // setX(float)
-func (this *QVector3D) setX(args ...interface{}) () {
+func (this *QVector3D) Setx(args ...interface{}) () {
   // setX(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -521,10 +565,11 @@ func (this *QVector3D) setX(args ...interface{}) () {
     qtrt.ErrorResolve("QVector3D", "setX", args)
   }
 
+  return
 }
 
 // setY(float)
-func (this *QVector3D) setY(args ...interface{}) () {
+func (this *QVector3D) Sety(args ...interface{}) () {
   // setY(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -544,10 +589,11 @@ func (this *QVector3D) setY(args ...interface{}) () {
     qtrt.ErrorResolve("QVector3D", "setY", args)
   }
 
+  return
 }
 
 // setZ(float)
-func (this *QVector3D) setZ(args ...interface{}) () {
+func (this *QVector3D) Setz(args ...interface{}) () {
   // setZ(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -567,10 +613,11 @@ func (this *QVector3D) setZ(args ...interface{}) () {
     qtrt.ErrorResolve("QVector3D", "setZ", args)
   }
 
+  return
 }
 
 // toPoint()
-func (this *QVector3D) toPoint(args ...interface{}) () {
+func (this *QVector3D) Topoint(args ...interface{}) (ret interface{}) {
   // toPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -582,16 +629,20 @@ func (this *QVector3D) toPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D7toPointEv
     // invoke: QPoint toPoint()
-    var ret = C.C_ZNK9QVector3D7toPointEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D7toPointEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPoint{}) // "QPoint"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "toPoint", args)
   }
 
+  return
 }
 
 // unproject(const class QMatrix4x4 &, const class QMatrix4x4 &, const class QRect &)
-func (this *QVector3D) unproject(args ...interface{}) () {
+func (this *QVector3D) Unproject(args ...interface{}) (ret interface{}) {
   // unproject(const class QMatrix4x4 &, const class QMatrix4x4 &, const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -612,16 +663,20 @@ func (this *QVector3D) unproject(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QRect).qclsinst
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZNK9QVector3D9unprojectERK10QMatrix4x4S2_RK5QRect(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D9unprojectERK10QMatrix4x4S2_RK5QRect(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "unproject", args)
   }
 
+  return
 }
 
 // distanceToLine(const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) distanceToLine(args ...interface{}) () {
+func (this *QVector3D) Distancetoline(args ...interface{}) (ret interface{}) {
   // distanceToLine(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -639,16 +694,20 @@ func (this *QVector3D) distanceToLine(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector3D).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK9QVector3D14distanceToLineERKS_S1_(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D14distanceToLineERKS_S1_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "distanceToLine", args)
   }
 
+  return
 }
 
 // project(const class QMatrix4x4 &, const class QMatrix4x4 &, const class QRect &)
-func (this *QVector3D) project(args ...interface{}) () {
+func (this *QVector3D) Project(args ...interface{}) (ret interface{}) {
   // project(const class QMatrix4x4 &, const class QMatrix4x4 &, const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -669,16 +728,20 @@ func (this *QVector3D) project(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QRect).qclsinst
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZNK9QVector3D7projectERK10QMatrix4x4S2_RK5QRect(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D7projectERK10QMatrix4x4S2_RK5QRect(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "project", args)
   }
 
+  return
 }
 
 // isNull()
-func (this *QVector3D) isNull(args ...interface{}) () {
+func (this *QVector3D) Isnull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -690,16 +753,20 @@ func (this *QVector3D) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D6isNullEv
     // invoke: bool isNull()
-    var ret = C.C_ZNK9QVector3D6isNullEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "isNull", args)
   }
 
+  return
 }
 
 // length()
-func (this *QVector3D) length(args ...interface{}) () {
+func (this *QVector3D) Length(args ...interface{}) (ret interface{}) {
   // length()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -711,16 +778,20 @@ func (this *QVector3D) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D6lengthEv
     // invoke: float length()
-    var ret = C.C_ZNK9QVector3D6lengthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D6lengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "length", args)
   }
 
+  return
 }
 
 // distanceToPoint(const class QVector3D &)
-func (this *QVector3D) distanceToPoint(args ...interface{}) () {
+func (this *QVector3D) Distancetopoint(args ...interface{}) (ret interface{}) {
   // distanceToPoint(const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -735,16 +806,20 @@ func (this *QVector3D) distanceToPoint(args ...interface{}) () {
     // invoke: float distanceToPoint(const class QVector3D &)
     var arg0 = args[0].(QVector3D).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QVector3D15distanceToPointERKS_(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D15distanceToPointERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "distanceToPoint", args)
   }
 
+  return
 }
 
 // y()
-func (this *QVector3D) y(args ...interface{}) () {
+func (this *QVector3D) Y(args ...interface{}) () {
   // y()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -761,10 +836,11 @@ func (this *QVector3D) y(args ...interface{}) () {
     qtrt.ErrorResolve("QVector3D", "y", args)
   }
 
+  return
 }
 
 // z()
-func (this *QVector3D) z(args ...interface{}) () {
+func (this *QVector3D) Z(args ...interface{}) (ret interface{}) {
   // z()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -776,12 +852,16 @@ func (this *QVector3D) z(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D1zEv
     // invoke: float z()
-    var ret = C.C_ZNK9QVector3D1zEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QVector3D1zEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.FloatTy(false) // "float"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QVector3D", "z", args)
   }
 
+  return
 }
 
 // <= body block end

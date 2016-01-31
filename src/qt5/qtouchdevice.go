@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QString QTouchDevice::name();
-extern void C_ZNK12QTouchDevice4nameEv(void* qthis); // 4
+extern void* C_ZNK12QTouchDevice4nameEv(void* qthis); // 4
   // proto:  void QTouchDevice::setName(const QString & name);
 extern void C_ZN12QTouchDevice7setNameERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QTouchDevice::~QTouchDevice();
@@ -37,7 +37,7 @@ extern void C_ZN12QTouchDeviceD2Ev(void* qthis); // 4
   // proto:  void QTouchDevice::setMaximumTouchPoints(int max);
 extern void C_ZN12QTouchDevice21setMaximumTouchPointsEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTouchDevice::maximumTouchPoints();
-extern void C_ZNK12QTouchDevice18maximumTouchPointsEv(void* qthis); // 4
+extern int32_t C_ZNK12QTouchDevice18maximumTouchPointsEv(void* qthis); // 4
   // proto: static QList<const QTouchDevice *> QTouchDevice::devices();
 extern void C_ZN12QTouchDevice7devicesEv(); // 4
   // proto:  Capabilities QTouchDevice::capabilities();
@@ -65,7 +65,7 @@ type QTouchDevice struct {
 }
 
 // name()
-func (this *QTouchDevice) name(args ...interface{}) () {
+func (this *QTouchDevice) Name(args ...interface{}) (ret interface{}) {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -77,16 +77,20 @@ func (this *QTouchDevice) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTouchDevice4nameEv
     // invoke: QString name()
-    var ret = C.C_ZNK12QTouchDevice4nameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTouchDevice4nameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTouchDevice", "name", args)
   }
 
+  return
 }
 
 // setName(const class QString &)
-func (this *QTouchDevice) setName(args ...interface{}) () {
+func (this *QTouchDevice) Setname(args ...interface{}) () {
   // setName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -106,10 +110,11 @@ func (this *QTouchDevice) setName(args ...interface{}) () {
     qtrt.ErrorResolve("QTouchDevice", "setName", args)
   }
 
+  return
 }
 
 // ~QTouchDevice()
-func (this *QTouchDevice) FreeQTouchDevice(args ...interface{}) () {
+func (this *QTouchDevice) Freeqtouchdevice(args ...interface{}) () {
   // ~QTouchDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -126,10 +131,11 @@ func (this *QTouchDevice) FreeQTouchDevice(args ...interface{}) () {
     qtrt.ErrorResolve("QTouchDevice", "~QTouchDevice", args)
   }
 
+  return
 }
 
 // setMaximumTouchPoints(int)
-func (this *QTouchDevice) setMaximumTouchPoints(args ...interface{}) () {
+func (this *QTouchDevice) Setmaximumtouchpoints(args ...interface{}) () {
   // setMaximumTouchPoints(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -149,10 +155,11 @@ func (this *QTouchDevice) setMaximumTouchPoints(args ...interface{}) () {
     qtrt.ErrorResolve("QTouchDevice", "setMaximumTouchPoints", args)
   }
 
+  return
 }
 
 // maximumTouchPoints()
-func (this *QTouchDevice) maximumTouchPoints(args ...interface{}) () {
+func (this *QTouchDevice) Maximumtouchpoints(args ...interface{}) (ret interface{}) {
   // maximumTouchPoints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -164,16 +171,20 @@ func (this *QTouchDevice) maximumTouchPoints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTouchDevice18maximumTouchPointsEv
     // invoke: int maximumTouchPoints()
-    var ret = C.C_ZNK12QTouchDevice18maximumTouchPointsEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QTouchDevice18maximumTouchPointsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTouchDevice", "maximumTouchPoints", args)
   }
 
+  return
 }
 
 // devices()
-func (this *QTouchDevice) devices_s(args ...interface{}) () {
+func (this *QTouchDevice) Devices_S(args ...interface{}) () {
   // devices()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -190,10 +201,11 @@ func (this *QTouchDevice) devices_s(args ...interface{}) () {
     qtrt.ErrorResolve("QTouchDevice", "devices", args)
   }
 
+  return
 }
 
 // capabilities()
-func (this *QTouchDevice) capabilities(args ...interface{}) () {
+func (this *QTouchDevice) Capabilities(args ...interface{}) () {
   // capabilities()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -210,6 +222,7 @@ func (this *QTouchDevice) capabilities(args ...interface{}) () {
     qtrt.ErrorResolve("QTouchDevice", "capabilities", args)
   }
 
+  return
 }
 
 // QTouchDevice()
@@ -237,7 +250,7 @@ func NewQTouchDevice(args ...interface{}) *QTouchDevice {
 }
 
 // type()
-func (this *QTouchDevice) type_(args ...interface{}) () {
+func (this *QTouchDevice) Type_(args ...interface{}) () {
   // type()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -254,6 +267,7 @@ func (this *QTouchDevice) type_(args ...interface{}) () {
     qtrt.ErrorResolve("QTouchDevice", "type", args)
   }
 
+  return
 }
 
 // <= body block end

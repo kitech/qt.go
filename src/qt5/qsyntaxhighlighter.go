@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qsyntaxhighlighter.h
 // dst-file: /src/gui/qsyntaxhighlighter.go
 //
@@ -35,7 +35,7 @@ extern void* C_ZN18QSyntaxHighlighterC2EP7QObject(void* arg0); // 3
   // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(QTextDocument * parent);
 extern void* C_ZN18QSyntaxHighlighterC2EP13QTextDocument(void* arg0); // 3
   // proto:  QTextDocument * QSyntaxHighlighter::document();
-extern void C_ZNK18QSyntaxHighlighter8documentEv(void* qthis); // 4
+extern void* C_ZNK18QSyntaxHighlighter8documentEv(void* qthis); // 4
   // proto:  void QSyntaxHighlighter::~QSyntaxHighlighter();
 extern void C_ZN18QSyntaxHighlighterD2Ev(void* qthis); // 4
   // proto:  void QSyntaxHighlighter::rehighlight();
@@ -63,7 +63,7 @@ type QSyntaxHighlighter struct {
 }
 
 // setDocument(class QTextDocument *)
-func (this *QSyntaxHighlighter) setDocument(args ...interface{}) () {
+func (this *QSyntaxHighlighter) Setdocument(args ...interface{}) () {
   // setDocument(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -83,6 +83,7 @@ func (this *QSyntaxHighlighter) setDocument(args ...interface{}) () {
     qtrt.ErrorResolve("QSyntaxHighlighter", "setDocument", args)
   }
 
+  return
 }
 
 // QSyntaxHighlighter(class QObject *)
@@ -125,7 +126,7 @@ func NewQSyntaxHighlighter(args ...interface{}) *QSyntaxHighlighter {
 }
 
 // document()
-func (this *QSyntaxHighlighter) document(args ...interface{}) () {
+func (this *QSyntaxHighlighter) Document(args ...interface{}) (ret interface{}) {
   // document()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -137,16 +138,20 @@ func (this *QSyntaxHighlighter) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QSyntaxHighlighter8documentEv
     // invoke: QTextDocument * document()
-    var ret = C.C_ZNK18QSyntaxHighlighter8documentEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QSyntaxHighlighter8documentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QTextDocument{}) // "QTextDocument *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "document", args)
   }
 
+  return
 }
 
 // ~QSyntaxHighlighter()
-func (this *QSyntaxHighlighter) FreeQSyntaxHighlighter(args ...interface{}) () {
+func (this *QSyntaxHighlighter) Freeqsyntaxhighlighter(args ...interface{}) () {
   // ~QSyntaxHighlighter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -163,10 +168,11 @@ func (this *QSyntaxHighlighter) FreeQSyntaxHighlighter(args ...interface{}) () {
     qtrt.ErrorResolve("QSyntaxHighlighter", "~QSyntaxHighlighter", args)
   }
 
+  return
 }
 
 // rehighlight()
-func (this *QSyntaxHighlighter) rehighlight(args ...interface{}) () {
+func (this *QSyntaxHighlighter) Rehighlight(args ...interface{}) () {
   // rehighlight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,10 +189,11 @@ func (this *QSyntaxHighlighter) rehighlight(args ...interface{}) () {
     qtrt.ErrorResolve("QSyntaxHighlighter", "rehighlight", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QSyntaxHighlighter) metaObject(args ...interface{}) () {
+func (this *QSyntaxHighlighter) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -203,10 +210,11 @@ func (this *QSyntaxHighlighter) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QSyntaxHighlighter", "metaObject", args)
   }
 
+  return
 }
 
 // rehighlightBlock(const class QTextBlock &)
-func (this *QSyntaxHighlighter) rehighlightBlock(args ...interface{}) () {
+func (this *QSyntaxHighlighter) Rehighlightblock(args ...interface{}) () {
   // rehighlightBlock(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -226,6 +234,7 @@ func (this *QSyntaxHighlighter) rehighlightBlock(args ...interface{}) () {
     qtrt.ErrorResolve("QSyntaxHighlighter", "rehighlightBlock", args)
   }
 
+  return
 }
 
 // <= body block end

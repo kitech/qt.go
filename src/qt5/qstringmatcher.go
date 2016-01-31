@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qstringmatcher.h
 // dst-file: /src/core/qstringmatcher.go
 //
@@ -35,11 +35,11 @@ extern void* C_ZN14QStringMatcherC2Ev(); // 3
   // proto:  void QStringMatcher::setPattern(const QString & pattern);
 extern void C_ZN14QStringMatcher10setPatternERK7QString(void* qthis, void* arg0); // 4
   // proto:  int QStringMatcher::indexIn(const QChar * str, int length, int from);
-extern void C_ZNK14QStringMatcher7indexInEPK5QCharii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
+extern int32_t C_ZNK14QStringMatcher7indexInEPK5QCharii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
   // proto:  int QStringMatcher::indexIn(const QString & str, int from);
-extern void C_ZNK14QStringMatcher7indexInERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 4
+extern int32_t C_ZNK14QStringMatcher7indexInERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QString QStringMatcher::pattern();
-extern void C_ZNK14QStringMatcher7patternEv(void* qthis); // 4
+extern void* C_ZNK14QStringMatcher7patternEv(void* qthis); // 4
   // proto:  void QStringMatcher::~QStringMatcher();
 extern void C_ZN14QStringMatcherD2Ev(void* qthis); // 4
   // proto:  Qt::CaseSensitivity QStringMatcher::caseSensitivity();
@@ -99,7 +99,7 @@ func NewQStringMatcher(args ...interface{}) *QStringMatcher {
 }
 
 // setPattern(const class QString &)
-func (this *QStringMatcher) setPattern(args ...interface{}) () {
+func (this *QStringMatcher) Setpattern(args ...interface{}) () {
   // setPattern(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -119,10 +119,11 @@ func (this *QStringMatcher) setPattern(args ...interface{}) () {
     qtrt.ErrorResolve("QStringMatcher", "setPattern", args)
   }
 
+  return
 }
 
 // indexIn(const class QChar *, int, int)
-func (this *QStringMatcher) indexIn(args ...interface{}) () {
+func (this *QStringMatcher) Indexin(args ...interface{}) (ret interface{}) {
   // indexIn(const class QChar *, int, int)
   // indexIn(const class QString &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -147,8 +148,11 @@ func (this *QStringMatcher) indexIn(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    var ret = C.C_ZNK14QStringMatcher7indexInEPK5QCharii(this.qclsinst, arg0, arg1, arg2)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QStringMatcher7indexInEPK5QCharii(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   case 1:
     // invoke: _ZNK14QStringMatcher7indexInERK7QStringi
     // invoke: int indexIn(const class QString &, int)
@@ -156,16 +160,20 @@ func (this *QStringMatcher) indexIn(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK14QStringMatcher7indexInERK7QStringi(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QStringMatcher7indexInERK7QStringi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStringMatcher", "indexIn", args)
   }
 
+  return
 }
 
 // pattern()
-func (this *QStringMatcher) pattern(args ...interface{}) () {
+func (this *QStringMatcher) Pattern(args ...interface{}) (ret interface{}) {
   // pattern()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -177,16 +185,20 @@ func (this *QStringMatcher) pattern(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStringMatcher7patternEv
     // invoke: QString pattern()
-    var ret = C.C_ZNK14QStringMatcher7patternEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK14QStringMatcher7patternEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QStringMatcher", "pattern", args)
   }
 
+  return
 }
 
 // ~QStringMatcher()
-func (this *QStringMatcher) FreeQStringMatcher(args ...interface{}) () {
+func (this *QStringMatcher) Freeqstringmatcher(args ...interface{}) () {
   // ~QStringMatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -203,10 +215,11 @@ func (this *QStringMatcher) FreeQStringMatcher(args ...interface{}) () {
     qtrt.ErrorResolve("QStringMatcher", "~QStringMatcher", args)
   }
 
+  return
 }
 
 // caseSensitivity()
-func (this *QStringMatcher) caseSensitivity(args ...interface{}) () {
+func (this *QStringMatcher) Casesensitivity(args ...interface{}) () {
   // caseSensitivity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -223,6 +236,7 @@ func (this *QStringMatcher) caseSensitivity(args ...interface{}) () {
     qtrt.ErrorResolve("QStringMatcher", "caseSensitivity", args)
   }
 
+  return
 }
 
 // <= body block end

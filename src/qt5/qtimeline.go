@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.go
 //
@@ -33,19 +33,19 @@ extern void C_ZN9QTimeLine15toggleDirectionEv(void* qthis); // 4
   // proto:  void QTimeLine::setCurrentTime(int msec);
 extern void C_ZN9QTimeLine14setCurrentTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  qreal QTimeLine::valueForTime(int msec);
-extern void C_ZNK9QTimeLine12valueForTimeEi(void* qthis, int32_t arg0); // 4
+extern double C_ZNK9QTimeLine12valueForTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTimeLine::setEasingCurve(const QEasingCurve & curve);
 extern void C_ZN9QTimeLine14setEasingCurveERK12QEasingCurve(void* qthis, void* arg0); // 4
   // proto:  qreal QTimeLine::currentValue();
-extern void C_ZNK9QTimeLine12currentValueEv(void* qthis); // 4
+extern double C_ZNK9QTimeLine12currentValueEv(void* qthis); // 4
   // proto:  void QTimeLine::QTimeLine(int duration, QObject * parent);
 extern void* C_ZN9QTimeLineC2EiP7QObject(int32_t arg0, void* arg1); // 3
   // proto:  void QTimeLine::setFrameRange(int startFrame, int endFrame);
 extern void C_ZN9QTimeLine13setFrameRangeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  int QTimeLine::duration();
-extern void C_ZNK9QTimeLine8durationEv(void* qthis); // 4
+extern int32_t C_ZNK9QTimeLine8durationEv(void* qthis); // 4
   // proto:  int QTimeLine::loopCount();
-extern void C_ZNK9QTimeLine9loopCountEv(void* qthis); // 4
+extern int32_t C_ZNK9QTimeLine9loopCountEv(void* qthis); // 4
   // proto:  void QTimeLine::resume();
 extern void C_ZN9QTimeLine6resumeEv(void* qthis); // 4
   // proto:  void QTimeLine::start();
@@ -53,21 +53,21 @@ extern void C_ZN9QTimeLine5startEv(void* qthis); // 4
   // proto:  QTimeLine::State QTimeLine::state();
 extern void C_ZNK9QTimeLine5stateEv(void* qthis); // 4
   // proto:  int QTimeLine::frameForTime(int msec);
-extern void C_ZNK9QTimeLine12frameForTimeEi(void* qthis, int32_t arg0); // 4
+extern int32_t C_ZNK9QTimeLine12frameForTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  QTimeLine::Direction QTimeLine::direction();
 extern void C_ZNK9QTimeLine9directionEv(void* qthis); // 4
   // proto:  void QTimeLine::setLoopCount(int count);
 extern void C_ZN9QTimeLine12setLoopCountEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTimeLine::endFrame();
-extern void C_ZNK9QTimeLine8endFrameEv(void* qthis); // 4
+extern int32_t C_ZNK9QTimeLine8endFrameEv(void* qthis); // 4
   // proto:  void QTimeLine::stop();
 extern void C_ZN9QTimeLine4stopEv(void* qthis); // 4
   // proto:  int QTimeLine::startFrame();
-extern void C_ZNK9QTimeLine10startFrameEv(void* qthis); // 4
+extern int32_t C_ZNK9QTimeLine10startFrameEv(void* qthis); // 4
   // proto:  int QTimeLine::updateInterval();
-extern void C_ZNK9QTimeLine14updateIntervalEv(void* qthis); // 4
+extern int32_t C_ZNK9QTimeLine14updateIntervalEv(void* qthis); // 4
   // proto:  int QTimeLine::currentFrame();
-extern void C_ZNK9QTimeLine12currentFrameEv(void* qthis); // 4
+extern int32_t C_ZNK9QTimeLine12currentFrameEv(void* qthis); // 4
   // proto:  const QMetaObject * QTimeLine::metaObject();
 extern void C_ZNK9QTimeLine10metaObjectEv(void* qthis); // 4
   // proto:  void QTimeLine::setUpdateInterval(int interval);
@@ -75,9 +75,9 @@ extern void C_ZN9QTimeLine17setUpdateIntervalEi(void* qthis, int32_t arg0); // 4
   // proto:  QTimeLine::CurveShape QTimeLine::curveShape();
 extern void C_ZNK9QTimeLine10curveShapeEv(void* qthis); // 4
   // proto:  int QTimeLine::currentTime();
-extern void C_ZNK9QTimeLine11currentTimeEv(void* qthis); // 4
+extern int32_t C_ZNK9QTimeLine11currentTimeEv(void* qthis); // 4
   // proto:  QEasingCurve QTimeLine::easingCurve();
-extern void C_ZNK9QTimeLine11easingCurveEv(void* qthis); // 4
+extern void* C_ZNK9QTimeLine11easingCurveEv(void* qthis); // 4
   // proto:  void QTimeLine::setEndFrame(int frame);
 extern void C_ZN9QTimeLine11setEndFrameEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTimeLine::setDuration(int duration);
@@ -111,7 +111,7 @@ type QTimeLine struct {
 }
 
 // toggleDirection()
-func (this *QTimeLine) toggleDirection(args ...interface{}) () {
+func (this *QTimeLine) Toggledirection(args ...interface{}) () {
   // toggleDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -128,10 +128,11 @@ func (this *QTimeLine) toggleDirection(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "toggleDirection", args)
   }
 
+  return
 }
 
 // setCurrentTime(int)
-func (this *QTimeLine) setCurrentTime(args ...interface{}) () {
+func (this *QTimeLine) Setcurrenttime(args ...interface{}) () {
   // setCurrentTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -151,10 +152,11 @@ func (this *QTimeLine) setCurrentTime(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "setCurrentTime", args)
   }
 
+  return
 }
 
 // valueForTime(int)
-func (this *QTimeLine) valueForTime(args ...interface{}) () {
+func (this *QTimeLine) Valuefortime(args ...interface{}) (ret interface{}) {
   // valueForTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -169,16 +171,20 @@ func (this *QTimeLine) valueForTime(args ...interface{}) () {
     // invoke: qreal valueForTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QTimeLine12valueForTimeEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTimeLine12valueForTimeEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimeLine", "valueForTime", args)
   }
 
+  return
 }
 
 // setEasingCurve(const class QEasingCurve &)
-func (this *QTimeLine) setEasingCurve(args ...interface{}) () {
+func (this *QTimeLine) Seteasingcurve(args ...interface{}) () {
   // setEasingCurve(const class QEasingCurve &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -198,10 +204,11 @@ func (this *QTimeLine) setEasingCurve(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "setEasingCurve", args)
   }
 
+  return
 }
 
 // currentValue()
-func (this *QTimeLine) currentValue(args ...interface{}) () {
+func (this *QTimeLine) Currentvalue(args ...interface{}) (ret interface{}) {
   // currentValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -213,12 +220,16 @@ func (this *QTimeLine) currentValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine12currentValueEv
     // invoke: qreal currentValue()
-    var ret = C.C_ZNK9QTimeLine12currentValueEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTimeLine12currentValueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimeLine", "currentValue", args)
   }
 
+  return
 }
 
 // QTimeLine(int, class QObject *)
@@ -252,7 +263,7 @@ func NewQTimeLine(args ...interface{}) *QTimeLine {
 }
 
 // setFrameRange(int, int)
-func (this *QTimeLine) setFrameRange(args ...interface{}) () {
+func (this *QTimeLine) Setframerange(args ...interface{}) () {
   // setFrameRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -275,10 +286,11 @@ func (this *QTimeLine) setFrameRange(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "setFrameRange", args)
   }
 
+  return
 }
 
 // duration()
-func (this *QTimeLine) duration(args ...interface{}) () {
+func (this *QTimeLine) Duration(args ...interface{}) (ret interface{}) {
   // duration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -290,16 +302,20 @@ func (this *QTimeLine) duration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine8durationEv
     // invoke: int duration()
-    var ret = C.C_ZNK9QTimeLine8durationEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTimeLine8durationEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimeLine", "duration", args)
   }
 
+  return
 }
 
 // loopCount()
-func (this *QTimeLine) loopCount(args ...interface{}) () {
+func (this *QTimeLine) Loopcount(args ...interface{}) (ret interface{}) {
   // loopCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -311,16 +327,20 @@ func (this *QTimeLine) loopCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine9loopCountEv
     // invoke: int loopCount()
-    var ret = C.C_ZNK9QTimeLine9loopCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTimeLine9loopCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimeLine", "loopCount", args)
   }
 
+  return
 }
 
 // resume()
-func (this *QTimeLine) resume(args ...interface{}) () {
+func (this *QTimeLine) Resume(args ...interface{}) () {
   // resume()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -337,10 +357,11 @@ func (this *QTimeLine) resume(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "resume", args)
   }
 
+  return
 }
 
 // start()
-func (this *QTimeLine) start(args ...interface{}) () {
+func (this *QTimeLine) Start(args ...interface{}) () {
   // start()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -357,10 +378,11 @@ func (this *QTimeLine) start(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "start", args)
   }
 
+  return
 }
 
 // state()
-func (this *QTimeLine) state(args ...interface{}) () {
+func (this *QTimeLine) State(args ...interface{}) () {
   // state()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -377,10 +399,11 @@ func (this *QTimeLine) state(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "state", args)
   }
 
+  return
 }
 
 // frameForTime(int)
-func (this *QTimeLine) frameForTime(args ...interface{}) () {
+func (this *QTimeLine) Framefortime(args ...interface{}) (ret interface{}) {
   // frameForTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -395,16 +418,20 @@ func (this *QTimeLine) frameForTime(args ...interface{}) () {
     // invoke: int frameForTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK9QTimeLine12frameForTimeEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTimeLine12frameForTimeEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimeLine", "frameForTime", args)
   }
 
+  return
 }
 
 // direction()
-func (this *QTimeLine) direction(args ...interface{}) () {
+func (this *QTimeLine) Direction(args ...interface{}) () {
   // direction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -421,10 +448,11 @@ func (this *QTimeLine) direction(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "direction", args)
   }
 
+  return
 }
 
 // setLoopCount(int)
-func (this *QTimeLine) setLoopCount(args ...interface{}) () {
+func (this *QTimeLine) Setloopcount(args ...interface{}) () {
   // setLoopCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -444,10 +472,11 @@ func (this *QTimeLine) setLoopCount(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "setLoopCount", args)
   }
 
+  return
 }
 
 // endFrame()
-func (this *QTimeLine) endFrame(args ...interface{}) () {
+func (this *QTimeLine) Endframe(args ...interface{}) (ret interface{}) {
   // endFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -459,16 +488,20 @@ func (this *QTimeLine) endFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine8endFrameEv
     // invoke: int endFrame()
-    var ret = C.C_ZNK9QTimeLine8endFrameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTimeLine8endFrameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimeLine", "endFrame", args)
   }
 
+  return
 }
 
 // stop()
-func (this *QTimeLine) stop(args ...interface{}) () {
+func (this *QTimeLine) Stop(args ...interface{}) () {
   // stop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -485,10 +518,11 @@ func (this *QTimeLine) stop(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "stop", args)
   }
 
+  return
 }
 
 // startFrame()
-func (this *QTimeLine) startFrame(args ...interface{}) () {
+func (this *QTimeLine) Startframe(args ...interface{}) (ret interface{}) {
   // startFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -500,16 +534,20 @@ func (this *QTimeLine) startFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine10startFrameEv
     // invoke: int startFrame()
-    var ret = C.C_ZNK9QTimeLine10startFrameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTimeLine10startFrameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimeLine", "startFrame", args)
   }
 
+  return
 }
 
 // updateInterval()
-func (this *QTimeLine) updateInterval(args ...interface{}) () {
+func (this *QTimeLine) Updateinterval(args ...interface{}) (ret interface{}) {
   // updateInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -521,16 +559,20 @@ func (this *QTimeLine) updateInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine14updateIntervalEv
     // invoke: int updateInterval()
-    var ret = C.C_ZNK9QTimeLine14updateIntervalEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTimeLine14updateIntervalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimeLine", "updateInterval", args)
   }
 
+  return
 }
 
 // currentFrame()
-func (this *QTimeLine) currentFrame(args ...interface{}) () {
+func (this *QTimeLine) Currentframe(args ...interface{}) (ret interface{}) {
   // currentFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -542,16 +584,20 @@ func (this *QTimeLine) currentFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine12currentFrameEv
     // invoke: int currentFrame()
-    var ret = C.C_ZNK9QTimeLine12currentFrameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTimeLine12currentFrameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimeLine", "currentFrame", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QTimeLine) metaObject(args ...interface{}) () {
+func (this *QTimeLine) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -568,10 +614,11 @@ func (this *QTimeLine) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "metaObject", args)
   }
 
+  return
 }
 
 // setUpdateInterval(int)
-func (this *QTimeLine) setUpdateInterval(args ...interface{}) () {
+func (this *QTimeLine) Setupdateinterval(args ...interface{}) () {
   // setUpdateInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -591,10 +638,11 @@ func (this *QTimeLine) setUpdateInterval(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "setUpdateInterval", args)
   }
 
+  return
 }
 
 // curveShape()
-func (this *QTimeLine) curveShape(args ...interface{}) () {
+func (this *QTimeLine) Curveshape(args ...interface{}) () {
   // curveShape()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -611,10 +659,11 @@ func (this *QTimeLine) curveShape(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "curveShape", args)
   }
 
+  return
 }
 
 // currentTime()
-func (this *QTimeLine) currentTime(args ...interface{}) () {
+func (this *QTimeLine) Currenttime(args ...interface{}) (ret interface{}) {
   // currentTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -626,16 +675,20 @@ func (this *QTimeLine) currentTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine11currentTimeEv
     // invoke: int currentTime()
-    var ret = C.C_ZNK9QTimeLine11currentTimeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTimeLine11currentTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimeLine", "currentTime", args)
   }
 
+  return
 }
 
 // easingCurve()
-func (this *QTimeLine) easingCurve(args ...interface{}) () {
+func (this *QTimeLine) Easingcurve(args ...interface{}) (ret interface{}) {
   // easingCurve()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -647,16 +700,20 @@ func (this *QTimeLine) easingCurve(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine11easingCurveEv
     // invoke: QEasingCurve easingCurve()
-    var ret = C.C_ZNK9QTimeLine11easingCurveEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK9QTimeLine11easingCurveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QEasingCurve{}) // "QEasingCurve"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimeLine", "easingCurve", args)
   }
 
+  return
 }
 
 // setEndFrame(int)
-func (this *QTimeLine) setEndFrame(args ...interface{}) () {
+func (this *QTimeLine) Setendframe(args ...interface{}) () {
   // setEndFrame(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -676,10 +733,11 @@ func (this *QTimeLine) setEndFrame(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "setEndFrame", args)
   }
 
+  return
 }
 
 // setDuration(int)
-func (this *QTimeLine) setDuration(args ...interface{}) () {
+func (this *QTimeLine) Setduration(args ...interface{}) () {
   // setDuration(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -699,10 +757,11 @@ func (this *QTimeLine) setDuration(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "setDuration", args)
   }
 
+  return
 }
 
 // ~QTimeLine()
-func (this *QTimeLine) FreeQTimeLine(args ...interface{}) () {
+func (this *QTimeLine) Freeqtimeline(args ...interface{}) () {
   // ~QTimeLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -719,10 +778,11 @@ func (this *QTimeLine) FreeQTimeLine(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "~QTimeLine", args)
   }
 
+  return
 }
 
 // setStartFrame(int)
-func (this *QTimeLine) setStartFrame(args ...interface{}) () {
+func (this *QTimeLine) Setstartframe(args ...interface{}) () {
   // setStartFrame(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -742,10 +802,11 @@ func (this *QTimeLine) setStartFrame(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "setStartFrame", args)
   }
 
+  return
 }
 
 // setPaused(_Bool)
-func (this *QTimeLine) setPaused(args ...interface{}) () {
+func (this *QTimeLine) Setpaused(args ...interface{}) () {
   // setPaused(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -765,6 +826,7 @@ func (this *QTimeLine) setPaused(args ...interface{}) () {
     qtrt.ErrorResolve("QTimeLine", "setPaused", args)
   }
 
+  return
 }
 
 // <= body block end

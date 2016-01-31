@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QStyleHints * QGuiApplication::styleHints();
-extern void C_ZN15QGuiApplication10styleHintsEv(); // 4
+extern void* C_ZN15QGuiApplication10styleHintsEv(); // 4
   // proto: static void QGuiApplication::setOverrideCursor(const QCursor & );
 extern void C_ZN15QGuiApplication17setOverrideCursorERK7QCursor(void* arg0); // 4
   // proto: static void QGuiApplication::sync();
@@ -41,53 +41,53 @@ extern void C_ZN15QGuiApplication7screensEv(); // 4
   // proto: static Qt::ApplicationState QGuiApplication::applicationState();
 extern void C_ZN15QGuiApplication16applicationStateEv(); // 4
   // proto:  bool QGuiApplication::notify(QObject * , QEvent * );
-extern void C_ZN15QGuiApplication6notifyEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
+extern bool C_ZN15QGuiApplication6notifyEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
   // proto: static Qt::KeyboardModifiers QGuiApplication::queryKeyboardModifiers();
 extern void C_ZN15QGuiApplication22queryKeyboardModifiersEv(); // 4
   // proto:  bool QGuiApplication::isSavingSession();
-extern void C_ZNK15QGuiApplication15isSavingSessionEv(void* qthis); // 4
+extern bool C_ZNK15QGuiApplication15isSavingSessionEv(void* qthis); // 4
   // proto: static void QGuiApplication::changeOverrideCursor(const QCursor & );
 extern void C_ZN15QGuiApplication20changeOverrideCursorERK7QCursor(void* arg0); // 4
   // proto: static QFont QGuiApplication::font();
-extern void C_ZN15QGuiApplication4fontEv(); // 4
+extern void* C_ZN15QGuiApplication4fontEv(); // 4
   // proto: static bool QGuiApplication::quitOnLastWindowClosed();
-extern void C_ZN15QGuiApplication22quitOnLastWindowClosedEv(); // 4
+extern bool C_ZN15QGuiApplication22quitOnLastWindowClosedEv(); // 4
   // proto: static QPalette QGuiApplication::palette();
-extern void C_ZN15QGuiApplication7paletteEv(); // 4
+extern void* C_ZN15QGuiApplication7paletteEv(); // 4
   // proto: static void QGuiApplication::setApplicationDisplayName(const QString & name);
 extern void C_ZN15QGuiApplication25setApplicationDisplayNameERK7QString(void* arg0); // 4
   // proto: static Qt::LayoutDirection QGuiApplication::layoutDirection();
 extern void C_ZN15QGuiApplication15layoutDirectionEv(); // 4
   // proto: static int QGuiApplication::exec();
-extern void C_ZN15QGuiApplication4execEv(); // 4
+extern int32_t C_ZN15QGuiApplication4execEv(); // 4
   // proto:  QString QGuiApplication::sessionId();
-extern void C_ZNK15QGuiApplication9sessionIdEv(void* qthis); // 4
+extern void* C_ZNK15QGuiApplication9sessionIdEv(void* qthis); // 4
   // proto:  QString QGuiApplication::sessionKey();
-extern void C_ZNK15QGuiApplication10sessionKeyEv(void* qthis); // 4
+extern void* C_ZNK15QGuiApplication10sessionKeyEv(void* qthis); // 4
   // proto: static QObject * QGuiApplication::focusObject();
-extern void C_ZN15QGuiApplication11focusObjectEv(); // 4
+extern void* C_ZN15QGuiApplication11focusObjectEv(); // 4
   // proto: static QFunctionPointer QGuiApplication::platformFunction(const QByteArray & function);
 extern void C_ZN15QGuiApplication16platformFunctionERK10QByteArray(void* arg0); // 4
   // proto: static Qt::KeyboardModifiers QGuiApplication::keyboardModifiers();
 extern void C_ZN15QGuiApplication17keyboardModifiersEv(); // 4
   // proto: static QString QGuiApplication::platformName();
-extern void C_ZN15QGuiApplication12platformNameEv(); // 4
+extern void* C_ZN15QGuiApplication12platformNameEv(); // 4
   // proto: static QWindow * QGuiApplication::focusWindow();
-extern void C_ZN15QGuiApplication11focusWindowEv(); // 4
+extern void* C_ZN15QGuiApplication11focusWindowEv(); // 4
   // proto: static bool QGuiApplication::isRightToLeft();
-extern void C_ZN15QGuiApplication13isRightToLeftEv(); // 2
+extern bool C_ZN15QGuiApplication13isRightToLeftEv(); // 2
   // proto: static QWindow * QGuiApplication::topLevelAt(const QPoint & pos);
-extern void C_ZN15QGuiApplication10topLevelAtERK6QPoint(void* arg0); // 4
+extern void* C_ZN15QGuiApplication10topLevelAtERK6QPoint(void* arg0); // 4
   // proto: static QString QGuiApplication::applicationDisplayName();
-extern void C_ZN15QGuiApplication22applicationDisplayNameEv(); // 4
+extern void* C_ZN15QGuiApplication22applicationDisplayNameEv(); // 4
   // proto: static QInputMethod * QGuiApplication::inputMethod();
-extern void C_ZN15QGuiApplication11inputMethodEv(); // 4
+extern void* C_ZN15QGuiApplication11inputMethodEv(); // 4
   // proto: static QClipboard * QGuiApplication::clipboard();
-extern void C_ZN15QGuiApplication9clipboardEv(); // 4
+extern void* C_ZN15QGuiApplication9clipboardEv(); // 4
   // proto: static QCursor * QGuiApplication::overrideCursor();
-extern void C_ZN15QGuiApplication14overrideCursorEv(); // 4
+extern void* C_ZN15QGuiApplication14overrideCursorEv(); // 4
   // proto: static QScreen * QGuiApplication::primaryScreen();
-extern void C_ZN15QGuiApplication13primaryScreenEv(); // 4
+extern void* C_ZN15QGuiApplication13primaryScreenEv(); // 4
   // proto: static QWindowList QGuiApplication::allWindows();
 extern void C_ZN15QGuiApplication10allWindowsEv(); // 4
   // proto:  void QGuiApplication::~QGuiApplication();
@@ -101,29 +101,29 @@ extern void C_ZN15QGuiApplication23platformNativeInterfaceEv(); // 4
   // proto:  const QMetaObject * QGuiApplication::metaObject();
 extern void C_ZNK15QGuiApplication10metaObjectEv(void* qthis); // 4
   // proto:  qreal QGuiApplication::devicePixelRatio();
-extern void C_ZNK15QGuiApplication16devicePixelRatioEv(void* qthis); // 4
+extern double C_ZNK15QGuiApplication16devicePixelRatioEv(void* qthis); // 4
   // proto: static QWindow * QGuiApplication::modalWindow();
-extern void C_ZN15QGuiApplication11modalWindowEv(); // 4
+extern void* C_ZN15QGuiApplication11modalWindowEv(); // 4
   // proto:  void QGuiApplication::QGuiApplication(int & argc, char ** argv, int );
-extern void* C_ZN15QGuiApplicationC2ERiPPci(int32_t* arg0, unsigned char* arg1, int32_t arg2); // 3
+extern void* C_ZN15QGuiApplicationC2ERiPPci(void* arg0, void* arg1, int32_t arg2); // 3
   // proto: static bool QGuiApplication::isLeftToRight();
-extern void C_ZN15QGuiApplication13isLeftToRightEv(); // 2
+extern bool C_ZN15QGuiApplication13isLeftToRightEv(); // 2
   // proto: static void QGuiApplication::setWindowIcon(const QIcon & icon);
 extern void C_ZN15QGuiApplication13setWindowIconERK5QIcon(void* arg0); // 4
   // proto: static void QGuiApplication::setQuitOnLastWindowClosed(bool quit);
 extern void C_ZN15QGuiApplication25setQuitOnLastWindowClosedEb(bool arg0); // 4
   // proto: static bool QGuiApplication::desktopSettingsAware();
-extern void C_ZN15QGuiApplication20desktopSettingsAwareEv(); // 4
+extern bool C_ZN15QGuiApplication20desktopSettingsAwareEv(); // 4
   // proto: static void QGuiApplication::setFont(const QFont & );
 extern void C_ZN15QGuiApplication7setFontERK5QFont(void* arg0); // 4
   // proto: static QWindowList QGuiApplication::topLevelWindows();
 extern void C_ZN15QGuiApplication15topLevelWindowsEv(); // 4
   // proto:  bool QGuiApplication::isSessionRestored();
-extern void C_ZNK15QGuiApplication17isSessionRestoredEv(void* qthis); // 4
+extern bool C_ZNK15QGuiApplication17isSessionRestoredEv(void* qthis); // 4
   // proto: static void QGuiApplication::restoreOverrideCursor();
 extern void C_ZN15QGuiApplication21restoreOverrideCursorEv(); // 4
   // proto: static QIcon QGuiApplication::windowIcon();
-extern void C_ZN15QGuiApplication10windowIconEv(); // 4
+extern void* C_ZN15QGuiApplication10windowIconEv(); // 4
 */
 import "C"
 // } // <= ext block end
@@ -154,7 +154,7 @@ type QGuiApplication struct {
 }
 
 // styleHints()
-func (this *QGuiApplication) styleHints_s(args ...interface{}) () {
+func (this *QGuiApplication) Stylehints_S(args ...interface{}) (ret interface{}) {
   // styleHints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -166,16 +166,20 @@ func (this *QGuiApplication) styleHints_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication10styleHintsEv
     // invoke: QStyleHints * styleHints()
-    var ret = C.C_ZN15QGuiApplication10styleHintsEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication10styleHintsEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QStyleHints{}) // "QStyleHints *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "styleHints", args)
   }
 
+  return
 }
 
 // setOverrideCursor(const class QCursor &)
-func (this *QGuiApplication) setOverrideCursor_s(args ...interface{}) () {
+func (this *QGuiApplication) Setoverridecursor_S(args ...interface{}) () {
   // setOverrideCursor(const class QCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -195,10 +199,11 @@ func (this *QGuiApplication) setOverrideCursor_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "setOverrideCursor", args)
   }
 
+  return
 }
 
 // sync()
-func (this *QGuiApplication) sync_s(args ...interface{}) () {
+func (this *QGuiApplication) Sync_S(args ...interface{}) () {
   // sync()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -215,10 +220,11 @@ func (this *QGuiApplication) sync_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "sync", args)
   }
 
+  return
 }
 
 // setPalette(const class QPalette &)
-func (this *QGuiApplication) setPalette_s(args ...interface{}) () {
+func (this *QGuiApplication) Setpalette_S(args ...interface{}) () {
   // setPalette(const class QPalette &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -238,10 +244,11 @@ func (this *QGuiApplication) setPalette_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "setPalette", args)
   }
 
+  return
 }
 
 // screens()
-func (this *QGuiApplication) screens_s(args ...interface{}) () {
+func (this *QGuiApplication) Screens_S(args ...interface{}) () {
   // screens()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -258,10 +265,11 @@ func (this *QGuiApplication) screens_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "screens", args)
   }
 
+  return
 }
 
 // applicationState()
-func (this *QGuiApplication) applicationState_s(args ...interface{}) () {
+func (this *QGuiApplication) Applicationstate_S(args ...interface{}) () {
   // applicationState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -278,10 +286,11 @@ func (this *QGuiApplication) applicationState_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "applicationState", args)
   }
 
+  return
 }
 
 // notify(class QObject *, class QEvent *)
-func (this *QGuiApplication) notify(args ...interface{}) () {
+func (this *QGuiApplication) Notify(args ...interface{}) (ret interface{}) {
   // notify(class QObject *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -299,16 +308,20 @@ func (this *QGuiApplication) notify(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZN15QGuiApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "notify", args)
   }
 
+  return
 }
 
 // queryKeyboardModifiers()
-func (this *QGuiApplication) queryKeyboardModifiers_s(args ...interface{}) () {
+func (this *QGuiApplication) Querykeyboardmodifiers_S(args ...interface{}) () {
   // queryKeyboardModifiers()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -325,10 +338,11 @@ func (this *QGuiApplication) queryKeyboardModifiers_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "queryKeyboardModifiers", args)
   }
 
+  return
 }
 
 // isSavingSession()
-func (this *QGuiApplication) isSavingSession(args ...interface{}) () {
+func (this *QGuiApplication) Issavingsession(args ...interface{}) (ret interface{}) {
   // isSavingSession()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -340,16 +354,20 @@ func (this *QGuiApplication) isSavingSession(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGuiApplication15isSavingSessionEv
     // invoke: bool isSavingSession()
-    var ret = C.C_ZNK15QGuiApplication15isSavingSessionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGuiApplication15isSavingSessionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "isSavingSession", args)
   }
 
+  return
 }
 
 // changeOverrideCursor(const class QCursor &)
-func (this *QGuiApplication) changeOverrideCursor_s(args ...interface{}) () {
+func (this *QGuiApplication) Changeoverridecursor_S(args ...interface{}) () {
   // changeOverrideCursor(const class QCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -369,10 +387,11 @@ func (this *QGuiApplication) changeOverrideCursor_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "changeOverrideCursor", args)
   }
 
+  return
 }
 
 // font()
-func (this *QGuiApplication) font_s(args ...interface{}) () {
+func (this *QGuiApplication) Font_S(args ...interface{}) (ret interface{}) {
   // font()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -384,16 +403,20 @@ func (this *QGuiApplication) font_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication4fontEv
     // invoke: QFont font()
-    var ret = C.C_ZN15QGuiApplication4fontEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication4fontEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QFont{}) // "QFont"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "font", args)
   }
 
+  return
 }
 
 // quitOnLastWindowClosed()
-func (this *QGuiApplication) quitOnLastWindowClosed_s(args ...interface{}) () {
+func (this *QGuiApplication) Quitonlastwindowclosed_S(args ...interface{}) (ret interface{}) {
   // quitOnLastWindowClosed()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -405,16 +428,20 @@ func (this *QGuiApplication) quitOnLastWindowClosed_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication22quitOnLastWindowClosedEv
     // invoke: bool quitOnLastWindowClosed()
-    var ret = C.C_ZN15QGuiApplication22quitOnLastWindowClosedEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication22quitOnLastWindowClosedEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "quitOnLastWindowClosed", args)
   }
 
+  return
 }
 
 // palette()
-func (this *QGuiApplication) palette_s(args ...interface{}) () {
+func (this *QGuiApplication) Palette_S(args ...interface{}) (ret interface{}) {
   // palette()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -426,16 +453,20 @@ func (this *QGuiApplication) palette_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication7paletteEv
     // invoke: QPalette palette()
-    var ret = C.C_ZN15QGuiApplication7paletteEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication7paletteEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPalette{}) // "QPalette"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "palette", args)
   }
 
+  return
 }
 
 // setApplicationDisplayName(const class QString &)
-func (this *QGuiApplication) setApplicationDisplayName_s(args ...interface{}) () {
+func (this *QGuiApplication) Setapplicationdisplayname_S(args ...interface{}) () {
   // setApplicationDisplayName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -455,10 +486,11 @@ func (this *QGuiApplication) setApplicationDisplayName_s(args ...interface{}) ()
     qtrt.ErrorResolve("QGuiApplication", "setApplicationDisplayName", args)
   }
 
+  return
 }
 
 // layoutDirection()
-func (this *QGuiApplication) layoutDirection_s(args ...interface{}) () {
+func (this *QGuiApplication) Layoutdirection_S(args ...interface{}) () {
   // layoutDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -475,10 +507,11 @@ func (this *QGuiApplication) layoutDirection_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "layoutDirection", args)
   }
 
+  return
 }
 
 // exec()
-func (this *QGuiApplication) exec_s(args ...interface{}) () {
+func (this *QGuiApplication) Exec_S(args ...interface{}) (ret interface{}) {
   // exec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -490,16 +523,20 @@ func (this *QGuiApplication) exec_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication4execEv
     // invoke: int exec()
-    var ret = C.C_ZN15QGuiApplication4execEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication4execEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "exec", args)
   }
 
+  return
 }
 
 // sessionId()
-func (this *QGuiApplication) sessionId(args ...interface{}) () {
+func (this *QGuiApplication) Sessionid(args ...interface{}) (ret interface{}) {
   // sessionId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -511,16 +548,20 @@ func (this *QGuiApplication) sessionId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGuiApplication9sessionIdEv
     // invoke: QString sessionId()
-    var ret = C.C_ZNK15QGuiApplication9sessionIdEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGuiApplication9sessionIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "sessionId", args)
   }
 
+  return
 }
 
 // sessionKey()
-func (this *QGuiApplication) sessionKey(args ...interface{}) () {
+func (this *QGuiApplication) Sessionkey(args ...interface{}) (ret interface{}) {
   // sessionKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -532,16 +573,20 @@ func (this *QGuiApplication) sessionKey(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGuiApplication10sessionKeyEv
     // invoke: QString sessionKey()
-    var ret = C.C_ZNK15QGuiApplication10sessionKeyEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGuiApplication10sessionKeyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "sessionKey", args)
   }
 
+  return
 }
 
 // focusObject()
-func (this *QGuiApplication) focusObject_s(args ...interface{}) () {
+func (this *QGuiApplication) Focusobject_S(args ...interface{}) (ret interface{}) {
   // focusObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -553,16 +598,20 @@ func (this *QGuiApplication) focusObject_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication11focusObjectEv
     // invoke: QObject * focusObject()
-    var ret = C.C_ZN15QGuiApplication11focusObjectEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication11focusObjectEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QObject{}) // "QObject *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "focusObject", args)
   }
 
+  return
 }
 
 // platformFunction(const class QByteArray &)
-func (this *QGuiApplication) platformFunction_s(args ...interface{}) () {
+func (this *QGuiApplication) Platformfunction_S(args ...interface{}) () {
   // platformFunction(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -582,10 +631,11 @@ func (this *QGuiApplication) platformFunction_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "platformFunction", args)
   }
 
+  return
 }
 
 // keyboardModifiers()
-func (this *QGuiApplication) keyboardModifiers_s(args ...interface{}) () {
+func (this *QGuiApplication) Keyboardmodifiers_S(args ...interface{}) () {
   // keyboardModifiers()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -602,10 +652,11 @@ func (this *QGuiApplication) keyboardModifiers_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "keyboardModifiers", args)
   }
 
+  return
 }
 
 // platformName()
-func (this *QGuiApplication) platformName_s(args ...interface{}) () {
+func (this *QGuiApplication) Platformname_S(args ...interface{}) (ret interface{}) {
   // platformName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -617,16 +668,20 @@ func (this *QGuiApplication) platformName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication12platformNameEv
     // invoke: QString platformName()
-    var ret = C.C_ZN15QGuiApplication12platformNameEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication12platformNameEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "platformName", args)
   }
 
+  return
 }
 
 // focusWindow()
-func (this *QGuiApplication) focusWindow_s(args ...interface{}) () {
+func (this *QGuiApplication) Focuswindow_S(args ...interface{}) (ret interface{}) {
   // focusWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -638,16 +693,20 @@ func (this *QGuiApplication) focusWindow_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication11focusWindowEv
     // invoke: QWindow * focusWindow()
-    var ret = C.C_ZN15QGuiApplication11focusWindowEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication11focusWindowEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWindow{}) // "QWindow *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "focusWindow", args)
   }
 
+  return
 }
 
 // isRightToLeft()
-func (this *QGuiApplication) isRightToLeft_s(args ...interface{}) () {
+func (this *QGuiApplication) Isrighttoleft_S(args ...interface{}) (ret interface{}) {
   // isRightToLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -659,16 +718,20 @@ func (this *QGuiApplication) isRightToLeft_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication13isRightToLeftEv
     // invoke: bool isRightToLeft()
-    var ret = C.C_ZN15QGuiApplication13isRightToLeftEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication13isRightToLeftEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "isRightToLeft", args)
   }
 
+  return
 }
 
 // topLevelAt(const class QPoint &)
-func (this *QGuiApplication) topLevelAt_s(args ...interface{}) () {
+func (this *QGuiApplication) Toplevelat_S(args ...interface{}) (ret interface{}) {
   // topLevelAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -683,16 +746,20 @@ func (this *QGuiApplication) topLevelAt_s(args ...interface{}) () {
     // invoke: QWindow * topLevelAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN15QGuiApplication10topLevelAtERK6QPoint(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication10topLevelAtERK6QPoint(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWindow{}) // "QWindow *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "topLevelAt", args)
   }
 
+  return
 }
 
 // applicationDisplayName()
-func (this *QGuiApplication) applicationDisplayName_s(args ...interface{}) () {
+func (this *QGuiApplication) Applicationdisplayname_S(args ...interface{}) (ret interface{}) {
   // applicationDisplayName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -704,16 +771,20 @@ func (this *QGuiApplication) applicationDisplayName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication22applicationDisplayNameEv
     // invoke: QString applicationDisplayName()
-    var ret = C.C_ZN15QGuiApplication22applicationDisplayNameEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication22applicationDisplayNameEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "applicationDisplayName", args)
   }
 
+  return
 }
 
 // inputMethod()
-func (this *QGuiApplication) inputMethod_s(args ...interface{}) () {
+func (this *QGuiApplication) Inputmethod_S(args ...interface{}) (ret interface{}) {
   // inputMethod()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -725,16 +796,20 @@ func (this *QGuiApplication) inputMethod_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication11inputMethodEv
     // invoke: QInputMethod * inputMethod()
-    var ret = C.C_ZN15QGuiApplication11inputMethodEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication11inputMethodEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QInputMethod{}) // "QInputMethod *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "inputMethod", args)
   }
 
+  return
 }
 
 // clipboard()
-func (this *QGuiApplication) clipboard_s(args ...interface{}) () {
+func (this *QGuiApplication) Clipboard_S(args ...interface{}) (ret interface{}) {
   // clipboard()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -746,16 +821,20 @@ func (this *QGuiApplication) clipboard_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication9clipboardEv
     // invoke: QClipboard * clipboard()
-    var ret = C.C_ZN15QGuiApplication9clipboardEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication9clipboardEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QClipboard{}) // "QClipboard *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "clipboard", args)
   }
 
+  return
 }
 
 // overrideCursor()
-func (this *QGuiApplication) overrideCursor_s(args ...interface{}) () {
+func (this *QGuiApplication) Overridecursor_S(args ...interface{}) (ret interface{}) {
   // overrideCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -767,16 +846,20 @@ func (this *QGuiApplication) overrideCursor_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication14overrideCursorEv
     // invoke: QCursor * overrideCursor()
-    var ret = C.C_ZN15QGuiApplication14overrideCursorEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication14overrideCursorEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QCursor{}) // "QCursor *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "overrideCursor", args)
   }
 
+  return
 }
 
 // primaryScreen()
-func (this *QGuiApplication) primaryScreen_s(args ...interface{}) () {
+func (this *QGuiApplication) Primaryscreen_S(args ...interface{}) (ret interface{}) {
   // primaryScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -788,16 +871,20 @@ func (this *QGuiApplication) primaryScreen_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication13primaryScreenEv
     // invoke: QScreen * primaryScreen()
-    var ret = C.C_ZN15QGuiApplication13primaryScreenEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication13primaryScreenEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QScreen{}) // "QScreen *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "primaryScreen", args)
   }
 
+  return
 }
 
 // allWindows()
-func (this *QGuiApplication) allWindows_s(args ...interface{}) () {
+func (this *QGuiApplication) Allwindows_S(args ...interface{}) () {
   // allWindows()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -814,10 +901,11 @@ func (this *QGuiApplication) allWindows_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "allWindows", args)
   }
 
+  return
 }
 
 // ~QGuiApplication()
-func (this *QGuiApplication) FreeQGuiApplication(args ...interface{}) () {
+func (this *QGuiApplication) Freeqguiapplication(args ...interface{}) () {
   // ~QGuiApplication()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -834,10 +922,11 @@ func (this *QGuiApplication) FreeQGuiApplication(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "~QGuiApplication", args)
   }
 
+  return
 }
 
 // setDesktopSettingsAware(_Bool)
-func (this *QGuiApplication) setDesktopSettingsAware_s(args ...interface{}) () {
+func (this *QGuiApplication) Setdesktopsettingsaware_S(args ...interface{}) () {
   // setDesktopSettingsAware(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -857,10 +946,11 @@ func (this *QGuiApplication) setDesktopSettingsAware_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "setDesktopSettingsAware", args)
   }
 
+  return
 }
 
 // mouseButtons()
-func (this *QGuiApplication) mouseButtons_s(args ...interface{}) () {
+func (this *QGuiApplication) Mousebuttons_S(args ...interface{}) () {
   // mouseButtons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -877,10 +967,11 @@ func (this *QGuiApplication) mouseButtons_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "mouseButtons", args)
   }
 
+  return
 }
 
 // platformNativeInterface()
-func (this *QGuiApplication) platformNativeInterface_s(args ...interface{}) () {
+func (this *QGuiApplication) Platformnativeinterface_S(args ...interface{}) () {
   // platformNativeInterface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -897,10 +988,11 @@ func (this *QGuiApplication) platformNativeInterface_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "platformNativeInterface", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QGuiApplication) metaObject(args ...interface{}) () {
+func (this *QGuiApplication) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -917,10 +1009,11 @@ func (this *QGuiApplication) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "metaObject", args)
   }
 
+  return
 }
 
 // devicePixelRatio()
-func (this *QGuiApplication) devicePixelRatio(args ...interface{}) () {
+func (this *QGuiApplication) Devicepixelratio(args ...interface{}) (ret interface{}) {
   // devicePixelRatio()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -932,16 +1025,20 @@ func (this *QGuiApplication) devicePixelRatio(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGuiApplication16devicePixelRatioEv
     // invoke: qreal devicePixelRatio()
-    var ret = C.C_ZNK15QGuiApplication16devicePixelRatioEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGuiApplication16devicePixelRatioEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "devicePixelRatio", args)
   }
 
+  return
 }
 
 // modalWindow()
-func (this *QGuiApplication) modalWindow_s(args ...interface{}) () {
+func (this *QGuiApplication) Modalwindow_S(args ...interface{}) (ret interface{}) {
   // modalWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -953,12 +1050,16 @@ func (this *QGuiApplication) modalWindow_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication11modalWindowEv
     // invoke: QWindow * modalWindow()
-    var ret = C.C_ZN15QGuiApplication11modalWindowEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication11modalWindowEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWindow{}) // "QWindow *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "modalWindow", args)
   }
 
+  return
 }
 
 // QGuiApplication(int &, char **, int)
@@ -977,10 +1078,12 @@ func NewQGuiApplication(args ...interface{}) *QGuiApplication {
   case 0:
     // invoke: _ZN15QGuiApplicationC1ERiPPci
     // invoke: void QGuiApplication(int &, char **, int)
-    var arg0 = (*C.int32_t)(args[0].(*int32))
+    var arg0 = (unsafe.Pointer)(args[0].(*int32))
     if false {fmt.Println(arg0)}
-    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
-    if false {fmt.Println(arg1)}
+    argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
+    var arg1 = argif1.(unsafe.Pointer)
+    if false {fmt.Println(argif1, arg1)}
+    if free1 {defer C.free(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
@@ -995,7 +1098,7 @@ func NewQGuiApplication(args ...interface{}) *QGuiApplication {
 }
 
 // isLeftToRight()
-func (this *QGuiApplication) isLeftToRight_s(args ...interface{}) () {
+func (this *QGuiApplication) Islefttoright_S(args ...interface{}) (ret interface{}) {
   // isLeftToRight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1007,16 +1110,20 @@ func (this *QGuiApplication) isLeftToRight_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication13isLeftToRightEv
     // invoke: bool isLeftToRight()
-    var ret = C.C_ZN15QGuiApplication13isLeftToRightEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication13isLeftToRightEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "isLeftToRight", args)
   }
 
+  return
 }
 
 // setWindowIcon(const class QIcon &)
-func (this *QGuiApplication) setWindowIcon_s(args ...interface{}) () {
+func (this *QGuiApplication) Setwindowicon_S(args ...interface{}) () {
   // setWindowIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1036,10 +1143,11 @@ func (this *QGuiApplication) setWindowIcon_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "setWindowIcon", args)
   }
 
+  return
 }
 
 // setQuitOnLastWindowClosed(_Bool)
-func (this *QGuiApplication) setQuitOnLastWindowClosed_s(args ...interface{}) () {
+func (this *QGuiApplication) Setquitonlastwindowclosed_S(args ...interface{}) () {
   // setQuitOnLastWindowClosed(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1059,10 +1167,11 @@ func (this *QGuiApplication) setQuitOnLastWindowClosed_s(args ...interface{}) ()
     qtrt.ErrorResolve("QGuiApplication", "setQuitOnLastWindowClosed", args)
   }
 
+  return
 }
 
 // desktopSettingsAware()
-func (this *QGuiApplication) desktopSettingsAware_s(args ...interface{}) () {
+func (this *QGuiApplication) Desktopsettingsaware_S(args ...interface{}) (ret interface{}) {
   // desktopSettingsAware()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1074,16 +1183,20 @@ func (this *QGuiApplication) desktopSettingsAware_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication20desktopSettingsAwareEv
     // invoke: bool desktopSettingsAware()
-    var ret = C.C_ZN15QGuiApplication20desktopSettingsAwareEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication20desktopSettingsAwareEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "desktopSettingsAware", args)
   }
 
+  return
 }
 
 // setFont(const class QFont &)
-func (this *QGuiApplication) setFont_s(args ...interface{}) () {
+func (this *QGuiApplication) Setfont_S(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1103,10 +1216,11 @@ func (this *QGuiApplication) setFont_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "setFont", args)
   }
 
+  return
 }
 
 // topLevelWindows()
-func (this *QGuiApplication) topLevelWindows_s(args ...interface{}) () {
+func (this *QGuiApplication) Toplevelwindows_S(args ...interface{}) () {
   // topLevelWindows()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1123,10 +1237,11 @@ func (this *QGuiApplication) topLevelWindows_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "topLevelWindows", args)
   }
 
+  return
 }
 
 // isSessionRestored()
-func (this *QGuiApplication) isSessionRestored(args ...interface{}) () {
+func (this *QGuiApplication) Issessionrestored(args ...interface{}) (ret interface{}) {
   // isSessionRestored()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1138,16 +1253,20 @@ func (this *QGuiApplication) isSessionRestored(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGuiApplication17isSessionRestoredEv
     // invoke: bool isSessionRestored()
-    var ret = C.C_ZNK15QGuiApplication17isSessionRestoredEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK15QGuiApplication17isSessionRestoredEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "isSessionRestored", args)
   }
 
+  return
 }
 
 // restoreOverrideCursor()
-func (this *QGuiApplication) restoreOverrideCursor_s(args ...interface{}) () {
+func (this *QGuiApplication) Restoreoverridecursor_S(args ...interface{}) () {
   // restoreOverrideCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1164,10 +1283,11 @@ func (this *QGuiApplication) restoreOverrideCursor_s(args ...interface{}) () {
     qtrt.ErrorResolve("QGuiApplication", "restoreOverrideCursor", args)
   }
 
+  return
 }
 
 // windowIcon()
-func (this *QGuiApplication) windowIcon_s(args ...interface{}) () {
+func (this *QGuiApplication) Windowicon_S(args ...interface{}) (ret interface{}) {
   // windowIcon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1179,12 +1299,16 @@ func (this *QGuiApplication) windowIcon_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication10windowIconEv
     // invoke: QIcon windowIcon()
-    var ret = C.C_ZN15QGuiApplication10windowIconEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN15QGuiApplication10windowIconEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QIcon{}) // "QIcon"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGuiApplication", "windowIcon", args)
   }
 
+  return
 }
 
 // <= body block end

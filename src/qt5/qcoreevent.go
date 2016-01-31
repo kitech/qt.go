@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qcoreevent.h
 // dst-file: /src/core/qcoreevent.go
 //
@@ -33,39 +33,39 @@ extern void* C_ZN20QDeferredDeleteEventC2Ev(); // 3
   // proto:  void QDeferredDeleteEvent::~QDeferredDeleteEvent();
 extern void C_ZN20QDeferredDeleteEventD2Ev(void* qthis); // 4
   // proto:  int QDeferredDeleteEvent::loopLevel();
-extern void C_ZNK20QDeferredDeleteEvent9loopLevelEv(void* qthis); // 2
+extern int32_t C_ZNK20QDeferredDeleteEvent9loopLevelEv(void* qthis); // 2
   // proto:  void QDynamicPropertyChangeEvent::QDynamicPropertyChangeEvent(const QByteArray & name);
 extern void* C_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray(void* arg0); // 3
   // proto:  QByteArray QDynamicPropertyChangeEvent::propertyName();
-extern void C_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(void* qthis); // 2
+extern void* C_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(void* qthis); // 2
   // proto:  void QDynamicPropertyChangeEvent::~QDynamicPropertyChangeEvent();
 extern void C_ZN27QDynamicPropertyChangeEventD2Ev(void* qthis); // 4
   // proto:  int QTimerEvent::timerId();
-extern void C_ZNK11QTimerEvent7timerIdEv(void* qthis); // 2
+extern int32_t C_ZNK11QTimerEvent7timerIdEv(void* qthis); // 2
   // proto:  void QTimerEvent::~QTimerEvent();
 extern void C_ZN11QTimerEventD2Ev(void* qthis); // 4
   // proto:  void QTimerEvent::QTimerEvent(int timerId);
 extern void* C_ZN11QTimerEventC2Ei(int32_t arg0); // 3
   // proto:  bool QChildEvent::added();
-extern void C_ZNK11QChildEvent5addedEv(void* qthis); // 2
+extern bool C_ZNK11QChildEvent5addedEv(void* qthis); // 2
   // proto:  bool QChildEvent::polished();
-extern void C_ZNK11QChildEvent8polishedEv(void* qthis); // 2
+extern bool C_ZNK11QChildEvent8polishedEv(void* qthis); // 2
   // proto:  void QChildEvent::~QChildEvent();
 extern void C_ZN11QChildEventD2Ev(void* qthis); // 4
   // proto:  QObject * QChildEvent::child();
-extern void C_ZNK11QChildEvent5childEv(void* qthis); // 2
+extern void* C_ZNK11QChildEvent5childEv(void* qthis); // 2
   // proto:  bool QChildEvent::removed();
-extern void C_ZNK11QChildEvent7removedEv(void* qthis); // 2
+extern bool C_ZNK11QChildEvent7removedEv(void* qthis); // 2
   // proto: static int QEvent::registerEventType(int hint);
-extern void C_ZN6QEvent17registerEventTypeEi(int32_t arg0); // 4
+extern int32_t C_ZN6QEvent17registerEventTypeEi(int32_t arg0); // 4
   // proto:  bool QEvent::spontaneous();
-extern void C_ZNK6QEvent11spontaneousEv(void* qthis); // 2
+extern bool C_ZNK6QEvent11spontaneousEv(void* qthis); // 2
   // proto:  void QEvent::accept();
 extern void C_ZN6QEvent6acceptEv(void* qthis); // 2
   // proto:  void QEvent::ignore();
 extern void C_ZN6QEvent6ignoreEv(void* qthis); // 2
   // proto:  bool QEvent::isAccepted();
-extern void C_ZNK6QEvent10isAcceptedEv(void* qthis); // 2
+extern bool C_ZNK6QEvent10isAcceptedEv(void* qthis); // 2
   // proto:  void QEvent::setAccepted(bool accepted);
 extern void C_ZN6QEvent11setAcceptedEb(void* qthis, bool arg0); // 2
   // proto:  QEvent::Type QEvent::type();
@@ -141,7 +141,7 @@ func NewQDeferredDeleteEvent(args ...interface{}) *QDeferredDeleteEvent {
 }
 
 // ~QDeferredDeleteEvent()
-func (this *QDeferredDeleteEvent) FreeQDeferredDeleteEvent(args ...interface{}) () {
+func (this *QDeferredDeleteEvent) Freeqdeferreddeleteevent(args ...interface{}) () {
   // ~QDeferredDeleteEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -158,10 +158,11 @@ func (this *QDeferredDeleteEvent) FreeQDeferredDeleteEvent(args ...interface{}) 
     qtrt.ErrorResolve("QDeferredDeleteEvent", "~QDeferredDeleteEvent", args)
   }
 
+  return
 }
 
 // loopLevel()
-func (this *QDeferredDeleteEvent) loopLevel(args ...interface{}) () {
+func (this *QDeferredDeleteEvent) Looplevel(args ...interface{}) (ret interface{}) {
   // loopLevel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -173,12 +174,16 @@ func (this *QDeferredDeleteEvent) loopLevel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QDeferredDeleteEvent9loopLevelEv
     // invoke: int loopLevel()
-    var ret = C.C_ZNK20QDeferredDeleteEvent9loopLevelEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK20QDeferredDeleteEvent9loopLevelEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "loopLevel", args)
   }
 
+  return
 }
 
 // QDynamicPropertyChangeEvent(const class QByteArray &)
@@ -209,7 +214,7 @@ func NewQDynamicPropertyChangeEvent(args ...interface{}) *QDynamicPropertyChange
 }
 
 // propertyName()
-func (this *QDynamicPropertyChangeEvent) propertyName(args ...interface{}) () {
+func (this *QDynamicPropertyChangeEvent) Propertyname(args ...interface{}) (ret interface{}) {
   // propertyName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -221,16 +226,20 @@ func (this *QDynamicPropertyChangeEvent) propertyName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QDynamicPropertyChangeEvent12propertyNameEv
     // invoke: QByteArray propertyName()
-    var ret = C.C_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "propertyName", args)
   }
 
+  return
 }
 
 // ~QDynamicPropertyChangeEvent()
-func (this *QDynamicPropertyChangeEvent) FreeQDynamicPropertyChangeEvent(args ...interface{}) () {
+func (this *QDynamicPropertyChangeEvent) Freeqdynamicpropertychangeevent(args ...interface{}) () {
   // ~QDynamicPropertyChangeEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -247,10 +256,11 @@ func (this *QDynamicPropertyChangeEvent) FreeQDynamicPropertyChangeEvent(args ..
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "~QDynamicPropertyChangeEvent", args)
   }
 
+  return
 }
 
 // timerId()
-func (this *QTimerEvent) timerId(args ...interface{}) () {
+func (this *QTimerEvent) Timerid(args ...interface{}) (ret interface{}) {
   // timerId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -262,16 +272,20 @@ func (this *QTimerEvent) timerId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTimerEvent7timerIdEv
     // invoke: int timerId()
-    var ret = C.C_ZNK11QTimerEvent7timerIdEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTimerEvent7timerIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTimerEvent", "timerId", args)
   }
 
+  return
 }
 
 // ~QTimerEvent()
-func (this *QTimerEvent) FreeQTimerEvent(args ...interface{}) () {
+func (this *QTimerEvent) Freeqtimerevent(args ...interface{}) () {
   // ~QTimerEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -288,6 +302,7 @@ func (this *QTimerEvent) FreeQTimerEvent(args ...interface{}) () {
     qtrt.ErrorResolve("QTimerEvent", "~QTimerEvent", args)
   }
 
+  return
 }
 
 // QTimerEvent(int)
@@ -318,7 +333,7 @@ func NewQTimerEvent(args ...interface{}) *QTimerEvent {
 }
 
 // added()
-func (this *QChildEvent) added(args ...interface{}) () {
+func (this *QChildEvent) Added(args ...interface{}) (ret interface{}) {
   // added()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -330,16 +345,20 @@ func (this *QChildEvent) added(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QChildEvent5addedEv
     // invoke: bool added()
-    var ret = C.C_ZNK11QChildEvent5addedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QChildEvent5addedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QChildEvent", "added", args)
   }
 
+  return
 }
 
 // polished()
-func (this *QChildEvent) polished(args ...interface{}) () {
+func (this *QChildEvent) Polished(args ...interface{}) (ret interface{}) {
   // polished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -351,16 +370,20 @@ func (this *QChildEvent) polished(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QChildEvent8polishedEv
     // invoke: bool polished()
-    var ret = C.C_ZNK11QChildEvent8polishedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QChildEvent8polishedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QChildEvent", "polished", args)
   }
 
+  return
 }
 
 // ~QChildEvent()
-func (this *QChildEvent) FreeQChildEvent(args ...interface{}) () {
+func (this *QChildEvent) Freeqchildevent(args ...interface{}) () {
   // ~QChildEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -377,10 +400,11 @@ func (this *QChildEvent) FreeQChildEvent(args ...interface{}) () {
     qtrt.ErrorResolve("QChildEvent", "~QChildEvent", args)
   }
 
+  return
 }
 
 // child()
-func (this *QChildEvent) child(args ...interface{}) () {
+func (this *QChildEvent) Child(args ...interface{}) (ret interface{}) {
   // child()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -392,16 +416,20 @@ func (this *QChildEvent) child(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QChildEvent5childEv
     // invoke: QObject * child()
-    var ret = C.C_ZNK11QChildEvent5childEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QChildEvent5childEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QObject{}) // "QObject *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QChildEvent", "child", args)
   }
 
+  return
 }
 
 // removed()
-func (this *QChildEvent) removed(args ...interface{}) () {
+func (this *QChildEvent) Removed(args ...interface{}) (ret interface{}) {
   // removed()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -413,16 +441,20 @@ func (this *QChildEvent) removed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QChildEvent7removedEv
     // invoke: bool removed()
-    var ret = C.C_ZNK11QChildEvent7removedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QChildEvent7removedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QChildEvent", "removed", args)
   }
 
+  return
 }
 
 // registerEventType(int)
-func (this *QEvent) registerEventType_s(args ...interface{}) () {
+func (this *QEvent) Registereventtype_S(args ...interface{}) (ret interface{}) {
   // registerEventType(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -437,16 +469,20 @@ func (this *QEvent) registerEventType_s(args ...interface{}) () {
     // invoke: int registerEventType(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN6QEvent17registerEventTypeEi(arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN6QEvent17registerEventTypeEi(arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QEvent", "registerEventType", args)
   }
 
+  return
 }
 
 // spontaneous()
-func (this *QEvent) spontaneous(args ...interface{}) () {
+func (this *QEvent) Spontaneous(args ...interface{}) (ret interface{}) {
   // spontaneous()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -458,16 +494,20 @@ func (this *QEvent) spontaneous(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QEvent11spontaneousEv
     // invoke: bool spontaneous()
-    var ret = C.C_ZNK6QEvent11spontaneousEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QEvent11spontaneousEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QEvent", "spontaneous", args)
   }
 
+  return
 }
 
 // accept()
-func (this *QEvent) accept(args ...interface{}) () {
+func (this *QEvent) Accept(args ...interface{}) () {
   // accept()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -484,10 +524,11 @@ func (this *QEvent) accept(args ...interface{}) () {
     qtrt.ErrorResolve("QEvent", "accept", args)
   }
 
+  return
 }
 
 // ignore()
-func (this *QEvent) ignore(args ...interface{}) () {
+func (this *QEvent) Ignore(args ...interface{}) () {
   // ignore()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -504,10 +545,11 @@ func (this *QEvent) ignore(args ...interface{}) () {
     qtrt.ErrorResolve("QEvent", "ignore", args)
   }
 
+  return
 }
 
 // isAccepted()
-func (this *QEvent) isAccepted(args ...interface{}) () {
+func (this *QEvent) Isaccepted(args ...interface{}) (ret interface{}) {
   // isAccepted()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -519,16 +561,20 @@ func (this *QEvent) isAccepted(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QEvent10isAcceptedEv
     // invoke: bool isAccepted()
-    var ret = C.C_ZNK6QEvent10isAcceptedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK6QEvent10isAcceptedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QEvent", "isAccepted", args)
   }
 
+  return
 }
 
 // setAccepted(_Bool)
-func (this *QEvent) setAccepted(args ...interface{}) () {
+func (this *QEvent) Setaccepted(args ...interface{}) () {
   // setAccepted(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -548,10 +594,11 @@ func (this *QEvent) setAccepted(args ...interface{}) () {
     qtrt.ErrorResolve("QEvent", "setAccepted", args)
   }
 
+  return
 }
 
 // type()
-func (this *QEvent) type_(args ...interface{}) () {
+func (this *QEvent) Type_(args ...interface{}) () {
   // type()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -568,6 +615,7 @@ func (this *QEvent) type_(args ...interface{}) () {
     qtrt.ErrorResolve("QEvent", "type", args)
   }
 
+  return
 }
 
 // QEvent(const class QEvent &)
@@ -598,7 +646,7 @@ func NewQEvent(args ...interface{}) *QEvent {
 }
 
 // ~QEvent()
-func (this *QEvent) FreeQEvent(args ...interface{}) () {
+func (this *QEvent) Freeqevent(args ...interface{}) () {
   // ~QEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -615,6 +663,7 @@ func (this *QEvent) FreeQEvent(args ...interface{}) () {
     qtrt.ErrorResolve("QEvent", "~QEvent", args)
   }
 
+  return
 }
 
 // <= body block end

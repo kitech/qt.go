@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qpluginloader.h
 // dst-file: /src/core/qpluginloader.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QPluginLoader::load();
-extern void C_ZN13QPluginLoader4loadEv(void* qthis); // 4
+extern bool C_ZN13QPluginLoader4loadEv(void* qthis); // 4
   // proto:  QString QPluginLoader::errorString();
-extern void C_ZNK13QPluginLoader11errorStringEv(void* qthis); // 4
+extern void* C_ZNK13QPluginLoader11errorStringEv(void* qthis); // 4
   // proto:  bool QPluginLoader::unload();
-extern void C_ZN13QPluginLoader6unloadEv(void* qthis); // 4
+extern bool C_ZN13QPluginLoader6unloadEv(void* qthis); // 4
   // proto:  void QPluginLoader::QPluginLoader(QObject * parent);
 extern void* C_ZN13QPluginLoaderC2EP7QObject(void* arg0); // 3
   // proto:  void QPluginLoader::QPluginLoader(const QString & fileName, QObject * parent);
@@ -43,11 +43,11 @@ extern void C_ZN13QPluginLoaderD2Ev(void* qthis); // 4
   // proto:  void QPluginLoader::setFileName(const QString & fileName);
 extern void C_ZN13QPluginLoader11setFileNameERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QPluginLoader::isLoaded();
-extern void C_ZNK13QPluginLoader8isLoadedEv(void* qthis); // 4
+extern bool C_ZNK13QPluginLoader8isLoadedEv(void* qthis); // 4
   // proto:  QObject * QPluginLoader::instance();
-extern void C_ZN13QPluginLoader8instanceEv(void* qthis); // 4
+extern void* C_ZN13QPluginLoader8instanceEv(void* qthis); // 4
   // proto:  QString QPluginLoader::fileName();
-extern void C_ZNK13QPluginLoader8fileNameEv(void* qthis); // 4
+extern void* C_ZNK13QPluginLoader8fileNameEv(void* qthis); // 4
   // proto:  QLibrary::LoadHints QPluginLoader::loadHints();
 extern void C_ZNK13QPluginLoader9loadHintsEv(void* qthis); // 4
   // proto:  const QMetaObject * QPluginLoader::metaObject();
@@ -77,7 +77,7 @@ type QPluginLoader struct {
 }
 
 // load()
-func (this *QPluginLoader) load(args ...interface{}) () {
+func (this *QPluginLoader) Load(args ...interface{}) (ret interface{}) {
   // load()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -89,16 +89,20 @@ func (this *QPluginLoader) load(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QPluginLoader4loadEv
     // invoke: bool load()
-    var ret = C.C_ZN13QPluginLoader4loadEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QPluginLoader4loadEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPluginLoader", "load", args)
   }
 
+  return
 }
 
 // errorString()
-func (this *QPluginLoader) errorString(args ...interface{}) () {
+func (this *QPluginLoader) Errorstring(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -110,16 +114,20 @@ func (this *QPluginLoader) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPluginLoader11errorStringEv
     // invoke: QString errorString()
-    var ret = C.C_ZNK13QPluginLoader11errorStringEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QPluginLoader11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPluginLoader", "errorString", args)
   }
 
+  return
 }
 
 // unload()
-func (this *QPluginLoader) unload(args ...interface{}) () {
+func (this *QPluginLoader) Unload(args ...interface{}) (ret interface{}) {
   // unload()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -131,12 +139,16 @@ func (this *QPluginLoader) unload(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QPluginLoader6unloadEv
     // invoke: bool unload()
-    var ret = C.C_ZN13QPluginLoader6unloadEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QPluginLoader6unloadEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPluginLoader", "unload", args)
   }
 
+  return
 }
 
 // QPluginLoader(class QObject *)
@@ -182,7 +194,7 @@ func NewQPluginLoader(args ...interface{}) *QPluginLoader {
 }
 
 // ~QPluginLoader()
-func (this *QPluginLoader) FreeQPluginLoader(args ...interface{}) () {
+func (this *QPluginLoader) Freeqpluginloader(args ...interface{}) () {
   // ~QPluginLoader()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -199,10 +211,11 @@ func (this *QPluginLoader) FreeQPluginLoader(args ...interface{}) () {
     qtrt.ErrorResolve("QPluginLoader", "~QPluginLoader", args)
   }
 
+  return
 }
 
 // setFileName(const class QString &)
-func (this *QPluginLoader) setFileName(args ...interface{}) () {
+func (this *QPluginLoader) Setfilename(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -222,10 +235,11 @@ func (this *QPluginLoader) setFileName(args ...interface{}) () {
     qtrt.ErrorResolve("QPluginLoader", "setFileName", args)
   }
 
+  return
 }
 
 // isLoaded()
-func (this *QPluginLoader) isLoaded(args ...interface{}) () {
+func (this *QPluginLoader) Isloaded(args ...interface{}) (ret interface{}) {
   // isLoaded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -237,16 +251,20 @@ func (this *QPluginLoader) isLoaded(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPluginLoader8isLoadedEv
     // invoke: bool isLoaded()
-    var ret = C.C_ZNK13QPluginLoader8isLoadedEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QPluginLoader8isLoadedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPluginLoader", "isLoaded", args)
   }
 
+  return
 }
 
 // instance()
-func (this *QPluginLoader) instance(args ...interface{}) () {
+func (this *QPluginLoader) Instance(args ...interface{}) (ret interface{}) {
   // instance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -258,16 +276,20 @@ func (this *QPluginLoader) instance(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QPluginLoader8instanceEv
     // invoke: QObject * instance()
-    var ret = C.C_ZN13QPluginLoader8instanceEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QPluginLoader8instanceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QObject{}) // "QObject *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPluginLoader", "instance", args)
   }
 
+  return
 }
 
 // fileName()
-func (this *QPluginLoader) fileName(args ...interface{}) () {
+func (this *QPluginLoader) Filename(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -279,16 +301,20 @@ func (this *QPluginLoader) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPluginLoader8fileNameEv
     // invoke: QString fileName()
-    var ret = C.C_ZNK13QPluginLoader8fileNameEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QPluginLoader8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPluginLoader", "fileName", args)
   }
 
+  return
 }
 
 // loadHints()
-func (this *QPluginLoader) loadHints(args ...interface{}) () {
+func (this *QPluginLoader) Loadhints(args ...interface{}) () {
   // loadHints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -305,10 +331,11 @@ func (this *QPluginLoader) loadHints(args ...interface{}) () {
     qtrt.ErrorResolve("QPluginLoader", "loadHints", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QPluginLoader) metaObject(args ...interface{}) () {
+func (this *QPluginLoader) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -325,10 +352,11 @@ func (this *QPluginLoader) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QPluginLoader", "metaObject", args)
   }
 
+  return
 }
 
 // metaData()
-func (this *QPluginLoader) metaData(args ...interface{}) () {
+func (this *QPluginLoader) Metadata(args ...interface{}) () {
   // metaData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -345,10 +373,11 @@ func (this *QPluginLoader) metaData(args ...interface{}) () {
     qtrt.ErrorResolve("QPluginLoader", "metaData", args)
   }
 
+  return
 }
 
 // staticInstances()
-func (this *QPluginLoader) staticInstances_s(args ...interface{}) () {
+func (this *QPluginLoader) Staticinstances_S(args ...interface{}) () {
   // staticInstances()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -365,10 +394,11 @@ func (this *QPluginLoader) staticInstances_s(args ...interface{}) () {
     qtrt.ErrorResolve("QPluginLoader", "staticInstances", args)
   }
 
+  return
 }
 
 // staticPlugins()
-func (this *QPluginLoader) staticPlugins_s(args ...interface{}) () {
+func (this *QPluginLoader) Staticplugins_S(args ...interface{}) () {
   // staticPlugins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -385,6 +415,7 @@ func (this *QPluginLoader) staticPlugins_s(args ...interface{}) () {
     qtrt.ErrorResolve("QPluginLoader", "staticPlugins", args)
   }
 
+  return
 }
 
 // <= body block end

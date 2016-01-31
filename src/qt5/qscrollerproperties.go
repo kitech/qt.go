@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qscrollerproperties.h
 // dst-file: /src/widgets/qscrollerproperties.go
 //
@@ -57,7 +57,7 @@ type QScrollerProperties struct {
 }
 
 // unsetDefaultScrollerProperties()
-func (this *QScrollerProperties) unsetDefaultScrollerProperties_s(args ...interface{}) () {
+func (this *QScrollerProperties) Unsetdefaultscrollerproperties_S(args ...interface{}) () {
   // unsetDefaultScrollerProperties()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -74,6 +74,7 @@ func (this *QScrollerProperties) unsetDefaultScrollerProperties_s(args ...interf
     qtrt.ErrorResolve("QScrollerProperties", "unsetDefaultScrollerProperties", args)
   }
 
+  return
 }
 
 // QScrollerProperties()
@@ -113,7 +114,7 @@ func NewQScrollerProperties(args ...interface{}) *QScrollerProperties {
 }
 
 // setDefaultScrollerProperties(const class QScrollerProperties &)
-func (this *QScrollerProperties) setDefaultScrollerProperties_s(args ...interface{}) () {
+func (this *QScrollerProperties) Setdefaultscrollerproperties_S(args ...interface{}) () {
   // setDefaultScrollerProperties(const class QScrollerProperties &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -133,10 +134,11 @@ func (this *QScrollerProperties) setDefaultScrollerProperties_s(args ...interfac
     qtrt.ErrorResolve("QScrollerProperties", "setDefaultScrollerProperties", args)
   }
 
+  return
 }
 
 // ~QScrollerProperties()
-func (this *QScrollerProperties) FreeQScrollerProperties(args ...interface{}) () {
+func (this *QScrollerProperties) Freeqscrollerproperties(args ...interface{}) () {
   // ~QScrollerProperties()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -153,6 +155,7 @@ func (this *QScrollerProperties) FreeQScrollerProperties(args ...interface{}) ()
     qtrt.ErrorResolve("QScrollerProperties", "~QScrollerProperties", args)
   }
 
+  return
 }
 
 // <= body block end

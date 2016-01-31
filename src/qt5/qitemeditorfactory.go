@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qitemeditorfactory.h
 // dst-file: /src/widgets/qitemeditorfactory.go
 //
@@ -35,15 +35,15 @@ extern void C_ZN18QItemEditorFactory17setDefaultFactoryEPS_(void* arg0); // 4
   // proto:  void QItemEditorFactory::~QItemEditorFactory();
 extern void C_ZN18QItemEditorFactoryD2Ev(void* qthis); // 4
   // proto:  QWidget * QItemEditorFactory::createEditor(int userType, QWidget * parent);
-extern void C_ZNK18QItemEditorFactory12createEditorEiP7QWidget(void* qthis, int32_t arg0, void* arg1); // 4
+extern void* C_ZNK18QItemEditorFactory12createEditorEiP7QWidget(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QItemEditorFactory::QItemEditorFactory();
 extern void* C_ZN18QItemEditorFactoryC2Ev(); // 1
   // proto: static const QItemEditorFactory * QItemEditorFactory::defaultFactory();
-extern void C_ZN18QItemEditorFactory14defaultFactoryEv(); // 4
+extern void* C_ZN18QItemEditorFactory14defaultFactoryEv(); // 4
   // proto:  void QItemEditorFactory::registerEditor(int userType, QItemEditorCreatorBase * creator);
 extern void C_ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  QByteArray QItemEditorFactory::valuePropertyName(int userType);
-extern void C_ZNK18QItemEditorFactory17valuePropertyNameEi(void* qthis, int32_t arg0); // 4
+extern void* C_ZNK18QItemEditorFactory17valuePropertyNameEi(void* qthis, int32_t arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -69,7 +69,7 @@ type QItemEditorFactory struct {
 }
 
 // ~QItemEditorCreatorBase()
-func (this *QItemEditorCreatorBase) FreeQItemEditorCreatorBase(args ...interface{}) () {
+func (this *QItemEditorCreatorBase) Freeqitemeditorcreatorbase(args ...interface{}) () {
   // ~QItemEditorCreatorBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -86,10 +86,11 @@ func (this *QItemEditorCreatorBase) FreeQItemEditorCreatorBase(args ...interface
     qtrt.ErrorResolve("QItemEditorCreatorBase", "~QItemEditorCreatorBase", args)
   }
 
+  return
 }
 
 // setDefaultFactory(class QItemEditorFactory *)
-func (this *QItemEditorFactory) setDefaultFactory_s(args ...interface{}) () {
+func (this *QItemEditorFactory) Setdefaultfactory_S(args ...interface{}) () {
   // setDefaultFactory(class QItemEditorFactory *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -109,10 +110,11 @@ func (this *QItemEditorFactory) setDefaultFactory_s(args ...interface{}) () {
     qtrt.ErrorResolve("QItemEditorFactory", "setDefaultFactory", args)
   }
 
+  return
 }
 
 // ~QItemEditorFactory()
-func (this *QItemEditorFactory) FreeQItemEditorFactory(args ...interface{}) () {
+func (this *QItemEditorFactory) Freeqitemeditorfactory(args ...interface{}) () {
   // ~QItemEditorFactory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -129,10 +131,11 @@ func (this *QItemEditorFactory) FreeQItemEditorFactory(args ...interface{}) () {
     qtrt.ErrorResolve("QItemEditorFactory", "~QItemEditorFactory", args)
   }
 
+  return
 }
 
 // createEditor(int, class QWidget *)
-func (this *QItemEditorFactory) createEditor(args ...interface{}) () {
+func (this *QItemEditorFactory) Createeditor(args ...interface{}) (ret interface{}) {
   // createEditor(int, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -150,12 +153,16 @@ func (this *QItemEditorFactory) createEditor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
-    var ret = C.C_ZNK18QItemEditorFactory12createEditorEiP7QWidget(this.qclsinst, arg0, arg1)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QItemEditorFactory12createEditorEiP7QWidget(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "createEditor", args)
   }
 
+  return
 }
 
 // QItemEditorFactory()
@@ -183,7 +190,7 @@ func NewQItemEditorFactory(args ...interface{}) *QItemEditorFactory {
 }
 
 // defaultFactory()
-func (this *QItemEditorFactory) defaultFactory_s(args ...interface{}) () {
+func (this *QItemEditorFactory) Defaultfactory_S(args ...interface{}) (ret interface{}) {
   // defaultFactory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -195,16 +202,20 @@ func (this *QItemEditorFactory) defaultFactory_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QItemEditorFactory14defaultFactoryEv
     // invoke: const QItemEditorFactory * defaultFactory()
-    var ret = C.C_ZN18QItemEditorFactory14defaultFactoryEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN18QItemEditorFactory14defaultFactoryEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QItemEditorFactory{}) // "const QItemEditorFactory *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "defaultFactory", args)
   }
 
+  return
 }
 
 // registerEditor(int, class QItemEditorCreatorBase *)
-func (this *QItemEditorFactory) registerEditor(args ...interface{}) () {
+func (this *QItemEditorFactory) Registereditor(args ...interface{}) () {
   // registerEditor(int, class QItemEditorCreatorBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -227,10 +238,11 @@ func (this *QItemEditorFactory) registerEditor(args ...interface{}) () {
     qtrt.ErrorResolve("QItemEditorFactory", "registerEditor", args)
   }
 
+  return
 }
 
 // valuePropertyName(int)
-func (this *QItemEditorFactory) valuePropertyName(args ...interface{}) () {
+func (this *QItemEditorFactory) Valuepropertyname(args ...interface{}) (ret interface{}) {
   // valuePropertyName(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -245,12 +257,16 @@ func (this *QItemEditorFactory) valuePropertyName(args ...interface{}) () {
     // invoke: QByteArray valuePropertyName(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK18QItemEditorFactory17valuePropertyNameEi(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QItemEditorFactory17valuePropertyNameEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "valuePropertyName", args)
   }
 
+  return
 }
 
 // <= body block end

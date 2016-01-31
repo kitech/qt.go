@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qgesture.h
 // dst-file: /src/widgets/qgesture.go
 //
@@ -37,7 +37,7 @@ extern void C_ZNK13QSwipeGesture19horizontalDirectionEv(void* qthis); // 4
   // proto:  QSwipeGesture::SwipeDirection QSwipeGesture::verticalDirection();
 extern void C_ZNK13QSwipeGesture17verticalDirectionEv(void* qthis); // 4
   // proto:  qreal QSwipeGesture::swipeAngle();
-extern void C_ZNK13QSwipeGesture10swipeAngleEv(void* qthis); // 4
+extern double C_ZNK13QSwipeGesture10swipeAngleEv(void* qthis); // 4
   // proto:  void QSwipeGesture::~QSwipeGesture();
 extern void C_ZN13QSwipeGestureD2Ev(void* qthis); // 4
   // proto:  void QSwipeGesture::setSwipeAngle(qreal value);
@@ -45,7 +45,7 @@ extern void C_ZN13QSwipeGesture13setSwipeAngleEd(void* qthis, double arg0); // 4
   // proto:  const QMetaObject * QGesture::metaObject();
 extern void C_ZNK8QGesture10metaObjectEv(void* qthis); // 4
   // proto:  bool QGesture::hasHotSpot();
-extern void C_ZNK8QGesture10hasHotSpotEv(void* qthis); // 4
+extern bool C_ZNK8QGesture10hasHotSpotEv(void* qthis); // 4
   // proto:  QGesture::GestureCancelPolicy QGesture::gestureCancelPolicy();
 extern void C_ZNK8QGesture19gestureCancelPolicyEv(void* qthis); // 4
   // proto:  Qt::GestureState QGesture::state();
@@ -53,7 +53,7 @@ extern void C_ZNK8QGesture5stateEv(void* qthis); // 4
   // proto:  void QGesture::setHotSpot(const QPointF & value);
 extern void C_ZN8QGesture10setHotSpotERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPointF QGesture::hotSpot();
-extern void C_ZNK8QGesture7hotSpotEv(void* qthis); // 4
+extern void* C_ZNK8QGesture7hotSpotEv(void* qthis); // 4
   // proto:  void QGesture::~QGesture();
 extern void C_ZN8QGestureD2Ev(void* qthis); // 4
   // proto:  Qt::GestureType QGesture::gestureType();
@@ -67,7 +67,7 @@ extern void C_ZNK13QGestureEvent14activeGesturesEv(void* qthis); // 4
   // proto:  QList<QGesture *> QGestureEvent::gestures();
 extern void C_ZNK13QGestureEvent8gesturesEv(void* qthis); // 4
   // proto:  QWidget * QGestureEvent::widget();
-extern void C_ZNK13QGestureEvent6widgetEv(void* qthis); // 4
+extern void* C_ZNK13QGestureEvent6widgetEv(void* qthis); // 4
   // proto:  QList<QGesture *> QGestureEvent::canceledGestures();
 extern void C_ZNK13QGestureEvent16canceledGesturesEv(void* qthis); // 4
   // proto:  void QGestureEvent::setWidget(QWidget * widget);
@@ -77,15 +77,15 @@ extern void C_ZN13QGestureEvent6acceptEP8QGesture(void* qthis, void* arg0); // 4
   // proto:  void QGestureEvent::ignore(QGesture * );
 extern void C_ZN13QGestureEvent6ignoreEP8QGesture(void* qthis, void* arg0); // 4
   // proto:  bool QGestureEvent::isAccepted(QGesture * );
-extern void C_ZNK13QGestureEvent10isAcceptedEP8QGesture(void* qthis, void* arg0); // 4
+extern bool C_ZNK13QGestureEvent10isAcceptedEP8QGesture(void* qthis, void* arg0); // 4
   // proto:  void QGestureEvent::~QGestureEvent();
 extern void C_ZN13QGestureEventD2Ev(void* qthis); // 4
   // proto:  void QGestureEvent::setAccepted(QGesture * , bool );
 extern void C_ZN13QGestureEvent11setAcceptedEP8QGestureb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  QPointF QGestureEvent::mapToGraphicsScene(const QPointF & gesturePoint);
-extern void C_ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF(void* qthis, void* arg0); // 4
+extern void* C_ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  qreal QPanGesture::acceleration();
-extern void C_ZNK11QPanGesture12accelerationEv(void* qthis); // 4
+extern double C_ZNK11QPanGesture12accelerationEv(void* qthis); // 4
   // proto:  void QPanGesture::setAcceleration(qreal value);
 extern void C_ZN11QPanGesture15setAccelerationEd(void* qthis, double arg0); // 4
   // proto:  const QMetaObject * QPanGesture::metaObject();
@@ -93,15 +93,15 @@ extern void C_ZNK11QPanGesture10metaObjectEv(void* qthis); // 4
   // proto:  void QPanGesture::QPanGesture(QObject * parent);
 extern void* C_ZN11QPanGestureC2EP7QObject(void* arg0); // 3
   // proto:  QPointF QPanGesture::offset();
-extern void C_ZNK11QPanGesture6offsetEv(void* qthis); // 4
+extern void* C_ZNK11QPanGesture6offsetEv(void* qthis); // 4
   // proto:  void QPanGesture::~QPanGesture();
 extern void C_ZN11QPanGestureD2Ev(void* qthis); // 4
   // proto:  QPointF QPanGesture::delta();
-extern void C_ZNK11QPanGesture5deltaEv(void* qthis); // 4
+extern void* C_ZNK11QPanGesture5deltaEv(void* qthis); // 4
   // proto:  void QPanGesture::setOffset(const QPointF & value);
 extern void C_ZN11QPanGesture9setOffsetERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPointF QPanGesture::lastOffset();
-extern void C_ZNK11QPanGesture10lastOffsetEv(void* qthis); // 4
+extern void* C_ZNK11QPanGesture10lastOffsetEv(void* qthis); // 4
   // proto:  void QPanGesture::setLastOffset(const QPointF & value);
 extern void C_ZN11QPanGesture13setLastOffsetERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QTapAndHoldGesture::QTapAndHoldGesture(QObject * parent);
@@ -111,9 +111,9 @@ extern void C_ZNK18QTapAndHoldGesture10metaObjectEv(void* qthis); // 4
   // proto:  void QTapAndHoldGesture::~QTapAndHoldGesture();
 extern void C_ZN18QTapAndHoldGestureD2Ev(void* qthis); // 4
   // proto: static int QTapAndHoldGesture::timeout();
-extern void C_ZN18QTapAndHoldGesture7timeoutEv(); // 4
+extern int32_t C_ZN18QTapAndHoldGesture7timeoutEv(); // 4
   // proto:  QPointF QTapAndHoldGesture::position();
-extern void C_ZNK18QTapAndHoldGesture8positionEv(void* qthis); // 4
+extern void* C_ZNK18QTapAndHoldGesture8positionEv(void* qthis); // 4
   // proto:  void QTapAndHoldGesture::setPosition(const QPointF & pos);
 extern void C_ZN18QTapAndHoldGesture11setPositionERK7QPointF(void* qthis, void* arg0); // 4
   // proto: static void QTapAndHoldGesture::setTimeout(int msecs);
@@ -125,13 +125,13 @@ extern void* C_ZN11QTapGestureC2EP7QObject(void* arg0); // 3
   // proto:  void QTapGesture::~QTapGesture();
 extern void C_ZN11QTapGestureD2Ev(void* qthis); // 4
   // proto:  QPointF QTapGesture::position();
-extern void C_ZNK11QTapGesture8positionEv(void* qthis); // 4
+extern void* C_ZNK11QTapGesture8positionEv(void* qthis); // 4
   // proto:  void QTapGesture::setPosition(const QPointF & pos);
 extern void C_ZN11QTapGesture11setPositionERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  ChangeFlags QPinchGesture::changeFlags();
 extern void C_ZNK13QPinchGesture11changeFlagsEv(void* qthis); // 4
   // proto:  QPointF QPinchGesture::startCenterPoint();
-extern void C_ZNK13QPinchGesture16startCenterPointEv(void* qthis); // 4
+extern void* C_ZNK13QPinchGesture16startCenterPointEv(void* qthis); // 4
   // proto:  void QPinchGesture::setLastCenterPoint(const QPointF & value);
 extern void C_ZN13QPinchGesture18setLastCenterPointERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QPinchGesture::setStartCenterPoint(const QPointF & value);
@@ -139,9 +139,9 @@ extern void C_ZN13QPinchGesture19setStartCenterPointERK7QPointF(void* qthis, voi
   // proto:  void QPinchGesture::setTotalRotationAngle(qreal value);
 extern void C_ZN13QPinchGesture21setTotalRotationAngleEd(void* qthis, double arg0); // 4
   // proto:  qreal QPinchGesture::lastRotationAngle();
-extern void C_ZNK13QPinchGesture17lastRotationAngleEv(void* qthis); // 4
+extern double C_ZNK13QPinchGesture17lastRotationAngleEv(void* qthis); // 4
   // proto:  qreal QPinchGesture::rotationAngle();
-extern void C_ZNK13QPinchGesture13rotationAngleEv(void* qthis); // 4
+extern double C_ZNK13QPinchGesture13rotationAngleEv(void* qthis); // 4
   // proto:  ChangeFlags QPinchGesture::totalChangeFlags();
 extern void C_ZNK13QPinchGesture16totalChangeFlagsEv(void* qthis); // 4
   // proto:  void QPinchGesture::setTotalScaleFactor(qreal value);
@@ -151,23 +151,23 @@ extern void C_ZN13QPinchGesture18setLastScaleFactorEd(void* qthis, double arg0);
   // proto:  void QPinchGesture::~QPinchGesture();
 extern void C_ZN13QPinchGestureD2Ev(void* qthis); // 4
   // proto:  qreal QPinchGesture::totalRotationAngle();
-extern void C_ZNK13QPinchGesture18totalRotationAngleEv(void* qthis); // 4
+extern double C_ZNK13QPinchGesture18totalRotationAngleEv(void* qthis); // 4
   // proto:  void QPinchGesture::setRotationAngle(qreal value);
 extern void C_ZN13QPinchGesture16setRotationAngleEd(void* qthis, double arg0); // 4
   // proto:  void QPinchGesture::QPinchGesture(QObject * parent);
 extern void* C_ZN13QPinchGestureC2EP7QObject(void* arg0); // 3
   // proto:  QPointF QPinchGesture::lastCenterPoint();
-extern void C_ZNK13QPinchGesture15lastCenterPointEv(void* qthis); // 4
+extern void* C_ZNK13QPinchGesture15lastCenterPointEv(void* qthis); // 4
   // proto:  QPointF QPinchGesture::centerPoint();
-extern void C_ZNK13QPinchGesture11centerPointEv(void* qthis); // 4
+extern void* C_ZNK13QPinchGesture11centerPointEv(void* qthis); // 4
   // proto:  qreal QPinchGesture::totalScaleFactor();
-extern void C_ZNK13QPinchGesture16totalScaleFactorEv(void* qthis); // 4
+extern double C_ZNK13QPinchGesture16totalScaleFactorEv(void* qthis); // 4
   // proto:  qreal QPinchGesture::lastScaleFactor();
-extern void C_ZNK13QPinchGesture15lastScaleFactorEv(void* qthis); // 4
+extern double C_ZNK13QPinchGesture15lastScaleFactorEv(void* qthis); // 4
   // proto:  void QPinchGesture::setCenterPoint(const QPointF & value);
 extern void C_ZN13QPinchGesture14setCenterPointERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  qreal QPinchGesture::scaleFactor();
-extern void C_ZNK13QPinchGesture11scaleFactorEv(void* qthis); // 4
+extern double C_ZNK13QPinchGesture11scaleFactorEv(void* qthis); // 4
   // proto:  const QMetaObject * QPinchGesture::metaObject();
 extern void C_ZNK13QPinchGesture10metaObjectEv(void* qthis); // 4
   // proto:  void QPinchGesture::setLastRotationAngle(qreal value);
@@ -256,7 +256,7 @@ func NewQSwipeGesture(args ...interface{}) *QSwipeGesture {
 }
 
 // metaObject()
-func (this *QSwipeGesture) metaObject(args ...interface{}) () {
+func (this *QSwipeGesture) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -273,10 +273,11 @@ func (this *QSwipeGesture) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QSwipeGesture", "metaObject", args)
   }
 
+  return
 }
 
 // horizontalDirection()
-func (this *QSwipeGesture) horizontalDirection(args ...interface{}) () {
+func (this *QSwipeGesture) Horizontaldirection(args ...interface{}) () {
   // horizontalDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,10 +294,11 @@ func (this *QSwipeGesture) horizontalDirection(args ...interface{}) () {
     qtrt.ErrorResolve("QSwipeGesture", "horizontalDirection", args)
   }
 
+  return
 }
 
 // verticalDirection()
-func (this *QSwipeGesture) verticalDirection(args ...interface{}) () {
+func (this *QSwipeGesture) Verticaldirection(args ...interface{}) () {
   // verticalDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -313,10 +315,11 @@ func (this *QSwipeGesture) verticalDirection(args ...interface{}) () {
     qtrt.ErrorResolve("QSwipeGesture", "verticalDirection", args)
   }
 
+  return
 }
 
 // swipeAngle()
-func (this *QSwipeGesture) swipeAngle(args ...interface{}) () {
+func (this *QSwipeGesture) Swipeangle(args ...interface{}) (ret interface{}) {
   // swipeAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -328,16 +331,20 @@ func (this *QSwipeGesture) swipeAngle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QSwipeGesture10swipeAngleEv
     // invoke: qreal swipeAngle()
-    var ret = C.C_ZNK13QSwipeGesture10swipeAngleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QSwipeGesture10swipeAngleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QSwipeGesture", "swipeAngle", args)
   }
 
+  return
 }
 
 // ~QSwipeGesture()
-func (this *QSwipeGesture) FreeQSwipeGesture(args ...interface{}) () {
+func (this *QSwipeGesture) Freeqswipegesture(args ...interface{}) () {
   // ~QSwipeGesture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -354,10 +361,11 @@ func (this *QSwipeGesture) FreeQSwipeGesture(args ...interface{}) () {
     qtrt.ErrorResolve("QSwipeGesture", "~QSwipeGesture", args)
   }
 
+  return
 }
 
 // setSwipeAngle(qreal)
-func (this *QSwipeGesture) setSwipeAngle(args ...interface{}) () {
+func (this *QSwipeGesture) Setswipeangle(args ...interface{}) () {
   // setSwipeAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -377,10 +385,11 @@ func (this *QSwipeGesture) setSwipeAngle(args ...interface{}) () {
     qtrt.ErrorResolve("QSwipeGesture", "setSwipeAngle", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QGesture) metaObject(args ...interface{}) () {
+func (this *QGesture) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -397,10 +406,11 @@ func (this *QGesture) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QGesture", "metaObject", args)
   }
 
+  return
 }
 
 // hasHotSpot()
-func (this *QGesture) hasHotSpot(args ...interface{}) () {
+func (this *QGesture) Hashotspot(args ...interface{}) (ret interface{}) {
   // hasHotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -412,16 +422,20 @@ func (this *QGesture) hasHotSpot(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QGesture10hasHotSpotEv
     // invoke: bool hasHotSpot()
-    var ret = C.C_ZNK8QGesture10hasHotSpotEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QGesture10hasHotSpotEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGesture", "hasHotSpot", args)
   }
 
+  return
 }
 
 // gestureCancelPolicy()
-func (this *QGesture) gestureCancelPolicy(args ...interface{}) () {
+func (this *QGesture) Gesturecancelpolicy(args ...interface{}) () {
   // gestureCancelPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -438,10 +452,11 @@ func (this *QGesture) gestureCancelPolicy(args ...interface{}) () {
     qtrt.ErrorResolve("QGesture", "gestureCancelPolicy", args)
   }
 
+  return
 }
 
 // state()
-func (this *QGesture) state(args ...interface{}) () {
+func (this *QGesture) State(args ...interface{}) () {
   // state()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -458,10 +473,11 @@ func (this *QGesture) state(args ...interface{}) () {
     qtrt.ErrorResolve("QGesture", "state", args)
   }
 
+  return
 }
 
 // setHotSpot(const class QPointF &)
-func (this *QGesture) setHotSpot(args ...interface{}) () {
+func (this *QGesture) Sethotspot(args ...interface{}) () {
   // setHotSpot(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -481,10 +497,11 @@ func (this *QGesture) setHotSpot(args ...interface{}) () {
     qtrt.ErrorResolve("QGesture", "setHotSpot", args)
   }
 
+  return
 }
 
 // hotSpot()
-func (this *QGesture) hotSpot(args ...interface{}) () {
+func (this *QGesture) Hotspot(args ...interface{}) (ret interface{}) {
   // hotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -496,16 +513,20 @@ func (this *QGesture) hotSpot(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QGesture7hotSpotEv
     // invoke: QPointF hotSpot()
-    var ret = C.C_ZNK8QGesture7hotSpotEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK8QGesture7hotSpotEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGesture", "hotSpot", args)
   }
 
+  return
 }
 
 // ~QGesture()
-func (this *QGesture) FreeQGesture(args ...interface{}) () {
+func (this *QGesture) Freeqgesture(args ...interface{}) () {
   // ~QGesture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -522,10 +543,11 @@ func (this *QGesture) FreeQGesture(args ...interface{}) () {
     qtrt.ErrorResolve("QGesture", "~QGesture", args)
   }
 
+  return
 }
 
 // gestureType()
-func (this *QGesture) gestureType(args ...interface{}) () {
+func (this *QGesture) Gesturetype(args ...interface{}) () {
   // gestureType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -542,10 +564,11 @@ func (this *QGesture) gestureType(args ...interface{}) () {
     qtrt.ErrorResolve("QGesture", "gestureType", args)
   }
 
+  return
 }
 
 // unsetHotSpot()
-func (this *QGesture) unsetHotSpot(args ...interface{}) () {
+func (this *QGesture) Unsethotspot(args ...interface{}) () {
   // unsetHotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -562,6 +585,7 @@ func (this *QGesture) unsetHotSpot(args ...interface{}) () {
     qtrt.ErrorResolve("QGesture", "unsetHotSpot", args)
   }
 
+  return
 }
 
 // QGesture(class QObject *)
@@ -592,7 +616,7 @@ func NewQGesture(args ...interface{}) *QGesture {
 }
 
 // activeGestures()
-func (this *QGestureEvent) activeGestures(args ...interface{}) () {
+func (this *QGestureEvent) Activegestures(args ...interface{}) () {
   // activeGestures()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -609,10 +633,11 @@ func (this *QGestureEvent) activeGestures(args ...interface{}) () {
     qtrt.ErrorResolve("QGestureEvent", "activeGestures", args)
   }
 
+  return
 }
 
 // gestures()
-func (this *QGestureEvent) gestures(args ...interface{}) () {
+func (this *QGestureEvent) Gestures(args ...interface{}) () {
   // gestures()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -629,10 +654,11 @@ func (this *QGestureEvent) gestures(args ...interface{}) () {
     qtrt.ErrorResolve("QGestureEvent", "gestures", args)
   }
 
+  return
 }
 
 // widget()
-func (this *QGestureEvent) widget(args ...interface{}) () {
+func (this *QGestureEvent) Widget(args ...interface{}) (ret interface{}) {
   // widget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -644,16 +670,20 @@ func (this *QGestureEvent) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGestureEvent6widgetEv
     // invoke: QWidget * widget()
-    var ret = C.C_ZNK13QGestureEvent6widgetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGestureEvent6widgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGestureEvent", "widget", args)
   }
 
+  return
 }
 
 // canceledGestures()
-func (this *QGestureEvent) canceledGestures(args ...interface{}) () {
+func (this *QGestureEvent) Canceledgestures(args ...interface{}) () {
   // canceledGestures()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -670,10 +700,11 @@ func (this *QGestureEvent) canceledGestures(args ...interface{}) () {
     qtrt.ErrorResolve("QGestureEvent", "canceledGestures", args)
   }
 
+  return
 }
 
 // setWidget(class QWidget *)
-func (this *QGestureEvent) setWidget(args ...interface{}) () {
+func (this *QGestureEvent) Setwidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -693,10 +724,11 @@ func (this *QGestureEvent) setWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QGestureEvent", "setWidget", args)
   }
 
+  return
 }
 
 // accept(class QGesture *)
-func (this *QGestureEvent) accept(args ...interface{}) () {
+func (this *QGestureEvent) Accept(args ...interface{}) () {
   // accept(class QGesture *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -716,10 +748,11 @@ func (this *QGestureEvent) accept(args ...interface{}) () {
     qtrt.ErrorResolve("QGestureEvent", "accept", args)
   }
 
+  return
 }
 
 // ignore(class QGesture *)
-func (this *QGestureEvent) ignore(args ...interface{}) () {
+func (this *QGestureEvent) Ignore(args ...interface{}) () {
   // ignore(class QGesture *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -739,10 +772,11 @@ func (this *QGestureEvent) ignore(args ...interface{}) () {
     qtrt.ErrorResolve("QGestureEvent", "ignore", args)
   }
 
+  return
 }
 
 // isAccepted(class QGesture *)
-func (this *QGestureEvent) isAccepted(args ...interface{}) () {
+func (this *QGestureEvent) Isaccepted(args ...interface{}) (ret interface{}) {
   // isAccepted(class QGesture *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -757,16 +791,20 @@ func (this *QGestureEvent) isAccepted(args ...interface{}) () {
     // invoke: bool isAccepted(class QGesture *)
     var arg0 = args[0].(QGesture).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QGestureEvent10isAcceptedEP8QGesture(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGestureEvent10isAcceptedEP8QGesture(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGestureEvent", "isAccepted", args)
   }
 
+  return
 }
 
 // ~QGestureEvent()
-func (this *QGestureEvent) FreeQGestureEvent(args ...interface{}) () {
+func (this *QGestureEvent) Freeqgestureevent(args ...interface{}) () {
   // ~QGestureEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -783,10 +821,11 @@ func (this *QGestureEvent) FreeQGestureEvent(args ...interface{}) () {
     qtrt.ErrorResolve("QGestureEvent", "~QGestureEvent", args)
   }
 
+  return
 }
 
 // setAccepted(class QGesture *, _Bool)
-func (this *QGestureEvent) setAccepted(args ...interface{}) () {
+func (this *QGestureEvent) Setaccepted(args ...interface{}) () {
   // setAccepted(class QGesture *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -809,10 +848,11 @@ func (this *QGestureEvent) setAccepted(args ...interface{}) () {
     qtrt.ErrorResolve("QGestureEvent", "setAccepted", args)
   }
 
+  return
 }
 
 // mapToGraphicsScene(const class QPointF &)
-func (this *QGestureEvent) mapToGraphicsScene(args ...interface{}) () {
+func (this *QGestureEvent) Maptographicsscene(args ...interface{}) (ret interface{}) {
   // mapToGraphicsScene(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -827,16 +867,20 @@ func (this *QGestureEvent) mapToGraphicsScene(args ...interface{}) () {
     // invoke: QPointF mapToGraphicsScene(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QGestureEvent", "mapToGraphicsScene", args)
   }
 
+  return
 }
 
 // acceleration()
-func (this *QPanGesture) acceleration(args ...interface{}) () {
+func (this *QPanGesture) Acceleration(args ...interface{}) (ret interface{}) {
   // acceleration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -848,16 +892,20 @@ func (this *QPanGesture) acceleration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPanGesture12accelerationEv
     // invoke: qreal acceleration()
-    var ret = C.C_ZNK11QPanGesture12accelerationEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPanGesture12accelerationEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPanGesture", "acceleration", args)
   }
 
+  return
 }
 
 // setAcceleration(qreal)
-func (this *QPanGesture) setAcceleration(args ...interface{}) () {
+func (this *QPanGesture) Setacceleration(args ...interface{}) () {
   // setAcceleration(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -877,10 +925,11 @@ func (this *QPanGesture) setAcceleration(args ...interface{}) () {
     qtrt.ErrorResolve("QPanGesture", "setAcceleration", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QPanGesture) metaObject(args ...interface{}) () {
+func (this *QPanGesture) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -897,6 +946,7 @@ func (this *QPanGesture) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QPanGesture", "metaObject", args)
   }
 
+  return
 }
 
 // QPanGesture(class QObject *)
@@ -927,7 +977,7 @@ func NewQPanGesture(args ...interface{}) *QPanGesture {
 }
 
 // offset()
-func (this *QPanGesture) offset(args ...interface{}) () {
+func (this *QPanGesture) Offset(args ...interface{}) (ret interface{}) {
   // offset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -939,16 +989,20 @@ func (this *QPanGesture) offset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPanGesture6offsetEv
     // invoke: QPointF offset()
-    var ret = C.C_ZNK11QPanGesture6offsetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPanGesture6offsetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPanGesture", "offset", args)
   }
 
+  return
 }
 
 // ~QPanGesture()
-func (this *QPanGesture) FreeQPanGesture(args ...interface{}) () {
+func (this *QPanGesture) Freeqpangesture(args ...interface{}) () {
   // ~QPanGesture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -965,10 +1019,11 @@ func (this *QPanGesture) FreeQPanGesture(args ...interface{}) () {
     qtrt.ErrorResolve("QPanGesture", "~QPanGesture", args)
   }
 
+  return
 }
 
 // delta()
-func (this *QPanGesture) delta(args ...interface{}) () {
+func (this *QPanGesture) Delta(args ...interface{}) (ret interface{}) {
   // delta()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -980,16 +1035,20 @@ func (this *QPanGesture) delta(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPanGesture5deltaEv
     // invoke: QPointF delta()
-    var ret = C.C_ZNK11QPanGesture5deltaEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPanGesture5deltaEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPanGesture", "delta", args)
   }
 
+  return
 }
 
 // setOffset(const class QPointF &)
-func (this *QPanGesture) setOffset(args ...interface{}) () {
+func (this *QPanGesture) Setoffset(args ...interface{}) () {
   // setOffset(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1009,10 +1068,11 @@ func (this *QPanGesture) setOffset(args ...interface{}) () {
     qtrt.ErrorResolve("QPanGesture", "setOffset", args)
   }
 
+  return
 }
 
 // lastOffset()
-func (this *QPanGesture) lastOffset(args ...interface{}) () {
+func (this *QPanGesture) Lastoffset(args ...interface{}) (ret interface{}) {
   // lastOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1024,16 +1084,20 @@ func (this *QPanGesture) lastOffset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPanGesture10lastOffsetEv
     // invoke: QPointF lastOffset()
-    var ret = C.C_ZNK11QPanGesture10lastOffsetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QPanGesture10lastOffsetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPanGesture", "lastOffset", args)
   }
 
+  return
 }
 
 // setLastOffset(const class QPointF &)
-func (this *QPanGesture) setLastOffset(args ...interface{}) () {
+func (this *QPanGesture) Setlastoffset(args ...interface{}) () {
   // setLastOffset(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1053,6 +1117,7 @@ func (this *QPanGesture) setLastOffset(args ...interface{}) () {
     qtrt.ErrorResolve("QPanGesture", "setLastOffset", args)
   }
 
+  return
 }
 
 // QTapAndHoldGesture(class QObject *)
@@ -1083,7 +1148,7 @@ func NewQTapAndHoldGesture(args ...interface{}) *QTapAndHoldGesture {
 }
 
 // metaObject()
-func (this *QTapAndHoldGesture) metaObject(args ...interface{}) () {
+func (this *QTapAndHoldGesture) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1100,10 +1165,11 @@ func (this *QTapAndHoldGesture) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QTapAndHoldGesture", "metaObject", args)
   }
 
+  return
 }
 
 // ~QTapAndHoldGesture()
-func (this *QTapAndHoldGesture) FreeQTapAndHoldGesture(args ...interface{}) () {
+func (this *QTapAndHoldGesture) Freeqtapandholdgesture(args ...interface{}) () {
   // ~QTapAndHoldGesture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1120,10 +1186,11 @@ func (this *QTapAndHoldGesture) FreeQTapAndHoldGesture(args ...interface{}) () {
     qtrt.ErrorResolve("QTapAndHoldGesture", "~QTapAndHoldGesture", args)
   }
 
+  return
 }
 
 // timeout()
-func (this *QTapAndHoldGesture) timeout_s(args ...interface{}) () {
+func (this *QTapAndHoldGesture) Timeout_S(args ...interface{}) (ret interface{}) {
   // timeout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1135,16 +1202,20 @@ func (this *QTapAndHoldGesture) timeout_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QTapAndHoldGesture7timeoutEv
     // invoke: int timeout()
-    var ret = C.C_ZN18QTapAndHoldGesture7timeoutEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN18QTapAndHoldGesture7timeoutEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTapAndHoldGesture", "timeout", args)
   }
 
+  return
 }
 
 // position()
-func (this *QTapAndHoldGesture) position(args ...interface{}) () {
+func (this *QTapAndHoldGesture) Position(args ...interface{}) (ret interface{}) {
   // position()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1156,16 +1227,20 @@ func (this *QTapAndHoldGesture) position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QTapAndHoldGesture8positionEv
     // invoke: QPointF position()
-    var ret = C.C_ZNK18QTapAndHoldGesture8positionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK18QTapAndHoldGesture8positionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTapAndHoldGesture", "position", args)
   }
 
+  return
 }
 
 // setPosition(const class QPointF &)
-func (this *QTapAndHoldGesture) setPosition(args ...interface{}) () {
+func (this *QTapAndHoldGesture) Setposition(args ...interface{}) () {
   // setPosition(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1185,10 +1260,11 @@ func (this *QTapAndHoldGesture) setPosition(args ...interface{}) () {
     qtrt.ErrorResolve("QTapAndHoldGesture", "setPosition", args)
   }
 
+  return
 }
 
 // setTimeout(int)
-func (this *QTapAndHoldGesture) setTimeout_s(args ...interface{}) () {
+func (this *QTapAndHoldGesture) Settimeout_S(args ...interface{}) () {
   // setTimeout(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1208,10 +1284,11 @@ func (this *QTapAndHoldGesture) setTimeout_s(args ...interface{}) () {
     qtrt.ErrorResolve("QTapAndHoldGesture", "setTimeout", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QTapGesture) metaObject(args ...interface{}) () {
+func (this *QTapGesture) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1228,6 +1305,7 @@ func (this *QTapGesture) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QTapGesture", "metaObject", args)
   }
 
+  return
 }
 
 // QTapGesture(class QObject *)
@@ -1258,7 +1336,7 @@ func NewQTapGesture(args ...interface{}) *QTapGesture {
 }
 
 // ~QTapGesture()
-func (this *QTapGesture) FreeQTapGesture(args ...interface{}) () {
+func (this *QTapGesture) Freeqtapgesture(args ...interface{}) () {
   // ~QTapGesture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1275,10 +1353,11 @@ func (this *QTapGesture) FreeQTapGesture(args ...interface{}) () {
     qtrt.ErrorResolve("QTapGesture", "~QTapGesture", args)
   }
 
+  return
 }
 
 // position()
-func (this *QTapGesture) position(args ...interface{}) () {
+func (this *QTapGesture) Position(args ...interface{}) (ret interface{}) {
   // position()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1290,16 +1369,20 @@ func (this *QTapGesture) position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTapGesture8positionEv
     // invoke: QPointF position()
-    var ret = C.C_ZNK11QTapGesture8positionEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QTapGesture8positionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QTapGesture", "position", args)
   }
 
+  return
 }
 
 // setPosition(const class QPointF &)
-func (this *QTapGesture) setPosition(args ...interface{}) () {
+func (this *QTapGesture) Setposition(args ...interface{}) () {
   // setPosition(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1319,10 +1402,11 @@ func (this *QTapGesture) setPosition(args ...interface{}) () {
     qtrt.ErrorResolve("QTapGesture", "setPosition", args)
   }
 
+  return
 }
 
 // changeFlags()
-func (this *QPinchGesture) changeFlags(args ...interface{}) () {
+func (this *QPinchGesture) Changeflags(args ...interface{}) () {
   // changeFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1339,10 +1423,11 @@ func (this *QPinchGesture) changeFlags(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "changeFlags", args)
   }
 
+  return
 }
 
 // startCenterPoint()
-func (this *QPinchGesture) startCenterPoint(args ...interface{}) () {
+func (this *QPinchGesture) Startcenterpoint(args ...interface{}) (ret interface{}) {
   // startCenterPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1354,16 +1439,20 @@ func (this *QPinchGesture) startCenterPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPinchGesture16startCenterPointEv
     // invoke: QPointF startCenterPoint()
-    var ret = C.C_ZNK13QPinchGesture16startCenterPointEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QPinchGesture16startCenterPointEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPinchGesture", "startCenterPoint", args)
   }
 
+  return
 }
 
 // setLastCenterPoint(const class QPointF &)
-func (this *QPinchGesture) setLastCenterPoint(args ...interface{}) () {
+func (this *QPinchGesture) Setlastcenterpoint(args ...interface{}) () {
   // setLastCenterPoint(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1383,10 +1472,11 @@ func (this *QPinchGesture) setLastCenterPoint(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "setLastCenterPoint", args)
   }
 
+  return
 }
 
 // setStartCenterPoint(const class QPointF &)
-func (this *QPinchGesture) setStartCenterPoint(args ...interface{}) () {
+func (this *QPinchGesture) Setstartcenterpoint(args ...interface{}) () {
   // setStartCenterPoint(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1406,10 +1496,11 @@ func (this *QPinchGesture) setStartCenterPoint(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "setStartCenterPoint", args)
   }
 
+  return
 }
 
 // setTotalRotationAngle(qreal)
-func (this *QPinchGesture) setTotalRotationAngle(args ...interface{}) () {
+func (this *QPinchGesture) Settotalrotationangle(args ...interface{}) () {
   // setTotalRotationAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1429,10 +1520,11 @@ func (this *QPinchGesture) setTotalRotationAngle(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "setTotalRotationAngle", args)
   }
 
+  return
 }
 
 // lastRotationAngle()
-func (this *QPinchGesture) lastRotationAngle(args ...interface{}) () {
+func (this *QPinchGesture) Lastrotationangle(args ...interface{}) (ret interface{}) {
   // lastRotationAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1444,16 +1536,20 @@ func (this *QPinchGesture) lastRotationAngle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPinchGesture17lastRotationAngleEv
     // invoke: qreal lastRotationAngle()
-    var ret = C.C_ZNK13QPinchGesture17lastRotationAngleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QPinchGesture17lastRotationAngleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPinchGesture", "lastRotationAngle", args)
   }
 
+  return
 }
 
 // rotationAngle()
-func (this *QPinchGesture) rotationAngle(args ...interface{}) () {
+func (this *QPinchGesture) Rotationangle(args ...interface{}) (ret interface{}) {
   // rotationAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1465,16 +1561,20 @@ func (this *QPinchGesture) rotationAngle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPinchGesture13rotationAngleEv
     // invoke: qreal rotationAngle()
-    var ret = C.C_ZNK13QPinchGesture13rotationAngleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QPinchGesture13rotationAngleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPinchGesture", "rotationAngle", args)
   }
 
+  return
 }
 
 // totalChangeFlags()
-func (this *QPinchGesture) totalChangeFlags(args ...interface{}) () {
+func (this *QPinchGesture) Totalchangeflags(args ...interface{}) () {
   // totalChangeFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1491,10 +1591,11 @@ func (this *QPinchGesture) totalChangeFlags(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "totalChangeFlags", args)
   }
 
+  return
 }
 
 // setTotalScaleFactor(qreal)
-func (this *QPinchGesture) setTotalScaleFactor(args ...interface{}) () {
+func (this *QPinchGesture) Settotalscalefactor(args ...interface{}) () {
   // setTotalScaleFactor(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1514,10 +1615,11 @@ func (this *QPinchGesture) setTotalScaleFactor(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "setTotalScaleFactor", args)
   }
 
+  return
 }
 
 // setLastScaleFactor(qreal)
-func (this *QPinchGesture) setLastScaleFactor(args ...interface{}) () {
+func (this *QPinchGesture) Setlastscalefactor(args ...interface{}) () {
   // setLastScaleFactor(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1537,10 +1639,11 @@ func (this *QPinchGesture) setLastScaleFactor(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "setLastScaleFactor", args)
   }
 
+  return
 }
 
 // ~QPinchGesture()
-func (this *QPinchGesture) FreeQPinchGesture(args ...interface{}) () {
+func (this *QPinchGesture) Freeqpinchgesture(args ...interface{}) () {
   // ~QPinchGesture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1557,10 +1660,11 @@ func (this *QPinchGesture) FreeQPinchGesture(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "~QPinchGesture", args)
   }
 
+  return
 }
 
 // totalRotationAngle()
-func (this *QPinchGesture) totalRotationAngle(args ...interface{}) () {
+func (this *QPinchGesture) Totalrotationangle(args ...interface{}) (ret interface{}) {
   // totalRotationAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1572,16 +1676,20 @@ func (this *QPinchGesture) totalRotationAngle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPinchGesture18totalRotationAngleEv
     // invoke: qreal totalRotationAngle()
-    var ret = C.C_ZNK13QPinchGesture18totalRotationAngleEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QPinchGesture18totalRotationAngleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPinchGesture", "totalRotationAngle", args)
   }
 
+  return
 }
 
 // setRotationAngle(qreal)
-func (this *QPinchGesture) setRotationAngle(args ...interface{}) () {
+func (this *QPinchGesture) Setrotationangle(args ...interface{}) () {
   // setRotationAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1601,6 +1709,7 @@ func (this *QPinchGesture) setRotationAngle(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "setRotationAngle", args)
   }
 
+  return
 }
 
 // QPinchGesture(class QObject *)
@@ -1631,7 +1740,7 @@ func NewQPinchGesture(args ...interface{}) *QPinchGesture {
 }
 
 // lastCenterPoint()
-func (this *QPinchGesture) lastCenterPoint(args ...interface{}) () {
+func (this *QPinchGesture) Lastcenterpoint(args ...interface{}) (ret interface{}) {
   // lastCenterPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1643,16 +1752,20 @@ func (this *QPinchGesture) lastCenterPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPinchGesture15lastCenterPointEv
     // invoke: QPointF lastCenterPoint()
-    var ret = C.C_ZNK13QPinchGesture15lastCenterPointEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QPinchGesture15lastCenterPointEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPinchGesture", "lastCenterPoint", args)
   }
 
+  return
 }
 
 // centerPoint()
-func (this *QPinchGesture) centerPoint(args ...interface{}) () {
+func (this *QPinchGesture) Centerpoint(args ...interface{}) (ret interface{}) {
   // centerPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1664,16 +1777,20 @@ func (this *QPinchGesture) centerPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPinchGesture11centerPointEv
     // invoke: QPointF centerPoint()
-    var ret = C.C_ZNK13QPinchGesture11centerPointEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QPinchGesture11centerPointEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QPointF{}) // "QPointF"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPinchGesture", "centerPoint", args)
   }
 
+  return
 }
 
 // totalScaleFactor()
-func (this *QPinchGesture) totalScaleFactor(args ...interface{}) () {
+func (this *QPinchGesture) Totalscalefactor(args ...interface{}) (ret interface{}) {
   // totalScaleFactor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1685,16 +1802,20 @@ func (this *QPinchGesture) totalScaleFactor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPinchGesture16totalScaleFactorEv
     // invoke: qreal totalScaleFactor()
-    var ret = C.C_ZNK13QPinchGesture16totalScaleFactorEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QPinchGesture16totalScaleFactorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPinchGesture", "totalScaleFactor", args)
   }
 
+  return
 }
 
 // lastScaleFactor()
-func (this *QPinchGesture) lastScaleFactor(args ...interface{}) () {
+func (this *QPinchGesture) Lastscalefactor(args ...interface{}) (ret interface{}) {
   // lastScaleFactor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1706,16 +1827,20 @@ func (this *QPinchGesture) lastScaleFactor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPinchGesture15lastScaleFactorEv
     // invoke: qreal lastScaleFactor()
-    var ret = C.C_ZNK13QPinchGesture15lastScaleFactorEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QPinchGesture15lastScaleFactorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPinchGesture", "lastScaleFactor", args)
   }
 
+  return
 }
 
 // setCenterPoint(const class QPointF &)
-func (this *QPinchGesture) setCenterPoint(args ...interface{}) () {
+func (this *QPinchGesture) Setcenterpoint(args ...interface{}) () {
   // setCenterPoint(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1735,10 +1860,11 @@ func (this *QPinchGesture) setCenterPoint(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "setCenterPoint", args)
   }
 
+  return
 }
 
 // scaleFactor()
-func (this *QPinchGesture) scaleFactor(args ...interface{}) () {
+func (this *QPinchGesture) Scalefactor(args ...interface{}) (ret interface{}) {
   // scaleFactor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1750,16 +1876,20 @@ func (this *QPinchGesture) scaleFactor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPinchGesture11scaleFactorEv
     // invoke: qreal scaleFactor()
-    var ret = C.C_ZNK13QPinchGesture11scaleFactorEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QPinchGesture11scaleFactorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.DoubleTy(false) // "qreal"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPinchGesture", "scaleFactor", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QPinchGesture) metaObject(args ...interface{}) () {
+func (this *QPinchGesture) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1776,10 +1906,11 @@ func (this *QPinchGesture) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "metaObject", args)
   }
 
+  return
 }
 
 // setLastRotationAngle(qreal)
-func (this *QPinchGesture) setLastRotationAngle(args ...interface{}) () {
+func (this *QPinchGesture) Setlastrotationangle(args ...interface{}) () {
   // setLastRotationAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1799,10 +1930,11 @@ func (this *QPinchGesture) setLastRotationAngle(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "setLastRotationAngle", args)
   }
 
+  return
 }
 
 // setScaleFactor(qreal)
-func (this *QPinchGesture) setScaleFactor(args ...interface{}) () {
+func (this *QPinchGesture) Setscalefactor(args ...interface{}) () {
   // setScaleFactor(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1822,6 +1954,7 @@ func (this *QPinchGesture) setScaleFactor(args ...interface{}) () {
     qtrt.ErrorResolve("QPinchGesture", "setScaleFactor", args)
   }
 
+  return
 }
 
 // <= body block end

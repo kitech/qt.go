@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtCore/qlibraryinfo.h
 // dst-file: /src/core/qlibraryinfo.go
 //
@@ -29,15 +29,15 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QDate QLibraryInfo::buildDate();
-extern void C_ZN12QLibraryInfo9buildDateEv(); // 4
+extern void* C_ZN12QLibraryInfo9buildDateEv(); // 4
   // proto: static bool QLibraryInfo::isDebugBuild();
-extern void C_ZN12QLibraryInfo12isDebugBuildEv(); // 4
+extern bool C_ZN12QLibraryInfo12isDebugBuildEv(); // 4
   // proto: static QString QLibraryInfo::licensee();
-extern void C_ZN12QLibraryInfo8licenseeEv(); // 4
+extern void* C_ZN12QLibraryInfo8licenseeEv(); // 4
   // proto: static QString QLibraryInfo::licensedProducts();
-extern void C_ZN12QLibraryInfo16licensedProductsEv(); // 4
+extern void* C_ZN12QLibraryInfo16licensedProductsEv(); // 4
   // proto: static const char * QLibraryInfo::build();
-extern void C_ZN12QLibraryInfo5buildEv(); // 4
+extern void* C_ZN12QLibraryInfo5buildEv(); // 4
   // proto: static QStringList QLibraryInfo::platformPluginArguments(const QString & platformName);
 extern void C_ZN12QLibraryInfo23platformPluginArgumentsERK7QString(void* arg0); // 4
 */
@@ -59,7 +59,7 @@ type QLibraryInfo struct {
 }
 
 // buildDate()
-func (this *QLibraryInfo) buildDate_s(args ...interface{}) () {
+func (this *QLibraryInfo) Builddate_S(args ...interface{}) (ret interface{}) {
   // buildDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -71,16 +71,20 @@ func (this *QLibraryInfo) buildDate_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo9buildDateEv
     // invoke: QDate buildDate()
-    var ret = C.C_ZN12QLibraryInfo9buildDateEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QLibraryInfo9buildDateEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QDate{}) // "QDate"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLibraryInfo", "buildDate", args)
   }
 
+  return
 }
 
 // isDebugBuild()
-func (this *QLibraryInfo) isDebugBuild_s(args ...interface{}) () {
+func (this *QLibraryInfo) Isdebugbuild_S(args ...interface{}) (ret interface{}) {
   // isDebugBuild()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -92,16 +96,20 @@ func (this *QLibraryInfo) isDebugBuild_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo12isDebugBuildEv
     // invoke: bool isDebugBuild()
-    var ret = C.C_ZN12QLibraryInfo12isDebugBuildEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QLibraryInfo12isDebugBuildEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLibraryInfo", "isDebugBuild", args)
   }
 
+  return
 }
 
 // licensee()
-func (this *QLibraryInfo) licensee_s(args ...interface{}) () {
+func (this *QLibraryInfo) Licensee_S(args ...interface{}) (ret interface{}) {
   // licensee()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -113,16 +121,20 @@ func (this *QLibraryInfo) licensee_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo8licenseeEv
     // invoke: QString licensee()
-    var ret = C.C_ZN12QLibraryInfo8licenseeEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QLibraryInfo8licenseeEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLibraryInfo", "licensee", args)
   }
 
+  return
 }
 
 // licensedProducts()
-func (this *QLibraryInfo) licensedProducts_s(args ...interface{}) () {
+func (this *QLibraryInfo) Licensedproducts_S(args ...interface{}) (ret interface{}) {
   // licensedProducts()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -134,16 +146,20 @@ func (this *QLibraryInfo) licensedProducts_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo16licensedProductsEv
     // invoke: QString licensedProducts()
-    var ret = C.C_ZN12QLibraryInfo16licensedProductsEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QLibraryInfo16licensedProductsEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QString{}) // "QString"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLibraryInfo", "licensedProducts", args)
   }
 
+  return
 }
 
 // build()
-func (this *QLibraryInfo) build_s(args ...interface{}) () {
+func (this *QLibraryInfo) Build_S(args ...interface{}) (ret interface{}) {
   // build()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -155,16 +171,20 @@ func (this *QLibraryInfo) build_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo5buildEv
     // invoke: const char * build()
-    var ret = C.C_ZN12QLibraryInfo5buildEv()
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN12QLibraryInfo5buildEv()
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.ByteTy(true) // "const char *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QLibraryInfo", "build", args)
   }
 
+  return
 }
 
 // platformPluginArguments(const class QString &)
-func (this *QLibraryInfo) platformPluginArguments_s(args ...interface{}) () {
+func (this *QLibraryInfo) Platformpluginarguments_S(args ...interface{}) () {
   // platformPluginArguments(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -184,6 +204,7 @@ func (this *QLibraryInfo) platformPluginArguments_s(args ...interface{}) () {
     qtrt.ErrorResolve("QLibraryInfo", "platformPluginArguments", args)
   }
 
+  return
 }
 
 // <= body block end

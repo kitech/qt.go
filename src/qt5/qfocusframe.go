@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qfocusframe.h
 // dst-file: /src/widgets/qfocusframe.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto:  void QFocusFrame::~QFocusFrame();
 extern void C_ZN11QFocusFrameD2Ev(void* qthis); // 4
   // proto:  QWidget * QFocusFrame::widget();
-extern void C_ZNK11QFocusFrame6widgetEv(void* qthis); // 4
+extern void* C_ZNK11QFocusFrame6widgetEv(void* qthis); // 4
   // proto:  void QFocusFrame::setWidget(QWidget * widget);
 extern void C_ZN11QFocusFrame9setWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QFocusFrame::QFocusFrame(QWidget * parent);
@@ -57,7 +57,7 @@ type QFocusFrame struct {
 }
 
 // ~QFocusFrame()
-func (this *QFocusFrame) FreeQFocusFrame(args ...interface{}) () {
+func (this *QFocusFrame) Freeqfocusframe(args ...interface{}) () {
   // ~QFocusFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -74,10 +74,11 @@ func (this *QFocusFrame) FreeQFocusFrame(args ...interface{}) () {
     qtrt.ErrorResolve("QFocusFrame", "~QFocusFrame", args)
   }
 
+  return
 }
 
 // widget()
-func (this *QFocusFrame) widget(args ...interface{}) () {
+func (this *QFocusFrame) Widget(args ...interface{}) (ret interface{}) {
   // widget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -89,16 +90,20 @@ func (this *QFocusFrame) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFocusFrame6widgetEv
     // invoke: QWidget * widget()
-    var ret = C.C_ZNK11QFocusFrame6widgetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK11QFocusFrame6widgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QFocusFrame", "widget", args)
   }
 
+  return
 }
 
 // setWidget(class QWidget *)
-func (this *QFocusFrame) setWidget(args ...interface{}) () {
+func (this *QFocusFrame) Setwidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -118,6 +123,7 @@ func (this *QFocusFrame) setWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QFocusFrame", "setWidget", args)
   }
 
+  return
 }
 
 // QFocusFrame(class QWidget *)
@@ -148,7 +154,7 @@ func NewQFocusFrame(args ...interface{}) *QFocusFrame {
 }
 
 // metaObject()
-func (this *QFocusFrame) metaObject(args ...interface{}) () {
+func (this *QFocusFrame) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -165,6 +171,7 @@ func (this *QFocusFrame) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QFocusFrame", "metaObject", args)
   }
 
+  return
 }
 
 // <= body block end

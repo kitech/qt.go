@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtWidgets/qwidgetaction.h
 // dst-file: /src/widgets/qwidgetaction.go
 //
@@ -35,9 +35,9 @@ extern void C_ZNK13QWidgetAction10metaObjectEv(void* qthis); // 4
   // proto:  void QWidgetAction::QWidgetAction(QObject * parent);
 extern void* C_ZN13QWidgetActionC2EP7QObject(void* arg0); // 3
   // proto:  QWidget * QWidgetAction::defaultWidget();
-extern void C_ZNK13QWidgetAction13defaultWidgetEv(void* qthis); // 4
+extern void* C_ZNK13QWidgetAction13defaultWidgetEv(void* qthis); // 4
   // proto:  QWidget * QWidgetAction::requestWidget(QWidget * parent);
-extern void C_ZN13QWidgetAction13requestWidgetEP7QWidget(void* qthis, void* arg0); // 4
+extern void* C_ZN13QWidgetAction13requestWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QWidgetAction::~QWidgetAction();
 extern void C_ZN13QWidgetActionD2Ev(void* qthis); // 4
   // proto:  void QWidgetAction::setDefaultWidget(QWidget * w);
@@ -61,7 +61,7 @@ type QWidgetAction struct {
 }
 
 // releaseWidget(class QWidget *)
-func (this *QWidgetAction) releaseWidget(args ...interface{}) () {
+func (this *QWidgetAction) Releasewidget(args ...interface{}) () {
   // releaseWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -81,10 +81,11 @@ func (this *QWidgetAction) releaseWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QWidgetAction", "releaseWidget", args)
   }
 
+  return
 }
 
 // metaObject()
-func (this *QWidgetAction) metaObject(args ...interface{}) () {
+func (this *QWidgetAction) Metaobject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -101,6 +102,7 @@ func (this *QWidgetAction) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QWidgetAction", "metaObject", args)
   }
 
+  return
 }
 
 // QWidgetAction(class QObject *)
@@ -131,7 +133,7 @@ func NewQWidgetAction(args ...interface{}) *QWidgetAction {
 }
 
 // defaultWidget()
-func (this *QWidgetAction) defaultWidget(args ...interface{}) () {
+func (this *QWidgetAction) Defaultwidget(args ...interface{}) (ret interface{}) {
   // defaultWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -143,16 +145,20 @@ func (this *QWidgetAction) defaultWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QWidgetAction13defaultWidgetEv
     // invoke: QWidget * defaultWidget()
-    var ret = C.C_ZNK13QWidgetAction13defaultWidgetEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK13QWidgetAction13defaultWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QWidgetAction", "defaultWidget", args)
   }
 
+  return
 }
 
 // requestWidget(class QWidget *)
-func (this *QWidgetAction) requestWidget(args ...interface{}) () {
+func (this *QWidgetAction) Requestwidget(args ...interface{}) (ret interface{}) {
   // requestWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -167,16 +173,20 @@ func (this *QWidgetAction) requestWidget(args ...interface{}) () {
     // invoke: QWidget * requestWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    var ret = C.C_ZN13QWidgetAction13requestWidgetEP7QWidget(this.qclsinst, arg0)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZN13QWidgetAction13requestWidgetEP7QWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QWidgetAction", "requestWidget", args)
   }
 
+  return
 }
 
 // ~QWidgetAction()
-func (this *QWidgetAction) FreeQWidgetAction(args ...interface{}) () {
+func (this *QWidgetAction) Freeqwidgetaction(args ...interface{}) () {
   // ~QWidgetAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -193,10 +203,11 @@ func (this *QWidgetAction) FreeQWidgetAction(args ...interface{}) () {
     qtrt.ErrorResolve("QWidgetAction", "~QWidgetAction", args)
   }
 
+  return
 }
 
 // setDefaultWidget(class QWidget *)
-func (this *QWidgetAction) setDefaultWidget(args ...interface{}) () {
+func (this *QWidgetAction) Setdefaultwidget(args ...interface{}) () {
   // setDefaultWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -216,6 +227,7 @@ func (this *QWidgetAction) setDefaultWidget(args ...interface{}) () {
     qtrt.ErrorResolve("QWidgetAction", "setDefaultWidget", args)
   }
 
+  return
 }
 
 // <= body block end

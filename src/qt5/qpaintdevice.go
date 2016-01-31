@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 14:26:18 2016
+// created: Sun Jan 31 23:40:52 2016
 // src-file: /QtGui/qpaintdevice.h
 // dst-file: /src/gui/qpaintdevice.go
 //
@@ -29,33 +29,33 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QPaintDevice::physicalDpiX();
-extern void C_ZNK12QPaintDevice12physicalDpiXEv(void* qthis); // 2
+extern int32_t C_ZNK12QPaintDevice12physicalDpiXEv(void* qthis); // 2
   // proto:  int QPaintDevice::physicalDpiY();
-extern void C_ZNK12QPaintDevice12physicalDpiYEv(void* qthis); // 2
+extern int32_t C_ZNK12QPaintDevice12physicalDpiYEv(void* qthis); // 2
   // proto:  int QPaintDevice::heightMM();
-extern void C_ZNK12QPaintDevice8heightMMEv(void* qthis); // 2
+extern int32_t C_ZNK12QPaintDevice8heightMMEv(void* qthis); // 2
   // proto:  int QPaintDevice::devicePixelRatio();
-extern void C_ZNK12QPaintDevice16devicePixelRatioEv(void* qthis); // 2
+extern int32_t C_ZNK12QPaintDevice16devicePixelRatioEv(void* qthis); // 2
   // proto:  int QPaintDevice::logicalDpiX();
-extern void C_ZNK12QPaintDevice11logicalDpiXEv(void* qthis); // 2
+extern int32_t C_ZNK12QPaintDevice11logicalDpiXEv(void* qthis); // 2
   // proto:  int QPaintDevice::depth();
-extern void C_ZNK12QPaintDevice5depthEv(void* qthis); // 2
+extern int32_t C_ZNK12QPaintDevice5depthEv(void* qthis); // 2
   // proto:  int QPaintDevice::height();
-extern void C_ZNK12QPaintDevice6heightEv(void* qthis); // 2
+extern int32_t C_ZNK12QPaintDevice6heightEv(void* qthis); // 2
   // proto:  int QPaintDevice::colorCount();
-extern void C_ZNK12QPaintDevice10colorCountEv(void* qthis); // 2
+extern int32_t C_ZNK12QPaintDevice10colorCountEv(void* qthis); // 2
   // proto:  int QPaintDevice::width();
-extern void C_ZNK12QPaintDevice5widthEv(void* qthis); // 2
+extern int32_t C_ZNK12QPaintDevice5widthEv(void* qthis); // 2
   // proto:  int QPaintDevice::devType();
-extern void C_ZNK12QPaintDevice7devTypeEv(void* qthis); // 2
+extern int32_t C_ZNK12QPaintDevice7devTypeEv(void* qthis); // 2
   // proto:  int QPaintDevice::widthMM();
-extern void C_ZNK12QPaintDevice7widthMMEv(void* qthis); // 2
+extern int32_t C_ZNK12QPaintDevice7widthMMEv(void* qthis); // 2
   // proto:  int QPaintDevice::logicalDpiY();
-extern void C_ZNK12QPaintDevice11logicalDpiYEv(void* qthis); // 2
+extern int32_t C_ZNK12QPaintDevice11logicalDpiYEv(void* qthis); // 2
   // proto:  void QPaintDevice::~QPaintDevice();
 extern void C_ZN12QPaintDeviceD2Ev(void* qthis); // 4
   // proto:  bool QPaintDevice::paintingActive();
-extern void C_ZNK12QPaintDevice14paintingActiveEv(void* qthis); // 2
+extern bool C_ZNK12QPaintDevice14paintingActiveEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -75,7 +75,7 @@ type QPaintDevice struct {
 }
 
 // physicalDpiX()
-func (this *QPaintDevice) physicalDpiX(args ...interface{}) () {
+func (this *QPaintDevice) Physicaldpix(args ...interface{}) (ret interface{}) {
   // physicalDpiX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -87,16 +87,20 @@ func (this *QPaintDevice) physicalDpiX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice12physicalDpiXEv
     // invoke: int physicalDpiX()
-    var ret = C.C_ZNK12QPaintDevice12physicalDpiXEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice12physicalDpiXEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "physicalDpiX", args)
   }
 
+  return
 }
 
 // physicalDpiY()
-func (this *QPaintDevice) physicalDpiY(args ...interface{}) () {
+func (this *QPaintDevice) Physicaldpiy(args ...interface{}) (ret interface{}) {
   // physicalDpiY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -108,16 +112,20 @@ func (this *QPaintDevice) physicalDpiY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice12physicalDpiYEv
     // invoke: int physicalDpiY()
-    var ret = C.C_ZNK12QPaintDevice12physicalDpiYEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice12physicalDpiYEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "physicalDpiY", args)
   }
 
+  return
 }
 
 // heightMM()
-func (this *QPaintDevice) heightMM(args ...interface{}) () {
+func (this *QPaintDevice) Heightmm(args ...interface{}) (ret interface{}) {
   // heightMM()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -129,16 +137,20 @@ func (this *QPaintDevice) heightMM(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice8heightMMEv
     // invoke: int heightMM()
-    var ret = C.C_ZNK12QPaintDevice8heightMMEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice8heightMMEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "heightMM", args)
   }
 
+  return
 }
 
 // devicePixelRatio()
-func (this *QPaintDevice) devicePixelRatio(args ...interface{}) () {
+func (this *QPaintDevice) Devicepixelratio(args ...interface{}) (ret interface{}) {
   // devicePixelRatio()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -150,16 +162,20 @@ func (this *QPaintDevice) devicePixelRatio(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice16devicePixelRatioEv
     // invoke: int devicePixelRatio()
-    var ret = C.C_ZNK12QPaintDevice16devicePixelRatioEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice16devicePixelRatioEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "devicePixelRatio", args)
   }
 
+  return
 }
 
 // logicalDpiX()
-func (this *QPaintDevice) logicalDpiX(args ...interface{}) () {
+func (this *QPaintDevice) Logicaldpix(args ...interface{}) (ret interface{}) {
   // logicalDpiX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -171,16 +187,20 @@ func (this *QPaintDevice) logicalDpiX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice11logicalDpiXEv
     // invoke: int logicalDpiX()
-    var ret = C.C_ZNK12QPaintDevice11logicalDpiXEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice11logicalDpiXEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "logicalDpiX", args)
   }
 
+  return
 }
 
 // depth()
-func (this *QPaintDevice) depth(args ...interface{}) () {
+func (this *QPaintDevice) Depth(args ...interface{}) (ret interface{}) {
   // depth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -192,16 +212,20 @@ func (this *QPaintDevice) depth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice5depthEv
     // invoke: int depth()
-    var ret = C.C_ZNK12QPaintDevice5depthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice5depthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "depth", args)
   }
 
+  return
 }
 
 // height()
-func (this *QPaintDevice) height(args ...interface{}) () {
+func (this *QPaintDevice) Height(args ...interface{}) (ret interface{}) {
   // height()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -213,16 +237,20 @@ func (this *QPaintDevice) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice6heightEv
     // invoke: int height()
-    var ret = C.C_ZNK12QPaintDevice6heightEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice6heightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "height", args)
   }
 
+  return
 }
 
 // colorCount()
-func (this *QPaintDevice) colorCount(args ...interface{}) () {
+func (this *QPaintDevice) Colorcount(args ...interface{}) (ret interface{}) {
   // colorCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -234,16 +262,20 @@ func (this *QPaintDevice) colorCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice10colorCountEv
     // invoke: int colorCount()
-    var ret = C.C_ZNK12QPaintDevice10colorCountEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice10colorCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "colorCount", args)
   }
 
+  return
 }
 
 // width()
-func (this *QPaintDevice) width(args ...interface{}) () {
+func (this *QPaintDevice) Width(args ...interface{}) (ret interface{}) {
   // width()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -255,16 +287,20 @@ func (this *QPaintDevice) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice5widthEv
     // invoke: int width()
-    var ret = C.C_ZNK12QPaintDevice5widthEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "width", args)
   }
 
+  return
 }
 
 // devType()
-func (this *QPaintDevice) devType(args ...interface{}) () {
+func (this *QPaintDevice) Devtype(args ...interface{}) (ret interface{}) {
   // devType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -276,16 +312,20 @@ func (this *QPaintDevice) devType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice7devTypeEv
     // invoke: int devType()
-    var ret = C.C_ZNK12QPaintDevice7devTypeEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice7devTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "devType", args)
   }
 
+  return
 }
 
 // widthMM()
-func (this *QPaintDevice) widthMM(args ...interface{}) () {
+func (this *QPaintDevice) Widthmm(args ...interface{}) (ret interface{}) {
   // widthMM()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -297,16 +337,20 @@ func (this *QPaintDevice) widthMM(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice7widthMMEv
     // invoke: int widthMM()
-    var ret = C.C_ZNK12QPaintDevice7widthMMEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice7widthMMEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "widthMM", args)
   }
 
+  return
 }
 
 // logicalDpiY()
-func (this *QPaintDevice) logicalDpiY(args ...interface{}) () {
+func (this *QPaintDevice) Logicaldpiy(args ...interface{}) (ret interface{}) {
   // logicalDpiY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -318,16 +362,20 @@ func (this *QPaintDevice) logicalDpiY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice11logicalDpiYEv
     // invoke: int logicalDpiY()
-    var ret = C.C_ZNK12QPaintDevice11logicalDpiYEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice11logicalDpiYEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.Int32Ty(false) // "int"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "logicalDpiY", args)
   }
 
+  return
 }
 
 // ~QPaintDevice()
-func (this *QPaintDevice) FreeQPaintDevice(args ...interface{}) () {
+func (this *QPaintDevice) Freeqpaintdevice(args ...interface{}) () {
   // ~QPaintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -344,10 +392,11 @@ func (this *QPaintDevice) FreeQPaintDevice(args ...interface{}) () {
     qtrt.ErrorResolve("QPaintDevice", "~QPaintDevice", args)
   }
 
+  return
 }
 
 // paintingActive()
-func (this *QPaintDevice) paintingActive(args ...interface{}) () {
+func (this *QPaintDevice) Paintingactive(args ...interface{}) (ret interface{}) {
   // paintingActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -359,12 +408,16 @@ func (this *QPaintDevice) paintingActive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintDevice14paintingActiveEv
     // invoke: bool paintingActive()
-    var ret = C.C_ZNK12QPaintDevice14paintingActiveEv(this.qclsinst)
-    if false {reflect.TypeOf(ret)}
+    var ret0 = C.C_ZNK12QPaintDevice14paintingActiveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret0)}
+    ret = ret0
+    var rety = qtrt.BoolTy(false) // "bool"
+    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
   default:
     qtrt.ErrorResolve("QPaintDevice", "paintingActive", args)
   }
 
+  return
 }
 
 // <= body block end
