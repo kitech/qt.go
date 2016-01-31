@@ -1,8 +1,12 @@
 package qtrt
 
+/*
+#include <stdint.h>
+*/
 import "C"
 import "unsafe"
 import "reflect"
+import "log"
 
 func test_123() {
 	// var a0 interface{}
@@ -30,4 +34,35 @@ func Float2Float(a0 interface{}) **C.float {
 
 func Double2Double(a0 interface{}) **C.double {
 	return (**C.double)((unsafe.Pointer)(reflect.ValueOf(a0.([][]float64)).UnsafeAddr())) // OK
+}
+
+func HandyConvert2c(fv interface{}, to reflect.Type) (retv interface{}, free bool) {
+	from := reflect.TypeOf(fv)
+	switch {
+	case from.Kind() == reflect.String && to.Kind() == reflect.Ptr && to.Elem().Kind() == reflect.Uint8:
+		retv = unsafe.Pointer(C.CString(fv.(string)))
+		free = true
+		return
+	default:
+	}
+
+	switch to.Kind() {
+	case reflect.Ptr:
+		log.Panicln("can's convert:", from.Kind().String(), to.Kind().String(), to.Elem().Kind().String())
+	default:
+		log.Panicln("can's convert:", from.Kind().String(), to.Kind().String())
+	}
+	return
+}
+
+func HandyConvert2go(fv interface{}, to reflect.Type) (retv interface{}, free bool) {
+	from := reflect.TypeOf(fv)
+
+	switch to.Kind() {
+	case reflect.Ptr:
+		log.Panicln("can's convert:", from.Kind().String(), to.Kind().String(), to.Elem().Kind().String())
+	default:
+		log.Panicln("can's convert:", from.Kind().String(), to.Kind().String())
+	}
+	return
 }
