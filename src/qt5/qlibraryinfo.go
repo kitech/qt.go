@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qlibraryinfo.h
 // dst-file: /src/core/qlibraryinfo.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QDate QLibraryInfo::buildDate();
-extern void _ZN12QLibraryInfo9buildDateEv(); // 4
+extern void C_ZN12QLibraryInfo9buildDateEv(); // 4
   // proto: static bool QLibraryInfo::isDebugBuild();
-extern void _ZN12QLibraryInfo12isDebugBuildEv(); // 4
+extern void C_ZN12QLibraryInfo12isDebugBuildEv(); // 4
   // proto: static QString QLibraryInfo::licensee();
-extern void _ZN12QLibraryInfo8licenseeEv(); // 4
+extern void C_ZN12QLibraryInfo8licenseeEv(); // 4
   // proto: static QString QLibraryInfo::licensedProducts();
-extern void _ZN12QLibraryInfo16licensedProductsEv(); // 4
+extern void C_ZN12QLibraryInfo16licensedProductsEv(); // 4
   // proto: static const char * QLibraryInfo::build();
-extern void _ZN12QLibraryInfo5buildEv(); // 4
+extern void C_ZN12QLibraryInfo5buildEv(); // 4
   // proto: static QStringList QLibraryInfo::platformPluginArguments(const QString & platformName);
-extern void _ZN12QLibraryInfo23platformPluginArgumentsERK7QString(void* arg0); // 4
+extern void C_ZN12QLibraryInfo23platformPluginArgumentsERK7QString(void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -71,7 +71,7 @@ func (this *QLibraryInfo) buildDate_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo9buildDateEv
     // invoke: QDate buildDate()
-    C._ZN12QLibraryInfo9buildDateEv()
+    C.C_ZN12QLibraryInfo9buildDateEv()
   default:
     qtrt.ErrorResolve("QLibraryInfo", "buildDate", args)
   }
@@ -91,7 +91,7 @@ func (this *QLibraryInfo) isDebugBuild_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo12isDebugBuildEv
     // invoke: bool isDebugBuild()
-    C._ZN12QLibraryInfo12isDebugBuildEv()
+    C.C_ZN12QLibraryInfo12isDebugBuildEv()
   default:
     qtrt.ErrorResolve("QLibraryInfo", "isDebugBuild", args)
   }
@@ -111,7 +111,7 @@ func (this *QLibraryInfo) licensee_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo8licenseeEv
     // invoke: QString licensee()
-    C._ZN12QLibraryInfo8licenseeEv()
+    C.C_ZN12QLibraryInfo8licenseeEv()
   default:
     qtrt.ErrorResolve("QLibraryInfo", "licensee", args)
   }
@@ -131,7 +131,7 @@ func (this *QLibraryInfo) licensedProducts_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo16licensedProductsEv
     // invoke: QString licensedProducts()
-    C._ZN12QLibraryInfo16licensedProductsEv()
+    C.C_ZN12QLibraryInfo16licensedProductsEv()
   default:
     qtrt.ErrorResolve("QLibraryInfo", "licensedProducts", args)
   }
@@ -151,7 +151,7 @@ func (this *QLibraryInfo) build_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo5buildEv
     // invoke: const char * build()
-    C._ZN12QLibraryInfo5buildEv()
+    C.C_ZN12QLibraryInfo5buildEv()
   default:
     qtrt.ErrorResolve("QLibraryInfo", "build", args)
   }
@@ -174,7 +174,7 @@ func (this *QLibraryInfo) platformPluginArguments_s(args ...interface{}) () {
     // invoke: QStringList platformPluginArguments(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QLibraryInfo23platformPluginArgumentsERK7QString(arg0)
+    C.C_ZN12QLibraryInfo23platformPluginArgumentsERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QLibraryInfo", "platformPluginArguments", args)
   }

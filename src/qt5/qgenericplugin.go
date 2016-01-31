@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qgenericplugin.h
 // dst-file: /src/gui/qgenericplugin.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  const QMetaObject * QGenericPlugin::metaObject();
-extern void _ZNK14QGenericPlugin10metaObjectEv(void* qthis); // 4
+extern void C_ZNK14QGenericPlugin10metaObjectEv(void* qthis); // 4
   // proto:  void QGenericPlugin::QGenericPlugin(QObject * parent);
-extern void _ZN14QGenericPluginC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN14QGenericPluginC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QGenericPlugin::~QGenericPlugin();
-extern void _ZN14QGenericPluginD2Ev(void* qthis); // 4
+extern void C_ZN14QGenericPluginD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -65,7 +65,7 @@ func (this *QGenericPlugin) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QGenericPlugin10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK14QGenericPlugin10metaObjectEv(this.qclsinst)
+    C.C_ZNK14QGenericPlugin10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGenericPlugin", "metaObject", args)
   }
@@ -90,7 +90,7 @@ func NewQGenericPlugin(args ...interface{}) QGenericPlugin {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN14QGenericPluginC2EP7QObject(qthis, arg0)
+    C.C_ZN14QGenericPluginC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QGenericPlugin", "QGenericPlugin", args)
   }
@@ -111,7 +111,7 @@ func (this *QGenericPlugin) FreeQGenericPlugin(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QGenericPluginD0Ev
     // invoke: void ~QGenericPlugin()
-    C._ZN14QGenericPluginD2Ev(this.qclsinst)
+    C.C_ZN14QGenericPluginD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGenericPlugin", "~QGenericPlugin", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.go
 //
@@ -29,33 +29,33 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QFrame::frameStyle();
-extern void _ZNK6QFrame10frameStyleEv(void* qthis); // 4
+extern void C_ZNK6QFrame10frameStyleEv(void* qthis); // 4
   // proto:  void QFrame::~QFrame();
-extern void _ZN6QFrameD2Ev(void* qthis); // 4
+extern void C_ZN6QFrameD2Ev(void* qthis); // 4
   // proto:  int QFrame::frameWidth();
-extern void _ZNK6QFrame10frameWidthEv(void* qthis); // 4
+extern void C_ZNK6QFrame10frameWidthEv(void* qthis); // 4
   // proto:  void QFrame::setLineWidth(int );
-extern void _ZN6QFrame12setLineWidthEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QFrame12setLineWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  const QMetaObject * QFrame::metaObject();
-extern void _ZNK6QFrame10metaObjectEv(void* qthis); // 4
+extern void C_ZNK6QFrame10metaObjectEv(void* qthis); // 4
   // proto:  void QFrame::setFrameStyle(int );
-extern void _ZN6QFrame13setFrameStyleEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QFrame13setFrameStyleEi(void* qthis, int32_t arg0); // 4
   // proto:  QRect QFrame::frameRect();
-extern void _ZNK6QFrame9frameRectEv(void* qthis); // 4
+extern void C_ZNK6QFrame9frameRectEv(void* qthis); // 4
   // proto:  QFrame::Shadow QFrame::frameShadow();
-extern void _ZNK6QFrame11frameShadowEv(void* qthis); // 4
+extern void C_ZNK6QFrame11frameShadowEv(void* qthis); // 4
   // proto:  void QFrame::setFrameRect(const QRect & );
-extern void _ZN6QFrame12setFrameRectERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZN6QFrame12setFrameRectERK5QRect(void* qthis, void* arg0); // 4
   // proto:  int QFrame::midLineWidth();
-extern void _ZNK6QFrame12midLineWidthEv(void* qthis); // 4
+extern void C_ZNK6QFrame12midLineWidthEv(void* qthis); // 4
   // proto:  QSize QFrame::sizeHint();
-extern void _ZNK6QFrame8sizeHintEv(void* qthis); // 4
+extern void C_ZNK6QFrame8sizeHintEv(void* qthis); // 4
   // proto:  QFrame::Shape QFrame::frameShape();
-extern void _ZNK6QFrame10frameShapeEv(void* qthis); // 4
+extern void C_ZNK6QFrame10frameShapeEv(void* qthis); // 4
   // proto:  void QFrame::setMidLineWidth(int );
-extern void _ZN6QFrame15setMidLineWidthEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QFrame15setMidLineWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  int QFrame::lineWidth();
-extern void _ZNK6QFrame9lineWidthEv(void* qthis); // 4
+extern void C_ZNK6QFrame9lineWidthEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -87,7 +87,7 @@ func (this *QFrame) frameStyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame10frameStyleEv
     // invoke: int frameStyle()
-    C._ZNK6QFrame10frameStyleEv(this.qclsinst)
+    C.C_ZNK6QFrame10frameStyleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "frameStyle", args)
   }
@@ -107,7 +107,7 @@ func (this *QFrame) FreeQFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QFrameD0Ev
     // invoke: void ~QFrame()
-    C._ZN6QFrameD2Ev(this.qclsinst)
+    C.C_ZN6QFrameD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "~QFrame", args)
   }
@@ -127,7 +127,7 @@ func (this *QFrame) frameWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame10frameWidthEv
     // invoke: int frameWidth()
-    C._ZNK6QFrame10frameWidthEv(this.qclsinst)
+    C.C_ZNK6QFrame10frameWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "frameWidth", args)
   }
@@ -150,7 +150,7 @@ func (this *QFrame) setLineWidth(args ...interface{}) () {
     // invoke: void setLineWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QFrame12setLineWidthEi(this.qclsinst, arg0)
+    C.C_ZN6QFrame12setLineWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFrame", "setLineWidth", args)
   }
@@ -170,7 +170,7 @@ func (this *QFrame) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK6QFrame10metaObjectEv(this.qclsinst)
+    C.C_ZNK6QFrame10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "metaObject", args)
   }
@@ -193,7 +193,7 @@ func (this *QFrame) setFrameStyle(args ...interface{}) () {
     // invoke: void setFrameStyle(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QFrame13setFrameStyleEi(this.qclsinst, arg0)
+    C.C_ZN6QFrame13setFrameStyleEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFrame", "setFrameStyle", args)
   }
@@ -213,7 +213,7 @@ func (this *QFrame) frameRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame9frameRectEv
     // invoke: QRect frameRect()
-    C._ZNK6QFrame9frameRectEv(this.qclsinst)
+    C.C_ZNK6QFrame9frameRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "frameRect", args)
   }
@@ -233,7 +233,7 @@ func (this *QFrame) frameShadow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame11frameShadowEv
     // invoke: QFrame::Shadow frameShadow()
-    C._ZNK6QFrame11frameShadowEv(this.qclsinst)
+    C.C_ZNK6QFrame11frameShadowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "frameShadow", args)
   }
@@ -256,7 +256,7 @@ func (this *QFrame) setFrameRect(args ...interface{}) () {
     // invoke: void setFrameRect(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QFrame12setFrameRectERK5QRect(this.qclsinst, arg0)
+    C.C_ZN6QFrame12setFrameRectERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFrame", "setFrameRect", args)
   }
@@ -276,7 +276,7 @@ func (this *QFrame) midLineWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame12midLineWidthEv
     // invoke: int midLineWidth()
-    C._ZNK6QFrame12midLineWidthEv(this.qclsinst)
+    C.C_ZNK6QFrame12midLineWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "midLineWidth", args)
   }
@@ -296,7 +296,7 @@ func (this *QFrame) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK6QFrame8sizeHintEv(this.qclsinst)
+    C.C_ZNK6QFrame8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "sizeHint", args)
   }
@@ -316,7 +316,7 @@ func (this *QFrame) frameShape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame10frameShapeEv
     // invoke: QFrame::Shape frameShape()
-    C._ZNK6QFrame10frameShapeEv(this.qclsinst)
+    C.C_ZNK6QFrame10frameShapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "frameShape", args)
   }
@@ -339,7 +339,7 @@ func (this *QFrame) setMidLineWidth(args ...interface{}) () {
     // invoke: void setMidLineWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QFrame15setMidLineWidthEi(this.qclsinst, arg0)
+    C.C_ZN6QFrame15setMidLineWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFrame", "setMidLineWidth", args)
   }
@@ -359,7 +359,7 @@ func (this *QFrame) lineWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame9lineWidthEv
     // invoke: int lineWidth()
-    C._ZNK6QFrame9lineWidthEv(this.qclsinst)
+    C.C_ZNK6QFrame9lineWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "lineWidth", args)
   }

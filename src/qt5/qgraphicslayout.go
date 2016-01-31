@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qgraphicslayout.h
 // dst-file: /src/widgets/qgraphicslayout.go
 //
@@ -29,27 +29,27 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QGraphicsLayout::updateGeometry();
-extern void _ZN15QGraphicsLayout14updateGeometryEv(void* qthis); // 4
+extern void C_ZN15QGraphicsLayout14updateGeometryEv(void* qthis); // 4
   // proto:  void QGraphicsLayout::activate();
-extern void _ZN15QGraphicsLayout8activateEv(void* qthis); // 4
+extern void C_ZN15QGraphicsLayout8activateEv(void* qthis); // 4
   // proto:  bool QGraphicsLayout::isActivated();
-extern void _ZNK15QGraphicsLayout11isActivatedEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsLayout11isActivatedEv(void* qthis); // 4
   // proto:  void QGraphicsLayout::invalidate();
-extern void _ZN15QGraphicsLayout10invalidateEv(void* qthis); // 4
+extern void C_ZN15QGraphicsLayout10invalidateEv(void* qthis); // 4
   // proto:  void QGraphicsLayout::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
-extern void _ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
+extern void C_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
   // proto:  void QGraphicsLayout::setContentsMargins(qreal left, qreal top, qreal right, qreal bottom);
-extern void _ZN15QGraphicsLayout18setContentsMarginsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
+extern void C_ZN15QGraphicsLayout18setContentsMarginsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
   // proto:  void QGraphicsLayout::~QGraphicsLayout();
-extern void _ZN15QGraphicsLayoutD2Ev(void* qthis); // 4
+extern void C_ZN15QGraphicsLayoutD2Ev(void* qthis); // 4
   // proto: static void QGraphicsLayout::setInstantInvalidatePropagation(bool enable);
-extern void _ZN15QGraphicsLayout31setInstantInvalidatePropagationEb(bool arg0); // 4
+extern void C_ZN15QGraphicsLayout31setInstantInvalidatePropagationEb(bool arg0); // 4
   // proto: static bool QGraphicsLayout::instantInvalidatePropagation();
-extern void _ZN15QGraphicsLayout28instantInvalidatePropagationEv(); // 4
+extern void C_ZN15QGraphicsLayout28instantInvalidatePropagationEv(); // 4
   // proto:  void QGraphicsLayout::widgetEvent(QEvent * e);
-extern void _ZN15QGraphicsLayout11widgetEventEP6QEvent(void* qthis, void* arg0); // 4
+extern void C_ZN15QGraphicsLayout11widgetEventEP6QEvent(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsLayout::QGraphicsLayout(QGraphicsLayoutItem * parent);
-extern void _ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(void* qthis, void* arg0); // 3
+extern void C_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -81,7 +81,7 @@ func (this *QGraphicsLayout) updateGeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsLayout14updateGeometryEv
     // invoke: void updateGeometry()
-    C._ZN15QGraphicsLayout14updateGeometryEv(this.qclsinst)
+    C.C_ZN15QGraphicsLayout14updateGeometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "updateGeometry", args)
   }
@@ -101,7 +101,7 @@ func (this *QGraphicsLayout) activate(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsLayout8activateEv
     // invoke: void activate()
-    C._ZN15QGraphicsLayout8activateEv(this.qclsinst)
+    C.C_ZN15QGraphicsLayout8activateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "activate", args)
   }
@@ -121,7 +121,7 @@ func (this *QGraphicsLayout) isActivated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsLayout11isActivatedEv
     // invoke: bool isActivated()
-    C._ZNK15QGraphicsLayout11isActivatedEv(this.qclsinst)
+    C.C_ZNK15QGraphicsLayout11isActivatedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "isActivated", args)
   }
@@ -141,7 +141,7 @@ func (this *QGraphicsLayout) invalidate(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsLayout10invalidateEv
     // invoke: void invalidate()
-    C._ZN15QGraphicsLayout10invalidateEv(this.qclsinst)
+    C.C_ZN15QGraphicsLayout10invalidateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "invalidate", args)
   }
@@ -173,7 +173,7 @@ func (this *QGraphicsLayout) getContentsMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C._ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "getContentsMargins", args)
   }
@@ -205,7 +205,7 @@ func (this *QGraphicsLayout) setContentsMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN15QGraphicsLayout18setContentsMarginsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN15QGraphicsLayout18setContentsMarginsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "setContentsMargins", args)
   }
@@ -225,7 +225,7 @@ func (this *QGraphicsLayout) FreeQGraphicsLayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsLayoutD0Ev
     // invoke: void ~QGraphicsLayout()
-    C._ZN15QGraphicsLayoutD2Ev(this.qclsinst)
+    C.C_ZN15QGraphicsLayoutD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "~QGraphicsLayout", args)
   }
@@ -248,7 +248,7 @@ func (this *QGraphicsLayout) setInstantInvalidatePropagation_s(args ...interface
     // invoke: void setInstantInvalidatePropagation(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsLayout31setInstantInvalidatePropagationEb(arg0)
+    C.C_ZN15QGraphicsLayout31setInstantInvalidatePropagationEb(arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "setInstantInvalidatePropagation", args)
   }
@@ -268,7 +268,7 @@ func (this *QGraphicsLayout) instantInvalidatePropagation_s(args ...interface{})
   case 0:
     // invoke: _ZN15QGraphicsLayout28instantInvalidatePropagationEv
     // invoke: bool instantInvalidatePropagation()
-    C._ZN15QGraphicsLayout28instantInvalidatePropagationEv()
+    C.C_ZN15QGraphicsLayout28instantInvalidatePropagationEv()
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "instantInvalidatePropagation", args)
   }
@@ -291,7 +291,7 @@ func (this *QGraphicsLayout) widgetEvent(args ...interface{}) () {
     // invoke: void widgetEvent(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsLayout11widgetEventEP6QEvent(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsLayout11widgetEventEP6QEvent(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "widgetEvent", args)
   }
@@ -316,7 +316,7 @@ func NewQGraphicsLayout(args ...interface{}) QGraphicsLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(qthis, arg0)
+    C.C_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(qthis, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "QGraphicsLayout", args)
   }

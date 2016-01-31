@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qbasictimer.h
 // dst-file: /src/core/qbasictimer.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QBasicTimer::stop();
-extern void _ZN11QBasicTimer4stopEv(void* qthis); // 4
+extern void C_ZN11QBasicTimer4stopEv(void* qthis); // 4
   // proto:  void QBasicTimer::start(int msec, QObject * obj);
-extern void _ZN11QBasicTimer5startEiP7QObject(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN11QBasicTimer5startEiP7QObject(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QBasicTimer::QBasicTimer();
-extern void _ZN11QBasicTimerC2Ev(void* qthis); // 1
+extern void C_ZN11QBasicTimerC2Ev(void* qthis); // 1
   // proto:  void QBasicTimer::~QBasicTimer();
-extern void _ZN11QBasicTimerD2Ev(void* qthis); // 2
+extern void C_ZN11QBasicTimerD2Ev(void* qthis); // 2
   // proto:  int QBasicTimer::timerId();
-extern void _ZNK11QBasicTimer7timerIdEv(void* qthis); // 2
+extern void C_ZNK11QBasicTimer7timerIdEv(void* qthis); // 2
   // proto:  bool QBasicTimer::isActive();
-extern void _ZNK11QBasicTimer8isActiveEv(void* qthis); // 2
+extern void C_ZNK11QBasicTimer8isActiveEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -71,7 +71,7 @@ func (this *QBasicTimer) stop(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QBasicTimer4stopEv
     // invoke: void stop()
-    C._ZN11QBasicTimer4stopEv(this.qclsinst)
+    C.C_ZN11QBasicTimer4stopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicTimer", "stop", args)
   }
@@ -97,7 +97,7 @@ func (this *QBasicTimer) start(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN11QBasicTimer5startEiP7QObject(this.qclsinst, arg0, arg1)
+    C.C_ZN11QBasicTimer5startEiP7QObject(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBasicTimer", "start", args)
   }
@@ -119,7 +119,7 @@ func NewQBasicTimer(args ...interface{}) QBasicTimer {
     // invoke: void QBasicTimer()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QBasicTimerC2Ev(qthis)
+    C.C_ZN11QBasicTimerC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QBasicTimer", "QBasicTimer", args)
   }
@@ -140,7 +140,7 @@ func (this *QBasicTimer) FreeQBasicTimer(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QBasicTimerD0Ev
     // invoke: void ~QBasicTimer()
-    C._ZN11QBasicTimerD2Ev(this.qclsinst)
+    C.C_ZN11QBasicTimerD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicTimer", "~QBasicTimer", args)
   }
@@ -160,7 +160,7 @@ func (this *QBasicTimer) timerId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QBasicTimer7timerIdEv
     // invoke: int timerId()
-    C._ZNK11QBasicTimer7timerIdEv(this.qclsinst)
+    C.C_ZNK11QBasicTimer7timerIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicTimer", "timerId", args)
   }
@@ -180,7 +180,7 @@ func (this *QBasicTimer) isActive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QBasicTimer8isActiveEv
     // invoke: bool isActive()
-    C._ZNK11QBasicTimer8isActiveEv(this.qclsinst)
+    C.C_ZNK11QBasicTimer8isActiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicTimer", "isActive", args)
   }

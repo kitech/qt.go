@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.go
 //
@@ -29,31 +29,31 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QElapsedTimer::invalidate();
-extern void _ZN13QElapsedTimer10invalidateEv(void* qthis); // 4
+extern void C_ZN13QElapsedTimer10invalidateEv(void* qthis); // 4
   // proto:  bool QElapsedTimer::isValid();
-extern void _ZNK13QElapsedTimer7isValidEv(void* qthis); // 4
+extern void C_ZNK13QElapsedTimer7isValidEv(void* qthis); // 4
   // proto:  qint64 QElapsedTimer::secsTo(const QElapsedTimer & other);
-extern void _ZNK13QElapsedTimer6secsToERKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK13QElapsedTimer6secsToERKS_(void* qthis, void* arg0); // 4
   // proto: static bool QElapsedTimer::isMonotonic();
-extern void _ZN13QElapsedTimer11isMonotonicEv(); // 4
+extern void C_ZN13QElapsedTimer11isMonotonicEv(); // 4
   // proto:  bool QElapsedTimer::hasExpired(qint64 timeout);
-extern void _ZNK13QElapsedTimer10hasExpiredEx(void* qthis, int64_t arg0); // 4
+extern void C_ZNK13QElapsedTimer10hasExpiredEx(void* qthis, int64_t arg0); // 4
   // proto:  void QElapsedTimer::QElapsedTimer();
-extern void _ZN13QElapsedTimerC2Ev(void* qthis); // 1
+extern void C_ZN13QElapsedTimerC2Ev(void* qthis); // 1
   // proto:  qint64 QElapsedTimer::elapsed();
-extern void _ZNK13QElapsedTimer7elapsedEv(void* qthis); // 4
+extern void C_ZNK13QElapsedTimer7elapsedEv(void* qthis); // 4
   // proto:  void QElapsedTimer::start();
-extern void _ZN13QElapsedTimer5startEv(void* qthis); // 4
+extern void C_ZN13QElapsedTimer5startEv(void* qthis); // 4
   // proto:  qint64 QElapsedTimer::msecsTo(const QElapsedTimer & other);
-extern void _ZNK13QElapsedTimer7msecsToERKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK13QElapsedTimer7msecsToERKS_(void* qthis, void* arg0); // 4
   // proto:  qint64 QElapsedTimer::msecsSinceReference();
-extern void _ZNK13QElapsedTimer19msecsSinceReferenceEv(void* qthis); // 4
+extern void C_ZNK13QElapsedTimer19msecsSinceReferenceEv(void* qthis); // 4
   // proto: static QElapsedTimer::ClockType QElapsedTimer::clockType();
-extern void _ZN13QElapsedTimer9clockTypeEv(); // 4
+extern void C_ZN13QElapsedTimer9clockTypeEv(); // 4
   // proto:  qint64 QElapsedTimer::nsecsElapsed();
-extern void _ZNK13QElapsedTimer12nsecsElapsedEv(void* qthis); // 4
+extern void C_ZNK13QElapsedTimer12nsecsElapsedEv(void* qthis); // 4
   // proto:  qint64 QElapsedTimer::restart();
-extern void _ZN13QElapsedTimer7restartEv(void* qthis); // 4
+extern void C_ZN13QElapsedTimer7restartEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -85,7 +85,7 @@ func (this *QElapsedTimer) invalidate(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QElapsedTimer10invalidateEv
     // invoke: void invalidate()
-    C._ZN13QElapsedTimer10invalidateEv(this.qclsinst)
+    C.C_ZN13QElapsedTimer10invalidateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "invalidate", args)
   }
@@ -105,7 +105,7 @@ func (this *QElapsedTimer) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QElapsedTimer7isValidEv
     // invoke: bool isValid()
-    C._ZNK13QElapsedTimer7isValidEv(this.qclsinst)
+    C.C_ZNK13QElapsedTimer7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "isValid", args)
   }
@@ -128,7 +128,7 @@ func (this *QElapsedTimer) secsTo(args ...interface{}) () {
     // invoke: qint64 secsTo(const class QElapsedTimer &)
     var arg0 = args[0].(QElapsedTimer).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QElapsedTimer6secsToERKS_(this.qclsinst, arg0)
+    C.C_ZNK13QElapsedTimer6secsToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "secsTo", args)
   }
@@ -148,7 +148,7 @@ func (this *QElapsedTimer) isMonotonic_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QElapsedTimer11isMonotonicEv
     // invoke: bool isMonotonic()
-    C._ZN13QElapsedTimer11isMonotonicEv()
+    C.C_ZN13QElapsedTimer11isMonotonicEv()
   default:
     qtrt.ErrorResolve("QElapsedTimer", "isMonotonic", args)
   }
@@ -171,7 +171,7 @@ func (this *QElapsedTimer) hasExpired(args ...interface{}) () {
     // invoke: bool hasExpired(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C._ZNK13QElapsedTimer10hasExpiredEx(this.qclsinst, arg0)
+    C.C_ZNK13QElapsedTimer10hasExpiredEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "hasExpired", args)
   }
@@ -193,7 +193,7 @@ func NewQElapsedTimer(args ...interface{}) QElapsedTimer {
     // invoke: void QElapsedTimer()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QElapsedTimerC2Ev(qthis)
+    C.C_ZN13QElapsedTimerC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "QElapsedTimer", args)
   }
@@ -214,7 +214,7 @@ func (this *QElapsedTimer) elapsed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QElapsedTimer7elapsedEv
     // invoke: qint64 elapsed()
-    C._ZNK13QElapsedTimer7elapsedEv(this.qclsinst)
+    C.C_ZNK13QElapsedTimer7elapsedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "elapsed", args)
   }
@@ -234,7 +234,7 @@ func (this *QElapsedTimer) start(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QElapsedTimer5startEv
     // invoke: void start()
-    C._ZN13QElapsedTimer5startEv(this.qclsinst)
+    C.C_ZN13QElapsedTimer5startEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "start", args)
   }
@@ -257,7 +257,7 @@ func (this *QElapsedTimer) msecsTo(args ...interface{}) () {
     // invoke: qint64 msecsTo(const class QElapsedTimer &)
     var arg0 = args[0].(QElapsedTimer).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QElapsedTimer7msecsToERKS_(this.qclsinst, arg0)
+    C.C_ZNK13QElapsedTimer7msecsToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "msecsTo", args)
   }
@@ -277,7 +277,7 @@ func (this *QElapsedTimer) msecsSinceReference(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QElapsedTimer19msecsSinceReferenceEv
     // invoke: qint64 msecsSinceReference()
-    C._ZNK13QElapsedTimer19msecsSinceReferenceEv(this.qclsinst)
+    C.C_ZNK13QElapsedTimer19msecsSinceReferenceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "msecsSinceReference", args)
   }
@@ -297,7 +297,7 @@ func (this *QElapsedTimer) clockType_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QElapsedTimer9clockTypeEv
     // invoke: QElapsedTimer::ClockType clockType()
-    C._ZN13QElapsedTimer9clockTypeEv()
+    C.C_ZN13QElapsedTimer9clockTypeEv()
   default:
     qtrt.ErrorResolve("QElapsedTimer", "clockType", args)
   }
@@ -317,7 +317,7 @@ func (this *QElapsedTimer) nsecsElapsed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QElapsedTimer12nsecsElapsedEv
     // invoke: qint64 nsecsElapsed()
-    C._ZNK13QElapsedTimer12nsecsElapsedEv(this.qclsinst)
+    C.C_ZNK13QElapsedTimer12nsecsElapsedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "nsecsElapsed", args)
   }
@@ -337,7 +337,7 @@ func (this *QElapsedTimer) restart(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QElapsedTimer7restartEv
     // invoke: qint64 restart()
-    C._ZN13QElapsedTimer7restartEv(this.qclsinst)
+    C.C_ZN13QElapsedTimer7restartEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "restart", args)
   }

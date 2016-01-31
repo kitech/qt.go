@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qdialogbuttonbox.h
 // dst-file: /src/widgets/qdialogbuttonbox.go
 //
@@ -29,29 +29,29 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  Qt::Orientation QDialogButtonBox::orientation();
-extern void _ZNK16QDialogButtonBox11orientationEv(void* qthis); // 4
+extern void C_ZNK16QDialogButtonBox11orientationEv(void* qthis); // 4
   // proto:  bool QDialogButtonBox::centerButtons();
-extern void _ZNK16QDialogButtonBox13centerButtonsEv(void* qthis); // 4
+extern void C_ZNK16QDialogButtonBox13centerButtonsEv(void* qthis); // 4
   // proto:  void QDialogButtonBox::setCenterButtons(bool center);
-extern void _ZN16QDialogButtonBox16setCenterButtonsEb(void* qthis, bool arg0); // 4
+extern void C_ZN16QDialogButtonBox16setCenterButtonsEb(void* qthis, bool arg0); // 4
   // proto:  void QDialogButtonBox::removeButton(QAbstractButton * button);
-extern void _ZN16QDialogButtonBox12removeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
+extern void C_ZN16QDialogButtonBox12removeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  void QDialogButtonBox::QDialogButtonBox(QWidget * parent);
-extern void _ZN16QDialogButtonBoxC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN16QDialogButtonBoxC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  QDialogButtonBox::ButtonRole QDialogButtonBox::buttonRole(QAbstractButton * button);
-extern void _ZNK16QDialogButtonBox10buttonRoleEP15QAbstractButton(void* qthis, void* arg0); // 4
+extern void C_ZNK16QDialogButtonBox10buttonRoleEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  QList<QAbstractButton *> QDialogButtonBox::buttons();
-extern void _ZNK16QDialogButtonBox7buttonsEv(void* qthis); // 4
+extern void C_ZNK16QDialogButtonBox7buttonsEv(void* qthis); // 4
   // proto:  void QDialogButtonBox::~QDialogButtonBox();
-extern void _ZN16QDialogButtonBoxD2Ev(void* qthis); // 4
+extern void C_ZN16QDialogButtonBoxD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QDialogButtonBox::metaObject();
-extern void _ZNK16QDialogButtonBox10metaObjectEv(void* qthis); // 4
+extern void C_ZNK16QDialogButtonBox10metaObjectEv(void* qthis); // 4
   // proto:  StandardButtons QDialogButtonBox::standardButtons();
-extern void _ZNK16QDialogButtonBox15standardButtonsEv(void* qthis); // 4
+extern void C_ZNK16QDialogButtonBox15standardButtonsEv(void* qthis); // 4
   // proto:  void QDialogButtonBox::clear();
-extern void _ZN16QDialogButtonBox5clearEv(void* qthis); // 4
+extern void C_ZN16QDialogButtonBox5clearEv(void* qthis); // 4
   // proto:  QDialogButtonBox::StandardButton QDialogButtonBox::standardButton(QAbstractButton * button);
-extern void _ZNK16QDialogButtonBox14standardButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
+extern void C_ZNK16QDialogButtonBox14standardButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -87,7 +87,7 @@ func (this *QDialogButtonBox) orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QDialogButtonBox11orientationEv
     // invoke: Qt::Orientation orientation()
-    C._ZNK16QDialogButtonBox11orientationEv(this.qclsinst)
+    C.C_ZNK16QDialogButtonBox11orientationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "orientation", args)
   }
@@ -107,7 +107,7 @@ func (this *QDialogButtonBox) centerButtons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QDialogButtonBox13centerButtonsEv
     // invoke: bool centerButtons()
-    C._ZNK16QDialogButtonBox13centerButtonsEv(this.qclsinst)
+    C.C_ZNK16QDialogButtonBox13centerButtonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "centerButtons", args)
   }
@@ -130,7 +130,7 @@ func (this *QDialogButtonBox) setCenterButtons(args ...interface{}) () {
     // invoke: void setCenterButtons(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN16QDialogButtonBox16setCenterButtonsEb(this.qclsinst, arg0)
+    C.C_ZN16QDialogButtonBox16setCenterButtonsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "setCenterButtons", args)
   }
@@ -153,7 +153,7 @@ func (this *QDialogButtonBox) removeButton(args ...interface{}) () {
     // invoke: void removeButton(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QDialogButtonBox12removeButtonEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZN16QDialogButtonBox12removeButtonEP15QAbstractButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "removeButton", args)
   }
@@ -178,7 +178,7 @@ func NewQDialogButtonBox(args ...interface{}) QDialogButtonBox {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QDialogButtonBoxC2EP7QWidget(qthis, arg0)
+    C.C_ZN16QDialogButtonBoxC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "QDialogButtonBox", args)
   }
@@ -202,7 +202,7 @@ func (this *QDialogButtonBox) buttonRole(args ...interface{}) () {
     // invoke: QDialogButtonBox::ButtonRole buttonRole(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QDialogButtonBox10buttonRoleEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZNK16QDialogButtonBox10buttonRoleEP15QAbstractButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "buttonRole", args)
   }
@@ -222,7 +222,7 @@ func (this *QDialogButtonBox) buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QDialogButtonBox7buttonsEv
     // invoke: QList<QAbstractButton *> buttons()
-    C._ZNK16QDialogButtonBox7buttonsEv(this.qclsinst)
+    C.C_ZNK16QDialogButtonBox7buttonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "buttons", args)
   }
@@ -242,7 +242,7 @@ func (this *QDialogButtonBox) FreeQDialogButtonBox(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QDialogButtonBoxD0Ev
     // invoke: void ~QDialogButtonBox()
-    C._ZN16QDialogButtonBoxD2Ev(this.qclsinst)
+    C.C_ZN16QDialogButtonBoxD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "~QDialogButtonBox", args)
   }
@@ -262,7 +262,7 @@ func (this *QDialogButtonBox) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QDialogButtonBox10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK16QDialogButtonBox10metaObjectEv(this.qclsinst)
+    C.C_ZNK16QDialogButtonBox10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "metaObject", args)
   }
@@ -282,7 +282,7 @@ func (this *QDialogButtonBox) standardButtons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QDialogButtonBox15standardButtonsEv
     // invoke: StandardButtons standardButtons()
-    C._ZNK16QDialogButtonBox15standardButtonsEv(this.qclsinst)
+    C.C_ZNK16QDialogButtonBox15standardButtonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "standardButtons", args)
   }
@@ -302,7 +302,7 @@ func (this *QDialogButtonBox) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QDialogButtonBox5clearEv
     // invoke: void clear()
-    C._ZN16QDialogButtonBox5clearEv(this.qclsinst)
+    C.C_ZN16QDialogButtonBox5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "clear", args)
   }
@@ -325,7 +325,7 @@ func (this *QDialogButtonBox) standardButton(args ...interface{}) () {
     // invoke: QDialogButtonBox::StandardButton standardButton(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QDialogButtonBox14standardButtonEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZNK16QDialogButtonBox14standardButtonEP15QAbstractButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "standardButton", args)
   }

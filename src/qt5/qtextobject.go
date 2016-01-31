@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qtextobject.h
 // dst-file: /src/gui/qtextobject.go
 //
@@ -29,143 +29,143 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QTextFormat QTextObject::format();
-extern void _ZNK11QTextObject6formatEv(void* qthis); // 4
+extern void C_ZNK11QTextObject6formatEv(void* qthis); // 4
   // proto:  QTextDocumentPrivate * QTextObject::docHandle();
-extern void _ZNK11QTextObject9docHandleEv(void* qthis); // 4
+extern void C_ZNK11QTextObject9docHandleEv(void* qthis); // 4
   // proto:  const QMetaObject * QTextObject::metaObject();
-extern void _ZNK11QTextObject10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QTextObject10metaObjectEv(void* qthis); // 4
   // proto:  int QTextObject::formatIndex();
-extern void _ZNK11QTextObject11formatIndexEv(void* qthis); // 4
+extern void C_ZNK11QTextObject11formatIndexEv(void* qthis); // 4
   // proto:  int QTextObject::objectIndex();
-extern void _ZNK11QTextObject11objectIndexEv(void* qthis); // 4
+extern void C_ZNK11QTextObject11objectIndexEv(void* qthis); // 4
   // proto:  QTextDocument * QTextObject::document();
-extern void _ZNK11QTextObject8documentEv(void* qthis); // 4
+extern void C_ZNK11QTextObject8documentEv(void* qthis); // 4
   // proto:  void QTextBlockUserData::~QTextBlockUserData();
-extern void _ZN18QTextBlockUserDataD2Ev(void* qthis); // 4
+extern void C_ZN18QTextBlockUserDataD2Ev(void* qthis); // 4
   // proto:  bool QTextFragment::isValid();
-extern void _ZNK13QTextFragment7isValidEv(void* qthis); // 2
+extern void C_ZNK13QTextFragment7isValidEv(void* qthis); // 2
   // proto:  int QTextFragment::charFormatIndex();
-extern void _ZNK13QTextFragment15charFormatIndexEv(void* qthis); // 4
+extern void C_ZNK13QTextFragment15charFormatIndexEv(void* qthis); // 4
   // proto:  QString QTextFragment::text();
-extern void _ZNK13QTextFragment4textEv(void* qthis); // 4
+extern void C_ZNK13QTextFragment4textEv(void* qthis); // 4
   // proto:  bool QTextFragment::contains(int position);
-extern void _ZNK13QTextFragment8containsEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK13QTextFragment8containsEi(void* qthis, int32_t arg0); // 4
   // proto:  QTextCharFormat QTextFragment::charFormat();
-extern void _ZNK13QTextFragment10charFormatEv(void* qthis); // 4
+extern void C_ZNK13QTextFragment10charFormatEv(void* qthis); // 4
   // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
-extern void _ZN13QTextFragmentC2ERKS_(void* qthis, void* arg0); // 1
+extern void C_ZN13QTextFragmentC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QTextFragment::QTextFragment();
-extern void _ZN13QTextFragmentC2Ev(void* qthis); // 1
+extern void C_ZN13QTextFragmentC2Ev(void* qthis); // 1
   // proto:  int QTextFragment::length();
-extern void _ZNK13QTextFragment6lengthEv(void* qthis); // 4
+extern void C_ZNK13QTextFragment6lengthEv(void* qthis); // 4
   // proto:  int QTextFragment::position();
-extern void _ZNK13QTextFragment8positionEv(void* qthis); // 4
+extern void C_ZNK13QTextFragment8positionEv(void* qthis); // 4
   // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
-extern void _ZNK13QTextFragment9glyphRunsEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZNK13QTextFragment9glyphRunsEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QTextFrameLayoutData::~QTextFrameLayoutData();
-extern void _ZN20QTextFrameLayoutDataD2Ev(void* qthis); // 4
+extern void C_ZN20QTextFrameLayoutDataD2Ev(void* qthis); // 4
   // proto:  int QTextBlock::blockFormatIndex();
-extern void _ZNK10QTextBlock16blockFormatIndexEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock16blockFormatIndexEv(void* qthis); // 4
   // proto:  QString QTextBlock::text();
-extern void _ZNK10QTextBlock4textEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock4textEv(void* qthis); // 4
   // proto:  int QTextBlock::lineCount();
-extern void _ZNK10QTextBlock9lineCountEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock9lineCountEv(void* qthis); // 4
   // proto:  void QTextBlock::clearLayout();
-extern void _ZN10QTextBlock11clearLayoutEv(void* qthis); // 4
+extern void C_ZN10QTextBlock11clearLayoutEv(void* qthis); // 4
   // proto:  QTextCharFormat QTextBlock::charFormat();
-extern void _ZNK10QTextBlock10charFormatEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock10charFormatEv(void* qthis); // 4
   // proto:  void QTextBlock::setRevision(int rev);
-extern void _ZN10QTextBlock11setRevisionEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QTextBlock11setRevisionEi(void* qthis, int32_t arg0); // 4
   // proto:  QTextList * QTextBlock::textList();
-extern void _ZNK10QTextBlock8textListEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock8textListEv(void* qthis); // 4
   // proto:  int QTextBlock::userState();
-extern void _ZNK10QTextBlock9userStateEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock9userStateEv(void* qthis); // 4
   // proto:  void QTextBlock::setUserState(int state);
-extern void _ZN10QTextBlock12setUserStateEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QTextBlock12setUserStateEi(void* qthis, int32_t arg0); // 4
   // proto:  QTextBlock::iterator QTextBlock::end();
-extern void _ZNK10QTextBlock3endEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock3endEv(void* qthis); // 4
   // proto:  QTextBlockFormat QTextBlock::blockFormat();
-extern void _ZNK10QTextBlock11blockFormatEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock11blockFormatEv(void* qthis); // 4
   // proto:  QVector<QTextLayout::FormatRange> QTextBlock::textFormats();
-extern void _ZNK10QTextBlock11textFormatsEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock11textFormatsEv(void* qthis); // 4
   // proto:  bool QTextBlock::contains(int position);
-extern void _ZNK10QTextBlock8containsEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK10QTextBlock8containsEi(void* qthis, int32_t arg0); // 4
   // proto:  QTextBlock QTextBlock::next();
-extern void _ZNK10QTextBlock4nextEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock4nextEv(void* qthis); // 4
   // proto:  QTextDocumentPrivate * QTextBlock::docHandle();
-extern void _ZNK10QTextBlock9docHandleEv(void* qthis); // 2
+extern void C_ZNK10QTextBlock9docHandleEv(void* qthis); // 2
   // proto:  int QTextBlock::fragmentIndex();
-extern void _ZNK10QTextBlock13fragmentIndexEv(void* qthis); // 2
+extern void C_ZNK10QTextBlock13fragmentIndexEv(void* qthis); // 2
   // proto:  int QTextBlock::firstLineNumber();
-extern void _ZNK10QTextBlock15firstLineNumberEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock15firstLineNumberEv(void* qthis); // 4
   // proto:  const QTextDocument * QTextBlock::document();
-extern void _ZNK10QTextBlock8documentEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock8documentEv(void* qthis); // 4
   // proto:  int QTextBlock::revision();
-extern void _ZNK10QTextBlock8revisionEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock8revisionEv(void* qthis); // 4
   // proto:  QTextBlockUserData * QTextBlock::userData();
-extern void _ZNK10QTextBlock8userDataEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock8userDataEv(void* qthis); // 4
   // proto:  QTextBlock::iterator QTextBlock::begin();
-extern void _ZNK10QTextBlock5beginEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock5beginEv(void* qthis); // 4
   // proto:  bool QTextBlock::isValid();
-extern void _ZNK10QTextBlock7isValidEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock7isValidEv(void* qthis); // 4
   // proto:  void QTextBlock::setLineCount(int count);
-extern void _ZN10QTextBlock12setLineCountEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QTextBlock12setLineCountEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTextBlock::blockNumber();
-extern void _ZNK10QTextBlock11blockNumberEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock11blockNumberEv(void* qthis); // 4
   // proto:  QTextBlock QTextBlock::previous();
-extern void _ZNK10QTextBlock8previousEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock8previousEv(void* qthis); // 4
   // proto:  QTextLayout * QTextBlock::layout();
-extern void _ZNK10QTextBlock6layoutEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock6layoutEv(void* qthis); // 4
   // proto:  void QTextBlock::setUserData(QTextBlockUserData * data);
-extern void _ZN10QTextBlock11setUserDataEP18QTextBlockUserData(void* qthis, void* arg0); // 4
+extern void C_ZN10QTextBlock11setUserDataEP18QTextBlockUserData(void* qthis, void* arg0); // 4
   // proto:  Qt::LayoutDirection QTextBlock::textDirection();
-extern void _ZNK10QTextBlock13textDirectionEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock13textDirectionEv(void* qthis); // 4
   // proto:  int QTextBlock::charFormatIndex();
-extern void _ZNK10QTextBlock15charFormatIndexEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock15charFormatIndexEv(void* qthis); // 4
   // proto:  int QTextBlock::length();
-extern void _ZNK10QTextBlock6lengthEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock6lengthEv(void* qthis); // 4
   // proto:  void QTextBlock::QTextBlock(const QTextBlock & o);
-extern void _ZN10QTextBlockC2ERKS_(void* qthis, void* arg0); // 1
+extern void C_ZN10QTextBlockC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QTextBlock::QTextBlock();
-extern void _ZN10QTextBlockC2Ev(void* qthis); // 1
+extern void C_ZN10QTextBlockC2Ev(void* qthis); // 1
   // proto:  bool QTextBlock::isVisible();
-extern void _ZNK10QTextBlock9isVisibleEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock9isVisibleEv(void* qthis); // 4
   // proto:  int QTextBlock::position();
-extern void _ZNK10QTextBlock8positionEv(void* qthis); // 4
+extern void C_ZNK10QTextBlock8positionEv(void* qthis); // 4
   // proto:  void QTextBlock::setVisible(bool visible);
-extern void _ZN10QTextBlock10setVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN10QTextBlock10setVisibleEb(void* qthis, bool arg0); // 4
   // proto:  const QMetaObject * QTextBlockGroup::metaObject();
-extern void _ZNK15QTextBlockGroup10metaObjectEv(void* qthis); // 4
+extern void C_ZNK15QTextBlockGroup10metaObjectEv(void* qthis); // 4
   // proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
-extern void _ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(void* qthis, void* arg0); // 2
+extern void C_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(void* qthis, void* arg0); // 2
   // proto:  QList<QTextFrame *> QTextFrame::childFrames();
-extern void _ZNK10QTextFrame11childFramesEv(void* qthis); // 4
+extern void C_ZNK10QTextFrame11childFramesEv(void* qthis); // 4
   // proto:  QTextFrame * QTextFrame::parentFrame();
-extern void _ZNK10QTextFrame11parentFrameEv(void* qthis); // 4
+extern void C_ZNK10QTextFrame11parentFrameEv(void* qthis); // 4
   // proto:  QTextCursor QTextFrame::firstCursorPosition();
-extern void _ZNK10QTextFrame19firstCursorPositionEv(void* qthis); // 4
+extern void C_ZNK10QTextFrame19firstCursorPositionEv(void* qthis); // 4
   // proto:  QTextCursor QTextFrame::lastCursorPosition();
-extern void _ZNK10QTextFrame18lastCursorPositionEv(void* qthis); // 4
+extern void C_ZNK10QTextFrame18lastCursorPositionEv(void* qthis); // 4
   // proto:  int QTextFrame::firstPosition();
-extern void _ZNK10QTextFrame13firstPositionEv(void* qthis); // 4
+extern void C_ZNK10QTextFrame13firstPositionEv(void* qthis); // 4
   // proto:  QTextFrame::iterator QTextFrame::begin();
-extern void _ZNK10QTextFrame5beginEv(void* qthis); // 4
+extern void C_ZNK10QTextFrame5beginEv(void* qthis); // 4
   // proto:  QTextFrameLayoutData * QTextFrame::layoutData();
-extern void _ZNK10QTextFrame10layoutDataEv(void* qthis); // 4
+extern void C_ZNK10QTextFrame10layoutDataEv(void* qthis); // 4
   // proto:  QTextFrame::iterator QTextFrame::end();
-extern void _ZNK10QTextFrame3endEv(void* qthis); // 4
+extern void C_ZNK10QTextFrame3endEv(void* qthis); // 4
   // proto:  void QTextFrame::~QTextFrame();
-extern void _ZN10QTextFrameD2Ev(void* qthis); // 4
+extern void C_ZN10QTextFrameD2Ev(void* qthis); // 4
   // proto:  void QTextFrame::QTextFrame(QTextDocument * doc);
-extern void _ZN10QTextFrameC2EP13QTextDocument(void* qthis, void* arg0); // 3
+extern void C_ZN10QTextFrameC2EP13QTextDocument(void* qthis, void* arg0); // 3
   // proto:  const QMetaObject * QTextFrame::metaObject();
-extern void _ZNK10QTextFrame10metaObjectEv(void* qthis); // 4
+extern void C_ZNK10QTextFrame10metaObjectEv(void* qthis); // 4
   // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
-extern void _ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData(void* qthis, void* arg0); // 4
+extern void C_ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData(void* qthis, void* arg0); // 4
   // proto:  QTextFrameFormat QTextFrame::frameFormat();
-extern void _ZNK10QTextFrame11frameFormatEv(void* qthis); // 2
+extern void C_ZNK10QTextFrame11frameFormatEv(void* qthis); // 2
   // proto:  int QTextFrame::lastPosition();
-extern void _ZNK10QTextFrame12lastPositionEv(void* qthis); // 4
+extern void C_ZNK10QTextFrame12lastPositionEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -233,7 +233,7 @@ func (this *QTextObject) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextObject6formatEv
     // invoke: QTextFormat format()
-    C._ZNK11QTextObject6formatEv(this.qclsinst)
+    C.C_ZNK11QTextObject6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextObject", "format", args)
   }
@@ -253,7 +253,7 @@ func (this *QTextObject) docHandle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextObject9docHandleEv
     // invoke: QTextDocumentPrivate * docHandle()
-    C._ZNK11QTextObject9docHandleEv(this.qclsinst)
+    C.C_ZNK11QTextObject9docHandleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextObject", "docHandle", args)
   }
@@ -273,7 +273,7 @@ func (this *QTextObject) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextObject10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QTextObject10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QTextObject10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextObject", "metaObject", args)
   }
@@ -293,7 +293,7 @@ func (this *QTextObject) formatIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextObject11formatIndexEv
     // invoke: int formatIndex()
-    C._ZNK11QTextObject11formatIndexEv(this.qclsinst)
+    C.C_ZNK11QTextObject11formatIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextObject", "formatIndex", args)
   }
@@ -313,7 +313,7 @@ func (this *QTextObject) objectIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextObject11objectIndexEv
     // invoke: int objectIndex()
-    C._ZNK11QTextObject11objectIndexEv(this.qclsinst)
+    C.C_ZNK11QTextObject11objectIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextObject", "objectIndex", args)
   }
@@ -333,7 +333,7 @@ func (this *QTextObject) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextObject8documentEv
     // invoke: QTextDocument * document()
-    C._ZNK11QTextObject8documentEv(this.qclsinst)
+    C.C_ZNK11QTextObject8documentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextObject", "document", args)
   }
@@ -353,7 +353,7 @@ func (this *QTextBlockUserData) FreeQTextBlockUserData(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QTextBlockUserDataD0Ev
     // invoke: void ~QTextBlockUserData()
-    C._ZN18QTextBlockUserDataD2Ev(this.qclsinst)
+    C.C_ZN18QTextBlockUserDataD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockUserData", "~QTextBlockUserData", args)
   }
@@ -373,7 +373,7 @@ func (this *QTextFragment) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment7isValidEv
     // invoke: bool isValid()
-    C._ZNK13QTextFragment7isValidEv(this.qclsinst)
+    C.C_ZNK13QTextFragment7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFragment", "isValid", args)
   }
@@ -393,7 +393,7 @@ func (this *QTextFragment) charFormatIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment15charFormatIndexEv
     // invoke: int charFormatIndex()
-    C._ZNK13QTextFragment15charFormatIndexEv(this.qclsinst)
+    C.C_ZNK13QTextFragment15charFormatIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFragment", "charFormatIndex", args)
   }
@@ -413,7 +413,7 @@ func (this *QTextFragment) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment4textEv
     // invoke: QString text()
-    C._ZNK13QTextFragment4textEv(this.qclsinst)
+    C.C_ZNK13QTextFragment4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFragment", "text", args)
   }
@@ -436,7 +436,7 @@ func (this *QTextFragment) contains(args ...interface{}) () {
     // invoke: bool contains(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK13QTextFragment8containsEi(this.qclsinst, arg0)
+    C.C_ZNK13QTextFragment8containsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFragment", "contains", args)
   }
@@ -456,7 +456,7 @@ func (this *QTextFragment) charFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment10charFormatEv
     // invoke: QTextCharFormat charFormat()
-    C._ZNK13QTextFragment10charFormatEv(this.qclsinst)
+    C.C_ZNK13QTextFragment10charFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFragment", "charFormat", args)
   }
@@ -483,13 +483,13 @@ func NewQTextFragment(args ...interface{}) QTextFragment {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QTextFragmentC2ERKS_(qthis, arg0)
+    C.C_ZN13QTextFragmentC2ERKS_(qthis, arg0)
   case 1:
     // invoke: _ZN13QTextFragmentC1Ev
     // invoke: void QTextFragment()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QTextFragmentC2Ev(qthis)
+    C.C_ZN13QTextFragmentC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QTextFragment", "QTextFragment", args)
   }
@@ -510,7 +510,7 @@ func (this *QTextFragment) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment6lengthEv
     // invoke: int length()
-    C._ZNK13QTextFragment6lengthEv(this.qclsinst)
+    C.C_ZNK13QTextFragment6lengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFragment", "length", args)
   }
@@ -530,7 +530,7 @@ func (this *QTextFragment) position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment8positionEv
     // invoke: int position()
-    C._ZNK13QTextFragment8positionEv(this.qclsinst)
+    C.C_ZNK13QTextFragment8positionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFragment", "position", args)
   }
@@ -556,7 +556,7 @@ func (this *QTextFragment) glyphRuns(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK13QTextFragment9glyphRunsEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QTextFragment9glyphRunsEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextFragment", "glyphRuns", args)
   }
@@ -576,7 +576,7 @@ func (this *QTextFrameLayoutData) FreeQTextFrameLayoutData(args ...interface{}) 
   case 0:
     // invoke: _ZN20QTextFrameLayoutDataD0Ev
     // invoke: void ~QTextFrameLayoutData()
-    C._ZN20QTextFrameLayoutDataD2Ev(this.qclsinst)
+    C.C_ZN20QTextFrameLayoutDataD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameLayoutData", "~QTextFrameLayoutData", args)
   }
@@ -596,7 +596,7 @@ func (this *QTextBlock) blockFormatIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock16blockFormatIndexEv
     // invoke: int blockFormatIndex()
-    C._ZNK10QTextBlock16blockFormatIndexEv(this.qclsinst)
+    C.C_ZNK10QTextBlock16blockFormatIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "blockFormatIndex", args)
   }
@@ -616,7 +616,7 @@ func (this *QTextBlock) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock4textEv
     // invoke: QString text()
-    C._ZNK10QTextBlock4textEv(this.qclsinst)
+    C.C_ZNK10QTextBlock4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "text", args)
   }
@@ -636,7 +636,7 @@ func (this *QTextBlock) lineCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock9lineCountEv
     // invoke: int lineCount()
-    C._ZNK10QTextBlock9lineCountEv(this.qclsinst)
+    C.C_ZNK10QTextBlock9lineCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "lineCount", args)
   }
@@ -656,7 +656,7 @@ func (this *QTextBlock) clearLayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextBlock11clearLayoutEv
     // invoke: void clearLayout()
-    C._ZN10QTextBlock11clearLayoutEv(this.qclsinst)
+    C.C_ZN10QTextBlock11clearLayoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "clearLayout", args)
   }
@@ -676,7 +676,7 @@ func (this *QTextBlock) charFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock10charFormatEv
     // invoke: QTextCharFormat charFormat()
-    C._ZNK10QTextBlock10charFormatEv(this.qclsinst)
+    C.C_ZNK10QTextBlock10charFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "charFormat", args)
   }
@@ -699,7 +699,7 @@ func (this *QTextBlock) setRevision(args ...interface{}) () {
     // invoke: void setRevision(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QTextBlock11setRevisionEi(this.qclsinst, arg0)
+    C.C_ZN10QTextBlock11setRevisionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlock", "setRevision", args)
   }
@@ -719,7 +719,7 @@ func (this *QTextBlock) textList(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock8textListEv
     // invoke: QTextList * textList()
-    C._ZNK10QTextBlock8textListEv(this.qclsinst)
+    C.C_ZNK10QTextBlock8textListEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "textList", args)
   }
@@ -739,7 +739,7 @@ func (this *QTextBlock) userState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock9userStateEv
     // invoke: int userState()
-    C._ZNK10QTextBlock9userStateEv(this.qclsinst)
+    C.C_ZNK10QTextBlock9userStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "userState", args)
   }
@@ -762,7 +762,7 @@ func (this *QTextBlock) setUserState(args ...interface{}) () {
     // invoke: void setUserState(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QTextBlock12setUserStateEi(this.qclsinst, arg0)
+    C.C_ZN10QTextBlock12setUserStateEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlock", "setUserState", args)
   }
@@ -782,7 +782,7 @@ func (this *QTextBlock) end(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock3endEv
     // invoke: QTextBlock::iterator end()
-    C._ZNK10QTextBlock3endEv(this.qclsinst)
+    C.C_ZNK10QTextBlock3endEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "end", args)
   }
@@ -802,7 +802,7 @@ func (this *QTextBlock) blockFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock11blockFormatEv
     // invoke: QTextBlockFormat blockFormat()
-    C._ZNK10QTextBlock11blockFormatEv(this.qclsinst)
+    C.C_ZNK10QTextBlock11blockFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "blockFormat", args)
   }
@@ -822,7 +822,7 @@ func (this *QTextBlock) textFormats(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock11textFormatsEv
     // invoke: QVector<QTextLayout::FormatRange> textFormats()
-    C._ZNK10QTextBlock11textFormatsEv(this.qclsinst)
+    C.C_ZNK10QTextBlock11textFormatsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "textFormats", args)
   }
@@ -845,7 +845,7 @@ func (this *QTextBlock) contains(args ...interface{}) () {
     // invoke: bool contains(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK10QTextBlock8containsEi(this.qclsinst, arg0)
+    C.C_ZNK10QTextBlock8containsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlock", "contains", args)
   }
@@ -865,7 +865,7 @@ func (this *QTextBlock) next(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock4nextEv
     // invoke: QTextBlock next()
-    C._ZNK10QTextBlock4nextEv(this.qclsinst)
+    C.C_ZNK10QTextBlock4nextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "next", args)
   }
@@ -885,7 +885,7 @@ func (this *QTextBlock) docHandle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock9docHandleEv
     // invoke: QTextDocumentPrivate * docHandle()
-    C._ZNK10QTextBlock9docHandleEv(this.qclsinst)
+    C.C_ZNK10QTextBlock9docHandleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "docHandle", args)
   }
@@ -905,7 +905,7 @@ func (this *QTextBlock) fragmentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock13fragmentIndexEv
     // invoke: int fragmentIndex()
-    C._ZNK10QTextBlock13fragmentIndexEv(this.qclsinst)
+    C.C_ZNK10QTextBlock13fragmentIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "fragmentIndex", args)
   }
@@ -925,7 +925,7 @@ func (this *QTextBlock) firstLineNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock15firstLineNumberEv
     // invoke: int firstLineNumber()
-    C._ZNK10QTextBlock15firstLineNumberEv(this.qclsinst)
+    C.C_ZNK10QTextBlock15firstLineNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "firstLineNumber", args)
   }
@@ -945,7 +945,7 @@ func (this *QTextBlock) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock8documentEv
     // invoke: const QTextDocument * document()
-    C._ZNK10QTextBlock8documentEv(this.qclsinst)
+    C.C_ZNK10QTextBlock8documentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "document", args)
   }
@@ -965,7 +965,7 @@ func (this *QTextBlock) revision(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock8revisionEv
     // invoke: int revision()
-    C._ZNK10QTextBlock8revisionEv(this.qclsinst)
+    C.C_ZNK10QTextBlock8revisionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "revision", args)
   }
@@ -985,7 +985,7 @@ func (this *QTextBlock) userData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock8userDataEv
     // invoke: QTextBlockUserData * userData()
-    C._ZNK10QTextBlock8userDataEv(this.qclsinst)
+    C.C_ZNK10QTextBlock8userDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "userData", args)
   }
@@ -1005,7 +1005,7 @@ func (this *QTextBlock) begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock5beginEv
     // invoke: QTextBlock::iterator begin()
-    C._ZNK10QTextBlock5beginEv(this.qclsinst)
+    C.C_ZNK10QTextBlock5beginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "begin", args)
   }
@@ -1025,7 +1025,7 @@ func (this *QTextBlock) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock7isValidEv
     // invoke: bool isValid()
-    C._ZNK10QTextBlock7isValidEv(this.qclsinst)
+    C.C_ZNK10QTextBlock7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "isValid", args)
   }
@@ -1048,7 +1048,7 @@ func (this *QTextBlock) setLineCount(args ...interface{}) () {
     // invoke: void setLineCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QTextBlock12setLineCountEi(this.qclsinst, arg0)
+    C.C_ZN10QTextBlock12setLineCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlock", "setLineCount", args)
   }
@@ -1068,7 +1068,7 @@ func (this *QTextBlock) blockNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock11blockNumberEv
     // invoke: int blockNumber()
-    C._ZNK10QTextBlock11blockNumberEv(this.qclsinst)
+    C.C_ZNK10QTextBlock11blockNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "blockNumber", args)
   }
@@ -1088,7 +1088,7 @@ func (this *QTextBlock) previous(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock8previousEv
     // invoke: QTextBlock previous()
-    C._ZNK10QTextBlock8previousEv(this.qclsinst)
+    C.C_ZNK10QTextBlock8previousEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "previous", args)
   }
@@ -1108,7 +1108,7 @@ func (this *QTextBlock) layout(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock6layoutEv
     // invoke: QTextLayout * layout()
-    C._ZNK10QTextBlock6layoutEv(this.qclsinst)
+    C.C_ZNK10QTextBlock6layoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "layout", args)
   }
@@ -1131,7 +1131,7 @@ func (this *QTextBlock) setUserData(args ...interface{}) () {
     // invoke: void setUserData(class QTextBlockUserData *)
     var arg0 = args[0].(QTextBlockUserData).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QTextBlock11setUserDataEP18QTextBlockUserData(this.qclsinst, arg0)
+    C.C_ZN10QTextBlock11setUserDataEP18QTextBlockUserData(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlock", "setUserData", args)
   }
@@ -1151,7 +1151,7 @@ func (this *QTextBlock) textDirection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock13textDirectionEv
     // invoke: Qt::LayoutDirection textDirection()
-    C._ZNK10QTextBlock13textDirectionEv(this.qclsinst)
+    C.C_ZNK10QTextBlock13textDirectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "textDirection", args)
   }
@@ -1171,7 +1171,7 @@ func (this *QTextBlock) charFormatIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock15charFormatIndexEv
     // invoke: int charFormatIndex()
-    C._ZNK10QTextBlock15charFormatIndexEv(this.qclsinst)
+    C.C_ZNK10QTextBlock15charFormatIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "charFormatIndex", args)
   }
@@ -1191,7 +1191,7 @@ func (this *QTextBlock) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock6lengthEv
     // invoke: int length()
-    C._ZNK10QTextBlock6lengthEv(this.qclsinst)
+    C.C_ZNK10QTextBlock6lengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "length", args)
   }
@@ -1218,13 +1218,13 @@ func NewQTextBlock(args ...interface{}) QTextBlock {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QTextBlockC2ERKS_(qthis, arg0)
+    C.C_ZN10QTextBlockC2ERKS_(qthis, arg0)
   case 1:
     // invoke: _ZN10QTextBlockC1Ev
     // invoke: void QTextBlock()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QTextBlockC2Ev(qthis)
+    C.C_ZN10QTextBlockC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QTextBlock", "QTextBlock", args)
   }
@@ -1245,7 +1245,7 @@ func (this *QTextBlock) isVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock9isVisibleEv
     // invoke: bool isVisible()
-    C._ZNK10QTextBlock9isVisibleEv(this.qclsinst)
+    C.C_ZNK10QTextBlock9isVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "isVisible", args)
   }
@@ -1265,7 +1265,7 @@ func (this *QTextBlock) position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock8positionEv
     // invoke: int position()
-    C._ZNK10QTextBlock8positionEv(this.qclsinst)
+    C.C_ZNK10QTextBlock8positionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "position", args)
   }
@@ -1288,7 +1288,7 @@ func (this *QTextBlock) setVisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN10QTextBlock10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN10QTextBlock10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlock", "setVisible", args)
   }
@@ -1308,7 +1308,7 @@ func (this *QTextBlockGroup) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextBlockGroup10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK15QTextBlockGroup10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QTextBlockGroup10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockGroup", "metaObject", args)
   }
@@ -1331,7 +1331,7 @@ func (this *QTextFrame) setFrameFormat(args ...interface{}) () {
     // invoke: void setFrameFormat(const class QTextFrameFormat &)
     var arg0 = args[0].(QTextFrameFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(this.qclsinst, arg0)
+    C.C_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrame", "setFrameFormat", args)
   }
@@ -1351,7 +1351,7 @@ func (this *QTextFrame) childFrames(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame11childFramesEv
     // invoke: QList<QTextFrame *> childFrames()
-    C._ZNK10QTextFrame11childFramesEv(this.qclsinst)
+    C.C_ZNK10QTextFrame11childFramesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "childFrames", args)
   }
@@ -1371,7 +1371,7 @@ func (this *QTextFrame) parentFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame11parentFrameEv
     // invoke: QTextFrame * parentFrame()
-    C._ZNK10QTextFrame11parentFrameEv(this.qclsinst)
+    C.C_ZNK10QTextFrame11parentFrameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "parentFrame", args)
   }
@@ -1391,7 +1391,7 @@ func (this *QTextFrame) firstCursorPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame19firstCursorPositionEv
     // invoke: QTextCursor firstCursorPosition()
-    C._ZNK10QTextFrame19firstCursorPositionEv(this.qclsinst)
+    C.C_ZNK10QTextFrame19firstCursorPositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "firstCursorPosition", args)
   }
@@ -1411,7 +1411,7 @@ func (this *QTextFrame) lastCursorPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame18lastCursorPositionEv
     // invoke: QTextCursor lastCursorPosition()
-    C._ZNK10QTextFrame18lastCursorPositionEv(this.qclsinst)
+    C.C_ZNK10QTextFrame18lastCursorPositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "lastCursorPosition", args)
   }
@@ -1431,7 +1431,7 @@ func (this *QTextFrame) firstPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame13firstPositionEv
     // invoke: int firstPosition()
-    C._ZNK10QTextFrame13firstPositionEv(this.qclsinst)
+    C.C_ZNK10QTextFrame13firstPositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "firstPosition", args)
   }
@@ -1451,7 +1451,7 @@ func (this *QTextFrame) begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame5beginEv
     // invoke: QTextFrame::iterator begin()
-    C._ZNK10QTextFrame5beginEv(this.qclsinst)
+    C.C_ZNK10QTextFrame5beginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "begin", args)
   }
@@ -1471,7 +1471,7 @@ func (this *QTextFrame) layoutData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame10layoutDataEv
     // invoke: QTextFrameLayoutData * layoutData()
-    C._ZNK10QTextFrame10layoutDataEv(this.qclsinst)
+    C.C_ZNK10QTextFrame10layoutDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "layoutData", args)
   }
@@ -1491,7 +1491,7 @@ func (this *QTextFrame) end(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame3endEv
     // invoke: QTextFrame::iterator end()
-    C._ZNK10QTextFrame3endEv(this.qclsinst)
+    C.C_ZNK10QTextFrame3endEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "end", args)
   }
@@ -1511,7 +1511,7 @@ func (this *QTextFrame) FreeQTextFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextFrameD0Ev
     // invoke: void ~QTextFrame()
-    C._ZN10QTextFrameD2Ev(this.qclsinst)
+    C.C_ZN10QTextFrameD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "~QTextFrame", args)
   }
@@ -1536,7 +1536,7 @@ func NewQTextFrame(args ...interface{}) QTextFrame {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QTextFrameC2EP13QTextDocument(qthis, arg0)
+    C.C_ZN10QTextFrameC2EP13QTextDocument(qthis, arg0)
   default:
     qtrt.ErrorResolve("QTextFrame", "QTextFrame", args)
   }
@@ -1557,7 +1557,7 @@ func (this *QTextFrame) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK10QTextFrame10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QTextFrame10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "metaObject", args)
   }
@@ -1580,7 +1580,7 @@ func (this *QTextFrame) setLayoutData(args ...interface{}) () {
     // invoke: void setLayoutData(class QTextFrameLayoutData *)
     var arg0 = args[0].(QTextFrameLayoutData).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData(this.qclsinst, arg0)
+    C.C_ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrame", "setLayoutData", args)
   }
@@ -1600,7 +1600,7 @@ func (this *QTextFrame) frameFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame11frameFormatEv
     // invoke: QTextFrameFormat frameFormat()
-    C._ZNK10QTextFrame11frameFormatEv(this.qclsinst)
+    C.C_ZNK10QTextFrame11frameFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "frameFormat", args)
   }
@@ -1620,7 +1620,7 @@ func (this *QTextFrame) lastPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame12lastPositionEv
     // invoke: int lastPosition()
-    C._ZNK10QTextFrame12lastPositionEv(this.qclsinst)
+    C.C_ZNK10QTextFrame12lastPositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "lastPosition", args)
   }

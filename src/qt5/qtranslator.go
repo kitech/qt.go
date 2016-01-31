@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.go
 //
@@ -29,21 +29,21 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QTranslator::load(const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix);
-extern void _ZN11QTranslator4loadERK7QStringS2_S2_S2_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
+extern void C_ZN11QTranslator4loadERK7QStringS2_S2_S2_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
   // proto:  bool QTranslator::load(const QLocale & locale, const QString & filename, const QString & prefix, const QString & directory, const QString & suffix);
-extern void _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4); // 4
+extern void C_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4); // 4
   // proto:  bool QTranslator::load(const uchar * data, int len, const QString & directory);
-extern void _ZN11QTranslator4loadEPKhiRK7QString(void* qthis, unsigned char* arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN11QTranslator4loadEPKhiRK7QString(void* qthis, unsigned char* arg0, int32_t arg1, void* arg2); // 4
   // proto:  const QMetaObject * QTranslator::metaObject();
-extern void _ZNK11QTranslator10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QTranslator10metaObjectEv(void* qthis); // 4
   // proto:  void QTranslator::~QTranslator();
-extern void _ZN11QTranslatorD2Ev(void* qthis); // 4
+extern void C_ZN11QTranslatorD2Ev(void* qthis); // 4
   // proto:  bool QTranslator::isEmpty();
-extern void _ZNK11QTranslator7isEmptyEv(void* qthis); // 4
+extern void C_ZNK11QTranslator7isEmptyEv(void* qthis); // 4
   // proto:  void QTranslator::QTranslator(QObject * parent);
-extern void _ZN11QTranslatorC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN11QTranslatorC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  QString QTranslator::translate(const char * context, const char * sourceText, const char * disambiguation, int n);
-extern void _ZNK11QTranslator9translateEPKcS1_S1_i(void* qthis, unsigned char* arg0, unsigned char* arg1, unsigned char* arg2, int32_t arg3); // 4
+extern void C_ZNK11QTranslator9translateEPKcS1_S1_i(void* qthis, unsigned char* arg0, unsigned char* arg1, unsigned char* arg2, int32_t arg3); // 4
 */
 import "C"
 // } // <= ext block end
@@ -99,7 +99,7 @@ func (this *QTranslator) load(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QString).qclsinst
     if false {fmt.Println(arg3)}
-    C._ZN11QTranslator4loadERK7QStringS2_S2_S2_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN11QTranslator4loadERK7QStringS2_S2_S2_(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_
     // invoke: bool load(const class QLocale &, const class QString &, const class QString &, const class QString &, const class QString &)
@@ -113,7 +113,7 @@ func (this *QTranslator) load(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QString).qclsinst
     if false {fmt.Println(arg4)}
-    C._ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   case 2:
     // invoke: _ZN11QTranslator4loadEPKhiRK7QString
     // invoke: bool load(const uchar *, int, const class QString &)
@@ -123,7 +123,7 @@ func (this *QTranslator) load(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN11QTranslator4loadEPKhiRK7QString(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN11QTranslator4loadEPKhiRK7QString(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTranslator", "load", args)
   }
@@ -143,7 +143,7 @@ func (this *QTranslator) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTranslator10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QTranslator10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QTranslator10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTranslator", "metaObject", args)
   }
@@ -163,7 +163,7 @@ func (this *QTranslator) FreeQTranslator(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTranslatorD0Ev
     // invoke: void ~QTranslator()
-    C._ZN11QTranslatorD2Ev(this.qclsinst)
+    C.C_ZN11QTranslatorD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTranslator", "~QTranslator", args)
   }
@@ -183,7 +183,7 @@ func (this *QTranslator) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTranslator7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK11QTranslator7isEmptyEv(this.qclsinst)
+    C.C_ZNK11QTranslator7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTranslator", "isEmpty", args)
   }
@@ -208,7 +208,7 @@ func NewQTranslator(args ...interface{}) QTranslator {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QTranslatorC2EP7QObject(qthis, arg0)
+    C.C_ZN11QTranslatorC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QTranslator", "QTranslator", args)
   }
@@ -241,7 +241,7 @@ func (this *QTranslator) translate(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZNK11QTranslator9translateEPKcS1_S1_i(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK11QTranslator9translateEPKcS1_S1_i(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QTranslator", "translate", args)
   }

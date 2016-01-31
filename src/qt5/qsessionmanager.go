@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.go
 //
@@ -29,37 +29,37 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QSessionManager::cancel();
-extern void _ZN15QSessionManager6cancelEv(void* qthis); // 4
+extern void C_ZN15QSessionManager6cancelEv(void* qthis); // 4
   // proto:  QStringList QSessionManager::restartCommand();
-extern void _ZNK15QSessionManager14restartCommandEv(void* qthis); // 4
+extern void C_ZNK15QSessionManager14restartCommandEv(void* qthis); // 4
   // proto:  void QSessionManager::setManagerProperty(const QString & name, const QStringList & value);
-extern void _ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QSessionManager::setManagerProperty(const QString & name, const QString & value);
-extern void _ZN15QSessionManager18setManagerPropertyERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN15QSessionManager18setManagerPropertyERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QSessionManager::requestPhase2();
-extern void _ZN15QSessionManager13requestPhase2Ev(void* qthis); // 4
+extern void C_ZN15QSessionManager13requestPhase2Ev(void* qthis); // 4
   // proto:  void QSessionManager::setRestartCommand(const QStringList & );
-extern void _ZN15QSessionManager17setRestartCommandERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN15QSessionManager17setRestartCommandERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  QStringList QSessionManager::discardCommand();
-extern void _ZNK15QSessionManager14discardCommandEv(void* qthis); // 4
+extern void C_ZNK15QSessionManager14discardCommandEv(void* qthis); // 4
   // proto:  QString QSessionManager::sessionKey();
-extern void _ZNK15QSessionManager10sessionKeyEv(void* qthis); // 4
+extern void C_ZNK15QSessionManager10sessionKeyEv(void* qthis); // 4
   // proto:  bool QSessionManager::isPhase2();
-extern void _ZNK15QSessionManager8isPhase2Ev(void* qthis); // 4
+extern void C_ZNK15QSessionManager8isPhase2Ev(void* qthis); // 4
   // proto:  void QSessionManager::setDiscardCommand(const QStringList & );
-extern void _ZN15QSessionManager17setDiscardCommandERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN15QSessionManager17setDiscardCommandERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  bool QSessionManager::allowsInteraction();
-extern void _ZN15QSessionManager17allowsInteractionEv(void* qthis); // 4
+extern void C_ZN15QSessionManager17allowsInteractionEv(void* qthis); // 4
   // proto:  QSessionManager::RestartHint QSessionManager::restartHint();
-extern void _ZNK15QSessionManager11restartHintEv(void* qthis); // 4
+extern void C_ZNK15QSessionManager11restartHintEv(void* qthis); // 4
   // proto:  const QMetaObject * QSessionManager::metaObject();
-extern void _ZNK15QSessionManager10metaObjectEv(void* qthis); // 4
+extern void C_ZNK15QSessionManager10metaObjectEv(void* qthis); // 4
   // proto:  bool QSessionManager::allowsErrorInteraction();
-extern void _ZN15QSessionManager22allowsErrorInteractionEv(void* qthis); // 4
+extern void C_ZN15QSessionManager22allowsErrorInteractionEv(void* qthis); // 4
   // proto:  QString QSessionManager::sessionId();
-extern void _ZNK15QSessionManager9sessionIdEv(void* qthis); // 4
+extern void C_ZNK15QSessionManager9sessionIdEv(void* qthis); // 4
   // proto:  void QSessionManager::release();
-extern void _ZN15QSessionManager7releaseEv(void* qthis); // 4
+extern void C_ZN15QSessionManager7releaseEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -91,7 +91,7 @@ func (this *QSessionManager) cancel(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager6cancelEv
     // invoke: void cancel()
-    C._ZN15QSessionManager6cancelEv(this.qclsinst)
+    C.C_ZN15QSessionManager6cancelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "cancel", args)
   }
@@ -111,7 +111,7 @@ func (this *QSessionManager) restartCommand(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager14restartCommandEv
     // invoke: QStringList restartCommand()
-    C._ZNK15QSessionManager14restartCommandEv(this.qclsinst)
+    C.C_ZNK15QSessionManager14restartCommandEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "restartCommand", args)
   }
@@ -141,7 +141,7 @@ func (this *QSessionManager) setManagerProperty(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStringList).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList(this.qclsinst, arg0, arg1)
+    C.C_ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN15QSessionManager18setManagerPropertyERK7QStringS2_
     // invoke: void setManagerProperty(const class QString &, const class QString &)
@@ -149,7 +149,7 @@ func (this *QSessionManager) setManagerProperty(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QSessionManager18setManagerPropertyERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN15QSessionManager18setManagerPropertyERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QSessionManager", "setManagerProperty", args)
   }
@@ -169,7 +169,7 @@ func (this *QSessionManager) requestPhase2(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager13requestPhase2Ev
     // invoke: void requestPhase2()
-    C._ZN15QSessionManager13requestPhase2Ev(this.qclsinst)
+    C.C_ZN15QSessionManager13requestPhase2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "requestPhase2", args)
   }
@@ -192,7 +192,7 @@ func (this *QSessionManager) setRestartCommand(args ...interface{}) () {
     // invoke: void setRestartCommand(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QSessionManager17setRestartCommandERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN15QSessionManager17setRestartCommandERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSessionManager", "setRestartCommand", args)
   }
@@ -212,7 +212,7 @@ func (this *QSessionManager) discardCommand(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager14discardCommandEv
     // invoke: QStringList discardCommand()
-    C._ZNK15QSessionManager14discardCommandEv(this.qclsinst)
+    C.C_ZNK15QSessionManager14discardCommandEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "discardCommand", args)
   }
@@ -232,7 +232,7 @@ func (this *QSessionManager) sessionKey(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager10sessionKeyEv
     // invoke: QString sessionKey()
-    C._ZNK15QSessionManager10sessionKeyEv(this.qclsinst)
+    C.C_ZNK15QSessionManager10sessionKeyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "sessionKey", args)
   }
@@ -252,7 +252,7 @@ func (this *QSessionManager) isPhase2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager8isPhase2Ev
     // invoke: bool isPhase2()
-    C._ZNK15QSessionManager8isPhase2Ev(this.qclsinst)
+    C.C_ZNK15QSessionManager8isPhase2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "isPhase2", args)
   }
@@ -275,7 +275,7 @@ func (this *QSessionManager) setDiscardCommand(args ...interface{}) () {
     // invoke: void setDiscardCommand(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QSessionManager17setDiscardCommandERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN15QSessionManager17setDiscardCommandERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSessionManager", "setDiscardCommand", args)
   }
@@ -295,7 +295,7 @@ func (this *QSessionManager) allowsInteraction(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager17allowsInteractionEv
     // invoke: bool allowsInteraction()
-    C._ZN15QSessionManager17allowsInteractionEv(this.qclsinst)
+    C.C_ZN15QSessionManager17allowsInteractionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "allowsInteraction", args)
   }
@@ -315,7 +315,7 @@ func (this *QSessionManager) restartHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager11restartHintEv
     // invoke: QSessionManager::RestartHint restartHint()
-    C._ZNK15QSessionManager11restartHintEv(this.qclsinst)
+    C.C_ZNK15QSessionManager11restartHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "restartHint", args)
   }
@@ -335,7 +335,7 @@ func (this *QSessionManager) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK15QSessionManager10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QSessionManager10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "metaObject", args)
   }
@@ -355,7 +355,7 @@ func (this *QSessionManager) allowsErrorInteraction(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager22allowsErrorInteractionEv
     // invoke: bool allowsErrorInteraction()
-    C._ZN15QSessionManager22allowsErrorInteractionEv(this.qclsinst)
+    C.C_ZN15QSessionManager22allowsErrorInteractionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "allowsErrorInteraction", args)
   }
@@ -375,7 +375,7 @@ func (this *QSessionManager) sessionId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager9sessionIdEv
     // invoke: QString sessionId()
-    C._ZNK15QSessionManager9sessionIdEv(this.qclsinst)
+    C.C_ZNK15QSessionManager9sessionIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "sessionId", args)
   }
@@ -395,7 +395,7 @@ func (this *QSessionManager) release(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager7releaseEv
     // invoke: void release()
-    C._ZN15QSessionManager7releaseEv(this.qclsinst)
+    C.C_ZN15QSessionManager7releaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "release", args)
   }

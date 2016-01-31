@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qatomic.h
 // dst-file: /src/core/qatomic.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QAtomicInt::QAtomicInt(int value);
-extern void _ZN10QAtomicIntC2Ei(void* qthis, int32_t arg0); // 1
+extern void C_ZN10QAtomicIntC2Ei(void* qthis, int32_t arg0); // 1
 */
 import "C"
 // } // <= ext block end
@@ -66,7 +66,7 @@ func NewQAtomicInt(args ...interface{}) QAtomicInt {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QAtomicIntC2Ei(qthis, arg0)
+    C.C_ZN10QAtomicIntC2Ei(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAtomicInt", "QAtomicInt", args)
   }

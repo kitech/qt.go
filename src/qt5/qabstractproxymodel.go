@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qabstractproxymodel.h
 // dst-file: /src/core/qabstractproxymodel.go
 //
@@ -29,49 +29,49 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QItemSelection QAbstractProxyModel::mapSelectionToSource(const QItemSelection & selection);
-extern void _ZNK19QAbstractProxyModel20mapSelectionToSourceERK14QItemSelection(void* qthis, void* arg0); // 4
+extern void C_ZNK19QAbstractProxyModel20mapSelectionToSourceERK14QItemSelection(void* qthis, void* arg0); // 4
   // proto:  Qt::DropActions QAbstractProxyModel::supportedDragActions();
-extern void _ZNK19QAbstractProxyModel20supportedDragActionsEv(void* qthis); // 4
+extern void C_ZNK19QAbstractProxyModel20supportedDragActionsEv(void* qthis); // 4
   // proto:  void QAbstractProxyModel::setSourceModel(QAbstractItemModel * sourceModel);
-extern void _ZN19QAbstractProxyModel14setSourceModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
+extern void C_ZN19QAbstractProxyModel14setSourceModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
   // proto:  QModelIndex QAbstractProxyModel::sibling(int row, int column, const QModelIndex & idx);
-extern void _ZNK19QAbstractProxyModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZNK19QAbstractProxyModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  void QAbstractProxyModel::QAbstractProxyModel(QObject * parent);
-extern void _ZN19QAbstractProxyModelC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN19QAbstractProxyModelC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  QSize QAbstractProxyModel::span(const QModelIndex & index);
-extern void _ZNK19QAbstractProxyModel4spanERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK19QAbstractProxyModel4spanERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QModelIndex QAbstractProxyModel::buddy(const QModelIndex & index);
-extern void _ZNK19QAbstractProxyModel5buddyERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK19QAbstractProxyModel5buddyERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  bool QAbstractProxyModel::hasChildren(const QModelIndex & parent);
-extern void _ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  bool QAbstractProxyModel::submit();
-extern void _ZN19QAbstractProxyModel6submitEv(void* qthis); // 4
+extern void C_ZN19QAbstractProxyModel6submitEv(void* qthis); // 4
   // proto:  bool QAbstractProxyModel::setData(const QModelIndex & index, const QVariant & value, int role);
-extern void _ZN19QAbstractProxyModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
+extern void C_ZN19QAbstractProxyModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
   // proto:  bool QAbstractProxyModel::canFetchMore(const QModelIndex & parent);
-extern void _ZNK19QAbstractProxyModel12canFetchMoreERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK19QAbstractProxyModel12canFetchMoreERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QMap<int, QVariant> QAbstractProxyModel::itemData(const QModelIndex & index);
-extern void _ZNK19QAbstractProxyModel8itemDataERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK19QAbstractProxyModel8itemDataERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QItemSelection QAbstractProxyModel::mapSelectionFromSource(const QItemSelection & selection);
-extern void _ZNK19QAbstractProxyModel22mapSelectionFromSourceERK14QItemSelection(void* qthis, void* arg0); // 4
+extern void C_ZNK19QAbstractProxyModel22mapSelectionFromSourceERK14QItemSelection(void* qthis, void* arg0); // 4
   // proto:  QVariant QAbstractProxyModel::data(const QModelIndex & proxyIndex, int role);
-extern void _ZNK19QAbstractProxyModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZNK19QAbstractProxyModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QStringList QAbstractProxyModel::mimeTypes();
-extern void _ZNK19QAbstractProxyModel9mimeTypesEv(void* qthis); // 4
+extern void C_ZNK19QAbstractProxyModel9mimeTypesEv(void* qthis); // 4
   // proto:  const QMetaObject * QAbstractProxyModel::metaObject();
-extern void _ZNK19QAbstractProxyModel10metaObjectEv(void* qthis); // 4
+extern void C_ZNK19QAbstractProxyModel10metaObjectEv(void* qthis); // 4
   // proto:  void QAbstractProxyModel::revert();
-extern void _ZN19QAbstractProxyModel6revertEv(void* qthis); // 4
+extern void C_ZN19QAbstractProxyModel6revertEv(void* qthis); // 4
   // proto:  void QAbstractProxyModel::~QAbstractProxyModel();
-extern void _ZN19QAbstractProxyModelD2Ev(void* qthis); // 4
+extern void C_ZN19QAbstractProxyModelD2Ev(void* qthis); // 4
   // proto:  Qt::ItemFlags QAbstractProxyModel::flags(const QModelIndex & index);
-extern void _ZNK19QAbstractProxyModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK19QAbstractProxyModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QAbstractItemModel * QAbstractProxyModel::sourceModel();
-extern void _ZNK19QAbstractProxyModel11sourceModelEv(void* qthis); // 4
+extern void C_ZNK19QAbstractProxyModel11sourceModelEv(void* qthis); // 4
   // proto:  void QAbstractProxyModel::fetchMore(const QModelIndex & parent);
-extern void _ZN19QAbstractProxyModel9fetchMoreERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZN19QAbstractProxyModel9fetchMoreERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  Qt::DropActions QAbstractProxyModel::supportedDropActions();
-extern void _ZNK19QAbstractProxyModel20supportedDropActionsEv(void* qthis); // 4
+extern void C_ZNK19QAbstractProxyModel20supportedDropActionsEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -107,7 +107,7 @@ func (this *QAbstractProxyModel) mapSelectionToSource(args ...interface{}) () {
     // invoke: QItemSelection mapSelectionToSource(const class QItemSelection &)
     var arg0 = args[0].(QItemSelection).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QAbstractProxyModel20mapSelectionToSourceERK14QItemSelection(this.qclsinst, arg0)
+    C.C_ZNK19QAbstractProxyModel20mapSelectionToSourceERK14QItemSelection(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "mapSelectionToSource", args)
   }
@@ -127,7 +127,7 @@ func (this *QAbstractProxyModel) supportedDragActions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel20supportedDragActionsEv
     // invoke: Qt::DropActions supportedDragActions()
-    C._ZNK19QAbstractProxyModel20supportedDragActionsEv(this.qclsinst)
+    C.C_ZNK19QAbstractProxyModel20supportedDragActionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "supportedDragActions", args)
   }
@@ -150,7 +150,7 @@ func (this *QAbstractProxyModel) setSourceModel(args ...interface{}) () {
     // invoke: void setSourceModel(class QAbstractItemModel *)
     var arg0 = args[0].(QAbstractItemModel).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QAbstractProxyModel14setSourceModelEP18QAbstractItemModel(this.qclsinst, arg0)
+    C.C_ZN19QAbstractProxyModel14setSourceModelEP18QAbstractItemModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "setSourceModel", args)
   }
@@ -179,7 +179,7 @@ func (this *QAbstractProxyModel) sibling(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZNK19QAbstractProxyModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK19QAbstractProxyModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "sibling", args)
   }
@@ -204,7 +204,7 @@ func NewQAbstractProxyModel(args ...interface{}) QAbstractProxyModel {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QAbstractProxyModelC2EP7QObject(qthis, arg0)
+    C.C_ZN19QAbstractProxyModelC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "QAbstractProxyModel", args)
   }
@@ -228,7 +228,7 @@ func (this *QAbstractProxyModel) span(args ...interface{}) () {
     // invoke: QSize span(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QAbstractProxyModel4spanERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK19QAbstractProxyModel4spanERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "span", args)
   }
@@ -251,7 +251,7 @@ func (this *QAbstractProxyModel) buddy(args ...interface{}) () {
     // invoke: QModelIndex buddy(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QAbstractProxyModel5buddyERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK19QAbstractProxyModel5buddyERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "buddy", args)
   }
@@ -274,7 +274,7 @@ func (this *QAbstractProxyModel) hasChildren(args ...interface{}) () {
     // invoke: bool hasChildren(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "hasChildren", args)
   }
@@ -294,7 +294,7 @@ func (this *QAbstractProxyModel) submit(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QAbstractProxyModel6submitEv
     // invoke: bool submit()
-    C._ZN19QAbstractProxyModel6submitEv(this.qclsinst)
+    C.C_ZN19QAbstractProxyModel6submitEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "submit", args)
   }
@@ -323,7 +323,7 @@ func (this *QAbstractProxyModel) setData(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN19QAbstractProxyModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN19QAbstractProxyModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "setData", args)
   }
@@ -346,7 +346,7 @@ func (this *QAbstractProxyModel) canFetchMore(args ...interface{}) () {
     // invoke: bool canFetchMore(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QAbstractProxyModel12canFetchMoreERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK19QAbstractProxyModel12canFetchMoreERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "canFetchMore", args)
   }
@@ -369,7 +369,7 @@ func (this *QAbstractProxyModel) itemData(args ...interface{}) () {
     // invoke: QMap<int, QVariant> itemData(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QAbstractProxyModel8itemDataERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK19QAbstractProxyModel8itemDataERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "itemData", args)
   }
@@ -392,7 +392,7 @@ func (this *QAbstractProxyModel) mapSelectionFromSource(args ...interface{}) () 
     // invoke: QItemSelection mapSelectionFromSource(const class QItemSelection &)
     var arg0 = args[0].(QItemSelection).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QAbstractProxyModel22mapSelectionFromSourceERK14QItemSelection(this.qclsinst, arg0)
+    C.C_ZNK19QAbstractProxyModel22mapSelectionFromSourceERK14QItemSelection(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "mapSelectionFromSource", args)
   }
@@ -418,7 +418,7 @@ func (this *QAbstractProxyModel) data(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK19QAbstractProxyModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
+    C.C_ZNK19QAbstractProxyModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "data", args)
   }
@@ -438,7 +438,7 @@ func (this *QAbstractProxyModel) mimeTypes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel9mimeTypesEv
     // invoke: QStringList mimeTypes()
-    C._ZNK19QAbstractProxyModel9mimeTypesEv(this.qclsinst)
+    C.C_ZNK19QAbstractProxyModel9mimeTypesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "mimeTypes", args)
   }
@@ -458,7 +458,7 @@ func (this *QAbstractProxyModel) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK19QAbstractProxyModel10metaObjectEv(this.qclsinst)
+    C.C_ZNK19QAbstractProxyModel10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "metaObject", args)
   }
@@ -478,7 +478,7 @@ func (this *QAbstractProxyModel) revert(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QAbstractProxyModel6revertEv
     // invoke: void revert()
-    C._ZN19QAbstractProxyModel6revertEv(this.qclsinst)
+    C.C_ZN19QAbstractProxyModel6revertEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "revert", args)
   }
@@ -498,7 +498,7 @@ func (this *QAbstractProxyModel) FreeQAbstractProxyModel(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QAbstractProxyModelD0Ev
     // invoke: void ~QAbstractProxyModel()
-    C._ZN19QAbstractProxyModelD2Ev(this.qclsinst)
+    C.C_ZN19QAbstractProxyModelD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "~QAbstractProxyModel", args)
   }
@@ -521,7 +521,7 @@ func (this *QAbstractProxyModel) flags(args ...interface{}) () {
     // invoke: Qt::ItemFlags flags(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QAbstractProxyModel5flagsERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK19QAbstractProxyModel5flagsERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "flags", args)
   }
@@ -541,7 +541,7 @@ func (this *QAbstractProxyModel) sourceModel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel11sourceModelEv
     // invoke: QAbstractItemModel * sourceModel()
-    C._ZNK19QAbstractProxyModel11sourceModelEv(this.qclsinst)
+    C.C_ZNK19QAbstractProxyModel11sourceModelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "sourceModel", args)
   }
@@ -564,7 +564,7 @@ func (this *QAbstractProxyModel) fetchMore(args ...interface{}) () {
     // invoke: void fetchMore(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QAbstractProxyModel9fetchMoreERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN19QAbstractProxyModel9fetchMoreERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "fetchMore", args)
   }
@@ -584,7 +584,7 @@ func (this *QAbstractProxyModel) supportedDropActions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel20supportedDropActionsEv
     // invoke: Qt::DropActions supportedDropActions()
-    C._ZNK19QAbstractProxyModel20supportedDropActionsEv(this.qclsinst)
+    C.C_ZNK19QAbstractProxyModel20supportedDropActionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "supportedDropActions", args)
   }

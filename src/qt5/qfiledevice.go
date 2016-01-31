@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qfiledevice.h
 // dst-file: /src/core/qfiledevice.go
 //
@@ -29,37 +29,37 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  qint64 QFileDevice::pos();
-extern void _ZNK11QFileDevice3posEv(void* qthis); // 4
+extern void C_ZNK11QFileDevice3posEv(void* qthis); // 4
   // proto:  bool QFileDevice::flush();
-extern void _ZN11QFileDevice5flushEv(void* qthis); // 4
+extern void C_ZN11QFileDevice5flushEv(void* qthis); // 4
   // proto:  void QFileDevice::close();
-extern void _ZN11QFileDevice5closeEv(void* qthis); // 4
+extern void C_ZN11QFileDevice5closeEv(void* qthis); // 4
   // proto:  bool QFileDevice::seek(qint64 offset);
-extern void _ZN11QFileDevice4seekEx(void* qthis, int64_t arg0); // 4
+extern void C_ZN11QFileDevice4seekEx(void* qthis, int64_t arg0); // 4
   // proto:  bool QFileDevice::isSequential();
-extern void _ZNK11QFileDevice12isSequentialEv(void* qthis); // 4
+extern void C_ZNK11QFileDevice12isSequentialEv(void* qthis); // 4
   // proto:  qint64 QFileDevice::size();
-extern void _ZNK11QFileDevice4sizeEv(void* qthis); // 4
+extern void C_ZNK11QFileDevice4sizeEv(void* qthis); // 4
   // proto:  void QFileDevice::unsetError();
-extern void _ZN11QFileDevice10unsetErrorEv(void* qthis); // 4
+extern void C_ZN11QFileDevice10unsetErrorEv(void* qthis); // 4
   // proto:  int QFileDevice::handle();
-extern void _ZNK11QFileDevice6handleEv(void* qthis); // 4
+extern void C_ZNK11QFileDevice6handleEv(void* qthis); // 4
   // proto:  QString QFileDevice::fileName();
-extern void _ZNK11QFileDevice8fileNameEv(void* qthis); // 4
+extern void C_ZNK11QFileDevice8fileNameEv(void* qthis); // 4
   // proto:  const QMetaObject * QFileDevice::metaObject();
-extern void _ZNK11QFileDevice10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QFileDevice10metaObjectEv(void* qthis); // 4
   // proto:  bool QFileDevice::resize(qint64 sz);
-extern void _ZN11QFileDevice6resizeEx(void* qthis, int64_t arg0); // 4
+extern void C_ZN11QFileDevice6resizeEx(void* qthis, int64_t arg0); // 4
   // proto:  Permissions QFileDevice::permissions();
-extern void _ZNK11QFileDevice11permissionsEv(void* qthis); // 4
+extern void C_ZNK11QFileDevice11permissionsEv(void* qthis); // 4
   // proto:  bool QFileDevice::unmap(uchar * address);
-extern void _ZN11QFileDevice5unmapEPh(void* qthis, unsigned char* arg0); // 4
+extern void C_ZN11QFileDevice5unmapEPh(void* qthis, unsigned char* arg0); // 4
   // proto:  bool QFileDevice::atEnd();
-extern void _ZNK11QFileDevice5atEndEv(void* qthis); // 4
+extern void C_ZNK11QFileDevice5atEndEv(void* qthis); // 4
   // proto:  void QFileDevice::~QFileDevice();
-extern void _ZN11QFileDeviceD2Ev(void* qthis); // 4
+extern void C_ZN11QFileDeviceD2Ev(void* qthis); // 4
   // proto:  QFileDevice::FileError QFileDevice::error();
-extern void _ZNK11QFileDevice5errorEv(void* qthis); // 4
+extern void C_ZNK11QFileDevice5errorEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -91,7 +91,7 @@ func (this *QFileDevice) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice3posEv
     // invoke: qint64 pos()
-    C._ZNK11QFileDevice3posEv(this.qclsinst)
+    C.C_ZNK11QFileDevice3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "pos", args)
   }
@@ -111,7 +111,7 @@ func (this *QFileDevice) flush(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDevice5flushEv
     // invoke: bool flush()
-    C._ZN11QFileDevice5flushEv(this.qclsinst)
+    C.C_ZN11QFileDevice5flushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "flush", args)
   }
@@ -131,7 +131,7 @@ func (this *QFileDevice) close(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDevice5closeEv
     // invoke: void close()
-    C._ZN11QFileDevice5closeEv(this.qclsinst)
+    C.C_ZN11QFileDevice5closeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "close", args)
   }
@@ -154,7 +154,7 @@ func (this *QFileDevice) seek(args ...interface{}) () {
     // invoke: bool seek(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDevice4seekEx(this.qclsinst, arg0)
+    C.C_ZN11QFileDevice4seekEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDevice", "seek", args)
   }
@@ -174,7 +174,7 @@ func (this *QFileDevice) isSequential(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice12isSequentialEv
     // invoke: bool isSequential()
-    C._ZNK11QFileDevice12isSequentialEv(this.qclsinst)
+    C.C_ZNK11QFileDevice12isSequentialEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "isSequential", args)
   }
@@ -194,7 +194,7 @@ func (this *QFileDevice) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice4sizeEv
     // invoke: qint64 size()
-    C._ZNK11QFileDevice4sizeEv(this.qclsinst)
+    C.C_ZNK11QFileDevice4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "size", args)
   }
@@ -214,7 +214,7 @@ func (this *QFileDevice) unsetError(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDevice10unsetErrorEv
     // invoke: void unsetError()
-    C._ZN11QFileDevice10unsetErrorEv(this.qclsinst)
+    C.C_ZN11QFileDevice10unsetErrorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "unsetError", args)
   }
@@ -234,7 +234,7 @@ func (this *QFileDevice) handle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice6handleEv
     // invoke: int handle()
-    C._ZNK11QFileDevice6handleEv(this.qclsinst)
+    C.C_ZNK11QFileDevice6handleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "handle", args)
   }
@@ -254,7 +254,7 @@ func (this *QFileDevice) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice8fileNameEv
     // invoke: QString fileName()
-    C._ZNK11QFileDevice8fileNameEv(this.qclsinst)
+    C.C_ZNK11QFileDevice8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "fileName", args)
   }
@@ -274,7 +274,7 @@ func (this *QFileDevice) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QFileDevice10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QFileDevice10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "metaObject", args)
   }
@@ -297,7 +297,7 @@ func (this *QFileDevice) resize(args ...interface{}) () {
     // invoke: bool resize(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDevice6resizeEx(this.qclsinst, arg0)
+    C.C_ZN11QFileDevice6resizeEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDevice", "resize", args)
   }
@@ -317,7 +317,7 @@ func (this *QFileDevice) permissions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice11permissionsEv
     // invoke: Permissions permissions()
-    C._ZNK11QFileDevice11permissionsEv(this.qclsinst)
+    C.C_ZNK11QFileDevice11permissionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "permissions", args)
   }
@@ -340,7 +340,7 @@ func (this *QFileDevice) unmap(args ...interface{}) () {
     // invoke: bool unmap(uchar *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDevice5unmapEPh(this.qclsinst, arg0)
+    C.C_ZN11QFileDevice5unmapEPh(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDevice", "unmap", args)
   }
@@ -360,7 +360,7 @@ func (this *QFileDevice) atEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice5atEndEv
     // invoke: bool atEnd()
-    C._ZNK11QFileDevice5atEndEv(this.qclsinst)
+    C.C_ZNK11QFileDevice5atEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "atEnd", args)
   }
@@ -380,7 +380,7 @@ func (this *QFileDevice) FreeQFileDevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDeviceD0Ev
     // invoke: void ~QFileDevice()
-    C._ZN11QFileDeviceD2Ev(this.qclsinst)
+    C.C_ZN11QFileDeviceD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "~QFileDevice", args)
   }
@@ -400,7 +400,7 @@ func (this *QFileDevice) error(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice5errorEv
     // invoke: QFileDevice::FileError error()
-    C._ZNK11QFileDevice5errorEv(this.qclsinst)
+    C.C_ZNK11QFileDevice5errorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "error", args)
   }

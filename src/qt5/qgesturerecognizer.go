@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qgesturerecognizer.h
 // dst-file: /src/widgets/qgesturerecognizer.go
 //
@@ -29,15 +29,15 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QGestureRecognizer::reset(QGesture * state);
-extern void _ZN18QGestureRecognizer5resetEP8QGesture(void* qthis, void* arg0); // 4
+extern void C_ZN18QGestureRecognizer5resetEP8QGesture(void* qthis, void* arg0); // 4
   // proto:  void QGestureRecognizer::~QGestureRecognizer();
-extern void _ZN18QGestureRecognizerD2Ev(void* qthis); // 4
+extern void C_ZN18QGestureRecognizerD2Ev(void* qthis); // 4
   // proto:  QGesture * QGestureRecognizer::create(QObject * target);
-extern void _ZN18QGestureRecognizer6createEP7QObject(void* qthis, void* arg0); // 4
+extern void C_ZN18QGestureRecognizer6createEP7QObject(void* qthis, void* arg0); // 4
   // proto: static Qt::GestureType QGestureRecognizer::registerRecognizer(QGestureRecognizer * recognizer);
-extern void _ZN18QGestureRecognizer18registerRecognizerEPS_(void* arg0); // 4
+extern void C_ZN18QGestureRecognizer18registerRecognizerEPS_(void* arg0); // 4
   // proto:  void QGestureRecognizer::QGestureRecognizer();
-extern void _ZN18QGestureRecognizerC2Ev(void* qthis); // 3
+extern void C_ZN18QGestureRecognizerC2Ev(void* qthis); // 3
 */
 import "C"
 // } // <= ext block end
@@ -72,7 +72,7 @@ func (this *QGestureRecognizer) reset(args ...interface{}) () {
     // invoke: void reset(class QGesture *)
     var arg0 = args[0].(QGesture).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QGestureRecognizer5resetEP8QGesture(this.qclsinst, arg0)
+    C.C_ZN18QGestureRecognizer5resetEP8QGesture(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGestureRecognizer", "reset", args)
   }
@@ -92,7 +92,7 @@ func (this *QGestureRecognizer) FreeQGestureRecognizer(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QGestureRecognizerD0Ev
     // invoke: void ~QGestureRecognizer()
-    C._ZN18QGestureRecognizerD2Ev(this.qclsinst)
+    C.C_ZN18QGestureRecognizerD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGestureRecognizer", "~QGestureRecognizer", args)
   }
@@ -115,7 +115,7 @@ func (this *QGestureRecognizer) create(args ...interface{}) () {
     // invoke: QGesture * create(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QGestureRecognizer6createEP7QObject(this.qclsinst, arg0)
+    C.C_ZN18QGestureRecognizer6createEP7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGestureRecognizer", "create", args)
   }
@@ -138,7 +138,7 @@ func (this *QGestureRecognizer) registerRecognizer_s(args ...interface{}) () {
     // invoke: Qt::GestureType registerRecognizer(class QGestureRecognizer *)
     var arg0 = args[0].(QGestureRecognizer).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QGestureRecognizer18registerRecognizerEPS_(arg0)
+    C.C_ZN18QGestureRecognizer18registerRecognizerEPS_(arg0)
   default:
     qtrt.ErrorResolve("QGestureRecognizer", "registerRecognizer", args)
   }
@@ -160,7 +160,7 @@ func NewQGestureRecognizer(args ...interface{}) QGestureRecognizer {
     // invoke: void QGestureRecognizer()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN18QGestureRecognizerC2Ev(qthis)
+    C.C_ZN18QGestureRecognizerC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QGestureRecognizer", "QGestureRecognizer", args)
   }

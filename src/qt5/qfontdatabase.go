@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qfontdatabase.h
 // dst-file: /src/gui/qfontdatabase.go
 //
@@ -29,55 +29,55 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static int QFontDatabase::addApplicationFontFromData(const QByteArray & fontData);
-extern void _ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray(void* arg0); // 4
+extern void C_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray(void* arg0); // 4
   // proto:  int QFontDatabase::weight(const QString & family, const QString & style);
-extern void _ZNK13QFontDatabase6weightERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QFontDatabase6weightERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  bool QFontDatabase::isFixedPitch(const QString & family, const QString & style);
-extern void _ZNK13QFontDatabase12isFixedPitchERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QFont QFontDatabase::font(const QString & family, const QString & style, int pointSize);
-extern void _ZNK13QFontDatabase4fontERK7QStringS2_i(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
+extern void C_ZNK13QFontDatabase4fontERK7QStringS2_i(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
   // proto:  QList<int> QFontDatabase::pointSizes(const QString & family, const QString & style);
-extern void _ZN13QFontDatabase10pointSizesERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN13QFontDatabase10pointSizesERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QList<QFontDatabase::WritingSystem> QFontDatabase::writingSystems();
-extern void _ZNK13QFontDatabase14writingSystemsEv(void* qthis); // 4
+extern void C_ZNK13QFontDatabase14writingSystemsEv(void* qthis); // 4
   // proto:  QList<QFontDatabase::WritingSystem> QFontDatabase::writingSystems(const QString & family);
-extern void _ZNK13QFontDatabase14writingSystemsERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK13QFontDatabase14writingSystemsERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QFontDatabase::isPrivateFamily(const QString & family);
-extern void _ZNK13QFontDatabase15isPrivateFamilyERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK13QFontDatabase15isPrivateFamilyERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QFontDatabase::QFontDatabase();
-extern void _ZN13QFontDatabaseC2Ev(void* qthis); // 3
+extern void C_ZN13QFontDatabaseC2Ev(void* qthis); // 3
   // proto:  QString QFontDatabase::styleString(const QFontInfo & fontInfo);
-extern void _ZN13QFontDatabase11styleStringERK9QFontInfo(void* qthis, void* arg0); // 4
+extern void C_ZN13QFontDatabase11styleStringERK9QFontInfo(void* qthis, void* arg0); // 4
   // proto:  QString QFontDatabase::styleString(const QFont & font);
-extern void _ZN13QFontDatabase11styleStringERK5QFont(void* qthis, void* arg0); // 4
+extern void C_ZN13QFontDatabase11styleStringERK5QFont(void* qthis, void* arg0); // 4
   // proto:  bool QFontDatabase::italic(const QString & family, const QString & style);
-extern void _ZNK13QFontDatabase6italicERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QFontDatabase6italicERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QStringList QFontDatabase::styles(const QString & family);
-extern void _ZNK13QFontDatabase6stylesERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK13QFontDatabase6stylesERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QFontDatabase::isSmoothlyScalable(const QString & family, const QString & style);
-extern void _ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  bool QFontDatabase::bold(const QString & family, const QString & style);
-extern void _ZNK13QFontDatabase4boldERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QFontDatabase4boldERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  bool QFontDatabase::isScalable(const QString & family, const QString & style);
-extern void _ZNK13QFontDatabase10isScalableERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QFontDatabase10isScalableERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto: static int QFontDatabase::addApplicationFont(const QString & fileName);
-extern void _ZN13QFontDatabase18addApplicationFontERK7QString(void* arg0); // 4
+extern void C_ZN13QFontDatabase18addApplicationFontERK7QString(void* arg0); // 4
   // proto:  bool QFontDatabase::isBitmapScalable(const QString & family, const QString & style);
-extern void _ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto: static QStringList QFontDatabase::applicationFontFamilies(int id);
-extern void _ZN13QFontDatabase23applicationFontFamiliesEi(int32_t arg0); // 4
+extern void C_ZN13QFontDatabase23applicationFontFamiliesEi(int32_t arg0); // 4
   // proto: static bool QFontDatabase::supportsThreadedFontRendering();
-extern void _ZN13QFontDatabase29supportsThreadedFontRenderingEv(); // 4
+extern void C_ZN13QFontDatabase29supportsThreadedFontRenderingEv(); // 4
   // proto:  QList<int> QFontDatabase::smoothSizes(const QString & family, const QString & style);
-extern void _ZN13QFontDatabase11smoothSizesERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN13QFontDatabase11smoothSizesERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto: static bool QFontDatabase::removeApplicationFont(int id);
-extern void _ZN13QFontDatabase21removeApplicationFontEi(int32_t arg0); // 4
+extern void C_ZN13QFontDatabase21removeApplicationFontEi(int32_t arg0); // 4
   // proto:  bool QFontDatabase::hasFamily(const QString & family);
-extern void _ZNK13QFontDatabase9hasFamilyERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK13QFontDatabase9hasFamilyERK7QString(void* qthis, void* arg0); // 4
   // proto: static QList<int> QFontDatabase::standardSizes();
-extern void _ZN13QFontDatabase13standardSizesEv(); // 4
+extern void C_ZN13QFontDatabase13standardSizesEv(); // 4
   // proto: static bool QFontDatabase::removeAllApplicationFonts();
-extern void _ZN13QFontDatabase25removeAllApplicationFontsEv(); // 4
+extern void C_ZN13QFontDatabase25removeAllApplicationFontsEv(); // 4
 */
 import "C"
 // } // <= ext block end
@@ -112,7 +112,7 @@ func (this *QFontDatabase) addApplicationFontFromData_s(args ...interface{}) () 
     // invoke: int addApplicationFontFromData(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray(arg0)
+    C.C_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray(arg0)
   default:
     qtrt.ErrorResolve("QFontDatabase", "addApplicationFontFromData", args)
   }
@@ -138,7 +138,7 @@ func (this *QFontDatabase) weight(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QFontDatabase6weightERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QFontDatabase6weightERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFontDatabase", "weight", args)
   }
@@ -164,7 +164,7 @@ func (this *QFontDatabase) isFixedPitch(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QFontDatabase12isFixedPitchERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFontDatabase", "isFixedPitch", args)
   }
@@ -193,7 +193,7 @@ func (this *QFontDatabase) font(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZNK13QFontDatabase4fontERK7QStringS2_i(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK13QFontDatabase4fontERK7QStringS2_i(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QFontDatabase", "font", args)
   }
@@ -219,7 +219,7 @@ func (this *QFontDatabase) pointSizes(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN13QFontDatabase10pointSizesERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN13QFontDatabase10pointSizesERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFontDatabase", "pointSizes", args)
   }
@@ -242,13 +242,13 @@ func (this *QFontDatabase) writingSystems(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QFontDatabase14writingSystemsEv
     // invoke: QList<QFontDatabase::WritingSystem> writingSystems()
-    C._ZNK13QFontDatabase14writingSystemsEv(this.qclsinst)
+    C.C_ZNK13QFontDatabase14writingSystemsEv(this.qclsinst)
   case 1:
     // invoke: _ZNK13QFontDatabase14writingSystemsERK7QString
     // invoke: QList<QFontDatabase::WritingSystem> writingSystems(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QFontDatabase14writingSystemsERK7QString(this.qclsinst, arg0)
+    C.C_ZNK13QFontDatabase14writingSystemsERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontDatabase", "writingSystems", args)
   }
@@ -271,7 +271,7 @@ func (this *QFontDatabase) isPrivateFamily(args ...interface{}) () {
     // invoke: bool isPrivateFamily(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QFontDatabase15isPrivateFamilyERK7QString(this.qclsinst, arg0)
+    C.C_ZNK13QFontDatabase15isPrivateFamilyERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontDatabase", "isPrivateFamily", args)
   }
@@ -293,7 +293,7 @@ func NewQFontDatabase(args ...interface{}) QFontDatabase {
     // invoke: void QFontDatabase()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QFontDatabaseC2Ev(qthis)
+    C.C_ZN13QFontDatabaseC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QFontDatabase", "QFontDatabase", args)
   }
@@ -320,13 +320,13 @@ func (this *QFontDatabase) styleString(args ...interface{}) () {
     // invoke: QString styleString(const class QFontInfo &)
     var arg0 = args[0].(QFontInfo).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QFontDatabase11styleStringERK9QFontInfo(this.qclsinst, arg0)
+    C.C_ZN13QFontDatabase11styleStringERK9QFontInfo(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN13QFontDatabase11styleStringERK5QFont
     // invoke: QString styleString(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QFontDatabase11styleStringERK5QFont(this.qclsinst, arg0)
+    C.C_ZN13QFontDatabase11styleStringERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontDatabase", "styleString", args)
   }
@@ -352,7 +352,7 @@ func (this *QFontDatabase) italic(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QFontDatabase6italicERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QFontDatabase6italicERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFontDatabase", "italic", args)
   }
@@ -375,7 +375,7 @@ func (this *QFontDatabase) styles(args ...interface{}) () {
     // invoke: QStringList styles(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QFontDatabase6stylesERK7QString(this.qclsinst, arg0)
+    C.C_ZNK13QFontDatabase6stylesERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontDatabase", "styles", args)
   }
@@ -401,7 +401,7 @@ func (this *QFontDatabase) isSmoothlyScalable(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFontDatabase", "isSmoothlyScalable", args)
   }
@@ -427,7 +427,7 @@ func (this *QFontDatabase) bold(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QFontDatabase4boldERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QFontDatabase4boldERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFontDatabase", "bold", args)
   }
@@ -453,7 +453,7 @@ func (this *QFontDatabase) isScalable(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QFontDatabase10isScalableERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QFontDatabase10isScalableERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFontDatabase", "isScalable", args)
   }
@@ -476,7 +476,7 @@ func (this *QFontDatabase) addApplicationFont_s(args ...interface{}) () {
     // invoke: int addApplicationFont(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QFontDatabase18addApplicationFontERK7QString(arg0)
+    C.C_ZN13QFontDatabase18addApplicationFontERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QFontDatabase", "addApplicationFont", args)
   }
@@ -502,7 +502,7 @@ func (this *QFontDatabase) isBitmapScalable(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFontDatabase", "isBitmapScalable", args)
   }
@@ -525,7 +525,7 @@ func (this *QFontDatabase) applicationFontFamilies_s(args ...interface{}) () {
     // invoke: QStringList applicationFontFamilies(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN13QFontDatabase23applicationFontFamiliesEi(arg0)
+    C.C_ZN13QFontDatabase23applicationFontFamiliesEi(arg0)
   default:
     qtrt.ErrorResolve("QFontDatabase", "applicationFontFamilies", args)
   }
@@ -545,7 +545,7 @@ func (this *QFontDatabase) supportsThreadedFontRendering_s(args ...interface{}) 
   case 0:
     // invoke: _ZN13QFontDatabase29supportsThreadedFontRenderingEv
     // invoke: bool supportsThreadedFontRendering()
-    C._ZN13QFontDatabase29supportsThreadedFontRenderingEv()
+    C.C_ZN13QFontDatabase29supportsThreadedFontRenderingEv()
   default:
     qtrt.ErrorResolve("QFontDatabase", "supportsThreadedFontRendering", args)
   }
@@ -571,7 +571,7 @@ func (this *QFontDatabase) smoothSizes(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN13QFontDatabase11smoothSizesERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN13QFontDatabase11smoothSizesERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFontDatabase", "smoothSizes", args)
   }
@@ -594,7 +594,7 @@ func (this *QFontDatabase) removeApplicationFont_s(args ...interface{}) () {
     // invoke: bool removeApplicationFont(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN13QFontDatabase21removeApplicationFontEi(arg0)
+    C.C_ZN13QFontDatabase21removeApplicationFontEi(arg0)
   default:
     qtrt.ErrorResolve("QFontDatabase", "removeApplicationFont", args)
   }
@@ -617,7 +617,7 @@ func (this *QFontDatabase) hasFamily(args ...interface{}) () {
     // invoke: bool hasFamily(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QFontDatabase9hasFamilyERK7QString(this.qclsinst, arg0)
+    C.C_ZNK13QFontDatabase9hasFamilyERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontDatabase", "hasFamily", args)
   }
@@ -637,7 +637,7 @@ func (this *QFontDatabase) standardSizes_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QFontDatabase13standardSizesEv
     // invoke: QList<int> standardSizes()
-    C._ZN13QFontDatabase13standardSizesEv()
+    C.C_ZN13QFontDatabase13standardSizesEv()
   default:
     qtrt.ErrorResolve("QFontDatabase", "standardSizes", args)
   }
@@ -657,7 +657,7 @@ func (this *QFontDatabase) removeAllApplicationFonts_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QFontDatabase25removeAllApplicationFontsEv
     // invoke: bool removeAllApplicationFonts()
-    C._ZN13QFontDatabase25removeAllApplicationFontsEv()
+    C.C_ZN13QFontDatabase25removeAllApplicationFontsEv()
   default:
     qtrt.ErrorResolve("QFontDatabase", "removeAllApplicationFonts", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  const QMetaObject * QIconEnginePlugin::metaObject();
-extern void _ZNK17QIconEnginePlugin10metaObjectEv(void* qthis); // 4
+extern void C_ZNK17QIconEnginePlugin10metaObjectEv(void* qthis); // 4
   // proto:  void QIconEnginePlugin::QIconEnginePlugin(QObject * parent);
-extern void _ZN17QIconEnginePluginC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN17QIconEnginePluginC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QIconEnginePlugin::~QIconEnginePlugin();
-extern void _ZN17QIconEnginePluginD2Ev(void* qthis); // 4
+extern void C_ZN17QIconEnginePluginD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -65,7 +65,7 @@ func (this *QIconEnginePlugin) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QIconEnginePlugin10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK17QIconEnginePlugin10metaObjectEv(this.qclsinst)
+    C.C_ZNK17QIconEnginePlugin10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIconEnginePlugin", "metaObject", args)
   }
@@ -90,7 +90,7 @@ func NewQIconEnginePlugin(args ...interface{}) QIconEnginePlugin {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QIconEnginePluginC2EP7QObject(qthis, arg0)
+    C.C_ZN17QIconEnginePluginC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QIconEnginePlugin", "QIconEnginePlugin", args)
   }
@@ -111,7 +111,7 @@ func (this *QIconEnginePlugin) FreeQIconEnginePlugin(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QIconEnginePluginD0Ev
     // invoke: void ~QIconEnginePlugin()
-    C._ZN17QIconEnginePluginD2Ev(this.qclsinst)
+    C.C_ZN17QIconEnginePluginD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIconEnginePlugin", "~QIconEnginePlugin", args)
   }

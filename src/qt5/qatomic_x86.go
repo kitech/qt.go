@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qatomic_x86.h
 // dst-file: /src/core/qatomic_x86.go
 //
@@ -41,19 +41,19 @@ func init() {
 }
 
 // class sizeof(QAtomicOpsSupport<2>)=1
-type QAtomicOpsSupport_2_ struct {
+type QAtomicOpsSupportL2G struct {
   // qbase: None;
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QAtomicOpsSupport<1>)=1
-type QAtomicOpsSupport_1_ struct {
+type QAtomicOpsSupportL1G struct {
   // qbase: None;
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QAtomicOpsSupport<8>)=1
-type QAtomicOpsSupport_8_ struct {
+type QAtomicOpsSupportL8G struct {
   // qbase: None;
   qclsinst unsafe.Pointer /* *C.void */;
 }

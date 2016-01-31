@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.go
 //
@@ -29,35 +29,35 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QVariant QVariantAnimation::keyValueAt(qreal step);
-extern void _ZNK17QVariantAnimation10keyValueAtEd(void* qthis, double arg0); // 4
+extern void C_ZNK17QVariantAnimation10keyValueAtEd(void* qthis, double arg0); // 4
   // proto:  QVariant QVariantAnimation::currentValue();
-extern void _ZNK17QVariantAnimation12currentValueEv(void* qthis); // 4
+extern void C_ZNK17QVariantAnimation12currentValueEv(void* qthis); // 4
   // proto:  void QVariantAnimation::setEasingCurve(const QEasingCurve & easing);
-extern void _ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(void* qthis, void* arg0); // 4
+extern void C_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(void* qthis, void* arg0); // 4
   // proto:  void QVariantAnimation::QVariantAnimation(QObject * parent);
-extern void _ZN17QVariantAnimationC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN17QVariantAnimationC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  int QVariantAnimation::duration();
-extern void _ZNK17QVariantAnimation8durationEv(void* qthis); // 4
+extern void C_ZNK17QVariantAnimation8durationEv(void* qthis); // 4
   // proto:  void QVariantAnimation::setStartValue(const QVariant & value);
-extern void _ZN17QVariantAnimation13setStartValueERK8QVariant(void* qthis, void* arg0); // 4
+extern void C_ZN17QVariantAnimation13setStartValueERK8QVariant(void* qthis, void* arg0); // 4
   // proto:  KeyValues QVariantAnimation::keyValues();
-extern void _ZNK17QVariantAnimation9keyValuesEv(void* qthis); // 4
+extern void C_ZNK17QVariantAnimation9keyValuesEv(void* qthis); // 4
   // proto:  void QVariantAnimation::~QVariantAnimation();
-extern void _ZN17QVariantAnimationD2Ev(void* qthis); // 4
+extern void C_ZN17QVariantAnimationD2Ev(void* qthis); // 4
   // proto:  QVariant QVariantAnimation::endValue();
-extern void _ZNK17QVariantAnimation8endValueEv(void* qthis); // 4
+extern void C_ZNK17QVariantAnimation8endValueEv(void* qthis); // 4
   // proto:  const QMetaObject * QVariantAnimation::metaObject();
-extern void _ZNK17QVariantAnimation10metaObjectEv(void* qthis); // 4
+extern void C_ZNK17QVariantAnimation10metaObjectEv(void* qthis); // 4
   // proto:  void QVariantAnimation::setKeyValueAt(qreal step, const QVariant & value);
-extern void _ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(void* qthis, double arg0, void* arg1); // 4
+extern void C_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(void* qthis, double arg0, void* arg1); // 4
   // proto:  QEasingCurve QVariantAnimation::easingCurve();
-extern void _ZNK17QVariantAnimation11easingCurveEv(void* qthis); // 4
+extern void C_ZNK17QVariantAnimation11easingCurveEv(void* qthis); // 4
   // proto:  void QVariantAnimation::setEndValue(const QVariant & value);
-extern void _ZN17QVariantAnimation11setEndValueERK8QVariant(void* qthis, void* arg0); // 4
+extern void C_ZN17QVariantAnimation11setEndValueERK8QVariant(void* qthis, void* arg0); // 4
   // proto:  void QVariantAnimation::setDuration(int msecs);
-extern void _ZN17QVariantAnimation11setDurationEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN17QVariantAnimation11setDurationEi(void* qthis, int32_t arg0); // 4
   // proto:  QVariant QVariantAnimation::startValue();
-extern void _ZNK17QVariantAnimation10startValueEv(void* qthis); // 4
+extern void C_ZNK17QVariantAnimation10startValueEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -93,7 +93,7 @@ func (this *QVariantAnimation) keyValueAt(args ...interface{}) () {
     // invoke: QVariant keyValueAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZNK17QVariantAnimation10keyValueAtEd(this.qclsinst, arg0)
+    C.C_ZNK17QVariantAnimation10keyValueAtEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "keyValueAt", args)
   }
@@ -113,7 +113,7 @@ func (this *QVariantAnimation) currentValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation12currentValueEv
     // invoke: QVariant currentValue()
-    C._ZNK17QVariantAnimation12currentValueEv(this.qclsinst)
+    C.C_ZNK17QVariantAnimation12currentValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "currentValue", args)
   }
@@ -136,7 +136,7 @@ func (this *QVariantAnimation) setEasingCurve(args ...interface{}) () {
     // invoke: void setEasingCurve(const class QEasingCurve &)
     var arg0 = args[0].(QEasingCurve).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(this.qclsinst, arg0)
+    C.C_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setEasingCurve", args)
   }
@@ -161,7 +161,7 @@ func NewQVariantAnimation(args ...interface{}) QVariantAnimation {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QVariantAnimationC2EP7QObject(qthis, arg0)
+    C.C_ZN17QVariantAnimationC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "QVariantAnimation", args)
   }
@@ -182,7 +182,7 @@ func (this *QVariantAnimation) duration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation8durationEv
     // invoke: int duration()
-    C._ZNK17QVariantAnimation8durationEv(this.qclsinst)
+    C.C_ZNK17QVariantAnimation8durationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "duration", args)
   }
@@ -205,7 +205,7 @@ func (this *QVariantAnimation) setStartValue(args ...interface{}) () {
     // invoke: void setStartValue(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QVariantAnimation13setStartValueERK8QVariant(this.qclsinst, arg0)
+    C.C_ZN17QVariantAnimation13setStartValueERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setStartValue", args)
   }
@@ -225,7 +225,7 @@ func (this *QVariantAnimation) keyValues(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation9keyValuesEv
     // invoke: KeyValues keyValues()
-    C._ZNK17QVariantAnimation9keyValuesEv(this.qclsinst)
+    C.C_ZNK17QVariantAnimation9keyValuesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "keyValues", args)
   }
@@ -245,7 +245,7 @@ func (this *QVariantAnimation) FreeQVariantAnimation(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QVariantAnimationD0Ev
     // invoke: void ~QVariantAnimation()
-    C._ZN17QVariantAnimationD2Ev(this.qclsinst)
+    C.C_ZN17QVariantAnimationD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "~QVariantAnimation", args)
   }
@@ -265,7 +265,7 @@ func (this *QVariantAnimation) endValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation8endValueEv
     // invoke: QVariant endValue()
-    C._ZNK17QVariantAnimation8endValueEv(this.qclsinst)
+    C.C_ZNK17QVariantAnimation8endValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "endValue", args)
   }
@@ -285,7 +285,7 @@ func (this *QVariantAnimation) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK17QVariantAnimation10metaObjectEv(this.qclsinst)
+    C.C_ZNK17QVariantAnimation10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "metaObject", args)
   }
@@ -311,7 +311,7 @@ func (this *QVariantAnimation) setKeyValueAt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(this.qclsinst, arg0, arg1)
+    C.C_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setKeyValueAt", args)
   }
@@ -331,7 +331,7 @@ func (this *QVariantAnimation) easingCurve(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation11easingCurveEv
     // invoke: QEasingCurve easingCurve()
-    C._ZNK17QVariantAnimation11easingCurveEv(this.qclsinst)
+    C.C_ZNK17QVariantAnimation11easingCurveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "easingCurve", args)
   }
@@ -354,7 +354,7 @@ func (this *QVariantAnimation) setEndValue(args ...interface{}) () {
     // invoke: void setEndValue(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QVariantAnimation11setEndValueERK8QVariant(this.qclsinst, arg0)
+    C.C_ZN17QVariantAnimation11setEndValueERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setEndValue", args)
   }
@@ -377,7 +377,7 @@ func (this *QVariantAnimation) setDuration(args ...interface{}) () {
     // invoke: void setDuration(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN17QVariantAnimation11setDurationEi(this.qclsinst, arg0)
+    C.C_ZN17QVariantAnimation11setDurationEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setDuration", args)
   }
@@ -397,7 +397,7 @@ func (this *QVariantAnimation) startValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation10startValueEv
     // invoke: QVariant startValue()
-    C._ZNK17QVariantAnimation10startValueEv(this.qclsinst)
+    C.C_ZNK17QVariantAnimation10startValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "startValue", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.go
 //
@@ -29,35 +29,35 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QStyle::drawItemPixmap(QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap);
-extern void _ZNK6QStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(void* qthis, void* arg0, void* arg1, int32_t arg2, void* arg3); // 4
+extern void C_ZNK6QStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(void* qthis, void* arg0, void* arg1, int32_t arg2, void* arg3); // 4
   // proto:  void QStyle::~QStyle();
-extern void _ZN6QStyleD2Ev(void* qthis); // 4
+extern void C_ZN6QStyleD2Ev(void* qthis); // 4
   // proto:  void QStyle::polish(QWidget * );
-extern void _ZN6QStyle6polishEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN6QStyle6polishEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QStyle::polish(QPalette & );
-extern void _ZN6QStyle6polishER8QPalette(void* qthis, void* arg0); // 4
+extern void C_ZN6QStyle6polishER8QPalette(void* qthis, void* arg0); // 4
   // proto:  void QStyle::polish(QApplication * );
-extern void _ZN6QStyle6polishEP12QApplication(void* qthis, void* arg0); // 4
+extern void C_ZN6QStyle6polishEP12QApplication(void* qthis, void* arg0); // 4
   // proto:  QPalette QStyle::standardPalette();
-extern void _ZNK6QStyle15standardPaletteEv(void* qthis); // 4
+extern void C_ZNK6QStyle15standardPaletteEv(void* qthis); // 4
   // proto:  void QStyle::QStyle();
-extern void _ZN6QStyleC2Ev(void* qthis); // 3
+extern void C_ZN6QStyleC2Ev(void* qthis); // 3
   // proto: static int QStyle::sliderValueFromPosition(int min, int max, int pos, int space, bool upsideDown);
-extern void _ZN6QStyle23sliderValueFromPositionEiiiib(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, bool arg4); // 4
+extern void C_ZN6QStyle23sliderValueFromPositionEiiiib(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, bool arg4); // 4
   // proto:  const QStyle * QStyle::proxy();
-extern void _ZNK6QStyle5proxyEv(void* qthis); // 4
+extern void C_ZNK6QStyle5proxyEv(void* qthis); // 4
   // proto:  const QMetaObject * QStyle::metaObject();
-extern void _ZNK6QStyle10metaObjectEv(void* qthis); // 4
+extern void C_ZNK6QStyle10metaObjectEv(void* qthis); // 4
   // proto:  QRect QStyle::itemTextRect(const QFontMetrics & fm, const QRect & r, int flags, bool enabled, const QString & text);
-extern void _ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(void* qthis, void* arg0, void* arg1, int32_t arg2, bool arg3, void* arg4); // 4
+extern void C_ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(void* qthis, void* arg0, void* arg1, int32_t arg2, bool arg3, void* arg4); // 4
   // proto:  void QStyle::unpolish(QWidget * );
-extern void _ZN6QStyle8unpolishEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN6QStyle8unpolishEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QStyle::unpolish(QApplication * );
-extern void _ZN6QStyle8unpolishEP12QApplication(void* qthis, void* arg0); // 4
+extern void C_ZN6QStyle8unpolishEP12QApplication(void* qthis, void* arg0); // 4
   // proto: static int QStyle::sliderPositionFromValue(int min, int max, int val, int space, bool upsideDown);
-extern void _ZN6QStyle23sliderPositionFromValueEiiiib(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, bool arg4); // 4
+extern void C_ZN6QStyle23sliderPositionFromValueEiiiib(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, bool arg4); // 4
   // proto:  QRect QStyle::itemPixmapRect(const QRect & r, int flags, const QPixmap & pixmap);
-extern void _ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
 */
 import "C"
 // } // <= ext block end
@@ -101,7 +101,7 @@ func (this *QStyle) drawItemPixmap(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QPixmap).qclsinst
     if false {fmt.Println(arg3)}
-    C._ZNK6QStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK6QStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QStyle", "drawItemPixmap", args)
   }
@@ -121,7 +121,7 @@ func (this *QStyle) FreeQStyle(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QStyleD0Ev
     // invoke: void ~QStyle()
-    C._ZN6QStyleD2Ev(this.qclsinst)
+    C.C_ZN6QStyleD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyle", "~QStyle", args)
   }
@@ -150,19 +150,19 @@ func (this *QStyle) polish(args ...interface{}) () {
     // invoke: void polish(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QStyle6polishEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN6QStyle6polishEP7QWidget(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN6QStyle6polishER8QPalette
     // invoke: void polish(class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QStyle6polishER8QPalette(this.qclsinst, arg0)
+    C.C_ZN6QStyle6polishER8QPalette(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN6QStyle6polishEP12QApplication
     // invoke: void polish(class QApplication *)
     var arg0 = args[0].(QApplication).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QStyle6polishEP12QApplication(this.qclsinst, arg0)
+    C.C_ZN6QStyle6polishEP12QApplication(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyle", "polish", args)
   }
@@ -182,7 +182,7 @@ func (this *QStyle) standardPalette(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QStyle15standardPaletteEv
     // invoke: QPalette standardPalette()
-    C._ZNK6QStyle15standardPaletteEv(this.qclsinst)
+    C.C_ZNK6QStyle15standardPaletteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyle", "standardPalette", args)
   }
@@ -204,7 +204,7 @@ func NewQStyle(args ...interface{}) QStyle {
     // invoke: void QStyle()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QStyleC2Ev(qthis)
+    C.C_ZN6QStyleC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QStyle", "QStyle", args)
   }
@@ -240,7 +240,7 @@ func (this *QStyle) sliderValueFromPosition_s(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.bool(args[4].(bool))
     if false {fmt.Println(arg4)}
-    C._ZN6QStyle23sliderValueFromPositionEiiiib(arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN6QStyle23sliderValueFromPositionEiiiib(arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QStyle", "sliderValueFromPosition", args)
   }
@@ -260,7 +260,7 @@ func (this *QStyle) proxy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QStyle5proxyEv
     // invoke: const QStyle * proxy()
-    C._ZNK6QStyle5proxyEv(this.qclsinst)
+    C.C_ZNK6QStyle5proxyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyle", "proxy", args)
   }
@@ -280,7 +280,7 @@ func (this *QStyle) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QStyle10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK6QStyle10metaObjectEv(this.qclsinst)
+    C.C_ZNK6QStyle10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyle", "metaObject", args)
   }
@@ -315,7 +315,7 @@ func (this *QStyle) itemTextRect(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QString).qclsinst
     if false {fmt.Println(arg4)}
-    C._ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QStyle", "itemTextRect", args)
   }
@@ -341,13 +341,13 @@ func (this *QStyle) unpolish(args ...interface{}) () {
     // invoke: void unpolish(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QStyle8unpolishEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN6QStyle8unpolishEP7QWidget(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN6QStyle8unpolishEP12QApplication
     // invoke: void unpolish(class QApplication *)
     var arg0 = args[0].(QApplication).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QStyle8unpolishEP12QApplication(this.qclsinst, arg0)
+    C.C_ZN6QStyle8unpolishEP12QApplication(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyle", "unpolish", args)
   }
@@ -382,7 +382,7 @@ func (this *QStyle) sliderPositionFromValue_s(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.bool(args[4].(bool))
     if false {fmt.Println(arg4)}
-    C._ZN6QStyle23sliderPositionFromValueEiiiib(arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN6QStyle23sliderPositionFromValueEiiiib(arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QStyle", "sliderPositionFromValue", args)
   }
@@ -411,7 +411,7 @@ func (this *QStyle) itemPixmapRect(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPixmap).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QStyle", "itemPixmapRect", args)
   }

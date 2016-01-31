@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qkeysequenceedit.h
 // dst-file: /src/widgets/qkeysequenceedit.go
 //
@@ -29,19 +29,19 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QKeySequenceEdit::QKeySequenceEdit(QWidget * parent);
-extern void _ZN16QKeySequenceEditC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN16QKeySequenceEditC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequence & keySequence, QWidget * parent);
-extern void _ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QKeySequenceEdit::clear();
-extern void _ZN16QKeySequenceEdit5clearEv(void* qthis); // 4
+extern void C_ZN16QKeySequenceEdit5clearEv(void* qthis); // 4
   // proto:  const QMetaObject * QKeySequenceEdit::metaObject();
-extern void _ZNK16QKeySequenceEdit10metaObjectEv(void* qthis); // 4
+extern void C_ZNK16QKeySequenceEdit10metaObjectEv(void* qthis); // 4
   // proto:  QKeySequence QKeySequenceEdit::keySequence();
-extern void _ZNK16QKeySequenceEdit11keySequenceEv(void* qthis); // 4
+extern void C_ZNK16QKeySequenceEdit11keySequenceEv(void* qthis); // 4
   // proto:  void QKeySequenceEdit::~QKeySequenceEdit();
-extern void _ZN16QKeySequenceEditD2Ev(void* qthis); // 4
+extern void C_ZN16QKeySequenceEditD2Ev(void* qthis); // 4
   // proto:  void QKeySequenceEdit::setKeySequence(const QKeySequence & keySequence);
-extern void _ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(void* qthis, void* arg0); // 4
+extern void C_ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -84,7 +84,7 @@ func NewQKeySequenceEdit(args ...interface{}) QKeySequenceEdit {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QKeySequenceEditC2EP7QWidget(qthis, arg0)
+    C.C_ZN16QKeySequenceEditC2EP7QWidget(qthis, arg0)
   case 1:
     // invoke: _ZN16QKeySequenceEditC1ERK12QKeySequenceP7QWidget
     // invoke: void QKeySequenceEdit(const class QKeySequence &, class QWidget *)
@@ -94,7 +94,7 @@ func NewQKeySequenceEdit(args ...interface{}) QKeySequenceEdit {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget(qthis, arg0, arg1)
+    C.C_ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "QKeySequenceEdit", args)
   }
@@ -115,7 +115,7 @@ func (this *QKeySequenceEdit) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QKeySequenceEdit5clearEv
     // invoke: void clear()
-    C._ZN16QKeySequenceEdit5clearEv(this.qclsinst)
+    C.C_ZN16QKeySequenceEdit5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "clear", args)
   }
@@ -135,7 +135,7 @@ func (this *QKeySequenceEdit) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QKeySequenceEdit10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK16QKeySequenceEdit10metaObjectEv(this.qclsinst)
+    C.C_ZNK16QKeySequenceEdit10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "metaObject", args)
   }
@@ -155,7 +155,7 @@ func (this *QKeySequenceEdit) keySequence(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QKeySequenceEdit11keySequenceEv
     // invoke: QKeySequence keySequence()
-    C._ZNK16QKeySequenceEdit11keySequenceEv(this.qclsinst)
+    C.C_ZNK16QKeySequenceEdit11keySequenceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "keySequence", args)
   }
@@ -175,7 +175,7 @@ func (this *QKeySequenceEdit) FreeQKeySequenceEdit(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QKeySequenceEditD0Ev
     // invoke: void ~QKeySequenceEdit()
-    C._ZN16QKeySequenceEditD2Ev(this.qclsinst)
+    C.C_ZN16QKeySequenceEditD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "~QKeySequenceEdit", args)
   }
@@ -198,7 +198,7 @@ func (this *QKeySequenceEdit) setKeySequence(args ...interface{}) () {
     // invoke: void setKeySequence(const class QKeySequence &)
     var arg0 = args[0].(QKeySequence).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(this.qclsinst, arg0)
+    C.C_ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "setKeySequence", args)
   }

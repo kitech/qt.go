@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qdir.h
 // dst-file: /src/core/qdir.go
 //
@@ -29,119 +29,119 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QDir::rename(const QString & oldName, const QString & newName);
-extern void _ZN4QDir6renameERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN4QDir6renameERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QDir::setNameFilters(const QStringList & nameFilters);
-extern void _ZN4QDir14setNameFiltersERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN4QDir14setNameFiltersERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  void QDir::~QDir();
-extern void _ZN4QDirD2Ev(void* qthis); // 4
+extern void C_ZN4QDirD2Ev(void* qthis); // 4
   // proto:  bool QDir::exists();
-extern void _ZNK4QDir6existsEv(void* qthis); // 4
+extern void C_ZNK4QDir6existsEv(void* qthis); // 4
   // proto:  bool QDir::exists(const QString & name);
-extern void _ZNK4QDir6existsERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK4QDir6existsERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QDir::relativeFilePath(const QString & fileName);
-extern void _ZNK4QDir16relativeFilePathERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK4QDir16relativeFilePathERK7QString(void* qthis, void* arg0); // 4
   // proto: static QString QDir::currentPath();
-extern void _ZN4QDir11currentPathEv(); // 4
+extern void C_ZN4QDir11currentPathEv(); // 4
   // proto:  bool QDir::isRelative();
-extern void _ZNK4QDir10isRelativeEv(void* qthis); // 4
+extern void C_ZNK4QDir10isRelativeEv(void* qthis); // 4
   // proto:  bool QDir::cd(const QString & dirName);
-extern void _ZN4QDir2cdERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN4QDir2cdERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QDir::QDir(const QDir & );
-extern void _ZN4QDirC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN4QDirC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QDir::QDir(const QString & path);
-extern void _ZN4QDirC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN4QDirC2ERK7QString(void* qthis, void* arg0); // 3
   // proto: static bool QDir::isAbsolutePath(const QString & path);
-extern void _ZN4QDir14isAbsolutePathERK7QString(void* arg0); // 2
+extern void C_ZN4QDir14isAbsolutePathERK7QString(void* arg0); // 2
   // proto:  bool QDir::remove(const QString & fileName);
-extern void _ZN4QDir6removeERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN4QDir6removeERK7QString(void* qthis, void* arg0); // 4
   // proto: static QString QDir::tempPath();
-extern void _ZN4QDir8tempPathEv(); // 4
+extern void C_ZN4QDir8tempPathEv(); // 4
   // proto: static QString QDir::homePath();
-extern void _ZN4QDir8homePathEv(); // 4
+extern void C_ZN4QDir8homePathEv(); // 4
   // proto: static QDir QDir::home();
-extern void _ZN4QDir4homeEv(); // 2
+extern void C_ZN4QDir4homeEv(); // 2
   // proto: static QString QDir::cleanPath(const QString & path);
-extern void _ZN4QDir9cleanPathERK7QString(void* arg0); // 4
+extern void C_ZN4QDir9cleanPathERK7QString(void* arg0); // 4
   // proto: static bool QDir::setCurrent(const QString & path);
-extern void _ZN4QDir10setCurrentERK7QString(void* arg0); // 4
+extern void C_ZN4QDir10setCurrentERK7QString(void* arg0); // 4
   // proto: static QString QDir::toNativeSeparators(const QString & pathName);
-extern void _ZN4QDir18toNativeSeparatorsERK7QString(void* arg0); // 4
+extern void C_ZN4QDir18toNativeSeparatorsERK7QString(void* arg0); // 4
   // proto:  Filters QDir::filter();
-extern void _ZNK4QDir6filterEv(void* qthis); // 4
+extern void C_ZNK4QDir6filterEv(void* qthis); // 4
   // proto: static QStringList QDir::searchPaths(const QString & prefix);
-extern void _ZN4QDir11searchPathsERK7QString(void* arg0); // 4
+extern void C_ZN4QDir11searchPathsERK7QString(void* arg0); // 4
   // proto:  bool QDir::isRoot();
-extern void _ZNK4QDir6isRootEv(void* qthis); // 4
+extern void C_ZNK4QDir6isRootEv(void* qthis); // 4
   // proto:  QString QDir::filePath(const QString & fileName);
-extern void _ZNK4QDir8filePathERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK4QDir8filePathERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QDir::mkdir(const QString & dirName);
-extern void _ZNK4QDir5mkdirERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK4QDir5mkdirERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QDir::absolutePath();
-extern void _ZNK4QDir12absolutePathEv(void* qthis); // 4
+extern void C_ZNK4QDir12absolutePathEv(void* qthis); // 4
   // proto: static void QDir::addResourceSearchPath(const QString & path);
-extern void _ZN4QDir21addResourceSearchPathERK7QString(void* arg0); // 4
+extern void C_ZN4QDir21addResourceSearchPathERK7QString(void* arg0); // 4
   // proto: static QDir QDir::current();
-extern void _ZN4QDir7currentEv(); // 2
+extern void C_ZN4QDir7currentEv(); // 2
   // proto: static QString QDir::fromNativeSeparators(const QString & pathName);
-extern void _ZN4QDir20fromNativeSeparatorsERK7QString(void* arg0); // 4
+extern void C_ZN4QDir20fromNativeSeparatorsERK7QString(void* arg0); // 4
   // proto: static bool QDir::isRelativePath(const QString & path);
-extern void _ZN4QDir14isRelativePathERK7QString(void* arg0); // 4
+extern void C_ZN4QDir14isRelativePathERK7QString(void* arg0); // 4
   // proto:  bool QDir::rmdir(const QString & dirName);
-extern void _ZNK4QDir5rmdirERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK4QDir5rmdirERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QDir::canonicalPath();
-extern void _ZNK4QDir13canonicalPathEv(void* qthis); // 4
+extern void C_ZNK4QDir13canonicalPathEv(void* qthis); // 4
   // proto:  bool QDir::removeRecursively();
-extern void _ZN4QDir17removeRecursivelyEv(void* qthis); // 4
+extern void C_ZN4QDir17removeRecursivelyEv(void* qthis); // 4
   // proto:  void QDir::setPath(const QString & path);
-extern void _ZN4QDir7setPathERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN4QDir7setPathERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QDir::dirName();
-extern void _ZNK4QDir7dirNameEv(void* qthis); // 4
+extern void C_ZNK4QDir7dirNameEv(void* qthis); // 4
   // proto: static bool QDir::match(const QStringList & filters, const QString & fileName);
-extern void _ZN4QDir5matchERK11QStringListRK7QString(void* arg0, void* arg1); // 4
+extern void C_ZN4QDir5matchERK11QStringListRK7QString(void* arg0, void* arg1); // 4
   // proto: static bool QDir::match(const QString & filter, const QString & fileName);
-extern void _ZN4QDir5matchERK7QStringS2_(void* arg0, void* arg1); // 4
+extern void C_ZN4QDir5matchERK7QStringS2_(void* arg0, void* arg1); // 4
   // proto:  void QDir::swap(QDir & other);
-extern void _ZN4QDir4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN4QDir4swapERS_(void* qthis, void* arg0); // 2
   // proto: static void QDir::setSearchPaths(const QString & prefix, const QStringList & searchPaths);
-extern void _ZN4QDir14setSearchPathsERK7QStringRK11QStringList(void* arg0, void* arg1); // 4
+extern void C_ZN4QDir14setSearchPathsERK7QStringRK11QStringList(void* arg0, void* arg1); // 4
   // proto:  QString QDir::absoluteFilePath(const QString & fileName);
-extern void _ZNK4QDir16absoluteFilePathERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK4QDir16absoluteFilePathERK7QString(void* qthis, void* arg0); // 4
   // proto: static QFileInfoList QDir::drives();
-extern void _ZN4QDir6drivesEv(); // 4
+extern void C_ZN4QDir6drivesEv(); // 4
   // proto:  bool QDir::rmpath(const QString & dirPath);
-extern void _ZNK4QDir6rmpathERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK4QDir6rmpathERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QDir::path();
-extern void _ZNK4QDir4pathEv(void* qthis); // 4
+extern void C_ZNK4QDir4pathEv(void* qthis); // 4
   // proto: static void QDir::addSearchPath(const QString & prefix, const QString & path);
-extern void _ZN4QDir13addSearchPathERK7QStringS2_(void* arg0, void* arg1); // 4
+extern void C_ZN4QDir13addSearchPathERK7QStringS2_(void* arg0, void* arg1); // 4
   // proto:  uint QDir::count();
-extern void _ZNK4QDir5countEv(void* qthis); // 4
+extern void C_ZNK4QDir5countEv(void* qthis); // 4
   // proto:  bool QDir::cdUp();
-extern void _ZN4QDir4cdUpEv(void* qthis); // 4
+extern void C_ZN4QDir4cdUpEv(void* qthis); // 4
   // proto:  SortFlags QDir::sorting();
-extern void _ZNK4QDir7sortingEv(void* qthis); // 4
+extern void C_ZNK4QDir7sortingEv(void* qthis); // 4
   // proto:  QStringList QDir::nameFilters();
-extern void _ZNK4QDir11nameFiltersEv(void* qthis); // 4
+extern void C_ZNK4QDir11nameFiltersEv(void* qthis); // 4
   // proto: static QDir QDir::temp();
-extern void _ZN4QDir4tempEv(); // 2
+extern void C_ZN4QDir4tempEv(); // 2
   // proto:  bool QDir::mkpath(const QString & dirPath);
-extern void _ZNK4QDir6mkpathERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK4QDir6mkpathERK7QString(void* qthis, void* arg0); // 4
   // proto: static QString QDir::rootPath();
-extern void _ZN4QDir8rootPathEv(); // 4
+extern void C_ZN4QDir8rootPathEv(); // 4
   // proto:  void QDir::refresh();
-extern void _ZNK4QDir7refreshEv(void* qthis); // 4
+extern void C_ZNK4QDir7refreshEv(void* qthis); // 4
   // proto:  bool QDir::makeAbsolute();
-extern void _ZN4QDir12makeAbsoluteEv(void* qthis); // 4
+extern void C_ZN4QDir12makeAbsoluteEv(void* qthis); // 4
   // proto: static QStringList QDir::nameFiltersFromString(const QString & nameFilter);
-extern void _ZN4QDir21nameFiltersFromStringERK7QString(void* arg0); // 4
+extern void C_ZN4QDir21nameFiltersFromStringERK7QString(void* arg0); // 4
   // proto: static QChar QDir::separator();
-extern void _ZN4QDir9separatorEv(); // 4
+extern void C_ZN4QDir9separatorEv(); // 4
   // proto:  bool QDir::isReadable();
-extern void _ZNK4QDir10isReadableEv(void* qthis); // 4
+extern void C_ZNK4QDir10isReadableEv(void* qthis); // 4
   // proto: static QDir QDir::root();
-extern void _ZN4QDir4rootEv(); // 2
+extern void C_ZN4QDir4rootEv(); // 2
   // proto:  bool QDir::isAbsolute();
-extern void _ZNK4QDir10isAbsoluteEv(void* qthis); // 2
+extern void C_ZNK4QDir10isAbsoluteEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -179,7 +179,7 @@ func (this *QDir) rename(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN4QDir6renameERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN4QDir6renameERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDir", "rename", args)
   }
@@ -202,7 +202,7 @@ func (this *QDir) setNameFilters(args ...interface{}) () {
     // invoke: void setNameFilters(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir14setNameFiltersERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN4QDir14setNameFiltersERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "setNameFilters", args)
   }
@@ -222,7 +222,7 @@ func (this *QDir) FreeQDir(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDirD0Ev
     // invoke: void ~QDir()
-    C._ZN4QDirD2Ev(this.qclsinst)
+    C.C_ZN4QDirD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "~QDir", args)
   }
@@ -245,13 +245,13 @@ func (this *QDir) exists(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir6existsEv
     // invoke: bool exists()
-    C._ZNK4QDir6existsEv(this.qclsinst)
+    C.C_ZNK4QDir6existsEv(this.qclsinst)
   case 1:
     // invoke: _ZNK4QDir6existsERK7QString
     // invoke: bool exists(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK4QDir6existsERK7QString(this.qclsinst, arg0)
+    C.C_ZNK4QDir6existsERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "exists", args)
   }
@@ -274,7 +274,7 @@ func (this *QDir) relativeFilePath(args ...interface{}) () {
     // invoke: QString relativeFilePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK4QDir16relativeFilePathERK7QString(this.qclsinst, arg0)
+    C.C_ZNK4QDir16relativeFilePathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "relativeFilePath", args)
   }
@@ -294,7 +294,7 @@ func (this *QDir) currentPath_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir11currentPathEv
     // invoke: QString currentPath()
-    C._ZN4QDir11currentPathEv()
+    C.C_ZN4QDir11currentPathEv()
   default:
     qtrt.ErrorResolve("QDir", "currentPath", args)
   }
@@ -314,7 +314,7 @@ func (this *QDir) isRelative(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir10isRelativeEv
     // invoke: bool isRelative()
-    C._ZNK4QDir10isRelativeEv(this.qclsinst)
+    C.C_ZNK4QDir10isRelativeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "isRelative", args)
   }
@@ -337,7 +337,7 @@ func (this *QDir) cd(args ...interface{}) () {
     // invoke: bool cd(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir2cdERK7QString(this.qclsinst, arg0)
+    C.C_ZN4QDir2cdERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "cd", args)
   }
@@ -365,7 +365,7 @@ func NewQDir(args ...interface{}) QDir {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN4QDirC2ERKS_(qthis, arg0)
+    C.C_ZN4QDirC2ERKS_(qthis, arg0)
   case 1:
     // invoke: _ZN4QDirC1ERK7QString
     // invoke: void QDir(const class QString &)
@@ -373,7 +373,7 @@ func NewQDir(args ...interface{}) QDir {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN4QDirC2ERK7QString(qthis, arg0)
+    C.C_ZN4QDirC2ERK7QString(qthis, arg0)
   default:
     qtrt.ErrorResolve("QDir", "QDir", args)
   }
@@ -397,7 +397,7 @@ func (this *QDir) isAbsolutePath_s(args ...interface{}) () {
     // invoke: bool isAbsolutePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir14isAbsolutePathERK7QString(arg0)
+    C.C_ZN4QDir14isAbsolutePathERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QDir", "isAbsolutePath", args)
   }
@@ -420,7 +420,7 @@ func (this *QDir) remove(args ...interface{}) () {
     // invoke: bool remove(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir6removeERK7QString(this.qclsinst, arg0)
+    C.C_ZN4QDir6removeERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "remove", args)
   }
@@ -440,7 +440,7 @@ func (this *QDir) tempPath_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir8tempPathEv
     // invoke: QString tempPath()
-    C._ZN4QDir8tempPathEv()
+    C.C_ZN4QDir8tempPathEv()
   default:
     qtrt.ErrorResolve("QDir", "tempPath", args)
   }
@@ -460,7 +460,7 @@ func (this *QDir) homePath_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir8homePathEv
     // invoke: QString homePath()
-    C._ZN4QDir8homePathEv()
+    C.C_ZN4QDir8homePathEv()
   default:
     qtrt.ErrorResolve("QDir", "homePath", args)
   }
@@ -480,7 +480,7 @@ func (this *QDir) home_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir4homeEv
     // invoke: QDir home()
-    C._ZN4QDir4homeEv()
+    C.C_ZN4QDir4homeEv()
   default:
     qtrt.ErrorResolve("QDir", "home", args)
   }
@@ -503,7 +503,7 @@ func (this *QDir) cleanPath_s(args ...interface{}) () {
     // invoke: QString cleanPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir9cleanPathERK7QString(arg0)
+    C.C_ZN4QDir9cleanPathERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QDir", "cleanPath", args)
   }
@@ -526,7 +526,7 @@ func (this *QDir) setCurrent_s(args ...interface{}) () {
     // invoke: bool setCurrent(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir10setCurrentERK7QString(arg0)
+    C.C_ZN4QDir10setCurrentERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QDir", "setCurrent", args)
   }
@@ -549,7 +549,7 @@ func (this *QDir) toNativeSeparators_s(args ...interface{}) () {
     // invoke: QString toNativeSeparators(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir18toNativeSeparatorsERK7QString(arg0)
+    C.C_ZN4QDir18toNativeSeparatorsERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QDir", "toNativeSeparators", args)
   }
@@ -569,7 +569,7 @@ func (this *QDir) filter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir6filterEv
     // invoke: Filters filter()
-    C._ZNK4QDir6filterEv(this.qclsinst)
+    C.C_ZNK4QDir6filterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "filter", args)
   }
@@ -592,7 +592,7 @@ func (this *QDir) searchPaths_s(args ...interface{}) () {
     // invoke: QStringList searchPaths(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir11searchPathsERK7QString(arg0)
+    C.C_ZN4QDir11searchPathsERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QDir", "searchPaths", args)
   }
@@ -612,7 +612,7 @@ func (this *QDir) isRoot(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir6isRootEv
     // invoke: bool isRoot()
-    C._ZNK4QDir6isRootEv(this.qclsinst)
+    C.C_ZNK4QDir6isRootEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "isRoot", args)
   }
@@ -635,7 +635,7 @@ func (this *QDir) filePath(args ...interface{}) () {
     // invoke: QString filePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK4QDir8filePathERK7QString(this.qclsinst, arg0)
+    C.C_ZNK4QDir8filePathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "filePath", args)
   }
@@ -658,7 +658,7 @@ func (this *QDir) mkdir(args ...interface{}) () {
     // invoke: bool mkdir(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK4QDir5mkdirERK7QString(this.qclsinst, arg0)
+    C.C_ZNK4QDir5mkdirERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "mkdir", args)
   }
@@ -678,7 +678,7 @@ func (this *QDir) absolutePath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir12absolutePathEv
     // invoke: QString absolutePath()
-    C._ZNK4QDir12absolutePathEv(this.qclsinst)
+    C.C_ZNK4QDir12absolutePathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "absolutePath", args)
   }
@@ -701,7 +701,7 @@ func (this *QDir) addResourceSearchPath_s(args ...interface{}) () {
     // invoke: void addResourceSearchPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir21addResourceSearchPathERK7QString(arg0)
+    C.C_ZN4QDir21addResourceSearchPathERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QDir", "addResourceSearchPath", args)
   }
@@ -721,7 +721,7 @@ func (this *QDir) current_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir7currentEv
     // invoke: QDir current()
-    C._ZN4QDir7currentEv()
+    C.C_ZN4QDir7currentEv()
   default:
     qtrt.ErrorResolve("QDir", "current", args)
   }
@@ -744,7 +744,7 @@ func (this *QDir) fromNativeSeparators_s(args ...interface{}) () {
     // invoke: QString fromNativeSeparators(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir20fromNativeSeparatorsERK7QString(arg0)
+    C.C_ZN4QDir20fromNativeSeparatorsERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QDir", "fromNativeSeparators", args)
   }
@@ -767,7 +767,7 @@ func (this *QDir) isRelativePath_s(args ...interface{}) () {
     // invoke: bool isRelativePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir14isRelativePathERK7QString(arg0)
+    C.C_ZN4QDir14isRelativePathERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QDir", "isRelativePath", args)
   }
@@ -790,7 +790,7 @@ func (this *QDir) rmdir(args ...interface{}) () {
     // invoke: bool rmdir(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK4QDir5rmdirERK7QString(this.qclsinst, arg0)
+    C.C_ZNK4QDir5rmdirERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "rmdir", args)
   }
@@ -810,7 +810,7 @@ func (this *QDir) canonicalPath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir13canonicalPathEv
     // invoke: QString canonicalPath()
-    C._ZNK4QDir13canonicalPathEv(this.qclsinst)
+    C.C_ZNK4QDir13canonicalPathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "canonicalPath", args)
   }
@@ -830,7 +830,7 @@ func (this *QDir) removeRecursively(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir17removeRecursivelyEv
     // invoke: bool removeRecursively()
-    C._ZN4QDir17removeRecursivelyEv(this.qclsinst)
+    C.C_ZN4QDir17removeRecursivelyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "removeRecursively", args)
   }
@@ -853,7 +853,7 @@ func (this *QDir) setPath(args ...interface{}) () {
     // invoke: void setPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir7setPathERK7QString(this.qclsinst, arg0)
+    C.C_ZN4QDir7setPathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "setPath", args)
   }
@@ -873,7 +873,7 @@ func (this *QDir) dirName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir7dirNameEv
     // invoke: QString dirName()
-    C._ZNK4QDir7dirNameEv(this.qclsinst)
+    C.C_ZNK4QDir7dirNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "dirName", args)
   }
@@ -903,7 +903,7 @@ func (this *QDir) match_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN4QDir5matchERK11QStringListRK7QString(arg0, arg1)
+    C.C_ZN4QDir5matchERK11QStringListRK7QString(arg0, arg1)
   case 1:
     // invoke: _ZN4QDir5matchERK7QStringS2_
     // invoke: bool match(const class QString &, const class QString &)
@@ -911,7 +911,7 @@ func (this *QDir) match_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN4QDir5matchERK7QStringS2_(arg0, arg1)
+    C.C_ZN4QDir5matchERK7QStringS2_(arg0, arg1)
   default:
     qtrt.ErrorResolve("QDir", "match", args)
   }
@@ -934,7 +934,7 @@ func (this *QDir) swap(args ...interface{}) () {
     // invoke: void swap(class QDir &)
     var arg0 = args[0].(QDir).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir4swapERS_(this.qclsinst, arg0)
+    C.C_ZN4QDir4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "swap", args)
   }
@@ -960,7 +960,7 @@ func (this *QDir) setSearchPaths_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStringList).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN4QDir14setSearchPathsERK7QStringRK11QStringList(arg0, arg1)
+    C.C_ZN4QDir14setSearchPathsERK7QStringRK11QStringList(arg0, arg1)
   default:
     qtrt.ErrorResolve("QDir", "setSearchPaths", args)
   }
@@ -983,7 +983,7 @@ func (this *QDir) absoluteFilePath(args ...interface{}) () {
     // invoke: QString absoluteFilePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK4QDir16absoluteFilePathERK7QString(this.qclsinst, arg0)
+    C.C_ZNK4QDir16absoluteFilePathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "absoluteFilePath", args)
   }
@@ -1003,7 +1003,7 @@ func (this *QDir) drives_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir6drivesEv
     // invoke: QFileInfoList drives()
-    C._ZN4QDir6drivesEv()
+    C.C_ZN4QDir6drivesEv()
   default:
     qtrt.ErrorResolve("QDir", "drives", args)
   }
@@ -1026,7 +1026,7 @@ func (this *QDir) rmpath(args ...interface{}) () {
     // invoke: bool rmpath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK4QDir6rmpathERK7QString(this.qclsinst, arg0)
+    C.C_ZNK4QDir6rmpathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "rmpath", args)
   }
@@ -1046,7 +1046,7 @@ func (this *QDir) path(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir4pathEv
     // invoke: QString path()
-    C._ZNK4QDir4pathEv(this.qclsinst)
+    C.C_ZNK4QDir4pathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "path", args)
   }
@@ -1072,7 +1072,7 @@ func (this *QDir) addSearchPath_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN4QDir13addSearchPathERK7QStringS2_(arg0, arg1)
+    C.C_ZN4QDir13addSearchPathERK7QStringS2_(arg0, arg1)
   default:
     qtrt.ErrorResolve("QDir", "addSearchPath", args)
   }
@@ -1092,7 +1092,7 @@ func (this *QDir) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir5countEv
     // invoke: uint count()
-    C._ZNK4QDir5countEv(this.qclsinst)
+    C.C_ZNK4QDir5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "count", args)
   }
@@ -1112,7 +1112,7 @@ func (this *QDir) cdUp(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir4cdUpEv
     // invoke: bool cdUp()
-    C._ZN4QDir4cdUpEv(this.qclsinst)
+    C.C_ZN4QDir4cdUpEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "cdUp", args)
   }
@@ -1132,7 +1132,7 @@ func (this *QDir) sorting(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir7sortingEv
     // invoke: SortFlags sorting()
-    C._ZNK4QDir7sortingEv(this.qclsinst)
+    C.C_ZNK4QDir7sortingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "sorting", args)
   }
@@ -1152,7 +1152,7 @@ func (this *QDir) nameFilters(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir11nameFiltersEv
     // invoke: QStringList nameFilters()
-    C._ZNK4QDir11nameFiltersEv(this.qclsinst)
+    C.C_ZNK4QDir11nameFiltersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "nameFilters", args)
   }
@@ -1172,7 +1172,7 @@ func (this *QDir) temp_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir4tempEv
     // invoke: QDir temp()
-    C._ZN4QDir4tempEv()
+    C.C_ZN4QDir4tempEv()
   default:
     qtrt.ErrorResolve("QDir", "temp", args)
   }
@@ -1195,7 +1195,7 @@ func (this *QDir) mkpath(args ...interface{}) () {
     // invoke: bool mkpath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK4QDir6mkpathERK7QString(this.qclsinst, arg0)
+    C.C_ZNK4QDir6mkpathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDir", "mkpath", args)
   }
@@ -1215,7 +1215,7 @@ func (this *QDir) rootPath_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir8rootPathEv
     // invoke: QString rootPath()
-    C._ZN4QDir8rootPathEv()
+    C.C_ZN4QDir8rootPathEv()
   default:
     qtrt.ErrorResolve("QDir", "rootPath", args)
   }
@@ -1235,7 +1235,7 @@ func (this *QDir) refresh(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir7refreshEv
     // invoke: void refresh()
-    C._ZNK4QDir7refreshEv(this.qclsinst)
+    C.C_ZNK4QDir7refreshEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "refresh", args)
   }
@@ -1255,7 +1255,7 @@ func (this *QDir) makeAbsolute(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir12makeAbsoluteEv
     // invoke: bool makeAbsolute()
-    C._ZN4QDir12makeAbsoluteEv(this.qclsinst)
+    C.C_ZN4QDir12makeAbsoluteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "makeAbsolute", args)
   }
@@ -1278,7 +1278,7 @@ func (this *QDir) nameFiltersFromString_s(args ...interface{}) () {
     // invoke: QStringList nameFiltersFromString(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QDir21nameFiltersFromStringERK7QString(arg0)
+    C.C_ZN4QDir21nameFiltersFromStringERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QDir", "nameFiltersFromString", args)
   }
@@ -1298,7 +1298,7 @@ func (this *QDir) separator_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir9separatorEv
     // invoke: QChar separator()
-    C._ZN4QDir9separatorEv()
+    C.C_ZN4QDir9separatorEv()
   default:
     qtrt.ErrorResolve("QDir", "separator", args)
   }
@@ -1318,7 +1318,7 @@ func (this *QDir) isReadable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir10isReadableEv
     // invoke: bool isReadable()
-    C._ZNK4QDir10isReadableEv(this.qclsinst)
+    C.C_ZNK4QDir10isReadableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "isReadable", args)
   }
@@ -1338,7 +1338,7 @@ func (this *QDir) root_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir4rootEv
     // invoke: QDir root()
-    C._ZN4QDir4rootEv()
+    C.C_ZN4QDir4rootEv()
   default:
     qtrt.ErrorResolve("QDir", "root", args)
   }
@@ -1358,7 +1358,7 @@ func (this *QDir) isAbsolute(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir10isAbsoluteEv
     // invoke: bool isAbsolute()
-    C._ZNK4QDir10isAbsoluteEv(this.qclsinst)
+    C.C_ZNK4QDir10isAbsoluteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDir", "isAbsolute", args)
   }

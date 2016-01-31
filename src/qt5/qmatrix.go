@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.go
 //
@@ -29,69 +29,69 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QMatrix::QMatrix(const QMatrix & matrix);
-extern void _ZN7QMatrixC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN7QMatrixC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QMatrix::QMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy);
-extern void _ZN7QMatrixC2Edddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4, double arg5); // 3
+extern void C_ZN7QMatrixC2Edddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4, double arg5); // 3
   // proto:  void QMatrix::QMatrix();
-extern void _ZN7QMatrixC2Ev(void* qthis); // 3
+extern void C_ZN7QMatrixC2Ev(void* qthis); // 3
   // proto:  void QMatrix::setMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy);
-extern void _ZN7QMatrix9setMatrixEdddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4, double arg5); // 4
+extern void C_ZN7QMatrix9setMatrixEdddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4, double arg5); // 4
   // proto:  QRect QMatrix::mapRect(const QRect & );
-extern void _ZNK7QMatrix7mapRectERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZNK7QMatrix7mapRectERK5QRect(void* qthis, void* arg0); // 4
   // proto:  QRectF QMatrix::mapRect(const QRectF & );
-extern void _ZNK7QMatrix7mapRectERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZNK7QMatrix7mapRectERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QMatrix QMatrix::inverted(bool * invertible);
-extern void _ZNK7QMatrix8invertedEPb(void* qthis, bool* arg0); // 4
+extern void C_ZNK7QMatrix8invertedEPb(void* qthis, bool* arg0); // 4
   // proto:  qreal QMatrix::m11();
-extern void _ZNK7QMatrix3m11Ev(void* qthis); // 2
+extern void C_ZNK7QMatrix3m11Ev(void* qthis); // 2
   // proto:  bool QMatrix::isInvertible();
-extern void _ZNK7QMatrix12isInvertibleEv(void* qthis); // 2
+extern void C_ZNK7QMatrix12isInvertibleEv(void* qthis); // 2
   // proto:  QMatrix & QMatrix::scale(qreal sx, qreal sy);
-extern void _ZN7QMatrix5scaleEdd(void* qthis, double arg0, double arg1); // 4
+extern void C_ZN7QMatrix5scaleEdd(void* qthis, double arg0, double arg1); // 4
   // proto:  QPolygon QMatrix::mapToPolygon(const QRect & r);
-extern void _ZNK7QMatrix12mapToPolygonERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZNK7QMatrix12mapToPolygonERK5QRect(void* qthis, void* arg0); // 4
   // proto:  QMatrix & QMatrix::translate(qreal dx, qreal dy);
-extern void _ZN7QMatrix9translateEdd(void* qthis, double arg0, double arg1); // 4
+extern void C_ZN7QMatrix9translateEdd(void* qthis, double arg0, double arg1); // 4
   // proto:  QMatrix & QMatrix::shear(qreal sh, qreal sv);
-extern void _ZN7QMatrix5shearEdd(void* qthis, double arg0, double arg1); // 4
+extern void C_ZN7QMatrix5shearEdd(void* qthis, double arg0, double arg1); // 4
   // proto:  QPainterPath QMatrix::map(const QPainterPath & p);
-extern void _ZNK7QMatrix3mapERK12QPainterPath(void* qthis, void* arg0); // 4
+extern void C_ZNK7QMatrix3mapERK12QPainterPath(void* qthis, void* arg0); // 4
   // proto:  QPolygon QMatrix::map(const QPolygon & a);
-extern void _ZNK7QMatrix3mapERK8QPolygon(void* qthis, void* arg0); // 4
+extern void C_ZNK7QMatrix3mapERK8QPolygon(void* qthis, void* arg0); // 4
   // proto:  QLineF QMatrix::map(const QLineF & l);
-extern void _ZNK7QMatrix3mapERK6QLineF(void* qthis, void* arg0); // 4
+extern void C_ZNK7QMatrix3mapERK6QLineF(void* qthis, void* arg0); // 4
   // proto:  void QMatrix::map(qreal x, qreal y, qreal * tx, qreal * ty);
-extern void _ZNK7QMatrix3mapEddPdS0_(void* qthis, double arg0, double arg1, double* arg2, double* arg3); // 4
+extern void C_ZNK7QMatrix3mapEddPdS0_(void* qthis, double arg0, double arg1, double* arg2, double* arg3); // 4
   // proto:  QPolygonF QMatrix::map(const QPolygonF & a);
-extern void _ZNK7QMatrix3mapERK9QPolygonF(void* qthis, void* arg0); // 4
+extern void C_ZNK7QMatrix3mapERK9QPolygonF(void* qthis, void* arg0); // 4
   // proto:  QPoint QMatrix::map(const QPoint & p);
-extern void _ZNK7QMatrix3mapERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZNK7QMatrix3mapERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  QLine QMatrix::map(const QLine & l);
-extern void _ZNK7QMatrix3mapERK5QLine(void* qthis, void* arg0); // 4
+extern void C_ZNK7QMatrix3mapERK5QLine(void* qthis, void* arg0); // 4
   // proto:  void QMatrix::map(int x, int y, int * tx, int * ty);
-extern void _ZNK7QMatrix3mapEiiPiS0_(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2, int32_t* arg3); // 4
+extern void C_ZNK7QMatrix3mapEiiPiS0_(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2, int32_t* arg3); // 4
   // proto:  QRegion QMatrix::map(const QRegion & r);
-extern void _ZNK7QMatrix3mapERK7QRegion(void* qthis, void* arg0); // 4
+extern void C_ZNK7QMatrix3mapERK7QRegion(void* qthis, void* arg0); // 4
   // proto:  QPointF QMatrix::map(const QPointF & p);
-extern void _ZNK7QMatrix3mapERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK7QMatrix3mapERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  qreal QMatrix::determinant();
-extern void _ZNK7QMatrix11determinantEv(void* qthis); // 2
+extern void C_ZNK7QMatrix11determinantEv(void* qthis); // 2
   // proto:  qreal QMatrix::dx();
-extern void _ZNK7QMatrix2dxEv(void* qthis); // 2
+extern void C_ZNK7QMatrix2dxEv(void* qthis); // 2
   // proto:  qreal QMatrix::dy();
-extern void _ZNK7QMatrix2dyEv(void* qthis); // 2
+extern void C_ZNK7QMatrix2dyEv(void* qthis); // 2
   // proto:  void QMatrix::reset();
-extern void _ZN7QMatrix5resetEv(void* qthis); // 4
+extern void C_ZN7QMatrix5resetEv(void* qthis); // 4
   // proto:  QMatrix & QMatrix::rotate(qreal a);
-extern void _ZN7QMatrix6rotateEd(void* qthis, double arg0); // 4
+extern void C_ZN7QMatrix6rotateEd(void* qthis, double arg0); // 4
   // proto:  qreal QMatrix::m21();
-extern void _ZNK7QMatrix3m21Ev(void* qthis); // 2
+extern void C_ZNK7QMatrix3m21Ev(void* qthis); // 2
   // proto:  qreal QMatrix::m22();
-extern void _ZNK7QMatrix3m22Ev(void* qthis); // 2
+extern void C_ZNK7QMatrix3m22Ev(void* qthis); // 2
   // proto:  qreal QMatrix::m12();
-extern void _ZNK7QMatrix3m12Ev(void* qthis); // 2
+extern void C_ZNK7QMatrix3m12Ev(void* qthis); // 2
   // proto:  bool QMatrix::isIdentity();
-extern void _ZNK7QMatrix10isIdentityEv(void* qthis); // 2
+extern void C_ZNK7QMatrix10isIdentityEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -138,7 +138,7 @@ func NewQMatrix(args ...interface{}) QMatrix {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN7QMatrixC2ERKS_(qthis, arg0)
+    C.C_ZN7QMatrixC2ERKS_(qthis, arg0)
   case 1:
     // invoke: _ZN7QMatrixC1Edddddd
     // invoke: void QMatrix(qreal, qreal, qreal, qreal, qreal, qreal)
@@ -156,13 +156,13 @@ func NewQMatrix(args ...interface{}) QMatrix {
     if false {fmt.Println(arg5)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN7QMatrixC2Edddddd(qthis, arg0, arg1, arg2, arg3, arg4, arg5)
+    C.C_ZN7QMatrixC2Edddddd(qthis, arg0, arg1, arg2, arg3, arg4, arg5)
   case 2:
     // invoke: _ZN7QMatrixC1Ev
     // invoke: void QMatrix()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN7QMatrixC2Ev(qthis)
+    C.C_ZN7QMatrixC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QMatrix", "QMatrix", args)
   }
@@ -201,7 +201,7 @@ func (this *QMatrix) setMatrix(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.double(args[5].(float64))
     if false {fmt.Println(arg5)}
-    C._ZN7QMatrix9setMatrixEdddddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
+    C.C_ZN7QMatrix9setMatrixEdddddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
   default:
     qtrt.ErrorResolve("QMatrix", "setMatrix", args)
   }
@@ -227,13 +227,13 @@ func (this *QMatrix) mapRect(args ...interface{}) () {
     // invoke: QRect mapRect(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK7QMatrix7mapRectERK5QRect(this.qclsinst, arg0)
+    C.C_ZNK7QMatrix7mapRectERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK7QMatrix7mapRectERK6QRectF
     // invoke: QRectF mapRect(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK7QMatrix7mapRectERK6QRectF(this.qclsinst, arg0)
+    C.C_ZNK7QMatrix7mapRectERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMatrix", "mapRect", args)
   }
@@ -256,7 +256,7 @@ func (this *QMatrix) inverted(args ...interface{}) () {
     // invoke: QMatrix inverted(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C._ZNK7QMatrix8invertedEPb(this.qclsinst, arg0)
+    C.C_ZNK7QMatrix8invertedEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMatrix", "inverted", args)
   }
@@ -276,7 +276,7 @@ func (this *QMatrix) m11(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix3m11Ev
     // invoke: qreal m11()
-    C._ZNK7QMatrix3m11Ev(this.qclsinst)
+    C.C_ZNK7QMatrix3m11Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "m11", args)
   }
@@ -296,7 +296,7 @@ func (this *QMatrix) isInvertible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix12isInvertibleEv
     // invoke: bool isInvertible()
-    C._ZNK7QMatrix12isInvertibleEv(this.qclsinst)
+    C.C_ZNK7QMatrix12isInvertibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "isInvertible", args)
   }
@@ -322,7 +322,7 @@ func (this *QMatrix) scale(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN7QMatrix5scaleEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN7QMatrix5scaleEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMatrix", "scale", args)
   }
@@ -345,7 +345,7 @@ func (this *QMatrix) mapToPolygon(args ...interface{}) () {
     // invoke: QPolygon mapToPolygon(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK7QMatrix12mapToPolygonERK5QRect(this.qclsinst, arg0)
+    C.C_ZNK7QMatrix12mapToPolygonERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMatrix", "mapToPolygon", args)
   }
@@ -371,7 +371,7 @@ func (this *QMatrix) translate(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN7QMatrix9translateEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN7QMatrix9translateEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMatrix", "translate", args)
   }
@@ -397,7 +397,7 @@ func (this *QMatrix) shear(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN7QMatrix5shearEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN7QMatrix5shearEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMatrix", "shear", args)
   }
@@ -453,19 +453,19 @@ func (this *QMatrix) map_(args ...interface{}) () {
     // invoke: QPainterPath map(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK7QMatrix3mapERK12QPainterPath(this.qclsinst, arg0)
+    C.C_ZNK7QMatrix3mapERK12QPainterPath(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK7QMatrix3mapERK8QPolygon
     // invoke: QPolygon map(const class QPolygon &)
     var arg0 = args[0].(QPolygon).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK7QMatrix3mapERK8QPolygon(this.qclsinst, arg0)
+    C.C_ZNK7QMatrix3mapERK8QPolygon(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK7QMatrix3mapERK6QLineF
     // invoke: QLineF map(const class QLineF &)
     var arg0 = args[0].(QLineF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK7QMatrix3mapERK6QLineF(this.qclsinst, arg0)
+    C.C_ZNK7QMatrix3mapERK6QLineF(this.qclsinst, arg0)
   case 3:
     // invoke: _ZNK7QMatrix3mapEddPdS0_
     // invoke: void map(qreal, qreal, qreal *, qreal *)
@@ -477,25 +477,25 @@ func (this *QMatrix) map_(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C._ZNK7QMatrix3mapEddPdS0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK7QMatrix3mapEddPdS0_(this.qclsinst, arg0, arg1, arg2, arg3)
   case 4:
     // invoke: _ZNK7QMatrix3mapERK9QPolygonF
     // invoke: QPolygonF map(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK7QMatrix3mapERK9QPolygonF(this.qclsinst, arg0)
+    C.C_ZNK7QMatrix3mapERK9QPolygonF(this.qclsinst, arg0)
   case 5:
     // invoke: _ZNK7QMatrix3mapERK6QPoint
     // invoke: QPoint map(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK7QMatrix3mapERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK7QMatrix3mapERK6QPoint(this.qclsinst, arg0)
   case 6:
     // invoke: _ZNK7QMatrix3mapERK5QLine
     // invoke: QLine map(const class QLine &)
     var arg0 = args[0].(QLine).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK7QMatrix3mapERK5QLine(this.qclsinst, arg0)
+    C.C_ZNK7QMatrix3mapERK5QLine(this.qclsinst, arg0)
   case 7:
     // invoke: _ZNK7QMatrix3mapEiiPiS0_
     // invoke: void map(int, int, int *, int *)
@@ -507,19 +507,19 @@ func (this *QMatrix) map_(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C._ZNK7QMatrix3mapEiiPiS0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK7QMatrix3mapEiiPiS0_(this.qclsinst, arg0, arg1, arg2, arg3)
   case 8:
     // invoke: _ZNK7QMatrix3mapERK7QRegion
     // invoke: QRegion map(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK7QMatrix3mapERK7QRegion(this.qclsinst, arg0)
+    C.C_ZNK7QMatrix3mapERK7QRegion(this.qclsinst, arg0)
   case 9:
     // invoke: _ZNK7QMatrix3mapERK7QPointF
     // invoke: QPointF map(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK7QMatrix3mapERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK7QMatrix3mapERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMatrix", "map", args)
   }
@@ -539,7 +539,7 @@ func (this *QMatrix) determinant(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix11determinantEv
     // invoke: qreal determinant()
-    C._ZNK7QMatrix11determinantEv(this.qclsinst)
+    C.C_ZNK7QMatrix11determinantEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "determinant", args)
   }
@@ -559,7 +559,7 @@ func (this *QMatrix) dx(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix2dxEv
     // invoke: qreal dx()
-    C._ZNK7QMatrix2dxEv(this.qclsinst)
+    C.C_ZNK7QMatrix2dxEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "dx", args)
   }
@@ -579,7 +579,7 @@ func (this *QMatrix) dy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix2dyEv
     // invoke: qreal dy()
-    C._ZNK7QMatrix2dyEv(this.qclsinst)
+    C.C_ZNK7QMatrix2dyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "dy", args)
   }
@@ -599,7 +599,7 @@ func (this *QMatrix) reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QMatrix5resetEv
     // invoke: void reset()
-    C._ZN7QMatrix5resetEv(this.qclsinst)
+    C.C_ZN7QMatrix5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "reset", args)
   }
@@ -622,7 +622,7 @@ func (this *QMatrix) rotate(args ...interface{}) () {
     // invoke: QMatrix & rotate(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN7QMatrix6rotateEd(this.qclsinst, arg0)
+    C.C_ZN7QMatrix6rotateEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMatrix", "rotate", args)
   }
@@ -642,7 +642,7 @@ func (this *QMatrix) m21(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix3m21Ev
     // invoke: qreal m21()
-    C._ZNK7QMatrix3m21Ev(this.qclsinst)
+    C.C_ZNK7QMatrix3m21Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "m21", args)
   }
@@ -662,7 +662,7 @@ func (this *QMatrix) m22(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix3m22Ev
     // invoke: qreal m22()
-    C._ZNK7QMatrix3m22Ev(this.qclsinst)
+    C.C_ZNK7QMatrix3m22Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "m22", args)
   }
@@ -682,7 +682,7 @@ func (this *QMatrix) m12(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix3m12Ev
     // invoke: qreal m12()
-    C._ZNK7QMatrix3m12Ev(this.qclsinst)
+    C.C_ZNK7QMatrix3m12Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "m12", args)
   }
@@ -702,7 +702,7 @@ func (this *QMatrix) isIdentity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix10isIdentityEv
     // invoke: bool isIdentity()
-    C._ZNK7QMatrix10isIdentityEv(this.qclsinst)
+    C.C_ZNK7QMatrix10isIdentityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "isIdentity", args)
   }

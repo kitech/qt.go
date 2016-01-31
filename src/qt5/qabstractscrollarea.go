@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qabstractscrollarea.h
 // dst-file: /src/widgets/qabstractscrollarea.go
 //
@@ -29,41 +29,41 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  Qt::ScrollBarPolicy QAbstractScrollArea::horizontalScrollBarPolicy();
-extern void _ZNK19QAbstractScrollArea25horizontalScrollBarPolicyEv(void* qthis); // 4
+extern void C_ZNK19QAbstractScrollArea25horizontalScrollBarPolicyEv(void* qthis); // 4
   // proto:  QSize QAbstractScrollArea::maximumViewportSize();
-extern void _ZNK19QAbstractScrollArea19maximumViewportSizeEv(void* qthis); // 4
+extern void C_ZNK19QAbstractScrollArea19maximumViewportSizeEv(void* qthis); // 4
   // proto:  QWidget * QAbstractScrollArea::cornerWidget();
-extern void _ZNK19QAbstractScrollArea12cornerWidgetEv(void* qthis); // 4
+extern void C_ZNK19QAbstractScrollArea12cornerWidgetEv(void* qthis); // 4
   // proto:  void QAbstractScrollArea::setVerticalScrollBar(QScrollBar * scrollbar);
-extern void _ZN19QAbstractScrollArea20setVerticalScrollBarEP10QScrollBar(void* qthis, void* arg0); // 4
+extern void C_ZN19QAbstractScrollArea20setVerticalScrollBarEP10QScrollBar(void* qthis, void* arg0); // 4
   // proto:  void QAbstractScrollArea::setHorizontalScrollBar(QScrollBar * scrollbar);
-extern void _ZN19QAbstractScrollArea22setHorizontalScrollBarEP10QScrollBar(void* qthis, void* arg0); // 4
+extern void C_ZN19QAbstractScrollArea22setHorizontalScrollBarEP10QScrollBar(void* qthis, void* arg0); // 4
   // proto:  void QAbstractScrollArea::setViewport(QWidget * widget);
-extern void _ZN19QAbstractScrollArea11setViewportEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN19QAbstractScrollArea11setViewportEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QAbstractScrollArea::setCornerWidget(QWidget * widget);
-extern void _ZN19QAbstractScrollArea15setCornerWidgetEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN19QAbstractScrollArea15setCornerWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QAbstractScrollArea::setupViewport(QWidget * viewport);
-extern void _ZN19QAbstractScrollArea13setupViewportEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN19QAbstractScrollArea13setupViewportEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QAbstractScrollArea::QAbstractScrollArea(QWidget * parent);
-extern void _ZN19QAbstractScrollAreaC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN19QAbstractScrollAreaC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QAbstractScrollArea::~QAbstractScrollArea();
-extern void _ZN19QAbstractScrollAreaD2Ev(void* qthis); // 4
+extern void C_ZN19QAbstractScrollAreaD2Ev(void* qthis); // 4
   // proto:  QScrollBar * QAbstractScrollArea::verticalScrollBar();
-extern void _ZNK19QAbstractScrollArea17verticalScrollBarEv(void* qthis); // 4
+extern void C_ZNK19QAbstractScrollArea17verticalScrollBarEv(void* qthis); // 4
   // proto:  QScrollBar * QAbstractScrollArea::horizontalScrollBar();
-extern void _ZNK19QAbstractScrollArea19horizontalScrollBarEv(void* qthis); // 4
+extern void C_ZNK19QAbstractScrollArea19horizontalScrollBarEv(void* qthis); // 4
   // proto:  QWidget * QAbstractScrollArea::viewport();
-extern void _ZNK19QAbstractScrollArea8viewportEv(void* qthis); // 4
+extern void C_ZNK19QAbstractScrollArea8viewportEv(void* qthis); // 4
   // proto:  const QMetaObject * QAbstractScrollArea::metaObject();
-extern void _ZNK19QAbstractScrollArea10metaObjectEv(void* qthis); // 4
+extern void C_ZNK19QAbstractScrollArea10metaObjectEv(void* qthis); // 4
   // proto:  Qt::ScrollBarPolicy QAbstractScrollArea::verticalScrollBarPolicy();
-extern void _ZNK19QAbstractScrollArea23verticalScrollBarPolicyEv(void* qthis); // 4
+extern void C_ZNK19QAbstractScrollArea23verticalScrollBarPolicyEv(void* qthis); // 4
   // proto:  QSize QAbstractScrollArea::sizeHint();
-extern void _ZNK19QAbstractScrollArea8sizeHintEv(void* qthis); // 4
+extern void C_ZNK19QAbstractScrollArea8sizeHintEv(void* qthis); // 4
   // proto:  QSize QAbstractScrollArea::minimumSizeHint();
-extern void _ZNK19QAbstractScrollArea15minimumSizeHintEv(void* qthis); // 4
+extern void C_ZNK19QAbstractScrollArea15minimumSizeHintEv(void* qthis); // 4
   // proto:  QAbstractScrollArea::SizeAdjustPolicy QAbstractScrollArea::sizeAdjustPolicy();
-extern void _ZNK19QAbstractScrollArea16sizeAdjustPolicyEv(void* qthis); // 4
+extern void C_ZNK19QAbstractScrollArea16sizeAdjustPolicyEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -95,7 +95,7 @@ func (this *QAbstractScrollArea) horizontalScrollBarPolicy(args ...interface{}) 
   case 0:
     // invoke: _ZNK19QAbstractScrollArea25horizontalScrollBarPolicyEv
     // invoke: Qt::ScrollBarPolicy horizontalScrollBarPolicy()
-    C._ZNK19QAbstractScrollArea25horizontalScrollBarPolicyEv(this.qclsinst)
+    C.C_ZNK19QAbstractScrollArea25horizontalScrollBarPolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "horizontalScrollBarPolicy", args)
   }
@@ -115,7 +115,7 @@ func (this *QAbstractScrollArea) maximumViewportSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea19maximumViewportSizeEv
     // invoke: QSize maximumViewportSize()
-    C._ZNK19QAbstractScrollArea19maximumViewportSizeEv(this.qclsinst)
+    C.C_ZNK19QAbstractScrollArea19maximumViewportSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "maximumViewportSize", args)
   }
@@ -135,7 +135,7 @@ func (this *QAbstractScrollArea) cornerWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea12cornerWidgetEv
     // invoke: QWidget * cornerWidget()
-    C._ZNK19QAbstractScrollArea12cornerWidgetEv(this.qclsinst)
+    C.C_ZNK19QAbstractScrollArea12cornerWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "cornerWidget", args)
   }
@@ -158,7 +158,7 @@ func (this *QAbstractScrollArea) setVerticalScrollBar(args ...interface{}) () {
     // invoke: void setVerticalScrollBar(class QScrollBar *)
     var arg0 = args[0].(QScrollBar).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QAbstractScrollArea20setVerticalScrollBarEP10QScrollBar(this.qclsinst, arg0)
+    C.C_ZN19QAbstractScrollArea20setVerticalScrollBarEP10QScrollBar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setVerticalScrollBar", args)
   }
@@ -181,7 +181,7 @@ func (this *QAbstractScrollArea) setHorizontalScrollBar(args ...interface{}) () 
     // invoke: void setHorizontalScrollBar(class QScrollBar *)
     var arg0 = args[0].(QScrollBar).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QAbstractScrollArea22setHorizontalScrollBarEP10QScrollBar(this.qclsinst, arg0)
+    C.C_ZN19QAbstractScrollArea22setHorizontalScrollBarEP10QScrollBar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setHorizontalScrollBar", args)
   }
@@ -204,7 +204,7 @@ func (this *QAbstractScrollArea) setViewport(args ...interface{}) () {
     // invoke: void setViewport(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QAbstractScrollArea11setViewportEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN19QAbstractScrollArea11setViewportEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setViewport", args)
   }
@@ -227,7 +227,7 @@ func (this *QAbstractScrollArea) setCornerWidget(args ...interface{}) () {
     // invoke: void setCornerWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QAbstractScrollArea15setCornerWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN19QAbstractScrollArea15setCornerWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setCornerWidget", args)
   }
@@ -250,7 +250,7 @@ func (this *QAbstractScrollArea) setupViewport(args ...interface{}) () {
     // invoke: void setupViewport(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QAbstractScrollArea13setupViewportEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN19QAbstractScrollArea13setupViewportEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setupViewport", args)
   }
@@ -275,7 +275,7 @@ func NewQAbstractScrollArea(args ...interface{}) QAbstractScrollArea {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QAbstractScrollAreaC2EP7QWidget(qthis, arg0)
+    C.C_ZN19QAbstractScrollAreaC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "QAbstractScrollArea", args)
   }
@@ -296,7 +296,7 @@ func (this *QAbstractScrollArea) FreeQAbstractScrollArea(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QAbstractScrollAreaD0Ev
     // invoke: void ~QAbstractScrollArea()
-    C._ZN19QAbstractScrollAreaD2Ev(this.qclsinst)
+    C.C_ZN19QAbstractScrollAreaD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "~QAbstractScrollArea", args)
   }
@@ -316,7 +316,7 @@ func (this *QAbstractScrollArea) verticalScrollBar(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea17verticalScrollBarEv
     // invoke: QScrollBar * verticalScrollBar()
-    C._ZNK19QAbstractScrollArea17verticalScrollBarEv(this.qclsinst)
+    C.C_ZNK19QAbstractScrollArea17verticalScrollBarEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "verticalScrollBar", args)
   }
@@ -336,7 +336,7 @@ func (this *QAbstractScrollArea) horizontalScrollBar(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea19horizontalScrollBarEv
     // invoke: QScrollBar * horizontalScrollBar()
-    C._ZNK19QAbstractScrollArea19horizontalScrollBarEv(this.qclsinst)
+    C.C_ZNK19QAbstractScrollArea19horizontalScrollBarEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "horizontalScrollBar", args)
   }
@@ -356,7 +356,7 @@ func (this *QAbstractScrollArea) viewport(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea8viewportEv
     // invoke: QWidget * viewport()
-    C._ZNK19QAbstractScrollArea8viewportEv(this.qclsinst)
+    C.C_ZNK19QAbstractScrollArea8viewportEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "viewport", args)
   }
@@ -376,7 +376,7 @@ func (this *QAbstractScrollArea) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK19QAbstractScrollArea10metaObjectEv(this.qclsinst)
+    C.C_ZNK19QAbstractScrollArea10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "metaObject", args)
   }
@@ -396,7 +396,7 @@ func (this *QAbstractScrollArea) verticalScrollBarPolicy(args ...interface{}) ()
   case 0:
     // invoke: _ZNK19QAbstractScrollArea23verticalScrollBarPolicyEv
     // invoke: Qt::ScrollBarPolicy verticalScrollBarPolicy()
-    C._ZNK19QAbstractScrollArea23verticalScrollBarPolicyEv(this.qclsinst)
+    C.C_ZNK19QAbstractScrollArea23verticalScrollBarPolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "verticalScrollBarPolicy", args)
   }
@@ -416,7 +416,7 @@ func (this *QAbstractScrollArea) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK19QAbstractScrollArea8sizeHintEv(this.qclsinst)
+    C.C_ZNK19QAbstractScrollArea8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "sizeHint", args)
   }
@@ -436,7 +436,7 @@ func (this *QAbstractScrollArea) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C._ZNK19QAbstractScrollArea15minimumSizeHintEv(this.qclsinst)
+    C.C_ZNK19QAbstractScrollArea15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "minimumSizeHint", args)
   }
@@ -456,7 +456,7 @@ func (this *QAbstractScrollArea) sizeAdjustPolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea16sizeAdjustPolicyEv
     // invoke: QAbstractScrollArea::SizeAdjustPolicy sizeAdjustPolicy()
-    C._ZNK19QAbstractScrollArea16sizeAdjustPolicyEv(this.qclsinst)
+    C.C_ZNK19QAbstractScrollArea16sizeAdjustPolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "sizeAdjustPolicy", args)
   }

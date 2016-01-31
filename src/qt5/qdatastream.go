@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.go
 //
@@ -29,43 +29,43 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QDataStream::~QDataStream();
-extern void _ZN11QDataStreamD2Ev(void* qthis); // 4
+extern void C_ZN11QDataStreamD2Ev(void* qthis); // 4
   // proto:  int QDataStream::skipRawData(int len);
-extern void _ZN11QDataStream11skipRawDataEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN11QDataStream11skipRawDataEi(void* qthis, int32_t arg0); // 4
   // proto:  void QDataStream::setVersion(int );
-extern void _ZN11QDataStream10setVersionEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN11QDataStream10setVersionEi(void* qthis, int32_t arg0); // 2
   // proto:  QDataStream & QDataStream::writeBytes(const char * , uint len);
-extern void _ZN11QDataStream10writeBytesEPKcj(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void C_ZN11QDataStream10writeBytesEPKcj(void* qthis, unsigned char* arg0, int32_t arg1); // 4
   // proto:  void QDataStream::unsetDevice();
-extern void _ZN11QDataStream11unsetDeviceEv(void* qthis); // 4
+extern void C_ZN11QDataStream11unsetDeviceEv(void* qthis); // 4
   // proto:  int QDataStream::version();
-extern void _ZNK11QDataStream7versionEv(void* qthis); // 2
+extern void C_ZNK11QDataStream7versionEv(void* qthis); // 2
   // proto:  QDataStream & QDataStream::readBytes(char *& , uint & len);
-extern void _ZN11QDataStream9readBytesERPcRj(void* qthis, unsigned char* arg0, int32_t* arg1); // 4
+extern void C_ZN11QDataStream9readBytesERPcRj(void* qthis, unsigned char* arg0, int32_t* arg1); // 4
   // proto:  void QDataStream::setDevice(QIODevice * );
-extern void _ZN11QDataStream9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
+extern void C_ZN11QDataStream9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  QDataStream::ByteOrder QDataStream::byteOrder();
-extern void _ZNK11QDataStream9byteOrderEv(void* qthis); // 2
+extern void C_ZNK11QDataStream9byteOrderEv(void* qthis); // 2
   // proto:  QDataStream::Status QDataStream::status();
-extern void _ZNK11QDataStream6statusEv(void* qthis); // 4
+extern void C_ZNK11QDataStream6statusEv(void* qthis); // 4
   // proto:  int QDataStream::readRawData(char * , int len);
-extern void _ZN11QDataStream11readRawDataEPci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void C_ZN11QDataStream11readRawDataEPci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
   // proto:  QDataStream::FloatingPointPrecision QDataStream::floatingPointPrecision();
-extern void _ZNK11QDataStream22floatingPointPrecisionEv(void* qthis); // 4
+extern void C_ZNK11QDataStream22floatingPointPrecisionEv(void* qthis); // 4
   // proto:  int QDataStream::writeRawData(const char * , int len);
-extern void _ZN11QDataStream12writeRawDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void C_ZN11QDataStream12writeRawDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
   // proto:  QIODevice * QDataStream::device();
-extern void _ZNK11QDataStream6deviceEv(void* qthis); // 2
+extern void C_ZNK11QDataStream6deviceEv(void* qthis); // 2
   // proto:  void QDataStream::resetStatus();
-extern void _ZN11QDataStream11resetStatusEv(void* qthis); // 4
+extern void C_ZN11QDataStream11resetStatusEv(void* qthis); // 4
   // proto:  bool QDataStream::atEnd();
-extern void _ZNK11QDataStream5atEndEv(void* qthis); // 4
+extern void C_ZNK11QDataStream5atEndEv(void* qthis); // 4
   // proto:  void QDataStream::QDataStream(const QByteArray & );
-extern void _ZN11QDataStreamC2ERK10QByteArray(void* qthis, void* arg0); // 3
+extern void C_ZN11QDataStreamC2ERK10QByteArray(void* qthis, void* arg0); // 3
   // proto:  void QDataStream::QDataStream();
-extern void _ZN11QDataStreamC2Ev(void* qthis); // 3
+extern void C_ZN11QDataStreamC2Ev(void* qthis); // 3
   // proto:  void QDataStream::QDataStream(QIODevice * );
-extern void _ZN11QDataStreamC2EP9QIODevice(void* qthis, void* arg0); // 3
+extern void C_ZN11QDataStreamC2EP9QIODevice(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -97,7 +97,7 @@ func (this *QDataStream) FreeQDataStream(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStreamD0Ev
     // invoke: void ~QDataStream()
-    C._ZN11QDataStreamD2Ev(this.qclsinst)
+    C.C_ZN11QDataStreamD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "~QDataStream", args)
   }
@@ -120,7 +120,7 @@ func (this *QDataStream) skipRawData(args ...interface{}) () {
     // invoke: int skipRawData(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QDataStream11skipRawDataEi(this.qclsinst, arg0)
+    C.C_ZN11QDataStream11skipRawDataEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataStream", "skipRawData", args)
   }
@@ -143,7 +143,7 @@ func (this *QDataStream) setVersion(args ...interface{}) () {
     // invoke: void setVersion(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QDataStream10setVersionEi(this.qclsinst, arg0)
+    C.C_ZN11QDataStream10setVersionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataStream", "setVersion", args)
   }
@@ -169,7 +169,7 @@ func (this *QDataStream) writeBytes(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QDataStream10writeBytesEPKcj(this.qclsinst, arg0, arg1)
+    C.C_ZN11QDataStream10writeBytesEPKcj(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDataStream", "writeBytes", args)
   }
@@ -189,7 +189,7 @@ func (this *QDataStream) unsetDevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream11unsetDeviceEv
     // invoke: void unsetDevice()
-    C._ZN11QDataStream11unsetDeviceEv(this.qclsinst)
+    C.C_ZN11QDataStream11unsetDeviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "unsetDevice", args)
   }
@@ -209,7 +209,7 @@ func (this *QDataStream) version(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream7versionEv
     // invoke: int version()
-    C._ZNK11QDataStream7versionEv(this.qclsinst)
+    C.C_ZNK11QDataStream7versionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "version", args)
   }
@@ -235,7 +235,7 @@ func (this *QDataStream) readBytes(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.int32_t)(args[1].(*int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QDataStream9readBytesERPcRj(this.qclsinst, arg0, arg1)
+    C.C_ZN11QDataStream9readBytesERPcRj(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDataStream", "readBytes", args)
   }
@@ -258,7 +258,7 @@ func (this *QDataStream) setDevice(args ...interface{}) () {
     // invoke: void setDevice(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QDataStream9setDeviceEP9QIODevice(this.qclsinst, arg0)
+    C.C_ZN11QDataStream9setDeviceEP9QIODevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataStream", "setDevice", args)
   }
@@ -278,7 +278,7 @@ func (this *QDataStream) byteOrder(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream9byteOrderEv
     // invoke: QDataStream::ByteOrder byteOrder()
-    C._ZNK11QDataStream9byteOrderEv(this.qclsinst)
+    C.C_ZNK11QDataStream9byteOrderEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "byteOrder", args)
   }
@@ -298,7 +298,7 @@ func (this *QDataStream) status(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream6statusEv
     // invoke: QDataStream::Status status()
-    C._ZNK11QDataStream6statusEv(this.qclsinst)
+    C.C_ZNK11QDataStream6statusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "status", args)
   }
@@ -324,7 +324,7 @@ func (this *QDataStream) readRawData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QDataStream11readRawDataEPci(this.qclsinst, arg0, arg1)
+    C.C_ZN11QDataStream11readRawDataEPci(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDataStream", "readRawData", args)
   }
@@ -344,7 +344,7 @@ func (this *QDataStream) floatingPointPrecision(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream22floatingPointPrecisionEv
     // invoke: QDataStream::FloatingPointPrecision floatingPointPrecision()
-    C._ZNK11QDataStream22floatingPointPrecisionEv(this.qclsinst)
+    C.C_ZNK11QDataStream22floatingPointPrecisionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "floatingPointPrecision", args)
   }
@@ -370,7 +370,7 @@ func (this *QDataStream) writeRawData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QDataStream12writeRawDataEPKci(this.qclsinst, arg0, arg1)
+    C.C_ZN11QDataStream12writeRawDataEPKci(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDataStream", "writeRawData", args)
   }
@@ -390,7 +390,7 @@ func (this *QDataStream) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream6deviceEv
     // invoke: QIODevice * device()
-    C._ZNK11QDataStream6deviceEv(this.qclsinst)
+    C.C_ZNK11QDataStream6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "device", args)
   }
@@ -410,7 +410,7 @@ func (this *QDataStream) resetStatus(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream11resetStatusEv
     // invoke: void resetStatus()
-    C._ZN11QDataStream11resetStatusEv(this.qclsinst)
+    C.C_ZN11QDataStream11resetStatusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "resetStatus", args)
   }
@@ -430,7 +430,7 @@ func (this *QDataStream) atEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream5atEndEv
     // invoke: bool atEnd()
-    C._ZNK11QDataStream5atEndEv(this.qclsinst)
+    C.C_ZNK11QDataStream5atEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "atEnd", args)
   }
@@ -460,13 +460,13 @@ func NewQDataStream(args ...interface{}) QDataStream {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QDataStreamC2ERK10QByteArray(qthis, arg0)
+    C.C_ZN11QDataStreamC2ERK10QByteArray(qthis, arg0)
   case 1:
     // invoke: _ZN11QDataStreamC1Ev
     // invoke: void QDataStream()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QDataStreamC2Ev(qthis)
+    C.C_ZN11QDataStreamC2Ev(qthis)
   case 2:
     // invoke: _ZN11QDataStreamC1EP9QIODevice
     // invoke: void QDataStream(class QIODevice *)
@@ -474,7 +474,7 @@ func NewQDataStream(args ...interface{}) QDataStream {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QDataStreamC2EP9QIODevice(qthis, arg0)
+    C.C_ZN11QDataStreamC2EP9QIODevice(qthis, arg0)
   default:
     qtrt.ErrorResolve("QDataStream", "QDataStream", args)
   }

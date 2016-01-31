@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qabstractbutton.h
 // dst-file: /src/widgets/qabstractbutton.go
 //
@@ -29,63 +29,63 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QAbstractButton::QAbstractButton(QWidget * parent);
-extern void _ZN15QAbstractButtonC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN15QAbstractButtonC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  QIcon QAbstractButton::icon();
-extern void _ZNK15QAbstractButton4iconEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton4iconEv(void* qthis); // 4
   // proto:  void QAbstractButton::setAutoExclusive(bool );
-extern void _ZN15QAbstractButton16setAutoExclusiveEb(void* qthis, bool arg0); // 4
+extern void C_ZN15QAbstractButton16setAutoExclusiveEb(void* qthis, bool arg0); // 4
   // proto:  void QAbstractButton::setChecked(bool );
-extern void _ZN15QAbstractButton10setCheckedEb(void* qthis, bool arg0); // 4
+extern void C_ZN15QAbstractButton10setCheckedEb(void* qthis, bool arg0); // 4
   // proto:  void QAbstractButton::setShortcut(const QKeySequence & key);
-extern void _ZN15QAbstractButton11setShortcutERK12QKeySequence(void* qthis, void* arg0); // 4
+extern void C_ZN15QAbstractButton11setShortcutERK12QKeySequence(void* qthis, void* arg0); // 4
   // proto:  bool QAbstractButton::isCheckable();
-extern void _ZNK15QAbstractButton11isCheckableEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton11isCheckableEv(void* qthis); // 4
   // proto:  void QAbstractButton::setAutoRepeatInterval(int );
-extern void _ZN15QAbstractButton21setAutoRepeatIntervalEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QAbstractButton21setAutoRepeatIntervalEi(void* qthis, int32_t arg0); // 4
   // proto:  void QAbstractButton::animateClick(int msec);
-extern void _ZN15QAbstractButton12animateClickEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QAbstractButton12animateClickEi(void* qthis, int32_t arg0); // 4
   // proto:  QButtonGroup * QAbstractButton::group();
-extern void _ZNK15QAbstractButton5groupEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton5groupEv(void* qthis); // 4
   // proto:  void QAbstractButton::setAutoRepeatDelay(int );
-extern void _ZN15QAbstractButton18setAutoRepeatDelayEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QAbstractButton18setAutoRepeatDelayEi(void* qthis, int32_t arg0); // 4
   // proto:  QKeySequence QAbstractButton::shortcut();
-extern void _ZNK15QAbstractButton8shortcutEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton8shortcutEv(void* qthis); // 4
   // proto:  void QAbstractButton::click();
-extern void _ZN15QAbstractButton5clickEv(void* qthis); // 4
+extern void C_ZN15QAbstractButton5clickEv(void* qthis); // 4
   // proto:  int QAbstractButton::autoRepeatInterval();
-extern void _ZNK15QAbstractButton18autoRepeatIntervalEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton18autoRepeatIntervalEv(void* qthis); // 4
   // proto:  bool QAbstractButton::isChecked();
-extern void _ZNK15QAbstractButton9isCheckedEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton9isCheckedEv(void* qthis); // 4
   // proto:  QString QAbstractButton::text();
-extern void _ZNK15QAbstractButton4textEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton4textEv(void* qthis); // 4
   // proto:  void QAbstractButton::setCheckable(bool );
-extern void _ZN15QAbstractButton12setCheckableEb(void* qthis, bool arg0); // 4
+extern void C_ZN15QAbstractButton12setCheckableEb(void* qthis, bool arg0); // 4
   // proto:  bool QAbstractButton::isDown();
-extern void _ZNK15QAbstractButton6isDownEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton6isDownEv(void* qthis); // 4
   // proto:  void QAbstractButton::setIcon(const QIcon & icon);
-extern void _ZN15QAbstractButton7setIconERK5QIcon(void* qthis, void* arg0); // 4
+extern void C_ZN15QAbstractButton7setIconERK5QIcon(void* qthis, void* arg0); // 4
   // proto:  void QAbstractButton::~QAbstractButton();
-extern void _ZN15QAbstractButtonD2Ev(void* qthis); // 4
+extern void C_ZN15QAbstractButtonD2Ev(void* qthis); // 4
   // proto:  QSize QAbstractButton::iconSize();
-extern void _ZNK15QAbstractButton8iconSizeEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton8iconSizeEv(void* qthis); // 4
   // proto:  void QAbstractButton::setAutoRepeat(bool );
-extern void _ZN15QAbstractButton13setAutoRepeatEb(void* qthis, bool arg0); // 4
+extern void C_ZN15QAbstractButton13setAutoRepeatEb(void* qthis, bool arg0); // 4
   // proto:  bool QAbstractButton::autoExclusive();
-extern void _ZNK15QAbstractButton13autoExclusiveEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton13autoExclusiveEv(void* qthis); // 4
   // proto:  const QMetaObject * QAbstractButton::metaObject();
-extern void _ZNK15QAbstractButton10metaObjectEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton10metaObjectEv(void* qthis); // 4
   // proto:  void QAbstractButton::setText(const QString & text);
-extern void _ZN15QAbstractButton7setTextERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN15QAbstractButton7setTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QAbstractButton::setIconSize(const QSize & size);
-extern void _ZN15QAbstractButton11setIconSizeERK5QSize(void* qthis, void* arg0); // 4
+extern void C_ZN15QAbstractButton11setIconSizeERK5QSize(void* qthis, void* arg0); // 4
   // proto:  void QAbstractButton::toggle();
-extern void _ZN15QAbstractButton6toggleEv(void* qthis); // 4
+extern void C_ZN15QAbstractButton6toggleEv(void* qthis); // 4
   // proto:  void QAbstractButton::setDown(bool );
-extern void _ZN15QAbstractButton7setDownEb(void* qthis, bool arg0); // 4
+extern void C_ZN15QAbstractButton7setDownEb(void* qthis, bool arg0); // 4
   // proto:  int QAbstractButton::autoRepeatDelay();
-extern void _ZNK15QAbstractButton15autoRepeatDelayEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton15autoRepeatDelayEv(void* qthis); // 4
   // proto:  bool QAbstractButton::autoRepeat();
-extern void _ZNK15QAbstractButton10autoRepeatEv(void* qthis); // 4
+extern void C_ZNK15QAbstractButton10autoRepeatEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -126,7 +126,7 @@ func NewQAbstractButton(args ...interface{}) QAbstractButton {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QAbstractButtonC2EP7QWidget(qthis, arg0)
+    C.C_ZN15QAbstractButtonC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "QAbstractButton", args)
   }
@@ -147,7 +147,7 @@ func (this *QAbstractButton) icon(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton4iconEv
     // invoke: QIcon icon()
-    C._ZNK15QAbstractButton4iconEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton4iconEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "icon", args)
   }
@@ -170,7 +170,7 @@ func (this *QAbstractButton) setAutoExclusive(args ...interface{}) () {
     // invoke: void setAutoExclusive(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractButton16setAutoExclusiveEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton16setAutoExclusiveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoExclusive", args)
   }
@@ -193,7 +193,7 @@ func (this *QAbstractButton) setChecked(args ...interface{}) () {
     // invoke: void setChecked(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractButton10setCheckedEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton10setCheckedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setChecked", args)
   }
@@ -216,7 +216,7 @@ func (this *QAbstractButton) setShortcut(args ...interface{}) () {
     // invoke: void setShortcut(const class QKeySequence &)
     var arg0 = args[0].(QKeySequence).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractButton11setShortcutERK12QKeySequence(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton11setShortcutERK12QKeySequence(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setShortcut", args)
   }
@@ -236,7 +236,7 @@ func (this *QAbstractButton) isCheckable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton11isCheckableEv
     // invoke: bool isCheckable()
-    C._ZNK15QAbstractButton11isCheckableEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton11isCheckableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "isCheckable", args)
   }
@@ -259,7 +259,7 @@ func (this *QAbstractButton) setAutoRepeatInterval(args ...interface{}) () {
     // invoke: void setAutoRepeatInterval(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractButton21setAutoRepeatIntervalEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton21setAutoRepeatIntervalEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoRepeatInterval", args)
   }
@@ -282,7 +282,7 @@ func (this *QAbstractButton) animateClick(args ...interface{}) () {
     // invoke: void animateClick(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractButton12animateClickEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton12animateClickEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "animateClick", args)
   }
@@ -302,7 +302,7 @@ func (this *QAbstractButton) group(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton5groupEv
     // invoke: QButtonGroup * group()
-    C._ZNK15QAbstractButton5groupEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton5groupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "group", args)
   }
@@ -325,7 +325,7 @@ func (this *QAbstractButton) setAutoRepeatDelay(args ...interface{}) () {
     // invoke: void setAutoRepeatDelay(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractButton18setAutoRepeatDelayEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton18setAutoRepeatDelayEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoRepeatDelay", args)
   }
@@ -345,7 +345,7 @@ func (this *QAbstractButton) shortcut(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton8shortcutEv
     // invoke: QKeySequence shortcut()
-    C._ZNK15QAbstractButton8shortcutEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton8shortcutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "shortcut", args)
   }
@@ -365,7 +365,7 @@ func (this *QAbstractButton) click(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton5clickEv
     // invoke: void click()
-    C._ZN15QAbstractButton5clickEv(this.qclsinst)
+    C.C_ZN15QAbstractButton5clickEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "click", args)
   }
@@ -385,7 +385,7 @@ func (this *QAbstractButton) autoRepeatInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton18autoRepeatIntervalEv
     // invoke: int autoRepeatInterval()
-    C._ZNK15QAbstractButton18autoRepeatIntervalEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton18autoRepeatIntervalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoRepeatInterval", args)
   }
@@ -405,7 +405,7 @@ func (this *QAbstractButton) isChecked(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton9isCheckedEv
     // invoke: bool isChecked()
-    C._ZNK15QAbstractButton9isCheckedEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton9isCheckedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "isChecked", args)
   }
@@ -425,7 +425,7 @@ func (this *QAbstractButton) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton4textEv
     // invoke: QString text()
-    C._ZNK15QAbstractButton4textEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "text", args)
   }
@@ -448,7 +448,7 @@ func (this *QAbstractButton) setCheckable(args ...interface{}) () {
     // invoke: void setCheckable(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractButton12setCheckableEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton12setCheckableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setCheckable", args)
   }
@@ -468,7 +468,7 @@ func (this *QAbstractButton) isDown(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton6isDownEv
     // invoke: bool isDown()
-    C._ZNK15QAbstractButton6isDownEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton6isDownEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "isDown", args)
   }
@@ -491,7 +491,7 @@ func (this *QAbstractButton) setIcon(args ...interface{}) () {
     // invoke: void setIcon(const class QIcon &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractButton7setIconERK5QIcon(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton7setIconERK5QIcon(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setIcon", args)
   }
@@ -511,7 +511,7 @@ func (this *QAbstractButton) FreeQAbstractButton(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButtonD0Ev
     // invoke: void ~QAbstractButton()
-    C._ZN15QAbstractButtonD2Ev(this.qclsinst)
+    C.C_ZN15QAbstractButtonD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "~QAbstractButton", args)
   }
@@ -531,7 +531,7 @@ func (this *QAbstractButton) iconSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton8iconSizeEv
     // invoke: QSize iconSize()
-    C._ZNK15QAbstractButton8iconSizeEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton8iconSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "iconSize", args)
   }
@@ -554,7 +554,7 @@ func (this *QAbstractButton) setAutoRepeat(args ...interface{}) () {
     // invoke: void setAutoRepeat(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractButton13setAutoRepeatEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton13setAutoRepeatEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoRepeat", args)
   }
@@ -574,7 +574,7 @@ func (this *QAbstractButton) autoExclusive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton13autoExclusiveEv
     // invoke: bool autoExclusive()
-    C._ZNK15QAbstractButton13autoExclusiveEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton13autoExclusiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoExclusive", args)
   }
@@ -594,7 +594,7 @@ func (this *QAbstractButton) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK15QAbstractButton10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "metaObject", args)
   }
@@ -617,7 +617,7 @@ func (this *QAbstractButton) setText(args ...interface{}) () {
     // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractButton7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setText", args)
   }
@@ -640,7 +640,7 @@ func (this *QAbstractButton) setIconSize(args ...interface{}) () {
     // invoke: void setIconSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractButton11setIconSizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton11setIconSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setIconSize", args)
   }
@@ -660,7 +660,7 @@ func (this *QAbstractButton) toggle(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton6toggleEv
     // invoke: void toggle()
-    C._ZN15QAbstractButton6toggleEv(this.qclsinst)
+    C.C_ZN15QAbstractButton6toggleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "toggle", args)
   }
@@ -683,7 +683,7 @@ func (this *QAbstractButton) setDown(args ...interface{}) () {
     // invoke: void setDown(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractButton7setDownEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton7setDownEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setDown", args)
   }
@@ -703,7 +703,7 @@ func (this *QAbstractButton) autoRepeatDelay(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton15autoRepeatDelayEv
     // invoke: int autoRepeatDelay()
-    C._ZNK15QAbstractButton15autoRepeatDelayEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton15autoRepeatDelayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoRepeatDelay", args)
   }
@@ -723,7 +723,7 @@ func (this *QAbstractButton) autoRepeat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton10autoRepeatEv
     // invoke: bool autoRepeat()
-    C._ZNK15QAbstractButton10autoRepeatEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton10autoRepeatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoRepeat", args)
   }

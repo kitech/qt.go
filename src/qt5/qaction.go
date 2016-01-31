@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qaction.h
 // dst-file: /src/widgets/qaction.go
 //
@@ -29,111 +29,111 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QList<QWidget *> QAction::associatedWidgets();
-extern void _ZNK7QAction17associatedWidgetsEv(void* qthis); // 4
+extern void C_ZNK7QAction17associatedWidgetsEv(void* qthis); // 4
   // proto:  void QAction::setIconVisibleInMenu(bool visible);
-extern void _ZN7QAction20setIconVisibleInMenuEb(void* qthis, bool arg0); // 4
+extern void C_ZN7QAction20setIconVisibleInMenuEb(void* qthis, bool arg0); // 4
   // proto:  QList<QKeySequence> QAction::shortcuts();
-extern void _ZNK7QAction9shortcutsEv(void* qthis); // 4
+extern void C_ZNK7QAction9shortcutsEv(void* qthis); // 4
   // proto:  void QAction::setChecked(bool );
-extern void _ZN7QAction10setCheckedEb(void* qthis, bool arg0); // 4
+extern void C_ZN7QAction10setCheckedEb(void* qthis, bool arg0); // 4
   // proto:  void QAction::setMenu(QMenu * menu);
-extern void _ZN7QAction7setMenuEP5QMenu(void* qthis, void* arg0); // 4
+extern void C_ZN7QAction7setMenuEP5QMenu(void* qthis, void* arg0); // 4
   // proto:  void QAction::setStatusTip(const QString & statusTip);
-extern void _ZN7QAction12setStatusTipERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN7QAction12setStatusTipERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QAction::toggle();
-extern void _ZN7QAction6toggleEv(void* qthis); // 4
+extern void C_ZN7QAction6toggleEv(void* qthis); // 4
   // proto:  bool QAction::isCheckable();
-extern void _ZNK7QAction11isCheckableEv(void* qthis); // 4
+extern void C_ZNK7QAction11isCheckableEv(void* qthis); // 4
   // proto:  bool QAction::isSeparator();
-extern void _ZNK7QAction11isSeparatorEv(void* qthis); // 4
+extern void C_ZNK7QAction11isSeparatorEv(void* qthis); // 4
   // proto:  void QAction::~QAction();
-extern void _ZN7QActionD2Ev(void* qthis); // 4
+extern void C_ZN7QActionD2Ev(void* qthis); // 4
   // proto:  bool QAction::showStatusText(QWidget * widget);
-extern void _ZN7QAction14showStatusTextEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN7QAction14showStatusTextEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  QFont QAction::font();
-extern void _ZNK7QAction4fontEv(void* qthis); // 4
+extern void C_ZNK7QAction4fontEv(void* qthis); // 4
   // proto:  void QAction::setActionGroup(QActionGroup * group);
-extern void _ZN7QAction14setActionGroupEP12QActionGroup(void* qthis, void* arg0); // 4
+extern void C_ZN7QAction14setActionGroupEP12QActionGroup(void* qthis, void* arg0); // 4
   // proto:  QMenu * QAction::menu();
-extern void _ZNK7QAction4menuEv(void* qthis); // 4
+extern void C_ZNK7QAction4menuEv(void* qthis); // 4
   // proto:  QKeySequence QAction::shortcut();
-extern void _ZNK7QAction8shortcutEv(void* qthis); // 4
+extern void C_ZNK7QAction8shortcutEv(void* qthis); // 4
   // proto:  QString QAction::whatsThis();
-extern void _ZNK7QAction9whatsThisEv(void* qthis); // 4
+extern void C_ZNK7QAction9whatsThisEv(void* qthis); // 4
   // proto:  bool QAction::isChecked();
-extern void _ZNK7QAction9isCheckedEv(void* qthis); // 4
+extern void C_ZNK7QAction9isCheckedEv(void* qthis); // 4
   // proto:  void QAction::trigger();
-extern void _ZN7QAction7triggerEv(void* qthis); // 2
+extern void C_ZN7QAction7triggerEv(void* qthis); // 2
   // proto:  void QAction::setCheckable(bool );
-extern void _ZN7QAction12setCheckableEb(void* qthis, bool arg0); // 4
+extern void C_ZN7QAction12setCheckableEb(void* qthis, bool arg0); // 4
   // proto:  bool QAction::isIconVisibleInMenu();
-extern void _ZNK7QAction19isIconVisibleInMenuEv(void* qthis); // 4
+extern void C_ZNK7QAction19isIconVisibleInMenuEv(void* qthis); // 4
   // proto:  QIcon QAction::icon();
-extern void _ZNK7QAction4iconEv(void* qthis); // 4
+extern void C_ZNK7QAction4iconEv(void* qthis); // 4
   // proto:  void QAction::setIcon(const QIcon & icon);
-extern void _ZN7QAction7setIconERK5QIcon(void* qthis, void* arg0); // 4
+extern void C_ZN7QAction7setIconERK5QIcon(void* qthis, void* arg0); // 4
   // proto:  void QAction::setData(const QVariant & var);
-extern void _ZN7QAction7setDataERK8QVariant(void* qthis, void* arg0); // 4
+extern void C_ZN7QAction7setDataERK8QVariant(void* qthis, void* arg0); // 4
   // proto:  void QAction::setEnabled(bool );
-extern void _ZN7QAction10setEnabledEb(void* qthis, bool arg0); // 4
+extern void C_ZN7QAction10setEnabledEb(void* qthis, bool arg0); // 4
   // proto:  QActionGroup * QAction::actionGroup();
-extern void _ZNK7QAction11actionGroupEv(void* qthis); // 4
+extern void C_ZNK7QAction11actionGroupEv(void* qthis); // 4
   // proto:  void QAction::hover();
-extern void _ZN7QAction5hoverEv(void* qthis); // 2
+extern void C_ZN7QAction5hoverEv(void* qthis); // 2
   // proto:  void QAction::setIconText(const QString & text);
-extern void _ZN7QAction11setIconTextERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN7QAction11setIconTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QAction::statusTip();
-extern void _ZNK7QAction9statusTipEv(void* qthis); // 4
+extern void C_ZNK7QAction9statusTipEv(void* qthis); // 4
   // proto:  void QAction::setAutoRepeat(bool );
-extern void _ZN7QAction13setAutoRepeatEb(void* qthis, bool arg0); // 4
+extern void C_ZN7QAction13setAutoRepeatEb(void* qthis, bool arg0); // 4
   // proto:  void QAction::setShortcut(const QKeySequence & shortcut);
-extern void _ZN7QAction11setShortcutERK12QKeySequence(void* qthis, void* arg0); // 4
+extern void C_ZN7QAction11setShortcutERK12QKeySequence(void* qthis, void* arg0); // 4
   // proto:  QString QAction::toolTip();
-extern void _ZNK7QAction7toolTipEv(void* qthis); // 4
+extern void C_ZNK7QAction7toolTipEv(void* qthis); // 4
   // proto:  bool QAction::isEnabled();
-extern void _ZNK7QAction9isEnabledEv(void* qthis); // 4
+extern void C_ZNK7QAction9isEnabledEv(void* qthis); // 4
   // proto:  void QAction::setWhatsThis(const QString & what);
-extern void _ZN7QAction12setWhatsThisERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN7QAction12setWhatsThisERK7QString(void* qthis, void* arg0); // 4
   // proto:  QVariant QAction::data();
-extern void _ZNK7QAction4dataEv(void* qthis); // 4
+extern void C_ZNK7QAction4dataEv(void* qthis); // 4
   // proto:  void QAction::setToolTip(const QString & tip);
-extern void _ZN7QAction10setToolTipERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN7QAction10setToolTipERK7QString(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QAction::metaObject();
-extern void _ZNK7QAction10metaObjectEv(void* qthis); // 4
+extern void C_ZNK7QAction10metaObjectEv(void* qthis); // 4
   // proto:  void QAction::setSeparator(bool b);
-extern void _ZN7QAction12setSeparatorEb(void* qthis, bool arg0); // 4
+extern void C_ZN7QAction12setSeparatorEb(void* qthis, bool arg0); // 4
   // proto:  QWidget * QAction::parentWidget();
-extern void _ZNK7QAction12parentWidgetEv(void* qthis); // 4
+extern void C_ZNK7QAction12parentWidgetEv(void* qthis); // 4
   // proto:  void QAction::setText(const QString & text);
-extern void _ZN7QAction7setTextERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN7QAction7setTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QAction::QAction(QObject * parent);
-extern void _ZN7QActionC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN7QActionC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QAction::QAction(const QIcon & icon, const QString & text, QObject * parent);
-extern void _ZN7QActionC2ERK5QIconRK7QStringP7QObject(void* qthis, void* arg0, void* arg1, void* arg2); // 3
+extern void C_ZN7QActionC2ERK5QIconRK7QStringP7QObject(void* qthis, void* arg0, void* arg1, void* arg2); // 3
   // proto:  void QAction::QAction(const QString & text, QObject * parent);
-extern void _ZN7QActionC2ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN7QActionC2ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1); // 3
   // proto:  QString QAction::iconText();
-extern void _ZNK7QAction8iconTextEv(void* qthis); // 4
+extern void C_ZNK7QAction8iconTextEv(void* qthis); // 4
   // proto:  Qt::ShortcutContext QAction::shortcutContext();
-extern void _ZNK7QAction15shortcutContextEv(void* qthis); // 4
+extern void C_ZNK7QAction15shortcutContextEv(void* qthis); // 4
   // proto:  void QAction::setDisabled(bool b);
-extern void _ZN7QAction11setDisabledEb(void* qthis, bool arg0); // 2
+extern void C_ZN7QAction11setDisabledEb(void* qthis, bool arg0); // 2
   // proto:  QString QAction::text();
-extern void _ZNK7QAction4textEv(void* qthis); // 4
+extern void C_ZNK7QAction4textEv(void* qthis); // 4
   // proto:  bool QAction::autoRepeat();
-extern void _ZNK7QAction10autoRepeatEv(void* qthis); // 4
+extern void C_ZNK7QAction10autoRepeatEv(void* qthis); // 4
   // proto:  bool QAction::isVisible();
-extern void _ZNK7QAction9isVisibleEv(void* qthis); // 4
+extern void C_ZNK7QAction9isVisibleEv(void* qthis); // 4
   // proto:  void QAction::setFont(const QFont & font);
-extern void _ZN7QAction7setFontERK5QFont(void* qthis, void* arg0); // 4
+extern void C_ZN7QAction7setFontERK5QFont(void* qthis, void* arg0); // 4
   // proto:  QAction::MenuRole QAction::menuRole();
-extern void _ZNK7QAction8menuRoleEv(void* qthis); // 4
+extern void C_ZNK7QAction8menuRoleEv(void* qthis); // 4
   // proto:  void QAction::setVisible(bool );
-extern void _ZN7QAction10setVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN7QAction10setVisibleEb(void* qthis, bool arg0); // 4
   // proto:  QList<QGraphicsWidget *> QAction::associatedGraphicsWidgets();
-extern void _ZNK7QAction25associatedGraphicsWidgetsEv(void* qthis); // 4
+extern void C_ZNK7QAction25associatedGraphicsWidgetsEv(void* qthis); // 4
   // proto:  QAction::Priority QAction::priority();
-extern void _ZNK7QAction8priorityEv(void* qthis); // 4
+extern void C_ZNK7QAction8priorityEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -169,7 +169,7 @@ func (this *QAction) associatedWidgets(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction17associatedWidgetsEv
     // invoke: QList<QWidget *> associatedWidgets()
-    C._ZNK7QAction17associatedWidgetsEv(this.qclsinst)
+    C.C_ZNK7QAction17associatedWidgetsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "associatedWidgets", args)
   }
@@ -192,7 +192,7 @@ func (this *QAction) setIconVisibleInMenu(args ...interface{}) () {
     // invoke: void setIconVisibleInMenu(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN7QAction20setIconVisibleInMenuEb(this.qclsinst, arg0)
+    C.C_ZN7QAction20setIconVisibleInMenuEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setIconVisibleInMenu", args)
   }
@@ -212,7 +212,7 @@ func (this *QAction) shortcuts(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction9shortcutsEv
     // invoke: QList<QKeySequence> shortcuts()
-    C._ZNK7QAction9shortcutsEv(this.qclsinst)
+    C.C_ZNK7QAction9shortcutsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "shortcuts", args)
   }
@@ -235,7 +235,7 @@ func (this *QAction) setChecked(args ...interface{}) () {
     // invoke: void setChecked(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN7QAction10setCheckedEb(this.qclsinst, arg0)
+    C.C_ZN7QAction10setCheckedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setChecked", args)
   }
@@ -258,7 +258,7 @@ func (this *QAction) setMenu(args ...interface{}) () {
     // invoke: void setMenu(class QMenu *)
     var arg0 = args[0].(QMenu).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QAction7setMenuEP5QMenu(this.qclsinst, arg0)
+    C.C_ZN7QAction7setMenuEP5QMenu(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setMenu", args)
   }
@@ -281,7 +281,7 @@ func (this *QAction) setStatusTip(args ...interface{}) () {
     // invoke: void setStatusTip(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QAction12setStatusTipERK7QString(this.qclsinst, arg0)
+    C.C_ZN7QAction12setStatusTipERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setStatusTip", args)
   }
@@ -301,7 +301,7 @@ func (this *QAction) toggle(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction6toggleEv
     // invoke: void toggle()
-    C._ZN7QAction6toggleEv(this.qclsinst)
+    C.C_ZN7QAction6toggleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "toggle", args)
   }
@@ -321,7 +321,7 @@ func (this *QAction) isCheckable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction11isCheckableEv
     // invoke: bool isCheckable()
-    C._ZNK7QAction11isCheckableEv(this.qclsinst)
+    C.C_ZNK7QAction11isCheckableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "isCheckable", args)
   }
@@ -341,7 +341,7 @@ func (this *QAction) isSeparator(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction11isSeparatorEv
     // invoke: bool isSeparator()
-    C._ZNK7QAction11isSeparatorEv(this.qclsinst)
+    C.C_ZNK7QAction11isSeparatorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "isSeparator", args)
   }
@@ -361,7 +361,7 @@ func (this *QAction) FreeQAction(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QActionD0Ev
     // invoke: void ~QAction()
-    C._ZN7QActionD2Ev(this.qclsinst)
+    C.C_ZN7QActionD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "~QAction", args)
   }
@@ -384,7 +384,7 @@ func (this *QAction) showStatusText(args ...interface{}) () {
     // invoke: bool showStatusText(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QAction14showStatusTextEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN7QAction14showStatusTextEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "showStatusText", args)
   }
@@ -404,7 +404,7 @@ func (this *QAction) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction4fontEv
     // invoke: QFont font()
-    C._ZNK7QAction4fontEv(this.qclsinst)
+    C.C_ZNK7QAction4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "font", args)
   }
@@ -427,7 +427,7 @@ func (this *QAction) setActionGroup(args ...interface{}) () {
     // invoke: void setActionGroup(class QActionGroup *)
     var arg0 = args[0].(QActionGroup).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QAction14setActionGroupEP12QActionGroup(this.qclsinst, arg0)
+    C.C_ZN7QAction14setActionGroupEP12QActionGroup(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setActionGroup", args)
   }
@@ -447,7 +447,7 @@ func (this *QAction) menu(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction4menuEv
     // invoke: QMenu * menu()
-    C._ZNK7QAction4menuEv(this.qclsinst)
+    C.C_ZNK7QAction4menuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "menu", args)
   }
@@ -467,7 +467,7 @@ func (this *QAction) shortcut(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction8shortcutEv
     // invoke: QKeySequence shortcut()
-    C._ZNK7QAction8shortcutEv(this.qclsinst)
+    C.C_ZNK7QAction8shortcutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "shortcut", args)
   }
@@ -487,7 +487,7 @@ func (this *QAction) whatsThis(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction9whatsThisEv
     // invoke: QString whatsThis()
-    C._ZNK7QAction9whatsThisEv(this.qclsinst)
+    C.C_ZNK7QAction9whatsThisEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "whatsThis", args)
   }
@@ -507,7 +507,7 @@ func (this *QAction) isChecked(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction9isCheckedEv
     // invoke: bool isChecked()
-    C._ZNK7QAction9isCheckedEv(this.qclsinst)
+    C.C_ZNK7QAction9isCheckedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "isChecked", args)
   }
@@ -527,7 +527,7 @@ func (this *QAction) trigger(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction7triggerEv
     // invoke: void trigger()
-    C._ZN7QAction7triggerEv(this.qclsinst)
+    C.C_ZN7QAction7triggerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "trigger", args)
   }
@@ -550,7 +550,7 @@ func (this *QAction) setCheckable(args ...interface{}) () {
     // invoke: void setCheckable(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN7QAction12setCheckableEb(this.qclsinst, arg0)
+    C.C_ZN7QAction12setCheckableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setCheckable", args)
   }
@@ -570,7 +570,7 @@ func (this *QAction) isIconVisibleInMenu(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction19isIconVisibleInMenuEv
     // invoke: bool isIconVisibleInMenu()
-    C._ZNK7QAction19isIconVisibleInMenuEv(this.qclsinst)
+    C.C_ZNK7QAction19isIconVisibleInMenuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "isIconVisibleInMenu", args)
   }
@@ -590,7 +590,7 @@ func (this *QAction) icon(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction4iconEv
     // invoke: QIcon icon()
-    C._ZNK7QAction4iconEv(this.qclsinst)
+    C.C_ZNK7QAction4iconEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "icon", args)
   }
@@ -613,7 +613,7 @@ func (this *QAction) setIcon(args ...interface{}) () {
     // invoke: void setIcon(const class QIcon &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QAction7setIconERK5QIcon(this.qclsinst, arg0)
+    C.C_ZN7QAction7setIconERK5QIcon(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setIcon", args)
   }
@@ -636,7 +636,7 @@ func (this *QAction) setData(args ...interface{}) () {
     // invoke: void setData(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QAction7setDataERK8QVariant(this.qclsinst, arg0)
+    C.C_ZN7QAction7setDataERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setData", args)
   }
@@ -659,7 +659,7 @@ func (this *QAction) setEnabled(args ...interface{}) () {
     // invoke: void setEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN7QAction10setEnabledEb(this.qclsinst, arg0)
+    C.C_ZN7QAction10setEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setEnabled", args)
   }
@@ -679,7 +679,7 @@ func (this *QAction) actionGroup(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction11actionGroupEv
     // invoke: QActionGroup * actionGroup()
-    C._ZNK7QAction11actionGroupEv(this.qclsinst)
+    C.C_ZNK7QAction11actionGroupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "actionGroup", args)
   }
@@ -699,7 +699,7 @@ func (this *QAction) hover(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction5hoverEv
     // invoke: void hover()
-    C._ZN7QAction5hoverEv(this.qclsinst)
+    C.C_ZN7QAction5hoverEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "hover", args)
   }
@@ -722,7 +722,7 @@ func (this *QAction) setIconText(args ...interface{}) () {
     // invoke: void setIconText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QAction11setIconTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN7QAction11setIconTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setIconText", args)
   }
@@ -742,7 +742,7 @@ func (this *QAction) statusTip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction9statusTipEv
     // invoke: QString statusTip()
-    C._ZNK7QAction9statusTipEv(this.qclsinst)
+    C.C_ZNK7QAction9statusTipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "statusTip", args)
   }
@@ -765,7 +765,7 @@ func (this *QAction) setAutoRepeat(args ...interface{}) () {
     // invoke: void setAutoRepeat(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN7QAction13setAutoRepeatEb(this.qclsinst, arg0)
+    C.C_ZN7QAction13setAutoRepeatEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setAutoRepeat", args)
   }
@@ -788,7 +788,7 @@ func (this *QAction) setShortcut(args ...interface{}) () {
     // invoke: void setShortcut(const class QKeySequence &)
     var arg0 = args[0].(QKeySequence).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QAction11setShortcutERK12QKeySequence(this.qclsinst, arg0)
+    C.C_ZN7QAction11setShortcutERK12QKeySequence(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setShortcut", args)
   }
@@ -808,7 +808,7 @@ func (this *QAction) toolTip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction7toolTipEv
     // invoke: QString toolTip()
-    C._ZNK7QAction7toolTipEv(this.qclsinst)
+    C.C_ZNK7QAction7toolTipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "toolTip", args)
   }
@@ -828,7 +828,7 @@ func (this *QAction) isEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction9isEnabledEv
     // invoke: bool isEnabled()
-    C._ZNK7QAction9isEnabledEv(this.qclsinst)
+    C.C_ZNK7QAction9isEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "isEnabled", args)
   }
@@ -851,7 +851,7 @@ func (this *QAction) setWhatsThis(args ...interface{}) () {
     // invoke: void setWhatsThis(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QAction12setWhatsThisERK7QString(this.qclsinst, arg0)
+    C.C_ZN7QAction12setWhatsThisERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setWhatsThis", args)
   }
@@ -871,7 +871,7 @@ func (this *QAction) data(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction4dataEv
     // invoke: QVariant data()
-    C._ZNK7QAction4dataEv(this.qclsinst)
+    C.C_ZNK7QAction4dataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "data", args)
   }
@@ -894,7 +894,7 @@ func (this *QAction) setToolTip(args ...interface{}) () {
     // invoke: void setToolTip(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QAction10setToolTipERK7QString(this.qclsinst, arg0)
+    C.C_ZN7QAction10setToolTipERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setToolTip", args)
   }
@@ -914,7 +914,7 @@ func (this *QAction) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK7QAction10metaObjectEv(this.qclsinst)
+    C.C_ZNK7QAction10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "metaObject", args)
   }
@@ -937,7 +937,7 @@ func (this *QAction) setSeparator(args ...interface{}) () {
     // invoke: void setSeparator(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN7QAction12setSeparatorEb(this.qclsinst, arg0)
+    C.C_ZN7QAction12setSeparatorEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setSeparator", args)
   }
@@ -957,7 +957,7 @@ func (this *QAction) parentWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction12parentWidgetEv
     // invoke: QWidget * parentWidget()
-    C._ZNK7QAction12parentWidgetEv(this.qclsinst)
+    C.C_ZNK7QAction12parentWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "parentWidget", args)
   }
@@ -980,7 +980,7 @@ func (this *QAction) setText(args ...interface{}) () {
     // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QAction7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN7QAction7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setText", args)
   }
@@ -1014,7 +1014,7 @@ func NewQAction(args ...interface{}) QAction {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN7QActionC2EP7QObject(qthis, arg0)
+    C.C_ZN7QActionC2EP7QObject(qthis, arg0)
   case 1:
     // invoke: _ZN7QActionC1ERK5QIconRK7QStringP7QObject
     // invoke: void QAction(const class QIcon &, const class QString &, class QObject *)
@@ -1026,7 +1026,7 @@ func NewQAction(args ...interface{}) QAction {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN7QActionC2ERK5QIconRK7QStringP7QObject(qthis, arg0, arg1, arg2)
+    C.C_ZN7QActionC2ERK5QIconRK7QStringP7QObject(qthis, arg0, arg1, arg2)
   case 2:
     // invoke: _ZN7QActionC1ERK7QStringP7QObject
     // invoke: void QAction(const class QString &, class QObject *)
@@ -1036,7 +1036,7 @@ func NewQAction(args ...interface{}) QAction {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN7QActionC2ERK7QStringP7QObject(qthis, arg0, arg1)
+    C.C_ZN7QActionC2ERK7QStringP7QObject(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAction", "QAction", args)
   }
@@ -1057,7 +1057,7 @@ func (this *QAction) iconText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction8iconTextEv
     // invoke: QString iconText()
-    C._ZNK7QAction8iconTextEv(this.qclsinst)
+    C.C_ZNK7QAction8iconTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "iconText", args)
   }
@@ -1077,7 +1077,7 @@ func (this *QAction) shortcutContext(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction15shortcutContextEv
     // invoke: Qt::ShortcutContext shortcutContext()
-    C._ZNK7QAction15shortcutContextEv(this.qclsinst)
+    C.C_ZNK7QAction15shortcutContextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "shortcutContext", args)
   }
@@ -1100,7 +1100,7 @@ func (this *QAction) setDisabled(args ...interface{}) () {
     // invoke: void setDisabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN7QAction11setDisabledEb(this.qclsinst, arg0)
+    C.C_ZN7QAction11setDisabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setDisabled", args)
   }
@@ -1120,7 +1120,7 @@ func (this *QAction) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction4textEv
     // invoke: QString text()
-    C._ZNK7QAction4textEv(this.qclsinst)
+    C.C_ZNK7QAction4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "text", args)
   }
@@ -1140,7 +1140,7 @@ func (this *QAction) autoRepeat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction10autoRepeatEv
     // invoke: bool autoRepeat()
-    C._ZNK7QAction10autoRepeatEv(this.qclsinst)
+    C.C_ZNK7QAction10autoRepeatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "autoRepeat", args)
   }
@@ -1160,7 +1160,7 @@ func (this *QAction) isVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction9isVisibleEv
     // invoke: bool isVisible()
-    C._ZNK7QAction9isVisibleEv(this.qclsinst)
+    C.C_ZNK7QAction9isVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "isVisible", args)
   }
@@ -1183,7 +1183,7 @@ func (this *QAction) setFont(args ...interface{}) () {
     // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QAction7setFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN7QAction7setFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setFont", args)
   }
@@ -1203,7 +1203,7 @@ func (this *QAction) menuRole(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction8menuRoleEv
     // invoke: QAction::MenuRole menuRole()
-    C._ZNK7QAction8menuRoleEv(this.qclsinst)
+    C.C_ZNK7QAction8menuRoleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "menuRole", args)
   }
@@ -1226,7 +1226,7 @@ func (this *QAction) setVisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN7QAction10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN7QAction10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setVisible", args)
   }
@@ -1246,7 +1246,7 @@ func (this *QAction) associatedGraphicsWidgets(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction25associatedGraphicsWidgetsEv
     // invoke: QList<QGraphicsWidget *> associatedGraphicsWidgets()
-    C._ZNK7QAction25associatedGraphicsWidgetsEv(this.qclsinst)
+    C.C_ZNK7QAction25associatedGraphicsWidgetsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "associatedGraphicsWidgets", args)
   }
@@ -1266,7 +1266,7 @@ func (this *QAction) priority(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QAction8priorityEv
     // invoke: QAction::Priority priority()
-    C._ZNK7QAction8priorityEv(this.qclsinst)
+    C.C_ZNK7QAction8priorityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "priority", args)
   }

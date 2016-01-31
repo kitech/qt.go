@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qundoview.h
 // dst-file: /src/widgets/qundoview.go
 //
@@ -29,31 +29,31 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QUndoView::setCleanIcon(const QIcon & icon);
-extern void _ZN9QUndoView12setCleanIconERK5QIcon(void* qthis, void* arg0); // 4
+extern void C_ZN9QUndoView12setCleanIconERK5QIcon(void* qthis, void* arg0); // 4
   // proto:  void QUndoView::~QUndoView();
-extern void _ZN9QUndoViewD2Ev(void* qthis); // 4
+extern void C_ZN9QUndoViewD2Ev(void* qthis); // 4
   // proto:  QIcon QUndoView::cleanIcon();
-extern void _ZNK9QUndoView9cleanIconEv(void* qthis); // 4
+extern void C_ZNK9QUndoView9cleanIconEv(void* qthis); // 4
   // proto:  void QUndoView::QUndoView(QWidget * parent);
-extern void _ZN9QUndoViewC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN9QUndoViewC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QUndoView::QUndoView(QUndoGroup * group, QWidget * parent);
-extern void _ZN9QUndoViewC2EP10QUndoGroupP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN9QUndoViewC2EP10QUndoGroupP7QWidget(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QUndoView::QUndoView(QUndoStack * stack, QWidget * parent);
-extern void _ZN9QUndoViewC2EP10QUndoStackP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN9QUndoViewC2EP10QUndoStackP7QWidget(void* qthis, void* arg0, void* arg1); // 3
   // proto:  QString QUndoView::emptyLabel();
-extern void _ZNK9QUndoView10emptyLabelEv(void* qthis); // 4
+extern void C_ZNK9QUndoView10emptyLabelEv(void* qthis); // 4
   // proto:  void QUndoView::setEmptyLabel(const QString & label);
-extern void _ZN9QUndoView13setEmptyLabelERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN9QUndoView13setEmptyLabelERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QUndoView::setStack(QUndoStack * stack);
-extern void _ZN9QUndoView8setStackEP10QUndoStack(void* qthis, void* arg0); // 4
+extern void C_ZN9QUndoView8setStackEP10QUndoStack(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QUndoView::metaObject();
-extern void _ZNK9QUndoView10metaObjectEv(void* qthis); // 4
+extern void C_ZNK9QUndoView10metaObjectEv(void* qthis); // 4
   // proto:  void QUndoView::setGroup(QUndoGroup * group);
-extern void _ZN9QUndoView8setGroupEP10QUndoGroup(void* qthis, void* arg0); // 4
+extern void C_ZN9QUndoView8setGroupEP10QUndoGroup(void* qthis, void* arg0); // 4
   // proto:  QUndoGroup * QUndoView::group();
-extern void _ZNK9QUndoView5groupEv(void* qthis); // 4
+extern void C_ZNK9QUndoView5groupEv(void* qthis); // 4
   // proto:  QUndoStack * QUndoView::stack();
-extern void _ZNK9QUndoView5stackEv(void* qthis); // 4
+extern void C_ZNK9QUndoView5stackEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -88,7 +88,7 @@ func (this *QUndoView) setCleanIcon(args ...interface{}) () {
     // invoke: void setCleanIcon(const class QIcon &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QUndoView12setCleanIconERK5QIcon(this.qclsinst, arg0)
+    C.C_ZN9QUndoView12setCleanIconERK5QIcon(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoView", "setCleanIcon", args)
   }
@@ -108,7 +108,7 @@ func (this *QUndoView) FreeQUndoView(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUndoViewD0Ev
     // invoke: void ~QUndoView()
-    C._ZN9QUndoViewD2Ev(this.qclsinst)
+    C.C_ZN9QUndoViewD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "~QUndoView", args)
   }
@@ -128,7 +128,7 @@ func (this *QUndoView) cleanIcon(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUndoView9cleanIconEv
     // invoke: QIcon cleanIcon()
-    C._ZNK9QUndoView9cleanIconEv(this.qclsinst)
+    C.C_ZNK9QUndoView9cleanIconEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "cleanIcon", args)
   }
@@ -161,7 +161,7 @@ func NewQUndoView(args ...interface{}) QUndoView {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QUndoViewC2EP7QWidget(qthis, arg0)
+    C.C_ZN9QUndoViewC2EP7QWidget(qthis, arg0)
   case 1:
     // invoke: _ZN9QUndoViewC1EP10QUndoGroupP7QWidget
     // invoke: void QUndoView(class QUndoGroup *, class QWidget *)
@@ -171,7 +171,7 @@ func NewQUndoView(args ...interface{}) QUndoView {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QUndoViewC2EP10QUndoGroupP7QWidget(qthis, arg0, arg1)
+    C.C_ZN9QUndoViewC2EP10QUndoGroupP7QWidget(qthis, arg0, arg1)
   case 2:
     // invoke: _ZN9QUndoViewC1EP10QUndoStackP7QWidget
     // invoke: void QUndoView(class QUndoStack *, class QWidget *)
@@ -181,7 +181,7 @@ func NewQUndoView(args ...interface{}) QUndoView {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QUndoViewC2EP10QUndoStackP7QWidget(qthis, arg0, arg1)
+    C.C_ZN9QUndoViewC2EP10QUndoStackP7QWidget(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QUndoView", "QUndoView", args)
   }
@@ -202,7 +202,7 @@ func (this *QUndoView) emptyLabel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUndoView10emptyLabelEv
     // invoke: QString emptyLabel()
-    C._ZNK9QUndoView10emptyLabelEv(this.qclsinst)
+    C.C_ZNK9QUndoView10emptyLabelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "emptyLabel", args)
   }
@@ -225,7 +225,7 @@ func (this *QUndoView) setEmptyLabel(args ...interface{}) () {
     // invoke: void setEmptyLabel(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QUndoView13setEmptyLabelERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QUndoView13setEmptyLabelERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoView", "setEmptyLabel", args)
   }
@@ -248,7 +248,7 @@ func (this *QUndoView) setStack(args ...interface{}) () {
     // invoke: void setStack(class QUndoStack *)
     var arg0 = args[0].(QUndoStack).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QUndoView8setStackEP10QUndoStack(this.qclsinst, arg0)
+    C.C_ZN9QUndoView8setStackEP10QUndoStack(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoView", "setStack", args)
   }
@@ -268,7 +268,7 @@ func (this *QUndoView) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUndoView10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK9QUndoView10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QUndoView10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "metaObject", args)
   }
@@ -291,7 +291,7 @@ func (this *QUndoView) setGroup(args ...interface{}) () {
     // invoke: void setGroup(class QUndoGroup *)
     var arg0 = args[0].(QUndoGroup).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QUndoView8setGroupEP10QUndoGroup(this.qclsinst, arg0)
+    C.C_ZN9QUndoView8setGroupEP10QUndoGroup(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoView", "setGroup", args)
   }
@@ -311,7 +311,7 @@ func (this *QUndoView) group(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUndoView5groupEv
     // invoke: QUndoGroup * group()
-    C._ZNK9QUndoView5groupEv(this.qclsinst)
+    C.C_ZNK9QUndoView5groupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "group", args)
   }
@@ -331,7 +331,7 @@ func (this *QUndoView) stack(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUndoView5stackEv
     // invoke: QUndoStack * stack()
-    C._ZNK9QUndoView5stackEv(this.qclsinst)
+    C.C_ZNK9QUndoView5stackEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "stack", args)
   }

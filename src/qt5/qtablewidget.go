@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qtablewidget.h
 // dst-file: /src/widgets/qtablewidget.go
 //
@@ -29,213 +29,213 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QTableWidgetSelectionRange::columnCount();
-extern void _ZNK26QTableWidgetSelectionRange11columnCountEv(void* qthis); // 2
+extern void C_ZNK26QTableWidgetSelectionRange11columnCountEv(void* qthis); // 2
   // proto:  int QTableWidgetSelectionRange::leftColumn();
-extern void _ZNK26QTableWidgetSelectionRange10leftColumnEv(void* qthis); // 2
+extern void C_ZNK26QTableWidgetSelectionRange10leftColumnEv(void* qthis); // 2
   // proto:  void QTableWidgetSelectionRange::~QTableWidgetSelectionRange();
-extern void _ZN26QTableWidgetSelectionRangeD2Ev(void* qthis); // 4
+extern void C_ZN26QTableWidgetSelectionRangeD2Ev(void* qthis); // 4
   // proto:  int QTableWidgetSelectionRange::bottomRow();
-extern void _ZNK26QTableWidgetSelectionRange9bottomRowEv(void* qthis); // 2
+extern void C_ZNK26QTableWidgetSelectionRange9bottomRowEv(void* qthis); // 2
   // proto:  int QTableWidgetSelectionRange::rightColumn();
-extern void _ZNK26QTableWidgetSelectionRange11rightColumnEv(void* qthis); // 2
+extern void C_ZNK26QTableWidgetSelectionRange11rightColumnEv(void* qthis); // 2
   // proto:  int QTableWidgetSelectionRange::topRow();
-extern void _ZNK26QTableWidgetSelectionRange6topRowEv(void* qthis); // 2
+extern void C_ZNK26QTableWidgetSelectionRange6topRowEv(void* qthis); // 2
   // proto:  int QTableWidgetSelectionRange::rowCount();
-extern void _ZNK26QTableWidgetSelectionRange8rowCountEv(void* qthis); // 2
+extern void C_ZNK26QTableWidgetSelectionRange8rowCountEv(void* qthis); // 2
   // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange(int top, int left, int bottom, int right);
-extern void _ZN26QTableWidgetSelectionRangeC2Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 3
+extern void C_ZN26QTableWidgetSelectionRangeC2Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 3
   // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other);
-extern void _ZN26QTableWidgetSelectionRangeC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN26QTableWidgetSelectionRangeC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange();
-extern void _ZN26QTableWidgetSelectionRangeC2Ev(void* qthis); // 3
+extern void C_ZN26QTableWidgetSelectionRangeC2Ev(void* qthis); // 3
   // proto:  int QTableWidget::columnCount();
-extern void _ZNK12QTableWidget11columnCountEv(void* qthis); // 4
+extern void C_ZNK12QTableWidget11columnCountEv(void* qthis); // 4
   // proto:  void QTableWidget::removeCellWidget(int row, int column);
-extern void _ZN12QTableWidget16removeCellWidgetEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZN12QTableWidget16removeCellWidgetEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  void QTableWidget::setCellWidget(int row, int column, QWidget * widget);
-extern void _ZN12QTableWidget13setCellWidgetEiiP7QWidget(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN12QTableWidget13setCellWidgetEiiP7QWidget(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  QTableWidgetItem * QTableWidget::verticalHeaderItem(int row);
-extern void _ZNK12QTableWidget18verticalHeaderItemEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK12QTableWidget18verticalHeaderItemEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTableWidget::setItemPrototype(const QTableWidgetItem * item);
-extern void _ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTableWidget::~QTableWidget();
-extern void _ZN12QTableWidgetD2Ev(void* qthis); // 4
+extern void C_ZN12QTableWidgetD2Ev(void* qthis); // 4
   // proto:  void QTableWidget::setItemSelected(const QTableWidgetItem * item, bool select);
-extern void _ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  void QTableWidget::openPersistentEditor(QTableWidgetItem * item);
-extern void _ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem(void* qthis, void* arg0); // 4
   // proto:  int QTableWidget::row(const QTableWidgetItem * item);
-extern void _ZNK12QTableWidget3rowEPK16QTableWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZNK12QTableWidget3rowEPK16QTableWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTableWidget::setColumnCount(int columns);
-extern void _ZN12QTableWidget14setColumnCountEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN12QTableWidget14setColumnCountEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTableWidget::setCurrentCell(int row, int column);
-extern void _ZN12QTableWidget14setCurrentCellEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN12QTableWidget14setCurrentCellEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QTableWidget::QTableWidget(int rows, int columns, QWidget * parent);
-extern void _ZN12QTableWidgetC2EiiP7QWidget(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 3
+extern void C_ZN12QTableWidgetC2EiiP7QWidget(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 3
   // proto:  void QTableWidget::QTableWidget(QWidget * parent);
-extern void _ZN12QTableWidgetC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN12QTableWidgetC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QTableWidget::setRowCount(int rows);
-extern void _ZN12QTableWidget11setRowCountEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN12QTableWidget11setRowCountEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTableWidget::editItem(QTableWidgetItem * item);
-extern void _ZN12QTableWidget8editItemEP16QTableWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZN12QTableWidget8editItemEP16QTableWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTableWidget::setHorizontalHeaderItem(int column, QTableWidgetItem * item);
-extern void _ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  QTableWidgetItem * QTableWidget::currentItem();
-extern void _ZNK12QTableWidget11currentItemEv(void* qthis); // 4
+extern void C_ZNK12QTableWidget11currentItemEv(void* qthis); // 4
   // proto:  void QTableWidget::insertColumn(int column);
-extern void _ZN12QTableWidget12insertColumnEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN12QTableWidget12insertColumnEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QTableWidget::isItemSelected(const QTableWidgetItem * item);
-extern void _ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTableWidget::clearContents();
-extern void _ZN12QTableWidget13clearContentsEv(void* qthis); // 4
+extern void C_ZN12QTableWidget13clearContentsEv(void* qthis); // 4
   // proto:  int QTableWidget::currentColumn();
-extern void _ZNK12QTableWidget13currentColumnEv(void* qthis); // 4
+extern void C_ZNK12QTableWidget13currentColumnEv(void* qthis); // 4
   // proto:  QTableWidgetItem * QTableWidget::itemAt(const QPoint & p);
-extern void _ZNK12QTableWidget6itemAtERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZNK12QTableWidget6itemAtERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  QTableWidgetItem * QTableWidget::itemAt(int x, int y);
-extern void _ZNK12QTableWidget6itemAtEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZNK12QTableWidget6itemAtEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  QTableWidgetItem * QTableWidget::takeItem(int row, int column);
-extern void _ZN12QTableWidget8takeItemEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN12QTableWidget8takeItemEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  QTableWidgetItem * QTableWidget::takeHorizontalHeaderItem(int column);
-extern void _ZN12QTableWidget24takeHorizontalHeaderItemEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN12QTableWidget24takeHorizontalHeaderItemEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QTableWidget::isSortingEnabled();
-extern void _ZNK12QTableWidget16isSortingEnabledEv(void* qthis); // 4
+extern void C_ZNK12QTableWidget16isSortingEnabledEv(void* qthis); // 4
   // proto:  QList<QTableWidgetSelectionRange> QTableWidget::selectedRanges();
-extern void _ZNK12QTableWidget14selectedRangesEv(void* qthis); // 4
+extern void C_ZNK12QTableWidget14selectedRangesEv(void* qthis); // 4
   // proto:  QList<QTableWidgetItem *> QTableWidget::selectedItems();
-extern void _ZNK12QTableWidget13selectedItemsEv(void* qthis); // 4
+extern void C_ZNK12QTableWidget13selectedItemsEv(void* qthis); // 4
   // proto:  void QTableWidget::removeRow(int row);
-extern void _ZN12QTableWidget9removeRowEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN12QTableWidget9removeRowEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTableWidget::rowCount();
-extern void _ZNK12QTableWidget8rowCountEv(void* qthis); // 4
+extern void C_ZNK12QTableWidget8rowCountEv(void* qthis); // 4
   // proto:  void QTableWidget::setItem(int row, int column, QTableWidgetItem * item);
-extern void _ZN12QTableWidget7setItemEiiP16QTableWidgetItem(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN12QTableWidget7setItemEiiP16QTableWidgetItem(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  QTableWidgetItem * QTableWidget::takeVerticalHeaderItem(int row);
-extern void _ZN12QTableWidget22takeVerticalHeaderItemEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN12QTableWidget22takeVerticalHeaderItemEi(void* qthis, int32_t arg0); // 4
   // proto:  QTableWidgetItem * QTableWidget::horizontalHeaderItem(int column);
-extern void _ZNK12QTableWidget20horizontalHeaderItemEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK12QTableWidget20horizontalHeaderItemEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTableWidget::setHorizontalHeaderLabels(const QStringList & labels);
-extern void _ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  QRect QTableWidget::visualItemRect(const QTableWidgetItem * item);
-extern void _ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTableWidget::removeColumn(int column);
-extern void _ZN12QTableWidget12removeColumnEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN12QTableWidget12removeColumnEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTableWidget::setCurrentItem(QTableWidgetItem * item);
-extern void _ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem(void* qthis, void* arg0); // 4
   // proto:  int QTableWidget::currentRow();
-extern void _ZNK12QTableWidget10currentRowEv(void* qthis); // 4
+extern void C_ZNK12QTableWidget10currentRowEv(void* qthis); // 4
   // proto:  const QMetaObject * QTableWidget::metaObject();
-extern void _ZNK12QTableWidget10metaObjectEv(void* qthis); // 4
+extern void C_ZNK12QTableWidget10metaObjectEv(void* qthis); // 4
   // proto:  const QTableWidgetItem * QTableWidget::itemPrototype();
-extern void _ZNK12QTableWidget13itemPrototypeEv(void* qthis); // 4
+extern void C_ZNK12QTableWidget13itemPrototypeEv(void* qthis); // 4
   // proto:  int QTableWidget::visualRow(int logicalRow);
-extern void _ZNK12QTableWidget9visualRowEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK12QTableWidget9visualRowEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTableWidget::column(const QTableWidgetItem * item);
-extern void _ZNK12QTableWidget6columnEPK16QTableWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZNK12QTableWidget6columnEPK16QTableWidgetItem(void* qthis, void* arg0); // 4
   // proto:  QWidget * QTableWidget::cellWidget(int row, int column);
-extern void _ZNK12QTableWidget10cellWidgetEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZNK12QTableWidget10cellWidgetEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QTableWidget::setRangeSelected(const QTableWidgetSelectionRange & range, bool select);
-extern void _ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  void QTableWidget::setSortingEnabled(bool enable);
-extern void _ZN12QTableWidget17setSortingEnabledEb(void* qthis, bool arg0); // 4
+extern void C_ZN12QTableWidget17setSortingEnabledEb(void* qthis, bool arg0); // 4
   // proto:  void QTableWidget::insertRow(int row);
-extern void _ZN12QTableWidget9insertRowEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN12QTableWidget9insertRowEi(void* qthis, int32_t arg0); // 4
   // proto:  QTableWidgetItem * QTableWidget::item(int row, int column);
-extern void _ZNK12QTableWidget4itemEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZNK12QTableWidget4itemEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  int QTableWidget::visualColumn(int logicalColumn);
-extern void _ZNK12QTableWidget12visualColumnEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK12QTableWidget12visualColumnEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTableWidget::setVerticalHeaderItem(int row, QTableWidgetItem * item);
-extern void _ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QTableWidget::closePersistentEditor(QTableWidgetItem * item);
-extern void _ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTableWidget::clear();
-extern void _ZN12QTableWidget5clearEv(void* qthis); // 4
+extern void C_ZN12QTableWidget5clearEv(void* qthis); // 4
   // proto:  void QTableWidget::setVerticalHeaderLabels(const QStringList & labels);
-extern void _ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  void QTableWidgetItem::setTextAlignment(int alignment);
-extern void _ZN16QTableWidgetItem16setTextAlignmentEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN16QTableWidgetItem16setTextAlignmentEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTableWidgetItem::setSizeHint(const QSize & size);
-extern void _ZN16QTableWidgetItem11setSizeHintERK5QSize(void* qthis, void* arg0); // 2
+extern void C_ZN16QTableWidgetItem11setSizeHintERK5QSize(void* qthis, void* arg0); // 2
   // proto:  void QTableWidgetItem::setSelected(bool select);
-extern void _ZN16QTableWidgetItem11setSelectedEb(void* qthis, bool arg0); // 2
+extern void C_ZN16QTableWidgetItem11setSelectedEb(void* qthis, bool arg0); // 2
   // proto:  QString QTableWidgetItem::text();
-extern void _ZNK16QTableWidgetItem4textEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem4textEv(void* qthis); // 2
   // proto:  void QTableWidgetItem::QTableWidgetItem(const QTableWidgetItem & other);
-extern void _ZN16QTableWidgetItemC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN16QTableWidgetItemC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QTableWidgetItem::QTableWidgetItem(int type);
-extern void _ZN16QTableWidgetItemC2Ei(void* qthis, int32_t arg0); // 3
+extern void C_ZN16QTableWidgetItemC2Ei(void* qthis, int32_t arg0); // 3
   // proto:  void QTableWidgetItem::QTableWidgetItem(const QIcon & icon, const QString & text, int type);
-extern void _ZN16QTableWidgetItemC2ERK5QIconRK7QStringi(void* qthis, void* arg0, void* arg1, int32_t arg2); // 3
+extern void C_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi(void* qthis, void* arg0, void* arg1, int32_t arg2); // 3
   // proto:  void QTableWidgetItem::QTableWidgetItem(const QString & text, int type);
-extern void _ZN16QTableWidgetItemC2ERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 3
+extern void C_ZN16QTableWidgetItemC2ERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 3
   // proto:  QFont QTableWidgetItem::font();
-extern void _ZNK16QTableWidgetItem4fontEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem4fontEv(void* qthis); // 2
   // proto:  int QTableWidgetItem::row();
-extern void _ZNK16QTableWidgetItem3rowEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem3rowEv(void* qthis); // 2
   // proto:  QString QTableWidgetItem::whatsThis();
-extern void _ZNK16QTableWidgetItem9whatsThisEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem9whatsThisEv(void* qthis); // 2
   // proto:  void QTableWidgetItem::setForeground(const QBrush & brush);
-extern void _ZN16QTableWidgetItem13setForegroundERK6QBrush(void* qthis, void* arg0); // 2
+extern void C_ZN16QTableWidgetItem13setForegroundERK6QBrush(void* qthis, void* arg0); // 2
   // proto:  bool QTableWidgetItem::isSelected();
-extern void _ZNK16QTableWidgetItem10isSelectedEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem10isSelectedEv(void* qthis); // 2
   // proto:  void QTableWidgetItem::write(QDataStream & out);
-extern void _ZNK16QTableWidgetItem5writeER11QDataStream(void* qthis, void* arg0); // 4
+extern void C_ZNK16QTableWidgetItem5writeER11QDataStream(void* qthis, void* arg0); // 4
   // proto:  void QTableWidgetItem::read(QDataStream & in);
-extern void _ZN16QTableWidgetItem4readER11QDataStream(void* qthis, void* arg0); // 4
+extern void C_ZN16QTableWidgetItem4readER11QDataStream(void* qthis, void* arg0); // 4
   // proto:  QColor QTableWidgetItem::backgroundColor();
-extern void _ZNK16QTableWidgetItem15backgroundColorEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem15backgroundColorEv(void* qthis); // 2
   // proto:  void QTableWidgetItem::setBackground(const QBrush & brush);
-extern void _ZN16QTableWidgetItem13setBackgroundERK6QBrush(void* qthis, void* arg0); // 2
+extern void C_ZN16QTableWidgetItem13setBackgroundERK6QBrush(void* qthis, void* arg0); // 2
   // proto:  QColor QTableWidgetItem::textColor();
-extern void _ZNK16QTableWidgetItem9textColorEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem9textColorEv(void* qthis); // 2
   // proto:  int QTableWidgetItem::type();
-extern void _ZNK16QTableWidgetItem4typeEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem4typeEv(void* qthis); // 2
   // proto:  void QTableWidgetItem::setData(int role, const QVariant & value);
-extern void _ZN16QTableWidgetItem7setDataEiRK8QVariant(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN16QTableWidgetItem7setDataEiRK8QVariant(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  QBrush QTableWidgetItem::foreground();
-extern void _ZNK16QTableWidgetItem10foregroundEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem10foregroundEv(void* qthis); // 2
   // proto:  QString QTableWidgetItem::statusTip();
-extern void _ZNK16QTableWidgetItem9statusTipEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem9statusTipEv(void* qthis); // 2
   // proto:  QTableWidgetItem * QTableWidgetItem::clone();
-extern void _ZNK16QTableWidgetItem5cloneEv(void* qthis); // 4
+extern void C_ZNK16QTableWidgetItem5cloneEv(void* qthis); // 4
   // proto:  void QTableWidgetItem::setBackgroundColor(const QColor & color);
-extern void _ZN16QTableWidgetItem18setBackgroundColorERK6QColor(void* qthis, void* arg0); // 2
+extern void C_ZN16QTableWidgetItem18setBackgroundColorERK6QColor(void* qthis, void* arg0); // 2
   // proto:  QString QTableWidgetItem::toolTip();
-extern void _ZNK16QTableWidgetItem7toolTipEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem7toolTipEv(void* qthis); // 2
   // proto:  QTableWidget * QTableWidgetItem::tableWidget();
-extern void _ZNK16QTableWidgetItem11tableWidgetEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem11tableWidgetEv(void* qthis); // 2
   // proto:  void QTableWidgetItem::setWhatsThis(const QString & whatsThis);
-extern void _ZN16QTableWidgetItem12setWhatsThisERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN16QTableWidgetItem12setWhatsThisERK7QString(void* qthis, void* arg0); // 2
   // proto:  QBrush QTableWidgetItem::background();
-extern void _ZNK16QTableWidgetItem10backgroundEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem10backgroundEv(void* qthis); // 2
   // proto:  QVariant QTableWidgetItem::data(int role);
-extern void _ZNK16QTableWidgetItem4dataEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK16QTableWidgetItem4dataEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTableWidgetItem::setTextColor(const QColor & color);
-extern void _ZN16QTableWidgetItem12setTextColorERK6QColor(void* qthis, void* arg0); // 2
+extern void C_ZN16QTableWidgetItem12setTextColorERK6QColor(void* qthis, void* arg0); // 2
   // proto:  QIcon QTableWidgetItem::icon();
-extern void _ZNK16QTableWidgetItem4iconEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem4iconEv(void* qthis); // 2
   // proto:  void QTableWidgetItem::setToolTip(const QString & toolTip);
-extern void _ZN16QTableWidgetItem10setToolTipERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN16QTableWidgetItem10setToolTipERK7QString(void* qthis, void* arg0); // 2
   // proto:  QSize QTableWidgetItem::sizeHint();
-extern void _ZNK16QTableWidgetItem8sizeHintEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem8sizeHintEv(void* qthis); // 2
   // proto:  void QTableWidgetItem::~QTableWidgetItem();
-extern void _ZN16QTableWidgetItemD2Ev(void* qthis); // 4
+extern void C_ZN16QTableWidgetItemD2Ev(void* qthis); // 4
   // proto:  int QTableWidgetItem::column();
-extern void _ZNK16QTableWidgetItem6columnEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem6columnEv(void* qthis); // 2
   // proto:  void QTableWidgetItem::setIcon(const QIcon & icon);
-extern void _ZN16QTableWidgetItem7setIconERK5QIcon(void* qthis, void* arg0); // 2
+extern void C_ZN16QTableWidgetItem7setIconERK5QIcon(void* qthis, void* arg0); // 2
   // proto:  void QTableWidgetItem::setText(const QString & text);
-extern void _ZN16QTableWidgetItem7setTextERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN16QTableWidgetItem7setTextERK7QString(void* qthis, void* arg0); // 2
   // proto:  void QTableWidgetItem::setStatusTip(const QString & statusTip);
-extern void _ZN16QTableWidgetItem12setStatusTipERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN16QTableWidgetItem12setStatusTipERK7QString(void* qthis, void* arg0); // 2
   // proto:  Qt::ItemFlags QTableWidgetItem::flags();
-extern void _ZNK16QTableWidgetItem5flagsEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem5flagsEv(void* qthis); // 2
   // proto:  Qt::CheckState QTableWidgetItem::checkState();
-extern void _ZNK16QTableWidgetItem10checkStateEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem10checkStateEv(void* qthis); // 2
   // proto:  void QTableWidgetItem::setFont(const QFont & font);
-extern void _ZN16QTableWidgetItem7setFontERK5QFont(void* qthis, void* arg0); // 2
+extern void C_ZN16QTableWidgetItem7setFontERK5QFont(void* qthis, void* arg0); // 2
   // proto:  int QTableWidgetItem::textAlignment();
-extern void _ZNK16QTableWidgetItem13textAlignmentEv(void* qthis); // 2
+extern void C_ZNK16QTableWidgetItem13textAlignmentEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -294,7 +294,7 @@ func (this *QTableWidgetSelectionRange) columnCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QTableWidgetSelectionRange11columnCountEv
     // invoke: int columnCount()
-    C._ZNK26QTableWidgetSelectionRange11columnCountEv(this.qclsinst)
+    C.C_ZNK26QTableWidgetSelectionRange11columnCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "columnCount", args)
   }
@@ -314,7 +314,7 @@ func (this *QTableWidgetSelectionRange) leftColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QTableWidgetSelectionRange10leftColumnEv
     // invoke: int leftColumn()
-    C._ZNK26QTableWidgetSelectionRange10leftColumnEv(this.qclsinst)
+    C.C_ZNK26QTableWidgetSelectionRange10leftColumnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "leftColumn", args)
   }
@@ -334,7 +334,7 @@ func (this *QTableWidgetSelectionRange) FreeQTableWidgetSelectionRange(args ...i
   case 0:
     // invoke: _ZN26QTableWidgetSelectionRangeD0Ev
     // invoke: void ~QTableWidgetSelectionRange()
-    C._ZN26QTableWidgetSelectionRangeD2Ev(this.qclsinst)
+    C.C_ZN26QTableWidgetSelectionRangeD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "~QTableWidgetSelectionRange", args)
   }
@@ -354,7 +354,7 @@ func (this *QTableWidgetSelectionRange) bottomRow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QTableWidgetSelectionRange9bottomRowEv
     // invoke: int bottomRow()
-    C._ZNK26QTableWidgetSelectionRange9bottomRowEv(this.qclsinst)
+    C.C_ZNK26QTableWidgetSelectionRange9bottomRowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "bottomRow", args)
   }
@@ -374,7 +374,7 @@ func (this *QTableWidgetSelectionRange) rightColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QTableWidgetSelectionRange11rightColumnEv
     // invoke: int rightColumn()
-    C._ZNK26QTableWidgetSelectionRange11rightColumnEv(this.qclsinst)
+    C.C_ZNK26QTableWidgetSelectionRange11rightColumnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "rightColumn", args)
   }
@@ -394,7 +394,7 @@ func (this *QTableWidgetSelectionRange) topRow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QTableWidgetSelectionRange6topRowEv
     // invoke: int topRow()
-    C._ZNK26QTableWidgetSelectionRange6topRowEv(this.qclsinst)
+    C.C_ZNK26QTableWidgetSelectionRange6topRowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "topRow", args)
   }
@@ -414,7 +414,7 @@ func (this *QTableWidgetSelectionRange) rowCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QTableWidgetSelectionRange8rowCountEv
     // invoke: int rowCount()
-    C._ZNK26QTableWidgetSelectionRange8rowCountEv(this.qclsinst)
+    C.C_ZNK26QTableWidgetSelectionRange8rowCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "rowCount", args)
   }
@@ -453,7 +453,7 @@ func NewQTableWidgetSelectionRange(args ...interface{}) QTableWidgetSelectionRan
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN26QTableWidgetSelectionRangeC2Eiiii(qthis, arg0, arg1, arg2, arg3)
+    C.C_ZN26QTableWidgetSelectionRangeC2Eiiii(qthis, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN26QTableWidgetSelectionRangeC1ERKS_
     // invoke: void QTableWidgetSelectionRange(const class QTableWidgetSelectionRange &)
@@ -461,13 +461,13 @@ func NewQTableWidgetSelectionRange(args ...interface{}) QTableWidgetSelectionRan
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN26QTableWidgetSelectionRangeC2ERKS_(qthis, arg0)
+    C.C_ZN26QTableWidgetSelectionRangeC2ERKS_(qthis, arg0)
   case 2:
     // invoke: _ZN26QTableWidgetSelectionRangeC1Ev
     // invoke: void QTableWidgetSelectionRange()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN26QTableWidgetSelectionRangeC2Ev(qthis)
+    C.C_ZN26QTableWidgetSelectionRangeC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "QTableWidgetSelectionRange", args)
   }
@@ -488,7 +488,7 @@ func (this *QTableWidget) columnCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget11columnCountEv
     // invoke: int columnCount()
-    C._ZNK12QTableWidget11columnCountEv(this.qclsinst)
+    C.C_ZNK12QTableWidget11columnCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "columnCount", args)
   }
@@ -514,7 +514,7 @@ func (this *QTableWidget) removeCellWidget(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN12QTableWidget16removeCellWidgetEii(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget16removeCellWidgetEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "removeCellWidget", args)
   }
@@ -543,7 +543,7 @@ func (this *QTableWidget) setCellWidget(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN12QTableWidget13setCellWidgetEiiP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN12QTableWidget13setCellWidgetEiiP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTableWidget", "setCellWidget", args)
   }
@@ -566,7 +566,7 @@ func (this *QTableWidget) verticalHeaderItem(args ...interface{}) () {
     // invoke: QTableWidgetItem * verticalHeaderItem(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK12QTableWidget18verticalHeaderItemEi(this.qclsinst, arg0)
+    C.C_ZNK12QTableWidget18verticalHeaderItemEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "verticalHeaderItem", args)
   }
@@ -589,7 +589,7 @@ func (this *QTableWidget) setItemPrototype(args ...interface{}) () {
     // invoke: void setItemPrototype(const class QTableWidgetItem *)
     var arg0 = args[0].(QTableWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setItemPrototype", args)
   }
@@ -609,7 +609,7 @@ func (this *QTableWidget) FreeQTableWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidgetD0Ev
     // invoke: void ~QTableWidget()
-    C._ZN12QTableWidgetD2Ev(this.qclsinst)
+    C.C_ZN12QTableWidgetD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "~QTableWidget", args)
   }
@@ -635,7 +635,7 @@ func (this *QTableWidget) setItemSelected(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "setItemSelected", args)
   }
@@ -658,7 +658,7 @@ func (this *QTableWidget) openPersistentEditor(args ...interface{}) () {
     // invoke: void openPersistentEditor(class QTableWidgetItem *)
     var arg0 = args[0].(QTableWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "openPersistentEditor", args)
   }
@@ -681,7 +681,7 @@ func (this *QTableWidget) row(args ...interface{}) () {
     // invoke: int row(const class QTableWidgetItem *)
     var arg0 = args[0].(QTableWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK12QTableWidget3rowEPK16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZNK12QTableWidget3rowEPK16QTableWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "row", args)
   }
@@ -704,7 +704,7 @@ func (this *QTableWidget) setColumnCount(args ...interface{}) () {
     // invoke: void setColumnCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget14setColumnCountEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget14setColumnCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setColumnCount", args)
   }
@@ -730,7 +730,7 @@ func (this *QTableWidget) setCurrentCell(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN12QTableWidget14setCurrentCellEii(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget14setCurrentCellEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "setCurrentCell", args)
   }
@@ -764,7 +764,7 @@ func NewQTableWidget(args ...interface{}) QTableWidget {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QTableWidgetC2EiiP7QWidget(qthis, arg0, arg1, arg2)
+    C.C_ZN12QTableWidgetC2EiiP7QWidget(qthis, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN12QTableWidgetC1EP7QWidget
     // invoke: void QTableWidget(class QWidget *)
@@ -772,7 +772,7 @@ func NewQTableWidget(args ...interface{}) QTableWidget {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QTableWidgetC2EP7QWidget(qthis, arg0)
+    C.C_ZN12QTableWidgetC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "QTableWidget", args)
   }
@@ -796,7 +796,7 @@ func (this *QTableWidget) setRowCount(args ...interface{}) () {
     // invoke: void setRowCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget11setRowCountEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget11setRowCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setRowCount", args)
   }
@@ -819,7 +819,7 @@ func (this *QTableWidget) editItem(args ...interface{}) () {
     // invoke: void editItem(class QTableWidgetItem *)
     var arg0 = args[0].(QTableWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget8editItemEP16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget8editItemEP16QTableWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "editItem", args)
   }
@@ -845,7 +845,7 @@ func (this *QTableWidget) setHorizontalHeaderItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTableWidgetItem).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "setHorizontalHeaderItem", args)
   }
@@ -865,7 +865,7 @@ func (this *QTableWidget) currentItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget11currentItemEv
     // invoke: QTableWidgetItem * currentItem()
-    C._ZNK12QTableWidget11currentItemEv(this.qclsinst)
+    C.C_ZNK12QTableWidget11currentItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "currentItem", args)
   }
@@ -888,7 +888,7 @@ func (this *QTableWidget) insertColumn(args ...interface{}) () {
     // invoke: void insertColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget12insertColumnEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget12insertColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "insertColumn", args)
   }
@@ -911,7 +911,7 @@ func (this *QTableWidget) isItemSelected(args ...interface{}) () {
     // invoke: bool isItemSelected(const class QTableWidgetItem *)
     var arg0 = args[0].(QTableWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "isItemSelected", args)
   }
@@ -931,7 +931,7 @@ func (this *QTableWidget) clearContents(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget13clearContentsEv
     // invoke: void clearContents()
-    C._ZN12QTableWidget13clearContentsEv(this.qclsinst)
+    C.C_ZN12QTableWidget13clearContentsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "clearContents", args)
   }
@@ -951,7 +951,7 @@ func (this *QTableWidget) currentColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget13currentColumnEv
     // invoke: int currentColumn()
-    C._ZNK12QTableWidget13currentColumnEv(this.qclsinst)
+    C.C_ZNK12QTableWidget13currentColumnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "currentColumn", args)
   }
@@ -978,7 +978,7 @@ func (this *QTableWidget) itemAt(args ...interface{}) () {
     // invoke: QTableWidgetItem * itemAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK12QTableWidget6itemAtERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK12QTableWidget6itemAtERK6QPoint(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK12QTableWidget6itemAtEii
     // invoke: QTableWidgetItem * itemAt(int, int)
@@ -986,7 +986,7 @@ func (this *QTableWidget) itemAt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK12QTableWidget6itemAtEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK12QTableWidget6itemAtEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "itemAt", args)
   }
@@ -1012,7 +1012,7 @@ func (this *QTableWidget) takeItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN12QTableWidget8takeItemEii(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget8takeItemEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "takeItem", args)
   }
@@ -1035,7 +1035,7 @@ func (this *QTableWidget) takeHorizontalHeaderItem(args ...interface{}) () {
     // invoke: QTableWidgetItem * takeHorizontalHeaderItem(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget24takeHorizontalHeaderItemEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget24takeHorizontalHeaderItemEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "takeHorizontalHeaderItem", args)
   }
@@ -1055,7 +1055,7 @@ func (this *QTableWidget) isSortingEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget16isSortingEnabledEv
     // invoke: bool isSortingEnabled()
-    C._ZNK12QTableWidget16isSortingEnabledEv(this.qclsinst)
+    C.C_ZNK12QTableWidget16isSortingEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "isSortingEnabled", args)
   }
@@ -1075,7 +1075,7 @@ func (this *QTableWidget) selectedRanges(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget14selectedRangesEv
     // invoke: QList<QTableWidgetSelectionRange> selectedRanges()
-    C._ZNK12QTableWidget14selectedRangesEv(this.qclsinst)
+    C.C_ZNK12QTableWidget14selectedRangesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "selectedRanges", args)
   }
@@ -1095,7 +1095,7 @@ func (this *QTableWidget) selectedItems(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget13selectedItemsEv
     // invoke: QList<QTableWidgetItem *> selectedItems()
-    C._ZNK12QTableWidget13selectedItemsEv(this.qclsinst)
+    C.C_ZNK12QTableWidget13selectedItemsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "selectedItems", args)
   }
@@ -1118,7 +1118,7 @@ func (this *QTableWidget) removeRow(args ...interface{}) () {
     // invoke: void removeRow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget9removeRowEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget9removeRowEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "removeRow", args)
   }
@@ -1138,7 +1138,7 @@ func (this *QTableWidget) rowCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget8rowCountEv
     // invoke: int rowCount()
-    C._ZNK12QTableWidget8rowCountEv(this.qclsinst)
+    C.C_ZNK12QTableWidget8rowCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "rowCount", args)
   }
@@ -1167,7 +1167,7 @@ func (this *QTableWidget) setItem(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QTableWidgetItem).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN12QTableWidget7setItemEiiP16QTableWidgetItem(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN12QTableWidget7setItemEiiP16QTableWidgetItem(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTableWidget", "setItem", args)
   }
@@ -1190,7 +1190,7 @@ func (this *QTableWidget) takeVerticalHeaderItem(args ...interface{}) () {
     // invoke: QTableWidgetItem * takeVerticalHeaderItem(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget22takeVerticalHeaderItemEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget22takeVerticalHeaderItemEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "takeVerticalHeaderItem", args)
   }
@@ -1213,7 +1213,7 @@ func (this *QTableWidget) horizontalHeaderItem(args ...interface{}) () {
     // invoke: QTableWidgetItem * horizontalHeaderItem(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK12QTableWidget20horizontalHeaderItemEi(this.qclsinst, arg0)
+    C.C_ZNK12QTableWidget20horizontalHeaderItemEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "horizontalHeaderItem", args)
   }
@@ -1236,7 +1236,7 @@ func (this *QTableWidget) setHorizontalHeaderLabels(args ...interface{}) () {
     // invoke: void setHorizontalHeaderLabels(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setHorizontalHeaderLabels", args)
   }
@@ -1259,7 +1259,7 @@ func (this *QTableWidget) visualItemRect(args ...interface{}) () {
     // invoke: QRect visualItemRect(const class QTableWidgetItem *)
     var arg0 = args[0].(QTableWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "visualItemRect", args)
   }
@@ -1282,7 +1282,7 @@ func (this *QTableWidget) removeColumn(args ...interface{}) () {
     // invoke: void removeColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget12removeColumnEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget12removeColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "removeColumn", args)
   }
@@ -1305,7 +1305,7 @@ func (this *QTableWidget) setCurrentItem(args ...interface{}) () {
     // invoke: void setCurrentItem(class QTableWidgetItem *)
     var arg0 = args[0].(QTableWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setCurrentItem", args)
   }
@@ -1325,7 +1325,7 @@ func (this *QTableWidget) currentRow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget10currentRowEv
     // invoke: int currentRow()
-    C._ZNK12QTableWidget10currentRowEv(this.qclsinst)
+    C.C_ZNK12QTableWidget10currentRowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "currentRow", args)
   }
@@ -1345,7 +1345,7 @@ func (this *QTableWidget) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK12QTableWidget10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QTableWidget10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "metaObject", args)
   }
@@ -1365,7 +1365,7 @@ func (this *QTableWidget) itemPrototype(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget13itemPrototypeEv
     // invoke: const QTableWidgetItem * itemPrototype()
-    C._ZNK12QTableWidget13itemPrototypeEv(this.qclsinst)
+    C.C_ZNK12QTableWidget13itemPrototypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "itemPrototype", args)
   }
@@ -1388,7 +1388,7 @@ func (this *QTableWidget) visualRow(args ...interface{}) () {
     // invoke: int visualRow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK12QTableWidget9visualRowEi(this.qclsinst, arg0)
+    C.C_ZNK12QTableWidget9visualRowEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "visualRow", args)
   }
@@ -1411,7 +1411,7 @@ func (this *QTableWidget) column(args ...interface{}) () {
     // invoke: int column(const class QTableWidgetItem *)
     var arg0 = args[0].(QTableWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK12QTableWidget6columnEPK16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZNK12QTableWidget6columnEPK16QTableWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "column", args)
   }
@@ -1437,7 +1437,7 @@ func (this *QTableWidget) cellWidget(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK12QTableWidget10cellWidgetEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK12QTableWidget10cellWidgetEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "cellWidget", args)
   }
@@ -1463,7 +1463,7 @@ func (this *QTableWidget) setRangeSelected(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "setRangeSelected", args)
   }
@@ -1486,7 +1486,7 @@ func (this *QTableWidget) setSortingEnabled(args ...interface{}) () {
     // invoke: void setSortingEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget17setSortingEnabledEb(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget17setSortingEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setSortingEnabled", args)
   }
@@ -1509,7 +1509,7 @@ func (this *QTableWidget) insertRow(args ...interface{}) () {
     // invoke: void insertRow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget9insertRowEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget9insertRowEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "insertRow", args)
   }
@@ -1535,7 +1535,7 @@ func (this *QTableWidget) item(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK12QTableWidget4itemEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK12QTableWidget4itemEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "item", args)
   }
@@ -1558,7 +1558,7 @@ func (this *QTableWidget) visualColumn(args ...interface{}) () {
     // invoke: int visualColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK12QTableWidget12visualColumnEi(this.qclsinst, arg0)
+    C.C_ZNK12QTableWidget12visualColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "visualColumn", args)
   }
@@ -1584,7 +1584,7 @@ func (this *QTableWidget) setVerticalHeaderItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTableWidgetItem).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "setVerticalHeaderItem", args)
   }
@@ -1607,7 +1607,7 @@ func (this *QTableWidget) closePersistentEditor(args ...interface{}) () {
     // invoke: void closePersistentEditor(class QTableWidgetItem *)
     var arg0 = args[0].(QTableWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "closePersistentEditor", args)
   }
@@ -1627,7 +1627,7 @@ func (this *QTableWidget) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget5clearEv
     // invoke: void clear()
-    C._ZN12QTableWidget5clearEv(this.qclsinst)
+    C.C_ZN12QTableWidget5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "clear", args)
   }
@@ -1650,7 +1650,7 @@ func (this *QTableWidget) setVerticalHeaderLabels(args ...interface{}) () {
     // invoke: void setVerticalHeaderLabels(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setVerticalHeaderLabels", args)
   }
@@ -1673,7 +1673,7 @@ func (this *QTableWidgetItem) setTextAlignment(args ...interface{}) () {
     // invoke: void setTextAlignment(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem16setTextAlignmentEi(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem16setTextAlignmentEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setTextAlignment", args)
   }
@@ -1696,7 +1696,7 @@ func (this *QTableWidgetItem) setSizeHint(args ...interface{}) () {
     // invoke: void setSizeHint(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem11setSizeHintERK5QSize(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem11setSizeHintERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setSizeHint", args)
   }
@@ -1719,7 +1719,7 @@ func (this *QTableWidgetItem) setSelected(args ...interface{}) () {
     // invoke: void setSelected(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem11setSelectedEb(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem11setSelectedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setSelected", args)
   }
@@ -1739,7 +1739,7 @@ func (this *QTableWidgetItem) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem4textEv
     // invoke: QString text()
-    C._ZNK16QTableWidgetItem4textEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "text", args)
   }
@@ -1776,7 +1776,7 @@ func NewQTableWidgetItem(args ...interface{}) QTableWidgetItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QTableWidgetItemC2ERKS_(qthis, arg0)
+    C.C_ZN16QTableWidgetItemC2ERKS_(qthis, arg0)
   case 1:
     // invoke: _ZN16QTableWidgetItemC1Ei
     // invoke: void QTableWidgetItem(int)
@@ -1784,7 +1784,7 @@ func NewQTableWidgetItem(args ...interface{}) QTableWidgetItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QTableWidgetItemC2Ei(qthis, arg0)
+    C.C_ZN16QTableWidgetItemC2Ei(qthis, arg0)
   case 2:
     // invoke: _ZN16QTableWidgetItemC1ERK5QIconRK7QStringi
     // invoke: void QTableWidgetItem(const class QIcon &, const class QString &, int)
@@ -1796,7 +1796,7 @@ func NewQTableWidgetItem(args ...interface{}) QTableWidgetItem {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QTableWidgetItemC2ERK5QIconRK7QStringi(qthis, arg0, arg1, arg2)
+    C.C_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi(qthis, arg0, arg1, arg2)
   case 3:
     // invoke: _ZN16QTableWidgetItemC1ERK7QStringi
     // invoke: void QTableWidgetItem(const class QString &, int)
@@ -1806,7 +1806,7 @@ func NewQTableWidgetItem(args ...interface{}) QTableWidgetItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QTableWidgetItemC2ERK7QStringi(qthis, arg0, arg1)
+    C.C_ZN16QTableWidgetItemC2ERK7QStringi(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "QTableWidgetItem", args)
   }
@@ -1827,7 +1827,7 @@ func (this *QTableWidgetItem) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem4fontEv
     // invoke: QFont font()
-    C._ZNK16QTableWidgetItem4fontEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "font", args)
   }
@@ -1847,7 +1847,7 @@ func (this *QTableWidgetItem) row(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem3rowEv
     // invoke: int row()
-    C._ZNK16QTableWidgetItem3rowEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem3rowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "row", args)
   }
@@ -1867,7 +1867,7 @@ func (this *QTableWidgetItem) whatsThis(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem9whatsThisEv
     // invoke: QString whatsThis()
-    C._ZNK16QTableWidgetItem9whatsThisEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem9whatsThisEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "whatsThis", args)
   }
@@ -1890,7 +1890,7 @@ func (this *QTableWidgetItem) setForeground(args ...interface{}) () {
     // invoke: void setForeground(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem13setForegroundERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem13setForegroundERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setForeground", args)
   }
@@ -1910,7 +1910,7 @@ func (this *QTableWidgetItem) isSelected(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem10isSelectedEv
     // invoke: bool isSelected()
-    C._ZNK16QTableWidgetItem10isSelectedEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem10isSelectedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "isSelected", args)
   }
@@ -1933,7 +1933,7 @@ func (this *QTableWidgetItem) write(args ...interface{}) () {
     // invoke: void write(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QTableWidgetItem5writeER11QDataStream(this.qclsinst, arg0)
+    C.C_ZNK16QTableWidgetItem5writeER11QDataStream(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "write", args)
   }
@@ -1956,7 +1956,7 @@ func (this *QTableWidgetItem) read(args ...interface{}) () {
     // invoke: void read(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem4readER11QDataStream(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem4readER11QDataStream(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "read", args)
   }
@@ -1976,7 +1976,7 @@ func (this *QTableWidgetItem) backgroundColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem15backgroundColorEv
     // invoke: QColor backgroundColor()
-    C._ZNK16QTableWidgetItem15backgroundColorEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem15backgroundColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "backgroundColor", args)
   }
@@ -1999,7 +1999,7 @@ func (this *QTableWidgetItem) setBackground(args ...interface{}) () {
     // invoke: void setBackground(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem13setBackgroundERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem13setBackgroundERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setBackground", args)
   }
@@ -2019,7 +2019,7 @@ func (this *QTableWidgetItem) textColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem9textColorEv
     // invoke: QColor textColor()
-    C._ZNK16QTableWidgetItem9textColorEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem9textColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "textColor", args)
   }
@@ -2039,7 +2039,7 @@ func (this *QTableWidgetItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem4typeEv
     // invoke: int type()
-    C._ZNK16QTableWidgetItem4typeEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "type", args)
   }
@@ -2065,7 +2065,7 @@ func (this *QTableWidgetItem) setData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN16QTableWidgetItem7setDataEiRK8QVariant(this.qclsinst, arg0, arg1)
+    C.C_ZN16QTableWidgetItem7setDataEiRK8QVariant(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setData", args)
   }
@@ -2085,7 +2085,7 @@ func (this *QTableWidgetItem) foreground(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem10foregroundEv
     // invoke: QBrush foreground()
-    C._ZNK16QTableWidgetItem10foregroundEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem10foregroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "foreground", args)
   }
@@ -2105,7 +2105,7 @@ func (this *QTableWidgetItem) statusTip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem9statusTipEv
     // invoke: QString statusTip()
-    C._ZNK16QTableWidgetItem9statusTipEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem9statusTipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "statusTip", args)
   }
@@ -2125,7 +2125,7 @@ func (this *QTableWidgetItem) clone(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem5cloneEv
     // invoke: QTableWidgetItem * clone()
-    C._ZNK16QTableWidgetItem5cloneEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem5cloneEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "clone", args)
   }
@@ -2148,7 +2148,7 @@ func (this *QTableWidgetItem) setBackgroundColor(args ...interface{}) () {
     // invoke: void setBackgroundColor(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem18setBackgroundColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem18setBackgroundColorERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setBackgroundColor", args)
   }
@@ -2168,7 +2168,7 @@ func (this *QTableWidgetItem) toolTip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem7toolTipEv
     // invoke: QString toolTip()
-    C._ZNK16QTableWidgetItem7toolTipEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem7toolTipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "toolTip", args)
   }
@@ -2188,7 +2188,7 @@ func (this *QTableWidgetItem) tableWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem11tableWidgetEv
     // invoke: QTableWidget * tableWidget()
-    C._ZNK16QTableWidgetItem11tableWidgetEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem11tableWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "tableWidget", args)
   }
@@ -2211,7 +2211,7 @@ func (this *QTableWidgetItem) setWhatsThis(args ...interface{}) () {
     // invoke: void setWhatsThis(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem12setWhatsThisERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem12setWhatsThisERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setWhatsThis", args)
   }
@@ -2231,7 +2231,7 @@ func (this *QTableWidgetItem) background(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem10backgroundEv
     // invoke: QBrush background()
-    C._ZNK16QTableWidgetItem10backgroundEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem10backgroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "background", args)
   }
@@ -2254,7 +2254,7 @@ func (this *QTableWidgetItem) data(args ...interface{}) () {
     // invoke: QVariant data(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK16QTableWidgetItem4dataEi(this.qclsinst, arg0)
+    C.C_ZNK16QTableWidgetItem4dataEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "data", args)
   }
@@ -2277,7 +2277,7 @@ func (this *QTableWidgetItem) setTextColor(args ...interface{}) () {
     // invoke: void setTextColor(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem12setTextColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem12setTextColorERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setTextColor", args)
   }
@@ -2297,7 +2297,7 @@ func (this *QTableWidgetItem) icon(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem4iconEv
     // invoke: QIcon icon()
-    C._ZNK16QTableWidgetItem4iconEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem4iconEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "icon", args)
   }
@@ -2320,7 +2320,7 @@ func (this *QTableWidgetItem) setToolTip(args ...interface{}) () {
     // invoke: void setToolTip(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem10setToolTipERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem10setToolTipERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setToolTip", args)
   }
@@ -2340,7 +2340,7 @@ func (this *QTableWidgetItem) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK16QTableWidgetItem8sizeHintEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "sizeHint", args)
   }
@@ -2360,7 +2360,7 @@ func (this *QTableWidgetItem) FreeQTableWidgetItem(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItemD0Ev
     // invoke: void ~QTableWidgetItem()
-    C._ZN16QTableWidgetItemD2Ev(this.qclsinst)
+    C.C_ZN16QTableWidgetItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "~QTableWidgetItem", args)
   }
@@ -2380,7 +2380,7 @@ func (this *QTableWidgetItem) column(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem6columnEv
     // invoke: int column()
-    C._ZNK16QTableWidgetItem6columnEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem6columnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "column", args)
   }
@@ -2403,7 +2403,7 @@ func (this *QTableWidgetItem) setIcon(args ...interface{}) () {
     // invoke: void setIcon(const class QIcon &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem7setIconERK5QIcon(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem7setIconERK5QIcon(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setIcon", args)
   }
@@ -2426,7 +2426,7 @@ func (this *QTableWidgetItem) setText(args ...interface{}) () {
     // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setText", args)
   }
@@ -2449,7 +2449,7 @@ func (this *QTableWidgetItem) setStatusTip(args ...interface{}) () {
     // invoke: void setStatusTip(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem12setStatusTipERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem12setStatusTipERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setStatusTip", args)
   }
@@ -2469,7 +2469,7 @@ func (this *QTableWidgetItem) flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem5flagsEv
     // invoke: Qt::ItemFlags flags()
-    C._ZNK16QTableWidgetItem5flagsEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem5flagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "flags", args)
   }
@@ -2489,7 +2489,7 @@ func (this *QTableWidgetItem) checkState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem10checkStateEv
     // invoke: Qt::CheckState checkState()
-    C._ZNK16QTableWidgetItem10checkStateEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem10checkStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "checkState", args)
   }
@@ -2512,7 +2512,7 @@ func (this *QTableWidgetItem) setFont(args ...interface{}) () {
     // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTableWidgetItem7setFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem7setFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setFont", args)
   }
@@ -2532,7 +2532,7 @@ func (this *QTableWidgetItem) textAlignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem13textAlignmentEv
     // invoke: int textAlignment()
-    C._ZNK16QTableWidgetItem13textAlignmentEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem13textAlignmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "textAlignment", args)
   }

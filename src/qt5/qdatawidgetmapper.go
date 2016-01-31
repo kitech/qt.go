@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.go
 //
@@ -29,59 +29,59 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  Qt::Orientation QDataWidgetMapper::orientation();
-extern void _ZNK17QDataWidgetMapper11orientationEv(void* qthis); // 4
+extern void C_ZNK17QDataWidgetMapper11orientationEv(void* qthis); // 4
   // proto:  void QDataWidgetMapper::setItemDelegate(QAbstractItemDelegate * delegate);
-extern void _ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate(void* qthis, void* arg0); // 4
+extern void C_ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate(void* qthis, void* arg0); // 4
   // proto:  void QDataWidgetMapper::revert();
-extern void _ZN17QDataWidgetMapper6revertEv(void* qthis); // 4
+extern void C_ZN17QDataWidgetMapper6revertEv(void* qthis); // 4
   // proto:  int QDataWidgetMapper::mappedSection(QWidget * widget);
-extern void _ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QDataWidgetMapper::setCurrentIndex(int index);
-extern void _ZN17QDataWidgetMapper15setCurrentIndexEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN17QDataWidgetMapper15setCurrentIndexEi(void* qthis, int32_t arg0); // 4
   // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section, const QByteArray & propertyName);
-extern void _ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
   // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section);
-extern void _ZN17QDataWidgetMapper10addMappingEP7QWidgeti(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN17QDataWidgetMapper10addMappingEP7QWidgeti(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QDataWidgetMapper::toPrevious();
-extern void _ZN17QDataWidgetMapper10toPreviousEv(void* qthis); // 4
+extern void C_ZN17QDataWidgetMapper10toPreviousEv(void* qthis); // 4
   // proto:  bool QDataWidgetMapper::submit();
-extern void _ZN17QDataWidgetMapper6submitEv(void* qthis); // 4
+extern void C_ZN17QDataWidgetMapper6submitEv(void* qthis); // 4
   // proto:  QModelIndex QDataWidgetMapper::rootIndex();
-extern void _ZNK17QDataWidgetMapper9rootIndexEv(void* qthis); // 4
+extern void C_ZNK17QDataWidgetMapper9rootIndexEv(void* qthis); // 4
   // proto:  QByteArray QDataWidgetMapper::mappedPropertyName(QWidget * widget);
-extern void _ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QDataWidgetMapper::clearMapping();
-extern void _ZN17QDataWidgetMapper12clearMappingEv(void* qthis); // 4
+extern void C_ZN17QDataWidgetMapper12clearMappingEv(void* qthis); // 4
   // proto:  void QDataWidgetMapper::toLast();
-extern void _ZN17QDataWidgetMapper6toLastEv(void* qthis); // 4
+extern void C_ZN17QDataWidgetMapper6toLastEv(void* qthis); // 4
   // proto:  QDataWidgetMapper::SubmitPolicy QDataWidgetMapper::submitPolicy();
-extern void _ZNK17QDataWidgetMapper12submitPolicyEv(void* qthis); // 4
+extern void C_ZNK17QDataWidgetMapper12submitPolicyEv(void* qthis); // 4
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(QObject * parent);
-extern void _ZN17QDataWidgetMapperC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN17QDataWidgetMapperC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QDataWidgetMapper::setRootIndex(const QModelIndex & index);
-extern void _ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  void QDataWidgetMapper::setModel(QAbstractItemModel * model);
-extern void _ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
+extern void C_ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
   // proto:  void QDataWidgetMapper::toFirst();
-extern void _ZN17QDataWidgetMapper7toFirstEv(void* qthis); // 4
+extern void C_ZN17QDataWidgetMapper7toFirstEv(void* qthis); // 4
   // proto:  QAbstractItemDelegate * QDataWidgetMapper::itemDelegate();
-extern void _ZNK17QDataWidgetMapper12itemDelegateEv(void* qthis); // 4
+extern void C_ZNK17QDataWidgetMapper12itemDelegateEv(void* qthis); // 4
   // proto:  void QDataWidgetMapper::toNext();
-extern void _ZN17QDataWidgetMapper6toNextEv(void* qthis); // 4
+extern void C_ZN17QDataWidgetMapper6toNextEv(void* qthis); // 4
   // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
-extern void _ZN17QDataWidgetMapperD2Ev(void* qthis); // 4
+extern void C_ZN17QDataWidgetMapperD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QDataWidgetMapper::metaObject();
-extern void _ZNK17QDataWidgetMapper10metaObjectEv(void* qthis); // 4
+extern void C_ZNK17QDataWidgetMapper10metaObjectEv(void* qthis); // 4
   // proto:  QWidget * QDataWidgetMapper::mappedWidgetAt(int section);
-extern void _ZNK17QDataWidgetMapper14mappedWidgetAtEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK17QDataWidgetMapper14mappedWidgetAtEi(void* qthis, int32_t arg0); // 4
   // proto:  int QDataWidgetMapper::currentIndex();
-extern void _ZNK17QDataWidgetMapper12currentIndexEv(void* qthis); // 4
+extern void C_ZNK17QDataWidgetMapper12currentIndexEv(void* qthis); // 4
   // proto:  QAbstractItemModel * QDataWidgetMapper::model();
-extern void _ZNK17QDataWidgetMapper5modelEv(void* qthis); // 4
+extern void C_ZNK17QDataWidgetMapper5modelEv(void* qthis); // 4
   // proto:  void QDataWidgetMapper::setCurrentModelIndex(const QModelIndex & index);
-extern void _ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  void QDataWidgetMapper::removeMapping(QWidget * widget);
-extern void _ZN17QDataWidgetMapper13removeMappingEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN17QDataWidgetMapper13removeMappingEP7QWidget(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -114,7 +114,7 @@ func (this *QDataWidgetMapper) orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper11orientationEv
     // invoke: Qt::Orientation orientation()
-    C._ZNK17QDataWidgetMapper11orientationEv(this.qclsinst)
+    C.C_ZNK17QDataWidgetMapper11orientationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "orientation", args)
   }
@@ -137,7 +137,7 @@ func (this *QDataWidgetMapper) setItemDelegate(args ...interface{}) () {
     // invoke: void setItemDelegate(class QAbstractItemDelegate *)
     var arg0 = args[0].(QAbstractItemDelegate).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate(this.qclsinst, arg0)
+    C.C_ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "setItemDelegate", args)
   }
@@ -157,7 +157,7 @@ func (this *QDataWidgetMapper) revert(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QDataWidgetMapper6revertEv
     // invoke: void revert()
-    C._ZN17QDataWidgetMapper6revertEv(this.qclsinst)
+    C.C_ZN17QDataWidgetMapper6revertEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "revert", args)
   }
@@ -180,7 +180,7 @@ func (this *QDataWidgetMapper) mappedSection(args ...interface{}) () {
     // invoke: int mappedSection(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(this.qclsinst, arg0)
+    C.C_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "mappedSection", args)
   }
@@ -203,7 +203,7 @@ func (this *QDataWidgetMapper) setCurrentIndex(args ...interface{}) () {
     // invoke: void setCurrentIndex(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN17QDataWidgetMapper15setCurrentIndexEi(this.qclsinst, arg0)
+    C.C_ZN17QDataWidgetMapper15setCurrentIndexEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "setCurrentIndex", args)
   }
@@ -236,7 +236,7 @@ func (this *QDataWidgetMapper) addMapping(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QByteArray).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN17QDataWidgetMapper10addMappingEP7QWidgeti
     // invoke: void addMapping(class QWidget *, int)
@@ -244,7 +244,7 @@ func (this *QDataWidgetMapper) addMapping(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN17QDataWidgetMapper10addMappingEP7QWidgeti(this.qclsinst, arg0, arg1)
+    C.C_ZN17QDataWidgetMapper10addMappingEP7QWidgeti(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "addMapping", args)
   }
@@ -264,7 +264,7 @@ func (this *QDataWidgetMapper) toPrevious(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QDataWidgetMapper10toPreviousEv
     // invoke: void toPrevious()
-    C._ZN17QDataWidgetMapper10toPreviousEv(this.qclsinst)
+    C.C_ZN17QDataWidgetMapper10toPreviousEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "toPrevious", args)
   }
@@ -284,7 +284,7 @@ func (this *QDataWidgetMapper) submit(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QDataWidgetMapper6submitEv
     // invoke: bool submit()
-    C._ZN17QDataWidgetMapper6submitEv(this.qclsinst)
+    C.C_ZN17QDataWidgetMapper6submitEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "submit", args)
   }
@@ -304,7 +304,7 @@ func (this *QDataWidgetMapper) rootIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper9rootIndexEv
     // invoke: QModelIndex rootIndex()
-    C._ZNK17QDataWidgetMapper9rootIndexEv(this.qclsinst)
+    C.C_ZNK17QDataWidgetMapper9rootIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "rootIndex", args)
   }
@@ -327,7 +327,7 @@ func (this *QDataWidgetMapper) mappedPropertyName(args ...interface{}) () {
     // invoke: QByteArray mappedPropertyName(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(this.qclsinst, arg0)
+    C.C_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "mappedPropertyName", args)
   }
@@ -347,7 +347,7 @@ func (this *QDataWidgetMapper) clearMapping(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QDataWidgetMapper12clearMappingEv
     // invoke: void clearMapping()
-    C._ZN17QDataWidgetMapper12clearMappingEv(this.qclsinst)
+    C.C_ZN17QDataWidgetMapper12clearMappingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "clearMapping", args)
   }
@@ -367,7 +367,7 @@ func (this *QDataWidgetMapper) toLast(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QDataWidgetMapper6toLastEv
     // invoke: void toLast()
-    C._ZN17QDataWidgetMapper6toLastEv(this.qclsinst)
+    C.C_ZN17QDataWidgetMapper6toLastEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "toLast", args)
   }
@@ -387,7 +387,7 @@ func (this *QDataWidgetMapper) submitPolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper12submitPolicyEv
     // invoke: QDataWidgetMapper::SubmitPolicy submitPolicy()
-    C._ZNK17QDataWidgetMapper12submitPolicyEv(this.qclsinst)
+    C.C_ZNK17QDataWidgetMapper12submitPolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "submitPolicy", args)
   }
@@ -412,7 +412,7 @@ func NewQDataWidgetMapper(args ...interface{}) QDataWidgetMapper {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QDataWidgetMapperC2EP7QObject(qthis, arg0)
+    C.C_ZN17QDataWidgetMapperC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "QDataWidgetMapper", args)
   }
@@ -436,7 +436,7 @@ func (this *QDataWidgetMapper) setRootIndex(args ...interface{}) () {
     // invoke: void setRootIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "setRootIndex", args)
   }
@@ -459,7 +459,7 @@ func (this *QDataWidgetMapper) setModel(args ...interface{}) () {
     // invoke: void setModel(class QAbstractItemModel *)
     var arg0 = args[0].(QAbstractItemModel).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
+    C.C_ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "setModel", args)
   }
@@ -479,7 +479,7 @@ func (this *QDataWidgetMapper) toFirst(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QDataWidgetMapper7toFirstEv
     // invoke: void toFirst()
-    C._ZN17QDataWidgetMapper7toFirstEv(this.qclsinst)
+    C.C_ZN17QDataWidgetMapper7toFirstEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "toFirst", args)
   }
@@ -499,7 +499,7 @@ func (this *QDataWidgetMapper) itemDelegate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper12itemDelegateEv
     // invoke: QAbstractItemDelegate * itemDelegate()
-    C._ZNK17QDataWidgetMapper12itemDelegateEv(this.qclsinst)
+    C.C_ZNK17QDataWidgetMapper12itemDelegateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "itemDelegate", args)
   }
@@ -519,7 +519,7 @@ func (this *QDataWidgetMapper) toNext(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QDataWidgetMapper6toNextEv
     // invoke: void toNext()
-    C._ZN17QDataWidgetMapper6toNextEv(this.qclsinst)
+    C.C_ZN17QDataWidgetMapper6toNextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "toNext", args)
   }
@@ -539,7 +539,7 @@ func (this *QDataWidgetMapper) FreeQDataWidgetMapper(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QDataWidgetMapperD0Ev
     // invoke: void ~QDataWidgetMapper()
-    C._ZN17QDataWidgetMapperD2Ev(this.qclsinst)
+    C.C_ZN17QDataWidgetMapperD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "~QDataWidgetMapper", args)
   }
@@ -559,7 +559,7 @@ func (this *QDataWidgetMapper) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK17QDataWidgetMapper10metaObjectEv(this.qclsinst)
+    C.C_ZNK17QDataWidgetMapper10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "metaObject", args)
   }
@@ -582,7 +582,7 @@ func (this *QDataWidgetMapper) mappedWidgetAt(args ...interface{}) () {
     // invoke: QWidget * mappedWidgetAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK17QDataWidgetMapper14mappedWidgetAtEi(this.qclsinst, arg0)
+    C.C_ZNK17QDataWidgetMapper14mappedWidgetAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "mappedWidgetAt", args)
   }
@@ -602,7 +602,7 @@ func (this *QDataWidgetMapper) currentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper12currentIndexEv
     // invoke: int currentIndex()
-    C._ZNK17QDataWidgetMapper12currentIndexEv(this.qclsinst)
+    C.C_ZNK17QDataWidgetMapper12currentIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "currentIndex", args)
   }
@@ -622,7 +622,7 @@ func (this *QDataWidgetMapper) model(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper5modelEv
     // invoke: QAbstractItemModel * model()
-    C._ZNK17QDataWidgetMapper5modelEv(this.qclsinst)
+    C.C_ZNK17QDataWidgetMapper5modelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "model", args)
   }
@@ -645,7 +645,7 @@ func (this *QDataWidgetMapper) setCurrentModelIndex(args ...interface{}) () {
     // invoke: void setCurrentModelIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "setCurrentModelIndex", args)
   }
@@ -668,7 +668,7 @@ func (this *QDataWidgetMapper) removeMapping(args ...interface{}) () {
     // invoke: void removeMapping(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QDataWidgetMapper13removeMappingEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN17QDataWidgetMapper13removeMappingEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "removeMapping", args)
   }

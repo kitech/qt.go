@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qmenubar.h
 // dst-file: /src/widgets/qmenubar.go
 //
@@ -29,55 +29,55 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QAction * QMenuBar::addAction(const QString & text);
-extern void _ZN8QMenuBar9addActionERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN8QMenuBar9addActionERK7QString(void* qthis, void* arg0); // 4
   // proto:  QAction * QMenuBar::addAction(const QString & text, const QObject * receiver, const char * member);
-extern void _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, unsigned char* arg2); // 4
+extern void C_ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, unsigned char* arg2); // 4
   // proto:  bool QMenuBar::isDefaultUp();
-extern void _ZNK8QMenuBar11isDefaultUpEv(void* qthis); // 4
+extern void C_ZNK8QMenuBar11isDefaultUpEv(void* qthis); // 4
   // proto:  QMenu * QMenuBar::addMenu(const QIcon & icon, const QString & title);
-extern void _ZN8QMenuBar7addMenuERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN8QMenuBar7addMenuERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QMenu * QMenuBar::addMenu(const QString & title);
-extern void _ZN8QMenuBar7addMenuERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN8QMenuBar7addMenuERK7QString(void* qthis, void* arg0); // 4
   // proto:  QAction * QMenuBar::addMenu(QMenu * menu);
-extern void _ZN8QMenuBar7addMenuEP5QMenu(void* qthis, void* arg0); // 4
+extern void C_ZN8QMenuBar7addMenuEP5QMenu(void* qthis, void* arg0); // 4
   // proto:  QPlatformMenuBar * QMenuBar::platformMenuBar();
-extern void _ZN8QMenuBar15platformMenuBarEv(void* qthis); // 4
+extern void C_ZN8QMenuBar15platformMenuBarEv(void* qthis); // 4
   // proto:  QAction * QMenuBar::actionAt(const QPoint & );
-extern void _ZNK8QMenuBar8actionAtERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZNK8QMenuBar8actionAtERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  QRect QMenuBar::actionGeometry(QAction * );
-extern void _ZNK8QMenuBar14actionGeometryEP7QAction(void* qthis, void* arg0); // 4
+extern void C_ZNK8QMenuBar14actionGeometryEP7QAction(void* qthis, void* arg0); // 4
   // proto:  QAction * QMenuBar::activeAction();
-extern void _ZNK8QMenuBar12activeActionEv(void* qthis); // 4
+extern void C_ZNK8QMenuBar12activeActionEv(void* qthis); // 4
   // proto:  QAction * QMenuBar::addSeparator();
-extern void _ZN8QMenuBar12addSeparatorEv(void* qthis); // 4
+extern void C_ZN8QMenuBar12addSeparatorEv(void* qthis); // 4
   // proto:  void QMenuBar::setActiveAction(QAction * action);
-extern void _ZN8QMenuBar15setActiveActionEP7QAction(void* qthis, void* arg0); // 4
+extern void C_ZN8QMenuBar15setActiveActionEP7QAction(void* qthis, void* arg0); // 4
   // proto:  bool QMenuBar::isNativeMenuBar();
-extern void _ZNK8QMenuBar15isNativeMenuBarEv(void* qthis); // 4
+extern void C_ZNK8QMenuBar15isNativeMenuBarEv(void* qthis); // 4
   // proto:  void QMenuBar::setNativeMenuBar(bool nativeMenuBar);
-extern void _ZN8QMenuBar16setNativeMenuBarEb(void* qthis, bool arg0); // 4
+extern void C_ZN8QMenuBar16setNativeMenuBarEb(void* qthis, bool arg0); // 4
   // proto:  const QMetaObject * QMenuBar::metaObject();
-extern void _ZNK8QMenuBar10metaObjectEv(void* qthis); // 4
+extern void C_ZNK8QMenuBar10metaObjectEv(void* qthis); // 4
   // proto:  void QMenuBar::QMenuBar(QWidget * parent);
-extern void _ZN8QMenuBarC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN8QMenuBarC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  QSize QMenuBar::sizeHint();
-extern void _ZNK8QMenuBar8sizeHintEv(void* qthis); // 4
+extern void C_ZNK8QMenuBar8sizeHintEv(void* qthis); // 4
   // proto:  QSize QMenuBar::minimumSizeHint();
-extern void _ZNK8QMenuBar15minimumSizeHintEv(void* qthis); // 4
+extern void C_ZNK8QMenuBar15minimumSizeHintEv(void* qthis); // 4
   // proto:  void QMenuBar::clear();
-extern void _ZN8QMenuBar5clearEv(void* qthis); // 4
+extern void C_ZN8QMenuBar5clearEv(void* qthis); // 4
   // proto:  QAction * QMenuBar::insertSeparator(QAction * before);
-extern void _ZN8QMenuBar15insertSeparatorEP7QAction(void* qthis, void* arg0); // 4
+extern void C_ZN8QMenuBar15insertSeparatorEP7QAction(void* qthis, void* arg0); // 4
   // proto:  int QMenuBar::heightForWidth(int );
-extern void _ZNK8QMenuBar14heightForWidthEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK8QMenuBar14heightForWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  void QMenuBar::setDefaultUp(bool );
-extern void _ZN8QMenuBar12setDefaultUpEb(void* qthis, bool arg0); // 4
+extern void C_ZN8QMenuBar12setDefaultUpEb(void* qthis, bool arg0); // 4
   // proto:  void QMenuBar::~QMenuBar();
-extern void _ZN8QMenuBarD2Ev(void* qthis); // 4
+extern void C_ZN8QMenuBarD2Ev(void* qthis); // 4
   // proto:  void QMenuBar::setVisible(bool visible);
-extern void _ZN8QMenuBar10setVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN8QMenuBar10setVisibleEb(void* qthis, bool arg0); // 4
   // proto:  QAction * QMenuBar::insertMenu(QAction * before, QMenu * menu);
-extern void _ZN8QMenuBar10insertMenuEP7QActionP5QMenu(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN8QMenuBar10insertMenuEP7QActionP5QMenu(void* qthis, void* arg0, void* arg1); // 4
 */
 import "C"
 // } // <= ext block end
@@ -119,7 +119,7 @@ func (this *QMenuBar) addAction(args ...interface{}) () {
     // invoke: QAction * addAction(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QMenuBar9addActionERK7QString(this.qclsinst, arg0)
+    C.C_ZN8QMenuBar9addActionERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc
     // invoke: QAction * addAction(const class QString &, const class QObject *, const char *)
@@ -129,7 +129,7 @@ func (this *QMenuBar) addAction(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).Pointer()))
     if false {fmt.Println(arg2)}
-    C._ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QMenuBar", "addAction", args)
   }
@@ -149,7 +149,7 @@ func (this *QMenuBar) isDefaultUp(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMenuBar11isDefaultUpEv
     // invoke: bool isDefaultUp()
-    C._ZNK8QMenuBar11isDefaultUpEv(this.qclsinst)
+    C.C_ZNK8QMenuBar11isDefaultUpEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "isDefaultUp", args)
   }
@@ -181,19 +181,19 @@ func (this *QMenuBar) addMenu(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN8QMenuBar7addMenuERK5QIconRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN8QMenuBar7addMenuERK5QIconRK7QString(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN8QMenuBar7addMenuERK7QString
     // invoke: QMenu * addMenu(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QMenuBar7addMenuERK7QString(this.qclsinst, arg0)
+    C.C_ZN8QMenuBar7addMenuERK7QString(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN8QMenuBar7addMenuEP5QMenu
     // invoke: QAction * addMenu(class QMenu *)
     var arg0 = args[0].(QMenu).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QMenuBar7addMenuEP5QMenu(this.qclsinst, arg0)
+    C.C_ZN8QMenuBar7addMenuEP5QMenu(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "addMenu", args)
   }
@@ -213,7 +213,7 @@ func (this *QMenuBar) platformMenuBar(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMenuBar15platformMenuBarEv
     // invoke: QPlatformMenuBar * platformMenuBar()
-    C._ZN8QMenuBar15platformMenuBarEv(this.qclsinst)
+    C.C_ZN8QMenuBar15platformMenuBarEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "platformMenuBar", args)
   }
@@ -236,7 +236,7 @@ func (this *QMenuBar) actionAt(args ...interface{}) () {
     // invoke: QAction * actionAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK8QMenuBar8actionAtERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK8QMenuBar8actionAtERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "actionAt", args)
   }
@@ -259,7 +259,7 @@ func (this *QMenuBar) actionGeometry(args ...interface{}) () {
     // invoke: QRect actionGeometry(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK8QMenuBar14actionGeometryEP7QAction(this.qclsinst, arg0)
+    C.C_ZNK8QMenuBar14actionGeometryEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "actionGeometry", args)
   }
@@ -279,7 +279,7 @@ func (this *QMenuBar) activeAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMenuBar12activeActionEv
     // invoke: QAction * activeAction()
-    C._ZNK8QMenuBar12activeActionEv(this.qclsinst)
+    C.C_ZNK8QMenuBar12activeActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "activeAction", args)
   }
@@ -299,7 +299,7 @@ func (this *QMenuBar) addSeparator(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMenuBar12addSeparatorEv
     // invoke: QAction * addSeparator()
-    C._ZN8QMenuBar12addSeparatorEv(this.qclsinst)
+    C.C_ZN8QMenuBar12addSeparatorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "addSeparator", args)
   }
@@ -322,7 +322,7 @@ func (this *QMenuBar) setActiveAction(args ...interface{}) () {
     // invoke: void setActiveAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QMenuBar15setActiveActionEP7QAction(this.qclsinst, arg0)
+    C.C_ZN8QMenuBar15setActiveActionEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "setActiveAction", args)
   }
@@ -342,7 +342,7 @@ func (this *QMenuBar) isNativeMenuBar(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMenuBar15isNativeMenuBarEv
     // invoke: bool isNativeMenuBar()
-    C._ZNK8QMenuBar15isNativeMenuBarEv(this.qclsinst)
+    C.C_ZNK8QMenuBar15isNativeMenuBarEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "isNativeMenuBar", args)
   }
@@ -365,7 +365,7 @@ func (this *QMenuBar) setNativeMenuBar(args ...interface{}) () {
     // invoke: void setNativeMenuBar(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN8QMenuBar16setNativeMenuBarEb(this.qclsinst, arg0)
+    C.C_ZN8QMenuBar16setNativeMenuBarEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "setNativeMenuBar", args)
   }
@@ -385,7 +385,7 @@ func (this *QMenuBar) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMenuBar10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK8QMenuBar10metaObjectEv(this.qclsinst)
+    C.C_ZNK8QMenuBar10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "metaObject", args)
   }
@@ -410,7 +410,7 @@ func NewQMenuBar(args ...interface{}) QMenuBar {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QMenuBarC2EP7QWidget(qthis, arg0)
+    C.C_ZN8QMenuBarC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "QMenuBar", args)
   }
@@ -431,7 +431,7 @@ func (this *QMenuBar) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMenuBar8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK8QMenuBar8sizeHintEv(this.qclsinst)
+    C.C_ZNK8QMenuBar8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "sizeHint", args)
   }
@@ -451,7 +451,7 @@ func (this *QMenuBar) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMenuBar15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C._ZNK8QMenuBar15minimumSizeHintEv(this.qclsinst)
+    C.C_ZNK8QMenuBar15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "minimumSizeHint", args)
   }
@@ -471,7 +471,7 @@ func (this *QMenuBar) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMenuBar5clearEv
     // invoke: void clear()
-    C._ZN8QMenuBar5clearEv(this.qclsinst)
+    C.C_ZN8QMenuBar5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "clear", args)
   }
@@ -494,7 +494,7 @@ func (this *QMenuBar) insertSeparator(args ...interface{}) () {
     // invoke: QAction * insertSeparator(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QMenuBar15insertSeparatorEP7QAction(this.qclsinst, arg0)
+    C.C_ZN8QMenuBar15insertSeparatorEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "insertSeparator", args)
   }
@@ -517,7 +517,7 @@ func (this *QMenuBar) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK8QMenuBar14heightForWidthEi(this.qclsinst, arg0)
+    C.C_ZNK8QMenuBar14heightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "heightForWidth", args)
   }
@@ -540,7 +540,7 @@ func (this *QMenuBar) setDefaultUp(args ...interface{}) () {
     // invoke: void setDefaultUp(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN8QMenuBar12setDefaultUpEb(this.qclsinst, arg0)
+    C.C_ZN8QMenuBar12setDefaultUpEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "setDefaultUp", args)
   }
@@ -560,7 +560,7 @@ func (this *QMenuBar) FreeQMenuBar(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMenuBarD0Ev
     // invoke: void ~QMenuBar()
-    C._ZN8QMenuBarD2Ev(this.qclsinst)
+    C.C_ZN8QMenuBarD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "~QMenuBar", args)
   }
@@ -583,7 +583,7 @@ func (this *QMenuBar) setVisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN8QMenuBar10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN8QMenuBar10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "setVisible", args)
   }
@@ -609,7 +609,7 @@ func (this *QMenuBar) insertMenu(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QMenu).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN8QMenuBar10insertMenuEP7QActionP5QMenu(this.qclsinst, arg0, arg1)
+    C.C_ZN8QMenuBar10insertMenuEP7QActionP5QMenu(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMenuBar", "insertMenu", args)
   }

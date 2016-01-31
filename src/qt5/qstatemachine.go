@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.go
 //
@@ -29,49 +29,49 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
-extern void _ZNK13QStateMachine17defaultAnimationsEv(void* qthis); // 4
+extern void C_ZNK13QStateMachine17defaultAnimationsEv(void* qthis); // 4
   // proto:  QState::RestorePolicy QStateMachine::globalRestorePolicy();
-extern void _ZNK13QStateMachine19globalRestorePolicyEv(void* qthis); // 4
+extern void C_ZNK13QStateMachine19globalRestorePolicyEv(void* qthis); // 4
   // proto:  void QStateMachine::addDefaultAnimation(QAbstractAnimation * animation);
-extern void _ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
+extern void C_ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
   // proto:  void QStateMachine::clearError();
-extern void _ZN13QStateMachine10clearErrorEv(void* qthis); // 4
+extern void C_ZN13QStateMachine10clearErrorEv(void* qthis); // 4
   // proto:  bool QStateMachine::isAnimated();
-extern void _ZNK13QStateMachine10isAnimatedEv(void* qthis); // 4
+extern void C_ZNK13QStateMachine10isAnimatedEv(void* qthis); // 4
   // proto:  void QStateMachine::addState(QAbstractState * state);
-extern void _ZN13QStateMachine8addStateEP14QAbstractState(void* qthis, void* arg0); // 4
+extern void C_ZN13QStateMachine8addStateEP14QAbstractState(void* qthis, void* arg0); // 4
   // proto:  bool QStateMachine::eventFilter(QObject * watched, QEvent * event);
-extern void _ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QStateMachine::start();
-extern void _ZN13QStateMachine5startEv(void* qthis); // 4
+extern void C_ZN13QStateMachine5startEv(void* qthis); // 4
   // proto:  bool QStateMachine::cancelDelayedEvent(int id);
-extern void _ZN13QStateMachine18cancelDelayedEventEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN13QStateMachine18cancelDelayedEventEi(void* qthis, int32_t arg0); // 4
   // proto:  void QStateMachine::setRunning(bool running);
-extern void _ZN13QStateMachine10setRunningEb(void* qthis, bool arg0); // 4
+extern void C_ZN13QStateMachine10setRunningEb(void* qthis, bool arg0); // 4
   // proto:  void QStateMachine::removeState(QAbstractState * state);
-extern void _ZN13QStateMachine11removeStateEP14QAbstractState(void* qthis, void* arg0); // 4
+extern void C_ZN13QStateMachine11removeStateEP14QAbstractState(void* qthis, void* arg0); // 4
   // proto:  QString QStateMachine::errorString();
-extern void _ZNK13QStateMachine11errorStringEv(void* qthis); // 4
+extern void C_ZNK13QStateMachine11errorStringEv(void* qthis); // 4
   // proto:  void QStateMachine::stop();
-extern void _ZN13QStateMachine4stopEv(void* qthis); // 4
+extern void C_ZN13QStateMachine4stopEv(void* qthis); // 4
   // proto:  void QStateMachine::setAnimated(bool enabled);
-extern void _ZN13QStateMachine11setAnimatedEb(void* qthis, bool arg0); // 4
+extern void C_ZN13QStateMachine11setAnimatedEb(void* qthis, bool arg0); // 4
   // proto:  const QMetaObject * QStateMachine::metaObject();
-extern void _ZNK13QStateMachine10metaObjectEv(void* qthis); // 4
+extern void C_ZNK13QStateMachine10metaObjectEv(void* qthis); // 4
   // proto:  QSet<QAbstractState *> QStateMachine::configuration();
-extern void _ZNK13QStateMachine13configurationEv(void* qthis); // 4
+extern void C_ZNK13QStateMachine13configurationEv(void* qthis); // 4
   // proto:  bool QStateMachine::isRunning();
-extern void _ZNK13QStateMachine9isRunningEv(void* qthis); // 4
+extern void C_ZNK13QStateMachine9isRunningEv(void* qthis); // 4
   // proto:  void QStateMachine::~QStateMachine();
-extern void _ZN13QStateMachineD2Ev(void* qthis); // 4
+extern void C_ZN13QStateMachineD2Ev(void* qthis); // 4
   // proto:  void QStateMachine::QStateMachine(QObject * parent);
-extern void _ZN13QStateMachineC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN13QStateMachineC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
-extern void _ZN13QStateMachine16postDelayedEventEP6QEventi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN13QStateMachine16postDelayedEventEP6QEventi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QStateMachine::Error QStateMachine::error();
-extern void _ZNK13QStateMachine5errorEv(void* qthis); // 4
+extern void C_ZNK13QStateMachine5errorEv(void* qthis); // 4
   // proto:  void QStateMachine::removeDefaultAnimation(QAbstractAnimation * animation);
-extern void _ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
+extern void C_ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -106,7 +106,7 @@ func (this *QStateMachine) defaultAnimations(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine17defaultAnimationsEv
     // invoke: QList<QAbstractAnimation *> defaultAnimations()
-    C._ZNK13QStateMachine17defaultAnimationsEv(this.qclsinst)
+    C.C_ZNK13QStateMachine17defaultAnimationsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStateMachine", "defaultAnimations", args)
   }
@@ -126,7 +126,7 @@ func (this *QStateMachine) globalRestorePolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine19globalRestorePolicyEv
     // invoke: QState::RestorePolicy globalRestorePolicy()
-    C._ZNK13QStateMachine19globalRestorePolicyEv(this.qclsinst)
+    C.C_ZNK13QStateMachine19globalRestorePolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStateMachine", "globalRestorePolicy", args)
   }
@@ -149,7 +149,7 @@ func (this *QStateMachine) addDefaultAnimation(args ...interface{}) () {
     // invoke: void addDefaultAnimation(class QAbstractAnimation *)
     var arg0 = args[0].(QAbstractAnimation).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
+    C.C_ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStateMachine", "addDefaultAnimation", args)
   }
@@ -169,7 +169,7 @@ func (this *QStateMachine) clearError(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStateMachine10clearErrorEv
     // invoke: void clearError()
-    C._ZN13QStateMachine10clearErrorEv(this.qclsinst)
+    C.C_ZN13QStateMachine10clearErrorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStateMachine", "clearError", args)
   }
@@ -189,7 +189,7 @@ func (this *QStateMachine) isAnimated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine10isAnimatedEv
     // invoke: bool isAnimated()
-    C._ZNK13QStateMachine10isAnimatedEv(this.qclsinst)
+    C.C_ZNK13QStateMachine10isAnimatedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStateMachine", "isAnimated", args)
   }
@@ -212,7 +212,7 @@ func (this *QStateMachine) addState(args ...interface{}) () {
     // invoke: void addState(class QAbstractState *)
     var arg0 = args[0].(QAbstractState).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QStateMachine8addStateEP14QAbstractState(this.qclsinst, arg0)
+    C.C_ZN13QStateMachine8addStateEP14QAbstractState(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStateMachine", "addState", args)
   }
@@ -238,7 +238,7 @@ func (this *QStateMachine) eventFilter(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
+    C.C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStateMachine", "eventFilter", args)
   }
@@ -258,7 +258,7 @@ func (this *QStateMachine) start(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStateMachine5startEv
     // invoke: void start()
-    C._ZN13QStateMachine5startEv(this.qclsinst)
+    C.C_ZN13QStateMachine5startEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStateMachine", "start", args)
   }
@@ -281,7 +281,7 @@ func (this *QStateMachine) cancelDelayedEvent(args ...interface{}) () {
     // invoke: bool cancelDelayedEvent(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN13QStateMachine18cancelDelayedEventEi(this.qclsinst, arg0)
+    C.C_ZN13QStateMachine18cancelDelayedEventEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStateMachine", "cancelDelayedEvent", args)
   }
@@ -304,7 +304,7 @@ func (this *QStateMachine) setRunning(args ...interface{}) () {
     // invoke: void setRunning(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN13QStateMachine10setRunningEb(this.qclsinst, arg0)
+    C.C_ZN13QStateMachine10setRunningEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStateMachine", "setRunning", args)
   }
@@ -327,7 +327,7 @@ func (this *QStateMachine) removeState(args ...interface{}) () {
     // invoke: void removeState(class QAbstractState *)
     var arg0 = args[0].(QAbstractState).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QStateMachine11removeStateEP14QAbstractState(this.qclsinst, arg0)
+    C.C_ZN13QStateMachine11removeStateEP14QAbstractState(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStateMachine", "removeState", args)
   }
@@ -347,7 +347,7 @@ func (this *QStateMachine) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine11errorStringEv
     // invoke: QString errorString()
-    C._ZNK13QStateMachine11errorStringEv(this.qclsinst)
+    C.C_ZNK13QStateMachine11errorStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStateMachine", "errorString", args)
   }
@@ -367,7 +367,7 @@ func (this *QStateMachine) stop(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStateMachine4stopEv
     // invoke: void stop()
-    C._ZN13QStateMachine4stopEv(this.qclsinst)
+    C.C_ZN13QStateMachine4stopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStateMachine", "stop", args)
   }
@@ -390,7 +390,7 @@ func (this *QStateMachine) setAnimated(args ...interface{}) () {
     // invoke: void setAnimated(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN13QStateMachine11setAnimatedEb(this.qclsinst, arg0)
+    C.C_ZN13QStateMachine11setAnimatedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStateMachine", "setAnimated", args)
   }
@@ -410,7 +410,7 @@ func (this *QStateMachine) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK13QStateMachine10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QStateMachine10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStateMachine", "metaObject", args)
   }
@@ -430,7 +430,7 @@ func (this *QStateMachine) configuration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine13configurationEv
     // invoke: QSet<QAbstractState *> configuration()
-    C._ZNK13QStateMachine13configurationEv(this.qclsinst)
+    C.C_ZNK13QStateMachine13configurationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStateMachine", "configuration", args)
   }
@@ -450,7 +450,7 @@ func (this *QStateMachine) isRunning(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine9isRunningEv
     // invoke: bool isRunning()
-    C._ZNK13QStateMachine9isRunningEv(this.qclsinst)
+    C.C_ZNK13QStateMachine9isRunningEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStateMachine", "isRunning", args)
   }
@@ -470,7 +470,7 @@ func (this *QStateMachine) FreeQStateMachine(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStateMachineD0Ev
     // invoke: void ~QStateMachine()
-    C._ZN13QStateMachineD2Ev(this.qclsinst)
+    C.C_ZN13QStateMachineD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStateMachine", "~QStateMachine", args)
   }
@@ -495,7 +495,7 @@ func NewQStateMachine(args ...interface{}) QStateMachine {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QStateMachineC2EP7QObject(qthis, arg0)
+    C.C_ZN13QStateMachineC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QStateMachine", "QStateMachine", args)
   }
@@ -522,7 +522,7 @@ func (this *QStateMachine) postDelayedEvent(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN13QStateMachine16postDelayedEventEP6QEventi(this.qclsinst, arg0, arg1)
+    C.C_ZN13QStateMachine16postDelayedEventEP6QEventi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStateMachine", "postDelayedEvent", args)
   }
@@ -542,7 +542,7 @@ func (this *QStateMachine) error(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine5errorEv
     // invoke: QStateMachine::Error error()
-    C._ZNK13QStateMachine5errorEv(this.qclsinst)
+    C.C_ZNK13QStateMachine5errorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStateMachine", "error", args)
   }
@@ -565,7 +565,7 @@ func (this *QStateMachine) removeDefaultAnimation(args ...interface{}) () {
     // invoke: void removeDefaultAnimation(class QAbstractAnimation *)
     var arg0 = args[0].(QAbstractAnimation).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
+    C.C_ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStateMachine", "removeDefaultAnimation", args)
   }

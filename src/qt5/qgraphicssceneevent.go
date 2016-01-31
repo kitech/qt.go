@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qgraphicssceneevent.h
 // dst-file: /src/widgets/qgraphicssceneevent.go
 //
@@ -29,185 +29,185 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QGraphicsSceneMoveEvent::setNewPos(const QPointF & pos);
-extern void _ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsSceneMoveEvent::newPos();
-extern void _ZNK23QGraphicsSceneMoveEvent6newPosEv(void* qthis); // 4
+extern void C_ZNK23QGraphicsSceneMoveEvent6newPosEv(void* qthis); // 4
   // proto:  void QGraphicsSceneMoveEvent::QGraphicsSceneMoveEvent();
-extern void _ZN23QGraphicsSceneMoveEventC2Ev(void* qthis); // 3
+extern void C_ZN23QGraphicsSceneMoveEventC2Ev(void* qthis); // 3
   // proto:  void QGraphicsSceneMoveEvent::~QGraphicsSceneMoveEvent();
-extern void _ZN23QGraphicsSceneMoveEventD2Ev(void* qthis); // 4
+extern void C_ZN23QGraphicsSceneMoveEventD2Ev(void* qthis); // 4
   // proto:  QPointF QGraphicsSceneMoveEvent::oldPos();
-extern void _ZNK23QGraphicsSceneMoveEvent6oldPosEv(void* qthis); // 4
+extern void C_ZNK23QGraphicsSceneMoveEvent6oldPosEv(void* qthis); // 4
   // proto:  void QGraphicsSceneMoveEvent::setOldPos(const QPointF & pos);
-extern void _ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  Qt::KeyboardModifiers QGraphicsSceneContextMenuEvent::modifiers();
-extern void _ZNK30QGraphicsSceneContextMenuEvent9modifiersEv(void* qthis); // 4
+extern void C_ZNK30QGraphicsSceneContextMenuEvent9modifiersEv(void* qthis); // 4
   // proto:  void QGraphicsSceneContextMenuEvent::setScreenPos(const QPoint & pos);
-extern void _ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSceneContextMenuEvent::setPos(const QPointF & pos);
-extern void _ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsSceneContextMenuEvent::pos();
-extern void _ZNK30QGraphicsSceneContextMenuEvent3posEv(void* qthis); // 4
+extern void C_ZNK30QGraphicsSceneContextMenuEvent3posEv(void* qthis); // 4
   // proto:  void QGraphicsSceneContextMenuEvent::setScenePos(const QPointF & pos);
-extern void _ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QGraphicsSceneContextMenuEvent::Reason QGraphicsSceneContextMenuEvent::reason();
-extern void _ZNK30QGraphicsSceneContextMenuEvent6reasonEv(void* qthis); // 4
+extern void C_ZNK30QGraphicsSceneContextMenuEvent6reasonEv(void* qthis); // 4
   // proto:  QPoint QGraphicsSceneContextMenuEvent::screenPos();
-extern void _ZNK30QGraphicsSceneContextMenuEvent9screenPosEv(void* qthis); // 4
+extern void C_ZNK30QGraphicsSceneContextMenuEvent9screenPosEv(void* qthis); // 4
   // proto:  QPointF QGraphicsSceneContextMenuEvent::scenePos();
-extern void _ZNK30QGraphicsSceneContextMenuEvent8scenePosEv(void* qthis); // 4
+extern void C_ZNK30QGraphicsSceneContextMenuEvent8scenePosEv(void* qthis); // 4
   // proto:  void QGraphicsSceneContextMenuEvent::~QGraphicsSceneContextMenuEvent();
-extern void _ZN30QGraphicsSceneContextMenuEventD2Ev(void* qthis); // 4
+extern void C_ZN30QGraphicsSceneContextMenuEventD2Ev(void* qthis); // 4
   // proto:  void QGraphicsSceneMouseEvent::setScreenPos(const QPoint & pos);
-extern void _ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsSceneMouseEvent::lastPos();
-extern void _ZNK24QGraphicsSceneMouseEvent7lastPosEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneMouseEvent7lastPosEv(void* qthis); // 4
   // proto:  QPointF QGraphicsSceneMouseEvent::pos();
-extern void _ZNK24QGraphicsSceneMouseEvent3posEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneMouseEvent3posEv(void* qthis); // 4
   // proto:  QPointF QGraphicsSceneMouseEvent::lastScenePos();
-extern void _ZNK24QGraphicsSceneMouseEvent12lastScenePosEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneMouseEvent12lastScenePosEv(void* qthis); // 4
   // proto:  Qt::KeyboardModifiers QGraphicsSceneMouseEvent::modifiers();
-extern void _ZNK24QGraphicsSceneMouseEvent9modifiersEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneMouseEvent9modifiersEv(void* qthis); // 4
   // proto:  void QGraphicsSceneMouseEvent::setLastPos(const QPointF & pos);
-extern void _ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSceneMouseEvent::~QGraphicsSceneMouseEvent();
-extern void _ZN24QGraphicsSceneMouseEventD2Ev(void* qthis); // 4
+extern void C_ZN24QGraphicsSceneMouseEventD2Ev(void* qthis); // 4
   // proto:  Qt::MouseButtons QGraphicsSceneMouseEvent::buttons();
-extern void _ZNK24QGraphicsSceneMouseEvent7buttonsEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneMouseEvent7buttonsEv(void* qthis); // 4
   // proto:  Qt::MouseEventSource QGraphicsSceneMouseEvent::source();
-extern void _ZNK24QGraphicsSceneMouseEvent6sourceEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneMouseEvent6sourceEv(void* qthis); // 4
   // proto:  QPointF QGraphicsSceneMouseEvent::scenePos();
-extern void _ZNK24QGraphicsSceneMouseEvent8scenePosEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneMouseEvent8scenePosEv(void* qthis); // 4
   // proto:  void QGraphicsSceneMouseEvent::setScenePos(const QPointF & pos);
-extern void _ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSceneMouseEvent::setLastScreenPos(const QPoint & pos);
-extern void _ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  QPoint QGraphicsSceneMouseEvent::screenPos();
-extern void _ZNK24QGraphicsSceneMouseEvent9screenPosEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneMouseEvent9screenPosEv(void* qthis); // 4
   // proto:  QPoint QGraphicsSceneMouseEvent::lastScreenPos();
-extern void _ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv(void* qthis); // 4
   // proto:  void QGraphicsSceneMouseEvent::setPos(const QPointF & pos);
-extern void _ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  Qt::MouseButton QGraphicsSceneMouseEvent::button();
-extern void _ZNK24QGraphicsSceneMouseEvent6buttonEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneMouseEvent6buttonEv(void* qthis); // 4
   // proto:  Qt::MouseEventFlags QGraphicsSceneMouseEvent::flags();
-extern void _ZNK24QGraphicsSceneMouseEvent5flagsEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneMouseEvent5flagsEv(void* qthis); // 4
   // proto:  void QGraphicsSceneMouseEvent::setLastScenePos(const QPointF & pos);
-extern void _ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPoint QGraphicsSceneHelpEvent::screenPos();
-extern void _ZNK23QGraphicsSceneHelpEvent9screenPosEv(void* qthis); // 4
+extern void C_ZNK23QGraphicsSceneHelpEvent9screenPosEv(void* qthis); // 4
   // proto:  void QGraphicsSceneHelpEvent::setScreenPos(const QPoint & pos);
-extern void _ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSceneHelpEvent::~QGraphicsSceneHelpEvent();
-extern void _ZN23QGraphicsSceneHelpEventD2Ev(void* qthis); // 4
+extern void C_ZN23QGraphicsSceneHelpEventD2Ev(void* qthis); // 4
   // proto:  void QGraphicsSceneHelpEvent::setScenePos(const QPointF & pos);
-extern void _ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsSceneHelpEvent::scenePos();
-extern void _ZNK23QGraphicsSceneHelpEvent8scenePosEv(void* qthis); // 4
+extern void C_ZNK23QGraphicsSceneHelpEvent8scenePosEv(void* qthis); // 4
   // proto:  Qt::KeyboardModifiers QGraphicsSceneHoverEvent::modifiers();
-extern void _ZNK24QGraphicsSceneHoverEvent9modifiersEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneHoverEvent9modifiersEv(void* qthis); // 4
   // proto:  void QGraphicsSceneHoverEvent::setLastPos(const QPointF & pos);
-extern void _ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSceneHoverEvent::setScreenPos(const QPoint & pos);
-extern void _ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsSceneHoverEvent::lastPos();
-extern void _ZNK24QGraphicsSceneHoverEvent7lastPosEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneHoverEvent7lastPosEv(void* qthis); // 4
   // proto:  QPoint QGraphicsSceneHoverEvent::lastScreenPos();
-extern void _ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv(void* qthis); // 4
   // proto:  QPointF QGraphicsSceneHoverEvent::pos();
-extern void _ZNK24QGraphicsSceneHoverEvent3posEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneHoverEvent3posEv(void* qthis); // 4
   // proto:  void QGraphicsSceneHoverEvent::setScenePos(const QPointF & pos);
-extern void _ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSceneHoverEvent::setPos(const QPointF & pos);
-extern void _ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPoint QGraphicsSceneHoverEvent::screenPos();
-extern void _ZNK24QGraphicsSceneHoverEvent9screenPosEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneHoverEvent9screenPosEv(void* qthis); // 4
   // proto:  void QGraphicsSceneHoverEvent::setLastScenePos(const QPointF & pos);
-extern void _ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsSceneHoverEvent::lastScenePos();
-extern void _ZNK24QGraphicsSceneHoverEvent12lastScenePosEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv(void* qthis); // 4
   // proto:  void QGraphicsSceneHoverEvent::~QGraphicsSceneHoverEvent();
-extern void _ZN24QGraphicsSceneHoverEventD2Ev(void* qthis); // 4
+extern void C_ZN24QGraphicsSceneHoverEventD2Ev(void* qthis); // 4
   // proto:  void QGraphicsSceneHoverEvent::setLastScreenPos(const QPoint & pos);
-extern void _ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsSceneHoverEvent::scenePos();
-extern void _ZNK24QGraphicsSceneHoverEvent8scenePosEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneHoverEvent8scenePosEv(void* qthis); // 4
   // proto:  Qt::KeyboardModifiers QGraphicsSceneWheelEvent::modifiers();
-extern void _ZNK24QGraphicsSceneWheelEvent9modifiersEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneWheelEvent9modifiersEv(void* qthis); // 4
   // proto:  void QGraphicsSceneWheelEvent::setDelta(int delta);
-extern void _ZN24QGraphicsSceneWheelEvent8setDeltaEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN24QGraphicsSceneWheelEvent8setDeltaEi(void* qthis, int32_t arg0); // 4
   // proto:  Qt::Orientation QGraphicsSceneWheelEvent::orientation();
-extern void _ZNK24QGraphicsSceneWheelEvent11orientationEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneWheelEvent11orientationEv(void* qthis); // 4
   // proto:  void QGraphicsSceneWheelEvent::setScreenPos(const QPoint & pos);
-extern void _ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSceneWheelEvent::setPos(const QPointF & pos);
-extern void _ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsSceneWheelEvent::pos();
-extern void _ZNK24QGraphicsSceneWheelEvent3posEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneWheelEvent3posEv(void* qthis); // 4
   // proto:  void QGraphicsSceneWheelEvent::setScenePos(const QPointF & pos);
-extern void _ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  Qt::MouseButtons QGraphicsSceneWheelEvent::buttons();
-extern void _ZNK24QGraphicsSceneWheelEvent7buttonsEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneWheelEvent7buttonsEv(void* qthis); // 4
   // proto:  QPoint QGraphicsSceneWheelEvent::screenPos();
-extern void _ZNK24QGraphicsSceneWheelEvent9screenPosEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneWheelEvent9screenPosEv(void* qthis); // 4
   // proto:  int QGraphicsSceneWheelEvent::delta();
-extern void _ZNK24QGraphicsSceneWheelEvent5deltaEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneWheelEvent5deltaEv(void* qthis); // 4
   // proto:  void QGraphicsSceneWheelEvent::~QGraphicsSceneWheelEvent();
-extern void _ZN24QGraphicsSceneWheelEventD2Ev(void* qthis); // 4
+extern void C_ZN24QGraphicsSceneWheelEventD2Ev(void* qthis); // 4
   // proto:  QPointF QGraphicsSceneWheelEvent::scenePos();
-extern void _ZNK24QGraphicsSceneWheelEvent8scenePosEv(void* qthis); // 4
+extern void C_ZNK24QGraphicsSceneWheelEvent8scenePosEv(void* qthis); // 4
   // proto:  void QGraphicsSceneDragDropEvent::setMimeData(const QMimeData * data);
-extern void _ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData(void* qthis, void* arg0); // 4
+extern void C_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSceneDragDropEvent::setScreenPos(const QPoint & pos);
-extern void _ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsSceneDragDropEvent::pos();
-extern void _ZNK27QGraphicsSceneDragDropEvent3posEv(void* qthis); // 4
+extern void C_ZNK27QGraphicsSceneDragDropEvent3posEv(void* qthis); // 4
   // proto:  void QGraphicsSceneDragDropEvent::setSource(QWidget * source);
-extern void _ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSceneDragDropEvent::acceptProposedAction();
-extern void _ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv(void* qthis); // 4
+extern void C_ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv(void* qthis); // 4
   // proto:  Qt::MouseButtons QGraphicsSceneDragDropEvent::buttons();
-extern void _ZNK27QGraphicsSceneDragDropEvent7buttonsEv(void* qthis); // 4
+extern void C_ZNK27QGraphicsSceneDragDropEvent7buttonsEv(void* qthis); // 4
   // proto:  QWidget * QGraphicsSceneDragDropEvent::source();
-extern void _ZNK27QGraphicsSceneDragDropEvent6sourceEv(void* qthis); // 4
+extern void C_ZNK27QGraphicsSceneDragDropEvent6sourceEv(void* qthis); // 4
   // proto:  QPointF QGraphicsSceneDragDropEvent::scenePos();
-extern void _ZNK27QGraphicsSceneDragDropEvent8scenePosEv(void* qthis); // 4
+extern void C_ZNK27QGraphicsSceneDragDropEvent8scenePosEv(void* qthis); // 4
   // proto:  Qt::DropAction QGraphicsSceneDragDropEvent::proposedAction();
-extern void _ZNK27QGraphicsSceneDragDropEvent14proposedActionEv(void* qthis); // 4
+extern void C_ZNK27QGraphicsSceneDragDropEvent14proposedActionEv(void* qthis); // 4
   // proto:  void QGraphicsSceneDragDropEvent::setScenePos(const QPointF & pos);
-extern void _ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  Qt::DropActions QGraphicsSceneDragDropEvent::possibleActions();
-extern void _ZNK27QGraphicsSceneDragDropEvent15possibleActionsEv(void* qthis); // 4
+extern void C_ZNK27QGraphicsSceneDragDropEvent15possibleActionsEv(void* qthis); // 4
   // proto:  Qt::DropAction QGraphicsSceneDragDropEvent::dropAction();
-extern void _ZNK27QGraphicsSceneDragDropEvent10dropActionEv(void* qthis); // 4
+extern void C_ZNK27QGraphicsSceneDragDropEvent10dropActionEv(void* qthis); // 4
   // proto:  void QGraphicsSceneDragDropEvent::~QGraphicsSceneDragDropEvent();
-extern void _ZN27QGraphicsSceneDragDropEventD2Ev(void* qthis); // 4
+extern void C_ZN27QGraphicsSceneDragDropEventD2Ev(void* qthis); // 4
   // proto:  QPoint QGraphicsSceneDragDropEvent::screenPos();
-extern void _ZNK27QGraphicsSceneDragDropEvent9screenPosEv(void* qthis); // 4
+extern void C_ZNK27QGraphicsSceneDragDropEvent9screenPosEv(void* qthis); // 4
   // proto:  const QMimeData * QGraphicsSceneDragDropEvent::mimeData();
-extern void _ZNK27QGraphicsSceneDragDropEvent8mimeDataEv(void* qthis); // 4
+extern void C_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv(void* qthis); // 4
   // proto:  Qt::KeyboardModifiers QGraphicsSceneDragDropEvent::modifiers();
-extern void _ZNK27QGraphicsSceneDragDropEvent9modifiersEv(void* qthis); // 4
+extern void C_ZNK27QGraphicsSceneDragDropEvent9modifiersEv(void* qthis); // 4
   // proto:  void QGraphicsSceneDragDropEvent::setPos(const QPointF & pos);
-extern void _ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSceneEvent::~QGraphicsSceneEvent();
-extern void _ZN19QGraphicsSceneEventD2Ev(void* qthis); // 4
+extern void C_ZN19QGraphicsSceneEventD2Ev(void* qthis); // 4
   // proto:  QWidget * QGraphicsSceneEvent::widget();
-extern void _ZNK19QGraphicsSceneEvent6widgetEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsSceneEvent6widgetEv(void* qthis); // 4
   // proto:  void QGraphicsSceneEvent::setWidget(QWidget * widget);
-extern void _ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  QSizeF QGraphicsSceneResizeEvent::newSize();
-extern void _ZNK25QGraphicsSceneResizeEvent7newSizeEv(void* qthis); // 4
+extern void C_ZNK25QGraphicsSceneResizeEvent7newSizeEv(void* qthis); // 4
   // proto:  QSizeF QGraphicsSceneResizeEvent::oldSize();
-extern void _ZNK25QGraphicsSceneResizeEvent7oldSizeEv(void* qthis); // 4
+extern void C_ZNK25QGraphicsSceneResizeEvent7oldSizeEv(void* qthis); // 4
   // proto:  void QGraphicsSceneResizeEvent::setOldSize(const QSizeF & size);
-extern void _ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF(void* qthis, void* arg0); // 4
+extern void C_ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSceneResizeEvent::setNewSize(const QSizeF & size);
-extern void _ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF(void* qthis, void* arg0); // 4
+extern void C_ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSceneResizeEvent::~QGraphicsSceneResizeEvent();
-extern void _ZN25QGraphicsSceneResizeEventD2Ev(void* qthis); // 4
+extern void C_ZN25QGraphicsSceneResizeEventD2Ev(void* qthis); // 4
   // proto:  void QGraphicsSceneResizeEvent::QGraphicsSceneResizeEvent();
-extern void _ZN25QGraphicsSceneResizeEventC2Ev(void* qthis); // 3
+extern void C_ZN25QGraphicsSceneResizeEventC2Ev(void* qthis); // 3
 */
 import "C"
 // } // <= ext block end
@@ -290,7 +290,7 @@ func (this *QGraphicsSceneMoveEvent) setNewPos(args ...interface{}) () {
     // invoke: void setNewPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "setNewPos", args)
   }
@@ -310,7 +310,7 @@ func (this *QGraphicsSceneMoveEvent) newPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QGraphicsSceneMoveEvent6newPosEv
     // invoke: QPointF newPos()
-    C._ZNK23QGraphicsSceneMoveEvent6newPosEv(this.qclsinst)
+    C.C_ZNK23QGraphicsSceneMoveEvent6newPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "newPos", args)
   }
@@ -332,7 +332,7 @@ func NewQGraphicsSceneMoveEvent(args ...interface{}) QGraphicsSceneMoveEvent {
     // invoke: void QGraphicsSceneMoveEvent()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN23QGraphicsSceneMoveEventC2Ev(qthis)
+    C.C_ZN23QGraphicsSceneMoveEventC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "QGraphicsSceneMoveEvent", args)
   }
@@ -353,7 +353,7 @@ func (this *QGraphicsSceneMoveEvent) FreeQGraphicsSceneMoveEvent(args ...interfa
   case 0:
     // invoke: _ZN23QGraphicsSceneMoveEventD0Ev
     // invoke: void ~QGraphicsSceneMoveEvent()
-    C._ZN23QGraphicsSceneMoveEventD2Ev(this.qclsinst)
+    C.C_ZN23QGraphicsSceneMoveEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "~QGraphicsSceneMoveEvent", args)
   }
@@ -373,7 +373,7 @@ func (this *QGraphicsSceneMoveEvent) oldPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QGraphicsSceneMoveEvent6oldPosEv
     // invoke: QPointF oldPos()
-    C._ZNK23QGraphicsSceneMoveEvent6oldPosEv(this.qclsinst)
+    C.C_ZNK23QGraphicsSceneMoveEvent6oldPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "oldPos", args)
   }
@@ -396,7 +396,7 @@ func (this *QGraphicsSceneMoveEvent) setOldPos(args ...interface{}) () {
     // invoke: void setOldPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "setOldPos", args)
   }
@@ -416,7 +416,7 @@ func (this *QGraphicsSceneContextMenuEvent) modifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent9modifiersEv
     // invoke: Qt::KeyboardModifiers modifiers()
-    C._ZNK30QGraphicsSceneContextMenuEvent9modifiersEv(this.qclsinst)
+    C.C_ZNK30QGraphicsSceneContextMenuEvent9modifiersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "modifiers", args)
   }
@@ -439,7 +439,7 @@ func (this *QGraphicsSceneContextMenuEvent) setScreenPos(args ...interface{}) ()
     // invoke: void setScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "setScreenPos", args)
   }
@@ -462,7 +462,7 @@ func (this *QGraphicsSceneContextMenuEvent) setPos(args ...interface{}) () {
     // invoke: void setPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "setPos", args)
   }
@@ -482,7 +482,7 @@ func (this *QGraphicsSceneContextMenuEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent3posEv
     // invoke: QPointF pos()
-    C._ZNK30QGraphicsSceneContextMenuEvent3posEv(this.qclsinst)
+    C.C_ZNK30QGraphicsSceneContextMenuEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "pos", args)
   }
@@ -505,7 +505,7 @@ func (this *QGraphicsSceneContextMenuEvent) setScenePos(args ...interface{}) () 
     // invoke: void setScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "setScenePos", args)
   }
@@ -525,7 +525,7 @@ func (this *QGraphicsSceneContextMenuEvent) reason(args ...interface{}) () {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent6reasonEv
     // invoke: QGraphicsSceneContextMenuEvent::Reason reason()
-    C._ZNK30QGraphicsSceneContextMenuEvent6reasonEv(this.qclsinst)
+    C.C_ZNK30QGraphicsSceneContextMenuEvent6reasonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "reason", args)
   }
@@ -545,7 +545,7 @@ func (this *QGraphicsSceneContextMenuEvent) screenPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent9screenPosEv
     // invoke: QPoint screenPos()
-    C._ZNK30QGraphicsSceneContextMenuEvent9screenPosEv(this.qclsinst)
+    C.C_ZNK30QGraphicsSceneContextMenuEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "screenPos", args)
   }
@@ -565,7 +565,7 @@ func (this *QGraphicsSceneContextMenuEvent) scenePos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent8scenePosEv
     // invoke: QPointF scenePos()
-    C._ZNK30QGraphicsSceneContextMenuEvent8scenePosEv(this.qclsinst)
+    C.C_ZNK30QGraphicsSceneContextMenuEvent8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "scenePos", args)
   }
@@ -585,7 +585,7 @@ func (this *QGraphicsSceneContextMenuEvent) FreeQGraphicsSceneContextMenuEvent(a
   case 0:
     // invoke: _ZN30QGraphicsSceneContextMenuEventD0Ev
     // invoke: void ~QGraphicsSceneContextMenuEvent()
-    C._ZN30QGraphicsSceneContextMenuEventD2Ev(this.qclsinst)
+    C.C_ZN30QGraphicsSceneContextMenuEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "~QGraphicsSceneContextMenuEvent", args)
   }
@@ -608,7 +608,7 @@ func (this *QGraphicsSceneMouseEvent) setScreenPos(args ...interface{}) () {
     // invoke: void setScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setScreenPos", args)
   }
@@ -628,7 +628,7 @@ func (this *QGraphicsSceneMouseEvent) lastPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent7lastPosEv
     // invoke: QPointF lastPos()
-    C._ZNK24QGraphicsSceneMouseEvent7lastPosEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent7lastPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "lastPos", args)
   }
@@ -648,7 +648,7 @@ func (this *QGraphicsSceneMouseEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent3posEv
     // invoke: QPointF pos()
-    C._ZNK24QGraphicsSceneMouseEvent3posEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "pos", args)
   }
@@ -668,7 +668,7 @@ func (this *QGraphicsSceneMouseEvent) lastScenePos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent12lastScenePosEv
     // invoke: QPointF lastScenePos()
-    C._ZNK24QGraphicsSceneMouseEvent12lastScenePosEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent12lastScenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "lastScenePos", args)
   }
@@ -688,7 +688,7 @@ func (this *QGraphicsSceneMouseEvent) modifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent9modifiersEv
     // invoke: Qt::KeyboardModifiers modifiers()
-    C._ZNK24QGraphicsSceneMouseEvent9modifiersEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent9modifiersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "modifiers", args)
   }
@@ -711,7 +711,7 @@ func (this *QGraphicsSceneMouseEvent) setLastPos(args ...interface{}) () {
     // invoke: void setLastPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setLastPos", args)
   }
@@ -731,7 +731,7 @@ func (this *QGraphicsSceneMouseEvent) FreeQGraphicsSceneMouseEvent(args ...inter
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEventD0Ev
     // invoke: void ~QGraphicsSceneMouseEvent()
-    C._ZN24QGraphicsSceneMouseEventD2Ev(this.qclsinst)
+    C.C_ZN24QGraphicsSceneMouseEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "~QGraphicsSceneMouseEvent", args)
   }
@@ -751,7 +751,7 @@ func (this *QGraphicsSceneMouseEvent) buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent7buttonsEv
     // invoke: Qt::MouseButtons buttons()
-    C._ZNK24QGraphicsSceneMouseEvent7buttonsEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent7buttonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "buttons", args)
   }
@@ -771,7 +771,7 @@ func (this *QGraphicsSceneMouseEvent) source(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent6sourceEv
     // invoke: Qt::MouseEventSource source()
-    C._ZNK24QGraphicsSceneMouseEvent6sourceEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent6sourceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "source", args)
   }
@@ -791,7 +791,7 @@ func (this *QGraphicsSceneMouseEvent) scenePos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent8scenePosEv
     // invoke: QPointF scenePos()
-    C._ZNK24QGraphicsSceneMouseEvent8scenePosEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "scenePos", args)
   }
@@ -814,7 +814,7 @@ func (this *QGraphicsSceneMouseEvent) setScenePos(args ...interface{}) () {
     // invoke: void setScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setScenePos", args)
   }
@@ -837,7 +837,7 @@ func (this *QGraphicsSceneMouseEvent) setLastScreenPos(args ...interface{}) () {
     // invoke: void setLastScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setLastScreenPos", args)
   }
@@ -857,7 +857,7 @@ func (this *QGraphicsSceneMouseEvent) screenPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent9screenPosEv
     // invoke: QPoint screenPos()
-    C._ZNK24QGraphicsSceneMouseEvent9screenPosEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "screenPos", args)
   }
@@ -877,7 +877,7 @@ func (this *QGraphicsSceneMouseEvent) lastScreenPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv
     // invoke: QPoint lastScreenPos()
-    C._ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "lastScreenPos", args)
   }
@@ -900,7 +900,7 @@ func (this *QGraphicsSceneMouseEvent) setPos(args ...interface{}) () {
     // invoke: void setPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setPos", args)
   }
@@ -920,7 +920,7 @@ func (this *QGraphicsSceneMouseEvent) button(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent6buttonEv
     // invoke: Qt::MouseButton button()
-    C._ZNK24QGraphicsSceneMouseEvent6buttonEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent6buttonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "button", args)
   }
@@ -940,7 +940,7 @@ func (this *QGraphicsSceneMouseEvent) flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent5flagsEv
     // invoke: Qt::MouseEventFlags flags()
-    C._ZNK24QGraphicsSceneMouseEvent5flagsEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent5flagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "flags", args)
   }
@@ -963,7 +963,7 @@ func (this *QGraphicsSceneMouseEvent) setLastScenePos(args ...interface{}) () {
     // invoke: void setLastScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setLastScenePos", args)
   }
@@ -983,7 +983,7 @@ func (this *QGraphicsSceneHelpEvent) screenPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QGraphicsSceneHelpEvent9screenPosEv
     // invoke: QPoint screenPos()
-    C._ZNK23QGraphicsSceneHelpEvent9screenPosEv(this.qclsinst)
+    C.C_ZNK23QGraphicsSceneHelpEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "screenPos", args)
   }
@@ -1006,7 +1006,7 @@ func (this *QGraphicsSceneHelpEvent) setScreenPos(args ...interface{}) () {
     // invoke: void setScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "setScreenPos", args)
   }
@@ -1026,7 +1026,7 @@ func (this *QGraphicsSceneHelpEvent) FreeQGraphicsSceneHelpEvent(args ...interfa
   case 0:
     // invoke: _ZN23QGraphicsSceneHelpEventD0Ev
     // invoke: void ~QGraphicsSceneHelpEvent()
-    C._ZN23QGraphicsSceneHelpEventD2Ev(this.qclsinst)
+    C.C_ZN23QGraphicsSceneHelpEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "~QGraphicsSceneHelpEvent", args)
   }
@@ -1049,7 +1049,7 @@ func (this *QGraphicsSceneHelpEvent) setScenePos(args ...interface{}) () {
     // invoke: void setScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "setScenePos", args)
   }
@@ -1069,7 +1069,7 @@ func (this *QGraphicsSceneHelpEvent) scenePos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QGraphicsSceneHelpEvent8scenePosEv
     // invoke: QPointF scenePos()
-    C._ZNK23QGraphicsSceneHelpEvent8scenePosEv(this.qclsinst)
+    C.C_ZNK23QGraphicsSceneHelpEvent8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "scenePos", args)
   }
@@ -1089,7 +1089,7 @@ func (this *QGraphicsSceneHoverEvent) modifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent9modifiersEv
     // invoke: Qt::KeyboardModifiers modifiers()
-    C._ZNK24QGraphicsSceneHoverEvent9modifiersEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneHoverEvent9modifiersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "modifiers", args)
   }
@@ -1112,7 +1112,7 @@ func (this *QGraphicsSceneHoverEvent) setLastPos(args ...interface{}) () {
     // invoke: void setLastPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setLastPos", args)
   }
@@ -1135,7 +1135,7 @@ func (this *QGraphicsSceneHoverEvent) setScreenPos(args ...interface{}) () {
     // invoke: void setScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setScreenPos", args)
   }
@@ -1155,7 +1155,7 @@ func (this *QGraphicsSceneHoverEvent) lastPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent7lastPosEv
     // invoke: QPointF lastPos()
-    C._ZNK24QGraphicsSceneHoverEvent7lastPosEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneHoverEvent7lastPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "lastPos", args)
   }
@@ -1175,7 +1175,7 @@ func (this *QGraphicsSceneHoverEvent) lastScreenPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv
     // invoke: QPoint lastScreenPos()
-    C._ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "lastScreenPos", args)
   }
@@ -1195,7 +1195,7 @@ func (this *QGraphicsSceneHoverEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent3posEv
     // invoke: QPointF pos()
-    C._ZNK24QGraphicsSceneHoverEvent3posEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneHoverEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "pos", args)
   }
@@ -1218,7 +1218,7 @@ func (this *QGraphicsSceneHoverEvent) setScenePos(args ...interface{}) () {
     // invoke: void setScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setScenePos", args)
   }
@@ -1241,7 +1241,7 @@ func (this *QGraphicsSceneHoverEvent) setPos(args ...interface{}) () {
     // invoke: void setPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setPos", args)
   }
@@ -1261,7 +1261,7 @@ func (this *QGraphicsSceneHoverEvent) screenPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent9screenPosEv
     // invoke: QPoint screenPos()
-    C._ZNK24QGraphicsSceneHoverEvent9screenPosEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneHoverEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "screenPos", args)
   }
@@ -1284,7 +1284,7 @@ func (this *QGraphicsSceneHoverEvent) setLastScenePos(args ...interface{}) () {
     // invoke: void setLastScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setLastScenePos", args)
   }
@@ -1304,7 +1304,7 @@ func (this *QGraphicsSceneHoverEvent) lastScenePos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent12lastScenePosEv
     // invoke: QPointF lastScenePos()
-    C._ZNK24QGraphicsSceneHoverEvent12lastScenePosEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "lastScenePos", args)
   }
@@ -1324,7 +1324,7 @@ func (this *QGraphicsSceneHoverEvent) FreeQGraphicsSceneHoverEvent(args ...inter
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEventD0Ev
     // invoke: void ~QGraphicsSceneHoverEvent()
-    C._ZN24QGraphicsSceneHoverEventD2Ev(this.qclsinst)
+    C.C_ZN24QGraphicsSceneHoverEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "~QGraphicsSceneHoverEvent", args)
   }
@@ -1347,7 +1347,7 @@ func (this *QGraphicsSceneHoverEvent) setLastScreenPos(args ...interface{}) () {
     // invoke: void setLastScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setLastScreenPos", args)
   }
@@ -1367,7 +1367,7 @@ func (this *QGraphicsSceneHoverEvent) scenePos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent8scenePosEv
     // invoke: QPointF scenePos()
-    C._ZNK24QGraphicsSceneHoverEvent8scenePosEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneHoverEvent8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "scenePos", args)
   }
@@ -1387,7 +1387,7 @@ func (this *QGraphicsSceneWheelEvent) modifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent9modifiersEv
     // invoke: Qt::KeyboardModifiers modifiers()
-    C._ZNK24QGraphicsSceneWheelEvent9modifiersEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneWheelEvent9modifiersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "modifiers", args)
   }
@@ -1410,7 +1410,7 @@ func (this *QGraphicsSceneWheelEvent) setDelta(args ...interface{}) () {
     // invoke: void setDelta(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneWheelEvent8setDeltaEi(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneWheelEvent8setDeltaEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setDelta", args)
   }
@@ -1430,7 +1430,7 @@ func (this *QGraphicsSceneWheelEvent) orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent11orientationEv
     // invoke: Qt::Orientation orientation()
-    C._ZNK24QGraphicsSceneWheelEvent11orientationEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneWheelEvent11orientationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "orientation", args)
   }
@@ -1453,7 +1453,7 @@ func (this *QGraphicsSceneWheelEvent) setScreenPos(args ...interface{}) () {
     // invoke: void setScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setScreenPos", args)
   }
@@ -1476,7 +1476,7 @@ func (this *QGraphicsSceneWheelEvent) setPos(args ...interface{}) () {
     // invoke: void setPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setPos", args)
   }
@@ -1496,7 +1496,7 @@ func (this *QGraphicsSceneWheelEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent3posEv
     // invoke: QPointF pos()
-    C._ZNK24QGraphicsSceneWheelEvent3posEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneWheelEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "pos", args)
   }
@@ -1519,7 +1519,7 @@ func (this *QGraphicsSceneWheelEvent) setScenePos(args ...interface{}) () {
     // invoke: void setScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setScenePos", args)
   }
@@ -1539,7 +1539,7 @@ func (this *QGraphicsSceneWheelEvent) buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent7buttonsEv
     // invoke: Qt::MouseButtons buttons()
-    C._ZNK24QGraphicsSceneWheelEvent7buttonsEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneWheelEvent7buttonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "buttons", args)
   }
@@ -1559,7 +1559,7 @@ func (this *QGraphicsSceneWheelEvent) screenPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent9screenPosEv
     // invoke: QPoint screenPos()
-    C._ZNK24QGraphicsSceneWheelEvent9screenPosEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneWheelEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "screenPos", args)
   }
@@ -1579,7 +1579,7 @@ func (this *QGraphicsSceneWheelEvent) delta(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent5deltaEv
     // invoke: int delta()
-    C._ZNK24QGraphicsSceneWheelEvent5deltaEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneWheelEvent5deltaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "delta", args)
   }
@@ -1599,7 +1599,7 @@ func (this *QGraphicsSceneWheelEvent) FreeQGraphicsSceneWheelEvent(args ...inter
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEventD0Ev
     // invoke: void ~QGraphicsSceneWheelEvent()
-    C._ZN24QGraphicsSceneWheelEventD2Ev(this.qclsinst)
+    C.C_ZN24QGraphicsSceneWheelEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "~QGraphicsSceneWheelEvent", args)
   }
@@ -1619,7 +1619,7 @@ func (this *QGraphicsSceneWheelEvent) scenePos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent8scenePosEv
     // invoke: QPointF scenePos()
-    C._ZNK24QGraphicsSceneWheelEvent8scenePosEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneWheelEvent8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "scenePos", args)
   }
@@ -1642,7 +1642,7 @@ func (this *QGraphicsSceneDragDropEvent) setMimeData(args ...interface{}) () {
     // invoke: void setMimeData(const class QMimeData *)
     var arg0 = args[0].(QMimeData).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData(this.qclsinst, arg0)
+    C.C_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setMimeData", args)
   }
@@ -1665,7 +1665,7 @@ func (this *QGraphicsSceneDragDropEvent) setScreenPos(args ...interface{}) () {
     // invoke: void setScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setScreenPos", args)
   }
@@ -1685,7 +1685,7 @@ func (this *QGraphicsSceneDragDropEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent3posEv
     // invoke: QPointF pos()
-    C._ZNK27QGraphicsSceneDragDropEvent3posEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "pos", args)
   }
@@ -1708,7 +1708,7 @@ func (this *QGraphicsSceneDragDropEvent) setSource(args ...interface{}) () {
     // invoke: void setSource(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setSource", args)
   }
@@ -1728,7 +1728,7 @@ func (this *QGraphicsSceneDragDropEvent) acceptProposedAction(args ...interface{
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv
     // invoke: void acceptProposedAction()
-    C._ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv(this.qclsinst)
+    C.C_ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "acceptProposedAction", args)
   }
@@ -1748,7 +1748,7 @@ func (this *QGraphicsSceneDragDropEvent) buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent7buttonsEv
     // invoke: Qt::MouseButtons buttons()
-    C._ZNK27QGraphicsSceneDragDropEvent7buttonsEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent7buttonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "buttons", args)
   }
@@ -1768,7 +1768,7 @@ func (this *QGraphicsSceneDragDropEvent) source(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent6sourceEv
     // invoke: QWidget * source()
-    C._ZNK27QGraphicsSceneDragDropEvent6sourceEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent6sourceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "source", args)
   }
@@ -1788,7 +1788,7 @@ func (this *QGraphicsSceneDragDropEvent) scenePos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent8scenePosEv
     // invoke: QPointF scenePos()
-    C._ZNK27QGraphicsSceneDragDropEvent8scenePosEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "scenePos", args)
   }
@@ -1808,7 +1808,7 @@ func (this *QGraphicsSceneDragDropEvent) proposedAction(args ...interface{}) () 
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent14proposedActionEv
     // invoke: Qt::DropAction proposedAction()
-    C._ZNK27QGraphicsSceneDragDropEvent14proposedActionEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent14proposedActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "proposedAction", args)
   }
@@ -1831,7 +1831,7 @@ func (this *QGraphicsSceneDragDropEvent) setScenePos(args ...interface{}) () {
     // invoke: void setScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setScenePos", args)
   }
@@ -1851,7 +1851,7 @@ func (this *QGraphicsSceneDragDropEvent) possibleActions(args ...interface{}) ()
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent15possibleActionsEv
     // invoke: Qt::DropActions possibleActions()
-    C._ZNK27QGraphicsSceneDragDropEvent15possibleActionsEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent15possibleActionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "possibleActions", args)
   }
@@ -1871,7 +1871,7 @@ func (this *QGraphicsSceneDragDropEvent) dropAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent10dropActionEv
     // invoke: Qt::DropAction dropAction()
-    C._ZNK27QGraphicsSceneDragDropEvent10dropActionEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent10dropActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "dropAction", args)
   }
@@ -1891,7 +1891,7 @@ func (this *QGraphicsSceneDragDropEvent) FreeQGraphicsSceneDragDropEvent(args ..
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEventD0Ev
     // invoke: void ~QGraphicsSceneDragDropEvent()
-    C._ZN27QGraphicsSceneDragDropEventD2Ev(this.qclsinst)
+    C.C_ZN27QGraphicsSceneDragDropEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "~QGraphicsSceneDragDropEvent", args)
   }
@@ -1911,7 +1911,7 @@ func (this *QGraphicsSceneDragDropEvent) screenPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent9screenPosEv
     // invoke: QPoint screenPos()
-    C._ZNK27QGraphicsSceneDragDropEvent9screenPosEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "screenPos", args)
   }
@@ -1931,7 +1931,7 @@ func (this *QGraphicsSceneDragDropEvent) mimeData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent8mimeDataEv
     // invoke: const QMimeData * mimeData()
-    C._ZNK27QGraphicsSceneDragDropEvent8mimeDataEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "mimeData", args)
   }
@@ -1951,7 +1951,7 @@ func (this *QGraphicsSceneDragDropEvent) modifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent9modifiersEv
     // invoke: Qt::KeyboardModifiers modifiers()
-    C._ZNK27QGraphicsSceneDragDropEvent9modifiersEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent9modifiersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "modifiers", args)
   }
@@ -1974,7 +1974,7 @@ func (this *QGraphicsSceneDragDropEvent) setPos(args ...interface{}) () {
     // invoke: void setPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setPos", args)
   }
@@ -1994,7 +1994,7 @@ func (this *QGraphicsSceneEvent) FreeQGraphicsSceneEvent(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QGraphicsSceneEventD0Ev
     // invoke: void ~QGraphicsSceneEvent()
-    C._ZN19QGraphicsSceneEventD2Ev(this.qclsinst)
+    C.C_ZN19QGraphicsSceneEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneEvent", "~QGraphicsSceneEvent", args)
   }
@@ -2014,7 +2014,7 @@ func (this *QGraphicsSceneEvent) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsSceneEvent6widgetEv
     // invoke: QWidget * widget()
-    C._ZNK19QGraphicsSceneEvent6widgetEv(this.qclsinst)
+    C.C_ZNK19QGraphicsSceneEvent6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneEvent", "widget", args)
   }
@@ -2037,7 +2037,7 @@ func (this *QGraphicsSceneEvent) setWidget(args ...interface{}) () {
     // invoke: void setWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneEvent", "setWidget", args)
   }
@@ -2057,7 +2057,7 @@ func (this *QGraphicsSceneResizeEvent) newSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK25QGraphicsSceneResizeEvent7newSizeEv
     // invoke: QSizeF newSize()
-    C._ZNK25QGraphicsSceneResizeEvent7newSizeEv(this.qclsinst)
+    C.C_ZNK25QGraphicsSceneResizeEvent7newSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "newSize", args)
   }
@@ -2077,7 +2077,7 @@ func (this *QGraphicsSceneResizeEvent) oldSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK25QGraphicsSceneResizeEvent7oldSizeEv
     // invoke: QSizeF oldSize()
-    C._ZNK25QGraphicsSceneResizeEvent7oldSizeEv(this.qclsinst)
+    C.C_ZNK25QGraphicsSceneResizeEvent7oldSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "oldSize", args)
   }
@@ -2100,7 +2100,7 @@ func (this *QGraphicsSceneResizeEvent) setOldSize(args ...interface{}) () {
     // invoke: void setOldSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "setOldSize", args)
   }
@@ -2123,7 +2123,7 @@ func (this *QGraphicsSceneResizeEvent) setNewSize(args ...interface{}) () {
     // invoke: void setNewSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "setNewSize", args)
   }
@@ -2143,7 +2143,7 @@ func (this *QGraphicsSceneResizeEvent) FreeQGraphicsSceneResizeEvent(args ...int
   case 0:
     // invoke: _ZN25QGraphicsSceneResizeEventD0Ev
     // invoke: void ~QGraphicsSceneResizeEvent()
-    C._ZN25QGraphicsSceneResizeEventD2Ev(this.qclsinst)
+    C.C_ZN25QGraphicsSceneResizeEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "~QGraphicsSceneResizeEvent", args)
   }
@@ -2165,7 +2165,7 @@ func NewQGraphicsSceneResizeEvent(args ...interface{}) QGraphicsSceneResizeEvent
     // invoke: void QGraphicsSceneResizeEvent()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN25QGraphicsSceneResizeEventC2Ev(qthis)
+    C.C_ZN25QGraphicsSceneResizeEventC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "QGraphicsSceneResizeEvent", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qrasterwindow.h
 // dst-file: /src/gui/qrasterwindow.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  const QMetaObject * QRasterWindow::metaObject();
-extern void _ZNK13QRasterWindow10metaObjectEv(void* qthis); // 4
+extern void C_ZNK13QRasterWindow10metaObjectEv(void* qthis); // 4
   // proto:  void QRasterWindow::QRasterWindow(QWindow * parent);
-extern void _ZN13QRasterWindowC2EP7QWindow(void* qthis, void* arg0); // 3
+extern void C_ZN13QRasterWindowC2EP7QWindow(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -63,7 +63,7 @@ func (this *QRasterWindow) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QRasterWindow10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK13QRasterWindow10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QRasterWindow10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRasterWindow", "metaObject", args)
   }
@@ -88,7 +88,7 @@ func NewQRasterWindow(args ...interface{}) QRasterWindow {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QRasterWindowC2EP7QWindow(qthis, arg0)
+    C.C_ZN13QRasterWindowC2EP7QWindow(qthis, arg0)
   default:
     qtrt.ErrorResolve("QRasterWindow", "QRasterWindow", args)
   }

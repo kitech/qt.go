@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qgraphicsproxywidget.h
 // dst-file: /src/widgets/qgraphicsproxywidget.go
 //
@@ -29,23 +29,23 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QGraphicsProxyWidget::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-extern void _ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QGraphicsProxyWidget::setWidget(QWidget * widget);
-extern void _ZN20QGraphicsProxyWidget9setWidgetEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN20QGraphicsProxyWidget9setWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QGraphicsProxyWidget::metaObject();
-extern void _ZNK20QGraphicsProxyWidget10metaObjectEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsProxyWidget10metaObjectEv(void* qthis); // 4
   // proto:  int QGraphicsProxyWidget::type();
-extern void _ZNK20QGraphicsProxyWidget4typeEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsProxyWidget4typeEv(void* qthis); // 4
   // proto:  QWidget * QGraphicsProxyWidget::widget();
-extern void _ZNK20QGraphicsProxyWidget6widgetEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsProxyWidget6widgetEv(void* qthis); // 4
   // proto:  void QGraphicsProxyWidget::setGeometry(const QRectF & rect);
-extern void _ZN20QGraphicsProxyWidget11setGeometryERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZN20QGraphicsProxyWidget11setGeometryERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsProxyWidget::~QGraphicsProxyWidget();
-extern void _ZN20QGraphicsProxyWidgetD2Ev(void* qthis); // 4
+extern void C_ZN20QGraphicsProxyWidgetD2Ev(void* qthis); // 4
   // proto:  QRectF QGraphicsProxyWidget::subWidgetRect(const QWidget * widget);
-extern void _ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(void* qthis, void* arg0); // 4
   // proto:  QGraphicsProxyWidget * QGraphicsProxyWidget::createProxyForChildWidget(QWidget * child);
-extern void _ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -86,7 +86,7 @@ func (this *QGraphicsProxyWidget) paint(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "paint", args)
   }
@@ -109,7 +109,7 @@ func (this *QGraphicsProxyWidget) setWidget(args ...interface{}) () {
     // invoke: void setWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN20QGraphicsProxyWidget9setWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN20QGraphicsProxyWidget9setWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "setWidget", args)
   }
@@ -129,7 +129,7 @@ func (this *QGraphicsProxyWidget) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsProxyWidget10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK20QGraphicsProxyWidget10metaObjectEv(this.qclsinst)
+    C.C_ZNK20QGraphicsProxyWidget10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "metaObject", args)
   }
@@ -149,7 +149,7 @@ func (this *QGraphicsProxyWidget) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsProxyWidget4typeEv
     // invoke: int type()
-    C._ZNK20QGraphicsProxyWidget4typeEv(this.qclsinst)
+    C.C_ZNK20QGraphicsProxyWidget4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "type", args)
   }
@@ -169,7 +169,7 @@ func (this *QGraphicsProxyWidget) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsProxyWidget6widgetEv
     // invoke: QWidget * widget()
-    C._ZNK20QGraphicsProxyWidget6widgetEv(this.qclsinst)
+    C.C_ZNK20QGraphicsProxyWidget6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "widget", args)
   }
@@ -192,7 +192,7 @@ func (this *QGraphicsProxyWidget) setGeometry(args ...interface{}) () {
     // invoke: void setGeometry(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN20QGraphicsProxyWidget11setGeometryERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN20QGraphicsProxyWidget11setGeometryERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "setGeometry", args)
   }
@@ -212,7 +212,7 @@ func (this *QGraphicsProxyWidget) FreeQGraphicsProxyWidget(args ...interface{}) 
   case 0:
     // invoke: _ZN20QGraphicsProxyWidgetD0Ev
     // invoke: void ~QGraphicsProxyWidget()
-    C._ZN20QGraphicsProxyWidgetD2Ev(this.qclsinst)
+    C.C_ZN20QGraphicsProxyWidgetD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "~QGraphicsProxyWidget", args)
   }
@@ -235,7 +235,7 @@ func (this *QGraphicsProxyWidget) subWidgetRect(args ...interface{}) () {
     // invoke: QRectF subWidgetRect(const class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(this.qclsinst, arg0)
+    C.C_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "subWidgetRect", args)
   }
@@ -258,7 +258,7 @@ func (this *QGraphicsProxyWidget) createProxyForChildWidget(args ...interface{})
     // invoke: QGraphicsProxyWidget * createProxyForChildWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "createProxyForChildWidget", args)
   }

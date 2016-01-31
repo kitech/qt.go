@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qcolor.h
 // dst-file: /src/gui/qcolor.go
 //
@@ -29,185 +29,185 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  qreal QColor::hueF();
-extern void _ZNK6QColor4hueFEv(void* qthis); // 4
+extern void C_ZNK6QColor4hueFEv(void* qthis); // 4
   // proto:  int QColor::yellow();
-extern void _ZNK6QColor6yellowEv(void* qthis); // 4
+extern void C_ZNK6QColor6yellowEv(void* qthis); // 4
   // proto:  qreal QColor::cyanF();
-extern void _ZNK6QColor5cyanFEv(void* qthis); // 4
+extern void C_ZNK6QColor5cyanFEv(void* qthis); // 4
   // proto:  qreal QColor::magentaF();
-extern void _ZNK6QColor8magentaFEv(void* qthis); // 4
+extern void C_ZNK6QColor8magentaFEv(void* qthis); // 4
   // proto: static bool QColor::isValidColor(const QString & name);
-extern void _ZN6QColor12isValidColorERK7QString(void* arg0); // 4
+extern void C_ZN6QColor12isValidColorERK7QString(void* arg0); // 4
   // proto:  void QColor::setHsvF(qreal h, qreal s, qreal v, qreal a);
-extern void _ZN6QColor7setHsvFEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
+extern void C_ZN6QColor7setHsvFEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
   // proto:  void QColor::setHsl(int h, int s, int l, int a);
-extern void _ZN6QColor6setHslEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
+extern void C_ZN6QColor6setHslEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
   // proto:  void QColor::setCmykF(qreal c, qreal m, qreal y, qreal k, qreal a);
-extern void _ZN6QColor8setCmykFEddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4); // 4
+extern void C_ZN6QColor8setCmykFEddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4); // 4
   // proto:  void QColor::setHsv(int h, int s, int v, int a);
-extern void _ZN6QColor6setHsvEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
+extern void C_ZN6QColor6setHsvEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
   // proto:  QRgb QColor::rgb();
-extern void _ZNK6QColor3rgbEv(void* qthis); // 4
+extern void C_ZNK6QColor3rgbEv(void* qthis); // 4
   // proto:  int QColor::black();
-extern void _ZNK6QColor5blackEv(void* qthis); // 4
+extern void C_ZNK6QColor5blackEv(void* qthis); // 4
   // proto: static QColor QColor::fromCmyk(int c, int m, int y, int k, int a);
-extern void _ZN6QColor8fromCmykEiiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4); // 4
+extern void C_ZN6QColor8fromCmykEiiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4); // 4
   // proto:  QColor::Spec QColor::spec();
-extern void _ZNK6QColor4specEv(void* qthis); // 2
+extern void C_ZNK6QColor4specEv(void* qthis); // 2
   // proto:  int QColor::saturation();
-extern void _ZNK6QColor10saturationEv(void* qthis); // 4
+extern void C_ZNK6QColor10saturationEv(void* qthis); // 4
   // proto:  void QColor::setCmyk(int c, int m, int y, int k, int a);
-extern void _ZN6QColor7setCmykEiiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4); // 4
+extern void C_ZN6QColor7setCmykEiiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4); // 4
   // proto:  QColor QColor::lighter(int f);
-extern void _ZNK6QColor7lighterEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK6QColor7lighterEi(void* qthis, int32_t arg0); // 2
   // proto:  qreal QColor::yellowF();
-extern void _ZNK6QColor7yellowFEv(void* qthis); // 4
+extern void C_ZNK6QColor7yellowFEv(void* qthis); // 4
   // proto: static QColor QColor::fromRgbF(qreal r, qreal g, qreal b, qreal a);
-extern void _ZN6QColor8fromRgbFEdddd(double arg0, double arg1, double arg2, double arg3); // 4
+extern void C_ZN6QColor8fromRgbFEdddd(double arg0, double arg1, double arg2, double arg3); // 4
   // proto:  void QColor::getHsvF(qreal * h, qreal * s, qreal * v, qreal * a);
-extern void _ZNK6QColor7getHsvFEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
+extern void C_ZNK6QColor7getHsvFEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
   // proto:  QString QColor::name();
-extern void _ZNK6QColor4nameEv(void* qthis); // 4
+extern void C_ZNK6QColor4nameEv(void* qthis); // 4
   // proto:  QColor QColor::toRgb();
-extern void _ZNK6QColor5toRgbEv(void* qthis); // 4
+extern void C_ZNK6QColor5toRgbEv(void* qthis); // 4
   // proto:  qreal QColor::hsvHueF();
-extern void _ZNK6QColor7hsvHueFEv(void* qthis); // 4
+extern void C_ZNK6QColor7hsvHueFEv(void* qthis); // 4
   // proto: static QColor QColor::fromRgba(QRgb rgba);
-extern void _ZN6QColor8fromRgbaEj(int32_t arg0); // 4
+extern void C_ZN6QColor8fromRgbaEj(int32_t arg0); // 4
   // proto:  void QColor::setAlphaF(qreal alpha);
-extern void _ZN6QColor9setAlphaFEd(void* qthis, double arg0); // 4
+extern void C_ZN6QColor9setAlphaFEd(void* qthis, double arg0); // 4
   // proto:  int QColor::hslSaturation();
-extern void _ZNK6QColor13hslSaturationEv(void* qthis); // 4
+extern void C_ZNK6QColor13hslSaturationEv(void* qthis); // 4
   // proto:  qreal QColor::blackF();
-extern void _ZNK6QColor6blackFEv(void* qthis); // 4
+extern void C_ZNK6QColor6blackFEv(void* qthis); // 4
   // proto:  qreal QColor::saturationF();
-extern void _ZNK6QColor11saturationFEv(void* qthis); // 4
+extern void C_ZNK6QColor11saturationFEv(void* qthis); // 4
   // proto:  void QColor::setRgb(QRgb rgb);
-extern void _ZN6QColor6setRgbEj(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QColor6setRgbEj(void* qthis, int32_t arg0); // 4
   // proto:  void QColor::setRgb(int r, int g, int b, int a);
-extern void _ZN6QColor6setRgbEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
+extern void C_ZN6QColor6setRgbEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
   // proto:  int QColor::blue();
-extern void _ZNK6QColor4blueEv(void* qthis); // 4
+extern void C_ZNK6QColor4blueEv(void* qthis); // 4
   // proto:  qreal QColor::blueF();
-extern void _ZNK6QColor5blueFEv(void* qthis); // 4
+extern void C_ZNK6QColor5blueFEv(void* qthis); // 4
   // proto:  QRgb QColor::rgba();
-extern void _ZNK6QColor4rgbaEv(void* qthis); // 4
+extern void C_ZNK6QColor4rgbaEv(void* qthis); // 4
   // proto:  int QColor::red();
-extern void _ZNK6QColor3redEv(void* qthis); // 4
+extern void C_ZNK6QColor3redEv(void* qthis); // 4
   // proto: static QColor QColor::fromHsvF(qreal h, qreal s, qreal v, qreal a);
-extern void _ZN6QColor8fromHsvFEdddd(double arg0, double arg1, double arg2, double arg3); // 4
+extern void C_ZN6QColor8fromHsvFEdddd(double arg0, double arg1, double arg2, double arg3); // 4
   // proto:  qreal QColor::alphaF();
-extern void _ZNK6QColor6alphaFEv(void* qthis); // 4
+extern void C_ZNK6QColor6alphaFEv(void* qthis); // 4
   // proto:  void QColor::setRedF(qreal red);
-extern void _ZN6QColor7setRedFEd(void* qthis, double arg0); // 4
+extern void C_ZN6QColor7setRedFEd(void* qthis, double arg0); // 4
   // proto:  int QColor::lightness();
-extern void _ZNK6QColor9lightnessEv(void* qthis); // 4
+extern void C_ZNK6QColor9lightnessEv(void* qthis); // 4
   // proto: static QStringList QColor::colorNames();
-extern void _ZN6QColor10colorNamesEv(); // 4
+extern void C_ZN6QColor10colorNamesEv(); // 4
   // proto:  void QColor::getCmykF(qreal * c, qreal * m, qreal * y, qreal * k, qreal * a);
-extern void _ZN6QColor8getCmykFEPdS0_S0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3, double* arg4); // 4
+extern void C_ZN6QColor8getCmykFEPdS0_S0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3, double* arg4); // 4
   // proto:  void QColor::setNamedColor(const QString & name);
-extern void _ZN6QColor13setNamedColorERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN6QColor13setNamedColorERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QColor::setGreen(int green);
-extern void _ZN6QColor8setGreenEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QColor8setGreenEi(void* qthis, int32_t arg0); // 4
   // proto:  void QColor::setRed(int red);
-extern void _ZN6QColor6setRedEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QColor6setRedEi(void* qthis, int32_t arg0); // 4
   // proto:  QColor QColor::toCmyk();
-extern void _ZNK6QColor6toCmykEv(void* qthis); // 4
+extern void C_ZNK6QColor6toCmykEv(void* qthis); // 4
   // proto:  qreal QColor::redF();
-extern void _ZNK6QColor4redFEv(void* qthis); // 4
+extern void C_ZNK6QColor4redFEv(void* qthis); // 4
   // proto:  int QColor::hue();
-extern void _ZNK6QColor3hueEv(void* qthis); // 4
+extern void C_ZNK6QColor3hueEv(void* qthis); // 4
   // proto:  qreal QColor::hslSaturationF();
-extern void _ZNK6QColor14hslSaturationFEv(void* qthis); // 4
+extern void C_ZNK6QColor14hslSaturationFEv(void* qthis); // 4
   // proto:  qreal QColor::hsvSaturationF();
-extern void _ZNK6QColor14hsvSaturationFEv(void* qthis); // 4
+extern void C_ZNK6QColor14hsvSaturationFEv(void* qthis); // 4
   // proto:  QColor QColor::toHsl();
-extern void _ZNK6QColor5toHslEv(void* qthis); // 4
+extern void C_ZNK6QColor5toHslEv(void* qthis); // 4
   // proto:  int QColor::value();
-extern void _ZNK6QColor5valueEv(void* qthis); // 4
+extern void C_ZNK6QColor5valueEv(void* qthis); // 4
   // proto:  QColor QColor::toHsv();
-extern void _ZNK6QColor5toHsvEv(void* qthis); // 4
+extern void C_ZNK6QColor5toHsvEv(void* qthis); // 4
   // proto:  QColor QColor::darker(int f);
-extern void _ZNK6QColor6darkerEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK6QColor6darkerEi(void* qthis, int32_t arg0); // 2
   // proto:  void QColor::setBlue(int blue);
-extern void _ZN6QColor7setBlueEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QColor7setBlueEi(void* qthis, int32_t arg0); // 4
   // proto:  void QColor::setHslF(qreal h, qreal s, qreal l, qreal a);
-extern void _ZN6QColor7setHslFEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
+extern void C_ZN6QColor7setHslFEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
   // proto:  qreal QColor::valueF();
-extern void _ZNK6QColor6valueFEv(void* qthis); // 4
+extern void C_ZNK6QColor6valueFEv(void* qthis); // 4
   // proto: static QColor QColor::fromHsl(int h, int s, int l, int a);
-extern void _ZN6QColor7fromHslEiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
+extern void C_ZN6QColor7fromHslEiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
   // proto:  int QColor::hslHue();
-extern void _ZNK6QColor6hslHueEv(void* qthis); // 4
+extern void C_ZNK6QColor6hslHueEv(void* qthis); // 4
   // proto: static QColor QColor::fromHsv(int h, int s, int v, int a);
-extern void _ZN6QColor7fromHsvEiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
+extern void C_ZN6QColor7fromHsvEiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
   // proto:  void QColor::getRgb(int * r, int * g, int * b, int * a);
-extern void _ZNK6QColor6getRgbEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 4
+extern void C_ZNK6QColor6getRgbEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 4
   // proto:  void QColor::setRgba(QRgb rgba);
-extern void _ZN6QColor7setRgbaEj(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QColor7setRgbaEj(void* qthis, int32_t arg0); // 4
   // proto:  int QColor::magenta();
-extern void _ZNK6QColor7magentaEv(void* qthis); // 4
+extern void C_ZNK6QColor7magentaEv(void* qthis); // 4
   // proto:  void QColor::QColor(const char * name);
-extern void _ZN6QColorC2EPKc(void* qthis, unsigned char* arg0); // 1
+extern void C_ZN6QColorC2EPKc(void* qthis, unsigned char* arg0); // 1
   // proto:  void QColor::QColor(QRgb rgb);
-extern void _ZN6QColorC2Ej(void* qthis, int32_t arg0); // 3
+extern void C_ZN6QColorC2Ej(void* qthis, int32_t arg0); // 3
   // proto:  void QColor::QColor(const QColor & color);
-extern void _ZN6QColorC2ERKS_(void* qthis, void* arg0); // 1
+extern void C_ZN6QColorC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QColor::QColor(int r, int g, int b, int a);
-extern void _ZN6QColorC2Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 1
+extern void C_ZN6QColorC2Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 1
   // proto:  void QColor::QColor();
-extern void _ZN6QColorC2Ev(void* qthis); // 1
+extern void C_ZN6QColorC2Ev(void* qthis); // 1
   // proto:  void QColor::QColor(const QString & name);
-extern void _ZN6QColorC2ERK7QString(void* qthis, void* arg0); // 1
+extern void C_ZN6QColorC2ERK7QString(void* qthis, void* arg0); // 1
   // proto:  qreal QColor::hslHueF();
-extern void _ZNK6QColor7hslHueFEv(void* qthis); // 4
+extern void C_ZNK6QColor7hslHueFEv(void* qthis); // 4
   // proto: static QColor QColor::fromHslF(qreal h, qreal s, qreal l, qreal a);
-extern void _ZN6QColor8fromHslFEdddd(double arg0, double arg1, double arg2, double arg3); // 4
+extern void C_ZN6QColor8fromHslFEdddd(double arg0, double arg1, double arg2, double arg3); // 4
   // proto:  int QColor::hsvSaturation();
-extern void _ZNK6QColor13hsvSaturationEv(void* qthis); // 4
+extern void C_ZNK6QColor13hsvSaturationEv(void* qthis); // 4
   // proto:  void QColor::setRgbF(qreal r, qreal g, qreal b, qreal a);
-extern void _ZN6QColor7setRgbFEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
+extern void C_ZN6QColor7setRgbFEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
   // proto:  void QColor::setAlpha(int alpha);
-extern void _ZN6QColor8setAlphaEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QColor8setAlphaEi(void* qthis, int32_t arg0); // 4
   // proto:  int QColor::cyan();
-extern void _ZNK6QColor4cyanEv(void* qthis); // 4
+extern void C_ZNK6QColor4cyanEv(void* qthis); // 4
   // proto:  void QColor::getRgbF(qreal * r, qreal * g, qreal * b, qreal * a);
-extern void _ZNK6QColor7getRgbFEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
+extern void C_ZNK6QColor7getRgbFEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
   // proto:  void QColor::setBlueF(qreal blue);
-extern void _ZN6QColor8setBlueFEd(void* qthis, double arg0); // 4
+extern void C_ZN6QColor8setBlueFEd(void* qthis, double arg0); // 4
   // proto:  void QColor::getCmyk(int * c, int * m, int * y, int * k, int * a);
-extern void _ZN6QColor7getCmykEPiS0_S0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3, int32_t* arg4); // 4
+extern void C_ZN6QColor7getCmykEPiS0_S0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3, int32_t* arg4); // 4
   // proto:  bool QColor::isValid();
-extern void _ZNK6QColor7isValidEv(void* qthis); // 2
+extern void C_ZNK6QColor7isValidEv(void* qthis); // 2
   // proto:  void QColor::getHsv(int * h, int * s, int * v, int * a);
-extern void _ZNK6QColor6getHsvEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 4
+extern void C_ZNK6QColor6getHsvEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 4
   // proto: static QColor QColor::fromCmykF(qreal c, qreal m, qreal y, qreal k, qreal a);
-extern void _ZN6QColor9fromCmykFEddddd(double arg0, double arg1, double arg2, double arg3, double arg4); // 4
+extern void C_ZN6QColor9fromCmykFEddddd(double arg0, double arg1, double arg2, double arg3, double arg4); // 4
   // proto:  int QColor::hsvHue();
-extern void _ZNK6QColor6hsvHueEv(void* qthis); // 4
+extern void C_ZNK6QColor6hsvHueEv(void* qthis); // 4
   // proto:  void QColor::getHsl(int * h, int * s, int * l, int * a);
-extern void _ZNK6QColor6getHslEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 4
+extern void C_ZNK6QColor6getHslEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 4
   // proto:  int QColor::alpha();
-extern void _ZNK6QColor5alphaEv(void* qthis); // 4
+extern void C_ZNK6QColor5alphaEv(void* qthis); // 4
   // proto:  QColor QColor::dark(int f);
-extern void _ZNK6QColor4darkEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK6QColor4darkEi(void* qthis, int32_t arg0); // 4
   // proto:  qreal QColor::greenF();
-extern void _ZNK6QColor6greenFEv(void* qthis); // 4
+extern void C_ZNK6QColor6greenFEv(void* qthis); // 4
   // proto:  QColor QColor::light(int f);
-extern void _ZNK6QColor5lightEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK6QColor5lightEi(void* qthis, int32_t arg0); // 4
   // proto:  void QColor::getHslF(qreal * h, qreal * s, qreal * l, qreal * a);
-extern void _ZNK6QColor7getHslFEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
+extern void C_ZNK6QColor7getHslFEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
   // proto:  qreal QColor::lightnessF();
-extern void _ZNK6QColor10lightnessFEv(void* qthis); // 4
+extern void C_ZNK6QColor10lightnessFEv(void* qthis); // 4
   // proto:  int QColor::green();
-extern void _ZNK6QColor5greenEv(void* qthis); // 4
+extern void C_ZNK6QColor5greenEv(void* qthis); // 4
   // proto: static QColor QColor::fromRgb(QRgb rgb);
-extern void _ZN6QColor7fromRgbEj(int32_t arg0); // 4
+extern void C_ZN6QColor7fromRgbEj(int32_t arg0); // 4
   // proto: static QColor QColor::fromRgb(int r, int g, int b, int a);
-extern void _ZN6QColor7fromRgbEiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
+extern void C_ZN6QColor7fromRgbEiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
   // proto:  void QColor::setGreenF(qreal green);
-extern void _ZN6QColor9setGreenFEd(void* qthis, double arg0); // 4
+extern void C_ZN6QColor9setGreenFEd(void* qthis, double arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -239,7 +239,7 @@ func (this *QColor) hueF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor4hueFEv
     // invoke: qreal hueF()
-    C._ZNK6QColor4hueFEv(this.qclsinst)
+    C.C_ZNK6QColor4hueFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "hueF", args)
   }
@@ -259,7 +259,7 @@ func (this *QColor) yellow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor6yellowEv
     // invoke: int yellow()
-    C._ZNK6QColor6yellowEv(this.qclsinst)
+    C.C_ZNK6QColor6yellowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "yellow", args)
   }
@@ -279,7 +279,7 @@ func (this *QColor) cyanF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor5cyanFEv
     // invoke: qreal cyanF()
-    C._ZNK6QColor5cyanFEv(this.qclsinst)
+    C.C_ZNK6QColor5cyanFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "cyanF", args)
   }
@@ -299,7 +299,7 @@ func (this *QColor) magentaF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor8magentaFEv
     // invoke: qreal magentaF()
-    C._ZNK6QColor8magentaFEv(this.qclsinst)
+    C.C_ZNK6QColor8magentaFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "magentaF", args)
   }
@@ -322,7 +322,7 @@ func (this *QColor) isValidColor_s(args ...interface{}) () {
     // invoke: bool isValidColor(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QColor12isValidColorERK7QString(arg0)
+    C.C_ZN6QColor12isValidColorERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QColor", "isValidColor", args)
   }
@@ -354,7 +354,7 @@ func (this *QColor) setHsvF(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN6QColor7setHsvFEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN6QColor7setHsvFEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "setHsvF", args)
   }
@@ -386,7 +386,7 @@ func (this *QColor) setHsl(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN6QColor6setHslEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN6QColor6setHslEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "setHsl", args)
   }
@@ -421,7 +421,7 @@ func (this *QColor) setCmykF(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.double(args[4].(float64))
     if false {fmt.Println(arg4)}
-    C._ZN6QColor8setCmykFEddddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN6QColor8setCmykFEddddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QColor", "setCmykF", args)
   }
@@ -453,7 +453,7 @@ func (this *QColor) setHsv(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN6QColor6setHsvEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN6QColor6setHsvEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "setHsv", args)
   }
@@ -473,7 +473,7 @@ func (this *QColor) rgb(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor3rgbEv
     // invoke: QRgb rgb()
-    C._ZNK6QColor3rgbEv(this.qclsinst)
+    C.C_ZNK6QColor3rgbEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "rgb", args)
   }
@@ -493,7 +493,7 @@ func (this *QColor) black(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor5blackEv
     // invoke: int black()
-    C._ZNK6QColor5blackEv(this.qclsinst)
+    C.C_ZNK6QColor5blackEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "black", args)
   }
@@ -528,7 +528,7 @@ func (this *QColor) fromCmyk_s(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.int32_t(args[4].(int32))
     if false {fmt.Println(arg4)}
-    C._ZN6QColor8fromCmykEiiiii(arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN6QColor8fromCmykEiiiii(arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QColor", "fromCmyk", args)
   }
@@ -548,7 +548,7 @@ func (this *QColor) spec(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor4specEv
     // invoke: QColor::Spec spec()
-    C._ZNK6QColor4specEv(this.qclsinst)
+    C.C_ZNK6QColor4specEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "spec", args)
   }
@@ -568,7 +568,7 @@ func (this *QColor) saturation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor10saturationEv
     // invoke: int saturation()
-    C._ZNK6QColor10saturationEv(this.qclsinst)
+    C.C_ZNK6QColor10saturationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "saturation", args)
   }
@@ -603,7 +603,7 @@ func (this *QColor) setCmyk(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.int32_t(args[4].(int32))
     if false {fmt.Println(arg4)}
-    C._ZN6QColor7setCmykEiiiii(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN6QColor7setCmykEiiiii(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QColor", "setCmyk", args)
   }
@@ -626,7 +626,7 @@ func (this *QColor) lighter(args ...interface{}) () {
     // invoke: QColor lighter(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK6QColor7lighterEi(this.qclsinst, arg0)
+    C.C_ZNK6QColor7lighterEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "lighter", args)
   }
@@ -646,7 +646,7 @@ func (this *QColor) yellowF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor7yellowFEv
     // invoke: qreal yellowF()
-    C._ZNK6QColor7yellowFEv(this.qclsinst)
+    C.C_ZNK6QColor7yellowFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "yellowF", args)
   }
@@ -678,7 +678,7 @@ func (this *QColor) fromRgbF_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN6QColor8fromRgbFEdddd(arg0, arg1, arg2, arg3)
+    C.C_ZN6QColor8fromRgbFEdddd(arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "fromRgbF", args)
   }
@@ -710,7 +710,7 @@ func (this *QColor) getHsvF(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C._ZNK6QColor7getHsvFEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK6QColor7getHsvFEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "getHsvF", args)
   }
@@ -730,7 +730,7 @@ func (this *QColor) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor4nameEv
     // invoke: QString name()
-    C._ZNK6QColor4nameEv(this.qclsinst)
+    C.C_ZNK6QColor4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "name", args)
   }
@@ -750,7 +750,7 @@ func (this *QColor) toRgb(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor5toRgbEv
     // invoke: QColor toRgb()
-    C._ZNK6QColor5toRgbEv(this.qclsinst)
+    C.C_ZNK6QColor5toRgbEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "toRgb", args)
   }
@@ -770,7 +770,7 @@ func (this *QColor) hsvHueF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor7hsvHueFEv
     // invoke: qreal hsvHueF()
-    C._ZNK6QColor7hsvHueFEv(this.qclsinst)
+    C.C_ZNK6QColor7hsvHueFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "hsvHueF", args)
   }
@@ -793,7 +793,7 @@ func (this *QColor) fromRgba_s(args ...interface{}) () {
     // invoke: QColor fromRgba(QRgb)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QColor8fromRgbaEj(arg0)
+    C.C_ZN6QColor8fromRgbaEj(arg0)
   default:
     qtrt.ErrorResolve("QColor", "fromRgba", args)
   }
@@ -816,7 +816,7 @@ func (this *QColor) setAlphaF(args ...interface{}) () {
     // invoke: void setAlphaF(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QColor9setAlphaFEd(this.qclsinst, arg0)
+    C.C_ZN6QColor9setAlphaFEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "setAlphaF", args)
   }
@@ -836,7 +836,7 @@ func (this *QColor) hslSaturation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor13hslSaturationEv
     // invoke: int hslSaturation()
-    C._ZNK6QColor13hslSaturationEv(this.qclsinst)
+    C.C_ZNK6QColor13hslSaturationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "hslSaturation", args)
   }
@@ -856,7 +856,7 @@ func (this *QColor) blackF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor6blackFEv
     // invoke: qreal blackF()
-    C._ZNK6QColor6blackFEv(this.qclsinst)
+    C.C_ZNK6QColor6blackFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "blackF", args)
   }
@@ -876,7 +876,7 @@ func (this *QColor) saturationF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor11saturationFEv
     // invoke: qreal saturationF()
-    C._ZNK6QColor11saturationFEv(this.qclsinst)
+    C.C_ZNK6QColor11saturationFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "saturationF", args)
   }
@@ -905,7 +905,7 @@ func (this *QColor) setRgb(args ...interface{}) () {
     // invoke: void setRgb(QRgb)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QColor6setRgbEj(this.qclsinst, arg0)
+    C.C_ZN6QColor6setRgbEj(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN6QColor6setRgbEiiii
     // invoke: void setRgb(int, int, int, int)
@@ -917,7 +917,7 @@ func (this *QColor) setRgb(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN6QColor6setRgbEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN6QColor6setRgbEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "setRgb", args)
   }
@@ -937,7 +937,7 @@ func (this *QColor) blue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor4blueEv
     // invoke: int blue()
-    C._ZNK6QColor4blueEv(this.qclsinst)
+    C.C_ZNK6QColor4blueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "blue", args)
   }
@@ -957,7 +957,7 @@ func (this *QColor) blueF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor5blueFEv
     // invoke: qreal blueF()
-    C._ZNK6QColor5blueFEv(this.qclsinst)
+    C.C_ZNK6QColor5blueFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "blueF", args)
   }
@@ -977,7 +977,7 @@ func (this *QColor) rgba(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor4rgbaEv
     // invoke: QRgb rgba()
-    C._ZNK6QColor4rgbaEv(this.qclsinst)
+    C.C_ZNK6QColor4rgbaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "rgba", args)
   }
@@ -997,7 +997,7 @@ func (this *QColor) red(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor3redEv
     // invoke: int red()
-    C._ZNK6QColor3redEv(this.qclsinst)
+    C.C_ZNK6QColor3redEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "red", args)
   }
@@ -1029,7 +1029,7 @@ func (this *QColor) fromHsvF_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN6QColor8fromHsvFEdddd(arg0, arg1, arg2, arg3)
+    C.C_ZN6QColor8fromHsvFEdddd(arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "fromHsvF", args)
   }
@@ -1049,7 +1049,7 @@ func (this *QColor) alphaF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor6alphaFEv
     // invoke: qreal alphaF()
-    C._ZNK6QColor6alphaFEv(this.qclsinst)
+    C.C_ZNK6QColor6alphaFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "alphaF", args)
   }
@@ -1072,7 +1072,7 @@ func (this *QColor) setRedF(args ...interface{}) () {
     // invoke: void setRedF(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QColor7setRedFEd(this.qclsinst, arg0)
+    C.C_ZN6QColor7setRedFEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "setRedF", args)
   }
@@ -1092,7 +1092,7 @@ func (this *QColor) lightness(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor9lightnessEv
     // invoke: int lightness()
-    C._ZNK6QColor9lightnessEv(this.qclsinst)
+    C.C_ZNK6QColor9lightnessEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "lightness", args)
   }
@@ -1112,7 +1112,7 @@ func (this *QColor) colorNames_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QColor10colorNamesEv
     // invoke: QStringList colorNames()
-    C._ZN6QColor10colorNamesEv()
+    C.C_ZN6QColor10colorNamesEv()
   default:
     qtrt.ErrorResolve("QColor", "colorNames", args)
   }
@@ -1147,7 +1147,7 @@ func (this *QColor) getCmykF(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = (*C.double)(args[4].(*float64))
     if false {fmt.Println(arg4)}
-    C._ZN6QColor8getCmykFEPdS0_S0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN6QColor8getCmykFEPdS0_S0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QColor", "getCmykF", args)
   }
@@ -1170,7 +1170,7 @@ func (this *QColor) setNamedColor(args ...interface{}) () {
     // invoke: void setNamedColor(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QColor13setNamedColorERK7QString(this.qclsinst, arg0)
+    C.C_ZN6QColor13setNamedColorERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "setNamedColor", args)
   }
@@ -1193,7 +1193,7 @@ func (this *QColor) setGreen(args ...interface{}) () {
     // invoke: void setGreen(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QColor8setGreenEi(this.qclsinst, arg0)
+    C.C_ZN6QColor8setGreenEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "setGreen", args)
   }
@@ -1216,7 +1216,7 @@ func (this *QColor) setRed(args ...interface{}) () {
     // invoke: void setRed(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QColor6setRedEi(this.qclsinst, arg0)
+    C.C_ZN6QColor6setRedEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "setRed", args)
   }
@@ -1236,7 +1236,7 @@ func (this *QColor) toCmyk(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor6toCmykEv
     // invoke: QColor toCmyk()
-    C._ZNK6QColor6toCmykEv(this.qclsinst)
+    C.C_ZNK6QColor6toCmykEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "toCmyk", args)
   }
@@ -1256,7 +1256,7 @@ func (this *QColor) redF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor4redFEv
     // invoke: qreal redF()
-    C._ZNK6QColor4redFEv(this.qclsinst)
+    C.C_ZNK6QColor4redFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "redF", args)
   }
@@ -1276,7 +1276,7 @@ func (this *QColor) hue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor3hueEv
     // invoke: int hue()
-    C._ZNK6QColor3hueEv(this.qclsinst)
+    C.C_ZNK6QColor3hueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "hue", args)
   }
@@ -1296,7 +1296,7 @@ func (this *QColor) hslSaturationF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor14hslSaturationFEv
     // invoke: qreal hslSaturationF()
-    C._ZNK6QColor14hslSaturationFEv(this.qclsinst)
+    C.C_ZNK6QColor14hslSaturationFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "hslSaturationF", args)
   }
@@ -1316,7 +1316,7 @@ func (this *QColor) hsvSaturationF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor14hsvSaturationFEv
     // invoke: qreal hsvSaturationF()
-    C._ZNK6QColor14hsvSaturationFEv(this.qclsinst)
+    C.C_ZNK6QColor14hsvSaturationFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "hsvSaturationF", args)
   }
@@ -1336,7 +1336,7 @@ func (this *QColor) toHsl(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor5toHslEv
     // invoke: QColor toHsl()
-    C._ZNK6QColor5toHslEv(this.qclsinst)
+    C.C_ZNK6QColor5toHslEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "toHsl", args)
   }
@@ -1356,7 +1356,7 @@ func (this *QColor) value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor5valueEv
     // invoke: int value()
-    C._ZNK6QColor5valueEv(this.qclsinst)
+    C.C_ZNK6QColor5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "value", args)
   }
@@ -1376,7 +1376,7 @@ func (this *QColor) toHsv(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor5toHsvEv
     // invoke: QColor toHsv()
-    C._ZNK6QColor5toHsvEv(this.qclsinst)
+    C.C_ZNK6QColor5toHsvEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "toHsv", args)
   }
@@ -1399,7 +1399,7 @@ func (this *QColor) darker(args ...interface{}) () {
     // invoke: QColor darker(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK6QColor6darkerEi(this.qclsinst, arg0)
+    C.C_ZNK6QColor6darkerEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "darker", args)
   }
@@ -1422,7 +1422,7 @@ func (this *QColor) setBlue(args ...interface{}) () {
     // invoke: void setBlue(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QColor7setBlueEi(this.qclsinst, arg0)
+    C.C_ZN6QColor7setBlueEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "setBlue", args)
   }
@@ -1454,7 +1454,7 @@ func (this *QColor) setHslF(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN6QColor7setHslFEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN6QColor7setHslFEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "setHslF", args)
   }
@@ -1474,7 +1474,7 @@ func (this *QColor) valueF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor6valueFEv
     // invoke: qreal valueF()
-    C._ZNK6QColor6valueFEv(this.qclsinst)
+    C.C_ZNK6QColor6valueFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "valueF", args)
   }
@@ -1506,7 +1506,7 @@ func (this *QColor) fromHsl_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN6QColor7fromHslEiiii(arg0, arg1, arg2, arg3)
+    C.C_ZN6QColor7fromHslEiiii(arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "fromHsl", args)
   }
@@ -1526,7 +1526,7 @@ func (this *QColor) hslHue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor6hslHueEv
     // invoke: int hslHue()
-    C._ZNK6QColor6hslHueEv(this.qclsinst)
+    C.C_ZNK6QColor6hslHueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "hslHue", args)
   }
@@ -1558,7 +1558,7 @@ func (this *QColor) fromHsv_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN6QColor7fromHsvEiiii(arg0, arg1, arg2, arg3)
+    C.C_ZN6QColor7fromHsvEiiii(arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "fromHsv", args)
   }
@@ -1590,7 +1590,7 @@ func (this *QColor) getRgb(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C._ZNK6QColor6getRgbEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK6QColor6getRgbEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "getRgb", args)
   }
@@ -1613,7 +1613,7 @@ func (this *QColor) setRgba(args ...interface{}) () {
     // invoke: void setRgba(QRgb)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QColor7setRgbaEj(this.qclsinst, arg0)
+    C.C_ZN6QColor7setRgbaEj(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "setRgba", args)
   }
@@ -1633,7 +1633,7 @@ func (this *QColor) magenta(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor7magentaEv
     // invoke: int magenta()
-    C._ZNK6QColor7magentaEv(this.qclsinst)
+    C.C_ZNK6QColor7magentaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "magenta", args)
   }
@@ -1675,7 +1675,7 @@ func NewQColor(args ...interface{}) QColor {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QColorC2EPKc(qthis, arg0)
+    C.C_ZN6QColorC2EPKc(qthis, arg0)
   case 1:
     // invoke: _ZN6QColorC1Ej
     // invoke: void QColor(QRgb)
@@ -1683,7 +1683,7 @@ func NewQColor(args ...interface{}) QColor {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QColorC2Ej(qthis, arg0)
+    C.C_ZN6QColorC2Ej(qthis, arg0)
   case 2:
     // invoke: _ZN6QColorC1ERKS_
     // invoke: void QColor(const class QColor &)
@@ -1691,7 +1691,7 @@ func NewQColor(args ...interface{}) QColor {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QColorC2ERKS_(qthis, arg0)
+    C.C_ZN6QColorC2ERKS_(qthis, arg0)
   case 3:
     // invoke: _ZN6QColorC1Eiiii
     // invoke: void QColor(int, int, int, int)
@@ -1705,13 +1705,13 @@ func NewQColor(args ...interface{}) QColor {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QColorC2Eiiii(qthis, arg0, arg1, arg2, arg3)
+    C.C_ZN6QColorC2Eiiii(qthis, arg0, arg1, arg2, arg3)
   case 4:
     // invoke: _ZN6QColorC1Ev
     // invoke: void QColor()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QColorC2Ev(qthis)
+    C.C_ZN6QColorC2Ev(qthis)
   case 5:
     // invoke: _ZN6QColorC1ERK7QString
     // invoke: void QColor(const class QString &)
@@ -1719,7 +1719,7 @@ func NewQColor(args ...interface{}) QColor {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QColorC2ERK7QString(qthis, arg0)
+    C.C_ZN6QColorC2ERK7QString(qthis, arg0)
   default:
     qtrt.ErrorResolve("QColor", "QColor", args)
   }
@@ -1740,7 +1740,7 @@ func (this *QColor) hslHueF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor7hslHueFEv
     // invoke: qreal hslHueF()
-    C._ZNK6QColor7hslHueFEv(this.qclsinst)
+    C.C_ZNK6QColor7hslHueFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "hslHueF", args)
   }
@@ -1772,7 +1772,7 @@ func (this *QColor) fromHslF_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN6QColor8fromHslFEdddd(arg0, arg1, arg2, arg3)
+    C.C_ZN6QColor8fromHslFEdddd(arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "fromHslF", args)
   }
@@ -1792,7 +1792,7 @@ func (this *QColor) hsvSaturation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor13hsvSaturationEv
     // invoke: int hsvSaturation()
-    C._ZNK6QColor13hsvSaturationEv(this.qclsinst)
+    C.C_ZNK6QColor13hsvSaturationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "hsvSaturation", args)
   }
@@ -1824,7 +1824,7 @@ func (this *QColor) setRgbF(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN6QColor7setRgbFEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN6QColor7setRgbFEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "setRgbF", args)
   }
@@ -1847,7 +1847,7 @@ func (this *QColor) setAlpha(args ...interface{}) () {
     // invoke: void setAlpha(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QColor8setAlphaEi(this.qclsinst, arg0)
+    C.C_ZN6QColor8setAlphaEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "setAlpha", args)
   }
@@ -1867,7 +1867,7 @@ func (this *QColor) cyan(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor4cyanEv
     // invoke: int cyan()
-    C._ZNK6QColor4cyanEv(this.qclsinst)
+    C.C_ZNK6QColor4cyanEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "cyan", args)
   }
@@ -1899,7 +1899,7 @@ func (this *QColor) getRgbF(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C._ZNK6QColor7getRgbFEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK6QColor7getRgbFEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "getRgbF", args)
   }
@@ -1922,7 +1922,7 @@ func (this *QColor) setBlueF(args ...interface{}) () {
     // invoke: void setBlueF(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QColor8setBlueFEd(this.qclsinst, arg0)
+    C.C_ZN6QColor8setBlueFEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "setBlueF", args)
   }
@@ -1957,7 +1957,7 @@ func (this *QColor) getCmyk(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = (*C.int32_t)(args[4].(*int32))
     if false {fmt.Println(arg4)}
-    C._ZN6QColor7getCmykEPiS0_S0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN6QColor7getCmykEPiS0_S0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QColor", "getCmyk", args)
   }
@@ -1977,7 +1977,7 @@ func (this *QColor) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor7isValidEv
     // invoke: bool isValid()
-    C._ZNK6QColor7isValidEv(this.qclsinst)
+    C.C_ZNK6QColor7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "isValid", args)
   }
@@ -2009,7 +2009,7 @@ func (this *QColor) getHsv(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C._ZNK6QColor6getHsvEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK6QColor6getHsvEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "getHsv", args)
   }
@@ -2044,7 +2044,7 @@ func (this *QColor) fromCmykF_s(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.double(args[4].(float64))
     if false {fmt.Println(arg4)}
-    C._ZN6QColor9fromCmykFEddddd(arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN6QColor9fromCmykFEddddd(arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QColor", "fromCmykF", args)
   }
@@ -2064,7 +2064,7 @@ func (this *QColor) hsvHue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor6hsvHueEv
     // invoke: int hsvHue()
-    C._ZNK6QColor6hsvHueEv(this.qclsinst)
+    C.C_ZNK6QColor6hsvHueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "hsvHue", args)
   }
@@ -2096,7 +2096,7 @@ func (this *QColor) getHsl(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C._ZNK6QColor6getHslEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK6QColor6getHslEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "getHsl", args)
   }
@@ -2116,7 +2116,7 @@ func (this *QColor) alpha(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor5alphaEv
     // invoke: int alpha()
-    C._ZNK6QColor5alphaEv(this.qclsinst)
+    C.C_ZNK6QColor5alphaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "alpha", args)
   }
@@ -2139,7 +2139,7 @@ func (this *QColor) dark(args ...interface{}) () {
     // invoke: QColor dark(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK6QColor4darkEi(this.qclsinst, arg0)
+    C.C_ZNK6QColor4darkEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "dark", args)
   }
@@ -2159,7 +2159,7 @@ func (this *QColor) greenF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor6greenFEv
     // invoke: qreal greenF()
-    C._ZNK6QColor6greenFEv(this.qclsinst)
+    C.C_ZNK6QColor6greenFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "greenF", args)
   }
@@ -2182,7 +2182,7 @@ func (this *QColor) light(args ...interface{}) () {
     // invoke: QColor light(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK6QColor5lightEi(this.qclsinst, arg0)
+    C.C_ZNK6QColor5lightEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "light", args)
   }
@@ -2214,7 +2214,7 @@ func (this *QColor) getHslF(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C._ZNK6QColor7getHslFEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK6QColor7getHslFEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "getHslF", args)
   }
@@ -2234,7 +2234,7 @@ func (this *QColor) lightnessF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor10lightnessFEv
     // invoke: qreal lightnessF()
-    C._ZNK6QColor10lightnessFEv(this.qclsinst)
+    C.C_ZNK6QColor10lightnessFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "lightnessF", args)
   }
@@ -2254,7 +2254,7 @@ func (this *QColor) green(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QColor5greenEv
     // invoke: int green()
-    C._ZNK6QColor5greenEv(this.qclsinst)
+    C.C_ZNK6QColor5greenEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColor", "green", args)
   }
@@ -2283,7 +2283,7 @@ func (this *QColor) fromRgb_s(args ...interface{}) () {
     // invoke: QColor fromRgb(QRgb)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QColor7fromRgbEj(arg0)
+    C.C_ZN6QColor7fromRgbEj(arg0)
   case 1:
     // invoke: _ZN6QColor7fromRgbEiiii
     // invoke: QColor fromRgb(int, int, int, int)
@@ -2295,7 +2295,7 @@ func (this *QColor) fromRgb_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN6QColor7fromRgbEiiii(arg0, arg1, arg2, arg3)
+    C.C_ZN6QColor7fromRgbEiiii(arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QColor", "fromRgb", args)
   }
@@ -2318,7 +2318,7 @@ func (this *QColor) setGreenF(args ...interface{}) () {
     // invoke: void setGreenF(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QColor9setGreenFEd(this.qclsinst, arg0)
+    C.C_ZN6QColor9setGreenFEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColor", "setGreenF", args)
   }

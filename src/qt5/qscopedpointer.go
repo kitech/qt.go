@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qscopedpointer.h
 // dst-file: /src/core/qscopedpointer.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static void QScopedPointerPodDeleter::cleanup(void * pointer);
-extern void _ZN24QScopedPointerPodDeleter7cleanupEPv(void* arg0); // 2
+extern void C_ZN24QScopedPointerPodDeleter7cleanupEPv(void* arg0); // 2
 */
 import "C"
 // } // <= ext block end
@@ -64,7 +64,7 @@ func (this *QScopedPointerPodDeleter) cleanup_s(args ...interface{}) () {
     // invoke: void cleanup(void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
-    C._ZN24QScopedPointerPodDeleter7cleanupEPv(arg0)
+    C.C_ZN24QScopedPointerPodDeleter7cleanupEPv(arg0)
   default:
     qtrt.ErrorResolve("QScopedPointerPodDeleter", "cleanup", args)
   }

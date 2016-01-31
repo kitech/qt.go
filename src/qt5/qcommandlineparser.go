@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qcommandlineparser.h
 // dst-file: /src/core/qcommandlineparser.go
 //
@@ -29,55 +29,55 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QCommandLineParser::addOption(const QCommandLineOption & commandLineOption);
-extern void _ZN18QCommandLineParser9addOptionERK18QCommandLineOption(void* qthis, void* arg0); // 4
+extern void C_ZN18QCommandLineParser9addOptionERK18QCommandLineOption(void* qthis, void* arg0); // 4
   // proto:  void QCommandLineParser::process(const QStringList & arguments);
-extern void _ZN18QCommandLineParser7processERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN18QCommandLineParser7processERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  void QCommandLineParser::process(const QCoreApplication & app);
-extern void _ZN18QCommandLineParser7processERK16QCoreApplication(void* qthis, void* arg0); // 4
+extern void C_ZN18QCommandLineParser7processERK16QCoreApplication(void* qthis, void* arg0); // 4
   // proto:  QString QCommandLineParser::errorText();
-extern void _ZNK18QCommandLineParser9errorTextEv(void* qthis); // 4
+extern void C_ZNK18QCommandLineParser9errorTextEv(void* qthis); // 4
   // proto:  void QCommandLineParser::addPositionalArgument(const QString & name, const QString & description, const QString & syntax);
-extern void _ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  bool QCommandLineParser::parse(const QStringList & arguments);
-extern void _ZN18QCommandLineParser5parseERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN18QCommandLineParser5parseERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  void QCommandLineParser::~QCommandLineParser();
-extern void _ZN18QCommandLineParserD2Ev(void* qthis); // 4
+extern void C_ZN18QCommandLineParserD2Ev(void* qthis); // 4
   // proto:  void QCommandLineParser::showHelp(int exitCode);
-extern void _ZN18QCommandLineParser8showHelpEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN18QCommandLineParser8showHelpEi(void* qthis, int32_t arg0); // 4
   // proto:  QString QCommandLineParser::applicationDescription();
-extern void _ZNK18QCommandLineParser22applicationDescriptionEv(void* qthis); // 4
+extern void C_ZNK18QCommandLineParser22applicationDescriptionEv(void* qthis); // 4
   // proto:  QCommandLineOption QCommandLineParser::addVersionOption();
-extern void _ZN18QCommandLineParser16addVersionOptionEv(void* qthis); // 4
+extern void C_ZN18QCommandLineParser16addVersionOptionEv(void* qthis); // 4
   // proto:  QString QCommandLineParser::helpText();
-extern void _ZNK18QCommandLineParser8helpTextEv(void* qthis); // 4
+extern void C_ZNK18QCommandLineParser8helpTextEv(void* qthis); // 4
   // proto:  void QCommandLineParser::showVersion();
-extern void _ZN18QCommandLineParser11showVersionEv(void* qthis); // 4
+extern void C_ZN18QCommandLineParser11showVersionEv(void* qthis); // 4
   // proto:  void QCommandLineParser::QCommandLineParser();
-extern void _ZN18QCommandLineParserC2Ev(void* qthis); // 3
+extern void C_ZN18QCommandLineParserC2Ev(void* qthis); // 3
   // proto:  void QCommandLineParser::setApplicationDescription(const QString & description);
-extern void _ZN18QCommandLineParser25setApplicationDescriptionERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN18QCommandLineParser25setApplicationDescriptionERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QCommandLineParser::clearPositionalArguments();
-extern void _ZN18QCommandLineParser24clearPositionalArgumentsEv(void* qthis); // 4
+extern void C_ZN18QCommandLineParser24clearPositionalArgumentsEv(void* qthis); // 4
   // proto:  QCommandLineOption QCommandLineParser::addHelpOption();
-extern void _ZN18QCommandLineParser13addHelpOptionEv(void* qthis); // 4
+extern void C_ZN18QCommandLineParser13addHelpOptionEv(void* qthis); // 4
   // proto:  QStringList QCommandLineParser::optionNames();
-extern void _ZNK18QCommandLineParser11optionNamesEv(void* qthis); // 4
+extern void C_ZNK18QCommandLineParser11optionNamesEv(void* qthis); // 4
   // proto:  QStringList QCommandLineParser::unknownOptionNames();
-extern void _ZNK18QCommandLineParser18unknownOptionNamesEv(void* qthis); // 4
+extern void C_ZNK18QCommandLineParser18unknownOptionNamesEv(void* qthis); // 4
   // proto:  QString QCommandLineParser::value(const QString & name);
-extern void _ZNK18QCommandLineParser5valueERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK18QCommandLineParser5valueERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QCommandLineParser::value(const QCommandLineOption & option);
-extern void _ZNK18QCommandLineParser5valueERK18QCommandLineOption(void* qthis, void* arg0); // 4
+extern void C_ZNK18QCommandLineParser5valueERK18QCommandLineOption(void* qthis, void* arg0); // 4
   // proto:  bool QCommandLineParser::isSet(const QString & name);
-extern void _ZNK18QCommandLineParser5isSetERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK18QCommandLineParser5isSetERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QCommandLineParser::isSet(const QCommandLineOption & option);
-extern void _ZNK18QCommandLineParser5isSetERK18QCommandLineOption(void* qthis, void* arg0); // 4
+extern void C_ZNK18QCommandLineParser5isSetERK18QCommandLineOption(void* qthis, void* arg0); // 4
   // proto:  QStringList QCommandLineParser::values(const QCommandLineOption & option);
-extern void _ZNK18QCommandLineParser6valuesERK18QCommandLineOption(void* qthis, void* arg0); // 4
+extern void C_ZNK18QCommandLineParser6valuesERK18QCommandLineOption(void* qthis, void* arg0); // 4
   // proto:  QStringList QCommandLineParser::values(const QString & name);
-extern void _ZNK18QCommandLineParser6valuesERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK18QCommandLineParser6valuesERK7QString(void* qthis, void* arg0); // 4
   // proto:  QStringList QCommandLineParser::positionalArguments();
-extern void _ZNK18QCommandLineParser19positionalArgumentsEv(void* qthis); // 4
+extern void C_ZNK18QCommandLineParser19positionalArgumentsEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -112,7 +112,7 @@ func (this *QCommandLineParser) addOption(args ...interface{}) () {
     // invoke: bool addOption(const class QCommandLineOption &)
     var arg0 = args[0].(QCommandLineOption).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QCommandLineParser9addOptionERK18QCommandLineOption(this.qclsinst, arg0)
+    C.C_ZN18QCommandLineParser9addOptionERK18QCommandLineOption(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "addOption", args)
   }
@@ -138,13 +138,13 @@ func (this *QCommandLineParser) process(args ...interface{}) () {
     // invoke: void process(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QCommandLineParser7processERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN18QCommandLineParser7processERK11QStringList(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN18QCommandLineParser7processERK16QCoreApplication
     // invoke: void process(const class QCoreApplication &)
     var arg0 = args[0].(QCoreApplication).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QCommandLineParser7processERK16QCoreApplication(this.qclsinst, arg0)
+    C.C_ZN18QCommandLineParser7processERK16QCoreApplication(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "process", args)
   }
@@ -164,7 +164,7 @@ func (this *QCommandLineParser) errorText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCommandLineParser9errorTextEv
     // invoke: QString errorText()
-    C._ZNK18QCommandLineParser9errorTextEv(this.qclsinst)
+    C.C_ZNK18QCommandLineParser9errorTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "errorText", args)
   }
@@ -193,7 +193,7 @@ func (this *QCommandLineParser) addPositionalArgument(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "addPositionalArgument", args)
   }
@@ -216,7 +216,7 @@ func (this *QCommandLineParser) parse(args ...interface{}) () {
     // invoke: bool parse(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QCommandLineParser5parseERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN18QCommandLineParser5parseERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "parse", args)
   }
@@ -236,7 +236,7 @@ func (this *QCommandLineParser) FreeQCommandLineParser(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineParserD0Ev
     // invoke: void ~QCommandLineParser()
-    C._ZN18QCommandLineParserD2Ev(this.qclsinst)
+    C.C_ZN18QCommandLineParserD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "~QCommandLineParser", args)
   }
@@ -259,7 +259,7 @@ func (this *QCommandLineParser) showHelp(args ...interface{}) () {
     // invoke: void showHelp(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN18QCommandLineParser8showHelpEi(this.qclsinst, arg0)
+    C.C_ZN18QCommandLineParser8showHelpEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "showHelp", args)
   }
@@ -279,7 +279,7 @@ func (this *QCommandLineParser) applicationDescription(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCommandLineParser22applicationDescriptionEv
     // invoke: QString applicationDescription()
-    C._ZNK18QCommandLineParser22applicationDescriptionEv(this.qclsinst)
+    C.C_ZNK18QCommandLineParser22applicationDescriptionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "applicationDescription", args)
   }
@@ -299,7 +299,7 @@ func (this *QCommandLineParser) addVersionOption(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineParser16addVersionOptionEv
     // invoke: QCommandLineOption addVersionOption()
-    C._ZN18QCommandLineParser16addVersionOptionEv(this.qclsinst)
+    C.C_ZN18QCommandLineParser16addVersionOptionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "addVersionOption", args)
   }
@@ -319,7 +319,7 @@ func (this *QCommandLineParser) helpText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCommandLineParser8helpTextEv
     // invoke: QString helpText()
-    C._ZNK18QCommandLineParser8helpTextEv(this.qclsinst)
+    C.C_ZNK18QCommandLineParser8helpTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "helpText", args)
   }
@@ -339,7 +339,7 @@ func (this *QCommandLineParser) showVersion(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineParser11showVersionEv
     // invoke: void showVersion()
-    C._ZN18QCommandLineParser11showVersionEv(this.qclsinst)
+    C.C_ZN18QCommandLineParser11showVersionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "showVersion", args)
   }
@@ -361,7 +361,7 @@ func NewQCommandLineParser(args ...interface{}) QCommandLineParser {
     // invoke: void QCommandLineParser()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN18QCommandLineParserC2Ev(qthis)
+    C.C_ZN18QCommandLineParserC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "QCommandLineParser", args)
   }
@@ -385,7 +385,7 @@ func (this *QCommandLineParser) setApplicationDescription(args ...interface{}) (
     // invoke: void setApplicationDescription(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QCommandLineParser25setApplicationDescriptionERK7QString(this.qclsinst, arg0)
+    C.C_ZN18QCommandLineParser25setApplicationDescriptionERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "setApplicationDescription", args)
   }
@@ -405,7 +405,7 @@ func (this *QCommandLineParser) clearPositionalArguments(args ...interface{}) ()
   case 0:
     // invoke: _ZN18QCommandLineParser24clearPositionalArgumentsEv
     // invoke: void clearPositionalArguments()
-    C._ZN18QCommandLineParser24clearPositionalArgumentsEv(this.qclsinst)
+    C.C_ZN18QCommandLineParser24clearPositionalArgumentsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "clearPositionalArguments", args)
   }
@@ -425,7 +425,7 @@ func (this *QCommandLineParser) addHelpOption(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineParser13addHelpOptionEv
     // invoke: QCommandLineOption addHelpOption()
-    C._ZN18QCommandLineParser13addHelpOptionEv(this.qclsinst)
+    C.C_ZN18QCommandLineParser13addHelpOptionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "addHelpOption", args)
   }
@@ -445,7 +445,7 @@ func (this *QCommandLineParser) optionNames(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCommandLineParser11optionNamesEv
     // invoke: QStringList optionNames()
-    C._ZNK18QCommandLineParser11optionNamesEv(this.qclsinst)
+    C.C_ZNK18QCommandLineParser11optionNamesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "optionNames", args)
   }
@@ -465,7 +465,7 @@ func (this *QCommandLineParser) unknownOptionNames(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCommandLineParser18unknownOptionNamesEv
     // invoke: QStringList unknownOptionNames()
-    C._ZNK18QCommandLineParser18unknownOptionNamesEv(this.qclsinst)
+    C.C_ZNK18QCommandLineParser18unknownOptionNamesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "unknownOptionNames", args)
   }
@@ -491,13 +491,13 @@ func (this *QCommandLineParser) value(args ...interface{}) () {
     // invoke: QString value(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK18QCommandLineParser5valueERK7QString(this.qclsinst, arg0)
+    C.C_ZNK18QCommandLineParser5valueERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK18QCommandLineParser5valueERK18QCommandLineOption
     // invoke: QString value(const class QCommandLineOption &)
     var arg0 = args[0].(QCommandLineOption).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK18QCommandLineParser5valueERK18QCommandLineOption(this.qclsinst, arg0)
+    C.C_ZNK18QCommandLineParser5valueERK18QCommandLineOption(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "value", args)
   }
@@ -523,13 +523,13 @@ func (this *QCommandLineParser) isSet(args ...interface{}) () {
     // invoke: bool isSet(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK18QCommandLineParser5isSetERK7QString(this.qclsinst, arg0)
+    C.C_ZNK18QCommandLineParser5isSetERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK18QCommandLineParser5isSetERK18QCommandLineOption
     // invoke: bool isSet(const class QCommandLineOption &)
     var arg0 = args[0].(QCommandLineOption).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK18QCommandLineParser5isSetERK18QCommandLineOption(this.qclsinst, arg0)
+    C.C_ZNK18QCommandLineParser5isSetERK18QCommandLineOption(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "isSet", args)
   }
@@ -555,13 +555,13 @@ func (this *QCommandLineParser) values(args ...interface{}) () {
     // invoke: QStringList values(const class QCommandLineOption &)
     var arg0 = args[0].(QCommandLineOption).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK18QCommandLineParser6valuesERK18QCommandLineOption(this.qclsinst, arg0)
+    C.C_ZNK18QCommandLineParser6valuesERK18QCommandLineOption(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK18QCommandLineParser6valuesERK7QString
     // invoke: QStringList values(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK18QCommandLineParser6valuesERK7QString(this.qclsinst, arg0)
+    C.C_ZNK18QCommandLineParser6valuesERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "values", args)
   }
@@ -581,7 +581,7 @@ func (this *QCommandLineParser) positionalArguments(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCommandLineParser19positionalArgumentsEv
     // invoke: QStringList positionalArguments()
-    C._ZNK18QCommandLineParser19positionalArgumentsEv(this.qclsinst)
+    C.C_ZNK18QCommandLineParser19positionalArgumentsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineParser", "positionalArguments", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qabstracteventdispatcher.h
 // dst-file: /src/core/qabstracteventdispatcher.go
 //
@@ -29,23 +29,23 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QAbstractEventDispatcher::installNativeEventFilter(QAbstractNativeEventFilter * filterObj);
-extern void _ZN24QAbstractEventDispatcher24installNativeEventFilterEP26QAbstractNativeEventFilter(void* qthis, void* arg0); // 4
+extern void C_ZN24QAbstractEventDispatcher24installNativeEventFilterEP26QAbstractNativeEventFilter(void* qthis, void* arg0); // 4
   // proto:  void QAbstractEventDispatcher::~QAbstractEventDispatcher();
-extern void _ZN24QAbstractEventDispatcherD2Ev(void* qthis); // 4
+extern void C_ZN24QAbstractEventDispatcherD2Ev(void* qthis); // 4
   // proto:  void QAbstractEventDispatcher::closingDown();
-extern void _ZN24QAbstractEventDispatcher11closingDownEv(void* qthis); // 4
+extern void C_ZN24QAbstractEventDispatcher11closingDownEv(void* qthis); // 4
   // proto:  void QAbstractEventDispatcher::startingUp();
-extern void _ZN24QAbstractEventDispatcher10startingUpEv(void* qthis); // 4
+extern void C_ZN24QAbstractEventDispatcher10startingUpEv(void* qthis); // 4
   // proto: static QAbstractEventDispatcher * QAbstractEventDispatcher::instance(QThread * thread);
-extern void _ZN24QAbstractEventDispatcher8instanceEP7QThread(void* arg0); // 4
+extern void C_ZN24QAbstractEventDispatcher8instanceEP7QThread(void* arg0); // 4
   // proto:  void QAbstractEventDispatcher::removeNativeEventFilter(QAbstractNativeEventFilter * filterObj);
-extern void _ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstractNativeEventFilter(void* qthis, void* arg0); // 4
+extern void C_ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstractNativeEventFilter(void* qthis, void* arg0); // 4
   // proto:  bool QAbstractEventDispatcher::filterNativeEvent(const QByteArray & eventType, void * message, long * result);
-extern void _ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(void* qthis, void* arg0, void* arg1, int32_t* arg2); // 4
+extern void C_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(void* qthis, void* arg0, void* arg1, int32_t* arg2); // 4
   // proto:  void QAbstractEventDispatcher::QAbstractEventDispatcher(QObject * parent);
-extern void _ZN24QAbstractEventDispatcherC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN24QAbstractEventDispatcherC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  const QMetaObject * QAbstractEventDispatcher::metaObject();
-extern void _ZNK24QAbstractEventDispatcher10metaObjectEv(void* qthis); // 4
+extern void C_ZNK24QAbstractEventDispatcher10metaObjectEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -82,7 +82,7 @@ func (this *QAbstractEventDispatcher) installNativeEventFilter(args ...interface
     // invoke: void installNativeEventFilter(class QAbstractNativeEventFilter *)
     var arg0 = args[0].(QAbstractNativeEventFilter).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QAbstractEventDispatcher24installNativeEventFilterEP26QAbstractNativeEventFilter(this.qclsinst, arg0)
+    C.C_ZN24QAbstractEventDispatcher24installNativeEventFilterEP26QAbstractNativeEventFilter(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "installNativeEventFilter", args)
   }
@@ -102,7 +102,7 @@ func (this *QAbstractEventDispatcher) FreeQAbstractEventDispatcher(args ...inter
   case 0:
     // invoke: _ZN24QAbstractEventDispatcherD0Ev
     // invoke: void ~QAbstractEventDispatcher()
-    C._ZN24QAbstractEventDispatcherD2Ev(this.qclsinst)
+    C.C_ZN24QAbstractEventDispatcherD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "~QAbstractEventDispatcher", args)
   }
@@ -122,7 +122,7 @@ func (this *QAbstractEventDispatcher) closingDown(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher11closingDownEv
     // invoke: void closingDown()
-    C._ZN24QAbstractEventDispatcher11closingDownEv(this.qclsinst)
+    C.C_ZN24QAbstractEventDispatcher11closingDownEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "closingDown", args)
   }
@@ -142,7 +142,7 @@ func (this *QAbstractEventDispatcher) startingUp(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher10startingUpEv
     // invoke: void startingUp()
-    C._ZN24QAbstractEventDispatcher10startingUpEv(this.qclsinst)
+    C.C_ZN24QAbstractEventDispatcher10startingUpEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "startingUp", args)
   }
@@ -165,7 +165,7 @@ func (this *QAbstractEventDispatcher) instance_s(args ...interface{}) () {
     // invoke: QAbstractEventDispatcher * instance(class QThread *)
     var arg0 = args[0].(QThread).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QAbstractEventDispatcher8instanceEP7QThread(arg0)
+    C.C_ZN24QAbstractEventDispatcher8instanceEP7QThread(arg0)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "instance", args)
   }
@@ -188,7 +188,7 @@ func (this *QAbstractEventDispatcher) removeNativeEventFilter(args ...interface{
     // invoke: void removeNativeEventFilter(class QAbstractNativeEventFilter *)
     var arg0 = args[0].(QAbstractNativeEventFilter).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstractNativeEventFilter(this.qclsinst, arg0)
+    C.C_ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstractNativeEventFilter(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "removeNativeEventFilter", args)
   }
@@ -217,7 +217,7 @@ func (this *QAbstractEventDispatcher) filterNativeEvent(args ...interface{}) () 
     if false {fmt.Println(arg1)}
     var arg2 = (*C.int32_t)(args[2].(*int32))
     if false {fmt.Println(arg2)}
-    C._ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "filterNativeEvent", args)
   }
@@ -242,7 +242,7 @@ func NewQAbstractEventDispatcher(args ...interface{}) QAbstractEventDispatcher {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN24QAbstractEventDispatcherC2EP7QObject(qthis, arg0)
+    C.C_ZN24QAbstractEventDispatcherC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "QAbstractEventDispatcher", args)
   }
@@ -263,7 +263,7 @@ func (this *QAbstractEventDispatcher) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QAbstractEventDispatcher10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK24QAbstractEventDispatcher10metaObjectEv(this.qclsinst)
+    C.C_ZNK24QAbstractEventDispatcher10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "metaObject", args)
   }

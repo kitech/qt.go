@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.go
 //
@@ -29,35 +29,35 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QGroupBox::~QGroupBox();
-extern void _ZN9QGroupBoxD2Ev(void* qthis); // 4
+extern void C_ZN9QGroupBoxD2Ev(void* qthis); // 4
   // proto:  void QGroupBox::setTitle(const QString & title);
-extern void _ZN9QGroupBox8setTitleERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN9QGroupBox8setTitleERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QGroupBox::isCheckable();
-extern void _ZNK9QGroupBox11isCheckableEv(void* qthis); // 4
+extern void C_ZNK9QGroupBox11isCheckableEv(void* qthis); // 4
   // proto:  Qt::Alignment QGroupBox::alignment();
-extern void _ZNK9QGroupBox9alignmentEv(void* qthis); // 4
+extern void C_ZNK9QGroupBox9alignmentEv(void* qthis); // 4
   // proto:  void QGroupBox::setFlat(bool flat);
-extern void _ZN9QGroupBox7setFlatEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QGroupBox7setFlatEb(void* qthis, bool arg0); // 4
   // proto:  void QGroupBox::QGroupBox(QWidget * parent);
-extern void _ZN9QGroupBoxC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN9QGroupBoxC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QGroupBox::QGroupBox(const QString & title, QWidget * parent);
-extern void _ZN9QGroupBoxC2ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN9QGroupBoxC2ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1); // 3
   // proto:  QString QGroupBox::title();
-extern void _ZNK9QGroupBox5titleEv(void* qthis); // 4
+extern void C_ZNK9QGroupBox5titleEv(void* qthis); // 4
   // proto:  bool QGroupBox::isChecked();
-extern void _ZNK9QGroupBox9isCheckedEv(void* qthis); // 4
+extern void C_ZNK9QGroupBox9isCheckedEv(void* qthis); // 4
   // proto:  void QGroupBox::setAlignment(int alignment);
-extern void _ZN9QGroupBox12setAlignmentEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QGroupBox12setAlignmentEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGroupBox::setChecked(bool checked);
-extern void _ZN9QGroupBox10setCheckedEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QGroupBox10setCheckedEb(void* qthis, bool arg0); // 4
   // proto:  void QGroupBox::setCheckable(bool checkable);
-extern void _ZN9QGroupBox12setCheckableEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QGroupBox12setCheckableEb(void* qthis, bool arg0); // 4
   // proto:  bool QGroupBox::isFlat();
-extern void _ZNK9QGroupBox6isFlatEv(void* qthis); // 4
+extern void C_ZNK9QGroupBox6isFlatEv(void* qthis); // 4
   // proto:  const QMetaObject * QGroupBox::metaObject();
-extern void _ZNK9QGroupBox10metaObjectEv(void* qthis); // 4
+extern void C_ZNK9QGroupBox10metaObjectEv(void* qthis); // 4
   // proto:  QSize QGroupBox::minimumSizeHint();
-extern void _ZNK9QGroupBox15minimumSizeHintEv(void* qthis); // 4
+extern void C_ZNK9QGroupBox15minimumSizeHintEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -91,7 +91,7 @@ func (this *QGroupBox) FreeQGroupBox(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGroupBoxD0Ev
     // invoke: void ~QGroupBox()
-    C._ZN9QGroupBoxD2Ev(this.qclsinst)
+    C.C_ZN9QGroupBoxD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGroupBox", "~QGroupBox", args)
   }
@@ -114,7 +114,7 @@ func (this *QGroupBox) setTitle(args ...interface{}) () {
     // invoke: void setTitle(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QGroupBox8setTitleERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QGroupBox8setTitleERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGroupBox", "setTitle", args)
   }
@@ -134,7 +134,7 @@ func (this *QGroupBox) isCheckable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox11isCheckableEv
     // invoke: bool isCheckable()
-    C._ZNK9QGroupBox11isCheckableEv(this.qclsinst)
+    C.C_ZNK9QGroupBox11isCheckableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGroupBox", "isCheckable", args)
   }
@@ -154,7 +154,7 @@ func (this *QGroupBox) alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C._ZNK9QGroupBox9alignmentEv(this.qclsinst)
+    C.C_ZNK9QGroupBox9alignmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGroupBox", "alignment", args)
   }
@@ -177,7 +177,7 @@ func (this *QGroupBox) setFlat(args ...interface{}) () {
     // invoke: void setFlat(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QGroupBox7setFlatEb(this.qclsinst, arg0)
+    C.C_ZN9QGroupBox7setFlatEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGroupBox", "setFlat", args)
   }
@@ -206,7 +206,7 @@ func NewQGroupBox(args ...interface{}) QGroupBox {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QGroupBoxC2EP7QWidget(qthis, arg0)
+    C.C_ZN9QGroupBoxC2EP7QWidget(qthis, arg0)
   case 1:
     // invoke: _ZN9QGroupBoxC1ERK7QStringP7QWidget
     // invoke: void QGroupBox(const class QString &, class QWidget *)
@@ -216,7 +216,7 @@ func NewQGroupBox(args ...interface{}) QGroupBox {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QGroupBoxC2ERK7QStringP7QWidget(qthis, arg0, arg1)
+    C.C_ZN9QGroupBoxC2ERK7QStringP7QWidget(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGroupBox", "QGroupBox", args)
   }
@@ -237,7 +237,7 @@ func (this *QGroupBox) title(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox5titleEv
     // invoke: QString title()
-    C._ZNK9QGroupBox5titleEv(this.qclsinst)
+    C.C_ZNK9QGroupBox5titleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGroupBox", "title", args)
   }
@@ -257,7 +257,7 @@ func (this *QGroupBox) isChecked(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox9isCheckedEv
     // invoke: bool isChecked()
-    C._ZNK9QGroupBox9isCheckedEv(this.qclsinst)
+    C.C_ZNK9QGroupBox9isCheckedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGroupBox", "isChecked", args)
   }
@@ -280,7 +280,7 @@ func (this *QGroupBox) setAlignment(args ...interface{}) () {
     // invoke: void setAlignment(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QGroupBox12setAlignmentEi(this.qclsinst, arg0)
+    C.C_ZN9QGroupBox12setAlignmentEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGroupBox", "setAlignment", args)
   }
@@ -303,7 +303,7 @@ func (this *QGroupBox) setChecked(args ...interface{}) () {
     // invoke: void setChecked(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QGroupBox10setCheckedEb(this.qclsinst, arg0)
+    C.C_ZN9QGroupBox10setCheckedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGroupBox", "setChecked", args)
   }
@@ -326,7 +326,7 @@ func (this *QGroupBox) setCheckable(args ...interface{}) () {
     // invoke: void setCheckable(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QGroupBox12setCheckableEb(this.qclsinst, arg0)
+    C.C_ZN9QGroupBox12setCheckableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGroupBox", "setCheckable", args)
   }
@@ -346,7 +346,7 @@ func (this *QGroupBox) isFlat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox6isFlatEv
     // invoke: bool isFlat()
-    C._ZNK9QGroupBox6isFlatEv(this.qclsinst)
+    C.C_ZNK9QGroupBox6isFlatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGroupBox", "isFlat", args)
   }
@@ -366,7 +366,7 @@ func (this *QGroupBox) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK9QGroupBox10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QGroupBox10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGroupBox", "metaObject", args)
   }
@@ -386,7 +386,7 @@ func (this *QGroupBox) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C._ZNK9QGroupBox15minimumSizeHintEv(this.qclsinst)
+    C.C_ZNK9QGroupBox15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGroupBox", "minimumSizeHint", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qfinalstate.h
 // dst-file: /src/core/qfinalstate.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QFinalState::QFinalState(QState * parent);
-extern void _ZN11QFinalStateC2EP6QState(void* qthis, void* arg0); // 3
+extern void C_ZN11QFinalStateC2EP6QState(void* qthis, void* arg0); // 3
   // proto:  void QFinalState::~QFinalState();
-extern void _ZN11QFinalStateD2Ev(void* qthis); // 4
+extern void C_ZN11QFinalStateD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QFinalState::metaObject();
-extern void _ZNK11QFinalState10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QFinalState10metaObjectEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -70,7 +70,7 @@ func NewQFinalState(args ...interface{}) QFinalState {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QFinalStateC2EP6QState(qthis, arg0)
+    C.C_ZN11QFinalStateC2EP6QState(qthis, arg0)
   default:
     qtrt.ErrorResolve("QFinalState", "QFinalState", args)
   }
@@ -91,7 +91,7 @@ func (this *QFinalState) FreeQFinalState(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFinalStateD0Ev
     // invoke: void ~QFinalState()
-    C._ZN11QFinalStateD2Ev(this.qclsinst)
+    C.C_ZN11QFinalStateD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFinalState", "~QFinalState", args)
   }
@@ -111,7 +111,7 @@ func (this *QFinalState) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFinalState10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QFinalState10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QFinalState10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFinalState", "metaObject", args)
   }

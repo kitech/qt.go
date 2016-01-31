@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qsyntaxhighlighter.h
 // dst-file: /src/gui/qsyntaxhighlighter.go
 //
@@ -29,21 +29,21 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QSyntaxHighlighter::setDocument(QTextDocument * doc);
-extern void _ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument(void* qthis, void* arg0); // 4
+extern void C_ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument(void* qthis, void* arg0); // 4
   // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(QObject * parent);
-extern void _ZN18QSyntaxHighlighterC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN18QSyntaxHighlighterC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(QTextDocument * parent);
-extern void _ZN18QSyntaxHighlighterC2EP13QTextDocument(void* qthis, void* arg0); // 3
+extern void C_ZN18QSyntaxHighlighterC2EP13QTextDocument(void* qthis, void* arg0); // 3
   // proto:  QTextDocument * QSyntaxHighlighter::document();
-extern void _ZNK18QSyntaxHighlighter8documentEv(void* qthis); // 4
+extern void C_ZNK18QSyntaxHighlighter8documentEv(void* qthis); // 4
   // proto:  void QSyntaxHighlighter::~QSyntaxHighlighter();
-extern void _ZN18QSyntaxHighlighterD2Ev(void* qthis); // 4
+extern void C_ZN18QSyntaxHighlighterD2Ev(void* qthis); // 4
   // proto:  void QSyntaxHighlighter::rehighlight();
-extern void _ZN18QSyntaxHighlighter11rehighlightEv(void* qthis); // 4
+extern void C_ZN18QSyntaxHighlighter11rehighlightEv(void* qthis); // 4
   // proto:  const QMetaObject * QSyntaxHighlighter::metaObject();
-extern void _ZNK18QSyntaxHighlighter10metaObjectEv(void* qthis); // 4
+extern void C_ZNK18QSyntaxHighlighter10metaObjectEv(void* qthis); // 4
   // proto:  void QSyntaxHighlighter::rehighlightBlock(const QTextBlock & block);
-extern void _ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock(void* qthis, void* arg0); // 4
+extern void C_ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -78,7 +78,7 @@ func (this *QSyntaxHighlighter) setDocument(args ...interface{}) () {
     // invoke: void setDocument(class QTextDocument *)
     var arg0 = args[0].(QTextDocument).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument(this.qclsinst, arg0)
+    C.C_ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "setDocument", args)
   }
@@ -106,7 +106,7 @@ func NewQSyntaxHighlighter(args ...interface{}) QSyntaxHighlighter {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN18QSyntaxHighlighterC2EP7QObject(qthis, arg0)
+    C.C_ZN18QSyntaxHighlighterC2EP7QObject(qthis, arg0)
   case 1:
     // invoke: _ZN18QSyntaxHighlighterC1EP13QTextDocument
     // invoke: void QSyntaxHighlighter(class QTextDocument *)
@@ -114,7 +114,7 @@ func NewQSyntaxHighlighter(args ...interface{}) QSyntaxHighlighter {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN18QSyntaxHighlighterC2EP13QTextDocument(qthis, arg0)
+    C.C_ZN18QSyntaxHighlighterC2EP13QTextDocument(qthis, arg0)
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "QSyntaxHighlighter", args)
   }
@@ -135,7 +135,7 @@ func (this *QSyntaxHighlighter) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QSyntaxHighlighter8documentEv
     // invoke: QTextDocument * document()
-    C._ZNK18QSyntaxHighlighter8documentEv(this.qclsinst)
+    C.C_ZNK18QSyntaxHighlighter8documentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "document", args)
   }
@@ -155,7 +155,7 @@ func (this *QSyntaxHighlighter) FreeQSyntaxHighlighter(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QSyntaxHighlighterD0Ev
     // invoke: void ~QSyntaxHighlighter()
-    C._ZN18QSyntaxHighlighterD2Ev(this.qclsinst)
+    C.C_ZN18QSyntaxHighlighterD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "~QSyntaxHighlighter", args)
   }
@@ -175,7 +175,7 @@ func (this *QSyntaxHighlighter) rehighlight(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QSyntaxHighlighter11rehighlightEv
     // invoke: void rehighlight()
-    C._ZN18QSyntaxHighlighter11rehighlightEv(this.qclsinst)
+    C.C_ZN18QSyntaxHighlighter11rehighlightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "rehighlight", args)
   }
@@ -195,7 +195,7 @@ func (this *QSyntaxHighlighter) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QSyntaxHighlighter10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK18QSyntaxHighlighter10metaObjectEv(this.qclsinst)
+    C.C_ZNK18QSyntaxHighlighter10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "metaObject", args)
   }
@@ -218,7 +218,7 @@ func (this *QSyntaxHighlighter) rehighlightBlock(args ...interface{}) () {
     // invoke: void rehighlightBlock(const class QTextBlock &)
     var arg0 = args[0].(QTextBlock).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock(this.qclsinst, arg0)
+    C.C_ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "rehighlightBlock", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qshortcut.h
 // dst-file: /src/widgets/qshortcut.go
 //
@@ -29,33 +29,33 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QShortcut::~QShortcut();
-extern void _ZN9QShortcutD2Ev(void* qthis); // 4
+extern void C_ZN9QShortcutD2Ev(void* qthis); // 4
   // proto:  int QShortcut::id();
-extern void _ZNK9QShortcut2idEv(void* qthis); // 4
+extern void C_ZNK9QShortcut2idEv(void* qthis); // 4
   // proto:  bool QShortcut::isEnabled();
-extern void _ZNK9QShortcut9isEnabledEv(void* qthis); // 4
+extern void C_ZNK9QShortcut9isEnabledEv(void* qthis); // 4
   // proto:  QString QShortcut::whatsThis();
-extern void _ZNK9QShortcut9whatsThisEv(void* qthis); // 4
+extern void C_ZNK9QShortcut9whatsThisEv(void* qthis); // 4
   // proto:  void QShortcut::setKey(const QKeySequence & key);
-extern void _ZN9QShortcut6setKeyERK12QKeySequence(void* qthis, void* arg0); // 4
+extern void C_ZN9QShortcut6setKeyERK12QKeySequence(void* qthis, void* arg0); // 4
   // proto:  void QShortcut::setEnabled(bool enable);
-extern void _ZN9QShortcut10setEnabledEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QShortcut10setEnabledEb(void* qthis, bool arg0); // 4
   // proto:  void QShortcut::setAutoRepeat(bool on);
-extern void _ZN9QShortcut13setAutoRepeatEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QShortcut13setAutoRepeatEb(void* qthis, bool arg0); // 4
   // proto:  void QShortcut::QShortcut(QWidget * parent);
-extern void _ZN9QShortcutC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN9QShortcutC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QShortcut::setWhatsThis(const QString & text);
-extern void _ZN9QShortcut12setWhatsThisERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN9QShortcut12setWhatsThisERK7QString(void* qthis, void* arg0); // 4
   // proto:  QKeySequence QShortcut::key();
-extern void _ZNK9QShortcut3keyEv(void* qthis); // 4
+extern void C_ZNK9QShortcut3keyEv(void* qthis); // 4
   // proto:  const QMetaObject * QShortcut::metaObject();
-extern void _ZNK9QShortcut10metaObjectEv(void* qthis); // 4
+extern void C_ZNK9QShortcut10metaObjectEv(void* qthis); // 4
   // proto:  QWidget * QShortcut::parentWidget();
-extern void _ZNK9QShortcut12parentWidgetEv(void* qthis); // 2
+extern void C_ZNK9QShortcut12parentWidgetEv(void* qthis); // 2
   // proto:  Qt::ShortcutContext QShortcut::context();
-extern void _ZNK9QShortcut7contextEv(void* qthis); // 4
+extern void C_ZNK9QShortcut7contextEv(void* qthis); // 4
   // proto:  bool QShortcut::autoRepeat();
-extern void _ZNK9QShortcut10autoRepeatEv(void* qthis); // 4
+extern void C_ZNK9QShortcut10autoRepeatEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -89,7 +89,7 @@ func (this *QShortcut) FreeQShortcut(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QShortcutD0Ev
     // invoke: void ~QShortcut()
-    C._ZN9QShortcutD2Ev(this.qclsinst)
+    C.C_ZN9QShortcutD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "~QShortcut", args)
   }
@@ -109,7 +109,7 @@ func (this *QShortcut) id(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut2idEv
     // invoke: int id()
-    C._ZNK9QShortcut2idEv(this.qclsinst)
+    C.C_ZNK9QShortcut2idEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "id", args)
   }
@@ -129,7 +129,7 @@ func (this *QShortcut) isEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut9isEnabledEv
     // invoke: bool isEnabled()
-    C._ZNK9QShortcut9isEnabledEv(this.qclsinst)
+    C.C_ZNK9QShortcut9isEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "isEnabled", args)
   }
@@ -149,7 +149,7 @@ func (this *QShortcut) whatsThis(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut9whatsThisEv
     // invoke: QString whatsThis()
-    C._ZNK9QShortcut9whatsThisEv(this.qclsinst)
+    C.C_ZNK9QShortcut9whatsThisEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "whatsThis", args)
   }
@@ -172,7 +172,7 @@ func (this *QShortcut) setKey(args ...interface{}) () {
     // invoke: void setKey(const class QKeySequence &)
     var arg0 = args[0].(QKeySequence).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QShortcut6setKeyERK12QKeySequence(this.qclsinst, arg0)
+    C.C_ZN9QShortcut6setKeyERK12QKeySequence(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "setKey", args)
   }
@@ -195,7 +195,7 @@ func (this *QShortcut) setEnabled(args ...interface{}) () {
     // invoke: void setEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QShortcut10setEnabledEb(this.qclsinst, arg0)
+    C.C_ZN9QShortcut10setEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "setEnabled", args)
   }
@@ -218,7 +218,7 @@ func (this *QShortcut) setAutoRepeat(args ...interface{}) () {
     // invoke: void setAutoRepeat(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QShortcut13setAutoRepeatEb(this.qclsinst, arg0)
+    C.C_ZN9QShortcut13setAutoRepeatEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "setAutoRepeat", args)
   }
@@ -243,7 +243,7 @@ func NewQShortcut(args ...interface{}) QShortcut {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QShortcutC2EP7QWidget(qthis, arg0)
+    C.C_ZN9QShortcutC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "QShortcut", args)
   }
@@ -267,7 +267,7 @@ func (this *QShortcut) setWhatsThis(args ...interface{}) () {
     // invoke: void setWhatsThis(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QShortcut12setWhatsThisERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QShortcut12setWhatsThisERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "setWhatsThis", args)
   }
@@ -287,7 +287,7 @@ func (this *QShortcut) key(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut3keyEv
     // invoke: QKeySequence key()
-    C._ZNK9QShortcut3keyEv(this.qclsinst)
+    C.C_ZNK9QShortcut3keyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "key", args)
   }
@@ -307,7 +307,7 @@ func (this *QShortcut) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK9QShortcut10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QShortcut10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "metaObject", args)
   }
@@ -327,7 +327,7 @@ func (this *QShortcut) parentWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut12parentWidgetEv
     // invoke: QWidget * parentWidget()
-    C._ZNK9QShortcut12parentWidgetEv(this.qclsinst)
+    C.C_ZNK9QShortcut12parentWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "parentWidget", args)
   }
@@ -347,7 +347,7 @@ func (this *QShortcut) context(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut7contextEv
     // invoke: Qt::ShortcutContext context()
-    C._ZNK9QShortcut7contextEv(this.qclsinst)
+    C.C_ZNK9QShortcut7contextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "context", args)
   }
@@ -367,7 +367,7 @@ func (this *QShortcut) autoRepeat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut10autoRepeatEv
     // invoke: bool autoRepeat()
-    C._ZNK9QShortcut10autoRepeatEv(this.qclsinst)
+    C.C_ZNK9QShortcut10autoRepeatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "autoRepeat", args)
   }

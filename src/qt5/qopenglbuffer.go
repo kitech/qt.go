@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.go
 //
@@ -29,39 +29,39 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QOpenGLBuffer::isCreated();
-extern void _ZNK13QOpenGLBuffer9isCreatedEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLBuffer9isCreatedEv(void* qthis); // 4
   // proto:  bool QOpenGLBuffer::unmap();
-extern void _ZN13QOpenGLBuffer5unmapEv(void* qthis); // 4
+extern void C_ZN13QOpenGLBuffer5unmapEv(void* qthis); // 4
   // proto:  GLuint QOpenGLBuffer::bufferId();
-extern void _ZNK13QOpenGLBuffer8bufferIdEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLBuffer8bufferIdEv(void* qthis); // 4
   // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);
-extern void _ZN13QOpenGLBuffer4readEiPvi(void* qthis, int32_t arg0, void* arg1, int32_t arg2); // 4
+extern void C_ZN13QOpenGLBuffer4readEiPvi(void* qthis, int32_t arg0, void* arg1, int32_t arg2); // 4
   // proto:  bool QOpenGLBuffer::bind();
-extern void _ZN13QOpenGLBuffer4bindEv(void* qthis); // 4
+extern void C_ZN13QOpenGLBuffer4bindEv(void* qthis); // 4
   // proto:  bool QOpenGLBuffer::create();
-extern void _ZN13QOpenGLBuffer6createEv(void* qthis); // 4
+extern void C_ZN13QOpenGLBuffer6createEv(void* qthis); // 4
   // proto:  void QOpenGLBuffer::write(int offset, const void * data, int count);
-extern void _ZN13QOpenGLBuffer5writeEiPKvi(void* qthis, int32_t arg0, void* arg1, int32_t arg2); // 4
+extern void C_ZN13QOpenGLBuffer5writeEiPKvi(void* qthis, int32_t arg0, void* arg1, int32_t arg2); // 4
   // proto:  QOpenGLBuffer::UsagePattern QOpenGLBuffer::usagePattern();
-extern void _ZNK13QOpenGLBuffer12usagePatternEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLBuffer12usagePatternEv(void* qthis); // 4
   // proto:  void QOpenGLBuffer::allocate(int count);
-extern void _ZN13QOpenGLBuffer8allocateEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN13QOpenGLBuffer8allocateEi(void* qthis, int32_t arg0); // 2
   // proto:  void QOpenGLBuffer::allocate(const void * data, int count);
-extern void _ZN13QOpenGLBuffer8allocateEPKvi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN13QOpenGLBuffer8allocateEPKvi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QOpenGLBuffer::release();
-extern void _ZN13QOpenGLBuffer7releaseEv(void* qthis); // 4
+extern void C_ZN13QOpenGLBuffer7releaseEv(void* qthis); // 4
   // proto:  void QOpenGLBuffer::destroy();
-extern void _ZN13QOpenGLBuffer7destroyEv(void* qthis); // 4
+extern void C_ZN13QOpenGLBuffer7destroyEv(void* qthis); // 4
   // proto:  int QOpenGLBuffer::size();
-extern void _ZNK13QOpenGLBuffer4sizeEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLBuffer4sizeEv(void* qthis); // 4
   // proto:  QOpenGLBuffer::Type QOpenGLBuffer::type();
-extern void _ZNK13QOpenGLBuffer4typeEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLBuffer4typeEv(void* qthis); // 4
   // proto:  void QOpenGLBuffer::~QOpenGLBuffer();
-extern void _ZN13QOpenGLBufferD2Ev(void* qthis); // 4
+extern void C_ZN13QOpenGLBufferD2Ev(void* qthis); // 4
   // proto:  void QOpenGLBuffer::QOpenGLBuffer();
-extern void _ZN13QOpenGLBufferC2Ev(void* qthis); // 3
+extern void C_ZN13QOpenGLBufferC2Ev(void* qthis); // 3
   // proto:  void QOpenGLBuffer::QOpenGLBuffer(const QOpenGLBuffer & other);
-extern void _ZN13QOpenGLBufferC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN13QOpenGLBufferC2ERKS_(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -93,7 +93,7 @@ func (this *QOpenGLBuffer) isCreated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer9isCreatedEv
     // invoke: bool isCreated()
-    C._ZNK13QOpenGLBuffer9isCreatedEv(this.qclsinst)
+    C.C_ZNK13QOpenGLBuffer9isCreatedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "isCreated", args)
   }
@@ -113,7 +113,7 @@ func (this *QOpenGLBuffer) unmap(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLBuffer5unmapEv
     // invoke: bool unmap()
-    C._ZN13QOpenGLBuffer5unmapEv(this.qclsinst)
+    C.C_ZN13QOpenGLBuffer5unmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "unmap", args)
   }
@@ -133,7 +133,7 @@ func (this *QOpenGLBuffer) bufferId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer8bufferIdEv
     // invoke: GLuint bufferId()
-    C._ZNK13QOpenGLBuffer8bufferIdEv(this.qclsinst)
+    C.C_ZNK13QOpenGLBuffer8bufferIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "bufferId", args)
   }
@@ -162,7 +162,7 @@ func (this *QOpenGLBuffer) read(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN13QOpenGLBuffer4readEiPvi(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QOpenGLBuffer4readEiPvi(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "read", args)
   }
@@ -182,7 +182,7 @@ func (this *QOpenGLBuffer) bind(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLBuffer4bindEv
     // invoke: bool bind()
-    C._ZN13QOpenGLBuffer4bindEv(this.qclsinst)
+    C.C_ZN13QOpenGLBuffer4bindEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "bind", args)
   }
@@ -202,7 +202,7 @@ func (this *QOpenGLBuffer) create(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLBuffer6createEv
     // invoke: bool create()
-    C._ZN13QOpenGLBuffer6createEv(this.qclsinst)
+    C.C_ZN13QOpenGLBuffer6createEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "create", args)
   }
@@ -231,7 +231,7 @@ func (this *QOpenGLBuffer) write(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN13QOpenGLBuffer5writeEiPKvi(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QOpenGLBuffer5writeEiPKvi(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "write", args)
   }
@@ -251,7 +251,7 @@ func (this *QOpenGLBuffer) usagePattern(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer12usagePatternEv
     // invoke: QOpenGLBuffer::UsagePattern usagePattern()
-    C._ZNK13QOpenGLBuffer12usagePatternEv(this.qclsinst)
+    C.C_ZNK13QOpenGLBuffer12usagePatternEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "usagePattern", args)
   }
@@ -278,7 +278,7 @@ func (this *QOpenGLBuffer) allocate(args ...interface{}) () {
     // invoke: void allocate(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN13QOpenGLBuffer8allocateEi(this.qclsinst, arg0)
+    C.C_ZN13QOpenGLBuffer8allocateEi(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN13QOpenGLBuffer8allocateEPKvi
     // invoke: void allocate(const void *, int)
@@ -286,7 +286,7 @@ func (this *QOpenGLBuffer) allocate(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN13QOpenGLBuffer8allocateEPKvi(this.qclsinst, arg0, arg1)
+    C.C_ZN13QOpenGLBuffer8allocateEPKvi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "allocate", args)
   }
@@ -306,7 +306,7 @@ func (this *QOpenGLBuffer) release(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLBuffer7releaseEv
     // invoke: void release()
-    C._ZN13QOpenGLBuffer7releaseEv(this.qclsinst)
+    C.C_ZN13QOpenGLBuffer7releaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "release", args)
   }
@@ -326,7 +326,7 @@ func (this *QOpenGLBuffer) destroy(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLBuffer7destroyEv
     // invoke: void destroy()
-    C._ZN13QOpenGLBuffer7destroyEv(this.qclsinst)
+    C.C_ZN13QOpenGLBuffer7destroyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "destroy", args)
   }
@@ -346,7 +346,7 @@ func (this *QOpenGLBuffer) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer4sizeEv
     // invoke: int size()
-    C._ZNK13QOpenGLBuffer4sizeEv(this.qclsinst)
+    C.C_ZNK13QOpenGLBuffer4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "size", args)
   }
@@ -366,7 +366,7 @@ func (this *QOpenGLBuffer) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer4typeEv
     // invoke: QOpenGLBuffer::Type type()
-    C._ZNK13QOpenGLBuffer4typeEv(this.qclsinst)
+    C.C_ZNK13QOpenGLBuffer4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "type", args)
   }
@@ -386,7 +386,7 @@ func (this *QOpenGLBuffer) FreeQOpenGLBuffer(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLBufferD0Ev
     // invoke: void ~QOpenGLBuffer()
-    C._ZN13QOpenGLBufferD2Ev(this.qclsinst)
+    C.C_ZN13QOpenGLBufferD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "~QOpenGLBuffer", args)
   }
@@ -411,7 +411,7 @@ func NewQOpenGLBuffer(args ...interface{}) QOpenGLBuffer {
     // invoke: void QOpenGLBuffer()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QOpenGLBufferC2Ev(qthis)
+    C.C_ZN13QOpenGLBufferC2Ev(qthis)
   case 1:
     // invoke: _ZN13QOpenGLBufferC1ERKS_
     // invoke: void QOpenGLBuffer(const class QOpenGLBuffer &)
@@ -419,7 +419,7 @@ func NewQOpenGLBuffer(args ...interface{}) QOpenGLBuffer {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QOpenGLBufferC2ERKS_(qthis, arg0)
+    C.C_ZN13QOpenGLBufferC2ERKS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "QOpenGLBuffer", args)
   }

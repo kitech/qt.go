@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QClipboard::ownsClipboard();
-extern void _ZNK10QClipboard13ownsClipboardEv(void* qthis); // 4
+extern void C_ZNK10QClipboard13ownsClipboardEv(void* qthis); // 4
   // proto:  bool QClipboard::supportsFindBuffer();
-extern void _ZNK10QClipboard18supportsFindBufferEv(void* qthis); // 4
+extern void C_ZNK10QClipboard18supportsFindBufferEv(void* qthis); // 4
   // proto:  bool QClipboard::ownsFindBuffer();
-extern void _ZNK10QClipboard14ownsFindBufferEv(void* qthis); // 4
+extern void C_ZNK10QClipboard14ownsFindBufferEv(void* qthis); // 4
   // proto:  bool QClipboard::supportsSelection();
-extern void _ZNK10QClipboard17supportsSelectionEv(void* qthis); // 4
+extern void C_ZNK10QClipboard17supportsSelectionEv(void* qthis); // 4
   // proto:  const QMetaObject * QClipboard::metaObject();
-extern void _ZNK10QClipboard10metaObjectEv(void* qthis); // 4
+extern void C_ZNK10QClipboard10metaObjectEv(void* qthis); // 4
   // proto:  bool QClipboard::ownsSelection();
-extern void _ZNK10QClipboard13ownsSelectionEv(void* qthis); // 4
+extern void C_ZNK10QClipboard13ownsSelectionEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -75,7 +75,7 @@ func (this *QClipboard) ownsClipboard(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard13ownsClipboardEv
     // invoke: bool ownsClipboard()
-    C._ZNK10QClipboard13ownsClipboardEv(this.qclsinst)
+    C.C_ZNK10QClipboard13ownsClipboardEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "ownsClipboard", args)
   }
@@ -95,7 +95,7 @@ func (this *QClipboard) supportsFindBuffer(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard18supportsFindBufferEv
     // invoke: bool supportsFindBuffer()
-    C._ZNK10QClipboard18supportsFindBufferEv(this.qclsinst)
+    C.C_ZNK10QClipboard18supportsFindBufferEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "supportsFindBuffer", args)
   }
@@ -115,7 +115,7 @@ func (this *QClipboard) ownsFindBuffer(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard14ownsFindBufferEv
     // invoke: bool ownsFindBuffer()
-    C._ZNK10QClipboard14ownsFindBufferEv(this.qclsinst)
+    C.C_ZNK10QClipboard14ownsFindBufferEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "ownsFindBuffer", args)
   }
@@ -135,7 +135,7 @@ func (this *QClipboard) supportsSelection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard17supportsSelectionEv
     // invoke: bool supportsSelection()
-    C._ZNK10QClipboard17supportsSelectionEv(this.qclsinst)
+    C.C_ZNK10QClipboard17supportsSelectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "supportsSelection", args)
   }
@@ -155,7 +155,7 @@ func (this *QClipboard) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK10QClipboard10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QClipboard10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "metaObject", args)
   }
@@ -175,7 +175,7 @@ func (this *QClipboard) ownsSelection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard13ownsSelectionEv
     // invoke: bool ownsSelection()
-    C._ZNK10QClipboard13ownsSelectionEv(this.qclsinst)
+    C.C_ZNK10QClipboard13ownsSelectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "ownsSelection", args)
   }

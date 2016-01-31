@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qdirmodel.h
 // dst-file: /src/widgets/qdirmodel.go
 //
@@ -29,75 +29,75 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QDirModel::columnCount(const QModelIndex & parent);
-extern void _ZNK9QDirModel11columnCountERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK9QDirModel11columnCountERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  void QDirModel::setNameFilters(const QStringList & filters);
-extern void _ZN9QDirModel14setNameFiltersERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN9QDirModel14setNameFiltersERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  void QDirModel::setIconProvider(QFileIconProvider * provider);
-extern void _ZN9QDirModel15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0); // 4
+extern void C_ZN9QDirModel15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0); // 4
   // proto:  void QDirModel::setLazyChildCount(bool enable);
-extern void _ZN9QDirModel17setLazyChildCountEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QDirModel17setLazyChildCountEb(void* qthis, bool arg0); // 4
   // proto:  bool QDirModel::isDir(const QModelIndex & index);
-extern void _ZNK9QDirModel5isDirERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK9QDirModel5isDirERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  bool QDirModel::lazyChildCount();
-extern void _ZNK9QDirModel14lazyChildCountEv(void* qthis); // 4
+extern void C_ZNK9QDirModel14lazyChildCountEv(void* qthis); // 4
   // proto:  void QDirModel::refresh(const QModelIndex & parent);
-extern void _ZN9QDirModel7refreshERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZN9QDirModel7refreshERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  bool QDirModel::resolveSymlinks();
-extern void _ZNK9QDirModel15resolveSymlinksEv(void* qthis); // 4
+extern void C_ZNK9QDirModel15resolveSymlinksEv(void* qthis); // 4
   // proto:  QModelIndex QDirModel::index(int row, int column, const QModelIndex & parent);
-extern void _ZNK9QDirModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZNK9QDirModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  QModelIndex QDirModel::index(const QString & path, int column);
-extern void _ZNK9QDirModel5indexERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZNK9QDirModel5indexERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  bool QDirModel::hasChildren(const QModelIndex & index);
-extern void _ZNK9QDirModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK9QDirModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  bool QDirModel::isReadOnly();
-extern void _ZNK9QDirModel10isReadOnlyEv(void* qthis); // 4
+extern void C_ZNK9QDirModel10isReadOnlyEv(void* qthis); // 4
   // proto:  QString QDirModel::filePath(const QModelIndex & index);
-extern void _ZNK9QDirModel8filePathERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK9QDirModel8filePathERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QModelIndex QDirModel::mkdir(const QModelIndex & parent, const QString & name);
-extern void _ZN9QDirModel5mkdirERK11QModelIndexRK7QString(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN9QDirModel5mkdirERK11QModelIndexRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  bool QDirModel::rmdir(const QModelIndex & index);
-extern void _ZN9QDirModel5rmdirERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZN9QDirModel5rmdirERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  void QDirModel::setResolveSymlinks(bool enable);
-extern void _ZN9QDirModel18setResolveSymlinksEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QDirModel18setResolveSymlinksEb(void* qthis, bool arg0); // 4
   // proto:  QFileInfo QDirModel::fileInfo(const QModelIndex & index);
-extern void _ZNK9QDirModel8fileInfoERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK9QDirModel8fileInfoERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  bool QDirModel::setData(const QModelIndex & index, const QVariant & value, int role);
-extern void _ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
+extern void C_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
   // proto:  QModelIndex QDirModel::parent(const QModelIndex & child);
-extern void _ZNK9QDirModel6parentERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK9QDirModel6parentERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QString QDirModel::fileName(const QModelIndex & index);
-extern void _ZNK9QDirModel8fileNameERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK9QDirModel8fileNameERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  int QDirModel::rowCount(const QModelIndex & parent);
-extern void _ZNK9QDirModel8rowCountERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK9QDirModel8rowCountERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  void QDirModel::~QDirModel();
-extern void _ZN9QDirModelD2Ev(void* qthis); // 4
+extern void C_ZN9QDirModelD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QDirModel::metaObject();
-extern void _ZNK9QDirModel10metaObjectEv(void* qthis); // 4
+extern void C_ZNK9QDirModel10metaObjectEv(void* qthis); // 4
   // proto:  QVariant QDirModel::data(const QModelIndex & index, int role);
-extern void _ZNK9QDirModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZNK9QDirModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QStringList QDirModel::mimeTypes();
-extern void _ZNK9QDirModel9mimeTypesEv(void* qthis); // 4
+extern void C_ZNK9QDirModel9mimeTypesEv(void* qthis); // 4
   // proto:  QDir::SortFlags QDirModel::sorting();
-extern void _ZNK9QDirModel7sortingEv(void* qthis); // 4
+extern void C_ZNK9QDirModel7sortingEv(void* qthis); // 4
   // proto:  QFileIconProvider * QDirModel::iconProvider();
-extern void _ZNK9QDirModel12iconProviderEv(void* qthis); // 4
+extern void C_ZNK9QDirModel12iconProviderEv(void* qthis); // 4
   // proto:  QStringList QDirModel::nameFilters();
-extern void _ZNK9QDirModel11nameFiltersEv(void* qthis); // 4
+extern void C_ZNK9QDirModel11nameFiltersEv(void* qthis); // 4
   // proto:  void QDirModel::QDirModel(QObject * parent);
-extern void _ZN9QDirModelC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN9QDirModelC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  bool QDirModel::remove(const QModelIndex & index);
-extern void _ZN9QDirModel6removeERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZN9QDirModel6removeERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QDir::Filters QDirModel::filter();
-extern void _ZNK9QDirModel6filterEv(void* qthis); // 4
+extern void C_ZNK9QDirModel6filterEv(void* qthis); // 4
   // proto:  void QDirModel::setReadOnly(bool enable);
-extern void _ZN9QDirModel11setReadOnlyEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QDirModel11setReadOnlyEb(void* qthis, bool arg0); // 4
   // proto:  Qt::ItemFlags QDirModel::flags(const QModelIndex & index);
-extern void _ZNK9QDirModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK9QDirModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QIcon QDirModel::fileIcon(const QModelIndex & index);
-extern void _ZNK9QDirModel8fileIconERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK9QDirModel8fileIconERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  Qt::DropActions QDirModel::supportedDropActions();
-extern void _ZNK9QDirModel20supportedDropActionsEv(void* qthis); // 4
+extern void C_ZNK9QDirModel20supportedDropActionsEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -132,7 +132,7 @@ func (this *QDirModel) columnCount(args ...interface{}) () {
     // invoke: int columnCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK9QDirModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "columnCount", args)
   }
@@ -155,7 +155,7 @@ func (this *QDirModel) setNameFilters(args ...interface{}) () {
     // invoke: void setNameFilters(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QDirModel14setNameFiltersERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN9QDirModel14setNameFiltersERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "setNameFilters", args)
   }
@@ -178,7 +178,7 @@ func (this *QDirModel) setIconProvider(args ...interface{}) () {
     // invoke: void setIconProvider(class QFileIconProvider *)
     var arg0 = args[0].(QFileIconProvider).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QDirModel15setIconProviderEP17QFileIconProvider(this.qclsinst, arg0)
+    C.C_ZN9QDirModel15setIconProviderEP17QFileIconProvider(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "setIconProvider", args)
   }
@@ -201,7 +201,7 @@ func (this *QDirModel) setLazyChildCount(args ...interface{}) () {
     // invoke: void setLazyChildCount(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QDirModel17setLazyChildCountEb(this.qclsinst, arg0)
+    C.C_ZN9QDirModel17setLazyChildCountEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "setLazyChildCount", args)
   }
@@ -224,7 +224,7 @@ func (this *QDirModel) isDir(args ...interface{}) () {
     // invoke: bool isDir(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel5isDirERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK9QDirModel5isDirERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "isDir", args)
   }
@@ -244,7 +244,7 @@ func (this *QDirModel) lazyChildCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel14lazyChildCountEv
     // invoke: bool lazyChildCount()
-    C._ZNK9QDirModel14lazyChildCountEv(this.qclsinst)
+    C.C_ZNK9QDirModel14lazyChildCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "lazyChildCount", args)
   }
@@ -267,7 +267,7 @@ func (this *QDirModel) refresh(args ...interface{}) () {
     // invoke: void refresh(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QDirModel7refreshERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN9QDirModel7refreshERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "refresh", args)
   }
@@ -287,7 +287,7 @@ func (this *QDirModel) resolveSymlinks(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel15resolveSymlinksEv
     // invoke: bool resolveSymlinks()
-    C._ZNK9QDirModel15resolveSymlinksEv(this.qclsinst)
+    C.C_ZNK9QDirModel15resolveSymlinksEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "resolveSymlinks", args)
   }
@@ -320,7 +320,7 @@ func (this *QDirModel) index(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZNK9QDirModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK9QDirModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZNK9QDirModel5indexERK7QStringi
     // invoke: QModelIndex index(const class QString &, int)
@@ -328,7 +328,7 @@ func (this *QDirModel) index(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK9QDirModel5indexERK7QStringi(this.qclsinst, arg0, arg1)
+    C.C_ZNK9QDirModel5indexERK7QStringi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDirModel", "index", args)
   }
@@ -351,7 +351,7 @@ func (this *QDirModel) hasChildren(args ...interface{}) () {
     // invoke: bool hasChildren(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK9QDirModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "hasChildren", args)
   }
@@ -371,7 +371,7 @@ func (this *QDirModel) isReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel10isReadOnlyEv
     // invoke: bool isReadOnly()
-    C._ZNK9QDirModel10isReadOnlyEv(this.qclsinst)
+    C.C_ZNK9QDirModel10isReadOnlyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "isReadOnly", args)
   }
@@ -394,7 +394,7 @@ func (this *QDirModel) filePath(args ...interface{}) () {
     // invoke: QString filePath(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel8filePathERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK9QDirModel8filePathERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "filePath", args)
   }
@@ -420,7 +420,7 @@ func (this *QDirModel) mkdir(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN9QDirModel5mkdirERK11QModelIndexRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN9QDirModel5mkdirERK11QModelIndexRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDirModel", "mkdir", args)
   }
@@ -443,7 +443,7 @@ func (this *QDirModel) rmdir(args ...interface{}) () {
     // invoke: bool rmdir(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QDirModel5rmdirERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN9QDirModel5rmdirERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "rmdir", args)
   }
@@ -466,7 +466,7 @@ func (this *QDirModel) setResolveSymlinks(args ...interface{}) () {
     // invoke: void setResolveSymlinks(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QDirModel18setResolveSymlinksEb(this.qclsinst, arg0)
+    C.C_ZN9QDirModel18setResolveSymlinksEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "setResolveSymlinks", args)
   }
@@ -489,7 +489,7 @@ func (this *QDirModel) fileInfo(args ...interface{}) () {
     // invoke: QFileInfo fileInfo(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel8fileInfoERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK9QDirModel8fileInfoERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "fileInfo", args)
   }
@@ -518,7 +518,7 @@ func (this *QDirModel) setData(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QDirModel", "setData", args)
   }
@@ -541,7 +541,7 @@ func (this *QDirModel) parent(args ...interface{}) () {
     // invoke: QModelIndex parent(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel6parentERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK9QDirModel6parentERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "parent", args)
   }
@@ -564,7 +564,7 @@ func (this *QDirModel) fileName(args ...interface{}) () {
     // invoke: QString fileName(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel8fileNameERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK9QDirModel8fileNameERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "fileName", args)
   }
@@ -587,7 +587,7 @@ func (this *QDirModel) rowCount(args ...interface{}) () {
     // invoke: int rowCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK9QDirModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "rowCount", args)
   }
@@ -607,7 +607,7 @@ func (this *QDirModel) FreeQDirModel(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDirModelD0Ev
     // invoke: void ~QDirModel()
-    C._ZN9QDirModelD2Ev(this.qclsinst)
+    C.C_ZN9QDirModelD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "~QDirModel", args)
   }
@@ -627,7 +627,7 @@ func (this *QDirModel) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK9QDirModel10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QDirModel10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "metaObject", args)
   }
@@ -653,7 +653,7 @@ func (this *QDirModel) data(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK9QDirModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
+    C.C_ZNK9QDirModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDirModel", "data", args)
   }
@@ -673,7 +673,7 @@ func (this *QDirModel) mimeTypes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel9mimeTypesEv
     // invoke: QStringList mimeTypes()
-    C._ZNK9QDirModel9mimeTypesEv(this.qclsinst)
+    C.C_ZNK9QDirModel9mimeTypesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "mimeTypes", args)
   }
@@ -693,7 +693,7 @@ func (this *QDirModel) sorting(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel7sortingEv
     // invoke: QDir::SortFlags sorting()
-    C._ZNK9QDirModel7sortingEv(this.qclsinst)
+    C.C_ZNK9QDirModel7sortingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "sorting", args)
   }
@@ -713,7 +713,7 @@ func (this *QDirModel) iconProvider(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel12iconProviderEv
     // invoke: QFileIconProvider * iconProvider()
-    C._ZNK9QDirModel12iconProviderEv(this.qclsinst)
+    C.C_ZNK9QDirModel12iconProviderEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "iconProvider", args)
   }
@@ -733,7 +733,7 @@ func (this *QDirModel) nameFilters(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel11nameFiltersEv
     // invoke: QStringList nameFilters()
-    C._ZNK9QDirModel11nameFiltersEv(this.qclsinst)
+    C.C_ZNK9QDirModel11nameFiltersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "nameFilters", args)
   }
@@ -758,7 +758,7 @@ func NewQDirModel(args ...interface{}) QDirModel {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QDirModelC2EP7QObject(qthis, arg0)
+    C.C_ZN9QDirModelC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "QDirModel", args)
   }
@@ -782,7 +782,7 @@ func (this *QDirModel) remove(args ...interface{}) () {
     // invoke: bool remove(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QDirModel6removeERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN9QDirModel6removeERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "remove", args)
   }
@@ -802,7 +802,7 @@ func (this *QDirModel) filter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel6filterEv
     // invoke: QDir::Filters filter()
-    C._ZNK9QDirModel6filterEv(this.qclsinst)
+    C.C_ZNK9QDirModel6filterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "filter", args)
   }
@@ -825,7 +825,7 @@ func (this *QDirModel) setReadOnly(args ...interface{}) () {
     // invoke: void setReadOnly(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QDirModel11setReadOnlyEb(this.qclsinst, arg0)
+    C.C_ZN9QDirModel11setReadOnlyEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "setReadOnly", args)
   }
@@ -848,7 +848,7 @@ func (this *QDirModel) flags(args ...interface{}) () {
     // invoke: Qt::ItemFlags flags(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel5flagsERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK9QDirModel5flagsERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "flags", args)
   }
@@ -871,7 +871,7 @@ func (this *QDirModel) fileIcon(args ...interface{}) () {
     // invoke: QIcon fileIcon(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel8fileIconERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK9QDirModel8fileIconERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "fileIcon", args)
   }
@@ -891,7 +891,7 @@ func (this *QDirModel) supportedDropActions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel20supportedDropActionsEv
     // invoke: Qt::DropActions supportedDropActions()
-    C._ZNK9QDirModel20supportedDropActionsEv(this.qclsinst)
+    C.C_ZNK9QDirModel20supportedDropActionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "supportedDropActions", args)
   }

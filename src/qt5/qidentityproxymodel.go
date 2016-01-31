@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qidentityproxymodel.h
 // dst-file: /src/core/qidentityproxymodel.go
 //
@@ -29,39 +29,39 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QIdentityProxyModel::columnCount(const QModelIndex & parent);
-extern void _ZNK19QIdentityProxyModel11columnCountERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QItemSelection QIdentityProxyModel::mapSelectionToSource(const QItemSelection & selection);
-extern void _ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection(void* qthis, void* arg0); // 4
+extern void C_ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection(void* qthis, void* arg0); // 4
   // proto:  void QIdentityProxyModel::setSourceModel(QAbstractItemModel * sourceModel);
-extern void _ZN19QIdentityProxyModel14setSourceModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
+extern void C_ZN19QIdentityProxyModel14setSourceModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
   // proto:  QModelIndex QIdentityProxyModel::sibling(int row, int column, const QModelIndex & idx);
-extern void _ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  QModelIndex QIdentityProxyModel::index(int row, int column, const QModelIndex & parent);
-extern void _ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  QModelIndex QIdentityProxyModel::mapFromSource(const QModelIndex & sourceIndex);
-extern void _ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  bool QIdentityProxyModel::removeRows(int row, int count, const QModelIndex & parent);
-extern void _ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  void QIdentityProxyModel::~QIdentityProxyModel();
-extern void _ZN19QIdentityProxyModelD2Ev(void* qthis); // 4
+extern void C_ZN19QIdentityProxyModelD2Ev(void* qthis); // 4
   // proto:  QModelIndex QIdentityProxyModel::parent(const QModelIndex & child);
-extern void _ZNK19QIdentityProxyModel6parentERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK19QIdentityProxyModel6parentERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QItemSelection QIdentityProxyModel::mapSelectionFromSource(const QItemSelection & selection);
-extern void _ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection(void* qthis, void* arg0); // 4
+extern void C_ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection(void* qthis, void* arg0); // 4
   // proto:  bool QIdentityProxyModel::insertRows(int row, int count, const QModelIndex & parent);
-extern void _ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  void QIdentityProxyModel::QIdentityProxyModel(QObject * parent);
-extern void _ZN19QIdentityProxyModelC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN19QIdentityProxyModelC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  const QMetaObject * QIdentityProxyModel::metaObject();
-extern void _ZNK19QIdentityProxyModel10metaObjectEv(void* qthis); // 4
+extern void C_ZNK19QIdentityProxyModel10metaObjectEv(void* qthis); // 4
   // proto:  int QIdentityProxyModel::rowCount(const QModelIndex & parent);
-extern void _ZNK19QIdentityProxyModel8rowCountERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QModelIndex QIdentityProxyModel::mapToSource(const QModelIndex & proxyIndex);
-extern void _ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  bool QIdentityProxyModel::insertColumns(int column, int count, const QModelIndex & parent);
-extern void _ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  bool QIdentityProxyModel::removeColumns(int column, int count, const QModelIndex & parent);
-extern void _ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
 */
 import "C"
 // } // <= ext block end
@@ -96,7 +96,7 @@ func (this *QIdentityProxyModel) columnCount(args ...interface{}) () {
     // invoke: int columnCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QIdentityProxyModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "columnCount", args)
   }
@@ -119,7 +119,7 @@ func (this *QIdentityProxyModel) mapSelectionToSource(args ...interface{}) () {
     // invoke: QItemSelection mapSelectionToSource(const class QItemSelection &)
     var arg0 = args[0].(QItemSelection).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection(this.qclsinst, arg0)
+    C.C_ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "mapSelectionToSource", args)
   }
@@ -142,7 +142,7 @@ func (this *QIdentityProxyModel) setSourceModel(args ...interface{}) () {
     // invoke: void setSourceModel(class QAbstractItemModel *)
     var arg0 = args[0].(QAbstractItemModel).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QIdentityProxyModel14setSourceModelEP18QAbstractItemModel(this.qclsinst, arg0)
+    C.C_ZN19QIdentityProxyModel14setSourceModelEP18QAbstractItemModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "setSourceModel", args)
   }
@@ -171,7 +171,7 @@ func (this *QIdentityProxyModel) sibling(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "sibling", args)
   }
@@ -200,7 +200,7 @@ func (this *QIdentityProxyModel) index(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "index", args)
   }
@@ -223,7 +223,7 @@ func (this *QIdentityProxyModel) mapFromSource(args ...interface{}) () {
     // invoke: QModelIndex mapFromSource(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "mapFromSource", args)
   }
@@ -252,7 +252,7 @@ func (this *QIdentityProxyModel) removeRows(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "removeRows", args)
   }
@@ -272,7 +272,7 @@ func (this *QIdentityProxyModel) FreeQIdentityProxyModel(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QIdentityProxyModelD0Ev
     // invoke: void ~QIdentityProxyModel()
-    C._ZN19QIdentityProxyModelD2Ev(this.qclsinst)
+    C.C_ZN19QIdentityProxyModelD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "~QIdentityProxyModel", args)
   }
@@ -295,7 +295,7 @@ func (this *QIdentityProxyModel) parent(args ...interface{}) () {
     // invoke: QModelIndex parent(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QIdentityProxyModel6parentERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK19QIdentityProxyModel6parentERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "parent", args)
   }
@@ -318,7 +318,7 @@ func (this *QIdentityProxyModel) mapSelectionFromSource(args ...interface{}) () 
     // invoke: QItemSelection mapSelectionFromSource(const class QItemSelection &)
     var arg0 = args[0].(QItemSelection).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection(this.qclsinst, arg0)
+    C.C_ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "mapSelectionFromSource", args)
   }
@@ -347,7 +347,7 @@ func (this *QIdentityProxyModel) insertRows(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "insertRows", args)
   }
@@ -372,7 +372,7 @@ func NewQIdentityProxyModel(args ...interface{}) QIdentityProxyModel {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QIdentityProxyModelC2EP7QObject(qthis, arg0)
+    C.C_ZN19QIdentityProxyModelC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "QIdentityProxyModel", args)
   }
@@ -393,7 +393,7 @@ func (this *QIdentityProxyModel) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK19QIdentityProxyModel10metaObjectEv(this.qclsinst)
+    C.C_ZNK19QIdentityProxyModel10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "metaObject", args)
   }
@@ -416,7 +416,7 @@ func (this *QIdentityProxyModel) rowCount(args ...interface{}) () {
     // invoke: int rowCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QIdentityProxyModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "rowCount", args)
   }
@@ -439,7 +439,7 @@ func (this *QIdentityProxyModel) mapToSource(args ...interface{}) () {
     // invoke: QModelIndex mapToSource(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "mapToSource", args)
   }
@@ -468,7 +468,7 @@ func (this *QIdentityProxyModel) insertColumns(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "insertColumns", args)
   }
@@ -497,7 +497,7 @@ func (this *QIdentityProxyModel) removeColumns(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "removeColumns", args)
   }

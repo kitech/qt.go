@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qcoreevent.h
 // dst-file: /src/core/qcoreevent.go
 //
@@ -29,51 +29,51 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QDeferredDeleteEvent::QDeferredDeleteEvent();
-extern void _ZN20QDeferredDeleteEventC2Ev(void* qthis); // 3
+extern void C_ZN20QDeferredDeleteEventC2Ev(void* qthis); // 3
   // proto:  void QDeferredDeleteEvent::~QDeferredDeleteEvent();
-extern void _ZN20QDeferredDeleteEventD2Ev(void* qthis); // 4
+extern void C_ZN20QDeferredDeleteEventD2Ev(void* qthis); // 4
   // proto:  int QDeferredDeleteEvent::loopLevel();
-extern void _ZNK20QDeferredDeleteEvent9loopLevelEv(void* qthis); // 2
+extern void C_ZNK20QDeferredDeleteEvent9loopLevelEv(void* qthis); // 2
   // proto:  void QDynamicPropertyChangeEvent::QDynamicPropertyChangeEvent(const QByteArray & name);
-extern void _ZN27QDynamicPropertyChangeEventC2ERK10QByteArray(void* qthis, void* arg0); // 3
+extern void C_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray(void* qthis, void* arg0); // 3
   // proto:  QByteArray QDynamicPropertyChangeEvent::propertyName();
-extern void _ZNK27QDynamicPropertyChangeEvent12propertyNameEv(void* qthis); // 2
+extern void C_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(void* qthis); // 2
   // proto:  void QDynamicPropertyChangeEvent::~QDynamicPropertyChangeEvent();
-extern void _ZN27QDynamicPropertyChangeEventD2Ev(void* qthis); // 4
+extern void C_ZN27QDynamicPropertyChangeEventD2Ev(void* qthis); // 4
   // proto:  int QTimerEvent::timerId();
-extern void _ZNK11QTimerEvent7timerIdEv(void* qthis); // 2
+extern void C_ZNK11QTimerEvent7timerIdEv(void* qthis); // 2
   // proto:  void QTimerEvent::~QTimerEvent();
-extern void _ZN11QTimerEventD2Ev(void* qthis); // 4
+extern void C_ZN11QTimerEventD2Ev(void* qthis); // 4
   // proto:  void QTimerEvent::QTimerEvent(int timerId);
-extern void _ZN11QTimerEventC2Ei(void* qthis, int32_t arg0); // 3
+extern void C_ZN11QTimerEventC2Ei(void* qthis, int32_t arg0); // 3
   // proto:  bool QChildEvent::added();
-extern void _ZNK11QChildEvent5addedEv(void* qthis); // 2
+extern void C_ZNK11QChildEvent5addedEv(void* qthis); // 2
   // proto:  bool QChildEvent::polished();
-extern void _ZNK11QChildEvent8polishedEv(void* qthis); // 2
+extern void C_ZNK11QChildEvent8polishedEv(void* qthis); // 2
   // proto:  void QChildEvent::~QChildEvent();
-extern void _ZN11QChildEventD2Ev(void* qthis); // 4
+extern void C_ZN11QChildEventD2Ev(void* qthis); // 4
   // proto:  QObject * QChildEvent::child();
-extern void _ZNK11QChildEvent5childEv(void* qthis); // 2
+extern void C_ZNK11QChildEvent5childEv(void* qthis); // 2
   // proto:  bool QChildEvent::removed();
-extern void _ZNK11QChildEvent7removedEv(void* qthis); // 2
+extern void C_ZNK11QChildEvent7removedEv(void* qthis); // 2
   // proto: static int QEvent::registerEventType(int hint);
-extern void _ZN6QEvent17registerEventTypeEi(int32_t arg0); // 4
+extern void C_ZN6QEvent17registerEventTypeEi(int32_t arg0); // 4
   // proto:  bool QEvent::spontaneous();
-extern void _ZNK6QEvent11spontaneousEv(void* qthis); // 2
+extern void C_ZNK6QEvent11spontaneousEv(void* qthis); // 2
   // proto:  void QEvent::accept();
-extern void _ZN6QEvent6acceptEv(void* qthis); // 2
+extern void C_ZN6QEvent6acceptEv(void* qthis); // 2
   // proto:  void QEvent::ignore();
-extern void _ZN6QEvent6ignoreEv(void* qthis); // 2
+extern void C_ZN6QEvent6ignoreEv(void* qthis); // 2
   // proto:  bool QEvent::isAccepted();
-extern void _ZNK6QEvent10isAcceptedEv(void* qthis); // 2
+extern void C_ZNK6QEvent10isAcceptedEv(void* qthis); // 2
   // proto:  void QEvent::setAccepted(bool accepted);
-extern void _ZN6QEvent11setAcceptedEb(void* qthis, bool arg0); // 2
+extern void C_ZN6QEvent11setAcceptedEb(void* qthis, bool arg0); // 2
   // proto:  QEvent::Type QEvent::type();
-extern void _ZNK6QEvent4typeEv(void* qthis); // 2
+extern void C_ZNK6QEvent4typeEv(void* qthis); // 2
   // proto:  void QEvent::QEvent(const QEvent & other);
-extern void _ZN6QEventC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN6QEventC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QEvent::~QEvent();
-extern void _ZN6QEventD2Ev(void* qthis); // 4
+extern void C_ZN6QEventD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -131,7 +131,7 @@ func NewQDeferredDeleteEvent(args ...interface{}) QDeferredDeleteEvent {
     // invoke: void QDeferredDeleteEvent()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN20QDeferredDeleteEventC2Ev(qthis)
+    C.C_ZN20QDeferredDeleteEventC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "QDeferredDeleteEvent", args)
   }
@@ -152,7 +152,7 @@ func (this *QDeferredDeleteEvent) FreeQDeferredDeleteEvent(args ...interface{}) 
   case 0:
     // invoke: _ZN20QDeferredDeleteEventD0Ev
     // invoke: void ~QDeferredDeleteEvent()
-    C._ZN20QDeferredDeleteEventD2Ev(this.qclsinst)
+    C.C_ZN20QDeferredDeleteEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "~QDeferredDeleteEvent", args)
   }
@@ -172,7 +172,7 @@ func (this *QDeferredDeleteEvent) loopLevel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QDeferredDeleteEvent9loopLevelEv
     // invoke: int loopLevel()
-    C._ZNK20QDeferredDeleteEvent9loopLevelEv(this.qclsinst)
+    C.C_ZNK20QDeferredDeleteEvent9loopLevelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "loopLevel", args)
   }
@@ -197,7 +197,7 @@ func NewQDynamicPropertyChangeEvent(args ...interface{}) QDynamicPropertyChangeE
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN27QDynamicPropertyChangeEventC2ERK10QByteArray(qthis, arg0)
+    C.C_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray(qthis, arg0)
   default:
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "QDynamicPropertyChangeEvent", args)
   }
@@ -218,7 +218,7 @@ func (this *QDynamicPropertyChangeEvent) propertyName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QDynamicPropertyChangeEvent12propertyNameEv
     // invoke: QByteArray propertyName()
-    C._ZNK27QDynamicPropertyChangeEvent12propertyNameEv(this.qclsinst)
+    C.C_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "propertyName", args)
   }
@@ -238,7 +238,7 @@ func (this *QDynamicPropertyChangeEvent) FreeQDynamicPropertyChangeEvent(args ..
   case 0:
     // invoke: _ZN27QDynamicPropertyChangeEventD0Ev
     // invoke: void ~QDynamicPropertyChangeEvent()
-    C._ZN27QDynamicPropertyChangeEventD2Ev(this.qclsinst)
+    C.C_ZN27QDynamicPropertyChangeEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "~QDynamicPropertyChangeEvent", args)
   }
@@ -258,7 +258,7 @@ func (this *QTimerEvent) timerId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTimerEvent7timerIdEv
     // invoke: int timerId()
-    C._ZNK11QTimerEvent7timerIdEv(this.qclsinst)
+    C.C_ZNK11QTimerEvent7timerIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimerEvent", "timerId", args)
   }
@@ -278,7 +278,7 @@ func (this *QTimerEvent) FreeQTimerEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTimerEventD0Ev
     // invoke: void ~QTimerEvent()
-    C._ZN11QTimerEventD2Ev(this.qclsinst)
+    C.C_ZN11QTimerEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimerEvent", "~QTimerEvent", args)
   }
@@ -303,7 +303,7 @@ func NewQTimerEvent(args ...interface{}) QTimerEvent {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QTimerEventC2Ei(qthis, arg0)
+    C.C_ZN11QTimerEventC2Ei(qthis, arg0)
   default:
     qtrt.ErrorResolve("QTimerEvent", "QTimerEvent", args)
   }
@@ -324,7 +324,7 @@ func (this *QChildEvent) added(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QChildEvent5addedEv
     // invoke: bool added()
-    C._ZNK11QChildEvent5addedEv(this.qclsinst)
+    C.C_ZNK11QChildEvent5addedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "added", args)
   }
@@ -344,7 +344,7 @@ func (this *QChildEvent) polished(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QChildEvent8polishedEv
     // invoke: bool polished()
-    C._ZNK11QChildEvent8polishedEv(this.qclsinst)
+    C.C_ZNK11QChildEvent8polishedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "polished", args)
   }
@@ -364,7 +364,7 @@ func (this *QChildEvent) FreeQChildEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QChildEventD0Ev
     // invoke: void ~QChildEvent()
-    C._ZN11QChildEventD2Ev(this.qclsinst)
+    C.C_ZN11QChildEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "~QChildEvent", args)
   }
@@ -384,7 +384,7 @@ func (this *QChildEvent) child(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QChildEvent5childEv
     // invoke: QObject * child()
-    C._ZNK11QChildEvent5childEv(this.qclsinst)
+    C.C_ZNK11QChildEvent5childEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "child", args)
   }
@@ -404,7 +404,7 @@ func (this *QChildEvent) removed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QChildEvent7removedEv
     // invoke: bool removed()
-    C._ZNK11QChildEvent7removedEv(this.qclsinst)
+    C.C_ZNK11QChildEvent7removedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "removed", args)
   }
@@ -427,7 +427,7 @@ func (this *QEvent) registerEventType_s(args ...interface{}) () {
     // invoke: int registerEventType(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QEvent17registerEventTypeEi(arg0)
+    C.C_ZN6QEvent17registerEventTypeEi(arg0)
   default:
     qtrt.ErrorResolve("QEvent", "registerEventType", args)
   }
@@ -447,7 +447,7 @@ func (this *QEvent) spontaneous(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QEvent11spontaneousEv
     // invoke: bool spontaneous()
-    C._ZNK6QEvent11spontaneousEv(this.qclsinst)
+    C.C_ZNK6QEvent11spontaneousEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "spontaneous", args)
   }
@@ -467,7 +467,7 @@ func (this *QEvent) accept(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QEvent6acceptEv
     // invoke: void accept()
-    C._ZN6QEvent6acceptEv(this.qclsinst)
+    C.C_ZN6QEvent6acceptEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "accept", args)
   }
@@ -487,7 +487,7 @@ func (this *QEvent) ignore(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QEvent6ignoreEv
     // invoke: void ignore()
-    C._ZN6QEvent6ignoreEv(this.qclsinst)
+    C.C_ZN6QEvent6ignoreEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "ignore", args)
   }
@@ -507,7 +507,7 @@ func (this *QEvent) isAccepted(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QEvent10isAcceptedEv
     // invoke: bool isAccepted()
-    C._ZNK6QEvent10isAcceptedEv(this.qclsinst)
+    C.C_ZNK6QEvent10isAcceptedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "isAccepted", args)
   }
@@ -530,7 +530,7 @@ func (this *QEvent) setAccepted(args ...interface{}) () {
     // invoke: void setAccepted(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN6QEvent11setAcceptedEb(this.qclsinst, arg0)
+    C.C_ZN6QEvent11setAcceptedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEvent", "setAccepted", args)
   }
@@ -550,7 +550,7 @@ func (this *QEvent) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QEvent4typeEv
     // invoke: QEvent::Type type()
-    C._ZNK6QEvent4typeEv(this.qclsinst)
+    C.C_ZNK6QEvent4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "type", args)
   }
@@ -575,7 +575,7 @@ func NewQEvent(args ...interface{}) QEvent {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QEventC2ERKS_(qthis, arg0)
+    C.C_ZN6QEventC2ERKS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QEvent", "QEvent", args)
   }
@@ -596,7 +596,7 @@ func (this *QEvent) FreeQEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QEventD0Ev
     // invoke: void ~QEvent()
-    C._ZN6QEventD2Ev(this.qclsinst)
+    C.C_ZN6QEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "~QEvent", args)
   }

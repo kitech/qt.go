@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qgraphicsview.h
 // dst-file: /src/widgets/qgraphicsview.go
 //
@@ -29,131 +29,131 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QGraphicsView::setBackgroundBrush(const QBrush & brush);
-extern void _ZN13QGraphicsView18setBackgroundBrushERK6QBrush(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsView18setBackgroundBrushERK6QBrush(void* qthis, void* arg0); // 4
   // proto:  Qt::Alignment QGraphicsView::alignment();
-extern void _ZNK13QGraphicsView9alignmentEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView9alignmentEv(void* qthis); // 4
   // proto:  void QGraphicsView::resetCachedContent();
-extern void _ZN13QGraphicsView18resetCachedContentEv(void* qthis); // 4
+extern void C_ZN13QGraphicsView18resetCachedContentEv(void* qthis); // 4
   // proto:  QPainter::RenderHints QGraphicsView::renderHints();
-extern void _ZNK13QGraphicsView11renderHintsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView11renderHintsEv(void* qthis); // 4
   // proto:  void QGraphicsView::setMatrix(const QMatrix & matrix, bool combine);
-extern void _ZN13QGraphicsView9setMatrixERK7QMatrixb(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZN13QGraphicsView9setMatrixERK7QMatrixb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  void QGraphicsView::shear(qreal sh, qreal sv);
-extern void _ZN13QGraphicsView5shearEdd(void* qthis, double arg0, double arg1); // 4
+extern void C_ZN13QGraphicsView5shearEdd(void* qthis, double arg0, double arg1); // 4
   // proto:  void QGraphicsView::resetTransform();
-extern void _ZN13QGraphicsView14resetTransformEv(void* qthis); // 4
+extern void C_ZN13QGraphicsView14resetTransformEv(void* qthis); // 4
   // proto:  void QGraphicsView::rotate(qreal angle);
-extern void _ZN13QGraphicsView6rotateEd(void* qthis, double arg0); // 4
+extern void C_ZN13QGraphicsView6rotateEd(void* qthis, double arg0); // 4
   // proto:  const QMetaObject * QGraphicsView::metaObject();
-extern void _ZNK13QGraphicsView10metaObjectEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView10metaObjectEv(void* qthis); // 4
   // proto:  QGraphicsItem * QGraphicsView::itemAt(int x, int y);
-extern void _ZNK13QGraphicsView6itemAtEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZNK13QGraphicsView6itemAtEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  QGraphicsItem * QGraphicsView::itemAt(const QPoint & pos);
-extern void _ZNK13QGraphicsView6itemAtERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsView6itemAtERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  OptimizationFlags QGraphicsView::optimizationFlags();
-extern void _ZNK13QGraphicsView17optimizationFlagsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView17optimizationFlagsEv(void* qthis); // 4
   // proto:  void QGraphicsView::updateSceneRect(const QRectF & rect);
-extern void _ZN13QGraphicsView15updateSceneRectERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsView15updateSceneRectERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsView::setTransform(const QTransform & matrix, bool combine);
-extern void _ZN13QGraphicsView12setTransformERK10QTransformb(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZN13QGraphicsView12setTransformERK10QTransformb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  QGraphicsView::ViewportAnchor QGraphicsView::resizeAnchor();
-extern void _ZNK13QGraphicsView12resizeAnchorEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView12resizeAnchorEv(void* qthis); // 4
   // proto:  void QGraphicsView::scale(qreal sx, qreal sy);
-extern void _ZN13QGraphicsView5scaleEdd(void* qthis, double arg0, double arg1); // 4
+extern void C_ZN13QGraphicsView5scaleEdd(void* qthis, double arg0, double arg1); // 4
   // proto:  QMatrix QGraphicsView::matrix();
-extern void _ZNK13QGraphicsView6matrixEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView6matrixEv(void* qthis); // 4
   // proto:  void QGraphicsView::setScene(QGraphicsScene * scene);
-extern void _ZN13QGraphicsView8setSceneEP14QGraphicsScene(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsView8setSceneEP14QGraphicsScene(void* qthis, void* arg0); // 4
   // proto:  QSize QGraphicsView::sizeHint();
-extern void _ZNK13QGraphicsView8sizeHintEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView8sizeHintEv(void* qthis); // 4
   // proto:  QList<QGraphicsItem *> QGraphicsView::items(int x, int y);
-extern void _ZNK13QGraphicsView5itemsEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZNK13QGraphicsView5itemsEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  QList<QGraphicsItem *> QGraphicsView::items(const QPoint & pos);
-extern void _ZNK13QGraphicsView5itemsERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsView5itemsERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  QList<QGraphicsItem *> QGraphicsView::items();
-extern void _ZNK13QGraphicsView5itemsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView5itemsEv(void* qthis); // 4
   // proto:  Qt::ItemSelectionMode QGraphicsView::rubberBandSelectionMode();
-extern void _ZNK13QGraphicsView23rubberBandSelectionModeEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView23rubberBandSelectionModeEv(void* qthis); // 4
   // proto:  void QGraphicsView::setSceneRect(qreal x, qreal y, qreal w, qreal h);
-extern void _ZN13QGraphicsView12setSceneRectEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZN13QGraphicsView12setSceneRectEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  void QGraphicsView::setSceneRect(const QRectF & rect);
-extern void _ZN13QGraphicsView12setSceneRectERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsView12setSceneRectERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QPolygon QGraphicsView::mapFromScene(const QPolygonF & polygon);
-extern void _ZNK13QGraphicsView12mapFromSceneERK9QPolygonF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsView12mapFromSceneERK9QPolygonF(void* qthis, void* arg0); // 4
   // proto:  QPainterPath QGraphicsView::mapFromScene(const QPainterPath & path);
-extern void _ZNK13QGraphicsView12mapFromSceneERK12QPainterPath(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsView12mapFromSceneERK12QPainterPath(void* qthis, void* arg0); // 4
   // proto:  QPoint QGraphicsView::mapFromScene(qreal x, qreal y);
-extern void _ZNK13QGraphicsView12mapFromSceneEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZNK13QGraphicsView12mapFromSceneEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  QPolygon QGraphicsView::mapFromScene(const QRectF & rect);
-extern void _ZNK13QGraphicsView12mapFromSceneERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsView12mapFromSceneERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QPoint QGraphicsView::mapFromScene(const QPointF & point);
-extern void _ZNK13QGraphicsView12mapFromSceneERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsView12mapFromSceneERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPolygon QGraphicsView::mapFromScene(qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsView12mapFromSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZNK13QGraphicsView12mapFromSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  QGraphicsView::DragMode QGraphicsView::dragMode();
-extern void _ZNK13QGraphicsView8dragModeEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView8dragModeEv(void* qthis); // 4
   // proto:  QGraphicsScene * QGraphicsView::scene();
-extern void _ZNK13QGraphicsView5sceneEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView5sceneEv(void* qthis); // 4
   // proto:  void QGraphicsView::~QGraphicsView();
-extern void _ZN13QGraphicsViewD2Ev(void* qthis); // 4
+extern void C_ZN13QGraphicsViewD2Ev(void* qthis); // 4
   // proto:  QGraphicsView::ViewportAnchor QGraphicsView::transformationAnchor();
-extern void _ZNK13QGraphicsView20transformationAnchorEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView20transformationAnchorEv(void* qthis); // 4
   // proto:  void QGraphicsView::QGraphicsView(QWidget * parent);
-extern void _ZN13QGraphicsViewC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN13QGraphicsViewC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QGraphicsView::QGraphicsView(QGraphicsScene * scene, QWidget * parent);
-extern void _ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget(void* qthis, void* arg0, void* arg1); // 3
   // proto:  QRect QGraphicsView::rubberBandRect();
-extern void _ZNK13QGraphicsView14rubberBandRectEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView14rubberBandRectEv(void* qthis); // 4
   // proto:  QTransform QGraphicsView::transform();
-extern void _ZNK13QGraphicsView9transformEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView9transformEv(void* qthis); // 4
   // proto:  QBrush QGraphicsView::foregroundBrush();
-extern void _ZNK13QGraphicsView15foregroundBrushEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView15foregroundBrushEv(void* qthis); // 4
   // proto:  void QGraphicsView::setForegroundBrush(const QBrush & brush);
-extern void _ZN13QGraphicsView18setForegroundBrushERK6QBrush(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsView18setForegroundBrushERK6QBrush(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsView::ensureVisible(const QRectF & rect, int xmargin, int ymargin);
-extern void _ZN13QGraphicsView13ensureVisibleERK6QRectFii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
+extern void C_ZN13QGraphicsView13ensureVisibleERK6QRectFii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
   // proto:  void QGraphicsView::ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin, int ymargin);
-extern void _ZN13QGraphicsView13ensureVisibleEddddii(void* qthis, double arg0, double arg1, double arg2, double arg3, int32_t arg4, int32_t arg5); // 2
+extern void C_ZN13QGraphicsView13ensureVisibleEddddii(void* qthis, double arg0, double arg1, double arg2, double arg3, int32_t arg4, int32_t arg5); // 2
   // proto:  void QGraphicsView::ensureVisible(const QGraphicsItem * item, int xmargin, int ymargin);
-extern void _ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
+extern void C_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
   // proto:  void QGraphicsView::setInteractive(bool allowed);
-extern void _ZN13QGraphicsView14setInteractiveEb(void* qthis, bool arg0); // 4
+extern void C_ZN13QGraphicsView14setInteractiveEb(void* qthis, bool arg0); // 4
   // proto:  bool QGraphicsView::isTransformed();
-extern void _ZNK13QGraphicsView13isTransformedEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView13isTransformedEv(void* qthis); // 4
   // proto:  bool QGraphicsView::isInteractive();
-extern void _ZNK13QGraphicsView13isInteractiveEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView13isInteractiveEv(void* qthis); // 4
   // proto:  QBrush QGraphicsView::backgroundBrush();
-extern void _ZNK13QGraphicsView15backgroundBrushEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView15backgroundBrushEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsView::mapToScene(const QPainterPath & path);
-extern void _ZNK13QGraphicsView10mapToSceneERK12QPainterPath(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsView10mapToSceneERK12QPainterPath(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsView::mapToScene(int x, int y);
-extern void _ZNK13QGraphicsView10mapToSceneEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZNK13QGraphicsView10mapToSceneEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  QPolygonF QGraphicsView::mapToScene(const QRect & rect);
-extern void _ZNK13QGraphicsView10mapToSceneERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsView10mapToSceneERK5QRect(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsView::mapToScene(const QPolygon & polygon);
-extern void _ZNK13QGraphicsView10mapToSceneERK8QPolygon(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsView10mapToSceneERK8QPolygon(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsView::mapToScene(int x, int y, int w, int h);
-extern void _ZNK13QGraphicsView10mapToSceneEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
+extern void C_ZNK13QGraphicsView10mapToSceneEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
   // proto:  QPointF QGraphicsView::mapToScene(const QPoint & point);
-extern void _ZNK13QGraphicsView10mapToSceneERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsView10mapToSceneERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsView::resetMatrix();
-extern void _ZN13QGraphicsView11resetMatrixEv(void* qthis); // 4
+extern void C_ZN13QGraphicsView11resetMatrixEv(void* qthis); // 4
   // proto:  void QGraphicsView::centerOn(const QPointF & pos);
-extern void _ZN13QGraphicsView8centerOnERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsView8centerOnERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsView::centerOn(const QGraphicsItem * item);
-extern void _ZN13QGraphicsView8centerOnEPK13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsView8centerOnEPK13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsView::centerOn(qreal x, qreal y);
-extern void _ZN13QGraphicsView8centerOnEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZN13QGraphicsView8centerOnEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QGraphicsView::translate(qreal dx, qreal dy);
-extern void _ZN13QGraphicsView9translateEdd(void* qthis, double arg0, double arg1); // 4
+extern void C_ZN13QGraphicsView9translateEdd(void* qthis, double arg0, double arg1); // 4
   // proto:  QGraphicsView::ViewportUpdateMode QGraphicsView::viewportUpdateMode();
-extern void _ZNK13QGraphicsView18viewportUpdateModeEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView18viewportUpdateModeEv(void* qthis); // 4
   // proto:  QRectF QGraphicsView::sceneRect();
-extern void _ZNK13QGraphicsView9sceneRectEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView9sceneRectEv(void* qthis); // 4
   // proto:  CacheMode QGraphicsView::cacheMode();
-extern void _ZNK13QGraphicsView9cacheModeEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView9cacheModeEv(void* qthis); // 4
   // proto:  QTransform QGraphicsView::viewportTransform();
-extern void _ZNK13QGraphicsView17viewportTransformEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsView17viewportTransformEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -189,7 +189,7 @@ func (this *QGraphicsView) setBackgroundBrush(args ...interface{}) () {
     // invoke: void setBackgroundBrush(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsView18setBackgroundBrushERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsView18setBackgroundBrushERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsView", "setBackgroundBrush", args)
   }
@@ -209,7 +209,7 @@ func (this *QGraphicsView) alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C._ZNK13QGraphicsView9alignmentEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView9alignmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "alignment", args)
   }
@@ -229,7 +229,7 @@ func (this *QGraphicsView) resetCachedContent(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsView18resetCachedContentEv
     // invoke: void resetCachedContent()
-    C._ZN13QGraphicsView18resetCachedContentEv(this.qclsinst)
+    C.C_ZN13QGraphicsView18resetCachedContentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "resetCachedContent", args)
   }
@@ -249,7 +249,7 @@ func (this *QGraphicsView) renderHints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView11renderHintsEv
     // invoke: QPainter::RenderHints renderHints()
-    C._ZNK13QGraphicsView11renderHintsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView11renderHintsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "renderHints", args)
   }
@@ -275,7 +275,7 @@ func (this *QGraphicsView) setMatrix(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN13QGraphicsView9setMatrixERK7QMatrixb(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsView9setMatrixERK7QMatrixb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsView", "setMatrix", args)
   }
@@ -301,7 +301,7 @@ func (this *QGraphicsView) shear(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN13QGraphicsView5shearEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsView5shearEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsView", "shear", args)
   }
@@ -321,7 +321,7 @@ func (this *QGraphicsView) resetTransform(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsView14resetTransformEv
     // invoke: void resetTransform()
-    C._ZN13QGraphicsView14resetTransformEv(this.qclsinst)
+    C.C_ZN13QGraphicsView14resetTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "resetTransform", args)
   }
@@ -344,7 +344,7 @@ func (this *QGraphicsView) rotate(args ...interface{}) () {
     // invoke: void rotate(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsView6rotateEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsView6rotateEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsView", "rotate", args)
   }
@@ -364,7 +364,7 @@ func (this *QGraphicsView) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK13QGraphicsView10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "metaObject", args)
   }
@@ -393,13 +393,13 @@ func (this *QGraphicsView) itemAt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsView6itemAtEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsView6itemAtEii(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK13QGraphicsView6itemAtERK6QPoint
     // invoke: QGraphicsItem * itemAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsView6itemAtERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsView6itemAtERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsView", "itemAt", args)
   }
@@ -419,7 +419,7 @@ func (this *QGraphicsView) optimizationFlags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView17optimizationFlagsEv
     // invoke: OptimizationFlags optimizationFlags()
-    C._ZNK13QGraphicsView17optimizationFlagsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView17optimizationFlagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "optimizationFlags", args)
   }
@@ -442,7 +442,7 @@ func (this *QGraphicsView) updateSceneRect(args ...interface{}) () {
     // invoke: void updateSceneRect(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsView15updateSceneRectERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsView15updateSceneRectERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsView", "updateSceneRect", args)
   }
@@ -468,7 +468,7 @@ func (this *QGraphicsView) setTransform(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN13QGraphicsView12setTransformERK10QTransformb(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsView12setTransformERK10QTransformb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsView", "setTransform", args)
   }
@@ -488,7 +488,7 @@ func (this *QGraphicsView) resizeAnchor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView12resizeAnchorEv
     // invoke: QGraphicsView::ViewportAnchor resizeAnchor()
-    C._ZNK13QGraphicsView12resizeAnchorEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView12resizeAnchorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "resizeAnchor", args)
   }
@@ -514,7 +514,7 @@ func (this *QGraphicsView) scale(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN13QGraphicsView5scaleEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsView5scaleEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsView", "scale", args)
   }
@@ -534,7 +534,7 @@ func (this *QGraphicsView) matrix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView6matrixEv
     // invoke: QMatrix matrix()
-    C._ZNK13QGraphicsView6matrixEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView6matrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "matrix", args)
   }
@@ -557,7 +557,7 @@ func (this *QGraphicsView) setScene(args ...interface{}) () {
     // invoke: void setScene(class QGraphicsScene *)
     var arg0 = args[0].(QGraphicsScene).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsView8setSceneEP14QGraphicsScene(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsView8setSceneEP14QGraphicsScene(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsView", "setScene", args)
   }
@@ -577,7 +577,7 @@ func (this *QGraphicsView) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK13QGraphicsView8sizeHintEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "sizeHint", args)
   }
@@ -608,17 +608,17 @@ func (this *QGraphicsView) items(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsView5itemsEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsView5itemsEii(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK13QGraphicsView5itemsERK6QPoint
     // invoke: QList<QGraphicsItem *> items(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsView5itemsERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsView5itemsERK6QPoint(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK13QGraphicsView5itemsEv
     // invoke: QList<QGraphicsItem *> items()
-    C._ZNK13QGraphicsView5itemsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView5itemsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "items", args)
   }
@@ -638,7 +638,7 @@ func (this *QGraphicsView) rubberBandSelectionMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView23rubberBandSelectionModeEv
     // invoke: Qt::ItemSelectionMode rubberBandSelectionMode()
-    C._ZNK13QGraphicsView23rubberBandSelectionModeEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView23rubberBandSelectionModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "rubberBandSelectionMode", args)
   }
@@ -673,13 +673,13 @@ func (this *QGraphicsView) setSceneRect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN13QGraphicsView12setSceneRectEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN13QGraphicsView12setSceneRectEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN13QGraphicsView12setSceneRectERK6QRectF
     // invoke: void setSceneRect(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsView12setSceneRectERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsView12setSceneRectERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsView", "setSceneRect", args)
   }
@@ -721,13 +721,13 @@ func (this *QGraphicsView) mapFromScene(args ...interface{}) () {
     // invoke: QPolygon mapFromScene(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsView12mapFromSceneERK9QPolygonF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsView12mapFromSceneERK9QPolygonF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsView12mapFromSceneERK12QPainterPath
     // invoke: QPainterPath mapFromScene(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsView12mapFromSceneERK12QPainterPath(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsView12mapFromSceneERK12QPainterPath(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK13QGraphicsView12mapFromSceneEdd
     // invoke: QPoint mapFromScene(qreal, qreal)
@@ -735,19 +735,19 @@ func (this *QGraphicsView) mapFromScene(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsView12mapFromSceneEdd(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsView12mapFromSceneEdd(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZNK13QGraphicsView12mapFromSceneERK6QRectF
     // invoke: QPolygon mapFromScene(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsView12mapFromSceneERK6QRectF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsView12mapFromSceneERK6QRectF(this.qclsinst, arg0)
   case 4:
     // invoke: _ZNK13QGraphicsView12mapFromSceneERK7QPointF
     // invoke: QPoint mapFromScene(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsView12mapFromSceneERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsView12mapFromSceneERK7QPointF(this.qclsinst, arg0)
   case 5:
     // invoke: _ZNK13QGraphicsView12mapFromSceneEdddd
     // invoke: QPolygon mapFromScene(qreal, qreal, qreal, qreal)
@@ -759,7 +759,7 @@ func (this *QGraphicsView) mapFromScene(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZNK13QGraphicsView12mapFromSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK13QGraphicsView12mapFromSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsView", "mapFromScene", args)
   }
@@ -779,7 +779,7 @@ func (this *QGraphicsView) dragMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView8dragModeEv
     // invoke: QGraphicsView::DragMode dragMode()
-    C._ZNK13QGraphicsView8dragModeEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView8dragModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "dragMode", args)
   }
@@ -799,7 +799,7 @@ func (this *QGraphicsView) scene(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView5sceneEv
     // invoke: QGraphicsScene * scene()
-    C._ZNK13QGraphicsView5sceneEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView5sceneEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "scene", args)
   }
@@ -819,7 +819,7 @@ func (this *QGraphicsView) FreeQGraphicsView(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsViewD0Ev
     // invoke: void ~QGraphicsView()
-    C._ZN13QGraphicsViewD2Ev(this.qclsinst)
+    C.C_ZN13QGraphicsViewD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "~QGraphicsView", args)
   }
@@ -839,7 +839,7 @@ func (this *QGraphicsView) transformationAnchor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView20transformationAnchorEv
     // invoke: QGraphicsView::ViewportAnchor transformationAnchor()
-    C._ZNK13QGraphicsView20transformationAnchorEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView20transformationAnchorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "transformationAnchor", args)
   }
@@ -868,7 +868,7 @@ func NewQGraphicsView(args ...interface{}) QGraphicsView {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QGraphicsViewC2EP7QWidget(qthis, arg0)
+    C.C_ZN13QGraphicsViewC2EP7QWidget(qthis, arg0)
   case 1:
     // invoke: _ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget
     // invoke: void QGraphicsView(class QGraphicsScene *, class QWidget *)
@@ -878,7 +878,7 @@ func NewQGraphicsView(args ...interface{}) QGraphicsView {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget(qthis, arg0, arg1)
+    C.C_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsView", "QGraphicsView", args)
   }
@@ -899,7 +899,7 @@ func (this *QGraphicsView) rubberBandRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView14rubberBandRectEv
     // invoke: QRect rubberBandRect()
-    C._ZNK13QGraphicsView14rubberBandRectEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView14rubberBandRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "rubberBandRect", args)
   }
@@ -919,7 +919,7 @@ func (this *QGraphicsView) transform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView9transformEv
     // invoke: QTransform transform()
-    C._ZNK13QGraphicsView9transformEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView9transformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "transform", args)
   }
@@ -939,7 +939,7 @@ func (this *QGraphicsView) foregroundBrush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView15foregroundBrushEv
     // invoke: QBrush foregroundBrush()
-    C._ZNK13QGraphicsView15foregroundBrushEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView15foregroundBrushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "foregroundBrush", args)
   }
@@ -962,7 +962,7 @@ func (this *QGraphicsView) setForegroundBrush(args ...interface{}) () {
     // invoke: void setForegroundBrush(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsView18setForegroundBrushERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsView18setForegroundBrushERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsView", "setForegroundBrush", args)
   }
@@ -1004,7 +1004,7 @@ func (this *QGraphicsView) ensureVisible(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN13QGraphicsView13ensureVisibleERK6QRectFii(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QGraphicsView13ensureVisibleERK6QRectFii(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN13QGraphicsView13ensureVisibleEddddii
     // invoke: void ensureVisible(qreal, qreal, qreal, qreal, int, int)
@@ -1020,7 +1020,7 @@ func (this *QGraphicsView) ensureVisible(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    C._ZN13QGraphicsView13ensureVisibleEddddii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
+    C.C_ZN13QGraphicsView13ensureVisibleEddddii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
   case 2:
     // invoke: _ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii
     // invoke: void ensureVisible(const class QGraphicsItem *, int, int)
@@ -1030,7 +1030,7 @@ func (this *QGraphicsView) ensureVisible(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsView", "ensureVisible", args)
   }
@@ -1053,7 +1053,7 @@ func (this *QGraphicsView) setInteractive(args ...interface{}) () {
     // invoke: void setInteractive(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsView14setInteractiveEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsView14setInteractiveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsView", "setInteractive", args)
   }
@@ -1073,7 +1073,7 @@ func (this *QGraphicsView) isTransformed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView13isTransformedEv
     // invoke: bool isTransformed()
-    C._ZNK13QGraphicsView13isTransformedEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView13isTransformedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "isTransformed", args)
   }
@@ -1093,7 +1093,7 @@ func (this *QGraphicsView) isInteractive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView13isInteractiveEv
     // invoke: bool isInteractive()
-    C._ZNK13QGraphicsView13isInteractiveEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView13isInteractiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "isInteractive", args)
   }
@@ -1113,7 +1113,7 @@ func (this *QGraphicsView) backgroundBrush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView15backgroundBrushEv
     // invoke: QBrush backgroundBrush()
-    C._ZNK13QGraphicsView15backgroundBrushEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView15backgroundBrushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "backgroundBrush", args)
   }
@@ -1155,7 +1155,7 @@ func (this *QGraphicsView) mapToScene(args ...interface{}) () {
     // invoke: QPainterPath mapToScene(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsView10mapToSceneERK12QPainterPath(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsView10mapToSceneERK12QPainterPath(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsView10mapToSceneEii
     // invoke: QPointF mapToScene(int, int)
@@ -1163,19 +1163,19 @@ func (this *QGraphicsView) mapToScene(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsView10mapToSceneEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsView10mapToSceneEii(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZNK13QGraphicsView10mapToSceneERK5QRect
     // invoke: QPolygonF mapToScene(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsView10mapToSceneERK5QRect(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsView10mapToSceneERK5QRect(this.qclsinst, arg0)
   case 3:
     // invoke: _ZNK13QGraphicsView10mapToSceneERK8QPolygon
     // invoke: QPolygonF mapToScene(const class QPolygon &)
     var arg0 = args[0].(QPolygon).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsView10mapToSceneERK8QPolygon(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsView10mapToSceneERK8QPolygon(this.qclsinst, arg0)
   case 4:
     // invoke: _ZNK13QGraphicsView10mapToSceneEiiii
     // invoke: QPolygonF mapToScene(int, int, int, int)
@@ -1187,13 +1187,13 @@ func (this *QGraphicsView) mapToScene(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZNK13QGraphicsView10mapToSceneEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK13QGraphicsView10mapToSceneEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   case 5:
     // invoke: _ZNK13QGraphicsView10mapToSceneERK6QPoint
     // invoke: QPointF mapToScene(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsView10mapToSceneERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsView10mapToSceneERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsView", "mapToScene", args)
   }
@@ -1213,7 +1213,7 @@ func (this *QGraphicsView) resetMatrix(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsView11resetMatrixEv
     // invoke: void resetMatrix()
-    C._ZN13QGraphicsView11resetMatrixEv(this.qclsinst)
+    C.C_ZN13QGraphicsView11resetMatrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "resetMatrix", args)
   }
@@ -1243,13 +1243,13 @@ func (this *QGraphicsView) centerOn(args ...interface{}) () {
     // invoke: void centerOn(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsView8centerOnERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsView8centerOnERK7QPointF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN13QGraphicsView8centerOnEPK13QGraphicsItem
     // invoke: void centerOn(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsView8centerOnEPK13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsView8centerOnEPK13QGraphicsItem(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN13QGraphicsView8centerOnEdd
     // invoke: void centerOn(qreal, qreal)
@@ -1257,7 +1257,7 @@ func (this *QGraphicsView) centerOn(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN13QGraphicsView8centerOnEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsView8centerOnEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsView", "centerOn", args)
   }
@@ -1283,7 +1283,7 @@ func (this *QGraphicsView) translate(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN13QGraphicsView9translateEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsView9translateEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsView", "translate", args)
   }
@@ -1303,7 +1303,7 @@ func (this *QGraphicsView) viewportUpdateMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView18viewportUpdateModeEv
     // invoke: QGraphicsView::ViewportUpdateMode viewportUpdateMode()
-    C._ZNK13QGraphicsView18viewportUpdateModeEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView18viewportUpdateModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "viewportUpdateMode", args)
   }
@@ -1323,7 +1323,7 @@ func (this *QGraphicsView) sceneRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView9sceneRectEv
     // invoke: QRectF sceneRect()
-    C._ZNK13QGraphicsView9sceneRectEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView9sceneRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "sceneRect", args)
   }
@@ -1343,7 +1343,7 @@ func (this *QGraphicsView) cacheMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView9cacheModeEv
     // invoke: CacheMode cacheMode()
-    C._ZNK13QGraphicsView9cacheModeEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView9cacheModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "cacheMode", args)
   }
@@ -1363,7 +1363,7 @@ func (this *QGraphicsView) viewportTransform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsView17viewportTransformEv
     // invoke: QTransform viewportTransform()
-    C._ZNK13QGraphicsView17viewportTransformEv(this.qclsinst)
+    C.C_ZNK13QGraphicsView17viewportTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsView", "viewportTransform", args)
   }

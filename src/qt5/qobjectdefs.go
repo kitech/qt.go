@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qobjectdefs.h
 // dst-file: /src/core/qobjectdefs.go
 //
@@ -29,91 +29,91 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QMetaObject::Connection::~Connection();
-extern void _ZN11QMetaObject10ConnectionD2Ev(void* qthis); // 4
+extern void C_ZN11QMetaObject10ConnectionD2Ev(void* qthis); // 4
   // proto:  void QMetaObject::Connection::Connection();
-extern void _ZN11QMetaObject10ConnectionC2Ev(void* qthis); // 3
+extern void C_ZN11QMetaObject10ConnectionC2Ev(void* qthis); // 3
   // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
-extern void _ZN22QGenericReturnArgumentC2EPKcPv(void* qthis, unsigned char* arg0, void* arg1); // 1
+extern void C_ZN22QGenericReturnArgumentC2EPKcPv(void* qthis, unsigned char* arg0, void* arg1); // 1
   // proto: static void QMetaObject::activate(QObject * sender, const QMetaObject * , int local_signal_index, void ** argv);
-extern void _ZN11QMetaObject8activateEP7QObjectPKS_iPPv(void* arg0, void* arg1, int32_t arg2, void* arg3); // 4
+extern void C_ZN11QMetaObject8activateEP7QObjectPKS_iPPv(void* arg0, void* arg1, int32_t arg2, void* arg3); // 4
   // proto: static void QMetaObject::activate(QObject * sender, int signal_index, void ** argv);
-extern void _ZN11QMetaObject8activateEP7QObjectiPPv(void* arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN11QMetaObject8activateEP7QObjectiPPv(void* arg0, int32_t arg1, void* arg2); // 4
   // proto: static void QMetaObject::activate(QObject * sender, int signal_offset, int local_signal_index, void ** argv);
-extern void _ZN11QMetaObject8activateEP7QObjectiiPPv(void* arg0, int32_t arg1, int32_t arg2, void* arg3); // 4
+extern void C_ZN11QMetaObject8activateEP7QObjectiiPPv(void* arg0, int32_t arg1, int32_t arg2, void* arg3); // 4
   // proto:  int QMetaObject::indexOfMethod(const char * method);
-extern void _ZNK11QMetaObject13indexOfMethodEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZNK11QMetaObject13indexOfMethodEPKc(void* qthis, unsigned char* arg0); // 4
   // proto: static bool QMetaObject::disconnectOne(const QObject * sender, int signal_index, const QObject * receiver, int method_index);
-extern void _ZN11QMetaObject13disconnectOneEPK7QObjectiS2_i(void* arg0, int32_t arg1, void* arg2, int32_t arg3); // 4
+extern void C_ZN11QMetaObject13disconnectOneEPK7QObjectiS2_i(void* arg0, int32_t arg1, void* arg2, int32_t arg3); // 4
   // proto:  int QMetaObject::indexOfProperty(const char * name);
-extern void _ZNK11QMetaObject15indexOfPropertyEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZNK11QMetaObject15indexOfPropertyEPKc(void* qthis, unsigned char* arg0); // 4
   // proto: static QMetaObject::Connection QMetaObject::connect(const QObject * sender, int signal_index, const QObject * receiver, int method_index, int type, int * types);
-extern void _ZN11QMetaObject7connectEPK7QObjectiS2_iiPi(void* arg0, int32_t arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t* arg5); // 4
+extern void C_ZN11QMetaObject7connectEPK7QObjectiS2_iiPi(void* arg0, int32_t arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t* arg5); // 4
   // proto:  int QMetaObject::propertyOffset();
-extern void _ZNK11QMetaObject14propertyOffsetEv(void* qthis); // 4
+extern void C_ZNK11QMetaObject14propertyOffsetEv(void* qthis); // 4
   // proto: static void QMetaObject::connectSlotsByName(QObject * o);
-extern void _ZN11QMetaObject18connectSlotsByNameEP7QObject(void* arg0); // 4
+extern void C_ZN11QMetaObject18connectSlotsByNameEP7QObject(void* arg0); // 4
   // proto:  int QMetaObject::indexOfConstructor(const char * constructor);
-extern void _ZNK11QMetaObject18indexOfConstructorEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZNK11QMetaObject18indexOfConstructorEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  int QMetaObject::methodCount();
-extern void _ZNK11QMetaObject11methodCountEv(void* qthis); // 4
+extern void C_ZNK11QMetaObject11methodCountEv(void* qthis); // 4
   // proto: static bool QMetaObject::disconnect(const QObject * sender, int signal_index, const QObject * receiver, int method_index);
-extern void _ZN11QMetaObject10disconnectEPK7QObjectiS2_i(void* arg0, int32_t arg1, void* arg2, int32_t arg3); // 4
+extern void C_ZN11QMetaObject10disconnectEPK7QObjectiS2_i(void* arg0, int32_t arg1, void* arg2, int32_t arg3); // 4
   // proto:  int QMetaObject::methodOffset();
-extern void _ZNK11QMetaObject12methodOffsetEv(void* qthis); // 4
+extern void C_ZNK11QMetaObject12methodOffsetEv(void* qthis); // 4
   // proto: static QByteArray QMetaObject::normalizedType(const char * type);
-extern void _ZN11QMetaObject14normalizedTypeEPKc(unsigned char* arg0); // 4
+extern void C_ZN11QMetaObject14normalizedTypeEPKc(unsigned char* arg0); // 4
   // proto:  int QMetaObject::indexOfEnumerator(const char * name);
-extern void _ZNK11QMetaObject17indexOfEnumeratorEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZNK11QMetaObject17indexOfEnumeratorEPKc(void* qthis, unsigned char* arg0); // 4
   // proto: static bool QMetaObject::checkConnectArgs(const char * signal, const char * method);
-extern void _ZN11QMetaObject16checkConnectArgsEPKcS1_(unsigned char* arg0, unsigned char* arg1); // 4
+extern void C_ZN11QMetaObject16checkConnectArgsEPKcS1_(unsigned char* arg0, unsigned char* arg1); // 4
   // proto: static bool QMetaObject::checkConnectArgs(const QMetaMethod & signal, const QMetaMethod & method);
-extern void _ZN11QMetaObject16checkConnectArgsERK11QMetaMethodS2_(void* arg0, void* arg1); // 4
+extern void C_ZN11QMetaObject16checkConnectArgsERK11QMetaMethodS2_(void* arg0, void* arg1); // 4
   // proto:  int QMetaObject::indexOfSlot(const char * slot);
-extern void _ZNK11QMetaObject11indexOfSlotEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZNK11QMetaObject11indexOfSlotEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  QMetaMethod QMetaObject::method(int index);
-extern void _ZNK11QMetaObject6methodEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QMetaObject6methodEi(void* qthis, int32_t arg0); // 4
   // proto:  int QMetaObject::indexOfClassInfo(const char * name);
-extern void _ZNK11QMetaObject16indexOfClassInfoEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZNK11QMetaObject16indexOfClassInfoEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  QMetaProperty QMetaObject::userProperty();
-extern void _ZNK11QMetaObject12userPropertyEv(void* qthis); // 4
+extern void C_ZNK11QMetaObject12userPropertyEv(void* qthis); // 4
   // proto:  QMetaEnum QMetaObject::enumerator(int index);
-extern void _ZNK11QMetaObject10enumeratorEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QMetaObject10enumeratorEi(void* qthis, int32_t arg0); // 4
   // proto:  int QMetaObject::classInfoOffset();
-extern void _ZNK11QMetaObject15classInfoOffsetEv(void* qthis); // 4
+extern void C_ZNK11QMetaObject15classInfoOffsetEv(void* qthis); // 4
   // proto:  int QMetaObject::indexOfSignal(const char * signal);
-extern void _ZNK11QMetaObject13indexOfSignalEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZNK11QMetaObject13indexOfSignalEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  int QMetaObject::enumeratorCount();
-extern void _ZNK11QMetaObject15enumeratorCountEv(void* qthis); // 4
+extern void C_ZNK11QMetaObject15enumeratorCountEv(void* qthis); // 4
   // proto:  int QMetaObject::enumeratorOffset();
-extern void _ZNK11QMetaObject16enumeratorOffsetEv(void* qthis); // 4
+extern void C_ZNK11QMetaObject16enumeratorOffsetEv(void* qthis); // 4
   // proto:  int QMetaObject::classInfoCount();
-extern void _ZNK11QMetaObject14classInfoCountEv(void* qthis); // 4
+extern void C_ZNK11QMetaObject14classInfoCountEv(void* qthis); // 4
   // proto:  int QMetaObject::constructorCount();
-extern void _ZNK11QMetaObject16constructorCountEv(void* qthis); // 4
+extern void C_ZNK11QMetaObject16constructorCountEv(void* qthis); // 4
   // proto:  QMetaClassInfo QMetaObject::classInfo(int index);
-extern void _ZNK11QMetaObject9classInfoEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QMetaObject9classInfoEi(void* qthis, int32_t arg0); // 4
   // proto:  const char * QMetaObject::className();
-extern void _ZNK11QMetaObject9classNameEv(void* qthis); // 4
+extern void C_ZNK11QMetaObject9classNameEv(void* qthis); // 4
   // proto:  const QObject * QMetaObject::cast(const QObject * obj);
-extern void _ZNK11QMetaObject4castEPK7QObject(void* qthis, void* arg0); // 4
+extern void C_ZNK11QMetaObject4castEPK7QObject(void* qthis, void* arg0); // 4
   // proto:  QObject * QMetaObject::cast(QObject * obj);
-extern void _ZNK11QMetaObject4castEP7QObject(void* qthis, void* arg0); // 4
+extern void C_ZNK11QMetaObject4castEP7QObject(void* qthis, void* arg0); // 4
   // proto: static QByteArray QMetaObject::normalizedSignature(const char * method);
-extern void _ZN11QMetaObject19normalizedSignatureEPKc(unsigned char* arg0); // 4
+extern void C_ZN11QMetaObject19normalizedSignatureEPKc(unsigned char* arg0); // 4
   // proto:  const QMetaObject * QMetaObject::superClass();
-extern void _ZNK11QMetaObject10superClassEv(void* qthis); // 2
+extern void C_ZNK11QMetaObject10superClassEv(void* qthis); // 2
   // proto:  QMetaMethod QMetaObject::constructor(int index);
-extern void _ZNK11QMetaObject11constructorEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QMetaObject11constructorEi(void* qthis, int32_t arg0); // 4
   // proto:  QMetaProperty QMetaObject::property(int index);
-extern void _ZNK11QMetaObject8propertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QMetaObject8propertyEi(void* qthis, int32_t arg0); // 4
   // proto:  int QMetaObject::propertyCount();
-extern void _ZNK11QMetaObject13propertyCountEv(void* qthis); // 4
+extern void C_ZNK11QMetaObject13propertyCountEv(void* qthis); // 4
   // proto:  void QGenericArgument::QGenericArgument(const char * aName, const void * aData);
-extern void _ZN16QGenericArgumentC2EPKcPKv(void* qthis, unsigned char* arg0, void* arg1); // 1
+extern void C_ZN16QGenericArgumentC2EPKcPKv(void* qthis, unsigned char* arg0, void* arg1); // 1
   // proto:  void * QGenericArgument::data();
-extern void _ZNK16QGenericArgument4dataEv(void* qthis); // 2
+extern void C_ZNK16QGenericArgument4dataEv(void* qthis); // 2
   // proto:  const char * QGenericArgument::name();
-extern void _ZNK16QGenericArgument4nameEv(void* qthis); // 2
+extern void C_ZNK16QGenericArgument4nameEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -163,7 +163,7 @@ func (this *QMetaObject__Connection) FreeQMetaObject__Connection(args ...interfa
   case 0:
     // invoke: _ZN11QMetaObject10ConnectionD0Ev
     // invoke: void ~Connection()
-    C._ZN11QMetaObject10ConnectionD2Ev(this.qclsinst)
+    C.C_ZN11QMetaObject10ConnectionD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject::Connection", "~Connection", args)
   }
@@ -185,7 +185,7 @@ func NewQMetaObject__Connection(args ...interface{}) QMetaObject__Connection {
     // invoke: void Connection()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QMetaObject10ConnectionC2Ev(qthis)
+    C.C_ZN11QMetaObject10ConnectionC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QMetaObject::Connection", "Connection", args)
   }
@@ -214,7 +214,7 @@ func NewQGenericReturnArgument(args ...interface{}) QGenericReturnArgument {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN22QGenericReturnArgumentC2EPKcPv(qthis, arg0, arg1)
+    C.C_ZN22QGenericReturnArgumentC2EPKcPv(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGenericReturnArgument", "QGenericReturnArgument", args)
   }
@@ -258,7 +258,7 @@ func (this *QMetaObject) activate_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(unsafe.Pointer)
     if false {fmt.Println(arg3)}
-    C._ZN11QMetaObject8activateEP7QObjectPKS_iPPv(arg0, arg1, arg2, arg3)
+    C.C_ZN11QMetaObject8activateEP7QObjectPKS_iPPv(arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN11QMetaObject8activateEP7QObjectiPPv
     // invoke: void activate(class QObject *, int, void **)
@@ -268,7 +268,7 @@ func (this *QMetaObject) activate_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(unsafe.Pointer)
     if false {fmt.Println(arg2)}
-    C._ZN11QMetaObject8activateEP7QObjectiPPv(arg0, arg1, arg2)
+    C.C_ZN11QMetaObject8activateEP7QObjectiPPv(arg0, arg1, arg2)
   case 2:
     // invoke: _ZN11QMetaObject8activateEP7QObjectiiPPv
     // invoke: void activate(class QObject *, int, int, void **)
@@ -280,7 +280,7 @@ func (this *QMetaObject) activate_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(unsafe.Pointer)
     if false {fmt.Println(arg3)}
-    C._ZN11QMetaObject8activateEP7QObjectiiPPv(arg0, arg1, arg2, arg3)
+    C.C_ZN11QMetaObject8activateEP7QObjectiiPPv(arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QMetaObject", "activate", args)
   }
@@ -303,7 +303,7 @@ func (this *QMetaObject) indexOfMethod(args ...interface{}) () {
     // invoke: int indexOfMethod(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject13indexOfMethodEPKc(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject13indexOfMethodEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfMethod", args)
   }
@@ -335,7 +335,7 @@ func (this *QMetaObject) disconnectOne_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN11QMetaObject13disconnectOneEPK7QObjectiS2_i(arg0, arg1, arg2, arg3)
+    C.C_ZN11QMetaObject13disconnectOneEPK7QObjectiS2_i(arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QMetaObject", "disconnectOne", args)
   }
@@ -358,7 +358,7 @@ func (this *QMetaObject) indexOfProperty(args ...interface{}) () {
     // invoke: int indexOfProperty(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject15indexOfPropertyEPKc(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject15indexOfPropertyEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfProperty", args)
   }
@@ -396,7 +396,7 @@ func (this *QMetaObject) connect_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = (*C.int32_t)(args[5].(*int32))
     if false {fmt.Println(arg5)}
-    C._ZN11QMetaObject7connectEPK7QObjectiS2_iiPi(arg0, arg1, arg2, arg3, arg4, arg5)
+    C.C_ZN11QMetaObject7connectEPK7QObjectiS2_iiPi(arg0, arg1, arg2, arg3, arg4, arg5)
   default:
     qtrt.ErrorResolve("QMetaObject", "connect", args)
   }
@@ -416,7 +416,7 @@ func (this *QMetaObject) propertyOffset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaObject14propertyOffsetEv
     // invoke: int propertyOffset()
-    C._ZNK11QMetaObject14propertyOffsetEv(this.qclsinst)
+    C.C_ZNK11QMetaObject14propertyOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "propertyOffset", args)
   }
@@ -439,7 +439,7 @@ func (this *QMetaObject) connectSlotsByName_s(args ...interface{}) () {
     // invoke: void connectSlotsByName(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMetaObject18connectSlotsByNameEP7QObject(arg0)
+    C.C_ZN11QMetaObject18connectSlotsByNameEP7QObject(arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "connectSlotsByName", args)
   }
@@ -462,7 +462,7 @@ func (this *QMetaObject) indexOfConstructor(args ...interface{}) () {
     // invoke: int indexOfConstructor(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject18indexOfConstructorEPKc(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject18indexOfConstructorEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfConstructor", args)
   }
@@ -482,7 +482,7 @@ func (this *QMetaObject) methodCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaObject11methodCountEv
     // invoke: int methodCount()
-    C._ZNK11QMetaObject11methodCountEv(this.qclsinst)
+    C.C_ZNK11QMetaObject11methodCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "methodCount", args)
   }
@@ -514,7 +514,7 @@ func (this *QMetaObject) disconnect_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN11QMetaObject10disconnectEPK7QObjectiS2_i(arg0, arg1, arg2, arg3)
+    C.C_ZN11QMetaObject10disconnectEPK7QObjectiS2_i(arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QMetaObject", "disconnect", args)
   }
@@ -534,7 +534,7 @@ func (this *QMetaObject) methodOffset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaObject12methodOffsetEv
     // invoke: int methodOffset()
-    C._ZNK11QMetaObject12methodOffsetEv(this.qclsinst)
+    C.C_ZNK11QMetaObject12methodOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "methodOffset", args)
   }
@@ -557,7 +557,7 @@ func (this *QMetaObject) normalizedType_s(args ...interface{}) () {
     // invoke: QByteArray normalizedType(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZN11QMetaObject14normalizedTypeEPKc(arg0)
+    C.C_ZN11QMetaObject14normalizedTypeEPKc(arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "normalizedType", args)
   }
@@ -580,7 +580,7 @@ func (this *QMetaObject) indexOfEnumerator(args ...interface{}) () {
     // invoke: int indexOfEnumerator(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject17indexOfEnumeratorEPKc(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject17indexOfEnumeratorEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfEnumerator", args)
   }
@@ -610,7 +610,7 @@ func (this *QMetaObject) checkConnectArgs_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C._ZN11QMetaObject16checkConnectArgsEPKcS1_(arg0, arg1)
+    C.C_ZN11QMetaObject16checkConnectArgsEPKcS1_(arg0, arg1)
   case 1:
     // invoke: _ZN11QMetaObject16checkConnectArgsERK11QMetaMethodS2_
     // invoke: bool checkConnectArgs(const class QMetaMethod &, const class QMetaMethod &)
@@ -618,7 +618,7 @@ func (this *QMetaObject) checkConnectArgs_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QMetaMethod).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN11QMetaObject16checkConnectArgsERK11QMetaMethodS2_(arg0, arg1)
+    C.C_ZN11QMetaObject16checkConnectArgsERK11QMetaMethodS2_(arg0, arg1)
   default:
     qtrt.ErrorResolve("QMetaObject", "checkConnectArgs", args)
   }
@@ -641,7 +641,7 @@ func (this *QMetaObject) indexOfSlot(args ...interface{}) () {
     // invoke: int indexOfSlot(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject11indexOfSlotEPKc(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject11indexOfSlotEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfSlot", args)
   }
@@ -664,7 +664,7 @@ func (this *QMetaObject) method(args ...interface{}) () {
     // invoke: QMetaMethod method(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject6methodEi(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject6methodEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "method", args)
   }
@@ -687,7 +687,7 @@ func (this *QMetaObject) indexOfClassInfo(args ...interface{}) () {
     // invoke: int indexOfClassInfo(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject16indexOfClassInfoEPKc(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject16indexOfClassInfoEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfClassInfo", args)
   }
@@ -707,7 +707,7 @@ func (this *QMetaObject) userProperty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaObject12userPropertyEv
     // invoke: QMetaProperty userProperty()
-    C._ZNK11QMetaObject12userPropertyEv(this.qclsinst)
+    C.C_ZNK11QMetaObject12userPropertyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "userProperty", args)
   }
@@ -730,7 +730,7 @@ func (this *QMetaObject) enumerator(args ...interface{}) () {
     // invoke: QMetaEnum enumerator(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject10enumeratorEi(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject10enumeratorEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "enumerator", args)
   }
@@ -750,7 +750,7 @@ func (this *QMetaObject) classInfoOffset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaObject15classInfoOffsetEv
     // invoke: int classInfoOffset()
-    C._ZNK11QMetaObject15classInfoOffsetEv(this.qclsinst)
+    C.C_ZNK11QMetaObject15classInfoOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "classInfoOffset", args)
   }
@@ -773,7 +773,7 @@ func (this *QMetaObject) indexOfSignal(args ...interface{}) () {
     // invoke: int indexOfSignal(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject13indexOfSignalEPKc(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject13indexOfSignalEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfSignal", args)
   }
@@ -793,7 +793,7 @@ func (this *QMetaObject) enumeratorCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaObject15enumeratorCountEv
     // invoke: int enumeratorCount()
-    C._ZNK11QMetaObject15enumeratorCountEv(this.qclsinst)
+    C.C_ZNK11QMetaObject15enumeratorCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "enumeratorCount", args)
   }
@@ -813,7 +813,7 @@ func (this *QMetaObject) enumeratorOffset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaObject16enumeratorOffsetEv
     // invoke: int enumeratorOffset()
-    C._ZNK11QMetaObject16enumeratorOffsetEv(this.qclsinst)
+    C.C_ZNK11QMetaObject16enumeratorOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "enumeratorOffset", args)
   }
@@ -833,7 +833,7 @@ func (this *QMetaObject) classInfoCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaObject14classInfoCountEv
     // invoke: int classInfoCount()
-    C._ZNK11QMetaObject14classInfoCountEv(this.qclsinst)
+    C.C_ZNK11QMetaObject14classInfoCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "classInfoCount", args)
   }
@@ -853,7 +853,7 @@ func (this *QMetaObject) constructorCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaObject16constructorCountEv
     // invoke: int constructorCount()
-    C._ZNK11QMetaObject16constructorCountEv(this.qclsinst)
+    C.C_ZNK11QMetaObject16constructorCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "constructorCount", args)
   }
@@ -876,7 +876,7 @@ func (this *QMetaObject) classInfo(args ...interface{}) () {
     // invoke: QMetaClassInfo classInfo(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject9classInfoEi(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject9classInfoEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "classInfo", args)
   }
@@ -896,7 +896,7 @@ func (this *QMetaObject) className(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaObject9classNameEv
     // invoke: const char * className()
-    C._ZNK11QMetaObject9classNameEv(this.qclsinst)
+    C.C_ZNK11QMetaObject9classNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "className", args)
   }
@@ -922,13 +922,13 @@ func (this *QMetaObject) cast(args ...interface{}) () {
     // invoke: const QObject * cast(const class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject4castEPK7QObject(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject4castEPK7QObject(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK11QMetaObject4castEP7QObject
     // invoke: QObject * cast(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject4castEP7QObject(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject4castEP7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "cast", args)
   }
@@ -951,7 +951,7 @@ func (this *QMetaObject) normalizedSignature_s(args ...interface{}) () {
     // invoke: QByteArray normalizedSignature(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZN11QMetaObject19normalizedSignatureEPKc(arg0)
+    C.C_ZN11QMetaObject19normalizedSignatureEPKc(arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "normalizedSignature", args)
   }
@@ -971,7 +971,7 @@ func (this *QMetaObject) superClass(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaObject10superClassEv
     // invoke: const QMetaObject * superClass()
-    C._ZNK11QMetaObject10superClassEv(this.qclsinst)
+    C.C_ZNK11QMetaObject10superClassEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "superClass", args)
   }
@@ -994,7 +994,7 @@ func (this *QMetaObject) constructor(args ...interface{}) () {
     // invoke: QMetaMethod constructor(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject11constructorEi(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject11constructorEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "constructor", args)
   }
@@ -1017,7 +1017,7 @@ func (this *QMetaObject) property(args ...interface{}) () {
     // invoke: QMetaProperty property(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMetaObject8propertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QMetaObject8propertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "property", args)
   }
@@ -1037,7 +1037,7 @@ func (this *QMetaObject) propertyCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaObject13propertyCountEv
     // invoke: int propertyCount()
-    C._ZNK11QMetaObject13propertyCountEv(this.qclsinst)
+    C.C_ZNK11QMetaObject13propertyCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "propertyCount", args)
   }
@@ -1065,7 +1065,7 @@ func NewQGenericArgument(args ...interface{}) QGenericArgument {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QGenericArgumentC2EPKcPKv(qthis, arg0, arg1)
+    C.C_ZN16QGenericArgumentC2EPKcPKv(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGenericArgument", "QGenericArgument", args)
   }
@@ -1086,7 +1086,7 @@ func (this *QGenericArgument) data(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QGenericArgument4dataEv
     // invoke: void * data()
-    C._ZNK16QGenericArgument4dataEv(this.qclsinst)
+    C.C_ZNK16QGenericArgument4dataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGenericArgument", "data", args)
   }
@@ -1106,7 +1106,7 @@ func (this *QGenericArgument) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QGenericArgument4nameEv
     // invoke: const char * name()
-    C._ZNK16QGenericArgument4nameEv(this.qclsinst)
+    C.C_ZNK16QGenericArgument4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGenericArgument", "name", args)
   }

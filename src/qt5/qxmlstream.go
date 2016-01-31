@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qxmlstream.h
 // dst-file: /src/core/qxmlstream.go
 //
@@ -29,295 +29,295 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  const QString * QXmlStreamStringRef::string();
-extern void _ZNK19QXmlStreamStringRef6stringEv(void* qthis); // 2
+extern void C_ZNK19QXmlStreamStringRef6stringEv(void* qthis); // 2
   // proto:  void QXmlStreamStringRef::~QXmlStreamStringRef();
-extern void _ZN19QXmlStreamStringRefD2Ev(void* qthis); // 2
+extern void C_ZN19QXmlStreamStringRefD2Ev(void* qthis); // 2
   // proto:  void QXmlStreamStringRef::clear();
-extern void _ZN19QXmlStreamStringRef5clearEv(void* qthis); // 2
+extern void C_ZN19QXmlStreamStringRef5clearEv(void* qthis); // 2
   // proto:  void QXmlStreamStringRef::QXmlStreamStringRef();
-extern void _ZN19QXmlStreamStringRefC2Ev(void* qthis); // 1
+extern void C_ZN19QXmlStreamStringRefC2Ev(void* qthis); // 1
   // proto:  void QXmlStreamStringRef::QXmlStreamStringRef(const QString & aString);
-extern void _ZN19QXmlStreamStringRefC2ERK7QString(void* qthis, void* arg0); // 1
+extern void C_ZN19QXmlStreamStringRefC2ERK7QString(void* qthis, void* arg0); // 1
   // proto:  int QXmlStreamStringRef::position();
-extern void _ZNK19QXmlStreamStringRef8positionEv(void* qthis); // 2
+extern void C_ZNK19QXmlStreamStringRef8positionEv(void* qthis); // 2
   // proto:  int QXmlStreamStringRef::size();
-extern void _ZNK19QXmlStreamStringRef4sizeEv(void* qthis); // 2
+extern void C_ZNK19QXmlStreamStringRef4sizeEv(void* qthis); // 2
   // proto:  bool QXmlStreamReader::isEntityReference();
-extern void _ZNK16QXmlStreamReader17isEntityReferenceEv(void* qthis); // 2
+extern void C_ZNK16QXmlStreamReader17isEntityReferenceEv(void* qthis); // 2
   // proto:  bool QXmlStreamReader::isDTD();
-extern void _ZNK16QXmlStreamReader5isDTDEv(void* qthis); // 2
+extern void C_ZNK16QXmlStreamReader5isDTDEv(void* qthis); // 2
   // proto:  QStringRef QXmlStreamReader::qualifiedName();
-extern void _ZNK16QXmlStreamReader13qualifiedNameEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader13qualifiedNameEv(void* qthis); // 4
   // proto:  QXmlStreamReader::TokenType QXmlStreamReader::tokenType();
-extern void _ZNK16QXmlStreamReader9tokenTypeEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader9tokenTypeEv(void* qthis); // 4
   // proto:  QXmlStreamReader::TokenType QXmlStreamReader::readNext();
-extern void _ZN16QXmlStreamReader8readNextEv(void* qthis); // 4
+extern void C_ZN16QXmlStreamReader8readNextEv(void* qthis); // 4
   // proto:  QStringRef QXmlStreamReader::text();
-extern void _ZNK16QXmlStreamReader4textEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader4textEv(void* qthis); // 4
   // proto:  QStringRef QXmlStreamReader::dtdPublicId();
-extern void _ZNK16QXmlStreamReader11dtdPublicIdEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader11dtdPublicIdEv(void* qthis); // 4
   // proto:  QXmlStreamEntityDeclarations QXmlStreamReader::entityDeclarations();
-extern void _ZNK16QXmlStreamReader18entityDeclarationsEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader18entityDeclarationsEv(void* qthis); // 4
   // proto:  void QXmlStreamReader::setNamespaceProcessing(bool );
-extern void _ZN16QXmlStreamReader22setNamespaceProcessingEb(void* qthis, bool arg0); // 4
+extern void C_ZN16QXmlStreamReader22setNamespaceProcessingEb(void* qthis, bool arg0); // 4
   // proto:  QXmlStreamNamespaceDeclarations QXmlStreamReader::namespaceDeclarations();
-extern void _ZNK16QXmlStreamReader21namespaceDeclarationsEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader21namespaceDeclarationsEv(void* qthis); // 4
   // proto:  bool QXmlStreamReader::isCharacters();
-extern void _ZNK16QXmlStreamReader12isCharactersEv(void* qthis); // 2
+extern void C_ZNK16QXmlStreamReader12isCharactersEv(void* qthis); // 2
   // proto:  QStringRef QXmlStreamReader::prefix();
-extern void _ZNK16QXmlStreamReader6prefixEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader6prefixEv(void* qthis); // 4
   // proto:  void QXmlStreamReader::addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaraction);
-extern void _ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration(void* qthis, void* arg0); // 4
   // proto:  QStringRef QXmlStreamReader::documentEncoding();
-extern void _ZNK16QXmlStreamReader16documentEncodingEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader16documentEncodingEv(void* qthis); // 4
   // proto:  QStringRef QXmlStreamReader::processingInstructionData();
-extern void _ZNK16QXmlStreamReader25processingInstructionDataEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader25processingInstructionDataEv(void* qthis); // 4
   // proto:  QStringRef QXmlStreamReader::processingInstructionTarget();
-extern void _ZNK16QXmlStreamReader27processingInstructionTargetEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader27processingInstructionTargetEv(void* qthis); // 4
   // proto:  void QXmlStreamReader::setEntityResolver(QXmlStreamEntityResolver * resolver);
-extern void _ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver(void* qthis, void* arg0); // 4
   // proto:  bool QXmlStreamReader::isProcessingInstruction();
-extern void _ZNK16QXmlStreamReader23isProcessingInstructionEv(void* qthis); // 2
+extern void C_ZNK16QXmlStreamReader23isProcessingInstructionEv(void* qthis); // 2
   // proto:  QStringRef QXmlStreamReader::documentVersion();
-extern void _ZNK16QXmlStreamReader15documentVersionEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader15documentVersionEv(void* qthis); // 4
   // proto:  QXmlStreamNotationDeclarations QXmlStreamReader::notationDeclarations();
-extern void _ZNK16QXmlStreamReader20notationDeclarationsEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader20notationDeclarationsEv(void* qthis); // 4
   // proto:  QStringRef QXmlStreamReader::namespaceUri();
-extern void _ZNK16QXmlStreamReader12namespaceUriEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader12namespaceUriEv(void* qthis); // 4
   // proto:  void QXmlStreamReader::setDevice(QIODevice * device);
-extern void _ZN16QXmlStreamReader9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamReader9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamReader::raiseError(const QString & message);
-extern void _ZN16QXmlStreamReader10raiseErrorERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamReader10raiseErrorERK7QString(void* qthis, void* arg0); // 4
   // proto:  QXmlStreamEntityResolver * QXmlStreamReader::entityResolver();
-extern void _ZNK16QXmlStreamReader14entityResolverEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader14entityResolverEv(void* qthis); // 4
   // proto:  bool QXmlStreamReader::isStartElement();
-extern void _ZNK16QXmlStreamReader14isStartElementEv(void* qthis); // 2
+extern void C_ZNK16QXmlStreamReader14isStartElementEv(void* qthis); // 2
   // proto:  bool QXmlStreamReader::isWhitespace();
-extern void _ZNK16QXmlStreamReader12isWhitespaceEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader12isWhitespaceEv(void* qthis); // 4
   // proto:  void QXmlStreamReader::QXmlStreamReader();
-extern void _ZN16QXmlStreamReaderC2Ev(void* qthis); // 3
+extern void C_ZN16QXmlStreamReaderC2Ev(void* qthis); // 3
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QString & data);
-extern void _ZN16QXmlStreamReaderC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN16QXmlStreamReaderC2ERK7QString(void* qthis, void* arg0); // 3
   // proto:  void QXmlStreamReader::QXmlStreamReader(const char * data);
-extern void _ZN16QXmlStreamReaderC2EPKc(void* qthis, unsigned char* arg0); // 3
+extern void C_ZN16QXmlStreamReaderC2EPKc(void* qthis, unsigned char* arg0); // 3
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QByteArray & data);
-extern void _ZN16QXmlStreamReaderC2ERK10QByteArray(void* qthis, void* arg0); // 3
+extern void C_ZN16QXmlStreamReaderC2ERK10QByteArray(void* qthis, void* arg0); // 3
   // proto:  void QXmlStreamReader::QXmlStreamReader(QIODevice * device);
-extern void _ZN16QXmlStreamReaderC2EP9QIODevice(void* qthis, void* arg0); // 3
+extern void C_ZN16QXmlStreamReaderC2EP9QIODevice(void* qthis, void* arg0); // 3
   // proto:  bool QXmlStreamReader::hasError();
-extern void _ZNK16QXmlStreamReader8hasErrorEv(void* qthis); // 2
+extern void C_ZNK16QXmlStreamReader8hasErrorEv(void* qthis); // 2
   // proto:  qint64 QXmlStreamReader::characterOffset();
-extern void _ZNK16QXmlStreamReader15characterOffsetEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader15characterOffsetEv(void* qthis); // 4
   // proto:  QString QXmlStreamReader::errorString();
-extern void _ZNK16QXmlStreamReader11errorStringEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader11errorStringEv(void* qthis); // 4
   // proto:  bool QXmlStreamReader::isEndElement();
-extern void _ZNK16QXmlStreamReader12isEndElementEv(void* qthis); // 2
+extern void C_ZNK16QXmlStreamReader12isEndElementEv(void* qthis); // 2
   // proto:  bool QXmlStreamReader::isCDATA();
-extern void _ZNK16QXmlStreamReader7isCDATAEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader7isCDATAEv(void* qthis); // 4
   // proto:  bool QXmlStreamReader::isStandaloneDocument();
-extern void _ZNK16QXmlStreamReader20isStandaloneDocumentEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader20isStandaloneDocumentEv(void* qthis); // 4
   // proto:  void QXmlStreamReader::skipCurrentElement();
-extern void _ZN16QXmlStreamReader18skipCurrentElementEv(void* qthis); // 4
+extern void C_ZN16QXmlStreamReader18skipCurrentElementEv(void* qthis); // 4
   // proto:  bool QXmlStreamReader::isComment();
-extern void _ZNK16QXmlStreamReader9isCommentEv(void* qthis); // 2
+extern void C_ZNK16QXmlStreamReader9isCommentEv(void* qthis); // 2
   // proto:  qint64 QXmlStreamReader::lineNumber();
-extern void _ZNK16QXmlStreamReader10lineNumberEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader10lineNumberEv(void* qthis); // 4
   // proto:  QIODevice * QXmlStreamReader::device();
-extern void _ZNK16QXmlStreamReader6deviceEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader6deviceEv(void* qthis); // 4
   // proto:  bool QXmlStreamReader::isEndDocument();
-extern void _ZNK16QXmlStreamReader13isEndDocumentEv(void* qthis); // 2
+extern void C_ZNK16QXmlStreamReader13isEndDocumentEv(void* qthis); // 2
   // proto:  qint64 QXmlStreamReader::columnNumber();
-extern void _ZNK16QXmlStreamReader12columnNumberEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader12columnNumberEv(void* qthis); // 4
   // proto:  QString QXmlStreamReader::tokenString();
-extern void _ZNK16QXmlStreamReader11tokenStringEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader11tokenStringEv(void* qthis); // 4
   // proto:  QStringRef QXmlStreamReader::name();
-extern void _ZNK16QXmlStreamReader4nameEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader4nameEv(void* qthis); // 4
   // proto:  bool QXmlStreamReader::namespaceProcessing();
-extern void _ZNK16QXmlStreamReader19namespaceProcessingEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader19namespaceProcessingEv(void* qthis); // 4
   // proto:  bool QXmlStreamReader::isStartDocument();
-extern void _ZNK16QXmlStreamReader15isStartDocumentEv(void* qthis); // 2
+extern void C_ZNK16QXmlStreamReader15isStartDocumentEv(void* qthis); // 2
   // proto:  void QXmlStreamReader::clear();
-extern void _ZN16QXmlStreamReader5clearEv(void* qthis); // 4
+extern void C_ZN16QXmlStreamReader5clearEv(void* qthis); // 4
   // proto:  bool QXmlStreamReader::atEnd();
-extern void _ZNK16QXmlStreamReader5atEndEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader5atEndEv(void* qthis); // 4
   // proto:  QStringRef QXmlStreamReader::dtdName();
-extern void _ZNK16QXmlStreamReader7dtdNameEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader7dtdNameEv(void* qthis); // 4
   // proto:  void QXmlStreamReader::addData(const QByteArray & data);
-extern void _ZN16QXmlStreamReader7addDataERK10QByteArray(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamReader7addDataERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamReader::addData(const QString & data);
-extern void _ZN16QXmlStreamReader7addDataERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamReader7addDataERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamReader::addData(const char * data);
-extern void _ZN16QXmlStreamReader7addDataEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZN16QXmlStreamReader7addDataEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  QStringRef QXmlStreamReader::dtdSystemId();
-extern void _ZNK16QXmlStreamReader11dtdSystemIdEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader11dtdSystemIdEv(void* qthis); // 4
   // proto:  bool QXmlStreamReader::readNextStartElement();
-extern void _ZN16QXmlStreamReader20readNextStartElementEv(void* qthis); // 4
+extern void C_ZN16QXmlStreamReader20readNextStartElementEv(void* qthis); // 4
   // proto:  QXmlStreamReader::Error QXmlStreamReader::error();
-extern void _ZNK16QXmlStreamReader5errorEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader5errorEv(void* qthis); // 4
   // proto:  QXmlStreamAttributes QXmlStreamReader::attributes();
-extern void _ZNK16QXmlStreamReader10attributesEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamReader10attributesEv(void* qthis); // 4
   // proto:  void QXmlStreamReader::~QXmlStreamReader();
-extern void _ZN16QXmlStreamReaderD2Ev(void* qthis); // 4
+extern void C_ZN16QXmlStreamReaderD2Ev(void* qthis); // 4
   // proto:  QString QXmlStreamEntityResolver::resolveEntity(const QString & publicId, const QString & systemId);
-extern void _ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QString QXmlStreamEntityResolver::resolveUndeclaredEntity(const QString & name);
-extern void _ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamEntityResolver::~QXmlStreamEntityResolver();
-extern void _ZN24QXmlStreamEntityResolverD2Ev(void* qthis); // 4
+extern void C_ZN24QXmlStreamEntityResolverD2Ev(void* qthis); // 4
   // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration();
-extern void _ZN30QXmlStreamNamespaceDeclarationC2Ev(void* qthis); // 3
+extern void C_ZN30QXmlStreamNamespaceDeclarationC2Ev(void* qthis); // 3
   // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri);
-extern void _ZN30QXmlStreamNamespaceDeclarationC2ERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN30QXmlStreamNamespaceDeclarationC2ERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & );
-extern void _ZN30QXmlStreamNamespaceDeclarationC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN30QXmlStreamNamespaceDeclarationC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QXmlStreamNamespaceDeclaration::~QXmlStreamNamespaceDeclaration();
-extern void _ZN30QXmlStreamNamespaceDeclarationD2Ev(void* qthis); // 4
+extern void C_ZN30QXmlStreamNamespaceDeclarationD2Ev(void* qthis); // 4
   // proto:  QStringRef QXmlStreamNamespaceDeclaration::namespaceUri();
-extern void _ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv(void* qthis); // 2
+extern void C_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv(void* qthis); // 2
   // proto:  QStringRef QXmlStreamNamespaceDeclaration::prefix();
-extern void _ZNK30QXmlStreamNamespaceDeclaration6prefixEv(void* qthis); // 2
+extern void C_ZNK30QXmlStreamNamespaceDeclaration6prefixEv(void* qthis); // 2
   // proto:  void QXmlStreamEntityDeclaration::~QXmlStreamEntityDeclaration();
-extern void _ZN27QXmlStreamEntityDeclarationD2Ev(void* qthis); // 4
+extern void C_ZN27QXmlStreamEntityDeclarationD2Ev(void* qthis); // 4
   // proto:  QStringRef QXmlStreamEntityDeclaration::publicId();
-extern void _ZNK27QXmlStreamEntityDeclaration8publicIdEv(void* qthis); // 2
+extern void C_ZNK27QXmlStreamEntityDeclaration8publicIdEv(void* qthis); // 2
   // proto:  QStringRef QXmlStreamEntityDeclaration::name();
-extern void _ZNK27QXmlStreamEntityDeclaration4nameEv(void* qthis); // 2
+extern void C_ZNK27QXmlStreamEntityDeclaration4nameEv(void* qthis); // 2
   // proto:  QStringRef QXmlStreamEntityDeclaration::value();
-extern void _ZNK27QXmlStreamEntityDeclaration5valueEv(void* qthis); // 2
+extern void C_ZNK27QXmlStreamEntityDeclaration5valueEv(void* qthis); // 2
   // proto:  QStringRef QXmlStreamEntityDeclaration::systemId();
-extern void _ZNK27QXmlStreamEntityDeclaration8systemIdEv(void* qthis); // 2
+extern void C_ZNK27QXmlStreamEntityDeclaration8systemIdEv(void* qthis); // 2
   // proto:  QStringRef QXmlStreamEntityDeclaration::notationName();
-extern void _ZNK27QXmlStreamEntityDeclaration12notationNameEv(void* qthis); // 2
+extern void C_ZNK27QXmlStreamEntityDeclaration12notationNameEv(void* qthis); // 2
   // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & );
-extern void _ZN27QXmlStreamEntityDeclarationC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN27QXmlStreamEntityDeclarationC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration();
-extern void _ZN27QXmlStreamEntityDeclarationC2Ev(void* qthis); // 3
+extern void C_ZN27QXmlStreamEntityDeclarationC2Ev(void* qthis); // 3
   // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & namespaceUri, const QString & name);
-extern void _ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 2
+extern void C_ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 2
   // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & qualifiedName);
-extern void _ZNK20QXmlStreamAttributes12hasAttributeERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZNK20QXmlStreamAttributes12hasAttributeERK7QString(void* qthis, void* arg0); // 2
   // proto:  void QXmlStreamAttributes::append(const QString & namespaceUri, const QString & name, const QString & value);
-extern void _ZN20QXmlStreamAttributes6appendERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN20QXmlStreamAttributes6appendERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QXmlStreamAttributes::append(const QString & qualifiedName, const QString & value);
-extern void _ZN20QXmlStreamAttributes6appendERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN20QXmlStreamAttributes6appendERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QStringRef QXmlStreamAttributes::value(const QString & namespaceUri, const QString & name);
-extern void _ZNK20QXmlStreamAttributes5valueERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK20QXmlStreamAttributes5valueERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QStringRef QXmlStreamAttributes::value(const QString & qualifiedName);
-extern void _ZNK20QXmlStreamAttributes5valueERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK20QXmlStreamAttributes5valueERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamAttributes::QXmlStreamAttributes();
-extern void _ZN20QXmlStreamAttributesC2Ev(void* qthis); // 1
+extern void C_ZN20QXmlStreamAttributesC2Ev(void* qthis); // 1
   // proto:  void QXmlStreamWriter::writeTextElement(const QString & namespaceUri, const QString & name, const QString & text);
-extern void _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QXmlStreamWriter::writeTextElement(const QString & qualifiedName, const QString & text);
-extern void _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QXmlStreamWriter::writeNamespace(const QString & namespaceUri, const QString & prefix);
-extern void _ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  bool QXmlStreamWriter::autoFormatting();
-extern void _ZNK16QXmlStreamWriter14autoFormattingEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamWriter14autoFormattingEv(void* qthis); // 4
   // proto:  QIODevice * QXmlStreamWriter::device();
-extern void _ZNK16QXmlStreamWriter6deviceEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamWriter6deviceEv(void* qthis); // 4
   // proto:  void QXmlStreamWriter::writeEntityReference(const QString & name);
-extern void _ZN16QXmlStreamWriter20writeEntityReferenceERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter20writeEntityReferenceERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamWriter::writeProcessingInstruction(const QString & target, const QString & data);
-extern void _ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QXmlStreamWriter::writeAttributes(const QXmlStreamAttributes & attributes);
-extern void _ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes(void* qthis, void* arg0); // 4
   // proto:  int QXmlStreamWriter::autoFormattingIndent();
-extern void _ZNK16QXmlStreamWriter20autoFormattingIndentEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamWriter20autoFormattingIndentEv(void* qthis); // 4
   // proto:  void QXmlStreamWriter::setCodec(const char * codecName);
-extern void _ZN16QXmlStreamWriter8setCodecEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZN16QXmlStreamWriter8setCodecEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  void QXmlStreamWriter::setCodec(QTextCodec * codec);
-extern void _ZN16QXmlStreamWriter8setCodecEP10QTextCodec(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter8setCodecEP10QTextCodec(void* qthis, void* arg0); // 4
   // proto:  QTextCodec * QXmlStreamWriter::codec();
-extern void _ZNK16QXmlStreamWriter5codecEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamWriter5codecEv(void* qthis); // 4
   // proto:  void QXmlStreamWriter::writeComment(const QString & text);
-extern void _ZN16QXmlStreamWriter12writeCommentERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter12writeCommentERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamWriter::writeCDATA(const QString & text);
-extern void _ZN16QXmlStreamWriter10writeCDATAERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter10writeCDATAERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamWriter::setDevice(QIODevice * device);
-extern void _ZN16QXmlStreamWriter9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamWriter::writeAttribute(const QString & namespaceUri, const QString & name, const QString & value);
-extern void _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QXmlStreamWriter::writeAttribute(const QString & qualifiedName, const QString & value);
-extern void _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QXmlStreamWriter::writeAttribute(const QXmlStreamAttribute & attribute);
-extern void _ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamWriter::setAutoFormatting(bool );
-extern void _ZN16QXmlStreamWriter17setAutoFormattingEb(void* qthis, bool arg0); // 4
+extern void C_ZN16QXmlStreamWriter17setAutoFormattingEb(void* qthis, bool arg0); // 4
   // proto:  bool QXmlStreamWriter::hasError();
-extern void _ZNK16QXmlStreamWriter8hasErrorEv(void* qthis); // 4
+extern void C_ZNK16QXmlStreamWriter8hasErrorEv(void* qthis); // 4
   // proto:  void QXmlStreamWriter::writeDTD(const QString & dtd);
-extern void _ZN16QXmlStreamWriter8writeDTDERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter8writeDTDERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QByteArray * array);
-extern void _ZN16QXmlStreamWriterC2EP10QByteArray(void* qthis, void* arg0); // 3
+extern void C_ZN16QXmlStreamWriterC2EP10QByteArray(void* qthis, void* arg0); // 3
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QString * string);
-extern void _ZN16QXmlStreamWriterC2EP7QString(void* qthis, void* arg0); // 3
+extern void C_ZN16QXmlStreamWriterC2EP7QString(void* qthis, void* arg0); // 3
   // proto:  void QXmlStreamWriter::QXmlStreamWriter();
-extern void _ZN16QXmlStreamWriterC2Ev(void* qthis); // 3
+extern void C_ZN16QXmlStreamWriterC2Ev(void* qthis); // 3
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QIODevice * device);
-extern void _ZN16QXmlStreamWriterC2EP9QIODevice(void* qthis, void* arg0); // 3
+extern void C_ZN16QXmlStreamWriterC2EP9QIODevice(void* qthis, void* arg0); // 3
   // proto:  void QXmlStreamWriter::writeStartElement(const QString & namespaceUri, const QString & name);
-extern void _ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QXmlStreamWriter::writeStartElement(const QString & qualifiedName);
-extern void _ZN16QXmlStreamWriter17writeStartElementERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter17writeStartElementERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamWriter::writeDefaultNamespace(const QString & namespaceUri);
-extern void _ZN16QXmlStreamWriter21writeDefaultNamespaceERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter21writeDefaultNamespaceERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamWriter::writeStartDocument();
-extern void _ZN16QXmlStreamWriter18writeStartDocumentEv(void* qthis); // 4
+extern void C_ZN16QXmlStreamWriter18writeStartDocumentEv(void* qthis); // 4
   // proto:  void QXmlStreamWriter::writeStartDocument(const QString & version, bool standalone);
-extern void _ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  void QXmlStreamWriter::writeStartDocument(const QString & version);
-extern void _ZN16QXmlStreamWriter18writeStartDocumentERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter18writeStartDocumentERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamWriter::writeEndDocument();
-extern void _ZN16QXmlStreamWriter16writeEndDocumentEv(void* qthis); // 4
+extern void C_ZN16QXmlStreamWriter16writeEndDocumentEv(void* qthis); // 4
   // proto:  void QXmlStreamWriter::~QXmlStreamWriter();
-extern void _ZN16QXmlStreamWriterD2Ev(void* qthis); // 4
+extern void C_ZN16QXmlStreamWriterD2Ev(void* qthis); // 4
   // proto:  void QXmlStreamWriter::writeEndElement();
-extern void _ZN16QXmlStreamWriter15writeEndElementEv(void* qthis); // 4
+extern void C_ZN16QXmlStreamWriter15writeEndElementEv(void* qthis); // 4
   // proto:  void QXmlStreamWriter::writeCurrentToken(const QXmlStreamReader & reader);
-extern void _ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamWriter::setAutoFormattingIndent(int spacesOrTabs);
-extern void _ZN16QXmlStreamWriter23setAutoFormattingIndentEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN16QXmlStreamWriter23setAutoFormattingIndentEi(void* qthis, int32_t arg0); // 4
   // proto:  void QXmlStreamWriter::writeCharacters(const QString & text);
-extern void _ZN16QXmlStreamWriter15writeCharactersERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter15writeCharactersERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QXmlStreamWriter::writeEmptyElement(const QString & namespaceUri, const QString & name);
-extern void _ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QXmlStreamWriter::writeEmptyElement(const QString & qualifiedName);
-extern void _ZN16QXmlStreamWriter17writeEmptyElementERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN16QXmlStreamWriter17writeEmptyElementERK7QString(void* qthis, void* arg0); // 4
   // proto:  QStringRef QXmlStreamNotationDeclaration::name();
-extern void _ZNK29QXmlStreamNotationDeclaration4nameEv(void* qthis); // 2
+extern void C_ZNK29QXmlStreamNotationDeclaration4nameEv(void* qthis); // 2
   // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & );
-extern void _ZN29QXmlStreamNotationDeclarationC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN29QXmlStreamNotationDeclarationC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration();
-extern void _ZN29QXmlStreamNotationDeclarationC2Ev(void* qthis); // 3
+extern void C_ZN29QXmlStreamNotationDeclarationC2Ev(void* qthis); // 3
   // proto:  QStringRef QXmlStreamNotationDeclaration::systemId();
-extern void _ZNK29QXmlStreamNotationDeclaration8systemIdEv(void* qthis); // 2
+extern void C_ZNK29QXmlStreamNotationDeclaration8systemIdEv(void* qthis); // 2
   // proto:  QStringRef QXmlStreamNotationDeclaration::publicId();
-extern void _ZNK29QXmlStreamNotationDeclaration8publicIdEv(void* qthis); // 2
+extern void C_ZNK29QXmlStreamNotationDeclaration8publicIdEv(void* qthis); // 2
   // proto:  void QXmlStreamNotationDeclaration::~QXmlStreamNotationDeclaration();
-extern void _ZN29QXmlStreamNotationDeclarationD2Ev(void* qthis); // 4
+extern void C_ZN29QXmlStreamNotationDeclarationD2Ev(void* qthis); // 4
   // proto:  QStringRef QXmlStreamAttribute::qualifiedName();
-extern void _ZNK19QXmlStreamAttribute13qualifiedNameEv(void* qthis); // 2
+extern void C_ZNK19QXmlStreamAttribute13qualifiedNameEv(void* qthis); // 2
   // proto:  QStringRef QXmlStreamAttribute::name();
-extern void _ZNK19QXmlStreamAttribute4nameEv(void* qthis); // 2
+extern void C_ZNK19QXmlStreamAttribute4nameEv(void* qthis); // 2
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & qualifiedName, const QString & value);
-extern void _ZN19QXmlStreamAttributeC2ERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN19QXmlStreamAttributeC2ERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute();
-extern void _ZN19QXmlStreamAttributeC2Ev(void* qthis); // 3
+extern void C_ZN19QXmlStreamAttributeC2Ev(void* qthis); // 3
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QXmlStreamAttribute & );
-extern void _ZN19QXmlStreamAttributeC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN19QXmlStreamAttributeC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value);
-extern void _ZN19QXmlStreamAttributeC2ERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 3
+extern void C_ZN19QXmlStreamAttributeC2ERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 3
   // proto:  QStringRef QXmlStreamAttribute::value();
-extern void _ZNK19QXmlStreamAttribute5valueEv(void* qthis); // 2
+extern void C_ZNK19QXmlStreamAttribute5valueEv(void* qthis); // 2
   // proto:  QStringRef QXmlStreamAttribute::namespaceUri();
-extern void _ZNK19QXmlStreamAttribute12namespaceUriEv(void* qthis); // 2
+extern void C_ZNK19QXmlStreamAttribute12namespaceUriEv(void* qthis); // 2
   // proto:  QStringRef QXmlStreamAttribute::prefix();
-extern void _ZNK19QXmlStreamAttribute6prefixEv(void* qthis); // 2
+extern void C_ZNK19QXmlStreamAttribute6prefixEv(void* qthis); // 2
   // proto:  void QXmlStreamAttribute::~QXmlStreamAttribute();
-extern void _ZN19QXmlStreamAttributeD2Ev(void* qthis); // 4
+extern void C_ZN19QXmlStreamAttributeD2Ev(void* qthis); // 4
   // proto:  bool QXmlStreamAttribute::isDefault();
-extern void _ZNK19QXmlStreamAttribute9isDefaultEv(void* qthis); // 2
+extern void C_ZNK19QXmlStreamAttribute9isDefaultEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -397,7 +397,7 @@ func (this *QXmlStreamStringRef) string(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QXmlStreamStringRef6stringEv
     // invoke: const QString * string()
-    C._ZNK19QXmlStreamStringRef6stringEv(this.qclsinst)
+    C.C_ZNK19QXmlStreamStringRef6stringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "string", args)
   }
@@ -417,7 +417,7 @@ func (this *QXmlStreamStringRef) FreeQXmlStreamStringRef(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QXmlStreamStringRefD0Ev
     // invoke: void ~QXmlStreamStringRef()
-    C._ZN19QXmlStreamStringRefD2Ev(this.qclsinst)
+    C.C_ZN19QXmlStreamStringRefD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "~QXmlStreamStringRef", args)
   }
@@ -437,7 +437,7 @@ func (this *QXmlStreamStringRef) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QXmlStreamStringRef5clearEv
     // invoke: void clear()
-    C._ZN19QXmlStreamStringRef5clearEv(this.qclsinst)
+    C.C_ZN19QXmlStreamStringRef5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "clear", args)
   }
@@ -462,7 +462,7 @@ func NewQXmlStreamStringRef(args ...interface{}) QXmlStreamStringRef {
     // invoke: void QXmlStreamStringRef()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QXmlStreamStringRefC2Ev(qthis)
+    C.C_ZN19QXmlStreamStringRefC2Ev(qthis)
   case 1:
     // invoke: _ZN19QXmlStreamStringRefC1ERK7QString
     // invoke: void QXmlStreamStringRef(const class QString &)
@@ -470,7 +470,7 @@ func NewQXmlStreamStringRef(args ...interface{}) QXmlStreamStringRef {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QXmlStreamStringRefC2ERK7QString(qthis, arg0)
+    C.C_ZN19QXmlStreamStringRefC2ERK7QString(qthis, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "QXmlStreamStringRef", args)
   }
@@ -491,7 +491,7 @@ func (this *QXmlStreamStringRef) position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QXmlStreamStringRef8positionEv
     // invoke: int position()
-    C._ZNK19QXmlStreamStringRef8positionEv(this.qclsinst)
+    C.C_ZNK19QXmlStreamStringRef8positionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "position", args)
   }
@@ -511,7 +511,7 @@ func (this *QXmlStreamStringRef) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QXmlStreamStringRef4sizeEv
     // invoke: int size()
-    C._ZNK19QXmlStreamStringRef4sizeEv(this.qclsinst)
+    C.C_ZNK19QXmlStreamStringRef4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "size", args)
   }
@@ -531,7 +531,7 @@ func (this *QXmlStreamReader) isEntityReference(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader17isEntityReferenceEv
     // invoke: bool isEntityReference()
-    C._ZNK16QXmlStreamReader17isEntityReferenceEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader17isEntityReferenceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isEntityReference", args)
   }
@@ -551,7 +551,7 @@ func (this *QXmlStreamReader) isDTD(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader5isDTDEv
     // invoke: bool isDTD()
-    C._ZNK16QXmlStreamReader5isDTDEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader5isDTDEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isDTD", args)
   }
@@ -571,7 +571,7 @@ func (this *QXmlStreamReader) qualifiedName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader13qualifiedNameEv
     // invoke: QStringRef qualifiedName()
-    C._ZNK16QXmlStreamReader13qualifiedNameEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader13qualifiedNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "qualifiedName", args)
   }
@@ -591,7 +591,7 @@ func (this *QXmlStreamReader) tokenType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader9tokenTypeEv
     // invoke: QXmlStreamReader::TokenType tokenType()
-    C._ZNK16QXmlStreamReader9tokenTypeEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader9tokenTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "tokenType", args)
   }
@@ -611,7 +611,7 @@ func (this *QXmlStreamReader) readNext(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamReader8readNextEv
     // invoke: QXmlStreamReader::TokenType readNext()
-    C._ZN16QXmlStreamReader8readNextEv(this.qclsinst)
+    C.C_ZN16QXmlStreamReader8readNextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "readNext", args)
   }
@@ -631,7 +631,7 @@ func (this *QXmlStreamReader) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader4textEv
     // invoke: QStringRef text()
-    C._ZNK16QXmlStreamReader4textEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "text", args)
   }
@@ -651,7 +651,7 @@ func (this *QXmlStreamReader) dtdPublicId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader11dtdPublicIdEv
     // invoke: QStringRef dtdPublicId()
-    C._ZNK16QXmlStreamReader11dtdPublicIdEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader11dtdPublicIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "dtdPublicId", args)
   }
@@ -671,7 +671,7 @@ func (this *QXmlStreamReader) entityDeclarations(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader18entityDeclarationsEv
     // invoke: QXmlStreamEntityDeclarations entityDeclarations()
-    C._ZNK16QXmlStreamReader18entityDeclarationsEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader18entityDeclarationsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "entityDeclarations", args)
   }
@@ -694,7 +694,7 @@ func (this *QXmlStreamReader) setNamespaceProcessing(args ...interface{}) () {
     // invoke: void setNamespaceProcessing(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamReader22setNamespaceProcessingEb(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamReader22setNamespaceProcessingEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "setNamespaceProcessing", args)
   }
@@ -714,7 +714,7 @@ func (this *QXmlStreamReader) namespaceDeclarations(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader21namespaceDeclarationsEv
     // invoke: QXmlStreamNamespaceDeclarations namespaceDeclarations()
-    C._ZNK16QXmlStreamReader21namespaceDeclarationsEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader21namespaceDeclarationsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "namespaceDeclarations", args)
   }
@@ -734,7 +734,7 @@ func (this *QXmlStreamReader) isCharacters(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12isCharactersEv
     // invoke: bool isCharacters()
-    C._ZNK16QXmlStreamReader12isCharactersEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader12isCharactersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isCharacters", args)
   }
@@ -754,7 +754,7 @@ func (this *QXmlStreamReader) prefix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader6prefixEv
     // invoke: QStringRef prefix()
-    C._ZNK16QXmlStreamReader6prefixEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader6prefixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "prefix", args)
   }
@@ -777,7 +777,7 @@ func (this *QXmlStreamReader) addExtraNamespaceDeclaration(args ...interface{}) 
     // invoke: void addExtraNamespaceDeclaration(const class QXmlStreamNamespaceDeclaration &)
     var arg0 = args[0].(QXmlStreamNamespaceDeclaration).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "addExtraNamespaceDeclaration", args)
   }
@@ -797,7 +797,7 @@ func (this *QXmlStreamReader) documentEncoding(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader16documentEncodingEv
     // invoke: QStringRef documentEncoding()
-    C._ZNK16QXmlStreamReader16documentEncodingEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader16documentEncodingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "documentEncoding", args)
   }
@@ -817,7 +817,7 @@ func (this *QXmlStreamReader) processingInstructionData(args ...interface{}) () 
   case 0:
     // invoke: _ZNK16QXmlStreamReader25processingInstructionDataEv
     // invoke: QStringRef processingInstructionData()
-    C._ZNK16QXmlStreamReader25processingInstructionDataEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader25processingInstructionDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "processingInstructionData", args)
   }
@@ -837,7 +837,7 @@ func (this *QXmlStreamReader) processingInstructionTarget(args ...interface{}) (
   case 0:
     // invoke: _ZNK16QXmlStreamReader27processingInstructionTargetEv
     // invoke: QStringRef processingInstructionTarget()
-    C._ZNK16QXmlStreamReader27processingInstructionTargetEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader27processingInstructionTargetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "processingInstructionTarget", args)
   }
@@ -860,7 +860,7 @@ func (this *QXmlStreamReader) setEntityResolver(args ...interface{}) () {
     // invoke: void setEntityResolver(class QXmlStreamEntityResolver *)
     var arg0 = args[0].(QXmlStreamEntityResolver).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "setEntityResolver", args)
   }
@@ -880,7 +880,7 @@ func (this *QXmlStreamReader) isProcessingInstruction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader23isProcessingInstructionEv
     // invoke: bool isProcessingInstruction()
-    C._ZNK16QXmlStreamReader23isProcessingInstructionEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader23isProcessingInstructionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isProcessingInstruction", args)
   }
@@ -900,7 +900,7 @@ func (this *QXmlStreamReader) documentVersion(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader15documentVersionEv
     // invoke: QStringRef documentVersion()
-    C._ZNK16QXmlStreamReader15documentVersionEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader15documentVersionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "documentVersion", args)
   }
@@ -920,7 +920,7 @@ func (this *QXmlStreamReader) notationDeclarations(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader20notationDeclarationsEv
     // invoke: QXmlStreamNotationDeclarations notationDeclarations()
-    C._ZNK16QXmlStreamReader20notationDeclarationsEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader20notationDeclarationsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "notationDeclarations", args)
   }
@@ -940,7 +940,7 @@ func (this *QXmlStreamReader) namespaceUri(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12namespaceUriEv
     // invoke: QStringRef namespaceUri()
-    C._ZNK16QXmlStreamReader12namespaceUriEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader12namespaceUriEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "namespaceUri", args)
   }
@@ -963,7 +963,7 @@ func (this *QXmlStreamReader) setDevice(args ...interface{}) () {
     // invoke: void setDevice(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamReader9setDeviceEP9QIODevice(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamReader9setDeviceEP9QIODevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "setDevice", args)
   }
@@ -986,7 +986,7 @@ func (this *QXmlStreamReader) raiseError(args ...interface{}) () {
     // invoke: void raiseError(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamReader10raiseErrorERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamReader10raiseErrorERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "raiseError", args)
   }
@@ -1006,7 +1006,7 @@ func (this *QXmlStreamReader) entityResolver(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader14entityResolverEv
     // invoke: QXmlStreamEntityResolver * entityResolver()
-    C._ZNK16QXmlStreamReader14entityResolverEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader14entityResolverEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "entityResolver", args)
   }
@@ -1026,7 +1026,7 @@ func (this *QXmlStreamReader) isStartElement(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader14isStartElementEv
     // invoke: bool isStartElement()
-    C._ZNK16QXmlStreamReader14isStartElementEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader14isStartElementEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isStartElement", args)
   }
@@ -1046,7 +1046,7 @@ func (this *QXmlStreamReader) isWhitespace(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12isWhitespaceEv
     // invoke: bool isWhitespace()
-    C._ZNK16QXmlStreamReader12isWhitespaceEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader12isWhitespaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isWhitespace", args)
   }
@@ -1080,7 +1080,7 @@ func NewQXmlStreamReader(args ...interface{}) QXmlStreamReader {
     // invoke: void QXmlStreamReader()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QXmlStreamReaderC2Ev(qthis)
+    C.C_ZN16QXmlStreamReaderC2Ev(qthis)
   case 1:
     // invoke: _ZN16QXmlStreamReaderC1ERK7QString
     // invoke: void QXmlStreamReader(const class QString &)
@@ -1088,7 +1088,7 @@ func NewQXmlStreamReader(args ...interface{}) QXmlStreamReader {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QXmlStreamReaderC2ERK7QString(qthis, arg0)
+    C.C_ZN16QXmlStreamReaderC2ERK7QString(qthis, arg0)
   case 2:
     // invoke: _ZN16QXmlStreamReaderC1EPKc
     // invoke: void QXmlStreamReader(const char *)
@@ -1096,7 +1096,7 @@ func NewQXmlStreamReader(args ...interface{}) QXmlStreamReader {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QXmlStreamReaderC2EPKc(qthis, arg0)
+    C.C_ZN16QXmlStreamReaderC2EPKc(qthis, arg0)
   case 3:
     // invoke: _ZN16QXmlStreamReaderC1ERK10QByteArray
     // invoke: void QXmlStreamReader(const class QByteArray &)
@@ -1104,7 +1104,7 @@ func NewQXmlStreamReader(args ...interface{}) QXmlStreamReader {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QXmlStreamReaderC2ERK10QByteArray(qthis, arg0)
+    C.C_ZN16QXmlStreamReaderC2ERK10QByteArray(qthis, arg0)
   case 4:
     // invoke: _ZN16QXmlStreamReaderC1EP9QIODevice
     // invoke: void QXmlStreamReader(class QIODevice *)
@@ -1112,7 +1112,7 @@ func NewQXmlStreamReader(args ...interface{}) QXmlStreamReader {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QXmlStreamReaderC2EP9QIODevice(qthis, arg0)
+    C.C_ZN16QXmlStreamReaderC2EP9QIODevice(qthis, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "QXmlStreamReader", args)
   }
@@ -1133,7 +1133,7 @@ func (this *QXmlStreamReader) hasError(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader8hasErrorEv
     // invoke: bool hasError()
-    C._ZNK16QXmlStreamReader8hasErrorEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader8hasErrorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "hasError", args)
   }
@@ -1153,7 +1153,7 @@ func (this *QXmlStreamReader) characterOffset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader15characterOffsetEv
     // invoke: qint64 characterOffset()
-    C._ZNK16QXmlStreamReader15characterOffsetEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader15characterOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "characterOffset", args)
   }
@@ -1173,7 +1173,7 @@ func (this *QXmlStreamReader) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader11errorStringEv
     // invoke: QString errorString()
-    C._ZNK16QXmlStreamReader11errorStringEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader11errorStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "errorString", args)
   }
@@ -1193,7 +1193,7 @@ func (this *QXmlStreamReader) isEndElement(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12isEndElementEv
     // invoke: bool isEndElement()
-    C._ZNK16QXmlStreamReader12isEndElementEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader12isEndElementEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isEndElement", args)
   }
@@ -1213,7 +1213,7 @@ func (this *QXmlStreamReader) isCDATA(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader7isCDATAEv
     // invoke: bool isCDATA()
-    C._ZNK16QXmlStreamReader7isCDATAEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader7isCDATAEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isCDATA", args)
   }
@@ -1233,7 +1233,7 @@ func (this *QXmlStreamReader) isStandaloneDocument(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader20isStandaloneDocumentEv
     // invoke: bool isStandaloneDocument()
-    C._ZNK16QXmlStreamReader20isStandaloneDocumentEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader20isStandaloneDocumentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isStandaloneDocument", args)
   }
@@ -1253,7 +1253,7 @@ func (this *QXmlStreamReader) skipCurrentElement(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamReader18skipCurrentElementEv
     // invoke: void skipCurrentElement()
-    C._ZN16QXmlStreamReader18skipCurrentElementEv(this.qclsinst)
+    C.C_ZN16QXmlStreamReader18skipCurrentElementEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "skipCurrentElement", args)
   }
@@ -1273,7 +1273,7 @@ func (this *QXmlStreamReader) isComment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader9isCommentEv
     // invoke: bool isComment()
-    C._ZNK16QXmlStreamReader9isCommentEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader9isCommentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isComment", args)
   }
@@ -1293,7 +1293,7 @@ func (this *QXmlStreamReader) lineNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader10lineNumberEv
     // invoke: qint64 lineNumber()
-    C._ZNK16QXmlStreamReader10lineNumberEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader10lineNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "lineNumber", args)
   }
@@ -1313,7 +1313,7 @@ func (this *QXmlStreamReader) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader6deviceEv
     // invoke: QIODevice * device()
-    C._ZNK16QXmlStreamReader6deviceEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "device", args)
   }
@@ -1333,7 +1333,7 @@ func (this *QXmlStreamReader) isEndDocument(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader13isEndDocumentEv
     // invoke: bool isEndDocument()
-    C._ZNK16QXmlStreamReader13isEndDocumentEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader13isEndDocumentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isEndDocument", args)
   }
@@ -1353,7 +1353,7 @@ func (this *QXmlStreamReader) columnNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12columnNumberEv
     // invoke: qint64 columnNumber()
-    C._ZNK16QXmlStreamReader12columnNumberEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader12columnNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "columnNumber", args)
   }
@@ -1373,7 +1373,7 @@ func (this *QXmlStreamReader) tokenString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader11tokenStringEv
     // invoke: QString tokenString()
-    C._ZNK16QXmlStreamReader11tokenStringEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader11tokenStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "tokenString", args)
   }
@@ -1393,7 +1393,7 @@ func (this *QXmlStreamReader) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader4nameEv
     // invoke: QStringRef name()
-    C._ZNK16QXmlStreamReader4nameEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "name", args)
   }
@@ -1413,7 +1413,7 @@ func (this *QXmlStreamReader) namespaceProcessing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader19namespaceProcessingEv
     // invoke: bool namespaceProcessing()
-    C._ZNK16QXmlStreamReader19namespaceProcessingEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader19namespaceProcessingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "namespaceProcessing", args)
   }
@@ -1433,7 +1433,7 @@ func (this *QXmlStreamReader) isStartDocument(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader15isStartDocumentEv
     // invoke: bool isStartDocument()
-    C._ZNK16QXmlStreamReader15isStartDocumentEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader15isStartDocumentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isStartDocument", args)
   }
@@ -1453,7 +1453,7 @@ func (this *QXmlStreamReader) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamReader5clearEv
     // invoke: void clear()
-    C._ZN16QXmlStreamReader5clearEv(this.qclsinst)
+    C.C_ZN16QXmlStreamReader5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "clear", args)
   }
@@ -1473,7 +1473,7 @@ func (this *QXmlStreamReader) atEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader5atEndEv
     // invoke: bool atEnd()
-    C._ZNK16QXmlStreamReader5atEndEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader5atEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "atEnd", args)
   }
@@ -1493,7 +1493,7 @@ func (this *QXmlStreamReader) dtdName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader7dtdNameEv
     // invoke: QStringRef dtdName()
-    C._ZNK16QXmlStreamReader7dtdNameEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader7dtdNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "dtdName", args)
   }
@@ -1522,19 +1522,19 @@ func (this *QXmlStreamReader) addData(args ...interface{}) () {
     // invoke: void addData(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamReader7addDataERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamReader7addDataERK10QByteArray(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN16QXmlStreamReader7addDataERK7QString
     // invoke: void addData(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamReader7addDataERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamReader7addDataERK7QString(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN16QXmlStreamReader7addDataEPKc
     // invoke: void addData(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamReader7addDataEPKc(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamReader7addDataEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "addData", args)
   }
@@ -1554,7 +1554,7 @@ func (this *QXmlStreamReader) dtdSystemId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader11dtdSystemIdEv
     // invoke: QStringRef dtdSystemId()
-    C._ZNK16QXmlStreamReader11dtdSystemIdEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader11dtdSystemIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "dtdSystemId", args)
   }
@@ -1574,7 +1574,7 @@ func (this *QXmlStreamReader) readNextStartElement(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamReader20readNextStartElementEv
     // invoke: bool readNextStartElement()
-    C._ZN16QXmlStreamReader20readNextStartElementEv(this.qclsinst)
+    C.C_ZN16QXmlStreamReader20readNextStartElementEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "readNextStartElement", args)
   }
@@ -1594,7 +1594,7 @@ func (this *QXmlStreamReader) error(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader5errorEv
     // invoke: QXmlStreamReader::Error error()
-    C._ZNK16QXmlStreamReader5errorEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader5errorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "error", args)
   }
@@ -1614,7 +1614,7 @@ func (this *QXmlStreamReader) attributes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamReader10attributesEv
     // invoke: QXmlStreamAttributes attributes()
-    C._ZNK16QXmlStreamReader10attributesEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamReader10attributesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "attributes", args)
   }
@@ -1634,7 +1634,7 @@ func (this *QXmlStreamReader) FreeQXmlStreamReader(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamReaderD0Ev
     // invoke: void ~QXmlStreamReader()
-    C._ZN16QXmlStreamReaderD2Ev(this.qclsinst)
+    C.C_ZN16QXmlStreamReaderD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "~QXmlStreamReader", args)
   }
@@ -1660,7 +1660,7 @@ func (this *QXmlStreamEntityResolver) resolveEntity(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityResolver", "resolveEntity", args)
   }
@@ -1683,7 +1683,7 @@ func (this *QXmlStreamEntityResolver) resolveUndeclaredEntity(args ...interface{
     // invoke: QString resolveUndeclaredEntity(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString(this.qclsinst, arg0)
+    C.C_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityResolver", "resolveUndeclaredEntity", args)
   }
@@ -1703,7 +1703,7 @@ func (this *QXmlStreamEntityResolver) FreeQXmlStreamEntityResolver(args ...inter
   case 0:
     // invoke: _ZN24QXmlStreamEntityResolverD0Ev
     // invoke: void ~QXmlStreamEntityResolver()
-    C._ZN24QXmlStreamEntityResolverD2Ev(this.qclsinst)
+    C.C_ZN24QXmlStreamEntityResolverD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityResolver", "~QXmlStreamEntityResolver", args)
   }
@@ -1732,7 +1732,7 @@ func NewQXmlStreamNamespaceDeclaration(args ...interface{}) QXmlStreamNamespaceD
     // invoke: void QXmlStreamNamespaceDeclaration()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN30QXmlStreamNamespaceDeclarationC2Ev(qthis)
+    C.C_ZN30QXmlStreamNamespaceDeclarationC2Ev(qthis)
   case 1:
     // invoke: _ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_
     // invoke: void QXmlStreamNamespaceDeclaration(const class QString &, const class QString &)
@@ -1742,7 +1742,7 @@ func NewQXmlStreamNamespaceDeclaration(args ...interface{}) QXmlStreamNamespaceD
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN30QXmlStreamNamespaceDeclarationC2ERK7QStringS2_(qthis, arg0, arg1)
+    C.C_ZN30QXmlStreamNamespaceDeclarationC2ERK7QStringS2_(qthis, arg0, arg1)
   case 2:
     // invoke: _ZN30QXmlStreamNamespaceDeclarationC1ERKS_
     // invoke: void QXmlStreamNamespaceDeclaration(const class QXmlStreamNamespaceDeclaration &)
@@ -1750,7 +1750,7 @@ func NewQXmlStreamNamespaceDeclaration(args ...interface{}) QXmlStreamNamespaceD
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN30QXmlStreamNamespaceDeclarationC2ERKS_(qthis, arg0)
+    C.C_ZN30QXmlStreamNamespaceDeclarationC2ERKS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamNamespaceDeclaration", "QXmlStreamNamespaceDeclaration", args)
   }
@@ -1771,7 +1771,7 @@ func (this *QXmlStreamNamespaceDeclaration) FreeQXmlStreamNamespaceDeclaration(a
   case 0:
     // invoke: _ZN30QXmlStreamNamespaceDeclarationD0Ev
     // invoke: void ~QXmlStreamNamespaceDeclaration()
-    C._ZN30QXmlStreamNamespaceDeclarationD2Ev(this.qclsinst)
+    C.C_ZN30QXmlStreamNamespaceDeclarationD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamNamespaceDeclaration", "~QXmlStreamNamespaceDeclaration", args)
   }
@@ -1791,7 +1791,7 @@ func (this *QXmlStreamNamespaceDeclaration) namespaceUri(args ...interface{}) ()
   case 0:
     // invoke: _ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv
     // invoke: QStringRef namespaceUri()
-    C._ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv(this.qclsinst)
+    C.C_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamNamespaceDeclaration", "namespaceUri", args)
   }
@@ -1811,7 +1811,7 @@ func (this *QXmlStreamNamespaceDeclaration) prefix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK30QXmlStreamNamespaceDeclaration6prefixEv
     // invoke: QStringRef prefix()
-    C._ZNK30QXmlStreamNamespaceDeclaration6prefixEv(this.qclsinst)
+    C.C_ZNK30QXmlStreamNamespaceDeclaration6prefixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamNamespaceDeclaration", "prefix", args)
   }
@@ -1831,7 +1831,7 @@ func (this *QXmlStreamEntityDeclaration) FreeQXmlStreamEntityDeclaration(args ..
   case 0:
     // invoke: _ZN27QXmlStreamEntityDeclarationD0Ev
     // invoke: void ~QXmlStreamEntityDeclaration()
-    C._ZN27QXmlStreamEntityDeclarationD2Ev(this.qclsinst)
+    C.C_ZN27QXmlStreamEntityDeclarationD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "~QXmlStreamEntityDeclaration", args)
   }
@@ -1851,7 +1851,7 @@ func (this *QXmlStreamEntityDeclaration) publicId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration8publicIdEv
     // invoke: QStringRef publicId()
-    C._ZNK27QXmlStreamEntityDeclaration8publicIdEv(this.qclsinst)
+    C.C_ZNK27QXmlStreamEntityDeclaration8publicIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "publicId", args)
   }
@@ -1871,7 +1871,7 @@ func (this *QXmlStreamEntityDeclaration) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration4nameEv
     // invoke: QStringRef name()
-    C._ZNK27QXmlStreamEntityDeclaration4nameEv(this.qclsinst)
+    C.C_ZNK27QXmlStreamEntityDeclaration4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "name", args)
   }
@@ -1891,7 +1891,7 @@ func (this *QXmlStreamEntityDeclaration) value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration5valueEv
     // invoke: QStringRef value()
-    C._ZNK27QXmlStreamEntityDeclaration5valueEv(this.qclsinst)
+    C.C_ZNK27QXmlStreamEntityDeclaration5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "value", args)
   }
@@ -1911,7 +1911,7 @@ func (this *QXmlStreamEntityDeclaration) systemId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration8systemIdEv
     // invoke: QStringRef systemId()
-    C._ZNK27QXmlStreamEntityDeclaration8systemIdEv(this.qclsinst)
+    C.C_ZNK27QXmlStreamEntityDeclaration8systemIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "systemId", args)
   }
@@ -1931,7 +1931,7 @@ func (this *QXmlStreamEntityDeclaration) notationName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration12notationNameEv
     // invoke: QStringRef notationName()
-    C._ZNK27QXmlStreamEntityDeclaration12notationNameEv(this.qclsinst)
+    C.C_ZNK27QXmlStreamEntityDeclaration12notationNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "notationName", args)
   }
@@ -1958,13 +1958,13 @@ func NewQXmlStreamEntityDeclaration(args ...interface{}) QXmlStreamEntityDeclara
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN27QXmlStreamEntityDeclarationC2ERKS_(qthis, arg0)
+    C.C_ZN27QXmlStreamEntityDeclarationC2ERKS_(qthis, arg0)
   case 1:
     // invoke: _ZN27QXmlStreamEntityDeclarationC1Ev
     // invoke: void QXmlStreamEntityDeclaration()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN27QXmlStreamEntityDeclarationC2Ev(qthis)
+    C.C_ZN27QXmlStreamEntityDeclarationC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "QXmlStreamEntityDeclaration", args)
   }
@@ -1994,13 +1994,13 @@ func (this *QXmlStreamAttributes) hasAttribute(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK20QXmlStreamAttributes12hasAttributeERK7QString
     // invoke: bool hasAttribute(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK20QXmlStreamAttributes12hasAttributeERK7QString(this.qclsinst, arg0)
+    C.C_ZNK20QXmlStreamAttributes12hasAttributeERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamAttributes", "hasAttribute", args)
   }
@@ -2033,7 +2033,7 @@ func (this *QXmlStreamAttributes) append(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN20QXmlStreamAttributes6appendERK7QStringS2_S2_(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN20QXmlStreamAttributes6appendERK7QStringS2_S2_(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN20QXmlStreamAttributes6appendERK7QStringS2_
     // invoke: void append(const class QString &, const class QString &)
@@ -2041,7 +2041,7 @@ func (this *QXmlStreamAttributes) append(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN20QXmlStreamAttributes6appendERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN20QXmlStreamAttributes6appendERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamAttributes", "append", args)
   }
@@ -2070,13 +2070,13 @@ func (this *QXmlStreamAttributes) value(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK20QXmlStreamAttributes5valueERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZNK20QXmlStreamAttributes5valueERK7QStringS2_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK20QXmlStreamAttributes5valueERK7QString
     // invoke: QStringRef value(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK20QXmlStreamAttributes5valueERK7QString(this.qclsinst, arg0)
+    C.C_ZNK20QXmlStreamAttributes5valueERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamAttributes", "value", args)
   }
@@ -2098,7 +2098,7 @@ func NewQXmlStreamAttributes(args ...interface{}) QXmlStreamAttributes {
     // invoke: void QXmlStreamAttributes()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN20QXmlStreamAttributesC2Ev(qthis)
+    C.C_ZN20QXmlStreamAttributesC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QXmlStreamAttributes", "QXmlStreamAttributes", args)
   }
@@ -2132,7 +2132,7 @@ func (this *QXmlStreamWriter) writeTextElement(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_S2_(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_S2_(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_
     // invoke: void writeTextElement(const class QString &, const class QString &)
@@ -2140,7 +2140,7 @@ func (this *QXmlStreamWriter) writeTextElement(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeTextElement", args)
   }
@@ -2166,7 +2166,7 @@ func (this *QXmlStreamWriter) writeNamespace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeNamespace", args)
   }
@@ -2186,7 +2186,7 @@ func (this *QXmlStreamWriter) autoFormatting(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter14autoFormattingEv
     // invoke: bool autoFormatting()
-    C._ZNK16QXmlStreamWriter14autoFormattingEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamWriter14autoFormattingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "autoFormatting", args)
   }
@@ -2206,7 +2206,7 @@ func (this *QXmlStreamWriter) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter6deviceEv
     // invoke: QIODevice * device()
-    C._ZNK16QXmlStreamWriter6deviceEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamWriter6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "device", args)
   }
@@ -2229,7 +2229,7 @@ func (this *QXmlStreamWriter) writeEntityReference(args ...interface{}) () {
     // invoke: void writeEntityReference(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter20writeEntityReferenceERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter20writeEntityReferenceERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeEntityReference", args)
   }
@@ -2255,7 +2255,7 @@ func (this *QXmlStreamWriter) writeProcessingInstruction(args ...interface{}) ()
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeProcessingInstruction", args)
   }
@@ -2278,7 +2278,7 @@ func (this *QXmlStreamWriter) writeAttributes(args ...interface{}) () {
     // invoke: void writeAttributes(const class QXmlStreamAttributes &)
     var arg0 = args[0].(QXmlStreamAttributes).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeAttributes", args)
   }
@@ -2298,7 +2298,7 @@ func (this *QXmlStreamWriter) autoFormattingIndent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter20autoFormattingIndentEv
     // invoke: int autoFormattingIndent()
-    C._ZNK16QXmlStreamWriter20autoFormattingIndentEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamWriter20autoFormattingIndentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "autoFormattingIndent", args)
   }
@@ -2324,13 +2324,13 @@ func (this *QXmlStreamWriter) setCodec(args ...interface{}) () {
     // invoke: void setCodec(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter8setCodecEPKc(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter8setCodecEPKc(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN16QXmlStreamWriter8setCodecEP10QTextCodec
     // invoke: void setCodec(class QTextCodec *)
     var arg0 = args[0].(QTextCodec).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter8setCodecEP10QTextCodec(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter8setCodecEP10QTextCodec(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "setCodec", args)
   }
@@ -2350,7 +2350,7 @@ func (this *QXmlStreamWriter) codec(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter5codecEv
     // invoke: QTextCodec * codec()
-    C._ZNK16QXmlStreamWriter5codecEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamWriter5codecEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "codec", args)
   }
@@ -2373,7 +2373,7 @@ func (this *QXmlStreamWriter) writeComment(args ...interface{}) () {
     // invoke: void writeComment(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter12writeCommentERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter12writeCommentERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeComment", args)
   }
@@ -2396,7 +2396,7 @@ func (this *QXmlStreamWriter) writeCDATA(args ...interface{}) () {
     // invoke: void writeCDATA(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter10writeCDATAERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter10writeCDATAERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeCDATA", args)
   }
@@ -2419,7 +2419,7 @@ func (this *QXmlStreamWriter) setDevice(args ...interface{}) () {
     // invoke: void setDevice(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter9setDeviceEP9QIODevice(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter9setDeviceEP9QIODevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "setDevice", args)
   }
@@ -2455,7 +2455,7 @@ func (this *QXmlStreamWriter) writeAttribute(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_S2_(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_S2_(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_
     // invoke: void writeAttribute(const class QString &, const class QString &)
@@ -2463,13 +2463,13 @@ func (this *QXmlStreamWriter) writeAttribute(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute
     // invoke: void writeAttribute(const class QXmlStreamAttribute &)
     var arg0 = args[0].(QXmlStreamAttribute).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeAttribute", args)
   }
@@ -2492,7 +2492,7 @@ func (this *QXmlStreamWriter) setAutoFormatting(args ...interface{}) () {
     // invoke: void setAutoFormatting(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter17setAutoFormattingEb(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter17setAutoFormattingEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "setAutoFormatting", args)
   }
@@ -2512,7 +2512,7 @@ func (this *QXmlStreamWriter) hasError(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter8hasErrorEv
     // invoke: bool hasError()
-    C._ZNK16QXmlStreamWriter8hasErrorEv(this.qclsinst)
+    C.C_ZNK16QXmlStreamWriter8hasErrorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "hasError", args)
   }
@@ -2535,7 +2535,7 @@ func (this *QXmlStreamWriter) writeDTD(args ...interface{}) () {
     // invoke: void writeDTD(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter8writeDTDERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter8writeDTDERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeDTD", args)
   }
@@ -2568,7 +2568,7 @@ func NewQXmlStreamWriter(args ...interface{}) QXmlStreamWriter {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QXmlStreamWriterC2EP10QByteArray(qthis, arg0)
+    C.C_ZN16QXmlStreamWriterC2EP10QByteArray(qthis, arg0)
   case 1:
     // invoke: _ZN16QXmlStreamWriterC1EP7QString
     // invoke: void QXmlStreamWriter(class QString *)
@@ -2576,13 +2576,13 @@ func NewQXmlStreamWriter(args ...interface{}) QXmlStreamWriter {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QXmlStreamWriterC2EP7QString(qthis, arg0)
+    C.C_ZN16QXmlStreamWriterC2EP7QString(qthis, arg0)
   case 2:
     // invoke: _ZN16QXmlStreamWriterC1Ev
     // invoke: void QXmlStreamWriter()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QXmlStreamWriterC2Ev(qthis)
+    C.C_ZN16QXmlStreamWriterC2Ev(qthis)
   case 3:
     // invoke: _ZN16QXmlStreamWriterC1EP9QIODevice
     // invoke: void QXmlStreamWriter(class QIODevice *)
@@ -2590,7 +2590,7 @@ func NewQXmlStreamWriter(args ...interface{}) QXmlStreamWriter {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QXmlStreamWriterC2EP9QIODevice(qthis, arg0)
+    C.C_ZN16QXmlStreamWriterC2EP9QIODevice(qthis, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "QXmlStreamWriter", args)
   }
@@ -2620,13 +2620,13 @@ func (this *QXmlStreamWriter) writeStartElement(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN16QXmlStreamWriter17writeStartElementERK7QString
     // invoke: void writeStartElement(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter17writeStartElementERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter17writeStartElementERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeStartElement", args)
   }
@@ -2649,7 +2649,7 @@ func (this *QXmlStreamWriter) writeDefaultNamespace(args ...interface{}) () {
     // invoke: void writeDefaultNamespace(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter21writeDefaultNamespaceERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter21writeDefaultNamespaceERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeDefaultNamespace", args)
   }
@@ -2676,7 +2676,7 @@ func (this *QXmlStreamWriter) writeStartDocument(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamWriter18writeStartDocumentEv
     // invoke: void writeStartDocument()
-    C._ZN16QXmlStreamWriter18writeStartDocumentEv(this.qclsinst)
+    C.C_ZN16QXmlStreamWriter18writeStartDocumentEv(this.qclsinst)
   case 1:
     // invoke: _ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb
     // invoke: void writeStartDocument(const class QString &, _Bool)
@@ -2684,13 +2684,13 @@ func (this *QXmlStreamWriter) writeStartDocument(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb(this.qclsinst, arg0, arg1)
+    C.C_ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN16QXmlStreamWriter18writeStartDocumentERK7QString
     // invoke: void writeStartDocument(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter18writeStartDocumentERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter18writeStartDocumentERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeStartDocument", args)
   }
@@ -2710,7 +2710,7 @@ func (this *QXmlStreamWriter) writeEndDocument(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamWriter16writeEndDocumentEv
     // invoke: void writeEndDocument()
-    C._ZN16QXmlStreamWriter16writeEndDocumentEv(this.qclsinst)
+    C.C_ZN16QXmlStreamWriter16writeEndDocumentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeEndDocument", args)
   }
@@ -2730,7 +2730,7 @@ func (this *QXmlStreamWriter) FreeQXmlStreamWriter(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamWriterD0Ev
     // invoke: void ~QXmlStreamWriter()
-    C._ZN16QXmlStreamWriterD2Ev(this.qclsinst)
+    C.C_ZN16QXmlStreamWriterD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "~QXmlStreamWriter", args)
   }
@@ -2750,7 +2750,7 @@ func (this *QXmlStreamWriter) writeEndElement(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamWriter15writeEndElementEv
     // invoke: void writeEndElement()
-    C._ZN16QXmlStreamWriter15writeEndElementEv(this.qclsinst)
+    C.C_ZN16QXmlStreamWriter15writeEndElementEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeEndElement", args)
   }
@@ -2773,7 +2773,7 @@ func (this *QXmlStreamWriter) writeCurrentToken(args ...interface{}) () {
     // invoke: void writeCurrentToken(const class QXmlStreamReader &)
     var arg0 = args[0].(QXmlStreamReader).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeCurrentToken", args)
   }
@@ -2796,7 +2796,7 @@ func (this *QXmlStreamWriter) setAutoFormattingIndent(args ...interface{}) () {
     // invoke: void setAutoFormattingIndent(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter23setAutoFormattingIndentEi(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter23setAutoFormattingIndentEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "setAutoFormattingIndent", args)
   }
@@ -2819,7 +2819,7 @@ func (this *QXmlStreamWriter) writeCharacters(args ...interface{}) () {
     // invoke: void writeCharacters(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter15writeCharactersERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter15writeCharactersERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeCharacters", args)
   }
@@ -2848,13 +2848,13 @@ func (this *QXmlStreamWriter) writeEmptyElement(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN16QXmlStreamWriter17writeEmptyElementERK7QString
     // invoke: void writeEmptyElement(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QXmlStreamWriter17writeEmptyElementERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QXmlStreamWriter17writeEmptyElementERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeEmptyElement", args)
   }
@@ -2874,7 +2874,7 @@ func (this *QXmlStreamNotationDeclaration) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK29QXmlStreamNotationDeclaration4nameEv
     // invoke: QStringRef name()
-    C._ZNK29QXmlStreamNotationDeclaration4nameEv(this.qclsinst)
+    C.C_ZNK29QXmlStreamNotationDeclaration4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "name", args)
   }
@@ -2901,13 +2901,13 @@ func NewQXmlStreamNotationDeclaration(args ...interface{}) QXmlStreamNotationDec
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN29QXmlStreamNotationDeclarationC2ERKS_(qthis, arg0)
+    C.C_ZN29QXmlStreamNotationDeclarationC2ERKS_(qthis, arg0)
   case 1:
     // invoke: _ZN29QXmlStreamNotationDeclarationC1Ev
     // invoke: void QXmlStreamNotationDeclaration()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN29QXmlStreamNotationDeclarationC2Ev(qthis)
+    C.C_ZN29QXmlStreamNotationDeclarationC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "QXmlStreamNotationDeclaration", args)
   }
@@ -2928,7 +2928,7 @@ func (this *QXmlStreamNotationDeclaration) systemId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK29QXmlStreamNotationDeclaration8systemIdEv
     // invoke: QStringRef systemId()
-    C._ZNK29QXmlStreamNotationDeclaration8systemIdEv(this.qclsinst)
+    C.C_ZNK29QXmlStreamNotationDeclaration8systemIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "systemId", args)
   }
@@ -2948,7 +2948,7 @@ func (this *QXmlStreamNotationDeclaration) publicId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK29QXmlStreamNotationDeclaration8publicIdEv
     // invoke: QStringRef publicId()
-    C._ZNK29QXmlStreamNotationDeclaration8publicIdEv(this.qclsinst)
+    C.C_ZNK29QXmlStreamNotationDeclaration8publicIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "publicId", args)
   }
@@ -2968,7 +2968,7 @@ func (this *QXmlStreamNotationDeclaration) FreeQXmlStreamNotationDeclaration(arg
   case 0:
     // invoke: _ZN29QXmlStreamNotationDeclarationD0Ev
     // invoke: void ~QXmlStreamNotationDeclaration()
-    C._ZN29QXmlStreamNotationDeclarationD2Ev(this.qclsinst)
+    C.C_ZN29QXmlStreamNotationDeclarationD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "~QXmlStreamNotationDeclaration", args)
   }
@@ -2988,7 +2988,7 @@ func (this *QXmlStreamAttribute) qualifiedName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute13qualifiedNameEv
     // invoke: QStringRef qualifiedName()
-    C._ZNK19QXmlStreamAttribute13qualifiedNameEv(this.qclsinst)
+    C.C_ZNK19QXmlStreamAttribute13qualifiedNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "qualifiedName", args)
   }
@@ -3008,7 +3008,7 @@ func (this *QXmlStreamAttribute) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute4nameEv
     // invoke: QStringRef name()
-    C._ZNK19QXmlStreamAttribute4nameEv(this.qclsinst)
+    C.C_ZNK19QXmlStreamAttribute4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "name", args)
   }
@@ -3046,13 +3046,13 @@ func NewQXmlStreamAttribute(args ...interface{}) QXmlStreamAttribute {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QXmlStreamAttributeC2ERK7QStringS2_(qthis, arg0, arg1)
+    C.C_ZN19QXmlStreamAttributeC2ERK7QStringS2_(qthis, arg0, arg1)
   case 1:
     // invoke: _ZN19QXmlStreamAttributeC1Ev
     // invoke: void QXmlStreamAttribute()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QXmlStreamAttributeC2Ev(qthis)
+    C.C_ZN19QXmlStreamAttributeC2Ev(qthis)
   case 2:
     // invoke: _ZN19QXmlStreamAttributeC1ERKS_
     // invoke: void QXmlStreamAttribute(const class QXmlStreamAttribute &)
@@ -3060,7 +3060,7 @@ func NewQXmlStreamAttribute(args ...interface{}) QXmlStreamAttribute {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QXmlStreamAttributeC2ERKS_(qthis, arg0)
+    C.C_ZN19QXmlStreamAttributeC2ERKS_(qthis, arg0)
   case 3:
     // invoke: _ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_
     // invoke: void QXmlStreamAttribute(const class QString &, const class QString &, const class QString &)
@@ -3072,7 +3072,7 @@ func NewQXmlStreamAttribute(args ...interface{}) QXmlStreamAttribute {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QXmlStreamAttributeC2ERK7QStringS2_S2_(qthis, arg0, arg1, arg2)
+    C.C_ZN19QXmlStreamAttributeC2ERK7QStringS2_S2_(qthis, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "QXmlStreamAttribute", args)
   }
@@ -3093,7 +3093,7 @@ func (this *QXmlStreamAttribute) value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute5valueEv
     // invoke: QStringRef value()
-    C._ZNK19QXmlStreamAttribute5valueEv(this.qclsinst)
+    C.C_ZNK19QXmlStreamAttribute5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "value", args)
   }
@@ -3113,7 +3113,7 @@ func (this *QXmlStreamAttribute) namespaceUri(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute12namespaceUriEv
     // invoke: QStringRef namespaceUri()
-    C._ZNK19QXmlStreamAttribute12namespaceUriEv(this.qclsinst)
+    C.C_ZNK19QXmlStreamAttribute12namespaceUriEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "namespaceUri", args)
   }
@@ -3133,7 +3133,7 @@ func (this *QXmlStreamAttribute) prefix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute6prefixEv
     // invoke: QStringRef prefix()
-    C._ZNK19QXmlStreamAttribute6prefixEv(this.qclsinst)
+    C.C_ZNK19QXmlStreamAttribute6prefixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "prefix", args)
   }
@@ -3153,7 +3153,7 @@ func (this *QXmlStreamAttribute) FreeQXmlStreamAttribute(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QXmlStreamAttributeD0Ev
     // invoke: void ~QXmlStreamAttribute()
-    C._ZN19QXmlStreamAttributeD2Ev(this.qclsinst)
+    C.C_ZN19QXmlStreamAttributeD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "~QXmlStreamAttribute", args)
   }
@@ -3173,7 +3173,7 @@ func (this *QXmlStreamAttribute) isDefault(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute9isDefaultEv
     // invoke: bool isDefault()
-    C._ZNK19QXmlStreamAttribute9isDefaultEv(this.qclsinst)
+    C.C_ZNK19QXmlStreamAttribute9isDefaultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "isDefault", args)
   }

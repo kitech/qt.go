@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qstorageinfo.h
 // dst-file: /src/core/qstorageinfo.go
 //
@@ -29,49 +29,49 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QStorageInfo::isReady();
-extern void _ZNK12QStorageInfo7isReadyEv(void* qthis); // 4
+extern void C_ZNK12QStorageInfo7isReadyEv(void* qthis); // 4
   // proto: static QList<QStorageInfo> QStorageInfo::mountedVolumes();
-extern void _ZN12QStorageInfo14mountedVolumesEv(); // 4
+extern void C_ZN12QStorageInfo14mountedVolumesEv(); // 4
   // proto:  QString QStorageInfo::name();
-extern void _ZNK12QStorageInfo4nameEv(void* qthis); // 4
+extern void C_ZNK12QStorageInfo4nameEv(void* qthis); // 4
   // proto:  bool QStorageInfo::isRoot();
-extern void _ZNK12QStorageInfo6isRootEv(void* qthis); // 2
+extern void C_ZNK12QStorageInfo6isRootEv(void* qthis); // 2
   // proto:  bool QStorageInfo::isReadOnly();
-extern void _ZNK12QStorageInfo10isReadOnlyEv(void* qthis); // 4
+extern void C_ZNK12QStorageInfo10isReadOnlyEv(void* qthis); // 4
   // proto:  bool QStorageInfo::isValid();
-extern void _ZNK12QStorageInfo7isValidEv(void* qthis); // 4
+extern void C_ZNK12QStorageInfo7isValidEv(void* qthis); // 4
   // proto:  QByteArray QStorageInfo::fileSystemType();
-extern void _ZNK12QStorageInfo14fileSystemTypeEv(void* qthis); // 4
+extern void C_ZNK12QStorageInfo14fileSystemTypeEv(void* qthis); // 4
   // proto:  QString QStorageInfo::rootPath();
-extern void _ZNK12QStorageInfo8rootPathEv(void* qthis); // 4
+extern void C_ZNK12QStorageInfo8rootPathEv(void* qthis); // 4
   // proto:  void QStorageInfo::refresh();
-extern void _ZN12QStorageInfo7refreshEv(void* qthis); // 4
+extern void C_ZN12QStorageInfo7refreshEv(void* qthis); // 4
   // proto:  qint64 QStorageInfo::bytesAvailable();
-extern void _ZNK12QStorageInfo14bytesAvailableEv(void* qthis); // 4
+extern void C_ZNK12QStorageInfo14bytesAvailableEv(void* qthis); // 4
   // proto:  qint64 QStorageInfo::bytesFree();
-extern void _ZNK12QStorageInfo9bytesFreeEv(void* qthis); // 4
+extern void C_ZNK12QStorageInfo9bytesFreeEv(void* qthis); // 4
   // proto:  qint64 QStorageInfo::bytesTotal();
-extern void _ZNK12QStorageInfo10bytesTotalEv(void* qthis); // 4
+extern void C_ZNK12QStorageInfo10bytesTotalEv(void* qthis); // 4
   // proto:  QByteArray QStorageInfo::device();
-extern void _ZNK12QStorageInfo6deviceEv(void* qthis); // 4
+extern void C_ZNK12QStorageInfo6deviceEv(void* qthis); // 4
   // proto:  void QStorageInfo::swap(QStorageInfo & other);
-extern void _ZN12QStorageInfo4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN12QStorageInfo4swapERS_(void* qthis, void* arg0); // 2
   // proto:  void QStorageInfo::QStorageInfo(const QDir & dir);
-extern void _ZN12QStorageInfoC2ERK4QDir(void* qthis, void* arg0); // 3
+extern void C_ZN12QStorageInfoC2ERK4QDir(void* qthis, void* arg0); // 3
   // proto:  void QStorageInfo::QStorageInfo(const QStorageInfo & other);
-extern void _ZN12QStorageInfoC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN12QStorageInfoC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QStorageInfo::QStorageInfo();
-extern void _ZN12QStorageInfoC2Ev(void* qthis); // 3
+extern void C_ZN12QStorageInfoC2Ev(void* qthis); // 3
   // proto:  void QStorageInfo::QStorageInfo(const QString & path);
-extern void _ZN12QStorageInfoC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN12QStorageInfoC2ERK7QString(void* qthis, void* arg0); // 3
   // proto:  QString QStorageInfo::displayName();
-extern void _ZNK12QStorageInfo11displayNameEv(void* qthis); // 4
+extern void C_ZNK12QStorageInfo11displayNameEv(void* qthis); // 4
   // proto:  void QStorageInfo::setPath(const QString & path);
-extern void _ZN12QStorageInfo7setPathERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN12QStorageInfo7setPathERK7QString(void* qthis, void* arg0); // 4
   // proto: static QStorageInfo QStorageInfo::root();
-extern void _ZN12QStorageInfo4rootEv(); // 4
+extern void C_ZN12QStorageInfo4rootEv(); // 4
   // proto:  void QStorageInfo::~QStorageInfo();
-extern void _ZN12QStorageInfoD2Ev(void* qthis); // 4
+extern void C_ZN12QStorageInfoD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -103,7 +103,7 @@ func (this *QStorageInfo) isReady(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStorageInfo7isReadyEv
     // invoke: bool isReady()
-    C._ZNK12QStorageInfo7isReadyEv(this.qclsinst)
+    C.C_ZNK12QStorageInfo7isReadyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "isReady", args)
   }
@@ -123,7 +123,7 @@ func (this *QStorageInfo) mountedVolumes_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStorageInfo14mountedVolumesEv
     // invoke: QList<QStorageInfo> mountedVolumes()
-    C._ZN12QStorageInfo14mountedVolumesEv()
+    C.C_ZN12QStorageInfo14mountedVolumesEv()
   default:
     qtrt.ErrorResolve("QStorageInfo", "mountedVolumes", args)
   }
@@ -143,7 +143,7 @@ func (this *QStorageInfo) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStorageInfo4nameEv
     // invoke: QString name()
-    C._ZNK12QStorageInfo4nameEv(this.qclsinst)
+    C.C_ZNK12QStorageInfo4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "name", args)
   }
@@ -163,7 +163,7 @@ func (this *QStorageInfo) isRoot(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStorageInfo6isRootEv
     // invoke: bool isRoot()
-    C._ZNK12QStorageInfo6isRootEv(this.qclsinst)
+    C.C_ZNK12QStorageInfo6isRootEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "isRoot", args)
   }
@@ -183,7 +183,7 @@ func (this *QStorageInfo) isReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStorageInfo10isReadOnlyEv
     // invoke: bool isReadOnly()
-    C._ZNK12QStorageInfo10isReadOnlyEv(this.qclsinst)
+    C.C_ZNK12QStorageInfo10isReadOnlyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "isReadOnly", args)
   }
@@ -203,7 +203,7 @@ func (this *QStorageInfo) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStorageInfo7isValidEv
     // invoke: bool isValid()
-    C._ZNK12QStorageInfo7isValidEv(this.qclsinst)
+    C.C_ZNK12QStorageInfo7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "isValid", args)
   }
@@ -223,7 +223,7 @@ func (this *QStorageInfo) fileSystemType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStorageInfo14fileSystemTypeEv
     // invoke: QByteArray fileSystemType()
-    C._ZNK12QStorageInfo14fileSystemTypeEv(this.qclsinst)
+    C.C_ZNK12QStorageInfo14fileSystemTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "fileSystemType", args)
   }
@@ -243,7 +243,7 @@ func (this *QStorageInfo) rootPath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStorageInfo8rootPathEv
     // invoke: QString rootPath()
-    C._ZNK12QStorageInfo8rootPathEv(this.qclsinst)
+    C.C_ZNK12QStorageInfo8rootPathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "rootPath", args)
   }
@@ -263,7 +263,7 @@ func (this *QStorageInfo) refresh(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStorageInfo7refreshEv
     // invoke: void refresh()
-    C._ZN12QStorageInfo7refreshEv(this.qclsinst)
+    C.C_ZN12QStorageInfo7refreshEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "refresh", args)
   }
@@ -283,7 +283,7 @@ func (this *QStorageInfo) bytesAvailable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStorageInfo14bytesAvailableEv
     // invoke: qint64 bytesAvailable()
-    C._ZNK12QStorageInfo14bytesAvailableEv(this.qclsinst)
+    C.C_ZNK12QStorageInfo14bytesAvailableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "bytesAvailable", args)
   }
@@ -303,7 +303,7 @@ func (this *QStorageInfo) bytesFree(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStorageInfo9bytesFreeEv
     // invoke: qint64 bytesFree()
-    C._ZNK12QStorageInfo9bytesFreeEv(this.qclsinst)
+    C.C_ZNK12QStorageInfo9bytesFreeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "bytesFree", args)
   }
@@ -323,7 +323,7 @@ func (this *QStorageInfo) bytesTotal(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStorageInfo10bytesTotalEv
     // invoke: qint64 bytesTotal()
-    C._ZNK12QStorageInfo10bytesTotalEv(this.qclsinst)
+    C.C_ZNK12QStorageInfo10bytesTotalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "bytesTotal", args)
   }
@@ -343,7 +343,7 @@ func (this *QStorageInfo) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStorageInfo6deviceEv
     // invoke: QByteArray device()
-    C._ZNK12QStorageInfo6deviceEv(this.qclsinst)
+    C.C_ZNK12QStorageInfo6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "device", args)
   }
@@ -366,7 +366,7 @@ func (this *QStorageInfo) swap(args ...interface{}) () {
     // invoke: void swap(class QStorageInfo &)
     var arg0 = args[0].(QStorageInfo).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QStorageInfo4swapERS_(this.qclsinst, arg0)
+    C.C_ZN12QStorageInfo4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStorageInfo", "swap", args)
   }
@@ -399,7 +399,7 @@ func NewQStorageInfo(args ...interface{}) QStorageInfo {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QStorageInfoC2ERK4QDir(qthis, arg0)
+    C.C_ZN12QStorageInfoC2ERK4QDir(qthis, arg0)
   case 1:
     // invoke: _ZN12QStorageInfoC1ERKS_
     // invoke: void QStorageInfo(const class QStorageInfo &)
@@ -407,13 +407,13 @@ func NewQStorageInfo(args ...interface{}) QStorageInfo {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QStorageInfoC2ERKS_(qthis, arg0)
+    C.C_ZN12QStorageInfoC2ERKS_(qthis, arg0)
   case 2:
     // invoke: _ZN12QStorageInfoC1Ev
     // invoke: void QStorageInfo()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QStorageInfoC2Ev(qthis)
+    C.C_ZN12QStorageInfoC2Ev(qthis)
   case 3:
     // invoke: _ZN12QStorageInfoC1ERK7QString
     // invoke: void QStorageInfo(const class QString &)
@@ -421,7 +421,7 @@ func NewQStorageInfo(args ...interface{}) QStorageInfo {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QStorageInfoC2ERK7QString(qthis, arg0)
+    C.C_ZN12QStorageInfoC2ERK7QString(qthis, arg0)
   default:
     qtrt.ErrorResolve("QStorageInfo", "QStorageInfo", args)
   }
@@ -442,7 +442,7 @@ func (this *QStorageInfo) displayName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStorageInfo11displayNameEv
     // invoke: QString displayName()
-    C._ZNK12QStorageInfo11displayNameEv(this.qclsinst)
+    C.C_ZNK12QStorageInfo11displayNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "displayName", args)
   }
@@ -465,7 +465,7 @@ func (this *QStorageInfo) setPath(args ...interface{}) () {
     // invoke: void setPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QStorageInfo7setPathERK7QString(this.qclsinst, arg0)
+    C.C_ZN12QStorageInfo7setPathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStorageInfo", "setPath", args)
   }
@@ -485,7 +485,7 @@ func (this *QStorageInfo) root_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStorageInfo4rootEv
     // invoke: QStorageInfo root()
-    C._ZN12QStorageInfo4rootEv()
+    C.C_ZN12QStorageInfo4rootEv()
   default:
     qtrt.ErrorResolve("QStorageInfo", "root", args)
   }
@@ -505,7 +505,7 @@ func (this *QStorageInfo) FreeQStorageInfo(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStorageInfoD0Ev
     // invoke: void ~QStorageInfo()
-    C._ZN12QStorageInfoD2Ev(this.qclsinst)
+    C.C_ZN12QStorageInfoD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "~QStorageInfo", args)
   }

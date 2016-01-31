@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qgraphicslayoutitem.h
 // dst-file: /src/widgets/qgraphicslayoutitem.go
 //
@@ -29,75 +29,75 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QGraphicsLayoutItem::setMaximumWidth(qreal width);
-extern void _ZN19QGraphicsLayoutItem15setMaximumWidthEd(void* qthis, double arg0); // 4
+extern void C_ZN19QGraphicsLayoutItem15setMaximumWidthEd(void* qthis, double arg0); // 4
   // proto:  QSizeF QGraphicsLayoutItem::preferredSize();
-extern void _ZNK19QGraphicsLayoutItem13preferredSizeEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsLayoutItem13preferredSizeEv(void* qthis); // 4
   // proto:  void QGraphicsLayoutItem::setParentLayoutItem(QGraphicsLayoutItem * parent);
-extern void _ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_(void* qthis, void* arg0); // 4
+extern void C_ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_(void* qthis, void* arg0); // 4
   // proto:  QGraphicsItem * QGraphicsLayoutItem::graphicsItem();
-extern void _ZNK19QGraphicsLayoutItem12graphicsItemEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsLayoutItem12graphicsItemEv(void* qthis); // 4
   // proto:  qreal QGraphicsLayoutItem::minimumHeight();
-extern void _ZNK19QGraphicsLayoutItem13minimumHeightEv(void* qthis); // 2
+extern void C_ZNK19QGraphicsLayoutItem13minimumHeightEv(void* qthis); // 2
   // proto:  void QGraphicsLayoutItem::setMaximumSize(const QSizeF & size);
-extern void _ZN19QGraphicsLayoutItem14setMaximumSizeERK6QSizeF(void* qthis, void* arg0); // 4
+extern void C_ZN19QGraphicsLayoutItem14setMaximumSizeERK6QSizeF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsLayoutItem::setMaximumSize(qreal w, qreal h);
-extern void _ZN19QGraphicsLayoutItem14setMaximumSizeEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZN19QGraphicsLayoutItem14setMaximumSizeEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QGraphicsLayoutItem::setGeometry(const QRectF & rect);
-extern void _ZN19QGraphicsLayoutItem11setGeometryERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZN19QGraphicsLayoutItem11setGeometryERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsLayoutItem::setMinimumHeight(qreal height);
-extern void _ZN19QGraphicsLayoutItem16setMinimumHeightEd(void* qthis, double arg0); // 4
+extern void C_ZN19QGraphicsLayoutItem16setMinimumHeightEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsLayoutItem::~QGraphicsLayoutItem();
-extern void _ZN19QGraphicsLayoutItemD2Ev(void* qthis); // 4
+extern void C_ZN19QGraphicsLayoutItemD2Ev(void* qthis); // 4
   // proto:  void QGraphicsLayoutItem::setPreferredSize(const QSizeF & size);
-extern void _ZN19QGraphicsLayoutItem16setPreferredSizeERK6QSizeF(void* qthis, void* arg0); // 4
+extern void C_ZN19QGraphicsLayoutItem16setPreferredSizeERK6QSizeF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsLayoutItem::setPreferredSize(qreal w, qreal h);
-extern void _ZN19QGraphicsLayoutItem16setPreferredSizeEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZN19QGraphicsLayoutItem16setPreferredSizeEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QGraphicsLayoutItem::QGraphicsLayoutItem(QGraphicsLayoutItem * parent, bool isLayout);
-extern void _ZN19QGraphicsLayoutItemC2EPS_b(void* qthis, void* arg0, bool arg1); // 3
+extern void C_ZN19QGraphicsLayoutItemC2EPS_b(void* qthis, void* arg0, bool arg1); // 3
   // proto:  QGraphicsLayoutItem * QGraphicsLayoutItem::parentLayoutItem();
-extern void _ZNK19QGraphicsLayoutItem16parentLayoutItemEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsLayoutItem16parentLayoutItemEv(void* qthis); // 4
   // proto:  void QGraphicsLayoutItem::setPreferredHeight(qreal height);
-extern void _ZN19QGraphicsLayoutItem18setPreferredHeightEd(void* qthis, double arg0); // 4
+extern void C_ZN19QGraphicsLayoutItem18setPreferredHeightEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsLayoutItem::updateGeometry();
-extern void _ZN19QGraphicsLayoutItem14updateGeometryEv(void* qthis); // 4
+extern void C_ZN19QGraphicsLayoutItem14updateGeometryEv(void* qthis); // 4
   // proto:  QSizePolicy QGraphicsLayoutItem::sizePolicy();
-extern void _ZNK19QGraphicsLayoutItem10sizePolicyEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsLayoutItem10sizePolicyEv(void* qthis); // 4
   // proto:  qreal QGraphicsLayoutItem::minimumWidth();
-extern void _ZNK19QGraphicsLayoutItem12minimumWidthEv(void* qthis); // 2
+extern void C_ZNK19QGraphicsLayoutItem12minimumWidthEv(void* qthis); // 2
   // proto:  qreal QGraphicsLayoutItem::preferredHeight();
-extern void _ZNK19QGraphicsLayoutItem15preferredHeightEv(void* qthis); // 2
+extern void C_ZNK19QGraphicsLayoutItem15preferredHeightEv(void* qthis); // 2
   // proto:  qreal QGraphicsLayoutItem::maximumHeight();
-extern void _ZNK19QGraphicsLayoutItem13maximumHeightEv(void* qthis); // 2
+extern void C_ZNK19QGraphicsLayoutItem13maximumHeightEv(void* qthis); // 2
   // proto:  qreal QGraphicsLayoutItem::preferredWidth();
-extern void _ZNK19QGraphicsLayoutItem14preferredWidthEv(void* qthis); // 2
+extern void C_ZNK19QGraphicsLayoutItem14preferredWidthEv(void* qthis); // 2
   // proto:  void QGraphicsLayoutItem::setMinimumSize(qreal w, qreal h);
-extern void _ZN19QGraphicsLayoutItem14setMinimumSizeEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZN19QGraphicsLayoutItem14setMinimumSizeEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QGraphicsLayoutItem::setMinimumSize(const QSizeF & size);
-extern void _ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF(void* qthis, void* arg0); // 4
+extern void C_ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF(void* qthis, void* arg0); // 4
   // proto:  qreal QGraphicsLayoutItem::maximumWidth();
-extern void _ZNK19QGraphicsLayoutItem12maximumWidthEv(void* qthis); // 2
+extern void C_ZNK19QGraphicsLayoutItem12maximumWidthEv(void* qthis); // 2
   // proto:  void QGraphicsLayoutItem::setSizePolicy(const QSizePolicy & policy);
-extern void _ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy(void* qthis, void* arg0); // 4
+extern void C_ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsLayoutItem::setMinimumWidth(qreal width);
-extern void _ZN19QGraphicsLayoutItem15setMinimumWidthEd(void* qthis, double arg0); // 4
+extern void C_ZN19QGraphicsLayoutItem15setMinimumWidthEd(void* qthis, double arg0); // 4
   // proto:  QRectF QGraphicsLayoutItem::geometry();
-extern void _ZNK19QGraphicsLayoutItem8geometryEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsLayoutItem8geometryEv(void* qthis); // 4
   // proto:  void QGraphicsLayoutItem::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
-extern void _ZNK19QGraphicsLayoutItem18getContentsMarginsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
+extern void C_ZNK19QGraphicsLayoutItem18getContentsMarginsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
   // proto:  QSizeF QGraphicsLayoutItem::minimumSize();
-extern void _ZNK19QGraphicsLayoutItem11minimumSizeEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsLayoutItem11minimumSizeEv(void* qthis); // 4
   // proto:  QRectF QGraphicsLayoutItem::contentsRect();
-extern void _ZNK19QGraphicsLayoutItem12contentsRectEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsLayoutItem12contentsRectEv(void* qthis); // 4
   // proto:  bool QGraphicsLayoutItem::isLayout();
-extern void _ZNK19QGraphicsLayoutItem8isLayoutEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsLayoutItem8isLayoutEv(void* qthis); // 4
   // proto:  void QGraphicsLayoutItem::setPreferredWidth(qreal width);
-extern void _ZN19QGraphicsLayoutItem17setPreferredWidthEd(void* qthis, double arg0); // 4
+extern void C_ZN19QGraphicsLayoutItem17setPreferredWidthEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsLayoutItem::setMaximumHeight(qreal height);
-extern void _ZN19QGraphicsLayoutItem16setMaximumHeightEd(void* qthis, double arg0); // 4
+extern void C_ZN19QGraphicsLayoutItem16setMaximumHeightEd(void* qthis, double arg0); // 4
   // proto:  QSizeF QGraphicsLayoutItem::maximumSize();
-extern void _ZNK19QGraphicsLayoutItem11maximumSizeEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsLayoutItem11maximumSizeEv(void* qthis); // 4
   // proto:  bool QGraphicsLayoutItem::ownedByLayout();
-extern void _ZNK19QGraphicsLayoutItem13ownedByLayoutEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsLayoutItem13ownedByLayoutEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -132,7 +132,7 @@ func (this *QGraphicsLayoutItem) setMaximumWidth(args ...interface{}) () {
     // invoke: void setMaximumWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsLayoutItem15setMaximumWidthEd(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsLayoutItem15setMaximumWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMaximumWidth", args)
   }
@@ -152,7 +152,7 @@ func (this *QGraphicsLayoutItem) preferredSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem13preferredSizeEv
     // invoke: QSizeF preferredSize()
-    C._ZNK19QGraphicsLayoutItem13preferredSizeEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem13preferredSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "preferredSize", args)
   }
@@ -175,7 +175,7 @@ func (this *QGraphicsLayoutItem) setParentLayoutItem(args ...interface{}) () {
     // invoke: void setParentLayoutItem(class QGraphicsLayoutItem *)
     var arg0 = args[0].(QGraphicsLayoutItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setParentLayoutItem", args)
   }
@@ -195,7 +195,7 @@ func (this *QGraphicsLayoutItem) graphicsItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem12graphicsItemEv
     // invoke: QGraphicsItem * graphicsItem()
-    C._ZNK19QGraphicsLayoutItem12graphicsItemEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem12graphicsItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "graphicsItem", args)
   }
@@ -215,7 +215,7 @@ func (this *QGraphicsLayoutItem) minimumHeight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem13minimumHeightEv
     // invoke: qreal minimumHeight()
-    C._ZNK19QGraphicsLayoutItem13minimumHeightEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem13minimumHeightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "minimumHeight", args)
   }
@@ -242,7 +242,7 @@ func (this *QGraphicsLayoutItem) setMaximumSize(args ...interface{}) () {
     // invoke: void setMaximumSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsLayoutItem14setMaximumSizeERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsLayoutItem14setMaximumSizeERK6QSizeF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN19QGraphicsLayoutItem14setMaximumSizeEdd
     // invoke: void setMaximumSize(qreal, qreal)
@@ -250,7 +250,7 @@ func (this *QGraphicsLayoutItem) setMaximumSize(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN19QGraphicsLayoutItem14setMaximumSizeEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN19QGraphicsLayoutItem14setMaximumSizeEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMaximumSize", args)
   }
@@ -273,7 +273,7 @@ func (this *QGraphicsLayoutItem) setGeometry(args ...interface{}) () {
     // invoke: void setGeometry(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsLayoutItem11setGeometryERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsLayoutItem11setGeometryERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setGeometry", args)
   }
@@ -296,7 +296,7 @@ func (this *QGraphicsLayoutItem) setMinimumHeight(args ...interface{}) () {
     // invoke: void setMinimumHeight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsLayoutItem16setMinimumHeightEd(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsLayoutItem16setMinimumHeightEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMinimumHeight", args)
   }
@@ -316,7 +316,7 @@ func (this *QGraphicsLayoutItem) FreeQGraphicsLayoutItem(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QGraphicsLayoutItemD0Ev
     // invoke: void ~QGraphicsLayoutItem()
-    C._ZN19QGraphicsLayoutItemD2Ev(this.qclsinst)
+    C.C_ZN19QGraphicsLayoutItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "~QGraphicsLayoutItem", args)
   }
@@ -343,7 +343,7 @@ func (this *QGraphicsLayoutItem) setPreferredSize(args ...interface{}) () {
     // invoke: void setPreferredSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsLayoutItem16setPreferredSizeERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsLayoutItem16setPreferredSizeERK6QSizeF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN19QGraphicsLayoutItem16setPreferredSizeEdd
     // invoke: void setPreferredSize(qreal, qreal)
@@ -351,7 +351,7 @@ func (this *QGraphicsLayoutItem) setPreferredSize(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN19QGraphicsLayoutItem16setPreferredSizeEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN19QGraphicsLayoutItem16setPreferredSizeEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setPreferredSize", args)
   }
@@ -379,7 +379,7 @@ func NewQGraphicsLayoutItem(args ...interface{}) QGraphicsLayoutItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QGraphicsLayoutItemC2EPS_b(qthis, arg0, arg1)
+    C.C_ZN19QGraphicsLayoutItemC2EPS_b(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "QGraphicsLayoutItem", args)
   }
@@ -400,7 +400,7 @@ func (this *QGraphicsLayoutItem) parentLayoutItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem16parentLayoutItemEv
     // invoke: QGraphicsLayoutItem * parentLayoutItem()
-    C._ZNK19QGraphicsLayoutItem16parentLayoutItemEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem16parentLayoutItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "parentLayoutItem", args)
   }
@@ -423,7 +423,7 @@ func (this *QGraphicsLayoutItem) setPreferredHeight(args ...interface{}) () {
     // invoke: void setPreferredHeight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsLayoutItem18setPreferredHeightEd(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsLayoutItem18setPreferredHeightEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setPreferredHeight", args)
   }
@@ -443,7 +443,7 @@ func (this *QGraphicsLayoutItem) updateGeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem14updateGeometryEv
     // invoke: void updateGeometry()
-    C._ZN19QGraphicsLayoutItem14updateGeometryEv(this.qclsinst)
+    C.C_ZN19QGraphicsLayoutItem14updateGeometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "updateGeometry", args)
   }
@@ -463,7 +463,7 @@ func (this *QGraphicsLayoutItem) sizePolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem10sizePolicyEv
     // invoke: QSizePolicy sizePolicy()
-    C._ZNK19QGraphicsLayoutItem10sizePolicyEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem10sizePolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "sizePolicy", args)
   }
@@ -483,7 +483,7 @@ func (this *QGraphicsLayoutItem) minimumWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem12minimumWidthEv
     // invoke: qreal minimumWidth()
-    C._ZNK19QGraphicsLayoutItem12minimumWidthEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem12minimumWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "minimumWidth", args)
   }
@@ -503,7 +503,7 @@ func (this *QGraphicsLayoutItem) preferredHeight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem15preferredHeightEv
     // invoke: qreal preferredHeight()
-    C._ZNK19QGraphicsLayoutItem15preferredHeightEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem15preferredHeightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "preferredHeight", args)
   }
@@ -523,7 +523,7 @@ func (this *QGraphicsLayoutItem) maximumHeight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem13maximumHeightEv
     // invoke: qreal maximumHeight()
-    C._ZNK19QGraphicsLayoutItem13maximumHeightEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem13maximumHeightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "maximumHeight", args)
   }
@@ -543,7 +543,7 @@ func (this *QGraphicsLayoutItem) preferredWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem14preferredWidthEv
     // invoke: qreal preferredWidth()
-    C._ZNK19QGraphicsLayoutItem14preferredWidthEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem14preferredWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "preferredWidth", args)
   }
@@ -572,13 +572,13 @@ func (this *QGraphicsLayoutItem) setMinimumSize(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN19QGraphicsLayoutItem14setMinimumSizeEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN19QGraphicsLayoutItem14setMinimumSizeEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF
     // invoke: void setMinimumSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMinimumSize", args)
   }
@@ -598,7 +598,7 @@ func (this *QGraphicsLayoutItem) maximumWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem12maximumWidthEv
     // invoke: qreal maximumWidth()
-    C._ZNK19QGraphicsLayoutItem12maximumWidthEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem12maximumWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "maximumWidth", args)
   }
@@ -621,7 +621,7 @@ func (this *QGraphicsLayoutItem) setSizePolicy(args ...interface{}) () {
     // invoke: void setSizePolicy(const class QSizePolicy &)
     var arg0 = args[0].(QSizePolicy).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setSizePolicy", args)
   }
@@ -644,7 +644,7 @@ func (this *QGraphicsLayoutItem) setMinimumWidth(args ...interface{}) () {
     // invoke: void setMinimumWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsLayoutItem15setMinimumWidthEd(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsLayoutItem15setMinimumWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMinimumWidth", args)
   }
@@ -664,7 +664,7 @@ func (this *QGraphicsLayoutItem) geometry(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem8geometryEv
     // invoke: QRectF geometry()
-    C._ZNK19QGraphicsLayoutItem8geometryEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem8geometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "geometry", args)
   }
@@ -696,7 +696,7 @@ func (this *QGraphicsLayoutItem) getContentsMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C._ZNK19QGraphicsLayoutItem18getContentsMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK19QGraphicsLayoutItem18getContentsMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "getContentsMargins", args)
   }
@@ -716,7 +716,7 @@ func (this *QGraphicsLayoutItem) minimumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem11minimumSizeEv
     // invoke: QSizeF minimumSize()
-    C._ZNK19QGraphicsLayoutItem11minimumSizeEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem11minimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "minimumSize", args)
   }
@@ -736,7 +736,7 @@ func (this *QGraphicsLayoutItem) contentsRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem12contentsRectEv
     // invoke: QRectF contentsRect()
-    C._ZNK19QGraphicsLayoutItem12contentsRectEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem12contentsRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "contentsRect", args)
   }
@@ -756,7 +756,7 @@ func (this *QGraphicsLayoutItem) isLayout(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem8isLayoutEv
     // invoke: bool isLayout()
-    C._ZNK19QGraphicsLayoutItem8isLayoutEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem8isLayoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "isLayout", args)
   }
@@ -779,7 +779,7 @@ func (this *QGraphicsLayoutItem) setPreferredWidth(args ...interface{}) () {
     // invoke: void setPreferredWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsLayoutItem17setPreferredWidthEd(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsLayoutItem17setPreferredWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setPreferredWidth", args)
   }
@@ -802,7 +802,7 @@ func (this *QGraphicsLayoutItem) setMaximumHeight(args ...interface{}) () {
     // invoke: void setMaximumHeight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsLayoutItem16setMaximumHeightEd(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsLayoutItem16setMaximumHeightEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMaximumHeight", args)
   }
@@ -822,7 +822,7 @@ func (this *QGraphicsLayoutItem) maximumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem11maximumSizeEv
     // invoke: QSizeF maximumSize()
-    C._ZNK19QGraphicsLayoutItem11maximumSizeEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem11maximumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "maximumSize", args)
   }
@@ -842,7 +842,7 @@ func (this *QGraphicsLayoutItem) ownedByLayout(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem13ownedByLayoutEv
     // invoke: bool ownedByLayout()
-    C._ZNK19QGraphicsLayoutItem13ownedByLayoutEv(this.qclsinst)
+    C.C_ZNK19QGraphicsLayoutItem13ownedByLayoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "ownedByLayout", args)
   }

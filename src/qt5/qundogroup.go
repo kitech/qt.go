@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qundogroup.h
 // dst-file: /src/widgets/qundogroup.go
 //
@@ -29,39 +29,39 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QAction * QUndoGroup::createUndoAction(QObject * parent, const QString & prefix);
-extern void _ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  bool QUndoGroup::isClean();
-extern void _ZNK10QUndoGroup7isCleanEv(void* qthis); // 4
+extern void C_ZNK10QUndoGroup7isCleanEv(void* qthis); // 4
   // proto:  void QUndoGroup::redo();
-extern void _ZN10QUndoGroup4redoEv(void* qthis); // 4
+extern void C_ZN10QUndoGroup4redoEv(void* qthis); // 4
   // proto:  bool QUndoGroup::canUndo();
-extern void _ZNK10QUndoGroup7canUndoEv(void* qthis); // 4
+extern void C_ZNK10QUndoGroup7canUndoEv(void* qthis); // 4
   // proto:  void QUndoGroup::~QUndoGroup();
-extern void _ZN10QUndoGroupD2Ev(void* qthis); // 4
+extern void C_ZN10QUndoGroupD2Ev(void* qthis); // 4
   // proto:  void QUndoGroup::QUndoGroup(QObject * parent);
-extern void _ZN10QUndoGroupC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN10QUndoGroupC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  QString QUndoGroup::redoText();
-extern void _ZNK10QUndoGroup8redoTextEv(void* qthis); // 4
+extern void C_ZNK10QUndoGroup8redoTextEv(void* qthis); // 4
   // proto:  void QUndoGroup::undo();
-extern void _ZN10QUndoGroup4undoEv(void* qthis); // 4
+extern void C_ZN10QUndoGroup4undoEv(void* qthis); // 4
   // proto:  bool QUndoGroup::canRedo();
-extern void _ZNK10QUndoGroup7canRedoEv(void* qthis); // 4
+extern void C_ZNK10QUndoGroup7canRedoEv(void* qthis); // 4
   // proto:  void QUndoGroup::addStack(QUndoStack * stack);
-extern void _ZN10QUndoGroup8addStackEP10QUndoStack(void* qthis, void* arg0); // 4
+extern void C_ZN10QUndoGroup8addStackEP10QUndoStack(void* qthis, void* arg0); // 4
   // proto:  QAction * QUndoGroup::createRedoAction(QObject * parent, const QString & prefix);
-extern void _ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  const QMetaObject * QUndoGroup::metaObject();
-extern void _ZNK10QUndoGroup10metaObjectEv(void* qthis); // 4
+extern void C_ZNK10QUndoGroup10metaObjectEv(void* qthis); // 4
   // proto:  QString QUndoGroup::undoText();
-extern void _ZNK10QUndoGroup8undoTextEv(void* qthis); // 4
+extern void C_ZNK10QUndoGroup8undoTextEv(void* qthis); // 4
   // proto:  void QUndoGroup::removeStack(QUndoStack * stack);
-extern void _ZN10QUndoGroup11removeStackEP10QUndoStack(void* qthis, void* arg0); // 4
+extern void C_ZN10QUndoGroup11removeStackEP10QUndoStack(void* qthis, void* arg0); // 4
   // proto:  void QUndoGroup::setActiveStack(QUndoStack * stack);
-extern void _ZN10QUndoGroup14setActiveStackEP10QUndoStack(void* qthis, void* arg0); // 4
+extern void C_ZN10QUndoGroup14setActiveStackEP10QUndoStack(void* qthis, void* arg0); // 4
   // proto:  QList<QUndoStack *> QUndoGroup::stacks();
-extern void _ZNK10QUndoGroup6stacksEv(void* qthis); // 4
+extern void C_ZNK10QUndoGroup6stacksEv(void* qthis); // 4
   // proto:  QUndoStack * QUndoGroup::activeStack();
-extern void _ZNK10QUndoGroup11activeStackEv(void* qthis); // 4
+extern void C_ZNK10QUndoGroup11activeStackEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -106,7 +106,7 @@ func (this *QUndoGroup) createUndoAction(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QUndoGroup", "createUndoAction", args)
   }
@@ -126,7 +126,7 @@ func (this *QUndoGroup) isClean(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoGroup7isCleanEv
     // invoke: bool isClean()
-    C._ZNK10QUndoGroup7isCleanEv(this.qclsinst)
+    C.C_ZNK10QUndoGroup7isCleanEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoGroup", "isClean", args)
   }
@@ -146,7 +146,7 @@ func (this *QUndoGroup) redo(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoGroup4redoEv
     // invoke: void redo()
-    C._ZN10QUndoGroup4redoEv(this.qclsinst)
+    C.C_ZN10QUndoGroup4redoEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoGroup", "redo", args)
   }
@@ -166,7 +166,7 @@ func (this *QUndoGroup) canUndo(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoGroup7canUndoEv
     // invoke: bool canUndo()
-    C._ZNK10QUndoGroup7canUndoEv(this.qclsinst)
+    C.C_ZNK10QUndoGroup7canUndoEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoGroup", "canUndo", args)
   }
@@ -186,7 +186,7 @@ func (this *QUndoGroup) FreeQUndoGroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoGroupD0Ev
     // invoke: void ~QUndoGroup()
-    C._ZN10QUndoGroupD2Ev(this.qclsinst)
+    C.C_ZN10QUndoGroupD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoGroup", "~QUndoGroup", args)
   }
@@ -211,7 +211,7 @@ func NewQUndoGroup(args ...interface{}) QUndoGroup {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QUndoGroupC2EP7QObject(qthis, arg0)
+    C.C_ZN10QUndoGroupC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QUndoGroup", "QUndoGroup", args)
   }
@@ -232,7 +232,7 @@ func (this *QUndoGroup) redoText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoGroup8redoTextEv
     // invoke: QString redoText()
-    C._ZNK10QUndoGroup8redoTextEv(this.qclsinst)
+    C.C_ZNK10QUndoGroup8redoTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoGroup", "redoText", args)
   }
@@ -252,7 +252,7 @@ func (this *QUndoGroup) undo(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoGroup4undoEv
     // invoke: void undo()
-    C._ZN10QUndoGroup4undoEv(this.qclsinst)
+    C.C_ZN10QUndoGroup4undoEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoGroup", "undo", args)
   }
@@ -272,7 +272,7 @@ func (this *QUndoGroup) canRedo(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoGroup7canRedoEv
     // invoke: bool canRedo()
-    C._ZNK10QUndoGroup7canRedoEv(this.qclsinst)
+    C.C_ZNK10QUndoGroup7canRedoEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoGroup", "canRedo", args)
   }
@@ -295,7 +295,7 @@ func (this *QUndoGroup) addStack(args ...interface{}) () {
     // invoke: void addStack(class QUndoStack *)
     var arg0 = args[0].(QUndoStack).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QUndoGroup8addStackEP10QUndoStack(this.qclsinst, arg0)
+    C.C_ZN10QUndoGroup8addStackEP10QUndoStack(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoGroup", "addStack", args)
   }
@@ -321,7 +321,7 @@ func (this *QUndoGroup) createRedoAction(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QUndoGroup", "createRedoAction", args)
   }
@@ -341,7 +341,7 @@ func (this *QUndoGroup) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoGroup10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK10QUndoGroup10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QUndoGroup10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoGroup", "metaObject", args)
   }
@@ -361,7 +361,7 @@ func (this *QUndoGroup) undoText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoGroup8undoTextEv
     // invoke: QString undoText()
-    C._ZNK10QUndoGroup8undoTextEv(this.qclsinst)
+    C.C_ZNK10QUndoGroup8undoTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoGroup", "undoText", args)
   }
@@ -384,7 +384,7 @@ func (this *QUndoGroup) removeStack(args ...interface{}) () {
     // invoke: void removeStack(class QUndoStack *)
     var arg0 = args[0].(QUndoStack).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QUndoGroup11removeStackEP10QUndoStack(this.qclsinst, arg0)
+    C.C_ZN10QUndoGroup11removeStackEP10QUndoStack(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoGroup", "removeStack", args)
   }
@@ -407,7 +407,7 @@ func (this *QUndoGroup) setActiveStack(args ...interface{}) () {
     // invoke: void setActiveStack(class QUndoStack *)
     var arg0 = args[0].(QUndoStack).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QUndoGroup14setActiveStackEP10QUndoStack(this.qclsinst, arg0)
+    C.C_ZN10QUndoGroup14setActiveStackEP10QUndoStack(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoGroup", "setActiveStack", args)
   }
@@ -427,7 +427,7 @@ func (this *QUndoGroup) stacks(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoGroup6stacksEv
     // invoke: QList<QUndoStack *> stacks()
-    C._ZNK10QUndoGroup6stacksEv(this.qclsinst)
+    C.C_ZNK10QUndoGroup6stacksEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoGroup", "stacks", args)
   }
@@ -447,7 +447,7 @@ func (this *QUndoGroup) activeStack(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoGroup11activeStackEv
     // invoke: QUndoStack * activeStack()
-    C._ZNK10QUndoGroup11activeStackEv(this.qclsinst)
+    C.C_ZNK10QUndoGroup11activeStackEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoGroup", "activeStack", args)
   }

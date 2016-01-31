@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qcryptographichash.h
 // dst-file: /src/core/qcryptographichash.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QCryptographicHash::reset();
-extern void _ZN18QCryptographicHash5resetEv(void* qthis); // 4
+extern void C_ZN18QCryptographicHash5resetEv(void* qthis); // 4
   // proto:  void QCryptographicHash::addData(const char * data, int length);
-extern void _ZN18QCryptographicHash7addDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void C_ZN18QCryptographicHash7addDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
   // proto:  bool QCryptographicHash::addData(QIODevice * device);
-extern void _ZN18QCryptographicHash7addDataEP9QIODevice(void* qthis, void* arg0); // 4
+extern void C_ZN18QCryptographicHash7addDataEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  void QCryptographicHash::addData(const QByteArray & data);
-extern void _ZN18QCryptographicHash7addDataERK10QByteArray(void* qthis, void* arg0); // 4
+extern void C_ZN18QCryptographicHash7addDataERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  QByteArray QCryptographicHash::result();
-extern void _ZNK18QCryptographicHash6resultEv(void* qthis); // 4
+extern void C_ZNK18QCryptographicHash6resultEv(void* qthis); // 4
   // proto:  void QCryptographicHash::~QCryptographicHash();
-extern void _ZN18QCryptographicHashD2Ev(void* qthis); // 4
+extern void C_ZN18QCryptographicHashD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -71,7 +71,7 @@ func (this *QCryptographicHash) reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCryptographicHash5resetEv
     // invoke: void reset()
-    C._ZN18QCryptographicHash5resetEv(this.qclsinst)
+    C.C_ZN18QCryptographicHash5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCryptographicHash", "reset", args)
   }
@@ -103,19 +103,19 @@ func (this *QCryptographicHash) addData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN18QCryptographicHash7addDataEPKci(this.qclsinst, arg0, arg1)
+    C.C_ZN18QCryptographicHash7addDataEPKci(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN18QCryptographicHash7addDataEP9QIODevice
     // invoke: bool addData(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QCryptographicHash7addDataEP9QIODevice(this.qclsinst, arg0)
+    C.C_ZN18QCryptographicHash7addDataEP9QIODevice(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN18QCryptographicHash7addDataERK10QByteArray
     // invoke: void addData(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QCryptographicHash7addDataERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN18QCryptographicHash7addDataERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCryptographicHash", "addData", args)
   }
@@ -135,7 +135,7 @@ func (this *QCryptographicHash) result(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCryptographicHash6resultEv
     // invoke: QByteArray result()
-    C._ZNK18QCryptographicHash6resultEv(this.qclsinst)
+    C.C_ZNK18QCryptographicHash6resultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCryptographicHash", "result", args)
   }
@@ -155,7 +155,7 @@ func (this *QCryptographicHash) FreeQCryptographicHash(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCryptographicHashD0Ev
     // invoke: void ~QCryptographicHash()
-    C._ZN18QCryptographicHashD2Ev(this.qclsinst)
+    C.C_ZN18QCryptographicHashD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCryptographicHash", "~QCryptographicHash", args)
   }

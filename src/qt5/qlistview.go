@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qlistview.h
 // dst-file: /src/widgets/qlistview.go
 //
@@ -29,69 +29,69 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QListView::isWrapping();
-extern void _ZNK9QListView10isWrappingEv(void* qthis); // 4
+extern void C_ZNK9QListView10isWrappingEv(void* qthis); // 4
   // proto:  int QListView::batchSize();
-extern void _ZNK9QListView9batchSizeEv(void* qthis); // 4
+extern void C_ZNK9QListView9batchSizeEv(void* qthis); // 4
   // proto:  void QListView::setModelColumn(int column);
-extern void _ZN9QListView14setModelColumnEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QListView14setModelColumnEi(void* qthis, int32_t arg0); // 4
   // proto:  void QListView::doItemsLayout();
-extern void _ZN9QListView13doItemsLayoutEv(void* qthis); // 4
+extern void C_ZN9QListView13doItemsLayoutEv(void* qthis); // 4
   // proto:  bool QListView::wordWrap();
-extern void _ZNK9QListView8wordWrapEv(void* qthis); // 4
+extern void C_ZNK9QListView8wordWrapEv(void* qthis); // 4
   // proto:  QListView::ViewMode QListView::viewMode();
-extern void _ZNK9QListView8viewModeEv(void* qthis); // 4
+extern void C_ZNK9QListView8viewModeEv(void* qthis); // 4
   // proto:  void QListView::setSpacing(int space);
-extern void _ZN9QListView10setSpacingEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QListView10setSpacingEi(void* qthis, int32_t arg0); // 4
   // proto:  void QListView::QListView(QWidget * parent);
-extern void _ZN9QListViewC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN9QListViewC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  QListView::LayoutMode QListView::layoutMode();
-extern void _ZNK9QListView10layoutModeEv(void* qthis); // 4
+extern void C_ZNK9QListView10layoutModeEv(void* qthis); // 4
   // proto:  void QListView::setWrapping(bool enable);
-extern void _ZN9QListView11setWrappingEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QListView11setWrappingEb(void* qthis, bool arg0); // 4
   // proto:  QModelIndex QListView::indexAt(const QPoint & p);
-extern void _ZNK9QListView7indexAtERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZNK9QListView7indexAtERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  void QListView::setWordWrap(bool on);
-extern void _ZN9QListView11setWordWrapEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QListView11setWordWrapEb(void* qthis, bool arg0); // 4
   // proto:  QRect QListView::visualRect(const QModelIndex & index);
-extern void _ZNK9QListView10visualRectERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK9QListView10visualRectERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QListView::Movement QListView::movement();
-extern void _ZNK9QListView8movementEv(void* qthis); // 4
+extern void C_ZNK9QListView8movementEv(void* qthis); // 4
   // proto:  void QListView::clearPropertyFlags();
-extern void _ZN9QListView18clearPropertyFlagsEv(void* qthis); // 4
+extern void C_ZN9QListView18clearPropertyFlagsEv(void* qthis); // 4
   // proto:  void QListView::reset();
-extern void _ZN9QListView5resetEv(void* qthis); // 4
+extern void C_ZN9QListView5resetEv(void* qthis); // 4
   // proto:  QSize QListView::gridSize();
-extern void _ZNK9QListView8gridSizeEv(void* qthis); // 4
+extern void C_ZNK9QListView8gridSizeEv(void* qthis); // 4
   // proto:  int QListView::spacing();
-extern void _ZNK9QListView7spacingEv(void* qthis); // 4
+extern void C_ZNK9QListView7spacingEv(void* qthis); // 4
   // proto:  void QListView::setRootIndex(const QModelIndex & index);
-extern void _ZN9QListView12setRootIndexERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZN9QListView12setRootIndexERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QListView::ResizeMode QListView::resizeMode();
-extern void _ZNK9QListView10resizeModeEv(void* qthis); // 4
+extern void C_ZNK9QListView10resizeModeEv(void* qthis); // 4
   // proto:  void QListView::setBatchSize(int batchSize);
-extern void _ZN9QListView12setBatchSizeEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QListView12setBatchSizeEi(void* qthis, int32_t arg0); // 4
   // proto:  void QListView::setGridSize(const QSize & size);
-extern void _ZN9QListView11setGridSizeERK5QSize(void* qthis, void* arg0); // 4
+extern void C_ZN9QListView11setGridSizeERK5QSize(void* qthis, void* arg0); // 4
   // proto:  bool QListView::isRowHidden(int row);
-extern void _ZNK9QListView11isRowHiddenEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK9QListView11isRowHiddenEi(void* qthis, int32_t arg0); // 4
   // proto:  const QMetaObject * QListView::metaObject();
-extern void _ZNK9QListView10metaObjectEv(void* qthis); // 4
+extern void C_ZNK9QListView10metaObjectEv(void* qthis); // 4
   // proto:  void QListView::~QListView();
-extern void _ZN9QListViewD2Ev(void* qthis); // 4
+extern void C_ZN9QListViewD2Ev(void* qthis); // 4
   // proto:  QListView::Flow QListView::flow();
-extern void _ZNK9QListView4flowEv(void* qthis); // 4
+extern void C_ZNK9QListView4flowEv(void* qthis); // 4
   // proto:  bool QListView::uniformItemSizes();
-extern void _ZNK9QListView16uniformItemSizesEv(void* qthis); // 4
+extern void C_ZNK9QListView16uniformItemSizesEv(void* qthis); // 4
   // proto:  void QListView::setUniformItemSizes(bool enable);
-extern void _ZN9QListView19setUniformItemSizesEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QListView19setUniformItemSizesEb(void* qthis, bool arg0); // 4
   // proto:  void QListView::setRowHidden(int row, bool hide);
-extern void _ZN9QListView12setRowHiddenEib(void* qthis, int32_t arg0, bool arg1); // 4
+extern void C_ZN9QListView12setRowHiddenEib(void* qthis, int32_t arg0, bool arg1); // 4
   // proto:  bool QListView::isSelectionRectVisible();
-extern void _ZNK9QListView22isSelectionRectVisibleEv(void* qthis); // 4
+extern void C_ZNK9QListView22isSelectionRectVisibleEv(void* qthis); // 4
   // proto:  void QListView::setSelectionRectVisible(bool show);
-extern void _ZN9QListView23setSelectionRectVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QListView23setSelectionRectVisibleEb(void* qthis, bool arg0); // 4
   // proto:  int QListView::modelColumn();
-extern void _ZNK9QListView11modelColumnEv(void* qthis); // 4
+extern void C_ZNK9QListView11modelColumnEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -124,7 +124,7 @@ func (this *QListView) isWrapping(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView10isWrappingEv
     // invoke: bool isWrapping()
-    C._ZNK9QListView10isWrappingEv(this.qclsinst)
+    C.C_ZNK9QListView10isWrappingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "isWrapping", args)
   }
@@ -144,7 +144,7 @@ func (this *QListView) batchSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView9batchSizeEv
     // invoke: int batchSize()
-    C._ZNK9QListView9batchSizeEv(this.qclsinst)
+    C.C_ZNK9QListView9batchSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "batchSize", args)
   }
@@ -167,7 +167,7 @@ func (this *QListView) setModelColumn(args ...interface{}) () {
     // invoke: void setModelColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QListView14setModelColumnEi(this.qclsinst, arg0)
+    C.C_ZN9QListView14setModelColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setModelColumn", args)
   }
@@ -187,7 +187,7 @@ func (this *QListView) doItemsLayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListView13doItemsLayoutEv
     // invoke: void doItemsLayout()
-    C._ZN9QListView13doItemsLayoutEv(this.qclsinst)
+    C.C_ZN9QListView13doItemsLayoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "doItemsLayout", args)
   }
@@ -207,7 +207,7 @@ func (this *QListView) wordWrap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView8wordWrapEv
     // invoke: bool wordWrap()
-    C._ZNK9QListView8wordWrapEv(this.qclsinst)
+    C.C_ZNK9QListView8wordWrapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "wordWrap", args)
   }
@@ -227,7 +227,7 @@ func (this *QListView) viewMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView8viewModeEv
     // invoke: QListView::ViewMode viewMode()
-    C._ZNK9QListView8viewModeEv(this.qclsinst)
+    C.C_ZNK9QListView8viewModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "viewMode", args)
   }
@@ -250,7 +250,7 @@ func (this *QListView) setSpacing(args ...interface{}) () {
     // invoke: void setSpacing(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QListView10setSpacingEi(this.qclsinst, arg0)
+    C.C_ZN9QListView10setSpacingEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setSpacing", args)
   }
@@ -275,7 +275,7 @@ func NewQListView(args ...interface{}) QListView {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QListViewC2EP7QWidget(qthis, arg0)
+    C.C_ZN9QListViewC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QListView", "QListView", args)
   }
@@ -296,7 +296,7 @@ func (this *QListView) layoutMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView10layoutModeEv
     // invoke: QListView::LayoutMode layoutMode()
-    C._ZNK9QListView10layoutModeEv(this.qclsinst)
+    C.C_ZNK9QListView10layoutModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "layoutMode", args)
   }
@@ -319,7 +319,7 @@ func (this *QListView) setWrapping(args ...interface{}) () {
     // invoke: void setWrapping(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QListView11setWrappingEb(this.qclsinst, arg0)
+    C.C_ZN9QListView11setWrappingEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setWrapping", args)
   }
@@ -342,7 +342,7 @@ func (this *QListView) indexAt(args ...interface{}) () {
     // invoke: QModelIndex indexAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QListView7indexAtERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK9QListView7indexAtERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "indexAt", args)
   }
@@ -365,7 +365,7 @@ func (this *QListView) setWordWrap(args ...interface{}) () {
     // invoke: void setWordWrap(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QListView11setWordWrapEb(this.qclsinst, arg0)
+    C.C_ZN9QListView11setWordWrapEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setWordWrap", args)
   }
@@ -388,7 +388,7 @@ func (this *QListView) visualRect(args ...interface{}) () {
     // invoke: QRect visualRect(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QListView10visualRectERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK9QListView10visualRectERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "visualRect", args)
   }
@@ -408,7 +408,7 @@ func (this *QListView) movement(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView8movementEv
     // invoke: QListView::Movement movement()
-    C._ZNK9QListView8movementEv(this.qclsinst)
+    C.C_ZNK9QListView8movementEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "movement", args)
   }
@@ -428,7 +428,7 @@ func (this *QListView) clearPropertyFlags(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListView18clearPropertyFlagsEv
     // invoke: void clearPropertyFlags()
-    C._ZN9QListView18clearPropertyFlagsEv(this.qclsinst)
+    C.C_ZN9QListView18clearPropertyFlagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "clearPropertyFlags", args)
   }
@@ -448,7 +448,7 @@ func (this *QListView) reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListView5resetEv
     // invoke: void reset()
-    C._ZN9QListView5resetEv(this.qclsinst)
+    C.C_ZN9QListView5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "reset", args)
   }
@@ -468,7 +468,7 @@ func (this *QListView) gridSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView8gridSizeEv
     // invoke: QSize gridSize()
-    C._ZNK9QListView8gridSizeEv(this.qclsinst)
+    C.C_ZNK9QListView8gridSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "gridSize", args)
   }
@@ -488,7 +488,7 @@ func (this *QListView) spacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView7spacingEv
     // invoke: int spacing()
-    C._ZNK9QListView7spacingEv(this.qclsinst)
+    C.C_ZNK9QListView7spacingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "spacing", args)
   }
@@ -511,7 +511,7 @@ func (this *QListView) setRootIndex(args ...interface{}) () {
     // invoke: void setRootIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QListView12setRootIndexERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN9QListView12setRootIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setRootIndex", args)
   }
@@ -531,7 +531,7 @@ func (this *QListView) resizeMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView10resizeModeEv
     // invoke: QListView::ResizeMode resizeMode()
-    C._ZNK9QListView10resizeModeEv(this.qclsinst)
+    C.C_ZNK9QListView10resizeModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "resizeMode", args)
   }
@@ -554,7 +554,7 @@ func (this *QListView) setBatchSize(args ...interface{}) () {
     // invoke: void setBatchSize(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QListView12setBatchSizeEi(this.qclsinst, arg0)
+    C.C_ZN9QListView12setBatchSizeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setBatchSize", args)
   }
@@ -577,7 +577,7 @@ func (this *QListView) setGridSize(args ...interface{}) () {
     // invoke: void setGridSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QListView11setGridSizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN9QListView11setGridSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setGridSize", args)
   }
@@ -600,7 +600,7 @@ func (this *QListView) isRowHidden(args ...interface{}) () {
     // invoke: bool isRowHidden(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK9QListView11isRowHiddenEi(this.qclsinst, arg0)
+    C.C_ZNK9QListView11isRowHiddenEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "isRowHidden", args)
   }
@@ -620,7 +620,7 @@ func (this *QListView) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK9QListView10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QListView10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "metaObject", args)
   }
@@ -640,7 +640,7 @@ func (this *QListView) FreeQListView(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListViewD0Ev
     // invoke: void ~QListView()
-    C._ZN9QListViewD2Ev(this.qclsinst)
+    C.C_ZN9QListViewD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "~QListView", args)
   }
@@ -660,7 +660,7 @@ func (this *QListView) flow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView4flowEv
     // invoke: QListView::Flow flow()
-    C._ZNK9QListView4flowEv(this.qclsinst)
+    C.C_ZNK9QListView4flowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "flow", args)
   }
@@ -680,7 +680,7 @@ func (this *QListView) uniformItemSizes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView16uniformItemSizesEv
     // invoke: bool uniformItemSizes()
-    C._ZNK9QListView16uniformItemSizesEv(this.qclsinst)
+    C.C_ZNK9QListView16uniformItemSizesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "uniformItemSizes", args)
   }
@@ -703,7 +703,7 @@ func (this *QListView) setUniformItemSizes(args ...interface{}) () {
     // invoke: void setUniformItemSizes(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QListView19setUniformItemSizesEb(this.qclsinst, arg0)
+    C.C_ZN9QListView19setUniformItemSizesEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setUniformItemSizes", args)
   }
@@ -729,7 +729,7 @@ func (this *QListView) setRowHidden(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN9QListView12setRowHiddenEib(this.qclsinst, arg0, arg1)
+    C.C_ZN9QListView12setRowHiddenEib(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QListView", "setRowHidden", args)
   }
@@ -749,7 +749,7 @@ func (this *QListView) isSelectionRectVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView22isSelectionRectVisibleEv
     // invoke: bool isSelectionRectVisible()
-    C._ZNK9QListView22isSelectionRectVisibleEv(this.qclsinst)
+    C.C_ZNK9QListView22isSelectionRectVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "isSelectionRectVisible", args)
   }
@@ -772,7 +772,7 @@ func (this *QListView) setSelectionRectVisible(args ...interface{}) () {
     // invoke: void setSelectionRectVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QListView23setSelectionRectVisibleEb(this.qclsinst, arg0)
+    C.C_ZN9QListView23setSelectionRectVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setSelectionRectVisible", args)
   }
@@ -792,7 +792,7 @@ func (this *QListView) modelColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListView11modelColumnEv
     // invoke: int modelColumn()
-    C._ZNK9QListView11modelColumnEv(this.qclsinst)
+    C.C_ZNK9QListView11modelColumnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "modelColumn", args)
   }

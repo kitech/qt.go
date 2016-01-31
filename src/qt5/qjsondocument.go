@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qjsondocument.h
 // dst-file: /src/core/qjsondocument.go
 //
@@ -29,33 +29,33 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QJsonDocument QJsonDocument::fromVariant(const QVariant & variant);
-extern void _ZN13QJsonDocument11fromVariantERK8QVariant(void* arg0); // 4
+extern void C_ZN13QJsonDocument11fromVariantERK8QVariant(void* arg0); // 4
   // proto:  void QJsonDocument::~QJsonDocument();
-extern void _ZN13QJsonDocumentD2Ev(void* qthis); // 4
+extern void C_ZN13QJsonDocumentD2Ev(void* qthis); // 4
   // proto:  void QJsonDocument::QJsonDocument();
-extern void _ZN13QJsonDocumentC2Ev(void* qthis); // 3
+extern void C_ZN13QJsonDocumentC2Ev(void* qthis); // 3
   // proto:  QJsonObject QJsonDocument::object();
-extern void _ZNK13QJsonDocument6objectEv(void* qthis); // 4
+extern void C_ZNK13QJsonDocument6objectEv(void* qthis); // 4
   // proto:  bool QJsonDocument::isArray();
-extern void _ZNK13QJsonDocument7isArrayEv(void* qthis); // 4
+extern void C_ZNK13QJsonDocument7isArrayEv(void* qthis); // 4
   // proto:  bool QJsonDocument::isNull();
-extern void _ZNK13QJsonDocument6isNullEv(void* qthis); // 4
+extern void C_ZNK13QJsonDocument6isNullEv(void* qthis); // 4
   // proto:  bool QJsonDocument::isEmpty();
-extern void _ZNK13QJsonDocument7isEmptyEv(void* qthis); // 4
+extern void C_ZNK13QJsonDocument7isEmptyEv(void* qthis); // 4
   // proto:  const char * QJsonDocument::rawData(int * size);
-extern void _ZNK13QJsonDocument7rawDataEPi(void* qthis, int32_t* arg0); // 4
+extern void C_ZNK13QJsonDocument7rawDataEPi(void* qthis, int32_t* arg0); // 4
   // proto:  QVariant QJsonDocument::toVariant();
-extern void _ZNK13QJsonDocument9toVariantEv(void* qthis); // 4
+extern void C_ZNK13QJsonDocument9toVariantEv(void* qthis); // 4
   // proto:  QJsonArray QJsonDocument::array();
-extern void _ZNK13QJsonDocument5arrayEv(void* qthis); // 4
+extern void C_ZNK13QJsonDocument5arrayEv(void* qthis); // 4
   // proto:  QByteArray QJsonDocument::toJson();
-extern void _ZNK13QJsonDocument6toJsonEv(void* qthis); // 4
+extern void C_ZNK13QJsonDocument6toJsonEv(void* qthis); // 4
   // proto:  QByteArray QJsonDocument::toBinaryData();
-extern void _ZNK13QJsonDocument12toBinaryDataEv(void* qthis); // 4
+extern void C_ZNK13QJsonDocument12toBinaryDataEv(void* qthis); // 4
   // proto:  bool QJsonDocument::isObject();
-extern void _ZNK13QJsonDocument8isObjectEv(void* qthis); // 4
+extern void C_ZNK13QJsonDocument8isObjectEv(void* qthis); // 4
   // proto:  QString QJsonParseError::errorString();
-extern void _ZNK15QJsonParseError11errorStringEv(void* qthis); // 4
+extern void C_ZNK15QJsonParseError11errorStringEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -96,7 +96,7 @@ func (this *QJsonDocument) fromVariant_s(args ...interface{}) () {
     // invoke: QJsonDocument fromVariant(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QJsonDocument11fromVariantERK8QVariant(arg0)
+    C.C_ZN13QJsonDocument11fromVariantERK8QVariant(arg0)
   default:
     qtrt.ErrorResolve("QJsonDocument", "fromVariant", args)
   }
@@ -116,7 +116,7 @@ func (this *QJsonDocument) FreeQJsonDocument(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QJsonDocumentD0Ev
     // invoke: void ~QJsonDocument()
-    C._ZN13QJsonDocumentD2Ev(this.qclsinst)
+    C.C_ZN13QJsonDocumentD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonDocument", "~QJsonDocument", args)
   }
@@ -138,7 +138,7 @@ func NewQJsonDocument(args ...interface{}) QJsonDocument {
     // invoke: void QJsonDocument()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QJsonDocumentC2Ev(qthis)
+    C.C_ZN13QJsonDocumentC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QJsonDocument", "QJsonDocument", args)
   }
@@ -159,7 +159,7 @@ func (this *QJsonDocument) object(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument6objectEv
     // invoke: QJsonObject object()
-    C._ZNK13QJsonDocument6objectEv(this.qclsinst)
+    C.C_ZNK13QJsonDocument6objectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonDocument", "object", args)
   }
@@ -179,7 +179,7 @@ func (this *QJsonDocument) isArray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument7isArrayEv
     // invoke: bool isArray()
-    C._ZNK13QJsonDocument7isArrayEv(this.qclsinst)
+    C.C_ZNK13QJsonDocument7isArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonDocument", "isArray", args)
   }
@@ -199,7 +199,7 @@ func (this *QJsonDocument) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument6isNullEv
     // invoke: bool isNull()
-    C._ZNK13QJsonDocument6isNullEv(this.qclsinst)
+    C.C_ZNK13QJsonDocument6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonDocument", "isNull", args)
   }
@@ -219,7 +219,7 @@ func (this *QJsonDocument) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK13QJsonDocument7isEmptyEv(this.qclsinst)
+    C.C_ZNK13QJsonDocument7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonDocument", "isEmpty", args)
   }
@@ -242,7 +242,7 @@ func (this *QJsonDocument) rawData(args ...interface{}) () {
     // invoke: const char * rawData(int *)
     var arg0 = (*C.int32_t)(args[0].(*int32))
     if false {fmt.Println(arg0)}
-    C._ZNK13QJsonDocument7rawDataEPi(this.qclsinst, arg0)
+    C.C_ZNK13QJsonDocument7rawDataEPi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonDocument", "rawData", args)
   }
@@ -262,7 +262,7 @@ func (this *QJsonDocument) toVariant(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument9toVariantEv
     // invoke: QVariant toVariant()
-    C._ZNK13QJsonDocument9toVariantEv(this.qclsinst)
+    C.C_ZNK13QJsonDocument9toVariantEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonDocument", "toVariant", args)
   }
@@ -282,7 +282,7 @@ func (this *QJsonDocument) array(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument5arrayEv
     // invoke: QJsonArray array()
-    C._ZNK13QJsonDocument5arrayEv(this.qclsinst)
+    C.C_ZNK13QJsonDocument5arrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonDocument", "array", args)
   }
@@ -302,7 +302,7 @@ func (this *QJsonDocument) toJson(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument6toJsonEv
     // invoke: QByteArray toJson()
-    C._ZNK13QJsonDocument6toJsonEv(this.qclsinst)
+    C.C_ZNK13QJsonDocument6toJsonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonDocument", "toJson", args)
   }
@@ -322,7 +322,7 @@ func (this *QJsonDocument) toBinaryData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument12toBinaryDataEv
     // invoke: QByteArray toBinaryData()
-    C._ZNK13QJsonDocument12toBinaryDataEv(this.qclsinst)
+    C.C_ZNK13QJsonDocument12toBinaryDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonDocument", "toBinaryData", args)
   }
@@ -342,7 +342,7 @@ func (this *QJsonDocument) isObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonDocument8isObjectEv
     // invoke: bool isObject()
-    C._ZNK13QJsonDocument8isObjectEv(this.qclsinst)
+    C.C_ZNK13QJsonDocument8isObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonDocument", "isObject", args)
   }
@@ -362,7 +362,7 @@ func (this *QJsonParseError) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QJsonParseError11errorStringEv
     // invoke: QString errorString()
-    C._ZNK15QJsonParseError11errorStringEv(this.qclsinst)
+    C.C_ZNK15QJsonParseError11errorStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonParseError", "errorString", args)
   }

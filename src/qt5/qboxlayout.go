@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qboxlayout.h
 // dst-file: /src/widgets/qboxlayout.go
 //
@@ -29,85 +29,85 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QHBoxLayout::QHBoxLayout(QWidget * parent);
-extern void _ZN11QHBoxLayoutC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN11QHBoxLayoutC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QHBoxLayout::QHBoxLayout();
-extern void _ZN11QHBoxLayoutC2Ev(void* qthis); // 3
+extern void C_ZN11QHBoxLayoutC2Ev(void* qthis); // 3
   // proto:  const QMetaObject * QHBoxLayout::metaObject();
-extern void _ZNK11QHBoxLayout10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QHBoxLayout10metaObjectEv(void* qthis); // 4
   // proto:  void QHBoxLayout::~QHBoxLayout();
-extern void _ZN11QHBoxLayoutD2Ev(void* qthis); // 4
+extern void C_ZN11QHBoxLayoutD2Ev(void* qthis); // 4
   // proto:  void QBoxLayout::invalidate();
-extern void _ZN10QBoxLayout10invalidateEv(void* qthis); // 4
+extern void C_ZN10QBoxLayout10invalidateEv(void* qthis); // 4
   // proto:  void QBoxLayout::setStretch(int index, int stretch);
-extern void _ZN10QBoxLayout10setStretchEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN10QBoxLayout10setStretchEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QBoxLayout::insertLayout(int index, QLayout * layout, int stretch);
-extern void _ZN10QBoxLayout12insertLayoutEiP7QLayouti(void* qthis, int32_t arg0, void* arg1, int32_t arg2); // 4
+extern void C_ZN10QBoxLayout12insertLayoutEiP7QLayouti(void* qthis, int32_t arg0, void* arg1, int32_t arg2); // 4
   // proto:  void QBoxLayout::insertStretch(int index, int stretch);
-extern void _ZN10QBoxLayout13insertStretchEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN10QBoxLayout13insertStretchEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QBoxLayout::addSpacerItem(QSpacerItem * spacerItem);
-extern void _ZN10QBoxLayout13addSpacerItemEP11QSpacerItem(void* qthis, void* arg0); // 4
+extern void C_ZN10QBoxLayout13addSpacerItemEP11QSpacerItem(void* qthis, void* arg0); // 4
   // proto:  Qt::Orientations QBoxLayout::expandingDirections();
-extern void _ZNK10QBoxLayout19expandingDirectionsEv(void* qthis); // 4
+extern void C_ZNK10QBoxLayout19expandingDirectionsEv(void* qthis); // 4
   // proto:  void QBoxLayout::insertSpacing(int index, int size);
-extern void _ZN10QBoxLayout13insertSpacingEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN10QBoxLayout13insertSpacingEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  int QBoxLayout::stretch(int index);
-extern void _ZNK10QBoxLayout7stretchEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK10QBoxLayout7stretchEi(void* qthis, int32_t arg0); // 4
   // proto:  int QBoxLayout::minimumHeightForWidth(int );
-extern void _ZNK10QBoxLayout21minimumHeightForWidthEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK10QBoxLayout21minimumHeightForWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  const QMetaObject * QBoxLayout::metaObject();
-extern void _ZNK10QBoxLayout10metaObjectEv(void* qthis); // 4
+extern void C_ZNK10QBoxLayout10metaObjectEv(void* qthis); // 4
   // proto:  void QBoxLayout::addStretch(int stretch);
-extern void _ZN10QBoxLayout10addStretchEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QBoxLayout10addStretchEi(void* qthis, int32_t arg0); // 4
   // proto:  void QBoxLayout::addStrut(int );
-extern void _ZN10QBoxLayout8addStrutEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QBoxLayout8addStrutEi(void* qthis, int32_t arg0); // 4
   // proto:  QBoxLayout::Direction QBoxLayout::direction();
-extern void _ZNK10QBoxLayout9directionEv(void* qthis); // 4
+extern void C_ZNK10QBoxLayout9directionEv(void* qthis); // 4
   // proto:  void QBoxLayout::addItem(QLayoutItem * );
-extern void _ZN10QBoxLayout7addItemEP11QLayoutItem(void* qthis, void* arg0); // 4
+extern void C_ZN10QBoxLayout7addItemEP11QLayoutItem(void* qthis, void* arg0); // 4
   // proto:  QLayoutItem * QBoxLayout::takeAt(int );
-extern void _ZN10QBoxLayout6takeAtEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QBoxLayout6takeAtEi(void* qthis, int32_t arg0); // 4
   // proto:  void QBoxLayout::insertItem(int index, QLayoutItem * );
-extern void _ZN10QBoxLayout10insertItemEiP11QLayoutItem(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN10QBoxLayout10insertItemEiP11QLayoutItem(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QBoxLayout::setSpacing(int spacing);
-extern void _ZN10QBoxLayout10setSpacingEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QBoxLayout10setSpacingEi(void* qthis, int32_t arg0); // 4
   // proto:  void QBoxLayout::setGeometry(const QRect & );
-extern void _ZN10QBoxLayout11setGeometryERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZN10QBoxLayout11setGeometryERK5QRect(void* qthis, void* arg0); // 4
   // proto:  int QBoxLayout::spacing();
-extern void _ZNK10QBoxLayout7spacingEv(void* qthis); // 4
+extern void C_ZNK10QBoxLayout7spacingEv(void* qthis); // 4
   // proto:  void QBoxLayout::~QBoxLayout();
-extern void _ZN10QBoxLayoutD2Ev(void* qthis); // 4
+extern void C_ZN10QBoxLayoutD2Ev(void* qthis); // 4
   // proto:  int QBoxLayout::count();
-extern void _ZNK10QBoxLayout5countEv(void* qthis); // 4
+extern void C_ZNK10QBoxLayout5countEv(void* qthis); // 4
   // proto:  void QBoxLayout::addSpacing(int size);
-extern void _ZN10QBoxLayout10addSpacingEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QBoxLayout10addSpacingEi(void* qthis, int32_t arg0); // 4
   // proto:  QSize QBoxLayout::sizeHint();
-extern void _ZNK10QBoxLayout8sizeHintEv(void* qthis); // 4
+extern void C_ZNK10QBoxLayout8sizeHintEv(void* qthis); // 4
   // proto:  bool QBoxLayout::hasHeightForWidth();
-extern void _ZNK10QBoxLayout17hasHeightForWidthEv(void* qthis); // 4
+extern void C_ZNK10QBoxLayout17hasHeightForWidthEv(void* qthis); // 4
   // proto:  QLayoutItem * QBoxLayout::itemAt(int );
-extern void _ZNK10QBoxLayout6itemAtEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK10QBoxLayout6itemAtEi(void* qthis, int32_t arg0); // 4
   // proto:  QSize QBoxLayout::minimumSize();
-extern void _ZNK10QBoxLayout11minimumSizeEv(void* qthis); // 4
+extern void C_ZNK10QBoxLayout11minimumSizeEv(void* qthis); // 4
   // proto:  int QBoxLayout::heightForWidth(int );
-extern void _ZNK10QBoxLayout14heightForWidthEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK10QBoxLayout14heightForWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  void QBoxLayout::insertSpacerItem(int index, QSpacerItem * spacerItem);
-extern void _ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QBoxLayout::addLayout(QLayout * layout, int stretch);
-extern void _ZN10QBoxLayout9addLayoutEP7QLayouti(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN10QBoxLayout9addLayoutEP7QLayouti(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  bool QBoxLayout::setStretchFactor(QLayout * l, int stretch);
-extern void _ZN10QBoxLayout16setStretchFactorEP7QLayouti(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN10QBoxLayout16setStretchFactorEP7QLayouti(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  bool QBoxLayout::setStretchFactor(QWidget * w, int stretch);
-extern void _ZN10QBoxLayout16setStretchFactorEP7QWidgeti(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QSize QBoxLayout::maximumSize();
-extern void _ZNK10QBoxLayout11maximumSizeEv(void* qthis); // 4
+extern void C_ZNK10QBoxLayout11maximumSizeEv(void* qthis); // 4
   // proto:  void QVBoxLayout::QVBoxLayout();
-extern void _ZN11QVBoxLayoutC2Ev(void* qthis); // 3
+extern void C_ZN11QVBoxLayoutC2Ev(void* qthis); // 3
   // proto:  void QVBoxLayout::QVBoxLayout(QWidget * parent);
-extern void _ZN11QVBoxLayoutC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN11QVBoxLayoutC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QVBoxLayout::~QVBoxLayout();
-extern void _ZN11QVBoxLayoutD2Ev(void* qthis); // 4
+extern void C_ZN11QVBoxLayoutD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QVBoxLayout::metaObject();
-extern void _ZNK11QVBoxLayout10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QVBoxLayout10metaObjectEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -158,13 +158,13 @@ func NewQHBoxLayout(args ...interface{}) QHBoxLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QHBoxLayoutC2EP7QWidget(qthis, arg0)
+    C.C_ZN11QHBoxLayoutC2EP7QWidget(qthis, arg0)
   case 1:
     // invoke: _ZN11QHBoxLayoutC1Ev
     // invoke: void QHBoxLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QHBoxLayoutC2Ev(qthis)
+    C.C_ZN11QHBoxLayoutC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QHBoxLayout", "QHBoxLayout", args)
   }
@@ -185,7 +185,7 @@ func (this *QHBoxLayout) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHBoxLayout10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QHBoxLayout10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QHBoxLayout10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHBoxLayout", "metaObject", args)
   }
@@ -205,7 +205,7 @@ func (this *QHBoxLayout) FreeQHBoxLayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHBoxLayoutD0Ev
     // invoke: void ~QHBoxLayout()
-    C._ZN11QHBoxLayoutD2Ev(this.qclsinst)
+    C.C_ZN11QHBoxLayoutD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHBoxLayout", "~QHBoxLayout", args)
   }
@@ -225,7 +225,7 @@ func (this *QBoxLayout) invalidate(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout10invalidateEv
     // invoke: void invalidate()
-    C._ZN10QBoxLayout10invalidateEv(this.qclsinst)
+    C.C_ZN10QBoxLayout10invalidateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "invalidate", args)
   }
@@ -251,7 +251,7 @@ func (this *QBoxLayout) setStretch(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QBoxLayout10setStretchEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout10setStretchEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "setStretch", args)
   }
@@ -280,7 +280,7 @@ func (this *QBoxLayout) insertLayout(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN10QBoxLayout12insertLayoutEiP7QLayouti(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN10QBoxLayout12insertLayoutEiP7QLayouti(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertLayout", args)
   }
@@ -306,7 +306,7 @@ func (this *QBoxLayout) insertStretch(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QBoxLayout13insertStretchEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout13insertStretchEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertStretch", args)
   }
@@ -329,7 +329,7 @@ func (this *QBoxLayout) addSpacerItem(args ...interface{}) () {
     // invoke: void addSpacerItem(class QSpacerItem *)
     var arg0 = args[0].(QSpacerItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QBoxLayout13addSpacerItemEP11QSpacerItem(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout13addSpacerItemEP11QSpacerItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "addSpacerItem", args)
   }
@@ -349,7 +349,7 @@ func (this *QBoxLayout) expandingDirections(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout19expandingDirectionsEv
     // invoke: Qt::Orientations expandingDirections()
-    C._ZNK10QBoxLayout19expandingDirectionsEv(this.qclsinst)
+    C.C_ZNK10QBoxLayout19expandingDirectionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "expandingDirections", args)
   }
@@ -375,7 +375,7 @@ func (this *QBoxLayout) insertSpacing(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QBoxLayout13insertSpacingEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout13insertSpacingEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertSpacing", args)
   }
@@ -398,7 +398,7 @@ func (this *QBoxLayout) stretch(args ...interface{}) () {
     // invoke: int stretch(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK10QBoxLayout7stretchEi(this.qclsinst, arg0)
+    C.C_ZNK10QBoxLayout7stretchEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "stretch", args)
   }
@@ -421,7 +421,7 @@ func (this *QBoxLayout) minimumHeightForWidth(args ...interface{}) () {
     // invoke: int minimumHeightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK10QBoxLayout21minimumHeightForWidthEi(this.qclsinst, arg0)
+    C.C_ZNK10QBoxLayout21minimumHeightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "minimumHeightForWidth", args)
   }
@@ -441,7 +441,7 @@ func (this *QBoxLayout) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK10QBoxLayout10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QBoxLayout10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "metaObject", args)
   }
@@ -464,7 +464,7 @@ func (this *QBoxLayout) addStretch(args ...interface{}) () {
     // invoke: void addStretch(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QBoxLayout10addStretchEi(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout10addStretchEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "addStretch", args)
   }
@@ -487,7 +487,7 @@ func (this *QBoxLayout) addStrut(args ...interface{}) () {
     // invoke: void addStrut(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QBoxLayout8addStrutEi(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout8addStrutEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "addStrut", args)
   }
@@ -507,7 +507,7 @@ func (this *QBoxLayout) direction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout9directionEv
     // invoke: QBoxLayout::Direction direction()
-    C._ZNK10QBoxLayout9directionEv(this.qclsinst)
+    C.C_ZNK10QBoxLayout9directionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "direction", args)
   }
@@ -530,7 +530,7 @@ func (this *QBoxLayout) addItem(args ...interface{}) () {
     // invoke: void addItem(class QLayoutItem *)
     var arg0 = args[0].(QLayoutItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QBoxLayout7addItemEP11QLayoutItem(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout7addItemEP11QLayoutItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "addItem", args)
   }
@@ -553,7 +553,7 @@ func (this *QBoxLayout) takeAt(args ...interface{}) () {
     // invoke: QLayoutItem * takeAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QBoxLayout6takeAtEi(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout6takeAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "takeAt", args)
   }
@@ -579,7 +579,7 @@ func (this *QBoxLayout) insertItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QLayoutItem).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN10QBoxLayout10insertItemEiP11QLayoutItem(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout10insertItemEiP11QLayoutItem(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertItem", args)
   }
@@ -602,7 +602,7 @@ func (this *QBoxLayout) setSpacing(args ...interface{}) () {
     // invoke: void setSpacing(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QBoxLayout10setSpacingEi(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout10setSpacingEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "setSpacing", args)
   }
@@ -625,7 +625,7 @@ func (this *QBoxLayout) setGeometry(args ...interface{}) () {
     // invoke: void setGeometry(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QBoxLayout11setGeometryERK5QRect(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout11setGeometryERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "setGeometry", args)
   }
@@ -645,7 +645,7 @@ func (this *QBoxLayout) spacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout7spacingEv
     // invoke: int spacing()
-    C._ZNK10QBoxLayout7spacingEv(this.qclsinst)
+    C.C_ZNK10QBoxLayout7spacingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "spacing", args)
   }
@@ -665,7 +665,7 @@ func (this *QBoxLayout) FreeQBoxLayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayoutD0Ev
     // invoke: void ~QBoxLayout()
-    C._ZN10QBoxLayoutD2Ev(this.qclsinst)
+    C.C_ZN10QBoxLayoutD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "~QBoxLayout", args)
   }
@@ -685,7 +685,7 @@ func (this *QBoxLayout) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout5countEv
     // invoke: int count()
-    C._ZNK10QBoxLayout5countEv(this.qclsinst)
+    C.C_ZNK10QBoxLayout5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "count", args)
   }
@@ -708,7 +708,7 @@ func (this *QBoxLayout) addSpacing(args ...interface{}) () {
     // invoke: void addSpacing(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QBoxLayout10addSpacingEi(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout10addSpacingEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "addSpacing", args)
   }
@@ -728,7 +728,7 @@ func (this *QBoxLayout) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK10QBoxLayout8sizeHintEv(this.qclsinst)
+    C.C_ZNK10QBoxLayout8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "sizeHint", args)
   }
@@ -748,7 +748,7 @@ func (this *QBoxLayout) hasHeightForWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    C._ZNK10QBoxLayout17hasHeightForWidthEv(this.qclsinst)
+    C.C_ZNK10QBoxLayout17hasHeightForWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "hasHeightForWidth", args)
   }
@@ -771,7 +771,7 @@ func (this *QBoxLayout) itemAt(args ...interface{}) () {
     // invoke: QLayoutItem * itemAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK10QBoxLayout6itemAtEi(this.qclsinst, arg0)
+    C.C_ZNK10QBoxLayout6itemAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "itemAt", args)
   }
@@ -791,7 +791,7 @@ func (this *QBoxLayout) minimumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout11minimumSizeEv
     // invoke: QSize minimumSize()
-    C._ZNK10QBoxLayout11minimumSizeEv(this.qclsinst)
+    C.C_ZNK10QBoxLayout11minimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "minimumSize", args)
   }
@@ -814,7 +814,7 @@ func (this *QBoxLayout) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK10QBoxLayout14heightForWidthEi(this.qclsinst, arg0)
+    C.C_ZNK10QBoxLayout14heightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "heightForWidth", args)
   }
@@ -840,7 +840,7 @@ func (this *QBoxLayout) insertSpacerItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QSpacerItem).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertSpacerItem", args)
   }
@@ -866,7 +866,7 @@ func (this *QBoxLayout) addLayout(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QBoxLayout9addLayoutEP7QLayouti(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout9addLayoutEP7QLayouti(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "addLayout", args)
   }
@@ -896,7 +896,7 @@ func (this *QBoxLayout) setStretchFactor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QBoxLayout16setStretchFactorEP7QLayouti(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout16setStretchFactorEP7QLayouti(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN10QBoxLayout16setStretchFactorEP7QWidgeti
     // invoke: bool setStretchFactor(class QWidget *, int)
@@ -904,7 +904,7 @@ func (this *QBoxLayout) setStretchFactor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QBoxLayout16setStretchFactorEP7QWidgeti(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "setStretchFactor", args)
   }
@@ -924,7 +924,7 @@ func (this *QBoxLayout) maximumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout11maximumSizeEv
     // invoke: QSize maximumSize()
-    C._ZNK10QBoxLayout11maximumSizeEv(this.qclsinst)
+    C.C_ZNK10QBoxLayout11maximumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "maximumSize", args)
   }
@@ -949,7 +949,7 @@ func NewQVBoxLayout(args ...interface{}) QVBoxLayout {
     // invoke: void QVBoxLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QVBoxLayoutC2Ev(qthis)
+    C.C_ZN11QVBoxLayoutC2Ev(qthis)
   case 1:
     // invoke: _ZN11QVBoxLayoutC1EP7QWidget
     // invoke: void QVBoxLayout(class QWidget *)
@@ -957,7 +957,7 @@ func NewQVBoxLayout(args ...interface{}) QVBoxLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QVBoxLayoutC2EP7QWidget(qthis, arg0)
+    C.C_ZN11QVBoxLayoutC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QVBoxLayout", "QVBoxLayout", args)
   }
@@ -978,7 +978,7 @@ func (this *QVBoxLayout) FreeQVBoxLayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QVBoxLayoutD0Ev
     // invoke: void ~QVBoxLayout()
-    C._ZN11QVBoxLayoutD2Ev(this.qclsinst)
+    C.C_ZN11QVBoxLayoutD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVBoxLayout", "~QVBoxLayout", args)
   }
@@ -998,7 +998,7 @@ func (this *QVBoxLayout) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QVBoxLayout10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QVBoxLayout10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QVBoxLayout10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVBoxLayout", "metaObject", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qfiledialog.h
 // dst-file: /src/widgets/qfiledialog.go
 //
@@ -29,101 +29,101 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QFileDialog::selectFile(const QString & filename);
-extern void _ZN11QFileDialog10selectFileERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog10selectFileERK7QString(void* qthis, void* arg0); // 4
   // proto:  QUrl QFileDialog::directoryUrl();
-extern void _ZNK11QFileDialog12directoryUrlEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog12directoryUrlEv(void* qthis); // 4
   // proto:  QList<QUrl> QFileDialog::sidebarUrls();
-extern void _ZNK11QFileDialog11sidebarUrlsEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog11sidebarUrlsEv(void* qthis); // 4
   // proto:  void QFileDialog::selectUrl(const QUrl & url);
-extern void _ZN11QFileDialog9selectUrlERK4QUrl(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog9selectUrlERK4QUrl(void* qthis, void* arg0); // 4
   // proto:  void QFileDialog::~QFileDialog();
-extern void _ZN11QFileDialogD2Ev(void* qthis); // 4
+extern void C_ZN11QFileDialogD2Ev(void* qthis); // 4
   // proto:  void QFileDialog::QFileDialog(QWidget * parent, const QString & caption, const QString & directory, const QString & filter);
-extern void _ZN11QFileDialogC2EP7QWidgetRK7QStringS4_S4_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 3
+extern void C_ZN11QFileDialogC2EP7QWidgetRK7QStringS4_S4_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 3
   // proto:  QByteArray QFileDialog::saveState();
-extern void _ZNK11QFileDialog9saveStateEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog9saveStateEv(void* qthis); // 4
   // proto:  QString QFileDialog::selectedNameFilter();
-extern void _ZNK11QFileDialog18selectedNameFilterEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog18selectedNameFilterEv(void* qthis); // 4
   // proto:  QFileDialog::FileMode QFileDialog::fileMode();
-extern void _ZNK11QFileDialog8fileModeEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog8fileModeEv(void* qthis); // 4
   // proto:  bool QFileDialog::resolveSymlinks();
-extern void _ZNK11QFileDialog15resolveSymlinksEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog15resolveSymlinksEv(void* qthis); // 4
   // proto:  void QFileDialog::open(QObject * receiver, const char * member);
-extern void _ZN11QFileDialog4openEP7QObjectPKc(void* qthis, void* arg0, unsigned char* arg1); // 4
+extern void C_ZN11QFileDialog4openEP7QObjectPKc(void* qthis, void* arg0, unsigned char* arg1); // 4
   // proto:  bool QFileDialog::isNameFilterDetailsVisible();
-extern void _ZNK11QFileDialog26isNameFilterDetailsVisibleEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog26isNameFilterDetailsVisibleEv(void* qthis); // 4
   // proto:  QString QFileDialog::defaultSuffix();
-extern void _ZNK11QFileDialog13defaultSuffixEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog13defaultSuffixEv(void* qthis); // 4
   // proto:  void QFileDialog::setProxyModel(QAbstractProxyModel * model);
-extern void _ZN11QFileDialog13setProxyModelEP19QAbstractProxyModel(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog13setProxyModelEP19QAbstractProxyModel(void* qthis, void* arg0); // 4
   // proto:  void QFileDialog::setDirectoryUrl(const QUrl & directory);
-extern void _ZN11QFileDialog15setDirectoryUrlERK4QUrl(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog15setDirectoryUrlERK4QUrl(void* qthis, void* arg0); // 4
   // proto:  void QFileDialog::setResolveSymlinks(bool enabled);
-extern void _ZN11QFileDialog18setResolveSymlinksEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QFileDialog18setResolveSymlinksEb(void* qthis, bool arg0); // 4
   // proto:  bool QFileDialog::isReadOnly();
-extern void _ZNK11QFileDialog10isReadOnlyEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog10isReadOnlyEv(void* qthis); // 4
   // proto:  void QFileDialog::setItemDelegate(QAbstractItemDelegate * delegate);
-extern void _ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate(void* qthis, void* arg0); // 4
   // proto:  void QFileDialog::setNameFilter(const QString & filter);
-extern void _ZN11QFileDialog13setNameFilterERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog13setNameFilterERK7QString(void* qthis, void* arg0); // 4
   // proto:  QAbstractProxyModel * QFileDialog::proxyModel();
-extern void _ZNK11QFileDialog10proxyModelEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog10proxyModelEv(void* qthis); // 4
   // proto:  void QFileDialog::setMimeTypeFilters(const QStringList & filters);
-extern void _ZN11QFileDialog18setMimeTypeFiltersERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog18setMimeTypeFiltersERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  void QFileDialog::selectNameFilter(const QString & filter);
-extern void _ZN11QFileDialog16selectNameFilterERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog16selectNameFilterERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QFileDialog::setIconProvider(QFileIconProvider * provider);
-extern void _ZN11QFileDialog15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0); // 4
   // proto:  bool QFileDialog::restoreState(const QByteArray & state);
-extern void _ZN11QFileDialog12restoreStateERK10QByteArray(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog12restoreStateERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  bool QFileDialog::confirmOverwrite();
-extern void _ZNK11QFileDialog16confirmOverwriteEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog16confirmOverwriteEv(void* qthis); // 4
   // proto:  QList<QUrl> QFileDialog::selectedUrls();
-extern void _ZNK11QFileDialog12selectedUrlsEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog12selectedUrlsEv(void* qthis); // 4
   // proto:  QAbstractItemDelegate * QFileDialog::itemDelegate();
-extern void _ZNK11QFileDialog12itemDelegateEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog12itemDelegateEv(void* qthis); // 4
   // proto:  void QFileDialog::selectMimeTypeFilter(const QString & filter);
-extern void _ZN11QFileDialog20selectMimeTypeFilterERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog20selectMimeTypeFilterERK7QString(void* qthis, void* arg0); // 4
   // proto:  QStringList QFileDialog::selectedFiles();
-extern void _ZNK11QFileDialog13selectedFilesEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog13selectedFilesEv(void* qthis); // 4
   // proto:  void QFileDialog::setNameFilterDetailsVisible(bool enabled);
-extern void _ZN11QFileDialog27setNameFilterDetailsVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QFileDialog27setNameFilterDetailsVisibleEb(void* qthis, bool arg0); // 4
   // proto:  void QFileDialog::setConfirmOverwrite(bool enabled);
-extern void _ZN11QFileDialog19setConfirmOverwriteEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QFileDialog19setConfirmOverwriteEb(void* qthis, bool arg0); // 4
   // proto:  void QFileDialog::setNameFilters(const QStringList & filters);
-extern void _ZN11QFileDialog14setNameFiltersERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog14setNameFiltersERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  void QFileDialog::setDefaultSuffix(const QString & suffix);
-extern void _ZN11QFileDialog16setDefaultSuffixERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog16setDefaultSuffixERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QFileDialog::setDirectory(const QDir & directory);
-extern void _ZN11QFileDialog12setDirectoryERK4QDir(void* qthis, void* arg0); // 2
+extern void C_ZN11QFileDialog12setDirectoryERK4QDir(void* qthis, void* arg0); // 2
   // proto:  void QFileDialog::setDirectory(const QString & directory);
-extern void _ZN11QFileDialog12setDirectoryERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog12setDirectoryERK7QString(void* qthis, void* arg0); // 4
   // proto:  QFileIconProvider * QFileDialog::iconProvider();
-extern void _ZNK11QFileDialog12iconProviderEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog12iconProviderEv(void* qthis); // 4
   // proto:  const QMetaObject * QFileDialog::metaObject();
-extern void _ZNK11QFileDialog10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog10metaObjectEv(void* qthis); // 4
   // proto:  QStringList QFileDialog::nameFilters();
-extern void _ZNK11QFileDialog11nameFiltersEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog11nameFiltersEv(void* qthis); // 4
   // proto:  QStringList QFileDialog::mimeTypeFilters();
-extern void _ZNK11QFileDialog15mimeTypeFiltersEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog15mimeTypeFiltersEv(void* qthis); // 4
   // proto:  void QFileDialog::setHistory(const QStringList & paths);
-extern void _ZN11QFileDialog10setHistoryERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN11QFileDialog10setHistoryERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  QDir::Filters QFileDialog::filter();
-extern void _ZNK11QFileDialog6filterEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog6filterEv(void* qthis); // 4
   // proto:  void QFileDialog::setReadOnly(bool enabled);
-extern void _ZN11QFileDialog11setReadOnlyEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QFileDialog11setReadOnlyEb(void* qthis, bool arg0); // 4
   // proto:  QFileDialog::AcceptMode QFileDialog::acceptMode();
-extern void _ZNK11QFileDialog10acceptModeEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog10acceptModeEv(void* qthis); // 4
   // proto:  QDir QFileDialog::directory();
-extern void _ZNK11QFileDialog9directoryEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog9directoryEv(void* qthis); // 4
   // proto:  QFileDialog::ViewMode QFileDialog::viewMode();
-extern void _ZNK11QFileDialog8viewModeEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog8viewModeEv(void* qthis); // 4
   // proto:  void QFileDialog::setVisible(bool visible);
-extern void _ZN11QFileDialog10setVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QFileDialog10setVisibleEb(void* qthis, bool arg0); // 4
   // proto:  Options QFileDialog::options();
-extern void _ZNK11QFileDialog7optionsEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog7optionsEv(void* qthis); // 4
   // proto:  QStringList QFileDialog::history();
-extern void _ZNK11QFileDialog7historyEv(void* qthis); // 4
+extern void C_ZNK11QFileDialog7historyEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -167,7 +167,7 @@ func (this *QFileDialog) selectFile(args ...interface{}) () {
     // invoke: void selectFile(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog10selectFileERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog10selectFileERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "selectFile", args)
   }
@@ -187,7 +187,7 @@ func (this *QFileDialog) directoryUrl(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog12directoryUrlEv
     // invoke: QUrl directoryUrl()
-    C._ZNK11QFileDialog12directoryUrlEv(this.qclsinst)
+    C.C_ZNK11QFileDialog12directoryUrlEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "directoryUrl", args)
   }
@@ -207,7 +207,7 @@ func (this *QFileDialog) sidebarUrls(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog11sidebarUrlsEv
     // invoke: QList<QUrl> sidebarUrls()
-    C._ZNK11QFileDialog11sidebarUrlsEv(this.qclsinst)
+    C.C_ZNK11QFileDialog11sidebarUrlsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "sidebarUrls", args)
   }
@@ -230,7 +230,7 @@ func (this *QFileDialog) selectUrl(args ...interface{}) () {
     // invoke: void selectUrl(const class QUrl &)
     var arg0 = args[0].(QUrl).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog9selectUrlERK4QUrl(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog9selectUrlERK4QUrl(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "selectUrl", args)
   }
@@ -250,7 +250,7 @@ func (this *QFileDialog) FreeQFileDialog(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDialogD0Ev
     // invoke: void ~QFileDialog()
-    C._ZN11QFileDialogD2Ev(this.qclsinst)
+    C.C_ZN11QFileDialogD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "~QFileDialog", args)
   }
@@ -284,7 +284,7 @@ func NewQFileDialog(args ...interface{}) QFileDialog {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QFileDialogC2EP7QWidgetRK7QStringS4_S4_(qthis, arg0, arg1, arg2, arg3)
+    C.C_ZN11QFileDialogC2EP7QWidgetRK7QStringS4_S4_(qthis, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QFileDialog", "QFileDialog", args)
   }
@@ -305,7 +305,7 @@ func (this *QFileDialog) saveState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog9saveStateEv
     // invoke: QByteArray saveState()
-    C._ZNK11QFileDialog9saveStateEv(this.qclsinst)
+    C.C_ZNK11QFileDialog9saveStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "saveState", args)
   }
@@ -325,7 +325,7 @@ func (this *QFileDialog) selectedNameFilter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog18selectedNameFilterEv
     // invoke: QString selectedNameFilter()
-    C._ZNK11QFileDialog18selectedNameFilterEv(this.qclsinst)
+    C.C_ZNK11QFileDialog18selectedNameFilterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "selectedNameFilter", args)
   }
@@ -345,7 +345,7 @@ func (this *QFileDialog) fileMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog8fileModeEv
     // invoke: QFileDialog::FileMode fileMode()
-    C._ZNK11QFileDialog8fileModeEv(this.qclsinst)
+    C.C_ZNK11QFileDialog8fileModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "fileMode", args)
   }
@@ -365,7 +365,7 @@ func (this *QFileDialog) resolveSymlinks(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog15resolveSymlinksEv
     // invoke: bool resolveSymlinks()
-    C._ZNK11QFileDialog15resolveSymlinksEv(this.qclsinst)
+    C.C_ZNK11QFileDialog15resolveSymlinksEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "resolveSymlinks", args)
   }
@@ -391,7 +391,7 @@ func (this *QFileDialog) open(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C._ZN11QFileDialog4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
+    C.C_ZN11QFileDialog4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFileDialog", "open", args)
   }
@@ -411,7 +411,7 @@ func (this *QFileDialog) isNameFilterDetailsVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog26isNameFilterDetailsVisibleEv
     // invoke: bool isNameFilterDetailsVisible()
-    C._ZNK11QFileDialog26isNameFilterDetailsVisibleEv(this.qclsinst)
+    C.C_ZNK11QFileDialog26isNameFilterDetailsVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "isNameFilterDetailsVisible", args)
   }
@@ -431,7 +431,7 @@ func (this *QFileDialog) defaultSuffix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog13defaultSuffixEv
     // invoke: QString defaultSuffix()
-    C._ZNK11QFileDialog13defaultSuffixEv(this.qclsinst)
+    C.C_ZNK11QFileDialog13defaultSuffixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "defaultSuffix", args)
   }
@@ -454,7 +454,7 @@ func (this *QFileDialog) setProxyModel(args ...interface{}) () {
     // invoke: void setProxyModel(class QAbstractProxyModel *)
     var arg0 = args[0].(QAbstractProxyModel).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog13setProxyModelEP19QAbstractProxyModel(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog13setProxyModelEP19QAbstractProxyModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setProxyModel", args)
   }
@@ -477,7 +477,7 @@ func (this *QFileDialog) setDirectoryUrl(args ...interface{}) () {
     // invoke: void setDirectoryUrl(const class QUrl &)
     var arg0 = args[0].(QUrl).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog15setDirectoryUrlERK4QUrl(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog15setDirectoryUrlERK4QUrl(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setDirectoryUrl", args)
   }
@@ -500,7 +500,7 @@ func (this *QFileDialog) setResolveSymlinks(args ...interface{}) () {
     // invoke: void setResolveSymlinks(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog18setResolveSymlinksEb(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog18setResolveSymlinksEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setResolveSymlinks", args)
   }
@@ -520,7 +520,7 @@ func (this *QFileDialog) isReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog10isReadOnlyEv
     // invoke: bool isReadOnly()
-    C._ZNK11QFileDialog10isReadOnlyEv(this.qclsinst)
+    C.C_ZNK11QFileDialog10isReadOnlyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "isReadOnly", args)
   }
@@ -543,7 +543,7 @@ func (this *QFileDialog) setItemDelegate(args ...interface{}) () {
     // invoke: void setItemDelegate(class QAbstractItemDelegate *)
     var arg0 = args[0].(QAbstractItemDelegate).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setItemDelegate", args)
   }
@@ -566,7 +566,7 @@ func (this *QFileDialog) setNameFilter(args ...interface{}) () {
     // invoke: void setNameFilter(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog13setNameFilterERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog13setNameFilterERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setNameFilter", args)
   }
@@ -586,7 +586,7 @@ func (this *QFileDialog) proxyModel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog10proxyModelEv
     // invoke: QAbstractProxyModel * proxyModel()
-    C._ZNK11QFileDialog10proxyModelEv(this.qclsinst)
+    C.C_ZNK11QFileDialog10proxyModelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "proxyModel", args)
   }
@@ -609,7 +609,7 @@ func (this *QFileDialog) setMimeTypeFilters(args ...interface{}) () {
     // invoke: void setMimeTypeFilters(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog18setMimeTypeFiltersERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog18setMimeTypeFiltersERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setMimeTypeFilters", args)
   }
@@ -632,7 +632,7 @@ func (this *QFileDialog) selectNameFilter(args ...interface{}) () {
     // invoke: void selectNameFilter(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog16selectNameFilterERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog16selectNameFilterERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "selectNameFilter", args)
   }
@@ -655,7 +655,7 @@ func (this *QFileDialog) setIconProvider(args ...interface{}) () {
     // invoke: void setIconProvider(class QFileIconProvider *)
     var arg0 = args[0].(QFileIconProvider).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog15setIconProviderEP17QFileIconProvider(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog15setIconProviderEP17QFileIconProvider(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setIconProvider", args)
   }
@@ -678,7 +678,7 @@ func (this *QFileDialog) restoreState(args ...interface{}) () {
     // invoke: bool restoreState(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog12restoreStateERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog12restoreStateERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "restoreState", args)
   }
@@ -698,7 +698,7 @@ func (this *QFileDialog) confirmOverwrite(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog16confirmOverwriteEv
     // invoke: bool confirmOverwrite()
-    C._ZNK11QFileDialog16confirmOverwriteEv(this.qclsinst)
+    C.C_ZNK11QFileDialog16confirmOverwriteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "confirmOverwrite", args)
   }
@@ -718,7 +718,7 @@ func (this *QFileDialog) selectedUrls(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog12selectedUrlsEv
     // invoke: QList<QUrl> selectedUrls()
-    C._ZNK11QFileDialog12selectedUrlsEv(this.qclsinst)
+    C.C_ZNK11QFileDialog12selectedUrlsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "selectedUrls", args)
   }
@@ -738,7 +738,7 @@ func (this *QFileDialog) itemDelegate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog12itemDelegateEv
     // invoke: QAbstractItemDelegate * itemDelegate()
-    C._ZNK11QFileDialog12itemDelegateEv(this.qclsinst)
+    C.C_ZNK11QFileDialog12itemDelegateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "itemDelegate", args)
   }
@@ -761,7 +761,7 @@ func (this *QFileDialog) selectMimeTypeFilter(args ...interface{}) () {
     // invoke: void selectMimeTypeFilter(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog20selectMimeTypeFilterERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog20selectMimeTypeFilterERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "selectMimeTypeFilter", args)
   }
@@ -781,7 +781,7 @@ func (this *QFileDialog) selectedFiles(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog13selectedFilesEv
     // invoke: QStringList selectedFiles()
-    C._ZNK11QFileDialog13selectedFilesEv(this.qclsinst)
+    C.C_ZNK11QFileDialog13selectedFilesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "selectedFiles", args)
   }
@@ -804,7 +804,7 @@ func (this *QFileDialog) setNameFilterDetailsVisible(args ...interface{}) () {
     // invoke: void setNameFilterDetailsVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog27setNameFilterDetailsVisibleEb(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog27setNameFilterDetailsVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setNameFilterDetailsVisible", args)
   }
@@ -827,7 +827,7 @@ func (this *QFileDialog) setConfirmOverwrite(args ...interface{}) () {
     // invoke: void setConfirmOverwrite(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog19setConfirmOverwriteEb(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog19setConfirmOverwriteEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setConfirmOverwrite", args)
   }
@@ -850,7 +850,7 @@ func (this *QFileDialog) setNameFilters(args ...interface{}) () {
     // invoke: void setNameFilters(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog14setNameFiltersERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog14setNameFiltersERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setNameFilters", args)
   }
@@ -873,7 +873,7 @@ func (this *QFileDialog) setDefaultSuffix(args ...interface{}) () {
     // invoke: void setDefaultSuffix(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog16setDefaultSuffixERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog16setDefaultSuffixERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setDefaultSuffix", args)
   }
@@ -899,13 +899,13 @@ func (this *QFileDialog) setDirectory(args ...interface{}) () {
     // invoke: void setDirectory(const class QDir &)
     var arg0 = args[0].(QDir).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog12setDirectoryERK4QDir(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog12setDirectoryERK4QDir(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN11QFileDialog12setDirectoryERK7QString
     // invoke: void setDirectory(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog12setDirectoryERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog12setDirectoryERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setDirectory", args)
   }
@@ -925,7 +925,7 @@ func (this *QFileDialog) iconProvider(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog12iconProviderEv
     // invoke: QFileIconProvider * iconProvider()
-    C._ZNK11QFileDialog12iconProviderEv(this.qclsinst)
+    C.C_ZNK11QFileDialog12iconProviderEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "iconProvider", args)
   }
@@ -945,7 +945,7 @@ func (this *QFileDialog) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QFileDialog10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QFileDialog10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "metaObject", args)
   }
@@ -965,7 +965,7 @@ func (this *QFileDialog) nameFilters(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog11nameFiltersEv
     // invoke: QStringList nameFilters()
-    C._ZNK11QFileDialog11nameFiltersEv(this.qclsinst)
+    C.C_ZNK11QFileDialog11nameFiltersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "nameFilters", args)
   }
@@ -985,7 +985,7 @@ func (this *QFileDialog) mimeTypeFilters(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog15mimeTypeFiltersEv
     // invoke: QStringList mimeTypeFilters()
-    C._ZNK11QFileDialog15mimeTypeFiltersEv(this.qclsinst)
+    C.C_ZNK11QFileDialog15mimeTypeFiltersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "mimeTypeFilters", args)
   }
@@ -1008,7 +1008,7 @@ func (this *QFileDialog) setHistory(args ...interface{}) () {
     // invoke: void setHistory(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog10setHistoryERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog10setHistoryERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setHistory", args)
   }
@@ -1028,7 +1028,7 @@ func (this *QFileDialog) filter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog6filterEv
     // invoke: QDir::Filters filter()
-    C._ZNK11QFileDialog6filterEv(this.qclsinst)
+    C.C_ZNK11QFileDialog6filterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "filter", args)
   }
@@ -1051,7 +1051,7 @@ func (this *QFileDialog) setReadOnly(args ...interface{}) () {
     // invoke: void setReadOnly(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog11setReadOnlyEb(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog11setReadOnlyEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setReadOnly", args)
   }
@@ -1071,7 +1071,7 @@ func (this *QFileDialog) acceptMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog10acceptModeEv
     // invoke: QFileDialog::AcceptMode acceptMode()
-    C._ZNK11QFileDialog10acceptModeEv(this.qclsinst)
+    C.C_ZNK11QFileDialog10acceptModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "acceptMode", args)
   }
@@ -1091,7 +1091,7 @@ func (this *QFileDialog) directory(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog9directoryEv
     // invoke: QDir directory()
-    C._ZNK11QFileDialog9directoryEv(this.qclsinst)
+    C.C_ZNK11QFileDialog9directoryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "directory", args)
   }
@@ -1111,7 +1111,7 @@ func (this *QFileDialog) viewMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog8viewModeEv
     // invoke: QFileDialog::ViewMode viewMode()
-    C._ZNK11QFileDialog8viewModeEv(this.qclsinst)
+    C.C_ZNK11QFileDialog8viewModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "viewMode", args)
   }
@@ -1134,7 +1134,7 @@ func (this *QFileDialog) setVisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QFileDialog10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN11QFileDialog10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDialog", "setVisible", args)
   }
@@ -1154,7 +1154,7 @@ func (this *QFileDialog) options(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog7optionsEv
     // invoke: Options options()
-    C._ZNK11QFileDialog7optionsEv(this.qclsinst)
+    C.C_ZNK11QFileDialog7optionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "options", args)
   }
@@ -1174,7 +1174,7 @@ func (this *QFileDialog) history(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDialog7historyEv
     // invoke: QStringList history()
-    C._ZNK11QFileDialog7historyEv(this.qclsinst)
+    C.C_ZNK11QFileDialog7historyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDialog", "history", args)
   }

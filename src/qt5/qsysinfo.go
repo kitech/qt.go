@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qsysinfo.h
 // dst-file: /src/core/qsysinfo.go
 //
@@ -29,25 +29,25 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QString QSysInfo::kernelVersion();
-extern void _ZN8QSysInfo13kernelVersionEv(); // 4
+extern void C_ZN8QSysInfo13kernelVersionEv(); // 4
   // proto: static QString QSysInfo::buildCpuArchitecture();
-extern void _ZN8QSysInfo20buildCpuArchitectureEv(); // 4
+extern void C_ZN8QSysInfo20buildCpuArchitectureEv(); // 4
   // proto: static QString QSysInfo::prettyProductName();
-extern void _ZN8QSysInfo17prettyProductNameEv(); // 4
+extern void C_ZN8QSysInfo17prettyProductNameEv(); // 4
   // proto: static QString QSysInfo::productVersion();
-extern void _ZN8QSysInfo14productVersionEv(); // 4
+extern void C_ZN8QSysInfo14productVersionEv(); // 4
   // proto: static QString QSysInfo::buildAbi();
-extern void _ZN8QSysInfo8buildAbiEv(); // 4
+extern void C_ZN8QSysInfo8buildAbiEv(); // 4
   // proto: static QString QSysInfo::kernelType();
-extern void _ZN8QSysInfo10kernelTypeEv(); // 4
+extern void C_ZN8QSysInfo10kernelTypeEv(); // 4
   // proto: static QString QSysInfo::productType();
-extern void _ZN8QSysInfo11productTypeEv(); // 4
+extern void C_ZN8QSysInfo11productTypeEv(); // 4
   // proto: static QSysInfo::WinVersion QSysInfo::windowsVersion();
-extern void _ZN8QSysInfo14windowsVersionEv(); // 2
+extern void C_ZN8QSysInfo14windowsVersionEv(); // 2
   // proto: static QString QSysInfo::currentCpuArchitecture();
-extern void _ZN8QSysInfo22currentCpuArchitectureEv(); // 4
+extern void C_ZN8QSysInfo22currentCpuArchitectureEv(); // 4
   // proto: static QSysInfo::MacVersion QSysInfo::macVersion();
-extern void _ZN8QSysInfo10macVersionEv(); // 2
+extern void C_ZN8QSysInfo10macVersionEv(); // 2
 */
 import "C"
 // } // <= ext block end
@@ -79,7 +79,7 @@ func (this *QSysInfo) kernelVersion_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo13kernelVersionEv
     // invoke: QString kernelVersion()
-    C._ZN8QSysInfo13kernelVersionEv()
+    C.C_ZN8QSysInfo13kernelVersionEv()
   default:
     qtrt.ErrorResolve("QSysInfo", "kernelVersion", args)
   }
@@ -99,7 +99,7 @@ func (this *QSysInfo) buildCpuArchitecture_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo20buildCpuArchitectureEv
     // invoke: QString buildCpuArchitecture()
-    C._ZN8QSysInfo20buildCpuArchitectureEv()
+    C.C_ZN8QSysInfo20buildCpuArchitectureEv()
   default:
     qtrt.ErrorResolve("QSysInfo", "buildCpuArchitecture", args)
   }
@@ -119,7 +119,7 @@ func (this *QSysInfo) prettyProductName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo17prettyProductNameEv
     // invoke: QString prettyProductName()
-    C._ZN8QSysInfo17prettyProductNameEv()
+    C.C_ZN8QSysInfo17prettyProductNameEv()
   default:
     qtrt.ErrorResolve("QSysInfo", "prettyProductName", args)
   }
@@ -139,7 +139,7 @@ func (this *QSysInfo) productVersion_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo14productVersionEv
     // invoke: QString productVersion()
-    C._ZN8QSysInfo14productVersionEv()
+    C.C_ZN8QSysInfo14productVersionEv()
   default:
     qtrt.ErrorResolve("QSysInfo", "productVersion", args)
   }
@@ -159,7 +159,7 @@ func (this *QSysInfo) buildAbi_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo8buildAbiEv
     // invoke: QString buildAbi()
-    C._ZN8QSysInfo8buildAbiEv()
+    C.C_ZN8QSysInfo8buildAbiEv()
   default:
     qtrt.ErrorResolve("QSysInfo", "buildAbi", args)
   }
@@ -179,7 +179,7 @@ func (this *QSysInfo) kernelType_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo10kernelTypeEv
     // invoke: QString kernelType()
-    C._ZN8QSysInfo10kernelTypeEv()
+    C.C_ZN8QSysInfo10kernelTypeEv()
   default:
     qtrt.ErrorResolve("QSysInfo", "kernelType", args)
   }
@@ -199,7 +199,7 @@ func (this *QSysInfo) productType_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo11productTypeEv
     // invoke: QString productType()
-    C._ZN8QSysInfo11productTypeEv()
+    C.C_ZN8QSysInfo11productTypeEv()
   default:
     qtrt.ErrorResolve("QSysInfo", "productType", args)
   }
@@ -219,7 +219,7 @@ func (this *QSysInfo) windowsVersion_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo14windowsVersionEv
     // invoke: QSysInfo::WinVersion windowsVersion()
-    C._ZN8QSysInfo14windowsVersionEv()
+    C.C_ZN8QSysInfo14windowsVersionEv()
   default:
     qtrt.ErrorResolve("QSysInfo", "windowsVersion", args)
   }
@@ -239,7 +239,7 @@ func (this *QSysInfo) currentCpuArchitecture_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo22currentCpuArchitectureEv
     // invoke: QString currentCpuArchitecture()
-    C._ZN8QSysInfo22currentCpuArchitectureEv()
+    C.C_ZN8QSysInfo22currentCpuArchitectureEv()
   default:
     qtrt.ErrorResolve("QSysInfo", "currentCpuArchitecture", args)
   }
@@ -259,7 +259,7 @@ func (this *QSysInfo) macVersion_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo10macVersionEv
     // invoke: QSysInfo::MacVersion macVersion()
-    C._ZN8QSysInfo10macVersionEv()
+    C.C_ZN8QSysInfo10macVersionEv()
   default:
     qtrt.ErrorResolve("QSysInfo", "macVersion", args)
   }

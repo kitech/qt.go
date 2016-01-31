@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qbuttongroup.h
 // dst-file: /src/widgets/qbuttongroup.go
 //
@@ -29,31 +29,31 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QButtonGroup::exclusive();
-extern void _ZNK12QButtonGroup9exclusiveEv(void* qthis); // 4
+extern void C_ZNK12QButtonGroup9exclusiveEv(void* qthis); // 4
   // proto:  void QButtonGroup::QButtonGroup(QObject * parent);
-extern void _ZN12QButtonGroupC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN12QButtonGroupC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QButtonGroup::addButton(QAbstractButton * , int id);
-extern void _ZN12QButtonGroup9addButtonEP15QAbstractButtoni(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN12QButtonGroup9addButtonEP15QAbstractButtoni(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QButtonGroup::~QButtonGroup();
-extern void _ZN12QButtonGroupD2Ev(void* qthis); // 4
+extern void C_ZN12QButtonGroupD2Ev(void* qthis); // 4
   // proto:  void QButtonGroup::removeButton(QAbstractButton * );
-extern void _ZN12QButtonGroup12removeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
+extern void C_ZN12QButtonGroup12removeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  int QButtonGroup::id(QAbstractButton * button);
-extern void _ZNK12QButtonGroup2idEP15QAbstractButton(void* qthis, void* arg0); // 4
+extern void C_ZNK12QButtonGroup2idEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  QList<QAbstractButton *> QButtonGroup::buttons();
-extern void _ZNK12QButtonGroup7buttonsEv(void* qthis); // 4
+extern void C_ZNK12QButtonGroup7buttonsEv(void* qthis); // 4
   // proto:  QAbstractButton * QButtonGroup::checkedButton();
-extern void _ZNK12QButtonGroup13checkedButtonEv(void* qthis); // 4
+extern void C_ZNK12QButtonGroup13checkedButtonEv(void* qthis); // 4
   // proto:  int QButtonGroup::checkedId();
-extern void _ZNK12QButtonGroup9checkedIdEv(void* qthis); // 4
+extern void C_ZNK12QButtonGroup9checkedIdEv(void* qthis); // 4
   // proto:  const QMetaObject * QButtonGroup::metaObject();
-extern void _ZNK12QButtonGroup10metaObjectEv(void* qthis); // 4
+extern void C_ZNK12QButtonGroup10metaObjectEv(void* qthis); // 4
   // proto:  void QButtonGroup::setExclusive(bool );
-extern void _ZN12QButtonGroup12setExclusiveEb(void* qthis, bool arg0); // 4
+extern void C_ZN12QButtonGroup12setExclusiveEb(void* qthis, bool arg0); // 4
   // proto:  QAbstractButton * QButtonGroup::button(int id);
-extern void _ZNK12QButtonGroup6buttonEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK12QButtonGroup6buttonEi(void* qthis, int32_t arg0); // 4
   // proto:  void QButtonGroup::setId(QAbstractButton * button, int id);
-extern void _ZN12QButtonGroup5setIdEP15QAbstractButtoni(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN12QButtonGroup5setIdEP15QAbstractButtoni(void* qthis, void* arg0, int32_t arg1); // 4
 */
 import "C"
 // } // <= ext block end
@@ -89,7 +89,7 @@ func (this *QButtonGroup) exclusive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QButtonGroup9exclusiveEv
     // invoke: bool exclusive()
-    C._ZNK12QButtonGroup9exclusiveEv(this.qclsinst)
+    C.C_ZNK12QButtonGroup9exclusiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QButtonGroup", "exclusive", args)
   }
@@ -114,7 +114,7 @@ func NewQButtonGroup(args ...interface{}) QButtonGroup {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QButtonGroupC2EP7QObject(qthis, arg0)
+    C.C_ZN12QButtonGroupC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QButtonGroup", "QButtonGroup", args)
   }
@@ -141,7 +141,7 @@ func (this *QButtonGroup) addButton(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN12QButtonGroup9addButtonEP15QAbstractButtoni(this.qclsinst, arg0, arg1)
+    C.C_ZN12QButtonGroup9addButtonEP15QAbstractButtoni(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QButtonGroup", "addButton", args)
   }
@@ -161,7 +161,7 @@ func (this *QButtonGroup) FreeQButtonGroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QButtonGroupD0Ev
     // invoke: void ~QButtonGroup()
-    C._ZN12QButtonGroupD2Ev(this.qclsinst)
+    C.C_ZN12QButtonGroupD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QButtonGroup", "~QButtonGroup", args)
   }
@@ -184,7 +184,7 @@ func (this *QButtonGroup) removeButton(args ...interface{}) () {
     // invoke: void removeButton(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QButtonGroup12removeButtonEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZN12QButtonGroup12removeButtonEP15QAbstractButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QButtonGroup", "removeButton", args)
   }
@@ -207,7 +207,7 @@ func (this *QButtonGroup) id(args ...interface{}) () {
     // invoke: int id(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK12QButtonGroup2idEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZNK12QButtonGroup2idEP15QAbstractButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QButtonGroup", "id", args)
   }
@@ -227,7 +227,7 @@ func (this *QButtonGroup) buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QButtonGroup7buttonsEv
     // invoke: QList<QAbstractButton *> buttons()
-    C._ZNK12QButtonGroup7buttonsEv(this.qclsinst)
+    C.C_ZNK12QButtonGroup7buttonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QButtonGroup", "buttons", args)
   }
@@ -247,7 +247,7 @@ func (this *QButtonGroup) checkedButton(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QButtonGroup13checkedButtonEv
     // invoke: QAbstractButton * checkedButton()
-    C._ZNK12QButtonGroup13checkedButtonEv(this.qclsinst)
+    C.C_ZNK12QButtonGroup13checkedButtonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QButtonGroup", "checkedButton", args)
   }
@@ -267,7 +267,7 @@ func (this *QButtonGroup) checkedId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QButtonGroup9checkedIdEv
     // invoke: int checkedId()
-    C._ZNK12QButtonGroup9checkedIdEv(this.qclsinst)
+    C.C_ZNK12QButtonGroup9checkedIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QButtonGroup", "checkedId", args)
   }
@@ -287,7 +287,7 @@ func (this *QButtonGroup) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QButtonGroup10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK12QButtonGroup10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QButtonGroup10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QButtonGroup", "metaObject", args)
   }
@@ -310,7 +310,7 @@ func (this *QButtonGroup) setExclusive(args ...interface{}) () {
     // invoke: void setExclusive(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN12QButtonGroup12setExclusiveEb(this.qclsinst, arg0)
+    C.C_ZN12QButtonGroup12setExclusiveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QButtonGroup", "setExclusive", args)
   }
@@ -333,7 +333,7 @@ func (this *QButtonGroup) button(args ...interface{}) () {
     // invoke: QAbstractButton * button(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK12QButtonGroup6buttonEi(this.qclsinst, arg0)
+    C.C_ZNK12QButtonGroup6buttonEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QButtonGroup", "button", args)
   }
@@ -359,7 +359,7 @@ func (this *QButtonGroup) setId(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN12QButtonGroup5setIdEP15QAbstractButtoni(this.qclsinst, arg0, arg1)
+    C.C_ZN12QButtonGroup5setIdEP15QAbstractButtoni(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QButtonGroup", "setId", args)
   }

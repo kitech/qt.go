@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qrunnable.h
 // dst-file: /src/core/qrunnable.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QRunnable::setAutoDelete(bool _autoDelete);
-extern void _ZN9QRunnable13setAutoDeleteEb(void* qthis, bool arg0); // 2
+extern void C_ZN9QRunnable13setAutoDeleteEb(void* qthis, bool arg0); // 2
   // proto:  bool QRunnable::autoDelete();
-extern void _ZNK9QRunnable10autoDeleteEv(void* qthis); // 2
+extern void C_ZNK9QRunnable10autoDeleteEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -66,7 +66,7 @@ func (this *QRunnable) setAutoDelete(args ...interface{}) () {
     // invoke: void setAutoDelete(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QRunnable13setAutoDeleteEb(this.qclsinst, arg0)
+    C.C_ZN9QRunnable13setAutoDeleteEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRunnable", "setAutoDelete", args)
   }
@@ -86,7 +86,7 @@ func (this *QRunnable) autoDelete(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QRunnable10autoDeleteEv
     // invoke: bool autoDelete()
-    C._ZNK9QRunnable10autoDeleteEv(this.qclsinst)
+    C.C_ZNK9QRunnable10autoDeleteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRunnable", "autoDelete", args)
   }

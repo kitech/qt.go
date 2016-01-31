@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.go
 //
@@ -29,87 +29,87 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QMainWindow::setMenuWidget(QWidget * menubar);
-extern void _ZN11QMainWindow13setMenuWidgetEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN11QMainWindow13setMenuWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QMainWindow::removeToolBar(QToolBar * toolbar);
-extern void _ZN11QMainWindow13removeToolBarEP8QToolBar(void* qthis, void* arg0); // 4
+extern void C_ZN11QMainWindow13removeToolBarEP8QToolBar(void* qthis, void* arg0); // 4
   // proto:  Qt::DockWidgetArea QMainWindow::dockWidgetArea(QDockWidget * dockwidget);
-extern void _ZNK11QMainWindow14dockWidgetAreaEP11QDockWidget(void* qthis, void* arg0); // 4
+extern void C_ZNK11QMainWindow14dockWidgetAreaEP11QDockWidget(void* qthis, void* arg0); // 4
   // proto:  void QMainWindow::setMenuBar(QMenuBar * menubar);
-extern void _ZN11QMainWindow10setMenuBarEP8QMenuBar(void* qthis, void* arg0); // 4
+extern void C_ZN11QMainWindow10setMenuBarEP8QMenuBar(void* qthis, void* arg0); // 4
   // proto:  QByteArray QMainWindow::saveState(int version);
-extern void _ZNK11QMainWindow9saveStateEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QMainWindow9saveStateEi(void* qthis, int32_t arg0); // 4
   // proto:  void QMainWindow::insertToolBar(QToolBar * before, QToolBar * toolbar);
-extern void _ZN11QMainWindow13insertToolBarEP8QToolBarS1_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN11QMainWindow13insertToolBarEP8QToolBarS1_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QList<QDockWidget *> QMainWindow::tabifiedDockWidgets(QDockWidget * dockwidget);
-extern void _ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(void* qthis, void* arg0); // 4
+extern void C_ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(void* qthis, void* arg0); // 4
   // proto:  void QMainWindow::addToolBar(QToolBar * toolbar);
-extern void _ZN11QMainWindow10addToolBarEP8QToolBar(void* qthis, void* arg0); // 4
+extern void C_ZN11QMainWindow10addToolBarEP8QToolBar(void* qthis, void* arg0); // 4
   // proto:  QToolBar * QMainWindow::addToolBar(const QString & title);
-extern void _ZN11QMainWindow10addToolBarERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QMainWindow10addToolBarERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QMainWindow::isAnimated();
-extern void _ZNK11QMainWindow10isAnimatedEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow10isAnimatedEv(void* qthis); // 4
   // proto:  void QMainWindow::setUnifiedTitleAndToolBarOnMac(bool set);
-extern void _ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb(void* qthis, bool arg0); // 4
   // proto:  void QMainWindow::setCentralWidget(QWidget * widget);
-extern void _ZN11QMainWindow16setCentralWidgetEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN11QMainWindow16setCentralWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QMainWindow::removeDockWidget(QDockWidget * dockwidget);
-extern void _ZN11QMainWindow16removeDockWidgetEP11QDockWidget(void* qthis, void* arg0); // 4
+extern void C_ZN11QMainWindow16removeDockWidgetEP11QDockWidget(void* qthis, void* arg0); // 4
   // proto:  Qt::ToolBarArea QMainWindow::toolBarArea(QToolBar * toolbar);
-extern void _ZNK11QMainWindow11toolBarAreaEP8QToolBar(void* qthis, void* arg0); // 4
+extern void C_ZNK11QMainWindow11toolBarAreaEP8QToolBar(void* qthis, void* arg0); // 4
   // proto:  bool QMainWindow::unifiedTitleAndToolBarOnMac();
-extern void _ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(void* qthis); // 4
   // proto:  QTabWidget::TabShape QMainWindow::tabShape();
-extern void _ZNK11QMainWindow8tabShapeEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow8tabShapeEv(void* qthis); // 4
   // proto:  QSize QMainWindow::iconSize();
-extern void _ZNK11QMainWindow8iconSizeEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow8iconSizeEv(void* qthis); // 4
   // proto:  void QMainWindow::tabifyDockWidget(QDockWidget * first, QDockWidget * second);
-extern void _ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  bool QMainWindow::toolBarBreak(QToolBar * toolbar);
-extern void _ZNK11QMainWindow12toolBarBreakEP8QToolBar(void* qthis, void* arg0); // 4
+extern void C_ZNK11QMainWindow12toolBarBreakEP8QToolBar(void* qthis, void* arg0); // 4
   // proto:  bool QMainWindow::documentMode();
-extern void _ZNK11QMainWindow12documentModeEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow12documentModeEv(void* qthis); // 4
   // proto:  void QMainWindow::insertToolBarBreak(QToolBar * before);
-extern void _ZN11QMainWindow18insertToolBarBreakEP8QToolBar(void* qthis, void* arg0); // 4
+extern void C_ZN11QMainWindow18insertToolBarBreakEP8QToolBar(void* qthis, void* arg0); // 4
   // proto:  bool QMainWindow::restoreState(const QByteArray & state, int version);
-extern void _ZN11QMainWindow12restoreStateERK10QByteArrayi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN11QMainWindow12restoreStateERK10QByteArrayi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  bool QMainWindow::restoreDockWidget(QDockWidget * dockwidget);
-extern void _ZN11QMainWindow17restoreDockWidgetEP11QDockWidget(void* qthis, void* arg0); // 4
+extern void C_ZN11QMainWindow17restoreDockWidgetEP11QDockWidget(void* qthis, void* arg0); // 4
   // proto:  QStatusBar * QMainWindow::statusBar();
-extern void _ZNK11QMainWindow9statusBarEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow9statusBarEv(void* qthis); // 4
   // proto:  DockOptions QMainWindow::dockOptions();
-extern void _ZNK11QMainWindow11dockOptionsEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow11dockOptionsEv(void* qthis); // 4
   // proto:  void QMainWindow::removeToolBarBreak(QToolBar * before);
-extern void _ZN11QMainWindow18removeToolBarBreakEP8QToolBar(void* qthis, void* arg0); // 4
+extern void C_ZN11QMainWindow18removeToolBarBreakEP8QToolBar(void* qthis, void* arg0); // 4
   // proto:  void QMainWindow::setAnimated(bool enabled);
-extern void _ZN11QMainWindow11setAnimatedEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QMainWindow11setAnimatedEb(void* qthis, bool arg0); // 4
   // proto:  const QMetaObject * QMainWindow::metaObject();
-extern void _ZNK11QMainWindow10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow10metaObjectEv(void* qthis); // 4
   // proto:  void QMainWindow::setDocumentMode(bool enabled);
-extern void _ZN11QMainWindow15setDocumentModeEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QMainWindow15setDocumentModeEb(void* qthis, bool arg0); // 4
   // proto:  QWidget * QMainWindow::takeCentralWidget();
-extern void _ZN11QMainWindow17takeCentralWidgetEv(void* qthis); // 4
+extern void C_ZN11QMainWindow17takeCentralWidgetEv(void* qthis); // 4
   // proto:  QMenu * QMainWindow::createPopupMenu();
-extern void _ZN11QMainWindow15createPopupMenuEv(void* qthis); // 4
+extern void C_ZN11QMainWindow15createPopupMenuEv(void* qthis); // 4
   // proto:  void QMainWindow::setDockNestingEnabled(bool enabled);
-extern void _ZN11QMainWindow21setDockNestingEnabledEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QMainWindow21setDockNestingEnabledEb(void* qthis, bool arg0); // 4
   // proto:  QWidget * QMainWindow::centralWidget();
-extern void _ZNK11QMainWindow13centralWidgetEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow13centralWidgetEv(void* qthis); // 4
   // proto:  void QMainWindow::setIconSize(const QSize & iconSize);
-extern void _ZN11QMainWindow11setIconSizeERK5QSize(void* qthis, void* arg0); // 4
+extern void C_ZN11QMainWindow11setIconSizeERK5QSize(void* qthis, void* arg0); // 4
   // proto:  void QMainWindow::setStatusBar(QStatusBar * statusbar);
-extern void _ZN11QMainWindow12setStatusBarEP10QStatusBar(void* qthis, void* arg0); // 4
+extern void C_ZN11QMainWindow12setStatusBarEP10QStatusBar(void* qthis, void* arg0); // 4
   // proto:  bool QMainWindow::isSeparator(const QPoint & pos);
-extern void _ZNK11QMainWindow11isSeparatorERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZNK11QMainWindow11isSeparatorERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  QWidget * QMainWindow::menuWidget();
-extern void _ZNK11QMainWindow10menuWidgetEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow10menuWidgetEv(void* qthis); // 4
   // proto:  Qt::ToolButtonStyle QMainWindow::toolButtonStyle();
-extern void _ZNK11QMainWindow15toolButtonStyleEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow15toolButtonStyleEv(void* qthis); // 4
   // proto:  void QMainWindow::~QMainWindow();
-extern void _ZN11QMainWindowD2Ev(void* qthis); // 4
+extern void C_ZN11QMainWindowD2Ev(void* qthis); // 4
   // proto:  bool QMainWindow::isDockNestingEnabled();
-extern void _ZNK11QMainWindow20isDockNestingEnabledEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow20isDockNestingEnabledEv(void* qthis); // 4
   // proto:  QMenuBar * QMainWindow::menuBar();
-extern void _ZNK11QMainWindow7menuBarEv(void* qthis); // 4
+extern void C_ZNK11QMainWindow7menuBarEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -146,7 +146,7 @@ func (this *QMainWindow) setMenuWidget(args ...interface{}) () {
     // invoke: void setMenuWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow13setMenuWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow13setMenuWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setMenuWidget", args)
   }
@@ -169,7 +169,7 @@ func (this *QMainWindow) removeToolBar(args ...interface{}) () {
     // invoke: void removeToolBar(class QToolBar *)
     var arg0 = args[0].(QToolBar).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow13removeToolBarEP8QToolBar(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow13removeToolBarEP8QToolBar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "removeToolBar", args)
   }
@@ -192,7 +192,7 @@ func (this *QMainWindow) dockWidgetArea(args ...interface{}) () {
     // invoke: Qt::DockWidgetArea dockWidgetArea(class QDockWidget *)
     var arg0 = args[0].(QDockWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QMainWindow14dockWidgetAreaEP11QDockWidget(this.qclsinst, arg0)
+    C.C_ZNK11QMainWindow14dockWidgetAreaEP11QDockWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "dockWidgetArea", args)
   }
@@ -215,7 +215,7 @@ func (this *QMainWindow) setMenuBar(args ...interface{}) () {
     // invoke: void setMenuBar(class QMenuBar *)
     var arg0 = args[0].(QMenuBar).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow10setMenuBarEP8QMenuBar(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow10setMenuBarEP8QMenuBar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setMenuBar", args)
   }
@@ -238,7 +238,7 @@ func (this *QMainWindow) saveState(args ...interface{}) () {
     // invoke: QByteArray saveState(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMainWindow9saveStateEi(this.qclsinst, arg0)
+    C.C_ZNK11QMainWindow9saveStateEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "saveState", args)
   }
@@ -264,7 +264,7 @@ func (this *QMainWindow) insertToolBar(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QToolBar).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN11QMainWindow13insertToolBarEP8QToolBarS1_(this.qclsinst, arg0, arg1)
+    C.C_ZN11QMainWindow13insertToolBarEP8QToolBarS1_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMainWindow", "insertToolBar", args)
   }
@@ -287,7 +287,7 @@ func (this *QMainWindow) tabifiedDockWidgets(args ...interface{}) () {
     // invoke: QList<QDockWidget *> tabifiedDockWidgets(class QDockWidget *)
     var arg0 = args[0].(QDockWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(this.qclsinst, arg0)
+    C.C_ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "tabifiedDockWidgets", args)
   }
@@ -313,13 +313,13 @@ func (this *QMainWindow) addToolBar(args ...interface{}) () {
     // invoke: void addToolBar(class QToolBar *)
     var arg0 = args[0].(QToolBar).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow10addToolBarEP8QToolBar(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow10addToolBarEP8QToolBar(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN11QMainWindow10addToolBarERK7QString
     // invoke: QToolBar * addToolBar(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow10addToolBarERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow10addToolBarERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "addToolBar", args)
   }
@@ -339,7 +339,7 @@ func (this *QMainWindow) isAnimated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow10isAnimatedEv
     // invoke: bool isAnimated()
-    C._ZNK11QMainWindow10isAnimatedEv(this.qclsinst)
+    C.C_ZNK11QMainWindow10isAnimatedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "isAnimated", args)
   }
@@ -362,7 +362,7 @@ func (this *QMainWindow) setUnifiedTitleAndToolBarOnMac(args ...interface{}) () 
     // invoke: void setUnifiedTitleAndToolBarOnMac(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setUnifiedTitleAndToolBarOnMac", args)
   }
@@ -385,7 +385,7 @@ func (this *QMainWindow) setCentralWidget(args ...interface{}) () {
     // invoke: void setCentralWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow16setCentralWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow16setCentralWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setCentralWidget", args)
   }
@@ -408,7 +408,7 @@ func (this *QMainWindow) removeDockWidget(args ...interface{}) () {
     // invoke: void removeDockWidget(class QDockWidget *)
     var arg0 = args[0].(QDockWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow16removeDockWidgetEP11QDockWidget(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow16removeDockWidgetEP11QDockWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "removeDockWidget", args)
   }
@@ -431,7 +431,7 @@ func (this *QMainWindow) toolBarArea(args ...interface{}) () {
     // invoke: Qt::ToolBarArea toolBarArea(class QToolBar *)
     var arg0 = args[0].(QToolBar).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QMainWindow11toolBarAreaEP8QToolBar(this.qclsinst, arg0)
+    C.C_ZNK11QMainWindow11toolBarAreaEP8QToolBar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "toolBarArea", args)
   }
@@ -451,7 +451,7 @@ func (this *QMainWindow) unifiedTitleAndToolBarOnMac(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv
     // invoke: bool unifiedTitleAndToolBarOnMac()
-    C._ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(this.qclsinst)
+    C.C_ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "unifiedTitleAndToolBarOnMac", args)
   }
@@ -471,7 +471,7 @@ func (this *QMainWindow) tabShape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow8tabShapeEv
     // invoke: QTabWidget::TabShape tabShape()
-    C._ZNK11QMainWindow8tabShapeEv(this.qclsinst)
+    C.C_ZNK11QMainWindow8tabShapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "tabShape", args)
   }
@@ -491,7 +491,7 @@ func (this *QMainWindow) iconSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow8iconSizeEv
     // invoke: QSize iconSize()
-    C._ZNK11QMainWindow8iconSizeEv(this.qclsinst)
+    C.C_ZNK11QMainWindow8iconSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "iconSize", args)
   }
@@ -517,7 +517,7 @@ func (this *QMainWindow) tabifyDockWidget(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QDockWidget).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_(this.qclsinst, arg0, arg1)
+    C.C_ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMainWindow", "tabifyDockWidget", args)
   }
@@ -540,7 +540,7 @@ func (this *QMainWindow) toolBarBreak(args ...interface{}) () {
     // invoke: bool toolBarBreak(class QToolBar *)
     var arg0 = args[0].(QToolBar).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QMainWindow12toolBarBreakEP8QToolBar(this.qclsinst, arg0)
+    C.C_ZNK11QMainWindow12toolBarBreakEP8QToolBar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "toolBarBreak", args)
   }
@@ -560,7 +560,7 @@ func (this *QMainWindow) documentMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow12documentModeEv
     // invoke: bool documentMode()
-    C._ZNK11QMainWindow12documentModeEv(this.qclsinst)
+    C.C_ZNK11QMainWindow12documentModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "documentMode", args)
   }
@@ -583,7 +583,7 @@ func (this *QMainWindow) insertToolBarBreak(args ...interface{}) () {
     // invoke: void insertToolBarBreak(class QToolBar *)
     var arg0 = args[0].(QToolBar).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow18insertToolBarBreakEP8QToolBar(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow18insertToolBarBreakEP8QToolBar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "insertToolBarBreak", args)
   }
@@ -609,7 +609,7 @@ func (this *QMainWindow) restoreState(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QMainWindow12restoreStateERK10QByteArrayi(this.qclsinst, arg0, arg1)
+    C.C_ZN11QMainWindow12restoreStateERK10QByteArrayi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMainWindow", "restoreState", args)
   }
@@ -632,7 +632,7 @@ func (this *QMainWindow) restoreDockWidget(args ...interface{}) () {
     // invoke: bool restoreDockWidget(class QDockWidget *)
     var arg0 = args[0].(QDockWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow17restoreDockWidgetEP11QDockWidget(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow17restoreDockWidgetEP11QDockWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "restoreDockWidget", args)
   }
@@ -652,7 +652,7 @@ func (this *QMainWindow) statusBar(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow9statusBarEv
     // invoke: QStatusBar * statusBar()
-    C._ZNK11QMainWindow9statusBarEv(this.qclsinst)
+    C.C_ZNK11QMainWindow9statusBarEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "statusBar", args)
   }
@@ -672,7 +672,7 @@ func (this *QMainWindow) dockOptions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow11dockOptionsEv
     // invoke: DockOptions dockOptions()
-    C._ZNK11QMainWindow11dockOptionsEv(this.qclsinst)
+    C.C_ZNK11QMainWindow11dockOptionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "dockOptions", args)
   }
@@ -695,7 +695,7 @@ func (this *QMainWindow) removeToolBarBreak(args ...interface{}) () {
     // invoke: void removeToolBarBreak(class QToolBar *)
     var arg0 = args[0].(QToolBar).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow18removeToolBarBreakEP8QToolBar(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow18removeToolBarBreakEP8QToolBar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "removeToolBarBreak", args)
   }
@@ -718,7 +718,7 @@ func (this *QMainWindow) setAnimated(args ...interface{}) () {
     // invoke: void setAnimated(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow11setAnimatedEb(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow11setAnimatedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setAnimated", args)
   }
@@ -738,7 +738,7 @@ func (this *QMainWindow) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QMainWindow10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QMainWindow10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "metaObject", args)
   }
@@ -761,7 +761,7 @@ func (this *QMainWindow) setDocumentMode(args ...interface{}) () {
     // invoke: void setDocumentMode(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow15setDocumentModeEb(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow15setDocumentModeEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setDocumentMode", args)
   }
@@ -781,7 +781,7 @@ func (this *QMainWindow) takeCentralWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow17takeCentralWidgetEv
     // invoke: QWidget * takeCentralWidget()
-    C._ZN11QMainWindow17takeCentralWidgetEv(this.qclsinst)
+    C.C_ZN11QMainWindow17takeCentralWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "takeCentralWidget", args)
   }
@@ -801,7 +801,7 @@ func (this *QMainWindow) createPopupMenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow15createPopupMenuEv
     // invoke: QMenu * createPopupMenu()
-    C._ZN11QMainWindow15createPopupMenuEv(this.qclsinst)
+    C.C_ZN11QMainWindow15createPopupMenuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "createPopupMenu", args)
   }
@@ -824,7 +824,7 @@ func (this *QMainWindow) setDockNestingEnabled(args ...interface{}) () {
     // invoke: void setDockNestingEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow21setDockNestingEnabledEb(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow21setDockNestingEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setDockNestingEnabled", args)
   }
@@ -844,7 +844,7 @@ func (this *QMainWindow) centralWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow13centralWidgetEv
     // invoke: QWidget * centralWidget()
-    C._ZNK11QMainWindow13centralWidgetEv(this.qclsinst)
+    C.C_ZNK11QMainWindow13centralWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "centralWidget", args)
   }
@@ -867,7 +867,7 @@ func (this *QMainWindow) setIconSize(args ...interface{}) () {
     // invoke: void setIconSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow11setIconSizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow11setIconSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setIconSize", args)
   }
@@ -890,7 +890,7 @@ func (this *QMainWindow) setStatusBar(args ...interface{}) () {
     // invoke: void setStatusBar(class QStatusBar *)
     var arg0 = args[0].(QStatusBar).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMainWindow12setStatusBarEP10QStatusBar(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow12setStatusBarEP10QStatusBar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setStatusBar", args)
   }
@@ -913,7 +913,7 @@ func (this *QMainWindow) isSeparator(args ...interface{}) () {
     // invoke: bool isSeparator(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QMainWindow11isSeparatorERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK11QMainWindow11isSeparatorERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "isSeparator", args)
   }
@@ -933,7 +933,7 @@ func (this *QMainWindow) menuWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow10menuWidgetEv
     // invoke: QWidget * menuWidget()
-    C._ZNK11QMainWindow10menuWidgetEv(this.qclsinst)
+    C.C_ZNK11QMainWindow10menuWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "menuWidget", args)
   }
@@ -953,7 +953,7 @@ func (this *QMainWindow) toolButtonStyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow15toolButtonStyleEv
     // invoke: Qt::ToolButtonStyle toolButtonStyle()
-    C._ZNK11QMainWindow15toolButtonStyleEv(this.qclsinst)
+    C.C_ZNK11QMainWindow15toolButtonStyleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "toolButtonStyle", args)
   }
@@ -973,7 +973,7 @@ func (this *QMainWindow) FreeQMainWindow(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindowD0Ev
     // invoke: void ~QMainWindow()
-    C._ZN11QMainWindowD2Ev(this.qclsinst)
+    C.C_ZN11QMainWindowD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "~QMainWindow", args)
   }
@@ -993,7 +993,7 @@ func (this *QMainWindow) isDockNestingEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow20isDockNestingEnabledEv
     // invoke: bool isDockNestingEnabled()
-    C._ZNK11QMainWindow20isDockNestingEnabledEv(this.qclsinst)
+    C.C_ZNK11QMainWindow20isDockNestingEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "isDockNestingEnabled", args)
   }
@@ -1013,7 +1013,7 @@ func (this *QMainWindow) menuBar(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow7menuBarEv
     // invoke: QMenuBar * menuBar()
-    C._ZNK11QMainWindow7menuBarEv(this.qclsinst)
+    C.C_ZNK11QMainWindow7menuBarEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "menuBar", args)
   }

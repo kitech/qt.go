@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.go
 //
@@ -29,31 +29,31 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QMutexLocker::~QMutexLocker();
-extern void _ZN12QMutexLockerD2Ev(void* qthis); // 2
+extern void C_ZN12QMutexLockerD2Ev(void* qthis); // 2
   // proto:  void QMutexLocker::unlock();
-extern void _ZN12QMutexLocker6unlockEv(void* qthis); // 2
+extern void C_ZN12QMutexLocker6unlockEv(void* qthis); // 2
   // proto:  void QMutexLocker::QMutexLocker(QBasicMutex * m);
-extern void _ZN12QMutexLockerC2EP11QBasicMutex(void* qthis, void* arg0); // 1
+extern void C_ZN12QMutexLockerC2EP11QBasicMutex(void* qthis, void* arg0); // 1
   // proto:  QMutex * QMutexLocker::mutex();
-extern void _ZNK12QMutexLocker5mutexEv(void* qthis); // 2
+extern void C_ZNK12QMutexLocker5mutexEv(void* qthis); // 2
   // proto:  void QMutexLocker::relock();
-extern void _ZN12QMutexLocker6relockEv(void* qthis); // 2
+extern void C_ZN12QMutexLocker6relockEv(void* qthis); // 2
   // proto:  void QBasicMutex::lock();
-extern void _ZN11QBasicMutex4lockEv(void* qthis); // 2
+extern void C_ZN11QBasicMutex4lockEv(void* qthis); // 2
   // proto:  void QBasicMutex::unlock();
-extern void _ZN11QBasicMutex6unlockEv(void* qthis); // 2
+extern void C_ZN11QBasicMutex6unlockEv(void* qthis); // 2
   // proto:  bool QBasicMutex::tryLock();
-extern void _ZN11QBasicMutex7tryLockEv(void* qthis); // 2
+extern void C_ZN11QBasicMutex7tryLockEv(void* qthis); // 2
   // proto:  bool QBasicMutex::isRecursive();
-extern void _ZN11QBasicMutex11isRecursiveEv(void* qthis); // 4
+extern void C_ZN11QBasicMutex11isRecursiveEv(void* qthis); // 4
   // proto:  void QMutex::lock();
-extern void _ZN6QMutex4lockEv(void* qthis); // 4
+extern void C_ZN6QMutex4lockEv(void* qthis); // 4
   // proto:  void QMutex::~QMutex();
-extern void _ZN6QMutexD2Ev(void* qthis); // 4
+extern void C_ZN6QMutexD2Ev(void* qthis); // 4
   // proto:  void QMutex::unlock();
-extern void _ZN6QMutex6unlockEv(void* qthis); // 4
+extern void C_ZN6QMutex6unlockEv(void* qthis); // 4
   // proto:  bool QMutex::tryLock(int timeout);
-extern void _ZN6QMutex7tryLockEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QMutex7tryLockEi(void* qthis, int32_t arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -97,7 +97,7 @@ func (this *QMutexLocker) FreeQMutexLocker(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMutexLockerD0Ev
     // invoke: void ~QMutexLocker()
-    C._ZN12QMutexLockerD2Ev(this.qclsinst)
+    C.C_ZN12QMutexLockerD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMutexLocker", "~QMutexLocker", args)
   }
@@ -117,7 +117,7 @@ func (this *QMutexLocker) unlock(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMutexLocker6unlockEv
     // invoke: void unlock()
-    C._ZN12QMutexLocker6unlockEv(this.qclsinst)
+    C.C_ZN12QMutexLocker6unlockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMutexLocker", "unlock", args)
   }
@@ -142,7 +142,7 @@ func NewQMutexLocker(args ...interface{}) QMutexLocker {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QMutexLockerC2EP11QBasicMutex(qthis, arg0)
+    C.C_ZN12QMutexLockerC2EP11QBasicMutex(qthis, arg0)
   default:
     qtrt.ErrorResolve("QMutexLocker", "QMutexLocker", args)
   }
@@ -163,7 +163,7 @@ func (this *QMutexLocker) mutex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QMutexLocker5mutexEv
     // invoke: QMutex * mutex()
-    C._ZNK12QMutexLocker5mutexEv(this.qclsinst)
+    C.C_ZNK12QMutexLocker5mutexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMutexLocker", "mutex", args)
   }
@@ -183,7 +183,7 @@ func (this *QMutexLocker) relock(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMutexLocker6relockEv
     // invoke: void relock()
-    C._ZN12QMutexLocker6relockEv(this.qclsinst)
+    C.C_ZN12QMutexLocker6relockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMutexLocker", "relock", args)
   }
@@ -203,7 +203,7 @@ func (this *QBasicMutex) lock(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QBasicMutex4lockEv
     // invoke: void lock()
-    C._ZN11QBasicMutex4lockEv(this.qclsinst)
+    C.C_ZN11QBasicMutex4lockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicMutex", "lock", args)
   }
@@ -223,7 +223,7 @@ func (this *QBasicMutex) unlock(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QBasicMutex6unlockEv
     // invoke: void unlock()
-    C._ZN11QBasicMutex6unlockEv(this.qclsinst)
+    C.C_ZN11QBasicMutex6unlockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicMutex", "unlock", args)
   }
@@ -243,7 +243,7 @@ func (this *QBasicMutex) tryLock(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QBasicMutex7tryLockEv
     // invoke: bool tryLock()
-    C._ZN11QBasicMutex7tryLockEv(this.qclsinst)
+    C.C_ZN11QBasicMutex7tryLockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicMutex", "tryLock", args)
   }
@@ -263,7 +263,7 @@ func (this *QBasicMutex) isRecursive(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QBasicMutex11isRecursiveEv
     // invoke: bool isRecursive()
-    C._ZN11QBasicMutex11isRecursiveEv(this.qclsinst)
+    C.C_ZN11QBasicMutex11isRecursiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicMutex", "isRecursive", args)
   }
@@ -283,7 +283,7 @@ func (this *QMutex) lock(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMutex4lockEv
     // invoke: void lock()
-    C._ZN6QMutex4lockEv(this.qclsinst)
+    C.C_ZN6QMutex4lockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMutex", "lock", args)
   }
@@ -303,7 +303,7 @@ func (this *QMutex) FreeQMutex(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMutexD0Ev
     // invoke: void ~QMutex()
-    C._ZN6QMutexD2Ev(this.qclsinst)
+    C.C_ZN6QMutexD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMutex", "~QMutex", args)
   }
@@ -323,7 +323,7 @@ func (this *QMutex) unlock(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMutex6unlockEv
     // invoke: void unlock()
-    C._ZN6QMutex6unlockEv(this.qclsinst)
+    C.C_ZN6QMutex6unlockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMutex", "unlock", args)
   }
@@ -346,7 +346,7 @@ func (this *QMutex) tryLock(args ...interface{}) () {
     // invoke: bool tryLock(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QMutex7tryLockEi(this.qclsinst, arg0)
+    C.C_ZN6QMutex7tryLockEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMutex", "tryLock", args)
   }

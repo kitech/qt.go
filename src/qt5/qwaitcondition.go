@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QWaitCondition::QWaitCondition();
-extern void _ZN14QWaitConditionC2Ev(void* qthis); // 3
+extern void C_ZN14QWaitConditionC2Ev(void* qthis); // 3
   // proto:  void QWaitCondition::wakeAll();
-extern void _ZN14QWaitCondition7wakeAllEv(void* qthis); // 4
+extern void C_ZN14QWaitCondition7wakeAllEv(void* qthis); // 4
   // proto:  void QWaitCondition::wakeOne();
-extern void _ZN14QWaitCondition7wakeOneEv(void* qthis); // 4
+extern void C_ZN14QWaitCondition7wakeOneEv(void* qthis); // 4
   // proto:  void QWaitCondition::~QWaitCondition();
-extern void _ZN14QWaitConditionD2Ev(void* qthis); // 4
+extern void C_ZN14QWaitConditionD2Ev(void* qthis); // 4
   // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
-extern void _ZN14QWaitCondition4waitEP14QReadWriteLockm(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN14QWaitCondition4waitEP14QReadWriteLockm(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  bool QWaitCondition::wait(QMutex * lockedMutex, unsigned long time);
-extern void _ZN14QWaitCondition4waitEP6QMutexm(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN14QWaitCondition4waitEP6QMutexm(void* qthis, void* arg0, int32_t arg1); // 4
 */
 import "C"
 // } // <= ext block end
@@ -73,7 +73,7 @@ func NewQWaitCondition(args ...interface{}) QWaitCondition {
     // invoke: void QWaitCondition()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN14QWaitConditionC2Ev(qthis)
+    C.C_ZN14QWaitConditionC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QWaitCondition", "QWaitCondition", args)
   }
@@ -94,7 +94,7 @@ func (this *QWaitCondition) wakeAll(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QWaitCondition7wakeAllEv
     // invoke: void wakeAll()
-    C._ZN14QWaitCondition7wakeAllEv(this.qclsinst)
+    C.C_ZN14QWaitCondition7wakeAllEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWaitCondition", "wakeAll", args)
   }
@@ -114,7 +114,7 @@ func (this *QWaitCondition) wakeOne(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QWaitCondition7wakeOneEv
     // invoke: void wakeOne()
-    C._ZN14QWaitCondition7wakeOneEv(this.qclsinst)
+    C.C_ZN14QWaitCondition7wakeOneEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWaitCondition", "wakeOne", args)
   }
@@ -134,7 +134,7 @@ func (this *QWaitCondition) FreeQWaitCondition(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QWaitConditionD0Ev
     // invoke: void ~QWaitCondition()
-    C._ZN14QWaitConditionD2Ev(this.qclsinst)
+    C.C_ZN14QWaitConditionD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWaitCondition", "~QWaitCondition", args)
   }
@@ -164,7 +164,7 @@ func (this *QWaitCondition) wait(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN14QWaitCondition4waitEP14QReadWriteLockm(this.qclsinst, arg0, arg1)
+    C.C_ZN14QWaitCondition4waitEP14QReadWriteLockm(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN14QWaitCondition4waitEP6QMutexm
     // invoke: bool wait(class QMutex *, unsigned long)
@@ -172,7 +172,7 @@ func (this *QWaitCondition) wait(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN14QWaitCondition4waitEP6QMutexm(this.qclsinst, arg0, arg1)
+    C.C_ZN14QWaitCondition4waitEP6QMutexm(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QWaitCondition", "wait", args)
   }

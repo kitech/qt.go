@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.go
 //
@@ -29,31 +29,31 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QDrag::setMimeData(QMimeData * data);
-extern void _ZN5QDrag11setMimeDataEP9QMimeData(void* qthis, void* arg0); // 4
+extern void C_ZN5QDrag11setMimeDataEP9QMimeData(void* qthis, void* arg0); // 4
   // proto:  void QDrag::QDrag(QObject * dragSource);
-extern void _ZN5QDragC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN5QDragC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  QPixmap QDrag::pixmap();
-extern void _ZNK5QDrag6pixmapEv(void* qthis); // 4
+extern void C_ZNK5QDrag6pixmapEv(void* qthis); // 4
   // proto:  void QDrag::~QDrag();
-extern void _ZN5QDragD2Ev(void* qthis); // 4
+extern void C_ZN5QDragD2Ev(void* qthis); // 4
   // proto:  Qt::DropAction QDrag::defaultAction();
-extern void _ZNK5QDrag13defaultActionEv(void* qthis); // 4
+extern void C_ZNK5QDrag13defaultActionEv(void* qthis); // 4
   // proto:  QObject * QDrag::source();
-extern void _ZNK5QDrag6sourceEv(void* qthis); // 4
+extern void C_ZNK5QDrag6sourceEv(void* qthis); // 4
   // proto:  Qt::DropActions QDrag::supportedActions();
-extern void _ZNK5QDrag16supportedActionsEv(void* qthis); // 4
+extern void C_ZNK5QDrag16supportedActionsEv(void* qthis); // 4
   // proto:  void QDrag::setHotSpot(const QPoint & hotspot);
-extern void _ZN5QDrag10setHotSpotERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZN5QDrag10setHotSpotERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  void QDrag::setPixmap(const QPixmap & );
-extern void _ZN5QDrag9setPixmapERK7QPixmap(void* qthis, void* arg0); // 4
+extern void C_ZN5QDrag9setPixmapERK7QPixmap(void* qthis, void* arg0); // 4
   // proto:  QPoint QDrag::hotSpot();
-extern void _ZNK5QDrag7hotSpotEv(void* qthis); // 4
+extern void C_ZNK5QDrag7hotSpotEv(void* qthis); // 4
   // proto:  QMimeData * QDrag::mimeData();
-extern void _ZNK5QDrag8mimeDataEv(void* qthis); // 4
+extern void C_ZNK5QDrag8mimeDataEv(void* qthis); // 4
   // proto:  const QMetaObject * QDrag::metaObject();
-extern void _ZNK5QDrag10metaObjectEv(void* qthis); // 4
+extern void C_ZNK5QDrag10metaObjectEv(void* qthis); // 4
   // proto:  QObject * QDrag::target();
-extern void _ZNK5QDrag6targetEv(void* qthis); // 4
+extern void C_ZNK5QDrag6targetEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -90,7 +90,7 @@ func (this *QDrag) setMimeData(args ...interface{}) () {
     // invoke: void setMimeData(class QMimeData *)
     var arg0 = args[0].(QMimeData).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QDrag11setMimeDataEP9QMimeData(this.qclsinst, arg0)
+    C.C_ZN5QDrag11setMimeDataEP9QMimeData(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDrag", "setMimeData", args)
   }
@@ -115,7 +115,7 @@ func NewQDrag(args ...interface{}) QDrag {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QDragC2EP7QObject(qthis, arg0)
+    C.C_ZN5QDragC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QDrag", "QDrag", args)
   }
@@ -136,7 +136,7 @@ func (this *QDrag) pixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag6pixmapEv
     // invoke: QPixmap pixmap()
-    C._ZNK5QDrag6pixmapEv(this.qclsinst)
+    C.C_ZNK5QDrag6pixmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "pixmap", args)
   }
@@ -156,7 +156,7 @@ func (this *QDrag) FreeQDrag(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QDragD0Ev
     // invoke: void ~QDrag()
-    C._ZN5QDragD2Ev(this.qclsinst)
+    C.C_ZN5QDragD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "~QDrag", args)
   }
@@ -176,7 +176,7 @@ func (this *QDrag) defaultAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag13defaultActionEv
     // invoke: Qt::DropAction defaultAction()
-    C._ZNK5QDrag13defaultActionEv(this.qclsinst)
+    C.C_ZNK5QDrag13defaultActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "defaultAction", args)
   }
@@ -196,7 +196,7 @@ func (this *QDrag) source(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag6sourceEv
     // invoke: QObject * source()
-    C._ZNK5QDrag6sourceEv(this.qclsinst)
+    C.C_ZNK5QDrag6sourceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "source", args)
   }
@@ -216,7 +216,7 @@ func (this *QDrag) supportedActions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag16supportedActionsEv
     // invoke: Qt::DropActions supportedActions()
-    C._ZNK5QDrag16supportedActionsEv(this.qclsinst)
+    C.C_ZNK5QDrag16supportedActionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "supportedActions", args)
   }
@@ -239,7 +239,7 @@ func (this *QDrag) setHotSpot(args ...interface{}) () {
     // invoke: void setHotSpot(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QDrag10setHotSpotERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QDrag10setHotSpotERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDrag", "setHotSpot", args)
   }
@@ -262,7 +262,7 @@ func (this *QDrag) setPixmap(args ...interface{}) () {
     // invoke: void setPixmap(const class QPixmap &)
     var arg0 = args[0].(QPixmap).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QDrag9setPixmapERK7QPixmap(this.qclsinst, arg0)
+    C.C_ZN5QDrag9setPixmapERK7QPixmap(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDrag", "setPixmap", args)
   }
@@ -282,7 +282,7 @@ func (this *QDrag) hotSpot(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag7hotSpotEv
     // invoke: QPoint hotSpot()
-    C._ZNK5QDrag7hotSpotEv(this.qclsinst)
+    C.C_ZNK5QDrag7hotSpotEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "hotSpot", args)
   }
@@ -302,7 +302,7 @@ func (this *QDrag) mimeData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag8mimeDataEv
     // invoke: QMimeData * mimeData()
-    C._ZNK5QDrag8mimeDataEv(this.qclsinst)
+    C.C_ZNK5QDrag8mimeDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "mimeData", args)
   }
@@ -322,7 +322,7 @@ func (this *QDrag) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK5QDrag10metaObjectEv(this.qclsinst)
+    C.C_ZNK5QDrag10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "metaObject", args)
   }
@@ -342,7 +342,7 @@ func (this *QDrag) target(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag6targetEv
     // invoke: QObject * target()
-    C._ZNK5QDrag6targetEv(this.qclsinst)
+    C.C_ZNK5QDrag6targetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "target", args)
   }

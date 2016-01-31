@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qsavefile.h
 // dst-file: /src/core/qsavefile.go
 //
@@ -29,27 +29,27 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  const QMetaObject * QSaveFile::metaObject();
-extern void _ZNK9QSaveFile10metaObjectEv(void* qthis); // 4
+extern void C_ZNK9QSaveFile10metaObjectEv(void* qthis); // 4
   // proto:  void QSaveFile::setDirectWriteFallback(bool enabled);
-extern void _ZN9QSaveFile22setDirectWriteFallbackEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QSaveFile22setDirectWriteFallbackEb(void* qthis, bool arg0); // 4
   // proto:  void QSaveFile::~QSaveFile();
-extern void _ZN9QSaveFileD2Ev(void* qthis); // 4
+extern void C_ZN9QSaveFileD2Ev(void* qthis); // 4
   // proto:  void QSaveFile::cancelWriting();
-extern void _ZN9QSaveFile13cancelWritingEv(void* qthis); // 4
+extern void C_ZN9QSaveFile13cancelWritingEv(void* qthis); // 4
   // proto:  void QSaveFile::setFileName(const QString & name);
-extern void _ZN9QSaveFile11setFileNameERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN9QSaveFile11setFileNameERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QSaveFile::fileName();
-extern void _ZNK9QSaveFile8fileNameEv(void* qthis); // 4
+extern void C_ZNK9QSaveFile8fileNameEv(void* qthis); // 4
   // proto:  void QSaveFile::QSaveFile(const QString & name);
-extern void _ZN9QSaveFileC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN9QSaveFileC2ERK7QString(void* qthis, void* arg0); // 3
   // proto:  void QSaveFile::QSaveFile(const QString & name, QObject * parent);
-extern void _ZN9QSaveFileC2ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN9QSaveFileC2ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QSaveFile::QSaveFile(QObject * parent);
-extern void _ZN9QSaveFileC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN9QSaveFileC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  bool QSaveFile::directWriteFallback();
-extern void _ZNK9QSaveFile19directWriteFallbackEv(void* qthis); // 4
+extern void C_ZNK9QSaveFile19directWriteFallbackEv(void* qthis); // 4
   // proto:  bool QSaveFile::commit();
-extern void _ZN9QSaveFile6commitEv(void* qthis); // 4
+extern void C_ZN9QSaveFile6commitEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -81,7 +81,7 @@ func (this *QSaveFile) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSaveFile10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK9QSaveFile10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QSaveFile10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "metaObject", args)
   }
@@ -104,7 +104,7 @@ func (this *QSaveFile) setDirectWriteFallback(args ...interface{}) () {
     // invoke: void setDirectWriteFallback(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QSaveFile22setDirectWriteFallbackEb(this.qclsinst, arg0)
+    C.C_ZN9QSaveFile22setDirectWriteFallbackEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSaveFile", "setDirectWriteFallback", args)
   }
@@ -124,7 +124,7 @@ func (this *QSaveFile) FreeQSaveFile(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSaveFileD0Ev
     // invoke: void ~QSaveFile()
-    C._ZN9QSaveFileD2Ev(this.qclsinst)
+    C.C_ZN9QSaveFileD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "~QSaveFile", args)
   }
@@ -144,7 +144,7 @@ func (this *QSaveFile) cancelWriting(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSaveFile13cancelWritingEv
     // invoke: void cancelWriting()
-    C._ZN9QSaveFile13cancelWritingEv(this.qclsinst)
+    C.C_ZN9QSaveFile13cancelWritingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "cancelWriting", args)
   }
@@ -167,7 +167,7 @@ func (this *QSaveFile) setFileName(args ...interface{}) () {
     // invoke: void setFileName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QSaveFile11setFileNameERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QSaveFile11setFileNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSaveFile", "setFileName", args)
   }
@@ -187,7 +187,7 @@ func (this *QSaveFile) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSaveFile8fileNameEv
     // invoke: QString fileName()
-    C._ZNK9QSaveFile8fileNameEv(this.qclsinst)
+    C.C_ZNK9QSaveFile8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "fileName", args)
   }
@@ -219,7 +219,7 @@ func NewQSaveFile(args ...interface{}) QSaveFile {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QSaveFileC2ERK7QString(qthis, arg0)
+    C.C_ZN9QSaveFileC2ERK7QString(qthis, arg0)
   case 1:
     // invoke: _ZN9QSaveFileC1ERK7QStringP7QObject
     // invoke: void QSaveFile(const class QString &, class QObject *)
@@ -229,7 +229,7 @@ func NewQSaveFile(args ...interface{}) QSaveFile {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QSaveFileC2ERK7QStringP7QObject(qthis, arg0, arg1)
+    C.C_ZN9QSaveFileC2ERK7QStringP7QObject(qthis, arg0, arg1)
   case 2:
     // invoke: _ZN9QSaveFileC1EP7QObject
     // invoke: void QSaveFile(class QObject *)
@@ -237,7 +237,7 @@ func NewQSaveFile(args ...interface{}) QSaveFile {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QSaveFileC2EP7QObject(qthis, arg0)
+    C.C_ZN9QSaveFileC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QSaveFile", "QSaveFile", args)
   }
@@ -258,7 +258,7 @@ func (this *QSaveFile) directWriteFallback(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSaveFile19directWriteFallbackEv
     // invoke: bool directWriteFallback()
-    C._ZNK9QSaveFile19directWriteFallbackEv(this.qclsinst)
+    C.C_ZNK9QSaveFile19directWriteFallbackEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "directWriteFallback", args)
   }
@@ -278,7 +278,7 @@ func (this *QSaveFile) commit(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSaveFile6commitEv
     // invoke: bool commit()
-    C._ZN9QSaveFile6commitEv(this.qclsinst)
+    C.C_ZN9QSaveFile6commitEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "commit", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qpixmapcache.h
 // dst-file: /src/gui/qpixmapcache.go
 //
@@ -29,23 +29,23 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static bool QPixmapCache::insert(const QString & key, const QPixmap & pixmap);
-extern void _ZN12QPixmapCache6insertERK7QStringRK7QPixmap(void* arg0, void* arg1); // 4
+extern void C_ZN12QPixmapCache6insertERK7QStringRK7QPixmap(void* arg0, void* arg1); // 4
   // proto: static QPixmapCache::Key QPixmapCache::insert(const QPixmap & pixmap);
-extern void _ZN12QPixmapCache6insertERK7QPixmap(void* arg0); // 4
+extern void C_ZN12QPixmapCache6insertERK7QPixmap(void* arg0); // 4
   // proto: static int QPixmapCache::cacheLimit();
-extern void _ZN12QPixmapCache10cacheLimitEv(); // 4
+extern void C_ZN12QPixmapCache10cacheLimitEv(); // 4
   // proto: static void QPixmapCache::clear();
-extern void _ZN12QPixmapCache5clearEv(); // 4
+extern void C_ZN12QPixmapCache5clearEv(); // 4
   // proto: static void QPixmapCache::remove(const QString & key);
-extern void _ZN12QPixmapCache6removeERK7QString(void* arg0); // 4
+extern void C_ZN12QPixmapCache6removeERK7QString(void* arg0); // 4
   // proto: static void QPixmapCache::setCacheLimit(int );
-extern void _ZN12QPixmapCache13setCacheLimitEi(int32_t arg0); // 4
+extern void C_ZN12QPixmapCache13setCacheLimitEi(int32_t arg0); // 4
   // proto: static QPixmap * QPixmapCache::find(const QString & key);
-extern void _ZN12QPixmapCache4findERK7QString(void* arg0); // 4
+extern void C_ZN12QPixmapCache4findERK7QString(void* arg0); // 4
   // proto: static bool QPixmapCache::find(const QString & key, QPixmap & pixmap);
-extern void _ZN12QPixmapCache4findERK7QStringR7QPixmap(void* arg0, void* arg1); // 4
+extern void C_ZN12QPixmapCache4findERK7QStringR7QPixmap(void* arg0, void* arg1); // 4
   // proto: static bool QPixmapCache::find(const QString & key, QPixmap * pixmap);
-extern void _ZN12QPixmapCache4findERK7QStringP7QPixmap(void* arg0, void* arg1); // 4
+extern void C_ZN12QPixmapCache4findERK7QStringP7QPixmap(void* arg0, void* arg1); // 4
 */
 import "C"
 // } // <= ext block end
@@ -86,13 +86,13 @@ func (this *QPixmapCache) insert_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0, arg1)
+    C.C_ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0, arg1)
   case 1:
     // invoke: _ZN12QPixmapCache6insertERK7QPixmap
     // invoke: QPixmapCache::Key insert(const class QPixmap &)
     var arg0 = args[0].(QPixmap).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QPixmapCache6insertERK7QPixmap(arg0)
+    C.C_ZN12QPixmapCache6insertERK7QPixmap(arg0)
   default:
     qtrt.ErrorResolve("QPixmapCache", "insert", args)
   }
@@ -112,7 +112,7 @@ func (this *QPixmapCache) cacheLimit_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPixmapCache10cacheLimitEv
     // invoke: int cacheLimit()
-    C._ZN12QPixmapCache10cacheLimitEv()
+    C.C_ZN12QPixmapCache10cacheLimitEv()
   default:
     qtrt.ErrorResolve("QPixmapCache", "cacheLimit", args)
   }
@@ -132,7 +132,7 @@ func (this *QPixmapCache) clear_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPixmapCache5clearEv
     // invoke: void clear()
-    C._ZN12QPixmapCache5clearEv()
+    C.C_ZN12QPixmapCache5clearEv()
   default:
     qtrt.ErrorResolve("QPixmapCache", "clear", args)
   }
@@ -155,7 +155,7 @@ func (this *QPixmapCache) remove_s(args ...interface{}) () {
     // invoke: void remove(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QPixmapCache6removeERK7QString(arg0)
+    C.C_ZN12QPixmapCache6removeERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QPixmapCache", "remove", args)
   }
@@ -178,7 +178,7 @@ func (this *QPixmapCache) setCacheLimit_s(args ...interface{}) () {
     // invoke: void setCacheLimit(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN12QPixmapCache13setCacheLimitEi(arg0)
+    C.C_ZN12QPixmapCache13setCacheLimitEi(arg0)
   default:
     qtrt.ErrorResolve("QPixmapCache", "setCacheLimit", args)
   }
@@ -209,7 +209,7 @@ func (this *QPixmapCache) find_s(args ...interface{}) () {
     // invoke: QPixmap * find(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QPixmapCache4findERK7QString(arg0)
+    C.C_ZN12QPixmapCache4findERK7QString(arg0)
   case 1:
     // invoke: _ZN12QPixmapCache4findERK7QStringR7QPixmap
     // invoke: bool find(const class QString &, class QPixmap &)
@@ -217,7 +217,7 @@ func (this *QPixmapCache) find_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0, arg1)
+    C.C_ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0, arg1)
   case 2:
     // invoke: _ZN12QPixmapCache4findERK7QStringP7QPixmap
     // invoke: bool find(const class QString &, class QPixmap *)
@@ -225,7 +225,7 @@ func (this *QPixmapCache) find_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN12QPixmapCache4findERK7QStringP7QPixmap(arg0, arg1)
+    C.C_ZN12QPixmapCache4findERK7QStringP7QPixmap(arg0, arg1)
   default:
     qtrt.ErrorResolve("QPixmapCache", "find", args)
   }

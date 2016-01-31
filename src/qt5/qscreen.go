@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.go
 //
@@ -29,61 +29,61 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  qreal QScreen::refreshRate();
-extern void _ZNK7QScreen11refreshRateEv(void* qthis); // 4
+extern void C_ZNK7QScreen11refreshRateEv(void* qthis); // 4
   // proto:  QSize QScreen::availableVirtualSize();
-extern void _ZNK7QScreen20availableVirtualSizeEv(void* qthis); // 4
+extern void C_ZNK7QScreen20availableVirtualSizeEv(void* qthis); // 4
   // proto:  Qt::ScreenOrientation QScreen::orientation();
-extern void _ZNK7QScreen11orientationEv(void* qthis); // 4
+extern void C_ZNK7QScreen11orientationEv(void* qthis); // 4
   // proto:  QPixmap QScreen::grabWindow(WId window, int x, int y, int w, int h);
-extern void _ZN7QScreen10grabWindowEiiiii(void* qthis, int32_t* arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4); // 4
+extern void C_ZN7QScreen10grabWindowEiiiii(void* qthis, int32_t* arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4); // 4
   // proto:  Qt::ScreenOrientation QScreen::nativeOrientation();
-extern void _ZNK7QScreen17nativeOrientationEv(void* qthis); // 4
+extern void C_ZNK7QScreen17nativeOrientationEv(void* qthis); // 4
   // proto:  QSize QScreen::size();
-extern void _ZNK7QScreen4sizeEv(void* qthis); // 4
+extern void C_ZNK7QScreen4sizeEv(void* qthis); // 4
   // proto:  qreal QScreen::physicalDotsPerInchY();
-extern void _ZNK7QScreen20physicalDotsPerInchYEv(void* qthis); // 4
+extern void C_ZNK7QScreen20physicalDotsPerInchYEv(void* qthis); // 4
   // proto:  qreal QScreen::logicalDotsPerInch();
-extern void _ZNK7QScreen18logicalDotsPerInchEv(void* qthis); // 4
+extern void C_ZNK7QScreen18logicalDotsPerInchEv(void* qthis); // 4
   // proto:  QList<QScreen *> QScreen::virtualSiblings();
-extern void _ZNK7QScreen15virtualSiblingsEv(void* qthis); // 4
+extern void C_ZNK7QScreen15virtualSiblingsEv(void* qthis); // 4
   // proto:  QRect QScreen::availableGeometry();
-extern void _ZNK7QScreen17availableGeometryEv(void* qthis); // 4
+extern void C_ZNK7QScreen17availableGeometryEv(void* qthis); // 4
   // proto:  Qt::ScreenOrientations QScreen::orientationUpdateMask();
-extern void _ZNK7QScreen21orientationUpdateMaskEv(void* qthis); // 4
+extern void C_ZNK7QScreen21orientationUpdateMaskEv(void* qthis); // 4
   // proto:  Qt::ScreenOrientation QScreen::primaryOrientation();
-extern void _ZNK7QScreen18primaryOrientationEv(void* qthis); // 4
+extern void C_ZNK7QScreen18primaryOrientationEv(void* qthis); // 4
   // proto:  QPlatformScreen * QScreen::handle();
-extern void _ZNK7QScreen6handleEv(void* qthis); // 4
+extern void C_ZNK7QScreen6handleEv(void* qthis); // 4
   // proto:  QRect QScreen::availableVirtualGeometry();
-extern void _ZNK7QScreen24availableVirtualGeometryEv(void* qthis); // 4
+extern void C_ZNK7QScreen24availableVirtualGeometryEv(void* qthis); // 4
   // proto:  void QScreen::~QScreen();
-extern void _ZN7QScreenD2Ev(void* qthis); // 4
+extern void C_ZN7QScreenD2Ev(void* qthis); // 4
   // proto:  QSize QScreen::availableSize();
-extern void _ZNK7QScreen13availableSizeEv(void* qthis); // 4
+extern void C_ZNK7QScreen13availableSizeEv(void* qthis); // 4
   // proto:  QRect QScreen::virtualGeometry();
-extern void _ZNK7QScreen15virtualGeometryEv(void* qthis); // 4
+extern void C_ZNK7QScreen15virtualGeometryEv(void* qthis); // 4
   // proto:  qreal QScreen::physicalDotsPerInch();
-extern void _ZNK7QScreen19physicalDotsPerInchEv(void* qthis); // 4
+extern void C_ZNK7QScreen19physicalDotsPerInchEv(void* qthis); // 4
   // proto:  QSizeF QScreen::physicalSize();
-extern void _ZNK7QScreen12physicalSizeEv(void* qthis); // 4
+extern void C_ZNK7QScreen12physicalSizeEv(void* qthis); // 4
   // proto:  const QMetaObject * QScreen::metaObject();
-extern void _ZNK7QScreen10metaObjectEv(void* qthis); // 4
+extern void C_ZNK7QScreen10metaObjectEv(void* qthis); // 4
   // proto:  QString QScreen::name();
-extern void _ZNK7QScreen4nameEv(void* qthis); // 4
+extern void C_ZNK7QScreen4nameEv(void* qthis); // 4
   // proto:  qreal QScreen::logicalDotsPerInchY();
-extern void _ZNK7QScreen19logicalDotsPerInchYEv(void* qthis); // 4
+extern void C_ZNK7QScreen19logicalDotsPerInchYEv(void* qthis); // 4
   // proto:  qreal QScreen::logicalDotsPerInchX();
-extern void _ZNK7QScreen19logicalDotsPerInchXEv(void* qthis); // 4
+extern void C_ZNK7QScreen19logicalDotsPerInchXEv(void* qthis); // 4
   // proto:  qreal QScreen::devicePixelRatio();
-extern void _ZNK7QScreen16devicePixelRatioEv(void* qthis); // 4
+extern void C_ZNK7QScreen16devicePixelRatioEv(void* qthis); // 4
   // proto:  QRect QScreen::geometry();
-extern void _ZNK7QScreen8geometryEv(void* qthis); // 4
+extern void C_ZNK7QScreen8geometryEv(void* qthis); // 4
   // proto:  int QScreen::depth();
-extern void _ZNK7QScreen5depthEv(void* qthis); // 4
+extern void C_ZNK7QScreen5depthEv(void* qthis); // 4
   // proto:  QSize QScreen::virtualSize();
-extern void _ZNK7QScreen11virtualSizeEv(void* qthis); // 4
+extern void C_ZNK7QScreen11virtualSizeEv(void* qthis); // 4
   // proto:  qreal QScreen::physicalDotsPerInchX();
-extern void _ZNK7QScreen20physicalDotsPerInchXEv(void* qthis); // 4
+extern void C_ZNK7QScreen20physicalDotsPerInchXEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -124,7 +124,7 @@ func (this *QScreen) refreshRate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen11refreshRateEv
     // invoke: qreal refreshRate()
-    C._ZNK7QScreen11refreshRateEv(this.qclsinst)
+    C.C_ZNK7QScreen11refreshRateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "refreshRate", args)
   }
@@ -144,7 +144,7 @@ func (this *QScreen) availableVirtualSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen20availableVirtualSizeEv
     // invoke: QSize availableVirtualSize()
-    C._ZNK7QScreen20availableVirtualSizeEv(this.qclsinst)
+    C.C_ZNK7QScreen20availableVirtualSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "availableVirtualSize", args)
   }
@@ -164,7 +164,7 @@ func (this *QScreen) orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen11orientationEv
     // invoke: Qt::ScreenOrientation orientation()
-    C._ZNK7QScreen11orientationEv(this.qclsinst)
+    C.C_ZNK7QScreen11orientationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "orientation", args)
   }
@@ -199,7 +199,7 @@ func (this *QScreen) grabWindow(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.int32_t(args[4].(int32))
     if false {fmt.Println(arg4)}
-    C._ZN7QScreen10grabWindowEiiiii(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN7QScreen10grabWindowEiiiii(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QScreen", "grabWindow", args)
   }
@@ -219,7 +219,7 @@ func (this *QScreen) nativeOrientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen17nativeOrientationEv
     // invoke: Qt::ScreenOrientation nativeOrientation()
-    C._ZNK7QScreen17nativeOrientationEv(this.qclsinst)
+    C.C_ZNK7QScreen17nativeOrientationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "nativeOrientation", args)
   }
@@ -239,7 +239,7 @@ func (this *QScreen) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen4sizeEv
     // invoke: QSize size()
-    C._ZNK7QScreen4sizeEv(this.qclsinst)
+    C.C_ZNK7QScreen4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "size", args)
   }
@@ -259,7 +259,7 @@ func (this *QScreen) physicalDotsPerInchY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen20physicalDotsPerInchYEv
     // invoke: qreal physicalDotsPerInchY()
-    C._ZNK7QScreen20physicalDotsPerInchYEv(this.qclsinst)
+    C.C_ZNK7QScreen20physicalDotsPerInchYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "physicalDotsPerInchY", args)
   }
@@ -279,7 +279,7 @@ func (this *QScreen) logicalDotsPerInch(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen18logicalDotsPerInchEv
     // invoke: qreal logicalDotsPerInch()
-    C._ZNK7QScreen18logicalDotsPerInchEv(this.qclsinst)
+    C.C_ZNK7QScreen18logicalDotsPerInchEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "logicalDotsPerInch", args)
   }
@@ -299,7 +299,7 @@ func (this *QScreen) virtualSiblings(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen15virtualSiblingsEv
     // invoke: QList<QScreen *> virtualSiblings()
-    C._ZNK7QScreen15virtualSiblingsEv(this.qclsinst)
+    C.C_ZNK7QScreen15virtualSiblingsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "virtualSiblings", args)
   }
@@ -319,7 +319,7 @@ func (this *QScreen) availableGeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen17availableGeometryEv
     // invoke: QRect availableGeometry()
-    C._ZNK7QScreen17availableGeometryEv(this.qclsinst)
+    C.C_ZNK7QScreen17availableGeometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "availableGeometry", args)
   }
@@ -339,7 +339,7 @@ func (this *QScreen) orientationUpdateMask(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen21orientationUpdateMaskEv
     // invoke: Qt::ScreenOrientations orientationUpdateMask()
-    C._ZNK7QScreen21orientationUpdateMaskEv(this.qclsinst)
+    C.C_ZNK7QScreen21orientationUpdateMaskEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "orientationUpdateMask", args)
   }
@@ -359,7 +359,7 @@ func (this *QScreen) primaryOrientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen18primaryOrientationEv
     // invoke: Qt::ScreenOrientation primaryOrientation()
-    C._ZNK7QScreen18primaryOrientationEv(this.qclsinst)
+    C.C_ZNK7QScreen18primaryOrientationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "primaryOrientation", args)
   }
@@ -379,7 +379,7 @@ func (this *QScreen) handle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen6handleEv
     // invoke: QPlatformScreen * handle()
-    C._ZNK7QScreen6handleEv(this.qclsinst)
+    C.C_ZNK7QScreen6handleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "handle", args)
   }
@@ -399,7 +399,7 @@ func (this *QScreen) availableVirtualGeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen24availableVirtualGeometryEv
     // invoke: QRect availableVirtualGeometry()
-    C._ZNK7QScreen24availableVirtualGeometryEv(this.qclsinst)
+    C.C_ZNK7QScreen24availableVirtualGeometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "availableVirtualGeometry", args)
   }
@@ -419,7 +419,7 @@ func (this *QScreen) FreeQScreen(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QScreenD0Ev
     // invoke: void ~QScreen()
-    C._ZN7QScreenD2Ev(this.qclsinst)
+    C.C_ZN7QScreenD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "~QScreen", args)
   }
@@ -439,7 +439,7 @@ func (this *QScreen) availableSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen13availableSizeEv
     // invoke: QSize availableSize()
-    C._ZNK7QScreen13availableSizeEv(this.qclsinst)
+    C.C_ZNK7QScreen13availableSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "availableSize", args)
   }
@@ -459,7 +459,7 @@ func (this *QScreen) virtualGeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen15virtualGeometryEv
     // invoke: QRect virtualGeometry()
-    C._ZNK7QScreen15virtualGeometryEv(this.qclsinst)
+    C.C_ZNK7QScreen15virtualGeometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "virtualGeometry", args)
   }
@@ -479,7 +479,7 @@ func (this *QScreen) physicalDotsPerInch(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen19physicalDotsPerInchEv
     // invoke: qreal physicalDotsPerInch()
-    C._ZNK7QScreen19physicalDotsPerInchEv(this.qclsinst)
+    C.C_ZNK7QScreen19physicalDotsPerInchEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "physicalDotsPerInch", args)
   }
@@ -499,7 +499,7 @@ func (this *QScreen) physicalSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen12physicalSizeEv
     // invoke: QSizeF physicalSize()
-    C._ZNK7QScreen12physicalSizeEv(this.qclsinst)
+    C.C_ZNK7QScreen12physicalSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "physicalSize", args)
   }
@@ -519,7 +519,7 @@ func (this *QScreen) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK7QScreen10metaObjectEv(this.qclsinst)
+    C.C_ZNK7QScreen10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "metaObject", args)
   }
@@ -539,7 +539,7 @@ func (this *QScreen) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen4nameEv
     // invoke: QString name()
-    C._ZNK7QScreen4nameEv(this.qclsinst)
+    C.C_ZNK7QScreen4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "name", args)
   }
@@ -559,7 +559,7 @@ func (this *QScreen) logicalDotsPerInchY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen19logicalDotsPerInchYEv
     // invoke: qreal logicalDotsPerInchY()
-    C._ZNK7QScreen19logicalDotsPerInchYEv(this.qclsinst)
+    C.C_ZNK7QScreen19logicalDotsPerInchYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "logicalDotsPerInchY", args)
   }
@@ -579,7 +579,7 @@ func (this *QScreen) logicalDotsPerInchX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen19logicalDotsPerInchXEv
     // invoke: qreal logicalDotsPerInchX()
-    C._ZNK7QScreen19logicalDotsPerInchXEv(this.qclsinst)
+    C.C_ZNK7QScreen19logicalDotsPerInchXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "logicalDotsPerInchX", args)
   }
@@ -599,7 +599,7 @@ func (this *QScreen) devicePixelRatio(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen16devicePixelRatioEv
     // invoke: qreal devicePixelRatio()
-    C._ZNK7QScreen16devicePixelRatioEv(this.qclsinst)
+    C.C_ZNK7QScreen16devicePixelRatioEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "devicePixelRatio", args)
   }
@@ -619,7 +619,7 @@ func (this *QScreen) geometry(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen8geometryEv
     // invoke: QRect geometry()
-    C._ZNK7QScreen8geometryEv(this.qclsinst)
+    C.C_ZNK7QScreen8geometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "geometry", args)
   }
@@ -639,7 +639,7 @@ func (this *QScreen) depth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen5depthEv
     // invoke: int depth()
-    C._ZNK7QScreen5depthEv(this.qclsinst)
+    C.C_ZNK7QScreen5depthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "depth", args)
   }
@@ -659,7 +659,7 @@ func (this *QScreen) virtualSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen11virtualSizeEv
     // invoke: QSize virtualSize()
-    C._ZNK7QScreen11virtualSizeEv(this.qclsinst)
+    C.C_ZNK7QScreen11virtualSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "virtualSize", args)
   }
@@ -679,7 +679,7 @@ func (this *QScreen) physicalDotsPerInchX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen20physicalDotsPerInchXEv
     // invoke: qreal physicalDotsPerInchX()
-    C._ZNK7QScreen20physicalDotsPerInchXEv(this.qclsinst)
+    C.C_ZNK7QScreen20physicalDotsPerInchXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "physicalDotsPerInchX", args)
   }

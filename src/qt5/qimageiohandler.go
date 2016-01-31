@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qimageiohandler.h
 // dst-file: /src/gui/qimageiohandler.go
 //
@@ -29,41 +29,41 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QIODevice * QImageIOHandler::device();
-extern void _ZNK15QImageIOHandler6deviceEv(void* qthis); // 4
+extern void C_ZNK15QImageIOHandler6deviceEv(void* qthis); // 4
   // proto:  int QImageIOHandler::imageCount();
-extern void _ZNK15QImageIOHandler10imageCountEv(void* qthis); // 4
+extern void C_ZNK15QImageIOHandler10imageCountEv(void* qthis); // 4
   // proto:  int QImageIOHandler::loopCount();
-extern void _ZNK15QImageIOHandler9loopCountEv(void* qthis); // 4
+extern void C_ZNK15QImageIOHandler9loopCountEv(void* qthis); // 4
   // proto:  void QImageIOHandler::setFormat(const QByteArray & format);
-extern void _ZN15QImageIOHandler9setFormatERK10QByteArray(void* qthis, void* arg0); // 4
+extern void C_ZN15QImageIOHandler9setFormatERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  QByteArray QImageIOHandler::format();
-extern void _ZNK15QImageIOHandler6formatEv(void* qthis); // 4
+extern void C_ZNK15QImageIOHandler6formatEv(void* qthis); // 4
   // proto:  bool QImageIOHandler::write(const QImage & image);
-extern void _ZN15QImageIOHandler5writeERK6QImage(void* qthis, void* arg0); // 4
+extern void C_ZN15QImageIOHandler5writeERK6QImage(void* qthis, void* arg0); // 4
   // proto:  bool QImageIOHandler::jumpToImage(int imageNumber);
-extern void _ZN15QImageIOHandler11jumpToImageEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QImageIOHandler11jumpToImageEi(void* qthis, int32_t arg0); // 4
   // proto:  void QImageIOHandler::setDevice(QIODevice * device);
-extern void _ZN15QImageIOHandler9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
+extern void C_ZN15QImageIOHandler9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  bool QImageIOHandler::jumpToNextImage();
-extern void _ZN15QImageIOHandler15jumpToNextImageEv(void* qthis); // 4
+extern void C_ZN15QImageIOHandler15jumpToNextImageEv(void* qthis); // 4
   // proto:  int QImageIOHandler::currentImageNumber();
-extern void _ZNK15QImageIOHandler18currentImageNumberEv(void* qthis); // 4
+extern void C_ZNK15QImageIOHandler18currentImageNumberEv(void* qthis); // 4
   // proto:  void QImageIOHandler::~QImageIOHandler();
-extern void _ZN15QImageIOHandlerD2Ev(void* qthis); // 4
+extern void C_ZN15QImageIOHandlerD2Ev(void* qthis); // 4
   // proto:  void QImageIOHandler::QImageIOHandler();
-extern void _ZN15QImageIOHandlerC2Ev(void* qthis); // 3
+extern void C_ZN15QImageIOHandlerC2Ev(void* qthis); // 3
   // proto:  QRect QImageIOHandler::currentImageRect();
-extern void _ZNK15QImageIOHandler16currentImageRectEv(void* qthis); // 4
+extern void C_ZNK15QImageIOHandler16currentImageRectEv(void* qthis); // 4
   // proto:  QByteArray QImageIOHandler::name();
-extern void _ZNK15QImageIOHandler4nameEv(void* qthis); // 4
+extern void C_ZNK15QImageIOHandler4nameEv(void* qthis); // 4
   // proto:  int QImageIOHandler::nextImageDelay();
-extern void _ZNK15QImageIOHandler14nextImageDelayEv(void* qthis); // 4
+extern void C_ZNK15QImageIOHandler14nextImageDelayEv(void* qthis); // 4
   // proto:  void QImageIOPlugin::~QImageIOPlugin();
-extern void _ZN14QImageIOPluginD2Ev(void* qthis); // 4
+extern void C_ZN14QImageIOPluginD2Ev(void* qthis); // 4
   // proto:  void QImageIOPlugin::QImageIOPlugin(QObject * parent);
-extern void _ZN14QImageIOPluginC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN14QImageIOPluginC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  const QMetaObject * QImageIOPlugin::metaObject();
-extern void _ZNK14QImageIOPlugin10metaObjectEv(void* qthis); // 4
+extern void C_ZNK14QImageIOPlugin10metaObjectEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -101,7 +101,7 @@ func (this *QImageIOHandler) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QImageIOHandler6deviceEv
     // invoke: QIODevice * device()
-    C._ZNK15QImageIOHandler6deviceEv(this.qclsinst)
+    C.C_ZNK15QImageIOHandler6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "device", args)
   }
@@ -121,7 +121,7 @@ func (this *QImageIOHandler) imageCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QImageIOHandler10imageCountEv
     // invoke: int imageCount()
-    C._ZNK15QImageIOHandler10imageCountEv(this.qclsinst)
+    C.C_ZNK15QImageIOHandler10imageCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "imageCount", args)
   }
@@ -141,7 +141,7 @@ func (this *QImageIOHandler) loopCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QImageIOHandler9loopCountEv
     // invoke: int loopCount()
-    C._ZNK15QImageIOHandler9loopCountEv(this.qclsinst)
+    C.C_ZNK15QImageIOHandler9loopCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "loopCount", args)
   }
@@ -164,7 +164,7 @@ func (this *QImageIOHandler) setFormat(args ...interface{}) () {
     // invoke: void setFormat(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QImageIOHandler9setFormatERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN15QImageIOHandler9setFormatERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "setFormat", args)
   }
@@ -184,7 +184,7 @@ func (this *QImageIOHandler) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QImageIOHandler6formatEv
     // invoke: QByteArray format()
-    C._ZNK15QImageIOHandler6formatEv(this.qclsinst)
+    C.C_ZNK15QImageIOHandler6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "format", args)
   }
@@ -207,7 +207,7 @@ func (this *QImageIOHandler) write(args ...interface{}) () {
     // invoke: bool write(const class QImage &)
     var arg0 = args[0].(QImage).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QImageIOHandler5writeERK6QImage(this.qclsinst, arg0)
+    C.C_ZN15QImageIOHandler5writeERK6QImage(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "write", args)
   }
@@ -230,7 +230,7 @@ func (this *QImageIOHandler) jumpToImage(args ...interface{}) () {
     // invoke: bool jumpToImage(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QImageIOHandler11jumpToImageEi(this.qclsinst, arg0)
+    C.C_ZN15QImageIOHandler11jumpToImageEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "jumpToImage", args)
   }
@@ -253,7 +253,7 @@ func (this *QImageIOHandler) setDevice(args ...interface{}) () {
     // invoke: void setDevice(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QImageIOHandler9setDeviceEP9QIODevice(this.qclsinst, arg0)
+    C.C_ZN15QImageIOHandler9setDeviceEP9QIODevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "setDevice", args)
   }
@@ -273,7 +273,7 @@ func (this *QImageIOHandler) jumpToNextImage(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QImageIOHandler15jumpToNextImageEv
     // invoke: bool jumpToNextImage()
-    C._ZN15QImageIOHandler15jumpToNextImageEv(this.qclsinst)
+    C.C_ZN15QImageIOHandler15jumpToNextImageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "jumpToNextImage", args)
   }
@@ -293,7 +293,7 @@ func (this *QImageIOHandler) currentImageNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QImageIOHandler18currentImageNumberEv
     // invoke: int currentImageNumber()
-    C._ZNK15QImageIOHandler18currentImageNumberEv(this.qclsinst)
+    C.C_ZNK15QImageIOHandler18currentImageNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "currentImageNumber", args)
   }
@@ -313,7 +313,7 @@ func (this *QImageIOHandler) FreeQImageIOHandler(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QImageIOHandlerD0Ev
     // invoke: void ~QImageIOHandler()
-    C._ZN15QImageIOHandlerD2Ev(this.qclsinst)
+    C.C_ZN15QImageIOHandlerD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "~QImageIOHandler", args)
   }
@@ -335,7 +335,7 @@ func NewQImageIOHandler(args ...interface{}) QImageIOHandler {
     // invoke: void QImageIOHandler()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QImageIOHandlerC2Ev(qthis)
+    C.C_ZN15QImageIOHandlerC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "QImageIOHandler", args)
   }
@@ -356,7 +356,7 @@ func (this *QImageIOHandler) currentImageRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QImageIOHandler16currentImageRectEv
     // invoke: QRect currentImageRect()
-    C._ZNK15QImageIOHandler16currentImageRectEv(this.qclsinst)
+    C.C_ZNK15QImageIOHandler16currentImageRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "currentImageRect", args)
   }
@@ -376,7 +376,7 @@ func (this *QImageIOHandler) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QImageIOHandler4nameEv
     // invoke: QByteArray name()
-    C._ZNK15QImageIOHandler4nameEv(this.qclsinst)
+    C.C_ZNK15QImageIOHandler4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "name", args)
   }
@@ -396,7 +396,7 @@ func (this *QImageIOHandler) nextImageDelay(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QImageIOHandler14nextImageDelayEv
     // invoke: int nextImageDelay()
-    C._ZNK15QImageIOHandler14nextImageDelayEv(this.qclsinst)
+    C.C_ZNK15QImageIOHandler14nextImageDelayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "nextImageDelay", args)
   }
@@ -416,7 +416,7 @@ func (this *QImageIOPlugin) FreeQImageIOPlugin(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QImageIOPluginD0Ev
     // invoke: void ~QImageIOPlugin()
-    C._ZN14QImageIOPluginD2Ev(this.qclsinst)
+    C.C_ZN14QImageIOPluginD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOPlugin", "~QImageIOPlugin", args)
   }
@@ -441,7 +441,7 @@ func NewQImageIOPlugin(args ...interface{}) QImageIOPlugin {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN14QImageIOPluginC2EP7QObject(qthis, arg0)
+    C.C_ZN14QImageIOPluginC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QImageIOPlugin", "QImageIOPlugin", args)
   }
@@ -462,7 +462,7 @@ func (this *QImageIOPlugin) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QImageIOPlugin10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK14QImageIOPlugin10metaObjectEv(this.qclsinst)
+    C.C_ZNK14QImageIOPlugin10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOPlugin", "metaObject", args)
   }

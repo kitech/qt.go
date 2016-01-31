@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qlabel.h
 // dst-file: /src/widgets/qlabel.go
 //
@@ -29,75 +29,75 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QLabel::setBuddy(QWidget * );
-extern void _ZN6QLabel8setBuddyEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN6QLabel8setBuddyEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  QString QLabel::text();
-extern void _ZNK6QLabel4textEv(void* qthis); // 4
+extern void C_ZNK6QLabel4textEv(void* qthis); // 4
   // proto:  void QLabel::setPixmap(const QPixmap & );
-extern void _ZN6QLabel9setPixmapERK7QPixmap(void* qthis, void* arg0); // 4
+extern void C_ZN6QLabel9setPixmapERK7QPixmap(void* qthis, void* arg0); // 4
   // proto:  bool QLabel::wordWrap();
-extern void _ZNK6QLabel8wordWrapEv(void* qthis); // 4
+extern void C_ZNK6QLabel8wordWrapEv(void* qthis); // 4
   // proto:  bool QLabel::hasSelectedText();
-extern void _ZNK6QLabel15hasSelectedTextEv(void* qthis); // 4
+extern void C_ZNK6QLabel15hasSelectedTextEv(void* qthis); // 4
   // proto:  void QLabel::setOpenExternalLinks(bool open);
-extern void _ZN6QLabel20setOpenExternalLinksEb(void* qthis, bool arg0); // 4
+extern void C_ZN6QLabel20setOpenExternalLinksEb(void* qthis, bool arg0); // 4
   // proto:  Qt::Alignment QLabel::alignment();
-extern void _ZNK6QLabel9alignmentEv(void* qthis); // 4
+extern void C_ZNK6QLabel9alignmentEv(void* qthis); // 4
   // proto:  const QPixmap * QLabel::pixmap();
-extern void _ZNK6QLabel6pixmapEv(void* qthis); // 4
+extern void C_ZNK6QLabel6pixmapEv(void* qthis); // 4
   // proto:  QWidget * QLabel::buddy();
-extern void _ZNK6QLabel5buddyEv(void* qthis); // 4
+extern void C_ZNK6QLabel5buddyEv(void* qthis); // 4
   // proto:  QMovie * QLabel::movie();
-extern void _ZNK6QLabel5movieEv(void* qthis); // 4
+extern void C_ZNK6QLabel5movieEv(void* qthis); // 4
   // proto:  void QLabel::setPicture(const QPicture & );
-extern void _ZN6QLabel10setPictureERK8QPicture(void* qthis, void* arg0); // 4
+extern void C_ZN6QLabel10setPictureERK8QPicture(void* qthis, void* arg0); // 4
   // proto:  bool QLabel::hasScaledContents();
-extern void _ZNK6QLabel17hasScaledContentsEv(void* qthis); // 4
+extern void C_ZNK6QLabel17hasScaledContentsEv(void* qthis); // 4
   // proto:  void QLabel::~QLabel();
-extern void _ZN6QLabelD2Ev(void* qthis); // 4
+extern void C_ZN6QLabelD2Ev(void* qthis); // 4
   // proto:  void QLabel::setWordWrap(bool on);
-extern void _ZN6QLabel11setWordWrapEb(void* qthis, bool arg0); // 4
+extern void C_ZN6QLabel11setWordWrapEb(void* qthis, bool arg0); // 4
   // proto:  Qt::TextInteractionFlags QLabel::textInteractionFlags();
-extern void _ZNK6QLabel20textInteractionFlagsEv(void* qthis); // 4
+extern void C_ZNK6QLabel20textInteractionFlagsEv(void* qthis); // 4
   // proto:  const QPicture * QLabel::picture();
-extern void _ZNK6QLabel7pictureEv(void* qthis); // 4
+extern void C_ZNK6QLabel7pictureEv(void* qthis); // 4
   // proto:  void QLabel::setIndent(int );
-extern void _ZN6QLabel9setIndentEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QLabel9setIndentEi(void* qthis, int32_t arg0); // 4
   // proto:  void QLabel::setMovie(QMovie * movie);
-extern void _ZN6QLabel8setMovieEP6QMovie(void* qthis, void* arg0); // 4
+extern void C_ZN6QLabel8setMovieEP6QMovie(void* qthis, void* arg0); // 4
   // proto:  void QLabel::setMargin(int );
-extern void _ZN6QLabel9setMarginEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QLabel9setMarginEi(void* qthis, int32_t arg0); // 4
   // proto:  QSize QLabel::sizeHint();
-extern void _ZNK6QLabel8sizeHintEv(void* qthis); // 4
+extern void C_ZNK6QLabel8sizeHintEv(void* qthis); // 4
   // proto:  void QLabel::setScaledContents(bool );
-extern void _ZN6QLabel17setScaledContentsEb(void* qthis, bool arg0); // 4
+extern void C_ZN6QLabel17setScaledContentsEb(void* qthis, bool arg0); // 4
   // proto:  int QLabel::indent();
-extern void _ZNK6QLabel6indentEv(void* qthis); // 4
+extern void C_ZNK6QLabel6indentEv(void* qthis); // 4
   // proto:  const QMetaObject * QLabel::metaObject();
-extern void _ZNK6QLabel10metaObjectEv(void* qthis); // 4
+extern void C_ZNK6QLabel10metaObjectEv(void* qthis); // 4
   // proto:  void QLabel::setSelection(int , int );
-extern void _ZN6QLabel12setSelectionEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN6QLabel12setSelectionEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  QSize QLabel::minimumSizeHint();
-extern void _ZNK6QLabel15minimumSizeHintEv(void* qthis); // 4
+extern void C_ZNK6QLabel15minimumSizeHintEv(void* qthis); // 4
   // proto:  bool QLabel::openExternalLinks();
-extern void _ZNK6QLabel17openExternalLinksEv(void* qthis); // 4
+extern void C_ZNK6QLabel17openExternalLinksEv(void* qthis); // 4
   // proto:  void QLabel::setText(const QString & );
-extern void _ZN6QLabel7setTextERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN6QLabel7setTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QLabel::selectedText();
-extern void _ZNK6QLabel12selectedTextEv(void* qthis); // 4
+extern void C_ZNK6QLabel12selectedTextEv(void* qthis); // 4
   // proto:  int QLabel::heightForWidth(int );
-extern void _ZNK6QLabel14heightForWidthEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK6QLabel14heightForWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  void QLabel::setNum(int );
-extern void _ZN6QLabel6setNumEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QLabel6setNumEi(void* qthis, int32_t arg0); // 4
   // proto:  void QLabel::setNum(double );
-extern void _ZN6QLabel6setNumEd(void* qthis, double arg0); // 4
+extern void C_ZN6QLabel6setNumEd(void* qthis, double arg0); // 4
   // proto:  int QLabel::selectionStart();
-extern void _ZNK6QLabel14selectionStartEv(void* qthis); // 4
+extern void C_ZNK6QLabel14selectionStartEv(void* qthis); // 4
   // proto:  Qt::TextFormat QLabel::textFormat();
-extern void _ZNK6QLabel10textFormatEv(void* qthis); // 4
+extern void C_ZNK6QLabel10textFormatEv(void* qthis); // 4
   // proto:  int QLabel::margin();
-extern void _ZNK6QLabel6marginEv(void* qthis); // 4
+extern void C_ZNK6QLabel6marginEv(void* qthis); // 4
   // proto:  void QLabel::clear();
-extern void _ZN6QLabel5clearEv(void* qthis); // 4
+extern void C_ZN6QLabel5clearEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -134,7 +134,7 @@ func (this *QLabel) setBuddy(args ...interface{}) () {
     // invoke: void setBuddy(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QLabel8setBuddyEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN6QLabel8setBuddyEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setBuddy", args)
   }
@@ -154,7 +154,7 @@ func (this *QLabel) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel4textEv
     // invoke: QString text()
-    C._ZNK6QLabel4textEv(this.qclsinst)
+    C.C_ZNK6QLabel4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "text", args)
   }
@@ -177,7 +177,7 @@ func (this *QLabel) setPixmap(args ...interface{}) () {
     // invoke: void setPixmap(const class QPixmap &)
     var arg0 = args[0].(QPixmap).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QLabel9setPixmapERK7QPixmap(this.qclsinst, arg0)
+    C.C_ZN6QLabel9setPixmapERK7QPixmap(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setPixmap", args)
   }
@@ -197,7 +197,7 @@ func (this *QLabel) wordWrap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel8wordWrapEv
     // invoke: bool wordWrap()
-    C._ZNK6QLabel8wordWrapEv(this.qclsinst)
+    C.C_ZNK6QLabel8wordWrapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "wordWrap", args)
   }
@@ -217,7 +217,7 @@ func (this *QLabel) hasSelectedText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel15hasSelectedTextEv
     // invoke: bool hasSelectedText()
-    C._ZNK6QLabel15hasSelectedTextEv(this.qclsinst)
+    C.C_ZNK6QLabel15hasSelectedTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "hasSelectedText", args)
   }
@@ -240,7 +240,7 @@ func (this *QLabel) setOpenExternalLinks(args ...interface{}) () {
     // invoke: void setOpenExternalLinks(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN6QLabel20setOpenExternalLinksEb(this.qclsinst, arg0)
+    C.C_ZN6QLabel20setOpenExternalLinksEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setOpenExternalLinks", args)
   }
@@ -260,7 +260,7 @@ func (this *QLabel) alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C._ZNK6QLabel9alignmentEv(this.qclsinst)
+    C.C_ZNK6QLabel9alignmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "alignment", args)
   }
@@ -280,7 +280,7 @@ func (this *QLabel) pixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel6pixmapEv
     // invoke: const QPixmap * pixmap()
-    C._ZNK6QLabel6pixmapEv(this.qclsinst)
+    C.C_ZNK6QLabel6pixmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "pixmap", args)
   }
@@ -300,7 +300,7 @@ func (this *QLabel) buddy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel5buddyEv
     // invoke: QWidget * buddy()
-    C._ZNK6QLabel5buddyEv(this.qclsinst)
+    C.C_ZNK6QLabel5buddyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "buddy", args)
   }
@@ -320,7 +320,7 @@ func (this *QLabel) movie(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel5movieEv
     // invoke: QMovie * movie()
-    C._ZNK6QLabel5movieEv(this.qclsinst)
+    C.C_ZNK6QLabel5movieEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "movie", args)
   }
@@ -343,7 +343,7 @@ func (this *QLabel) setPicture(args ...interface{}) () {
     // invoke: void setPicture(const class QPicture &)
     var arg0 = args[0].(QPicture).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QLabel10setPictureERK8QPicture(this.qclsinst, arg0)
+    C.C_ZN6QLabel10setPictureERK8QPicture(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setPicture", args)
   }
@@ -363,7 +363,7 @@ func (this *QLabel) hasScaledContents(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel17hasScaledContentsEv
     // invoke: bool hasScaledContents()
-    C._ZNK6QLabel17hasScaledContentsEv(this.qclsinst)
+    C.C_ZNK6QLabel17hasScaledContentsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "hasScaledContents", args)
   }
@@ -383,7 +383,7 @@ func (this *QLabel) FreeQLabel(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QLabelD0Ev
     // invoke: void ~QLabel()
-    C._ZN6QLabelD2Ev(this.qclsinst)
+    C.C_ZN6QLabelD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "~QLabel", args)
   }
@@ -406,7 +406,7 @@ func (this *QLabel) setWordWrap(args ...interface{}) () {
     // invoke: void setWordWrap(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN6QLabel11setWordWrapEb(this.qclsinst, arg0)
+    C.C_ZN6QLabel11setWordWrapEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setWordWrap", args)
   }
@@ -426,7 +426,7 @@ func (this *QLabel) textInteractionFlags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel20textInteractionFlagsEv
     // invoke: Qt::TextInteractionFlags textInteractionFlags()
-    C._ZNK6QLabel20textInteractionFlagsEv(this.qclsinst)
+    C.C_ZNK6QLabel20textInteractionFlagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "textInteractionFlags", args)
   }
@@ -446,7 +446,7 @@ func (this *QLabel) picture(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel7pictureEv
     // invoke: const QPicture * picture()
-    C._ZNK6QLabel7pictureEv(this.qclsinst)
+    C.C_ZNK6QLabel7pictureEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "picture", args)
   }
@@ -469,7 +469,7 @@ func (this *QLabel) setIndent(args ...interface{}) () {
     // invoke: void setIndent(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QLabel9setIndentEi(this.qclsinst, arg0)
+    C.C_ZN6QLabel9setIndentEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setIndent", args)
   }
@@ -492,7 +492,7 @@ func (this *QLabel) setMovie(args ...interface{}) () {
     // invoke: void setMovie(class QMovie *)
     var arg0 = args[0].(QMovie).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QLabel8setMovieEP6QMovie(this.qclsinst, arg0)
+    C.C_ZN6QLabel8setMovieEP6QMovie(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setMovie", args)
   }
@@ -515,7 +515,7 @@ func (this *QLabel) setMargin(args ...interface{}) () {
     // invoke: void setMargin(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QLabel9setMarginEi(this.qclsinst, arg0)
+    C.C_ZN6QLabel9setMarginEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setMargin", args)
   }
@@ -535,7 +535,7 @@ func (this *QLabel) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK6QLabel8sizeHintEv(this.qclsinst)
+    C.C_ZNK6QLabel8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "sizeHint", args)
   }
@@ -558,7 +558,7 @@ func (this *QLabel) setScaledContents(args ...interface{}) () {
     // invoke: void setScaledContents(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN6QLabel17setScaledContentsEb(this.qclsinst, arg0)
+    C.C_ZN6QLabel17setScaledContentsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setScaledContents", args)
   }
@@ -578,7 +578,7 @@ func (this *QLabel) indent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel6indentEv
     // invoke: int indent()
-    C._ZNK6QLabel6indentEv(this.qclsinst)
+    C.C_ZNK6QLabel6indentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "indent", args)
   }
@@ -598,7 +598,7 @@ func (this *QLabel) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK6QLabel10metaObjectEv(this.qclsinst)
+    C.C_ZNK6QLabel10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "metaObject", args)
   }
@@ -624,7 +624,7 @@ func (this *QLabel) setSelection(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN6QLabel12setSelectionEii(this.qclsinst, arg0, arg1)
+    C.C_ZN6QLabel12setSelectionEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QLabel", "setSelection", args)
   }
@@ -644,7 +644,7 @@ func (this *QLabel) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C._ZNK6QLabel15minimumSizeHintEv(this.qclsinst)
+    C.C_ZNK6QLabel15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "minimumSizeHint", args)
   }
@@ -664,7 +664,7 @@ func (this *QLabel) openExternalLinks(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel17openExternalLinksEv
     // invoke: bool openExternalLinks()
-    C._ZNK6QLabel17openExternalLinksEv(this.qclsinst)
+    C.C_ZNK6QLabel17openExternalLinksEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "openExternalLinks", args)
   }
@@ -687,7 +687,7 @@ func (this *QLabel) setText(args ...interface{}) () {
     // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QLabel7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN6QLabel7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setText", args)
   }
@@ -707,7 +707,7 @@ func (this *QLabel) selectedText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel12selectedTextEv
     // invoke: QString selectedText()
-    C._ZNK6QLabel12selectedTextEv(this.qclsinst)
+    C.C_ZNK6QLabel12selectedTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "selectedText", args)
   }
@@ -730,7 +730,7 @@ func (this *QLabel) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK6QLabel14heightForWidthEi(this.qclsinst, arg0)
+    C.C_ZNK6QLabel14heightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "heightForWidth", args)
   }
@@ -756,13 +756,13 @@ func (this *QLabel) setNum(args ...interface{}) () {
     // invoke: void setNum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QLabel6setNumEi(this.qclsinst, arg0)
+    C.C_ZN6QLabel6setNumEi(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN6QLabel6setNumEd
     // invoke: void setNum(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QLabel6setNumEd(this.qclsinst, arg0)
+    C.C_ZN6QLabel6setNumEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setNum", args)
   }
@@ -782,7 +782,7 @@ func (this *QLabel) selectionStart(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel14selectionStartEv
     // invoke: int selectionStart()
-    C._ZNK6QLabel14selectionStartEv(this.qclsinst)
+    C.C_ZNK6QLabel14selectionStartEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "selectionStart", args)
   }
@@ -802,7 +802,7 @@ func (this *QLabel) textFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel10textFormatEv
     // invoke: Qt::TextFormat textFormat()
-    C._ZNK6QLabel10textFormatEv(this.qclsinst)
+    C.C_ZNK6QLabel10textFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "textFormat", args)
   }
@@ -822,7 +822,7 @@ func (this *QLabel) margin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel6marginEv
     // invoke: int margin()
-    C._ZNK6QLabel6marginEv(this.qclsinst)
+    C.C_ZNK6QLabel6marginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "margin", args)
   }
@@ -842,7 +842,7 @@ func (this *QLabel) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QLabel5clearEv
     // invoke: void clear()
-    C._ZN6QLabel5clearEv(this.qclsinst)
+    C.C_ZN6QLabel5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "clear", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qcolumnview.h
 // dst-file: /src/widgets/qcolumnview.go
 //
@@ -29,35 +29,35 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QColumnView::selectAll();
-extern void _ZN11QColumnView9selectAllEv(void* qthis); // 4
+extern void C_ZN11QColumnView9selectAllEv(void* qthis); // 4
   // proto:  void QColumnView::setResizeGripsVisible(bool visible);
-extern void _ZN11QColumnView21setResizeGripsVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QColumnView21setResizeGripsVisibleEb(void* qthis, bool arg0); // 4
   // proto:  void QColumnView::~QColumnView();
-extern void _ZN11QColumnViewD2Ev(void* qthis); // 4
+extern void C_ZN11QColumnViewD2Ev(void* qthis); // 4
   // proto:  bool QColumnView::resizeGripsVisible();
-extern void _ZNK11QColumnView18resizeGripsVisibleEv(void* qthis); // 4
+extern void C_ZNK11QColumnView18resizeGripsVisibleEv(void* qthis); // 4
   // proto:  QModelIndex QColumnView::indexAt(const QPoint & point);
-extern void _ZNK11QColumnView7indexAtERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZNK11QColumnView7indexAtERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  QWidget * QColumnView::previewWidget();
-extern void _ZNK11QColumnView13previewWidgetEv(void* qthis); // 4
+extern void C_ZNK11QColumnView13previewWidgetEv(void* qthis); // 4
   // proto:  QRect QColumnView::visualRect(const QModelIndex & index);
-extern void _ZNK11QColumnView10visualRectERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK11QColumnView10visualRectERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  void QColumnView::setPreviewWidget(QWidget * widget);
-extern void _ZN11QColumnView16setPreviewWidgetEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN11QColumnView16setPreviewWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QColumnView::setRootIndex(const QModelIndex & index);
-extern void _ZN11QColumnView12setRootIndexERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZN11QColumnView12setRootIndexERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QSize QColumnView::sizeHint();
-extern void _ZNK11QColumnView8sizeHintEv(void* qthis); // 4
+extern void C_ZNK11QColumnView8sizeHintEv(void* qthis); // 4
   // proto:  void QColumnView::setModel(QAbstractItemModel * model);
-extern void _ZN11QColumnView8setModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
+extern void C_ZN11QColumnView8setModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
   // proto:  void QColumnView::setSelectionModel(QItemSelectionModel * selectionModel);
-extern void _ZN11QColumnView17setSelectionModelEP19QItemSelectionModel(void* qthis, void* arg0); // 4
+extern void C_ZN11QColumnView17setSelectionModelEP19QItemSelectionModel(void* qthis, void* arg0); // 4
   // proto:  QList<int> QColumnView::columnWidths();
-extern void _ZNK11QColumnView12columnWidthsEv(void* qthis); // 4
+extern void C_ZNK11QColumnView12columnWidthsEv(void* qthis); // 4
   // proto:  const QMetaObject * QColumnView::metaObject();
-extern void _ZNK11QColumnView10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QColumnView10metaObjectEv(void* qthis); // 4
   // proto:  void QColumnView::QColumnView(QWidget * parent);
-extern void _ZN11QColumnViewC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN11QColumnViewC2EP7QWidget(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -90,7 +90,7 @@ func (this *QColumnView) selectAll(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QColumnView9selectAllEv
     // invoke: void selectAll()
-    C._ZN11QColumnView9selectAllEv(this.qclsinst)
+    C.C_ZN11QColumnView9selectAllEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColumnView", "selectAll", args)
   }
@@ -113,7 +113,7 @@ func (this *QColumnView) setResizeGripsVisible(args ...interface{}) () {
     // invoke: void setResizeGripsVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QColumnView21setResizeGripsVisibleEb(this.qclsinst, arg0)
+    C.C_ZN11QColumnView21setResizeGripsVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColumnView", "setResizeGripsVisible", args)
   }
@@ -133,7 +133,7 @@ func (this *QColumnView) FreeQColumnView(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QColumnViewD0Ev
     // invoke: void ~QColumnView()
-    C._ZN11QColumnViewD2Ev(this.qclsinst)
+    C.C_ZN11QColumnViewD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColumnView", "~QColumnView", args)
   }
@@ -153,7 +153,7 @@ func (this *QColumnView) resizeGripsVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QColumnView18resizeGripsVisibleEv
     // invoke: bool resizeGripsVisible()
-    C._ZNK11QColumnView18resizeGripsVisibleEv(this.qclsinst)
+    C.C_ZNK11QColumnView18resizeGripsVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColumnView", "resizeGripsVisible", args)
   }
@@ -176,7 +176,7 @@ func (this *QColumnView) indexAt(args ...interface{}) () {
     // invoke: QModelIndex indexAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QColumnView7indexAtERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK11QColumnView7indexAtERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColumnView", "indexAt", args)
   }
@@ -196,7 +196,7 @@ func (this *QColumnView) previewWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QColumnView13previewWidgetEv
     // invoke: QWidget * previewWidget()
-    C._ZNK11QColumnView13previewWidgetEv(this.qclsinst)
+    C.C_ZNK11QColumnView13previewWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColumnView", "previewWidget", args)
   }
@@ -219,7 +219,7 @@ func (this *QColumnView) visualRect(args ...interface{}) () {
     // invoke: QRect visualRect(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QColumnView10visualRectERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK11QColumnView10visualRectERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColumnView", "visualRect", args)
   }
@@ -242,7 +242,7 @@ func (this *QColumnView) setPreviewWidget(args ...interface{}) () {
     // invoke: void setPreviewWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QColumnView16setPreviewWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN11QColumnView16setPreviewWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColumnView", "setPreviewWidget", args)
   }
@@ -265,7 +265,7 @@ func (this *QColumnView) setRootIndex(args ...interface{}) () {
     // invoke: void setRootIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QColumnView12setRootIndexERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN11QColumnView12setRootIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColumnView", "setRootIndex", args)
   }
@@ -285,7 +285,7 @@ func (this *QColumnView) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QColumnView8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK11QColumnView8sizeHintEv(this.qclsinst)
+    C.C_ZNK11QColumnView8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColumnView", "sizeHint", args)
   }
@@ -308,7 +308,7 @@ func (this *QColumnView) setModel(args ...interface{}) () {
     // invoke: void setModel(class QAbstractItemModel *)
     var arg0 = args[0].(QAbstractItemModel).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QColumnView8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
+    C.C_ZN11QColumnView8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColumnView", "setModel", args)
   }
@@ -331,7 +331,7 @@ func (this *QColumnView) setSelectionModel(args ...interface{}) () {
     // invoke: void setSelectionModel(class QItemSelectionModel *)
     var arg0 = args[0].(QItemSelectionModel).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QColumnView17setSelectionModelEP19QItemSelectionModel(this.qclsinst, arg0)
+    C.C_ZN11QColumnView17setSelectionModelEP19QItemSelectionModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColumnView", "setSelectionModel", args)
   }
@@ -351,7 +351,7 @@ func (this *QColumnView) columnWidths(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QColumnView12columnWidthsEv
     // invoke: QList<int> columnWidths()
-    C._ZNK11QColumnView12columnWidthsEv(this.qclsinst)
+    C.C_ZNK11QColumnView12columnWidthsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColumnView", "columnWidths", args)
   }
@@ -371,7 +371,7 @@ func (this *QColumnView) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QColumnView10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QColumnView10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QColumnView10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColumnView", "metaObject", args)
   }
@@ -396,7 +396,7 @@ func NewQColumnView(args ...interface{}) QColumnView {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QColumnViewC2EP7QWidget(qthis, arg0)
+    C.C_ZN11QColumnViewC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QColumnView", "QColumnView", args)
   }

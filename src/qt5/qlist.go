@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qlist.h
 // dst-file: /src/core/qlist.go
 //
@@ -29,41 +29,41 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void ** QListData::insert(int i);
-extern void _ZN9QListData6insertEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QListData6insertEi(void* qthis, int32_t arg0); // 4
   // proto:  void ** QListData::begin();
-extern void _ZNK9QListData5beginEv(void* qthis); // 2
+extern void C_ZNK9QListData5beginEv(void* qthis); // 2
   // proto:  void ** QListData::end();
-extern void _ZNK9QListData3endEv(void* qthis); // 2
+extern void C_ZNK9QListData3endEv(void* qthis); // 2
   // proto:  void QListData::realloc(int alloc);
-extern void _ZN9QListData7reallocEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QListData7reallocEi(void* qthis, int32_t arg0); // 4
   // proto:  void QListData::move(int from, int to);
-extern void _ZN9QListData4moveEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN9QListData4moveEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QListData::dispose();
-extern void _ZN9QListData7disposeEv(void* qthis); // 2
+extern void C_ZN9QListData7disposeEv(void* qthis); // 2
   // proto:  void QListData::remove(int i);
-extern void _ZN9QListData6removeEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QListData6removeEi(void* qthis, int32_t arg0); // 4
   // proto:  void QListData::remove(int i, int n);
-extern void _ZN9QListData6removeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN9QListData6removeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void ** QListData::prepend();
-extern void _ZN9QListData7prependEv(void* qthis); // 4
+extern void C_ZN9QListData7prependEv(void* qthis); // 4
   // proto:  void ** QListData::erase(void ** xi);
-extern void _ZN9QListData5eraseEPPv(void* qthis, void* arg0); // 4
+extern void C_ZN9QListData5eraseEPPv(void* qthis, void* arg0); // 4
   // proto:  bool QListData::isEmpty();
-extern void _ZNK9QListData7isEmptyEv(void* qthis); // 2
+extern void C_ZNK9QListData7isEmptyEv(void* qthis); // 2
   // proto:  void ** QListData::at(int i);
-extern void _ZNK9QListData2atEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK9QListData2atEi(void* qthis, int32_t arg0); // 2
   // proto:  QListData::Data * QListData::detach_grow(int * i, int n);
-extern void _ZN9QListData11detach_growEPii(void* qthis, int32_t* arg0, int32_t arg1); // 4
+extern void C_ZN9QListData11detach_growEPii(void* qthis, int32_t* arg0, int32_t arg1); // 4
   // proto:  QListData::Data * QListData::detach(int alloc);
-extern void _ZN9QListData6detachEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QListData6detachEi(void* qthis, int32_t arg0); // 4
   // proto:  void ** QListData::append(int n);
-extern void _ZN9QListData6appendEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QListData6appendEi(void* qthis, int32_t arg0); // 4
   // proto:  void ** QListData::append(const QListData & l);
-extern void _ZN9QListData6appendERKS_(void* qthis, void* arg0); // 4
+extern void C_ZN9QListData6appendERKS_(void* qthis, void* arg0); // 4
   // proto:  void ** QListData::append();
-extern void _ZN9QListData6appendEv(void* qthis); // 4
+extern void C_ZN9QListData6appendEv(void* qthis); // 4
   // proto:  int QListData::size();
-extern void _ZNK9QListData4sizeEv(void* qthis); // 2
+extern void C_ZNK9QListData4sizeEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -98,7 +98,7 @@ func (this *QListData) insert(args ...interface{}) () {
     // invoke: void ** insert(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QListData6insertEi(this.qclsinst, arg0)
+    C.C_ZN9QListData6insertEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListData", "insert", args)
   }
@@ -118,7 +118,7 @@ func (this *QListData) begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListData5beginEv
     // invoke: void ** begin()
-    C._ZNK9QListData5beginEv(this.qclsinst)
+    C.C_ZNK9QListData5beginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListData", "begin", args)
   }
@@ -138,7 +138,7 @@ func (this *QListData) end(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListData3endEv
     // invoke: void ** end()
-    C._ZNK9QListData3endEv(this.qclsinst)
+    C.C_ZNK9QListData3endEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListData", "end", args)
   }
@@ -161,7 +161,7 @@ func (this *QListData) realloc(args ...interface{}) () {
     // invoke: void realloc(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QListData7reallocEi(this.qclsinst, arg0)
+    C.C_ZN9QListData7reallocEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListData", "realloc", args)
   }
@@ -187,7 +187,7 @@ func (this *QListData) move_(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN9QListData4moveEii(this.qclsinst, arg0, arg1)
+    C.C_ZN9QListData4moveEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QListData", "move", args)
   }
@@ -207,7 +207,7 @@ func (this *QListData) dispose(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListData7disposeEv
     // invoke: void dispose()
-    C._ZN9QListData7disposeEv(this.qclsinst)
+    C.C_ZN9QListData7disposeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListData", "dispose", args)
   }
@@ -234,7 +234,7 @@ func (this *QListData) remove(args ...interface{}) () {
     // invoke: void remove(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QListData6removeEi(this.qclsinst, arg0)
+    C.C_ZN9QListData6removeEi(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN9QListData6removeEii
     // invoke: void remove(int, int)
@@ -242,7 +242,7 @@ func (this *QListData) remove(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN9QListData6removeEii(this.qclsinst, arg0, arg1)
+    C.C_ZN9QListData6removeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QListData", "remove", args)
   }
@@ -262,7 +262,7 @@ func (this *QListData) prepend(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListData7prependEv
     // invoke: void ** prepend()
-    C._ZN9QListData7prependEv(this.qclsinst)
+    C.C_ZN9QListData7prependEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListData", "prepend", args)
   }
@@ -285,7 +285,7 @@ func (this *QListData) erase(args ...interface{}) () {
     // invoke: void ** erase(void **)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
-    C._ZN9QListData5eraseEPPv(this.qclsinst, arg0)
+    C.C_ZN9QListData5eraseEPPv(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListData", "erase", args)
   }
@@ -305,7 +305,7 @@ func (this *QListData) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListData7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK9QListData7isEmptyEv(this.qclsinst)
+    C.C_ZNK9QListData7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListData", "isEmpty", args)
   }
@@ -328,7 +328,7 @@ func (this *QListData) at(args ...interface{}) () {
     // invoke: void ** at(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK9QListData2atEi(this.qclsinst, arg0)
+    C.C_ZNK9QListData2atEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListData", "at", args)
   }
@@ -354,7 +354,7 @@ func (this *QListData) detach_grow(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN9QListData11detach_growEPii(this.qclsinst, arg0, arg1)
+    C.C_ZN9QListData11detach_growEPii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QListData", "detach_grow", args)
   }
@@ -377,7 +377,7 @@ func (this *QListData) detach(args ...interface{}) () {
     // invoke: QListData::Data * detach(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QListData6detachEi(this.qclsinst, arg0)
+    C.C_ZN9QListData6detachEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListData", "detach", args)
   }
@@ -405,17 +405,17 @@ func (this *QListData) append(args ...interface{}) () {
     // invoke: void ** append(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QListData6appendEi(this.qclsinst, arg0)
+    C.C_ZN9QListData6appendEi(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN9QListData6appendERKS_
     // invoke: void ** append(const struct QListData &)
     var arg0 = args[0].(QListData).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QListData6appendERKS_(this.qclsinst, arg0)
+    C.C_ZN9QListData6appendERKS_(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN9QListData6appendEv
     // invoke: void ** append()
-    C._ZN9QListData6appendEv(this.qclsinst)
+    C.C_ZN9QListData6appendEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListData", "append", args)
   }
@@ -435,7 +435,7 @@ func (this *QListData) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListData4sizeEv
     // invoke: int size()
-    C._ZNK9QListData4sizeEv(this.qclsinst)
+    C.C_ZNK9QListData4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListData", "size", args)
   }

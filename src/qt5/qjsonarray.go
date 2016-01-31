@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qjsonarray.h
 // dst-file: /src/core/qjsonarray.go
 //
@@ -29,47 +29,47 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QJsonArray::QJsonArray();
-extern void _ZN10QJsonArrayC2Ev(void* qthis); // 3
+extern void C_ZN10QJsonArrayC2Ev(void* qthis); // 3
   // proto:  QJsonArray::const_iterator QJsonArray::constBegin();
-extern void _ZNK10QJsonArray10constBeginEv(void* qthis); // 2
+extern void C_ZNK10QJsonArray10constBeginEv(void* qthis); // 2
   // proto:  void QJsonArray::removeAt(int i);
-extern void _ZN10QJsonArray8removeAtEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QJsonArray8removeAtEi(void* qthis, int32_t arg0); // 4
   // proto:  QJsonValue QJsonArray::at(int i);
-extern void _ZNK10QJsonArray2atEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK10QJsonArray2atEi(void* qthis, int32_t arg0); // 4
   // proto:  int QJsonArray::size();
-extern void _ZNK10QJsonArray4sizeEv(void* qthis); // 4
+extern void C_ZNK10QJsonArray4sizeEv(void* qthis); // 4
   // proto:  QJsonArray::iterator QJsonArray::end();
-extern void _ZN10QJsonArray3endEv(void* qthis); // 2
+extern void C_ZN10QJsonArray3endEv(void* qthis); // 2
   // proto:  void QJsonArray::pop_front();
-extern void _ZN10QJsonArray9pop_frontEv(void* qthis); // 2
+extern void C_ZN10QJsonArray9pop_frontEv(void* qthis); // 2
   // proto:  bool QJsonArray::isEmpty();
-extern void _ZNK10QJsonArray7isEmptyEv(void* qthis); // 4
+extern void C_ZNK10QJsonArray7isEmptyEv(void* qthis); // 4
   // proto:  void QJsonArray::pop_back();
-extern void _ZN10QJsonArray8pop_backEv(void* qthis); // 2
+extern void C_ZN10QJsonArray8pop_backEv(void* qthis); // 2
   // proto:  bool QJsonArray::empty();
-extern void _ZNK10QJsonArray5emptyEv(void* qthis); // 2
+extern void C_ZNK10QJsonArray5emptyEv(void* qthis); // 2
   // proto:  QJsonArray::iterator QJsonArray::begin();
-extern void _ZN10QJsonArray5beginEv(void* qthis); // 2
+extern void C_ZN10QJsonArray5beginEv(void* qthis); // 2
   // proto:  QJsonValue QJsonArray::takeAt(int i);
-extern void _ZN10QJsonArray6takeAtEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QJsonArray6takeAtEi(void* qthis, int32_t arg0); // 4
   // proto:  void QJsonArray::removeFirst();
-extern void _ZN10QJsonArray11removeFirstEv(void* qthis); // 2
+extern void C_ZN10QJsonArray11removeFirstEv(void* qthis); // 2
   // proto: static QJsonArray QJsonArray::fromStringList(const QStringList & list);
-extern void _ZN10QJsonArray14fromStringListERK11QStringList(void* arg0); // 4
+extern void C_ZN10QJsonArray14fromStringListERK11QStringList(void* arg0); // 4
   // proto:  int QJsonArray::count();
-extern void _ZNK10QJsonArray5countEv(void* qthis); // 2
+extern void C_ZNK10QJsonArray5countEv(void* qthis); // 2
   // proto:  QJsonValue QJsonArray::last();
-extern void _ZNK10QJsonArray4lastEv(void* qthis); // 4
+extern void C_ZNK10QJsonArray4lastEv(void* qthis); // 4
   // proto:  QVariantList QJsonArray::toVariantList();
-extern void _ZNK10QJsonArray13toVariantListEv(void* qthis); // 4
+extern void C_ZNK10QJsonArray13toVariantListEv(void* qthis); // 4
   // proto:  void QJsonArray::removeLast();
-extern void _ZN10QJsonArray10removeLastEv(void* qthis); // 2
+extern void C_ZN10QJsonArray10removeLastEv(void* qthis); // 2
   // proto:  QJsonArray::const_iterator QJsonArray::constEnd();
-extern void _ZNK10QJsonArray8constEndEv(void* qthis); // 2
+extern void C_ZNK10QJsonArray8constEndEv(void* qthis); // 2
   // proto:  void QJsonArray::~QJsonArray();
-extern void _ZN10QJsonArrayD2Ev(void* qthis); // 4
+extern void C_ZN10QJsonArrayD2Ev(void* qthis); // 4
   // proto:  QJsonValue QJsonArray::first();
-extern void _ZNK10QJsonArray5firstEv(void* qthis); // 4
+extern void C_ZNK10QJsonArray5firstEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -103,7 +103,7 @@ func NewQJsonArray(args ...interface{}) QJsonArray {
     // invoke: void QJsonArray()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QJsonArrayC2Ev(qthis)
+    C.C_ZN10QJsonArrayC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QJsonArray", "QJsonArray", args)
   }
@@ -124,7 +124,7 @@ func (this *QJsonArray) constBegin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray10constBeginEv
     // invoke: QJsonArray::const_iterator constBegin()
-    C._ZNK10QJsonArray10constBeginEv(this.qclsinst)
+    C.C_ZNK10QJsonArray10constBeginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "constBegin", args)
   }
@@ -147,7 +147,7 @@ func (this *QJsonArray) removeAt(args ...interface{}) () {
     // invoke: void removeAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QJsonArray8removeAtEi(this.qclsinst, arg0)
+    C.C_ZN10QJsonArray8removeAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonArray", "removeAt", args)
   }
@@ -170,7 +170,7 @@ func (this *QJsonArray) at(args ...interface{}) () {
     // invoke: QJsonValue at(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK10QJsonArray2atEi(this.qclsinst, arg0)
+    C.C_ZNK10QJsonArray2atEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonArray", "at", args)
   }
@@ -190,7 +190,7 @@ func (this *QJsonArray) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray4sizeEv
     // invoke: int size()
-    C._ZNK10QJsonArray4sizeEv(this.qclsinst)
+    C.C_ZNK10QJsonArray4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "size", args)
   }
@@ -210,7 +210,7 @@ func (this *QJsonArray) end(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray3endEv
     // invoke: QJsonArray::iterator end()
-    C._ZN10QJsonArray3endEv(this.qclsinst)
+    C.C_ZN10QJsonArray3endEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "end", args)
   }
@@ -230,7 +230,7 @@ func (this *QJsonArray) pop_front(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray9pop_frontEv
     // invoke: void pop_front()
-    C._ZN10QJsonArray9pop_frontEv(this.qclsinst)
+    C.C_ZN10QJsonArray9pop_frontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "pop_front", args)
   }
@@ -250,7 +250,7 @@ func (this *QJsonArray) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK10QJsonArray7isEmptyEv(this.qclsinst)
+    C.C_ZNK10QJsonArray7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "isEmpty", args)
   }
@@ -270,7 +270,7 @@ func (this *QJsonArray) pop_back(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray8pop_backEv
     // invoke: void pop_back()
-    C._ZN10QJsonArray8pop_backEv(this.qclsinst)
+    C.C_ZN10QJsonArray8pop_backEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "pop_back", args)
   }
@@ -290,7 +290,7 @@ func (this *QJsonArray) empty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray5emptyEv
     // invoke: bool empty()
-    C._ZNK10QJsonArray5emptyEv(this.qclsinst)
+    C.C_ZNK10QJsonArray5emptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "empty", args)
   }
@@ -310,7 +310,7 @@ func (this *QJsonArray) begin(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray5beginEv
     // invoke: QJsonArray::iterator begin()
-    C._ZN10QJsonArray5beginEv(this.qclsinst)
+    C.C_ZN10QJsonArray5beginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "begin", args)
   }
@@ -333,7 +333,7 @@ func (this *QJsonArray) takeAt(args ...interface{}) () {
     // invoke: QJsonValue takeAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QJsonArray6takeAtEi(this.qclsinst, arg0)
+    C.C_ZN10QJsonArray6takeAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonArray", "takeAt", args)
   }
@@ -353,7 +353,7 @@ func (this *QJsonArray) removeFirst(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray11removeFirstEv
     // invoke: void removeFirst()
-    C._ZN10QJsonArray11removeFirstEv(this.qclsinst)
+    C.C_ZN10QJsonArray11removeFirstEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "removeFirst", args)
   }
@@ -376,7 +376,7 @@ func (this *QJsonArray) fromStringList_s(args ...interface{}) () {
     // invoke: QJsonArray fromStringList(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QJsonArray14fromStringListERK11QStringList(arg0)
+    C.C_ZN10QJsonArray14fromStringListERK11QStringList(arg0)
   default:
     qtrt.ErrorResolve("QJsonArray", "fromStringList", args)
   }
@@ -396,7 +396,7 @@ func (this *QJsonArray) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray5countEv
     // invoke: int count()
-    C._ZNK10QJsonArray5countEv(this.qclsinst)
+    C.C_ZNK10QJsonArray5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "count", args)
   }
@@ -416,7 +416,7 @@ func (this *QJsonArray) last(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray4lastEv
     // invoke: QJsonValue last()
-    C._ZNK10QJsonArray4lastEv(this.qclsinst)
+    C.C_ZNK10QJsonArray4lastEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "last", args)
   }
@@ -436,7 +436,7 @@ func (this *QJsonArray) toVariantList(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray13toVariantListEv
     // invoke: QVariantList toVariantList()
-    C._ZNK10QJsonArray13toVariantListEv(this.qclsinst)
+    C.C_ZNK10QJsonArray13toVariantListEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "toVariantList", args)
   }
@@ -456,7 +456,7 @@ func (this *QJsonArray) removeLast(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray10removeLastEv
     // invoke: void removeLast()
-    C._ZN10QJsonArray10removeLastEv(this.qclsinst)
+    C.C_ZN10QJsonArray10removeLastEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "removeLast", args)
   }
@@ -476,7 +476,7 @@ func (this *QJsonArray) constEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray8constEndEv
     // invoke: QJsonArray::const_iterator constEnd()
-    C._ZNK10QJsonArray8constEndEv(this.qclsinst)
+    C.C_ZNK10QJsonArray8constEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "constEnd", args)
   }
@@ -496,7 +496,7 @@ func (this *QJsonArray) FreeQJsonArray(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArrayD0Ev
     // invoke: void ~QJsonArray()
-    C._ZN10QJsonArrayD2Ev(this.qclsinst)
+    C.C_ZN10QJsonArrayD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "~QJsonArray", args)
   }
@@ -516,7 +516,7 @@ func (this *QJsonArray) first(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray5firstEv
     // invoke: QJsonValue first()
-    C._ZNK10QJsonArray5firstEv(this.qclsinst)
+    C.C_ZNK10QJsonArray5firstEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "first", args)
   }

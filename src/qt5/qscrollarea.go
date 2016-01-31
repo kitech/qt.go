@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qscrollarea.h
 // dst-file: /src/widgets/qscrollarea.go
 //
@@ -29,31 +29,31 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QScrollArea::ensureWidgetVisible(QWidget * childWidget, int xmargin, int ymargin);
-extern void _ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
+extern void C_ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
   // proto:  void QScrollArea::QScrollArea(QWidget * parent);
-extern void _ZN11QScrollAreaC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN11QScrollAreaC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QScrollArea::~QScrollArea();
-extern void _ZN11QScrollAreaD2Ev(void* qthis); // 4
+extern void C_ZN11QScrollAreaD2Ev(void* qthis); // 4
   // proto:  void QScrollArea::setWidget(QWidget * widget);
-extern void _ZN11QScrollArea9setWidgetEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN11QScrollArea9setWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  bool QScrollArea::focusNextPrevChild(bool next);
-extern void _ZN11QScrollArea18focusNextPrevChildEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QScrollArea18focusNextPrevChildEb(void* qthis, bool arg0); // 4
   // proto:  Qt::Alignment QScrollArea::alignment();
-extern void _ZNK11QScrollArea9alignmentEv(void* qthis); // 4
+extern void C_ZNK11QScrollArea9alignmentEv(void* qthis); // 4
   // proto:  bool QScrollArea::widgetResizable();
-extern void _ZNK11QScrollArea15widgetResizableEv(void* qthis); // 4
+extern void C_ZNK11QScrollArea15widgetResizableEv(void* qthis); // 4
   // proto:  void QScrollArea::setWidgetResizable(bool resizable);
-extern void _ZN11QScrollArea18setWidgetResizableEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QScrollArea18setWidgetResizableEb(void* qthis, bool arg0); // 4
   // proto:  QWidget * QScrollArea::widget();
-extern void _ZNK11QScrollArea6widgetEv(void* qthis); // 4
+extern void C_ZNK11QScrollArea6widgetEv(void* qthis); // 4
   // proto:  void QScrollArea::ensureVisible(int x, int y, int xmargin, int ymargin);
-extern void _ZN11QScrollArea13ensureVisibleEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
+extern void C_ZN11QScrollArea13ensureVisibleEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
   // proto:  const QMetaObject * QScrollArea::metaObject();
-extern void _ZNK11QScrollArea10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QScrollArea10metaObjectEv(void* qthis); // 4
   // proto:  QWidget * QScrollArea::takeWidget();
-extern void _ZN11QScrollArea10takeWidgetEv(void* qthis); // 4
+extern void C_ZN11QScrollArea10takeWidgetEv(void* qthis); // 4
   // proto:  QSize QScrollArea::sizeHint();
-extern void _ZNK11QScrollArea8sizeHintEv(void* qthis); // 4
+extern void C_ZNK11QScrollArea8sizeHintEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -94,7 +94,7 @@ func (this *QScrollArea) ensureWidgetVisible(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QScrollArea", "ensureWidgetVisible", args)
   }
@@ -119,7 +119,7 @@ func NewQScrollArea(args ...interface{}) QScrollArea {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QScrollAreaC2EP7QWidget(qthis, arg0)
+    C.C_ZN11QScrollAreaC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QScrollArea", "QScrollArea", args)
   }
@@ -140,7 +140,7 @@ func (this *QScrollArea) FreeQScrollArea(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QScrollAreaD0Ev
     // invoke: void ~QScrollArea()
-    C._ZN11QScrollAreaD2Ev(this.qclsinst)
+    C.C_ZN11QScrollAreaD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "~QScrollArea", args)
   }
@@ -163,7 +163,7 @@ func (this *QScrollArea) setWidget(args ...interface{}) () {
     // invoke: void setWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QScrollArea9setWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN11QScrollArea9setWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollArea", "setWidget", args)
   }
@@ -186,7 +186,7 @@ func (this *QScrollArea) focusNextPrevChild(args ...interface{}) () {
     // invoke: bool focusNextPrevChild(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QScrollArea18focusNextPrevChildEb(this.qclsinst, arg0)
+    C.C_ZN11QScrollArea18focusNextPrevChildEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollArea", "focusNextPrevChild", args)
   }
@@ -206,7 +206,7 @@ func (this *QScrollArea) alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QScrollArea9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C._ZNK11QScrollArea9alignmentEv(this.qclsinst)
+    C.C_ZNK11QScrollArea9alignmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "alignment", args)
   }
@@ -226,7 +226,7 @@ func (this *QScrollArea) widgetResizable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QScrollArea15widgetResizableEv
     // invoke: bool widgetResizable()
-    C._ZNK11QScrollArea15widgetResizableEv(this.qclsinst)
+    C.C_ZNK11QScrollArea15widgetResizableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "widgetResizable", args)
   }
@@ -249,7 +249,7 @@ func (this *QScrollArea) setWidgetResizable(args ...interface{}) () {
     // invoke: void setWidgetResizable(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QScrollArea18setWidgetResizableEb(this.qclsinst, arg0)
+    C.C_ZN11QScrollArea18setWidgetResizableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollArea", "setWidgetResizable", args)
   }
@@ -269,7 +269,7 @@ func (this *QScrollArea) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QScrollArea6widgetEv
     // invoke: QWidget * widget()
-    C._ZNK11QScrollArea6widgetEv(this.qclsinst)
+    C.C_ZNK11QScrollArea6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "widget", args)
   }
@@ -301,7 +301,7 @@ func (this *QScrollArea) ensureVisible(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN11QScrollArea13ensureVisibleEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN11QScrollArea13ensureVisibleEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QScrollArea", "ensureVisible", args)
   }
@@ -321,7 +321,7 @@ func (this *QScrollArea) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QScrollArea10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QScrollArea10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QScrollArea10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "metaObject", args)
   }
@@ -341,7 +341,7 @@ func (this *QScrollArea) takeWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QScrollArea10takeWidgetEv
     // invoke: QWidget * takeWidget()
-    C._ZN11QScrollArea10takeWidgetEv(this.qclsinst)
+    C.C_ZN11QScrollArea10takeWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "takeWidget", args)
   }
@@ -361,7 +361,7 @@ func (this *QScrollArea) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QScrollArea8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK11QScrollArea8sizeHintEv(this.qclsinst)
+    C.C_ZNK11QScrollArea8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "sizeHint", args)
   }

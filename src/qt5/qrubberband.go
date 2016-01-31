@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qrubberband.h
 // dst-file: /src/widgets/qrubberband.go
 //
@@ -29,23 +29,23 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QRubberBand::move(int x, int y);
-extern void _ZN11QRubberBand4moveEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZN11QRubberBand4moveEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  void QRubberBand::move(const QPoint & p);
-extern void _ZN11QRubberBand4moveERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZN11QRubberBand4moveERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  void QRubberBand::~QRubberBand();
-extern void _ZN11QRubberBandD2Ev(void* qthis); // 4
+extern void C_ZN11QRubberBandD2Ev(void* qthis); // 4
   // proto:  void QRubberBand::setGeometry(const QRect & r);
-extern void _ZN11QRubberBand11setGeometryERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZN11QRubberBand11setGeometryERK5QRect(void* qthis, void* arg0); // 4
   // proto:  void QRubberBand::setGeometry(int x, int y, int w, int h);
-extern void _ZN11QRubberBand11setGeometryEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
+extern void C_ZN11QRubberBand11setGeometryEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
   // proto:  QRubberBand::Shape QRubberBand::shape();
-extern void _ZNK11QRubberBand5shapeEv(void* qthis); // 4
+extern void C_ZNK11QRubberBand5shapeEv(void* qthis); // 4
   // proto:  const QMetaObject * QRubberBand::metaObject();
-extern void _ZNK11QRubberBand10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QRubberBand10metaObjectEv(void* qthis); // 4
   // proto:  void QRubberBand::resize(const QSize & s);
-extern void _ZN11QRubberBand6resizeERK5QSize(void* qthis, void* arg0); // 2
+extern void C_ZN11QRubberBand6resizeERK5QSize(void* qthis, void* arg0); // 2
   // proto:  void QRubberBand::resize(int w, int h);
-extern void _ZN11QRubberBand6resizeEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZN11QRubberBand6resizeEii(void* qthis, int32_t arg0, int32_t arg1); // 2
 */
 import "C"
 // } // <= ext block end
@@ -86,13 +86,13 @@ func (this *QRubberBand) move_(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QRubberBand4moveEii(this.qclsinst, arg0, arg1)
+    C.C_ZN11QRubberBand4moveEii(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN11QRubberBand4moveERK6QPoint
     // invoke: void move(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QRubberBand4moveERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN11QRubberBand4moveERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRubberBand", "move", args)
   }
@@ -112,7 +112,7 @@ func (this *QRubberBand) FreeQRubberBand(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QRubberBandD0Ev
     // invoke: void ~QRubberBand()
-    C._ZN11QRubberBandD2Ev(this.qclsinst)
+    C.C_ZN11QRubberBandD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRubberBand", "~QRubberBand", args)
   }
@@ -141,7 +141,7 @@ func (this *QRubberBand) setGeometry(args ...interface{}) () {
     // invoke: void setGeometry(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QRubberBand11setGeometryERK5QRect(this.qclsinst, arg0)
+    C.C_ZN11QRubberBand11setGeometryERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN11QRubberBand11setGeometryEiiii
     // invoke: void setGeometry(int, int, int, int)
@@ -153,7 +153,7 @@ func (this *QRubberBand) setGeometry(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN11QRubberBand11setGeometryEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN11QRubberBand11setGeometryEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRubberBand", "setGeometry", args)
   }
@@ -173,7 +173,7 @@ func (this *QRubberBand) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QRubberBand5shapeEv
     // invoke: QRubberBand::Shape shape()
-    C._ZNK11QRubberBand5shapeEv(this.qclsinst)
+    C.C_ZNK11QRubberBand5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRubberBand", "shape", args)
   }
@@ -193,7 +193,7 @@ func (this *QRubberBand) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QRubberBand10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QRubberBand10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QRubberBand10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRubberBand", "metaObject", args)
   }
@@ -220,7 +220,7 @@ func (this *QRubberBand) resize(args ...interface{}) () {
     // invoke: void resize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QRubberBand6resizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN11QRubberBand6resizeERK5QSize(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN11QRubberBand6resizeEii
     // invoke: void resize(int, int)
@@ -228,7 +228,7 @@ func (this *QRubberBand) resize(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QRubberBand6resizeEii(this.qclsinst, arg0, arg1)
+    C.C_ZN11QRubberBand6resizeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QRubberBand", "resize", args)
   }

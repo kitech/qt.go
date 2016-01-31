@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.go
 //
@@ -29,15 +29,15 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QStateMachine * QAbstractState::machine();
-extern void _ZNK14QAbstractState7machineEv(void* qthis); // 4
+extern void C_ZNK14QAbstractState7machineEv(void* qthis); // 4
   // proto:  bool QAbstractState::active();
-extern void _ZNK14QAbstractState6activeEv(void* qthis); // 4
+extern void C_ZNK14QAbstractState6activeEv(void* qthis); // 4
   // proto:  const QMetaObject * QAbstractState::metaObject();
-extern void _ZNK14QAbstractState10metaObjectEv(void* qthis); // 4
+extern void C_ZNK14QAbstractState10metaObjectEv(void* qthis); // 4
   // proto:  QState * QAbstractState::parentState();
-extern void _ZNK14QAbstractState11parentStateEv(void* qthis); // 4
+extern void C_ZNK14QAbstractState11parentStateEv(void* qthis); // 4
   // proto:  void QAbstractState::~QAbstractState();
-extern void _ZN14QAbstractStateD2Ev(void* qthis); // 4
+extern void C_ZN14QAbstractStateD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -72,7 +72,7 @@ func (this *QAbstractState) machine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QAbstractState7machineEv
     // invoke: QStateMachine * machine()
-    C._ZNK14QAbstractState7machineEv(this.qclsinst)
+    C.C_ZNK14QAbstractState7machineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractState", "machine", args)
   }
@@ -92,7 +92,7 @@ func (this *QAbstractState) active(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QAbstractState6activeEv
     // invoke: bool active()
-    C._ZNK14QAbstractState6activeEv(this.qclsinst)
+    C.C_ZNK14QAbstractState6activeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractState", "active", args)
   }
@@ -112,7 +112,7 @@ func (this *QAbstractState) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QAbstractState10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK14QAbstractState10metaObjectEv(this.qclsinst)
+    C.C_ZNK14QAbstractState10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractState", "metaObject", args)
   }
@@ -132,7 +132,7 @@ func (this *QAbstractState) parentState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QAbstractState11parentStateEv
     // invoke: QState * parentState()
-    C._ZNK14QAbstractState11parentStateEv(this.qclsinst)
+    C.C_ZNK14QAbstractState11parentStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractState", "parentState", args)
   }
@@ -152,7 +152,7 @@ func (this *QAbstractState) FreeQAbstractState(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QAbstractStateD0Ev
     // invoke: void ~QAbstractState()
-    C._ZN14QAbstractStateD2Ev(this.qclsinst)
+    C.C_ZN14QAbstractStateD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractState", "~QAbstractState", args)
   }

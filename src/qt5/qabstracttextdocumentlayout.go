@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.go
 //
@@ -29,25 +29,25 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QAbstractTextDocumentLayout::unregisterHandler(int objectType, QObject * component);
-extern void _ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QAbstractTextDocumentLayout::setPaintDevice(QPaintDevice * device);
-extern void _ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(void* qthis, void* arg0); // 4
+extern void C_ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(void* qthis, void* arg0); // 4
   // proto:  QString QAbstractTextDocumentLayout::anchorAt(const QPointF & pos);
-extern void _ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QAbstractTextDocumentLayout::QAbstractTextDocumentLayout(QTextDocument * doc);
-extern void _ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(void* qthis, void* arg0); // 3
+extern void C_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(void* qthis, void* arg0); // 3
   // proto:  QPaintDevice * QAbstractTextDocumentLayout::paintDevice();
-extern void _ZNK27QAbstractTextDocumentLayout11paintDeviceEv(void* qthis); // 4
+extern void C_ZNK27QAbstractTextDocumentLayout11paintDeviceEv(void* qthis); // 4
   // proto:  QTextDocument * QAbstractTextDocumentLayout::document();
-extern void _ZNK27QAbstractTextDocumentLayout8documentEv(void* qthis); // 4
+extern void C_ZNK27QAbstractTextDocumentLayout8documentEv(void* qthis); // 4
   // proto:  void QAbstractTextDocumentLayout::registerHandler(int objectType, QObject * component);
-extern void _ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  const QMetaObject * QAbstractTextDocumentLayout::metaObject();
-extern void _ZNK27QAbstractTextDocumentLayout10metaObjectEv(void* qthis); // 4
+extern void C_ZNK27QAbstractTextDocumentLayout10metaObjectEv(void* qthis); // 4
   // proto:  void QAbstractTextDocumentLayout::~QAbstractTextDocumentLayout();
-extern void _ZN27QAbstractTextDocumentLayoutD2Ev(void* qthis); // 4
+extern void C_ZN27QAbstractTextDocumentLayoutD2Ev(void* qthis); // 4
   // proto:  QTextObjectInterface * QAbstractTextDocumentLayout::handlerForObject(int objectType);
-extern void _ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(void* qthis, int32_t arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -95,7 +95,7 @@ func (this *QAbstractTextDocumentLayout) unregisterHandler(args ...interface{}) 
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(this.qclsinst, arg0, arg1)
+    C.C_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "unregisterHandler", args)
   }
@@ -118,7 +118,7 @@ func (this *QAbstractTextDocumentLayout) setPaintDevice(args ...interface{}) () 
     // invoke: void setPaintDevice(class QPaintDevice *)
     var arg0 = args[0].(QPaintDevice).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(this.qclsinst, arg0)
+    C.C_ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "setPaintDevice", args)
   }
@@ -141,7 +141,7 @@ func (this *QAbstractTextDocumentLayout) anchorAt(args ...interface{}) () {
     // invoke: QString anchorAt(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "anchorAt", args)
   }
@@ -166,7 +166,7 @@ func NewQAbstractTextDocumentLayout(args ...interface{}) QAbstractTextDocumentLa
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(qthis, arg0)
+    C.C_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "QAbstractTextDocumentLayout", args)
   }
@@ -187,7 +187,7 @@ func (this *QAbstractTextDocumentLayout) paintDevice(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout11paintDeviceEv
     // invoke: QPaintDevice * paintDevice()
-    C._ZNK27QAbstractTextDocumentLayout11paintDeviceEv(this.qclsinst)
+    C.C_ZNK27QAbstractTextDocumentLayout11paintDeviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "paintDevice", args)
   }
@@ -207,7 +207,7 @@ func (this *QAbstractTextDocumentLayout) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout8documentEv
     // invoke: QTextDocument * document()
-    C._ZNK27QAbstractTextDocumentLayout8documentEv(this.qclsinst)
+    C.C_ZNK27QAbstractTextDocumentLayout8documentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "document", args)
   }
@@ -233,7 +233,7 @@ func (this *QAbstractTextDocumentLayout) registerHandler(args ...interface{}) ()
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject(this.qclsinst, arg0, arg1)
+    C.C_ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "registerHandler", args)
   }
@@ -253,7 +253,7 @@ func (this *QAbstractTextDocumentLayout) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK27QAbstractTextDocumentLayout10metaObjectEv(this.qclsinst)
+    C.C_ZNK27QAbstractTextDocumentLayout10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "metaObject", args)
   }
@@ -273,7 +273,7 @@ func (this *QAbstractTextDocumentLayout) FreeQAbstractTextDocumentLayout(args ..
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayoutD0Ev
     // invoke: void ~QAbstractTextDocumentLayout()
-    C._ZN27QAbstractTextDocumentLayoutD2Ev(this.qclsinst)
+    C.C_ZN27QAbstractTextDocumentLayoutD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "~QAbstractTextDocumentLayout", args)
   }
@@ -296,7 +296,7 @@ func (this *QAbstractTextDocumentLayout) handlerForObject(args ...interface{}) (
     // invoke: QTextObjectInterface * handlerForObject(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(this.qclsinst, arg0)
+    C.C_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "handlerForObject", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.go
 //
@@ -29,19 +29,19 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QMessageAuthenticationCode::reset();
-extern void _ZN26QMessageAuthenticationCode5resetEv(void* qthis); // 4
+extern void C_ZN26QMessageAuthenticationCode5resetEv(void* qthis); // 4
   // proto:  void QMessageAuthenticationCode::~QMessageAuthenticationCode();
-extern void _ZN26QMessageAuthenticationCodeD2Ev(void* qthis); // 4
+extern void C_ZN26QMessageAuthenticationCodeD2Ev(void* qthis); // 4
   // proto:  void QMessageAuthenticationCode::addData(const QByteArray & data);
-extern void _ZN26QMessageAuthenticationCode7addDataERK10QByteArray(void* qthis, void* arg0); // 4
+extern void C_ZN26QMessageAuthenticationCode7addDataERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  void QMessageAuthenticationCode::addData(const char * data, int length);
-extern void _ZN26QMessageAuthenticationCode7addDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void C_ZN26QMessageAuthenticationCode7addDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
   // proto:  bool QMessageAuthenticationCode::addData(QIODevice * device);
-extern void _ZN26QMessageAuthenticationCode7addDataEP9QIODevice(void* qthis, void* arg0); // 4
+extern void C_ZN26QMessageAuthenticationCode7addDataEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  void QMessageAuthenticationCode::setKey(const QByteArray & key);
-extern void _ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(void* qthis, void* arg0); // 4
+extern void C_ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  QByteArray QMessageAuthenticationCode::result();
-extern void _ZNK26QMessageAuthenticationCode6resultEv(void* qthis); // 4
+extern void C_ZNK26QMessageAuthenticationCode6resultEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -73,7 +73,7 @@ func (this *QMessageAuthenticationCode) reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN26QMessageAuthenticationCode5resetEv
     // invoke: void reset()
-    C._ZN26QMessageAuthenticationCode5resetEv(this.qclsinst)
+    C.C_ZN26QMessageAuthenticationCode5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "reset", args)
   }
@@ -93,7 +93,7 @@ func (this *QMessageAuthenticationCode) FreeQMessageAuthenticationCode(args ...i
   case 0:
     // invoke: _ZN26QMessageAuthenticationCodeD0Ev
     // invoke: void ~QMessageAuthenticationCode()
-    C._ZN26QMessageAuthenticationCodeD2Ev(this.qclsinst)
+    C.C_ZN26QMessageAuthenticationCodeD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "~QMessageAuthenticationCode", args)
   }
@@ -123,7 +123,7 @@ func (this *QMessageAuthenticationCode) addData(args ...interface{}) () {
     // invoke: void addData(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN26QMessageAuthenticationCode7addDataERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN26QMessageAuthenticationCode7addDataERK10QByteArray(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN26QMessageAuthenticationCode7addDataEPKci
     // invoke: void addData(const char *, int)
@@ -131,13 +131,13 @@ func (this *QMessageAuthenticationCode) addData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN26QMessageAuthenticationCode7addDataEPKci(this.qclsinst, arg0, arg1)
+    C.C_ZN26QMessageAuthenticationCode7addDataEPKci(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN26QMessageAuthenticationCode7addDataEP9QIODevice
     // invoke: bool addData(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN26QMessageAuthenticationCode7addDataEP9QIODevice(this.qclsinst, arg0)
+    C.C_ZN26QMessageAuthenticationCode7addDataEP9QIODevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "addData", args)
   }
@@ -160,7 +160,7 @@ func (this *QMessageAuthenticationCode) setKey(args ...interface{}) () {
     // invoke: void setKey(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "setKey", args)
   }
@@ -180,7 +180,7 @@ func (this *QMessageAuthenticationCode) result(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QMessageAuthenticationCode6resultEv
     // invoke: QByteArray result()
-    C._ZNK26QMessageAuthenticationCode6resultEv(this.qclsinst)
+    C.C_ZNK26QMessageAuthenticationCode6resultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "result", args)
   }

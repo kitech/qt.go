@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qprogressbar.h
 // dst-file: /src/widgets/qprogressbar.go
 //
@@ -29,53 +29,53 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  Qt::Orientation QProgressBar::orientation();
-extern void _ZNK12QProgressBar11orientationEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar11orientationEv(void* qthis); // 4
   // proto:  QString QProgressBar::text();
-extern void _ZNK12QProgressBar4textEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar4textEv(void* qthis); // 4
   // proto:  bool QProgressBar::isTextVisible();
-extern void _ZNK12QProgressBar13isTextVisibleEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar13isTextVisibleEv(void* qthis); // 4
   // proto:  void QProgressBar::QProgressBar(QWidget * parent);
-extern void _ZN12QProgressBarC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN12QProgressBarC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  int QProgressBar::minimum();
-extern void _ZNK12QProgressBar7minimumEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar7minimumEv(void* qthis); // 4
   // proto:  Qt::Alignment QProgressBar::alignment();
-extern void _ZNK12QProgressBar9alignmentEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar9alignmentEv(void* qthis); // 4
   // proto:  QProgressBar::Direction QProgressBar::textDirection();
-extern void _ZNK12QProgressBar13textDirectionEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar13textDirectionEv(void* qthis); // 4
   // proto:  void QProgressBar::resetFormat();
-extern void _ZN12QProgressBar11resetFormatEv(void* qthis); // 4
+extern void C_ZN12QProgressBar11resetFormatEv(void* qthis); // 4
   // proto:  void QProgressBar::~QProgressBar();
-extern void _ZN12QProgressBarD2Ev(void* qthis); // 4
+extern void C_ZN12QProgressBarD2Ev(void* qthis); // 4
   // proto:  void QProgressBar::setFormat(const QString & format);
-extern void _ZN12QProgressBar9setFormatERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN12QProgressBar9setFormatERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QProgressBar::setMaximum(int maximum);
-extern void _ZN12QProgressBar10setMaximumEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN12QProgressBar10setMaximumEi(void* qthis, int32_t arg0); // 4
   // proto:  void QProgressBar::setValue(int value);
-extern void _ZN12QProgressBar8setValueEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN12QProgressBar8setValueEi(void* qthis, int32_t arg0); // 4
   // proto:  QString QProgressBar::format();
-extern void _ZNK12QProgressBar6formatEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar6formatEv(void* qthis); // 4
   // proto:  QSize QProgressBar::sizeHint();
-extern void _ZNK12QProgressBar8sizeHintEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar8sizeHintEv(void* qthis); // 4
   // proto:  void QProgressBar::setRange(int minimum, int maximum);
-extern void _ZN12QProgressBar8setRangeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN12QProgressBar8setRangeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QProgressBar::reset();
-extern void _ZN12QProgressBar5resetEv(void* qthis); // 4
+extern void C_ZN12QProgressBar5resetEv(void* qthis); // 4
   // proto:  void QProgressBar::setInvertedAppearance(bool invert);
-extern void _ZN12QProgressBar21setInvertedAppearanceEb(void* qthis, bool arg0); // 4
+extern void C_ZN12QProgressBar21setInvertedAppearanceEb(void* qthis, bool arg0); // 4
   // proto:  const QMetaObject * QProgressBar::metaObject();
-extern void _ZNK12QProgressBar10metaObjectEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar10metaObjectEv(void* qthis); // 4
   // proto:  void QProgressBar::setTextVisible(bool visible);
-extern void _ZN12QProgressBar14setTextVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN12QProgressBar14setTextVisibleEb(void* qthis, bool arg0); // 4
   // proto:  QSize QProgressBar::minimumSizeHint();
-extern void _ZNK12QProgressBar15minimumSizeHintEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar15minimumSizeHintEv(void* qthis); // 4
   // proto:  int QProgressBar::maximum();
-extern void _ZNK12QProgressBar7maximumEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar7maximumEv(void* qthis); // 4
   // proto:  int QProgressBar::value();
-extern void _ZNK12QProgressBar5valueEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar5valueEv(void* qthis); // 4
   // proto:  bool QProgressBar::invertedAppearance();
-extern void _ZNK12QProgressBar18invertedAppearanceEv(void* qthis); // 4
+extern void C_ZNK12QProgressBar18invertedAppearanceEv(void* qthis); // 4
   // proto:  void QProgressBar::setMinimum(int minimum);
-extern void _ZN12QProgressBar10setMinimumEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN12QProgressBar10setMinimumEi(void* qthis, int32_t arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -108,7 +108,7 @@ func (this *QProgressBar) orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar11orientationEv
     // invoke: Qt::Orientation orientation()
-    C._ZNK12QProgressBar11orientationEv(this.qclsinst)
+    C.C_ZNK12QProgressBar11orientationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "orientation", args)
   }
@@ -128,7 +128,7 @@ func (this *QProgressBar) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar4textEv
     // invoke: QString text()
-    C._ZNK12QProgressBar4textEv(this.qclsinst)
+    C.C_ZNK12QProgressBar4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "text", args)
   }
@@ -148,7 +148,7 @@ func (this *QProgressBar) isTextVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar13isTextVisibleEv
     // invoke: bool isTextVisible()
-    C._ZNK12QProgressBar13isTextVisibleEv(this.qclsinst)
+    C.C_ZNK12QProgressBar13isTextVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "isTextVisible", args)
   }
@@ -173,7 +173,7 @@ func NewQProgressBar(args ...interface{}) QProgressBar {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QProgressBarC2EP7QWidget(qthis, arg0)
+    C.C_ZN12QProgressBarC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "QProgressBar", args)
   }
@@ -194,7 +194,7 @@ func (this *QProgressBar) minimum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar7minimumEv
     // invoke: int minimum()
-    C._ZNK12QProgressBar7minimumEv(this.qclsinst)
+    C.C_ZNK12QProgressBar7minimumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "minimum", args)
   }
@@ -214,7 +214,7 @@ func (this *QProgressBar) alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C._ZNK12QProgressBar9alignmentEv(this.qclsinst)
+    C.C_ZNK12QProgressBar9alignmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "alignment", args)
   }
@@ -234,7 +234,7 @@ func (this *QProgressBar) textDirection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar13textDirectionEv
     // invoke: QProgressBar::Direction textDirection()
-    C._ZNK12QProgressBar13textDirectionEv(this.qclsinst)
+    C.C_ZNK12QProgressBar13textDirectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "textDirection", args)
   }
@@ -254,7 +254,7 @@ func (this *QProgressBar) resetFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBar11resetFormatEv
     // invoke: void resetFormat()
-    C._ZN12QProgressBar11resetFormatEv(this.qclsinst)
+    C.C_ZN12QProgressBar11resetFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "resetFormat", args)
   }
@@ -274,7 +274,7 @@ func (this *QProgressBar) FreeQProgressBar(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBarD0Ev
     // invoke: void ~QProgressBar()
-    C._ZN12QProgressBarD2Ev(this.qclsinst)
+    C.C_ZN12QProgressBarD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "~QProgressBar", args)
   }
@@ -297,7 +297,7 @@ func (this *QProgressBar) setFormat(args ...interface{}) () {
     // invoke: void setFormat(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QProgressBar9setFormatERK7QString(this.qclsinst, arg0)
+    C.C_ZN12QProgressBar9setFormatERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setFormat", args)
   }
@@ -320,7 +320,7 @@ func (this *QProgressBar) setMaximum(args ...interface{}) () {
     // invoke: void setMaximum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN12QProgressBar10setMaximumEi(this.qclsinst, arg0)
+    C.C_ZN12QProgressBar10setMaximumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setMaximum", args)
   }
@@ -343,7 +343,7 @@ func (this *QProgressBar) setValue(args ...interface{}) () {
     // invoke: void setValue(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN12QProgressBar8setValueEi(this.qclsinst, arg0)
+    C.C_ZN12QProgressBar8setValueEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setValue", args)
   }
@@ -363,7 +363,7 @@ func (this *QProgressBar) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar6formatEv
     // invoke: QString format()
-    C._ZNK12QProgressBar6formatEv(this.qclsinst)
+    C.C_ZNK12QProgressBar6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "format", args)
   }
@@ -383,7 +383,7 @@ func (this *QProgressBar) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK12QProgressBar8sizeHintEv(this.qclsinst)
+    C.C_ZNK12QProgressBar8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "sizeHint", args)
   }
@@ -409,7 +409,7 @@ func (this *QProgressBar) setRange(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN12QProgressBar8setRangeEii(this.qclsinst, arg0, arg1)
+    C.C_ZN12QProgressBar8setRangeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QProgressBar", "setRange", args)
   }
@@ -429,7 +429,7 @@ func (this *QProgressBar) reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBar5resetEv
     // invoke: void reset()
-    C._ZN12QProgressBar5resetEv(this.qclsinst)
+    C.C_ZN12QProgressBar5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "reset", args)
   }
@@ -452,7 +452,7 @@ func (this *QProgressBar) setInvertedAppearance(args ...interface{}) () {
     // invoke: void setInvertedAppearance(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN12QProgressBar21setInvertedAppearanceEb(this.qclsinst, arg0)
+    C.C_ZN12QProgressBar21setInvertedAppearanceEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setInvertedAppearance", args)
   }
@@ -472,7 +472,7 @@ func (this *QProgressBar) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK12QProgressBar10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QProgressBar10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "metaObject", args)
   }
@@ -495,7 +495,7 @@ func (this *QProgressBar) setTextVisible(args ...interface{}) () {
     // invoke: void setTextVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN12QProgressBar14setTextVisibleEb(this.qclsinst, arg0)
+    C.C_ZN12QProgressBar14setTextVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setTextVisible", args)
   }
@@ -515,7 +515,7 @@ func (this *QProgressBar) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C._ZNK12QProgressBar15minimumSizeHintEv(this.qclsinst)
+    C.C_ZNK12QProgressBar15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "minimumSizeHint", args)
   }
@@ -535,7 +535,7 @@ func (this *QProgressBar) maximum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar7maximumEv
     // invoke: int maximum()
-    C._ZNK12QProgressBar7maximumEv(this.qclsinst)
+    C.C_ZNK12QProgressBar7maximumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "maximum", args)
   }
@@ -555,7 +555,7 @@ func (this *QProgressBar) value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar5valueEv
     // invoke: int value()
-    C._ZNK12QProgressBar5valueEv(this.qclsinst)
+    C.C_ZNK12QProgressBar5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "value", args)
   }
@@ -575,7 +575,7 @@ func (this *QProgressBar) invertedAppearance(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar18invertedAppearanceEv
     // invoke: bool invertedAppearance()
-    C._ZNK12QProgressBar18invertedAppearanceEv(this.qclsinst)
+    C.C_ZNK12QProgressBar18invertedAppearanceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "invertedAppearance", args)
   }
@@ -598,7 +598,7 @@ func (this *QProgressBar) setMinimum(args ...interface{}) () {
     // invoke: void setMinimum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN12QProgressBar10setMinimumEi(this.qclsinst, arg0)
+    C.C_ZN12QProgressBar10setMinimumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setMinimum", args)
   }

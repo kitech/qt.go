@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.go
 //
@@ -29,13 +29,13 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QPaintDeviceWindow::update(const QRect & rect);
-extern void _ZN18QPaintDeviceWindow6updateERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZN18QPaintDeviceWindow6updateERK5QRect(void* qthis, void* arg0); // 4
   // proto:  void QPaintDeviceWindow::update(const QRegion & region);
-extern void _ZN18QPaintDeviceWindow6updateERK7QRegion(void* qthis, void* arg0); // 4
+extern void C_ZN18QPaintDeviceWindow6updateERK7QRegion(void* qthis, void* arg0); // 4
   // proto:  void QPaintDeviceWindow::update();
-extern void _ZN18QPaintDeviceWindow6updateEv(void* qthis); // 4
+extern void C_ZN18QPaintDeviceWindow6updateEv(void* qthis); // 4
   // proto:  const QMetaObject * QPaintDeviceWindow::metaObject();
-extern void _ZNK18QPaintDeviceWindow10metaObjectEv(void* qthis); // 4
+extern void C_ZNK18QPaintDeviceWindow10metaObjectEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -75,17 +75,17 @@ func (this *QPaintDeviceWindow) update(args ...interface{}) () {
     // invoke: void update(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QPaintDeviceWindow6updateERK5QRect(this.qclsinst, arg0)
+    C.C_ZN18QPaintDeviceWindow6updateERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN18QPaintDeviceWindow6updateERK7QRegion
     // invoke: void update(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QPaintDeviceWindow6updateERK7QRegion(this.qclsinst, arg0)
+    C.C_ZN18QPaintDeviceWindow6updateERK7QRegion(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN18QPaintDeviceWindow6updateEv
     // invoke: void update()
-    C._ZN18QPaintDeviceWindow6updateEv(this.qclsinst)
+    C.C_ZN18QPaintDeviceWindow6updateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDeviceWindow", "update", args)
   }
@@ -105,7 +105,7 @@ func (this *QPaintDeviceWindow) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QPaintDeviceWindow10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK18QPaintDeviceWindow10metaObjectEv(this.qclsinst)
+    C.C_ZNK18QPaintDeviceWindow10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDeviceWindow", "metaObject", args)
   }

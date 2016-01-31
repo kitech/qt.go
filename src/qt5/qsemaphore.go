@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.go
 //
@@ -29,19 +29,19 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QSemaphore::available();
-extern void _ZNK10QSemaphore9availableEv(void* qthis); // 4
+extern void C_ZNK10QSemaphore9availableEv(void* qthis); // 4
   // proto:  void QSemaphore::~QSemaphore();
-extern void _ZN10QSemaphoreD2Ev(void* qthis); // 4
+extern void C_ZN10QSemaphoreD2Ev(void* qthis); // 4
   // proto:  void QSemaphore::acquire(int n);
-extern void _ZN10QSemaphore7acquireEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QSemaphore7acquireEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QSemaphore::tryAcquire(int n);
-extern void _ZN10QSemaphore10tryAcquireEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QSemaphore10tryAcquireEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QSemaphore::tryAcquire(int n, int timeout);
-extern void _ZN10QSemaphore10tryAcquireEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN10QSemaphore10tryAcquireEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QSemaphore::release(int n);
-extern void _ZN10QSemaphore7releaseEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QSemaphore7releaseEi(void* qthis, int32_t arg0); // 4
   // proto:  void QSemaphore::QSemaphore(int n);
-extern void _ZN10QSemaphoreC2Ei(void* qthis, int32_t arg0); // 3
+extern void C_ZN10QSemaphoreC2Ei(void* qthis, int32_t arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -73,7 +73,7 @@ func (this *QSemaphore) available(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QSemaphore9availableEv
     // invoke: int available()
-    C._ZNK10QSemaphore9availableEv(this.qclsinst)
+    C.C_ZNK10QSemaphore9availableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSemaphore", "available", args)
   }
@@ -93,7 +93,7 @@ func (this *QSemaphore) FreeQSemaphore(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QSemaphoreD0Ev
     // invoke: void ~QSemaphore()
-    C._ZN10QSemaphoreD2Ev(this.qclsinst)
+    C.C_ZN10QSemaphoreD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSemaphore", "~QSemaphore", args)
   }
@@ -116,7 +116,7 @@ func (this *QSemaphore) acquire(args ...interface{}) () {
     // invoke: void acquire(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QSemaphore7acquireEi(this.qclsinst, arg0)
+    C.C_ZN10QSemaphore7acquireEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSemaphore", "acquire", args)
   }
@@ -143,7 +143,7 @@ func (this *QSemaphore) tryAcquire(args ...interface{}) () {
     // invoke: bool tryAcquire(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QSemaphore10tryAcquireEi(this.qclsinst, arg0)
+    C.C_ZN10QSemaphore10tryAcquireEi(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN10QSemaphore10tryAcquireEii
     // invoke: bool tryAcquire(int, int)
@@ -151,7 +151,7 @@ func (this *QSemaphore) tryAcquire(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QSemaphore10tryAcquireEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QSemaphore10tryAcquireEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QSemaphore", "tryAcquire", args)
   }
@@ -174,7 +174,7 @@ func (this *QSemaphore) release(args ...interface{}) () {
     // invoke: void release(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QSemaphore7releaseEi(this.qclsinst, arg0)
+    C.C_ZN10QSemaphore7releaseEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSemaphore", "release", args)
   }
@@ -199,7 +199,7 @@ func NewQSemaphore(args ...interface{}) QSemaphore {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QSemaphoreC2Ei(qthis, arg0)
+    C.C_ZN10QSemaphoreC2Ei(qthis, arg0)
   default:
     qtrt.ErrorResolve("QSemaphore", "QSemaphore", args)
   }

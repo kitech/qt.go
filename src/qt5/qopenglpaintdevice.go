@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qopenglpaintdevice.h
 // dst-file: /src/gui/qopenglpaintdevice.go
 //
@@ -29,39 +29,39 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QOpenGLPaintDevice::setDotsPerMeterX(qreal );
-extern void _ZN18QOpenGLPaintDevice16setDotsPerMeterXEd(void* qthis, double arg0); // 4
+extern void C_ZN18QOpenGLPaintDevice16setDotsPerMeterXEd(void* qthis, double arg0); // 4
   // proto:  void QOpenGLPaintDevice::setDotsPerMeterY(qreal );
-extern void _ZN18QOpenGLPaintDevice16setDotsPerMeterYEd(void* qthis, double arg0); // 4
+extern void C_ZN18QOpenGLPaintDevice16setDotsPerMeterYEd(void* qthis, double arg0); // 4
   // proto:  void QOpenGLPaintDevice::ensureActiveTarget();
-extern void _ZN18QOpenGLPaintDevice18ensureActiveTargetEv(void* qthis); // 4
+extern void C_ZN18QOpenGLPaintDevice18ensureActiveTargetEv(void* qthis); // 4
   // proto:  void QOpenGLPaintDevice::setDevicePixelRatio(qreal devicePixelRatio);
-extern void _ZN18QOpenGLPaintDevice19setDevicePixelRatioEd(void* qthis, double arg0); // 4
+extern void C_ZN18QOpenGLPaintDevice19setDevicePixelRatioEd(void* qthis, double arg0); // 4
   // proto:  qreal QOpenGLPaintDevice::dotsPerMeterY();
-extern void _ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(void* qthis); // 4
+extern void C_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(void* qthis); // 4
   // proto:  void QOpenGLPaintDevice::setSize(const QSize & size);
-extern void _ZN18QOpenGLPaintDevice7setSizeERK5QSize(void* qthis, void* arg0); // 4
+extern void C_ZN18QOpenGLPaintDevice7setSizeERK5QSize(void* qthis, void* arg0); // 4
   // proto:  int QOpenGLPaintDevice::devType();
-extern void _ZNK18QOpenGLPaintDevice7devTypeEv(void* qthis); // 2
+extern void C_ZNK18QOpenGLPaintDevice7devTypeEv(void* qthis); // 2
   // proto:  QOpenGLContext * QOpenGLPaintDevice::context();
-extern void _ZNK18QOpenGLPaintDevice7contextEv(void* qthis); // 4
+extern void C_ZNK18QOpenGLPaintDevice7contextEv(void* qthis); // 4
   // proto:  void QOpenGLPaintDevice::~QOpenGLPaintDevice();
-extern void _ZN18QOpenGLPaintDeviceD2Ev(void* qthis); // 4
+extern void C_ZN18QOpenGLPaintDeviceD2Ev(void* qthis); // 4
   // proto:  bool QOpenGLPaintDevice::paintFlipped();
-extern void _ZNK18QOpenGLPaintDevice12paintFlippedEv(void* qthis); // 4
+extern void C_ZNK18QOpenGLPaintDevice12paintFlippedEv(void* qthis); // 4
   // proto:  QPaintEngine * QOpenGLPaintDevice::paintEngine();
-extern void _ZNK18QOpenGLPaintDevice11paintEngineEv(void* qthis); // 4
+extern void C_ZNK18QOpenGLPaintDevice11paintEngineEv(void* qthis); // 4
   // proto:  void QOpenGLPaintDevice::setPaintFlipped(bool flipped);
-extern void _ZN18QOpenGLPaintDevice15setPaintFlippedEb(void* qthis, bool arg0); // 4
+extern void C_ZN18QOpenGLPaintDevice15setPaintFlippedEb(void* qthis, bool arg0); // 4
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QSize & size);
-extern void _ZN18QOpenGLPaintDeviceC2ERK5QSize(void* qthis, void* arg0); // 3
+extern void C_ZN18QOpenGLPaintDeviceC2ERK5QSize(void* qthis, void* arg0); // 3
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice();
-extern void _ZN18QOpenGLPaintDeviceC2Ev(void* qthis); // 3
+extern void C_ZN18QOpenGLPaintDeviceC2Ev(void* qthis); // 3
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height);
-extern void _ZN18QOpenGLPaintDeviceC2Eii(void* qthis, int32_t arg0, int32_t arg1); // 3
+extern void C_ZN18QOpenGLPaintDeviceC2Eii(void* qthis, int32_t arg0, int32_t arg1); // 3
   // proto:  qreal QOpenGLPaintDevice::dotsPerMeterX();
-extern void _ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(void* qthis); // 4
+extern void C_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(void* qthis); // 4
   // proto:  QSize QOpenGLPaintDevice::size();
-extern void _ZNK18QOpenGLPaintDevice4sizeEv(void* qthis); // 4
+extern void C_ZNK18QOpenGLPaintDevice4sizeEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -96,7 +96,7 @@ func (this *QOpenGLPaintDevice) setDotsPerMeterX(args ...interface{}) () {
     // invoke: void setDotsPerMeterX(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN18QOpenGLPaintDevice16setDotsPerMeterXEd(this.qclsinst, arg0)
+    C.C_ZN18QOpenGLPaintDevice16setDotsPerMeterXEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDotsPerMeterX", args)
   }
@@ -119,7 +119,7 @@ func (this *QOpenGLPaintDevice) setDotsPerMeterY(args ...interface{}) () {
     // invoke: void setDotsPerMeterY(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN18QOpenGLPaintDevice16setDotsPerMeterYEd(this.qclsinst, arg0)
+    C.C_ZN18QOpenGLPaintDevice16setDotsPerMeterYEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDotsPerMeterY", args)
   }
@@ -139,7 +139,7 @@ func (this *QOpenGLPaintDevice) ensureActiveTarget(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice18ensureActiveTargetEv
     // invoke: void ensureActiveTarget()
-    C._ZN18QOpenGLPaintDevice18ensureActiveTargetEv(this.qclsinst)
+    C.C_ZN18QOpenGLPaintDevice18ensureActiveTargetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "ensureActiveTarget", args)
   }
@@ -162,7 +162,7 @@ func (this *QOpenGLPaintDevice) setDevicePixelRatio(args ...interface{}) () {
     // invoke: void setDevicePixelRatio(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN18QOpenGLPaintDevice19setDevicePixelRatioEd(this.qclsinst, arg0)
+    C.C_ZN18QOpenGLPaintDevice19setDevicePixelRatioEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDevicePixelRatio", args)
   }
@@ -182,7 +182,7 @@ func (this *QOpenGLPaintDevice) dotsPerMeterY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice13dotsPerMeterYEv
     // invoke: qreal dotsPerMeterY()
-    C._ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(this.qclsinst)
+    C.C_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "dotsPerMeterY", args)
   }
@@ -205,7 +205,7 @@ func (this *QOpenGLPaintDevice) setSize(args ...interface{}) () {
     // invoke: void setSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QOpenGLPaintDevice7setSizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN18QOpenGLPaintDevice7setSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setSize", args)
   }
@@ -225,7 +225,7 @@ func (this *QOpenGLPaintDevice) devType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice7devTypeEv
     // invoke: int devType()
-    C._ZNK18QOpenGLPaintDevice7devTypeEv(this.qclsinst)
+    C.C_ZNK18QOpenGLPaintDevice7devTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "devType", args)
   }
@@ -245,7 +245,7 @@ func (this *QOpenGLPaintDevice) context(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice7contextEv
     // invoke: QOpenGLContext * context()
-    C._ZNK18QOpenGLPaintDevice7contextEv(this.qclsinst)
+    C.C_ZNK18QOpenGLPaintDevice7contextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "context", args)
   }
@@ -265,7 +265,7 @@ func (this *QOpenGLPaintDevice) FreeQOpenGLPaintDevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QOpenGLPaintDeviceD0Ev
     // invoke: void ~QOpenGLPaintDevice()
-    C._ZN18QOpenGLPaintDeviceD2Ev(this.qclsinst)
+    C.C_ZN18QOpenGLPaintDeviceD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "~QOpenGLPaintDevice", args)
   }
@@ -285,7 +285,7 @@ func (this *QOpenGLPaintDevice) paintFlipped(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice12paintFlippedEv
     // invoke: bool paintFlipped()
-    C._ZNK18QOpenGLPaintDevice12paintFlippedEv(this.qclsinst)
+    C.C_ZNK18QOpenGLPaintDevice12paintFlippedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "paintFlipped", args)
   }
@@ -305,7 +305,7 @@ func (this *QOpenGLPaintDevice) paintEngine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice11paintEngineEv
     // invoke: QPaintEngine * paintEngine()
-    C._ZNK18QOpenGLPaintDevice11paintEngineEv(this.qclsinst)
+    C.C_ZNK18QOpenGLPaintDevice11paintEngineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "paintEngine", args)
   }
@@ -328,7 +328,7 @@ func (this *QOpenGLPaintDevice) setPaintFlipped(args ...interface{}) () {
     // invoke: void setPaintFlipped(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN18QOpenGLPaintDevice15setPaintFlippedEb(this.qclsinst, arg0)
+    C.C_ZN18QOpenGLPaintDevice15setPaintFlippedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setPaintFlipped", args)
   }
@@ -359,13 +359,13 @@ func NewQOpenGLPaintDevice(args ...interface{}) QOpenGLPaintDevice {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN18QOpenGLPaintDeviceC2ERK5QSize(qthis, arg0)
+    C.C_ZN18QOpenGLPaintDeviceC2ERK5QSize(qthis, arg0)
   case 1:
     // invoke: _ZN18QOpenGLPaintDeviceC1Ev
     // invoke: void QOpenGLPaintDevice()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN18QOpenGLPaintDeviceC2Ev(qthis)
+    C.C_ZN18QOpenGLPaintDeviceC2Ev(qthis)
   case 2:
     // invoke: _ZN18QOpenGLPaintDeviceC1Eii
     // invoke: void QOpenGLPaintDevice(int, int)
@@ -375,7 +375,7 @@ func NewQOpenGLPaintDevice(args ...interface{}) QOpenGLPaintDevice {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN18QOpenGLPaintDeviceC2Eii(qthis, arg0, arg1)
+    C.C_ZN18QOpenGLPaintDeviceC2Eii(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "QOpenGLPaintDevice", args)
   }
@@ -396,7 +396,7 @@ func (this *QOpenGLPaintDevice) dotsPerMeterX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice13dotsPerMeterXEv
     // invoke: qreal dotsPerMeterX()
-    C._ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(this.qclsinst)
+    C.C_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "dotsPerMeterX", args)
   }
@@ -416,7 +416,7 @@ func (this *QOpenGLPaintDevice) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice4sizeEv
     // invoke: QSize size()
-    C._ZNK18QOpenGLPaintDevice4sizeEv(this.qclsinst)
+    C.C_ZNK18QOpenGLPaintDevice4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "size", args)
   }

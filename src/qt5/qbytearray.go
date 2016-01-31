@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qbytearray.h
 // dst-file: /src/core/qbytearray.go
 //
@@ -29,263 +29,263 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QByteArray::detach();
-extern void _ZN10QByteArray6detachEv(void* qthis); // 2
+extern void C_ZN10QByteArray6detachEv(void* qthis); // 2
   // proto:  void QByteArray::swap(QByteArray & other);
-extern void _ZN10QByteArray4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN10QByteArray4swapERS_(void* qthis, void* arg0); // 2
   // proto:  QByteArray QByteArray::rightJustified(int width, char fill, bool truncate);
-extern void _ZNK10QByteArray14rightJustifiedEicb(void* qthis, int32_t arg0, unsigned char arg1, bool arg2); // 4
+extern void C_ZNK10QByteArray14rightJustifiedEicb(void* qthis, int32_t arg0, unsigned char arg1, bool arg2); // 4
   // proto:  QByteArray & QByteArray::insert(int i, const QString & s);
-extern void _ZN10QByteArray6insertEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
+extern void C_ZN10QByteArray6insertEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QByteArray & QByteArray::insert(int i, const char * s);
-extern void _ZN10QByteArray6insertEiPKc(void* qthis, int32_t arg0, unsigned char* arg1); // 4
+extern void C_ZN10QByteArray6insertEiPKc(void* qthis, int32_t arg0, unsigned char* arg1); // 4
   // proto:  QByteArray & QByteArray::insert(int i, const QByteArray & a);
-extern void _ZN10QByteArray6insertEiRKS_(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN10QByteArray6insertEiRKS_(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  QByteArray & QByteArray::insert(int i, char c);
-extern void _ZN10QByteArray6insertEic(void* qthis, int32_t arg0, unsigned char arg1); // 4
+extern void C_ZN10QByteArray6insertEic(void* qthis, int32_t arg0, unsigned char arg1); // 4
   // proto:  QByteArray & QByteArray::insert(int i, const char * s, int len);
-extern void _ZN10QByteArray6insertEiPKci(void* qthis, int32_t arg0, unsigned char* arg1, int32_t arg2); // 4
+extern void C_ZN10QByteArray6insertEiPKci(void* qthis, int32_t arg0, unsigned char* arg1, int32_t arg2); // 4
   // proto:  QByteArray & QByteArray::remove(int index, int len);
-extern void _ZN10QByteArray6removeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN10QByteArray6removeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  QByteArray QByteArray::trimmed();
-extern void _ZNKR10QByteArray7trimmedEv(void* qthis); // 2
+extern void C_ZNKR10QByteArray7trimmedEv(void* qthis); // 2
   // proto:  const_iterator QByteArray::constEnd();
-extern void _ZNK10QByteArray8constEndEv(void* qthis); // 2
+extern void C_ZNK10QByteArray8constEndEv(void* qthis); // 2
   // proto:  bool QByteArray::isSharedWith(const QByteArray & other);
-extern void _ZNK10QByteArray12isSharedWithERKS_(void* qthis, void* arg0); // 2
+extern void C_ZNK10QByteArray12isSharedWithERKS_(void* qthis, void* arg0); // 2
   // proto:  QByteArray QByteArray::right(int len);
-extern void _ZNK10QByteArray5rightEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK10QByteArray5rightEi(void* qthis, int32_t arg0); // 4
   // proto:  uint QByteArray::toUInt(bool * ok, int base);
-extern void _ZNK10QByteArray6toUIntEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray6toUIntEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
   // proto:  QByteArray & QByteArray::append(char c);
-extern void _ZN10QByteArray6appendEc(void* qthis, unsigned char arg0); // 4
+extern void C_ZN10QByteArray6appendEc(void* qthis, unsigned char arg0); // 4
   // proto:  QByteArray & QByteArray::append(const char * s, int len);
-extern void _ZN10QByteArray6appendEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void C_ZN10QByteArray6appendEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
   // proto:  QByteArray & QByteArray::append(const QByteArray & a);
-extern void _ZN10QByteArray6appendERKS_(void* qthis, void* arg0); // 4
+extern void C_ZN10QByteArray6appendERKS_(void* qthis, void* arg0); // 4
   // proto:  QByteArray & QByteArray::append(const QString & s);
-extern void _ZN10QByteArray6appendERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN10QByteArray6appendERK7QString(void* qthis, void* arg0); // 2
   // proto:  QByteArray & QByteArray::append(const char * s);
-extern void _ZN10QByteArray6appendEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZN10QByteArray6appendEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  bool QByteArray::startsWith(const char * c);
-extern void _ZNK10QByteArray10startsWithEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZNK10QByteArray10startsWithEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  bool QByteArray::startsWith(const QByteArray & a);
-extern void _ZNK10QByteArray10startsWithERKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK10QByteArray10startsWithERKS_(void* qthis, void* arg0); // 4
   // proto:  bool QByteArray::startsWith(char c);
-extern void _ZNK10QByteArray10startsWithEc(void* qthis, unsigned char arg0); // 4
+extern void C_ZNK10QByteArray10startsWithEc(void* qthis, unsigned char arg0); // 4
   // proto:  int QByteArray::capacity();
-extern void _ZNK10QByteArray8capacityEv(void* qthis); // 2
+extern void C_ZNK10QByteArray8capacityEv(void* qthis); // 2
   // proto:  QByteArray QByteArray::toLower();
-extern void _ZNKR10QByteArray7toLowerEv(void* qthis); // 2
+extern void C_ZNKR10QByteArray7toLowerEv(void* qthis); // 2
   // proto:  bool QByteArray::isNull();
-extern void _ZNK10QByteArray6isNullEv(void* qthis); // 4
+extern void C_ZNK10QByteArray6isNullEv(void* qthis); // 4
   // proto:  std::string QByteArray::toStdString();
-extern void _ZNK10QByteArray11toStdStringEv(void* qthis); // 2
+extern void C_ZNK10QByteArray11toStdStringB5cxx11Ev(void* qthis); // 2
   // proto:  QByteArray QByteArray::toHex();
-extern void _ZNK10QByteArray5toHexEv(void* qthis); // 4
+extern void C_ZNK10QByteArray5toHexEv(void* qthis); // 4
   // proto:  int QByteArray::indexOf(const char * c, int from);
-extern void _ZNK10QByteArray7indexOfEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray7indexOfEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
   // proto:  int QByteArray::indexOf(char c, int from);
-extern void _ZNK10QByteArray7indexOfEci(void* qthis, unsigned char arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray7indexOfEci(void* qthis, unsigned char arg0, int32_t arg1); // 4
   // proto:  int QByteArray::indexOf(const QByteArray & a, int from);
-extern void _ZNK10QByteArray7indexOfERKS_i(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray7indexOfERKS_i(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  int QByteArray::indexOf(const QString & s, int from);
-extern void _ZNK10QByteArray7indexOfERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 2
+extern void C_ZNK10QByteArray7indexOfERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  const_iterator QByteArray::cbegin();
-extern void _ZNK10QByteArray6cbeginEv(void* qthis); // 2
+extern void C_ZNK10QByteArray6cbeginEv(void* qthis); // 2
   // proto:  void QByteArray::QByteArray();
-extern void _ZN10QByteArrayC2Ev(void* qthis); // 1
+extern void C_ZN10QByteArrayC2Ev(void* qthis); // 1
   // proto:  void QByteArray::QByteArray(const QByteArray & );
-extern void _ZN10QByteArrayC2ERKS_(void* qthis, void* arg0); // 1
+extern void C_ZN10QByteArrayC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QByteArray::QByteArray(const char * , int size);
-extern void _ZN10QByteArrayC2EPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 3
+extern void C_ZN10QByteArrayC2EPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 3
   // proto:  void QByteArray::QByteArray(int size, char c);
-extern void _ZN10QByteArrayC2Eic(void* qthis, int32_t arg0, unsigned char arg1); // 3
+extern void C_ZN10QByteArrayC2Eic(void* qthis, int32_t arg0, unsigned char arg1); // 3
   // proto: static QByteArray QByteArray::fromBase64(const QByteArray & base64);
-extern void _ZN10QByteArray10fromBase64ERKS_(void* arg0); // 4
+extern void C_ZN10QByteArray10fromBase64ERKS_(void* arg0); // 4
   // proto: static QByteArray QByteArray::fromHex(const QByteArray & hexEncoded);
-extern void _ZN10QByteArray7fromHexERKS_(void* arg0); // 4
+extern void C_ZN10QByteArray7fromHexERKS_(void* arg0); // 4
   // proto:  void QByteArray::chop(int n);
-extern void _ZN10QByteArray4chopEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QByteArray4chopEi(void* qthis, int32_t arg0); // 4
   // proto:  int QByteArray::length();
-extern void _ZNK10QByteArray6lengthEv(void* qthis); // 2
+extern void C_ZNK10QByteArray6lengthEv(void* qthis); // 2
   // proto:  double QByteArray::toDouble(bool * ok);
-extern void _ZNK10QByteArray8toDoubleEPb(void* qthis, bool* arg0); // 4
+extern void C_ZNK10QByteArray8toDoubleEPb(void* qthis, bool* arg0); // 4
   // proto:  long QByteArray::toLong(bool * ok, int base);
-extern void _ZNK10QByteArray6toLongEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray6toLongEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
   // proto:  QByteArray QByteArray::toPercentEncoding(const QByteArray & exclude, const QByteArray & include, char percent);
-extern void _ZNK10QByteArray17toPercentEncodingERKS_S1_c(void* qthis, void* arg0, void* arg1, unsigned char arg2); // 4
+extern void C_ZNK10QByteArray17toPercentEncodingERKS_S1_c(void* qthis, void* arg0, void* arg1, unsigned char arg2); // 4
   // proto:  ushort QByteArray::toUShort(bool * ok, int base);
-extern void _ZNK10QByteArray8toUShortEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray8toUShortEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
   // proto:  const_iterator QByteArray::constBegin();
-extern void _ZNK10QByteArray10constBeginEv(void* qthis); // 2
+extern void C_ZNK10QByteArray10constBeginEv(void* qthis); // 2
   // proto:  short QByteArray::toShort(bool * ok, int base);
-extern void _ZNK10QByteArray7toShortEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray7toShortEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
   // proto: static QByteArray QByteArray::number(qlonglong , int base);
-extern void _ZN10QByteArray6numberExi(int64_t arg0, int32_t arg1); // 4
+extern void C_ZN10QByteArray6numberExi(int64_t arg0, int32_t arg1); // 4
   // proto: static QByteArray QByteArray::number(qulonglong , int base);
-extern void _ZN10QByteArray6numberEyi(int64_t arg0, int32_t arg1); // 4
+extern void C_ZN10QByteArray6numberEyi(int64_t arg0, int32_t arg1); // 4
   // proto: static QByteArray QByteArray::number(int , int base);
-extern void _ZN10QByteArray6numberEii(int32_t arg0, int32_t arg1); // 4
+extern void C_ZN10QByteArray6numberEii(int32_t arg0, int32_t arg1); // 4
   // proto: static QByteArray QByteArray::number(uint , int base);
-extern void _ZN10QByteArray6numberEji(int32_t arg0, int32_t arg1); // 4
+extern void C_ZN10QByteArray6numberEji(int32_t arg0, int32_t arg1); // 4
   // proto: static QByteArray QByteArray::number(double , char f, int prec);
-extern void _ZN10QByteArray6numberEdci(double arg0, unsigned char arg1, int32_t arg2); // 4
+extern void C_ZN10QByteArray6numberEdci(double arg0, unsigned char arg1, int32_t arg2); // 4
   // proto:  QByteArray & QByteArray::replace(const QString & before, const char * after);
-extern void _ZN10QByteArray7replaceERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1); // 2
+extern void C_ZN10QByteArray7replaceERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1); // 2
   // proto:  QByteArray & QByteArray::replace(char before, const QByteArray & after);
-extern void _ZN10QByteArray7replaceEcRKS_(void* qthis, unsigned char arg0, void* arg1); // 4
+extern void C_ZN10QByteArray7replaceEcRKS_(void* qthis, unsigned char arg0, void* arg1); // 4
   // proto:  QByteArray & QByteArray::replace(int index, int len, const QByteArray & s);
-extern void _ZN10QByteArray7replaceEiiRKS_(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN10QByteArray7replaceEiiRKS_(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  QByteArray & QByteArray::replace(char before, const char * after);
-extern void _ZN10QByteArray7replaceEcPKc(void* qthis, unsigned char arg0, unsigned char* arg1); // 2
+extern void C_ZN10QByteArray7replaceEcPKc(void* qthis, unsigned char arg0, unsigned char* arg1); // 2
   // proto:  QByteArray & QByteArray::replace(char before, char after);
-extern void _ZN10QByteArray7replaceEcc(void* qthis, unsigned char arg0, unsigned char arg1); // 4
+extern void C_ZN10QByteArray7replaceEcc(void* qthis, unsigned char arg0, unsigned char arg1); // 4
   // proto:  QByteArray & QByteArray::replace(const QByteArray & before, const QByteArray & after);
-extern void _ZN10QByteArray7replaceERKS_S1_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN10QByteArray7replaceERKS_S1_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QByteArray & QByteArray::replace(const QByteArray & before, const char * after);
-extern void _ZN10QByteArray7replaceERKS_PKc(void* qthis, void* arg0, unsigned char* arg1); // 2
+extern void C_ZN10QByteArray7replaceERKS_PKc(void* qthis, void* arg0, unsigned char* arg1); // 2
   // proto:  QByteArray & QByteArray::replace(int index, int len, const char * s);
-extern void _ZN10QByteArray7replaceEiiPKc(void* qthis, int32_t arg0, int32_t arg1, unsigned char* arg2); // 4
+extern void C_ZN10QByteArray7replaceEiiPKc(void* qthis, int32_t arg0, int32_t arg1, unsigned char* arg2); // 4
   // proto:  QByteArray & QByteArray::replace(int index, int len, const char * s, int alen);
-extern void _ZN10QByteArray7replaceEiiPKci(void* qthis, int32_t arg0, int32_t arg1, unsigned char* arg2, int32_t arg3); // 4
+extern void C_ZN10QByteArray7replaceEiiPKci(void* qthis, int32_t arg0, int32_t arg1, unsigned char* arg2, int32_t arg3); // 4
   // proto:  QByteArray & QByteArray::replace(const char * before, const QByteArray & after);
-extern void _ZN10QByteArray7replaceEPKcRKS_(void* qthis, unsigned char* arg0, void* arg1); // 4
+extern void C_ZN10QByteArray7replaceEPKcRKS_(void* qthis, unsigned char* arg0, void* arg1); // 4
   // proto:  QByteArray & QByteArray::replace(const char * before, const char * after);
-extern void _ZN10QByteArray7replaceEPKcS1_(void* qthis, unsigned char* arg0, unsigned char* arg1); // 2
+extern void C_ZN10QByteArray7replaceEPKcS1_(void* qthis, unsigned char* arg0, unsigned char* arg1); // 2
   // proto:  QByteArray & QByteArray::replace(char c, const QString & after);
-extern void _ZN10QByteArray7replaceEcRK7QString(void* qthis, unsigned char arg0, void* arg1); // 2
+extern void C_ZN10QByteArray7replaceEcRK7QString(void* qthis, unsigned char arg0, void* arg1); // 2
   // proto:  QByteArray & QByteArray::replace(const QString & before, const QByteArray & after);
-extern void _ZN10QByteArray7replaceERK7QStringRKS_(void* qthis, void* arg0, void* arg1); // 2
+extern void C_ZN10QByteArray7replaceERK7QStringRKS_(void* qthis, void* arg0, void* arg1); // 2
   // proto:  QByteArray & QByteArray::replace(const char * before, int bsize, const char * after, int asize);
-extern void _ZN10QByteArray7replaceEPKciS1_i(void* qthis, unsigned char* arg0, int32_t arg1, unsigned char* arg2, int32_t arg3); // 4
+extern void C_ZN10QByteArray7replaceEPKciS1_i(void* qthis, unsigned char* arg0, int32_t arg1, unsigned char* arg2, int32_t arg3); // 4
   // proto:  void QByteArray::push_back(const QByteArray & a);
-extern void _ZN10QByteArray9push_backERKS_(void* qthis, void* arg0); // 2
+extern void C_ZN10QByteArray9push_backERKS_(void* qthis, void* arg0); // 2
   // proto:  void QByteArray::push_back(const char * c);
-extern void _ZN10QByteArray9push_backEPKc(void* qthis, unsigned char* arg0); // 2
+extern void C_ZN10QByteArray9push_backEPKc(void* qthis, unsigned char* arg0); // 2
   // proto:  void QByteArray::push_back(char c);
-extern void _ZN10QByteArray9push_backEc(void* qthis, unsigned char arg0); // 2
+extern void C_ZN10QByteArray9push_backEc(void* qthis, unsigned char arg0); // 2
   // proto:  QByteArray QByteArray::simplified();
-extern void _ZNKR10QByteArray10simplifiedEv(void* qthis); // 2
+extern void C_ZNKR10QByteArray10simplifiedEv(void* qthis); // 2
   // proto:  int QByteArray::size();
-extern void _ZNK10QByteArray4sizeEv(void* qthis); // 2
+extern void C_ZNK10QByteArray4sizeEv(void* qthis); // 2
   // proto:  bool QByteArray::contains(char c);
-extern void _ZNK10QByteArray8containsEc(void* qthis, unsigned char arg0); // 2
+extern void C_ZNK10QByteArray8containsEc(void* qthis, unsigned char arg0); // 2
   // proto:  bool QByteArray::contains(const QByteArray & a);
-extern void _ZNK10QByteArray8containsERKS_(void* qthis, void* arg0); // 2
+extern void C_ZNK10QByteArray8containsERKS_(void* qthis, void* arg0); // 2
   // proto:  bool QByteArray::contains(const char * a);
-extern void _ZNK10QByteArray8containsEPKc(void* qthis, unsigned char* arg0); // 2
+extern void C_ZNK10QByteArray8containsEPKc(void* qthis, unsigned char* arg0); // 2
   // proto: static QByteArray QByteArray::fromPercentEncoding(const QByteArray & pctEncoded, char percent);
-extern void _ZN10QByteArray19fromPercentEncodingERKS_c(void* arg0, unsigned char arg1); // 4
+extern void C_ZN10QByteArray19fromPercentEncodingERKS_c(void* arg0, unsigned char arg1); // 4
   // proto:  const_iterator QByteArray::cend();
-extern void _ZNK10QByteArray4cendEv(void* qthis); // 2
+extern void C_ZNK10QByteArray4cendEv(void* qthis); // 2
   // proto:  QByteArray QByteArray::leftJustified(int width, char fill, bool truncate);
-extern void _ZNK10QByteArray13leftJustifiedEicb(void* qthis, int32_t arg0, unsigned char arg1, bool arg2); // 4
+extern void C_ZNK10QByteArray13leftJustifiedEicb(void* qthis, int32_t arg0, unsigned char arg1, bool arg2); // 4
   // proto:  QByteArray QByteArray::repeated(int times);
-extern void _ZNK10QByteArray8repeatedEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK10QByteArray8repeatedEi(void* qthis, int32_t arg0); // 4
   // proto: static QByteArray QByteArray::fromRawData(const char * , int size);
-extern void _ZN10QByteArray11fromRawDataEPKci(unsigned char* arg0, int32_t arg1); // 4
+extern void C_ZN10QByteArray11fromRawDataEPKci(unsigned char* arg0, int32_t arg1); // 4
   // proto:  void QByteArray::squeeze();
-extern void _ZN10QByteArray7squeezeEv(void* qthis); // 2
+extern void C_ZN10QByteArray7squeezeEv(void* qthis); // 2
   // proto:  void QByteArray::resize(int size);
-extern void _ZN10QByteArray6resizeEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QByteArray6resizeEi(void* qthis, int32_t arg0); // 4
   // proto:  qulonglong QByteArray::toULongLong(bool * ok, int base);
-extern void _ZNK10QByteArray11toULongLongEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray11toULongLongEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
   // proto:  int QByteArray::count();
-extern void _ZNK10QByteArray5countEv(void* qthis); // 2
+extern void C_ZNK10QByteArray5countEv(void* qthis); // 2
   // proto:  int QByteArray::count(const char * a);
-extern void _ZNK10QByteArray5countEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZNK10QByteArray5countEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  int QByteArray::count(char c);
-extern void _ZNK10QByteArray5countEc(void* qthis, unsigned char arg0); // 4
+extern void C_ZNK10QByteArray5countEc(void* qthis, unsigned char arg0); // 4
   // proto:  int QByteArray::count(const QByteArray & a);
-extern void _ZNK10QByteArray5countERKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK10QByteArray5countERKS_(void* qthis, void* arg0); // 4
   // proto:  void QByteArray::~QByteArray();
-extern void _ZN10QByteArrayD2Ev(void* qthis); // 2
+extern void C_ZN10QByteArrayD2Ev(void* qthis); // 2
   // proto:  float QByteArray::toFloat(bool * ok);
-extern void _ZNK10QByteArray7toFloatEPb(void* qthis, bool* arg0); // 4
+extern void C_ZNK10QByteArray7toFloatEPb(void* qthis, bool* arg0); // 4
   // proto:  char QByteArray::at(int i);
-extern void _ZNK10QByteArray2atEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK10QByteArray2atEi(void* qthis, int32_t arg0); // 2
   // proto:  QByteArray & QByteArray::fill(char c, int size);
-extern void _ZN10QByteArray4fillEci(void* qthis, unsigned char arg0, int32_t arg1); // 4
+extern void C_ZN10QByteArray4fillEci(void* qthis, unsigned char arg0, int32_t arg1); // 4
   // proto:  ulong QByteArray::toULong(bool * ok, int base);
-extern void _ZNK10QByteArray7toULongEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray7toULongEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
   // proto:  iterator QByteArray::end();
-extern void _ZN10QByteArray3endEv(void* qthis); // 2
+extern void C_ZN10QByteArray3endEv(void* qthis); // 2
   // proto:  QByteArray QByteArray::mid(int index, int len);
-extern void _ZNK10QByteArray3midEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray3midEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  QByteArray & QByteArray::prepend(const char * s);
-extern void _ZN10QByteArray7prependEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZN10QByteArray7prependEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  QByteArray & QByteArray::prepend(char c);
-extern void _ZN10QByteArray7prependEc(void* qthis, unsigned char arg0); // 4
+extern void C_ZN10QByteArray7prependEc(void* qthis, unsigned char arg0); // 4
   // proto:  QByteArray & QByteArray::prepend(const char * s, int len);
-extern void _ZN10QByteArray7prependEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void C_ZN10QByteArray7prependEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
   // proto:  QByteArray & QByteArray::prepend(const QByteArray & a);
-extern void _ZN10QByteArray7prependERKS_(void* qthis, void* arg0); // 4
+extern void C_ZN10QByteArray7prependERKS_(void* qthis, void* arg0); // 4
   // proto:  const char * QByteArray::constData();
-extern void _ZNK10QByteArray9constDataEv(void* qthis); // 2
+extern void C_ZNK10QByteArray9constDataEv(void* qthis); // 2
   // proto:  qlonglong QByteArray::toLongLong(bool * ok, int base);
-extern void _ZNK10QByteArray10toLongLongEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray10toLongLongEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
   // proto:  bool QByteArray::isEmpty();
-extern void _ZNK10QByteArray7isEmptyEv(void* qthis); // 2
+extern void C_ZNK10QByteArray7isEmptyEv(void* qthis); // 2
   // proto:  QList<QByteArray> QByteArray::split(char sep);
-extern void _ZNK10QByteArray5splitEc(void* qthis, unsigned char arg0); // 4
+extern void C_ZNK10QByteArray5splitEc(void* qthis, unsigned char arg0); // 4
   // proto:  QByteArray & QByteArray::setRawData(const char * a, uint n);
-extern void _ZN10QByteArray10setRawDataEPKcj(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void C_ZN10QByteArray10setRawDataEPKcj(void* qthis, unsigned char* arg0, int32_t arg1); // 4
   // proto:  bool QByteArray::isDetached();
-extern void _ZNK10QByteArray10isDetachedEv(void* qthis); // 2
+extern void C_ZNK10QByteArray10isDetachedEv(void* qthis); // 2
   // proto:  iterator QByteArray::begin();
-extern void _ZN10QByteArray5beginEv(void* qthis); // 2
+extern void C_ZN10QByteArray5beginEv(void* qthis); // 2
   // proto:  int QByteArray::lastIndexOf(const char * c, int from);
-extern void _ZNK10QByteArray11lastIndexOfEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray11lastIndexOfEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
   // proto:  int QByteArray::lastIndexOf(const QString & s, int from);
-extern void _ZNK10QByteArray11lastIndexOfERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 2
+extern void C_ZNK10QByteArray11lastIndexOfERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  int QByteArray::lastIndexOf(const QByteArray & a, int from);
-extern void _ZNK10QByteArray11lastIndexOfERKS_i(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray11lastIndexOfERKS_i(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  int QByteArray::lastIndexOf(char c, int from);
-extern void _ZNK10QByteArray11lastIndexOfEci(void* qthis, unsigned char arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray11lastIndexOfEci(void* qthis, unsigned char arg0, int32_t arg1); // 4
   // proto:  QByteArray QByteArray::toUpper();
-extern void _ZNKR10QByteArray7toUpperEv(void* qthis); // 2
+extern void C_ZNKR10QByteArray7toUpperEv(void* qthis); // 2
   // proto:  void QByteArray::truncate(int pos);
-extern void _ZN10QByteArray8truncateEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QByteArray8truncateEi(void* qthis, int32_t arg0); // 4
   // proto:  QByteArray QByteArray::toBase64();
-extern void _ZNK10QByteArray8toBase64Ev(void* qthis); // 4
+extern void C_ZNK10QByteArray8toBase64Ev(void* qthis); // 4
   // proto:  char * QByteArray::data();
-extern void _ZN10QByteArray4dataEv(void* qthis); // 2
+extern void C_ZN10QByteArray4dataEv(void* qthis); // 2
   // proto:  void QByteArray::clear();
-extern void _ZN10QByteArray5clearEv(void* qthis); // 4
+extern void C_ZN10QByteArray5clearEv(void* qthis); // 4
   // proto:  int QByteArray::toInt(bool * ok, int base);
-extern void _ZNK10QByteArray5toIntEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
+extern void C_ZNK10QByteArray5toIntEPbi(void* qthis, bool* arg0, int32_t arg1); // 4
   // proto:  bool QByteArray::endsWith(const QByteArray & a);
-extern void _ZNK10QByteArray8endsWithERKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK10QByteArray8endsWithERKS_(void* qthis, void* arg0); // 4
   // proto:  bool QByteArray::endsWith(const char * c);
-extern void _ZNK10QByteArray8endsWithEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZNK10QByteArray8endsWithEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  bool QByteArray::endsWith(char c);
-extern void _ZNK10QByteArray8endsWithEc(void* qthis, unsigned char arg0); // 4
+extern void C_ZNK10QByteArray8endsWithEc(void* qthis, unsigned char arg0); // 4
   // proto:  QByteArray & QByteArray::setNum(uint , int base);
-extern void _ZN10QByteArray6setNumEji(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZN10QByteArray6setNumEji(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  QByteArray & QByteArray::setNum(int , int base);
-extern void _ZN10QByteArray6setNumEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZN10QByteArray6setNumEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  QByteArray & QByteArray::setNum(short , int base);
-extern void _ZN10QByteArray6setNumEsi(void* qthis, int16_t arg0, int32_t arg1); // 2
+extern void C_ZN10QByteArray6setNumEsi(void* qthis, int16_t arg0, int32_t arg1); // 2
   // proto:  QByteArray & QByteArray::setNum(double , char f, int prec);
-extern void _ZN10QByteArray6setNumEdci(void* qthis, double arg0, unsigned char arg1, int32_t arg2); // 4
+extern void C_ZN10QByteArray6setNumEdci(void* qthis, double arg0, unsigned char arg1, int32_t arg2); // 4
   // proto:  QByteArray & QByteArray::setNum(float , char f, int prec);
-extern void _ZN10QByteArray6setNumEfci(void* qthis, float arg0, unsigned char arg1, int32_t arg2); // 2
+extern void C_ZN10QByteArray6setNumEfci(void* qthis, float arg0, unsigned char arg1, int32_t arg2); // 2
   // proto:  QByteArray & QByteArray::setNum(qulonglong , int base);
-extern void _ZN10QByteArray6setNumEyi(void* qthis, int64_t arg0, int32_t arg1); // 4
+extern void C_ZN10QByteArray6setNumEyi(void* qthis, int64_t arg0, int32_t arg1); // 4
   // proto:  QByteArray & QByteArray::setNum(qlonglong , int base);
-extern void _ZN10QByteArray6setNumExi(void* qthis, int64_t arg0, int32_t arg1); // 4
+extern void C_ZN10QByteArray6setNumExi(void* qthis, int64_t arg0, int32_t arg1); // 4
   // proto:  QByteArray & QByteArray::setNum(ushort , int base);
-extern void _ZN10QByteArray6setNumEti(void* qthis, int16_t arg0, int32_t arg1); // 2
+extern void C_ZN10QByteArray6setNumEti(void* qthis, int16_t arg0, int32_t arg1); // 2
   // proto:  void QByteArray::reserve(int size);
-extern void _ZN10QByteArray7reserveEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN10QByteArray7reserveEi(void* qthis, int32_t arg0); // 2
   // proto:  void QByteArray::push_front(char c);
-extern void _ZN10QByteArray10push_frontEc(void* qthis, unsigned char arg0); // 2
+extern void C_ZN10QByteArray10push_frontEc(void* qthis, unsigned char arg0); // 2
   // proto:  void QByteArray::push_front(const QByteArray & a);
-extern void _ZN10QByteArray10push_frontERKS_(void* qthis, void* arg0); // 2
+extern void C_ZN10QByteArray10push_frontERKS_(void* qthis, void* arg0); // 2
   // proto:  void QByteArray::push_front(const char * c);
-extern void _ZN10QByteArray10push_frontEPKc(void* qthis, unsigned char* arg0); // 2
+extern void C_ZN10QByteArray10push_frontEPKc(void* qthis, unsigned char* arg0); // 2
   // proto:  QByteArray QByteArray::left(int len);
-extern void _ZNK10QByteArray4leftEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK10QByteArray4leftEi(void* qthis, int32_t arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -329,7 +329,7 @@ func (this *QByteArray) detach(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray6detachEv
     // invoke: void detach()
-    C._ZN10QByteArray6detachEv(this.qclsinst)
+    C.C_ZN10QByteArray6detachEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "detach", args)
   }
@@ -352,7 +352,7 @@ func (this *QByteArray) swap(args ...interface{}) () {
     // invoke: void swap(class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray4swapERS_(this.qclsinst, arg0)
+    C.C_ZN10QByteArray4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "swap", args)
   }
@@ -381,7 +381,7 @@ func (this *QByteArray) rightJustified(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.bool(args[2].(bool))
     if false {fmt.Println(arg2)}
-    C._ZNK10QByteArray14rightJustifiedEicb(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK10QByteArray14rightJustifiedEicb(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QByteArray", "rightJustified", args)
   }
@@ -424,7 +424,7 @@ func (this *QByteArray) insert(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6insertEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray6insertEiRK7QString(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN10QByteArray6insertEiPKc
     // invoke: QByteArray & insert(int, const char *)
@@ -432,7 +432,7 @@ func (this *QByteArray) insert(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6insertEiPKc(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray6insertEiPKc(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN10QByteArray6insertEiRKS_
     // invoke: QByteArray & insert(int, const class QByteArray &)
@@ -440,7 +440,7 @@ func (this *QByteArray) insert(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6insertEiRKS_(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray6insertEiRKS_(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZN10QByteArray6insertEic
     // invoke: QByteArray & insert(int, char)
@@ -448,7 +448,7 @@ func (this *QByteArray) insert(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6insertEic(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray6insertEic(this.qclsinst, arg0, arg1)
   case 4:
     // invoke: _ZN10QByteArray6insertEiPKci
     // invoke: QByteArray & insert(int, const char *, int)
@@ -458,7 +458,7 @@ func (this *QByteArray) insert(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN10QByteArray6insertEiPKci(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN10QByteArray6insertEiPKci(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QByteArray", "insert", args)
   }
@@ -484,7 +484,7 @@ func (this *QByteArray) remove(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6removeEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray6removeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "remove", args)
   }
@@ -504,7 +504,7 @@ func (this *QByteArray) trimmed(args ...interface{}) () {
   case 0:
     // invoke: _ZNKR10QByteArray7trimmedEv
     // invoke: QByteArray trimmed()
-    C._ZNKR10QByteArray7trimmedEv(this.qclsinst)
+    C.C_ZNKR10QByteArray7trimmedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "trimmed", args)
   }
@@ -524,7 +524,7 @@ func (this *QByteArray) constEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray8constEndEv
     // invoke: const_iterator constEnd()
-    C._ZNK10QByteArray8constEndEv(this.qclsinst)
+    C.C_ZNK10QByteArray8constEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "constEnd", args)
   }
@@ -547,7 +547,7 @@ func (this *QByteArray) isSharedWith(args ...interface{}) () {
     // invoke: bool isSharedWith(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray12isSharedWithERKS_(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray12isSharedWithERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "isSharedWith", args)
   }
@@ -570,7 +570,7 @@ func (this *QByteArray) right(args ...interface{}) () {
     // invoke: QByteArray right(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray5rightEi(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray5rightEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "right", args)
   }
@@ -596,7 +596,7 @@ func (this *QByteArray) toUInt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray6toUIntEPbi(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray6toUIntEPbi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "toUInt", args)
   }
@@ -632,7 +632,7 @@ func (this *QByteArray) append(args ...interface{}) () {
     // invoke: QByteArray & append(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray6appendEc(this.qclsinst, arg0)
+    C.C_ZN10QByteArray6appendEc(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN10QByteArray6appendEPKci
     // invoke: QByteArray & append(const char *, int)
@@ -640,25 +640,25 @@ func (this *QByteArray) append(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6appendEPKci(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray6appendEPKci(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN10QByteArray6appendERKS_
     // invoke: QByteArray & append(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray6appendERKS_(this.qclsinst, arg0)
+    C.C_ZN10QByteArray6appendERKS_(this.qclsinst, arg0)
   case 3:
     // invoke: _ZN10QByteArray6appendERK7QString
     // invoke: QByteArray & append(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray6appendERK7QString(this.qclsinst, arg0)
+    C.C_ZN10QByteArray6appendERK7QString(this.qclsinst, arg0)
   case 4:
     // invoke: _ZN10QByteArray6appendEPKc
     // invoke: QByteArray & append(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray6appendEPKc(this.qclsinst, arg0)
+    C.C_ZN10QByteArray6appendEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "append", args)
   }
@@ -687,19 +687,19 @@ func (this *QByteArray) startsWith(args ...interface{}) () {
     // invoke: bool startsWith(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray10startsWithEPKc(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray10startsWithEPKc(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK10QByteArray10startsWithERKS_
     // invoke: bool startsWith(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray10startsWithERKS_(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray10startsWithERKS_(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK10QByteArray10startsWithEc
     // invoke: bool startsWith(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray10startsWithEc(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray10startsWithEc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "startsWith", args)
   }
@@ -719,7 +719,7 @@ func (this *QByteArray) capacity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray8capacityEv
     // invoke: int capacity()
-    C._ZNK10QByteArray8capacityEv(this.qclsinst)
+    C.C_ZNK10QByteArray8capacityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "capacity", args)
   }
@@ -739,7 +739,7 @@ func (this *QByteArray) toLower(args ...interface{}) () {
   case 0:
     // invoke: _ZNKR10QByteArray7toLowerEv
     // invoke: QByteArray toLower()
-    C._ZNKR10QByteArray7toLowerEv(this.qclsinst)
+    C.C_ZNKR10QByteArray7toLowerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "toLower", args)
   }
@@ -759,7 +759,7 @@ func (this *QByteArray) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray6isNullEv
     // invoke: bool isNull()
-    C._ZNK10QByteArray6isNullEv(this.qclsinst)
+    C.C_ZNK10QByteArray6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "isNull", args)
   }
@@ -777,9 +777,9 @@ func (this *QByteArray) toStdString(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QByteArray11toStdStringEv
+    // invoke: _ZNK10QByteArray11toStdStringB5cxx11Ev
     // invoke: std::string toStdString()
-    C._ZNK10QByteArray11toStdStringEv(this.qclsinst)
+    C.C_ZNK10QByteArray11toStdStringB5cxx11Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "toStdString", args)
   }
@@ -799,7 +799,7 @@ func (this *QByteArray) toHex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray5toHexEv
     // invoke: QByteArray toHex()
-    C._ZNK10QByteArray5toHexEv(this.qclsinst)
+    C.C_ZNK10QByteArray5toHexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "toHex", args)
   }
@@ -837,7 +837,7 @@ func (this *QByteArray) indexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray7indexOfEPKci(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray7indexOfEPKci(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK10QByteArray7indexOfEci
     // invoke: int indexOf(char, int)
@@ -845,7 +845,7 @@ func (this *QByteArray) indexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray7indexOfEci(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray7indexOfEci(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZNK10QByteArray7indexOfERKS_i
     // invoke: int indexOf(const class QByteArray &, int)
@@ -853,7 +853,7 @@ func (this *QByteArray) indexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray7indexOfERKS_i(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray7indexOfERKS_i(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZNK10QByteArray7indexOfERK7QStringi
     // invoke: int indexOf(const class QString &, int)
@@ -861,7 +861,7 @@ func (this *QByteArray) indexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray7indexOfERK7QStringi(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray7indexOfERK7QStringi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "indexOf", args)
   }
@@ -881,7 +881,7 @@ func (this *QByteArray) cbegin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray6cbeginEv
     // invoke: const_iterator cbegin()
-    C._ZNK10QByteArray6cbeginEv(this.qclsinst)
+    C.C_ZNK10QByteArray6cbeginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "cbegin", args)
   }
@@ -914,7 +914,7 @@ func NewQByteArray(args ...interface{}) QByteArray {
     // invoke: void QByteArray()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QByteArrayC2Ev(qthis)
+    C.C_ZN10QByteArrayC2Ev(qthis)
   case 1:
     // invoke: _ZN10QByteArrayC1ERKS_
     // invoke: void QByteArray(const class QByteArray &)
@@ -922,7 +922,7 @@ func NewQByteArray(args ...interface{}) QByteArray {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QByteArrayC2ERKS_(qthis, arg0)
+    C.C_ZN10QByteArrayC2ERKS_(qthis, arg0)
   case 2:
     // invoke: _ZN10QByteArrayC1EPKci
     // invoke: void QByteArray(const char *, int)
@@ -932,7 +932,7 @@ func NewQByteArray(args ...interface{}) QByteArray {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QByteArrayC2EPKci(qthis, arg0, arg1)
+    C.C_ZN10QByteArrayC2EPKci(qthis, arg0, arg1)
   case 3:
     // invoke: _ZN10QByteArrayC1Eic
     // invoke: void QByteArray(int, char)
@@ -942,7 +942,7 @@ func NewQByteArray(args ...interface{}) QByteArray {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QByteArrayC2Eic(qthis, arg0, arg1)
+    C.C_ZN10QByteArrayC2Eic(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "QByteArray", args)
   }
@@ -966,7 +966,7 @@ func (this *QByteArray) fromBase64_s(args ...interface{}) () {
     // invoke: QByteArray fromBase64(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray10fromBase64ERKS_(arg0)
+    C.C_ZN10QByteArray10fromBase64ERKS_(arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "fromBase64", args)
   }
@@ -989,7 +989,7 @@ func (this *QByteArray) fromHex_s(args ...interface{}) () {
     // invoke: QByteArray fromHex(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray7fromHexERKS_(arg0)
+    C.C_ZN10QByteArray7fromHexERKS_(arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "fromHex", args)
   }
@@ -1012,7 +1012,7 @@ func (this *QByteArray) chop(args ...interface{}) () {
     // invoke: void chop(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray4chopEi(this.qclsinst, arg0)
+    C.C_ZN10QByteArray4chopEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "chop", args)
   }
@@ -1032,7 +1032,7 @@ func (this *QByteArray) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray6lengthEv
     // invoke: int length()
-    C._ZNK10QByteArray6lengthEv(this.qclsinst)
+    C.C_ZNK10QByteArray6lengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "length", args)
   }
@@ -1055,7 +1055,7 @@ func (this *QByteArray) toDouble(args ...interface{}) () {
     // invoke: double toDouble(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray8toDoubleEPb(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray8toDoubleEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "toDouble", args)
   }
@@ -1081,7 +1081,7 @@ func (this *QByteArray) toLong(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray6toLongEPbi(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray6toLongEPbi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "toLong", args)
   }
@@ -1110,7 +1110,7 @@ func (this *QByteArray) toPercentEncoding(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.uchar(args[2].(byte))
     if false {fmt.Println(arg2)}
-    C._ZNK10QByteArray17toPercentEncodingERKS_S1_c(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK10QByteArray17toPercentEncodingERKS_S1_c(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QByteArray", "toPercentEncoding", args)
   }
@@ -1136,7 +1136,7 @@ func (this *QByteArray) toUShort(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray8toUShortEPbi(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray8toUShortEPbi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "toUShort", args)
   }
@@ -1156,7 +1156,7 @@ func (this *QByteArray) constBegin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray10constBeginEv
     // invoke: const_iterator constBegin()
-    C._ZNK10QByteArray10constBeginEv(this.qclsinst)
+    C.C_ZNK10QByteArray10constBeginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "constBegin", args)
   }
@@ -1182,7 +1182,7 @@ func (this *QByteArray) toShort(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray7toShortEPbi(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray7toShortEPbi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "toShort", args)
   }
@@ -1225,7 +1225,7 @@ func (this *QByteArray) number_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6numberExi(arg0, arg1)
+    C.C_ZN10QByteArray6numberExi(arg0, arg1)
   case 1:
     // invoke: _ZN10QByteArray6numberEyi
     // invoke: QByteArray number(qulonglong, int)
@@ -1233,7 +1233,7 @@ func (this *QByteArray) number_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6numberEyi(arg0, arg1)
+    C.C_ZN10QByteArray6numberEyi(arg0, arg1)
   case 2:
     // invoke: _ZN10QByteArray6numberEii
     // invoke: QByteArray number(int, int)
@@ -1241,7 +1241,7 @@ func (this *QByteArray) number_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6numberEii(arg0, arg1)
+    C.C_ZN10QByteArray6numberEii(arg0, arg1)
   case 3:
     // invoke: _ZN10QByteArray6numberEji
     // invoke: QByteArray number(uint, int)
@@ -1249,7 +1249,7 @@ func (this *QByteArray) number_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6numberEji(arg0, arg1)
+    C.C_ZN10QByteArray6numberEji(arg0, arg1)
   case 4:
     // invoke: _ZN10QByteArray6numberEdci
     // invoke: QByteArray number(double, char, int)
@@ -1259,7 +1259,7 @@ func (this *QByteArray) number_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN10QByteArray6numberEdci(arg0, arg1, arg2)
+    C.C_ZN10QByteArray6numberEdci(arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QByteArray", "number", args)
   }
@@ -1343,7 +1343,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray7replaceERK7QStringPKc(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray7replaceERK7QStringPKc(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN10QByteArray7replaceEcRKS_
     // invoke: QByteArray & replace(char, const class QByteArray &)
@@ -1351,7 +1351,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray7replaceEcRKS_(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray7replaceEcRKS_(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN10QByteArray7replaceEiiRKS_
     // invoke: QByteArray & replace(int, int, const class QByteArray &)
@@ -1361,7 +1361,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QByteArray).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN10QByteArray7replaceEiiRKS_(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN10QByteArray7replaceEiiRKS_(this.qclsinst, arg0, arg1, arg2)
   case 3:
     // invoke: _ZN10QByteArray7replaceEcPKc
     // invoke: QByteArray & replace(char, const char *)
@@ -1369,7 +1369,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray7replaceEcPKc(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray7replaceEcPKc(this.qclsinst, arg0, arg1)
   case 4:
     // invoke: _ZN10QByteArray7replaceEcc
     // invoke: QByteArray & replace(char, char)
@@ -1377,7 +1377,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray7replaceEcc(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray7replaceEcc(this.qclsinst, arg0, arg1)
   case 5:
     // invoke: _ZN10QByteArray7replaceERKS_S1_
     // invoke: QByteArray & replace(const class QByteArray &, const class QByteArray &)
@@ -1385,7 +1385,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray7replaceERKS_S1_(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray7replaceERKS_S1_(this.qclsinst, arg0, arg1)
   case 6:
     // invoke: _ZN10QByteArray7replaceERKS_PKc
     // invoke: QByteArray & replace(const class QByteArray &, const char *)
@@ -1393,7 +1393,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray7replaceERKS_PKc(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray7replaceERKS_PKc(this.qclsinst, arg0, arg1)
   case 7:
     // invoke: _ZN10QByteArray7replaceEiiPKc
     // invoke: QByteArray & replace(int, int, const char *)
@@ -1403,7 +1403,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).Pointer()))
     if false {fmt.Println(arg2)}
-    C._ZN10QByteArray7replaceEiiPKc(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN10QByteArray7replaceEiiPKc(this.qclsinst, arg0, arg1, arg2)
   case 8:
     // invoke: _ZN10QByteArray7replaceEiiPKci
     // invoke: QByteArray & replace(int, int, const char *, int)
@@ -1415,7 +1415,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN10QByteArray7replaceEiiPKci(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN10QByteArray7replaceEiiPKci(this.qclsinst, arg0, arg1, arg2, arg3)
   case 9:
     // invoke: _ZN10QByteArray7replaceEPKcRKS_
     // invoke: QByteArray & replace(const char *, const class QByteArray &)
@@ -1423,7 +1423,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray7replaceEPKcRKS_(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray7replaceEPKcRKS_(this.qclsinst, arg0, arg1)
   case 10:
     // invoke: _ZN10QByteArray7replaceEPKcS1_
     // invoke: QByteArray & replace(const char *, const char *)
@@ -1431,7 +1431,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray7replaceEPKcS1_(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray7replaceEPKcS1_(this.qclsinst, arg0, arg1)
   case 11:
     // invoke: _ZN10QByteArray7replaceEcRK7QString
     // invoke: QByteArray & replace(char, const class QString &)
@@ -1439,7 +1439,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray7replaceEcRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray7replaceEcRK7QString(this.qclsinst, arg0, arg1)
   case 12:
     // invoke: _ZN10QByteArray7replaceERK7QStringRKS_
     // invoke: QByteArray & replace(const class QString &, const class QByteArray &)
@@ -1447,7 +1447,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray7replaceERK7QStringRKS_(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray7replaceERK7QStringRKS_(this.qclsinst, arg0, arg1)
   case 13:
     // invoke: _ZN10QByteArray7replaceEPKciS1_i
     // invoke: QByteArray & replace(const char *, int, const char *, int)
@@ -1459,7 +1459,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN10QByteArray7replaceEPKciS1_i(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN10QByteArray7replaceEPKciS1_i(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QByteArray", "replace", args)
   }
@@ -1488,19 +1488,19 @@ func (this *QByteArray) push_back(args ...interface{}) () {
     // invoke: void push_back(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray9push_backERKS_(this.qclsinst, arg0)
+    C.C_ZN10QByteArray9push_backERKS_(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN10QByteArray9push_backEPKc
     // invoke: void push_back(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray9push_backEPKc(this.qclsinst, arg0)
+    C.C_ZN10QByteArray9push_backEPKc(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN10QByteArray9push_backEc
     // invoke: void push_back(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray9push_backEc(this.qclsinst, arg0)
+    C.C_ZN10QByteArray9push_backEc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "push_back", args)
   }
@@ -1520,7 +1520,7 @@ func (this *QByteArray) simplified(args ...interface{}) () {
   case 0:
     // invoke: _ZNKR10QByteArray10simplifiedEv
     // invoke: QByteArray simplified()
-    C._ZNKR10QByteArray10simplifiedEv(this.qclsinst)
+    C.C_ZNKR10QByteArray10simplifiedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "simplified", args)
   }
@@ -1540,7 +1540,7 @@ func (this *QByteArray) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray4sizeEv
     // invoke: int size()
-    C._ZNK10QByteArray4sizeEv(this.qclsinst)
+    C.C_ZNK10QByteArray4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "size", args)
   }
@@ -1569,19 +1569,19 @@ func (this *QByteArray) contains(args ...interface{}) () {
     // invoke: bool contains(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray8containsEc(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray8containsEc(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK10QByteArray8containsERKS_
     // invoke: bool contains(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray8containsERKS_(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray8containsERKS_(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK10QByteArray8containsEPKc
     // invoke: bool contains(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray8containsEPKc(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray8containsEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "contains", args)
   }
@@ -1607,7 +1607,7 @@ func (this *QByteArray) fromPercentEncoding_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray19fromPercentEncodingERKS_c(arg0, arg1)
+    C.C_ZN10QByteArray19fromPercentEncodingERKS_c(arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "fromPercentEncoding", args)
   }
@@ -1627,7 +1627,7 @@ func (this *QByteArray) cend(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray4cendEv
     // invoke: const_iterator cend()
-    C._ZNK10QByteArray4cendEv(this.qclsinst)
+    C.C_ZNK10QByteArray4cendEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "cend", args)
   }
@@ -1656,7 +1656,7 @@ func (this *QByteArray) leftJustified(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.bool(args[2].(bool))
     if false {fmt.Println(arg2)}
-    C._ZNK10QByteArray13leftJustifiedEicb(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK10QByteArray13leftJustifiedEicb(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QByteArray", "leftJustified", args)
   }
@@ -1679,7 +1679,7 @@ func (this *QByteArray) repeated(args ...interface{}) () {
     // invoke: QByteArray repeated(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray8repeatedEi(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray8repeatedEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "repeated", args)
   }
@@ -1705,7 +1705,7 @@ func (this *QByteArray) fromRawData_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray11fromRawDataEPKci(arg0, arg1)
+    C.C_ZN10QByteArray11fromRawDataEPKci(arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "fromRawData", args)
   }
@@ -1725,7 +1725,7 @@ func (this *QByteArray) squeeze(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray7squeezeEv
     // invoke: void squeeze()
-    C._ZN10QByteArray7squeezeEv(this.qclsinst)
+    C.C_ZN10QByteArray7squeezeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "squeeze", args)
   }
@@ -1748,7 +1748,7 @@ func (this *QByteArray) resize(args ...interface{}) () {
     // invoke: void resize(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray6resizeEi(this.qclsinst, arg0)
+    C.C_ZN10QByteArray6resizeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "resize", args)
   }
@@ -1774,7 +1774,7 @@ func (this *QByteArray) toULongLong(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray11toULongLongEPbi(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray11toULongLongEPbi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "toULongLong", args)
   }
@@ -1803,25 +1803,25 @@ func (this *QByteArray) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray5countEv
     // invoke: int count()
-    C._ZNK10QByteArray5countEv(this.qclsinst)
+    C.C_ZNK10QByteArray5countEv(this.qclsinst)
   case 1:
     // invoke: _ZNK10QByteArray5countEPKc
     // invoke: int count(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray5countEPKc(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray5countEPKc(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK10QByteArray5countEc
     // invoke: int count(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray5countEc(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray5countEc(this.qclsinst, arg0)
   case 3:
     // invoke: _ZNK10QByteArray5countERKS_
     // invoke: int count(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray5countERKS_(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray5countERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "count", args)
   }
@@ -1841,7 +1841,7 @@ func (this *QByteArray) FreeQByteArray(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArrayD0Ev
     // invoke: void ~QByteArray()
-    C._ZN10QByteArrayD2Ev(this.qclsinst)
+    C.C_ZN10QByteArrayD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "~QByteArray", args)
   }
@@ -1864,7 +1864,7 @@ func (this *QByteArray) toFloat(args ...interface{}) () {
     // invoke: float toFloat(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray7toFloatEPb(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray7toFloatEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "toFloat", args)
   }
@@ -1887,7 +1887,7 @@ func (this *QByteArray) at(args ...interface{}) () {
     // invoke: char at(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray2atEi(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray2atEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "at", args)
   }
@@ -1913,7 +1913,7 @@ func (this *QByteArray) fill(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray4fillEci(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray4fillEci(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "fill", args)
   }
@@ -1939,7 +1939,7 @@ func (this *QByteArray) toULong(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray7toULongEPbi(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray7toULongEPbi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "toULong", args)
   }
@@ -1959,7 +1959,7 @@ func (this *QByteArray) end(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray3endEv
     // invoke: iterator end()
-    C._ZN10QByteArray3endEv(this.qclsinst)
+    C.C_ZN10QByteArray3endEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "end", args)
   }
@@ -1985,7 +1985,7 @@ func (this *QByteArray) mid(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray3midEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray3midEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "mid", args)
   }
@@ -2018,13 +2018,13 @@ func (this *QByteArray) prepend(args ...interface{}) () {
     // invoke: QByteArray & prepend(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray7prependEPKc(this.qclsinst, arg0)
+    C.C_ZN10QByteArray7prependEPKc(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN10QByteArray7prependEc
     // invoke: QByteArray & prepend(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray7prependEc(this.qclsinst, arg0)
+    C.C_ZN10QByteArray7prependEc(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN10QByteArray7prependEPKci
     // invoke: QByteArray & prepend(const char *, int)
@@ -2032,13 +2032,13 @@ func (this *QByteArray) prepend(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray7prependEPKci(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray7prependEPKci(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZN10QByteArray7prependERKS_
     // invoke: QByteArray & prepend(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray7prependERKS_(this.qclsinst, arg0)
+    C.C_ZN10QByteArray7prependERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "prepend", args)
   }
@@ -2058,7 +2058,7 @@ func (this *QByteArray) constData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray9constDataEv
     // invoke: const char * constData()
-    C._ZNK10QByteArray9constDataEv(this.qclsinst)
+    C.C_ZNK10QByteArray9constDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "constData", args)
   }
@@ -2084,7 +2084,7 @@ func (this *QByteArray) toLongLong(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray10toLongLongEPbi(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray10toLongLongEPbi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "toLongLong", args)
   }
@@ -2104,7 +2104,7 @@ func (this *QByteArray) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK10QByteArray7isEmptyEv(this.qclsinst)
+    C.C_ZNK10QByteArray7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "isEmpty", args)
   }
@@ -2127,7 +2127,7 @@ func (this *QByteArray) split(args ...interface{}) () {
     // invoke: QList<QByteArray> split(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray5splitEc(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray5splitEc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "split", args)
   }
@@ -2153,7 +2153,7 @@ func (this *QByteArray) setRawData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray10setRawDataEPKcj(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray10setRawDataEPKcj(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "setRawData", args)
   }
@@ -2173,7 +2173,7 @@ func (this *QByteArray) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray10isDetachedEv
     // invoke: bool isDetached()
-    C._ZNK10QByteArray10isDetachedEv(this.qclsinst)
+    C.C_ZNK10QByteArray10isDetachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "isDetached", args)
   }
@@ -2193,7 +2193,7 @@ func (this *QByteArray) begin(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray5beginEv
     // invoke: iterator begin()
-    C._ZN10QByteArray5beginEv(this.qclsinst)
+    C.C_ZN10QByteArray5beginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "begin", args)
   }
@@ -2231,7 +2231,7 @@ func (this *QByteArray) lastIndexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray11lastIndexOfEPKci(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray11lastIndexOfEPKci(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK10QByteArray11lastIndexOfERK7QStringi
     // invoke: int lastIndexOf(const class QString &, int)
@@ -2239,7 +2239,7 @@ func (this *QByteArray) lastIndexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray11lastIndexOfERK7QStringi(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray11lastIndexOfERK7QStringi(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZNK10QByteArray11lastIndexOfERKS_i
     // invoke: int lastIndexOf(const class QByteArray &, int)
@@ -2247,7 +2247,7 @@ func (this *QByteArray) lastIndexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray11lastIndexOfERKS_i(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray11lastIndexOfERKS_i(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZNK10QByteArray11lastIndexOfEci
     // invoke: int lastIndexOf(char, int)
@@ -2255,7 +2255,7 @@ func (this *QByteArray) lastIndexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray11lastIndexOfEci(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray11lastIndexOfEci(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "lastIndexOf", args)
   }
@@ -2275,7 +2275,7 @@ func (this *QByteArray) toUpper(args ...interface{}) () {
   case 0:
     // invoke: _ZNKR10QByteArray7toUpperEv
     // invoke: QByteArray toUpper()
-    C._ZNKR10QByteArray7toUpperEv(this.qclsinst)
+    C.C_ZNKR10QByteArray7toUpperEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "toUpper", args)
   }
@@ -2298,7 +2298,7 @@ func (this *QByteArray) truncate(args ...interface{}) () {
     // invoke: void truncate(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray8truncateEi(this.qclsinst, arg0)
+    C.C_ZN10QByteArray8truncateEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "truncate", args)
   }
@@ -2318,7 +2318,7 @@ func (this *QByteArray) toBase64(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray8toBase64Ev
     // invoke: QByteArray toBase64()
-    C._ZNK10QByteArray8toBase64Ev(this.qclsinst)
+    C.C_ZNK10QByteArray8toBase64Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "toBase64", args)
   }
@@ -2338,7 +2338,7 @@ func (this *QByteArray) data(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray4dataEv
     // invoke: char * data()
-    C._ZN10QByteArray4dataEv(this.qclsinst)
+    C.C_ZN10QByteArray4dataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "data", args)
   }
@@ -2358,7 +2358,7 @@ func (this *QByteArray) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray5clearEv
     // invoke: void clear()
-    C._ZN10QByteArray5clearEv(this.qclsinst)
+    C.C_ZN10QByteArray5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "clear", args)
   }
@@ -2384,7 +2384,7 @@ func (this *QByteArray) toInt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK10QByteArray5toIntEPbi(this.qclsinst, arg0, arg1)
+    C.C_ZNK10QByteArray5toIntEPbi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "toInt", args)
   }
@@ -2413,19 +2413,19 @@ func (this *QByteArray) endsWith(args ...interface{}) () {
     // invoke: bool endsWith(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray8endsWithERKS_(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray8endsWithERKS_(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK10QByteArray8endsWithEPKc
     // invoke: bool endsWith(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray8endsWithEPKc(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray8endsWithEPKc(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK10QByteArray8endsWithEc
     // invoke: bool endsWith(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray8endsWithEc(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray8endsWithEc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "endsWith", args)
   }
@@ -2481,7 +2481,7 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6setNumEji(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray6setNumEji(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN10QByteArray6setNumEii
     // invoke: QByteArray & setNum(int, int)
@@ -2489,7 +2489,7 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6setNumEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray6setNumEii(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN10QByteArray6setNumEsi
     // invoke: QByteArray & setNum(short, int)
@@ -2497,7 +2497,7 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6setNumEsi(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray6setNumEsi(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZN10QByteArray6setNumEdci
     // invoke: QByteArray & setNum(double, char, int)
@@ -2507,7 +2507,7 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN10QByteArray6setNumEdci(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN10QByteArray6setNumEdci(this.qclsinst, arg0, arg1, arg2)
   case 4:
     // invoke: _ZN10QByteArray6setNumEfci
     // invoke: QByteArray & setNum(float, char, int)
@@ -2517,7 +2517,7 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN10QByteArray6setNumEfci(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN10QByteArray6setNumEfci(this.qclsinst, arg0, arg1, arg2)
   case 5:
     // invoke: _ZN10QByteArray6setNumEyi
     // invoke: QByteArray & setNum(qulonglong, int)
@@ -2525,7 +2525,7 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6setNumEyi(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray6setNumEyi(this.qclsinst, arg0, arg1)
   case 6:
     // invoke: _ZN10QByteArray6setNumExi
     // invoke: QByteArray & setNum(qlonglong, int)
@@ -2533,7 +2533,7 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6setNumExi(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray6setNumExi(this.qclsinst, arg0, arg1)
   case 7:
     // invoke: _ZN10QByteArray6setNumEti
     // invoke: QByteArray & setNum(ushort, int)
@@ -2541,7 +2541,7 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QByteArray6setNumEti(this.qclsinst, arg0, arg1)
+    C.C_ZN10QByteArray6setNumEti(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArray", "setNum", args)
   }
@@ -2564,7 +2564,7 @@ func (this *QByteArray) reserve(args ...interface{}) () {
     // invoke: void reserve(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray7reserveEi(this.qclsinst, arg0)
+    C.C_ZN10QByteArray7reserveEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "reserve", args)
   }
@@ -2593,19 +2593,19 @@ func (this *QByteArray) push_front(args ...interface{}) () {
     // invoke: void push_front(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray10push_frontEc(this.qclsinst, arg0)
+    C.C_ZN10QByteArray10push_frontEc(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN10QByteArray10push_frontERKS_
     // invoke: void push_front(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray10push_frontERKS_(this.qclsinst, arg0)
+    C.C_ZN10QByteArray10push_frontERKS_(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN10QByteArray10push_frontEPKc
     // invoke: void push_front(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZN10QByteArray10push_frontEPKc(this.qclsinst, arg0)
+    C.C_ZN10QByteArray10push_frontEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "push_front", args)
   }
@@ -2628,7 +2628,7 @@ func (this *QByteArray) left(args ...interface{}) () {
     // invoke: QByteArray left(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK10QByteArray4leftEi(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray4leftEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "left", args)
   }

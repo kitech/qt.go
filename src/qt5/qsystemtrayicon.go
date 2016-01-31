@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.go
 //
@@ -29,39 +29,39 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QSystemTrayIcon::show();
-extern void _ZN15QSystemTrayIcon4showEv(void* qthis); // 2
+extern void C_ZN15QSystemTrayIcon4showEv(void* qthis); // 2
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(const QIcon & icon, QObject * parent);
-extern void _ZN15QSystemTrayIconC2ERK5QIconP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN15QSystemTrayIconC2ERK5QIconP7QObject(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(QObject * parent);
-extern void _ZN15QSystemTrayIconC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN15QSystemTrayIconC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QSystemTrayIcon::hide();
-extern void _ZN15QSystemTrayIcon4hideEv(void* qthis); // 2
+extern void C_ZN15QSystemTrayIcon4hideEv(void* qthis); // 2
   // proto: static bool QSystemTrayIcon::isSystemTrayAvailable();
-extern void _ZN15QSystemTrayIcon21isSystemTrayAvailableEv(); // 4
+extern void C_ZN15QSystemTrayIcon21isSystemTrayAvailableEv(); // 4
   // proto:  QMenu * QSystemTrayIcon::contextMenu();
-extern void _ZNK15QSystemTrayIcon11contextMenuEv(void* qthis); // 4
+extern void C_ZNK15QSystemTrayIcon11contextMenuEv(void* qthis); // 4
   // proto:  void QSystemTrayIcon::setIcon(const QIcon & icon);
-extern void _ZN15QSystemTrayIcon7setIconERK5QIcon(void* qthis, void* arg0); // 4
+extern void C_ZN15QSystemTrayIcon7setIconERK5QIcon(void* qthis, void* arg0); // 4
   // proto:  QString QSystemTrayIcon::toolTip();
-extern void _ZNK15QSystemTrayIcon7toolTipEv(void* qthis); // 4
+extern void C_ZNK15QSystemTrayIcon7toolTipEv(void* qthis); // 4
   // proto:  QIcon QSystemTrayIcon::icon();
-extern void _ZNK15QSystemTrayIcon4iconEv(void* qthis); // 4
+extern void C_ZNK15QSystemTrayIcon4iconEv(void* qthis); // 4
   // proto:  void QSystemTrayIcon::setContextMenu(QMenu * menu);
-extern void _ZN15QSystemTrayIcon14setContextMenuEP5QMenu(void* qthis, void* arg0); // 4
+extern void C_ZN15QSystemTrayIcon14setContextMenuEP5QMenu(void* qthis, void* arg0); // 4
   // proto:  void QSystemTrayIcon::setToolTip(const QString & tip);
-extern void _ZN15QSystemTrayIcon10setToolTipERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN15QSystemTrayIcon10setToolTipERK7QString(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QSystemTrayIcon::metaObject();
-extern void _ZNK15QSystemTrayIcon10metaObjectEv(void* qthis); // 4
+extern void C_ZNK15QSystemTrayIcon10metaObjectEv(void* qthis); // 4
   // proto:  QRect QSystemTrayIcon::geometry();
-extern void _ZNK15QSystemTrayIcon8geometryEv(void* qthis); // 4
+extern void C_ZNK15QSystemTrayIcon8geometryEv(void* qthis); // 4
   // proto:  void QSystemTrayIcon::~QSystemTrayIcon();
-extern void _ZN15QSystemTrayIconD2Ev(void* qthis); // 4
+extern void C_ZN15QSystemTrayIconD2Ev(void* qthis); // 4
   // proto:  bool QSystemTrayIcon::isVisible();
-extern void _ZNK15QSystemTrayIcon9isVisibleEv(void* qthis); // 4
+extern void C_ZNK15QSystemTrayIcon9isVisibleEv(void* qthis); // 4
   // proto: static bool QSystemTrayIcon::supportsMessages();
-extern void _ZN15QSystemTrayIcon16supportsMessagesEv(); // 4
+extern void C_ZN15QSystemTrayIcon16supportsMessagesEv(); // 4
   // proto:  void QSystemTrayIcon::setVisible(bool visible);
-extern void _ZN15QSystemTrayIcon10setVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN15QSystemTrayIcon10setVisibleEb(void* qthis, bool arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -95,7 +95,7 @@ func (this *QSystemTrayIcon) show(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSystemTrayIcon4showEv
     // invoke: void show()
-    C._ZN15QSystemTrayIcon4showEv(this.qclsinst)
+    C.C_ZN15QSystemTrayIcon4showEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "show", args)
   }
@@ -126,7 +126,7 @@ func NewQSystemTrayIcon(args ...interface{}) QSystemTrayIcon {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QSystemTrayIconC2ERK5QIconP7QObject(qthis, arg0, arg1)
+    C.C_ZN15QSystemTrayIconC2ERK5QIconP7QObject(qthis, arg0, arg1)
   case 1:
     // invoke: _ZN15QSystemTrayIconC1EP7QObject
     // invoke: void QSystemTrayIcon(class QObject *)
@@ -134,7 +134,7 @@ func NewQSystemTrayIcon(args ...interface{}) QSystemTrayIcon {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QSystemTrayIconC2EP7QObject(qthis, arg0)
+    C.C_ZN15QSystemTrayIconC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "QSystemTrayIcon", args)
   }
@@ -155,7 +155,7 @@ func (this *QSystemTrayIcon) hide(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSystemTrayIcon4hideEv
     // invoke: void hide()
-    C._ZN15QSystemTrayIcon4hideEv(this.qclsinst)
+    C.C_ZN15QSystemTrayIcon4hideEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "hide", args)
   }
@@ -175,7 +175,7 @@ func (this *QSystemTrayIcon) isSystemTrayAvailable_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSystemTrayIcon21isSystemTrayAvailableEv
     // invoke: bool isSystemTrayAvailable()
-    C._ZN15QSystemTrayIcon21isSystemTrayAvailableEv()
+    C.C_ZN15QSystemTrayIcon21isSystemTrayAvailableEv()
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "isSystemTrayAvailable", args)
   }
@@ -195,7 +195,7 @@ func (this *QSystemTrayIcon) contextMenu(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon11contextMenuEv
     // invoke: QMenu * contextMenu()
-    C._ZNK15QSystemTrayIcon11contextMenuEv(this.qclsinst)
+    C.C_ZNK15QSystemTrayIcon11contextMenuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "contextMenu", args)
   }
@@ -218,7 +218,7 @@ func (this *QSystemTrayIcon) setIcon(args ...interface{}) () {
     // invoke: void setIcon(const class QIcon &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QSystemTrayIcon7setIconERK5QIcon(this.qclsinst, arg0)
+    C.C_ZN15QSystemTrayIcon7setIconERK5QIcon(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setIcon", args)
   }
@@ -238,7 +238,7 @@ func (this *QSystemTrayIcon) toolTip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon7toolTipEv
     // invoke: QString toolTip()
-    C._ZNK15QSystemTrayIcon7toolTipEv(this.qclsinst)
+    C.C_ZNK15QSystemTrayIcon7toolTipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "toolTip", args)
   }
@@ -258,7 +258,7 @@ func (this *QSystemTrayIcon) icon(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon4iconEv
     // invoke: QIcon icon()
-    C._ZNK15QSystemTrayIcon4iconEv(this.qclsinst)
+    C.C_ZNK15QSystemTrayIcon4iconEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "icon", args)
   }
@@ -281,7 +281,7 @@ func (this *QSystemTrayIcon) setContextMenu(args ...interface{}) () {
     // invoke: void setContextMenu(class QMenu *)
     var arg0 = args[0].(QMenu).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QSystemTrayIcon14setContextMenuEP5QMenu(this.qclsinst, arg0)
+    C.C_ZN15QSystemTrayIcon14setContextMenuEP5QMenu(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setContextMenu", args)
   }
@@ -304,7 +304,7 @@ func (this *QSystemTrayIcon) setToolTip(args ...interface{}) () {
     // invoke: void setToolTip(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QSystemTrayIcon10setToolTipERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QSystemTrayIcon10setToolTipERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setToolTip", args)
   }
@@ -324,7 +324,7 @@ func (this *QSystemTrayIcon) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK15QSystemTrayIcon10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QSystemTrayIcon10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "metaObject", args)
   }
@@ -344,7 +344,7 @@ func (this *QSystemTrayIcon) geometry(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon8geometryEv
     // invoke: QRect geometry()
-    C._ZNK15QSystemTrayIcon8geometryEv(this.qclsinst)
+    C.C_ZNK15QSystemTrayIcon8geometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "geometry", args)
   }
@@ -364,7 +364,7 @@ func (this *QSystemTrayIcon) FreeQSystemTrayIcon(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSystemTrayIconD0Ev
     // invoke: void ~QSystemTrayIcon()
-    C._ZN15QSystemTrayIconD2Ev(this.qclsinst)
+    C.C_ZN15QSystemTrayIconD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "~QSystemTrayIcon", args)
   }
@@ -384,7 +384,7 @@ func (this *QSystemTrayIcon) isVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon9isVisibleEv
     // invoke: bool isVisible()
-    C._ZNK15QSystemTrayIcon9isVisibleEv(this.qclsinst)
+    C.C_ZNK15QSystemTrayIcon9isVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "isVisible", args)
   }
@@ -404,7 +404,7 @@ func (this *QSystemTrayIcon) supportsMessages_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSystemTrayIcon16supportsMessagesEv
     // invoke: bool supportsMessages()
-    C._ZN15QSystemTrayIcon16supportsMessagesEv()
+    C.C_ZN15QSystemTrayIcon16supportsMessagesEv()
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "supportsMessages", args)
   }
@@ -427,7 +427,7 @@ func (this *QSystemTrayIcon) setVisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QSystemTrayIcon10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN15QSystemTrayIcon10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setVisible", args)
   }

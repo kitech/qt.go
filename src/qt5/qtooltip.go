@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.go
 //
@@ -29,25 +29,25 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QPalette QToolTip::palette();
-extern void _ZN8QToolTip7paletteEv(); // 4
+extern void C_ZN8QToolTip7paletteEv(); // 4
   // proto: static void QToolTip::hideText();
-extern void _ZN8QToolTip8hideTextEv(); // 2
+extern void C_ZN8QToolTip8hideTextEv(); // 2
   // proto: static QString QToolTip::text();
-extern void _ZN8QToolTip4textEv(); // 4
+extern void C_ZN8QToolTip4textEv(); // 4
   // proto: static void QToolTip::setPalette(const QPalette & );
-extern void _ZN8QToolTip10setPaletteERK8QPalette(void* arg0); // 4
+extern void C_ZN8QToolTip10setPaletteERK8QPalette(void* arg0); // 4
   // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect);
-extern void _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(void* arg0, void* arg1, void* arg2, void* arg3); // 4
+extern void C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(void* arg0, void* arg1, void* arg2, void* arg3); // 4
   // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect, int msecShowTime);
-extern void _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(void* arg0, void* arg1, void* arg2, void* arg3, int32_t arg4); // 4
+extern void C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(void* arg0, void* arg1, void* arg2, void* arg3, int32_t arg4); // 4
   // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w);
-extern void _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget(void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget(void* arg0, void* arg1, void* arg2); // 4
   // proto: static bool QToolTip::isVisible();
-extern void _ZN8QToolTip9isVisibleEv(); // 4
+extern void C_ZN8QToolTip9isVisibleEv(); // 4
   // proto: static void QToolTip::setFont(const QFont & );
-extern void _ZN8QToolTip7setFontERK5QFont(void* arg0); // 4
+extern void C_ZN8QToolTip7setFontERK5QFont(void* arg0); // 4
   // proto: static QFont QToolTip::font();
-extern void _ZN8QToolTip4fontEv(); // 4
+extern void C_ZN8QToolTip4fontEv(); // 4
 */
 import "C"
 // } // <= ext block end
@@ -79,7 +79,7 @@ func (this *QToolTip) palette_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip7paletteEv
     // invoke: QPalette palette()
-    C._ZN8QToolTip7paletteEv()
+    C.C_ZN8QToolTip7paletteEv()
   default:
     qtrt.ErrorResolve("QToolTip", "palette", args)
   }
@@ -99,7 +99,7 @@ func (this *QToolTip) hideText_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip8hideTextEv
     // invoke: void hideText()
-    C._ZN8QToolTip8hideTextEv()
+    C.C_ZN8QToolTip8hideTextEv()
   default:
     qtrt.ErrorResolve("QToolTip", "hideText", args)
   }
@@ -119,7 +119,7 @@ func (this *QToolTip) text_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip4textEv
     // invoke: QString text()
-    C._ZN8QToolTip4textEv()
+    C.C_ZN8QToolTip4textEv()
   default:
     qtrt.ErrorResolve("QToolTip", "text", args)
   }
@@ -142,7 +142,7 @@ func (this *QToolTip) setPalette_s(args ...interface{}) () {
     // invoke: void setPalette(const class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QToolTip10setPaletteERK8QPalette(arg0)
+    C.C_ZN8QToolTip10setPaletteERK8QPalette(arg0)
   default:
     qtrt.ErrorResolve("QToolTip", "setPalette", args)
   }
@@ -186,7 +186,7 @@ func (this *QToolTip) showText_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QRect).qclsinst
     if false {fmt.Println(arg3)}
-    C._ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(arg0, arg1, arg2, arg3)
+    C.C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti
     // invoke: void showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &, int)
@@ -200,7 +200,7 @@ func (this *QToolTip) showText_s(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.int32_t(args[4].(int32))
     if false {fmt.Println(arg4)}
-    C._ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(arg0, arg1, arg2, arg3, arg4)
   case 2:
     // invoke: _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget
     // invoke: void showText(const class QPoint &, const class QString &, class QWidget *)
@@ -210,7 +210,7 @@ func (this *QToolTip) showText_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget(arg0, arg1, arg2)
+    C.C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget(arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QToolTip", "showText", args)
   }
@@ -230,7 +230,7 @@ func (this *QToolTip) isVisible_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip9isVisibleEv
     // invoke: bool isVisible()
-    C._ZN8QToolTip9isVisibleEv()
+    C.C_ZN8QToolTip9isVisibleEv()
   default:
     qtrt.ErrorResolve("QToolTip", "isVisible", args)
   }
@@ -253,7 +253,7 @@ func (this *QToolTip) setFont_s(args ...interface{}) () {
     // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QToolTip7setFontERK5QFont(arg0)
+    C.C_ZN8QToolTip7setFontERK5QFont(arg0)
   default:
     qtrt.ErrorResolve("QToolTip", "setFont", args)
   }
@@ -273,7 +273,7 @@ func (this *QToolTip) font_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip4fontEv
     // invoke: QFont font()
-    C._ZN8QToolTip4fontEv()
+    C.C_ZN8QToolTip4fontEv()
   default:
     qtrt.ErrorResolve("QToolTip", "font", args)
   }

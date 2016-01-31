@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.go
 //
@@ -29,49 +29,49 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QToolBox::setItemText(int index, const QString & text);
-extern void _ZN8QToolBox11setItemTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN8QToolBox11setItemTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  QIcon QToolBox::itemIcon(int index);
-extern void _ZNK8QToolBox8itemIconEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK8QToolBox8itemIconEi(void* qthis, int32_t arg0); // 4
   // proto:  void QToolBox::setItemEnabled(int index, bool enabled);
-extern void _ZN8QToolBox14setItemEnabledEib(void* qthis, int32_t arg0, bool arg1); // 4
+extern void C_ZN8QToolBox14setItemEnabledEib(void* qthis, int32_t arg0, bool arg1); // 4
   // proto:  void QToolBox::setCurrentIndex(int index);
-extern void _ZN8QToolBox15setCurrentIndexEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN8QToolBox15setCurrentIndexEi(void* qthis, int32_t arg0); // 4
   // proto:  QWidget * QToolBox::currentWidget();
-extern void _ZNK8QToolBox13currentWidgetEv(void* qthis); // 4
+extern void C_ZNK8QToolBox13currentWidgetEv(void* qthis); // 4
   // proto:  void QToolBox::~QToolBox();
-extern void _ZN8QToolBoxD2Ev(void* qthis); // 4
+extern void C_ZN8QToolBoxD2Ev(void* qthis); // 4
   // proto:  void QToolBox::setCurrentWidget(QWidget * widget);
-extern void _ZN8QToolBox16setCurrentWidgetEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN8QToolBox16setCurrentWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  int QToolBox::indexOf(QWidget * widget);
-extern void _ZNK8QToolBox7indexOfEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZNK8QToolBox7indexOfEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  int QToolBox::count();
-extern void _ZNK8QToolBox5countEv(void* qthis); // 4
+extern void C_ZNK8QToolBox5countEv(void* qthis); // 4
   // proto:  QWidget * QToolBox::widget(int index);
-extern void _ZNK8QToolBox6widgetEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK8QToolBox6widgetEi(void* qthis, int32_t arg0); // 4
   // proto:  void QToolBox::setItemToolTip(int index, const QString & toolTip);
-extern void _ZN8QToolBox14setItemToolTipEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN8QToolBox14setItemToolTipEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QToolBox::setItemIcon(int index, const QIcon & icon);
-extern void _ZN8QToolBox11setItemIconEiRK5QIcon(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN8QToolBox11setItemIconEiRK5QIcon(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QIcon & icon, const QString & text);
-extern void _ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString(void* qthis, int32_t arg0, void* arg1, void* arg2, void* arg3); // 4
+extern void C_ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString(void* qthis, int32_t arg0, void* arg1, void* arg2, void* arg3); // 4
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QString & text);
-extern void _ZN8QToolBox10insertItemEiP7QWidgetRK7QString(void* qthis, int32_t arg0, void* arg1, void* arg2); // 2
+extern void C_ZN8QToolBox10insertItemEiP7QWidgetRK7QString(void* qthis, int32_t arg0, void* arg1, void* arg2); // 2
   // proto:  int QToolBox::addItem(QWidget * widget, const QIcon & icon, const QString & text);
-extern void _ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString(void* qthis, void* arg0, void* arg1, void* arg2); // 2
+extern void C_ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString(void* qthis, void* arg0, void* arg1, void* arg2); // 2
   // proto:  int QToolBox::addItem(QWidget * widget, const QString & text);
-extern void _ZN8QToolBox7addItemEP7QWidgetRK7QString(void* qthis, void* arg0, void* arg1); // 2
+extern void C_ZN8QToolBox7addItemEP7QWidgetRK7QString(void* qthis, void* arg0, void* arg1); // 2
   // proto:  void QToolBox::removeItem(int index);
-extern void _ZN8QToolBox10removeItemEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN8QToolBox10removeItemEi(void* qthis, int32_t arg0); // 4
   // proto:  QString QToolBox::itemText(int index);
-extern void _ZNK8QToolBox8itemTextEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK8QToolBox8itemTextEi(void* qthis, int32_t arg0); // 4
   // proto:  QString QToolBox::itemToolTip(int index);
-extern void _ZNK8QToolBox11itemToolTipEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK8QToolBox11itemToolTipEi(void* qthis, int32_t arg0); // 4
   // proto:  const QMetaObject * QToolBox::metaObject();
-extern void _ZNK8QToolBox10metaObjectEv(void* qthis); // 4
+extern void C_ZNK8QToolBox10metaObjectEv(void* qthis); // 4
   // proto:  int QToolBox::currentIndex();
-extern void _ZNK8QToolBox12currentIndexEv(void* qthis); // 4
+extern void C_ZNK8QToolBox12currentIndexEv(void* qthis); // 4
   // proto:  bool QToolBox::isItemEnabled(int index);
-extern void _ZNK8QToolBox13isItemEnabledEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK8QToolBox13isItemEnabledEi(void* qthis, int32_t arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -110,7 +110,7 @@ func (this *QToolBox) setItemText(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN8QToolBox11setItemTextEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN8QToolBox11setItemTextEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QToolBox", "setItemText", args)
   }
@@ -133,7 +133,7 @@ func (this *QToolBox) itemIcon(args ...interface{}) () {
     // invoke: QIcon itemIcon(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK8QToolBox8itemIconEi(this.qclsinst, arg0)
+    C.C_ZNK8QToolBox8itemIconEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBox", "itemIcon", args)
   }
@@ -159,7 +159,7 @@ func (this *QToolBox) setItemEnabled(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN8QToolBox14setItemEnabledEib(this.qclsinst, arg0, arg1)
+    C.C_ZN8QToolBox14setItemEnabledEib(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QToolBox", "setItemEnabled", args)
   }
@@ -182,7 +182,7 @@ func (this *QToolBox) setCurrentIndex(args ...interface{}) () {
     // invoke: void setCurrentIndex(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN8QToolBox15setCurrentIndexEi(this.qclsinst, arg0)
+    C.C_ZN8QToolBox15setCurrentIndexEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBox", "setCurrentIndex", args)
   }
@@ -202,7 +202,7 @@ func (this *QToolBox) currentWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QToolBox13currentWidgetEv
     // invoke: QWidget * currentWidget()
-    C._ZNK8QToolBox13currentWidgetEv(this.qclsinst)
+    C.C_ZNK8QToolBox13currentWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolBox", "currentWidget", args)
   }
@@ -222,7 +222,7 @@ func (this *QToolBox) FreeQToolBox(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolBoxD0Ev
     // invoke: void ~QToolBox()
-    C._ZN8QToolBoxD2Ev(this.qclsinst)
+    C.C_ZN8QToolBoxD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolBox", "~QToolBox", args)
   }
@@ -245,7 +245,7 @@ func (this *QToolBox) setCurrentWidget(args ...interface{}) () {
     // invoke: void setCurrentWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QToolBox16setCurrentWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN8QToolBox16setCurrentWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBox", "setCurrentWidget", args)
   }
@@ -268,7 +268,7 @@ func (this *QToolBox) indexOf(args ...interface{}) () {
     // invoke: int indexOf(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK8QToolBox7indexOfEP7QWidget(this.qclsinst, arg0)
+    C.C_ZNK8QToolBox7indexOfEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBox", "indexOf", args)
   }
@@ -288,7 +288,7 @@ func (this *QToolBox) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QToolBox5countEv
     // invoke: int count()
-    C._ZNK8QToolBox5countEv(this.qclsinst)
+    C.C_ZNK8QToolBox5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolBox", "count", args)
   }
@@ -311,7 +311,7 @@ func (this *QToolBox) widget(args ...interface{}) () {
     // invoke: QWidget * widget(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK8QToolBox6widgetEi(this.qclsinst, arg0)
+    C.C_ZNK8QToolBox6widgetEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBox", "widget", args)
   }
@@ -337,7 +337,7 @@ func (this *QToolBox) setItemToolTip(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN8QToolBox14setItemToolTipEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN8QToolBox14setItemToolTipEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QToolBox", "setItemToolTip", args)
   }
@@ -363,7 +363,7 @@ func (this *QToolBox) setItemIcon(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QIcon).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN8QToolBox11setItemIconEiRK5QIcon(this.qclsinst, arg0, arg1)
+    C.C_ZN8QToolBox11setItemIconEiRK5QIcon(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QToolBox", "setItemIcon", args)
   }
@@ -400,7 +400,7 @@ func (this *QToolBox) insertItem(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QString).qclsinst
     if false {fmt.Println(arg3)}
-    C._ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN8QToolBox10insertItemEiP7QWidgetRK7QString
     // invoke: int insertItem(int, class QWidget *, const class QString &)
@@ -410,7 +410,7 @@ func (this *QToolBox) insertItem(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN8QToolBox10insertItemEiP7QWidgetRK7QString(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN8QToolBox10insertItemEiP7QWidgetRK7QString(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QToolBox", "insertItem", args)
   }
@@ -443,7 +443,7 @@ func (this *QToolBox) addItem(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN8QToolBox7addItemEP7QWidgetRK7QString
     // invoke: int addItem(class QWidget *, const class QString &)
@@ -451,7 +451,7 @@ func (this *QToolBox) addItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN8QToolBox7addItemEP7QWidgetRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN8QToolBox7addItemEP7QWidgetRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QToolBox", "addItem", args)
   }
@@ -474,7 +474,7 @@ func (this *QToolBox) removeItem(args ...interface{}) () {
     // invoke: void removeItem(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN8QToolBox10removeItemEi(this.qclsinst, arg0)
+    C.C_ZN8QToolBox10removeItemEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBox", "removeItem", args)
   }
@@ -497,7 +497,7 @@ func (this *QToolBox) itemText(args ...interface{}) () {
     // invoke: QString itemText(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK8QToolBox8itemTextEi(this.qclsinst, arg0)
+    C.C_ZNK8QToolBox8itemTextEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBox", "itemText", args)
   }
@@ -520,7 +520,7 @@ func (this *QToolBox) itemToolTip(args ...interface{}) () {
     // invoke: QString itemToolTip(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK8QToolBox11itemToolTipEi(this.qclsinst, arg0)
+    C.C_ZNK8QToolBox11itemToolTipEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBox", "itemToolTip", args)
   }
@@ -540,7 +540,7 @@ func (this *QToolBox) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QToolBox10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK8QToolBox10metaObjectEv(this.qclsinst)
+    C.C_ZNK8QToolBox10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolBox", "metaObject", args)
   }
@@ -560,7 +560,7 @@ func (this *QToolBox) currentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QToolBox12currentIndexEv
     // invoke: int currentIndex()
-    C._ZNK8QToolBox12currentIndexEv(this.qclsinst)
+    C.C_ZNK8QToolBox12currentIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolBox", "currentIndex", args)
   }
@@ -583,7 +583,7 @@ func (this *QToolBox) isItemEnabled(args ...interface{}) () {
     // invoke: bool isItemEnabled(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK8QToolBox13isItemEnabledEi(this.qclsinst, arg0)
+    C.C_ZNK8QToolBox13isItemEnabledEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBox", "isItemEnabled", args)
   }

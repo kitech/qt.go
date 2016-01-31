@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qdialog.h
 // dst-file: /src/widgets/qdialog.go
 //
@@ -29,43 +29,43 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  Qt::Orientation QDialog::orientation();
-extern void _ZNK7QDialog11orientationEv(void* qthis); // 4
+extern void C_ZNK7QDialog11orientationEv(void* qthis); // 4
   // proto:  void QDialog::accept();
-extern void _ZN7QDialog6acceptEv(void* qthis); // 4
+extern void C_ZN7QDialog6acceptEv(void* qthis); // 4
   // proto:  void QDialog::showExtension(bool );
-extern void _ZN7QDialog13showExtensionEb(void* qthis, bool arg0); // 4
+extern void C_ZN7QDialog13showExtensionEb(void* qthis, bool arg0); // 4
   // proto:  void QDialog::done(int );
-extern void _ZN7QDialog4doneEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN7QDialog4doneEi(void* qthis, int32_t arg0); // 4
   // proto:  int QDialog::result();
-extern void _ZNK7QDialog6resultEv(void* qthis); // 4
+extern void C_ZNK7QDialog6resultEv(void* qthis); // 4
   // proto:  void QDialog::open();
-extern void _ZN7QDialog4openEv(void* qthis); // 4
+extern void C_ZN7QDialog4openEv(void* qthis); // 4
   // proto:  void QDialog::setModal(bool modal);
-extern void _ZN7QDialog8setModalEb(void* qthis, bool arg0); // 4
+extern void C_ZN7QDialog8setModalEb(void* qthis, bool arg0); // 4
   // proto:  int QDialog::exec();
-extern void _ZN7QDialog4execEv(void* qthis); // 4
+extern void C_ZN7QDialog4execEv(void* qthis); // 4
   // proto:  void QDialog::reject();
-extern void _ZN7QDialog6rejectEv(void* qthis); // 4
+extern void C_ZN7QDialog6rejectEv(void* qthis); // 4
   // proto:  void QDialog::setExtension(QWidget * extension);
-extern void _ZN7QDialog12setExtensionEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN7QDialog12setExtensionEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QDialog::metaObject();
-extern void _ZNK7QDialog10metaObjectEv(void* qthis); // 4
+extern void C_ZNK7QDialog10metaObjectEv(void* qthis); // 4
   // proto:  void QDialog::setSizeGripEnabled(bool );
-extern void _ZN7QDialog18setSizeGripEnabledEb(void* qthis, bool arg0); // 4
+extern void C_ZN7QDialog18setSizeGripEnabledEb(void* qthis, bool arg0); // 4
   // proto:  void QDialog::~QDialog();
-extern void _ZN7QDialogD2Ev(void* qthis); // 4
+extern void C_ZN7QDialogD2Ev(void* qthis); // 4
   // proto:  QSize QDialog::sizeHint();
-extern void _ZNK7QDialog8sizeHintEv(void* qthis); // 4
+extern void C_ZNK7QDialog8sizeHintEv(void* qthis); // 4
   // proto:  QWidget * QDialog::extension();
-extern void _ZNK7QDialog9extensionEv(void* qthis); // 4
+extern void C_ZNK7QDialog9extensionEv(void* qthis); // 4
   // proto:  QSize QDialog::minimumSizeHint();
-extern void _ZNK7QDialog15minimumSizeHintEv(void* qthis); // 4
+extern void C_ZNK7QDialog15minimumSizeHintEv(void* qthis); // 4
   // proto:  bool QDialog::isSizeGripEnabled();
-extern void _ZNK7QDialog17isSizeGripEnabledEv(void* qthis); // 4
+extern void C_ZNK7QDialog17isSizeGripEnabledEv(void* qthis); // 4
   // proto:  void QDialog::setResult(int r);
-extern void _ZN7QDialog9setResultEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN7QDialog9setResultEi(void* qthis, int32_t arg0); // 4
   // proto:  void QDialog::setVisible(bool visible);
-extern void _ZN7QDialog10setVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN7QDialog10setVisibleEb(void* qthis, bool arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -100,7 +100,7 @@ func (this *QDialog) orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QDialog11orientationEv
     // invoke: Qt::Orientation orientation()
-    C._ZNK7QDialog11orientationEv(this.qclsinst)
+    C.C_ZNK7QDialog11orientationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "orientation", args)
   }
@@ -120,7 +120,7 @@ func (this *QDialog) accept(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QDialog6acceptEv
     // invoke: void accept()
-    C._ZN7QDialog6acceptEv(this.qclsinst)
+    C.C_ZN7QDialog6acceptEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "accept", args)
   }
@@ -143,7 +143,7 @@ func (this *QDialog) showExtension(args ...interface{}) () {
     // invoke: void showExtension(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN7QDialog13showExtensionEb(this.qclsinst, arg0)
+    C.C_ZN7QDialog13showExtensionEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "showExtension", args)
   }
@@ -166,7 +166,7 @@ func (this *QDialog) done(args ...interface{}) () {
     // invoke: void done(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN7QDialog4doneEi(this.qclsinst, arg0)
+    C.C_ZN7QDialog4doneEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "done", args)
   }
@@ -186,7 +186,7 @@ func (this *QDialog) result(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QDialog6resultEv
     // invoke: int result()
-    C._ZNK7QDialog6resultEv(this.qclsinst)
+    C.C_ZNK7QDialog6resultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "result", args)
   }
@@ -206,7 +206,7 @@ func (this *QDialog) open(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QDialog4openEv
     // invoke: void open()
-    C._ZN7QDialog4openEv(this.qclsinst)
+    C.C_ZN7QDialog4openEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "open", args)
   }
@@ -229,7 +229,7 @@ func (this *QDialog) setModal(args ...interface{}) () {
     // invoke: void setModal(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN7QDialog8setModalEb(this.qclsinst, arg0)
+    C.C_ZN7QDialog8setModalEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "setModal", args)
   }
@@ -249,7 +249,7 @@ func (this *QDialog) exec(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QDialog4execEv
     // invoke: int exec()
-    C._ZN7QDialog4execEv(this.qclsinst)
+    C.C_ZN7QDialog4execEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "exec", args)
   }
@@ -269,7 +269,7 @@ func (this *QDialog) reject(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QDialog6rejectEv
     // invoke: void reject()
-    C._ZN7QDialog6rejectEv(this.qclsinst)
+    C.C_ZN7QDialog6rejectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "reject", args)
   }
@@ -292,7 +292,7 @@ func (this *QDialog) setExtension(args ...interface{}) () {
     // invoke: void setExtension(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QDialog12setExtensionEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN7QDialog12setExtensionEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "setExtension", args)
   }
@@ -312,7 +312,7 @@ func (this *QDialog) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QDialog10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK7QDialog10metaObjectEv(this.qclsinst)
+    C.C_ZNK7QDialog10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "metaObject", args)
   }
@@ -335,7 +335,7 @@ func (this *QDialog) setSizeGripEnabled(args ...interface{}) () {
     // invoke: void setSizeGripEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN7QDialog18setSizeGripEnabledEb(this.qclsinst, arg0)
+    C.C_ZN7QDialog18setSizeGripEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "setSizeGripEnabled", args)
   }
@@ -355,7 +355,7 @@ func (this *QDialog) FreeQDialog(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QDialogD0Ev
     // invoke: void ~QDialog()
-    C._ZN7QDialogD2Ev(this.qclsinst)
+    C.C_ZN7QDialogD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "~QDialog", args)
   }
@@ -375,7 +375,7 @@ func (this *QDialog) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QDialog8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK7QDialog8sizeHintEv(this.qclsinst)
+    C.C_ZNK7QDialog8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "sizeHint", args)
   }
@@ -395,7 +395,7 @@ func (this *QDialog) extension(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QDialog9extensionEv
     // invoke: QWidget * extension()
-    C._ZNK7QDialog9extensionEv(this.qclsinst)
+    C.C_ZNK7QDialog9extensionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "extension", args)
   }
@@ -415,7 +415,7 @@ func (this *QDialog) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QDialog15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C._ZNK7QDialog15minimumSizeHintEv(this.qclsinst)
+    C.C_ZNK7QDialog15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "minimumSizeHint", args)
   }
@@ -435,7 +435,7 @@ func (this *QDialog) isSizeGripEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QDialog17isSizeGripEnabledEv
     // invoke: bool isSizeGripEnabled()
-    C._ZNK7QDialog17isSizeGripEnabledEv(this.qclsinst)
+    C.C_ZNK7QDialog17isSizeGripEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "isSizeGripEnabled", args)
   }
@@ -458,7 +458,7 @@ func (this *QDialog) setResult(args ...interface{}) () {
     // invoke: void setResult(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN7QDialog9setResultEi(this.qclsinst, arg0)
+    C.C_ZN7QDialog9setResultEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "setResult", args)
   }
@@ -481,7 +481,7 @@ func (this *QDialog) setVisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN7QDialog10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN7QDialog10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "setVisible", args)
   }

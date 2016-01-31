@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qmenu.h
 // dst-file: /src/widgets/qmenu.go
 //
@@ -29,95 +29,95 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QAction * QMenu::addAction(const QString & text);
-extern void _ZN5QMenu9addActionERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN5QMenu9addActionERK7QString(void* qthis, void* arg0); // 4
   // proto:  QAction * QMenu::addAction(const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut);
-extern void _ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence(void* qthis, void* arg0, void* arg1, unsigned char* arg2, void* arg3); // 4
+extern void C_ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence(void* qthis, void* arg0, void* arg1, unsigned char* arg2, void* arg3); // 4
   // proto:  QAction * QMenu::addAction(const QIcon & icon, const QString & text);
-extern void _ZN5QMenu9addActionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN5QMenu9addActionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QAction * QMenu::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut);
-extern void _ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence(void* qthis, void* arg0, void* arg1, void* arg2, unsigned char* arg3, void* arg4); // 4
+extern void C_ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence(void* qthis, void* arg0, void* arg1, void* arg2, unsigned char* arg3, void* arg4); // 4
   // proto:  void QMenu::setTitle(const QString & title);
-extern void _ZN5QMenu8setTitleERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN5QMenu8setTitleERK7QString(void* qthis, void* arg0); // 4
   // proto:  QAction * QMenu::actionAt(const QPoint & );
-extern void _ZNK5QMenu8actionAtERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZNK5QMenu8actionAtERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  bool QMenu::toolTipsVisible();
-extern void _ZNK5QMenu15toolTipsVisibleEv(void* qthis); // 4
+extern void C_ZNK5QMenu15toolTipsVisibleEv(void* qthis); // 4
   // proto:  void QMenu::setSeparatorsCollapsible(bool collapse);
-extern void _ZN5QMenu24setSeparatorsCollapsibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN5QMenu24setSeparatorsCollapsibleEb(void* qthis, bool arg0); // 4
   // proto:  QAction * QMenu::menuAction();
-extern void _ZNK5QMenu10menuActionEv(void* qthis); // 4
+extern void C_ZNK5QMenu10menuActionEv(void* qthis); // 4
   // proto:  QAction * QMenu::activeAction();
-extern void _ZNK5QMenu12activeActionEv(void* qthis); // 4
+extern void C_ZNK5QMenu12activeActionEv(void* qthis); // 4
   // proto:  QAction * QMenu::addSeparator();
-extern void _ZN5QMenu12addSeparatorEv(void* qthis); // 4
+extern void C_ZN5QMenu12addSeparatorEv(void* qthis); // 4
   // proto:  void QMenu::setTearOffEnabled(bool );
-extern void _ZN5QMenu17setTearOffEnabledEb(void* qthis, bool arg0); // 4
+extern void C_ZN5QMenu17setTearOffEnabledEb(void* qthis, bool arg0); // 4
   // proto:  void QMenu::setActiveAction(QAction * act);
-extern void _ZN5QMenu15setActiveActionEP7QAction(void* qthis, void* arg0); // 4
+extern void C_ZN5QMenu15setActiveActionEP7QAction(void* qthis, void* arg0); // 4
   // proto:  QAction * QMenu::defaultAction();
-extern void _ZNK5QMenu13defaultActionEv(void* qthis); // 4
+extern void C_ZNK5QMenu13defaultActionEv(void* qthis); // 4
   // proto:  bool QMenu::isEmpty();
-extern void _ZNK5QMenu7isEmptyEv(void* qthis); // 4
+extern void C_ZNK5QMenu7isEmptyEv(void* qthis); // 4
   // proto:  QAction * QMenu::insertSection(QAction * before, const QString & text);
-extern void _ZN5QMenu13insertSectionEP7QActionRK7QString(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN5QMenu13insertSectionEP7QActionRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QAction * QMenu::insertSection(QAction * before, const QIcon & icon, const QString & text);
-extern void _ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QMenu::setIcon(const QIcon & icon);
-extern void _ZN5QMenu7setIconERK5QIcon(void* qthis, void* arg0); // 4
+extern void C_ZN5QMenu7setIconERK5QIcon(void* qthis, void* arg0); // 4
   // proto:  bool QMenu::isTearOffEnabled();
-extern void _ZNK5QMenu16isTearOffEnabledEv(void* qthis); // 4
+extern void C_ZNK5QMenu16isTearOffEnabledEv(void* qthis); // 4
   // proto:  QMenu * QMenu::addMenu(const QString & title);
-extern void _ZN5QMenu7addMenuERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN5QMenu7addMenuERK7QString(void* qthis, void* arg0); // 4
   // proto:  QMenu * QMenu::addMenu(const QIcon & icon, const QString & title);
-extern void _ZN5QMenu7addMenuERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN5QMenu7addMenuERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QAction * QMenu::addMenu(QMenu * menu);
-extern void _ZN5QMenu7addMenuEPS_(void* qthis, void* arg0); // 4
+extern void C_ZN5QMenu7addMenuEPS_(void* qthis, void* arg0); // 4
   // proto:  QAction * QMenu::exec(const QPoint & pos, QAction * at);
-extern void _ZN5QMenu4execERK6QPointP7QAction(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN5QMenu4execERK6QPointP7QAction(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QAction * QMenu::exec();
-extern void _ZN5QMenu4execEv(void* qthis); // 4
+extern void C_ZN5QMenu4execEv(void* qthis); // 4
   // proto:  QAction * QMenu::addSection(const QString & text);
-extern void _ZN5QMenu10addSectionERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN5QMenu10addSectionERK7QString(void* qthis, void* arg0); // 4
   // proto:  QAction * QMenu::addSection(const QIcon & icon, const QString & text);
-extern void _ZN5QMenu10addSectionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN5QMenu10addSectionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QString QMenu::title();
-extern void _ZNK5QMenu5titleEv(void* qthis); // 4
+extern void C_ZNK5QMenu5titleEv(void* qthis); // 4
   // proto:  void QMenu::setDefaultAction(QAction * );
-extern void _ZN5QMenu16setDefaultActionEP7QAction(void* qthis, void* arg0); // 4
+extern void C_ZN5QMenu16setDefaultActionEP7QAction(void* qthis, void* arg0); // 4
   // proto:  QAction * QMenu::insertMenu(QAction * before, QMenu * menu);
-extern void _ZN5QMenu10insertMenuEP7QActionPS_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN5QMenu10insertMenuEP7QActionPS_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  bool QMenu::isTearOffMenuVisible();
-extern void _ZNK5QMenu20isTearOffMenuVisibleEv(void* qthis); // 4
+extern void C_ZNK5QMenu20isTearOffMenuVisibleEv(void* qthis); // 4
   // proto:  QIcon QMenu::icon();
-extern void _ZNK5QMenu4iconEv(void* qthis); // 4
+extern void C_ZNK5QMenu4iconEv(void* qthis); // 4
   // proto:  void QMenu::setNoReplayFor(QWidget * widget);
-extern void _ZN5QMenu14setNoReplayForEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN5QMenu14setNoReplayForEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QMenu::metaObject();
-extern void _ZNK5QMenu10metaObjectEv(void* qthis); // 4
+extern void C_ZNK5QMenu10metaObjectEv(void* qthis); // 4
   // proto:  QSize QMenu::sizeHint();
-extern void _ZNK5QMenu8sizeHintEv(void* qthis); // 4
+extern void C_ZNK5QMenu8sizeHintEv(void* qthis); // 4
   // proto:  void QMenu::clear();
-extern void _ZN5QMenu5clearEv(void* qthis); // 4
+extern void C_ZN5QMenu5clearEv(void* qthis); // 4
   // proto:  QAction * QMenu::insertSeparator(QAction * before);
-extern void _ZN5QMenu15insertSeparatorEP7QAction(void* qthis, void* arg0); // 4
+extern void C_ZN5QMenu15insertSeparatorEP7QAction(void* qthis, void* arg0); // 4
   // proto:  void QMenu::popup(const QPoint & pos, QAction * at);
-extern void _ZN5QMenu5popupERK6QPointP7QAction(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN5QMenu5popupERK6QPointP7QAction(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QMenu::setToolTipsVisible(bool visible);
-extern void _ZN5QMenu18setToolTipsVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN5QMenu18setToolTipsVisibleEb(void* qthis, bool arg0); // 4
   // proto:  void QMenu::~QMenu();
-extern void _ZN5QMenuD2Ev(void* qthis); // 4
+extern void C_ZN5QMenuD2Ev(void* qthis); // 4
   // proto:  void QMenu::QMenu(QWidget * parent);
-extern void _ZN5QMenuC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN5QMenuC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QMenu::QMenu(const QString & title, QWidget * parent);
-extern void _ZN5QMenuC2ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN5QMenuC2ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1); // 3
   // proto:  QPlatformMenu * QMenu::platformMenu();
-extern void _ZN5QMenu12platformMenuEv(void* qthis); // 4
+extern void C_ZN5QMenu12platformMenuEv(void* qthis); // 4
   // proto:  bool QMenu::separatorsCollapsible();
-extern void _ZNK5QMenu21separatorsCollapsibleEv(void* qthis); // 4
+extern void C_ZNK5QMenu21separatorsCollapsibleEv(void* qthis); // 4
   // proto:  QRect QMenu::actionGeometry(QAction * );
-extern void _ZNK5QMenu14actionGeometryEP7QAction(void* qthis, void* arg0); // 4
+extern void C_ZNK5QMenu14actionGeometryEP7QAction(void* qthis, void* arg0); // 4
   // proto:  void QMenu::hideTearOffMenu();
-extern void _ZN5QMenu15hideTearOffMenuEv(void* qthis); // 4
+extern void C_ZN5QMenu15hideTearOffMenuEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -173,7 +173,7 @@ func (this *QMenu) addAction(args ...interface{}) () {
     // invoke: QAction * addAction(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu9addActionERK7QString(this.qclsinst, arg0)
+    C.C_ZN5QMenu9addActionERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence
     // invoke: QAction * addAction(const class QString &, const class QObject *, const char *, const class QKeySequence &)
@@ -185,7 +185,7 @@ func (this *QMenu) addAction(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QKeySequence).qclsinst
     if false {fmt.Println(arg3)}
-    C._ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence(this.qclsinst, arg0, arg1, arg2, arg3)
   case 2:
     // invoke: _ZN5QMenu9addActionERK5QIconRK7QString
     // invoke: QAction * addAction(const class QIcon &, const class QString &)
@@ -193,7 +193,7 @@ func (this *QMenu) addAction(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN5QMenu9addActionERK5QIconRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN5QMenu9addActionERK5QIconRK7QString(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence
     // invoke: QAction * addAction(const class QIcon &, const class QString &, const class QObject *, const char *, const class QKeySequence &)
@@ -207,7 +207,7 @@ func (this *QMenu) addAction(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QKeySequence).qclsinst
     if false {fmt.Println(arg4)}
-    C._ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QMenu", "addAction", args)
   }
@@ -230,7 +230,7 @@ func (this *QMenu) setTitle(args ...interface{}) () {
     // invoke: void setTitle(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu8setTitleERK7QString(this.qclsinst, arg0)
+    C.C_ZN5QMenu8setTitleERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenu", "setTitle", args)
   }
@@ -253,7 +253,7 @@ func (this *QMenu) actionAt(args ...interface{}) () {
     // invoke: QAction * actionAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK5QMenu8actionAtERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK5QMenu8actionAtERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenu", "actionAt", args)
   }
@@ -273,7 +273,7 @@ func (this *QMenu) toolTipsVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QMenu15toolTipsVisibleEv
     // invoke: bool toolTipsVisible()
-    C._ZNK5QMenu15toolTipsVisibleEv(this.qclsinst)
+    C.C_ZNK5QMenu15toolTipsVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "toolTipsVisible", args)
   }
@@ -296,7 +296,7 @@ func (this *QMenu) setSeparatorsCollapsible(args ...interface{}) () {
     // invoke: void setSeparatorsCollapsible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu24setSeparatorsCollapsibleEb(this.qclsinst, arg0)
+    C.C_ZN5QMenu24setSeparatorsCollapsibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenu", "setSeparatorsCollapsible", args)
   }
@@ -316,7 +316,7 @@ func (this *QMenu) menuAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QMenu10menuActionEv
     // invoke: QAction * menuAction()
-    C._ZNK5QMenu10menuActionEv(this.qclsinst)
+    C.C_ZNK5QMenu10menuActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "menuAction", args)
   }
@@ -336,7 +336,7 @@ func (this *QMenu) activeAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QMenu12activeActionEv
     // invoke: QAction * activeAction()
-    C._ZNK5QMenu12activeActionEv(this.qclsinst)
+    C.C_ZNK5QMenu12activeActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "activeAction", args)
   }
@@ -356,7 +356,7 @@ func (this *QMenu) addSeparator(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QMenu12addSeparatorEv
     // invoke: QAction * addSeparator()
-    C._ZN5QMenu12addSeparatorEv(this.qclsinst)
+    C.C_ZN5QMenu12addSeparatorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "addSeparator", args)
   }
@@ -379,7 +379,7 @@ func (this *QMenu) setTearOffEnabled(args ...interface{}) () {
     // invoke: void setTearOffEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu17setTearOffEnabledEb(this.qclsinst, arg0)
+    C.C_ZN5QMenu17setTearOffEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenu", "setTearOffEnabled", args)
   }
@@ -402,7 +402,7 @@ func (this *QMenu) setActiveAction(args ...interface{}) () {
     // invoke: void setActiveAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu15setActiveActionEP7QAction(this.qclsinst, arg0)
+    C.C_ZN5QMenu15setActiveActionEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenu", "setActiveAction", args)
   }
@@ -422,7 +422,7 @@ func (this *QMenu) defaultAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QMenu13defaultActionEv
     // invoke: QAction * defaultAction()
-    C._ZNK5QMenu13defaultActionEv(this.qclsinst)
+    C.C_ZNK5QMenu13defaultActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "defaultAction", args)
   }
@@ -442,7 +442,7 @@ func (this *QMenu) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QMenu7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK5QMenu7isEmptyEv(this.qclsinst)
+    C.C_ZNK5QMenu7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "isEmpty", args)
   }
@@ -473,7 +473,7 @@ func (this *QMenu) insertSection(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN5QMenu13insertSectionEP7QActionRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN5QMenu13insertSectionEP7QActionRK7QString(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString
     // invoke: QAction * insertSection(class QAction *, const class QIcon &, const class QString &)
@@ -483,7 +483,7 @@ func (this *QMenu) insertSection(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QMenu", "insertSection", args)
   }
@@ -506,7 +506,7 @@ func (this *QMenu) setIcon(args ...interface{}) () {
     // invoke: void setIcon(const class QIcon &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu7setIconERK5QIcon(this.qclsinst, arg0)
+    C.C_ZN5QMenu7setIconERK5QIcon(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenu", "setIcon", args)
   }
@@ -526,7 +526,7 @@ func (this *QMenu) isTearOffEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QMenu16isTearOffEnabledEv
     // invoke: bool isTearOffEnabled()
-    C._ZNK5QMenu16isTearOffEnabledEv(this.qclsinst)
+    C.C_ZNK5QMenu16isTearOffEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "isTearOffEnabled", args)
   }
@@ -556,7 +556,7 @@ func (this *QMenu) addMenu(args ...interface{}) () {
     // invoke: QMenu * addMenu(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu7addMenuERK7QString(this.qclsinst, arg0)
+    C.C_ZN5QMenu7addMenuERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN5QMenu7addMenuERK5QIconRK7QString
     // invoke: QMenu * addMenu(const class QIcon &, const class QString &)
@@ -564,13 +564,13 @@ func (this *QMenu) addMenu(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN5QMenu7addMenuERK5QIconRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN5QMenu7addMenuERK5QIconRK7QString(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN5QMenu7addMenuEPS_
     // invoke: QAction * addMenu(class QMenu *)
     var arg0 = args[0].(QMenu).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu7addMenuEPS_(this.qclsinst, arg0)
+    C.C_ZN5QMenu7addMenuEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenu", "addMenu", args)
   }
@@ -598,11 +598,11 @@ func (this *QMenu) exec(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QAction).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN5QMenu4execERK6QPointP7QAction(this.qclsinst, arg0, arg1)
+    C.C_ZN5QMenu4execERK6QPointP7QAction(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN5QMenu4execEv
     // invoke: QAction * exec()
-    C._ZN5QMenu4execEv(this.qclsinst)
+    C.C_ZN5QMenu4execEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "exec", args)
   }
@@ -629,7 +629,7 @@ func (this *QMenu) addSection(args ...interface{}) () {
     // invoke: QAction * addSection(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu10addSectionERK7QString(this.qclsinst, arg0)
+    C.C_ZN5QMenu10addSectionERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN5QMenu10addSectionERK5QIconRK7QString
     // invoke: QAction * addSection(const class QIcon &, const class QString &)
@@ -637,7 +637,7 @@ func (this *QMenu) addSection(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN5QMenu10addSectionERK5QIconRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN5QMenu10addSectionERK5QIconRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMenu", "addSection", args)
   }
@@ -657,7 +657,7 @@ func (this *QMenu) title(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QMenu5titleEv
     // invoke: QString title()
-    C._ZNK5QMenu5titleEv(this.qclsinst)
+    C.C_ZNK5QMenu5titleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "title", args)
   }
@@ -680,7 +680,7 @@ func (this *QMenu) setDefaultAction(args ...interface{}) () {
     // invoke: void setDefaultAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu16setDefaultActionEP7QAction(this.qclsinst, arg0)
+    C.C_ZN5QMenu16setDefaultActionEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenu", "setDefaultAction", args)
   }
@@ -706,7 +706,7 @@ func (this *QMenu) insertMenu(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QMenu).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN5QMenu10insertMenuEP7QActionPS_(this.qclsinst, arg0, arg1)
+    C.C_ZN5QMenu10insertMenuEP7QActionPS_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMenu", "insertMenu", args)
   }
@@ -726,7 +726,7 @@ func (this *QMenu) isTearOffMenuVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QMenu20isTearOffMenuVisibleEv
     // invoke: bool isTearOffMenuVisible()
-    C._ZNK5QMenu20isTearOffMenuVisibleEv(this.qclsinst)
+    C.C_ZNK5QMenu20isTearOffMenuVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "isTearOffMenuVisible", args)
   }
@@ -746,7 +746,7 @@ func (this *QMenu) icon(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QMenu4iconEv
     // invoke: QIcon icon()
-    C._ZNK5QMenu4iconEv(this.qclsinst)
+    C.C_ZNK5QMenu4iconEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "icon", args)
   }
@@ -769,7 +769,7 @@ func (this *QMenu) setNoReplayFor(args ...interface{}) () {
     // invoke: void setNoReplayFor(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu14setNoReplayForEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN5QMenu14setNoReplayForEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenu", "setNoReplayFor", args)
   }
@@ -789,7 +789,7 @@ func (this *QMenu) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QMenu10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK5QMenu10metaObjectEv(this.qclsinst)
+    C.C_ZNK5QMenu10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "metaObject", args)
   }
@@ -809,7 +809,7 @@ func (this *QMenu) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QMenu8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK5QMenu8sizeHintEv(this.qclsinst)
+    C.C_ZNK5QMenu8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "sizeHint", args)
   }
@@ -829,7 +829,7 @@ func (this *QMenu) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QMenu5clearEv
     // invoke: void clear()
-    C._ZN5QMenu5clearEv(this.qclsinst)
+    C.C_ZN5QMenu5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "clear", args)
   }
@@ -852,7 +852,7 @@ func (this *QMenu) insertSeparator(args ...interface{}) () {
     // invoke: QAction * insertSeparator(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu15insertSeparatorEP7QAction(this.qclsinst, arg0)
+    C.C_ZN5QMenu15insertSeparatorEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenu", "insertSeparator", args)
   }
@@ -878,7 +878,7 @@ func (this *QMenu) popup(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QAction).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN5QMenu5popupERK6QPointP7QAction(this.qclsinst, arg0, arg1)
+    C.C_ZN5QMenu5popupERK6QPointP7QAction(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMenu", "popup", args)
   }
@@ -901,7 +901,7 @@ func (this *QMenu) setToolTipsVisible(args ...interface{}) () {
     // invoke: void setToolTipsVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN5QMenu18setToolTipsVisibleEb(this.qclsinst, arg0)
+    C.C_ZN5QMenu18setToolTipsVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenu", "setToolTipsVisible", args)
   }
@@ -921,7 +921,7 @@ func (this *QMenu) FreeQMenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QMenuD0Ev
     // invoke: void ~QMenu()
-    C._ZN5QMenuD2Ev(this.qclsinst)
+    C.C_ZN5QMenuD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "~QMenu", args)
   }
@@ -950,7 +950,7 @@ func NewQMenu(args ...interface{}) QMenu {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QMenuC2EP7QWidget(qthis, arg0)
+    C.C_ZN5QMenuC2EP7QWidget(qthis, arg0)
   case 1:
     // invoke: _ZN5QMenuC1ERK7QStringP7QWidget
     // invoke: void QMenu(const class QString &, class QWidget *)
@@ -960,7 +960,7 @@ func NewQMenu(args ...interface{}) QMenu {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QMenuC2ERK7QStringP7QWidget(qthis, arg0, arg1)
+    C.C_ZN5QMenuC2ERK7QStringP7QWidget(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMenu", "QMenu", args)
   }
@@ -981,7 +981,7 @@ func (this *QMenu) platformMenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QMenu12platformMenuEv
     // invoke: QPlatformMenu * platformMenu()
-    C._ZN5QMenu12platformMenuEv(this.qclsinst)
+    C.C_ZN5QMenu12platformMenuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "platformMenu", args)
   }
@@ -1001,7 +1001,7 @@ func (this *QMenu) separatorsCollapsible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QMenu21separatorsCollapsibleEv
     // invoke: bool separatorsCollapsible()
-    C._ZNK5QMenu21separatorsCollapsibleEv(this.qclsinst)
+    C.C_ZNK5QMenu21separatorsCollapsibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "separatorsCollapsible", args)
   }
@@ -1024,7 +1024,7 @@ func (this *QMenu) actionGeometry(args ...interface{}) () {
     // invoke: QRect actionGeometry(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK5QMenu14actionGeometryEP7QAction(this.qclsinst, arg0)
+    C.C_ZNK5QMenu14actionGeometryEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenu", "actionGeometry", args)
   }
@@ -1044,7 +1044,7 @@ func (this *QMenu) hideTearOffMenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QMenu15hideTearOffMenuEv
     // invoke: void hideTearOffMenu()
-    C._ZN5QMenu15hideTearOffMenuEv(this.qclsinst)
+    C.C_ZN5QMenu15hideTearOffMenuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenu", "hideTearOffMenu", args)
   }

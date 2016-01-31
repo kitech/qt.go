@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.go
 //
@@ -29,29 +29,29 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QAbstractTransition::TransitionType QAbstractTransition::transitionType();
-extern void _ZNK19QAbstractTransition14transitionTypeEv(void* qthis); // 4
+extern void C_ZNK19QAbstractTransition14transitionTypeEv(void* qthis); // 4
   // proto:  QList<QAbstractState *> QAbstractTransition::targetStates();
-extern void _ZNK19QAbstractTransition12targetStatesEv(void* qthis); // 4
+extern void C_ZNK19QAbstractTransition12targetStatesEv(void* qthis); // 4
   // proto:  void QAbstractTransition::removeAnimation(QAbstractAnimation * animation);
-extern void _ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
+extern void C_ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
   // proto:  QStateMachine * QAbstractTransition::machine();
-extern void _ZNK19QAbstractTransition7machineEv(void* qthis); // 4
+extern void C_ZNK19QAbstractTransition7machineEv(void* qthis); // 4
   // proto:  QAbstractState * QAbstractTransition::targetState();
-extern void _ZNK19QAbstractTransition11targetStateEv(void* qthis); // 4
+extern void C_ZNK19QAbstractTransition11targetStateEv(void* qthis); // 4
   // proto:  QList<QAbstractAnimation *> QAbstractTransition::animations();
-extern void _ZNK19QAbstractTransition10animationsEv(void* qthis); // 4
+extern void C_ZNK19QAbstractTransition10animationsEv(void* qthis); // 4
   // proto:  const QMetaObject * QAbstractTransition::metaObject();
-extern void _ZNK19QAbstractTransition10metaObjectEv(void* qthis); // 4
+extern void C_ZNK19QAbstractTransition10metaObjectEv(void* qthis); // 4
   // proto:  void QAbstractTransition::setTargetState(QAbstractState * target);
-extern void _ZN19QAbstractTransition14setTargetStateEP14QAbstractState(void* qthis, void* arg0); // 4
+extern void C_ZN19QAbstractTransition14setTargetStateEP14QAbstractState(void* qthis, void* arg0); // 4
   // proto:  void QAbstractTransition::~QAbstractTransition();
-extern void _ZN19QAbstractTransitionD2Ev(void* qthis); // 4
+extern void C_ZN19QAbstractTransitionD2Ev(void* qthis); // 4
   // proto:  void QAbstractTransition::addAnimation(QAbstractAnimation * animation);
-extern void _ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
+extern void C_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
   // proto:  void QAbstractTransition::QAbstractTransition(QState * sourceState);
-extern void _ZN19QAbstractTransitionC2EP6QState(void* qthis, void* arg0); // 3
+extern void C_ZN19QAbstractTransitionC2EP6QState(void* qthis, void* arg0); // 3
   // proto:  QState * QAbstractTransition::sourceState();
-extern void _ZNK19QAbstractTransition11sourceStateEv(void* qthis); // 4
+extern void C_ZNK19QAbstractTransition11sourceStateEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -86,7 +86,7 @@ func (this *QAbstractTransition) transitionType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractTransition14transitionTypeEv
     // invoke: QAbstractTransition::TransitionType transitionType()
-    C._ZNK19QAbstractTransition14transitionTypeEv(this.qclsinst)
+    C.C_ZNK19QAbstractTransition14transitionTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "transitionType", args)
   }
@@ -106,7 +106,7 @@ func (this *QAbstractTransition) targetStates(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractTransition12targetStatesEv
     // invoke: QList<QAbstractState *> targetStates()
-    C._ZNK19QAbstractTransition12targetStatesEv(this.qclsinst)
+    C.C_ZNK19QAbstractTransition12targetStatesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "targetStates", args)
   }
@@ -129,7 +129,7 @@ func (this *QAbstractTransition) removeAnimation(args ...interface{}) () {
     // invoke: void removeAnimation(class QAbstractAnimation *)
     var arg0 = args[0].(QAbstractAnimation).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
+    C.C_ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "removeAnimation", args)
   }
@@ -149,7 +149,7 @@ func (this *QAbstractTransition) machine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractTransition7machineEv
     // invoke: QStateMachine * machine()
-    C._ZNK19QAbstractTransition7machineEv(this.qclsinst)
+    C.C_ZNK19QAbstractTransition7machineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "machine", args)
   }
@@ -169,7 +169,7 @@ func (this *QAbstractTransition) targetState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractTransition11targetStateEv
     // invoke: QAbstractState * targetState()
-    C._ZNK19QAbstractTransition11targetStateEv(this.qclsinst)
+    C.C_ZNK19QAbstractTransition11targetStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "targetState", args)
   }
@@ -189,7 +189,7 @@ func (this *QAbstractTransition) animations(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractTransition10animationsEv
     // invoke: QList<QAbstractAnimation *> animations()
-    C._ZNK19QAbstractTransition10animationsEv(this.qclsinst)
+    C.C_ZNK19QAbstractTransition10animationsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "animations", args)
   }
@@ -209,7 +209,7 @@ func (this *QAbstractTransition) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractTransition10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK19QAbstractTransition10metaObjectEv(this.qclsinst)
+    C.C_ZNK19QAbstractTransition10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "metaObject", args)
   }
@@ -232,7 +232,7 @@ func (this *QAbstractTransition) setTargetState(args ...interface{}) () {
     // invoke: void setTargetState(class QAbstractState *)
     var arg0 = args[0].(QAbstractState).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QAbstractTransition14setTargetStateEP14QAbstractState(this.qclsinst, arg0)
+    C.C_ZN19QAbstractTransition14setTargetStateEP14QAbstractState(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "setTargetState", args)
   }
@@ -252,7 +252,7 @@ func (this *QAbstractTransition) FreeQAbstractTransition(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QAbstractTransitionD0Ev
     // invoke: void ~QAbstractTransition()
-    C._ZN19QAbstractTransitionD2Ev(this.qclsinst)
+    C.C_ZN19QAbstractTransitionD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "~QAbstractTransition", args)
   }
@@ -275,7 +275,7 @@ func (this *QAbstractTransition) addAnimation(args ...interface{}) () {
     // invoke: void addAnimation(class QAbstractAnimation *)
     var arg0 = args[0].(QAbstractAnimation).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
+    C.C_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "addAnimation", args)
   }
@@ -300,7 +300,7 @@ func NewQAbstractTransition(args ...interface{}) QAbstractTransition {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QAbstractTransitionC2EP6QState(qthis, arg0)
+    C.C_ZN19QAbstractTransitionC2EP6QState(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "QAbstractTransition", args)
   }
@@ -321,7 +321,7 @@ func (this *QAbstractTransition) sourceState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractTransition11sourceStateEv
     // invoke: QState * sourceState()
-    C._ZNK19QAbstractTransition11sourceStateEv(this.qclsinst)
+    C.C_ZNK19QAbstractTransition11sourceStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "sourceState", args)
   }

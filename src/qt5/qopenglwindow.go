@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.go
 //
@@ -29,25 +29,25 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QOpenGLWindow::UpdateBehavior QOpenGLWindow::updateBehavior();
-extern void _ZNK13QOpenGLWindow14updateBehaviorEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLWindow14updateBehaviorEv(void* qthis); // 4
   // proto:  QOpenGLContext * QOpenGLWindow::shareContext();
-extern void _ZNK13QOpenGLWindow12shareContextEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLWindow12shareContextEv(void* qthis); // 4
   // proto:  void QOpenGLWindow::doneCurrent();
-extern void _ZN13QOpenGLWindow11doneCurrentEv(void* qthis); // 4
+extern void C_ZN13QOpenGLWindow11doneCurrentEv(void* qthis); // 4
   // proto:  bool QOpenGLWindow::isValid();
-extern void _ZNK13QOpenGLWindow7isValidEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLWindow7isValidEv(void* qthis); // 4
   // proto:  GLuint QOpenGLWindow::defaultFramebufferObject();
-extern void _ZNK13QOpenGLWindow24defaultFramebufferObjectEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(void* qthis); // 4
   // proto:  void QOpenGLWindow::~QOpenGLWindow();
-extern void _ZN13QOpenGLWindowD2Ev(void* qthis); // 4
+extern void C_ZN13QOpenGLWindowD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QOpenGLWindow::metaObject();
-extern void _ZNK13QOpenGLWindow10metaObjectEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLWindow10metaObjectEv(void* qthis); // 4
   // proto:  void QOpenGLWindow::makeCurrent();
-extern void _ZN13QOpenGLWindow11makeCurrentEv(void* qthis); // 4
+extern void C_ZN13QOpenGLWindow11makeCurrentEv(void* qthis); // 4
   // proto:  QImage QOpenGLWindow::grabFramebuffer();
-extern void _ZN13QOpenGLWindow15grabFramebufferEv(void* qthis); // 4
+extern void C_ZN13QOpenGLWindow15grabFramebufferEv(void* qthis); // 4
   // proto:  QOpenGLContext * QOpenGLWindow::context();
-extern void _ZNK13QOpenGLWindow7contextEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLWindow7contextEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -80,7 +80,7 @@ func (this *QOpenGLWindow) updateBehavior(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow14updateBehaviorEv
     // invoke: QOpenGLWindow::UpdateBehavior updateBehavior()
-    C._ZNK13QOpenGLWindow14updateBehaviorEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWindow14updateBehaviorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "updateBehavior", args)
   }
@@ -100,7 +100,7 @@ func (this *QOpenGLWindow) shareContext(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow12shareContextEv
     // invoke: QOpenGLContext * shareContext()
-    C._ZNK13QOpenGLWindow12shareContextEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWindow12shareContextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "shareContext", args)
   }
@@ -120,7 +120,7 @@ func (this *QOpenGLWindow) doneCurrent(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWindow11doneCurrentEv
     // invoke: void doneCurrent()
-    C._ZN13QOpenGLWindow11doneCurrentEv(this.qclsinst)
+    C.C_ZN13QOpenGLWindow11doneCurrentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "doneCurrent", args)
   }
@@ -140,7 +140,7 @@ func (this *QOpenGLWindow) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow7isValidEv
     // invoke: bool isValid()
-    C._ZNK13QOpenGLWindow7isValidEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWindow7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "isValid", args)
   }
@@ -160,7 +160,7 @@ func (this *QOpenGLWindow) defaultFramebufferObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow24defaultFramebufferObjectEv
     // invoke: GLuint defaultFramebufferObject()
-    C._ZNK13QOpenGLWindow24defaultFramebufferObjectEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "defaultFramebufferObject", args)
   }
@@ -180,7 +180,7 @@ func (this *QOpenGLWindow) FreeQOpenGLWindow(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWindowD0Ev
     // invoke: void ~QOpenGLWindow()
-    C._ZN13QOpenGLWindowD2Ev(this.qclsinst)
+    C.C_ZN13QOpenGLWindowD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "~QOpenGLWindow", args)
   }
@@ -200,7 +200,7 @@ func (this *QOpenGLWindow) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK13QOpenGLWindow10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWindow10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "metaObject", args)
   }
@@ -220,7 +220,7 @@ func (this *QOpenGLWindow) makeCurrent(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWindow11makeCurrentEv
     // invoke: void makeCurrent()
-    C._ZN13QOpenGLWindow11makeCurrentEv(this.qclsinst)
+    C.C_ZN13QOpenGLWindow11makeCurrentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "makeCurrent", args)
   }
@@ -240,7 +240,7 @@ func (this *QOpenGLWindow) grabFramebuffer(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWindow15grabFramebufferEv
     // invoke: QImage grabFramebuffer()
-    C._ZN13QOpenGLWindow15grabFramebufferEv(this.qclsinst)
+    C.C_ZN13QOpenGLWindow15grabFramebufferEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "grabFramebuffer", args)
   }
@@ -260,7 +260,7 @@ func (this *QOpenGLWindow) context(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow7contextEv
     // invoke: QOpenGLContext * context()
-    C._ZNK13QOpenGLWindow7contextEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWindow7contextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "context", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qgenericpluginfactory.h
 // dst-file: /src/gui/qgenericpluginfactory.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QStringList QGenericPluginFactory::keys();
-extern void _ZN21QGenericPluginFactory4keysEv(); // 4
+extern void C_ZN21QGenericPluginFactory4keysEv(); // 4
   // proto: static QObject * QGenericPluginFactory::create(const QString & , const QString & );
-extern void _ZN21QGenericPluginFactory6createERK7QStringS2_(void* arg0, void* arg1); // 4
+extern void C_ZN21QGenericPluginFactory6createERK7QStringS2_(void* arg0, void* arg1); // 4
 */
 import "C"
 // } // <= ext block end
@@ -63,7 +63,7 @@ func (this *QGenericPluginFactory) keys_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN21QGenericPluginFactory4keysEv
     // invoke: QStringList keys()
-    C._ZN21QGenericPluginFactory4keysEv()
+    C.C_ZN21QGenericPluginFactory4keysEv()
   default:
     qtrt.ErrorResolve("QGenericPluginFactory", "keys", args)
   }
@@ -89,7 +89,7 @@ func (this *QGenericPluginFactory) create_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN21QGenericPluginFactory6createERK7QStringS2_(arg0, arg1)
+    C.C_ZN21QGenericPluginFactory6createERK7QStringS2_(arg0, arg1)
   default:
     qtrt.ErrorResolve("QGenericPluginFactory", "create", args)
   }

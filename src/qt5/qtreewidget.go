@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qtreewidget.h
 // dst-file: /src/widgets/qtreewidget.go
 //
@@ -29,223 +29,223 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QTreeWidget::sortColumn();
-extern void _ZNK11QTreeWidget10sortColumnEv(void* qthis); // 4
+extern void C_ZNK11QTreeWidget10sortColumnEv(void* qthis); // 4
   // proto:  void QTreeWidget::setHeaderLabel(const QString & label);
-extern void _ZN11QTreeWidget14setHeaderLabelERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN11QTreeWidget14setHeaderLabelERK7QString(void* qthis, void* arg0); // 2
   // proto:  void QTreeWidget::setFirstItemColumnSpanned(const QTreeWidgetItem * item, bool span);
-extern void _ZN11QTreeWidget25setFirstItemColumnSpannedEPK15QTreeWidgetItemb(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZN11QTreeWidget25setFirstItemColumnSpannedEPK15QTreeWidgetItemb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  int QTreeWidget::indexOfTopLevelItem(QTreeWidgetItem * item);
-extern void _ZNK11QTreeWidget19indexOfTopLevelItemEP15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZNK11QTreeWidget19indexOfTopLevelItemEP15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidget::setHeaderLabels(const QStringList & labels);
-extern void _ZN11QTreeWidget15setHeaderLabelsERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN11QTreeWidget15setHeaderLabelsERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidget::setItemExpanded(const QTreeWidgetItem * item, bool expand);
-extern void _ZN11QTreeWidget15setItemExpandedEPK15QTreeWidgetItemb(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZN11QTreeWidget15setItemExpandedEPK15QTreeWidgetItemb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  void QTreeWidget::setItemSelected(const QTreeWidgetItem * item, bool select);
-extern void _ZN11QTreeWidget15setItemSelectedEPK15QTreeWidgetItemb(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZN11QTreeWidget15setItemSelectedEPK15QTreeWidgetItemb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  void QTreeWidget::QTreeWidget(QWidget * parent);
-extern void _ZN11QTreeWidgetC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN11QTreeWidgetC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  QWidget * QTreeWidget::itemWidget(QTreeWidgetItem * item, int column);
-extern void _ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QList<QTreeWidgetItem *> QTreeWidget::selectedItems();
-extern void _ZNK11QTreeWidget13selectedItemsEv(void* qthis); // 4
+extern void C_ZNK11QTreeWidget13selectedItemsEv(void* qthis); // 4
   // proto:  void QTreeWidget::openPersistentEditor(QTreeWidgetItem * item, int column);
-extern void _ZN11QTreeWidget20openPersistentEditorEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN11QTreeWidget20openPersistentEditorEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QRect QTreeWidget::visualItemRect(const QTreeWidgetItem * item);
-extern void _ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidget::removeItemWidget(QTreeWidgetItem * item, int column);
-extern void _ZN11QTreeWidget16removeItemWidgetEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 2
+extern void C_ZN11QTreeWidget16removeItemWidgetEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  void QTreeWidget::setColumnCount(int columns);
-extern void _ZN11QTreeWidget14setColumnCountEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN11QTreeWidget14setColumnCountEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTreeWidget::expandItem(const QTreeWidgetItem * item);
-extern void _ZN11QTreeWidget10expandItemEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZN11QTreeWidget10expandItemEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidget::collapseItem(const QTreeWidgetItem * item);
-extern void _ZN11QTreeWidget12collapseItemEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZN11QTreeWidget12collapseItemEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidget::setItemWidget(QTreeWidgetItem * item, int column, QWidget * widget);
-extern void _ZN11QTreeWidget13setItemWidgetEP15QTreeWidgetItemiP7QWidget(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN11QTreeWidget13setItemWidgetEP15QTreeWidgetItemiP7QWidget(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
   // proto:  void QTreeWidget::editItem(QTreeWidgetItem * item, int column);
-extern void _ZN11QTreeWidget8editItemEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN11QTreeWidget8editItemEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QTreeWidget::setSelectionModel(QItemSelectionModel * selectionModel);
-extern void _ZN11QTreeWidget17setSelectionModelEP19QItemSelectionModel(void* qthis, void* arg0); // 4
+extern void C_ZN11QTreeWidget17setSelectionModelEP19QItemSelectionModel(void* qthis, void* arg0); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::currentItem();
-extern void _ZNK11QTreeWidget11currentItemEv(void* qthis); // 4
+extern void C_ZNK11QTreeWidget11currentItemEv(void* qthis); // 4
   // proto:  bool QTreeWidget::isItemSelected(const QTreeWidgetItem * item);
-extern void _ZNK11QTreeWidget14isItemSelectedEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZNK11QTreeWidget14isItemSelectedEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::itemBelow(const QTreeWidgetItem * item);
-extern void _ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  int QTreeWidget::currentColumn();
-extern void _ZNK11QTreeWidget13currentColumnEv(void* qthis); // 4
+extern void C_ZNK11QTreeWidget13currentColumnEv(void* qthis); // 4
   // proto:  bool QTreeWidget::isItemHidden(const QTreeWidgetItem * item);
-extern void _ZNK11QTreeWidget12isItemHiddenEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZNK11QTreeWidget12isItemHiddenEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  int QTreeWidget::columnCount();
-extern void _ZNK11QTreeWidget11columnCountEv(void* qthis); // 4
+extern void C_ZNK11QTreeWidget11columnCountEv(void* qthis); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::itemAbove(const QTreeWidgetItem * item);
-extern void _ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::invisibleRootItem();
-extern void _ZNK11QTreeWidget17invisibleRootItemEv(void* qthis); // 4
+extern void C_ZNK11QTreeWidget17invisibleRootItemEv(void* qthis); // 4
   // proto:  bool QTreeWidget::isFirstItemColumnSpanned(const QTreeWidgetItem * item);
-extern void _ZNK11QTreeWidget24isFirstItemColumnSpannedEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZNK11QTreeWidget24isFirstItemColumnSpannedEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  bool QTreeWidget::isItemExpanded(const QTreeWidgetItem * item);
-extern void _ZNK11QTreeWidget14isItemExpandedEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZNK11QTreeWidget14isItemExpandedEPK15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::takeTopLevelItem(int index);
-extern void _ZN11QTreeWidget16takeTopLevelItemEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN11QTreeWidget16takeTopLevelItemEi(void* qthis, int32_t arg0); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::topLevelItem(int index);
-extern void _ZNK11QTreeWidget12topLevelItemEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QTreeWidget12topLevelItemEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTreeWidget::topLevelItemCount();
-extern void _ZNK11QTreeWidget17topLevelItemCountEv(void* qthis); // 4
+extern void C_ZNK11QTreeWidget17topLevelItemCountEv(void* qthis); // 4
   // proto:  void QTreeWidget::insertTopLevelItem(int index, QTreeWidgetItem * item);
-extern void _ZN11QTreeWidget18insertTopLevelItemEiP15QTreeWidgetItem(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN11QTreeWidget18insertTopLevelItemEiP15QTreeWidgetItem(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QTreeWidget::addTopLevelItem(QTreeWidgetItem * item);
-extern void _ZN11QTreeWidget15addTopLevelItemEP15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZN11QTreeWidget15addTopLevelItemEP15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::headerItem();
-extern void _ZNK11QTreeWidget10headerItemEv(void* qthis); // 4
+extern void C_ZNK11QTreeWidget10headerItemEv(void* qthis); // 4
   // proto:  void QTreeWidget::setCurrentItem(QTreeWidgetItem * item);
-extern void _ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidget::setCurrentItem(QTreeWidgetItem * item, int column);
-extern void _ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  const QMetaObject * QTreeWidget::metaObject();
-extern void _ZNK11QTreeWidget10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QTreeWidget10metaObjectEv(void* qthis); // 4
   // proto:  void QTreeWidget::~QTreeWidget();
-extern void _ZN11QTreeWidgetD2Ev(void* qthis); // 4
+extern void C_ZN11QTreeWidgetD2Ev(void* qthis); // 4
   // proto:  QTreeWidgetItem * QTreeWidget::itemAt(int x, int y);
-extern void _ZNK11QTreeWidget6itemAtEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZNK11QTreeWidget6itemAtEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  QTreeWidgetItem * QTreeWidget::itemAt(const QPoint & p);
-extern void _ZNK11QTreeWidget6itemAtERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZNK11QTreeWidget6itemAtERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidget::clear();
-extern void _ZN11QTreeWidget5clearEv(void* qthis); // 4
+extern void C_ZN11QTreeWidget5clearEv(void* qthis); // 4
   // proto:  void QTreeWidget::setItemHidden(const QTreeWidgetItem * item, bool hide);
-extern void _ZN11QTreeWidget13setItemHiddenEPK15QTreeWidgetItemb(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZN11QTreeWidget13setItemHiddenEPK15QTreeWidgetItemb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  void QTreeWidget::closePersistentEditor(QTreeWidgetItem * item, int column);
-extern void _ZN11QTreeWidget21closePersistentEditorEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN11QTreeWidget21closePersistentEditorEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QTreeWidget::setHeaderItem(QTreeWidgetItem * item);
-extern void _ZN11QTreeWidget13setHeaderItemEP15QTreeWidgetItem(void* qthis, void* arg0); // 4
+extern void C_ZN11QTreeWidget13setHeaderItemEP15QTreeWidgetItem(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidgetItem::setTextAlignment(int column, int alignment);
-extern void _ZN15QTreeWidgetItem16setTextAlignmentEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZN15QTreeWidgetItem16setTextAlignmentEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  int QTreeWidgetItem::columnCount();
-extern void _ZNK15QTreeWidgetItem11columnCountEv(void* qthis); // 2
+extern void C_ZNK15QTreeWidgetItem11columnCountEv(void* qthis); // 2
   // proto:  void QTreeWidgetItem::addChild(QTreeWidgetItem * child);
-extern void _ZN15QTreeWidgetItem8addChildEPS_(void* qthis, void* arg0); // 4
+extern void C_ZN15QTreeWidgetItem8addChildEPS_(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidgetItem::setSelected(bool select);
-extern void _ZN15QTreeWidgetItem11setSelectedEb(void* qthis, bool arg0); // 2
+extern void C_ZN15QTreeWidgetItem11setSelectedEb(void* qthis, bool arg0); // 2
   // proto:  QString QTreeWidgetItem::text(int column);
-extern void _ZNK15QTreeWidgetItem4textEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem4textEi(void* qthis, int32_t arg0); // 2
   // proto:  QString QTreeWidgetItem::whatsThis(int column);
-extern void _ZNK15QTreeWidgetItem9whatsThisEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem9whatsThisEi(void* qthis, int32_t arg0); // 2
   // proto:  int QTreeWidgetItem::type();
-extern void _ZNK15QTreeWidgetItem4typeEv(void* qthis); // 2
+extern void C_ZNK15QTreeWidgetItem4typeEv(void* qthis); // 2
   // proto:  QFont QTreeWidgetItem::font(int column);
-extern void _ZNK15QTreeWidgetItem4fontEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem4fontEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTreeWidgetItem::~QTreeWidgetItem();
-extern void _ZN15QTreeWidgetItemD2Ev(void* qthis); // 4
+extern void C_ZN15QTreeWidgetItemD2Ev(void* qthis); // 4
   // proto:  void QTreeWidgetItem::setForeground(int column, const QBrush & brush);
-extern void _ZN15QTreeWidgetItem13setForegroundEiRK6QBrush(void* qthis, int32_t arg0, void* arg1); // 2
+extern void C_ZN15QTreeWidgetItem13setForegroundEiRK6QBrush(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  bool QTreeWidgetItem::isSelected();
-extern void _ZNK15QTreeWidgetItem10isSelectedEv(void* qthis); // 2
+extern void C_ZNK15QTreeWidgetItem10isSelectedEv(void* qthis); // 2
   // proto:  bool QTreeWidgetItem::isDisabled();
-extern void _ZNK15QTreeWidgetItem10isDisabledEv(void* qthis); // 2
+extern void C_ZNK15QTreeWidgetItem10isDisabledEv(void* qthis); // 2
   // proto:  int QTreeWidgetItem::indexOfChild(QTreeWidgetItem * child);
-extern void _ZNK15QTreeWidgetItem12indexOfChildEPS_(void* qthis, void* arg0); // 2
+extern void C_ZNK15QTreeWidgetItem12indexOfChildEPS_(void* qthis, void* arg0); // 2
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem * parent, int type);
-extern void _ZN15QTreeWidgetItemC2EPS_i(void* qthis, void* arg0, int32_t arg1); // 3
+extern void C_ZN15QTreeWidgetItemC2EPS_i(void* qthis, void* arg0, int32_t arg1); // 3
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(int type);
-extern void _ZN15QTreeWidgetItemC2Ei(void* qthis, int32_t arg0); // 3
+extern void C_ZN15QTreeWidgetItemC2Ei(void* qthis, int32_t arg0); // 3
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem * parent, QTreeWidgetItem * after, int type);
-extern void _ZN15QTreeWidgetItemC2EPS_S0_i(void* qthis, void* arg0, void* arg1, int32_t arg2); // 3
+extern void C_ZN15QTreeWidgetItemC2EPS_S0_i(void* qthis, void* arg0, void* arg1, int32_t arg2); // 3
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidget * view, int type);
-extern void _ZN15QTreeWidgetItemC2EP11QTreeWidgeti(void* qthis, void* arg0, int32_t arg1); // 3
+extern void C_ZN15QTreeWidgetItemC2EP11QTreeWidgeti(void* qthis, void* arg0, int32_t arg1); // 3
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidget * view, const QStringList & strings, int type);
-extern void _ZN15QTreeWidgetItemC2EP11QTreeWidgetRK11QStringListi(void* qthis, void* arg0, void* arg1, int32_t arg2); // 3
+extern void C_ZN15QTreeWidgetItemC2EP11QTreeWidgetRK11QStringListi(void* qthis, void* arg0, void* arg1, int32_t arg2); // 3
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidget * view, QTreeWidgetItem * after, int type);
-extern void _ZN15QTreeWidgetItemC2EP11QTreeWidgetPS_i(void* qthis, void* arg0, void* arg1, int32_t arg2); // 3
+extern void C_ZN15QTreeWidgetItemC2EP11QTreeWidgetPS_i(void* qthis, void* arg0, void* arg1, int32_t arg2); // 3
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(const QStringList & strings, int type);
-extern void _ZN15QTreeWidgetItemC2ERK11QStringListi(void* qthis, void* arg0, int32_t arg1); // 3
+extern void C_ZN15QTreeWidgetItemC2ERK11QStringListi(void* qthis, void* arg0, int32_t arg1); // 3
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(const QTreeWidgetItem & other);
-extern void _ZN15QTreeWidgetItemC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN15QTreeWidgetItemC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem * parent, const QStringList & strings, int type);
-extern void _ZN15QTreeWidgetItemC2EPS_RK11QStringListi(void* qthis, void* arg0, void* arg1, int32_t arg2); // 3
+extern void C_ZN15QTreeWidgetItemC2EPS_RK11QStringListi(void* qthis, void* arg0, void* arg1, int32_t arg2); // 3
   // proto:  void QTreeWidgetItem::write(QDataStream & out);
-extern void _ZNK15QTreeWidgetItem5writeER11QDataStream(void* qthis, void* arg0); // 4
+extern void C_ZNK15QTreeWidgetItem5writeER11QDataStream(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidgetItem::setExpanded(bool expand);
-extern void _ZN15QTreeWidgetItem11setExpandedEb(void* qthis, bool arg0); // 2
+extern void C_ZN15QTreeWidgetItem11setExpandedEb(void* qthis, bool arg0); // 2
   // proto:  void QTreeWidgetItem::insertChild(int index, QTreeWidgetItem * child);
-extern void _ZN15QTreeWidgetItem11insertChildEiPS_(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN15QTreeWidgetItem11insertChildEiPS_(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  QColor QTreeWidgetItem::backgroundColor(int column);
-extern void _ZNK15QTreeWidgetItem15backgroundColorEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem15backgroundColorEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTreeWidgetItem::setBackground(int column, const QBrush & brush);
-extern void _ZN15QTreeWidgetItem13setBackgroundEiRK6QBrush(void* qthis, int32_t arg0, void* arg1); // 2
+extern void C_ZN15QTreeWidgetItem13setBackgroundEiRK6QBrush(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QColor QTreeWidgetItem::textColor(int column);
-extern void _ZNK15QTreeWidgetItem9textColorEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem9textColorEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTreeWidgetItem::setIcon(int column, const QIcon & icon);
-extern void _ZN15QTreeWidgetItem7setIconEiRK5QIcon(void* qthis, int32_t arg0, void* arg1); // 2
+extern void C_ZN15QTreeWidgetItem7setIconEiRK5QIcon(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  int QTreeWidgetItem::childCount();
-extern void _ZNK15QTreeWidgetItem10childCountEv(void* qthis); // 2
+extern void C_ZNK15QTreeWidgetItem10childCountEv(void* qthis); // 2
   // proto:  void QTreeWidgetItem::setData(int column, int role, const QVariant & value);
-extern void _ZN15QTreeWidgetItem7setDataEiiRK8QVariant(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN15QTreeWidgetItem7setDataEiiRK8QVariant(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  QString QTreeWidgetItem::statusTip(int column);
-extern void _ZNK15QTreeWidgetItem9statusTipEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem9statusTipEi(void* qthis, int32_t arg0); // 2
   // proto:  QBrush QTreeWidgetItem::foreground(int column);
-extern void _ZNK15QTreeWidgetItem10foregroundEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem10foregroundEi(void* qthis, int32_t arg0); // 2
   // proto:  QTreeWidget * QTreeWidgetItem::treeWidget();
-extern void _ZNK15QTreeWidgetItem10treeWidgetEv(void* qthis); // 2
+extern void C_ZNK15QTreeWidgetItem10treeWidgetEv(void* qthis); // 2
   // proto:  QTreeWidgetItem * QTreeWidgetItem::parent();
-extern void _ZNK15QTreeWidgetItem6parentEv(void* qthis); // 2
+extern void C_ZNK15QTreeWidgetItem6parentEv(void* qthis); // 2
   // proto:  bool QTreeWidgetItem::isFirstColumnSpanned();
-extern void _ZNK15QTreeWidgetItem20isFirstColumnSpannedEv(void* qthis); // 2
+extern void C_ZNK15QTreeWidgetItem20isFirstColumnSpannedEv(void* qthis); // 2
   // proto:  void QTreeWidgetItem::setFirstColumnSpanned(bool span);
-extern void _ZN15QTreeWidgetItem21setFirstColumnSpannedEb(void* qthis, bool arg0); // 2
+extern void C_ZN15QTreeWidgetItem21setFirstColumnSpannedEb(void* qthis, bool arg0); // 2
   // proto:  QTreeWidgetItem * QTreeWidgetItem::clone();
-extern void _ZNK15QTreeWidgetItem5cloneEv(void* qthis); // 4
+extern void C_ZNK15QTreeWidgetItem5cloneEv(void* qthis); // 4
   // proto:  void QTreeWidgetItem::setBackgroundColor(int column, const QColor & color);
-extern void _ZN15QTreeWidgetItem18setBackgroundColorEiRK6QColor(void* qthis, int32_t arg0, void* arg1); // 2
+extern void C_ZN15QTreeWidgetItem18setBackgroundColorEiRK6QColor(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QString QTreeWidgetItem::toolTip(int column);
-extern void _ZNK15QTreeWidgetItem7toolTipEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem7toolTipEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTreeWidgetItem::setFont(int column, const QFont & font);
-extern void _ZN15QTreeWidgetItem7setFontEiRK5QFont(void* qthis, int32_t arg0, void* arg1); // 2
+extern void C_ZN15QTreeWidgetItem7setFontEiRK5QFont(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QTreeWidgetItem::ChildIndicatorPolicy QTreeWidgetItem::childIndicatorPolicy();
-extern void _ZNK15QTreeWidgetItem20childIndicatorPolicyEv(void* qthis); // 4
+extern void C_ZNK15QTreeWidgetItem20childIndicatorPolicyEv(void* qthis); // 4
   // proto:  void QTreeWidgetItem::setWhatsThis(int column, const QString & whatsThis);
-extern void _ZN15QTreeWidgetItem12setWhatsThisEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
+extern void C_ZN15QTreeWidgetItem12setWhatsThisEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QBrush QTreeWidgetItem::background(int column);
-extern void _ZNK15QTreeWidgetItem10backgroundEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem10backgroundEi(void* qthis, int32_t arg0); // 2
   // proto:  QTreeWidgetItem * QTreeWidgetItem::child(int index);
-extern void _ZNK15QTreeWidgetItem5childEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem5childEi(void* qthis, int32_t arg0); // 2
   // proto:  QVariant QTreeWidgetItem::data(int column, int role);
-extern void _ZNK15QTreeWidgetItem4dataEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZNK15QTreeWidgetItem4dataEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QTreeWidgetItem::setTextColor(int column, const QColor & color);
-extern void _ZN15QTreeWidgetItem12setTextColorEiRK6QColor(void* qthis, int32_t arg0, void* arg1); // 2
+extern void C_ZN15QTreeWidgetItem12setTextColorEiRK6QColor(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QIcon QTreeWidgetItem::icon(int column);
-extern void _ZNK15QTreeWidgetItem4iconEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem4iconEi(void* qthis, int32_t arg0); // 2
   // proto:  bool QTreeWidgetItem::isExpanded();
-extern void _ZNK15QTreeWidgetItem10isExpandedEv(void* qthis); // 2
+extern void C_ZNK15QTreeWidgetItem10isExpandedEv(void* qthis); // 2
   // proto:  void QTreeWidgetItem::setSizeHint(int column, const QSize & size);
-extern void _ZN15QTreeWidgetItem11setSizeHintEiRK5QSize(void* qthis, int32_t arg0, void* arg1); // 2
+extern void C_ZN15QTreeWidgetItem11setSizeHintEiRK5QSize(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  void QTreeWidgetItem::setToolTip(int column, const QString & toolTip);
-extern void _ZN15QTreeWidgetItem10setToolTipEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
+extern void C_ZN15QTreeWidgetItem10setToolTipEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  QSize QTreeWidgetItem::sizeHint(int column);
-extern void _ZNK15QTreeWidgetItem8sizeHintEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem8sizeHintEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTreeWidgetItem::read(QDataStream & in);
-extern void _ZN15QTreeWidgetItem4readER11QDataStream(void* qthis, void* arg0); // 4
+extern void C_ZN15QTreeWidgetItem4readER11QDataStream(void* qthis, void* arg0); // 4
   // proto:  bool QTreeWidgetItem::isHidden();
-extern void _ZNK15QTreeWidgetItem8isHiddenEv(void* qthis); // 2
+extern void C_ZNK15QTreeWidgetItem8isHiddenEv(void* qthis); // 2
   // proto:  void QTreeWidgetItem::setText(int column, const QString & text);
-extern void _ZN15QTreeWidgetItem7setTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
+extern void C_ZN15QTreeWidgetItem7setTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  void QTreeWidgetItem::setStatusTip(int column, const QString & statusTip);
-extern void _ZN15QTreeWidgetItem12setStatusTipEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
+extern void C_ZN15QTreeWidgetItem12setStatusTipEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  void QTreeWidgetItem::removeChild(QTreeWidgetItem * child);
-extern void _ZN15QTreeWidgetItem11removeChildEPS_(void* qthis, void* arg0); // 4
+extern void C_ZN15QTreeWidgetItem11removeChildEPS_(void* qthis, void* arg0); // 4
   // proto:  void QTreeWidgetItem::setDisabled(bool disabled);
-extern void _ZN15QTreeWidgetItem11setDisabledEb(void* qthis, bool arg0); // 2
+extern void C_ZN15QTreeWidgetItem11setDisabledEb(void* qthis, bool arg0); // 2
   // proto:  Qt::ItemFlags QTreeWidgetItem::flags();
-extern void _ZNK15QTreeWidgetItem5flagsEv(void* qthis); // 4
+extern void C_ZNK15QTreeWidgetItem5flagsEv(void* qthis); // 4
   // proto:  Qt::CheckState QTreeWidgetItem::checkState(int column);
-extern void _ZNK15QTreeWidgetItem10checkStateEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem10checkStateEi(void* qthis, int32_t arg0); // 2
   // proto:  QList<QTreeWidgetItem *> QTreeWidgetItem::takeChildren();
-extern void _ZN15QTreeWidgetItem12takeChildrenEv(void* qthis); // 4
+extern void C_ZN15QTreeWidgetItem12takeChildrenEv(void* qthis); // 4
   // proto:  QTreeWidgetItem * QTreeWidgetItem::takeChild(int index);
-extern void _ZN15QTreeWidgetItem9takeChildEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QTreeWidgetItem9takeChildEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTreeWidgetItem::textAlignment(int column);
-extern void _ZNK15QTreeWidgetItem13textAlignmentEi(void* qthis, int32_t arg0); // 2
+extern void C_ZNK15QTreeWidgetItem13textAlignmentEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTreeWidgetItem::setHidden(bool hide);
-extern void _ZN15QTreeWidgetItem9setHiddenEb(void* qthis, bool arg0); // 2
+extern void C_ZN15QTreeWidgetItem9setHiddenEb(void* qthis, bool arg0); // 2
 */
 import "C"
 // } // <= ext block end
@@ -293,7 +293,7 @@ func (this *QTreeWidget) sortColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget10sortColumnEv
     // invoke: int sortColumn()
-    C._ZNK11QTreeWidget10sortColumnEv(this.qclsinst)
+    C.C_ZNK11QTreeWidget10sortColumnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidget", "sortColumn", args)
   }
@@ -316,7 +316,7 @@ func (this *QTreeWidget) setHeaderLabel(args ...interface{}) () {
     // invoke: void setHeaderLabel(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTreeWidget14setHeaderLabelERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QTreeWidget14setHeaderLabelERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "setHeaderLabel", args)
   }
@@ -342,7 +342,7 @@ func (this *QTreeWidget) setFirstItemColumnSpanned(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN11QTreeWidget25setFirstItemColumnSpannedEPK15QTreeWidgetItemb(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTreeWidget25setFirstItemColumnSpannedEPK15QTreeWidgetItemb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidget", "setFirstItemColumnSpanned", args)
   }
@@ -365,7 +365,7 @@ func (this *QTreeWidget) indexOfTopLevelItem(args ...interface{}) () {
     // invoke: int indexOfTopLevelItem(class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QTreeWidget19indexOfTopLevelItemEP15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZNK11QTreeWidget19indexOfTopLevelItemEP15QTreeWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "indexOfTopLevelItem", args)
   }
@@ -388,7 +388,7 @@ func (this *QTreeWidget) setHeaderLabels(args ...interface{}) () {
     // invoke: void setHeaderLabels(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTreeWidget15setHeaderLabelsERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN11QTreeWidget15setHeaderLabelsERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "setHeaderLabels", args)
   }
@@ -414,7 +414,7 @@ func (this *QTreeWidget) setItemExpanded(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN11QTreeWidget15setItemExpandedEPK15QTreeWidgetItemb(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTreeWidget15setItemExpandedEPK15QTreeWidgetItemb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidget", "setItemExpanded", args)
   }
@@ -440,7 +440,7 @@ func (this *QTreeWidget) setItemSelected(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN11QTreeWidget15setItemSelectedEPK15QTreeWidgetItemb(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTreeWidget15setItemSelectedEPK15QTreeWidgetItemb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidget", "setItemSelected", args)
   }
@@ -465,7 +465,7 @@ func NewQTreeWidget(args ...interface{}) QTreeWidget {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QTreeWidgetC2EP7QWidget(qthis, arg0)
+    C.C_ZN11QTreeWidgetC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "QTreeWidget", args)
   }
@@ -492,7 +492,7 @@ func (this *QTreeWidget) itemWidget(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
+    C.C_ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidget", "itemWidget", args)
   }
@@ -512,7 +512,7 @@ func (this *QTreeWidget) selectedItems(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget13selectedItemsEv
     // invoke: QList<QTreeWidgetItem *> selectedItems()
-    C._ZNK11QTreeWidget13selectedItemsEv(this.qclsinst)
+    C.C_ZNK11QTreeWidget13selectedItemsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidget", "selectedItems", args)
   }
@@ -538,7 +538,7 @@ func (this *QTreeWidget) openPersistentEditor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QTreeWidget20openPersistentEditorEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTreeWidget20openPersistentEditorEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidget", "openPersistentEditor", args)
   }
@@ -561,7 +561,7 @@ func (this *QTreeWidget) visualItemRect(args ...interface{}) () {
     // invoke: QRect visualItemRect(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "visualItemRect", args)
   }
@@ -587,7 +587,7 @@ func (this *QTreeWidget) removeItemWidget(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QTreeWidget16removeItemWidgetEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTreeWidget16removeItemWidgetEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidget", "removeItemWidget", args)
   }
@@ -610,7 +610,7 @@ func (this *QTreeWidget) setColumnCount(args ...interface{}) () {
     // invoke: void setColumnCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QTreeWidget14setColumnCountEi(this.qclsinst, arg0)
+    C.C_ZN11QTreeWidget14setColumnCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "setColumnCount", args)
   }
@@ -633,7 +633,7 @@ func (this *QTreeWidget) expandItem(args ...interface{}) () {
     // invoke: void expandItem(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTreeWidget10expandItemEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZN11QTreeWidget10expandItemEPK15QTreeWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "expandItem", args)
   }
@@ -656,7 +656,7 @@ func (this *QTreeWidget) collapseItem(args ...interface{}) () {
     // invoke: void collapseItem(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTreeWidget12collapseItemEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZN11QTreeWidget12collapseItemEPK15QTreeWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "collapseItem", args)
   }
@@ -685,7 +685,7 @@ func (this *QTreeWidget) setItemWidget(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN11QTreeWidget13setItemWidgetEP15QTreeWidgetItemiP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN11QTreeWidget13setItemWidgetEP15QTreeWidgetItemiP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTreeWidget", "setItemWidget", args)
   }
@@ -711,7 +711,7 @@ func (this *QTreeWidget) editItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QTreeWidget8editItemEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTreeWidget8editItemEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidget", "editItem", args)
   }
@@ -734,7 +734,7 @@ func (this *QTreeWidget) setSelectionModel(args ...interface{}) () {
     // invoke: void setSelectionModel(class QItemSelectionModel *)
     var arg0 = args[0].(QItemSelectionModel).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTreeWidget17setSelectionModelEP19QItemSelectionModel(this.qclsinst, arg0)
+    C.C_ZN11QTreeWidget17setSelectionModelEP19QItemSelectionModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "setSelectionModel", args)
   }
@@ -754,7 +754,7 @@ func (this *QTreeWidget) currentItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget11currentItemEv
     // invoke: QTreeWidgetItem * currentItem()
-    C._ZNK11QTreeWidget11currentItemEv(this.qclsinst)
+    C.C_ZNK11QTreeWidget11currentItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidget", "currentItem", args)
   }
@@ -777,7 +777,7 @@ func (this *QTreeWidget) isItemSelected(args ...interface{}) () {
     // invoke: bool isItemSelected(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QTreeWidget14isItemSelectedEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZNK11QTreeWidget14isItemSelectedEPK15QTreeWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "isItemSelected", args)
   }
@@ -800,7 +800,7 @@ func (this *QTreeWidget) itemBelow(args ...interface{}) () {
     // invoke: QTreeWidgetItem * itemBelow(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "itemBelow", args)
   }
@@ -820,7 +820,7 @@ func (this *QTreeWidget) currentColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget13currentColumnEv
     // invoke: int currentColumn()
-    C._ZNK11QTreeWidget13currentColumnEv(this.qclsinst)
+    C.C_ZNK11QTreeWidget13currentColumnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidget", "currentColumn", args)
   }
@@ -843,7 +843,7 @@ func (this *QTreeWidget) isItemHidden(args ...interface{}) () {
     // invoke: bool isItemHidden(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QTreeWidget12isItemHiddenEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZNK11QTreeWidget12isItemHiddenEPK15QTreeWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "isItemHidden", args)
   }
@@ -863,7 +863,7 @@ func (this *QTreeWidget) columnCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget11columnCountEv
     // invoke: int columnCount()
-    C._ZNK11QTreeWidget11columnCountEv(this.qclsinst)
+    C.C_ZNK11QTreeWidget11columnCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidget", "columnCount", args)
   }
@@ -886,7 +886,7 @@ func (this *QTreeWidget) itemAbove(args ...interface{}) () {
     // invoke: QTreeWidgetItem * itemAbove(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "itemAbove", args)
   }
@@ -906,7 +906,7 @@ func (this *QTreeWidget) invisibleRootItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget17invisibleRootItemEv
     // invoke: QTreeWidgetItem * invisibleRootItem()
-    C._ZNK11QTreeWidget17invisibleRootItemEv(this.qclsinst)
+    C.C_ZNK11QTreeWidget17invisibleRootItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidget", "invisibleRootItem", args)
   }
@@ -929,7 +929,7 @@ func (this *QTreeWidget) isFirstItemColumnSpanned(args ...interface{}) () {
     // invoke: bool isFirstItemColumnSpanned(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QTreeWidget24isFirstItemColumnSpannedEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZNK11QTreeWidget24isFirstItemColumnSpannedEPK15QTreeWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "isFirstItemColumnSpanned", args)
   }
@@ -952,7 +952,7 @@ func (this *QTreeWidget) isItemExpanded(args ...interface{}) () {
     // invoke: bool isItemExpanded(const class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QTreeWidget14isItemExpandedEPK15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZNK11QTreeWidget14isItemExpandedEPK15QTreeWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "isItemExpanded", args)
   }
@@ -975,7 +975,7 @@ func (this *QTreeWidget) takeTopLevelItem(args ...interface{}) () {
     // invoke: QTreeWidgetItem * takeTopLevelItem(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QTreeWidget16takeTopLevelItemEi(this.qclsinst, arg0)
+    C.C_ZN11QTreeWidget16takeTopLevelItemEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "takeTopLevelItem", args)
   }
@@ -998,7 +998,7 @@ func (this *QTreeWidget) topLevelItem(args ...interface{}) () {
     // invoke: QTreeWidgetItem * topLevelItem(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTreeWidget12topLevelItemEi(this.qclsinst, arg0)
+    C.C_ZNK11QTreeWidget12topLevelItemEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "topLevelItem", args)
   }
@@ -1018,7 +1018,7 @@ func (this *QTreeWidget) topLevelItemCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget17topLevelItemCountEv
     // invoke: int topLevelItemCount()
-    C._ZNK11QTreeWidget17topLevelItemCountEv(this.qclsinst)
+    C.C_ZNK11QTreeWidget17topLevelItemCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidget", "topLevelItemCount", args)
   }
@@ -1044,7 +1044,7 @@ func (this *QTreeWidget) insertTopLevelItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN11QTreeWidget18insertTopLevelItemEiP15QTreeWidgetItem(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTreeWidget18insertTopLevelItemEiP15QTreeWidgetItem(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidget", "insertTopLevelItem", args)
   }
@@ -1067,7 +1067,7 @@ func (this *QTreeWidget) addTopLevelItem(args ...interface{}) () {
     // invoke: void addTopLevelItem(class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTreeWidget15addTopLevelItemEP15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZN11QTreeWidget15addTopLevelItemEP15QTreeWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "addTopLevelItem", args)
   }
@@ -1087,7 +1087,7 @@ func (this *QTreeWidget) headerItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget10headerItemEv
     // invoke: QTreeWidgetItem * headerItem()
-    C._ZNK11QTreeWidget10headerItemEv(this.qclsinst)
+    C.C_ZNK11QTreeWidget10headerItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidget", "headerItem", args)
   }
@@ -1114,7 +1114,7 @@ func (this *QTreeWidget) setCurrentItem(args ...interface{}) () {
     // invoke: void setCurrentItem(class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItem(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItemi
     // invoke: void setCurrentItem(class QTreeWidgetItem *, int)
@@ -1122,7 +1122,7 @@ func (this *QTreeWidget) setCurrentItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidget", "setCurrentItem", args)
   }
@@ -1142,7 +1142,7 @@ func (this *QTreeWidget) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTreeWidget10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QTreeWidget10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QTreeWidget10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidget", "metaObject", args)
   }
@@ -1162,7 +1162,7 @@ func (this *QTreeWidget) FreeQTreeWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTreeWidgetD0Ev
     // invoke: void ~QTreeWidget()
-    C._ZN11QTreeWidgetD2Ev(this.qclsinst)
+    C.C_ZN11QTreeWidgetD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidget", "~QTreeWidget", args)
   }
@@ -1191,13 +1191,13 @@ func (this *QTreeWidget) itemAt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK11QTreeWidget6itemAtEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK11QTreeWidget6itemAtEii(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK11QTreeWidget6itemAtERK6QPoint
     // invoke: QTreeWidgetItem * itemAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QTreeWidget6itemAtERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK11QTreeWidget6itemAtERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "itemAt", args)
   }
@@ -1217,7 +1217,7 @@ func (this *QTreeWidget) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTreeWidget5clearEv
     // invoke: void clear()
-    C._ZN11QTreeWidget5clearEv(this.qclsinst)
+    C.C_ZN11QTreeWidget5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidget", "clear", args)
   }
@@ -1243,7 +1243,7 @@ func (this *QTreeWidget) setItemHidden(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN11QTreeWidget13setItemHiddenEPK15QTreeWidgetItemb(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTreeWidget13setItemHiddenEPK15QTreeWidgetItemb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidget", "setItemHidden", args)
   }
@@ -1269,7 +1269,7 @@ func (this *QTreeWidget) closePersistentEditor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QTreeWidget21closePersistentEditorEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTreeWidget21closePersistentEditorEP15QTreeWidgetItemi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidget", "closePersistentEditor", args)
   }
@@ -1292,7 +1292,7 @@ func (this *QTreeWidget) setHeaderItem(args ...interface{}) () {
     // invoke: void setHeaderItem(class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTreeWidget13setHeaderItemEP15QTreeWidgetItem(this.qclsinst, arg0)
+    C.C_ZN11QTreeWidget13setHeaderItemEP15QTreeWidgetItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidget", "setHeaderItem", args)
   }
@@ -1318,7 +1318,7 @@ func (this *QTreeWidgetItem) setTextAlignment(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem16setTextAlignmentEii(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem16setTextAlignmentEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setTextAlignment", args)
   }
@@ -1338,7 +1338,7 @@ func (this *QTreeWidgetItem) columnCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem11columnCountEv
     // invoke: int columnCount()
-    C._ZNK15QTreeWidgetItem11columnCountEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem11columnCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "columnCount", args)
   }
@@ -1361,7 +1361,7 @@ func (this *QTreeWidgetItem) addChild(args ...interface{}) () {
     // invoke: void addChild(class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTreeWidgetItem8addChildEPS_(this.qclsinst, arg0)
+    C.C_ZN15QTreeWidgetItem8addChildEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "addChild", args)
   }
@@ -1384,7 +1384,7 @@ func (this *QTreeWidgetItem) setSelected(args ...interface{}) () {
     // invoke: void setSelected(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QTreeWidgetItem11setSelectedEb(this.qclsinst, arg0)
+    C.C_ZN15QTreeWidgetItem11setSelectedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setSelected", args)
   }
@@ -1407,7 +1407,7 @@ func (this *QTreeWidgetItem) text(args ...interface{}) () {
     // invoke: QString text(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem4textEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem4textEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "text", args)
   }
@@ -1430,7 +1430,7 @@ func (this *QTreeWidgetItem) whatsThis(args ...interface{}) () {
     // invoke: QString whatsThis(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem9whatsThisEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem9whatsThisEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "whatsThis", args)
   }
@@ -1450,7 +1450,7 @@ func (this *QTreeWidgetItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem4typeEv
     // invoke: int type()
-    C._ZNK15QTreeWidgetItem4typeEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "type", args)
   }
@@ -1473,7 +1473,7 @@ func (this *QTreeWidgetItem) font(args ...interface{}) () {
     // invoke: QFont font(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem4fontEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem4fontEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "font", args)
   }
@@ -1493,7 +1493,7 @@ func (this *QTreeWidgetItem) FreeQTreeWidgetItem(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTreeWidgetItemD0Ev
     // invoke: void ~QTreeWidgetItem()
-    C._ZN15QTreeWidgetItemD2Ev(this.qclsinst)
+    C.C_ZN15QTreeWidgetItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "~QTreeWidgetItem", args)
   }
@@ -1519,7 +1519,7 @@ func (this *QTreeWidgetItem) setForeground(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QBrush).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem13setForegroundEiRK6QBrush(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem13setForegroundEiRK6QBrush(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setForeground", args)
   }
@@ -1539,7 +1539,7 @@ func (this *QTreeWidgetItem) isSelected(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem10isSelectedEv
     // invoke: bool isSelected()
-    C._ZNK15QTreeWidgetItem10isSelectedEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem10isSelectedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "isSelected", args)
   }
@@ -1559,7 +1559,7 @@ func (this *QTreeWidgetItem) isDisabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem10isDisabledEv
     // invoke: bool isDisabled()
-    C._ZNK15QTreeWidgetItem10isDisabledEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem10isDisabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "isDisabled", args)
   }
@@ -1582,7 +1582,7 @@ func (this *QTreeWidgetItem) indexOfChild(args ...interface{}) () {
     // invoke: int indexOfChild(class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem12indexOfChildEPS_(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem12indexOfChildEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "indexOfChild", args)
   }
@@ -1644,7 +1644,7 @@ func NewQTreeWidgetItem(args ...interface{}) QTreeWidgetItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QTreeWidgetItemC2EPS_i(qthis, arg0, arg1)
+    C.C_ZN15QTreeWidgetItemC2EPS_i(qthis, arg0, arg1)
   case 1:
     // invoke: _ZN15QTreeWidgetItemC1Ei
     // invoke: void QTreeWidgetItem(int)
@@ -1652,7 +1652,7 @@ func NewQTreeWidgetItem(args ...interface{}) QTreeWidgetItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QTreeWidgetItemC2Ei(qthis, arg0)
+    C.C_ZN15QTreeWidgetItemC2Ei(qthis, arg0)
   case 2:
     // invoke: _ZN15QTreeWidgetItemC1EPS_S0_i
     // invoke: void QTreeWidgetItem(class QTreeWidgetItem *, class QTreeWidgetItem *, int)
@@ -1664,7 +1664,7 @@ func NewQTreeWidgetItem(args ...interface{}) QTreeWidgetItem {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QTreeWidgetItemC2EPS_S0_i(qthis, arg0, arg1, arg2)
+    C.C_ZN15QTreeWidgetItemC2EPS_S0_i(qthis, arg0, arg1, arg2)
   case 3:
     // invoke: _ZN15QTreeWidgetItemC1EP11QTreeWidgeti
     // invoke: void QTreeWidgetItem(class QTreeWidget *, int)
@@ -1674,7 +1674,7 @@ func NewQTreeWidgetItem(args ...interface{}) QTreeWidgetItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QTreeWidgetItemC2EP11QTreeWidgeti(qthis, arg0, arg1)
+    C.C_ZN15QTreeWidgetItemC2EP11QTreeWidgeti(qthis, arg0, arg1)
   case 4:
     // invoke: _ZN15QTreeWidgetItemC1EP11QTreeWidgetRK11QStringListi
     // invoke: void QTreeWidgetItem(class QTreeWidget *, const class QStringList &, int)
@@ -1686,7 +1686,7 @@ func NewQTreeWidgetItem(args ...interface{}) QTreeWidgetItem {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QTreeWidgetItemC2EP11QTreeWidgetRK11QStringListi(qthis, arg0, arg1, arg2)
+    C.C_ZN15QTreeWidgetItemC2EP11QTreeWidgetRK11QStringListi(qthis, arg0, arg1, arg2)
   case 5:
     // invoke: _ZN15QTreeWidgetItemC1EP11QTreeWidgetPS_i
     // invoke: void QTreeWidgetItem(class QTreeWidget *, class QTreeWidgetItem *, int)
@@ -1698,7 +1698,7 @@ func NewQTreeWidgetItem(args ...interface{}) QTreeWidgetItem {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QTreeWidgetItemC2EP11QTreeWidgetPS_i(qthis, arg0, arg1, arg2)
+    C.C_ZN15QTreeWidgetItemC2EP11QTreeWidgetPS_i(qthis, arg0, arg1, arg2)
   case 6:
     // invoke: _ZN15QTreeWidgetItemC1ERK11QStringListi
     // invoke: void QTreeWidgetItem(const class QStringList &, int)
@@ -1708,7 +1708,7 @@ func NewQTreeWidgetItem(args ...interface{}) QTreeWidgetItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QTreeWidgetItemC2ERK11QStringListi(qthis, arg0, arg1)
+    C.C_ZN15QTreeWidgetItemC2ERK11QStringListi(qthis, arg0, arg1)
   case 7:
     // invoke: _ZN15QTreeWidgetItemC1ERKS_
     // invoke: void QTreeWidgetItem(const class QTreeWidgetItem &)
@@ -1716,7 +1716,7 @@ func NewQTreeWidgetItem(args ...interface{}) QTreeWidgetItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QTreeWidgetItemC2ERKS_(qthis, arg0)
+    C.C_ZN15QTreeWidgetItemC2ERKS_(qthis, arg0)
   case 8:
     // invoke: _ZN15QTreeWidgetItemC1EPS_RK11QStringListi
     // invoke: void QTreeWidgetItem(class QTreeWidgetItem *, const class QStringList &, int)
@@ -1728,7 +1728,7 @@ func NewQTreeWidgetItem(args ...interface{}) QTreeWidgetItem {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QTreeWidgetItemC2EPS_RK11QStringListi(qthis, arg0, arg1, arg2)
+    C.C_ZN15QTreeWidgetItemC2EPS_RK11QStringListi(qthis, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "QTreeWidgetItem", args)
   }
@@ -1752,7 +1752,7 @@ func (this *QTreeWidgetItem) write(args ...interface{}) () {
     // invoke: void write(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem5writeER11QDataStream(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem5writeER11QDataStream(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "write", args)
   }
@@ -1775,7 +1775,7 @@ func (this *QTreeWidgetItem) setExpanded(args ...interface{}) () {
     // invoke: void setExpanded(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QTreeWidgetItem11setExpandedEb(this.qclsinst, arg0)
+    C.C_ZN15QTreeWidgetItem11setExpandedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setExpanded", args)
   }
@@ -1801,7 +1801,7 @@ func (this *QTreeWidgetItem) insertChild(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem11insertChildEiPS_(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem11insertChildEiPS_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "insertChild", args)
   }
@@ -1824,7 +1824,7 @@ func (this *QTreeWidgetItem) backgroundColor(args ...interface{}) () {
     // invoke: QColor backgroundColor(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem15backgroundColorEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem15backgroundColorEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "backgroundColor", args)
   }
@@ -1850,7 +1850,7 @@ func (this *QTreeWidgetItem) setBackground(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QBrush).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem13setBackgroundEiRK6QBrush(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem13setBackgroundEiRK6QBrush(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setBackground", args)
   }
@@ -1873,7 +1873,7 @@ func (this *QTreeWidgetItem) textColor(args ...interface{}) () {
     // invoke: QColor textColor(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem9textColorEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem9textColorEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "textColor", args)
   }
@@ -1899,7 +1899,7 @@ func (this *QTreeWidgetItem) setIcon(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QIcon).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem7setIconEiRK5QIcon(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem7setIconEiRK5QIcon(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setIcon", args)
   }
@@ -1919,7 +1919,7 @@ func (this *QTreeWidgetItem) childCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem10childCountEv
     // invoke: int childCount()
-    C._ZNK15QTreeWidgetItem10childCountEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem10childCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "childCount", args)
   }
@@ -1948,7 +1948,7 @@ func (this *QTreeWidgetItem) setData(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QVariant).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN15QTreeWidgetItem7setDataEiiRK8QVariant(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN15QTreeWidgetItem7setDataEiiRK8QVariant(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setData", args)
   }
@@ -1971,7 +1971,7 @@ func (this *QTreeWidgetItem) statusTip(args ...interface{}) () {
     // invoke: QString statusTip(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem9statusTipEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem9statusTipEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "statusTip", args)
   }
@@ -1994,7 +1994,7 @@ func (this *QTreeWidgetItem) foreground(args ...interface{}) () {
     // invoke: QBrush foreground(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem10foregroundEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem10foregroundEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "foreground", args)
   }
@@ -2014,7 +2014,7 @@ func (this *QTreeWidgetItem) treeWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem10treeWidgetEv
     // invoke: QTreeWidget * treeWidget()
-    C._ZNK15QTreeWidgetItem10treeWidgetEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem10treeWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "treeWidget", args)
   }
@@ -2034,7 +2034,7 @@ func (this *QTreeWidgetItem) parent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem6parentEv
     // invoke: QTreeWidgetItem * parent()
-    C._ZNK15QTreeWidgetItem6parentEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem6parentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "parent", args)
   }
@@ -2054,7 +2054,7 @@ func (this *QTreeWidgetItem) isFirstColumnSpanned(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem20isFirstColumnSpannedEv
     // invoke: bool isFirstColumnSpanned()
-    C._ZNK15QTreeWidgetItem20isFirstColumnSpannedEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem20isFirstColumnSpannedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "isFirstColumnSpanned", args)
   }
@@ -2077,7 +2077,7 @@ func (this *QTreeWidgetItem) setFirstColumnSpanned(args ...interface{}) () {
     // invoke: void setFirstColumnSpanned(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QTreeWidgetItem21setFirstColumnSpannedEb(this.qclsinst, arg0)
+    C.C_ZN15QTreeWidgetItem21setFirstColumnSpannedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setFirstColumnSpanned", args)
   }
@@ -2097,7 +2097,7 @@ func (this *QTreeWidgetItem) clone(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem5cloneEv
     // invoke: QTreeWidgetItem * clone()
-    C._ZNK15QTreeWidgetItem5cloneEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem5cloneEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "clone", args)
   }
@@ -2123,7 +2123,7 @@ func (this *QTreeWidgetItem) setBackgroundColor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QColor).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem18setBackgroundColorEiRK6QColor(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem18setBackgroundColorEiRK6QColor(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setBackgroundColor", args)
   }
@@ -2146,7 +2146,7 @@ func (this *QTreeWidgetItem) toolTip(args ...interface{}) () {
     // invoke: QString toolTip(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem7toolTipEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem7toolTipEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "toolTip", args)
   }
@@ -2172,7 +2172,7 @@ func (this *QTreeWidgetItem) setFont(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QFont).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem7setFontEiRK5QFont(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem7setFontEiRK5QFont(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setFont", args)
   }
@@ -2192,7 +2192,7 @@ func (this *QTreeWidgetItem) childIndicatorPolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem20childIndicatorPolicyEv
     // invoke: QTreeWidgetItem::ChildIndicatorPolicy childIndicatorPolicy()
-    C._ZNK15QTreeWidgetItem20childIndicatorPolicyEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem20childIndicatorPolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "childIndicatorPolicy", args)
   }
@@ -2218,7 +2218,7 @@ func (this *QTreeWidgetItem) setWhatsThis(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem12setWhatsThisEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem12setWhatsThisEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setWhatsThis", args)
   }
@@ -2241,7 +2241,7 @@ func (this *QTreeWidgetItem) background(args ...interface{}) () {
     // invoke: QBrush background(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem10backgroundEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem10backgroundEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "background", args)
   }
@@ -2264,7 +2264,7 @@ func (this *QTreeWidgetItem) child(args ...interface{}) () {
     // invoke: QTreeWidgetItem * child(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem5childEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem5childEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "child", args)
   }
@@ -2290,7 +2290,7 @@ func (this *QTreeWidgetItem) data(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK15QTreeWidgetItem4dataEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK15QTreeWidgetItem4dataEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "data", args)
   }
@@ -2316,7 +2316,7 @@ func (this *QTreeWidgetItem) setTextColor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QColor).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem12setTextColorEiRK6QColor(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem12setTextColorEiRK6QColor(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setTextColor", args)
   }
@@ -2339,7 +2339,7 @@ func (this *QTreeWidgetItem) icon(args ...interface{}) () {
     // invoke: QIcon icon(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem4iconEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem4iconEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "icon", args)
   }
@@ -2359,7 +2359,7 @@ func (this *QTreeWidgetItem) isExpanded(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem10isExpandedEv
     // invoke: bool isExpanded()
-    C._ZNK15QTreeWidgetItem10isExpandedEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem10isExpandedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "isExpanded", args)
   }
@@ -2385,7 +2385,7 @@ func (this *QTreeWidgetItem) setSizeHint(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QSize).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem11setSizeHintEiRK5QSize(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem11setSizeHintEiRK5QSize(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setSizeHint", args)
   }
@@ -2411,7 +2411,7 @@ func (this *QTreeWidgetItem) setToolTip(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem10setToolTipEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem10setToolTipEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setToolTip", args)
   }
@@ -2434,7 +2434,7 @@ func (this *QTreeWidgetItem) sizeHint(args ...interface{}) () {
     // invoke: QSize sizeHint(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem8sizeHintEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem8sizeHintEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "sizeHint", args)
   }
@@ -2457,7 +2457,7 @@ func (this *QTreeWidgetItem) read(args ...interface{}) () {
     // invoke: void read(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTreeWidgetItem4readER11QDataStream(this.qclsinst, arg0)
+    C.C_ZN15QTreeWidgetItem4readER11QDataStream(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "read", args)
   }
@@ -2477,7 +2477,7 @@ func (this *QTreeWidgetItem) isHidden(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem8isHiddenEv
     // invoke: bool isHidden()
-    C._ZNK15QTreeWidgetItem8isHiddenEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem8isHiddenEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "isHidden", args)
   }
@@ -2503,7 +2503,7 @@ func (this *QTreeWidgetItem) setText(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem7setTextEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem7setTextEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setText", args)
   }
@@ -2529,7 +2529,7 @@ func (this *QTreeWidgetItem) setStatusTip(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QTreeWidgetItem12setStatusTipEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN15QTreeWidgetItem12setStatusTipEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setStatusTip", args)
   }
@@ -2552,7 +2552,7 @@ func (this *QTreeWidgetItem) removeChild(args ...interface{}) () {
     // invoke: void removeChild(class QTreeWidgetItem *)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTreeWidgetItem11removeChildEPS_(this.qclsinst, arg0)
+    C.C_ZN15QTreeWidgetItem11removeChildEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "removeChild", args)
   }
@@ -2575,7 +2575,7 @@ func (this *QTreeWidgetItem) setDisabled(args ...interface{}) () {
     // invoke: void setDisabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QTreeWidgetItem11setDisabledEb(this.qclsinst, arg0)
+    C.C_ZN15QTreeWidgetItem11setDisabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setDisabled", args)
   }
@@ -2595,7 +2595,7 @@ func (this *QTreeWidgetItem) flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem5flagsEv
     // invoke: Qt::ItemFlags flags()
-    C._ZNK15QTreeWidgetItem5flagsEv(this.qclsinst)
+    C.C_ZNK15QTreeWidgetItem5flagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "flags", args)
   }
@@ -2618,7 +2618,7 @@ func (this *QTreeWidgetItem) checkState(args ...interface{}) () {
     // invoke: Qt::CheckState checkState(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem10checkStateEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem10checkStateEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "checkState", args)
   }
@@ -2638,7 +2638,7 @@ func (this *QTreeWidgetItem) takeChildren(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTreeWidgetItem12takeChildrenEv
     // invoke: QList<QTreeWidgetItem *> takeChildren()
-    C._ZN15QTreeWidgetItem12takeChildrenEv(this.qclsinst)
+    C.C_ZN15QTreeWidgetItem12takeChildrenEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "takeChildren", args)
   }
@@ -2661,7 +2661,7 @@ func (this *QTreeWidgetItem) takeChild(args ...interface{}) () {
     // invoke: QTreeWidgetItem * takeChild(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QTreeWidgetItem9takeChildEi(this.qclsinst, arg0)
+    C.C_ZN15QTreeWidgetItem9takeChildEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "takeChild", args)
   }
@@ -2684,7 +2684,7 @@ func (this *QTreeWidgetItem) textAlignment(args ...interface{}) () {
     // invoke: int textAlignment(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK15QTreeWidgetItem13textAlignmentEi(this.qclsinst, arg0)
+    C.C_ZNK15QTreeWidgetItem13textAlignmentEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "textAlignment", args)
   }
@@ -2707,7 +2707,7 @@ func (this *QTreeWidgetItem) setHidden(args ...interface{}) () {
     // invoke: void setHidden(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QTreeWidgetItem9setHiddenEb(this.qclsinst, arg0)
+    C.C_ZN15QTreeWidgetItem9setHiddenEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setHidden", args)
   }

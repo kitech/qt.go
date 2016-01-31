@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qmargins.h
 // dst-file: /src/core/qmargins.go
 //
@@ -29,53 +29,53 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  qreal QMarginsF::right();
-extern void _ZNK9QMarginsF5rightEv(void* qthis); // 2
+extern void C_ZNK9QMarginsF5rightEv(void* qthis); // 2
   // proto:  qreal QMarginsF::bottom();
-extern void _ZNK9QMarginsF6bottomEv(void* qthis); // 2
+extern void C_ZNK9QMarginsF6bottomEv(void* qthis); // 2
   // proto:  void QMarginsF::setBottom(qreal bottom);
-extern void _ZN9QMarginsF9setBottomEd(void* qthis, double arg0); // 2
+extern void C_ZN9QMarginsF9setBottomEd(void* qthis, double arg0); // 2
   // proto:  qreal QMarginsF::top();
-extern void _ZNK9QMarginsF3topEv(void* qthis); // 2
+extern void C_ZNK9QMarginsF3topEv(void* qthis); // 2
   // proto:  QMargins QMarginsF::toMargins();
-extern void _ZNK9QMarginsF9toMarginsEv(void* qthis); // 2
+extern void C_ZNK9QMarginsF9toMarginsEv(void* qthis); // 2
   // proto:  void QMarginsF::setRight(qreal right);
-extern void _ZN9QMarginsF8setRightEd(void* qthis, double arg0); // 2
+extern void C_ZN9QMarginsF8setRightEd(void* qthis, double arg0); // 2
   // proto:  void QMarginsF::setTop(qreal top);
-extern void _ZN9QMarginsF6setTopEd(void* qthis, double arg0); // 2
+extern void C_ZN9QMarginsF6setTopEd(void* qthis, double arg0); // 2
   // proto:  bool QMarginsF::isNull();
-extern void _ZNK9QMarginsF6isNullEv(void* qthis); // 2
+extern void C_ZNK9QMarginsF6isNullEv(void* qthis); // 2
   // proto:  void QMarginsF::setLeft(qreal left);
-extern void _ZN9QMarginsF7setLeftEd(void* qthis, double arg0); // 2
+extern void C_ZN9QMarginsF7setLeftEd(void* qthis, double arg0); // 2
   // proto:  void QMarginsF::QMarginsF();
-extern void _ZN9QMarginsFC2Ev(void* qthis); // 1
+extern void C_ZN9QMarginsFC2Ev(void* qthis); // 1
   // proto:  void QMarginsF::QMarginsF(qreal left, qreal top, qreal right, qreal bottom);
-extern void _ZN9QMarginsFC2Edddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 1
+extern void C_ZN9QMarginsFC2Edddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 1
   // proto:  void QMarginsF::QMarginsF(const QMargins & margins);
-extern void _ZN9QMarginsFC2ERK8QMargins(void* qthis, void* arg0); // 1
+extern void C_ZN9QMarginsFC2ERK8QMargins(void* qthis, void* arg0); // 1
   // proto:  qreal QMarginsF::left();
-extern void _ZNK9QMarginsF4leftEv(void* qthis); // 2
+extern void C_ZNK9QMarginsF4leftEv(void* qthis); // 2
   // proto:  int QMargins::right();
-extern void _ZNK8QMargins5rightEv(void* qthis); // 2
+extern void C_ZNK8QMargins5rightEv(void* qthis); // 2
   // proto:  int QMargins::bottom();
-extern void _ZNK8QMargins6bottomEv(void* qthis); // 2
+extern void C_ZNK8QMargins6bottomEv(void* qthis); // 2
   // proto:  void QMargins::setBottom(int bottom);
-extern void _ZN8QMargins9setBottomEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN8QMargins9setBottomEi(void* qthis, int32_t arg0); // 2
   // proto:  void QMargins::setRight(int right);
-extern void _ZN8QMargins8setRightEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN8QMargins8setRightEi(void* qthis, int32_t arg0); // 2
   // proto:  void QMargins::setTop(int top);
-extern void _ZN8QMargins6setTopEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN8QMargins6setTopEi(void* qthis, int32_t arg0); // 2
   // proto:  bool QMargins::isNull();
-extern void _ZNK8QMargins6isNullEv(void* qthis); // 2
+extern void C_ZNK8QMargins6isNullEv(void* qthis); // 2
   // proto:  void QMargins::QMargins();
-extern void _ZN8QMarginsC2Ev(void* qthis); // 1
+extern void C_ZN8QMarginsC2Ev(void* qthis); // 1
   // proto:  void QMargins::QMargins(int left, int top, int right, int bottom);
-extern void _ZN8QMarginsC2Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 1
+extern void C_ZN8QMarginsC2Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 1
   // proto:  void QMargins::setLeft(int left);
-extern void _ZN8QMargins7setLeftEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN8QMargins7setLeftEi(void* qthis, int32_t arg0); // 2
   // proto:  int QMargins::top();
-extern void _ZNK8QMargins3topEv(void* qthis); // 2
+extern void C_ZNK8QMargins3topEv(void* qthis); // 2
   // proto:  int QMargins::left();
-extern void _ZNK8QMargins4leftEv(void* qthis); // 2
+extern void C_ZNK8QMargins4leftEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -113,7 +113,7 @@ func (this *QMarginsF) right(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMarginsF5rightEv
     // invoke: qreal right()
-    C._ZNK9QMarginsF5rightEv(this.qclsinst)
+    C.C_ZNK9QMarginsF5rightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMarginsF", "right", args)
   }
@@ -133,7 +133,7 @@ func (this *QMarginsF) bottom(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMarginsF6bottomEv
     // invoke: qreal bottom()
-    C._ZNK9QMarginsF6bottomEv(this.qclsinst)
+    C.C_ZNK9QMarginsF6bottomEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMarginsF", "bottom", args)
   }
@@ -156,7 +156,7 @@ func (this *QMarginsF) setBottom(args ...interface{}) () {
     // invoke: void setBottom(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN9QMarginsF9setBottomEd(this.qclsinst, arg0)
+    C.C_ZN9QMarginsF9setBottomEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMarginsF", "setBottom", args)
   }
@@ -176,7 +176,7 @@ func (this *QMarginsF) top(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMarginsF3topEv
     // invoke: qreal top()
-    C._ZNK9QMarginsF3topEv(this.qclsinst)
+    C.C_ZNK9QMarginsF3topEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMarginsF", "top", args)
   }
@@ -196,7 +196,7 @@ func (this *QMarginsF) toMargins(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMarginsF9toMarginsEv
     // invoke: QMargins toMargins()
-    C._ZNK9QMarginsF9toMarginsEv(this.qclsinst)
+    C.C_ZNK9QMarginsF9toMarginsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMarginsF", "toMargins", args)
   }
@@ -219,7 +219,7 @@ func (this *QMarginsF) setRight(args ...interface{}) () {
     // invoke: void setRight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN9QMarginsF8setRightEd(this.qclsinst, arg0)
+    C.C_ZN9QMarginsF8setRightEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMarginsF", "setRight", args)
   }
@@ -242,7 +242,7 @@ func (this *QMarginsF) setTop(args ...interface{}) () {
     // invoke: void setTop(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN9QMarginsF6setTopEd(this.qclsinst, arg0)
+    C.C_ZN9QMarginsF6setTopEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMarginsF", "setTop", args)
   }
@@ -262,7 +262,7 @@ func (this *QMarginsF) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMarginsF6isNullEv
     // invoke: bool isNull()
-    C._ZNK9QMarginsF6isNullEv(this.qclsinst)
+    C.C_ZNK9QMarginsF6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMarginsF", "isNull", args)
   }
@@ -285,7 +285,7 @@ func (this *QMarginsF) setLeft(args ...interface{}) () {
     // invoke: void setLeft(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN9QMarginsF7setLeftEd(this.qclsinst, arg0)
+    C.C_ZN9QMarginsF7setLeftEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMarginsF", "setLeft", args)
   }
@@ -316,7 +316,7 @@ func NewQMarginsF(args ...interface{}) QMarginsF {
     // invoke: void QMarginsF()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QMarginsFC2Ev(qthis)
+    C.C_ZN9QMarginsFC2Ev(qthis)
   case 1:
     // invoke: _ZN9QMarginsFC1Edddd
     // invoke: void QMarginsF(qreal, qreal, qreal, qreal)
@@ -330,7 +330,7 @@ func NewQMarginsF(args ...interface{}) QMarginsF {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QMarginsFC2Edddd(qthis, arg0, arg1, arg2, arg3)
+    C.C_ZN9QMarginsFC2Edddd(qthis, arg0, arg1, arg2, arg3)
   case 2:
     // invoke: _ZN9QMarginsFC1ERK8QMargins
     // invoke: void QMarginsF(const class QMargins &)
@@ -338,7 +338,7 @@ func NewQMarginsF(args ...interface{}) QMarginsF {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QMarginsFC2ERK8QMargins(qthis, arg0)
+    C.C_ZN9QMarginsFC2ERK8QMargins(qthis, arg0)
   default:
     qtrt.ErrorResolve("QMarginsF", "QMarginsF", args)
   }
@@ -359,7 +359,7 @@ func (this *QMarginsF) left(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMarginsF4leftEv
     // invoke: qreal left()
-    C._ZNK9QMarginsF4leftEv(this.qclsinst)
+    C.C_ZNK9QMarginsF4leftEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMarginsF", "left", args)
   }
@@ -379,7 +379,7 @@ func (this *QMargins) right(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMargins5rightEv
     // invoke: int right()
-    C._ZNK8QMargins5rightEv(this.qclsinst)
+    C.C_ZNK8QMargins5rightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMargins", "right", args)
   }
@@ -399,7 +399,7 @@ func (this *QMargins) bottom(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMargins6bottomEv
     // invoke: int bottom()
-    C._ZNK8QMargins6bottomEv(this.qclsinst)
+    C.C_ZNK8QMargins6bottomEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMargins", "bottom", args)
   }
@@ -422,7 +422,7 @@ func (this *QMargins) setBottom(args ...interface{}) () {
     // invoke: void setBottom(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN8QMargins9setBottomEi(this.qclsinst, arg0)
+    C.C_ZN8QMargins9setBottomEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMargins", "setBottom", args)
   }
@@ -445,7 +445,7 @@ func (this *QMargins) setRight(args ...interface{}) () {
     // invoke: void setRight(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN8QMargins8setRightEi(this.qclsinst, arg0)
+    C.C_ZN8QMargins8setRightEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMargins", "setRight", args)
   }
@@ -468,7 +468,7 @@ func (this *QMargins) setTop(args ...interface{}) () {
     // invoke: void setTop(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN8QMargins6setTopEi(this.qclsinst, arg0)
+    C.C_ZN8QMargins6setTopEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMargins", "setTop", args)
   }
@@ -488,7 +488,7 @@ func (this *QMargins) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMargins6isNullEv
     // invoke: bool isNull()
-    C._ZNK8QMargins6isNullEv(this.qclsinst)
+    C.C_ZNK8QMargins6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMargins", "isNull", args)
   }
@@ -516,7 +516,7 @@ func NewQMargins(args ...interface{}) QMargins {
     // invoke: void QMargins()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QMarginsC2Ev(qthis)
+    C.C_ZN8QMarginsC2Ev(qthis)
   case 1:
     // invoke: _ZN8QMarginsC1Eiiii
     // invoke: void QMargins(int, int, int, int)
@@ -530,7 +530,7 @@ func NewQMargins(args ...interface{}) QMargins {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QMarginsC2Eiiii(qthis, arg0, arg1, arg2, arg3)
+    C.C_ZN8QMarginsC2Eiiii(qthis, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QMargins", "QMargins", args)
   }
@@ -554,7 +554,7 @@ func (this *QMargins) setLeft(args ...interface{}) () {
     // invoke: void setLeft(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN8QMargins7setLeftEi(this.qclsinst, arg0)
+    C.C_ZN8QMargins7setLeftEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMargins", "setLeft", args)
   }
@@ -574,7 +574,7 @@ func (this *QMargins) top(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMargins3topEv
     // invoke: int top()
-    C._ZNK8QMargins3topEv(this.qclsinst)
+    C.C_ZNK8QMargins3topEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMargins", "top", args)
   }
@@ -594,7 +594,7 @@ func (this *QMargins) left(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMargins4leftEv
     // invoke: int left()
-    C._ZNK8QMargins4leftEv(this.qclsinst)
+    C.C_ZNK8QMargins4leftEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMargins", "left", args)
   }

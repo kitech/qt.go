@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qgraphicsitem.h
 // dst-file: /src/widgets/qgraphicsitem.go
 //
@@ -29,657 +29,657 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QGraphicsTextItem::contains(const QPointF & point);
-extern void _ZNK17QGraphicsTextItem8containsERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK17QGraphicsTextItem8containsERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QRectF QGraphicsTextItem::boundingRect();
-extern void _ZNK17QGraphicsTextItem12boundingRectEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem12boundingRectEv(void* qthis); // 4
   // proto:  void QGraphicsTextItem::setPlainText(const QString & text);
-extern void _ZN17QGraphicsTextItem12setPlainTextERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN17QGraphicsTextItem12setPlainTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsTextItem::setHtml(const QString & html);
-extern void _ZN17QGraphicsTextItem7setHtmlERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN17QGraphicsTextItem7setHtmlERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsTextItem::setTabChangesFocus(bool b);
-extern void _ZN17QGraphicsTextItem18setTabChangesFocusEb(void* qthis, bool arg0); // 4
+extern void C_ZN17QGraphicsTextItem18setTabChangesFocusEb(void* qthis, bool arg0); // 4
   // proto:  void QGraphicsTextItem::setDocument(QTextDocument * document);
-extern void _ZN17QGraphicsTextItem11setDocumentEP13QTextDocument(void* qthis, void* arg0); // 4
+extern void C_ZN17QGraphicsTextItem11setDocumentEP13QTextDocument(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsTextItem::setOpenExternalLinks(bool open);
-extern void _ZN17QGraphicsTextItem20setOpenExternalLinksEb(void* qthis, bool arg0); // 4
+extern void C_ZN17QGraphicsTextItem20setOpenExternalLinksEb(void* qthis, bool arg0); // 4
   // proto:  QFont QGraphicsTextItem::font();
-extern void _ZNK17QGraphicsTextItem4fontEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem4fontEv(void* qthis); // 4
   // proto:  void QGraphicsTextItem::setDefaultTextColor(const QColor & c);
-extern void _ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor(void* qthis, void* arg0); // 4
+extern void C_ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor(void* qthis, void* arg0); // 4
   // proto:  bool QGraphicsTextItem::openExternalLinks();
-extern void _ZNK17QGraphicsTextItem17openExternalLinksEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem17openExternalLinksEv(void* qthis); // 4
   // proto:  void QGraphicsTextItem::setTextCursor(const QTextCursor & cursor);
-extern void _ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor(void* qthis, void* arg0); // 4
+extern void C_ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor(void* qthis, void* arg0); // 4
   // proto:  QString QGraphicsTextItem::toPlainText();
-extern void _ZNK17QGraphicsTextItem11toPlainTextEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem11toPlainTextEv(void* qthis); // 4
   // proto:  bool QGraphicsTextItem::tabChangesFocus();
-extern void _ZNK17QGraphicsTextItem15tabChangesFocusEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem15tabChangesFocusEv(void* qthis); // 4
   // proto:  QTextCursor QGraphicsTextItem::textCursor();
-extern void _ZNK17QGraphicsTextItem10textCursorEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem10textCursorEv(void* qthis); // 4
   // proto:  void QGraphicsTextItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-extern void _ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QGraphicsTextItem::QGraphicsTextItem(QGraphicsItem * parent);
-extern void _ZN17QGraphicsTextItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
+extern void C_ZN17QGraphicsTextItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
   // proto:  void QGraphicsTextItem::QGraphicsTextItem(const QString & text, QGraphicsItem * parent);
-extern void _ZN17QGraphicsTextItemC2ERK7QStringP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN17QGraphicsTextItemC2ERK7QStringP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
   // proto:  int QGraphicsTextItem::type();
-extern void _ZNK17QGraphicsTextItem4typeEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem4typeEv(void* qthis); // 4
   // proto:  Qt::TextInteractionFlags QGraphicsTextItem::textInteractionFlags();
-extern void _ZNK17QGraphicsTextItem20textInteractionFlagsEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem20textInteractionFlagsEv(void* qthis); // 4
   // proto:  QString QGraphicsTextItem::toHtml();
-extern void _ZNK17QGraphicsTextItem6toHtmlEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem6toHtmlEv(void* qthis); // 4
   // proto:  void QGraphicsTextItem::adjustSize();
-extern void _ZN17QGraphicsTextItem10adjustSizeEv(void* qthis); // 4
+extern void C_ZN17QGraphicsTextItem10adjustSizeEv(void* qthis); // 4
   // proto:  void QGraphicsTextItem::~QGraphicsTextItem();
-extern void _ZN17QGraphicsTextItemD2Ev(void* qthis); // 4
+extern void C_ZN17QGraphicsTextItemD2Ev(void* qthis); // 4
   // proto:  void QGraphicsTextItem::setTextWidth(qreal width);
-extern void _ZN17QGraphicsTextItem12setTextWidthEd(void* qthis, double arg0); // 4
+extern void C_ZN17QGraphicsTextItem12setTextWidthEd(void* qthis, double arg0); // 4
   // proto:  bool QGraphicsTextItem::isObscuredBy(const QGraphicsItem * item);
-extern void _ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  QTextDocument * QGraphicsTextItem::document();
-extern void _ZNK17QGraphicsTextItem8documentEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem8documentEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsTextItem::opaqueArea();
-extern void _ZNK17QGraphicsTextItem10opaqueAreaEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem10opaqueAreaEv(void* qthis); // 4
   // proto:  QColor QGraphicsTextItem::defaultTextColor();
-extern void _ZNK17QGraphicsTextItem16defaultTextColorEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem16defaultTextColorEv(void* qthis); // 4
   // proto:  const QMetaObject * QGraphicsTextItem::metaObject();
-extern void _ZNK17QGraphicsTextItem10metaObjectEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem10metaObjectEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsTextItem::shape();
-extern void _ZNK17QGraphicsTextItem5shapeEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem5shapeEv(void* qthis); // 4
   // proto:  void QGraphicsTextItem::setFont(const QFont & font);
-extern void _ZN17QGraphicsTextItem7setFontERK5QFont(void* qthis, void* arg0); // 4
+extern void C_ZN17QGraphicsTextItem7setFontERK5QFont(void* qthis, void* arg0); // 4
   // proto:  qreal QGraphicsTextItem::textWidth();
-extern void _ZNK17QGraphicsTextItem9textWidthEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsTextItem9textWidthEv(void* qthis); // 4
   // proto:  QRectF QGraphicsPixmapItem::boundingRect();
-extern void _ZNK19QGraphicsPixmapItem12boundingRectEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsPixmapItem12boundingRectEv(void* qthis); // 4
   // proto:  void QGraphicsPixmapItem::setPixmap(const QPixmap & pixmap);
-extern void _ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap(void* qthis, void* arg0); // 4
+extern void C_ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap(void* qthis, void* arg0); // 4
   // proto:  QPainterPath QGraphicsPixmapItem::shape();
-extern void _ZNK19QGraphicsPixmapItem5shapeEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsPixmapItem5shapeEv(void* qthis); // 4
   // proto:  Qt::TransformationMode QGraphicsPixmapItem::transformationMode();
-extern void _ZNK19QGraphicsPixmapItem18transformationModeEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsPixmapItem18transformationModeEv(void* qthis); // 4
   // proto:  QPixmap QGraphicsPixmapItem::pixmap();
-extern void _ZNK19QGraphicsPixmapItem6pixmapEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsPixmapItem6pixmapEv(void* qthis); // 4
   // proto:  bool QGraphicsPixmapItem::contains(const QPointF & point);
-extern void _ZNK19QGraphicsPixmapItem8containsERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK19QGraphicsPixmapItem8containsERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QGraphicsPixmapItem::ShapeMode QGraphicsPixmapItem::shapeMode();
-extern void _ZNK19QGraphicsPixmapItem9shapeModeEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsPixmapItem9shapeModeEv(void* qthis); // 4
   // proto:  void QGraphicsPixmapItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-extern void _ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QGraphicsPixmapItem::setOffset(const QPointF & offset);
-extern void _ZN19QGraphicsPixmapItem9setOffsetERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN19QGraphicsPixmapItem9setOffsetERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsPixmapItem::setOffset(qreal x, qreal y);
-extern void _ZN19QGraphicsPixmapItem9setOffsetEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZN19QGraphicsPixmapItem9setOffsetEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  int QGraphicsPixmapItem::type();
-extern void _ZNK19QGraphicsPixmapItem4typeEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsPixmapItem4typeEv(void* qthis); // 4
   // proto:  void QGraphicsPixmapItem::~QGraphicsPixmapItem();
-extern void _ZN19QGraphicsPixmapItemD2Ev(void* qthis); // 4
+extern void C_ZN19QGraphicsPixmapItemD2Ev(void* qthis); // 4
   // proto:  QPointF QGraphicsPixmapItem::offset();
-extern void _ZNK19QGraphicsPixmapItem6offsetEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsPixmapItem6offsetEv(void* qthis); // 4
   // proto:  void QGraphicsPixmapItem::QGraphicsPixmapItem(QGraphicsItem * parent);
-extern void _ZN19QGraphicsPixmapItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
+extern void C_ZN19QGraphicsPixmapItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
   // proto:  void QGraphicsPixmapItem::QGraphicsPixmapItem(const QPixmap & pixmap, QGraphicsItem * parent);
-extern void _ZN19QGraphicsPixmapItemC2ERK7QPixmapP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN19QGraphicsPixmapItemC2ERK7QPixmapP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
   // proto:  bool QGraphicsPixmapItem::isObscuredBy(const QGraphicsItem * item);
-extern void _ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  QPainterPath QGraphicsPixmapItem::opaqueArea();
-extern void _ZNK19QGraphicsPixmapItem10opaqueAreaEv(void* qthis); // 4
+extern void C_ZNK19QGraphicsPixmapItem10opaqueAreaEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsRectItem::opaqueArea();
-extern void _ZNK17QGraphicsRectItem10opaqueAreaEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsRectItem10opaqueAreaEv(void* qthis); // 4
   // proto:  QRectF QGraphicsRectItem::boundingRect();
-extern void _ZNK17QGraphicsRectItem12boundingRectEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsRectItem12boundingRectEv(void* qthis); // 4
   // proto:  int QGraphicsRectItem::type();
-extern void _ZNK17QGraphicsRectItem4typeEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsRectItem4typeEv(void* qthis); // 4
   // proto:  bool QGraphicsRectItem::contains(const QPointF & point);
-extern void _ZNK17QGraphicsRectItem8containsERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK17QGraphicsRectItem8containsERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsRectItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-extern void _ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  QPainterPath QGraphicsRectItem::shape();
-extern void _ZNK17QGraphicsRectItem5shapeEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsRectItem5shapeEv(void* qthis); // 4
   // proto:  void QGraphicsRectItem::QGraphicsRectItem(QGraphicsItem * parent);
-extern void _ZN17QGraphicsRectItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
+extern void C_ZN17QGraphicsRectItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
   // proto:  void QGraphicsRectItem::QGraphicsRectItem(const QRectF & rect, QGraphicsItem * parent);
-extern void _ZN17QGraphicsRectItemC2ERK6QRectFP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN17QGraphicsRectItemC2ERK6QRectFP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QGraphicsRectItem::QGraphicsRectItem(qreal x, qreal y, qreal w, qreal h, QGraphicsItem * parent);
-extern void _ZN17QGraphicsRectItemC2EddddP13QGraphicsItem(void* qthis, double arg0, double arg1, double arg2, double arg3, void* arg4); // 3
+extern void C_ZN17QGraphicsRectItemC2EddddP13QGraphicsItem(void* qthis, double arg0, double arg1, double arg2, double arg3, void* arg4); // 3
   // proto:  void QGraphicsRectItem::~QGraphicsRectItem();
-extern void _ZN17QGraphicsRectItemD2Ev(void* qthis); // 4
+extern void C_ZN17QGraphicsRectItemD2Ev(void* qthis); // 4
   // proto:  bool QGraphicsRectItem::isObscuredBy(const QGraphicsItem * item);
-extern void _ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsRectItem::setRect(const QRectF & rect);
-extern void _ZN17QGraphicsRectItem7setRectERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZN17QGraphicsRectItem7setRectERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsRectItem::setRect(qreal x, qreal y, qreal w, qreal h);
-extern void _ZN17QGraphicsRectItem7setRectEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZN17QGraphicsRectItem7setRectEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  QRectF QGraphicsRectItem::rect();
-extern void _ZNK17QGraphicsRectItem4rectEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsRectItem4rectEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsEllipseItem::opaqueArea();
-extern void _ZNK20QGraphicsEllipseItem10opaqueAreaEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsEllipseItem10opaqueAreaEv(void* qthis); // 4
   // proto:  QRectF QGraphicsEllipseItem::boundingRect();
-extern void _ZNK20QGraphicsEllipseItem12boundingRectEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsEllipseItem12boundingRectEv(void* qthis); // 4
   // proto:  int QGraphicsEllipseItem::spanAngle();
-extern void _ZNK20QGraphicsEllipseItem9spanAngleEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsEllipseItem9spanAngleEv(void* qthis); // 4
   // proto:  int QGraphicsEllipseItem::type();
-extern void _ZNK20QGraphicsEllipseItem4typeEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsEllipseItem4typeEv(void* qthis); // 4
   // proto:  bool QGraphicsEllipseItem::contains(const QPointF & point);
-extern void _ZNK20QGraphicsEllipseItem8containsERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK20QGraphicsEllipseItem8containsERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsEllipseItem::setSpanAngle(int angle);
-extern void _ZN20QGraphicsEllipseItem12setSpanAngleEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN20QGraphicsEllipseItem12setSpanAngleEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsEllipseItem::setRect(const QRectF & rect);
-extern void _ZN20QGraphicsEllipseItem7setRectERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZN20QGraphicsEllipseItem7setRectERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsEllipseItem::setRect(qreal x, qreal y, qreal w, qreal h);
-extern void _ZN20QGraphicsEllipseItem7setRectEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZN20QGraphicsEllipseItem7setRectEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  void QGraphicsEllipseItem::setStartAngle(int angle);
-extern void _ZN20QGraphicsEllipseItem13setStartAngleEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN20QGraphicsEllipseItem13setStartAngleEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsEllipseItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-extern void _ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  QPainterPath QGraphicsEllipseItem::shape();
-extern void _ZNK20QGraphicsEllipseItem5shapeEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsEllipseItem5shapeEv(void* qthis); // 4
   // proto:  void QGraphicsEllipseItem::~QGraphicsEllipseItem();
-extern void _ZN20QGraphicsEllipseItemD2Ev(void* qthis); // 4
+extern void C_ZN20QGraphicsEllipseItemD2Ev(void* qthis); // 4
   // proto:  int QGraphicsEllipseItem::startAngle();
-extern void _ZNK20QGraphicsEllipseItem10startAngleEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsEllipseItem10startAngleEv(void* qthis); // 4
   // proto:  bool QGraphicsEllipseItem::isObscuredBy(const QGraphicsItem * item);
-extern void _ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsEllipseItem::QGraphicsEllipseItem(QGraphicsItem * parent);
-extern void _ZN20QGraphicsEllipseItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
+extern void C_ZN20QGraphicsEllipseItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
   // proto:  void QGraphicsEllipseItem::QGraphicsEllipseItem(qreal x, qreal y, qreal w, qreal h, QGraphicsItem * parent);
-extern void _ZN20QGraphicsEllipseItemC2EddddP13QGraphicsItem(void* qthis, double arg0, double arg1, double arg2, double arg3, void* arg4); // 3
+extern void C_ZN20QGraphicsEllipseItemC2EddddP13QGraphicsItem(void* qthis, double arg0, double arg1, double arg2, double arg3, void* arg4); // 3
   // proto:  void QGraphicsEllipseItem::QGraphicsEllipseItem(const QRectF & rect, QGraphicsItem * parent);
-extern void _ZN20QGraphicsEllipseItemC2ERK6QRectFP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN20QGraphicsEllipseItemC2ERK6QRectFP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
   // proto:  QRectF QGraphicsEllipseItem::rect();
-extern void _ZNK20QGraphicsEllipseItem4rectEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsEllipseItem4rectEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsPolygonItem::opaqueArea();
-extern void _ZNK20QGraphicsPolygonItem10opaqueAreaEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsPolygonItem10opaqueAreaEv(void* qthis); // 4
   // proto:  QRectF QGraphicsPolygonItem::boundingRect();
-extern void _ZNK20QGraphicsPolygonItem12boundingRectEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsPolygonItem12boundingRectEv(void* qthis); // 4
   // proto:  void QGraphicsPolygonItem::setPolygon(const QPolygonF & polygon);
-extern void _ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF(void* qthis, void* arg0); // 4
+extern void C_ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF(void* qthis, void* arg0); // 4
   // proto:  int QGraphicsPolygonItem::type();
-extern void _ZNK20QGraphicsPolygonItem4typeEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsPolygonItem4typeEv(void* qthis); // 4
   // proto:  bool QGraphicsPolygonItem::contains(const QPointF & point);
-extern void _ZNK20QGraphicsPolygonItem8containsERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK20QGraphicsPolygonItem8containsERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsPolygonItem::polygon();
-extern void _ZNK20QGraphicsPolygonItem7polygonEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsPolygonItem7polygonEv(void* qthis); // 4
   // proto:  void QGraphicsPolygonItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-extern void _ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  QPainterPath QGraphicsPolygonItem::shape();
-extern void _ZNK20QGraphicsPolygonItem5shapeEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsPolygonItem5shapeEv(void* qthis); // 4
   // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(const QPolygonF & polygon, QGraphicsItem * parent);
-extern void _ZN20QGraphicsPolygonItemC2ERK9QPolygonFP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN20QGraphicsPolygonItemC2ERK9QPolygonFP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(QGraphicsItem * parent);
-extern void _ZN20QGraphicsPolygonItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
+extern void C_ZN20QGraphicsPolygonItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
   // proto:  void QGraphicsPolygonItem::~QGraphicsPolygonItem();
-extern void _ZN20QGraphicsPolygonItemD2Ev(void* qthis); // 4
+extern void C_ZN20QGraphicsPolygonItemD2Ev(void* qthis); // 4
   // proto:  bool QGraphicsPolygonItem::isObscuredBy(const QGraphicsItem * item);
-extern void _ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  Qt::FillRule QGraphicsPolygonItem::fillRule();
-extern void _ZNK20QGraphicsPolygonItem8fillRuleEv(void* qthis); // 4
+extern void C_ZNK20QGraphicsPolygonItem8fillRuleEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsPathItem::opaqueArea();
-extern void _ZNK17QGraphicsPathItem10opaqueAreaEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsPathItem10opaqueAreaEv(void* qthis); // 4
   // proto:  void QGraphicsPathItem::~QGraphicsPathItem();
-extern void _ZN17QGraphicsPathItemD2Ev(void* qthis); // 4
+extern void C_ZN17QGraphicsPathItemD2Ev(void* qthis); // 4
   // proto:  QRectF QGraphicsPathItem::boundingRect();
-extern void _ZNK17QGraphicsPathItem12boundingRectEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsPathItem12boundingRectEv(void* qthis); // 4
   // proto:  bool QGraphicsPathItem::isObscuredBy(const QGraphicsItem * item);
-extern void _ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  bool QGraphicsPathItem::contains(const QPointF & point);
-extern void _ZNK17QGraphicsPathItem8containsERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK17QGraphicsPathItem8containsERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsPathItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-extern void _ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  QPainterPath QGraphicsPathItem::shape();
-extern void _ZNK17QGraphicsPathItem5shapeEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsPathItem5shapeEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsPathItem::path();
-extern void _ZNK17QGraphicsPathItem4pathEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsPathItem4pathEv(void* qthis); // 4
   // proto:  void QGraphicsPathItem::setPath(const QPainterPath & path);
-extern void _ZN17QGraphicsPathItem7setPathERK12QPainterPath(void* qthis, void* arg0); // 4
+extern void C_ZN17QGraphicsPathItem7setPathERK12QPainterPath(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsPathItem::QGraphicsPathItem(const QPainterPath & path, QGraphicsItem * parent);
-extern void _ZN17QGraphicsPathItemC2ERK12QPainterPathP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN17QGraphicsPathItemC2ERK12QPainterPathP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QGraphicsPathItem::QGraphicsPathItem(QGraphicsItem * parent);
-extern void _ZN17QGraphicsPathItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
+extern void C_ZN17QGraphicsPathItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
   // proto:  int QGraphicsPathItem::type();
-extern void _ZNK17QGraphicsPathItem4typeEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsPathItem4typeEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsLineItem::opaqueArea();
-extern void _ZNK17QGraphicsLineItem10opaqueAreaEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsLineItem10opaqueAreaEv(void* qthis); // 4
   // proto:  QRectF QGraphicsLineItem::boundingRect();
-extern void _ZNK17QGraphicsLineItem12boundingRectEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsLineItem12boundingRectEv(void* qthis); // 4
   // proto:  int QGraphicsLineItem::type();
-extern void _ZNK17QGraphicsLineItem4typeEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsLineItem4typeEv(void* qthis); // 4
   // proto:  bool QGraphicsLineItem::contains(const QPointF & point);
-extern void _ZNK17QGraphicsLineItem8containsERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK17QGraphicsLineItem8containsERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPainterPath QGraphicsLineItem::shape();
-extern void _ZNK17QGraphicsLineItem5shapeEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsLineItem5shapeEv(void* qthis); // 4
   // proto:  void QGraphicsLineItem::~QGraphicsLineItem();
-extern void _ZN17QGraphicsLineItemD2Ev(void* qthis); // 4
+extern void C_ZN17QGraphicsLineItemD2Ev(void* qthis); // 4
   // proto:  void QGraphicsLineItem::QGraphicsLineItem(QGraphicsItem * parent);
-extern void _ZN17QGraphicsLineItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
+extern void C_ZN17QGraphicsLineItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
   // proto:  void QGraphicsLineItem::QGraphicsLineItem(const QLineF & line, QGraphicsItem * parent);
-extern void _ZN17QGraphicsLineItemC2ERK6QLineFP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN17QGraphicsLineItemC2ERK6QLineFP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QGraphicsLineItem::QGraphicsLineItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent);
-extern void _ZN17QGraphicsLineItemC2EddddP13QGraphicsItem(void* qthis, double arg0, double arg1, double arg2, double arg3, void* arg4); // 3
+extern void C_ZN17QGraphicsLineItemC2EddddP13QGraphicsItem(void* qthis, double arg0, double arg1, double arg2, double arg3, void* arg4); // 3
   // proto:  void QGraphicsLineItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-extern void _ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  QPen QGraphicsLineItem::pen();
-extern void _ZNK17QGraphicsLineItem3penEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsLineItem3penEv(void* qthis); // 4
   // proto:  void QGraphicsLineItem::setPen(const QPen & pen);
-extern void _ZN17QGraphicsLineItem6setPenERK4QPen(void* qthis, void* arg0); // 4
+extern void C_ZN17QGraphicsLineItem6setPenERK4QPen(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsLineItem::setLine(const QLineF & line);
-extern void _ZN17QGraphicsLineItem7setLineERK6QLineF(void* qthis, void* arg0); // 4
+extern void C_ZN17QGraphicsLineItem7setLineERK6QLineF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsLineItem::setLine(qreal x1, qreal y1, qreal x2, qreal y2);
-extern void _ZN17QGraphicsLineItem7setLineEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZN17QGraphicsLineItem7setLineEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  QLineF QGraphicsLineItem::line();
-extern void _ZNK17QGraphicsLineItem4lineEv(void* qthis); // 4
+extern void C_ZNK17QGraphicsLineItem4lineEv(void* qthis); // 4
   // proto:  bool QGraphicsLineItem::isObscuredBy(const QGraphicsItem * item);
-extern void _ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  QPainterPath QGraphicsItemGroup::opaqueArea();
-extern void _ZNK18QGraphicsItemGroup10opaqueAreaEv(void* qthis); // 4
+extern void C_ZNK18QGraphicsItemGroup10opaqueAreaEv(void* qthis); // 4
   // proto:  void QGraphicsItemGroup::addToGroup(QGraphicsItem * item);
-extern void _ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsItemGroup::QGraphicsItemGroup(QGraphicsItem * parent);
-extern void _ZN18QGraphicsItemGroupC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
+extern void C_ZN18QGraphicsItemGroupC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
   // proto:  QRectF QGraphicsItemGroup::boundingRect();
-extern void _ZNK18QGraphicsItemGroup12boundingRectEv(void* qthis); // 4
+extern void C_ZNK18QGraphicsItemGroup12boundingRectEv(void* qthis); // 4
   // proto:  void QGraphicsItemGroup::removeFromGroup(QGraphicsItem * item);
-extern void _ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  bool QGraphicsItemGroup::isObscuredBy(const QGraphicsItem * item);
-extern void _ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsItemGroup::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-extern void _ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  int QGraphicsItemGroup::type();
-extern void _ZNK18QGraphicsItemGroup4typeEv(void* qthis); // 4
+extern void C_ZNK18QGraphicsItemGroup4typeEv(void* qthis); // 4
   // proto:  void QGraphicsItemGroup::~QGraphicsItemGroup();
-extern void _ZN18QGraphicsItemGroupD2Ev(void* qthis); // 4
+extern void C_ZN18QGraphicsItemGroupD2Ev(void* qthis); // 4
   // proto:  QPainterPath QAbstractGraphicsShapeItem::opaqueArea();
-extern void _ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv(void* qthis); // 4
+extern void C_ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv(void* qthis); // 4
   // proto:  bool QAbstractGraphicsShapeItem::isObscuredBy(const QGraphicsItem * item);
-extern void _ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  QPen QAbstractGraphicsShapeItem::pen();
-extern void _ZNK26QAbstractGraphicsShapeItem3penEv(void* qthis); // 4
+extern void C_ZNK26QAbstractGraphicsShapeItem3penEv(void* qthis); // 4
   // proto:  QBrush QAbstractGraphicsShapeItem::brush();
-extern void _ZNK26QAbstractGraphicsShapeItem5brushEv(void* qthis); // 4
+extern void C_ZNK26QAbstractGraphicsShapeItem5brushEv(void* qthis); // 4
   // proto:  void QAbstractGraphicsShapeItem::setPen(const QPen & pen);
-extern void _ZN26QAbstractGraphicsShapeItem6setPenERK4QPen(void* qthis, void* arg0); // 4
+extern void C_ZN26QAbstractGraphicsShapeItem6setPenERK4QPen(void* qthis, void* arg0); // 4
   // proto:  void QAbstractGraphicsShapeItem::setBrush(const QBrush & brush);
-extern void _ZN26QAbstractGraphicsShapeItem8setBrushERK6QBrush(void* qthis, void* arg0); // 4
+extern void C_ZN26QAbstractGraphicsShapeItem8setBrushERK6QBrush(void* qthis, void* arg0); // 4
   // proto:  void QAbstractGraphicsShapeItem::~QAbstractGraphicsShapeItem();
-extern void _ZN26QAbstractGraphicsShapeItemD2Ev(void* qthis); // 4
+extern void C_ZN26QAbstractGraphicsShapeItemD2Ev(void* qthis); // 4
   // proto:  void QAbstractGraphicsShapeItem::QAbstractGraphicsShapeItem(QGraphicsItem * parent);
-extern void _ZN26QAbstractGraphicsShapeItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
+extern void C_ZN26QAbstractGraphicsShapeItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
   // proto:  void QGraphicsItem::show();
-extern void _ZN13QGraphicsItem4showEv(void* qthis); // 2
+extern void C_ZN13QGraphicsItem4showEv(void* qthis); // 2
   // proto:  bool QGraphicsItem::hasFocus();
-extern void _ZNK13QGraphicsItem8hasFocusEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem8hasFocusEv(void* qthis); // 4
   // proto:  void QGraphicsItem::setGroup(QGraphicsItemGroup * group);
-extern void _ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup(void* qthis, void* arg0); // 4
   // proto:  bool QGraphicsItem::handlesChildEvents();
-extern void _ZNK13QGraphicsItem18handlesChildEventsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem18handlesChildEventsEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsItem::shape();
-extern void _ZNK13QGraphicsItem5shapeEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem5shapeEv(void* qthis); // 4
   // proto:  bool QGraphicsItem::isPanel();
-extern void _ZNK13QGraphicsItem7isPanelEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem7isPanelEv(void* qthis); // 4
   // proto:  QVariant QGraphicsItem::data(int key);
-extern void _ZNK13QGraphicsItem4dataEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK13QGraphicsItem4dataEi(void* qthis, int32_t arg0); // 4
   // proto:  QGraphicsItem * QGraphicsItem::parentItem();
-extern void _ZNK13QGraphicsItem10parentItemEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem10parentItemEv(void* qthis); // 4
   // proto:  QRectF QGraphicsItem::childrenBoundingRect();
-extern void _ZNK13QGraphicsItem20childrenBoundingRectEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem20childrenBoundingRectEv(void* qthis); // 4
   // proto:  QGraphicsItemGroup * QGraphicsItem::group();
-extern void _ZNK13QGraphicsItem5groupEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem5groupEv(void* qthis); // 4
   // proto:  bool QGraphicsItem::isEnabled();
-extern void _ZNK13QGraphicsItem9isEnabledEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem9isEnabledEv(void* qthis); // 4
   // proto:  QGraphicsWidget * QGraphicsItem::window();
-extern void _ZNK13QGraphicsItem6windowEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem6windowEv(void* qthis); // 4
   // proto:  void QGraphicsItem::setBoundingRegionGranularity(qreal granularity);
-extern void _ZN13QGraphicsItem28setBoundingRegionGranularityEd(void* qthis, double arg0); // 4
+extern void C_ZN13QGraphicsItem28setBoundingRegionGranularityEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsItem::setRotation(qreal angle);
-extern void _ZN13QGraphicsItem11setRotationEd(void* qthis, double arg0); // 4
+extern void C_ZN13QGraphicsItem11setRotationEd(void* qthis, double arg0); // 4
   // proto:  QGraphicsItem * QGraphicsItem::commonAncestorItem(const QGraphicsItem * other);
-extern void _ZNK13QGraphicsItem18commonAncestorItemEPKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem18commonAncestorItemEPKS_(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapToItem(const QGraphicsItem * item, const QPolygonF & polygon);
-extern void _ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QPolygonF QGraphicsItem::mapToItem(const QGraphicsItem * item, const QRectF & rect);
-extern void _ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QPainterPath QGraphicsItem::mapToItem(const QGraphicsItem * item, const QPainterPath & path);
-extern void _ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QPointF QGraphicsItem::mapToItem(const QGraphicsItem * item, const QPointF & point);
-extern void _ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QPolygonF QGraphicsItem::mapToItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem9mapToItemEPKS_dddd(void* qthis, void* arg0, double arg1, double arg2, double arg3, double arg4); // 2
+extern void C_ZNK13QGraphicsItem9mapToItemEPKS_dddd(void* qthis, void* arg0, double arg1, double arg2, double arg3, double arg4); // 2
   // proto:  QPointF QGraphicsItem::mapToItem(const QGraphicsItem * item, qreal x, qreal y);
-extern void _ZNK13QGraphicsItem9mapToItemEPKS_dd(void* qthis, void* arg0, double arg1, double arg2); // 2
+extern void C_ZNK13QGraphicsItem9mapToItemEPKS_dd(void* qthis, void* arg0, double arg1, double arg2); // 2
   // proto:  QGraphicsObject * QGraphicsItem::toGraphicsObject();
-extern void _ZN13QGraphicsItem16toGraphicsObjectEv(void* qthis); // 4
+extern void C_ZN13QGraphicsItem16toGraphicsObjectEv(void* qthis); // 4
   // proto:  Qt::MouseButtons QGraphicsItem::acceptedMouseButtons();
-extern void _ZNK13QGraphicsItem20acceptedMouseButtonsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem20acceptedMouseButtonsEv(void* qthis); // 4
   // proto:  void QGraphicsItem::setGraphicsEffect(QGraphicsEffect * effect);
-extern void _ZN13QGraphicsItem17setGraphicsEffectEP15QGraphicsEffect(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsItem17setGraphicsEffectEP15QGraphicsEffect(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapToParent(qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem11mapToParentEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZNK13QGraphicsItem11mapToParentEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  QPointF QGraphicsItem::mapToParent(const QPointF & point);
-extern void _ZNK13QGraphicsItem11mapToParentERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem11mapToParentERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsItem::mapToParent(qreal x, qreal y);
-extern void _ZNK13QGraphicsItem11mapToParentEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZNK13QGraphicsItem11mapToParentEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  QPainterPath QGraphicsItem::mapToParent(const QPainterPath & path);
-extern void _ZNK13QGraphicsItem11mapToParentERK12QPainterPath(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem11mapToParentERK12QPainterPath(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapToParent(const QRectF & rect);
-extern void _ZNK13QGraphicsItem11mapToParentERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem11mapToParentERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapToParent(const QPolygonF & polygon);
-extern void _ZNK13QGraphicsItem11mapToParentERK9QPolygonF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem11mapToParentERK9QPolygonF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsItem::setTransformOriginPoint(const QPointF & origin);
-extern void _ZN13QGraphicsItem23setTransformOriginPointERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsItem23setTransformOriginPointERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsItem::setTransformOriginPoint(qreal ax, qreal ay);
-extern void _ZN13QGraphicsItem23setTransformOriginPointEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZN13QGraphicsItem23setTransformOriginPointEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  QTransform QGraphicsItem::deviceTransform(const QTransform & viewportTransform);
-extern void _ZNK13QGraphicsItem15deviceTransformERK10QTransform(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem15deviceTransformERK10QTransform(void* qthis, void* arg0); // 4
   // proto:  qreal QGraphicsItem::rotation();
-extern void _ZNK13QGraphicsItem8rotationEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem8rotationEv(void* qthis); // 4
   // proto:  qreal QGraphicsItem::effectiveOpacity();
-extern void _ZNK13QGraphicsItem16effectiveOpacityEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem16effectiveOpacityEv(void* qthis); // 4
   // proto:  QGraphicsItem * QGraphicsItem::focusScopeItem();
-extern void _ZNK13QGraphicsItem14focusScopeItemEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem14focusScopeItemEv(void* qthis); // 4
   // proto:  Qt::InputMethodHints QGraphicsItem::inputMethodHints();
-extern void _ZNK13QGraphicsItem16inputMethodHintsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem16inputMethodHintsEv(void* qthis); // 4
   // proto:  QGraphicsItem::PanelModality QGraphicsItem::panelModality();
-extern void _ZNK13QGraphicsItem13panelModalityEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem13panelModalityEv(void* qthis); // 4
   // proto:  QGraphicsWidget * QGraphicsItem::topLevelWidget();
-extern void _ZNK13QGraphicsItem14topLevelWidgetEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem14topLevelWidgetEv(void* qthis); // 4
   // proto:  bool QGraphicsItem::isVisibleTo(const QGraphicsItem * parent);
-extern void _ZNK13QGraphicsItem11isVisibleToEPKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem11isVisibleToEPKS_(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsItem::setAcceptDrops(bool on);
-extern void _ZN13QGraphicsItem14setAcceptDropsEb(void* qthis, bool arg0); // 4
+extern void C_ZN13QGraphicsItem14setAcceptDropsEb(void* qthis, bool arg0); // 4
   // proto:  void QGraphicsItem::clearFocus();
-extern void _ZN13QGraphicsItem10clearFocusEv(void* qthis); // 4
+extern void C_ZN13QGraphicsItem10clearFocusEv(void* qthis); // 4
   // proto:  bool QGraphicsItem::filtersChildEvents();
-extern void _ZNK13QGraphicsItem18filtersChildEventsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem18filtersChildEventsEv(void* qthis); // 4
   // proto:  qreal QGraphicsItem::x();
-extern void _ZNK13QGraphicsItem1xEv(void* qthis); // 2
+extern void C_ZNK13QGraphicsItem1xEv(void* qthis); // 2
   // proto:  void QGraphicsItem::setTransform(const QTransform & matrix, bool combine);
-extern void _ZN13QGraphicsItem12setTransformERK10QTransformb(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZN13QGraphicsItem12setTransformERK10QTransformb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  void QGraphicsItem::stackBefore(const QGraphicsItem * sibling);
-extern void _ZN13QGraphicsItem11stackBeforeEPKS_(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsItem11stackBeforeEPKS_(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsItem::setAcceptHoverEvents(bool enabled);
-extern void _ZN13QGraphicsItem20setAcceptHoverEventsEb(void* qthis, bool arg0); // 4
+extern void C_ZN13QGraphicsItem20setAcceptHoverEventsEb(void* qthis, bool arg0); // 4
   // proto:  QGraphicsItem * QGraphicsItem::focusProxy();
-extern void _ZNK13QGraphicsItem10focusProxyEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem10focusProxyEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsItem::mapFromParent(const QPainterPath & path);
-extern void _ZNK13QGraphicsItem13mapFromParentERK12QPainterPath(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem13mapFromParentERK12QPainterPath(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapFromParent(const QRectF & rect);
-extern void _ZNK13QGraphicsItem13mapFromParentERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem13mapFromParentERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapFromParent(qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem13mapFromParentEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZNK13QGraphicsItem13mapFromParentEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  QPointF QGraphicsItem::mapFromParent(qreal x, qreal y);
-extern void _ZNK13QGraphicsItem13mapFromParentEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZNK13QGraphicsItem13mapFromParentEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  QPointF QGraphicsItem::mapFromParent(const QPointF & point);
-extern void _ZNK13QGraphicsItem13mapFromParentERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem13mapFromParentERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapFromParent(const QPolygonF & polygon);
-extern void _ZNK13QGraphicsItem13mapFromParentERK9QPolygonF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem13mapFromParentERK9QPolygonF(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsItem::scenePos();
-extern void _ZNK13QGraphicsItem8scenePosEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem8scenePosEv(void* qthis); // 4
   // proto:  void QGraphicsItem::setPos(qreal x, qreal y);
-extern void _ZN13QGraphicsItem6setPosEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZN13QGraphicsItem6setPosEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QGraphicsItem::setPos(const QPointF & pos);
-extern void _ZN13QGraphicsItem6setPosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsItem6setPosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  qreal QGraphicsItem::scale();
-extern void _ZNK13QGraphicsItem5scaleEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem5scaleEv(void* qthis); // 4
   // proto:  void QGraphicsItem::hide();
-extern void _ZN13QGraphicsItem4hideEv(void* qthis); // 2
+extern void C_ZN13QGraphicsItem4hideEv(void* qthis); // 2
   // proto:  QMatrix QGraphicsItem::matrix();
-extern void _ZNK13QGraphicsItem6matrixEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem6matrixEv(void* qthis); // 4
   // proto:  bool QGraphicsItem::isSelected();
-extern void _ZNK13QGraphicsItem10isSelectedEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem10isSelectedEv(void* qthis); // 4
   // proto:  void QGraphicsItem::moveBy(qreal dx, qreal dy);
-extern void _ZN13QGraphicsItem6moveByEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZN13QGraphicsItem6moveByEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QGraphicsItem::setFocusProxy(QGraphicsItem * item);
-extern void _ZN13QGraphicsItem13setFocusProxyEPS_(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsItem13setFocusProxyEPS_(void* qthis, void* arg0); // 4
   // proto:  QTransform QGraphicsItem::itemTransform(const QGraphicsItem * other, bool * ok);
-extern void _ZNK13QGraphicsItem13itemTransformEPKS_Pb(void* qthis, void* arg0, bool* arg1); // 4
+extern void C_ZNK13QGraphicsItem13itemTransformEPKS_Pb(void* qthis, void* arg0, bool* arg1); // 4
   // proto:  QRectF QGraphicsItem::mapRectToParent(const QRectF & rect);
-extern void _ZNK13QGraphicsItem15mapRectToParentERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem15mapRectToParentERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QRectF QGraphicsItem::mapRectToParent(qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem15mapRectToParentEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZNK13QGraphicsItem15mapRectToParentEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  bool QGraphicsItem::isBlockedByModalPanel(QGraphicsItem ** blockingPanel);
-extern void _ZNK13QGraphicsItem21isBlockedByModalPanelEPPS_(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem21isBlockedByModalPanelEPPS_(void* qthis, void* arg0); // 4
   // proto:  QGraphicsEffect * QGraphicsItem::graphicsEffect();
-extern void _ZNK13QGraphicsItem14graphicsEffectEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem14graphicsEffectEv(void* qthis); // 4
   // proto:  QList<QGraphicsItem *> QGraphicsItem::childItems();
-extern void _ZNK13QGraphicsItem10childItemsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem10childItemsEv(void* qthis); // 4
   // proto:  bool QGraphicsItem::isClipped();
-extern void _ZNK13QGraphicsItem9isClippedEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem9isClippedEv(void* qthis); // 4
   // proto:  QString QGraphicsItem::toolTip();
-extern void _ZNK13QGraphicsItem7toolTipEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem7toolTipEv(void* qthis); // 4
   // proto:  void QGraphicsItem::~QGraphicsItem();
-extern void _ZN13QGraphicsItemD2Ev(void* qthis); // 4
+extern void C_ZN13QGraphicsItemD2Ev(void* qthis); // 4
   // proto:  bool QGraphicsItem::isActive();
-extern void _ZNK13QGraphicsItem8isActiveEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem8isActiveEv(void* qthis); // 4
   // proto:  void QGraphicsItem::setFiltersChildEvents(bool enabled);
-extern void _ZN13QGraphicsItem21setFiltersChildEventsEb(void* qthis, bool arg0); // 4
+extern void C_ZN13QGraphicsItem21setFiltersChildEventsEb(void* qthis, bool arg0); // 4
   // proto:  QPainterPath QGraphicsItem::opaqueArea();
-extern void _ZNK13QGraphicsItem10opaqueAreaEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem10opaqueAreaEv(void* qthis); // 4
   // proto:  void QGraphicsItem::advance(int phase);
-extern void _ZN13QGraphicsItem7advanceEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN13QGraphicsItem7advanceEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsItem::setToolTip(const QString & toolTip);
-extern void _ZN13QGraphicsItem10setToolTipERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsItem10setToolTipERK7QString(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapToScene(const QPolygonF & polygon);
-extern void _ZNK13QGraphicsItem10mapToSceneERK9QPolygonF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem10mapToSceneERK9QPolygonF(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapToScene(const QRectF & rect);
-extern void _ZNK13QGraphicsItem10mapToSceneERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem10mapToSceneERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsItem::mapToScene(const QPointF & point);
-extern void _ZNK13QGraphicsItem10mapToSceneERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem10mapToSceneERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QPainterPath QGraphicsItem::mapToScene(const QPainterPath & path);
-extern void _ZNK13QGraphicsItem10mapToSceneERK12QPainterPath(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem10mapToSceneERK12QPainterPath(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapToScene(qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem10mapToSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZNK13QGraphicsItem10mapToSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  QPointF QGraphicsItem::mapToScene(qreal x, qreal y);
-extern void _ZNK13QGraphicsItem10mapToSceneEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZNK13QGraphicsItem10mapToSceneEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QGraphicsItem::setHandlesChildEvents(bool enabled);
-extern void _ZN13QGraphicsItem21setHandlesChildEventsEb(void* qthis, bool arg0); // 4
+extern void C_ZN13QGraphicsItem21setHandlesChildEventsEb(void* qthis, bool arg0); // 4
   // proto:  QPointF QGraphicsItem::transformOriginPoint();
-extern void _ZNK13QGraphicsItem20transformOriginPointEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem20transformOriginPointEv(void* qthis); // 4
   // proto:  QPointF QGraphicsItem::pos();
-extern void _ZNK13QGraphicsItem3posEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem3posEv(void* qthis); // 4
   // proto:  QRectF QGraphicsItem::mapRectToScene(const QRectF & rect);
-extern void _ZNK13QGraphicsItem14mapRectToSceneERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem14mapRectToSceneERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QRectF QGraphicsItem::mapRectToScene(qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem14mapRectToSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZNK13QGraphicsItem14mapRectToSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  void QGraphicsItem::ungrabMouse();
-extern void _ZN13QGraphicsItem11ungrabMouseEv(void* qthis); // 4
+extern void C_ZN13QGraphicsItem11ungrabMouseEv(void* qthis); // 4
   // proto:  bool QGraphicsItem::isObscured(qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem10isObscuredEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZNK13QGraphicsItem10isObscuredEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  bool QGraphicsItem::isObscured(const QRectF & rect);
-extern void _ZNK13QGraphicsItem10isObscuredERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem10isObscuredERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsItem::setSelected(bool selected);
-extern void _ZN13QGraphicsItem11setSelectedEb(void* qthis, bool arg0); // 4
+extern void C_ZN13QGraphicsItem11setSelectedEb(void* qthis, bool arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapFromScene(const QPolygonF & polygon);
-extern void _ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapFromScene(const QRectF & rect);
-extern void _ZNK13QGraphicsItem12mapFromSceneERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem12mapFromSceneERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QPolygonF QGraphicsItem::mapFromScene(qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem12mapFromSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZNK13QGraphicsItem12mapFromSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  QPointF QGraphicsItem::mapFromScene(qreal x, qreal y);
-extern void _ZNK13QGraphicsItem12mapFromSceneEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZNK13QGraphicsItem12mapFromSceneEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  QPainterPath QGraphicsItem::mapFromScene(const QPainterPath & path);
-extern void _ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath(void* qthis, void* arg0); // 4
   // proto:  QPointF QGraphicsItem::mapFromScene(const QPointF & point);
-extern void _ZNK13QGraphicsItem12mapFromSceneERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem12mapFromSceneERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QGraphicsScene * QGraphicsItem::scene();
-extern void _ZNK13QGraphicsItem5sceneEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem5sceneEv(void* qthis); // 4
   // proto:  bool QGraphicsItem::isAncestorOf(const QGraphicsItem * child);
-extern void _ZNK13QGraphicsItem12isAncestorOfEPKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem12isAncestorOfEPKS_(void* qthis, void* arg0); // 4
   // proto:  QGraphicsItem * QGraphicsItem::topLevelItem();
-extern void _ZNK13QGraphicsItem12topLevelItemEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem12topLevelItemEv(void* qthis); // 4
   // proto:  QGraphicsItem * QGraphicsItem::panel();
-extern void _ZNK13QGraphicsItem5panelEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem5panelEv(void* qthis); // 4
   // proto:  void QGraphicsItem::unsetCursor();
-extern void _ZN13QGraphicsItem11unsetCursorEv(void* qthis); // 4
+extern void C_ZN13QGraphicsItem11unsetCursorEv(void* qthis); // 4
   // proto:  QList<QGraphicsTransform *> QGraphicsItem::transformations();
-extern void _ZNK13QGraphicsItem15transformationsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem15transformationsEv(void* qthis); // 4
   // proto:  QRectF QGraphicsItem::mapRectFromScene(const QRectF & rect);
-extern void _ZNK13QGraphicsItem16mapRectFromSceneERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem16mapRectFromSceneERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QRectF QGraphicsItem::mapRectFromScene(qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem16mapRectFromSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZNK13QGraphicsItem16mapRectFromSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  bool QGraphicsItem::contains(const QPointF & point);
-extern void _ZNK13QGraphicsItem8containsERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem8containsERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QTransform QGraphicsItem::transform();
-extern void _ZNK13QGraphicsItem9transformEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem9transformEv(void* qthis); // 4
   // proto:  void QGraphicsItem::ungrabKeyboard();
-extern void _ZN13QGraphicsItem14ungrabKeyboardEv(void* qthis); // 4
+extern void C_ZN13QGraphicsItem14ungrabKeyboardEv(void* qthis); // 4
   // proto:  void QGraphicsItem::installSceneEventFilter(QGraphicsItem * filterItem);
-extern void _ZN13QGraphicsItem23installSceneEventFilterEPS_(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsItem23installSceneEventFilterEPS_(void* qthis, void* arg0); // 4
   // proto:  bool QGraphicsItem::acceptHoverEvents();
-extern void _ZNK13QGraphicsItem17acceptHoverEventsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem17acceptHoverEventsEv(void* qthis); // 4
   // proto:  QRectF QGraphicsItem::mapRectToItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem13mapRectToItemEPKS_dddd(void* qthis, void* arg0, double arg1, double arg2, double arg3, double arg4); // 2
+extern void C_ZNK13QGraphicsItem13mapRectToItemEPKS_dddd(void* qthis, void* arg0, double arg1, double arg2, double arg3, double arg4); // 2
   // proto:  QRectF QGraphicsItem::mapRectToItem(const QGraphicsItem * item, const QRectF & rect);
-extern void _ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QPointF QGraphicsItem::mapFromItem(const QGraphicsItem * item, qreal x, qreal y);
-extern void _ZNK13QGraphicsItem11mapFromItemEPKS_dd(void* qthis, void* arg0, double arg1, double arg2); // 2
+extern void C_ZNK13QGraphicsItem11mapFromItemEPKS_dd(void* qthis, void* arg0, double arg1, double arg2); // 2
   // proto:  QPointF QGraphicsItem::mapFromItem(const QGraphicsItem * item, const QPointF & point);
-extern void _ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QPolygonF QGraphicsItem::mapFromItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem11mapFromItemEPKS_dddd(void* qthis, void* arg0, double arg1, double arg2, double arg3, double arg4); // 2
+extern void C_ZNK13QGraphicsItem11mapFromItemEPKS_dddd(void* qthis, void* arg0, double arg1, double arg2, double arg3, double arg4); // 2
   // proto:  QPolygonF QGraphicsItem::mapFromItem(const QGraphicsItem * item, const QRectF & rect);
-extern void _ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QPolygonF QGraphicsItem::mapFromItem(const QGraphicsItem * item, const QPolygonF & polygon);
-extern void _ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QPainterPath QGraphicsItem::mapFromItem(const QGraphicsItem * item, const QPainterPath & path);
-extern void _ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QGraphicsItem::QGraphicsItem(QGraphicsItem * parent);
-extern void _ZN13QGraphicsItemC2EPS_(void* qthis, void* arg0); // 3
+extern void C_ZN13QGraphicsItemC2EPS_(void* qthis, void* arg0); // 3
   // proto:  int QGraphicsItem::type();
-extern void _ZNK13QGraphicsItem4typeEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem4typeEv(void* qthis); // 4
   // proto:  void QGraphicsItem::setEnabled(bool enabled);
-extern void _ZN13QGraphicsItem10setEnabledEb(void* qthis, bool arg0); // 4
+extern void C_ZN13QGraphicsItem10setEnabledEb(void* qthis, bool arg0); // 4
   // proto:  void QGraphicsItem::grabMouse();
-extern void _ZN13QGraphicsItem9grabMouseEv(void* qthis); // 4
+extern void C_ZN13QGraphicsItem9grabMouseEv(void* qthis); // 4
   // proto:  void QGraphicsItem::setActive(bool active);
-extern void _ZN13QGraphicsItem9setActiveEb(void* qthis, bool arg0); // 4
+extern void C_ZN13QGraphicsItem9setActiveEb(void* qthis, bool arg0); // 4
   // proto:  bool QGraphicsItem::isObscuredBy(const QGraphicsItem * item);
-extern void _ZNK13QGraphicsItem12isObscuredByEPKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem12isObscuredByEPKS_(void* qthis, void* arg0); // 4
   // proto:  bool QGraphicsItem::acceptDrops();
-extern void _ZNK13QGraphicsItem11acceptDropsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem11acceptDropsEv(void* qthis); // 4
   // proto:  void QGraphicsItem::setParentItem(QGraphicsItem * parent);
-extern void _ZN13QGraphicsItem13setParentItemEPS_(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsItem13setParentItemEPS_(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsItem::ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin, int ymargin);
-extern void _ZN13QGraphicsItem13ensureVisibleEddddii(void* qthis, double arg0, double arg1, double arg2, double arg3, int32_t arg4, int32_t arg5); // 2
+extern void C_ZN13QGraphicsItem13ensureVisibleEddddii(void* qthis, double arg0, double arg1, double arg2, double arg3, int32_t arg4, int32_t arg5); // 2
   // proto:  void QGraphicsItem::ensureVisible(const QRectF & rect, int xmargin, int ymargin);
-extern void _ZN13QGraphicsItem13ensureVisibleERK6QRectFii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
+extern void C_ZN13QGraphicsItem13ensureVisibleERK6QRectFii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
   // proto:  void QGraphicsItem::grabKeyboard();
-extern void _ZN13QGraphicsItem12grabKeyboardEv(void* qthis); // 4
+extern void C_ZN13QGraphicsItem12grabKeyboardEv(void* qthis); // 4
   // proto:  QGraphicsObject * QGraphicsItem::parentObject();
-extern void _ZNK13QGraphicsItem12parentObjectEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem12parentObjectEv(void* qthis); // 4
   // proto:  bool QGraphicsItem::isUnderMouse();
-extern void _ZNK13QGraphicsItem12isUnderMouseEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem12isUnderMouseEv(void* qthis); // 4
   // proto:  QGraphicsWidget * QGraphicsItem::parentWidget();
-extern void _ZNK13QGraphicsItem12parentWidgetEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem12parentWidgetEv(void* qthis); // 4
   // proto:  void QGraphicsItem::setZValue(qreal z);
-extern void _ZN13QGraphicsItem9setZValueEd(void* qthis, double arg0); // 4
+extern void C_ZN13QGraphicsItem9setZValueEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsItem::setMatrix(const QMatrix & matrix, bool combine);
-extern void _ZN13QGraphicsItem9setMatrixERK7QMatrixb(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZN13QGraphicsItem9setMatrixERK7QMatrixb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  QCursor QGraphicsItem::cursor();
-extern void _ZNK13QGraphicsItem6cursorEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem6cursorEv(void* qthis); // 4
   // proto:  qreal QGraphicsItem::zValue();
-extern void _ZNK13QGraphicsItem6zValueEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem6zValueEv(void* qthis); // 4
   // proto:  void QGraphicsItem::setVisible(bool visible);
-extern void _ZN13QGraphicsItem10setVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN13QGraphicsItem10setVisibleEb(void* qthis, bool arg0); // 4
   // proto:  void QGraphicsItem::resetMatrix();
-extern void _ZN13QGraphicsItem11resetMatrixEv(void* qthis); // 4
+extern void C_ZN13QGraphicsItem11resetMatrixEv(void* qthis); // 4
   // proto:  QTransform QGraphicsItem::sceneTransform();
-extern void _ZNK13QGraphicsItem14sceneTransformEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem14sceneTransformEv(void* qthis); // 4
   // proto:  bool QGraphicsItem::isWindow();
-extern void _ZNK13QGraphicsItem8isWindowEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem8isWindowEv(void* qthis); // 4
   // proto:  QRectF QGraphicsItem::mapRectFromParent(const QRectF & rect);
-extern void _ZNK13QGraphicsItem17mapRectFromParentERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem17mapRectFromParentERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QRectF QGraphicsItem::mapRectFromParent(qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem17mapRectFromParentEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZNK13QGraphicsItem17mapRectFromParentEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  void QGraphicsItem::setScale(qreal scale);
-extern void _ZN13QGraphicsItem8setScaleEd(void* qthis, double arg0); // 4
+extern void C_ZN13QGraphicsItem8setScaleEd(void* qthis, double arg0); // 4
   // proto:  bool QGraphicsItem::isWidget();
-extern void _ZNK13QGraphicsItem8isWidgetEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem8isWidgetEv(void* qthis); // 4
   // proto:  void QGraphicsItem::resetTransform();
-extern void _ZN13QGraphicsItem14resetTransformEv(void* qthis); // 4
+extern void C_ZN13QGraphicsItem14resetTransformEv(void* qthis); // 4
   // proto:  QRectF QGraphicsItem::sceneBoundingRect();
-extern void _ZNK13QGraphicsItem17sceneBoundingRectEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem17sceneBoundingRectEv(void* qthis); // 4
   // proto:  void QGraphicsItem::setOpacity(qreal opacity);
-extern void _ZN13QGraphicsItem10setOpacityEd(void* qthis, double arg0); // 4
+extern void C_ZN13QGraphicsItem10setOpacityEd(void* qthis, double arg0); // 4
   // proto:  QGraphicsItem * QGraphicsItem::focusItem();
-extern void _ZNK13QGraphicsItem9focusItemEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem9focusItemEv(void* qthis); // 4
   // proto:  bool QGraphicsItem::hasCursor();
-extern void _ZNK13QGraphicsItem9hasCursorEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem9hasCursorEv(void* qthis); // 4
   // proto:  void QGraphicsItem::setAcceptTouchEvents(bool enabled);
-extern void _ZN13QGraphicsItem20setAcceptTouchEventsEb(void* qthis, bool arg0); // 4
+extern void C_ZN13QGraphicsItem20setAcceptTouchEventsEb(void* qthis, bool arg0); // 4
   // proto:  void QGraphicsItem::setData(int key, const QVariant & value);
-extern void _ZN13QGraphicsItem7setDataEiRK8QVariant(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN13QGraphicsItem7setDataEiRK8QVariant(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  qreal QGraphicsItem::opacity();
-extern void _ZNK13QGraphicsItem7opacityEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem7opacityEv(void* qthis); // 4
   // proto:  bool QGraphicsItem::isVisible();
-extern void _ZNK13QGraphicsItem9isVisibleEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem9isVisibleEv(void* qthis); // 4
   // proto:  void QGraphicsItem::update(qreal x, qreal y, qreal width, qreal height);
-extern void _ZN13QGraphicsItem6updateEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZN13QGraphicsItem6updateEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  void QGraphicsItem::update(const QRectF & rect);
-extern void _ZN13QGraphicsItem6updateERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsItem6updateERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QRectF QGraphicsItem::mapRectFromItem(const QGraphicsItem * item, const QRectF & rect);
-extern void _ZNK13QGraphicsItem15mapRectFromItemEPKS_RK6QRectF(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QGraphicsItem15mapRectFromItemEPKS_RK6QRectF(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QRectF QGraphicsItem::mapRectFromItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h);
-extern void _ZNK13QGraphicsItem15mapRectFromItemEPKS_dddd(void* qthis, void* arg0, double arg1, double arg2, double arg3, double arg4); // 2
+extern void C_ZNK13QGraphicsItem15mapRectFromItemEPKS_dddd(void* qthis, void* arg0, double arg1, double arg2, double arg3, double arg4); // 2
   // proto:  void QGraphicsItem::setX(qreal x);
-extern void _ZN13QGraphicsItem4setXEd(void* qthis, double arg0); // 4
+extern void C_ZN13QGraphicsItem4setXEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsItem::setY(qreal y);
-extern void _ZN13QGraphicsItem4setYEd(void* qthis, double arg0); // 4
+extern void C_ZN13QGraphicsItem4setYEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsItem::setCursor(const QCursor & cursor);
-extern void _ZN13QGraphicsItem9setCursorERK7QCursor(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsItem9setCursorERK7QCursor(void* qthis, void* arg0); // 4
   // proto:  qreal QGraphicsItem::boundingRegionGranularity();
-extern void _ZNK13QGraphicsItem25boundingRegionGranularityEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem25boundingRegionGranularityEv(void* qthis); // 4
   // proto:  void QGraphicsItem::removeSceneEventFilter(QGraphicsItem * filterItem);
-extern void _ZN13QGraphicsItem22removeSceneEventFilterEPS_(void* qthis, void* arg0); // 4
+extern void C_ZN13QGraphicsItem22removeSceneEventFilterEPS_(void* qthis, void* arg0); // 4
   // proto:  bool QGraphicsItem::acceptTouchEvents();
-extern void _ZNK13QGraphicsItem17acceptTouchEventsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem17acceptTouchEventsEv(void* qthis); // 4
   // proto:  QMatrix QGraphicsItem::sceneMatrix();
-extern void _ZNK13QGraphicsItem11sceneMatrixEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem11sceneMatrixEv(void* qthis); // 4
   // proto:  QGraphicsItem::CacheMode QGraphicsItem::cacheMode();
-extern void _ZNK13QGraphicsItem9cacheModeEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem9cacheModeEv(void* qthis); // 4
   // proto:  GraphicsItemFlags QGraphicsItem::flags();
-extern void _ZNK13QGraphicsItem5flagsEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem5flagsEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsItem::clipPath();
-extern void _ZNK13QGraphicsItem8clipPathEv(void* qthis); // 4
+extern void C_ZNK13QGraphicsItem8clipPathEv(void* qthis); // 4
   // proto:  qreal QGraphicsItem::y();
-extern void _ZNK13QGraphicsItem1yEv(void* qthis); // 2
+extern void C_ZNK13QGraphicsItem1yEv(void* qthis); // 2
   // proto:  void QGraphicsItem::scroll(qreal dx, qreal dy, const QRectF & rect);
-extern void _ZN13QGraphicsItem6scrollEddRK6QRectF(void* qthis, double arg0, double arg1, void* arg2); // 4
+extern void C_ZN13QGraphicsItem6scrollEddRK6QRectF(void* qthis, double arg0, double arg1, void* arg2); // 4
   // proto:  QRegion QGraphicsItem::boundingRegion(const QTransform & itemToDeviceTransform);
-extern void _ZNK13QGraphicsItem14boundingRegionERK10QTransform(void* qthis, void* arg0); // 4
+extern void C_ZNK13QGraphicsItem14boundingRegionERK10QTransform(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsObject::~QGraphicsObject();
-extern void _ZN15QGraphicsObjectD2Ev(void* qthis); // 4
+extern void C_ZN15QGraphicsObjectD2Ev(void* qthis); // 4
   // proto:  void QGraphicsObject::QGraphicsObject(QGraphicsItem * parent);
-extern void _ZN15QGraphicsObjectC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
+extern void C_ZN15QGraphicsObjectC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
   // proto:  const QMetaObject * QGraphicsObject::metaObject();
-extern void _ZNK15QGraphicsObject10metaObjectEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsObject10metaObjectEv(void* qthis); // 4
   // proto:  QPainterPath QGraphicsSimpleTextItem::opaqueArea();
-extern void _ZNK23QGraphicsSimpleTextItem10opaqueAreaEv(void* qthis); // 4
+extern void C_ZNK23QGraphicsSimpleTextItem10opaqueAreaEv(void* qthis); // 4
   // proto:  void QGraphicsSimpleTextItem::~QGraphicsSimpleTextItem();
-extern void _ZN23QGraphicsSimpleTextItemD2Ev(void* qthis); // 4
+extern void C_ZN23QGraphicsSimpleTextItemD2Ev(void* qthis); // 4
   // proto:  QRectF QGraphicsSimpleTextItem::boundingRect();
-extern void _ZNK23QGraphicsSimpleTextItem12boundingRectEv(void* qthis); // 4
+extern void C_ZNK23QGraphicsSimpleTextItem12boundingRectEv(void* qthis); // 4
   // proto:  QString QGraphicsSimpleTextItem::text();
-extern void _ZNK23QGraphicsSimpleTextItem4textEv(void* qthis); // 4
+extern void C_ZNK23QGraphicsSimpleTextItem4textEv(void* qthis); // 4
   // proto:  void QGraphicsSimpleTextItem::setText(const QString & text);
-extern void _ZN23QGraphicsSimpleTextItem7setTextERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN23QGraphicsSimpleTextItem7setTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QGraphicsSimpleTextItem::contains(const QPointF & point);
-extern void _ZNK23QGraphicsSimpleTextItem8containsERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK23QGraphicsSimpleTextItem8containsERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  bool QGraphicsSimpleTextItem::isObscuredBy(const QGraphicsItem * item);
-extern void _ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
+extern void C_ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsSimpleTextItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-extern void _ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  QPainterPath QGraphicsSimpleTextItem::shape();
-extern void _ZNK23QGraphicsSimpleTextItem5shapeEv(void* qthis); // 4
+extern void C_ZNK23QGraphicsSimpleTextItem5shapeEv(void* qthis); // 4
   // proto:  void QGraphicsSimpleTextItem::QGraphicsSimpleTextItem(QGraphicsItem * parent);
-extern void _ZN23QGraphicsSimpleTextItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
+extern void C_ZN23QGraphicsSimpleTextItemC2EP13QGraphicsItem(void* qthis, void* arg0); // 3
   // proto:  void QGraphicsSimpleTextItem::QGraphicsSimpleTextItem(const QString & text, QGraphicsItem * parent);
-extern void _ZN23QGraphicsSimpleTextItemC2ERK7QStringP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN23QGraphicsSimpleTextItemC2ERK7QStringP13QGraphicsItem(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QGraphicsSimpleTextItem::setFont(const QFont & font);
-extern void _ZN23QGraphicsSimpleTextItem7setFontERK5QFont(void* qthis, void* arg0); // 4
+extern void C_ZN23QGraphicsSimpleTextItem7setFontERK5QFont(void* qthis, void* arg0); // 4
   // proto:  QFont QGraphicsSimpleTextItem::font();
-extern void _ZNK23QGraphicsSimpleTextItem4fontEv(void* qthis); // 4
+extern void C_ZNK23QGraphicsSimpleTextItem4fontEv(void* qthis); // 4
   // proto:  int QGraphicsSimpleTextItem::type();
-extern void _ZNK23QGraphicsSimpleTextItem4typeEv(void* qthis); // 4
+extern void C_ZNK23QGraphicsSimpleTextItem4typeEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -794,7 +794,7 @@ func (this *QGraphicsTextItem) contains(args ...interface{}) () {
     // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK17QGraphicsTextItem8containsERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK17QGraphicsTextItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "contains", args)
   }
@@ -814,7 +814,7 @@ func (this *QGraphicsTextItem) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    C._ZNK17QGraphicsTextItem12boundingRectEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "boundingRect", args)
   }
@@ -837,7 +837,7 @@ func (this *QGraphicsTextItem) setPlainText(args ...interface{}) () {
     // invoke: void setPlainText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsTextItem12setPlainTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem12setPlainTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setPlainText", args)
   }
@@ -860,7 +860,7 @@ func (this *QGraphicsTextItem) setHtml(args ...interface{}) () {
     // invoke: void setHtml(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsTextItem7setHtmlERK7QString(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem7setHtmlERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setHtml", args)
   }
@@ -883,7 +883,7 @@ func (this *QGraphicsTextItem) setTabChangesFocus(args ...interface{}) () {
     // invoke: void setTabChangesFocus(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsTextItem18setTabChangesFocusEb(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem18setTabChangesFocusEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setTabChangesFocus", args)
   }
@@ -906,7 +906,7 @@ func (this *QGraphicsTextItem) setDocument(args ...interface{}) () {
     // invoke: void setDocument(class QTextDocument *)
     var arg0 = args[0].(QTextDocument).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsTextItem11setDocumentEP13QTextDocument(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem11setDocumentEP13QTextDocument(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setDocument", args)
   }
@@ -929,7 +929,7 @@ func (this *QGraphicsTextItem) setOpenExternalLinks(args ...interface{}) () {
     // invoke: void setOpenExternalLinks(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsTextItem20setOpenExternalLinksEb(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem20setOpenExternalLinksEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setOpenExternalLinks", args)
   }
@@ -949,7 +949,7 @@ func (this *QGraphicsTextItem) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem4fontEv
     // invoke: QFont font()
-    C._ZNK17QGraphicsTextItem4fontEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "font", args)
   }
@@ -972,7 +972,7 @@ func (this *QGraphicsTextItem) setDefaultTextColor(args ...interface{}) () {
     // invoke: void setDefaultTextColor(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setDefaultTextColor", args)
   }
@@ -992,7 +992,7 @@ func (this *QGraphicsTextItem) openExternalLinks(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem17openExternalLinksEv
     // invoke: bool openExternalLinks()
-    C._ZNK17QGraphicsTextItem17openExternalLinksEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem17openExternalLinksEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "openExternalLinks", args)
   }
@@ -1015,7 +1015,7 @@ func (this *QGraphicsTextItem) setTextCursor(args ...interface{}) () {
     // invoke: void setTextCursor(const class QTextCursor &)
     var arg0 = args[0].(QTextCursor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setTextCursor", args)
   }
@@ -1035,7 +1035,7 @@ func (this *QGraphicsTextItem) toPlainText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem11toPlainTextEv
     // invoke: QString toPlainText()
-    C._ZNK17QGraphicsTextItem11toPlainTextEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem11toPlainTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "toPlainText", args)
   }
@@ -1055,7 +1055,7 @@ func (this *QGraphicsTextItem) tabChangesFocus(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem15tabChangesFocusEv
     // invoke: bool tabChangesFocus()
-    C._ZNK17QGraphicsTextItem15tabChangesFocusEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem15tabChangesFocusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "tabChangesFocus", args)
   }
@@ -1075,7 +1075,7 @@ func (this *QGraphicsTextItem) textCursor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem10textCursorEv
     // invoke: QTextCursor textCursor()
-    C._ZNK17QGraphicsTextItem10textCursorEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem10textCursorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "textCursor", args)
   }
@@ -1104,7 +1104,7 @@ func (this *QGraphicsTextItem) paint(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "paint", args)
   }
@@ -1133,7 +1133,7 @@ func NewQGraphicsTextItem(args ...interface{}) QGraphicsTextItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QGraphicsTextItemC2EP13QGraphicsItem(qthis, arg0)
+    C.C_ZN17QGraphicsTextItemC2EP13QGraphicsItem(qthis, arg0)
   case 1:
     // invoke: _ZN17QGraphicsTextItemC1ERK7QStringP13QGraphicsItem
     // invoke: void QGraphicsTextItem(const class QString &, class QGraphicsItem *)
@@ -1143,7 +1143,7 @@ func NewQGraphicsTextItem(args ...interface{}) QGraphicsTextItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QGraphicsTextItemC2ERK7QStringP13QGraphicsItem(qthis, arg0, arg1)
+    C.C_ZN17QGraphicsTextItemC2ERK7QStringP13QGraphicsItem(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "QGraphicsTextItem", args)
   }
@@ -1164,7 +1164,7 @@ func (this *QGraphicsTextItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem4typeEv
     // invoke: int type()
-    C._ZNK17QGraphicsTextItem4typeEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "type", args)
   }
@@ -1184,7 +1184,7 @@ func (this *QGraphicsTextItem) textInteractionFlags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem20textInteractionFlagsEv
     // invoke: Qt::TextInteractionFlags textInteractionFlags()
-    C._ZNK17QGraphicsTextItem20textInteractionFlagsEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem20textInteractionFlagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "textInteractionFlags", args)
   }
@@ -1204,7 +1204,7 @@ func (this *QGraphicsTextItem) toHtml(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem6toHtmlEv
     // invoke: QString toHtml()
-    C._ZNK17QGraphicsTextItem6toHtmlEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem6toHtmlEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "toHtml", args)
   }
@@ -1224,7 +1224,7 @@ func (this *QGraphicsTextItem) adjustSize(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItem10adjustSizeEv
     // invoke: void adjustSize()
-    C._ZN17QGraphicsTextItem10adjustSizeEv(this.qclsinst)
+    C.C_ZN17QGraphicsTextItem10adjustSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "adjustSize", args)
   }
@@ -1244,7 +1244,7 @@ func (this *QGraphicsTextItem) FreeQGraphicsTextItem(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItemD0Ev
     // invoke: void ~QGraphicsTextItem()
-    C._ZN17QGraphicsTextItemD2Ev(this.qclsinst)
+    C.C_ZN17QGraphicsTextItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "~QGraphicsTextItem", args)
   }
@@ -1267,7 +1267,7 @@ func (this *QGraphicsTextItem) setTextWidth(args ...interface{}) () {
     // invoke: void setTextWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsTextItem12setTextWidthEd(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem12setTextWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setTextWidth", args)
   }
@@ -1290,7 +1290,7 @@ func (this *QGraphicsTextItem) isObscuredBy(args ...interface{}) () {
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "isObscuredBy", args)
   }
@@ -1310,7 +1310,7 @@ func (this *QGraphicsTextItem) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem8documentEv
     // invoke: QTextDocument * document()
-    C._ZNK17QGraphicsTextItem8documentEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem8documentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "document", args)
   }
@@ -1330,7 +1330,7 @@ func (this *QGraphicsTextItem) opaqueArea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    C._ZNK17QGraphicsTextItem10opaqueAreaEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "opaqueArea", args)
   }
@@ -1350,7 +1350,7 @@ func (this *QGraphicsTextItem) defaultTextColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem16defaultTextColorEv
     // invoke: QColor defaultTextColor()
-    C._ZNK17QGraphicsTextItem16defaultTextColorEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem16defaultTextColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "defaultTextColor", args)
   }
@@ -1370,7 +1370,7 @@ func (this *QGraphicsTextItem) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK17QGraphicsTextItem10metaObjectEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "metaObject", args)
   }
@@ -1390,7 +1390,7 @@ func (this *QGraphicsTextItem) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem5shapeEv
     // invoke: QPainterPath shape()
-    C._ZNK17QGraphicsTextItem5shapeEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "shape", args)
   }
@@ -1413,7 +1413,7 @@ func (this *QGraphicsTextItem) setFont(args ...interface{}) () {
     // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsTextItem7setFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem7setFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setFont", args)
   }
@@ -1433,7 +1433,7 @@ func (this *QGraphicsTextItem) textWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem9textWidthEv
     // invoke: qreal textWidth()
-    C._ZNK17QGraphicsTextItem9textWidthEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem9textWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "textWidth", args)
   }
@@ -1453,7 +1453,7 @@ func (this *QGraphicsPixmapItem) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    C._ZNK19QGraphicsPixmapItem12boundingRectEv(this.qclsinst)
+    C.C_ZNK19QGraphicsPixmapItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "boundingRect", args)
   }
@@ -1476,7 +1476,7 @@ func (this *QGraphicsPixmapItem) setPixmap(args ...interface{}) () {
     // invoke: void setPixmap(const class QPixmap &)
     var arg0 = args[0].(QPixmap).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "setPixmap", args)
   }
@@ -1496,7 +1496,7 @@ func (this *QGraphicsPixmapItem) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem5shapeEv
     // invoke: QPainterPath shape()
-    C._ZNK19QGraphicsPixmapItem5shapeEv(this.qclsinst)
+    C.C_ZNK19QGraphicsPixmapItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "shape", args)
   }
@@ -1516,7 +1516,7 @@ func (this *QGraphicsPixmapItem) transformationMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem18transformationModeEv
     // invoke: Qt::TransformationMode transformationMode()
-    C._ZNK19QGraphicsPixmapItem18transformationModeEv(this.qclsinst)
+    C.C_ZNK19QGraphicsPixmapItem18transformationModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "transformationMode", args)
   }
@@ -1536,7 +1536,7 @@ func (this *QGraphicsPixmapItem) pixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem6pixmapEv
     // invoke: QPixmap pixmap()
-    C._ZNK19QGraphicsPixmapItem6pixmapEv(this.qclsinst)
+    C.C_ZNK19QGraphicsPixmapItem6pixmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "pixmap", args)
   }
@@ -1559,7 +1559,7 @@ func (this *QGraphicsPixmapItem) contains(args ...interface{}) () {
     // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QGraphicsPixmapItem8containsERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK19QGraphicsPixmapItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "contains", args)
   }
@@ -1579,7 +1579,7 @@ func (this *QGraphicsPixmapItem) shapeMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem9shapeModeEv
     // invoke: QGraphicsPixmapItem::ShapeMode shapeMode()
-    C._ZNK19QGraphicsPixmapItem9shapeModeEv(this.qclsinst)
+    C.C_ZNK19QGraphicsPixmapItem9shapeModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "shapeMode", args)
   }
@@ -1608,7 +1608,7 @@ func (this *QGraphicsPixmapItem) paint(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "paint", args)
   }
@@ -1635,7 +1635,7 @@ func (this *QGraphicsPixmapItem) setOffset(args ...interface{}) () {
     // invoke: void setOffset(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QGraphicsPixmapItem9setOffsetERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsPixmapItem9setOffsetERK7QPointF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN19QGraphicsPixmapItem9setOffsetEdd
     // invoke: void setOffset(qreal, qreal)
@@ -1643,7 +1643,7 @@ func (this *QGraphicsPixmapItem) setOffset(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN19QGraphicsPixmapItem9setOffsetEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN19QGraphicsPixmapItem9setOffsetEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "setOffset", args)
   }
@@ -1663,7 +1663,7 @@ func (this *QGraphicsPixmapItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem4typeEv
     // invoke: int type()
-    C._ZNK19QGraphicsPixmapItem4typeEv(this.qclsinst)
+    C.C_ZNK19QGraphicsPixmapItem4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "type", args)
   }
@@ -1683,7 +1683,7 @@ func (this *QGraphicsPixmapItem) FreeQGraphicsPixmapItem(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QGraphicsPixmapItemD0Ev
     // invoke: void ~QGraphicsPixmapItem()
-    C._ZN19QGraphicsPixmapItemD2Ev(this.qclsinst)
+    C.C_ZN19QGraphicsPixmapItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "~QGraphicsPixmapItem", args)
   }
@@ -1703,7 +1703,7 @@ func (this *QGraphicsPixmapItem) offset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem6offsetEv
     // invoke: QPointF offset()
-    C._ZNK19QGraphicsPixmapItem6offsetEv(this.qclsinst)
+    C.C_ZNK19QGraphicsPixmapItem6offsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "offset", args)
   }
@@ -1732,7 +1732,7 @@ func NewQGraphicsPixmapItem(args ...interface{}) QGraphicsPixmapItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QGraphicsPixmapItemC2EP13QGraphicsItem(qthis, arg0)
+    C.C_ZN19QGraphicsPixmapItemC2EP13QGraphicsItem(qthis, arg0)
   case 1:
     // invoke: _ZN19QGraphicsPixmapItemC1ERK7QPixmapP13QGraphicsItem
     // invoke: void QGraphicsPixmapItem(const class QPixmap &, class QGraphicsItem *)
@@ -1742,7 +1742,7 @@ func NewQGraphicsPixmapItem(args ...interface{}) QGraphicsPixmapItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QGraphicsPixmapItemC2ERK7QPixmapP13QGraphicsItem(qthis, arg0, arg1)
+    C.C_ZN19QGraphicsPixmapItemC2ERK7QPixmapP13QGraphicsItem(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "QGraphicsPixmapItem", args)
   }
@@ -1766,7 +1766,7 @@ func (this *QGraphicsPixmapItem) isObscuredBy(args ...interface{}) () {
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "isObscuredBy", args)
   }
@@ -1786,7 +1786,7 @@ func (this *QGraphicsPixmapItem) opaqueArea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    C._ZNK19QGraphicsPixmapItem10opaqueAreaEv(this.qclsinst)
+    C.C_ZNK19QGraphicsPixmapItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "opaqueArea", args)
   }
@@ -1806,7 +1806,7 @@ func (this *QGraphicsRectItem) opaqueArea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    C._ZNK17QGraphicsRectItem10opaqueAreaEv(this.qclsinst)
+    C.C_ZNK17QGraphicsRectItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "opaqueArea", args)
   }
@@ -1826,7 +1826,7 @@ func (this *QGraphicsRectItem) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    C._ZNK17QGraphicsRectItem12boundingRectEv(this.qclsinst)
+    C.C_ZNK17QGraphicsRectItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "boundingRect", args)
   }
@@ -1846,7 +1846,7 @@ func (this *QGraphicsRectItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem4typeEv
     // invoke: int type()
-    C._ZNK17QGraphicsRectItem4typeEv(this.qclsinst)
+    C.C_ZNK17QGraphicsRectItem4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "type", args)
   }
@@ -1869,7 +1869,7 @@ func (this *QGraphicsRectItem) contains(args ...interface{}) () {
     // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK17QGraphicsRectItem8containsERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK17QGraphicsRectItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "contains", args)
   }
@@ -1898,7 +1898,7 @@ func (this *QGraphicsRectItem) paint(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "paint", args)
   }
@@ -1918,7 +1918,7 @@ func (this *QGraphicsRectItem) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem5shapeEv
     // invoke: QPainterPath shape()
-    C._ZNK17QGraphicsRectItem5shapeEv(this.qclsinst)
+    C.C_ZNK17QGraphicsRectItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "shape", args)
   }
@@ -1954,7 +1954,7 @@ func NewQGraphicsRectItem(args ...interface{}) QGraphicsRectItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QGraphicsRectItemC2EP13QGraphicsItem(qthis, arg0)
+    C.C_ZN17QGraphicsRectItemC2EP13QGraphicsItem(qthis, arg0)
   case 1:
     // invoke: _ZN17QGraphicsRectItemC1ERK6QRectFP13QGraphicsItem
     // invoke: void QGraphicsRectItem(const class QRectF &, class QGraphicsItem *)
@@ -1964,7 +1964,7 @@ func NewQGraphicsRectItem(args ...interface{}) QGraphicsRectItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QGraphicsRectItemC2ERK6QRectFP13QGraphicsItem(qthis, arg0, arg1)
+    C.C_ZN17QGraphicsRectItemC2ERK6QRectFP13QGraphicsItem(qthis, arg0, arg1)
   case 2:
     // invoke: _ZN17QGraphicsRectItemC1EddddP13QGraphicsItem
     // invoke: void QGraphicsRectItem(qreal, qreal, qreal, qreal, class QGraphicsItem *)
@@ -1980,7 +1980,7 @@ func NewQGraphicsRectItem(args ...interface{}) QGraphicsRectItem {
     if false {fmt.Println(arg4)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QGraphicsRectItemC2EddddP13QGraphicsItem(qthis, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN17QGraphicsRectItemC2EddddP13QGraphicsItem(qthis, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "QGraphicsRectItem", args)
   }
@@ -2001,7 +2001,7 @@ func (this *QGraphicsRectItem) FreeQGraphicsRectItem(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsRectItemD0Ev
     // invoke: void ~QGraphicsRectItem()
-    C._ZN17QGraphicsRectItemD2Ev(this.qclsinst)
+    C.C_ZN17QGraphicsRectItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "~QGraphicsRectItem", args)
   }
@@ -2024,7 +2024,7 @@ func (this *QGraphicsRectItem) isObscuredBy(args ...interface{}) () {
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "isObscuredBy", args)
   }
@@ -2053,7 +2053,7 @@ func (this *QGraphicsRectItem) setRect(args ...interface{}) () {
     // invoke: void setRect(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsRectItem7setRectERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsRectItem7setRectERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN17QGraphicsRectItem7setRectEdddd
     // invoke: void setRect(qreal, qreal, qreal, qreal)
@@ -2065,7 +2065,7 @@ func (this *QGraphicsRectItem) setRect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN17QGraphicsRectItem7setRectEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN17QGraphicsRectItem7setRectEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "setRect", args)
   }
@@ -2085,7 +2085,7 @@ func (this *QGraphicsRectItem) rect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem4rectEv
     // invoke: QRectF rect()
-    C._ZNK17QGraphicsRectItem4rectEv(this.qclsinst)
+    C.C_ZNK17QGraphicsRectItem4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "rect", args)
   }
@@ -2105,7 +2105,7 @@ func (this *QGraphicsEllipseItem) opaqueArea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    C._ZNK20QGraphicsEllipseItem10opaqueAreaEv(this.qclsinst)
+    C.C_ZNK20QGraphicsEllipseItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "opaqueArea", args)
   }
@@ -2125,7 +2125,7 @@ func (this *QGraphicsEllipseItem) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    C._ZNK20QGraphicsEllipseItem12boundingRectEv(this.qclsinst)
+    C.C_ZNK20QGraphicsEllipseItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "boundingRect", args)
   }
@@ -2145,7 +2145,7 @@ func (this *QGraphicsEllipseItem) spanAngle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem9spanAngleEv
     // invoke: int spanAngle()
-    C._ZNK20QGraphicsEllipseItem9spanAngleEv(this.qclsinst)
+    C.C_ZNK20QGraphicsEllipseItem9spanAngleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "spanAngle", args)
   }
@@ -2165,7 +2165,7 @@ func (this *QGraphicsEllipseItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem4typeEv
     // invoke: int type()
-    C._ZNK20QGraphicsEllipseItem4typeEv(this.qclsinst)
+    C.C_ZNK20QGraphicsEllipseItem4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "type", args)
   }
@@ -2188,7 +2188,7 @@ func (this *QGraphicsEllipseItem) contains(args ...interface{}) () {
     // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK20QGraphicsEllipseItem8containsERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK20QGraphicsEllipseItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "contains", args)
   }
@@ -2211,7 +2211,7 @@ func (this *QGraphicsEllipseItem) setSpanAngle(args ...interface{}) () {
     // invoke: void setSpanAngle(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN20QGraphicsEllipseItem12setSpanAngleEi(this.qclsinst, arg0)
+    C.C_ZN20QGraphicsEllipseItem12setSpanAngleEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "setSpanAngle", args)
   }
@@ -2240,7 +2240,7 @@ func (this *QGraphicsEllipseItem) setRect(args ...interface{}) () {
     // invoke: void setRect(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN20QGraphicsEllipseItem7setRectERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN20QGraphicsEllipseItem7setRectERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN20QGraphicsEllipseItem7setRectEdddd
     // invoke: void setRect(qreal, qreal, qreal, qreal)
@@ -2252,7 +2252,7 @@ func (this *QGraphicsEllipseItem) setRect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN20QGraphicsEllipseItem7setRectEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN20QGraphicsEllipseItem7setRectEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "setRect", args)
   }
@@ -2275,7 +2275,7 @@ func (this *QGraphicsEllipseItem) setStartAngle(args ...interface{}) () {
     // invoke: void setStartAngle(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN20QGraphicsEllipseItem13setStartAngleEi(this.qclsinst, arg0)
+    C.C_ZN20QGraphicsEllipseItem13setStartAngleEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "setStartAngle", args)
   }
@@ -2304,7 +2304,7 @@ func (this *QGraphicsEllipseItem) paint(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "paint", args)
   }
@@ -2324,7 +2324,7 @@ func (this *QGraphicsEllipseItem) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem5shapeEv
     // invoke: QPainterPath shape()
-    C._ZNK20QGraphicsEllipseItem5shapeEv(this.qclsinst)
+    C.C_ZNK20QGraphicsEllipseItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "shape", args)
   }
@@ -2344,7 +2344,7 @@ func (this *QGraphicsEllipseItem) FreeQGraphicsEllipseItem(args ...interface{}) 
   case 0:
     // invoke: _ZN20QGraphicsEllipseItemD0Ev
     // invoke: void ~QGraphicsEllipseItem()
-    C._ZN20QGraphicsEllipseItemD2Ev(this.qclsinst)
+    C.C_ZN20QGraphicsEllipseItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "~QGraphicsEllipseItem", args)
   }
@@ -2364,7 +2364,7 @@ func (this *QGraphicsEllipseItem) startAngle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem10startAngleEv
     // invoke: int startAngle()
-    C._ZNK20QGraphicsEllipseItem10startAngleEv(this.qclsinst)
+    C.C_ZNK20QGraphicsEllipseItem10startAngleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "startAngle", args)
   }
@@ -2387,7 +2387,7 @@ func (this *QGraphicsEllipseItem) isObscuredBy(args ...interface{}) () {
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "isObscuredBy", args)
   }
@@ -2423,7 +2423,7 @@ func NewQGraphicsEllipseItem(args ...interface{}) QGraphicsEllipseItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN20QGraphicsEllipseItemC2EP13QGraphicsItem(qthis, arg0)
+    C.C_ZN20QGraphicsEllipseItemC2EP13QGraphicsItem(qthis, arg0)
   case 1:
     // invoke: _ZN20QGraphicsEllipseItemC1EddddP13QGraphicsItem
     // invoke: void QGraphicsEllipseItem(qreal, qreal, qreal, qreal, class QGraphicsItem *)
@@ -2439,7 +2439,7 @@ func NewQGraphicsEllipseItem(args ...interface{}) QGraphicsEllipseItem {
     if false {fmt.Println(arg4)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN20QGraphicsEllipseItemC2EddddP13QGraphicsItem(qthis, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN20QGraphicsEllipseItemC2EddddP13QGraphicsItem(qthis, arg0, arg1, arg2, arg3, arg4)
   case 2:
     // invoke: _ZN20QGraphicsEllipseItemC1ERK6QRectFP13QGraphicsItem
     // invoke: void QGraphicsEllipseItem(const class QRectF &, class QGraphicsItem *)
@@ -2449,7 +2449,7 @@ func NewQGraphicsEllipseItem(args ...interface{}) QGraphicsEllipseItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN20QGraphicsEllipseItemC2ERK6QRectFP13QGraphicsItem(qthis, arg0, arg1)
+    C.C_ZN20QGraphicsEllipseItemC2ERK6QRectFP13QGraphicsItem(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "QGraphicsEllipseItem", args)
   }
@@ -2470,7 +2470,7 @@ func (this *QGraphicsEllipseItem) rect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem4rectEv
     // invoke: QRectF rect()
-    C._ZNK20QGraphicsEllipseItem4rectEv(this.qclsinst)
+    C.C_ZNK20QGraphicsEllipseItem4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "rect", args)
   }
@@ -2490,7 +2490,7 @@ func (this *QGraphicsPolygonItem) opaqueArea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    C._ZNK20QGraphicsPolygonItem10opaqueAreaEv(this.qclsinst)
+    C.C_ZNK20QGraphicsPolygonItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "opaqueArea", args)
   }
@@ -2510,7 +2510,7 @@ func (this *QGraphicsPolygonItem) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    C._ZNK20QGraphicsPolygonItem12boundingRectEv(this.qclsinst)
+    C.C_ZNK20QGraphicsPolygonItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "boundingRect", args)
   }
@@ -2533,7 +2533,7 @@ func (this *QGraphicsPolygonItem) setPolygon(args ...interface{}) () {
     // invoke: void setPolygon(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF(this.qclsinst, arg0)
+    C.C_ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "setPolygon", args)
   }
@@ -2553,7 +2553,7 @@ func (this *QGraphicsPolygonItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem4typeEv
     // invoke: int type()
-    C._ZNK20QGraphicsPolygonItem4typeEv(this.qclsinst)
+    C.C_ZNK20QGraphicsPolygonItem4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "type", args)
   }
@@ -2576,7 +2576,7 @@ func (this *QGraphicsPolygonItem) contains(args ...interface{}) () {
     // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK20QGraphicsPolygonItem8containsERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK20QGraphicsPolygonItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "contains", args)
   }
@@ -2596,7 +2596,7 @@ func (this *QGraphicsPolygonItem) polygon(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem7polygonEv
     // invoke: QPolygonF polygon()
-    C._ZNK20QGraphicsPolygonItem7polygonEv(this.qclsinst)
+    C.C_ZNK20QGraphicsPolygonItem7polygonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "polygon", args)
   }
@@ -2625,7 +2625,7 @@ func (this *QGraphicsPolygonItem) paint(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "paint", args)
   }
@@ -2645,7 +2645,7 @@ func (this *QGraphicsPolygonItem) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem5shapeEv
     // invoke: QPainterPath shape()
-    C._ZNK20QGraphicsPolygonItem5shapeEv(this.qclsinst)
+    C.C_ZNK20QGraphicsPolygonItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "shape", args)
   }
@@ -2676,7 +2676,7 @@ func NewQGraphicsPolygonItem(args ...interface{}) QGraphicsPolygonItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN20QGraphicsPolygonItemC2ERK9QPolygonFP13QGraphicsItem(qthis, arg0, arg1)
+    C.C_ZN20QGraphicsPolygonItemC2ERK9QPolygonFP13QGraphicsItem(qthis, arg0, arg1)
   case 1:
     // invoke: _ZN20QGraphicsPolygonItemC1EP13QGraphicsItem
     // invoke: void QGraphicsPolygonItem(class QGraphicsItem *)
@@ -2684,7 +2684,7 @@ func NewQGraphicsPolygonItem(args ...interface{}) QGraphicsPolygonItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN20QGraphicsPolygonItemC2EP13QGraphicsItem(qthis, arg0)
+    C.C_ZN20QGraphicsPolygonItemC2EP13QGraphicsItem(qthis, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "QGraphicsPolygonItem", args)
   }
@@ -2705,7 +2705,7 @@ func (this *QGraphicsPolygonItem) FreeQGraphicsPolygonItem(args ...interface{}) 
   case 0:
     // invoke: _ZN20QGraphicsPolygonItemD0Ev
     // invoke: void ~QGraphicsPolygonItem()
-    C._ZN20QGraphicsPolygonItemD2Ev(this.qclsinst)
+    C.C_ZN20QGraphicsPolygonItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "~QGraphicsPolygonItem", args)
   }
@@ -2728,7 +2728,7 @@ func (this *QGraphicsPolygonItem) isObscuredBy(args ...interface{}) () {
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "isObscuredBy", args)
   }
@@ -2748,7 +2748,7 @@ func (this *QGraphicsPolygonItem) fillRule(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem8fillRuleEv
     // invoke: Qt::FillRule fillRule()
-    C._ZNK20QGraphicsPolygonItem8fillRuleEv(this.qclsinst)
+    C.C_ZNK20QGraphicsPolygonItem8fillRuleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "fillRule", args)
   }
@@ -2768,7 +2768,7 @@ func (this *QGraphicsPathItem) opaqueArea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    C._ZNK17QGraphicsPathItem10opaqueAreaEv(this.qclsinst)
+    C.C_ZNK17QGraphicsPathItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "opaqueArea", args)
   }
@@ -2788,7 +2788,7 @@ func (this *QGraphicsPathItem) FreeQGraphicsPathItem(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsPathItemD0Ev
     // invoke: void ~QGraphicsPathItem()
-    C._ZN17QGraphicsPathItemD2Ev(this.qclsinst)
+    C.C_ZN17QGraphicsPathItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "~QGraphicsPathItem", args)
   }
@@ -2808,7 +2808,7 @@ func (this *QGraphicsPathItem) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    C._ZNK17QGraphicsPathItem12boundingRectEv(this.qclsinst)
+    C.C_ZNK17QGraphicsPathItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "boundingRect", args)
   }
@@ -2831,7 +2831,7 @@ func (this *QGraphicsPathItem) isObscuredBy(args ...interface{}) () {
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "isObscuredBy", args)
   }
@@ -2854,7 +2854,7 @@ func (this *QGraphicsPathItem) contains(args ...interface{}) () {
     // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK17QGraphicsPathItem8containsERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK17QGraphicsPathItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "contains", args)
   }
@@ -2883,7 +2883,7 @@ func (this *QGraphicsPathItem) paint(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "paint", args)
   }
@@ -2903,7 +2903,7 @@ func (this *QGraphicsPathItem) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem5shapeEv
     // invoke: QPainterPath shape()
-    C._ZNK17QGraphicsPathItem5shapeEv(this.qclsinst)
+    C.C_ZNK17QGraphicsPathItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "shape", args)
   }
@@ -2923,7 +2923,7 @@ func (this *QGraphicsPathItem) path(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem4pathEv
     // invoke: QPainterPath path()
-    C._ZNK17QGraphicsPathItem4pathEv(this.qclsinst)
+    C.C_ZNK17QGraphicsPathItem4pathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "path", args)
   }
@@ -2946,7 +2946,7 @@ func (this *QGraphicsPathItem) setPath(args ...interface{}) () {
     // invoke: void setPath(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsPathItem7setPathERK12QPainterPath(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsPathItem7setPathERK12QPainterPath(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "setPath", args)
   }
@@ -2977,7 +2977,7 @@ func NewQGraphicsPathItem(args ...interface{}) QGraphicsPathItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QGraphicsPathItemC2ERK12QPainterPathP13QGraphicsItem(qthis, arg0, arg1)
+    C.C_ZN17QGraphicsPathItemC2ERK12QPainterPathP13QGraphicsItem(qthis, arg0, arg1)
   case 1:
     // invoke: _ZN17QGraphicsPathItemC1EP13QGraphicsItem
     // invoke: void QGraphicsPathItem(class QGraphicsItem *)
@@ -2985,7 +2985,7 @@ func NewQGraphicsPathItem(args ...interface{}) QGraphicsPathItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QGraphicsPathItemC2EP13QGraphicsItem(qthis, arg0)
+    C.C_ZN17QGraphicsPathItemC2EP13QGraphicsItem(qthis, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "QGraphicsPathItem", args)
   }
@@ -3006,7 +3006,7 @@ func (this *QGraphicsPathItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem4typeEv
     // invoke: int type()
-    C._ZNK17QGraphicsPathItem4typeEv(this.qclsinst)
+    C.C_ZNK17QGraphicsPathItem4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "type", args)
   }
@@ -3026,7 +3026,7 @@ func (this *QGraphicsLineItem) opaqueArea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    C._ZNK17QGraphicsLineItem10opaqueAreaEv(this.qclsinst)
+    C.C_ZNK17QGraphicsLineItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "opaqueArea", args)
   }
@@ -3046,7 +3046,7 @@ func (this *QGraphicsLineItem) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    C._ZNK17QGraphicsLineItem12boundingRectEv(this.qclsinst)
+    C.C_ZNK17QGraphicsLineItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "boundingRect", args)
   }
@@ -3066,7 +3066,7 @@ func (this *QGraphicsLineItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem4typeEv
     // invoke: int type()
-    C._ZNK17QGraphicsLineItem4typeEv(this.qclsinst)
+    C.C_ZNK17QGraphicsLineItem4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "type", args)
   }
@@ -3089,7 +3089,7 @@ func (this *QGraphicsLineItem) contains(args ...interface{}) () {
     // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK17QGraphicsLineItem8containsERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK17QGraphicsLineItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "contains", args)
   }
@@ -3109,7 +3109,7 @@ func (this *QGraphicsLineItem) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem5shapeEv
     // invoke: QPainterPath shape()
-    C._ZNK17QGraphicsLineItem5shapeEv(this.qclsinst)
+    C.C_ZNK17QGraphicsLineItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "shape", args)
   }
@@ -3129,7 +3129,7 @@ func (this *QGraphicsLineItem) FreeQGraphicsLineItem(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsLineItemD0Ev
     // invoke: void ~QGraphicsLineItem()
-    C._ZN17QGraphicsLineItemD2Ev(this.qclsinst)
+    C.C_ZN17QGraphicsLineItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "~QGraphicsLineItem", args)
   }
@@ -3165,7 +3165,7 @@ func NewQGraphicsLineItem(args ...interface{}) QGraphicsLineItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QGraphicsLineItemC2EP13QGraphicsItem(qthis, arg0)
+    C.C_ZN17QGraphicsLineItemC2EP13QGraphicsItem(qthis, arg0)
   case 1:
     // invoke: _ZN17QGraphicsLineItemC1ERK6QLineFP13QGraphicsItem
     // invoke: void QGraphicsLineItem(const class QLineF &, class QGraphicsItem *)
@@ -3175,7 +3175,7 @@ func NewQGraphicsLineItem(args ...interface{}) QGraphicsLineItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QGraphicsLineItemC2ERK6QLineFP13QGraphicsItem(qthis, arg0, arg1)
+    C.C_ZN17QGraphicsLineItemC2ERK6QLineFP13QGraphicsItem(qthis, arg0, arg1)
   case 2:
     // invoke: _ZN17QGraphicsLineItemC1EddddP13QGraphicsItem
     // invoke: void QGraphicsLineItem(qreal, qreal, qreal, qreal, class QGraphicsItem *)
@@ -3191,7 +3191,7 @@ func NewQGraphicsLineItem(args ...interface{}) QGraphicsLineItem {
     if false {fmt.Println(arg4)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QGraphicsLineItemC2EddddP13QGraphicsItem(qthis, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN17QGraphicsLineItemC2EddddP13QGraphicsItem(qthis, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "QGraphicsLineItem", args)
   }
@@ -3221,7 +3221,7 @@ func (this *QGraphicsLineItem) paint(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "paint", args)
   }
@@ -3241,7 +3241,7 @@ func (this *QGraphicsLineItem) pen(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem3penEv
     // invoke: QPen pen()
-    C._ZNK17QGraphicsLineItem3penEv(this.qclsinst)
+    C.C_ZNK17QGraphicsLineItem3penEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "pen", args)
   }
@@ -3264,7 +3264,7 @@ func (this *QGraphicsLineItem) setPen(args ...interface{}) () {
     // invoke: void setPen(const class QPen &)
     var arg0 = args[0].(QPen).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsLineItem6setPenERK4QPen(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsLineItem6setPenERK4QPen(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "setPen", args)
   }
@@ -3293,7 +3293,7 @@ func (this *QGraphicsLineItem) setLine(args ...interface{}) () {
     // invoke: void setLine(const class QLineF &)
     var arg0 = args[0].(QLineF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QGraphicsLineItem7setLineERK6QLineF(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsLineItem7setLineERK6QLineF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN17QGraphicsLineItem7setLineEdddd
     // invoke: void setLine(qreal, qreal, qreal, qreal)
@@ -3305,7 +3305,7 @@ func (this *QGraphicsLineItem) setLine(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN17QGraphicsLineItem7setLineEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN17QGraphicsLineItem7setLineEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "setLine", args)
   }
@@ -3325,7 +3325,7 @@ func (this *QGraphicsLineItem) line(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem4lineEv
     // invoke: QLineF line()
-    C._ZNK17QGraphicsLineItem4lineEv(this.qclsinst)
+    C.C_ZNK17QGraphicsLineItem4lineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "line", args)
   }
@@ -3348,7 +3348,7 @@ func (this *QGraphicsLineItem) isObscuredBy(args ...interface{}) () {
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "isObscuredBy", args)
   }
@@ -3368,7 +3368,7 @@ func (this *QGraphicsItemGroup) opaqueArea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    C._ZNK18QGraphicsItemGroup10opaqueAreaEv(this.qclsinst)
+    C.C_ZNK18QGraphicsItemGroup10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "opaqueArea", args)
   }
@@ -3391,7 +3391,7 @@ func (this *QGraphicsItemGroup) addToGroup(args ...interface{}) () {
     // invoke: void addToGroup(class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "addToGroup", args)
   }
@@ -3416,7 +3416,7 @@ func NewQGraphicsItemGroup(args ...interface{}) QGraphicsItemGroup {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN18QGraphicsItemGroupC2EP13QGraphicsItem(qthis, arg0)
+    C.C_ZN18QGraphicsItemGroupC2EP13QGraphicsItem(qthis, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "QGraphicsItemGroup", args)
   }
@@ -3437,7 +3437,7 @@ func (this *QGraphicsItemGroup) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup12boundingRectEv
     // invoke: QRectF boundingRect()
-    C._ZNK18QGraphicsItemGroup12boundingRectEv(this.qclsinst)
+    C.C_ZNK18QGraphicsItemGroup12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "boundingRect", args)
   }
@@ -3460,7 +3460,7 @@ func (this *QGraphicsItemGroup) removeFromGroup(args ...interface{}) () {
     // invoke: void removeFromGroup(class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "removeFromGroup", args)
   }
@@ -3483,7 +3483,7 @@ func (this *QGraphicsItemGroup) isObscuredBy(args ...interface{}) () {
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "isObscuredBy", args)
   }
@@ -3512,7 +3512,7 @@ func (this *QGraphicsItemGroup) paint(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "paint", args)
   }
@@ -3532,7 +3532,7 @@ func (this *QGraphicsItemGroup) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup4typeEv
     // invoke: int type()
-    C._ZNK18QGraphicsItemGroup4typeEv(this.qclsinst)
+    C.C_ZNK18QGraphicsItemGroup4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "type", args)
   }
@@ -3552,7 +3552,7 @@ func (this *QGraphicsItemGroup) FreeQGraphicsItemGroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QGraphicsItemGroupD0Ev
     // invoke: void ~QGraphicsItemGroup()
-    C._ZN18QGraphicsItemGroupD2Ev(this.qclsinst)
+    C.C_ZN18QGraphicsItemGroupD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "~QGraphicsItemGroup", args)
   }
@@ -3572,7 +3572,7 @@ func (this *QAbstractGraphicsShapeItem) opaqueArea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    C._ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv(this.qclsinst)
+    C.C_ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "opaqueArea", args)
   }
@@ -3595,7 +3595,7 @@ func (this *QAbstractGraphicsShapeItem) isObscuredBy(args ...interface{}) () {
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "isObscuredBy", args)
   }
@@ -3615,7 +3615,7 @@ func (this *QAbstractGraphicsShapeItem) pen(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem3penEv
     // invoke: QPen pen()
-    C._ZNK26QAbstractGraphicsShapeItem3penEv(this.qclsinst)
+    C.C_ZNK26QAbstractGraphicsShapeItem3penEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "pen", args)
   }
@@ -3635,7 +3635,7 @@ func (this *QAbstractGraphicsShapeItem) brush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem5brushEv
     // invoke: QBrush brush()
-    C._ZNK26QAbstractGraphicsShapeItem5brushEv(this.qclsinst)
+    C.C_ZNK26QAbstractGraphicsShapeItem5brushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "brush", args)
   }
@@ -3658,7 +3658,7 @@ func (this *QAbstractGraphicsShapeItem) setPen(args ...interface{}) () {
     // invoke: void setPen(const class QPen &)
     var arg0 = args[0].(QPen).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN26QAbstractGraphicsShapeItem6setPenERK4QPen(this.qclsinst, arg0)
+    C.C_ZN26QAbstractGraphicsShapeItem6setPenERK4QPen(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "setPen", args)
   }
@@ -3681,7 +3681,7 @@ func (this *QAbstractGraphicsShapeItem) setBrush(args ...interface{}) () {
     // invoke: void setBrush(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN26QAbstractGraphicsShapeItem8setBrushERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN26QAbstractGraphicsShapeItem8setBrushERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "setBrush", args)
   }
@@ -3701,7 +3701,7 @@ func (this *QAbstractGraphicsShapeItem) FreeQAbstractGraphicsShapeItem(args ...i
   case 0:
     // invoke: _ZN26QAbstractGraphicsShapeItemD0Ev
     // invoke: void ~QAbstractGraphicsShapeItem()
-    C._ZN26QAbstractGraphicsShapeItemD2Ev(this.qclsinst)
+    C.C_ZN26QAbstractGraphicsShapeItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "~QAbstractGraphicsShapeItem", args)
   }
@@ -3726,7 +3726,7 @@ func NewQAbstractGraphicsShapeItem(args ...interface{}) QAbstractGraphicsShapeIt
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN26QAbstractGraphicsShapeItemC2EP13QGraphicsItem(qthis, arg0)
+    C.C_ZN26QAbstractGraphicsShapeItemC2EP13QGraphicsItem(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "QAbstractGraphicsShapeItem", args)
   }
@@ -3747,7 +3747,7 @@ func (this *QGraphicsItem) show(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem4showEv
     // invoke: void show()
-    C._ZN13QGraphicsItem4showEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem4showEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "show", args)
   }
@@ -3767,7 +3767,7 @@ func (this *QGraphicsItem) hasFocus(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem8hasFocusEv
     // invoke: bool hasFocus()
-    C._ZNK13QGraphicsItem8hasFocusEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem8hasFocusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "hasFocus", args)
   }
@@ -3790,7 +3790,7 @@ func (this *QGraphicsItem) setGroup(args ...interface{}) () {
     // invoke: void setGroup(class QGraphicsItemGroup *)
     var arg0 = args[0].(QGraphicsItemGroup).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setGroup", args)
   }
@@ -3810,7 +3810,7 @@ func (this *QGraphicsItem) handlesChildEvents(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem18handlesChildEventsEv
     // invoke: bool handlesChildEvents()
-    C._ZNK13QGraphicsItem18handlesChildEventsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem18handlesChildEventsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "handlesChildEvents", args)
   }
@@ -3830,7 +3830,7 @@ func (this *QGraphicsItem) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem5shapeEv
     // invoke: QPainterPath shape()
-    C._ZNK13QGraphicsItem5shapeEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "shape", args)
   }
@@ -3850,7 +3850,7 @@ func (this *QGraphicsItem) isPanel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem7isPanelEv
     // invoke: bool isPanel()
-    C._ZNK13QGraphicsItem7isPanelEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem7isPanelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isPanel", args)
   }
@@ -3873,7 +3873,7 @@ func (this *QGraphicsItem) data(args ...interface{}) () {
     // invoke: QVariant data(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem4dataEi(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem4dataEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "data", args)
   }
@@ -3893,7 +3893,7 @@ func (this *QGraphicsItem) parentItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem10parentItemEv
     // invoke: QGraphicsItem * parentItem()
-    C._ZNK13QGraphicsItem10parentItemEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem10parentItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "parentItem", args)
   }
@@ -3913,7 +3913,7 @@ func (this *QGraphicsItem) childrenBoundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem20childrenBoundingRectEv
     // invoke: QRectF childrenBoundingRect()
-    C._ZNK13QGraphicsItem20childrenBoundingRectEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem20childrenBoundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "childrenBoundingRect", args)
   }
@@ -3933,7 +3933,7 @@ func (this *QGraphicsItem) group(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem5groupEv
     // invoke: QGraphicsItemGroup * group()
-    C._ZNK13QGraphicsItem5groupEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem5groupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "group", args)
   }
@@ -3953,7 +3953,7 @@ func (this *QGraphicsItem) isEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem9isEnabledEv
     // invoke: bool isEnabled()
-    C._ZNK13QGraphicsItem9isEnabledEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem9isEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isEnabled", args)
   }
@@ -3973,7 +3973,7 @@ func (this *QGraphicsItem) window(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem6windowEv
     // invoke: QGraphicsWidget * window()
-    C._ZNK13QGraphicsItem6windowEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem6windowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "window", args)
   }
@@ -3996,7 +3996,7 @@ func (this *QGraphicsItem) setBoundingRegionGranularity(args ...interface{}) () 
     // invoke: void setBoundingRegionGranularity(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem28setBoundingRegionGranularityEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem28setBoundingRegionGranularityEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setBoundingRegionGranularity", args)
   }
@@ -4019,7 +4019,7 @@ func (this *QGraphicsItem) setRotation(args ...interface{}) () {
     // invoke: void setRotation(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem11setRotationEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem11setRotationEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setRotation", args)
   }
@@ -4042,7 +4042,7 @@ func (this *QGraphicsItem) commonAncestorItem(args ...interface{}) () {
     // invoke: QGraphicsItem * commonAncestorItem(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem18commonAncestorItemEPKS_(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem18commonAncestorItemEPKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "commonAncestorItem", args)
   }
@@ -4092,7 +4092,7 @@ func (this *QGraphicsItem) mapToItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPolygonF).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF
     // invoke: QPolygonF mapToItem(const class QGraphicsItem *, const class QRectF &)
@@ -4100,7 +4100,7 @@ func (this *QGraphicsItem) mapToItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QRectF).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath
     // invoke: QPainterPath mapToItem(const class QGraphicsItem *, const class QPainterPath &)
@@ -4108,7 +4108,7 @@ func (this *QGraphicsItem) mapToItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPainterPath).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF
     // invoke: QPointF mapToItem(const class QGraphicsItem *, const class QPointF &)
@@ -4116,7 +4116,7 @@ func (this *QGraphicsItem) mapToItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPointF).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF(this.qclsinst, arg0, arg1)
   case 4:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_dddd
     // invoke: QPolygonF mapToItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
@@ -4130,7 +4130,7 @@ func (this *QGraphicsItem) mapToItem(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.double(args[4].(float64))
     if false {fmt.Println(arg4)}
-    C._ZNK13QGraphicsItem9mapToItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZNK13QGraphicsItem9mapToItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   case 5:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_dd
     // invoke: QPointF mapToItem(const class QGraphicsItem *, qreal, qreal)
@@ -4140,7 +4140,7 @@ func (this *QGraphicsItem) mapToItem(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.double(args[2].(float64))
     if false {fmt.Println(arg2)}
-    C._ZNK13QGraphicsItem9mapToItemEPKS_dd(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK13QGraphicsItem9mapToItemEPKS_dd(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapToItem", args)
   }
@@ -4160,7 +4160,7 @@ func (this *QGraphicsItem) toGraphicsObject(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem16toGraphicsObjectEv
     // invoke: QGraphicsObject * toGraphicsObject()
-    C._ZN13QGraphicsItem16toGraphicsObjectEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem16toGraphicsObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "toGraphicsObject", args)
   }
@@ -4180,7 +4180,7 @@ func (this *QGraphicsItem) acceptedMouseButtons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem20acceptedMouseButtonsEv
     // invoke: Qt::MouseButtons acceptedMouseButtons()
-    C._ZNK13QGraphicsItem20acceptedMouseButtonsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem20acceptedMouseButtonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptedMouseButtons", args)
   }
@@ -4203,7 +4203,7 @@ func (this *QGraphicsItem) setGraphicsEffect(args ...interface{}) () {
     // invoke: void setGraphicsEffect(class QGraphicsEffect *)
     var arg0 = args[0].(QGraphicsEffect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem17setGraphicsEffectEP15QGraphicsEffect(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem17setGraphicsEffectEP15QGraphicsEffect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setGraphicsEffect", args)
   }
@@ -4251,13 +4251,13 @@ func (this *QGraphicsItem) mapToParent(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZNK13QGraphicsItem11mapToParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK13QGraphicsItem11mapToParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK7QPointF
     // invoke: QPointF mapToParent(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem11mapToParentERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem11mapToParentERK7QPointF(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK13QGraphicsItem11mapToParentEdd
     // invoke: QPointF mapToParent(qreal, qreal)
@@ -4265,25 +4265,25 @@ func (this *QGraphicsItem) mapToParent(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem11mapToParentEdd(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem11mapToParentEdd(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK12QPainterPath
     // invoke: QPainterPath mapToParent(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem11mapToParentERK12QPainterPath(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem11mapToParentERK12QPainterPath(this.qclsinst, arg0)
   case 4:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK6QRectF
     // invoke: QPolygonF mapToParent(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem11mapToParentERK6QRectF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem11mapToParentERK6QRectF(this.qclsinst, arg0)
   case 5:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK9QPolygonF
     // invoke: QPolygonF mapToParent(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem11mapToParentERK9QPolygonF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem11mapToParentERK9QPolygonF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapToParent", args)
   }
@@ -4310,7 +4310,7 @@ func (this *QGraphicsItem) setTransformOriginPoint(args ...interface{}) () {
     // invoke: void setTransformOriginPoint(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem23setTransformOriginPointERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem23setTransformOriginPointERK7QPointF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN13QGraphicsItem23setTransformOriginPointEdd
     // invoke: void setTransformOriginPoint(qreal, qreal)
@@ -4318,7 +4318,7 @@ func (this *QGraphicsItem) setTransformOriginPoint(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN13QGraphicsItem23setTransformOriginPointEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsItem23setTransformOriginPointEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setTransformOriginPoint", args)
   }
@@ -4341,7 +4341,7 @@ func (this *QGraphicsItem) deviceTransform(args ...interface{}) () {
     // invoke: QTransform deviceTransform(const class QTransform &)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem15deviceTransformERK10QTransform(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem15deviceTransformERK10QTransform(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "deviceTransform", args)
   }
@@ -4361,7 +4361,7 @@ func (this *QGraphicsItem) rotation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem8rotationEv
     // invoke: qreal rotation()
-    C._ZNK13QGraphicsItem8rotationEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem8rotationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "rotation", args)
   }
@@ -4381,7 +4381,7 @@ func (this *QGraphicsItem) effectiveOpacity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem16effectiveOpacityEv
     // invoke: qreal effectiveOpacity()
-    C._ZNK13QGraphicsItem16effectiveOpacityEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem16effectiveOpacityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "effectiveOpacity", args)
   }
@@ -4401,7 +4401,7 @@ func (this *QGraphicsItem) focusScopeItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem14focusScopeItemEv
     // invoke: QGraphicsItem * focusScopeItem()
-    C._ZNK13QGraphicsItem14focusScopeItemEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem14focusScopeItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "focusScopeItem", args)
   }
@@ -4421,7 +4421,7 @@ func (this *QGraphicsItem) inputMethodHints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem16inputMethodHintsEv
     // invoke: Qt::InputMethodHints inputMethodHints()
-    C._ZNK13QGraphicsItem16inputMethodHintsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem16inputMethodHintsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "inputMethodHints", args)
   }
@@ -4441,7 +4441,7 @@ func (this *QGraphicsItem) panelModality(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem13panelModalityEv
     // invoke: QGraphicsItem::PanelModality panelModality()
-    C._ZNK13QGraphicsItem13panelModalityEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem13panelModalityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "panelModality", args)
   }
@@ -4461,7 +4461,7 @@ func (this *QGraphicsItem) topLevelWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem14topLevelWidgetEv
     // invoke: QGraphicsWidget * topLevelWidget()
-    C._ZNK13QGraphicsItem14topLevelWidgetEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem14topLevelWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "topLevelWidget", args)
   }
@@ -4484,7 +4484,7 @@ func (this *QGraphicsItem) isVisibleTo(args ...interface{}) () {
     // invoke: bool isVisibleTo(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem11isVisibleToEPKS_(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem11isVisibleToEPKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isVisibleTo", args)
   }
@@ -4507,7 +4507,7 @@ func (this *QGraphicsItem) setAcceptDrops(args ...interface{}) () {
     // invoke: void setAcceptDrops(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem14setAcceptDropsEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem14setAcceptDropsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setAcceptDrops", args)
   }
@@ -4527,7 +4527,7 @@ func (this *QGraphicsItem) clearFocus(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem10clearFocusEv
     // invoke: void clearFocus()
-    C._ZN13QGraphicsItem10clearFocusEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem10clearFocusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "clearFocus", args)
   }
@@ -4547,7 +4547,7 @@ func (this *QGraphicsItem) filtersChildEvents(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem18filtersChildEventsEv
     // invoke: bool filtersChildEvents()
-    C._ZNK13QGraphicsItem18filtersChildEventsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem18filtersChildEventsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "filtersChildEvents", args)
   }
@@ -4567,7 +4567,7 @@ func (this *QGraphicsItem) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem1xEv
     // invoke: qreal x()
-    C._ZNK13QGraphicsItem1xEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "x", args)
   }
@@ -4593,7 +4593,7 @@ func (this *QGraphicsItem) setTransform(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN13QGraphicsItem12setTransformERK10QTransformb(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsItem12setTransformERK10QTransformb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setTransform", args)
   }
@@ -4616,7 +4616,7 @@ func (this *QGraphicsItem) stackBefore(args ...interface{}) () {
     // invoke: void stackBefore(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem11stackBeforeEPKS_(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem11stackBeforeEPKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "stackBefore", args)
   }
@@ -4639,7 +4639,7 @@ func (this *QGraphicsItem) setAcceptHoverEvents(args ...interface{}) () {
     // invoke: void setAcceptHoverEvents(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem20setAcceptHoverEventsEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem20setAcceptHoverEventsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setAcceptHoverEvents", args)
   }
@@ -4659,7 +4659,7 @@ func (this *QGraphicsItem) focusProxy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem10focusProxyEv
     // invoke: QGraphicsItem * focusProxy()
-    C._ZNK13QGraphicsItem10focusProxyEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem10focusProxyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "focusProxy", args)
   }
@@ -4701,13 +4701,13 @@ func (this *QGraphicsItem) mapFromParent(args ...interface{}) () {
     // invoke: QPainterPath mapFromParent(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem13mapFromParentERK12QPainterPath(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem13mapFromParentERK12QPainterPath(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK6QRectF
     // invoke: QPolygonF mapFromParent(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem13mapFromParentERK6QRectF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem13mapFromParentERK6QRectF(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK13QGraphicsItem13mapFromParentEdddd
     // invoke: QPolygonF mapFromParent(qreal, qreal, qreal, qreal)
@@ -4719,7 +4719,7 @@ func (this *QGraphicsItem) mapFromParent(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZNK13QGraphicsItem13mapFromParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK13QGraphicsItem13mapFromParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 3:
     // invoke: _ZNK13QGraphicsItem13mapFromParentEdd
     // invoke: QPointF mapFromParent(qreal, qreal)
@@ -4727,19 +4727,19 @@ func (this *QGraphicsItem) mapFromParent(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem13mapFromParentEdd(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem13mapFromParentEdd(this.qclsinst, arg0, arg1)
   case 4:
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK7QPointF
     // invoke: QPointF mapFromParent(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem13mapFromParentERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem13mapFromParentERK7QPointF(this.qclsinst, arg0)
   case 5:
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK9QPolygonF
     // invoke: QPolygonF mapFromParent(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem13mapFromParentERK9QPolygonF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem13mapFromParentERK9QPolygonF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapFromParent", args)
   }
@@ -4759,7 +4759,7 @@ func (this *QGraphicsItem) scenePos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem8scenePosEv
     // invoke: QPointF scenePos()
-    C._ZNK13QGraphicsItem8scenePosEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scenePos", args)
   }
@@ -4788,13 +4788,13 @@ func (this *QGraphicsItem) setPos(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN13QGraphicsItem6setPosEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsItem6setPosEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN13QGraphicsItem6setPosERK7QPointF
     // invoke: void setPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem6setPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem6setPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setPos", args)
   }
@@ -4814,7 +4814,7 @@ func (this *QGraphicsItem) scale(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem5scaleEv
     // invoke: qreal scale()
-    C._ZNK13QGraphicsItem5scaleEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem5scaleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scale", args)
   }
@@ -4834,7 +4834,7 @@ func (this *QGraphicsItem) hide(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem4hideEv
     // invoke: void hide()
-    C._ZN13QGraphicsItem4hideEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem4hideEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "hide", args)
   }
@@ -4854,7 +4854,7 @@ func (this *QGraphicsItem) matrix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem6matrixEv
     // invoke: QMatrix matrix()
-    C._ZNK13QGraphicsItem6matrixEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem6matrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "matrix", args)
   }
@@ -4874,7 +4874,7 @@ func (this *QGraphicsItem) isSelected(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem10isSelectedEv
     // invoke: bool isSelected()
-    C._ZNK13QGraphicsItem10isSelectedEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem10isSelectedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isSelected", args)
   }
@@ -4900,7 +4900,7 @@ func (this *QGraphicsItem) moveBy(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN13QGraphicsItem6moveByEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsItem6moveByEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "moveBy", args)
   }
@@ -4923,7 +4923,7 @@ func (this *QGraphicsItem) setFocusProxy(args ...interface{}) () {
     // invoke: void setFocusProxy(class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem13setFocusProxyEPS_(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem13setFocusProxyEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setFocusProxy", args)
   }
@@ -4949,7 +4949,7 @@ func (this *QGraphicsItem) itemTransform(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem13itemTransformEPKS_Pb(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem13itemTransformEPKS_Pb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "itemTransform", args)
   }
@@ -4978,7 +4978,7 @@ func (this *QGraphicsItem) mapRectToParent(args ...interface{}) () {
     // invoke: QRectF mapRectToParent(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem15mapRectToParentERK6QRectF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem15mapRectToParentERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem15mapRectToParentEdddd
     // invoke: QRectF mapRectToParent(qreal, qreal, qreal, qreal)
@@ -4990,7 +4990,7 @@ func (this *QGraphicsItem) mapRectToParent(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZNK13QGraphicsItem15mapRectToParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK13QGraphicsItem15mapRectToParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectToParent", args)
   }
@@ -5013,7 +5013,7 @@ func (this *QGraphicsItem) isBlockedByModalPanel(args ...interface{}) () {
     // invoke: bool isBlockedByModalPanel(class QGraphicsItem **)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem21isBlockedByModalPanelEPPS_(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem21isBlockedByModalPanelEPPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isBlockedByModalPanel", args)
   }
@@ -5033,7 +5033,7 @@ func (this *QGraphicsItem) graphicsEffect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem14graphicsEffectEv
     // invoke: QGraphicsEffect * graphicsEffect()
-    C._ZNK13QGraphicsItem14graphicsEffectEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem14graphicsEffectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "graphicsEffect", args)
   }
@@ -5053,7 +5053,7 @@ func (this *QGraphicsItem) childItems(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem10childItemsEv
     // invoke: QList<QGraphicsItem *> childItems()
-    C._ZNK13QGraphicsItem10childItemsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem10childItemsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "childItems", args)
   }
@@ -5073,7 +5073,7 @@ func (this *QGraphicsItem) isClipped(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem9isClippedEv
     // invoke: bool isClipped()
-    C._ZNK13QGraphicsItem9isClippedEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem9isClippedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isClipped", args)
   }
@@ -5093,7 +5093,7 @@ func (this *QGraphicsItem) toolTip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem7toolTipEv
     // invoke: QString toolTip()
-    C._ZNK13QGraphicsItem7toolTipEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem7toolTipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "toolTip", args)
   }
@@ -5113,7 +5113,7 @@ func (this *QGraphicsItem) FreeQGraphicsItem(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItemD0Ev
     // invoke: void ~QGraphicsItem()
-    C._ZN13QGraphicsItemD2Ev(this.qclsinst)
+    C.C_ZN13QGraphicsItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "~QGraphicsItem", args)
   }
@@ -5133,7 +5133,7 @@ func (this *QGraphicsItem) isActive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem8isActiveEv
     // invoke: bool isActive()
-    C._ZNK13QGraphicsItem8isActiveEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem8isActiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isActive", args)
   }
@@ -5156,7 +5156,7 @@ func (this *QGraphicsItem) setFiltersChildEvents(args ...interface{}) () {
     // invoke: void setFiltersChildEvents(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem21setFiltersChildEventsEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem21setFiltersChildEventsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setFiltersChildEvents", args)
   }
@@ -5176,7 +5176,7 @@ func (this *QGraphicsItem) opaqueArea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    C._ZNK13QGraphicsItem10opaqueAreaEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "opaqueArea", args)
   }
@@ -5199,7 +5199,7 @@ func (this *QGraphicsItem) advance(args ...interface{}) () {
     // invoke: void advance(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem7advanceEi(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem7advanceEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "advance", args)
   }
@@ -5222,7 +5222,7 @@ func (this *QGraphicsItem) setToolTip(args ...interface{}) () {
     // invoke: void setToolTip(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem10setToolTipERK7QString(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem10setToolTipERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setToolTip", args)
   }
@@ -5264,25 +5264,25 @@ func (this *QGraphicsItem) mapToScene(args ...interface{}) () {
     // invoke: QPolygonF mapToScene(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem10mapToSceneERK9QPolygonF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem10mapToSceneERK9QPolygonF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem10mapToSceneERK6QRectF
     // invoke: QPolygonF mapToScene(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem10mapToSceneERK6QRectF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem10mapToSceneERK6QRectF(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK13QGraphicsItem10mapToSceneERK7QPointF
     // invoke: QPointF mapToScene(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem10mapToSceneERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem10mapToSceneERK7QPointF(this.qclsinst, arg0)
   case 3:
     // invoke: _ZNK13QGraphicsItem10mapToSceneERK12QPainterPath
     // invoke: QPainterPath mapToScene(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem10mapToSceneERK12QPainterPath(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem10mapToSceneERK12QPainterPath(this.qclsinst, arg0)
   case 4:
     // invoke: _ZNK13QGraphicsItem10mapToSceneEdddd
     // invoke: QPolygonF mapToScene(qreal, qreal, qreal, qreal)
@@ -5294,7 +5294,7 @@ func (this *QGraphicsItem) mapToScene(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZNK13QGraphicsItem10mapToSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK13QGraphicsItem10mapToSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 5:
     // invoke: _ZNK13QGraphicsItem10mapToSceneEdd
     // invoke: QPointF mapToScene(qreal, qreal)
@@ -5302,7 +5302,7 @@ func (this *QGraphicsItem) mapToScene(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem10mapToSceneEdd(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem10mapToSceneEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapToScene", args)
   }
@@ -5325,7 +5325,7 @@ func (this *QGraphicsItem) setHandlesChildEvents(args ...interface{}) () {
     // invoke: void setHandlesChildEvents(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem21setHandlesChildEventsEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem21setHandlesChildEventsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setHandlesChildEvents", args)
   }
@@ -5345,7 +5345,7 @@ func (this *QGraphicsItem) transformOriginPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem20transformOriginPointEv
     // invoke: QPointF transformOriginPoint()
-    C._ZNK13QGraphicsItem20transformOriginPointEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem20transformOriginPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "transformOriginPoint", args)
   }
@@ -5365,7 +5365,7 @@ func (this *QGraphicsItem) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem3posEv
     // invoke: QPointF pos()
-    C._ZNK13QGraphicsItem3posEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "pos", args)
   }
@@ -5394,7 +5394,7 @@ func (this *QGraphicsItem) mapRectToScene(args ...interface{}) () {
     // invoke: QRectF mapRectToScene(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem14mapRectToSceneERK6QRectF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem14mapRectToSceneERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem14mapRectToSceneEdddd
     // invoke: QRectF mapRectToScene(qreal, qreal, qreal, qreal)
@@ -5406,7 +5406,7 @@ func (this *QGraphicsItem) mapRectToScene(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZNK13QGraphicsItem14mapRectToSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK13QGraphicsItem14mapRectToSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectToScene", args)
   }
@@ -5426,7 +5426,7 @@ func (this *QGraphicsItem) ungrabMouse(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem11ungrabMouseEv
     // invoke: void ungrabMouse()
-    C._ZN13QGraphicsItem11ungrabMouseEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem11ungrabMouseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "ungrabMouse", args)
   }
@@ -5461,13 +5461,13 @@ func (this *QGraphicsItem) isObscured(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZNK13QGraphicsItem10isObscuredEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK13QGraphicsItem10isObscuredEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZNK13QGraphicsItem10isObscuredERK6QRectF
     // invoke: bool isObscured(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem10isObscuredERK6QRectF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem10isObscuredERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isObscured", args)
   }
@@ -5490,7 +5490,7 @@ func (this *QGraphicsItem) setSelected(args ...interface{}) () {
     // invoke: void setSelected(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem11setSelectedEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem11setSelectedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setSelected", args)
   }
@@ -5532,13 +5532,13 @@ func (this *QGraphicsItem) mapFromScene(args ...interface{}) () {
     // invoke: QPolygonF mapFromScene(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK6QRectF
     // invoke: QPolygonF mapFromScene(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem12mapFromSceneERK6QRectF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem12mapFromSceneERK6QRectF(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneEdddd
     // invoke: QPolygonF mapFromScene(qreal, qreal, qreal, qreal)
@@ -5550,7 +5550,7 @@ func (this *QGraphicsItem) mapFromScene(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZNK13QGraphicsItem12mapFromSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK13QGraphicsItem12mapFromSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 3:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneEdd
     // invoke: QPointF mapFromScene(qreal, qreal)
@@ -5558,19 +5558,19 @@ func (this *QGraphicsItem) mapFromScene(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem12mapFromSceneEdd(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem12mapFromSceneEdd(this.qclsinst, arg0, arg1)
   case 4:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath
     // invoke: QPainterPath mapFromScene(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath(this.qclsinst, arg0)
   case 5:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK7QPointF
     // invoke: QPointF mapFromScene(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem12mapFromSceneERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem12mapFromSceneERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapFromScene", args)
   }
@@ -5590,7 +5590,7 @@ func (this *QGraphicsItem) scene(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem5sceneEv
     // invoke: QGraphicsScene * scene()
-    C._ZNK13QGraphicsItem5sceneEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem5sceneEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scene", args)
   }
@@ -5613,7 +5613,7 @@ func (this *QGraphicsItem) isAncestorOf(args ...interface{}) () {
     // invoke: bool isAncestorOf(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem12isAncestorOfEPKS_(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem12isAncestorOfEPKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isAncestorOf", args)
   }
@@ -5633,7 +5633,7 @@ func (this *QGraphicsItem) topLevelItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem12topLevelItemEv
     // invoke: QGraphicsItem * topLevelItem()
-    C._ZNK13QGraphicsItem12topLevelItemEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem12topLevelItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "topLevelItem", args)
   }
@@ -5653,7 +5653,7 @@ func (this *QGraphicsItem) panel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem5panelEv
     // invoke: QGraphicsItem * panel()
-    C._ZNK13QGraphicsItem5panelEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem5panelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "panel", args)
   }
@@ -5673,7 +5673,7 @@ func (this *QGraphicsItem) unsetCursor(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem11unsetCursorEv
     // invoke: void unsetCursor()
-    C._ZN13QGraphicsItem11unsetCursorEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem11unsetCursorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "unsetCursor", args)
   }
@@ -5693,7 +5693,7 @@ func (this *QGraphicsItem) transformations(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem15transformationsEv
     // invoke: QList<QGraphicsTransform *> transformations()
-    C._ZNK13QGraphicsItem15transformationsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem15transformationsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "transformations", args)
   }
@@ -5722,7 +5722,7 @@ func (this *QGraphicsItem) mapRectFromScene(args ...interface{}) () {
     // invoke: QRectF mapRectFromScene(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem16mapRectFromSceneERK6QRectF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem16mapRectFromSceneERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem16mapRectFromSceneEdddd
     // invoke: QRectF mapRectFromScene(qreal, qreal, qreal, qreal)
@@ -5734,7 +5734,7 @@ func (this *QGraphicsItem) mapRectFromScene(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZNK13QGraphicsItem16mapRectFromSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK13QGraphicsItem16mapRectFromSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectFromScene", args)
   }
@@ -5757,7 +5757,7 @@ func (this *QGraphicsItem) contains(args ...interface{}) () {
     // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem8containsERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "contains", args)
   }
@@ -5777,7 +5777,7 @@ func (this *QGraphicsItem) transform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem9transformEv
     // invoke: QTransform transform()
-    C._ZNK13QGraphicsItem9transformEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem9transformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "transform", args)
   }
@@ -5797,7 +5797,7 @@ func (this *QGraphicsItem) ungrabKeyboard(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem14ungrabKeyboardEv
     // invoke: void ungrabKeyboard()
-    C._ZN13QGraphicsItem14ungrabKeyboardEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem14ungrabKeyboardEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "ungrabKeyboard", args)
   }
@@ -5820,7 +5820,7 @@ func (this *QGraphicsItem) installSceneEventFilter(args ...interface{}) () {
     // invoke: void installSceneEventFilter(class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem23installSceneEventFilterEPS_(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem23installSceneEventFilterEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "installSceneEventFilter", args)
   }
@@ -5840,7 +5840,7 @@ func (this *QGraphicsItem) acceptHoverEvents(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem17acceptHoverEventsEv
     // invoke: bool acceptHoverEvents()
-    C._ZNK13QGraphicsItem17acceptHoverEventsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem17acceptHoverEventsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptHoverEvents", args)
   }
@@ -5879,7 +5879,7 @@ func (this *QGraphicsItem) mapRectToItem(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.double(args[4].(float64))
     if false {fmt.Println(arg4)}
-    C._ZNK13QGraphicsItem13mapRectToItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZNK13QGraphicsItem13mapRectToItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   case 1:
     // invoke: _ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF
     // invoke: QRectF mapRectToItem(const class QGraphicsItem *, const class QRectF &)
@@ -5887,7 +5887,7 @@ func (this *QGraphicsItem) mapRectToItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QRectF).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectToItem", args)
   }
@@ -5939,7 +5939,7 @@ func (this *QGraphicsItem) mapFromItem(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.double(args[2].(float64))
     if false {fmt.Println(arg2)}
-    C._ZNK13QGraphicsItem11mapFromItemEPKS_dd(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK13QGraphicsItem11mapFromItemEPKS_dd(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF
     // invoke: QPointF mapFromItem(const class QGraphicsItem *, const class QPointF &)
@@ -5947,7 +5947,7 @@ func (this *QGraphicsItem) mapFromItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPointF).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_dddd
     // invoke: QPolygonF mapFromItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
@@ -5961,7 +5961,7 @@ func (this *QGraphicsItem) mapFromItem(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.double(args[4].(float64))
     if false {fmt.Println(arg4)}
-    C._ZNK13QGraphicsItem11mapFromItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZNK13QGraphicsItem11mapFromItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   case 3:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF
     // invoke: QPolygonF mapFromItem(const class QGraphicsItem *, const class QRectF &)
@@ -5969,7 +5969,7 @@ func (this *QGraphicsItem) mapFromItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QRectF).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
   case 4:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF
     // invoke: QPolygonF mapFromItem(const class QGraphicsItem *, const class QPolygonF &)
@@ -5977,7 +5977,7 @@ func (this *QGraphicsItem) mapFromItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPolygonF).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF(this.qclsinst, arg0, arg1)
   case 5:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath
     // invoke: QPainterPath mapFromItem(const class QGraphicsItem *, const class QPainterPath &)
@@ -5985,7 +5985,7 @@ func (this *QGraphicsItem) mapFromItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPainterPath).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapFromItem", args)
   }
@@ -6010,7 +6010,7 @@ func NewQGraphicsItem(args ...interface{}) QGraphicsItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QGraphicsItemC2EPS_(qthis, arg0)
+    C.C_ZN13QGraphicsItemC2EPS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "QGraphicsItem", args)
   }
@@ -6031,7 +6031,7 @@ func (this *QGraphicsItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem4typeEv
     // invoke: int type()
-    C._ZNK13QGraphicsItem4typeEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "type", args)
   }
@@ -6054,7 +6054,7 @@ func (this *QGraphicsItem) setEnabled(args ...interface{}) () {
     // invoke: void setEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem10setEnabledEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem10setEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setEnabled", args)
   }
@@ -6074,7 +6074,7 @@ func (this *QGraphicsItem) grabMouse(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem9grabMouseEv
     // invoke: void grabMouse()
-    C._ZN13QGraphicsItem9grabMouseEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem9grabMouseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "grabMouse", args)
   }
@@ -6097,7 +6097,7 @@ func (this *QGraphicsItem) setActive(args ...interface{}) () {
     // invoke: void setActive(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem9setActiveEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem9setActiveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setActive", args)
   }
@@ -6120,7 +6120,7 @@ func (this *QGraphicsItem) isObscuredBy(args ...interface{}) () {
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem12isObscuredByEPKS_(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem12isObscuredByEPKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isObscuredBy", args)
   }
@@ -6140,7 +6140,7 @@ func (this *QGraphicsItem) acceptDrops(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem11acceptDropsEv
     // invoke: bool acceptDrops()
-    C._ZNK13QGraphicsItem11acceptDropsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem11acceptDropsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptDrops", args)
   }
@@ -6163,7 +6163,7 @@ func (this *QGraphicsItem) setParentItem(args ...interface{}) () {
     // invoke: void setParentItem(class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem13setParentItemEPS_(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem13setParentItemEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setParentItem", args)
   }
@@ -6206,7 +6206,7 @@ func (this *QGraphicsItem) ensureVisible(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    C._ZN13QGraphicsItem13ensureVisibleEddddii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
+    C.C_ZN13QGraphicsItem13ensureVisibleEddddii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
   case 1:
     // invoke: _ZN13QGraphicsItem13ensureVisibleERK6QRectFii
     // invoke: void ensureVisible(const class QRectF &, int, int)
@@ -6216,7 +6216,7 @@ func (this *QGraphicsItem) ensureVisible(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN13QGraphicsItem13ensureVisibleERK6QRectFii(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QGraphicsItem13ensureVisibleERK6QRectFii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "ensureVisible", args)
   }
@@ -6236,7 +6236,7 @@ func (this *QGraphicsItem) grabKeyboard(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem12grabKeyboardEv
     // invoke: void grabKeyboard()
-    C._ZN13QGraphicsItem12grabKeyboardEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem12grabKeyboardEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "grabKeyboard", args)
   }
@@ -6256,7 +6256,7 @@ func (this *QGraphicsItem) parentObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem12parentObjectEv
     // invoke: QGraphicsObject * parentObject()
-    C._ZNK13QGraphicsItem12parentObjectEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem12parentObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "parentObject", args)
   }
@@ -6276,7 +6276,7 @@ func (this *QGraphicsItem) isUnderMouse(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem12isUnderMouseEv
     // invoke: bool isUnderMouse()
-    C._ZNK13QGraphicsItem12isUnderMouseEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem12isUnderMouseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isUnderMouse", args)
   }
@@ -6296,7 +6296,7 @@ func (this *QGraphicsItem) parentWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem12parentWidgetEv
     // invoke: QGraphicsWidget * parentWidget()
-    C._ZNK13QGraphicsItem12parentWidgetEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem12parentWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "parentWidget", args)
   }
@@ -6319,7 +6319,7 @@ func (this *QGraphicsItem) setZValue(args ...interface{}) () {
     // invoke: void setZValue(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem9setZValueEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem9setZValueEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setZValue", args)
   }
@@ -6345,7 +6345,7 @@ func (this *QGraphicsItem) setMatrix(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN13QGraphicsItem9setMatrixERK7QMatrixb(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsItem9setMatrixERK7QMatrixb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setMatrix", args)
   }
@@ -6365,7 +6365,7 @@ func (this *QGraphicsItem) cursor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem6cursorEv
     // invoke: QCursor cursor()
-    C._ZNK13QGraphicsItem6cursorEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem6cursorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "cursor", args)
   }
@@ -6385,7 +6385,7 @@ func (this *QGraphicsItem) zValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem6zValueEv
     // invoke: qreal zValue()
-    C._ZNK13QGraphicsItem6zValueEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem6zValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "zValue", args)
   }
@@ -6408,7 +6408,7 @@ func (this *QGraphicsItem) setVisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setVisible", args)
   }
@@ -6428,7 +6428,7 @@ func (this *QGraphicsItem) resetMatrix(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem11resetMatrixEv
     // invoke: void resetMatrix()
-    C._ZN13QGraphicsItem11resetMatrixEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem11resetMatrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "resetMatrix", args)
   }
@@ -6448,7 +6448,7 @@ func (this *QGraphicsItem) sceneTransform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem14sceneTransformEv
     // invoke: QTransform sceneTransform()
-    C._ZNK13QGraphicsItem14sceneTransformEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem14sceneTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "sceneTransform", args)
   }
@@ -6468,7 +6468,7 @@ func (this *QGraphicsItem) isWindow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem8isWindowEv
     // invoke: bool isWindow()
-    C._ZNK13QGraphicsItem8isWindowEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem8isWindowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isWindow", args)
   }
@@ -6497,7 +6497,7 @@ func (this *QGraphicsItem) mapRectFromParent(args ...interface{}) () {
     // invoke: QRectF mapRectFromParent(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem17mapRectFromParentERK6QRectF(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem17mapRectFromParentERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem17mapRectFromParentEdddd
     // invoke: QRectF mapRectFromParent(qreal, qreal, qreal, qreal)
@@ -6509,7 +6509,7 @@ func (this *QGraphicsItem) mapRectFromParent(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZNK13QGraphicsItem17mapRectFromParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK13QGraphicsItem17mapRectFromParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectFromParent", args)
   }
@@ -6532,7 +6532,7 @@ func (this *QGraphicsItem) setScale(args ...interface{}) () {
     // invoke: void setScale(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem8setScaleEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem8setScaleEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setScale", args)
   }
@@ -6552,7 +6552,7 @@ func (this *QGraphicsItem) isWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem8isWidgetEv
     // invoke: bool isWidget()
-    C._ZNK13QGraphicsItem8isWidgetEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem8isWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isWidget", args)
   }
@@ -6572,7 +6572,7 @@ func (this *QGraphicsItem) resetTransform(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem14resetTransformEv
     // invoke: void resetTransform()
-    C._ZN13QGraphicsItem14resetTransformEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem14resetTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "resetTransform", args)
   }
@@ -6592,7 +6592,7 @@ func (this *QGraphicsItem) sceneBoundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem17sceneBoundingRectEv
     // invoke: QRectF sceneBoundingRect()
-    C._ZNK13QGraphicsItem17sceneBoundingRectEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem17sceneBoundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "sceneBoundingRect", args)
   }
@@ -6615,7 +6615,7 @@ func (this *QGraphicsItem) setOpacity(args ...interface{}) () {
     // invoke: void setOpacity(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem10setOpacityEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem10setOpacityEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setOpacity", args)
   }
@@ -6635,7 +6635,7 @@ func (this *QGraphicsItem) focusItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem9focusItemEv
     // invoke: QGraphicsItem * focusItem()
-    C._ZNK13QGraphicsItem9focusItemEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem9focusItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "focusItem", args)
   }
@@ -6655,7 +6655,7 @@ func (this *QGraphicsItem) hasCursor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem9hasCursorEv
     // invoke: bool hasCursor()
-    C._ZNK13QGraphicsItem9hasCursorEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem9hasCursorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "hasCursor", args)
   }
@@ -6678,7 +6678,7 @@ func (this *QGraphicsItem) setAcceptTouchEvents(args ...interface{}) () {
     // invoke: void setAcceptTouchEvents(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem20setAcceptTouchEventsEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem20setAcceptTouchEventsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setAcceptTouchEvents", args)
   }
@@ -6704,7 +6704,7 @@ func (this *QGraphicsItem) setData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN13QGraphicsItem7setDataEiRK8QVariant(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsItem7setDataEiRK8QVariant(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setData", args)
   }
@@ -6724,7 +6724,7 @@ func (this *QGraphicsItem) opacity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem7opacityEv
     // invoke: qreal opacity()
-    C._ZNK13QGraphicsItem7opacityEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem7opacityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "opacity", args)
   }
@@ -6744,7 +6744,7 @@ func (this *QGraphicsItem) isVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem9isVisibleEv
     // invoke: bool isVisible()
-    C._ZNK13QGraphicsItem9isVisibleEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem9isVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isVisible", args)
   }
@@ -6779,13 +6779,13 @@ func (this *QGraphicsItem) update(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN13QGraphicsItem6updateEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN13QGraphicsItem6updateEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN13QGraphicsItem6updateERK6QRectF
     // invoke: void update(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem6updateERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem6updateERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "update", args)
   }
@@ -6818,7 +6818,7 @@ func (this *QGraphicsItem) mapRectFromItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QRectF).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QGraphicsItem15mapRectFromItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QGraphicsItem15mapRectFromItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK13QGraphicsItem15mapRectFromItemEPKS_dddd
     // invoke: QRectF mapRectFromItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
@@ -6832,7 +6832,7 @@ func (this *QGraphicsItem) mapRectFromItem(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.double(args[4].(float64))
     if false {fmt.Println(arg4)}
-    C._ZNK13QGraphicsItem15mapRectFromItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZNK13QGraphicsItem15mapRectFromItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectFromItem", args)
   }
@@ -6855,7 +6855,7 @@ func (this *QGraphicsItem) setX(args ...interface{}) () {
     // invoke: void setX(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem4setXEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem4setXEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setX", args)
   }
@@ -6878,7 +6878,7 @@ func (this *QGraphicsItem) setY(args ...interface{}) () {
     // invoke: void setY(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem4setYEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem4setYEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setY", args)
   }
@@ -6901,7 +6901,7 @@ func (this *QGraphicsItem) setCursor(args ...interface{}) () {
     // invoke: void setCursor(const class QCursor &)
     var arg0 = args[0].(QCursor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem9setCursorERK7QCursor(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem9setCursorERK7QCursor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setCursor", args)
   }
@@ -6921,7 +6921,7 @@ func (this *QGraphicsItem) boundingRegionGranularity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem25boundingRegionGranularityEv
     // invoke: qreal boundingRegionGranularity()
-    C._ZNK13QGraphicsItem25boundingRegionGranularityEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem25boundingRegionGranularityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "boundingRegionGranularity", args)
   }
@@ -6944,7 +6944,7 @@ func (this *QGraphicsItem) removeSceneEventFilter(args ...interface{}) () {
     // invoke: void removeSceneEventFilter(class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QGraphicsItem22removeSceneEventFilterEPS_(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem22removeSceneEventFilterEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "removeSceneEventFilter", args)
   }
@@ -6964,7 +6964,7 @@ func (this *QGraphicsItem) acceptTouchEvents(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem17acceptTouchEventsEv
     // invoke: bool acceptTouchEvents()
-    C._ZNK13QGraphicsItem17acceptTouchEventsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem17acceptTouchEventsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptTouchEvents", args)
   }
@@ -6984,7 +6984,7 @@ func (this *QGraphicsItem) sceneMatrix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem11sceneMatrixEv
     // invoke: QMatrix sceneMatrix()
-    C._ZNK13QGraphicsItem11sceneMatrixEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem11sceneMatrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "sceneMatrix", args)
   }
@@ -7004,7 +7004,7 @@ func (this *QGraphicsItem) cacheMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem9cacheModeEv
     // invoke: QGraphicsItem::CacheMode cacheMode()
-    C._ZNK13QGraphicsItem9cacheModeEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem9cacheModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "cacheMode", args)
   }
@@ -7024,7 +7024,7 @@ func (this *QGraphicsItem) flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem5flagsEv
     // invoke: GraphicsItemFlags flags()
-    C._ZNK13QGraphicsItem5flagsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem5flagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "flags", args)
   }
@@ -7044,7 +7044,7 @@ func (this *QGraphicsItem) clipPath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem8clipPathEv
     // invoke: QPainterPath clipPath()
-    C._ZNK13QGraphicsItem8clipPathEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem8clipPathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "clipPath", args)
   }
@@ -7064,7 +7064,7 @@ func (this *QGraphicsItem) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem1yEv
     // invoke: qreal y()
-    C._ZNK13QGraphicsItem1yEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "y", args)
   }
@@ -7093,7 +7093,7 @@ func (this *QGraphicsItem) scroll(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QRectF).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN13QGraphicsItem6scrollEddRK6QRectF(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QGraphicsItem6scrollEddRK6QRectF(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scroll", args)
   }
@@ -7116,7 +7116,7 @@ func (this *QGraphicsItem) boundingRegion(args ...interface{}) () {
     // invoke: QRegion boundingRegion(const class QTransform &)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QGraphicsItem14boundingRegionERK10QTransform(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem14boundingRegionERK10QTransform(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "boundingRegion", args)
   }
@@ -7136,7 +7136,7 @@ func (this *QGraphicsObject) FreeQGraphicsObject(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsObjectD0Ev
     // invoke: void ~QGraphicsObject()
-    C._ZN15QGraphicsObjectD2Ev(this.qclsinst)
+    C.C_ZN15QGraphicsObjectD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsObject", "~QGraphicsObject", args)
   }
@@ -7161,7 +7161,7 @@ func NewQGraphicsObject(args ...interface{}) QGraphicsObject {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QGraphicsObjectC2EP13QGraphicsItem(qthis, arg0)
+    C.C_ZN15QGraphicsObjectC2EP13QGraphicsItem(qthis, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsObject", "QGraphicsObject", args)
   }
@@ -7182,7 +7182,7 @@ func (this *QGraphicsObject) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsObject10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK15QGraphicsObject10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QGraphicsObject10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsObject", "metaObject", args)
   }
@@ -7202,7 +7202,7 @@ func (this *QGraphicsSimpleTextItem) opaqueArea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    C._ZNK23QGraphicsSimpleTextItem10opaqueAreaEv(this.qclsinst)
+    C.C_ZNK23QGraphicsSimpleTextItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "opaqueArea", args)
   }
@@ -7222,7 +7222,7 @@ func (this *QGraphicsSimpleTextItem) FreeQGraphicsSimpleTextItem(args ...interfa
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItemD0Ev
     // invoke: void ~QGraphicsSimpleTextItem()
-    C._ZN23QGraphicsSimpleTextItemD2Ev(this.qclsinst)
+    C.C_ZN23QGraphicsSimpleTextItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "~QGraphicsSimpleTextItem", args)
   }
@@ -7242,7 +7242,7 @@ func (this *QGraphicsSimpleTextItem) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    C._ZNK23QGraphicsSimpleTextItem12boundingRectEv(this.qclsinst)
+    C.C_ZNK23QGraphicsSimpleTextItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "boundingRect", args)
   }
@@ -7262,7 +7262,7 @@ func (this *QGraphicsSimpleTextItem) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem4textEv
     // invoke: QString text()
-    C._ZNK23QGraphicsSimpleTextItem4textEv(this.qclsinst)
+    C.C_ZNK23QGraphicsSimpleTextItem4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "text", args)
   }
@@ -7285,7 +7285,7 @@ func (this *QGraphicsSimpleTextItem) setText(args ...interface{}) () {
     // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN23QGraphicsSimpleTextItem7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsSimpleTextItem7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "setText", args)
   }
@@ -7308,7 +7308,7 @@ func (this *QGraphicsSimpleTextItem) contains(args ...interface{}) () {
     // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK23QGraphicsSimpleTextItem8containsERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK23QGraphicsSimpleTextItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "contains", args)
   }
@@ -7331,7 +7331,7 @@ func (this *QGraphicsSimpleTextItem) isObscuredBy(args ...interface{}) () {
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "isObscuredBy", args)
   }
@@ -7360,7 +7360,7 @@ func (this *QGraphicsSimpleTextItem) paint(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "paint", args)
   }
@@ -7380,7 +7380,7 @@ func (this *QGraphicsSimpleTextItem) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem5shapeEv
     // invoke: QPainterPath shape()
-    C._ZNK23QGraphicsSimpleTextItem5shapeEv(this.qclsinst)
+    C.C_ZNK23QGraphicsSimpleTextItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "shape", args)
   }
@@ -7409,7 +7409,7 @@ func NewQGraphicsSimpleTextItem(args ...interface{}) QGraphicsSimpleTextItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN23QGraphicsSimpleTextItemC2EP13QGraphicsItem(qthis, arg0)
+    C.C_ZN23QGraphicsSimpleTextItemC2EP13QGraphicsItem(qthis, arg0)
   case 1:
     // invoke: _ZN23QGraphicsSimpleTextItemC1ERK7QStringP13QGraphicsItem
     // invoke: void QGraphicsSimpleTextItem(const class QString &, class QGraphicsItem *)
@@ -7419,7 +7419,7 @@ func NewQGraphicsSimpleTextItem(args ...interface{}) QGraphicsSimpleTextItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN23QGraphicsSimpleTextItemC2ERK7QStringP13QGraphicsItem(qthis, arg0, arg1)
+    C.C_ZN23QGraphicsSimpleTextItemC2ERK7QStringP13QGraphicsItem(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "QGraphicsSimpleTextItem", args)
   }
@@ -7443,7 +7443,7 @@ func (this *QGraphicsSimpleTextItem) setFont(args ...interface{}) () {
     // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN23QGraphicsSimpleTextItem7setFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsSimpleTextItem7setFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "setFont", args)
   }
@@ -7463,7 +7463,7 @@ func (this *QGraphicsSimpleTextItem) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem4fontEv
     // invoke: QFont font()
-    C._ZNK23QGraphicsSimpleTextItem4fontEv(this.qclsinst)
+    C.C_ZNK23QGraphicsSimpleTextItem4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "font", args)
   }
@@ -7483,7 +7483,7 @@ func (this *QGraphicsSimpleTextItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem4typeEv
     // invoke: int type()
-    C._ZNK23QGraphicsSimpleTextItem4typeEv(this.qclsinst)
+    C.C_ZNK23QGraphicsSimpleTextItem4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "type", args)
   }

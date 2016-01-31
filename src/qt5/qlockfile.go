@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qlockfile.h
 // dst-file: /src/core/qlockfile.go
 //
@@ -29,27 +29,27 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QLockFile::getLockInfo(qint64 * pid, QString * hostname, QString * appname);
-extern void _ZNK9QLockFile11getLockInfoEPxP7QStringS2_(void* qthis, int64_t* arg0, void* arg1, void* arg2); // 4
+extern void C_ZNK9QLockFile11getLockInfoEPxP7QStringS2_(void* qthis, int64_t* arg0, void* arg1, void* arg2); // 4
   // proto:  void QLockFile::setStaleLockTime(int );
-extern void _ZN9QLockFile16setStaleLockTimeEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QLockFile16setStaleLockTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  void QLockFile::QLockFile(const QString & fileName);
-extern void _ZN9QLockFileC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN9QLockFileC2ERK7QString(void* qthis, void* arg0); // 3
   // proto:  bool QLockFile::lock();
-extern void _ZN9QLockFile4lockEv(void* qthis); // 4
+extern void C_ZN9QLockFile4lockEv(void* qthis); // 4
   // proto:  void QLockFile::~QLockFile();
-extern void _ZN9QLockFileD2Ev(void* qthis); // 4
+extern void C_ZN9QLockFileD2Ev(void* qthis); // 4
   // proto:  bool QLockFile::removeStaleLockFile();
-extern void _ZN9QLockFile19removeStaleLockFileEv(void* qthis); // 4
+extern void C_ZN9QLockFile19removeStaleLockFileEv(void* qthis); // 4
   // proto:  bool QLockFile::isLocked();
-extern void _ZNK9QLockFile8isLockedEv(void* qthis); // 4
+extern void C_ZNK9QLockFile8isLockedEv(void* qthis); // 4
   // proto:  int QLockFile::staleLockTime();
-extern void _ZNK9QLockFile13staleLockTimeEv(void* qthis); // 4
+extern void C_ZNK9QLockFile13staleLockTimeEv(void* qthis); // 4
   // proto:  bool QLockFile::tryLock(int timeout);
-extern void _ZN9QLockFile7tryLockEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QLockFile7tryLockEi(void* qthis, int32_t arg0); // 4
   // proto:  void QLockFile::unlock();
-extern void _ZN9QLockFile6unlockEv(void* qthis); // 4
+extern void C_ZN9QLockFile6unlockEv(void* qthis); // 4
   // proto:  QLockFile::LockError QLockFile::error();
-extern void _ZNK9QLockFile5errorEv(void* qthis); // 4
+extern void C_ZNK9QLockFile5errorEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -90,7 +90,7 @@ func (this *QLockFile) getLockInfo(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZNK9QLockFile11getLockInfoEPxP7QStringS2_(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK9QLockFile11getLockInfoEPxP7QStringS2_(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QLockFile", "getLockInfo", args)
   }
@@ -113,7 +113,7 @@ func (this *QLockFile) setStaleLockTime(args ...interface{}) () {
     // invoke: void setStaleLockTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QLockFile16setStaleLockTimeEi(this.qclsinst, arg0)
+    C.C_ZN9QLockFile16setStaleLockTimeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLockFile", "setStaleLockTime", args)
   }
@@ -138,7 +138,7 @@ func NewQLockFile(args ...interface{}) QLockFile {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QLockFileC2ERK7QString(qthis, arg0)
+    C.C_ZN9QLockFileC2ERK7QString(qthis, arg0)
   default:
     qtrt.ErrorResolve("QLockFile", "QLockFile", args)
   }
@@ -159,7 +159,7 @@ func (this *QLockFile) lock(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLockFile4lockEv
     // invoke: bool lock()
-    C._ZN9QLockFile4lockEv(this.qclsinst)
+    C.C_ZN9QLockFile4lockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLockFile", "lock", args)
   }
@@ -179,7 +179,7 @@ func (this *QLockFile) FreeQLockFile(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLockFileD0Ev
     // invoke: void ~QLockFile()
-    C._ZN9QLockFileD2Ev(this.qclsinst)
+    C.C_ZN9QLockFileD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLockFile", "~QLockFile", args)
   }
@@ -199,7 +199,7 @@ func (this *QLockFile) removeStaleLockFile(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLockFile19removeStaleLockFileEv
     // invoke: bool removeStaleLockFile()
-    C._ZN9QLockFile19removeStaleLockFileEv(this.qclsinst)
+    C.C_ZN9QLockFile19removeStaleLockFileEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLockFile", "removeStaleLockFile", args)
   }
@@ -219,7 +219,7 @@ func (this *QLockFile) isLocked(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QLockFile8isLockedEv
     // invoke: bool isLocked()
-    C._ZNK9QLockFile8isLockedEv(this.qclsinst)
+    C.C_ZNK9QLockFile8isLockedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLockFile", "isLocked", args)
   }
@@ -239,7 +239,7 @@ func (this *QLockFile) staleLockTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QLockFile13staleLockTimeEv
     // invoke: int staleLockTime()
-    C._ZNK9QLockFile13staleLockTimeEv(this.qclsinst)
+    C.C_ZNK9QLockFile13staleLockTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLockFile", "staleLockTime", args)
   }
@@ -262,7 +262,7 @@ func (this *QLockFile) tryLock(args ...interface{}) () {
     // invoke: bool tryLock(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QLockFile7tryLockEi(this.qclsinst, arg0)
+    C.C_ZN9QLockFile7tryLockEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLockFile", "tryLock", args)
   }
@@ -282,7 +282,7 @@ func (this *QLockFile) unlock(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLockFile6unlockEv
     // invoke: void unlock()
-    C._ZN9QLockFile6unlockEv(this.qclsinst)
+    C.C_ZN9QLockFile6unlockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLockFile", "unlock", args)
   }
@@ -302,7 +302,7 @@ func (this *QLockFile) error(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QLockFile5errorEv
     // invoke: QLockFile::LockError error()
-    C._ZNK9QLockFile5errorEv(this.qclsinst)
+    C.C_ZNK9QLockFile5errorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLockFile", "error", args)
   }

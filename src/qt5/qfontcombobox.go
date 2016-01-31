@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qfontcombobox.h
 // dst-file: /src/widgets/qfontcombobox.go
 //
@@ -29,21 +29,21 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  FontFilters QFontComboBox::fontFilters();
-extern void _ZNK13QFontComboBox11fontFiltersEv(void* qthis); // 4
+extern void C_ZNK13QFontComboBox11fontFiltersEv(void* qthis); // 4
   // proto:  void QFontComboBox::setCurrentFont(const QFont & f);
-extern void _ZN13QFontComboBox14setCurrentFontERK5QFont(void* qthis, void* arg0); // 4
+extern void C_ZN13QFontComboBox14setCurrentFontERK5QFont(void* qthis, void* arg0); // 4
   // proto:  void QFontComboBox::QFontComboBox(QWidget * parent);
-extern void _ZN13QFontComboBoxC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN13QFontComboBoxC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  QSize QFontComboBox::sizeHint();
-extern void _ZNK13QFontComboBox8sizeHintEv(void* qthis); // 4
+extern void C_ZNK13QFontComboBox8sizeHintEv(void* qthis); // 4
   // proto:  const QMetaObject * QFontComboBox::metaObject();
-extern void _ZNK13QFontComboBox10metaObjectEv(void* qthis); // 4
+extern void C_ZNK13QFontComboBox10metaObjectEv(void* qthis); // 4
   // proto:  QFont QFontComboBox::currentFont();
-extern void _ZNK13QFontComboBox11currentFontEv(void* qthis); // 4
+extern void C_ZNK13QFontComboBox11currentFontEv(void* qthis); // 4
   // proto:  void QFontComboBox::~QFontComboBox();
-extern void _ZN13QFontComboBoxD2Ev(void* qthis); // 4
+extern void C_ZN13QFontComboBoxD2Ev(void* qthis); // 4
   // proto:  QFontDatabase::WritingSystem QFontComboBox::writingSystem();
-extern void _ZNK13QFontComboBox13writingSystemEv(void* qthis); // 4
+extern void C_ZNK13QFontComboBox13writingSystemEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -76,7 +76,7 @@ func (this *QFontComboBox) fontFilters(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QFontComboBox11fontFiltersEv
     // invoke: FontFilters fontFilters()
-    C._ZNK13QFontComboBox11fontFiltersEv(this.qclsinst)
+    C.C_ZNK13QFontComboBox11fontFiltersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontComboBox", "fontFilters", args)
   }
@@ -99,7 +99,7 @@ func (this *QFontComboBox) setCurrentFont(args ...interface{}) () {
     // invoke: void setCurrentFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QFontComboBox14setCurrentFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN13QFontComboBox14setCurrentFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontComboBox", "setCurrentFont", args)
   }
@@ -124,7 +124,7 @@ func NewQFontComboBox(args ...interface{}) QFontComboBox {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QFontComboBoxC2EP7QWidget(qthis, arg0)
+    C.C_ZN13QFontComboBoxC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QFontComboBox", "QFontComboBox", args)
   }
@@ -145,7 +145,7 @@ func (this *QFontComboBox) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QFontComboBox8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK13QFontComboBox8sizeHintEv(this.qclsinst)
+    C.C_ZNK13QFontComboBox8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontComboBox", "sizeHint", args)
   }
@@ -165,7 +165,7 @@ func (this *QFontComboBox) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QFontComboBox10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK13QFontComboBox10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QFontComboBox10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontComboBox", "metaObject", args)
   }
@@ -185,7 +185,7 @@ func (this *QFontComboBox) currentFont(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QFontComboBox11currentFontEv
     // invoke: QFont currentFont()
-    C._ZNK13QFontComboBox11currentFontEv(this.qclsinst)
+    C.C_ZNK13QFontComboBox11currentFontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontComboBox", "currentFont", args)
   }
@@ -205,7 +205,7 @@ func (this *QFontComboBox) FreeQFontComboBox(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QFontComboBoxD0Ev
     // invoke: void ~QFontComboBox()
-    C._ZN13QFontComboBoxD2Ev(this.qclsinst)
+    C.C_ZN13QFontComboBoxD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontComboBox", "~QFontComboBox", args)
   }
@@ -225,7 +225,7 @@ func (this *QFontComboBox) writingSystem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QFontComboBox13writingSystemEv
     // invoke: QFontDatabase::WritingSystem writingSystem()
-    C._ZNK13QFontComboBox13writingSystemEv(this.qclsinst)
+    C.C_ZNK13QFontComboBox13writingSystemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontComboBox", "writingSystem", args)
   }

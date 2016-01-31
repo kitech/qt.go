@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qevent.h
 // dst-file: /src/gui/qevent.go
 //
@@ -29,435 +29,435 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QWhatsThisClickedEvent::QWhatsThisClickedEvent(const QString & href);
-extern void _ZN22QWhatsThisClickedEventC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN22QWhatsThisClickedEventC2ERK7QString(void* qthis, void* arg0); // 3
   // proto:  void QWhatsThisClickedEvent::~QWhatsThisClickedEvent();
-extern void _ZN22QWhatsThisClickedEventD2Ev(void* qthis); // 4
+extern void C_ZN22QWhatsThisClickedEventD2Ev(void* qthis); // 4
   // proto:  QString QWhatsThisClickedEvent::href();
-extern void _ZNK22QWhatsThisClickedEvent4hrefEv(void* qthis); // 2
+extern void C_ZNK22QWhatsThisClickedEvent4hrefEv(void* qthis); // 2
   // proto:  const QRegion & QExposeEvent::region();
-extern void _ZNK12QExposeEvent6regionEv(void* qthis); // 2
+extern void C_ZNK12QExposeEvent6regionEv(void* qthis); // 2
   // proto:  void QExposeEvent::~QExposeEvent();
-extern void _ZN12QExposeEventD2Ev(void* qthis); // 4
+extern void C_ZN12QExposeEventD2Ev(void* qthis); // 4
   // proto:  void QExposeEvent::QExposeEvent(const QRegion & rgn);
-extern void _ZN12QExposeEventC2ERK7QRegion(void* qthis, void* arg0); // 3
+extern void C_ZN12QExposeEventC2ERK7QRegion(void* qthis, void* arg0); // 3
   // proto:  int QInputMethodEvent::replacementStart();
-extern void _ZNK17QInputMethodEvent16replacementStartEv(void* qthis); // 2
+extern void C_ZNK17QInputMethodEvent16replacementStartEv(void* qthis); // 2
   // proto:  int QInputMethodEvent::replacementLength();
-extern void _ZNK17QInputMethodEvent17replacementLengthEv(void* qthis); // 2
+extern void C_ZNK17QInputMethodEvent17replacementLengthEv(void* qthis); // 2
   // proto:  void QInputMethodEvent::QInputMethodEvent(const QInputMethodEvent & other);
-extern void _ZN17QInputMethodEventC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN17QInputMethodEventC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QInputMethodEvent::QInputMethodEvent();
-extern void _ZN17QInputMethodEventC2Ev(void* qthis); // 3
+extern void C_ZN17QInputMethodEventC2Ev(void* qthis); // 3
   // proto:  const QString & QInputMethodEvent::preeditString();
-extern void _ZNK17QInputMethodEvent13preeditStringEv(void* qthis); // 2
+extern void C_ZNK17QInputMethodEvent13preeditStringEv(void* qthis); // 2
   // proto:  const QList<QInputMethodEvent::Attribute> & QInputMethodEvent::attributes();
-extern void _ZNK17QInputMethodEvent10attributesEv(void* qthis); // 2
+extern void C_ZNK17QInputMethodEvent10attributesEv(void* qthis); // 2
   // proto:  const QString & QInputMethodEvent::commitString();
-extern void _ZNK17QInputMethodEvent12commitStringEv(void* qthis); // 2
+extern void C_ZNK17QInputMethodEvent12commitStringEv(void* qthis); // 2
   // proto:  void QInputMethodEvent::setCommitString(const QString & commitString, int replaceFrom, int replaceLength);
-extern void _ZN17QInputMethodEvent15setCommitStringERK7QStringii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
+extern void C_ZN17QInputMethodEvent15setCommitStringERK7QStringii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
   // proto:  const QPoint & QHelpEvent::globalPos();
-extern void _ZNK10QHelpEvent9globalPosEv(void* qthis); // 2
+extern void C_ZNK10QHelpEvent9globalPosEv(void* qthis); // 2
   // proto:  const QPoint & QHelpEvent::pos();
-extern void _ZNK10QHelpEvent3posEv(void* qthis); // 2
+extern void C_ZNK10QHelpEvent3posEv(void* qthis); // 2
   // proto:  int QHelpEvent::y();
-extern void _ZNK10QHelpEvent1yEv(void* qthis); // 2
+extern void C_ZNK10QHelpEvent1yEv(void* qthis); // 2
   // proto:  int QHelpEvent::x();
-extern void _ZNK10QHelpEvent1xEv(void* qthis); // 2
+extern void C_ZNK10QHelpEvent1xEv(void* qthis); // 2
   // proto:  int QHelpEvent::globalX();
-extern void _ZNK10QHelpEvent7globalXEv(void* qthis); // 2
+extern void C_ZNK10QHelpEvent7globalXEv(void* qthis); // 2
   // proto:  int QHelpEvent::globalY();
-extern void _ZNK10QHelpEvent7globalYEv(void* qthis); // 2
+extern void C_ZNK10QHelpEvent7globalYEv(void* qthis); // 2
   // proto:  void QHelpEvent::~QHelpEvent();
-extern void _ZN10QHelpEventD2Ev(void* qthis); // 4
+extern void C_ZN10QHelpEventD2Ev(void* qthis); // 4
   // proto:  QAction * QActionEvent::action();
-extern void _ZNK12QActionEvent6actionEv(void* qthis); // 2
+extern void C_ZNK12QActionEvent6actionEv(void* qthis); // 2
   // proto:  void QActionEvent::QActionEvent(int type, QAction * action, QAction * before);
-extern void _ZN12QActionEventC2EiP7QActionS1_(void* qthis, int32_t arg0, void* arg1, void* arg2); // 3
+extern void C_ZN12QActionEventC2EiP7QActionS1_(void* qthis, int32_t arg0, void* arg1, void* arg2); // 3
   // proto:  void QActionEvent::~QActionEvent();
-extern void _ZN12QActionEventD2Ev(void* qthis); // 4
+extern void C_ZN12QActionEventD2Ev(void* qthis); // 4
   // proto:  QAction * QActionEvent::before();
-extern void _ZNK12QActionEvent6beforeEv(void* qthis); // 2
+extern void C_ZNK12QActionEvent6beforeEv(void* qthis); // 2
   // proto:  const QPointF & QMouseEvent::localPos();
-extern void _ZNK11QMouseEvent8localPosEv(void* qthis); // 2
+extern void C_ZNK11QMouseEvent8localPosEv(void* qthis); // 2
   // proto:  const QPointF & QMouseEvent::screenPos();
-extern void _ZNK11QMouseEvent9screenPosEv(void* qthis); // 2
+extern void C_ZNK11QMouseEvent9screenPosEv(void* qthis); // 2
   // proto:  QPoint QMouseEvent::globalPos();
-extern void _ZNK11QMouseEvent9globalPosEv(void* qthis); // 2
+extern void C_ZNK11QMouseEvent9globalPosEv(void* qthis); // 2
   // proto:  Qt::MouseButton QMouseEvent::button();
-extern void _ZNK11QMouseEvent6buttonEv(void* qthis); // 2
+extern void C_ZNK11QMouseEvent6buttonEv(void* qthis); // 2
   // proto:  void QMouseEvent::~QMouseEvent();
-extern void _ZN11QMouseEventD2Ev(void* qthis); // 4
+extern void C_ZN11QMouseEventD2Ev(void* qthis); // 4
   // proto:  QPoint QMouseEvent::pos();
-extern void _ZNK11QMouseEvent3posEv(void* qthis); // 2
+extern void C_ZNK11QMouseEvent3posEv(void* qthis); // 2
   // proto:  Qt::MouseButtons QMouseEvent::buttons();
-extern void _ZNK11QMouseEvent7buttonsEv(void* qthis); // 2
+extern void C_ZNK11QMouseEvent7buttonsEv(void* qthis); // 2
   // proto:  Qt::MouseEventSource QMouseEvent::source();
-extern void _ZNK11QMouseEvent6sourceEv(void* qthis); // 4
+extern void C_ZNK11QMouseEvent6sourceEv(void* qthis); // 4
   // proto:  Qt::MouseEventFlags QMouseEvent::flags();
-extern void _ZNK11QMouseEvent5flagsEv(void* qthis); // 4
+extern void C_ZNK11QMouseEvent5flagsEv(void* qthis); // 4
   // proto:  int QMouseEvent::globalY();
-extern void _ZNK11QMouseEvent7globalYEv(void* qthis); // 2
+extern void C_ZNK11QMouseEvent7globalYEv(void* qthis); // 2
   // proto:  int QMouseEvent::y();
-extern void _ZNK11QMouseEvent1yEv(void* qthis); // 2
+extern void C_ZNK11QMouseEvent1yEv(void* qthis); // 2
   // proto:  int QMouseEvent::x();
-extern void _ZNK11QMouseEvent1xEv(void* qthis); // 2
+extern void C_ZNK11QMouseEvent1xEv(void* qthis); // 2
   // proto:  const QPointF & QMouseEvent::windowPos();
-extern void _ZNK11QMouseEvent9windowPosEv(void* qthis); // 2
+extern void C_ZNK11QMouseEvent9windowPosEv(void* qthis); // 2
   // proto:  int QMouseEvent::globalX();
-extern void _ZNK11QMouseEvent7globalXEv(void* qthis); // 2
+extern void C_ZNK11QMouseEvent7globalXEv(void* qthis); // 2
   // proto:  QUrl QFileOpenEvent::url();
-extern void _ZNK14QFileOpenEvent3urlEv(void* qthis); // 2
+extern void C_ZNK14QFileOpenEvent3urlEv(void* qthis); // 2
   // proto:  void QFileOpenEvent::~QFileOpenEvent();
-extern void _ZN14QFileOpenEventD2Ev(void* qthis); // 4
+extern void C_ZN14QFileOpenEventD2Ev(void* qthis); // 4
   // proto:  QString QFileOpenEvent::file();
-extern void _ZNK14QFileOpenEvent4fileEv(void* qthis); // 2
+extern void C_ZNK14QFileOpenEvent4fileEv(void* qthis); // 2
   // proto:  void QFileOpenEvent::QFileOpenEvent(const QString & file);
-extern void _ZN14QFileOpenEventC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN14QFileOpenEventC2ERK7QString(void* qthis, void* arg0); // 3
   // proto:  void QFileOpenEvent::QFileOpenEvent(const QUrl & url);
-extern void _ZN14QFileOpenEventC2ERK4QUrl(void* qthis, void* arg0); // 3
+extern void C_ZN14QFileOpenEventC2ERK4QUrl(void* qthis, void* arg0); // 3
   // proto:  void QToolBarChangeEvent::~QToolBarChangeEvent();
-extern void _ZN19QToolBarChangeEventD2Ev(void* qthis); // 4
+extern void C_ZN19QToolBarChangeEventD2Ev(void* qthis); // 4
   // proto:  bool QToolBarChangeEvent::toggle();
-extern void _ZNK19QToolBarChangeEvent6toggleEv(void* qthis); // 2
+extern void C_ZNK19QToolBarChangeEvent6toggleEv(void* qthis); // 2
   // proto:  void QToolBarChangeEvent::QToolBarChangeEvent(bool t);
-extern void _ZN19QToolBarChangeEventC2Eb(void* qthis, bool arg0); // 3
+extern void C_ZN19QToolBarChangeEventC2Eb(void* qthis, bool arg0); // 3
   // proto:  int QTabletEvent::xTilt();
-extern void _ZNK12QTabletEvent5xTiltEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent5xTiltEv(void* qthis); // 2
   // proto:  QPoint QTabletEvent::pos();
-extern void _ZNK12QTabletEvent3posEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent3posEv(void* qthis); // 2
   // proto:  QTabletEvent::PointerType QTabletEvent::pointerType();
-extern void _ZNK12QTabletEvent11pointerTypeEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent11pointerTypeEv(void* qthis); // 2
   // proto:  Qt::MouseButtons QTabletEvent::buttons();
-extern void _ZNK12QTabletEvent7buttonsEv(void* qthis); // 4
+extern void C_ZNK12QTabletEvent7buttonsEv(void* qthis); // 4
   // proto:  qreal QTabletEvent::hiResGlobalX();
-extern void _ZNK12QTabletEvent12hiResGlobalXEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent12hiResGlobalXEv(void* qthis); // 2
   // proto:  qreal QTabletEvent::hiResGlobalY();
-extern void _ZNK12QTabletEvent12hiResGlobalYEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent12hiResGlobalYEv(void* qthis); // 2
   // proto:  void QTabletEvent::~QTabletEvent();
-extern void _ZN12QTabletEventD2Ev(void* qthis); // 4
+extern void C_ZN12QTabletEventD2Ev(void* qthis); // 4
   // proto:  qint64 QTabletEvent::uniqueId();
-extern void _ZNK12QTabletEvent8uniqueIdEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent8uniqueIdEv(void* qthis); // 2
   // proto:  int QTabletEvent::globalX();
-extern void _ZNK12QTabletEvent7globalXEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent7globalXEv(void* qthis); // 2
   // proto:  int QTabletEvent::globalY();
-extern void _ZNK12QTabletEvent7globalYEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent7globalYEv(void* qthis); // 2
   // proto:  int QTabletEvent::yTilt();
-extern void _ZNK12QTabletEvent5yTiltEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent5yTiltEv(void* qthis); // 2
   // proto:  const QPointF & QTabletEvent::globalPosF();
-extern void _ZNK12QTabletEvent10globalPosFEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent10globalPosFEv(void* qthis); // 2
   // proto:  qreal QTabletEvent::pressure();
-extern void _ZNK12QTabletEvent8pressureEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent8pressureEv(void* qthis); // 2
   // proto:  QTabletEvent::TabletDevice QTabletEvent::device();
-extern void _ZNK12QTabletEvent6deviceEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent6deviceEv(void* qthis); // 2
   // proto:  qreal QTabletEvent::rotation();
-extern void _ZNK12QTabletEvent8rotationEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent8rotationEv(void* qthis); // 2
   // proto:  QPoint QTabletEvent::globalPos();
-extern void _ZNK12QTabletEvent9globalPosEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent9globalPosEv(void* qthis); // 2
   // proto:  const QPointF & QTabletEvent::posF();
-extern void _ZNK12QTabletEvent4posFEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent4posFEv(void* qthis); // 2
   // proto:  Qt::MouseButton QTabletEvent::button();
-extern void _ZNK12QTabletEvent6buttonEv(void* qthis); // 4
+extern void C_ZNK12QTabletEvent6buttonEv(void* qthis); // 4
   // proto:  int QTabletEvent::y();
-extern void _ZNK12QTabletEvent1yEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent1yEv(void* qthis); // 2
   // proto:  int QTabletEvent::x();
-extern void _ZNK12QTabletEvent1xEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent1xEv(void* qthis); // 2
   // proto:  int QTabletEvent::z();
-extern void _ZNK12QTabletEvent1zEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent1zEv(void* qthis); // 2
   // proto:  qreal QTabletEvent::tangentialPressure();
-extern void _ZNK12QTabletEvent18tangentialPressureEv(void* qthis); // 2
+extern void C_ZNK12QTabletEvent18tangentialPressureEv(void* qthis); // 2
   // proto:  Qt::TouchPointStates QTouchEvent::touchPointStates();
-extern void _ZNK11QTouchEvent16touchPointStatesEv(void* qthis); // 2
+extern void C_ZNK11QTouchEvent16touchPointStatesEv(void* qthis); // 2
   // proto:  QObject * QTouchEvent::target();
-extern void _ZNK11QTouchEvent6targetEv(void* qthis); // 2
+extern void C_ZNK11QTouchEvent6targetEv(void* qthis); // 2
   // proto:  void QTouchEvent::setTarget(QObject * atarget);
-extern void _ZN11QTouchEvent9setTargetEP7QObject(void* qthis, void* arg0); // 2
+extern void C_ZN11QTouchEvent9setTargetEP7QObject(void* qthis, void* arg0); // 2
   // proto:  const QList<QTouchEvent::TouchPoint> & QTouchEvent::touchPoints();
-extern void _ZNK11QTouchEvent11touchPointsEv(void* qthis); // 2
+extern void C_ZNK11QTouchEvent11touchPointsEv(void* qthis); // 2
   // proto:  void QTouchEvent::~QTouchEvent();
-extern void _ZN11QTouchEventD2Ev(void* qthis); // 4
+extern void C_ZN11QTouchEventD2Ev(void* qthis); // 4
   // proto:  QWindow * QTouchEvent::window();
-extern void _ZNK11QTouchEvent6windowEv(void* qthis); // 2
+extern void C_ZNK11QTouchEvent6windowEv(void* qthis); // 2
   // proto:  void QTouchEvent::setDevice(QTouchDevice * adevice);
-extern void _ZN11QTouchEvent9setDeviceEP12QTouchDevice(void* qthis, void* arg0); // 2
+extern void C_ZN11QTouchEvent9setDeviceEP12QTouchDevice(void* qthis, void* arg0); // 2
   // proto:  QTouchDevice * QTouchEvent::device();
-extern void _ZNK11QTouchEvent6deviceEv(void* qthis); // 2
+extern void C_ZNK11QTouchEvent6deviceEv(void* qthis); // 2
   // proto:  void QTouchEvent::setWindow(QWindow * awindow);
-extern void _ZN11QTouchEvent9setWindowEP7QWindow(void* qthis, void* arg0); // 2
+extern void C_ZN11QTouchEvent9setWindowEP7QWindow(void* qthis, void* arg0); // 2
   // proto:  QScreen * QScreenOrientationChangeEvent::screen();
-extern void _ZNK29QScreenOrientationChangeEvent6screenEv(void* qthis); // 4
+extern void C_ZNK29QScreenOrientationChangeEvent6screenEv(void* qthis); // 4
   // proto:  Qt::ScreenOrientation QScreenOrientationChangeEvent::orientation();
-extern void _ZNK29QScreenOrientationChangeEvent11orientationEv(void* qthis); // 4
+extern void C_ZNK29QScreenOrientationChangeEvent11orientationEv(void* qthis); // 4
   // proto:  void QScreenOrientationChangeEvent::~QScreenOrientationChangeEvent();
-extern void _ZN29QScreenOrientationChangeEventD2Ev(void* qthis); // 4
+extern void C_ZN29QScreenOrientationChangeEventD2Ev(void* qthis); // 4
   // proto:  void QIconDragEvent::~QIconDragEvent();
-extern void _ZN14QIconDragEventD2Ev(void* qthis); // 4
+extern void C_ZN14QIconDragEventD2Ev(void* qthis); // 4
   // proto:  void QIconDragEvent::QIconDragEvent();
-extern void _ZN14QIconDragEventC2Ev(void* qthis); // 3
+extern void C_ZN14QIconDragEventC2Ev(void* qthis); // 3
   // proto:  void QCloseEvent::QCloseEvent();
-extern void _ZN11QCloseEventC2Ev(void* qthis); // 3
+extern void C_ZN11QCloseEventC2Ev(void* qthis); // 3
   // proto:  void QCloseEvent::~QCloseEvent();
-extern void _ZN11QCloseEventD2Ev(void* qthis); // 4
+extern void C_ZN11QCloseEventD2Ev(void* qthis); // 4
   // proto:  void QDragEnterEvent::~QDragEnterEvent();
-extern void _ZN15QDragEnterEventD2Ev(void* qthis); // 4
+extern void C_ZN15QDragEnterEventD2Ev(void* qthis); // 4
   // proto:  QPoint QWheelEvent::pixelDelta();
-extern void _ZNK11QWheelEvent10pixelDeltaEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent10pixelDeltaEv(void* qthis); // 2
   // proto:  const QPointF & QWheelEvent::globalPosF();
-extern void _ZNK11QWheelEvent10globalPosFEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent10globalPosFEv(void* qthis); // 2
   // proto:  void QWheelEvent::~QWheelEvent();
-extern void _ZN11QWheelEventD2Ev(void* qthis); // 4
+extern void C_ZN11QWheelEventD2Ev(void* qthis); // 4
   // proto:  Qt::Orientation QWheelEvent::orientation();
-extern void _ZNK11QWheelEvent11orientationEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent11orientationEv(void* qthis); // 2
   // proto:  const QPointF & QWheelEvent::posF();
-extern void _ZNK11QWheelEvent4posFEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent4posFEv(void* qthis); // 2
   // proto:  QPoint QWheelEvent::angleDelta();
-extern void _ZNK11QWheelEvent10angleDeltaEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent10angleDeltaEv(void* qthis); // 2
   // proto:  QPoint QWheelEvent::pos();
-extern void _ZNK11QWheelEvent3posEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent3posEv(void* qthis); // 2
   // proto:  int QWheelEvent::y();
-extern void _ZNK11QWheelEvent1yEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent1yEv(void* qthis); // 2
   // proto:  Qt::MouseButtons QWheelEvent::buttons();
-extern void _ZNK11QWheelEvent7buttonsEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent7buttonsEv(void* qthis); // 2
   // proto:  Qt::MouseEventSource QWheelEvent::source();
-extern void _ZNK11QWheelEvent6sourceEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent6sourceEv(void* qthis); // 2
   // proto:  int QWheelEvent::delta();
-extern void _ZNK11QWheelEvent5deltaEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent5deltaEv(void* qthis); // 2
   // proto:  Qt::ScrollPhase QWheelEvent::phase();
-extern void _ZNK11QWheelEvent5phaseEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent5phaseEv(void* qthis); // 2
   // proto:  int QWheelEvent::globalY();
-extern void _ZNK11QWheelEvent7globalYEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent7globalYEv(void* qthis); // 2
   // proto:  int QWheelEvent::globalX();
-extern void _ZNK11QWheelEvent7globalXEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent7globalXEv(void* qthis); // 2
   // proto:  int QWheelEvent::x();
-extern void _ZNK11QWheelEvent1xEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent1xEv(void* qthis); // 2
   // proto:  QPoint QWheelEvent::globalPos();
-extern void _ZNK11QWheelEvent9globalPosEv(void* qthis); // 2
+extern void C_ZNK11QWheelEvent9globalPosEv(void* qthis); // 2
   // proto:  QPointF QScrollEvent::contentPos();
-extern void _ZNK12QScrollEvent10contentPosEv(void* qthis); // 4
+extern void C_ZNK12QScrollEvent10contentPosEv(void* qthis); // 4
   // proto:  QPointF QScrollEvent::overshootDistance();
-extern void _ZNK12QScrollEvent17overshootDistanceEv(void* qthis); // 4
+extern void C_ZNK12QScrollEvent17overshootDistanceEv(void* qthis); // 4
   // proto:  void QScrollEvent::~QScrollEvent();
-extern void _ZN12QScrollEventD2Ev(void* qthis); // 4
+extern void C_ZN12QScrollEventD2Ev(void* qthis); // 4
   // proto:  QScrollEvent::ScrollState QScrollEvent::scrollState();
-extern void _ZNK12QScrollEvent11scrollStateEv(void* qthis); // 4
+extern void C_ZNK12QScrollEvent11scrollStateEv(void* qthis); // 4
   // proto:  const QPointF & QHoverEvent::posF();
-extern void _ZNK11QHoverEvent4posFEv(void* qthis); // 2
+extern void C_ZNK11QHoverEvent4posFEv(void* qthis); // 2
   // proto:  QPoint QHoverEvent::pos();
-extern void _ZNK11QHoverEvent3posEv(void* qthis); // 2
+extern void C_ZNK11QHoverEvent3posEv(void* qthis); // 2
   // proto:  QPoint QHoverEvent::oldPos();
-extern void _ZNK11QHoverEvent6oldPosEv(void* qthis); // 2
+extern void C_ZNK11QHoverEvent6oldPosEv(void* qthis); // 2
   // proto:  const QPointF & QHoverEvent::oldPosF();
-extern void _ZNK11QHoverEvent7oldPosFEv(void* qthis); // 2
+extern void C_ZNK11QHoverEvent7oldPosFEv(void* qthis); // 2
   // proto:  void QHoverEvent::~QHoverEvent();
-extern void _ZN11QHoverEventD2Ev(void* qthis); // 4
+extern void C_ZN11QHoverEventD2Ev(void* qthis); // 4
   // proto:  void QDragMoveEvent::ignore();
-extern void _ZN14QDragMoveEvent6ignoreEv(void* qthis); // 2
+extern void C_ZN14QDragMoveEvent6ignoreEv(void* qthis); // 2
   // proto:  void QDragMoveEvent::ignore(const QRect & r);
-extern void _ZN14QDragMoveEvent6ignoreERK5QRect(void* qthis, void* arg0); // 2
+extern void C_ZN14QDragMoveEvent6ignoreERK5QRect(void* qthis, void* arg0); // 2
   // proto:  void QDragMoveEvent::~QDragMoveEvent();
-extern void _ZN14QDragMoveEventD2Ev(void* qthis); // 4
+extern void C_ZN14QDragMoveEventD2Ev(void* qthis); // 4
   // proto:  QRect QDragMoveEvent::answerRect();
-extern void _ZNK14QDragMoveEvent10answerRectEv(void* qthis); // 2
+extern void C_ZNK14QDragMoveEvent10answerRectEv(void* qthis); // 2
   // proto:  void QDragMoveEvent::accept(const QRect & r);
-extern void _ZN14QDragMoveEvent6acceptERK5QRect(void* qthis, void* arg0); // 2
+extern void C_ZN14QDragMoveEvent6acceptERK5QRect(void* qthis, void* arg0); // 2
   // proto:  void QDragMoveEvent::accept();
-extern void _ZN14QDragMoveEvent6acceptEv(void* qthis); // 2
+extern void C_ZN14QDragMoveEvent6acceptEv(void* qthis); // 2
   // proto:  void QShowEvent::~QShowEvent();
-extern void _ZN10QShowEventD2Ev(void* qthis); // 4
+extern void C_ZN10QShowEventD2Ev(void* qthis); // 4
   // proto:  void QShowEvent::QShowEvent();
-extern void _ZN10QShowEventC2Ev(void* qthis); // 3
+extern void C_ZN10QShowEventC2Ev(void* qthis); // 3
   // proto:  QPlatformSurfaceEvent::SurfaceEventType QPlatformSurfaceEvent::surfaceEventType();
-extern void _ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv(void* qthis); // 2
+extern void C_ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv(void* qthis); // 2
   // proto:  void QPlatformSurfaceEvent::~QPlatformSurfaceEvent();
-extern void _ZN21QPlatformSurfaceEventD2Ev(void* qthis); // 4
+extern void C_ZN21QPlatformSurfaceEventD2Ev(void* qthis); // 4
   // proto:  void QPaintEvent::QPaintEvent(const QRect & paintRect);
-extern void _ZN11QPaintEventC2ERK5QRect(void* qthis, void* arg0); // 3
+extern void C_ZN11QPaintEventC2ERK5QRect(void* qthis, void* arg0); // 3
   // proto:  void QPaintEvent::QPaintEvent(const QRegion & paintRegion);
-extern void _ZN11QPaintEventC2ERK7QRegion(void* qthis, void* arg0); // 3
+extern void C_ZN11QPaintEventC2ERK7QRegion(void* qthis, void* arg0); // 3
   // proto:  void QPaintEvent::~QPaintEvent();
-extern void _ZN11QPaintEventD2Ev(void* qthis); // 4
+extern void C_ZN11QPaintEventD2Ev(void* qthis); // 4
   // proto:  const QRegion & QPaintEvent::region();
-extern void _ZNK11QPaintEvent6regionEv(void* qthis); // 2
+extern void C_ZNK11QPaintEvent6regionEv(void* qthis); // 2
   // proto:  const QRect & QPaintEvent::rect();
-extern void _ZNK11QPaintEvent4rectEv(void* qthis); // 2
+extern void C_ZNK11QPaintEvent4rectEv(void* qthis); // 2
   // proto:  Qt::FocusReason QFocusEvent::reason();
-extern void _ZNK11QFocusEvent6reasonEv(void* qthis); // 4
+extern void C_ZNK11QFocusEvent6reasonEv(void* qthis); // 4
   // proto:  void QFocusEvent::~QFocusEvent();
-extern void _ZN11QFocusEventD2Ev(void* qthis); // 4
+extern void C_ZN11QFocusEventD2Ev(void* qthis); // 4
   // proto:  bool QFocusEvent::gotFocus();
-extern void _ZNK11QFocusEvent8gotFocusEv(void* qthis); // 2
+extern void C_ZNK11QFocusEvent8gotFocusEv(void* qthis); // 2
   // proto:  bool QFocusEvent::lostFocus();
-extern void _ZNK11QFocusEvent9lostFocusEv(void* qthis); // 2
+extern void C_ZNK11QFocusEvent9lostFocusEv(void* qthis); // 2
   // proto:  const QPointF & QNativeGestureEvent::localPos();
-extern void _ZNK19QNativeGestureEvent8localPosEv(void* qthis); // 2
+extern void C_ZNK19QNativeGestureEvent8localPosEv(void* qthis); // 2
   // proto:  const QPointF & QNativeGestureEvent::screenPos();
-extern void _ZNK19QNativeGestureEvent9screenPosEv(void* qthis); // 2
+extern void C_ZNK19QNativeGestureEvent9screenPosEv(void* qthis); // 2
   // proto:  const QPoint QNativeGestureEvent::globalPos();
-extern void _ZNK19QNativeGestureEvent9globalPosEv(void* qthis); // 2
+extern void C_ZNK19QNativeGestureEvent9globalPosEv(void* qthis); // 2
   // proto:  const QPoint QNativeGestureEvent::pos();
-extern void _ZNK19QNativeGestureEvent3posEv(void* qthis); // 2
+extern void C_ZNK19QNativeGestureEvent3posEv(void* qthis); // 2
   // proto:  qreal QNativeGestureEvent::value();
-extern void _ZNK19QNativeGestureEvent5valueEv(void* qthis); // 2
+extern void C_ZNK19QNativeGestureEvent5valueEv(void* qthis); // 2
   // proto:  Qt::NativeGestureType QNativeGestureEvent::gestureType();
-extern void _ZNK19QNativeGestureEvent11gestureTypeEv(void* qthis); // 2
+extern void C_ZNK19QNativeGestureEvent11gestureTypeEv(void* qthis); // 2
   // proto:  const QPointF & QNativeGestureEvent::windowPos();
-extern void _ZNK19QNativeGestureEvent9windowPosEv(void* qthis); // 2
+extern void C_ZNK19QNativeGestureEvent9windowPosEv(void* qthis); // 2
   // proto:  void QResizeEvent::~QResizeEvent();
-extern void _ZN12QResizeEventD2Ev(void* qthis); // 4
+extern void C_ZN12QResizeEventD2Ev(void* qthis); // 4
   // proto:  const QSize & QResizeEvent::oldSize();
-extern void _ZNK12QResizeEvent7oldSizeEv(void* qthis); // 2
+extern void C_ZNK12QResizeEvent7oldSizeEv(void* qthis); // 2
   // proto:  void QResizeEvent::QResizeEvent(const QSize & size, const QSize & oldSize);
-extern void _ZN12QResizeEventC2ERK5QSizeS2_(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN12QResizeEventC2ERK5QSizeS2_(void* qthis, void* arg0, void* arg1); // 3
   // proto:  const QSize & QResizeEvent::size();
-extern void _ZNK12QResizeEvent4sizeEv(void* qthis); // 2
+extern void C_ZNK12QResizeEvent4sizeEv(void* qthis); // 2
   // proto:  QString QStatusTipEvent::tip();
-extern void _ZNK15QStatusTipEvent3tipEv(void* qthis); // 2
+extern void C_ZNK15QStatusTipEvent3tipEv(void* qthis); // 2
   // proto:  void QStatusTipEvent::~QStatusTipEvent();
-extern void _ZN15QStatusTipEventD2Ev(void* qthis); // 4
+extern void C_ZN15QStatusTipEventD2Ev(void* qthis); // 4
   // proto:  void QStatusTipEvent::QStatusTipEvent(const QString & tip);
-extern void _ZN15QStatusTipEventC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN15QStatusTipEventC2ERK7QString(void* qthis, void* arg0); // 3
   // proto:  const QPointF & QEnterEvent::localPos();
-extern void _ZNK11QEnterEvent8localPosEv(void* qthis); // 2
+extern void C_ZNK11QEnterEvent8localPosEv(void* qthis); // 2
   // proto:  const QPointF & QEnterEvent::screenPos();
-extern void _ZNK11QEnterEvent9screenPosEv(void* qthis); // 2
+extern void C_ZNK11QEnterEvent9screenPosEv(void* qthis); // 2
   // proto:  QPoint QEnterEvent::globalPos();
-extern void _ZNK11QEnterEvent9globalPosEv(void* qthis); // 2
+extern void C_ZNK11QEnterEvent9globalPosEv(void* qthis); // 2
   // proto:  void QEnterEvent::QEnterEvent(const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos);
-extern void _ZN11QEnterEventC2ERK7QPointFS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 3
+extern void C_ZN11QEnterEventC2ERK7QPointFS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2); // 3
   // proto:  QPoint QEnterEvent::pos();
-extern void _ZNK11QEnterEvent3posEv(void* qthis); // 2
+extern void C_ZNK11QEnterEvent3posEv(void* qthis); // 2
   // proto:  int QEnterEvent::globalX();
-extern void _ZNK11QEnterEvent7globalXEv(void* qthis); // 2
+extern void C_ZNK11QEnterEvent7globalXEv(void* qthis); // 2
   // proto:  void QEnterEvent::~QEnterEvent();
-extern void _ZN11QEnterEventD2Ev(void* qthis); // 4
+extern void C_ZN11QEnterEventD2Ev(void* qthis); // 4
   // proto:  int QEnterEvent::globalY();
-extern void _ZNK11QEnterEvent7globalYEv(void* qthis); // 2
+extern void C_ZNK11QEnterEvent7globalYEv(void* qthis); // 2
   // proto:  int QEnterEvent::y();
-extern void _ZNK11QEnterEvent1yEv(void* qthis); // 2
+extern void C_ZNK11QEnterEvent1yEv(void* qthis); // 2
   // proto:  int QEnterEvent::x();
-extern void _ZNK11QEnterEvent1xEv(void* qthis); // 2
+extern void C_ZNK11QEnterEvent1xEv(void* qthis); // 2
   // proto:  const QPointF & QEnterEvent::windowPos();
-extern void _ZNK11QEnterEvent9windowPosEv(void* qthis); // 2
+extern void C_ZNK11QEnterEvent9windowPosEv(void* qthis); // 2
   // proto:  void QMoveEvent::QMoveEvent(const QPoint & pos, const QPoint & oldPos);
-extern void _ZN10QMoveEventC2ERK6QPointS2_(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN10QMoveEventC2ERK6QPointS2_(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QMoveEvent::~QMoveEvent();
-extern void _ZN10QMoveEventD2Ev(void* qthis); // 4
+extern void C_ZN10QMoveEventD2Ev(void* qthis); // 4
   // proto:  const QPoint & QMoveEvent::oldPos();
-extern void _ZNK10QMoveEvent6oldPosEv(void* qthis); // 2
+extern void C_ZNK10QMoveEvent6oldPosEv(void* qthis); // 2
   // proto:  const QPoint & QMoveEvent::pos();
-extern void _ZNK10QMoveEvent3posEv(void* qthis); // 2
+extern void C_ZNK10QMoveEvent3posEv(void* qthis); // 2
   // proto:  void QHideEvent::QHideEvent();
-extern void _ZN10QHideEventC2Ev(void* qthis); // 3
+extern void C_ZN10QHideEventC2Ev(void* qthis); // 3
   // proto:  void QHideEvent::~QHideEvent();
-extern void _ZN10QHideEventD2Ev(void* qthis); // 4
+extern void C_ZN10QHideEventD2Ev(void* qthis); // 4
   // proto:  void QDragLeaveEvent::~QDragLeaveEvent();
-extern void _ZN15QDragLeaveEventD2Ev(void* qthis); // 4
+extern void C_ZN15QDragLeaveEventD2Ev(void* qthis); // 4
   // proto:  void QDragLeaveEvent::QDragLeaveEvent();
-extern void _ZN15QDragLeaveEventC2Ev(void* qthis); // 3
+extern void C_ZN15QDragLeaveEventC2Ev(void* qthis); // 3
   // proto:  const QMimeData * QDropEvent::mimeData();
-extern void _ZNK10QDropEvent8mimeDataEv(void* qthis); // 2
+extern void C_ZNK10QDropEvent8mimeDataEv(void* qthis); // 2
   // proto:  void QDropEvent::acceptProposedAction();
-extern void _ZN10QDropEvent20acceptProposedActionEv(void* qthis); // 2
+extern void C_ZN10QDropEvent20acceptProposedActionEv(void* qthis); // 2
   // proto:  Qt::DropActions QDropEvent::possibleActions();
-extern void _ZNK10QDropEvent15possibleActionsEv(void* qthis); // 2
+extern void C_ZNK10QDropEvent15possibleActionsEv(void* qthis); // 2
   // proto:  const QPointF & QDropEvent::posF();
-extern void _ZNK10QDropEvent4posFEv(void* qthis); // 2
+extern void C_ZNK10QDropEvent4posFEv(void* qthis); // 2
   // proto:  QPoint QDropEvent::pos();
-extern void _ZNK10QDropEvent3posEv(void* qthis); // 2
+extern void C_ZNK10QDropEvent3posEv(void* qthis); // 2
   // proto:  QObject * QDropEvent::source();
-extern void _ZNK10QDropEvent6sourceEv(void* qthis); // 4
+extern void C_ZNK10QDropEvent6sourceEv(void* qthis); // 4
   // proto:  Qt::DropAction QDropEvent::proposedAction();
-extern void _ZNK10QDropEvent14proposedActionEv(void* qthis); // 2
+extern void C_ZNK10QDropEvent14proposedActionEv(void* qthis); // 2
   // proto:  Qt::DropAction QDropEvent::dropAction();
-extern void _ZNK10QDropEvent10dropActionEv(void* qthis); // 2
+extern void C_ZNK10QDropEvent10dropActionEv(void* qthis); // 2
   // proto:  Qt::KeyboardModifiers QDropEvent::keyboardModifiers();
-extern void _ZNK10QDropEvent17keyboardModifiersEv(void* qthis); // 2
+extern void C_ZNK10QDropEvent17keyboardModifiersEv(void* qthis); // 2
   // proto:  void QDropEvent::~QDropEvent();
-extern void _ZN10QDropEventD2Ev(void* qthis); // 4
+extern void C_ZN10QDropEventD2Ev(void* qthis); // 4
   // proto:  Qt::MouseButtons QDropEvent::mouseButtons();
-extern void _ZNK10QDropEvent12mouseButtonsEv(void* qthis); // 2
+extern void C_ZNK10QDropEvent12mouseButtonsEv(void* qthis); // 2
   // proto:  Qt::KeyboardModifiers QInputEvent::modifiers();
-extern void _ZNK11QInputEvent9modifiersEv(void* qthis); // 2
+extern void C_ZNK11QInputEvent9modifiersEv(void* qthis); // 2
   // proto:  ulong QInputEvent::timestamp();
-extern void _ZNK11QInputEvent9timestampEv(void* qthis); // 2
+extern void C_ZNK11QInputEvent9timestampEv(void* qthis); // 2
   // proto:  void QInputEvent::setTimestamp(ulong atimestamp);
-extern void _ZN11QInputEvent12setTimestampEm(void* qthis, int32_t arg0); // 2
+extern void C_ZN11QInputEvent12setTimestampEm(void* qthis, int32_t arg0); // 2
   // proto:  void QInputEvent::~QInputEvent();
-extern void _ZN11QInputEventD2Ev(void* qthis); // 4
+extern void C_ZN11QInputEventD2Ev(void* qthis); // 4
   // proto:  Qt::ApplicationState QApplicationStateChangeEvent::applicationState();
-extern void _ZNK28QApplicationStateChangeEvent16applicationStateEv(void* qthis); // 4
+extern void C_ZNK28QApplicationStateChangeEvent16applicationStateEv(void* qthis); // 4
   // proto:  int QKeyEvent::count();
-extern void _ZNK9QKeyEvent5countEv(void* qthis); // 2
+extern void C_ZNK9QKeyEvent5countEv(void* qthis); // 2
   // proto:  Qt::KeyboardModifiers QKeyEvent::modifiers();
-extern void _ZNK9QKeyEvent9modifiersEv(void* qthis); // 4
+extern void C_ZNK9QKeyEvent9modifiersEv(void* qthis); // 4
   // proto:  quint32 QKeyEvent::nativeModifiers();
-extern void _ZNK9QKeyEvent15nativeModifiersEv(void* qthis); // 2
+extern void C_ZNK9QKeyEvent15nativeModifiersEv(void* qthis); // 2
   // proto:  QString QKeyEvent::text();
-extern void _ZNK9QKeyEvent4textEv(void* qthis); // 2
+extern void C_ZNK9QKeyEvent4textEv(void* qthis); // 2
   // proto:  void QKeyEvent::~QKeyEvent();
-extern void _ZN9QKeyEventD2Ev(void* qthis); // 4
+extern void C_ZN9QKeyEventD2Ev(void* qthis); // 4
   // proto:  quint32 QKeyEvent::nativeScanCode();
-extern void _ZNK9QKeyEvent14nativeScanCodeEv(void* qthis); // 2
+extern void C_ZNK9QKeyEvent14nativeScanCodeEv(void* qthis); // 2
   // proto:  bool QKeyEvent::isAutoRepeat();
-extern void _ZNK9QKeyEvent12isAutoRepeatEv(void* qthis); // 2
+extern void C_ZNK9QKeyEvent12isAutoRepeatEv(void* qthis); // 2
   // proto:  int QKeyEvent::key();
-extern void _ZNK9QKeyEvent3keyEv(void* qthis); // 2
+extern void C_ZNK9QKeyEvent3keyEv(void* qthis); // 2
   // proto:  quint32 QKeyEvent::nativeVirtualKey();
-extern void _ZNK9QKeyEvent16nativeVirtualKeyEv(void* qthis); // 2
+extern void C_ZNK9QKeyEvent16nativeVirtualKeyEv(void* qthis); // 2
   // proto:  const QPoint & QContextMenuEvent::globalPos();
-extern void _ZNK17QContextMenuEvent9globalPosEv(void* qthis); // 2
+extern void C_ZNK17QContextMenuEvent9globalPosEv(void* qthis); // 2
   // proto:  const QPoint & QContextMenuEvent::pos();
-extern void _ZNK17QContextMenuEvent3posEv(void* qthis); // 2
+extern void C_ZNK17QContextMenuEvent3posEv(void* qthis); // 2
   // proto:  int QContextMenuEvent::y();
-extern void _ZNK17QContextMenuEvent1yEv(void* qthis); // 2
+extern void C_ZNK17QContextMenuEvent1yEv(void* qthis); // 2
   // proto:  QContextMenuEvent::Reason QContextMenuEvent::reason();
-extern void _ZNK17QContextMenuEvent6reasonEv(void* qthis); // 2
+extern void C_ZNK17QContextMenuEvent6reasonEv(void* qthis); // 2
   // proto:  int QContextMenuEvent::x();
-extern void _ZNK17QContextMenuEvent1xEv(void* qthis); // 2
+extern void C_ZNK17QContextMenuEvent1xEv(void* qthis); // 2
   // proto:  int QContextMenuEvent::globalX();
-extern void _ZNK17QContextMenuEvent7globalXEv(void* qthis); // 2
+extern void C_ZNK17QContextMenuEvent7globalXEv(void* qthis); // 2
   // proto:  int QContextMenuEvent::globalY();
-extern void _ZNK17QContextMenuEvent7globalYEv(void* qthis); // 2
+extern void C_ZNK17QContextMenuEvent7globalYEv(void* qthis); // 2
   // proto:  void QContextMenuEvent::~QContextMenuEvent();
-extern void _ZN17QContextMenuEventD2Ev(void* qthis); // 4
+extern void C_ZN17QContextMenuEventD2Ev(void* qthis); // 4
   // proto:  void QScrollPrepareEvent::setContentPosRange(const QRectF & rect);
-extern void _ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  QPointF QScrollPrepareEvent::contentPos();
-extern void _ZNK19QScrollPrepareEvent10contentPosEv(void* qthis); // 4
+extern void C_ZNK19QScrollPrepareEvent10contentPosEv(void* qthis); // 4
   // proto:  void QScrollPrepareEvent::setContentPos(const QPointF & pos);
-extern void _ZN19QScrollPrepareEvent13setContentPosERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZN19QScrollPrepareEvent13setContentPosERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QScrollPrepareEvent::~QScrollPrepareEvent();
-extern void _ZN19QScrollPrepareEventD2Ev(void* qthis); // 4
+extern void C_ZN19QScrollPrepareEventD2Ev(void* qthis); // 4
   // proto:  QSizeF QScrollPrepareEvent::viewportSize();
-extern void _ZNK19QScrollPrepareEvent12viewportSizeEv(void* qthis); // 4
+extern void C_ZNK19QScrollPrepareEvent12viewportSizeEv(void* qthis); // 4
   // proto:  void QScrollPrepareEvent::setViewportSize(const QSizeF & size);
-extern void _ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF(void* qthis, void* arg0); // 4
+extern void C_ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF(void* qthis, void* arg0); // 4
   // proto:  void QScrollPrepareEvent::QScrollPrepareEvent(const QPointF & startPos);
-extern void _ZN19QScrollPrepareEventC2ERK7QPointF(void* qthis, void* arg0); // 3
+extern void C_ZN19QScrollPrepareEventC2ERK7QPointF(void* qthis, void* arg0); // 3
   // proto:  QRectF QScrollPrepareEvent::contentPosRange();
-extern void _ZNK19QScrollPrepareEvent15contentPosRangeEv(void* qthis); // 4
+extern void C_ZNK19QScrollPrepareEvent15contentPosRangeEv(void* qthis); // 4
   // proto:  QPointF QScrollPrepareEvent::startPos();
-extern void _ZNK19QScrollPrepareEvent8startPosEv(void* qthis); // 4
+extern void C_ZNK19QScrollPrepareEvent8startPosEv(void* qthis); // 4
   // proto:  void QShortcutEvent::~QShortcutEvent();
-extern void _ZN14QShortcutEventD2Ev(void* qthis); // 4
+extern void C_ZN14QShortcutEventD2Ev(void* qthis); // 4
   // proto:  bool QShortcutEvent::isAmbiguous();
-extern void _ZNK14QShortcutEvent11isAmbiguousEv(void* qthis); // 2
+extern void C_ZNK14QShortcutEvent11isAmbiguousEv(void* qthis); // 2
   // proto:  int QShortcutEvent::shortcutId();
-extern void _ZNK14QShortcutEvent10shortcutIdEv(void* qthis); // 2
+extern void C_ZNK14QShortcutEvent10shortcutIdEv(void* qthis); // 2
   // proto:  const QKeySequence & QShortcutEvent::key();
-extern void _ZNK14QShortcutEvent3keyEv(void* qthis); // 2
+extern void C_ZNK14QShortcutEvent3keyEv(void* qthis); // 2
   // proto:  void QShortcutEvent::QShortcutEvent(const QKeySequence & key, int id, bool ambiguous);
-extern void _ZN14QShortcutEventC2ERK12QKeySequenceib(void* qthis, void* arg0, int32_t arg1, bool arg2); // 3
+extern void C_ZN14QShortcutEventC2ERK12QKeySequenceib(void* qthis, void* arg0, int32_t arg1, bool arg2); // 3
   // proto:  bool QWindowStateChangeEvent::isOverride();
-extern void _ZNK23QWindowStateChangeEvent10isOverrideEv(void* qthis); // 4
+extern void C_ZNK23QWindowStateChangeEvent10isOverrideEv(void* qthis); // 4
   // proto:  Qt::WindowStates QWindowStateChangeEvent::oldState();
-extern void _ZNK23QWindowStateChangeEvent8oldStateEv(void* qthis); // 2
+extern void C_ZNK23QWindowStateChangeEvent8oldStateEv(void* qthis); // 2
   // proto:  void QWindowStateChangeEvent::~QWindowStateChangeEvent();
-extern void _ZN23QWindowStateChangeEventD2Ev(void* qthis); // 4
+extern void C_ZN23QWindowStateChangeEventD2Ev(void* qthis); // 4
   // proto:  void QInputMethodQueryEvent::~QInputMethodQueryEvent();
-extern void _ZN22QInputMethodQueryEventD2Ev(void* qthis); // 4
+extern void C_ZN22QInputMethodQueryEventD2Ev(void* qthis); // 4
   // proto:  Qt::InputMethodQueries QInputMethodQueryEvent::queries();
-extern void _ZNK22QInputMethodQueryEvent7queriesEv(void* qthis); // 2
+extern void C_ZNK22QInputMethodQueryEvent7queriesEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -716,7 +716,7 @@ func NewQWhatsThisClickedEvent(args ...interface{}) QWhatsThisClickedEvent {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN22QWhatsThisClickedEventC2ERK7QString(qthis, arg0)
+    C.C_ZN22QWhatsThisClickedEventC2ERK7QString(qthis, arg0)
   default:
     qtrt.ErrorResolve("QWhatsThisClickedEvent", "QWhatsThisClickedEvent", args)
   }
@@ -737,7 +737,7 @@ func (this *QWhatsThisClickedEvent) FreeQWhatsThisClickedEvent(args ...interface
   case 0:
     // invoke: _ZN22QWhatsThisClickedEventD0Ev
     // invoke: void ~QWhatsThisClickedEvent()
-    C._ZN22QWhatsThisClickedEventD2Ev(this.qclsinst)
+    C.C_ZN22QWhatsThisClickedEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWhatsThisClickedEvent", "~QWhatsThisClickedEvent", args)
   }
@@ -757,7 +757,7 @@ func (this *QWhatsThisClickedEvent) href(args ...interface{}) () {
   case 0:
     // invoke: _ZNK22QWhatsThisClickedEvent4hrefEv
     // invoke: QString href()
-    C._ZNK22QWhatsThisClickedEvent4hrefEv(this.qclsinst)
+    C.C_ZNK22QWhatsThisClickedEvent4hrefEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWhatsThisClickedEvent", "href", args)
   }
@@ -777,7 +777,7 @@ func (this *QExposeEvent) region(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QExposeEvent6regionEv
     // invoke: const QRegion & region()
-    C._ZNK12QExposeEvent6regionEv(this.qclsinst)
+    C.C_ZNK12QExposeEvent6regionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QExposeEvent", "region", args)
   }
@@ -797,7 +797,7 @@ func (this *QExposeEvent) FreeQExposeEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QExposeEventD0Ev
     // invoke: void ~QExposeEvent()
-    C._ZN12QExposeEventD2Ev(this.qclsinst)
+    C.C_ZN12QExposeEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QExposeEvent", "~QExposeEvent", args)
   }
@@ -822,7 +822,7 @@ func NewQExposeEvent(args ...interface{}) QExposeEvent {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QExposeEventC2ERK7QRegion(qthis, arg0)
+    C.C_ZN12QExposeEventC2ERK7QRegion(qthis, arg0)
   default:
     qtrt.ErrorResolve("QExposeEvent", "QExposeEvent", args)
   }
@@ -843,7 +843,7 @@ func (this *QInputMethodEvent) replacementStart(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QInputMethodEvent16replacementStartEv
     // invoke: int replacementStart()
-    C._ZNK17QInputMethodEvent16replacementStartEv(this.qclsinst)
+    C.C_ZNK17QInputMethodEvent16replacementStartEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "replacementStart", args)
   }
@@ -863,7 +863,7 @@ func (this *QInputMethodEvent) replacementLength(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QInputMethodEvent17replacementLengthEv
     // invoke: int replacementLength()
-    C._ZNK17QInputMethodEvent17replacementLengthEv(this.qclsinst)
+    C.C_ZNK17QInputMethodEvent17replacementLengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "replacementLength", args)
   }
@@ -890,13 +890,13 @@ func NewQInputMethodEvent(args ...interface{}) QInputMethodEvent {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QInputMethodEventC2ERKS_(qthis, arg0)
+    C.C_ZN17QInputMethodEventC2ERKS_(qthis, arg0)
   case 1:
     // invoke: _ZN17QInputMethodEventC1Ev
     // invoke: void QInputMethodEvent()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QInputMethodEventC2Ev(qthis)
+    C.C_ZN17QInputMethodEventC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "QInputMethodEvent", args)
   }
@@ -917,7 +917,7 @@ func (this *QInputMethodEvent) preeditString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QInputMethodEvent13preeditStringEv
     // invoke: const QString & preeditString()
-    C._ZNK17QInputMethodEvent13preeditStringEv(this.qclsinst)
+    C.C_ZNK17QInputMethodEvent13preeditStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "preeditString", args)
   }
@@ -937,7 +937,7 @@ func (this *QInputMethodEvent) attributes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QInputMethodEvent10attributesEv
     // invoke: const QList<QInputMethodEvent::Attribute> & attributes()
-    C._ZNK17QInputMethodEvent10attributesEv(this.qclsinst)
+    C.C_ZNK17QInputMethodEvent10attributesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "attributes", args)
   }
@@ -957,7 +957,7 @@ func (this *QInputMethodEvent) commitString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QInputMethodEvent12commitStringEv
     // invoke: const QString & commitString()
-    C._ZNK17QInputMethodEvent12commitStringEv(this.qclsinst)
+    C.C_ZNK17QInputMethodEvent12commitStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "commitString", args)
   }
@@ -986,7 +986,7 @@ func (this *QInputMethodEvent) setCommitString(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN17QInputMethodEvent15setCommitStringERK7QStringii(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN17QInputMethodEvent15setCommitStringERK7QStringii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "setCommitString", args)
   }
@@ -1006,7 +1006,7 @@ func (this *QHelpEvent) globalPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QHelpEvent9globalPosEv
     // invoke: const QPoint & globalPos()
-    C._ZNK10QHelpEvent9globalPosEv(this.qclsinst)
+    C.C_ZNK10QHelpEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "globalPos", args)
   }
@@ -1026,7 +1026,7 @@ func (this *QHelpEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QHelpEvent3posEv
     // invoke: const QPoint & pos()
-    C._ZNK10QHelpEvent3posEv(this.qclsinst)
+    C.C_ZNK10QHelpEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "pos", args)
   }
@@ -1046,7 +1046,7 @@ func (this *QHelpEvent) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QHelpEvent1yEv
     // invoke: int y()
-    C._ZNK10QHelpEvent1yEv(this.qclsinst)
+    C.C_ZNK10QHelpEvent1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "y", args)
   }
@@ -1066,7 +1066,7 @@ func (this *QHelpEvent) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QHelpEvent1xEv
     // invoke: int x()
-    C._ZNK10QHelpEvent1xEv(this.qclsinst)
+    C.C_ZNK10QHelpEvent1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "x", args)
   }
@@ -1086,7 +1086,7 @@ func (this *QHelpEvent) globalX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QHelpEvent7globalXEv
     // invoke: int globalX()
-    C._ZNK10QHelpEvent7globalXEv(this.qclsinst)
+    C.C_ZNK10QHelpEvent7globalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "globalX", args)
   }
@@ -1106,7 +1106,7 @@ func (this *QHelpEvent) globalY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QHelpEvent7globalYEv
     // invoke: int globalY()
-    C._ZNK10QHelpEvent7globalYEv(this.qclsinst)
+    C.C_ZNK10QHelpEvent7globalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "globalY", args)
   }
@@ -1126,7 +1126,7 @@ func (this *QHelpEvent) FreeQHelpEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QHelpEventD0Ev
     // invoke: void ~QHelpEvent()
-    C._ZN10QHelpEventD2Ev(this.qclsinst)
+    C.C_ZN10QHelpEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "~QHelpEvent", args)
   }
@@ -1146,7 +1146,7 @@ func (this *QActionEvent) action(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionEvent6actionEv
     // invoke: QAction * action()
-    C._ZNK12QActionEvent6actionEv(this.qclsinst)
+    C.C_ZNK12QActionEvent6actionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QActionEvent", "action", args)
   }
@@ -1177,7 +1177,7 @@ func NewQActionEvent(args ...interface{}) QActionEvent {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QActionEventC2EiP7QActionS1_(qthis, arg0, arg1, arg2)
+    C.C_ZN12QActionEventC2EiP7QActionS1_(qthis, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QActionEvent", "QActionEvent", args)
   }
@@ -1198,7 +1198,7 @@ func (this *QActionEvent) FreeQActionEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QActionEventD0Ev
     // invoke: void ~QActionEvent()
-    C._ZN12QActionEventD2Ev(this.qclsinst)
+    C.C_ZN12QActionEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QActionEvent", "~QActionEvent", args)
   }
@@ -1218,7 +1218,7 @@ func (this *QActionEvent) before(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionEvent6beforeEv
     // invoke: QAction * before()
-    C._ZNK12QActionEvent6beforeEv(this.qclsinst)
+    C.C_ZNK12QActionEvent6beforeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QActionEvent", "before", args)
   }
@@ -1238,7 +1238,7 @@ func (this *QMouseEvent) localPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent8localPosEv
     // invoke: const QPointF & localPos()
-    C._ZNK11QMouseEvent8localPosEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent8localPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "localPos", args)
   }
@@ -1258,7 +1258,7 @@ func (this *QMouseEvent) screenPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent9screenPosEv
     // invoke: const QPointF & screenPos()
-    C._ZNK11QMouseEvent9screenPosEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "screenPos", args)
   }
@@ -1278,7 +1278,7 @@ func (this *QMouseEvent) globalPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent9globalPosEv
     // invoke: QPoint globalPos()
-    C._ZNK11QMouseEvent9globalPosEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "globalPos", args)
   }
@@ -1298,7 +1298,7 @@ func (this *QMouseEvent) button(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent6buttonEv
     // invoke: Qt::MouseButton button()
-    C._ZNK11QMouseEvent6buttonEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent6buttonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "button", args)
   }
@@ -1318,7 +1318,7 @@ func (this *QMouseEvent) FreeQMouseEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMouseEventD0Ev
     // invoke: void ~QMouseEvent()
-    C._ZN11QMouseEventD2Ev(this.qclsinst)
+    C.C_ZN11QMouseEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "~QMouseEvent", args)
   }
@@ -1338,7 +1338,7 @@ func (this *QMouseEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent3posEv
     // invoke: QPoint pos()
-    C._ZNK11QMouseEvent3posEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "pos", args)
   }
@@ -1358,7 +1358,7 @@ func (this *QMouseEvent) buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent7buttonsEv
     // invoke: Qt::MouseButtons buttons()
-    C._ZNK11QMouseEvent7buttonsEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent7buttonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "buttons", args)
   }
@@ -1378,7 +1378,7 @@ func (this *QMouseEvent) source(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent6sourceEv
     // invoke: Qt::MouseEventSource source()
-    C._ZNK11QMouseEvent6sourceEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent6sourceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "source", args)
   }
@@ -1398,7 +1398,7 @@ func (this *QMouseEvent) flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent5flagsEv
     // invoke: Qt::MouseEventFlags flags()
-    C._ZNK11QMouseEvent5flagsEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent5flagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "flags", args)
   }
@@ -1418,7 +1418,7 @@ func (this *QMouseEvent) globalY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent7globalYEv
     // invoke: int globalY()
-    C._ZNK11QMouseEvent7globalYEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent7globalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "globalY", args)
   }
@@ -1438,7 +1438,7 @@ func (this *QMouseEvent) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent1yEv
     // invoke: int y()
-    C._ZNK11QMouseEvent1yEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "y", args)
   }
@@ -1458,7 +1458,7 @@ func (this *QMouseEvent) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent1xEv
     // invoke: int x()
-    C._ZNK11QMouseEvent1xEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "x", args)
   }
@@ -1478,7 +1478,7 @@ func (this *QMouseEvent) windowPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent9windowPosEv
     // invoke: const QPointF & windowPos()
-    C._ZNK11QMouseEvent9windowPosEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent9windowPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "windowPos", args)
   }
@@ -1498,7 +1498,7 @@ func (this *QMouseEvent) globalX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMouseEvent7globalXEv
     // invoke: int globalX()
-    C._ZNK11QMouseEvent7globalXEv(this.qclsinst)
+    C.C_ZNK11QMouseEvent7globalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "globalX", args)
   }
@@ -1518,7 +1518,7 @@ func (this *QFileOpenEvent) url(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QFileOpenEvent3urlEv
     // invoke: QUrl url()
-    C._ZNK14QFileOpenEvent3urlEv(this.qclsinst)
+    C.C_ZNK14QFileOpenEvent3urlEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileOpenEvent", "url", args)
   }
@@ -1538,7 +1538,7 @@ func (this *QFileOpenEvent) FreeQFileOpenEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QFileOpenEventD0Ev
     // invoke: void ~QFileOpenEvent()
-    C._ZN14QFileOpenEventD2Ev(this.qclsinst)
+    C.C_ZN14QFileOpenEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileOpenEvent", "~QFileOpenEvent", args)
   }
@@ -1558,7 +1558,7 @@ func (this *QFileOpenEvent) file(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QFileOpenEvent4fileEv
     // invoke: QString file()
-    C._ZNK14QFileOpenEvent4fileEv(this.qclsinst)
+    C.C_ZNK14QFileOpenEvent4fileEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileOpenEvent", "file", args)
   }
@@ -1586,7 +1586,7 @@ func NewQFileOpenEvent(args ...interface{}) QFileOpenEvent {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN14QFileOpenEventC2ERK7QString(qthis, arg0)
+    C.C_ZN14QFileOpenEventC2ERK7QString(qthis, arg0)
   case 1:
     // invoke: _ZN14QFileOpenEventC1ERK4QUrl
     // invoke: void QFileOpenEvent(const class QUrl &)
@@ -1594,7 +1594,7 @@ func NewQFileOpenEvent(args ...interface{}) QFileOpenEvent {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN14QFileOpenEventC2ERK4QUrl(qthis, arg0)
+    C.C_ZN14QFileOpenEventC2ERK4QUrl(qthis, arg0)
   default:
     qtrt.ErrorResolve("QFileOpenEvent", "QFileOpenEvent", args)
   }
@@ -1615,7 +1615,7 @@ func (this *QToolBarChangeEvent) FreeQToolBarChangeEvent(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QToolBarChangeEventD0Ev
     // invoke: void ~QToolBarChangeEvent()
-    C._ZN19QToolBarChangeEventD2Ev(this.qclsinst)
+    C.C_ZN19QToolBarChangeEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolBarChangeEvent", "~QToolBarChangeEvent", args)
   }
@@ -1635,7 +1635,7 @@ func (this *QToolBarChangeEvent) toggle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QToolBarChangeEvent6toggleEv
     // invoke: bool toggle()
-    C._ZNK19QToolBarChangeEvent6toggleEv(this.qclsinst)
+    C.C_ZNK19QToolBarChangeEvent6toggleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolBarChangeEvent", "toggle", args)
   }
@@ -1660,7 +1660,7 @@ func NewQToolBarChangeEvent(args ...interface{}) QToolBarChangeEvent {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QToolBarChangeEventC2Eb(qthis, arg0)
+    C.C_ZN19QToolBarChangeEventC2Eb(qthis, arg0)
   default:
     qtrt.ErrorResolve("QToolBarChangeEvent", "QToolBarChangeEvent", args)
   }
@@ -1681,7 +1681,7 @@ func (this *QTabletEvent) xTilt(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent5xTiltEv
     // invoke: int xTilt()
-    C._ZNK12QTabletEvent5xTiltEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent5xTiltEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "xTilt", args)
   }
@@ -1701,7 +1701,7 @@ func (this *QTabletEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent3posEv
     // invoke: QPoint pos()
-    C._ZNK12QTabletEvent3posEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "pos", args)
   }
@@ -1721,7 +1721,7 @@ func (this *QTabletEvent) pointerType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent11pointerTypeEv
     // invoke: QTabletEvent::PointerType pointerType()
-    C._ZNK12QTabletEvent11pointerTypeEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent11pointerTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "pointerType", args)
   }
@@ -1741,7 +1741,7 @@ func (this *QTabletEvent) buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent7buttonsEv
     // invoke: Qt::MouseButtons buttons()
-    C._ZNK12QTabletEvent7buttonsEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent7buttonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "buttons", args)
   }
@@ -1761,7 +1761,7 @@ func (this *QTabletEvent) hiResGlobalX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent12hiResGlobalXEv
     // invoke: qreal hiResGlobalX()
-    C._ZNK12QTabletEvent12hiResGlobalXEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent12hiResGlobalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "hiResGlobalX", args)
   }
@@ -1781,7 +1781,7 @@ func (this *QTabletEvent) hiResGlobalY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent12hiResGlobalYEv
     // invoke: qreal hiResGlobalY()
-    C._ZNK12QTabletEvent12hiResGlobalYEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent12hiResGlobalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "hiResGlobalY", args)
   }
@@ -1801,7 +1801,7 @@ func (this *QTabletEvent) FreeQTabletEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTabletEventD0Ev
     // invoke: void ~QTabletEvent()
-    C._ZN12QTabletEventD2Ev(this.qclsinst)
+    C.C_ZN12QTabletEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "~QTabletEvent", args)
   }
@@ -1821,7 +1821,7 @@ func (this *QTabletEvent) uniqueId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent8uniqueIdEv
     // invoke: qint64 uniqueId()
-    C._ZNK12QTabletEvent8uniqueIdEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent8uniqueIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "uniqueId", args)
   }
@@ -1841,7 +1841,7 @@ func (this *QTabletEvent) globalX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent7globalXEv
     // invoke: int globalX()
-    C._ZNK12QTabletEvent7globalXEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent7globalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "globalX", args)
   }
@@ -1861,7 +1861,7 @@ func (this *QTabletEvent) globalY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent7globalYEv
     // invoke: int globalY()
-    C._ZNK12QTabletEvent7globalYEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent7globalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "globalY", args)
   }
@@ -1881,7 +1881,7 @@ func (this *QTabletEvent) yTilt(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent5yTiltEv
     // invoke: int yTilt()
-    C._ZNK12QTabletEvent5yTiltEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent5yTiltEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "yTilt", args)
   }
@@ -1901,7 +1901,7 @@ func (this *QTabletEvent) globalPosF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent10globalPosFEv
     // invoke: const QPointF & globalPosF()
-    C._ZNK12QTabletEvent10globalPosFEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent10globalPosFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "globalPosF", args)
   }
@@ -1921,7 +1921,7 @@ func (this *QTabletEvent) pressure(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent8pressureEv
     // invoke: qreal pressure()
-    C._ZNK12QTabletEvent8pressureEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent8pressureEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "pressure", args)
   }
@@ -1941,7 +1941,7 @@ func (this *QTabletEvent) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent6deviceEv
     // invoke: QTabletEvent::TabletDevice device()
-    C._ZNK12QTabletEvent6deviceEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "device", args)
   }
@@ -1961,7 +1961,7 @@ func (this *QTabletEvent) rotation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent8rotationEv
     // invoke: qreal rotation()
-    C._ZNK12QTabletEvent8rotationEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent8rotationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "rotation", args)
   }
@@ -1981,7 +1981,7 @@ func (this *QTabletEvent) globalPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent9globalPosEv
     // invoke: QPoint globalPos()
-    C._ZNK12QTabletEvent9globalPosEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "globalPos", args)
   }
@@ -2001,7 +2001,7 @@ func (this *QTabletEvent) posF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent4posFEv
     // invoke: const QPointF & posF()
-    C._ZNK12QTabletEvent4posFEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent4posFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "posF", args)
   }
@@ -2021,7 +2021,7 @@ func (this *QTabletEvent) button(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent6buttonEv
     // invoke: Qt::MouseButton button()
-    C._ZNK12QTabletEvent6buttonEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent6buttonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "button", args)
   }
@@ -2041,7 +2041,7 @@ func (this *QTabletEvent) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent1yEv
     // invoke: int y()
-    C._ZNK12QTabletEvent1yEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "y", args)
   }
@@ -2061,7 +2061,7 @@ func (this *QTabletEvent) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent1xEv
     // invoke: int x()
-    C._ZNK12QTabletEvent1xEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "x", args)
   }
@@ -2081,7 +2081,7 @@ func (this *QTabletEvent) z(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent1zEv
     // invoke: int z()
-    C._ZNK12QTabletEvent1zEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent1zEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "z", args)
   }
@@ -2101,7 +2101,7 @@ func (this *QTabletEvent) tangentialPressure(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTabletEvent18tangentialPressureEv
     // invoke: qreal tangentialPressure()
-    C._ZNK12QTabletEvent18tangentialPressureEv(this.qclsinst)
+    C.C_ZNK12QTabletEvent18tangentialPressureEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "tangentialPressure", args)
   }
@@ -2121,7 +2121,7 @@ func (this *QTouchEvent) touchPointStates(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTouchEvent16touchPointStatesEv
     // invoke: Qt::TouchPointStates touchPointStates()
-    C._ZNK11QTouchEvent16touchPointStatesEv(this.qclsinst)
+    C.C_ZNK11QTouchEvent16touchPointStatesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTouchEvent", "touchPointStates", args)
   }
@@ -2141,7 +2141,7 @@ func (this *QTouchEvent) target(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTouchEvent6targetEv
     // invoke: QObject * target()
-    C._ZNK11QTouchEvent6targetEv(this.qclsinst)
+    C.C_ZNK11QTouchEvent6targetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTouchEvent", "target", args)
   }
@@ -2164,7 +2164,7 @@ func (this *QTouchEvent) setTarget(args ...interface{}) () {
     // invoke: void setTarget(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTouchEvent9setTargetEP7QObject(this.qclsinst, arg0)
+    C.C_ZN11QTouchEvent9setTargetEP7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTouchEvent", "setTarget", args)
   }
@@ -2184,7 +2184,7 @@ func (this *QTouchEvent) touchPoints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTouchEvent11touchPointsEv
     // invoke: const QList<QTouchEvent::TouchPoint> & touchPoints()
-    C._ZNK11QTouchEvent11touchPointsEv(this.qclsinst)
+    C.C_ZNK11QTouchEvent11touchPointsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTouchEvent", "touchPoints", args)
   }
@@ -2204,7 +2204,7 @@ func (this *QTouchEvent) FreeQTouchEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTouchEventD0Ev
     // invoke: void ~QTouchEvent()
-    C._ZN11QTouchEventD2Ev(this.qclsinst)
+    C.C_ZN11QTouchEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTouchEvent", "~QTouchEvent", args)
   }
@@ -2224,7 +2224,7 @@ func (this *QTouchEvent) window(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTouchEvent6windowEv
     // invoke: QWindow * window()
-    C._ZNK11QTouchEvent6windowEv(this.qclsinst)
+    C.C_ZNK11QTouchEvent6windowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTouchEvent", "window", args)
   }
@@ -2247,7 +2247,7 @@ func (this *QTouchEvent) setDevice(args ...interface{}) () {
     // invoke: void setDevice(class QTouchDevice *)
     var arg0 = args[0].(QTouchDevice).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTouchEvent9setDeviceEP12QTouchDevice(this.qclsinst, arg0)
+    C.C_ZN11QTouchEvent9setDeviceEP12QTouchDevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTouchEvent", "setDevice", args)
   }
@@ -2267,7 +2267,7 @@ func (this *QTouchEvent) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTouchEvent6deviceEv
     // invoke: QTouchDevice * device()
-    C._ZNK11QTouchEvent6deviceEv(this.qclsinst)
+    C.C_ZNK11QTouchEvent6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTouchEvent", "device", args)
   }
@@ -2290,7 +2290,7 @@ func (this *QTouchEvent) setWindow(args ...interface{}) () {
     // invoke: void setWindow(class QWindow *)
     var arg0 = args[0].(QWindow).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTouchEvent9setWindowEP7QWindow(this.qclsinst, arg0)
+    C.C_ZN11QTouchEvent9setWindowEP7QWindow(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTouchEvent", "setWindow", args)
   }
@@ -2310,7 +2310,7 @@ func (this *QScreenOrientationChangeEvent) screen(args ...interface{}) () {
   case 0:
     // invoke: _ZNK29QScreenOrientationChangeEvent6screenEv
     // invoke: QScreen * screen()
-    C._ZNK29QScreenOrientationChangeEvent6screenEv(this.qclsinst)
+    C.C_ZNK29QScreenOrientationChangeEvent6screenEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreenOrientationChangeEvent", "screen", args)
   }
@@ -2330,7 +2330,7 @@ func (this *QScreenOrientationChangeEvent) orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK29QScreenOrientationChangeEvent11orientationEv
     // invoke: Qt::ScreenOrientation orientation()
-    C._ZNK29QScreenOrientationChangeEvent11orientationEv(this.qclsinst)
+    C.C_ZNK29QScreenOrientationChangeEvent11orientationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreenOrientationChangeEvent", "orientation", args)
   }
@@ -2350,7 +2350,7 @@ func (this *QScreenOrientationChangeEvent) FreeQScreenOrientationChangeEvent(arg
   case 0:
     // invoke: _ZN29QScreenOrientationChangeEventD0Ev
     // invoke: void ~QScreenOrientationChangeEvent()
-    C._ZN29QScreenOrientationChangeEventD2Ev(this.qclsinst)
+    C.C_ZN29QScreenOrientationChangeEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreenOrientationChangeEvent", "~QScreenOrientationChangeEvent", args)
   }
@@ -2370,7 +2370,7 @@ func (this *QIconDragEvent) FreeQIconDragEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QIconDragEventD0Ev
     // invoke: void ~QIconDragEvent()
-    C._ZN14QIconDragEventD2Ev(this.qclsinst)
+    C.C_ZN14QIconDragEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIconDragEvent", "~QIconDragEvent", args)
   }
@@ -2392,7 +2392,7 @@ func NewQIconDragEvent(args ...interface{}) QIconDragEvent {
     // invoke: void QIconDragEvent()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN14QIconDragEventC2Ev(qthis)
+    C.C_ZN14QIconDragEventC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QIconDragEvent", "QIconDragEvent", args)
   }
@@ -2415,7 +2415,7 @@ func NewQCloseEvent(args ...interface{}) QCloseEvent {
     // invoke: void QCloseEvent()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QCloseEventC2Ev(qthis)
+    C.C_ZN11QCloseEventC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QCloseEvent", "QCloseEvent", args)
   }
@@ -2436,7 +2436,7 @@ func (this *QCloseEvent) FreeQCloseEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QCloseEventD0Ev
     // invoke: void ~QCloseEvent()
-    C._ZN11QCloseEventD2Ev(this.qclsinst)
+    C.C_ZN11QCloseEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCloseEvent", "~QCloseEvent", args)
   }
@@ -2456,7 +2456,7 @@ func (this *QDragEnterEvent) FreeQDragEnterEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QDragEnterEventD0Ev
     // invoke: void ~QDragEnterEvent()
-    C._ZN15QDragEnterEventD2Ev(this.qclsinst)
+    C.C_ZN15QDragEnterEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDragEnterEvent", "~QDragEnterEvent", args)
   }
@@ -2476,7 +2476,7 @@ func (this *QWheelEvent) pixelDelta(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent10pixelDeltaEv
     // invoke: QPoint pixelDelta()
-    C._ZNK11QWheelEvent10pixelDeltaEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent10pixelDeltaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "pixelDelta", args)
   }
@@ -2496,7 +2496,7 @@ func (this *QWheelEvent) globalPosF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent10globalPosFEv
     // invoke: const QPointF & globalPosF()
-    C._ZNK11QWheelEvent10globalPosFEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent10globalPosFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "globalPosF", args)
   }
@@ -2516,7 +2516,7 @@ func (this *QWheelEvent) FreeQWheelEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QWheelEventD0Ev
     // invoke: void ~QWheelEvent()
-    C._ZN11QWheelEventD2Ev(this.qclsinst)
+    C.C_ZN11QWheelEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "~QWheelEvent", args)
   }
@@ -2536,7 +2536,7 @@ func (this *QWheelEvent) orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent11orientationEv
     // invoke: Qt::Orientation orientation()
-    C._ZNK11QWheelEvent11orientationEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent11orientationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "orientation", args)
   }
@@ -2556,7 +2556,7 @@ func (this *QWheelEvent) posF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent4posFEv
     // invoke: const QPointF & posF()
-    C._ZNK11QWheelEvent4posFEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent4posFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "posF", args)
   }
@@ -2576,7 +2576,7 @@ func (this *QWheelEvent) angleDelta(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent10angleDeltaEv
     // invoke: QPoint angleDelta()
-    C._ZNK11QWheelEvent10angleDeltaEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent10angleDeltaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "angleDelta", args)
   }
@@ -2596,7 +2596,7 @@ func (this *QWheelEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent3posEv
     // invoke: QPoint pos()
-    C._ZNK11QWheelEvent3posEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "pos", args)
   }
@@ -2616,7 +2616,7 @@ func (this *QWheelEvent) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent1yEv
     // invoke: int y()
-    C._ZNK11QWheelEvent1yEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "y", args)
   }
@@ -2636,7 +2636,7 @@ func (this *QWheelEvent) buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent7buttonsEv
     // invoke: Qt::MouseButtons buttons()
-    C._ZNK11QWheelEvent7buttonsEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent7buttonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "buttons", args)
   }
@@ -2656,7 +2656,7 @@ func (this *QWheelEvent) source(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent6sourceEv
     // invoke: Qt::MouseEventSource source()
-    C._ZNK11QWheelEvent6sourceEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent6sourceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "source", args)
   }
@@ -2676,7 +2676,7 @@ func (this *QWheelEvent) delta(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent5deltaEv
     // invoke: int delta()
-    C._ZNK11QWheelEvent5deltaEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent5deltaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "delta", args)
   }
@@ -2696,7 +2696,7 @@ func (this *QWheelEvent) phase(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent5phaseEv
     // invoke: Qt::ScrollPhase phase()
-    C._ZNK11QWheelEvent5phaseEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent5phaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "phase", args)
   }
@@ -2716,7 +2716,7 @@ func (this *QWheelEvent) globalY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent7globalYEv
     // invoke: int globalY()
-    C._ZNK11QWheelEvent7globalYEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent7globalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "globalY", args)
   }
@@ -2736,7 +2736,7 @@ func (this *QWheelEvent) globalX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent7globalXEv
     // invoke: int globalX()
-    C._ZNK11QWheelEvent7globalXEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent7globalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "globalX", args)
   }
@@ -2756,7 +2756,7 @@ func (this *QWheelEvent) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent1xEv
     // invoke: int x()
-    C._ZNK11QWheelEvent1xEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "x", args)
   }
@@ -2776,7 +2776,7 @@ func (this *QWheelEvent) globalPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWheelEvent9globalPosEv
     // invoke: QPoint globalPos()
-    C._ZNK11QWheelEvent9globalPosEv(this.qclsinst)
+    C.C_ZNK11QWheelEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "globalPos", args)
   }
@@ -2796,7 +2796,7 @@ func (this *QScrollEvent) contentPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QScrollEvent10contentPosEv
     // invoke: QPointF contentPos()
-    C._ZNK12QScrollEvent10contentPosEv(this.qclsinst)
+    C.C_ZNK12QScrollEvent10contentPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollEvent", "contentPos", args)
   }
@@ -2816,7 +2816,7 @@ func (this *QScrollEvent) overshootDistance(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QScrollEvent17overshootDistanceEv
     // invoke: QPointF overshootDistance()
-    C._ZNK12QScrollEvent17overshootDistanceEv(this.qclsinst)
+    C.C_ZNK12QScrollEvent17overshootDistanceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollEvent", "overshootDistance", args)
   }
@@ -2836,7 +2836,7 @@ func (this *QScrollEvent) FreeQScrollEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QScrollEventD0Ev
     // invoke: void ~QScrollEvent()
-    C._ZN12QScrollEventD2Ev(this.qclsinst)
+    C.C_ZN12QScrollEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollEvent", "~QScrollEvent", args)
   }
@@ -2856,7 +2856,7 @@ func (this *QScrollEvent) scrollState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QScrollEvent11scrollStateEv
     // invoke: QScrollEvent::ScrollState scrollState()
-    C._ZNK12QScrollEvent11scrollStateEv(this.qclsinst)
+    C.C_ZNK12QScrollEvent11scrollStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollEvent", "scrollState", args)
   }
@@ -2876,7 +2876,7 @@ func (this *QHoverEvent) posF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHoverEvent4posFEv
     // invoke: const QPointF & posF()
-    C._ZNK11QHoverEvent4posFEv(this.qclsinst)
+    C.C_ZNK11QHoverEvent4posFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHoverEvent", "posF", args)
   }
@@ -2896,7 +2896,7 @@ func (this *QHoverEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHoverEvent3posEv
     // invoke: QPoint pos()
-    C._ZNK11QHoverEvent3posEv(this.qclsinst)
+    C.C_ZNK11QHoverEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHoverEvent", "pos", args)
   }
@@ -2916,7 +2916,7 @@ func (this *QHoverEvent) oldPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHoverEvent6oldPosEv
     // invoke: QPoint oldPos()
-    C._ZNK11QHoverEvent6oldPosEv(this.qclsinst)
+    C.C_ZNK11QHoverEvent6oldPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHoverEvent", "oldPos", args)
   }
@@ -2936,7 +2936,7 @@ func (this *QHoverEvent) oldPosF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHoverEvent7oldPosFEv
     // invoke: const QPointF & oldPosF()
-    C._ZNK11QHoverEvent7oldPosFEv(this.qclsinst)
+    C.C_ZNK11QHoverEvent7oldPosFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHoverEvent", "oldPosF", args)
   }
@@ -2956,7 +2956,7 @@ func (this *QHoverEvent) FreeQHoverEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHoverEventD0Ev
     // invoke: void ~QHoverEvent()
-    C._ZN11QHoverEventD2Ev(this.qclsinst)
+    C.C_ZN11QHoverEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHoverEvent", "~QHoverEvent", args)
   }
@@ -2979,13 +2979,13 @@ func (this *QDragMoveEvent) ignore(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QDragMoveEvent6ignoreEv
     // invoke: void ignore()
-    C._ZN14QDragMoveEvent6ignoreEv(this.qclsinst)
+    C.C_ZN14QDragMoveEvent6ignoreEv(this.qclsinst)
   case 1:
     // invoke: _ZN14QDragMoveEvent6ignoreERK5QRect
     // invoke: void ignore(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN14QDragMoveEvent6ignoreERK5QRect(this.qclsinst, arg0)
+    C.C_ZN14QDragMoveEvent6ignoreERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDragMoveEvent", "ignore", args)
   }
@@ -3005,7 +3005,7 @@ func (this *QDragMoveEvent) FreeQDragMoveEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QDragMoveEventD0Ev
     // invoke: void ~QDragMoveEvent()
-    C._ZN14QDragMoveEventD2Ev(this.qclsinst)
+    C.C_ZN14QDragMoveEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDragMoveEvent", "~QDragMoveEvent", args)
   }
@@ -3025,7 +3025,7 @@ func (this *QDragMoveEvent) answerRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QDragMoveEvent10answerRectEv
     // invoke: QRect answerRect()
-    C._ZNK14QDragMoveEvent10answerRectEv(this.qclsinst)
+    C.C_ZNK14QDragMoveEvent10answerRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDragMoveEvent", "answerRect", args)
   }
@@ -3050,11 +3050,11 @@ func (this *QDragMoveEvent) accept(args ...interface{}) () {
     // invoke: void accept(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN14QDragMoveEvent6acceptERK5QRect(this.qclsinst, arg0)
+    C.C_ZN14QDragMoveEvent6acceptERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN14QDragMoveEvent6acceptEv
     // invoke: void accept()
-    C._ZN14QDragMoveEvent6acceptEv(this.qclsinst)
+    C.C_ZN14QDragMoveEvent6acceptEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDragMoveEvent", "accept", args)
   }
@@ -3074,7 +3074,7 @@ func (this *QShowEvent) FreeQShowEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QShowEventD0Ev
     // invoke: void ~QShowEvent()
-    C._ZN10QShowEventD2Ev(this.qclsinst)
+    C.C_ZN10QShowEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShowEvent", "~QShowEvent", args)
   }
@@ -3096,7 +3096,7 @@ func NewQShowEvent(args ...interface{}) QShowEvent {
     // invoke: void QShowEvent()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QShowEventC2Ev(qthis)
+    C.C_ZN10QShowEventC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QShowEvent", "QShowEvent", args)
   }
@@ -3117,7 +3117,7 @@ func (this *QPlatformSurfaceEvent) surfaceEventType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv
     // invoke: QPlatformSurfaceEvent::SurfaceEventType surfaceEventType()
-    C._ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv(this.qclsinst)
+    C.C_ZNK21QPlatformSurfaceEvent16surfaceEventTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPlatformSurfaceEvent", "surfaceEventType", args)
   }
@@ -3137,7 +3137,7 @@ func (this *QPlatformSurfaceEvent) FreeQPlatformSurfaceEvent(args ...interface{}
   case 0:
     // invoke: _ZN21QPlatformSurfaceEventD0Ev
     // invoke: void ~QPlatformSurfaceEvent()
-    C._ZN21QPlatformSurfaceEventD2Ev(this.qclsinst)
+    C.C_ZN21QPlatformSurfaceEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPlatformSurfaceEvent", "~QPlatformSurfaceEvent", args)
   }
@@ -3165,7 +3165,7 @@ func NewQPaintEvent(args ...interface{}) QPaintEvent {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QPaintEventC2ERK5QRect(qthis, arg0)
+    C.C_ZN11QPaintEventC2ERK5QRect(qthis, arg0)
   case 1:
     // invoke: _ZN11QPaintEventC1ERK7QRegion
     // invoke: void QPaintEvent(const class QRegion &)
@@ -3173,7 +3173,7 @@ func NewQPaintEvent(args ...interface{}) QPaintEvent {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QPaintEventC2ERK7QRegion(qthis, arg0)
+    C.C_ZN11QPaintEventC2ERK7QRegion(qthis, arg0)
   default:
     qtrt.ErrorResolve("QPaintEvent", "QPaintEvent", args)
   }
@@ -3194,7 +3194,7 @@ func (this *QPaintEvent) FreeQPaintEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPaintEventD0Ev
     // invoke: void ~QPaintEvent()
-    C._ZN11QPaintEventD2Ev(this.qclsinst)
+    C.C_ZN11QPaintEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEvent", "~QPaintEvent", args)
   }
@@ -3214,7 +3214,7 @@ func (this *QPaintEvent) region(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPaintEvent6regionEv
     // invoke: const QRegion & region()
-    C._ZNK11QPaintEvent6regionEv(this.qclsinst)
+    C.C_ZNK11QPaintEvent6regionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEvent", "region", args)
   }
@@ -3234,7 +3234,7 @@ func (this *QPaintEvent) rect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPaintEvent4rectEv
     // invoke: const QRect & rect()
-    C._ZNK11QPaintEvent4rectEv(this.qclsinst)
+    C.C_ZNK11QPaintEvent4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEvent", "rect", args)
   }
@@ -3254,7 +3254,7 @@ func (this *QFocusEvent) reason(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFocusEvent6reasonEv
     // invoke: Qt::FocusReason reason()
-    C._ZNK11QFocusEvent6reasonEv(this.qclsinst)
+    C.C_ZNK11QFocusEvent6reasonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFocusEvent", "reason", args)
   }
@@ -3274,7 +3274,7 @@ func (this *QFocusEvent) FreeQFocusEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFocusEventD0Ev
     // invoke: void ~QFocusEvent()
-    C._ZN11QFocusEventD2Ev(this.qclsinst)
+    C.C_ZN11QFocusEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFocusEvent", "~QFocusEvent", args)
   }
@@ -3294,7 +3294,7 @@ func (this *QFocusEvent) gotFocus(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFocusEvent8gotFocusEv
     // invoke: bool gotFocus()
-    C._ZNK11QFocusEvent8gotFocusEv(this.qclsinst)
+    C.C_ZNK11QFocusEvent8gotFocusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFocusEvent", "gotFocus", args)
   }
@@ -3314,7 +3314,7 @@ func (this *QFocusEvent) lostFocus(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFocusEvent9lostFocusEv
     // invoke: bool lostFocus()
-    C._ZNK11QFocusEvent9lostFocusEv(this.qclsinst)
+    C.C_ZNK11QFocusEvent9lostFocusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFocusEvent", "lostFocus", args)
   }
@@ -3334,7 +3334,7 @@ func (this *QNativeGestureEvent) localPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent8localPosEv
     // invoke: const QPointF & localPos()
-    C._ZNK19QNativeGestureEvent8localPosEv(this.qclsinst)
+    C.C_ZNK19QNativeGestureEvent8localPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "localPos", args)
   }
@@ -3354,7 +3354,7 @@ func (this *QNativeGestureEvent) screenPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent9screenPosEv
     // invoke: const QPointF & screenPos()
-    C._ZNK19QNativeGestureEvent9screenPosEv(this.qclsinst)
+    C.C_ZNK19QNativeGestureEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "screenPos", args)
   }
@@ -3374,7 +3374,7 @@ func (this *QNativeGestureEvent) globalPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent9globalPosEv
     // invoke: const QPoint globalPos()
-    C._ZNK19QNativeGestureEvent9globalPosEv(this.qclsinst)
+    C.C_ZNK19QNativeGestureEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "globalPos", args)
   }
@@ -3394,7 +3394,7 @@ func (this *QNativeGestureEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent3posEv
     // invoke: const QPoint pos()
-    C._ZNK19QNativeGestureEvent3posEv(this.qclsinst)
+    C.C_ZNK19QNativeGestureEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "pos", args)
   }
@@ -3414,7 +3414,7 @@ func (this *QNativeGestureEvent) value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent5valueEv
     // invoke: qreal value()
-    C._ZNK19QNativeGestureEvent5valueEv(this.qclsinst)
+    C.C_ZNK19QNativeGestureEvent5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "value", args)
   }
@@ -3434,7 +3434,7 @@ func (this *QNativeGestureEvent) gestureType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent11gestureTypeEv
     // invoke: Qt::NativeGestureType gestureType()
-    C._ZNK19QNativeGestureEvent11gestureTypeEv(this.qclsinst)
+    C.C_ZNK19QNativeGestureEvent11gestureTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "gestureType", args)
   }
@@ -3454,7 +3454,7 @@ func (this *QNativeGestureEvent) windowPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent9windowPosEv
     // invoke: const QPointF & windowPos()
-    C._ZNK19QNativeGestureEvent9windowPosEv(this.qclsinst)
+    C.C_ZNK19QNativeGestureEvent9windowPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "windowPos", args)
   }
@@ -3474,7 +3474,7 @@ func (this *QResizeEvent) FreeQResizeEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QResizeEventD0Ev
     // invoke: void ~QResizeEvent()
-    C._ZN12QResizeEventD2Ev(this.qclsinst)
+    C.C_ZN12QResizeEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResizeEvent", "~QResizeEvent", args)
   }
@@ -3494,7 +3494,7 @@ func (this *QResizeEvent) oldSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QResizeEvent7oldSizeEv
     // invoke: const QSize & oldSize()
-    C._ZNK12QResizeEvent7oldSizeEv(this.qclsinst)
+    C.C_ZNK12QResizeEvent7oldSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResizeEvent", "oldSize", args)
   }
@@ -3522,7 +3522,7 @@ func NewQResizeEvent(args ...interface{}) QResizeEvent {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QResizeEventC2ERK5QSizeS2_(qthis, arg0, arg1)
+    C.C_ZN12QResizeEventC2ERK5QSizeS2_(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QResizeEvent", "QResizeEvent", args)
   }
@@ -3543,7 +3543,7 @@ func (this *QResizeEvent) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QResizeEvent4sizeEv
     // invoke: const QSize & size()
-    C._ZNK12QResizeEvent4sizeEv(this.qclsinst)
+    C.C_ZNK12QResizeEvent4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResizeEvent", "size", args)
   }
@@ -3563,7 +3563,7 @@ func (this *QStatusTipEvent) tip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QStatusTipEvent3tipEv
     // invoke: QString tip()
-    C._ZNK15QStatusTipEvent3tipEv(this.qclsinst)
+    C.C_ZNK15QStatusTipEvent3tipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStatusTipEvent", "tip", args)
   }
@@ -3583,7 +3583,7 @@ func (this *QStatusTipEvent) FreeQStatusTipEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QStatusTipEventD0Ev
     // invoke: void ~QStatusTipEvent()
-    C._ZN15QStatusTipEventD2Ev(this.qclsinst)
+    C.C_ZN15QStatusTipEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStatusTipEvent", "~QStatusTipEvent", args)
   }
@@ -3608,7 +3608,7 @@ func NewQStatusTipEvent(args ...interface{}) QStatusTipEvent {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QStatusTipEventC2ERK7QString(qthis, arg0)
+    C.C_ZN15QStatusTipEventC2ERK7QString(qthis, arg0)
   default:
     qtrt.ErrorResolve("QStatusTipEvent", "QStatusTipEvent", args)
   }
@@ -3629,7 +3629,7 @@ func (this *QEnterEvent) localPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QEnterEvent8localPosEv
     // invoke: const QPointF & localPos()
-    C._ZNK11QEnterEvent8localPosEv(this.qclsinst)
+    C.C_ZNK11QEnterEvent8localPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "localPos", args)
   }
@@ -3649,7 +3649,7 @@ func (this *QEnterEvent) screenPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QEnterEvent9screenPosEv
     // invoke: const QPointF & screenPos()
-    C._ZNK11QEnterEvent9screenPosEv(this.qclsinst)
+    C.C_ZNK11QEnterEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "screenPos", args)
   }
@@ -3669,7 +3669,7 @@ func (this *QEnterEvent) globalPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QEnterEvent9globalPosEv
     // invoke: QPoint globalPos()
-    C._ZNK11QEnterEvent9globalPosEv(this.qclsinst)
+    C.C_ZNK11QEnterEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "globalPos", args)
   }
@@ -3700,7 +3700,7 @@ func NewQEnterEvent(args ...interface{}) QEnterEvent {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QEnterEventC2ERK7QPointFS2_S2_(qthis, arg0, arg1, arg2)
+    C.C_ZN11QEnterEventC2ERK7QPointFS2_S2_(qthis, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QEnterEvent", "QEnterEvent", args)
   }
@@ -3721,7 +3721,7 @@ func (this *QEnterEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QEnterEvent3posEv
     // invoke: QPoint pos()
-    C._ZNK11QEnterEvent3posEv(this.qclsinst)
+    C.C_ZNK11QEnterEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "pos", args)
   }
@@ -3741,7 +3741,7 @@ func (this *QEnterEvent) globalX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QEnterEvent7globalXEv
     // invoke: int globalX()
-    C._ZNK11QEnterEvent7globalXEv(this.qclsinst)
+    C.C_ZNK11QEnterEvent7globalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "globalX", args)
   }
@@ -3761,7 +3761,7 @@ func (this *QEnterEvent) FreeQEnterEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QEnterEventD0Ev
     // invoke: void ~QEnterEvent()
-    C._ZN11QEnterEventD2Ev(this.qclsinst)
+    C.C_ZN11QEnterEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "~QEnterEvent", args)
   }
@@ -3781,7 +3781,7 @@ func (this *QEnterEvent) globalY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QEnterEvent7globalYEv
     // invoke: int globalY()
-    C._ZNK11QEnterEvent7globalYEv(this.qclsinst)
+    C.C_ZNK11QEnterEvent7globalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "globalY", args)
   }
@@ -3801,7 +3801,7 @@ func (this *QEnterEvent) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QEnterEvent1yEv
     // invoke: int y()
-    C._ZNK11QEnterEvent1yEv(this.qclsinst)
+    C.C_ZNK11QEnterEvent1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "y", args)
   }
@@ -3821,7 +3821,7 @@ func (this *QEnterEvent) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QEnterEvent1xEv
     // invoke: int x()
-    C._ZNK11QEnterEvent1xEv(this.qclsinst)
+    C.C_ZNK11QEnterEvent1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "x", args)
   }
@@ -3841,7 +3841,7 @@ func (this *QEnterEvent) windowPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QEnterEvent9windowPosEv
     // invoke: const QPointF & windowPos()
-    C._ZNK11QEnterEvent9windowPosEv(this.qclsinst)
+    C.C_ZNK11QEnterEvent9windowPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "windowPos", args)
   }
@@ -3869,7 +3869,7 @@ func NewQMoveEvent(args ...interface{}) QMoveEvent {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QMoveEventC2ERK6QPointS2_(qthis, arg0, arg1)
+    C.C_ZN10QMoveEventC2ERK6QPointS2_(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMoveEvent", "QMoveEvent", args)
   }
@@ -3890,7 +3890,7 @@ func (this *QMoveEvent) FreeQMoveEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QMoveEventD0Ev
     // invoke: void ~QMoveEvent()
-    C._ZN10QMoveEventD2Ev(this.qclsinst)
+    C.C_ZN10QMoveEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMoveEvent", "~QMoveEvent", args)
   }
@@ -3910,7 +3910,7 @@ func (this *QMoveEvent) oldPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QMoveEvent6oldPosEv
     // invoke: const QPoint & oldPos()
-    C._ZNK10QMoveEvent6oldPosEv(this.qclsinst)
+    C.C_ZNK10QMoveEvent6oldPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMoveEvent", "oldPos", args)
   }
@@ -3930,7 +3930,7 @@ func (this *QMoveEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QMoveEvent3posEv
     // invoke: const QPoint & pos()
-    C._ZNK10QMoveEvent3posEv(this.qclsinst)
+    C.C_ZNK10QMoveEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMoveEvent", "pos", args)
   }
@@ -3952,7 +3952,7 @@ func NewQHideEvent(args ...interface{}) QHideEvent {
     // invoke: void QHideEvent()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QHideEventC2Ev(qthis)
+    C.C_ZN10QHideEventC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QHideEvent", "QHideEvent", args)
   }
@@ -3973,7 +3973,7 @@ func (this *QHideEvent) FreeQHideEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QHideEventD0Ev
     // invoke: void ~QHideEvent()
-    C._ZN10QHideEventD2Ev(this.qclsinst)
+    C.C_ZN10QHideEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHideEvent", "~QHideEvent", args)
   }
@@ -3993,7 +3993,7 @@ func (this *QDragLeaveEvent) FreeQDragLeaveEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QDragLeaveEventD0Ev
     // invoke: void ~QDragLeaveEvent()
-    C._ZN15QDragLeaveEventD2Ev(this.qclsinst)
+    C.C_ZN15QDragLeaveEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDragLeaveEvent", "~QDragLeaveEvent", args)
   }
@@ -4015,7 +4015,7 @@ func NewQDragLeaveEvent(args ...interface{}) QDragLeaveEvent {
     // invoke: void QDragLeaveEvent()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QDragLeaveEventC2Ev(qthis)
+    C.C_ZN15QDragLeaveEventC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QDragLeaveEvent", "QDragLeaveEvent", args)
   }
@@ -4036,7 +4036,7 @@ func (this *QDropEvent) mimeData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QDropEvent8mimeDataEv
     // invoke: const QMimeData * mimeData()
-    C._ZNK10QDropEvent8mimeDataEv(this.qclsinst)
+    C.C_ZNK10QDropEvent8mimeDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "mimeData", args)
   }
@@ -4056,7 +4056,7 @@ func (this *QDropEvent) acceptProposedAction(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QDropEvent20acceptProposedActionEv
     // invoke: void acceptProposedAction()
-    C._ZN10QDropEvent20acceptProposedActionEv(this.qclsinst)
+    C.C_ZN10QDropEvent20acceptProposedActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "acceptProposedAction", args)
   }
@@ -4076,7 +4076,7 @@ func (this *QDropEvent) possibleActions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QDropEvent15possibleActionsEv
     // invoke: Qt::DropActions possibleActions()
-    C._ZNK10QDropEvent15possibleActionsEv(this.qclsinst)
+    C.C_ZNK10QDropEvent15possibleActionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "possibleActions", args)
   }
@@ -4096,7 +4096,7 @@ func (this *QDropEvent) posF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QDropEvent4posFEv
     // invoke: const QPointF & posF()
-    C._ZNK10QDropEvent4posFEv(this.qclsinst)
+    C.C_ZNK10QDropEvent4posFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "posF", args)
   }
@@ -4116,7 +4116,7 @@ func (this *QDropEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QDropEvent3posEv
     // invoke: QPoint pos()
-    C._ZNK10QDropEvent3posEv(this.qclsinst)
+    C.C_ZNK10QDropEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "pos", args)
   }
@@ -4136,7 +4136,7 @@ func (this *QDropEvent) source(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QDropEvent6sourceEv
     // invoke: QObject * source()
-    C._ZNK10QDropEvent6sourceEv(this.qclsinst)
+    C.C_ZNK10QDropEvent6sourceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "source", args)
   }
@@ -4156,7 +4156,7 @@ func (this *QDropEvent) proposedAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QDropEvent14proposedActionEv
     // invoke: Qt::DropAction proposedAction()
-    C._ZNK10QDropEvent14proposedActionEv(this.qclsinst)
+    C.C_ZNK10QDropEvent14proposedActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "proposedAction", args)
   }
@@ -4176,7 +4176,7 @@ func (this *QDropEvent) dropAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QDropEvent10dropActionEv
     // invoke: Qt::DropAction dropAction()
-    C._ZNK10QDropEvent10dropActionEv(this.qclsinst)
+    C.C_ZNK10QDropEvent10dropActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "dropAction", args)
   }
@@ -4196,7 +4196,7 @@ func (this *QDropEvent) keyboardModifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QDropEvent17keyboardModifiersEv
     // invoke: Qt::KeyboardModifiers keyboardModifiers()
-    C._ZNK10QDropEvent17keyboardModifiersEv(this.qclsinst)
+    C.C_ZNK10QDropEvent17keyboardModifiersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "keyboardModifiers", args)
   }
@@ -4216,7 +4216,7 @@ func (this *QDropEvent) FreeQDropEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QDropEventD0Ev
     // invoke: void ~QDropEvent()
-    C._ZN10QDropEventD2Ev(this.qclsinst)
+    C.C_ZN10QDropEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "~QDropEvent", args)
   }
@@ -4236,7 +4236,7 @@ func (this *QDropEvent) mouseButtons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QDropEvent12mouseButtonsEv
     // invoke: Qt::MouseButtons mouseButtons()
-    C._ZNK10QDropEvent12mouseButtonsEv(this.qclsinst)
+    C.C_ZNK10QDropEvent12mouseButtonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "mouseButtons", args)
   }
@@ -4256,7 +4256,7 @@ func (this *QInputEvent) modifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QInputEvent9modifiersEv
     // invoke: Qt::KeyboardModifiers modifiers()
-    C._ZNK11QInputEvent9modifiersEv(this.qclsinst)
+    C.C_ZNK11QInputEvent9modifiersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputEvent", "modifiers", args)
   }
@@ -4276,7 +4276,7 @@ func (this *QInputEvent) timestamp(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QInputEvent9timestampEv
     // invoke: ulong timestamp()
-    C._ZNK11QInputEvent9timestampEv(this.qclsinst)
+    C.C_ZNK11QInputEvent9timestampEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputEvent", "timestamp", args)
   }
@@ -4299,7 +4299,7 @@ func (this *QInputEvent) setTimestamp(args ...interface{}) () {
     // invoke: void setTimestamp(ulong)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QInputEvent12setTimestampEm(this.qclsinst, arg0)
+    C.C_ZN11QInputEvent12setTimestampEm(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputEvent", "setTimestamp", args)
   }
@@ -4319,7 +4319,7 @@ func (this *QInputEvent) FreeQInputEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QInputEventD0Ev
     // invoke: void ~QInputEvent()
-    C._ZN11QInputEventD2Ev(this.qclsinst)
+    C.C_ZN11QInputEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputEvent", "~QInputEvent", args)
   }
@@ -4339,7 +4339,7 @@ func (this *QApplicationStateChangeEvent) applicationState(args ...interface{}) 
   case 0:
     // invoke: _ZNK28QApplicationStateChangeEvent16applicationStateEv
     // invoke: Qt::ApplicationState applicationState()
-    C._ZNK28QApplicationStateChangeEvent16applicationStateEv(this.qclsinst)
+    C.C_ZNK28QApplicationStateChangeEvent16applicationStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QApplicationStateChangeEvent", "applicationState", args)
   }
@@ -4359,7 +4359,7 @@ func (this *QKeyEvent) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QKeyEvent5countEv
     // invoke: int count()
-    C._ZNK9QKeyEvent5countEv(this.qclsinst)
+    C.C_ZNK9QKeyEvent5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "count", args)
   }
@@ -4379,7 +4379,7 @@ func (this *QKeyEvent) modifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QKeyEvent9modifiersEv
     // invoke: Qt::KeyboardModifiers modifiers()
-    C._ZNK9QKeyEvent9modifiersEv(this.qclsinst)
+    C.C_ZNK9QKeyEvent9modifiersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "modifiers", args)
   }
@@ -4399,7 +4399,7 @@ func (this *QKeyEvent) nativeModifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QKeyEvent15nativeModifiersEv
     // invoke: quint32 nativeModifiers()
-    C._ZNK9QKeyEvent15nativeModifiersEv(this.qclsinst)
+    C.C_ZNK9QKeyEvent15nativeModifiersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "nativeModifiers", args)
   }
@@ -4419,7 +4419,7 @@ func (this *QKeyEvent) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QKeyEvent4textEv
     // invoke: QString text()
-    C._ZNK9QKeyEvent4textEv(this.qclsinst)
+    C.C_ZNK9QKeyEvent4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "text", args)
   }
@@ -4439,7 +4439,7 @@ func (this *QKeyEvent) FreeQKeyEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QKeyEventD0Ev
     // invoke: void ~QKeyEvent()
-    C._ZN9QKeyEventD2Ev(this.qclsinst)
+    C.C_ZN9QKeyEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "~QKeyEvent", args)
   }
@@ -4459,7 +4459,7 @@ func (this *QKeyEvent) nativeScanCode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QKeyEvent14nativeScanCodeEv
     // invoke: quint32 nativeScanCode()
-    C._ZNK9QKeyEvent14nativeScanCodeEv(this.qclsinst)
+    C.C_ZNK9QKeyEvent14nativeScanCodeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "nativeScanCode", args)
   }
@@ -4479,7 +4479,7 @@ func (this *QKeyEvent) isAutoRepeat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QKeyEvent12isAutoRepeatEv
     // invoke: bool isAutoRepeat()
-    C._ZNK9QKeyEvent12isAutoRepeatEv(this.qclsinst)
+    C.C_ZNK9QKeyEvent12isAutoRepeatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "isAutoRepeat", args)
   }
@@ -4499,7 +4499,7 @@ func (this *QKeyEvent) key(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QKeyEvent3keyEv
     // invoke: int key()
-    C._ZNK9QKeyEvent3keyEv(this.qclsinst)
+    C.C_ZNK9QKeyEvent3keyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "key", args)
   }
@@ -4519,7 +4519,7 @@ func (this *QKeyEvent) nativeVirtualKey(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QKeyEvent16nativeVirtualKeyEv
     // invoke: quint32 nativeVirtualKey()
-    C._ZNK9QKeyEvent16nativeVirtualKeyEv(this.qclsinst)
+    C.C_ZNK9QKeyEvent16nativeVirtualKeyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "nativeVirtualKey", args)
   }
@@ -4539,7 +4539,7 @@ func (this *QContextMenuEvent) globalPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QContextMenuEvent9globalPosEv
     // invoke: const QPoint & globalPos()
-    C._ZNK17QContextMenuEvent9globalPosEv(this.qclsinst)
+    C.C_ZNK17QContextMenuEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "globalPos", args)
   }
@@ -4559,7 +4559,7 @@ func (this *QContextMenuEvent) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QContextMenuEvent3posEv
     // invoke: const QPoint & pos()
-    C._ZNK17QContextMenuEvent3posEv(this.qclsinst)
+    C.C_ZNK17QContextMenuEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "pos", args)
   }
@@ -4579,7 +4579,7 @@ func (this *QContextMenuEvent) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QContextMenuEvent1yEv
     // invoke: int y()
-    C._ZNK17QContextMenuEvent1yEv(this.qclsinst)
+    C.C_ZNK17QContextMenuEvent1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "y", args)
   }
@@ -4599,7 +4599,7 @@ func (this *QContextMenuEvent) reason(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QContextMenuEvent6reasonEv
     // invoke: QContextMenuEvent::Reason reason()
-    C._ZNK17QContextMenuEvent6reasonEv(this.qclsinst)
+    C.C_ZNK17QContextMenuEvent6reasonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "reason", args)
   }
@@ -4619,7 +4619,7 @@ func (this *QContextMenuEvent) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QContextMenuEvent1xEv
     // invoke: int x()
-    C._ZNK17QContextMenuEvent1xEv(this.qclsinst)
+    C.C_ZNK17QContextMenuEvent1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "x", args)
   }
@@ -4639,7 +4639,7 @@ func (this *QContextMenuEvent) globalX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QContextMenuEvent7globalXEv
     // invoke: int globalX()
-    C._ZNK17QContextMenuEvent7globalXEv(this.qclsinst)
+    C.C_ZNK17QContextMenuEvent7globalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "globalX", args)
   }
@@ -4659,7 +4659,7 @@ func (this *QContextMenuEvent) globalY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QContextMenuEvent7globalYEv
     // invoke: int globalY()
-    C._ZNK17QContextMenuEvent7globalYEv(this.qclsinst)
+    C.C_ZNK17QContextMenuEvent7globalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "globalY", args)
   }
@@ -4679,7 +4679,7 @@ func (this *QContextMenuEvent) FreeQContextMenuEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QContextMenuEventD0Ev
     // invoke: void ~QContextMenuEvent()
-    C._ZN17QContextMenuEventD2Ev(this.qclsinst)
+    C.C_ZN17QContextMenuEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "~QContextMenuEvent", args)
   }
@@ -4702,7 +4702,7 @@ func (this *QScrollPrepareEvent) setContentPosRange(args ...interface{}) () {
     // invoke: void setContentPosRange(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "setContentPosRange", args)
   }
@@ -4722,7 +4722,7 @@ func (this *QScrollPrepareEvent) contentPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QScrollPrepareEvent10contentPosEv
     // invoke: QPointF contentPos()
-    C._ZNK19QScrollPrepareEvent10contentPosEv(this.qclsinst)
+    C.C_ZNK19QScrollPrepareEvent10contentPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "contentPos", args)
   }
@@ -4745,7 +4745,7 @@ func (this *QScrollPrepareEvent) setContentPos(args ...interface{}) () {
     // invoke: void setContentPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QScrollPrepareEvent13setContentPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN19QScrollPrepareEvent13setContentPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "setContentPos", args)
   }
@@ -4765,7 +4765,7 @@ func (this *QScrollPrepareEvent) FreeQScrollPrepareEvent(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QScrollPrepareEventD0Ev
     // invoke: void ~QScrollPrepareEvent()
-    C._ZN19QScrollPrepareEventD2Ev(this.qclsinst)
+    C.C_ZN19QScrollPrepareEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "~QScrollPrepareEvent", args)
   }
@@ -4785,7 +4785,7 @@ func (this *QScrollPrepareEvent) viewportSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QScrollPrepareEvent12viewportSizeEv
     // invoke: QSizeF viewportSize()
-    C._ZNK19QScrollPrepareEvent12viewportSizeEv(this.qclsinst)
+    C.C_ZNK19QScrollPrepareEvent12viewportSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "viewportSize", args)
   }
@@ -4808,7 +4808,7 @@ func (this *QScrollPrepareEvent) setViewportSize(args ...interface{}) () {
     // invoke: void setViewportSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "setViewportSize", args)
   }
@@ -4833,7 +4833,7 @@ func NewQScrollPrepareEvent(args ...interface{}) QScrollPrepareEvent {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QScrollPrepareEventC2ERK7QPointF(qthis, arg0)
+    C.C_ZN19QScrollPrepareEventC2ERK7QPointF(qthis, arg0)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "QScrollPrepareEvent", args)
   }
@@ -4854,7 +4854,7 @@ func (this *QScrollPrepareEvent) contentPosRange(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QScrollPrepareEvent15contentPosRangeEv
     // invoke: QRectF contentPosRange()
-    C._ZNK19QScrollPrepareEvent15contentPosRangeEv(this.qclsinst)
+    C.C_ZNK19QScrollPrepareEvent15contentPosRangeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "contentPosRange", args)
   }
@@ -4874,7 +4874,7 @@ func (this *QScrollPrepareEvent) startPos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QScrollPrepareEvent8startPosEv
     // invoke: QPointF startPos()
-    C._ZNK19QScrollPrepareEvent8startPosEv(this.qclsinst)
+    C.C_ZNK19QScrollPrepareEvent8startPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "startPos", args)
   }
@@ -4894,7 +4894,7 @@ func (this *QShortcutEvent) FreeQShortcutEvent(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QShortcutEventD0Ev
     // invoke: void ~QShortcutEvent()
-    C._ZN14QShortcutEventD2Ev(this.qclsinst)
+    C.C_ZN14QShortcutEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcutEvent", "~QShortcutEvent", args)
   }
@@ -4914,7 +4914,7 @@ func (this *QShortcutEvent) isAmbiguous(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QShortcutEvent11isAmbiguousEv
     // invoke: bool isAmbiguous()
-    C._ZNK14QShortcutEvent11isAmbiguousEv(this.qclsinst)
+    C.C_ZNK14QShortcutEvent11isAmbiguousEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcutEvent", "isAmbiguous", args)
   }
@@ -4934,7 +4934,7 @@ func (this *QShortcutEvent) shortcutId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QShortcutEvent10shortcutIdEv
     // invoke: int shortcutId()
-    C._ZNK14QShortcutEvent10shortcutIdEv(this.qclsinst)
+    C.C_ZNK14QShortcutEvent10shortcutIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcutEvent", "shortcutId", args)
   }
@@ -4954,7 +4954,7 @@ func (this *QShortcutEvent) key(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QShortcutEvent3keyEv
     // invoke: const QKeySequence & key()
-    C._ZNK14QShortcutEvent3keyEv(this.qclsinst)
+    C.C_ZNK14QShortcutEvent3keyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcutEvent", "key", args)
   }
@@ -4985,7 +4985,7 @@ func NewQShortcutEvent(args ...interface{}) QShortcutEvent {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN14QShortcutEventC2ERK12QKeySequenceib(qthis, arg0, arg1, arg2)
+    C.C_ZN14QShortcutEventC2ERK12QKeySequenceib(qthis, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QShortcutEvent", "QShortcutEvent", args)
   }
@@ -5006,7 +5006,7 @@ func (this *QWindowStateChangeEvent) isOverride(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QWindowStateChangeEvent10isOverrideEv
     // invoke: bool isOverride()
-    C._ZNK23QWindowStateChangeEvent10isOverrideEv(this.qclsinst)
+    C.C_ZNK23QWindowStateChangeEvent10isOverrideEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWindowStateChangeEvent", "isOverride", args)
   }
@@ -5026,7 +5026,7 @@ func (this *QWindowStateChangeEvent) oldState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QWindowStateChangeEvent8oldStateEv
     // invoke: Qt::WindowStates oldState()
-    C._ZNK23QWindowStateChangeEvent8oldStateEv(this.qclsinst)
+    C.C_ZNK23QWindowStateChangeEvent8oldStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWindowStateChangeEvent", "oldState", args)
   }
@@ -5046,7 +5046,7 @@ func (this *QWindowStateChangeEvent) FreeQWindowStateChangeEvent(args ...interfa
   case 0:
     // invoke: _ZN23QWindowStateChangeEventD0Ev
     // invoke: void ~QWindowStateChangeEvent()
-    C._ZN23QWindowStateChangeEventD2Ev(this.qclsinst)
+    C.C_ZN23QWindowStateChangeEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWindowStateChangeEvent", "~QWindowStateChangeEvent", args)
   }
@@ -5066,7 +5066,7 @@ func (this *QInputMethodQueryEvent) FreeQInputMethodQueryEvent(args ...interface
   case 0:
     // invoke: _ZN22QInputMethodQueryEventD0Ev
     // invoke: void ~QInputMethodQueryEvent()
-    C._ZN22QInputMethodQueryEventD2Ev(this.qclsinst)
+    C.C_ZN22QInputMethodQueryEventD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethodQueryEvent", "~QInputMethodQueryEvent", args)
   }
@@ -5086,7 +5086,7 @@ func (this *QInputMethodQueryEvent) queries(args ...interface{}) () {
   case 0:
     // invoke: _ZNK22QInputMethodQueryEvent7queriesEv
     // invoke: Qt::InputMethodQueries queries()
-    C._ZNK22QInputMethodQueryEvent7queriesEv(this.qclsinst)
+    C.C_ZNK22QInputMethodQueryEvent7queriesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethodQueryEvent", "queries", args)
   }

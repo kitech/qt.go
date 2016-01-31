@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qpaintengine.h
 // dst-file: /src/gui/qpaintengine.go
 //
@@ -29,105 +29,105 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  qreal QTextItem::descent();
-extern void _ZNK9QTextItem7descentEv(void* qthis); // 4
+extern void C_ZNK9QTextItem7descentEv(void* qthis); // 4
   // proto:  QString QTextItem::text();
-extern void _ZNK9QTextItem4textEv(void* qthis); // 4
+extern void C_ZNK9QTextItem4textEv(void* qthis); // 4
   // proto:  qreal QTextItem::width();
-extern void _ZNK9QTextItem5widthEv(void* qthis); // 4
+extern void C_ZNK9QTextItem5widthEv(void* qthis); // 4
   // proto:  RenderFlags QTextItem::renderFlags();
-extern void _ZNK9QTextItem11renderFlagsEv(void* qthis); // 4
+extern void C_ZNK9QTextItem11renderFlagsEv(void* qthis); // 4
   // proto:  QFont QTextItem::font();
-extern void _ZNK9QTextItem4fontEv(void* qthis); // 4
+extern void C_ZNK9QTextItem4fontEv(void* qthis); // 4
   // proto:  qreal QTextItem::ascent();
-extern void _ZNK9QTextItem6ascentEv(void* qthis); // 4
+extern void C_ZNK9QTextItem6ascentEv(void* qthis); // 4
   // proto:  qreal QPaintEngineState::opacity();
-extern void _ZNK17QPaintEngineState7opacityEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState7opacityEv(void* qthis); // 4
   // proto:  bool QPaintEngineState::penNeedsResolving();
-extern void _ZNK17QPaintEngineState17penNeedsResolvingEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState17penNeedsResolvingEv(void* qthis); // 4
   // proto:  bool QPaintEngineState::isClipEnabled();
-extern void _ZNK17QPaintEngineState13isClipEnabledEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState13isClipEnabledEv(void* qthis); // 4
   // proto:  QMatrix QPaintEngineState::matrix();
-extern void _ZNK17QPaintEngineState6matrixEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState6matrixEv(void* qthis); // 4
   // proto:  QPen QPaintEngineState::pen();
-extern void _ZNK17QPaintEngineState3penEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState3penEv(void* qthis); // 4
   // proto:  QBrush QPaintEngineState::backgroundBrush();
-extern void _ZNK17QPaintEngineState15backgroundBrushEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState15backgroundBrushEv(void* qthis); // 4
   // proto:  QPainter::CompositionMode QPaintEngineState::compositionMode();
-extern void _ZNK17QPaintEngineState15compositionModeEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState15compositionModeEv(void* qthis); // 4
   // proto:  QTransform QPaintEngineState::transform();
-extern void _ZNK17QPaintEngineState9transformEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState9transformEv(void* qthis); // 4
   // proto:  QPainter::RenderHints QPaintEngineState::renderHints();
-extern void _ZNK17QPaintEngineState11renderHintsEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState11renderHintsEv(void* qthis); // 4
   // proto:  QPaintEngine::DirtyFlags QPaintEngineState::state();
-extern void _ZNK17QPaintEngineState5stateEv(void* qthis); // 2
+extern void C_ZNK17QPaintEngineState5stateEv(void* qthis); // 2
   // proto:  Qt::BGMode QPaintEngineState::backgroundMode();
-extern void _ZNK17QPaintEngineState14backgroundModeEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState14backgroundModeEv(void* qthis); // 4
   // proto:  Qt::ClipOperation QPaintEngineState::clipOperation();
-extern void _ZNK17QPaintEngineState13clipOperationEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState13clipOperationEv(void* qthis); // 4
   // proto:  QBrush QPaintEngineState::brush();
-extern void _ZNK17QPaintEngineState5brushEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState5brushEv(void* qthis); // 4
   // proto:  QPainterPath QPaintEngineState::clipPath();
-extern void _ZNK17QPaintEngineState8clipPathEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState8clipPathEv(void* qthis); // 4
   // proto:  QFont QPaintEngineState::font();
-extern void _ZNK17QPaintEngineState4fontEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState4fontEv(void* qthis); // 4
   // proto:  QRegion QPaintEngineState::clipRegion();
-extern void _ZNK17QPaintEngineState10clipRegionEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState10clipRegionEv(void* qthis); // 4
   // proto:  QPointF QPaintEngineState::brushOrigin();
-extern void _ZNK17QPaintEngineState11brushOriginEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState11brushOriginEv(void* qthis); // 4
   // proto:  QPainter * QPaintEngineState::painter();
-extern void _ZNK17QPaintEngineState7painterEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState7painterEv(void* qthis); // 4
   // proto:  bool QPaintEngineState::brushNeedsResolving();
-extern void _ZNK17QPaintEngineState19brushNeedsResolvingEv(void* qthis); // 4
+extern void C_ZNK17QPaintEngineState19brushNeedsResolvingEv(void* qthis); // 4
   // proto:  QPaintDevice * QPaintEngine::paintDevice();
-extern void _ZNK12QPaintEngine11paintDeviceEv(void* qthis); // 4
+extern void C_ZNK12QPaintEngine11paintDeviceEv(void* qthis); // 4
   // proto:  void QPaintEngine::drawRects(const QRectF * rects, int rectCount);
-extern void _ZN12QPaintEngine9drawRectsEPK6QRectFi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN12QPaintEngine9drawRectsEPK6QRectFi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QPaintEngine::drawRects(const QRect * rects, int rectCount);
-extern void _ZN12QPaintEngine9drawRectsEPK5QRecti(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN12QPaintEngine9drawRectsEPK5QRecti(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QPaintEngine::drawPoints(const QPointF * points, int pointCount);
-extern void _ZN12QPaintEngine10drawPointsEPK7QPointFi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN12QPaintEngine10drawPointsEPK7QPointFi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QPaintEngine::drawPoints(const QPoint * points, int pointCount);
-extern void _ZN12QPaintEngine10drawPointsEPK6QPointi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN12QPaintEngine10drawPointsEPK6QPointi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QRect QPaintEngine::systemRect();
-extern void _ZNK12QPaintEngine10systemRectEv(void* qthis); // 4
+extern void C_ZNK12QPaintEngine10systemRectEv(void* qthis); // 4
   // proto:  void QPaintEngine::drawPath(const QPainterPath & path);
-extern void _ZN12QPaintEngine8drawPathERK12QPainterPath(void* qthis, void* arg0); // 4
+extern void C_ZN12QPaintEngine8drawPathERK12QPainterPath(void* qthis, void* arg0); // 4
   // proto:  void QPaintEngine::setPaintDevice(QPaintDevice * device);
-extern void _ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice(void* qthis, void* arg0); // 4
+extern void C_ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice(void* qthis, void* arg0); // 4
   // proto:  QPainter * QPaintEngine::painter();
-extern void _ZNK12QPaintEngine7painterEv(void* qthis); // 4
+extern void C_ZNK12QPaintEngine7painterEv(void* qthis); // 4
   // proto:  void QPaintEngine::drawTiledPixmap(const QRectF & r, const QPixmap & pixmap, const QPointF & s);
-extern void _ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QPaintEngine::setActive(bool newState);
-extern void _ZN12QPaintEngine9setActiveEb(void* qthis, bool arg0); // 2
+extern void C_ZN12QPaintEngine9setActiveEb(void* qthis, bool arg0); // 2
   // proto:  void QPaintEngine::setSystemRect(const QRect & rect);
-extern void _ZN12QPaintEngine13setSystemRectERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZN12QPaintEngine13setSystemRectERK5QRect(void* qthis, void* arg0); // 4
   // proto:  void QPaintEngine::syncState();
-extern void _ZN12QPaintEngine9syncStateEv(void* qthis); // 4
+extern void C_ZN12QPaintEngine9syncStateEv(void* qthis); // 4
   // proto:  void QPaintEngine::~QPaintEngine();
-extern void _ZN12QPaintEngineD2Ev(void* qthis); // 4
+extern void C_ZN12QPaintEngineD2Ev(void* qthis); // 4
   // proto:  QRegion QPaintEngine::systemClip();
-extern void _ZNK12QPaintEngine10systemClipEv(void* qthis); // 4
+extern void C_ZNK12QPaintEngine10systemClipEv(void* qthis); // 4
   // proto:  void QPaintEngine::fix_neg_rect(int * x, int * y, int * w, int * h);
-extern void _ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 2
+extern void C_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 2
   // proto:  void QPaintEngine::setSystemClip(const QRegion & baseClip);
-extern void _ZN12QPaintEngine13setSystemClipERK7QRegion(void* qthis, void* arg0); // 4
+extern void C_ZN12QPaintEngine13setSystemClipERK7QRegion(void* qthis, void* arg0); // 4
   // proto:  QPoint QPaintEngine::coordinateOffset();
-extern void _ZNK12QPaintEngine16coordinateOffsetEv(void* qthis); // 4
+extern void C_ZNK12QPaintEngine16coordinateOffsetEv(void* qthis); // 4
   // proto:  bool QPaintEngine::isActive();
-extern void _ZNK12QPaintEngine8isActiveEv(void* qthis); // 2
+extern void C_ZNK12QPaintEngine8isActiveEv(void* qthis); // 2
   // proto:  void QPaintEngine::drawEllipse(const QRectF & r);
-extern void _ZN12QPaintEngine11drawEllipseERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZN12QPaintEngine11drawEllipseERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QPaintEngine::drawEllipse(const QRect & r);
-extern void _ZN12QPaintEngine11drawEllipseERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZN12QPaintEngine11drawEllipseERK5QRect(void* qthis, void* arg0); // 4
   // proto:  void QPaintEngine::drawTextItem(const QPointF & p, const QTextItem & textItem);
-extern void _ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem(void* qthis, void* arg0, void* arg1); // 4
   // proto:  bool QPaintEngine::isExtended();
-extern void _ZNK12QPaintEngine10isExtendedEv(void* qthis); // 2
+extern void C_ZNK12QPaintEngine10isExtendedEv(void* qthis); // 2
   // proto:  void QPaintEngine::drawLines(const QLine * lines, int lineCount);
-extern void _ZN12QPaintEngine9drawLinesEPK5QLinei(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN12QPaintEngine9drawLinesEPK5QLinei(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QPaintEngine::drawLines(const QLineF * lines, int lineCount);
-extern void _ZN12QPaintEngine9drawLinesEPK6QLineFi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN12QPaintEngine9drawLinesEPK6QLineFi(void* qthis, void* arg0, int32_t arg1); // 4
 */
 import "C"
 // } // <= ext block end
@@ -171,7 +171,7 @@ func (this *QTextItem) descent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem7descentEv
     // invoke: qreal descent()
-    C._ZNK9QTextItem7descentEv(this.qclsinst)
+    C.C_ZNK9QTextItem7descentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextItem", "descent", args)
   }
@@ -191,7 +191,7 @@ func (this *QTextItem) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem4textEv
     // invoke: QString text()
-    C._ZNK9QTextItem4textEv(this.qclsinst)
+    C.C_ZNK9QTextItem4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextItem", "text", args)
   }
@@ -211,7 +211,7 @@ func (this *QTextItem) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem5widthEv
     // invoke: qreal width()
-    C._ZNK9QTextItem5widthEv(this.qclsinst)
+    C.C_ZNK9QTextItem5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextItem", "width", args)
   }
@@ -231,7 +231,7 @@ func (this *QTextItem) renderFlags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem11renderFlagsEv
     // invoke: RenderFlags renderFlags()
-    C._ZNK9QTextItem11renderFlagsEv(this.qclsinst)
+    C.C_ZNK9QTextItem11renderFlagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextItem", "renderFlags", args)
   }
@@ -251,7 +251,7 @@ func (this *QTextItem) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem4fontEv
     // invoke: QFont font()
-    C._ZNK9QTextItem4fontEv(this.qclsinst)
+    C.C_ZNK9QTextItem4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextItem", "font", args)
   }
@@ -271,7 +271,7 @@ func (this *QTextItem) ascent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem6ascentEv
     // invoke: qreal ascent()
-    C._ZNK9QTextItem6ascentEv(this.qclsinst)
+    C.C_ZNK9QTextItem6ascentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextItem", "ascent", args)
   }
@@ -291,7 +291,7 @@ func (this *QPaintEngineState) opacity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState7opacityEv
     // invoke: qreal opacity()
-    C._ZNK17QPaintEngineState7opacityEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState7opacityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "opacity", args)
   }
@@ -311,7 +311,7 @@ func (this *QPaintEngineState) penNeedsResolving(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState17penNeedsResolvingEv
     // invoke: bool penNeedsResolving()
-    C._ZNK17QPaintEngineState17penNeedsResolvingEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState17penNeedsResolvingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "penNeedsResolving", args)
   }
@@ -331,7 +331,7 @@ func (this *QPaintEngineState) isClipEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState13isClipEnabledEv
     // invoke: bool isClipEnabled()
-    C._ZNK17QPaintEngineState13isClipEnabledEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState13isClipEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "isClipEnabled", args)
   }
@@ -351,7 +351,7 @@ func (this *QPaintEngineState) matrix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState6matrixEv
     // invoke: QMatrix matrix()
-    C._ZNK17QPaintEngineState6matrixEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState6matrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "matrix", args)
   }
@@ -371,7 +371,7 @@ func (this *QPaintEngineState) pen(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState3penEv
     // invoke: QPen pen()
-    C._ZNK17QPaintEngineState3penEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState3penEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "pen", args)
   }
@@ -391,7 +391,7 @@ func (this *QPaintEngineState) backgroundBrush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState15backgroundBrushEv
     // invoke: QBrush backgroundBrush()
-    C._ZNK17QPaintEngineState15backgroundBrushEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState15backgroundBrushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "backgroundBrush", args)
   }
@@ -411,7 +411,7 @@ func (this *QPaintEngineState) compositionMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState15compositionModeEv
     // invoke: QPainter::CompositionMode compositionMode()
-    C._ZNK17QPaintEngineState15compositionModeEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState15compositionModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "compositionMode", args)
   }
@@ -431,7 +431,7 @@ func (this *QPaintEngineState) transform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState9transformEv
     // invoke: QTransform transform()
-    C._ZNK17QPaintEngineState9transformEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState9transformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "transform", args)
   }
@@ -451,7 +451,7 @@ func (this *QPaintEngineState) renderHints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState11renderHintsEv
     // invoke: QPainter::RenderHints renderHints()
-    C._ZNK17QPaintEngineState11renderHintsEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState11renderHintsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "renderHints", args)
   }
@@ -471,7 +471,7 @@ func (this *QPaintEngineState) state(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState5stateEv
     // invoke: QPaintEngine::DirtyFlags state()
-    C._ZNK17QPaintEngineState5stateEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState5stateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "state", args)
   }
@@ -491,7 +491,7 @@ func (this *QPaintEngineState) backgroundMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState14backgroundModeEv
     // invoke: Qt::BGMode backgroundMode()
-    C._ZNK17QPaintEngineState14backgroundModeEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState14backgroundModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "backgroundMode", args)
   }
@@ -511,7 +511,7 @@ func (this *QPaintEngineState) clipOperation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState13clipOperationEv
     // invoke: Qt::ClipOperation clipOperation()
-    C._ZNK17QPaintEngineState13clipOperationEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState13clipOperationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "clipOperation", args)
   }
@@ -531,7 +531,7 @@ func (this *QPaintEngineState) brush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState5brushEv
     // invoke: QBrush brush()
-    C._ZNK17QPaintEngineState5brushEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState5brushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "brush", args)
   }
@@ -551,7 +551,7 @@ func (this *QPaintEngineState) clipPath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState8clipPathEv
     // invoke: QPainterPath clipPath()
-    C._ZNK17QPaintEngineState8clipPathEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState8clipPathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "clipPath", args)
   }
@@ -571,7 +571,7 @@ func (this *QPaintEngineState) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState4fontEv
     // invoke: QFont font()
-    C._ZNK17QPaintEngineState4fontEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "font", args)
   }
@@ -591,7 +591,7 @@ func (this *QPaintEngineState) clipRegion(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState10clipRegionEv
     // invoke: QRegion clipRegion()
-    C._ZNK17QPaintEngineState10clipRegionEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState10clipRegionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "clipRegion", args)
   }
@@ -611,7 +611,7 @@ func (this *QPaintEngineState) brushOrigin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState11brushOriginEv
     // invoke: QPointF brushOrigin()
-    C._ZNK17QPaintEngineState11brushOriginEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState11brushOriginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "brushOrigin", args)
   }
@@ -631,7 +631,7 @@ func (this *QPaintEngineState) painter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState7painterEv
     // invoke: QPainter * painter()
-    C._ZNK17QPaintEngineState7painterEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState7painterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "painter", args)
   }
@@ -651,7 +651,7 @@ func (this *QPaintEngineState) brushNeedsResolving(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState19brushNeedsResolvingEv
     // invoke: bool brushNeedsResolving()
-    C._ZNK17QPaintEngineState19brushNeedsResolvingEv(this.qclsinst)
+    C.C_ZNK17QPaintEngineState19brushNeedsResolvingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "brushNeedsResolving", args)
   }
@@ -671,7 +671,7 @@ func (this *QPaintEngine) paintDevice(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine11paintDeviceEv
     // invoke: QPaintDevice * paintDevice()
-    C._ZNK12QPaintEngine11paintDeviceEv(this.qclsinst)
+    C.C_ZNK12QPaintEngine11paintDeviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "paintDevice", args)
   }
@@ -701,7 +701,7 @@ func (this *QPaintEngine) drawRects(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN12QPaintEngine9drawRectsEPK6QRectFi(this.qclsinst, arg0, arg1)
+    C.C_ZN12QPaintEngine9drawRectsEPK6QRectFi(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN12QPaintEngine9drawRectsEPK5QRecti
     // invoke: void drawRects(const class QRect *, int)
@@ -709,7 +709,7 @@ func (this *QPaintEngine) drawRects(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN12QPaintEngine9drawRectsEPK5QRecti(this.qclsinst, arg0, arg1)
+    C.C_ZN12QPaintEngine9drawRectsEPK5QRecti(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawRects", args)
   }
@@ -739,7 +739,7 @@ func (this *QPaintEngine) drawPoints(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN12QPaintEngine10drawPointsEPK7QPointFi(this.qclsinst, arg0, arg1)
+    C.C_ZN12QPaintEngine10drawPointsEPK7QPointFi(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN12QPaintEngine10drawPointsEPK6QPointi
     // invoke: void drawPoints(const class QPoint *, int)
@@ -747,7 +747,7 @@ func (this *QPaintEngine) drawPoints(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN12QPaintEngine10drawPointsEPK6QPointi(this.qclsinst, arg0, arg1)
+    C.C_ZN12QPaintEngine10drawPointsEPK6QPointi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawPoints", args)
   }
@@ -767,7 +767,7 @@ func (this *QPaintEngine) systemRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine10systemRectEv
     // invoke: QRect systemRect()
-    C._ZNK12QPaintEngine10systemRectEv(this.qclsinst)
+    C.C_ZNK12QPaintEngine10systemRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "systemRect", args)
   }
@@ -790,7 +790,7 @@ func (this *QPaintEngine) drawPath(args ...interface{}) () {
     // invoke: void drawPath(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QPaintEngine8drawPathERK12QPainterPath(this.qclsinst, arg0)
+    C.C_ZN12QPaintEngine8drawPathERK12QPainterPath(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawPath", args)
   }
@@ -813,7 +813,7 @@ func (this *QPaintEngine) setPaintDevice(args ...interface{}) () {
     // invoke: void setPaintDevice(class QPaintDevice *)
     var arg0 = args[0].(QPaintDevice).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice(this.qclsinst, arg0)
+    C.C_ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "setPaintDevice", args)
   }
@@ -833,7 +833,7 @@ func (this *QPaintEngine) painter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine7painterEv
     // invoke: QPainter * painter()
-    C._ZNK12QPaintEngine7painterEv(this.qclsinst)
+    C.C_ZNK12QPaintEngine7painterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "painter", args)
   }
@@ -862,7 +862,7 @@ func (this *QPaintEngine) drawTiledPixmap(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPointF).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawTiledPixmap", args)
   }
@@ -885,7 +885,7 @@ func (this *QPaintEngine) setActive(args ...interface{}) () {
     // invoke: void setActive(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN12QPaintEngine9setActiveEb(this.qclsinst, arg0)
+    C.C_ZN12QPaintEngine9setActiveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "setActive", args)
   }
@@ -908,7 +908,7 @@ func (this *QPaintEngine) setSystemRect(args ...interface{}) () {
     // invoke: void setSystemRect(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QPaintEngine13setSystemRectERK5QRect(this.qclsinst, arg0)
+    C.C_ZN12QPaintEngine13setSystemRectERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "setSystemRect", args)
   }
@@ -928,7 +928,7 @@ func (this *QPaintEngine) syncState(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPaintEngine9syncStateEv
     // invoke: void syncState()
-    C._ZN12QPaintEngine9syncStateEv(this.qclsinst)
+    C.C_ZN12QPaintEngine9syncStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "syncState", args)
   }
@@ -948,7 +948,7 @@ func (this *QPaintEngine) FreeQPaintEngine(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPaintEngineD0Ev
     // invoke: void ~QPaintEngine()
-    C._ZN12QPaintEngineD2Ev(this.qclsinst)
+    C.C_ZN12QPaintEngineD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "~QPaintEngine", args)
   }
@@ -968,7 +968,7 @@ func (this *QPaintEngine) systemClip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine10systemClipEv
     // invoke: QRegion systemClip()
-    C._ZNK12QPaintEngine10systemClipEv(this.qclsinst)
+    C.C_ZNK12QPaintEngine10systemClipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "systemClip", args)
   }
@@ -1000,7 +1000,7 @@ func (this *QPaintEngine) fix_neg_rect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C._ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QPaintEngine", "fix_neg_rect", args)
   }
@@ -1023,7 +1023,7 @@ func (this *QPaintEngine) setSystemClip(args ...interface{}) () {
     // invoke: void setSystemClip(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QPaintEngine13setSystemClipERK7QRegion(this.qclsinst, arg0)
+    C.C_ZN12QPaintEngine13setSystemClipERK7QRegion(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "setSystemClip", args)
   }
@@ -1043,7 +1043,7 @@ func (this *QPaintEngine) coordinateOffset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine16coordinateOffsetEv
     // invoke: QPoint coordinateOffset()
-    C._ZNK12QPaintEngine16coordinateOffsetEv(this.qclsinst)
+    C.C_ZNK12QPaintEngine16coordinateOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "coordinateOffset", args)
   }
@@ -1063,7 +1063,7 @@ func (this *QPaintEngine) isActive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine8isActiveEv
     // invoke: bool isActive()
-    C._ZNK12QPaintEngine8isActiveEv(this.qclsinst)
+    C.C_ZNK12QPaintEngine8isActiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "isActive", args)
   }
@@ -1089,13 +1089,13 @@ func (this *QPaintEngine) drawEllipse(args ...interface{}) () {
     // invoke: void drawEllipse(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QPaintEngine11drawEllipseERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN12QPaintEngine11drawEllipseERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN12QPaintEngine11drawEllipseERK5QRect
     // invoke: void drawEllipse(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QPaintEngine11drawEllipseERK5QRect(this.qclsinst, arg0)
+    C.C_ZN12QPaintEngine11drawEllipseERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawEllipse", args)
   }
@@ -1121,7 +1121,7 @@ func (this *QPaintEngine) drawTextItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTextItem).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem(this.qclsinst, arg0, arg1)
+    C.C_ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawTextItem", args)
   }
@@ -1141,7 +1141,7 @@ func (this *QPaintEngine) isExtended(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine10isExtendedEv
     // invoke: bool isExtended()
-    C._ZNK12QPaintEngine10isExtendedEv(this.qclsinst)
+    C.C_ZNK12QPaintEngine10isExtendedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "isExtended", args)
   }
@@ -1171,7 +1171,7 @@ func (this *QPaintEngine) drawLines(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN12QPaintEngine9drawLinesEPK5QLinei(this.qclsinst, arg0, arg1)
+    C.C_ZN12QPaintEngine9drawLinesEPK5QLinei(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN12QPaintEngine9drawLinesEPK6QLineFi
     // invoke: void drawLines(const class QLineF *, int)
@@ -1179,7 +1179,7 @@ func (this *QPaintEngine) drawLines(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN12QPaintEngine9drawLinesEPK6QLineFi(this.qclsinst, arg0, arg1)
+    C.C_ZN12QPaintEngine9drawLinesEPK6QLineFi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawLines", args)
   }

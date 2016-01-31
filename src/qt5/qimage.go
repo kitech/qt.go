@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qimage.h
 // dst-file: /src/gui/qimage.go
 //
@@ -29,149 +29,149 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QImage::load(QIODevice * device, const char * format);
-extern void _ZN6QImage4loadEP9QIODevicePKc(void* qthis, void* arg0, unsigned char* arg1); // 4
+extern void C_ZN6QImage4loadEP9QIODevicePKc(void* qthis, void* arg0, unsigned char* arg1); // 4
   // proto:  bool QImage::load(const QString & fileName, const char * format);
-extern void _ZN6QImage4loadERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1); // 4
+extern void C_ZN6QImage4loadERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1); // 4
   // proto: static QImage::Format QImage::toImageFormat(QPixelFormat format);
-extern void _ZN6QImage13toImageFormatE12QPixelFormat(void* arg0); // 4
+extern void C_ZN6QImage13toImageFormatE12QPixelFormat(void* arg0); // 4
   // proto:  QRgb QImage::color(int i);
-extern void _ZNK6QImage5colorEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK6QImage5colorEi(void* qthis, int32_t arg0); // 4
   // proto:  QString QImage::text(const QString & key);
-extern void _ZNK6QImage4textERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK6QImage4textERK7QString(void* qthis, void* arg0); // 4
   // proto:  QPoint QImage::offset();
-extern void _ZNK6QImage6offsetEv(void* qthis); // 4
+extern void C_ZNK6QImage6offsetEv(void* qthis); // 4
   // proto:  const uchar * QImage::constScanLine(int );
-extern void _ZNK6QImage13constScanLineEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK6QImage13constScanLineEi(void* qthis, int32_t arg0); // 4
   // proto:  int QImage::height();
-extern void _ZNK6QImage6heightEv(void* qthis); // 4
+extern void C_ZNK6QImage6heightEv(void* qthis); // 4
   // proto: static QImage QImage::fromData(const uchar * data, int size, const char * format);
-extern void _ZN6QImage8fromDataEPKhiPKc(unsigned char* arg0, int32_t arg1, unsigned char* arg2); // 4
+extern void C_ZN6QImage8fromDataEPKhiPKc(unsigned char* arg0, int32_t arg1, unsigned char* arg2); // 4
   // proto: static QImage QImage::fromData(const QByteArray & data, const char * format);
-extern void _ZN6QImage8fromDataERK10QByteArrayPKc(void* arg0, unsigned char* arg1); // 2
+extern void C_ZN6QImage8fromDataERK10QByteArrayPKc(void* arg0, unsigned char* arg1); // 2
   // proto:  uchar * QImage::scanLine(int );
-extern void _ZN6QImage8scanLineEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QImage8scanLineEi(void* qthis, int32_t arg0); // 4
   // proto:  int QImage::byteCount();
-extern void _ZNK6QImage9byteCountEv(void* qthis); // 4
+extern void C_ZNK6QImage9byteCountEv(void* qthis); // 4
   // proto:  qint64 QImage::cacheKey();
-extern void _ZNK6QImage8cacheKeyEv(void* qthis); // 4
+extern void C_ZNK6QImage8cacheKeyEv(void* qthis); // 4
   // proto:  void QImage::setColorCount(int );
-extern void _ZN6QImage13setColorCountEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QImage13setColorCountEi(void* qthis, int32_t arg0); // 4
   // proto:  const uchar * QImage::constBits();
-extern void _ZNK6QImage9constBitsEv(void* qthis); // 4
+extern void C_ZNK6QImage9constBitsEv(void* qthis); // 4
   // proto: static QMatrix QImage::trueMatrix(const QMatrix & , int w, int h);
-extern void _ZN6QImage10trueMatrixERK7QMatrixii(void* arg0, int32_t arg1, int32_t arg2); // 4
+extern void C_ZN6QImage10trueMatrixERK7QMatrixii(void* arg0, int32_t arg1, int32_t arg2); // 4
   // proto: static QTransform QImage::trueMatrix(const QTransform & , int w, int h);
-extern void _ZN6QImage10trueMatrixERK10QTransformii(void* arg0, int32_t arg1, int32_t arg2); // 4
+extern void C_ZN6QImage10trueMatrixERK10QTransformii(void* arg0, int32_t arg1, int32_t arg2); // 4
   // proto:  void QImage::detach();
-extern void _ZN6QImage6detachEv(void* qthis); // 4
+extern void C_ZN6QImage6detachEv(void* qthis); // 4
   // proto:  QPaintEngine * QImage::paintEngine();
-extern void _ZNK6QImage11paintEngineEv(void* qthis); // 4
+extern void C_ZNK6QImage11paintEngineEv(void* qthis); // 4
   // proto:  QSize QImage::size();
-extern void _ZNK6QImage4sizeEv(void* qthis); // 4
+extern void C_ZNK6QImage4sizeEv(void* qthis); // 4
   // proto:  int QImage::devType();
-extern void _ZNK6QImage7devTypeEv(void* qthis); // 4
+extern void C_ZNK6QImage7devTypeEv(void* qthis); // 4
   // proto:  QImage QImage::mirrored(bool horizontally, bool vertically);
-extern void _ZNKR6QImage8mirroredEbb(void* qthis, bool arg0, bool arg1); // 2
+extern void C_ZNKR6QImage8mirroredEbb(void* qthis, bool arg0, bool arg1); // 2
   // proto:  int QImage::width();
-extern void _ZNK6QImage5widthEv(void* qthis); // 4
+extern void C_ZNK6QImage5widthEv(void* qthis); // 4
   // proto:  bool QImage::valid(int x, int y);
-extern void _ZNK6QImage5validEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZNK6QImage5validEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  bool QImage::valid(const QPoint & pt);
-extern void _ZNK6QImage5validERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZNK6QImage5validERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  void QImage::setDevicePixelRatio(qreal scaleFactor);
-extern void _ZN6QImage19setDevicePixelRatioEd(void* qthis, double arg0); // 4
+extern void C_ZN6QImage19setDevicePixelRatioEd(void* qthis, double arg0); // 4
   // proto:  QStringList QImage::textKeys();
-extern void _ZNK6QImage8textKeysEv(void* qthis); // 4
+extern void C_ZNK6QImage8textKeysEv(void* qthis); // 4
   // proto:  void QImage::setOffset(const QPoint & );
-extern void _ZN6QImage9setOffsetERK6QPoint(void* qthis, void* arg0); // 4
+extern void C_ZN6QImage9setOffsetERK6QPoint(void* qthis, void* arg0); // 4
   // proto:  bool QImage::save(const QString & fileName, const char * format, int quality);
-extern void _ZNK6QImage4saveERK7QStringPKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2); // 4
+extern void C_ZNK6QImage4saveERK7QStringPKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2); // 4
   // proto:  bool QImage::save(QIODevice * device, const char * format, int quality);
-extern void _ZNK6QImage4saveEP9QIODevicePKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2); // 4
+extern void C_ZNK6QImage4saveEP9QIODevicePKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2); // 4
   // proto:  uchar * QImage::bits();
-extern void _ZN6QImage4bitsEv(void* qthis); // 4
+extern void C_ZN6QImage4bitsEv(void* qthis); // 4
   // proto:  QRgb QImage::pixel(const QPoint & pt);
-extern void _ZNK6QImage5pixelERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZNK6QImage5pixelERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  QRgb QImage::pixel(int x, int y);
-extern void _ZNK6QImage5pixelEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZNK6QImage5pixelEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QImage::swap(QImage & other);
-extern void _ZN6QImage4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN6QImage4swapERS_(void* qthis, void* arg0); // 2
   // proto:  bool QImage::isDetached();
-extern void _ZNK6QImage10isDetachedEv(void* qthis); // 4
+extern void C_ZNK6QImage10isDetachedEv(void* qthis); // 4
   // proto:  QImage QImage::alphaChannel();
-extern void _ZNK6QImage12alphaChannelEv(void* qthis); // 4
+extern void C_ZNK6QImage12alphaChannelEv(void* qthis); // 4
   // proto:  void QImage::setPixel(int x, int y, uint index_or_rgb);
-extern void _ZN6QImage8setPixelEiij(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2); // 4
+extern void C_ZN6QImage8setPixelEiij(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2); // 4
   // proto:  void QImage::setPixel(const QPoint & pt, uint index_or_rgb);
-extern void _ZN6QImage8setPixelERK6QPointj(void* qthis, void* arg0, int32_t arg1); // 2
+extern void C_ZN6QImage8setPixelERK6QPointj(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  void QImage::setDotsPerMeterY(int );
-extern void _ZN6QImage16setDotsPerMeterYEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QImage16setDotsPerMeterYEi(void* qthis, int32_t arg0); // 4
   // proto:  QImage::Format QImage::format();
-extern void _ZNK6QImage6formatEv(void* qthis); // 4
+extern void C_ZNK6QImage6formatEv(void* qthis); // 4
   // proto:  bool QImage::hasAlphaChannel();
-extern void _ZNK6QImage15hasAlphaChannelEv(void* qthis); // 4
+extern void C_ZNK6QImage15hasAlphaChannelEv(void* qthis); // 4
   // proto:  int QImage::bitPlaneCount();
-extern void _ZNK6QImage13bitPlaneCountEv(void* qthis); // 4
+extern void C_ZNK6QImage13bitPlaneCountEv(void* qthis); // 4
   // proto:  QPixelFormat QImage::pixelFormat();
-extern void _ZNK6QImage11pixelFormatEv(void* qthis); // 4
+extern void C_ZNK6QImage11pixelFormatEv(void* qthis); // 4
   // proto:  QImage QImage::rgbSwapped();
-extern void _ZNKR6QImage10rgbSwappedEv(void* qthis); // 2
+extern void C_ZNKR6QImage10rgbSwappedEv(void* qthis); // 2
   // proto:  bool QImage::isGrayscale();
-extern void _ZNK6QImage11isGrayscaleEv(void* qthis); // 4
+extern void C_ZNK6QImage11isGrayscaleEv(void* qthis); // 4
   // proto:  QImage QImage::createHeuristicMask(bool clipTight);
-extern void _ZNK6QImage19createHeuristicMaskEb(void* qthis, bool arg0); // 4
+extern void C_ZNK6QImage19createHeuristicMaskEb(void* qthis, bool arg0); // 4
   // proto:  int QImage::bytesPerLine();
-extern void _ZNK6QImage12bytesPerLineEv(void* qthis); // 4
+extern void C_ZNK6QImage12bytesPerLineEv(void* qthis); // 4
   // proto:  QImage QImage::copy(const QRect & rect);
-extern void _ZNK6QImage4copyERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZNK6QImage4copyERK5QRect(void* qthis, void* arg0); // 4
   // proto:  QImage QImage::copy(int x, int y, int w, int h);
-extern void _ZNK6QImage4copyEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
+extern void C_ZNK6QImage4copyEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
   // proto:  int QImage::dotsPerMeterY();
-extern void _ZNK6QImage13dotsPerMeterYEv(void* qthis); // 4
+extern void C_ZNK6QImage13dotsPerMeterYEv(void* qthis); // 4
   // proto:  int QImage::dotsPerMeterX();
-extern void _ZNK6QImage13dotsPerMeterXEv(void* qthis); // 4
+extern void C_ZNK6QImage13dotsPerMeterXEv(void* qthis); // 4
   // proto:  QRect QImage::rect();
-extern void _ZNK6QImage4rectEv(void* qthis); // 4
+extern void C_ZNK6QImage4rectEv(void* qthis); // 4
   // proto:  void QImage::setDotsPerMeterX(int );
-extern void _ZN6QImage16setDotsPerMeterXEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QImage16setDotsPerMeterXEi(void* qthis, int32_t arg0); // 4
   // proto:  void QImage::setAlphaChannel(const QImage & alphaChannel);
-extern void _ZN6QImage15setAlphaChannelERKS_(void* qthis, void* arg0); // 4
+extern void C_ZN6QImage15setAlphaChannelERKS_(void* qthis, void* arg0); // 4
   // proto:  void QImage::setColor(int i, QRgb c);
-extern void _ZN6QImage8setColorEij(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN6QImage8setColorEij(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  qreal QImage::devicePixelRatio();
-extern void _ZNK6QImage16devicePixelRatioEv(void* qthis); // 4
+extern void C_ZNK6QImage16devicePixelRatioEv(void* qthis); // 4
   // proto:  bool QImage::loadFromData(const uchar * buf, int len, const char * format);
-extern void _ZN6QImage12loadFromDataEPKhiPKc(void* qthis, unsigned char* arg0, int32_t arg1, unsigned char* arg2); // 4
+extern void C_ZN6QImage12loadFromDataEPKhiPKc(void* qthis, unsigned char* arg0, int32_t arg1, unsigned char* arg2); // 4
   // proto:  bool QImage::loadFromData(const QByteArray & data, const char * aformat);
-extern void _ZN6QImage12loadFromDataERK10QByteArrayPKc(void* qthis, void* arg0, unsigned char* arg1); // 2
+extern void C_ZN6QImage12loadFromDataERK10QByteArrayPKc(void* qthis, void* arg0, unsigned char* arg1); // 2
   // proto:  void QImage::setText(const QString & key, const QString & value);
-extern void _ZN6QImage7setTextERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN6QImage7setTextERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  bool QImage::allGray();
-extern void _ZNK6QImage7allGrayEv(void* qthis); // 4
+extern void C_ZNK6QImage7allGrayEv(void* qthis); // 4
   // proto:  int QImage::colorCount();
-extern void _ZNK6QImage10colorCountEv(void* qthis); // 4
+extern void C_ZNK6QImage10colorCountEv(void* qthis); // 4
   // proto:  bool QImage::isNull();
-extern void _ZNK6QImage6isNullEv(void* qthis); // 4
+extern void C_ZNK6QImage6isNullEv(void* qthis); // 4
   // proto:  int QImage::depth();
-extern void _ZNK6QImage5depthEv(void* qthis); // 4
+extern void C_ZNK6QImage5depthEv(void* qthis); // 4
   // proto:  void QImage::~QImage();
-extern void _ZN6QImageD2Ev(void* qthis); // 4
+extern void C_ZN6QImageD2Ev(void* qthis); // 4
   // proto:  int QImage::pixelIndex(int x, int y);
-extern void _ZNK6QImage10pixelIndexEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZNK6QImage10pixelIndexEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  int QImage::pixelIndex(const QPoint & pt);
-extern void _ZNK6QImage10pixelIndexERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZNK6QImage10pixelIndexERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  void QImage::fill(uint pixel);
-extern void _ZN6QImage4fillEj(void* qthis, int32_t arg0); // 4
+extern void C_ZN6QImage4fillEj(void* qthis, int32_t arg0); // 4
   // proto:  void QImage::fill(const QColor & color);
-extern void _ZN6QImage4fillERK6QColor(void* qthis, void* arg0); // 4
+extern void C_ZN6QImage4fillERK6QColor(void* qthis, void* arg0); // 4
   // proto:  QVector<QRgb> QImage::colorTable();
-extern void _ZNK6QImage10colorTableEv(void* qthis); // 4
+extern void C_ZNK6QImage10colorTableEv(void* qthis); // 4
   // proto:  void QImage::QImage();
-extern void _ZN6QImageC2Ev(void* qthis); // 3
+extern void C_ZN6QImageC2Ev(void* qthis); // 3
   // proto:  void QImage::QImage(const QString & fileName, const char * format);
-extern void _ZN6QImageC2ERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1); // 3
+extern void C_ZN6QImageC2ERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1); // 3
   // proto:  void QImage::QImage(const QImage & );
-extern void _ZN6QImageC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN6QImageC2ERKS_(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -213,7 +213,7 @@ func (this *QImage) load(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C._ZN6QImage4loadEP9QIODevicePKc(this.qclsinst, arg0, arg1)
+    C.C_ZN6QImage4loadEP9QIODevicePKc(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN6QImage4loadERK7QStringPKc
     // invoke: bool load(const class QString &, const char *)
@@ -221,7 +221,7 @@ func (this *QImage) load(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C._ZN6QImage4loadERK7QStringPKc(this.qclsinst, arg0, arg1)
+    C.C_ZN6QImage4loadERK7QStringPKc(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QImage", "load", args)
   }
@@ -244,7 +244,7 @@ func (this *QImage) toImageFormat_s(args ...interface{}) () {
     // invoke: QImage::Format toImageFormat(class QPixelFormat)
     var arg0 = args[0].(QPixelFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QImage13toImageFormatE12QPixelFormat(arg0)
+    C.C_ZN6QImage13toImageFormatE12QPixelFormat(arg0)
   default:
     qtrt.ErrorResolve("QImage", "toImageFormat", args)
   }
@@ -267,7 +267,7 @@ func (this *QImage) color(args ...interface{}) () {
     // invoke: QRgb color(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK6QImage5colorEi(this.qclsinst, arg0)
+    C.C_ZNK6QImage5colorEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "color", args)
   }
@@ -290,7 +290,7 @@ func (this *QImage) text(args ...interface{}) () {
     // invoke: QString text(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QImage4textERK7QString(this.qclsinst, arg0)
+    C.C_ZNK6QImage4textERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "text", args)
   }
@@ -310,7 +310,7 @@ func (this *QImage) offset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage6offsetEv
     // invoke: QPoint offset()
-    C._ZNK6QImage6offsetEv(this.qclsinst)
+    C.C_ZNK6QImage6offsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "offset", args)
   }
@@ -333,7 +333,7 @@ func (this *QImage) constScanLine(args ...interface{}) () {
     // invoke: const uchar * constScanLine(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK6QImage13constScanLineEi(this.qclsinst, arg0)
+    C.C_ZNK6QImage13constScanLineEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "constScanLine", args)
   }
@@ -353,7 +353,7 @@ func (this *QImage) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage6heightEv
     // invoke: int height()
-    C._ZNK6QImage6heightEv(this.qclsinst)
+    C.C_ZNK6QImage6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "height", args)
   }
@@ -386,7 +386,7 @@ func (this *QImage) fromData_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).Pointer()))
     if false {fmt.Println(arg2)}
-    C._ZN6QImage8fromDataEPKhiPKc(arg0, arg1, arg2)
+    C.C_ZN6QImage8fromDataEPKhiPKc(arg0, arg1, arg2)
   case 1:
     // invoke: _ZN6QImage8fromDataERK10QByteArrayPKc
     // invoke: QImage fromData(const class QByteArray &, const char *)
@@ -394,7 +394,7 @@ func (this *QImage) fromData_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C._ZN6QImage8fromDataERK10QByteArrayPKc(arg0, arg1)
+    C.C_ZN6QImage8fromDataERK10QByteArrayPKc(arg0, arg1)
   default:
     qtrt.ErrorResolve("QImage", "fromData", args)
   }
@@ -417,7 +417,7 @@ func (this *QImage) scanLine(args ...interface{}) () {
     // invoke: uchar * scanLine(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QImage8scanLineEi(this.qclsinst, arg0)
+    C.C_ZN6QImage8scanLineEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "scanLine", args)
   }
@@ -437,7 +437,7 @@ func (this *QImage) byteCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage9byteCountEv
     // invoke: int byteCount()
-    C._ZNK6QImage9byteCountEv(this.qclsinst)
+    C.C_ZNK6QImage9byteCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "byteCount", args)
   }
@@ -457,7 +457,7 @@ func (this *QImage) cacheKey(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage8cacheKeyEv
     // invoke: qint64 cacheKey()
-    C._ZNK6QImage8cacheKeyEv(this.qclsinst)
+    C.C_ZNK6QImage8cacheKeyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "cacheKey", args)
   }
@@ -480,7 +480,7 @@ func (this *QImage) setColorCount(args ...interface{}) () {
     // invoke: void setColorCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QImage13setColorCountEi(this.qclsinst, arg0)
+    C.C_ZN6QImage13setColorCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "setColorCount", args)
   }
@@ -500,7 +500,7 @@ func (this *QImage) constBits(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage9constBitsEv
     // invoke: const uchar * constBits()
-    C._ZNK6QImage9constBitsEv(this.qclsinst)
+    C.C_ZNK6QImage9constBitsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "constBits", args)
   }
@@ -534,7 +534,7 @@ func (this *QImage) trueMatrix_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN6QImage10trueMatrixERK7QMatrixii(arg0, arg1, arg2)
+    C.C_ZN6QImage10trueMatrixERK7QMatrixii(arg0, arg1, arg2)
   case 1:
     // invoke: _ZN6QImage10trueMatrixERK10QTransformii
     // invoke: QTransform trueMatrix(const class QTransform &, int, int)
@@ -544,7 +544,7 @@ func (this *QImage) trueMatrix_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN6QImage10trueMatrixERK10QTransformii(arg0, arg1, arg2)
+    C.C_ZN6QImage10trueMatrixERK10QTransformii(arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QImage", "trueMatrix", args)
   }
@@ -564,7 +564,7 @@ func (this *QImage) detach(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QImage6detachEv
     // invoke: void detach()
-    C._ZN6QImage6detachEv(this.qclsinst)
+    C.C_ZN6QImage6detachEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "detach", args)
   }
@@ -584,7 +584,7 @@ func (this *QImage) paintEngine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage11paintEngineEv
     // invoke: QPaintEngine * paintEngine()
-    C._ZNK6QImage11paintEngineEv(this.qclsinst)
+    C.C_ZNK6QImage11paintEngineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "paintEngine", args)
   }
@@ -604,7 +604,7 @@ func (this *QImage) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage4sizeEv
     // invoke: QSize size()
-    C._ZNK6QImage4sizeEv(this.qclsinst)
+    C.C_ZNK6QImage4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "size", args)
   }
@@ -624,7 +624,7 @@ func (this *QImage) devType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage7devTypeEv
     // invoke: int devType()
-    C._ZNK6QImage7devTypeEv(this.qclsinst)
+    C.C_ZNK6QImage7devTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "devType", args)
   }
@@ -650,7 +650,7 @@ func (this *QImage) mirrored(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZNKR6QImage8mirroredEbb(this.qclsinst, arg0, arg1)
+    C.C_ZNKR6QImage8mirroredEbb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QImage", "mirrored", args)
   }
@@ -670,7 +670,7 @@ func (this *QImage) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage5widthEv
     // invoke: int width()
-    C._ZNK6QImage5widthEv(this.qclsinst)
+    C.C_ZNK6QImage5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "width", args)
   }
@@ -699,13 +699,13 @@ func (this *QImage) valid(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK6QImage5validEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK6QImage5validEii(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK6QImage5validERK6QPoint
     // invoke: bool valid(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QImage5validERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK6QImage5validERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "valid", args)
   }
@@ -728,7 +728,7 @@ func (this *QImage) setDevicePixelRatio(args ...interface{}) () {
     // invoke: void setDevicePixelRatio(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QImage19setDevicePixelRatioEd(this.qclsinst, arg0)
+    C.C_ZN6QImage19setDevicePixelRatioEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "setDevicePixelRatio", args)
   }
@@ -748,7 +748,7 @@ func (this *QImage) textKeys(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage8textKeysEv
     // invoke: QStringList textKeys()
-    C._ZNK6QImage8textKeysEv(this.qclsinst)
+    C.C_ZNK6QImage8textKeysEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "textKeys", args)
   }
@@ -771,7 +771,7 @@ func (this *QImage) setOffset(args ...interface{}) () {
     // invoke: void setOffset(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QImage9setOffsetERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN6QImage9setOffsetERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "setOffset", args)
   }
@@ -805,7 +805,7 @@ func (this *QImage) save(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZNK6QImage4saveERK7QStringPKci(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK6QImage4saveERK7QStringPKci(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZNK6QImage4saveEP9QIODevicePKci
     // invoke: bool save(class QIODevice *, const char *, int)
@@ -815,7 +815,7 @@ func (this *QImage) save(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZNK6QImage4saveEP9QIODevicePKci(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK6QImage4saveEP9QIODevicePKci(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QImage", "save", args)
   }
@@ -835,7 +835,7 @@ func (this *QImage) bits(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QImage4bitsEv
     // invoke: uchar * bits()
-    C._ZN6QImage4bitsEv(this.qclsinst)
+    C.C_ZN6QImage4bitsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "bits", args)
   }
@@ -862,7 +862,7 @@ func (this *QImage) pixel(args ...interface{}) () {
     // invoke: QRgb pixel(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QImage5pixelERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK6QImage5pixelERK6QPoint(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK6QImage5pixelEii
     // invoke: QRgb pixel(int, int)
@@ -870,7 +870,7 @@ func (this *QImage) pixel(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK6QImage5pixelEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK6QImage5pixelEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QImage", "pixel", args)
   }
@@ -893,7 +893,7 @@ func (this *QImage) swap(args ...interface{}) () {
     // invoke: void swap(class QImage &)
     var arg0 = args[0].(QImage).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QImage4swapERS_(this.qclsinst, arg0)
+    C.C_ZN6QImage4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "swap", args)
   }
@@ -913,7 +913,7 @@ func (this *QImage) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage10isDetachedEv
     // invoke: bool isDetached()
-    C._ZNK6QImage10isDetachedEv(this.qclsinst)
+    C.C_ZNK6QImage10isDetachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "isDetached", args)
   }
@@ -933,7 +933,7 @@ func (this *QImage) alphaChannel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage12alphaChannelEv
     // invoke: QImage alphaChannel()
-    C._ZNK6QImage12alphaChannelEv(this.qclsinst)
+    C.C_ZNK6QImage12alphaChannelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "alphaChannel", args)
   }
@@ -966,7 +966,7 @@ func (this *QImage) setPixel(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN6QImage8setPixelEiij(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN6QImage8setPixelEiij(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN6QImage8setPixelERK6QPointj
     // invoke: void setPixel(const class QPoint &, uint)
@@ -974,7 +974,7 @@ func (this *QImage) setPixel(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN6QImage8setPixelERK6QPointj(this.qclsinst, arg0, arg1)
+    C.C_ZN6QImage8setPixelERK6QPointj(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QImage", "setPixel", args)
   }
@@ -997,7 +997,7 @@ func (this *QImage) setDotsPerMeterY(args ...interface{}) () {
     // invoke: void setDotsPerMeterY(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QImage16setDotsPerMeterYEi(this.qclsinst, arg0)
+    C.C_ZN6QImage16setDotsPerMeterYEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "setDotsPerMeterY", args)
   }
@@ -1017,7 +1017,7 @@ func (this *QImage) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage6formatEv
     // invoke: QImage::Format format()
-    C._ZNK6QImage6formatEv(this.qclsinst)
+    C.C_ZNK6QImage6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "format", args)
   }
@@ -1037,7 +1037,7 @@ func (this *QImage) hasAlphaChannel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage15hasAlphaChannelEv
     // invoke: bool hasAlphaChannel()
-    C._ZNK6QImage15hasAlphaChannelEv(this.qclsinst)
+    C.C_ZNK6QImage15hasAlphaChannelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "hasAlphaChannel", args)
   }
@@ -1057,7 +1057,7 @@ func (this *QImage) bitPlaneCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage13bitPlaneCountEv
     // invoke: int bitPlaneCount()
-    C._ZNK6QImage13bitPlaneCountEv(this.qclsinst)
+    C.C_ZNK6QImage13bitPlaneCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "bitPlaneCount", args)
   }
@@ -1077,7 +1077,7 @@ func (this *QImage) pixelFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage11pixelFormatEv
     // invoke: QPixelFormat pixelFormat()
-    C._ZNK6QImage11pixelFormatEv(this.qclsinst)
+    C.C_ZNK6QImage11pixelFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "pixelFormat", args)
   }
@@ -1097,7 +1097,7 @@ func (this *QImage) rgbSwapped(args ...interface{}) () {
   case 0:
     // invoke: _ZNKR6QImage10rgbSwappedEv
     // invoke: QImage rgbSwapped()
-    C._ZNKR6QImage10rgbSwappedEv(this.qclsinst)
+    C.C_ZNKR6QImage10rgbSwappedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "rgbSwapped", args)
   }
@@ -1117,7 +1117,7 @@ func (this *QImage) isGrayscale(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage11isGrayscaleEv
     // invoke: bool isGrayscale()
-    C._ZNK6QImage11isGrayscaleEv(this.qclsinst)
+    C.C_ZNK6QImage11isGrayscaleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "isGrayscale", args)
   }
@@ -1140,7 +1140,7 @@ func (this *QImage) createHeuristicMask(args ...interface{}) () {
     // invoke: QImage createHeuristicMask(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZNK6QImage19createHeuristicMaskEb(this.qclsinst, arg0)
+    C.C_ZNK6QImage19createHeuristicMaskEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "createHeuristicMask", args)
   }
@@ -1160,7 +1160,7 @@ func (this *QImage) bytesPerLine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage12bytesPerLineEv
     // invoke: int bytesPerLine()
-    C._ZNK6QImage12bytesPerLineEv(this.qclsinst)
+    C.C_ZNK6QImage12bytesPerLineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "bytesPerLine", args)
   }
@@ -1189,7 +1189,7 @@ func (this *QImage) copy(args ...interface{}) () {
     // invoke: QImage copy(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QImage4copyERK5QRect(this.qclsinst, arg0)
+    C.C_ZNK6QImage4copyERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK6QImage4copyEiiii
     // invoke: QImage copy(int, int, int, int)
@@ -1201,7 +1201,7 @@ func (this *QImage) copy(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZNK6QImage4copyEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK6QImage4copyEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QImage", "copy", args)
   }
@@ -1221,7 +1221,7 @@ func (this *QImage) dotsPerMeterY(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage13dotsPerMeterYEv
     // invoke: int dotsPerMeterY()
-    C._ZNK6QImage13dotsPerMeterYEv(this.qclsinst)
+    C.C_ZNK6QImage13dotsPerMeterYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "dotsPerMeterY", args)
   }
@@ -1241,7 +1241,7 @@ func (this *QImage) dotsPerMeterX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage13dotsPerMeterXEv
     // invoke: int dotsPerMeterX()
-    C._ZNK6QImage13dotsPerMeterXEv(this.qclsinst)
+    C.C_ZNK6QImage13dotsPerMeterXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "dotsPerMeterX", args)
   }
@@ -1261,7 +1261,7 @@ func (this *QImage) rect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage4rectEv
     // invoke: QRect rect()
-    C._ZNK6QImage4rectEv(this.qclsinst)
+    C.C_ZNK6QImage4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "rect", args)
   }
@@ -1284,7 +1284,7 @@ func (this *QImage) setDotsPerMeterX(args ...interface{}) () {
     // invoke: void setDotsPerMeterX(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QImage16setDotsPerMeterXEi(this.qclsinst, arg0)
+    C.C_ZN6QImage16setDotsPerMeterXEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "setDotsPerMeterX", args)
   }
@@ -1307,7 +1307,7 @@ func (this *QImage) setAlphaChannel(args ...interface{}) () {
     // invoke: void setAlphaChannel(const class QImage &)
     var arg0 = args[0].(QImage).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QImage15setAlphaChannelERKS_(this.qclsinst, arg0)
+    C.C_ZN6QImage15setAlphaChannelERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "setAlphaChannel", args)
   }
@@ -1333,7 +1333,7 @@ func (this *QImage) setColor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN6QImage8setColorEij(this.qclsinst, arg0, arg1)
+    C.C_ZN6QImage8setColorEij(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QImage", "setColor", args)
   }
@@ -1353,7 +1353,7 @@ func (this *QImage) devicePixelRatio(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage16devicePixelRatioEv
     // invoke: qreal devicePixelRatio()
-    C._ZNK6QImage16devicePixelRatioEv(this.qclsinst)
+    C.C_ZNK6QImage16devicePixelRatioEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "devicePixelRatio", args)
   }
@@ -1386,7 +1386,7 @@ func (this *QImage) loadFromData(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).Pointer()))
     if false {fmt.Println(arg2)}
-    C._ZN6QImage12loadFromDataEPKhiPKc(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN6QImage12loadFromDataEPKhiPKc(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN6QImage12loadFromDataERK10QByteArrayPKc
     // invoke: bool loadFromData(const class QByteArray &, const char *)
@@ -1394,7 +1394,7 @@ func (this *QImage) loadFromData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C._ZN6QImage12loadFromDataERK10QByteArrayPKc(this.qclsinst, arg0, arg1)
+    C.C_ZN6QImage12loadFromDataERK10QByteArrayPKc(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QImage", "loadFromData", args)
   }
@@ -1420,7 +1420,7 @@ func (this *QImage) setText(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN6QImage7setTextERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN6QImage7setTextERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QImage", "setText", args)
   }
@@ -1440,7 +1440,7 @@ func (this *QImage) allGray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage7allGrayEv
     // invoke: bool allGray()
-    C._ZNK6QImage7allGrayEv(this.qclsinst)
+    C.C_ZNK6QImage7allGrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "allGray", args)
   }
@@ -1460,7 +1460,7 @@ func (this *QImage) colorCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage10colorCountEv
     // invoke: int colorCount()
-    C._ZNK6QImage10colorCountEv(this.qclsinst)
+    C.C_ZNK6QImage10colorCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "colorCount", args)
   }
@@ -1480,7 +1480,7 @@ func (this *QImage) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage6isNullEv
     // invoke: bool isNull()
-    C._ZNK6QImage6isNullEv(this.qclsinst)
+    C.C_ZNK6QImage6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "isNull", args)
   }
@@ -1500,7 +1500,7 @@ func (this *QImage) depth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage5depthEv
     // invoke: int depth()
-    C._ZNK6QImage5depthEv(this.qclsinst)
+    C.C_ZNK6QImage5depthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "depth", args)
   }
@@ -1520,7 +1520,7 @@ func (this *QImage) FreeQImage(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QImageD0Ev
     // invoke: void ~QImage()
-    C._ZN6QImageD2Ev(this.qclsinst)
+    C.C_ZN6QImageD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "~QImage", args)
   }
@@ -1549,13 +1549,13 @@ func (this *QImage) pixelIndex(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK6QImage10pixelIndexEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK6QImage10pixelIndexEii(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK6QImage10pixelIndexERK6QPoint
     // invoke: int pixelIndex(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QImage10pixelIndexERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK6QImage10pixelIndexERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "pixelIndex", args)
   }
@@ -1581,13 +1581,13 @@ func (this *QImage) fill(args ...interface{}) () {
     // invoke: void fill(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN6QImage4fillEj(this.qclsinst, arg0)
+    C.C_ZN6QImage4fillEj(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN6QImage4fillERK6QColor
     // invoke: void fill(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QImage4fillERK6QColor(this.qclsinst, arg0)
+    C.C_ZN6QImage4fillERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImage", "fill", args)
   }
@@ -1607,7 +1607,7 @@ func (this *QImage) colorTable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage10colorTableEv
     // invoke: QVector<QRgb> colorTable()
-    C._ZNK6QImage10colorTableEv(this.qclsinst)
+    C.C_ZNK6QImage10colorTableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImage", "colorTable", args)
   }
@@ -1636,7 +1636,7 @@ func NewQImage(args ...interface{}) QImage {
     // invoke: void QImage()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QImageC2Ev(qthis)
+    C.C_ZN6QImageC2Ev(qthis)
   case 1:
     // invoke: _ZN6QImageC1ERK7QStringPKc
     // invoke: void QImage(const class QString &, const char *)
@@ -1646,7 +1646,7 @@ func NewQImage(args ...interface{}) QImage {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QImageC2ERK7QStringPKc(qthis, arg0, arg1)
+    C.C_ZN6QImageC2ERK7QStringPKc(qthis, arg0, arg1)
   case 2:
     // invoke: _ZN6QImageC1ERKS_
     // invoke: void QImage(const class QImage &)
@@ -1654,7 +1654,7 @@ func NewQImage(args ...interface{}) QImage {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QImageC2ERKS_(qthis, arg0)
+    C.C_ZN6QImageC2ERKS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QImage", "QImage", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qaccessiblebridge.h
 // dst-file: /src/gui/qaccessiblebridge.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
-extern void _ZNK23QAccessibleBridgePlugin10metaObjectEv(void* qthis); // 4
+extern void C_ZNK23QAccessibleBridgePlugin10metaObjectEv(void* qthis); // 4
   // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
-extern void _ZN23QAccessibleBridgePluginC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN23QAccessibleBridgePluginC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
-extern void _ZN23QAccessibleBridgePluginD2Ev(void* qthis); // 4
+extern void C_ZN23QAccessibleBridgePluginD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -71,7 +71,7 @@ func (this *QAccessibleBridgePlugin) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QAccessibleBridgePlugin10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK23QAccessibleBridgePlugin10metaObjectEv(this.qclsinst)
+    C.C_ZNK23QAccessibleBridgePlugin10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleBridgePlugin", "metaObject", args)
   }
@@ -96,7 +96,7 @@ func NewQAccessibleBridgePlugin(args ...interface{}) QAccessibleBridgePlugin {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN23QAccessibleBridgePluginC2EP7QObject(qthis, arg0)
+    C.C_ZN23QAccessibleBridgePluginC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleBridgePlugin", "QAccessibleBridgePlugin", args)
   }
@@ -117,7 +117,7 @@ func (this *QAccessibleBridgePlugin) FreeQAccessibleBridgePlugin(args ...interfa
   case 0:
     // invoke: _ZN23QAccessibleBridgePluginD0Ev
     // invoke: void ~QAccessibleBridgePlugin()
-    C._ZN23QAccessibleBridgePluginD2Ev(this.qclsinst)
+    C.C_ZN23QAccessibleBridgePluginD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleBridgePlugin", "~QAccessibleBridgePlugin", args)
   }

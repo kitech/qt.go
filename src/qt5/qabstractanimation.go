@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qabstractanimation.h
 // dst-file: /src/core/qabstractanimation.go
 //
@@ -29,59 +29,59 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QAbstractAnimation::currentLoop();
-extern void _ZNK18QAbstractAnimation11currentLoopEv(void* qthis); // 4
+extern void C_ZNK18QAbstractAnimation11currentLoopEv(void* qthis); // 4
   // proto:  int QAbstractAnimation::currentLoopTime();
-extern void _ZNK18QAbstractAnimation15currentLoopTimeEv(void* qthis); // 4
+extern void C_ZNK18QAbstractAnimation15currentLoopTimeEv(void* qthis); // 4
   // proto:  void QAbstractAnimation::setCurrentTime(int msecs);
-extern void _ZN18QAbstractAnimation14setCurrentTimeEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN18QAbstractAnimation14setCurrentTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  void QAbstractAnimation::~QAbstractAnimation();
-extern void _ZN18QAbstractAnimationD2Ev(void* qthis); // 4
+extern void C_ZN18QAbstractAnimationD2Ev(void* qthis); // 4
   // proto:  void QAbstractAnimation::pause();
-extern void _ZN18QAbstractAnimation5pauseEv(void* qthis); // 4
+extern void C_ZN18QAbstractAnimation5pauseEv(void* qthis); // 4
   // proto:  QAnimationGroup * QAbstractAnimation::group();
-extern void _ZNK18QAbstractAnimation5groupEv(void* qthis); // 4
+extern void C_ZNK18QAbstractAnimation5groupEv(void* qthis); // 4
   // proto:  int QAbstractAnimation::loopCount();
-extern void _ZNK18QAbstractAnimation9loopCountEv(void* qthis); // 4
+extern void C_ZNK18QAbstractAnimation9loopCountEv(void* qthis); // 4
   // proto:  void QAbstractAnimation::QAbstractAnimation(QObject * parent);
-extern void _ZN18QAbstractAnimationC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN18QAbstractAnimationC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  QAbstractAnimation::State QAbstractAnimation::state();
-extern void _ZNK18QAbstractAnimation5stateEv(void* qthis); // 4
+extern void C_ZNK18QAbstractAnimation5stateEv(void* qthis); // 4
   // proto:  QAbstractAnimation::Direction QAbstractAnimation::direction();
-extern void _ZNK18QAbstractAnimation9directionEv(void* qthis); // 4
+extern void C_ZNK18QAbstractAnimation9directionEv(void* qthis); // 4
   // proto:  void QAbstractAnimation::setLoopCount(int loopCount);
-extern void _ZN18QAbstractAnimation12setLoopCountEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN18QAbstractAnimation12setLoopCountEi(void* qthis, int32_t arg0); // 4
   // proto:  void QAbstractAnimation::resume();
-extern void _ZN18QAbstractAnimation6resumeEv(void* qthis); // 4
+extern void C_ZN18QAbstractAnimation6resumeEv(void* qthis); // 4
   // proto:  void QAbstractAnimation::stop();
-extern void _ZN18QAbstractAnimation4stopEv(void* qthis); // 4
+extern void C_ZN18QAbstractAnimation4stopEv(void* qthis); // 4
   // proto:  const QMetaObject * QAbstractAnimation::metaObject();
-extern void _ZNK18QAbstractAnimation10metaObjectEv(void* qthis); // 4
+extern void C_ZNK18QAbstractAnimation10metaObjectEv(void* qthis); // 4
   // proto:  int QAbstractAnimation::currentTime();
-extern void _ZNK18QAbstractAnimation11currentTimeEv(void* qthis); // 4
+extern void C_ZNK18QAbstractAnimation11currentTimeEv(void* qthis); // 4
   // proto:  int QAbstractAnimation::totalDuration();
-extern void _ZNK18QAbstractAnimation13totalDurationEv(void* qthis); // 4
+extern void C_ZNK18QAbstractAnimation13totalDurationEv(void* qthis); // 4
   // proto:  void QAbstractAnimation::setPaused(bool );
-extern void _ZN18QAbstractAnimation9setPausedEb(void* qthis, bool arg0); // 4
+extern void C_ZN18QAbstractAnimation9setPausedEb(void* qthis, bool arg0); // 4
   // proto:  void QAnimationDriver::advance();
-extern void _ZN16QAnimationDriver7advanceEv(void* qthis); // 4
+extern void C_ZN16QAnimationDriver7advanceEv(void* qthis); // 4
   // proto:  void QAnimationDriver::QAnimationDriver(QObject * parent);
-extern void _ZN16QAnimationDriverC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN16QAnimationDriverC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  const QMetaObject * QAnimationDriver::metaObject();
-extern void _ZNK16QAnimationDriver10metaObjectEv(void* qthis); // 4
+extern void C_ZNK16QAnimationDriver10metaObjectEv(void* qthis); // 4
   // proto:  qint64 QAnimationDriver::startTime();
-extern void _ZNK16QAnimationDriver9startTimeEv(void* qthis); // 4
+extern void C_ZNK16QAnimationDriver9startTimeEv(void* qthis); // 4
   // proto:  qint64 QAnimationDriver::elapsed();
-extern void _ZNK16QAnimationDriver7elapsedEv(void* qthis); // 4
+extern void C_ZNK16QAnimationDriver7elapsedEv(void* qthis); // 4
   // proto:  void QAnimationDriver::setStartTime(qint64 startTime);
-extern void _ZN16QAnimationDriver12setStartTimeEx(void* qthis, int64_t arg0); // 4
+extern void C_ZN16QAnimationDriver12setStartTimeEx(void* qthis, int64_t arg0); // 4
   // proto:  void QAnimationDriver::install();
-extern void _ZN16QAnimationDriver7installEv(void* qthis); // 4
+extern void C_ZN16QAnimationDriver7installEv(void* qthis); // 4
   // proto:  void QAnimationDriver::~QAnimationDriver();
-extern void _ZN16QAnimationDriverD2Ev(void* qthis); // 4
+extern void C_ZN16QAnimationDriverD2Ev(void* qthis); // 4
   // proto:  bool QAnimationDriver::isRunning();
-extern void _ZNK16QAnimationDriver9isRunningEv(void* qthis); // 4
+extern void C_ZNK16QAnimationDriver9isRunningEv(void* qthis); // 4
   // proto:  void QAnimationDriver::uninstall();
-extern void _ZN16QAnimationDriver9uninstallEv(void* qthis); // 4
+extern void C_ZN16QAnimationDriver9uninstallEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -125,7 +125,7 @@ func (this *QAbstractAnimation) currentLoop(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QAbstractAnimation11currentLoopEv
     // invoke: int currentLoop()
-    C._ZNK18QAbstractAnimation11currentLoopEv(this.qclsinst)
+    C.C_ZNK18QAbstractAnimation11currentLoopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "currentLoop", args)
   }
@@ -145,7 +145,7 @@ func (this *QAbstractAnimation) currentLoopTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QAbstractAnimation15currentLoopTimeEv
     // invoke: int currentLoopTime()
-    C._ZNK18QAbstractAnimation15currentLoopTimeEv(this.qclsinst)
+    C.C_ZNK18QAbstractAnimation15currentLoopTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "currentLoopTime", args)
   }
@@ -168,7 +168,7 @@ func (this *QAbstractAnimation) setCurrentTime(args ...interface{}) () {
     // invoke: void setCurrentTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN18QAbstractAnimation14setCurrentTimeEi(this.qclsinst, arg0)
+    C.C_ZN18QAbstractAnimation14setCurrentTimeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "setCurrentTime", args)
   }
@@ -188,7 +188,7 @@ func (this *QAbstractAnimation) FreeQAbstractAnimation(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QAbstractAnimationD0Ev
     // invoke: void ~QAbstractAnimation()
-    C._ZN18QAbstractAnimationD2Ev(this.qclsinst)
+    C.C_ZN18QAbstractAnimationD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "~QAbstractAnimation", args)
   }
@@ -208,7 +208,7 @@ func (this *QAbstractAnimation) pause(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QAbstractAnimation5pauseEv
     // invoke: void pause()
-    C._ZN18QAbstractAnimation5pauseEv(this.qclsinst)
+    C.C_ZN18QAbstractAnimation5pauseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "pause", args)
   }
@@ -228,7 +228,7 @@ func (this *QAbstractAnimation) group(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QAbstractAnimation5groupEv
     // invoke: QAnimationGroup * group()
-    C._ZNK18QAbstractAnimation5groupEv(this.qclsinst)
+    C.C_ZNK18QAbstractAnimation5groupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "group", args)
   }
@@ -248,7 +248,7 @@ func (this *QAbstractAnimation) loopCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QAbstractAnimation9loopCountEv
     // invoke: int loopCount()
-    C._ZNK18QAbstractAnimation9loopCountEv(this.qclsinst)
+    C.C_ZNK18QAbstractAnimation9loopCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "loopCount", args)
   }
@@ -273,7 +273,7 @@ func NewQAbstractAnimation(args ...interface{}) QAbstractAnimation {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN18QAbstractAnimationC2EP7QObject(qthis, arg0)
+    C.C_ZN18QAbstractAnimationC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "QAbstractAnimation", args)
   }
@@ -294,7 +294,7 @@ func (this *QAbstractAnimation) state(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QAbstractAnimation5stateEv
     // invoke: QAbstractAnimation::State state()
-    C._ZNK18QAbstractAnimation5stateEv(this.qclsinst)
+    C.C_ZNK18QAbstractAnimation5stateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "state", args)
   }
@@ -314,7 +314,7 @@ func (this *QAbstractAnimation) direction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QAbstractAnimation9directionEv
     // invoke: QAbstractAnimation::Direction direction()
-    C._ZNK18QAbstractAnimation9directionEv(this.qclsinst)
+    C.C_ZNK18QAbstractAnimation9directionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "direction", args)
   }
@@ -337,7 +337,7 @@ func (this *QAbstractAnimation) setLoopCount(args ...interface{}) () {
     // invoke: void setLoopCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN18QAbstractAnimation12setLoopCountEi(this.qclsinst, arg0)
+    C.C_ZN18QAbstractAnimation12setLoopCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "setLoopCount", args)
   }
@@ -357,7 +357,7 @@ func (this *QAbstractAnimation) resume(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QAbstractAnimation6resumeEv
     // invoke: void resume()
-    C._ZN18QAbstractAnimation6resumeEv(this.qclsinst)
+    C.C_ZN18QAbstractAnimation6resumeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "resume", args)
   }
@@ -377,7 +377,7 @@ func (this *QAbstractAnimation) stop(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QAbstractAnimation4stopEv
     // invoke: void stop()
-    C._ZN18QAbstractAnimation4stopEv(this.qclsinst)
+    C.C_ZN18QAbstractAnimation4stopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "stop", args)
   }
@@ -397,7 +397,7 @@ func (this *QAbstractAnimation) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QAbstractAnimation10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK18QAbstractAnimation10metaObjectEv(this.qclsinst)
+    C.C_ZNK18QAbstractAnimation10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "metaObject", args)
   }
@@ -417,7 +417,7 @@ func (this *QAbstractAnimation) currentTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QAbstractAnimation11currentTimeEv
     // invoke: int currentTime()
-    C._ZNK18QAbstractAnimation11currentTimeEv(this.qclsinst)
+    C.C_ZNK18QAbstractAnimation11currentTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "currentTime", args)
   }
@@ -437,7 +437,7 @@ func (this *QAbstractAnimation) totalDuration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QAbstractAnimation13totalDurationEv
     // invoke: int totalDuration()
-    C._ZNK18QAbstractAnimation13totalDurationEv(this.qclsinst)
+    C.C_ZNK18QAbstractAnimation13totalDurationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "totalDuration", args)
   }
@@ -460,7 +460,7 @@ func (this *QAbstractAnimation) setPaused(args ...interface{}) () {
     // invoke: void setPaused(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN18QAbstractAnimation9setPausedEb(this.qclsinst, arg0)
+    C.C_ZN18QAbstractAnimation9setPausedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "setPaused", args)
   }
@@ -480,7 +480,7 @@ func (this *QAnimationDriver) advance(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAnimationDriver7advanceEv
     // invoke: void advance()
-    C._ZN16QAnimationDriver7advanceEv(this.qclsinst)
+    C.C_ZN16QAnimationDriver7advanceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "advance", args)
   }
@@ -505,7 +505,7 @@ func NewQAnimationDriver(args ...interface{}) QAnimationDriver {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QAnimationDriverC2EP7QObject(qthis, arg0)
+    C.C_ZN16QAnimationDriverC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "QAnimationDriver", args)
   }
@@ -526,7 +526,7 @@ func (this *QAnimationDriver) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAnimationDriver10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK16QAnimationDriver10metaObjectEv(this.qclsinst)
+    C.C_ZNK16QAnimationDriver10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "metaObject", args)
   }
@@ -546,7 +546,7 @@ func (this *QAnimationDriver) startTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAnimationDriver9startTimeEv
     // invoke: qint64 startTime()
-    C._ZNK16QAnimationDriver9startTimeEv(this.qclsinst)
+    C.C_ZNK16QAnimationDriver9startTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "startTime", args)
   }
@@ -566,7 +566,7 @@ func (this *QAnimationDriver) elapsed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAnimationDriver7elapsedEv
     // invoke: qint64 elapsed()
-    C._ZNK16QAnimationDriver7elapsedEv(this.qclsinst)
+    C.C_ZNK16QAnimationDriver7elapsedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "elapsed", args)
   }
@@ -589,7 +589,7 @@ func (this *QAnimationDriver) setStartTime(args ...interface{}) () {
     // invoke: void setStartTime(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C._ZN16QAnimationDriver12setStartTimeEx(this.qclsinst, arg0)
+    C.C_ZN16QAnimationDriver12setStartTimeEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "setStartTime", args)
   }
@@ -609,7 +609,7 @@ func (this *QAnimationDriver) install(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAnimationDriver7installEv
     // invoke: void install()
-    C._ZN16QAnimationDriver7installEv(this.qclsinst)
+    C.C_ZN16QAnimationDriver7installEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "install", args)
   }
@@ -629,7 +629,7 @@ func (this *QAnimationDriver) FreeQAnimationDriver(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAnimationDriverD0Ev
     // invoke: void ~QAnimationDriver()
-    C._ZN16QAnimationDriverD2Ev(this.qclsinst)
+    C.C_ZN16QAnimationDriverD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "~QAnimationDriver", args)
   }
@@ -649,7 +649,7 @@ func (this *QAnimationDriver) isRunning(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAnimationDriver9isRunningEv
     // invoke: bool isRunning()
-    C._ZNK16QAnimationDriver9isRunningEv(this.qclsinst)
+    C.C_ZNK16QAnimationDriver9isRunningEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "isRunning", args)
   }
@@ -669,7 +669,7 @@ func (this *QAnimationDriver) uninstall(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAnimationDriver9uninstallEv
     // invoke: void uninstall()
-    C._ZN16QAnimationDriver9uninstallEv(this.qclsinst)
+    C.C_ZN16QAnimationDriver9uninstallEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "uninstall", args)
   }

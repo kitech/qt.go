@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qshareddata.h
 // dst-file: /src/core/qshareddata.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QSharedData::QSharedData();
-extern void _ZN11QSharedDataC2Ev(void* qthis); // 1
+extern void C_ZN11QSharedDataC2Ev(void* qthis); // 1
   // proto:  void QSharedData::QSharedData(const QSharedData & );
-extern void _ZN11QSharedDataC2ERKS_(void* qthis, void* arg0); // 1
+extern void C_ZN11QSharedDataC2ERKS_(void* qthis, void* arg0); // 1
 */
 import "C"
 // } // <= ext block end
@@ -68,7 +68,7 @@ func NewQSharedData(args ...interface{}) QSharedData {
     // invoke: void QSharedData()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QSharedDataC2Ev(qthis)
+    C.C_ZN11QSharedDataC2Ev(qthis)
   case 1:
     // invoke: _ZN11QSharedDataC1ERKS_
     // invoke: void QSharedData(const class QSharedData &)
@@ -76,7 +76,7 @@ func NewQSharedData(args ...interface{}) QSharedData {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QSharedDataC2ERKS_(qthis, arg0)
+    C.C_ZN11QSharedDataC2ERKS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QSharedData", "QSharedData", args)
   }

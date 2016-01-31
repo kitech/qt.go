@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qtimezone.h
 // dst-file: /src/core/qtimezone.go
 //
@@ -29,65 +29,65 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QString QTimeZone::comment();
-extern void _ZNK9QTimeZone7commentEv(void* qthis); // 4
+extern void C_ZNK9QTimeZone7commentEv(void* qthis); // 4
   // proto: static QByteArray QTimeZone::systemTimeZoneId();
-extern void _ZN9QTimeZone16systemTimeZoneIdEv(); // 4
+extern void C_ZN9QTimeZone16systemTimeZoneIdEv(); // 4
   // proto: static bool QTimeZone::isTimeZoneIdAvailable(const QByteArray & ianaId);
-extern void _ZN9QTimeZone21isTimeZoneIdAvailableERK10QByteArray(void* arg0); // 4
+extern void C_ZN9QTimeZone21isTimeZoneIdAvailableERK10QByteArray(void* arg0); // 4
   // proto:  QString QTimeZone::abbreviation(const QDateTime & atDateTime);
-extern void _ZNK9QTimeZone12abbreviationERK9QDateTime(void* qthis, void* arg0); // 4
+extern void C_ZNK9QTimeZone12abbreviationERK9QDateTime(void* qthis, void* arg0); // 4
   // proto: static QByteArray QTimeZone::windowsIdToDefaultIanaId(const QByteArray & windowsId);
-extern void _ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArray(void* arg0); // 4
+extern void C_ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArray(void* arg0); // 4
   // proto:  void QTimeZone::QTimeZone(const QTimeZone & other);
-extern void _ZN9QTimeZoneC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN9QTimeZoneC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QTimeZone::QTimeZone(int offsetSeconds);
-extern void _ZN9QTimeZoneC2Ei(void* qthis, int32_t arg0); // 3
+extern void C_ZN9QTimeZoneC2Ei(void* qthis, int32_t arg0); // 3
   // proto:  void QTimeZone::QTimeZone();
-extern void _ZN9QTimeZoneC2Ev(void* qthis); // 3
+extern void C_ZN9QTimeZoneC2Ev(void* qthis); // 3
   // proto:  void QTimeZone::QTimeZone(const QByteArray & ianaId);
-extern void _ZN9QTimeZoneC2ERK10QByteArray(void* qthis, void* arg0); // 3
+extern void C_ZN9QTimeZoneC2ERK10QByteArray(void* qthis, void* arg0); // 3
   // proto:  OffsetDataList QTimeZone::transitions(const QDateTime & fromDateTime, const QDateTime & toDateTime);
-extern void _ZNK9QTimeZone11transitionsERK9QDateTimeS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK9QTimeZone11transitionsERK9QDateTimeS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QTimeZone::OffsetData QTimeZone::nextTransition(const QDateTime & afterDateTime);
-extern void _ZNK9QTimeZone14nextTransitionERK9QDateTime(void* qthis, void* arg0); // 4
+extern void C_ZNK9QTimeZone14nextTransitionERK9QDateTime(void* qthis, void* arg0); // 4
   // proto:  QByteArray QTimeZone::id();
-extern void _ZNK9QTimeZone2idEv(void* qthis); // 4
+extern void C_ZNK9QTimeZone2idEv(void* qthis); // 4
   // proto:  int QTimeZone::offsetFromUtc(const QDateTime & atDateTime);
-extern void _ZNK9QTimeZone13offsetFromUtcERK9QDateTime(void* qthis, void* arg0); // 4
+extern void C_ZNK9QTimeZone13offsetFromUtcERK9QDateTime(void* qthis, void* arg0); // 4
   // proto:  QTimeZone::OffsetData QTimeZone::previousTransition(const QDateTime & beforeDateTime);
-extern void _ZNK9QTimeZone18previousTransitionERK9QDateTime(void* qthis, void* arg0); // 4
+extern void C_ZNK9QTimeZone18previousTransitionERK9QDateTime(void* qthis, void* arg0); // 4
   // proto: static QList<QByteArray> QTimeZone::availableTimeZoneIds();
-extern void _ZN9QTimeZone20availableTimeZoneIdsEv(); // 4
+extern void C_ZN9QTimeZone20availableTimeZoneIdsEv(); // 4
   // proto: static QList<QByteArray> QTimeZone::availableTimeZoneIds(int offsetSeconds);
-extern void _ZN9QTimeZone20availableTimeZoneIdsEi(int32_t arg0); // 4
+extern void C_ZN9QTimeZone20availableTimeZoneIdsEi(int32_t arg0); // 4
   // proto:  void QTimeZone::~QTimeZone();
-extern void _ZN9QTimeZoneD2Ev(void* qthis); // 4
+extern void C_ZN9QTimeZoneD2Ev(void* qthis); // 4
   // proto: static QList<QByteArray> QTimeZone::windowsIdToIanaIds(const QByteArray & windowsId);
-extern void _ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray(void* arg0); // 4
+extern void C_ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray(void* arg0); // 4
   // proto: static QTimeZone QTimeZone::systemTimeZone();
-extern void _ZN9QTimeZone14systemTimeZoneEv(); // 4
+extern void C_ZN9QTimeZone14systemTimeZoneEv(); // 4
   // proto:  void QTimeZone::swap(QTimeZone & other);
-extern void _ZN9QTimeZone4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN9QTimeZone4swapERS_(void* qthis, void* arg0); // 2
   // proto:  QTimeZone::OffsetData QTimeZone::offsetData(const QDateTime & forDateTime);
-extern void _ZNK9QTimeZone10offsetDataERK9QDateTime(void* qthis, void* arg0); // 4
+extern void C_ZNK9QTimeZone10offsetDataERK9QDateTime(void* qthis, void* arg0); // 4
   // proto:  int QTimeZone::standardTimeOffset(const QDateTime & atDateTime);
-extern void _ZNK9QTimeZone18standardTimeOffsetERK9QDateTime(void* qthis, void* arg0); // 4
+extern void C_ZNK9QTimeZone18standardTimeOffsetERK9QDateTime(void* qthis, void* arg0); // 4
   // proto:  bool QTimeZone::isValid();
-extern void _ZNK9QTimeZone7isValidEv(void* qthis); // 4
+extern void C_ZNK9QTimeZone7isValidEv(void* qthis); // 4
   // proto:  bool QTimeZone::hasDaylightTime();
-extern void _ZNK9QTimeZone15hasDaylightTimeEv(void* qthis); // 4
+extern void C_ZNK9QTimeZone15hasDaylightTimeEv(void* qthis); // 4
   // proto:  int QTimeZone::daylightTimeOffset(const QDateTime & atDateTime);
-extern void _ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime(void* qthis, void* arg0); // 4
+extern void C_ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime(void* qthis, void* arg0); // 4
   // proto: static QTimeZone QTimeZone::utc();
-extern void _ZN9QTimeZone3utcEv(); // 4
+extern void C_ZN9QTimeZone3utcEv(); // 4
   // proto:  bool QTimeZone::hasTransitions();
-extern void _ZNK9QTimeZone14hasTransitionsEv(void* qthis); // 4
+extern void C_ZNK9QTimeZone14hasTransitionsEv(void* qthis); // 4
   // proto: static QByteArray QTimeZone::ianaIdToWindowsId(const QByteArray & ianaId);
-extern void _ZN9QTimeZone17ianaIdToWindowsIdERK10QByteArray(void* arg0); // 4
+extern void C_ZN9QTimeZone17ianaIdToWindowsIdERK10QByteArray(void* arg0); // 4
   // proto:  QLocale::Country QTimeZone::country();
-extern void _ZNK9QTimeZone7countryEv(void* qthis); // 4
+extern void C_ZNK9QTimeZone7countryEv(void* qthis); // 4
   // proto:  bool QTimeZone::isDaylightTime(const QDateTime & atDateTime);
-extern void _ZNK9QTimeZone14isDaylightTimeERK9QDateTime(void* qthis, void* arg0); // 4
+extern void C_ZNK9QTimeZone14isDaylightTimeERK9QDateTime(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -119,7 +119,7 @@ func (this *QTimeZone) comment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeZone7commentEv
     // invoke: QString comment()
-    C._ZNK9QTimeZone7commentEv(this.qclsinst)
+    C.C_ZNK9QTimeZone7commentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeZone", "comment", args)
   }
@@ -139,7 +139,7 @@ func (this *QTimeZone) systemTimeZoneId_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeZone16systemTimeZoneIdEv
     // invoke: QByteArray systemTimeZoneId()
-    C._ZN9QTimeZone16systemTimeZoneIdEv()
+    C.C_ZN9QTimeZone16systemTimeZoneIdEv()
   default:
     qtrt.ErrorResolve("QTimeZone", "systemTimeZoneId", args)
   }
@@ -162,7 +162,7 @@ func (this *QTimeZone) isTimeZoneIdAvailable_s(args ...interface{}) () {
     // invoke: bool isTimeZoneIdAvailable(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeZone21isTimeZoneIdAvailableERK10QByteArray(arg0)
+    C.C_ZN9QTimeZone21isTimeZoneIdAvailableERK10QByteArray(arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "isTimeZoneIdAvailable", args)
   }
@@ -185,7 +185,7 @@ func (this *QTimeZone) abbreviation(args ...interface{}) () {
     // invoke: QString abbreviation(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QTimeZone12abbreviationERK9QDateTime(this.qclsinst, arg0)
+    C.C_ZNK9QTimeZone12abbreviationERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "abbreviation", args)
   }
@@ -208,7 +208,7 @@ func (this *QTimeZone) windowsIdToDefaultIanaId_s(args ...interface{}) () {
     // invoke: QByteArray windowsIdToDefaultIanaId(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArray(arg0)
+    C.C_ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArray(arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "windowsIdToDefaultIanaId", args)
   }
@@ -241,7 +241,7 @@ func NewQTimeZone(args ...interface{}) QTimeZone {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QTimeZoneC2ERKS_(qthis, arg0)
+    C.C_ZN9QTimeZoneC2ERKS_(qthis, arg0)
   case 1:
     // invoke: _ZN9QTimeZoneC1Ei
     // invoke: void QTimeZone(int)
@@ -249,13 +249,13 @@ func NewQTimeZone(args ...interface{}) QTimeZone {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QTimeZoneC2Ei(qthis, arg0)
+    C.C_ZN9QTimeZoneC2Ei(qthis, arg0)
   case 2:
     // invoke: _ZN9QTimeZoneC1Ev
     // invoke: void QTimeZone()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QTimeZoneC2Ev(qthis)
+    C.C_ZN9QTimeZoneC2Ev(qthis)
   case 3:
     // invoke: _ZN9QTimeZoneC1ERK10QByteArray
     // invoke: void QTimeZone(const class QByteArray &)
@@ -263,7 +263,7 @@ func NewQTimeZone(args ...interface{}) QTimeZone {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QTimeZoneC2ERK10QByteArray(qthis, arg0)
+    C.C_ZN9QTimeZoneC2ERK10QByteArray(qthis, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "QTimeZone", args)
   }
@@ -290,7 +290,7 @@ func (this *QTimeZone) transitions(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QDateTime).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK9QTimeZone11transitionsERK9QDateTimeS2_(this.qclsinst, arg0, arg1)
+    C.C_ZNK9QTimeZone11transitionsERK9QDateTimeS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTimeZone", "transitions", args)
   }
@@ -313,7 +313,7 @@ func (this *QTimeZone) nextTransition(args ...interface{}) () {
     // invoke: QTimeZone::OffsetData nextTransition(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QTimeZone14nextTransitionERK9QDateTime(this.qclsinst, arg0)
+    C.C_ZNK9QTimeZone14nextTransitionERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "nextTransition", args)
   }
@@ -333,7 +333,7 @@ func (this *QTimeZone) id(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeZone2idEv
     // invoke: QByteArray id()
-    C._ZNK9QTimeZone2idEv(this.qclsinst)
+    C.C_ZNK9QTimeZone2idEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeZone", "id", args)
   }
@@ -356,7 +356,7 @@ func (this *QTimeZone) offsetFromUtc(args ...interface{}) () {
     // invoke: int offsetFromUtc(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QTimeZone13offsetFromUtcERK9QDateTime(this.qclsinst, arg0)
+    C.C_ZNK9QTimeZone13offsetFromUtcERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "offsetFromUtc", args)
   }
@@ -379,7 +379,7 @@ func (this *QTimeZone) previousTransition(args ...interface{}) () {
     // invoke: QTimeZone::OffsetData previousTransition(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QTimeZone18previousTransitionERK9QDateTime(this.qclsinst, arg0)
+    C.C_ZNK9QTimeZone18previousTransitionERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "previousTransition", args)
   }
@@ -402,13 +402,13 @@ func (this *QTimeZone) availableTimeZoneIds_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeZone20availableTimeZoneIdsEv
     // invoke: QList<QByteArray> availableTimeZoneIds()
-    C._ZN9QTimeZone20availableTimeZoneIdsEv()
+    C.C_ZN9QTimeZone20availableTimeZoneIdsEv()
   case 1:
     // invoke: _ZN9QTimeZone20availableTimeZoneIdsEi
     // invoke: QList<QByteArray> availableTimeZoneIds(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeZone20availableTimeZoneIdsEi(arg0)
+    C.C_ZN9QTimeZone20availableTimeZoneIdsEi(arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "availableTimeZoneIds", args)
   }
@@ -428,7 +428,7 @@ func (this *QTimeZone) FreeQTimeZone(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeZoneD0Ev
     // invoke: void ~QTimeZone()
-    C._ZN9QTimeZoneD2Ev(this.qclsinst)
+    C.C_ZN9QTimeZoneD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeZone", "~QTimeZone", args)
   }
@@ -451,7 +451,7 @@ func (this *QTimeZone) windowsIdToIanaIds_s(args ...interface{}) () {
     // invoke: QList<QByteArray> windowsIdToIanaIds(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray(arg0)
+    C.C_ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray(arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "windowsIdToIanaIds", args)
   }
@@ -471,7 +471,7 @@ func (this *QTimeZone) systemTimeZone_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeZone14systemTimeZoneEv
     // invoke: QTimeZone systemTimeZone()
-    C._ZN9QTimeZone14systemTimeZoneEv()
+    C.C_ZN9QTimeZone14systemTimeZoneEv()
   default:
     qtrt.ErrorResolve("QTimeZone", "systemTimeZone", args)
   }
@@ -494,7 +494,7 @@ func (this *QTimeZone) swap(args ...interface{}) () {
     // invoke: void swap(class QTimeZone &)
     var arg0 = args[0].(QTimeZone).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeZone4swapERS_(this.qclsinst, arg0)
+    C.C_ZN9QTimeZone4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "swap", args)
   }
@@ -517,7 +517,7 @@ func (this *QTimeZone) offsetData(args ...interface{}) () {
     // invoke: QTimeZone::OffsetData offsetData(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QTimeZone10offsetDataERK9QDateTime(this.qclsinst, arg0)
+    C.C_ZNK9QTimeZone10offsetDataERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "offsetData", args)
   }
@@ -540,7 +540,7 @@ func (this *QTimeZone) standardTimeOffset(args ...interface{}) () {
     // invoke: int standardTimeOffset(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QTimeZone18standardTimeOffsetERK9QDateTime(this.qclsinst, arg0)
+    C.C_ZNK9QTimeZone18standardTimeOffsetERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "standardTimeOffset", args)
   }
@@ -560,7 +560,7 @@ func (this *QTimeZone) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeZone7isValidEv
     // invoke: bool isValid()
-    C._ZNK9QTimeZone7isValidEv(this.qclsinst)
+    C.C_ZNK9QTimeZone7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeZone", "isValid", args)
   }
@@ -580,7 +580,7 @@ func (this *QTimeZone) hasDaylightTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeZone15hasDaylightTimeEv
     // invoke: bool hasDaylightTime()
-    C._ZNK9QTimeZone15hasDaylightTimeEv(this.qclsinst)
+    C.C_ZNK9QTimeZone15hasDaylightTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeZone", "hasDaylightTime", args)
   }
@@ -603,7 +603,7 @@ func (this *QTimeZone) daylightTimeOffset(args ...interface{}) () {
     // invoke: int daylightTimeOffset(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime(this.qclsinst, arg0)
+    C.C_ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "daylightTimeOffset", args)
   }
@@ -623,7 +623,7 @@ func (this *QTimeZone) utc_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeZone3utcEv
     // invoke: QTimeZone utc()
-    C._ZN9QTimeZone3utcEv()
+    C.C_ZN9QTimeZone3utcEv()
   default:
     qtrt.ErrorResolve("QTimeZone", "utc", args)
   }
@@ -643,7 +643,7 @@ func (this *QTimeZone) hasTransitions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeZone14hasTransitionsEv
     // invoke: bool hasTransitions()
-    C._ZNK9QTimeZone14hasTransitionsEv(this.qclsinst)
+    C.C_ZNK9QTimeZone14hasTransitionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeZone", "hasTransitions", args)
   }
@@ -666,7 +666,7 @@ func (this *QTimeZone) ianaIdToWindowsId_s(args ...interface{}) () {
     // invoke: QByteArray ianaIdToWindowsId(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeZone17ianaIdToWindowsIdERK10QByteArray(arg0)
+    C.C_ZN9QTimeZone17ianaIdToWindowsIdERK10QByteArray(arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "ianaIdToWindowsId", args)
   }
@@ -686,7 +686,7 @@ func (this *QTimeZone) country(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeZone7countryEv
     // invoke: QLocale::Country country()
-    C._ZNK9QTimeZone7countryEv(this.qclsinst)
+    C.C_ZNK9QTimeZone7countryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeZone", "country", args)
   }
@@ -709,7 +709,7 @@ func (this *QTimeZone) isDaylightTime(args ...interface{}) () {
     // invoke: bool isDaylightTime(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QTimeZone14isDaylightTimeERK9QDateTime(this.qclsinst, arg0)
+    C.C_ZNK9QTimeZone14isDaylightTimeERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "isDaylightTime", args)
   }

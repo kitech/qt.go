@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qopenglcontext.h
 // dst-file: /src/gui/qopenglcontext.go
 //
@@ -29,99 +29,99 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QSurfaceFormat::OpenGLContextProfile QOpenGLVersionProfile::profile();
-extern void _ZNK21QOpenGLVersionProfile7profileEv(void* qthis); // 4
+extern void C_ZNK21QOpenGLVersionProfile7profileEv(void* qthis); // 4
   // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile(const QSurfaceFormat & format);
-extern void _ZN21QOpenGLVersionProfileC2ERK14QSurfaceFormat(void* qthis, void* arg0); // 3
+extern void C_ZN21QOpenGLVersionProfileC2ERK14QSurfaceFormat(void* qthis, void* arg0); // 3
   // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile();
-extern void _ZN21QOpenGLVersionProfileC2Ev(void* qthis); // 3
+extern void C_ZN21QOpenGLVersionProfileC2Ev(void* qthis); // 3
   // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile(const QOpenGLVersionProfile & other);
-extern void _ZN21QOpenGLVersionProfileC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN21QOpenGLVersionProfileC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  bool QOpenGLVersionProfile::hasProfiles();
-extern void _ZNK21QOpenGLVersionProfile11hasProfilesEv(void* qthis); // 4
+extern void C_ZNK21QOpenGLVersionProfile11hasProfilesEv(void* qthis); // 4
   // proto:  bool QOpenGLVersionProfile::isValid();
-extern void _ZNK21QOpenGLVersionProfile7isValidEv(void* qthis); // 4
+extern void C_ZNK21QOpenGLVersionProfile7isValidEv(void* qthis); // 4
   // proto:  void QOpenGLVersionProfile::~QOpenGLVersionProfile();
-extern void _ZN21QOpenGLVersionProfileD2Ev(void* qthis); // 4
+extern void C_ZN21QOpenGLVersionProfileD2Ev(void* qthis); // 4
   // proto:  QPair<int, int> QOpenGLVersionProfile::version();
-extern void _ZNK21QOpenGLVersionProfile7versionEv(void* qthis); // 4
+extern void C_ZNK21QOpenGLVersionProfile7versionEv(void* qthis); // 4
   // proto:  bool QOpenGLVersionProfile::isLegacyVersion();
-extern void _ZNK21QOpenGLVersionProfile15isLegacyVersionEv(void* qthis); // 4
+extern void C_ZNK21QOpenGLVersionProfile15isLegacyVersionEv(void* qthis); // 4
   // proto:  void QOpenGLVersionProfile::setVersion(int majorVersion, int minorVersion);
-extern void _ZN21QOpenGLVersionProfile10setVersionEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN21QOpenGLVersionProfile10setVersionEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QOpenGLContext::~QOpenGLContext();
-extern void _ZN14QOpenGLContextD2Ev(void* qthis); // 4
+extern void C_ZN14QOpenGLContextD2Ev(void* qthis); // 4
   // proto: static void * QOpenGLContext::openGLModuleHandle();
-extern void _ZN14QOpenGLContext18openGLModuleHandleEv(); // 4
+extern void C_ZN14QOpenGLContext18openGLModuleHandleEv(); // 4
   // proto:  QOpenGLContext * QOpenGLContext::shareContext();
-extern void _ZNK14QOpenGLContext12shareContextEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext12shareContextEv(void* qthis); // 4
   // proto:  void QOpenGLContext::doneCurrent();
-extern void _ZN14QOpenGLContext11doneCurrentEv(void* qthis); // 4
+extern void C_ZN14QOpenGLContext11doneCurrentEv(void* qthis); // 4
   // proto:  QSurface * QOpenGLContext::surface();
-extern void _ZNK14QOpenGLContext7surfaceEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext7surfaceEv(void* qthis); // 4
   // proto:  void QOpenGLContext::setNativeHandle(const QVariant & handle);
-extern void _ZN14QOpenGLContext15setNativeHandleERK8QVariant(void* qthis, void* arg0); // 4
+extern void C_ZN14QOpenGLContext15setNativeHandleERK8QVariant(void* qthis, void* arg0); // 4
   // proto: static bool QOpenGLContext::supportsThreadedOpenGL();
-extern void _ZN14QOpenGLContext22supportsThreadedOpenGLEv(); // 4
+extern void C_ZN14QOpenGLContext22supportsThreadedOpenGLEv(); // 4
   // proto:  QOpenGLFunctions * QOpenGLContext::functions();
-extern void _ZNK14QOpenGLContext9functionsEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext9functionsEv(void* qthis); // 4
   // proto: static bool QOpenGLContext::areSharing(QOpenGLContext * first, QOpenGLContext * second);
-extern void _ZN14QOpenGLContext10areSharingEPS_S0_(void* arg0, void* arg1); // 4
+extern void C_ZN14QOpenGLContext10areSharingEPS_S0_(void* arg0, void* arg1); // 4
   // proto:  void QOpenGLContext::setScreen(QScreen * screen);
-extern void _ZN14QOpenGLContext9setScreenEP7QScreen(void* qthis, void* arg0); // 4
+extern void C_ZN14QOpenGLContext9setScreenEP7QScreen(void* qthis, void* arg0); // 4
   // proto: static QOpenGLContext * QOpenGLContext::currentContext();
-extern void _ZN14QOpenGLContext14currentContextEv(); // 4
+extern void C_ZN14QOpenGLContext14currentContextEv(); // 4
   // proto:  void QOpenGLContext::setShareContext(QOpenGLContext * shareContext);
-extern void _ZN14QOpenGLContext15setShareContextEPS_(void* qthis, void* arg0); // 4
+extern void C_ZN14QOpenGLContext15setShareContextEPS_(void* qthis, void* arg0); // 4
   // proto: static QOpenGLContext::OpenGLModuleType QOpenGLContext::openGLModuleType();
-extern void _ZN14QOpenGLContext16openGLModuleTypeEv(); // 4
+extern void C_ZN14QOpenGLContext16openGLModuleTypeEv(); // 4
   // proto: static QOpenGLContext * QOpenGLContext::globalShareContext();
-extern void _ZN14QOpenGLContext18globalShareContextEv(); // 4
+extern void C_ZN14QOpenGLContext18globalShareContextEv(); // 4
   // proto:  bool QOpenGLContext::isOpenGLES();
-extern void _ZNK14QOpenGLContext10isOpenGLESEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext10isOpenGLESEv(void* qthis); // 4
   // proto:  QAbstractOpenGLFunctions * QOpenGLContext::versionFunctions(const QOpenGLVersionProfile & versionProfile);
-extern void _ZNK14QOpenGLContext16versionFunctionsERK21QOpenGLVersionProfile(void* qthis, void* arg0); // 4
+extern void C_ZNK14QOpenGLContext16versionFunctionsERK21QOpenGLVersionProfile(void* qthis, void* arg0); // 4
   // proto:  QScreen * QOpenGLContext::screen();
-extern void _ZNK14QOpenGLContext6screenEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext6screenEv(void* qthis); // 4
   // proto:  void QOpenGLContext::swapBuffers(QSurface * surface);
-extern void _ZN14QOpenGLContext11swapBuffersEP8QSurface(void* qthis, void* arg0); // 4
+extern void C_ZN14QOpenGLContext11swapBuffersEP8QSurface(void* qthis, void* arg0); // 4
   // proto:  QPlatformOpenGLContext * QOpenGLContext::handle();
-extern void _ZNK14QOpenGLContext6handleEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext6handleEv(void* qthis); // 4
   // proto:  bool QOpenGLContext::isValid();
-extern void _ZNK14QOpenGLContext7isValidEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext7isValidEv(void* qthis); // 4
   // proto:  bool QOpenGLContext::hasExtension(const QByteArray & extension);
-extern void _ZNK14QOpenGLContext12hasExtensionERK10QByteArray(void* qthis, void* arg0); // 4
+extern void C_ZNK14QOpenGLContext12hasExtensionERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  GLuint QOpenGLContext::defaultFramebufferObject();
-extern void _ZNK14QOpenGLContext24defaultFramebufferObjectEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext24defaultFramebufferObjectEv(void* qthis); // 4
   // proto:  QFunctionPointer QOpenGLContext::getProcAddress(const QByteArray & procName);
-extern void _ZNK14QOpenGLContext14getProcAddressERK10QByteArray(void* qthis, void* arg0); // 4
+extern void C_ZNK14QOpenGLContext14getProcAddressERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  QOpenGLContextGroup * QOpenGLContext::shareGroup();
-extern void _ZNK14QOpenGLContext10shareGroupEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext10shareGroupEv(void* qthis); // 4
   // proto:  QPlatformOpenGLContext * QOpenGLContext::shareHandle();
-extern void _ZNK14QOpenGLContext11shareHandleEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext11shareHandleEv(void* qthis); // 4
   // proto:  const QMetaObject * QOpenGLContext::metaObject();
-extern void _ZNK14QOpenGLContext10metaObjectEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext10metaObjectEv(void* qthis); // 4
   // proto:  void QOpenGLContext::QOpenGLContext(QObject * parent);
-extern void _ZN14QOpenGLContextC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN14QOpenGLContextC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QOpenGLContext::setFormat(const QSurfaceFormat & format);
-extern void _ZN14QOpenGLContext9setFormatERK14QSurfaceFormat(void* qthis, void* arg0); // 4
+extern void C_ZN14QOpenGLContext9setFormatERK14QSurfaceFormat(void* qthis, void* arg0); // 4
   // proto:  bool QOpenGLContext::makeCurrent(QSurface * surface);
-extern void _ZN14QOpenGLContext11makeCurrentEP8QSurface(void* qthis, void* arg0); // 4
+extern void C_ZN14QOpenGLContext11makeCurrentEP8QSurface(void* qthis, void* arg0); // 4
   // proto:  QVariant QOpenGLContext::nativeHandle();
-extern void _ZNK14QOpenGLContext12nativeHandleEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext12nativeHandleEv(void* qthis); // 4
   // proto:  QSet<QByteArray> QOpenGLContext::extensions();
-extern void _ZNK14QOpenGLContext10extensionsEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext10extensionsEv(void* qthis); // 4
   // proto:  QSurfaceFormat QOpenGLContext::format();
-extern void _ZNK14QOpenGLContext6formatEv(void* qthis); // 4
+extern void C_ZNK14QOpenGLContext6formatEv(void* qthis); // 4
   // proto:  bool QOpenGLContext::create();
-extern void _ZN14QOpenGLContext6createEv(void* qthis); // 4
+extern void C_ZN14QOpenGLContext6createEv(void* qthis); // 4
   // proto:  const QMetaObject * QOpenGLContextGroup::metaObject();
-extern void _ZNK19QOpenGLContextGroup10metaObjectEv(void* qthis); // 4
+extern void C_ZNK19QOpenGLContextGroup10metaObjectEv(void* qthis); // 4
   // proto: static QOpenGLContextGroup * QOpenGLContextGroup::currentContextGroup();
-extern void _ZN19QOpenGLContextGroup19currentContextGroupEv(); // 4
+extern void C_ZN19QOpenGLContextGroup19currentContextGroupEv(); // 4
   // proto:  QList<QOpenGLContext *> QOpenGLContextGroup::shares();
-extern void _ZNK19QOpenGLContextGroup6sharesEv(void* qthis); // 4
+extern void C_ZNK19QOpenGLContextGroup6sharesEv(void* qthis); // 4
   // proto:  void QOpenGLContextGroup::~QOpenGLContextGroup();
-extern void _ZN19QOpenGLContextGroupD2Ev(void* qthis); // 4
+extern void C_ZN19QOpenGLContextGroupD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -166,7 +166,7 @@ func (this *QOpenGLVersionProfile) profile(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QOpenGLVersionProfile7profileEv
     // invoke: QSurfaceFormat::OpenGLContextProfile profile()
-    C._ZNK21QOpenGLVersionProfile7profileEv(this.qclsinst)
+    C.C_ZNK21QOpenGLVersionProfile7profileEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "profile", args)
   }
@@ -196,13 +196,13 @@ func NewQOpenGLVersionProfile(args ...interface{}) QOpenGLVersionProfile {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN21QOpenGLVersionProfileC2ERK14QSurfaceFormat(qthis, arg0)
+    C.C_ZN21QOpenGLVersionProfileC2ERK14QSurfaceFormat(qthis, arg0)
   case 1:
     // invoke: _ZN21QOpenGLVersionProfileC1Ev
     // invoke: void QOpenGLVersionProfile()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN21QOpenGLVersionProfileC2Ev(qthis)
+    C.C_ZN21QOpenGLVersionProfileC2Ev(qthis)
   case 2:
     // invoke: _ZN21QOpenGLVersionProfileC1ERKS_
     // invoke: void QOpenGLVersionProfile(const class QOpenGLVersionProfile &)
@@ -210,7 +210,7 @@ func NewQOpenGLVersionProfile(args ...interface{}) QOpenGLVersionProfile {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN21QOpenGLVersionProfileC2ERKS_(qthis, arg0)
+    C.C_ZN21QOpenGLVersionProfileC2ERKS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "QOpenGLVersionProfile", args)
   }
@@ -231,7 +231,7 @@ func (this *QOpenGLVersionProfile) hasProfiles(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QOpenGLVersionProfile11hasProfilesEv
     // invoke: bool hasProfiles()
-    C._ZNK21QOpenGLVersionProfile11hasProfilesEv(this.qclsinst)
+    C.C_ZNK21QOpenGLVersionProfile11hasProfilesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "hasProfiles", args)
   }
@@ -251,7 +251,7 @@ func (this *QOpenGLVersionProfile) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QOpenGLVersionProfile7isValidEv
     // invoke: bool isValid()
-    C._ZNK21QOpenGLVersionProfile7isValidEv(this.qclsinst)
+    C.C_ZNK21QOpenGLVersionProfile7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "isValid", args)
   }
@@ -271,7 +271,7 @@ func (this *QOpenGLVersionProfile) FreeQOpenGLVersionProfile(args ...interface{}
   case 0:
     // invoke: _ZN21QOpenGLVersionProfileD0Ev
     // invoke: void ~QOpenGLVersionProfile()
-    C._ZN21QOpenGLVersionProfileD2Ev(this.qclsinst)
+    C.C_ZN21QOpenGLVersionProfileD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "~QOpenGLVersionProfile", args)
   }
@@ -291,7 +291,7 @@ func (this *QOpenGLVersionProfile) version(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QOpenGLVersionProfile7versionEv
     // invoke: QPair<int, int> version()
-    C._ZNK21QOpenGLVersionProfile7versionEv(this.qclsinst)
+    C.C_ZNK21QOpenGLVersionProfile7versionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "version", args)
   }
@@ -311,7 +311,7 @@ func (this *QOpenGLVersionProfile) isLegacyVersion(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QOpenGLVersionProfile15isLegacyVersionEv
     // invoke: bool isLegacyVersion()
-    C._ZNK21QOpenGLVersionProfile15isLegacyVersionEv(this.qclsinst)
+    C.C_ZNK21QOpenGLVersionProfile15isLegacyVersionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "isLegacyVersion", args)
   }
@@ -337,7 +337,7 @@ func (this *QOpenGLVersionProfile) setVersion(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN21QOpenGLVersionProfile10setVersionEii(this.qclsinst, arg0, arg1)
+    C.C_ZN21QOpenGLVersionProfile10setVersionEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "setVersion", args)
   }
@@ -357,7 +357,7 @@ func (this *QOpenGLContext) FreeQOpenGLContext(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContextD0Ev
     // invoke: void ~QOpenGLContext()
-    C._ZN14QOpenGLContextD2Ev(this.qclsinst)
+    C.C_ZN14QOpenGLContextD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "~QOpenGLContext", args)
   }
@@ -377,7 +377,7 @@ func (this *QOpenGLContext) openGLModuleHandle_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext18openGLModuleHandleEv
     // invoke: void * openGLModuleHandle()
-    C._ZN14QOpenGLContext18openGLModuleHandleEv()
+    C.C_ZN14QOpenGLContext18openGLModuleHandleEv()
   default:
     qtrt.ErrorResolve("QOpenGLContext", "openGLModuleHandle", args)
   }
@@ -397,7 +397,7 @@ func (this *QOpenGLContext) shareContext(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext12shareContextEv
     // invoke: QOpenGLContext * shareContext()
-    C._ZNK14QOpenGLContext12shareContextEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext12shareContextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "shareContext", args)
   }
@@ -417,7 +417,7 @@ func (this *QOpenGLContext) doneCurrent(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext11doneCurrentEv
     // invoke: void doneCurrent()
-    C._ZN14QOpenGLContext11doneCurrentEv(this.qclsinst)
+    C.C_ZN14QOpenGLContext11doneCurrentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "doneCurrent", args)
   }
@@ -437,7 +437,7 @@ func (this *QOpenGLContext) surface(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext7surfaceEv
     // invoke: QSurface * surface()
-    C._ZNK14QOpenGLContext7surfaceEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext7surfaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "surface", args)
   }
@@ -460,7 +460,7 @@ func (this *QOpenGLContext) setNativeHandle(args ...interface{}) () {
     // invoke: void setNativeHandle(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN14QOpenGLContext15setNativeHandleERK8QVariant(this.qclsinst, arg0)
+    C.C_ZN14QOpenGLContext15setNativeHandleERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "setNativeHandle", args)
   }
@@ -480,7 +480,7 @@ func (this *QOpenGLContext) supportsThreadedOpenGL_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext22supportsThreadedOpenGLEv
     // invoke: bool supportsThreadedOpenGL()
-    C._ZN14QOpenGLContext22supportsThreadedOpenGLEv()
+    C.C_ZN14QOpenGLContext22supportsThreadedOpenGLEv()
   default:
     qtrt.ErrorResolve("QOpenGLContext", "supportsThreadedOpenGL", args)
   }
@@ -500,7 +500,7 @@ func (this *QOpenGLContext) functions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext9functionsEv
     // invoke: QOpenGLFunctions * functions()
-    C._ZNK14QOpenGLContext9functionsEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext9functionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "functions", args)
   }
@@ -526,7 +526,7 @@ func (this *QOpenGLContext) areSharing_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QOpenGLContext).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN14QOpenGLContext10areSharingEPS_S0_(arg0, arg1)
+    C.C_ZN14QOpenGLContext10areSharingEPS_S0_(arg0, arg1)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "areSharing", args)
   }
@@ -549,7 +549,7 @@ func (this *QOpenGLContext) setScreen(args ...interface{}) () {
     // invoke: void setScreen(class QScreen *)
     var arg0 = args[0].(QScreen).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN14QOpenGLContext9setScreenEP7QScreen(this.qclsinst, arg0)
+    C.C_ZN14QOpenGLContext9setScreenEP7QScreen(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "setScreen", args)
   }
@@ -569,7 +569,7 @@ func (this *QOpenGLContext) currentContext_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext14currentContextEv
     // invoke: QOpenGLContext * currentContext()
-    C._ZN14QOpenGLContext14currentContextEv()
+    C.C_ZN14QOpenGLContext14currentContextEv()
   default:
     qtrt.ErrorResolve("QOpenGLContext", "currentContext", args)
   }
@@ -592,7 +592,7 @@ func (this *QOpenGLContext) setShareContext(args ...interface{}) () {
     // invoke: void setShareContext(class QOpenGLContext *)
     var arg0 = args[0].(QOpenGLContext).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN14QOpenGLContext15setShareContextEPS_(this.qclsinst, arg0)
+    C.C_ZN14QOpenGLContext15setShareContextEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "setShareContext", args)
   }
@@ -612,7 +612,7 @@ func (this *QOpenGLContext) openGLModuleType_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext16openGLModuleTypeEv
     // invoke: QOpenGLContext::OpenGLModuleType openGLModuleType()
-    C._ZN14QOpenGLContext16openGLModuleTypeEv()
+    C.C_ZN14QOpenGLContext16openGLModuleTypeEv()
   default:
     qtrt.ErrorResolve("QOpenGLContext", "openGLModuleType", args)
   }
@@ -632,7 +632,7 @@ func (this *QOpenGLContext) globalShareContext_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext18globalShareContextEv
     // invoke: QOpenGLContext * globalShareContext()
-    C._ZN14QOpenGLContext18globalShareContextEv()
+    C.C_ZN14QOpenGLContext18globalShareContextEv()
   default:
     qtrt.ErrorResolve("QOpenGLContext", "globalShareContext", args)
   }
@@ -652,7 +652,7 @@ func (this *QOpenGLContext) isOpenGLES(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext10isOpenGLESEv
     // invoke: bool isOpenGLES()
-    C._ZNK14QOpenGLContext10isOpenGLESEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext10isOpenGLESEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "isOpenGLES", args)
   }
@@ -675,7 +675,7 @@ func (this *QOpenGLContext) versionFunctions(args ...interface{}) () {
     // invoke: QAbstractOpenGLFunctions * versionFunctions(const class QOpenGLVersionProfile &)
     var arg0 = args[0].(QOpenGLVersionProfile).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK14QOpenGLContext16versionFunctionsERK21QOpenGLVersionProfile(this.qclsinst, arg0)
+    C.C_ZNK14QOpenGLContext16versionFunctionsERK21QOpenGLVersionProfile(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "versionFunctions", args)
   }
@@ -695,7 +695,7 @@ func (this *QOpenGLContext) screen(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext6screenEv
     // invoke: QScreen * screen()
-    C._ZNK14QOpenGLContext6screenEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext6screenEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "screen", args)
   }
@@ -718,7 +718,7 @@ func (this *QOpenGLContext) swapBuffers(args ...interface{}) () {
     // invoke: void swapBuffers(class QSurface *)
     var arg0 = args[0].(QSurface).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN14QOpenGLContext11swapBuffersEP8QSurface(this.qclsinst, arg0)
+    C.C_ZN14QOpenGLContext11swapBuffersEP8QSurface(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "swapBuffers", args)
   }
@@ -738,7 +738,7 @@ func (this *QOpenGLContext) handle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext6handleEv
     // invoke: QPlatformOpenGLContext * handle()
-    C._ZNK14QOpenGLContext6handleEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext6handleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "handle", args)
   }
@@ -758,7 +758,7 @@ func (this *QOpenGLContext) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext7isValidEv
     // invoke: bool isValid()
-    C._ZNK14QOpenGLContext7isValidEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "isValid", args)
   }
@@ -781,7 +781,7 @@ func (this *QOpenGLContext) hasExtension(args ...interface{}) () {
     // invoke: bool hasExtension(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK14QOpenGLContext12hasExtensionERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZNK14QOpenGLContext12hasExtensionERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "hasExtension", args)
   }
@@ -801,7 +801,7 @@ func (this *QOpenGLContext) defaultFramebufferObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext24defaultFramebufferObjectEv
     // invoke: GLuint defaultFramebufferObject()
-    C._ZNK14QOpenGLContext24defaultFramebufferObjectEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext24defaultFramebufferObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "defaultFramebufferObject", args)
   }
@@ -824,7 +824,7 @@ func (this *QOpenGLContext) getProcAddress(args ...interface{}) () {
     // invoke: QFunctionPointer getProcAddress(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK14QOpenGLContext14getProcAddressERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZNK14QOpenGLContext14getProcAddressERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "getProcAddress", args)
   }
@@ -844,7 +844,7 @@ func (this *QOpenGLContext) shareGroup(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext10shareGroupEv
     // invoke: QOpenGLContextGroup * shareGroup()
-    C._ZNK14QOpenGLContext10shareGroupEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext10shareGroupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "shareGroup", args)
   }
@@ -864,7 +864,7 @@ func (this *QOpenGLContext) shareHandle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext11shareHandleEv
     // invoke: QPlatformOpenGLContext * shareHandle()
-    C._ZNK14QOpenGLContext11shareHandleEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext11shareHandleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "shareHandle", args)
   }
@@ -884,7 +884,7 @@ func (this *QOpenGLContext) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK14QOpenGLContext10metaObjectEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "metaObject", args)
   }
@@ -909,7 +909,7 @@ func NewQOpenGLContext(args ...interface{}) QOpenGLContext {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN14QOpenGLContextC2EP7QObject(qthis, arg0)
+    C.C_ZN14QOpenGLContextC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "QOpenGLContext", args)
   }
@@ -933,7 +933,7 @@ func (this *QOpenGLContext) setFormat(args ...interface{}) () {
     // invoke: void setFormat(const class QSurfaceFormat &)
     var arg0 = args[0].(QSurfaceFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN14QOpenGLContext9setFormatERK14QSurfaceFormat(this.qclsinst, arg0)
+    C.C_ZN14QOpenGLContext9setFormatERK14QSurfaceFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "setFormat", args)
   }
@@ -956,7 +956,7 @@ func (this *QOpenGLContext) makeCurrent(args ...interface{}) () {
     // invoke: bool makeCurrent(class QSurface *)
     var arg0 = args[0].(QSurface).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN14QOpenGLContext11makeCurrentEP8QSurface(this.qclsinst, arg0)
+    C.C_ZN14QOpenGLContext11makeCurrentEP8QSurface(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "makeCurrent", args)
   }
@@ -976,7 +976,7 @@ func (this *QOpenGLContext) nativeHandle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext12nativeHandleEv
     // invoke: QVariant nativeHandle()
-    C._ZNK14QOpenGLContext12nativeHandleEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext12nativeHandleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "nativeHandle", args)
   }
@@ -996,7 +996,7 @@ func (this *QOpenGLContext) extensions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext10extensionsEv
     // invoke: QSet<QByteArray> extensions()
-    C._ZNK14QOpenGLContext10extensionsEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext10extensionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "extensions", args)
   }
@@ -1016,7 +1016,7 @@ func (this *QOpenGLContext) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext6formatEv
     // invoke: QSurfaceFormat format()
-    C._ZNK14QOpenGLContext6formatEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "format", args)
   }
@@ -1036,7 +1036,7 @@ func (this *QOpenGLContext) create(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext6createEv
     // invoke: bool create()
-    C._ZN14QOpenGLContext6createEv(this.qclsinst)
+    C.C_ZN14QOpenGLContext6createEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "create", args)
   }
@@ -1056,7 +1056,7 @@ func (this *QOpenGLContextGroup) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QOpenGLContextGroup10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK19QOpenGLContextGroup10metaObjectEv(this.qclsinst)
+    C.C_ZNK19QOpenGLContextGroup10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContextGroup", "metaObject", args)
   }
@@ -1076,7 +1076,7 @@ func (this *QOpenGLContextGroup) currentContextGroup_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QOpenGLContextGroup19currentContextGroupEv
     // invoke: QOpenGLContextGroup * currentContextGroup()
-    C._ZN19QOpenGLContextGroup19currentContextGroupEv()
+    C.C_ZN19QOpenGLContextGroup19currentContextGroupEv()
   default:
     qtrt.ErrorResolve("QOpenGLContextGroup", "currentContextGroup", args)
   }
@@ -1096,7 +1096,7 @@ func (this *QOpenGLContextGroup) shares(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QOpenGLContextGroup6sharesEv
     // invoke: QList<QOpenGLContext *> shares()
-    C._ZNK19QOpenGLContextGroup6sharesEv(this.qclsinst)
+    C.C_ZNK19QOpenGLContextGroup6sharesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContextGroup", "shares", args)
   }
@@ -1116,7 +1116,7 @@ func (this *QOpenGLContextGroup) FreeQOpenGLContextGroup(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QOpenGLContextGroupD0Ev
     // invoke: void ~QOpenGLContextGroup()
-    C._ZN19QOpenGLContextGroupD2Ev(this.qclsinst)
+    C.C_ZN19QOpenGLContextGroupD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContextGroup", "~QOpenGLContextGroup", args)
   }

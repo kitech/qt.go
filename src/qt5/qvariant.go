@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qvariant.h
 // dst-file: /src/core/qvariant.go
 //
@@ -29,215 +29,215 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
-extern void _ZN24QVariantComparisonHelperC2ERK8QVariant(void* qthis, void* arg0); // 1
+extern void C_ZN24QVariantComparisonHelperC2ERK8QVariant(void* qthis, void* arg0); // 1
   // proto:  void QVariant::load(QDataStream & ds);
-extern void _ZN8QVariant4loadER11QDataStream(void* qthis, void* arg0); // 4
+extern void C_ZN8QVariant4loadER11QDataStream(void* qthis, void* arg0); // 4
   // proto:  int QVariant::toInt(bool * ok);
-extern void _ZNK8QVariant5toIntEPb(void* qthis, bool* arg0); // 4
+extern void C_ZNK8QVariant5toIntEPb(void* qthis, bool* arg0); // 4
   // proto:  uint QVariant::toUInt(bool * ok);
-extern void _ZNK8QVariant6toUIntEPb(void* qthis, bool* arg0); // 4
+extern void C_ZNK8QVariant6toUIntEPb(void* qthis, bool* arg0); // 4
   // proto:  float QVariant::toFloat(bool * ok);
-extern void _ZNK8QVariant7toFloatEPb(void* qthis, bool* arg0); // 4
+extern void C_ZNK8QVariant7toFloatEPb(void* qthis, bool* arg0); // 4
   // proto:  QChar QVariant::toChar();
-extern void _ZNK8QVariant6toCharEv(void* qthis); // 4
+extern void C_ZNK8QVariant6toCharEv(void* qthis); // 4
   // proto:  const char * QVariant::typeName();
-extern void _ZNK8QVariant8typeNameEv(void* qthis); // 4
+extern void C_ZNK8QVariant8typeNameEv(void* qthis); // 4
   // proto:  QRegularExpression QVariant::toRegularExpression();
-extern void _ZNK8QVariant19toRegularExpressionEv(void* qthis); // 4
+extern void C_ZNK8QVariant19toRegularExpressionEv(void* qthis); // 4
   // proto: static QVariant::Type QVariant::nameToType(const char * name);
-extern void _ZN8QVariant10nameToTypeEPKc(unsigned char* arg0); // 4
+extern void C_ZN8QVariant10nameToTypeEPKc(unsigned char* arg0); // 4
   // proto:  QEasingCurve QVariant::toEasingCurve();
-extern void _ZNK8QVariant13toEasingCurveEv(void* qthis); // 4
+extern void C_ZNK8QVariant13toEasingCurveEv(void* qthis); // 4
   // proto:  QList<QVariant> QVariant::toList();
-extern void _ZNK8QVariant6toListEv(void* qthis); // 4
+extern void C_ZNK8QVariant6toListEv(void* qthis); // 4
   // proto:  QMap<QString, QVariant> QVariant::toMap();
-extern void _ZNK8QVariant5toMapEv(void* qthis); // 4
+extern void C_ZNK8QVariant5toMapEv(void* qthis); // 4
   // proto: static const char * QVariant::typeToName(int typeId);
-extern void _ZN8QVariant10typeToNameEi(int32_t arg0); // 4
+extern void C_ZN8QVariant10typeToNameEi(int32_t arg0); // 4
   // proto:  bool QVariant::toBool();
-extern void _ZNK8QVariant6toBoolEv(void* qthis); // 4
+extern void C_ZNK8QVariant6toBoolEv(void* qthis); // 4
   // proto:  QBitArray QVariant::toBitArray();
-extern void _ZNK8QVariant10toBitArrayEv(void* qthis); // 4
+extern void C_ZNK8QVariant10toBitArrayEv(void* qthis); // 4
   // proto:  int QVariant::userType();
-extern void _ZNK8QVariant8userTypeEv(void* qthis); // 4
+extern void C_ZNK8QVariant8userTypeEv(void* qthis); // 4
   // proto:  qlonglong QVariant::toLongLong(bool * ok);
-extern void _ZNK8QVariant10toLongLongEPb(void* qthis, bool* arg0); // 4
+extern void C_ZNK8QVariant10toLongLongEPb(void* qthis, bool* arg0); // 4
   // proto:  const void * QVariant::constData();
-extern void _ZNK8QVariant9constDataEv(void* qthis); // 4
+extern void C_ZNK8QVariant9constDataEv(void* qthis); // 4
   // proto:  QString QVariant::toString();
-extern void _ZNK8QVariant8toStringEv(void* qthis); // 4
+extern void C_ZNK8QVariant8toStringEv(void* qthis); // 4
   // proto:  void QVariant::swap(QVariant & other);
-extern void _ZN8QVariant4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN8QVariant4swapERS_(void* qthis, void* arg0); // 2
   // proto:  QJsonObject QVariant::toJsonObject();
-extern void _ZNK8QVariant12toJsonObjectEv(void* qthis); // 4
+extern void C_ZNK8QVariant12toJsonObjectEv(void* qthis); // 4
   // proto:  QVariant::Type QVariant::type();
-extern void _ZNK8QVariant4typeEv(void* qthis); // 4
+extern void C_ZNK8QVariant4typeEv(void* qthis); // 4
   // proto:  QSize QVariant::toSize();
-extern void _ZNK8QVariant6toSizeEv(void* qthis); // 4
+extern void C_ZNK8QVariant6toSizeEv(void* qthis); // 4
   // proto:  bool QVariant::isDetached();
-extern void _ZNK8QVariant10isDetachedEv(void* qthis); // 2
+extern void C_ZNK8QVariant10isDetachedEv(void* qthis); // 2
   // proto:  QLocale QVariant::toLocale();
-extern void _ZNK8QVariant8toLocaleEv(void* qthis); // 4
+extern void C_ZNK8QVariant8toLocaleEv(void* qthis); // 4
   // proto:  void QVariant::QVariant(const QRectF & rect);
-extern void _ZN8QVariantC2ERK6QRectF(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK6QRectF(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(QChar qchar);
-extern void _ZN8QVariantC2E5QChar(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2E5QChar(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const char * str);
-extern void _ZN8QVariantC2EPKc(void* qthis, unsigned char* arg0); // 3
+extern void C_ZN8QVariantC2EPKc(void* qthis, unsigned char* arg0); // 3
   // proto:  void QVariant::QVariant(const QPointF & pt);
-extern void _ZN8QVariantC2ERK7QPointF(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK7QPointF(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QRect & rect);
-extern void _ZN8QVariantC2ERK5QRect(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK5QRect(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(int typeId, const void * copy);
-extern void _ZN8QVariantC2EiPKv(void* qthis, int32_t arg0, void* arg1); // 3
+extern void C_ZN8QVariantC2EiPKv(void* qthis, int32_t arg0, void* arg1); // 3
   // proto:  void QVariant::QVariant(const QPoint & pt);
-extern void _ZN8QVariantC2ERK6QPoint(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK6QPoint(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(uint ui);
-extern void _ZN8QVariantC2Ej(void* qthis, int32_t arg0); // 3
+extern void C_ZN8QVariantC2Ej(void* qthis, int32_t arg0); // 3
   // proto:  void QVariant::QVariant(const QLocale & locale);
-extern void _ZN8QVariantC2ERK7QLocale(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK7QLocale(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QByteArray & bytearray);
-extern void _ZN8QVariantC2ERK10QByteArray(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK10QByteArray(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(qlonglong ll);
-extern void _ZN8QVariantC2Ex(void* qthis, int64_t arg0); // 3
+extern void C_ZN8QVariantC2Ex(void* qthis, int64_t arg0); // 3
   // proto:  void QVariant::QVariant(qulonglong ull);
-extern void _ZN8QVariantC2Ey(void* qthis, int64_t arg0); // 3
+extern void C_ZN8QVariantC2Ey(void* qthis, int64_t arg0); // 3
   // proto:  void QVariant::QVariant();
-extern void _ZN8QVariantC2Ev(void* qthis); // 1
+extern void C_ZN8QVariantC2Ev(void* qthis); // 1
   // proto:  void QVariant::QVariant(const QPersistentModelIndex & modelIndex);
-extern void _ZN8QVariantC2ERK21QPersistentModelIndex(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK21QPersistentModelIndex(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(int typeId, const void * copy, uint flags);
-extern void _ZN8QVariantC2EiPKvj(void* qthis, int32_t arg0, void* arg1, int32_t arg2); // 3
+extern void C_ZN8QVariantC2EiPKvj(void* qthis, int32_t arg0, void* arg1, int32_t arg2); // 3
   // proto:  void QVariant::QVariant(const QLineF & line);
-extern void _ZN8QVariantC2ERK6QLineF(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK6QLineF(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(int i);
-extern void _ZN8QVariantC2Ei(void* qthis, int32_t arg0); // 3
+extern void C_ZN8QVariantC2Ei(void* qthis, int32_t arg0); // 3
   // proto:  void QVariant::QVariant(float f);
-extern void _ZN8QVariantC2Ef(void* qthis, float arg0); // 3
+extern void C_ZN8QVariantC2Ef(void* qthis, float arg0); // 3
   // proto:  void QVariant::QVariant(const QString & string);
-extern void _ZN8QVariantC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK7QString(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(double d);
-extern void _ZN8QVariantC2Ed(void* qthis, double arg0); // 3
+extern void C_ZN8QVariantC2Ed(void* qthis, double arg0); // 3
   // proto:  void QVariant::QVariant(bool b);
-extern void _ZN8QVariantC2Eb(void* qthis, bool arg0); // 3
+extern void C_ZN8QVariantC2Eb(void* qthis, bool arg0); // 3
   // proto:  void QVariant::QVariant(const QEasingCurve & easing);
-extern void _ZN8QVariantC2ERK12QEasingCurve(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK12QEasingCurve(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(QDataStream & s);
-extern void _ZN8QVariantC2ER11QDataStream(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ER11QDataStream(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QSizeF & size);
-extern void _ZN8QVariantC2ERK6QSizeF(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK6QSizeF(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QStringList & stringlist);
-extern void _ZN8QVariantC2ERK11QStringList(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK11QStringList(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QUuid & uuid);
-extern void _ZN8QVariantC2ERK5QUuid(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK5QUuid(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QDate & date);
-extern void _ZN8QVariantC2ERK5QDate(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK5QDate(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QBitArray & bitarray);
-extern void _ZN8QVariantC2ERK9QBitArray(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK9QBitArray(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QModelIndex & modelIndex);
-extern void _ZN8QVariantC2ERK11QModelIndex(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK11QModelIndex(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QUrl & url);
-extern void _ZN8QVariantC2ERK4QUrl(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK4QUrl(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QVariant & other);
-extern void _ZN8QVariantC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QSize & size);
-extern void _ZN8QVariantC2ERK5QSize(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK5QSize(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QLine & line);
-extern void _ZN8QVariantC2ERK5QLine(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK5QLine(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QRegularExpression & re);
-extern void _ZN8QVariantC2ERK18QRegularExpression(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK18QRegularExpression(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QTime & time);
-extern void _ZN8QVariantC2ERK5QTime(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK5QTime(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QDateTime & datetime);
-extern void _ZN8QVariantC2ERK9QDateTime(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK9QDateTime(void* qthis, void* arg0); // 3
   // proto:  void QVariant::QVariant(const QRegExp & regExp);
-extern void _ZN8QVariantC2ERK7QRegExp(void* qthis, void* arg0); // 3
+extern void C_ZN8QVariantC2ERK7QRegExp(void* qthis, void* arg0); // 3
   // proto:  QDateTime QVariant::toDateTime();
-extern void _ZNK8QVariant10toDateTimeEv(void* qthis); // 4
+extern void C_ZNK8QVariant10toDateTimeEv(void* qthis); // 4
   // proto:  QJsonArray QVariant::toJsonArray();
-extern void _ZNK8QVariant11toJsonArrayEv(void* qthis); // 4
+extern void C_ZNK8QVariant11toJsonArrayEv(void* qthis); // 4
   // proto:  bool QVariant::isValid();
-extern void _ZNK8QVariant7isValidEv(void* qthis); // 2
+extern void C_ZNK8QVariant7isValidEv(void* qthis); // 2
   // proto:  QLineF QVariant::toLineF();
-extern void _ZNK8QVariant7toLineFEv(void* qthis); // 4
+extern void C_ZNK8QVariant7toLineFEv(void* qthis); // 4
   // proto:  QJsonValue QVariant::toJsonValue();
-extern void _ZNK8QVariant11toJsonValueEv(void* qthis); // 4
+extern void C_ZNK8QVariant11toJsonValueEv(void* qthis); // 4
   // proto:  bool QVariant::canConvert(int targetTypeId);
-extern void _ZNK8QVariant10canConvertEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK8QVariant10canConvertEi(void* qthis, int32_t arg0); // 4
   // proto:  QPersistentModelIndex QVariant::toPersistentModelIndex();
-extern void _ZNK8QVariant22toPersistentModelIndexEv(void* qthis); // 4
+extern void C_ZNK8QVariant22toPersistentModelIndexEv(void* qthis); // 4
   // proto:  QPointF QVariant::toPointF();
-extern void _ZNK8QVariant8toPointFEv(void* qthis); // 4
+extern void C_ZNK8QVariant8toPointFEv(void* qthis); // 4
   // proto:  QJsonDocument QVariant::toJsonDocument();
-extern void _ZNK8QVariant14toJsonDocumentEv(void* qthis); // 4
+extern void C_ZNK8QVariant14toJsonDocumentEv(void* qthis); // 4
   // proto:  QModelIndex QVariant::toModelIndex();
-extern void _ZNK8QVariant12toModelIndexEv(void* qthis); // 4
+extern void C_ZNK8QVariant12toModelIndexEv(void* qthis); // 4
   // proto:  void QVariant::detach();
-extern void _ZN8QVariant6detachEv(void* qthis); // 4
+extern void C_ZN8QVariant6detachEv(void* qthis); // 4
   // proto:  void * QVariant::data();
-extern void _ZN8QVariant4dataEv(void* qthis); // 4
+extern void C_ZN8QVariant4dataEv(void* qthis); // 4
   // proto:  qulonglong QVariant::toULongLong(bool * ok);
-extern void _ZNK8QVariant11toULongLongEPb(void* qthis, bool* arg0); // 4
+extern void C_ZNK8QVariant11toULongLongEPb(void* qthis, bool* arg0); // 4
   // proto:  QPoint QVariant::toPoint();
-extern void _ZNK8QVariant7toPointEv(void* qthis); // 4
+extern void C_ZNK8QVariant7toPointEv(void* qthis); // 4
   // proto:  QHash<QString, QVariant> QVariant::toHash();
-extern void _ZNK8QVariant6toHashEv(void* qthis); // 4
+extern void C_ZNK8QVariant6toHashEv(void* qthis); // 4
   // proto:  bool QVariant::convert(int targetTypeId);
-extern void _ZN8QVariant7convertEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN8QVariant7convertEi(void* qthis, int32_t arg0); // 4
   // proto:  void QVariant::save(QDataStream & ds);
-extern void _ZNK8QVariant4saveER11QDataStream(void* qthis, void* arg0); // 4
+extern void C_ZNK8QVariant4saveER11QDataStream(void* qthis, void* arg0); // 4
   // proto:  QRegExp QVariant::toRegExp();
-extern void _ZNK8QVariant8toRegExpEv(void* qthis); // 4
+extern void C_ZNK8QVariant8toRegExpEv(void* qthis); // 4
   // proto:  QLine QVariant::toLine();
-extern void _ZNK8QVariant6toLineEv(void* qthis); // 4
+extern void C_ZNK8QVariant6toLineEv(void* qthis); // 4
   // proto:  QStringList QVariant::toStringList();
-extern void _ZNK8QVariant12toStringListEv(void* qthis); // 4
+extern void C_ZNK8QVariant12toStringListEv(void* qthis); // 4
   // proto:  QSizeF QVariant::toSizeF();
-extern void _ZNK8QVariant7toSizeFEv(void* qthis); // 4
+extern void C_ZNK8QVariant7toSizeFEv(void* qthis); // 4
   // proto:  QRectF QVariant::toRectF();
-extern void _ZNK8QVariant7toRectFEv(void* qthis); // 4
+extern void C_ZNK8QVariant7toRectFEv(void* qthis); // 4
   // proto:  QUrl QVariant::toUrl();
-extern void _ZNK8QVariant5toUrlEv(void* qthis); // 4
+extern void C_ZNK8QVariant5toUrlEv(void* qthis); // 4
   // proto:  QUuid QVariant::toUuid();
-extern void _ZNK8QVariant6toUuidEv(void* qthis); // 4
+extern void C_ZNK8QVariant6toUuidEv(void* qthis); // 4
   // proto:  qreal QVariant::toReal(bool * ok);
-extern void _ZNK8QVariant6toRealEPb(void* qthis, bool* arg0); // 4
+extern void C_ZNK8QVariant6toRealEPb(void* qthis, bool* arg0); // 4
   // proto:  void QVariant::~QVariant();
-extern void _ZN8QVariantD2Ev(void* qthis); // 4
+extern void C_ZN8QVariantD2Ev(void* qthis); // 4
   // proto:  bool QVariant::isNull();
-extern void _ZNK8QVariant6isNullEv(void* qthis); // 4
+extern void C_ZNK8QVariant6isNullEv(void* qthis); // 4
   // proto:  QByteArray QVariant::toByteArray();
-extern void _ZNK8QVariant11toByteArrayEv(void* qthis); // 4
+extern void C_ZNK8QVariant11toByteArrayEv(void* qthis); // 4
   // proto:  double QVariant::toDouble(bool * ok);
-extern void _ZNK8QVariant8toDoubleEPb(void* qthis, bool* arg0); // 4
+extern void C_ZNK8QVariant8toDoubleEPb(void* qthis, bool* arg0); // 4
   // proto:  QTime QVariant::toTime();
-extern void _ZNK8QVariant6toTimeEv(void* qthis); // 4
+extern void C_ZNK8QVariant6toTimeEv(void* qthis); // 4
   // proto:  QDate QVariant::toDate();
-extern void _ZNK8QVariant6toDateEv(void* qthis); // 4
+extern void C_ZNK8QVariant6toDateEv(void* qthis); // 4
   // proto:  void QVariant::clear();
-extern void _ZN8QVariant5clearEv(void* qthis); // 4
+extern void C_ZN8QVariant5clearEv(void* qthis); // 4
   // proto:  QRect QVariant::toRect();
-extern void _ZNK8QVariant6toRectEv(void* qthis); // 4
+extern void C_ZNK8QVariant6toRectEv(void* qthis); // 4
   // proto:  QSequentialIterable::const_iterator QSequentialIterable::begin();
-extern void _ZNK19QSequentialIterable5beginEv(void* qthis); // 4
+extern void C_ZNK19QSequentialIterable5beginEv(void* qthis); // 4
   // proto:  QSequentialIterable::const_iterator QSequentialIterable::end();
-extern void _ZNK19QSequentialIterable3endEv(void* qthis); // 4
+extern void C_ZNK19QSequentialIterable3endEv(void* qthis); // 4
   // proto:  bool QSequentialIterable::canReverseIterate();
-extern void _ZNK19QSequentialIterable17canReverseIterateEv(void* qthis); // 4
+extern void C_ZNK19QSequentialIterable17canReverseIterateEv(void* qthis); // 4
   // proto:  QVariant QSequentialIterable::at(int idx);
-extern void _ZNK19QSequentialIterable2atEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK19QSequentialIterable2atEi(void* qthis, int32_t arg0); // 4
   // proto:  int QSequentialIterable::size();
-extern void _ZNK19QSequentialIterable4sizeEv(void* qthis); // 4
+extern void C_ZNK19QSequentialIterable4sizeEv(void* qthis); // 4
   // proto:  QAssociativeIterable::const_iterator QAssociativeIterable::begin();
-extern void _ZNK20QAssociativeIterable5beginEv(void* qthis); // 4
+extern void C_ZNK20QAssociativeIterable5beginEv(void* qthis); // 4
   // proto:  QVariant QAssociativeIterable::value(const QVariant & key);
-extern void _ZNK20QAssociativeIterable5valueERK8QVariant(void* qthis, void* arg0); // 4
+extern void C_ZNK20QAssociativeIterable5valueERK8QVariant(void* qthis, void* arg0); // 4
   // proto:  QAssociativeIterable::const_iterator QAssociativeIterable::end();
-extern void _ZNK20QAssociativeIterable3endEv(void* qthis); // 4
+extern void C_ZNK20QAssociativeIterable3endEv(void* qthis); // 4
   // proto:  QAssociativeIterable::const_iterator QAssociativeIterable::find(const QVariant & key);
-extern void _ZNK20QAssociativeIterable4findERK8QVariant(void* qthis, void* arg0); // 4
+extern void C_ZNK20QAssociativeIterable4findERK8QVariant(void* qthis, void* arg0); // 4
   // proto:  int QAssociativeIterable::size();
-extern void _ZNK20QAssociativeIterable4sizeEv(void* qthis); // 4
+extern void C_ZNK20QAssociativeIterable4sizeEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -292,7 +292,7 @@ func NewQVariantComparisonHelper(args ...interface{}) QVariantComparisonHelper {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN24QVariantComparisonHelperC2ERK8QVariant(qthis, arg0)
+    C.C_ZN24QVariantComparisonHelperC2ERK8QVariant(qthis, arg0)
   default:
     qtrt.ErrorResolve("QVariantComparisonHelper", "QVariantComparisonHelper", args)
   }
@@ -316,7 +316,7 @@ func (this *QVariant) load(args ...interface{}) () {
     // invoke: void load(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QVariant4loadER11QDataStream(this.qclsinst, arg0)
+    C.C_ZN8QVariant4loadER11QDataStream(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "load", args)
   }
@@ -339,7 +339,7 @@ func (this *QVariant) toInt(args ...interface{}) () {
     // invoke: int toInt(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C._ZNK8QVariant5toIntEPb(this.qclsinst, arg0)
+    C.C_ZNK8QVariant5toIntEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toInt", args)
   }
@@ -362,7 +362,7 @@ func (this *QVariant) toUInt(args ...interface{}) () {
     // invoke: uint toUInt(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C._ZNK8QVariant6toUIntEPb(this.qclsinst, arg0)
+    C.C_ZNK8QVariant6toUIntEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toUInt", args)
   }
@@ -385,7 +385,7 @@ func (this *QVariant) toFloat(args ...interface{}) () {
     // invoke: float toFloat(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C._ZNK8QVariant7toFloatEPb(this.qclsinst, arg0)
+    C.C_ZNK8QVariant7toFloatEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toFloat", args)
   }
@@ -405,7 +405,7 @@ func (this *QVariant) toChar(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6toCharEv
     // invoke: QChar toChar()
-    C._ZNK8QVariant6toCharEv(this.qclsinst)
+    C.C_ZNK8QVariant6toCharEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toChar", args)
   }
@@ -425,7 +425,7 @@ func (this *QVariant) typeName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant8typeNameEv
     // invoke: const char * typeName()
-    C._ZNK8QVariant8typeNameEv(this.qclsinst)
+    C.C_ZNK8QVariant8typeNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "typeName", args)
   }
@@ -445,7 +445,7 @@ func (this *QVariant) toRegularExpression(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant19toRegularExpressionEv
     // invoke: QRegularExpression toRegularExpression()
-    C._ZNK8QVariant19toRegularExpressionEv(this.qclsinst)
+    C.C_ZNK8QVariant19toRegularExpressionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toRegularExpression", args)
   }
@@ -468,7 +468,7 @@ func (this *QVariant) nameToType_s(args ...interface{}) () {
     // invoke: QVariant::Type nameToType(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZN8QVariant10nameToTypeEPKc(arg0)
+    C.C_ZN8QVariant10nameToTypeEPKc(arg0)
   default:
     qtrt.ErrorResolve("QVariant", "nameToType", args)
   }
@@ -488,7 +488,7 @@ func (this *QVariant) toEasingCurve(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant13toEasingCurveEv
     // invoke: QEasingCurve toEasingCurve()
-    C._ZNK8QVariant13toEasingCurveEv(this.qclsinst)
+    C.C_ZNK8QVariant13toEasingCurveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toEasingCurve", args)
   }
@@ -508,7 +508,7 @@ func (this *QVariant) toList(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6toListEv
     // invoke: QList<QVariant> toList()
-    C._ZNK8QVariant6toListEv(this.qclsinst)
+    C.C_ZNK8QVariant6toListEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toList", args)
   }
@@ -528,7 +528,7 @@ func (this *QVariant) toMap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant5toMapEv
     // invoke: QMap<QString, QVariant> toMap()
-    C._ZNK8QVariant5toMapEv(this.qclsinst)
+    C.C_ZNK8QVariant5toMapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toMap", args)
   }
@@ -551,7 +551,7 @@ func (this *QVariant) typeToName_s(args ...interface{}) () {
     // invoke: const char * typeToName(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN8QVariant10typeToNameEi(arg0)
+    C.C_ZN8QVariant10typeToNameEi(arg0)
   default:
     qtrt.ErrorResolve("QVariant", "typeToName", args)
   }
@@ -571,7 +571,7 @@ func (this *QVariant) toBool(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6toBoolEv
     // invoke: bool toBool()
-    C._ZNK8QVariant6toBoolEv(this.qclsinst)
+    C.C_ZNK8QVariant6toBoolEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toBool", args)
   }
@@ -591,7 +591,7 @@ func (this *QVariant) toBitArray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant10toBitArrayEv
     // invoke: QBitArray toBitArray()
-    C._ZNK8QVariant10toBitArrayEv(this.qclsinst)
+    C.C_ZNK8QVariant10toBitArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toBitArray", args)
   }
@@ -611,7 +611,7 @@ func (this *QVariant) userType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant8userTypeEv
     // invoke: int userType()
-    C._ZNK8QVariant8userTypeEv(this.qclsinst)
+    C.C_ZNK8QVariant8userTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "userType", args)
   }
@@ -634,7 +634,7 @@ func (this *QVariant) toLongLong(args ...interface{}) () {
     // invoke: qlonglong toLongLong(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C._ZNK8QVariant10toLongLongEPb(this.qclsinst, arg0)
+    C.C_ZNK8QVariant10toLongLongEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toLongLong", args)
   }
@@ -654,7 +654,7 @@ func (this *QVariant) constData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant9constDataEv
     // invoke: const void * constData()
-    C._ZNK8QVariant9constDataEv(this.qclsinst)
+    C.C_ZNK8QVariant9constDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "constData", args)
   }
@@ -674,7 +674,7 @@ func (this *QVariant) toString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant8toStringEv
     // invoke: QString toString()
-    C._ZNK8QVariant8toStringEv(this.qclsinst)
+    C.C_ZNK8QVariant8toStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toString", args)
   }
@@ -697,7 +697,7 @@ func (this *QVariant) swap(args ...interface{}) () {
     // invoke: void swap(class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QVariant4swapERS_(this.qclsinst, arg0)
+    C.C_ZN8QVariant4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "swap", args)
   }
@@ -717,7 +717,7 @@ func (this *QVariant) toJsonObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant12toJsonObjectEv
     // invoke: QJsonObject toJsonObject()
-    C._ZNK8QVariant12toJsonObjectEv(this.qclsinst)
+    C.C_ZNK8QVariant12toJsonObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toJsonObject", args)
   }
@@ -737,7 +737,7 @@ func (this *QVariant) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant4typeEv
     // invoke: QVariant::Type type()
-    C._ZNK8QVariant4typeEv(this.qclsinst)
+    C.C_ZNK8QVariant4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "type", args)
   }
@@ -757,7 +757,7 @@ func (this *QVariant) toSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6toSizeEv
     // invoke: QSize toSize()
-    C._ZNK8QVariant6toSizeEv(this.qclsinst)
+    C.C_ZNK8QVariant6toSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toSize", args)
   }
@@ -777,7 +777,7 @@ func (this *QVariant) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant10isDetachedEv
     // invoke: bool isDetached()
-    C._ZNK8QVariant10isDetachedEv(this.qclsinst)
+    C.C_ZNK8QVariant10isDetachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "isDetached", args)
   }
@@ -797,7 +797,7 @@ func (this *QVariant) toLocale(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant8toLocaleEv
     // invoke: QLocale toLocale()
-    C._ZNK8QVariant8toLocaleEv(this.qclsinst)
+    C.C_ZNK8QVariant8toLocaleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toLocale", args)
   }
@@ -932,7 +932,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK6QRectF(qthis, arg0)
+    C.C_ZN8QVariantC2ERK6QRectF(qthis, arg0)
   case 1:
     // invoke: _ZN8QVariantC1E5QChar
     // invoke: void QVariant(class QChar)
@@ -940,7 +940,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2E5QChar(qthis, arg0)
+    C.C_ZN8QVariantC2E5QChar(qthis, arg0)
   case 2:
     // invoke: _ZN8QVariantC1EPKc
     // invoke: void QVariant(const char *)
@@ -948,7 +948,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2EPKc(qthis, arg0)
+    C.C_ZN8QVariantC2EPKc(qthis, arg0)
   case 3:
     // invoke: _ZN8QVariantC1ERK7QPointF
     // invoke: void QVariant(const class QPointF &)
@@ -956,7 +956,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK7QPointF(qthis, arg0)
+    C.C_ZN8QVariantC2ERK7QPointF(qthis, arg0)
   case 4:
     // invoke: _ZN8QVariantC1ERK5QRect
     // invoke: void QVariant(const class QRect &)
@@ -964,7 +964,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK5QRect(qthis, arg0)
+    C.C_ZN8QVariantC2ERK5QRect(qthis, arg0)
   case 5:
     // invoke: _ZN8QVariantC1EiPKv
     // invoke: void QVariant(int, const void *)
@@ -974,7 +974,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2EiPKv(qthis, arg0, arg1)
+    C.C_ZN8QVariantC2EiPKv(qthis, arg0, arg1)
   case 6:
     // invoke: _ZN8QVariantC1ERK6QPoint
     // invoke: void QVariant(const class QPoint &)
@@ -982,7 +982,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK6QPoint(qthis, arg0)
+    C.C_ZN8QVariantC2ERK6QPoint(qthis, arg0)
   case 7:
     // invoke: _ZN8QVariantC1Ej
     // invoke: void QVariant(uint)
@@ -990,7 +990,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2Ej(qthis, arg0)
+    C.C_ZN8QVariantC2Ej(qthis, arg0)
   case 8:
     // invoke: _ZN8QVariantC1ERK7QLocale
     // invoke: void QVariant(const class QLocale &)
@@ -998,7 +998,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK7QLocale(qthis, arg0)
+    C.C_ZN8QVariantC2ERK7QLocale(qthis, arg0)
   case 9:
     // invoke: _ZN8QVariantC1ERK10QByteArray
     // invoke: void QVariant(const class QByteArray &)
@@ -1006,7 +1006,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK10QByteArray(qthis, arg0)
+    C.C_ZN8QVariantC2ERK10QByteArray(qthis, arg0)
   case 10:
     // invoke: _ZN8QVariantC1Ex
     // invoke: void QVariant(qlonglong)
@@ -1014,7 +1014,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2Ex(qthis, arg0)
+    C.C_ZN8QVariantC2Ex(qthis, arg0)
   case 11:
     // invoke: _ZN8QVariantC1Ey
     // invoke: void QVariant(qulonglong)
@@ -1022,13 +1022,13 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2Ey(qthis, arg0)
+    C.C_ZN8QVariantC2Ey(qthis, arg0)
   case 12:
     // invoke: _ZN8QVariantC1Ev
     // invoke: void QVariant()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2Ev(qthis)
+    C.C_ZN8QVariantC2Ev(qthis)
   case 13:
     // invoke: _ZN8QVariantC1ERK21QPersistentModelIndex
     // invoke: void QVariant(const class QPersistentModelIndex &)
@@ -1036,7 +1036,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK21QPersistentModelIndex(qthis, arg0)
+    C.C_ZN8QVariantC2ERK21QPersistentModelIndex(qthis, arg0)
   case 14:
     // invoke: _ZN8QVariantC1EiPKvj
     // invoke: void QVariant(int, const void *, uint)
@@ -1048,7 +1048,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2EiPKvj(qthis, arg0, arg1, arg2)
+    C.C_ZN8QVariantC2EiPKvj(qthis, arg0, arg1, arg2)
   case 15:
     // invoke: _ZN8QVariantC1ERK6QLineF
     // invoke: void QVariant(const class QLineF &)
@@ -1056,7 +1056,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK6QLineF(qthis, arg0)
+    C.C_ZN8QVariantC2ERK6QLineF(qthis, arg0)
   case 16:
     // invoke: _ZN8QVariantC1Ei
     // invoke: void QVariant(int)
@@ -1064,7 +1064,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2Ei(qthis, arg0)
+    C.C_ZN8QVariantC2Ei(qthis, arg0)
   case 17:
     // invoke: _ZN8QVariantC1Ef
     // invoke: void QVariant(float)
@@ -1072,7 +1072,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2Ef(qthis, arg0)
+    C.C_ZN8QVariantC2Ef(qthis, arg0)
   case 18:
     // invoke: _ZN8QVariantC1ERK7QString
     // invoke: void QVariant(const class QString &)
@@ -1080,7 +1080,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK7QString(qthis, arg0)
+    C.C_ZN8QVariantC2ERK7QString(qthis, arg0)
   case 19:
     // invoke: _ZN8QVariantC1Ed
     // invoke: void QVariant(double)
@@ -1088,7 +1088,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2Ed(qthis, arg0)
+    C.C_ZN8QVariantC2Ed(qthis, arg0)
   case 20:
     // invoke: _ZN8QVariantC1Eb
     // invoke: void QVariant(_Bool)
@@ -1096,7 +1096,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2Eb(qthis, arg0)
+    C.C_ZN8QVariantC2Eb(qthis, arg0)
   case 21:
     // invoke: _ZN8QVariantC1ERK12QEasingCurve
     // invoke: void QVariant(const class QEasingCurve &)
@@ -1104,7 +1104,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK12QEasingCurve(qthis, arg0)
+    C.C_ZN8QVariantC2ERK12QEasingCurve(qthis, arg0)
   case 22:
     // invoke: _ZN8QVariantC1ER11QDataStream
     // invoke: void QVariant(class QDataStream &)
@@ -1112,7 +1112,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ER11QDataStream(qthis, arg0)
+    C.C_ZN8QVariantC2ER11QDataStream(qthis, arg0)
   case 23:
     // invoke: _ZN8QVariantC1ERK6QSizeF
     // invoke: void QVariant(const class QSizeF &)
@@ -1120,7 +1120,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK6QSizeF(qthis, arg0)
+    C.C_ZN8QVariantC2ERK6QSizeF(qthis, arg0)
   case 24:
     // invoke: _ZN8QVariantC1ERK11QStringList
     // invoke: void QVariant(const class QStringList &)
@@ -1128,7 +1128,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK11QStringList(qthis, arg0)
+    C.C_ZN8QVariantC2ERK11QStringList(qthis, arg0)
   case 25:
     // invoke: _ZN8QVariantC1ERK5QUuid
     // invoke: void QVariant(const class QUuid &)
@@ -1136,7 +1136,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK5QUuid(qthis, arg0)
+    C.C_ZN8QVariantC2ERK5QUuid(qthis, arg0)
   case 26:
     // invoke: _ZN8QVariantC1ERK5QDate
     // invoke: void QVariant(const class QDate &)
@@ -1144,7 +1144,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK5QDate(qthis, arg0)
+    C.C_ZN8QVariantC2ERK5QDate(qthis, arg0)
   case 27:
     // invoke: _ZN8QVariantC1ERK9QBitArray
     // invoke: void QVariant(const class QBitArray &)
@@ -1152,7 +1152,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK9QBitArray(qthis, arg0)
+    C.C_ZN8QVariantC2ERK9QBitArray(qthis, arg0)
   case 28:
     // invoke: _ZN8QVariantC1ERK11QModelIndex
     // invoke: void QVariant(const class QModelIndex &)
@@ -1160,7 +1160,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK11QModelIndex(qthis, arg0)
+    C.C_ZN8QVariantC2ERK11QModelIndex(qthis, arg0)
   case 29:
     // invoke: _ZN8QVariantC1ERK4QUrl
     // invoke: void QVariant(const class QUrl &)
@@ -1168,7 +1168,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK4QUrl(qthis, arg0)
+    C.C_ZN8QVariantC2ERK4QUrl(qthis, arg0)
   case 30:
     // invoke: _ZN8QVariantC1ERKS_
     // invoke: void QVariant(const class QVariant &)
@@ -1176,7 +1176,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERKS_(qthis, arg0)
+    C.C_ZN8QVariantC2ERKS_(qthis, arg0)
   case 31:
     // invoke: _ZN8QVariantC1ERK5QSize
     // invoke: void QVariant(const class QSize &)
@@ -1184,7 +1184,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK5QSize(qthis, arg0)
+    C.C_ZN8QVariantC2ERK5QSize(qthis, arg0)
   case 32:
     // invoke: _ZN8QVariantC1ERK5QLine
     // invoke: void QVariant(const class QLine &)
@@ -1192,7 +1192,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK5QLine(qthis, arg0)
+    C.C_ZN8QVariantC2ERK5QLine(qthis, arg0)
   case 33:
     // invoke: _ZN8QVariantC1ERK18QRegularExpression
     // invoke: void QVariant(const class QRegularExpression &)
@@ -1200,7 +1200,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK18QRegularExpression(qthis, arg0)
+    C.C_ZN8QVariantC2ERK18QRegularExpression(qthis, arg0)
   case 34:
     // invoke: _ZN8QVariantC1ERK5QTime
     // invoke: void QVariant(const class QTime &)
@@ -1208,7 +1208,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK5QTime(qthis, arg0)
+    C.C_ZN8QVariantC2ERK5QTime(qthis, arg0)
   case 35:
     // invoke: _ZN8QVariantC1ERK9QDateTime
     // invoke: void QVariant(const class QDateTime &)
@@ -1216,7 +1216,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK9QDateTime(qthis, arg0)
+    C.C_ZN8QVariantC2ERK9QDateTime(qthis, arg0)
   case 36:
     // invoke: _ZN8QVariantC1ERK7QRegExp
     // invoke: void QVariant(const class QRegExp &)
@@ -1224,7 +1224,7 @@ func NewQVariant(args ...interface{}) QVariant {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QVariantC2ERK7QRegExp(qthis, arg0)
+    C.C_ZN8QVariantC2ERK7QRegExp(qthis, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "QVariant", args)
   }
@@ -1245,7 +1245,7 @@ func (this *QVariant) toDateTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant10toDateTimeEv
     // invoke: QDateTime toDateTime()
-    C._ZNK8QVariant10toDateTimeEv(this.qclsinst)
+    C.C_ZNK8QVariant10toDateTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toDateTime", args)
   }
@@ -1265,7 +1265,7 @@ func (this *QVariant) toJsonArray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant11toJsonArrayEv
     // invoke: QJsonArray toJsonArray()
-    C._ZNK8QVariant11toJsonArrayEv(this.qclsinst)
+    C.C_ZNK8QVariant11toJsonArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toJsonArray", args)
   }
@@ -1285,7 +1285,7 @@ func (this *QVariant) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant7isValidEv
     // invoke: bool isValid()
-    C._ZNK8QVariant7isValidEv(this.qclsinst)
+    C.C_ZNK8QVariant7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "isValid", args)
   }
@@ -1305,7 +1305,7 @@ func (this *QVariant) toLineF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant7toLineFEv
     // invoke: QLineF toLineF()
-    C._ZNK8QVariant7toLineFEv(this.qclsinst)
+    C.C_ZNK8QVariant7toLineFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toLineF", args)
   }
@@ -1325,7 +1325,7 @@ func (this *QVariant) toJsonValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant11toJsonValueEv
     // invoke: QJsonValue toJsonValue()
-    C._ZNK8QVariant11toJsonValueEv(this.qclsinst)
+    C.C_ZNK8QVariant11toJsonValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toJsonValue", args)
   }
@@ -1348,7 +1348,7 @@ func (this *QVariant) canConvert(args ...interface{}) () {
     // invoke: bool canConvert(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK8QVariant10canConvertEi(this.qclsinst, arg0)
+    C.C_ZNK8QVariant10canConvertEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "canConvert", args)
   }
@@ -1368,7 +1368,7 @@ func (this *QVariant) toPersistentModelIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant22toPersistentModelIndexEv
     // invoke: QPersistentModelIndex toPersistentModelIndex()
-    C._ZNK8QVariant22toPersistentModelIndexEv(this.qclsinst)
+    C.C_ZNK8QVariant22toPersistentModelIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toPersistentModelIndex", args)
   }
@@ -1388,7 +1388,7 @@ func (this *QVariant) toPointF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant8toPointFEv
     // invoke: QPointF toPointF()
-    C._ZNK8QVariant8toPointFEv(this.qclsinst)
+    C.C_ZNK8QVariant8toPointFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toPointF", args)
   }
@@ -1408,7 +1408,7 @@ func (this *QVariant) toJsonDocument(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant14toJsonDocumentEv
     // invoke: QJsonDocument toJsonDocument()
-    C._ZNK8QVariant14toJsonDocumentEv(this.qclsinst)
+    C.C_ZNK8QVariant14toJsonDocumentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toJsonDocument", args)
   }
@@ -1428,7 +1428,7 @@ func (this *QVariant) toModelIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant12toModelIndexEv
     // invoke: QModelIndex toModelIndex()
-    C._ZNK8QVariant12toModelIndexEv(this.qclsinst)
+    C.C_ZNK8QVariant12toModelIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toModelIndex", args)
   }
@@ -1448,7 +1448,7 @@ func (this *QVariant) detach(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QVariant6detachEv
     // invoke: void detach()
-    C._ZN8QVariant6detachEv(this.qclsinst)
+    C.C_ZN8QVariant6detachEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "detach", args)
   }
@@ -1468,7 +1468,7 @@ func (this *QVariant) data(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QVariant4dataEv
     // invoke: void * data()
-    C._ZN8QVariant4dataEv(this.qclsinst)
+    C.C_ZN8QVariant4dataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "data", args)
   }
@@ -1491,7 +1491,7 @@ func (this *QVariant) toULongLong(args ...interface{}) () {
     // invoke: qulonglong toULongLong(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C._ZNK8QVariant11toULongLongEPb(this.qclsinst, arg0)
+    C.C_ZNK8QVariant11toULongLongEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toULongLong", args)
   }
@@ -1511,7 +1511,7 @@ func (this *QVariant) toPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant7toPointEv
     // invoke: QPoint toPoint()
-    C._ZNK8QVariant7toPointEv(this.qclsinst)
+    C.C_ZNK8QVariant7toPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toPoint", args)
   }
@@ -1531,7 +1531,7 @@ func (this *QVariant) toHash(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6toHashEv
     // invoke: QHash<QString, QVariant> toHash()
-    C._ZNK8QVariant6toHashEv(this.qclsinst)
+    C.C_ZNK8QVariant6toHashEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toHash", args)
   }
@@ -1554,7 +1554,7 @@ func (this *QVariant) convert(args ...interface{}) () {
     // invoke: bool convert(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN8QVariant7convertEi(this.qclsinst, arg0)
+    C.C_ZN8QVariant7convertEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "convert", args)
   }
@@ -1577,7 +1577,7 @@ func (this *QVariant) save(args ...interface{}) () {
     // invoke: void save(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK8QVariant4saveER11QDataStream(this.qclsinst, arg0)
+    C.C_ZNK8QVariant4saveER11QDataStream(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "save", args)
   }
@@ -1597,7 +1597,7 @@ func (this *QVariant) toRegExp(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant8toRegExpEv
     // invoke: QRegExp toRegExp()
-    C._ZNK8QVariant8toRegExpEv(this.qclsinst)
+    C.C_ZNK8QVariant8toRegExpEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toRegExp", args)
   }
@@ -1617,7 +1617,7 @@ func (this *QVariant) toLine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6toLineEv
     // invoke: QLine toLine()
-    C._ZNK8QVariant6toLineEv(this.qclsinst)
+    C.C_ZNK8QVariant6toLineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toLine", args)
   }
@@ -1637,7 +1637,7 @@ func (this *QVariant) toStringList(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant12toStringListEv
     // invoke: QStringList toStringList()
-    C._ZNK8QVariant12toStringListEv(this.qclsinst)
+    C.C_ZNK8QVariant12toStringListEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toStringList", args)
   }
@@ -1657,7 +1657,7 @@ func (this *QVariant) toSizeF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant7toSizeFEv
     // invoke: QSizeF toSizeF()
-    C._ZNK8QVariant7toSizeFEv(this.qclsinst)
+    C.C_ZNK8QVariant7toSizeFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toSizeF", args)
   }
@@ -1677,7 +1677,7 @@ func (this *QVariant) toRectF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant7toRectFEv
     // invoke: QRectF toRectF()
-    C._ZNK8QVariant7toRectFEv(this.qclsinst)
+    C.C_ZNK8QVariant7toRectFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toRectF", args)
   }
@@ -1697,7 +1697,7 @@ func (this *QVariant) toUrl(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant5toUrlEv
     // invoke: QUrl toUrl()
-    C._ZNK8QVariant5toUrlEv(this.qclsinst)
+    C.C_ZNK8QVariant5toUrlEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toUrl", args)
   }
@@ -1717,7 +1717,7 @@ func (this *QVariant) toUuid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6toUuidEv
     // invoke: QUuid toUuid()
-    C._ZNK8QVariant6toUuidEv(this.qclsinst)
+    C.C_ZNK8QVariant6toUuidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toUuid", args)
   }
@@ -1740,7 +1740,7 @@ func (this *QVariant) toReal(args ...interface{}) () {
     // invoke: qreal toReal(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C._ZNK8QVariant6toRealEPb(this.qclsinst, arg0)
+    C.C_ZNK8QVariant6toRealEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toReal", args)
   }
@@ -1760,7 +1760,7 @@ func (this *QVariant) FreeQVariant(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QVariantD0Ev
     // invoke: void ~QVariant()
-    C._ZN8QVariantD2Ev(this.qclsinst)
+    C.C_ZN8QVariantD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "~QVariant", args)
   }
@@ -1780,7 +1780,7 @@ func (this *QVariant) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6isNullEv
     // invoke: bool isNull()
-    C._ZNK8QVariant6isNullEv(this.qclsinst)
+    C.C_ZNK8QVariant6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "isNull", args)
   }
@@ -1800,7 +1800,7 @@ func (this *QVariant) toByteArray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant11toByteArrayEv
     // invoke: QByteArray toByteArray()
-    C._ZNK8QVariant11toByteArrayEv(this.qclsinst)
+    C.C_ZNK8QVariant11toByteArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toByteArray", args)
   }
@@ -1823,7 +1823,7 @@ func (this *QVariant) toDouble(args ...interface{}) () {
     // invoke: double toDouble(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C._ZNK8QVariant8toDoubleEPb(this.qclsinst, arg0)
+    C.C_ZNK8QVariant8toDoubleEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toDouble", args)
   }
@@ -1843,7 +1843,7 @@ func (this *QVariant) toTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6toTimeEv
     // invoke: QTime toTime()
-    C._ZNK8QVariant6toTimeEv(this.qclsinst)
+    C.C_ZNK8QVariant6toTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toTime", args)
   }
@@ -1863,7 +1863,7 @@ func (this *QVariant) toDate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6toDateEv
     // invoke: QDate toDate()
-    C._ZNK8QVariant6toDateEv(this.qclsinst)
+    C.C_ZNK8QVariant6toDateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toDate", args)
   }
@@ -1883,7 +1883,7 @@ func (this *QVariant) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QVariant5clearEv
     // invoke: void clear()
-    C._ZN8QVariant5clearEv(this.qclsinst)
+    C.C_ZN8QVariant5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "clear", args)
   }
@@ -1903,7 +1903,7 @@ func (this *QVariant) toRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6toRectEv
     // invoke: QRect toRect()
-    C._ZNK8QVariant6toRectEv(this.qclsinst)
+    C.C_ZNK8QVariant6toRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toRect", args)
   }
@@ -1923,7 +1923,7 @@ func (this *QSequentialIterable) begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QSequentialIterable5beginEv
     // invoke: QSequentialIterable::const_iterator begin()
-    C._ZNK19QSequentialIterable5beginEv(this.qclsinst)
+    C.C_ZNK19QSequentialIterable5beginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialIterable", "begin", args)
   }
@@ -1943,7 +1943,7 @@ func (this *QSequentialIterable) end(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QSequentialIterable3endEv
     // invoke: QSequentialIterable::const_iterator end()
-    C._ZNK19QSequentialIterable3endEv(this.qclsinst)
+    C.C_ZNK19QSequentialIterable3endEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialIterable", "end", args)
   }
@@ -1963,7 +1963,7 @@ func (this *QSequentialIterable) canReverseIterate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QSequentialIterable17canReverseIterateEv
     // invoke: bool canReverseIterate()
-    C._ZNK19QSequentialIterable17canReverseIterateEv(this.qclsinst)
+    C.C_ZNK19QSequentialIterable17canReverseIterateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialIterable", "canReverseIterate", args)
   }
@@ -1986,7 +1986,7 @@ func (this *QSequentialIterable) at(args ...interface{}) () {
     // invoke: QVariant at(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK19QSequentialIterable2atEi(this.qclsinst, arg0)
+    C.C_ZNK19QSequentialIterable2atEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSequentialIterable", "at", args)
   }
@@ -2006,7 +2006,7 @@ func (this *QSequentialIterable) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QSequentialIterable4sizeEv
     // invoke: int size()
-    C._ZNK19QSequentialIterable4sizeEv(this.qclsinst)
+    C.C_ZNK19QSequentialIterable4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialIterable", "size", args)
   }
@@ -2026,7 +2026,7 @@ func (this *QAssociativeIterable) begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QAssociativeIterable5beginEv
     // invoke: QAssociativeIterable::const_iterator begin()
-    C._ZNK20QAssociativeIterable5beginEv(this.qclsinst)
+    C.C_ZNK20QAssociativeIterable5beginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "begin", args)
   }
@@ -2049,7 +2049,7 @@ func (this *QAssociativeIterable) value(args ...interface{}) () {
     // invoke: QVariant value(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK20QAssociativeIterable5valueERK8QVariant(this.qclsinst, arg0)
+    C.C_ZNK20QAssociativeIterable5valueERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "value", args)
   }
@@ -2069,7 +2069,7 @@ func (this *QAssociativeIterable) end(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QAssociativeIterable3endEv
     // invoke: QAssociativeIterable::const_iterator end()
-    C._ZNK20QAssociativeIterable3endEv(this.qclsinst)
+    C.C_ZNK20QAssociativeIterable3endEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "end", args)
   }
@@ -2092,7 +2092,7 @@ func (this *QAssociativeIterable) find(args ...interface{}) () {
     // invoke: QAssociativeIterable::const_iterator find(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK20QAssociativeIterable4findERK8QVariant(this.qclsinst, arg0)
+    C.C_ZNK20QAssociativeIterable4findERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "find", args)
   }
@@ -2112,7 +2112,7 @@ func (this *QAssociativeIterable) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QAssociativeIterable4sizeEv
     // invoke: int size()
-    C._ZNK20QAssociativeIterable4sizeEv(this.qclsinst)
+    C.C_ZNK20QAssociativeIterable4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "size", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qdiriterator.h
 // dst-file: /src/core/qdiriterator.go
 //
@@ -29,19 +29,19 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QDirIterator::~QDirIterator();
-extern void _ZN12QDirIteratorD2Ev(void* qthis); // 4
+extern void C_ZN12QDirIteratorD2Ev(void* qthis); // 4
   // proto:  QString QDirIterator::filePath();
-extern void _ZNK12QDirIterator8filePathEv(void* qthis); // 4
+extern void C_ZNK12QDirIterator8filePathEv(void* qthis); // 4
   // proto:  QString QDirIterator::next();
-extern void _ZN12QDirIterator4nextEv(void* qthis); // 4
+extern void C_ZN12QDirIterator4nextEv(void* qthis); // 4
   // proto:  bool QDirIterator::hasNext();
-extern void _ZNK12QDirIterator7hasNextEv(void* qthis); // 4
+extern void C_ZNK12QDirIterator7hasNextEv(void* qthis); // 4
   // proto:  QString QDirIterator::path();
-extern void _ZNK12QDirIterator4pathEv(void* qthis); // 4
+extern void C_ZNK12QDirIterator4pathEv(void* qthis); // 4
   // proto:  QFileInfo QDirIterator::fileInfo();
-extern void _ZNK12QDirIterator8fileInfoEv(void* qthis); // 4
+extern void C_ZNK12QDirIterator8fileInfoEv(void* qthis); // 4
   // proto:  QString QDirIterator::fileName();
-extern void _ZNK12QDirIterator8fileNameEv(void* qthis); // 4
+extern void C_ZNK12QDirIterator8fileNameEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -73,7 +73,7 @@ func (this *QDirIterator) FreeQDirIterator(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QDirIteratorD0Ev
     // invoke: void ~QDirIterator()
-    C._ZN12QDirIteratorD2Ev(this.qclsinst)
+    C.C_ZN12QDirIteratorD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "~QDirIterator", args)
   }
@@ -93,7 +93,7 @@ func (this *QDirIterator) filePath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QDirIterator8filePathEv
     // invoke: QString filePath()
-    C._ZNK12QDirIterator8filePathEv(this.qclsinst)
+    C.C_ZNK12QDirIterator8filePathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "filePath", args)
   }
@@ -113,7 +113,7 @@ func (this *QDirIterator) next(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QDirIterator4nextEv
     // invoke: QString next()
-    C._ZN12QDirIterator4nextEv(this.qclsinst)
+    C.C_ZN12QDirIterator4nextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "next", args)
   }
@@ -133,7 +133,7 @@ func (this *QDirIterator) hasNext(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QDirIterator7hasNextEv
     // invoke: bool hasNext()
-    C._ZNK12QDirIterator7hasNextEv(this.qclsinst)
+    C.C_ZNK12QDirIterator7hasNextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "hasNext", args)
   }
@@ -153,7 +153,7 @@ func (this *QDirIterator) path(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QDirIterator4pathEv
     // invoke: QString path()
-    C._ZNK12QDirIterator4pathEv(this.qclsinst)
+    C.C_ZNK12QDirIterator4pathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "path", args)
   }
@@ -173,7 +173,7 @@ func (this *QDirIterator) fileInfo(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QDirIterator8fileInfoEv
     // invoke: QFileInfo fileInfo()
-    C._ZNK12QDirIterator8fileInfoEv(this.qclsinst)
+    C.C_ZNK12QDirIterator8fileInfoEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "fileInfo", args)
   }
@@ -193,7 +193,7 @@ func (this *QDirIterator) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QDirIterator8fileNameEv
     // invoke: QString fileName()
-    C._ZNK12QDirIterator8fileNameEv(this.qclsinst)
+    C.C_ZNK12QDirIterator8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "fileName", args)
   }

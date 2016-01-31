@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qurlquery.h
 // dst-file: /src/core/qurlquery.go
 //
@@ -29,43 +29,43 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QUrlQuery::addQueryItem(const QString & key, const QString & value);
-extern void _ZN9QUrlQuery12addQueryItemERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN9QUrlQuery12addQueryItemERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QChar QUrlQuery::queryValueDelimiter();
-extern void _ZNK9QUrlQuery19queryValueDelimiterEv(void* qthis); // 4
+extern void C_ZNK9QUrlQuery19queryValueDelimiterEv(void* qthis); // 4
   // proto:  bool QUrlQuery::hasQueryItem(const QString & key);
-extern void _ZNK9QUrlQuery12hasQueryItemERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK9QUrlQuery12hasQueryItemERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QUrlQuery::removeAllQueryItems(const QString & key);
-extern void _ZN9QUrlQuery19removeAllQueryItemsERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN9QUrlQuery19removeAllQueryItemsERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QUrlQuery::~QUrlQuery();
-extern void _ZN9QUrlQueryD2Ev(void* qthis); // 4
+extern void C_ZN9QUrlQueryD2Ev(void* qthis); // 4
   // proto:  bool QUrlQuery::isEmpty();
-extern void _ZNK9QUrlQuery7isEmptyEv(void* qthis); // 4
+extern void C_ZNK9QUrlQuery7isEmptyEv(void* qthis); // 4
   // proto:  void QUrlQuery::swap(QUrlQuery & other);
-extern void _ZN9QUrlQuery4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN9QUrlQuery4swapERS_(void* qthis, void* arg0); // 2
   // proto:  bool QUrlQuery::isDetached();
-extern void _ZNK9QUrlQuery10isDetachedEv(void* qthis); // 4
+extern void C_ZNK9QUrlQuery10isDetachedEv(void* qthis); // 4
   // proto: static QChar QUrlQuery::defaultQueryPairDelimiter();
-extern void _ZN9QUrlQuery25defaultQueryPairDelimiterEv(); // 2
+extern void C_ZN9QUrlQuery25defaultQueryPairDelimiterEv(); // 2
   // proto:  void QUrlQuery::QUrlQuery();
-extern void _ZN9QUrlQueryC2Ev(void* qthis); // 3
+extern void C_ZN9QUrlQueryC2Ev(void* qthis); // 3
   // proto:  void QUrlQuery::QUrlQuery(const QString & queryString);
-extern void _ZN9QUrlQueryC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN9QUrlQueryC2ERK7QString(void* qthis, void* arg0); // 3
   // proto:  void QUrlQuery::QUrlQuery(const QUrl & url);
-extern void _ZN9QUrlQueryC2ERK4QUrl(void* qthis, void* arg0); // 3
+extern void C_ZN9QUrlQueryC2ERK4QUrl(void* qthis, void* arg0); // 3
   // proto:  void QUrlQuery::QUrlQuery(const QUrlQuery & other);
-extern void _ZN9QUrlQueryC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN9QUrlQueryC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QUrlQuery::setQueryDelimiters(QChar valueDelimiter, QChar pairDelimiter);
-extern void _ZN9QUrlQuery18setQueryDelimitersE5QCharS0_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QUrlQuery::clear();
-extern void _ZN9QUrlQuery5clearEv(void* qthis); // 4
+extern void C_ZN9QUrlQuery5clearEv(void* qthis); // 4
   // proto:  QChar QUrlQuery::queryPairDelimiter();
-extern void _ZNK9QUrlQuery18queryPairDelimiterEv(void* qthis); // 4
+extern void C_ZNK9QUrlQuery18queryPairDelimiterEv(void* qthis); // 4
   // proto:  void QUrlQuery::setQuery(const QString & queryString);
-extern void _ZN9QUrlQuery8setQueryERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN9QUrlQuery8setQueryERK7QString(void* qthis, void* arg0); // 4
   // proto: static QChar QUrlQuery::defaultQueryValueDelimiter();
-extern void _ZN9QUrlQuery26defaultQueryValueDelimiterEv(); // 2
+extern void C_ZN9QUrlQuery26defaultQueryValueDelimiterEv(); // 2
   // proto:  void QUrlQuery::removeQueryItem(const QString & key);
-extern void _ZN9QUrlQuery15removeQueryItemERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN9QUrlQuery15removeQueryItemERK7QString(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -103,7 +103,7 @@ func (this *QUrlQuery) addQueryItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN9QUrlQuery12addQueryItemERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN9QUrlQuery12addQueryItemERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QUrlQuery", "addQueryItem", args)
   }
@@ -123,7 +123,7 @@ func (this *QUrlQuery) queryValueDelimiter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUrlQuery19queryValueDelimiterEv
     // invoke: QChar queryValueDelimiter()
-    C._ZNK9QUrlQuery19queryValueDelimiterEv(this.qclsinst)
+    C.C_ZNK9QUrlQuery19queryValueDelimiterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "queryValueDelimiter", args)
   }
@@ -146,7 +146,7 @@ func (this *QUrlQuery) hasQueryItem(args ...interface{}) () {
     // invoke: bool hasQueryItem(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QUrlQuery12hasQueryItemERK7QString(this.qclsinst, arg0)
+    C.C_ZNK9QUrlQuery12hasQueryItemERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "hasQueryItem", args)
   }
@@ -169,7 +169,7 @@ func (this *QUrlQuery) removeAllQueryItems(args ...interface{}) () {
     // invoke: void removeAllQueryItems(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QUrlQuery19removeAllQueryItemsERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QUrlQuery19removeAllQueryItemsERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "removeAllQueryItems", args)
   }
@@ -189,7 +189,7 @@ func (this *QUrlQuery) FreeQUrlQuery(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQueryD0Ev
     // invoke: void ~QUrlQuery()
-    C._ZN9QUrlQueryD2Ev(this.qclsinst)
+    C.C_ZN9QUrlQueryD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "~QUrlQuery", args)
   }
@@ -209,7 +209,7 @@ func (this *QUrlQuery) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUrlQuery7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK9QUrlQuery7isEmptyEv(this.qclsinst)
+    C.C_ZNK9QUrlQuery7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "isEmpty", args)
   }
@@ -232,7 +232,7 @@ func (this *QUrlQuery) swap(args ...interface{}) () {
     // invoke: void swap(class QUrlQuery &)
     var arg0 = args[0].(QUrlQuery).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QUrlQuery4swapERS_(this.qclsinst, arg0)
+    C.C_ZN9QUrlQuery4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "swap", args)
   }
@@ -252,7 +252,7 @@ func (this *QUrlQuery) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUrlQuery10isDetachedEv
     // invoke: bool isDetached()
-    C._ZNK9QUrlQuery10isDetachedEv(this.qclsinst)
+    C.C_ZNK9QUrlQuery10isDetachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "isDetached", args)
   }
@@ -272,7 +272,7 @@ func (this *QUrlQuery) defaultQueryPairDelimiter_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQuery25defaultQueryPairDelimiterEv
     // invoke: QChar defaultQueryPairDelimiter()
-    C._ZN9QUrlQuery25defaultQueryPairDelimiterEv()
+    C.C_ZN9QUrlQuery25defaultQueryPairDelimiterEv()
   default:
     qtrt.ErrorResolve("QUrlQuery", "defaultQueryPairDelimiter", args)
   }
@@ -303,7 +303,7 @@ func NewQUrlQuery(args ...interface{}) QUrlQuery {
     // invoke: void QUrlQuery()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QUrlQueryC2Ev(qthis)
+    C.C_ZN9QUrlQueryC2Ev(qthis)
   case 1:
     // invoke: _ZN9QUrlQueryC1ERK7QString
     // invoke: void QUrlQuery(const class QString &)
@@ -311,7 +311,7 @@ func NewQUrlQuery(args ...interface{}) QUrlQuery {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QUrlQueryC2ERK7QString(qthis, arg0)
+    C.C_ZN9QUrlQueryC2ERK7QString(qthis, arg0)
   case 2:
     // invoke: _ZN9QUrlQueryC1ERK4QUrl
     // invoke: void QUrlQuery(const class QUrl &)
@@ -319,7 +319,7 @@ func NewQUrlQuery(args ...interface{}) QUrlQuery {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QUrlQueryC2ERK4QUrl(qthis, arg0)
+    C.C_ZN9QUrlQueryC2ERK4QUrl(qthis, arg0)
   case 3:
     // invoke: _ZN9QUrlQueryC1ERKS_
     // invoke: void QUrlQuery(const class QUrlQuery &)
@@ -327,7 +327,7 @@ func NewQUrlQuery(args ...interface{}) QUrlQuery {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QUrlQueryC2ERKS_(qthis, arg0)
+    C.C_ZN9QUrlQueryC2ERKS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "QUrlQuery", args)
   }
@@ -354,7 +354,7 @@ func (this *QUrlQuery) setQueryDelimiters(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QChar).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN9QUrlQuery18setQueryDelimitersE5QCharS0_(this.qclsinst, arg0, arg1)
+    C.C_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QUrlQuery", "setQueryDelimiters", args)
   }
@@ -374,7 +374,7 @@ func (this *QUrlQuery) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQuery5clearEv
     // invoke: void clear()
-    C._ZN9QUrlQuery5clearEv(this.qclsinst)
+    C.C_ZN9QUrlQuery5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "clear", args)
   }
@@ -394,7 +394,7 @@ func (this *QUrlQuery) queryPairDelimiter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUrlQuery18queryPairDelimiterEv
     // invoke: QChar queryPairDelimiter()
-    C._ZNK9QUrlQuery18queryPairDelimiterEv(this.qclsinst)
+    C.C_ZNK9QUrlQuery18queryPairDelimiterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "queryPairDelimiter", args)
   }
@@ -417,7 +417,7 @@ func (this *QUrlQuery) setQuery(args ...interface{}) () {
     // invoke: void setQuery(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QUrlQuery8setQueryERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QUrlQuery8setQueryERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "setQuery", args)
   }
@@ -437,7 +437,7 @@ func (this *QUrlQuery) defaultQueryValueDelimiter_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQuery26defaultQueryValueDelimiterEv
     // invoke: QChar defaultQueryValueDelimiter()
-    C._ZN9QUrlQuery26defaultQueryValueDelimiterEv()
+    C.C_ZN9QUrlQuery26defaultQueryValueDelimiterEv()
   default:
     qtrt.ErrorResolve("QUrlQuery", "defaultQueryValueDelimiter", args)
   }
@@ -460,7 +460,7 @@ func (this *QUrlQuery) removeQueryItem(args ...interface{}) () {
     // invoke: void removeQueryItem(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QUrlQuery15removeQueryItemERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QUrlQuery15removeQueryItemERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "removeQueryItem", args)
   }

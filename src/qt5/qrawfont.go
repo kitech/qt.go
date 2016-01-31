@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qrawfont.h
 // dst-file: /src/gui/qrawfont.go
 //
@@ -29,65 +29,65 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QRectF QRawFont::boundingRect(quint32 glyphIndex);
-extern void _ZNK8QRawFont12boundingRectEj(void* qthis, int32_t arg0); // 4
+extern void C_ZNK8QRawFont12boundingRectEj(void* qthis, int32_t arg0); // 4
   // proto:  qreal QRawFont::underlinePosition();
-extern void _ZNK8QRawFont17underlinePositionEv(void* qthis); // 4
+extern void C_ZNK8QRawFont17underlinePositionEv(void* qthis); // 4
   // proto:  qreal QRawFont::ascent();
-extern void _ZNK8QRawFont6ascentEv(void* qthis); // 4
+extern void C_ZNK8QRawFont6ascentEv(void* qthis); // 4
   // proto:  qreal QRawFont::lineThickness();
-extern void _ZNK8QRawFont13lineThicknessEv(void* qthis); // 4
+extern void C_ZNK8QRawFont13lineThicknessEv(void* qthis); // 4
   // proto:  QFont::Style QRawFont::style();
-extern void _ZNK8QRawFont5styleEv(void* qthis); // 4
+extern void C_ZNK8QRawFont5styleEv(void* qthis); // 4
   // proto:  qreal QRawFont::descent();
-extern void _ZNK8QRawFont7descentEv(void* qthis); // 4
+extern void C_ZNK8QRawFont7descentEv(void* qthis); // 4
   // proto:  void QRawFont::QRawFont();
-extern void _ZN8QRawFontC2Ev(void* qthis); // 3
+extern void C_ZN8QRawFontC2Ev(void* qthis); // 3
   // proto:  void QRawFont::QRawFont(const QRawFont & other);
-extern void _ZN8QRawFontC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN8QRawFontC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  qreal QRawFont::leading();
-extern void _ZNK8QRawFont7leadingEv(void* qthis); // 4
+extern void C_ZNK8QRawFont7leadingEv(void* qthis); // 4
   // proto:  bool QRawFont::advancesForGlyphIndexes(const quint32 * glyphIndexes, QPointF * advances, int numGlyphs);
-extern void _ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi(void* qthis, int32_t* arg0, void* arg1, int32_t arg2); // 4
+extern void C_ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi(void* qthis, int32_t* arg0, void* arg1, int32_t arg2); // 4
   // proto:  QByteArray QRawFont::fontTable(const char * tagName);
-extern void _ZNK8QRawFont9fontTableEPKc(void* qthis, unsigned char* arg0); // 4
+extern void C_ZNK8QRawFont9fontTableEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  void QRawFont::swap(QRawFont & other);
-extern void _ZN8QRawFont4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN8QRawFont4swapERS_(void* qthis, void* arg0); // 2
   // proto:  qreal QRawFont::pixelSize();
-extern void _ZNK8QRawFont9pixelSizeEv(void* qthis); // 4
+extern void C_ZNK8QRawFont9pixelSizeEv(void* qthis); // 4
   // proto:  bool QRawFont::glyphIndexesForChars(const QChar * chars, int numChars, quint32 * glyphIndexes, int * numGlyphs);
-extern void _ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi(void* qthis, void* arg0, int32_t arg1, int32_t* arg2, int32_t* arg3); // 4
+extern void C_ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi(void* qthis, void* arg0, int32_t arg1, int32_t* arg2, int32_t* arg3); // 4
   // proto:  bool QRawFont::supportsCharacter(QChar character);
-extern void _ZNK8QRawFont17supportsCharacterE5QChar(void* qthis, void* arg0); // 4
+extern void C_ZNK8QRawFont17supportsCharacterE5QChar(void* qthis, void* arg0); // 4
   // proto:  bool QRawFont::supportsCharacter(uint ucs4);
-extern void _ZNK8QRawFont17supportsCharacterEj(void* qthis, int32_t arg0); // 4
+extern void C_ZNK8QRawFont17supportsCharacterEj(void* qthis, int32_t arg0); // 4
   // proto:  QVector<quint32> QRawFont::glyphIndexesForString(const QString & text);
-extern void _ZNK8QRawFont21glyphIndexesForStringERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK8QRawFont21glyphIndexesForStringERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QRawFont::isValid();
-extern void _ZNK8QRawFont7isValidEv(void* qthis); // 4
+extern void C_ZNK8QRawFont7isValidEv(void* qthis); // 4
   // proto:  QString QRawFont::familyName();
-extern void _ZNK8QRawFont10familyNameEv(void* qthis); // 4
+extern void C_ZNK8QRawFont10familyNameEv(void* qthis); // 4
   // proto:  int QRawFont::weight();
-extern void _ZNK8QRawFont6weightEv(void* qthis); // 4
+extern void C_ZNK8QRawFont6weightEv(void* qthis); // 4
   // proto:  QFont::HintingPreference QRawFont::hintingPreference();
-extern void _ZNK8QRawFont17hintingPreferenceEv(void* qthis); // 4
+extern void C_ZNK8QRawFont17hintingPreferenceEv(void* qthis); // 4
   // proto:  QPainterPath QRawFont::pathForGlyph(quint32 glyphIndex);
-extern void _ZNK8QRawFont12pathForGlyphEj(void* qthis, int32_t arg0); // 4
+extern void C_ZNK8QRawFont12pathForGlyphEj(void* qthis, int32_t arg0); // 4
   // proto:  void QRawFont::setPixelSize(qreal pixelSize);
-extern void _ZN8QRawFont12setPixelSizeEd(void* qthis, double arg0); // 4
+extern void C_ZN8QRawFont12setPixelSizeEd(void* qthis, double arg0); // 4
   // proto:  void QRawFont::~QRawFont();
-extern void _ZN8QRawFontD2Ev(void* qthis); // 4
+extern void C_ZN8QRawFontD2Ev(void* qthis); // 4
   // proto:  qreal QRawFont::maxCharWidth();
-extern void _ZNK8QRawFont12maxCharWidthEv(void* qthis); // 4
+extern void C_ZNK8QRawFont12maxCharWidthEv(void* qthis); // 4
   // proto:  qreal QRawFont::averageCharWidth();
-extern void _ZNK8QRawFont16averageCharWidthEv(void* qthis); // 4
+extern void C_ZNK8QRawFont16averageCharWidthEv(void* qthis); // 4
   // proto:  qreal QRawFont::unitsPerEm();
-extern void _ZNK8QRawFont10unitsPerEmEv(void* qthis); // 4
+extern void C_ZNK8QRawFont10unitsPerEmEv(void* qthis); // 4
   // proto:  qreal QRawFont::xHeight();
-extern void _ZNK8QRawFont7xHeightEv(void* qthis); // 4
+extern void C_ZNK8QRawFont7xHeightEv(void* qthis); // 4
   // proto:  QString QRawFont::styleName();
-extern void _ZNK8QRawFont9styleNameEv(void* qthis); // 4
+extern void C_ZNK8QRawFont9styleNameEv(void* qthis); // 4
   // proto:  QList<QFontDatabase::WritingSystem> QRawFont::supportedWritingSystems();
-extern void _ZNK8QRawFont23supportedWritingSystemsEv(void* qthis); // 4
+extern void C_ZNK8QRawFont23supportedWritingSystemsEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -122,7 +122,7 @@ func (this *QRawFont) boundingRect(args ...interface{}) () {
     // invoke: QRectF boundingRect(quint32)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK8QRawFont12boundingRectEj(this.qclsinst, arg0)
+    C.C_ZNK8QRawFont12boundingRectEj(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRawFont", "boundingRect", args)
   }
@@ -142,7 +142,7 @@ func (this *QRawFont) underlinePosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont17underlinePositionEv
     // invoke: qreal underlinePosition()
-    C._ZNK8QRawFont17underlinePositionEv(this.qclsinst)
+    C.C_ZNK8QRawFont17underlinePositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "underlinePosition", args)
   }
@@ -162,7 +162,7 @@ func (this *QRawFont) ascent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont6ascentEv
     // invoke: qreal ascent()
-    C._ZNK8QRawFont6ascentEv(this.qclsinst)
+    C.C_ZNK8QRawFont6ascentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "ascent", args)
   }
@@ -182,7 +182,7 @@ func (this *QRawFont) lineThickness(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont13lineThicknessEv
     // invoke: qreal lineThickness()
-    C._ZNK8QRawFont13lineThicknessEv(this.qclsinst)
+    C.C_ZNK8QRawFont13lineThicknessEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "lineThickness", args)
   }
@@ -202,7 +202,7 @@ func (this *QRawFont) style(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont5styleEv
     // invoke: QFont::Style style()
-    C._ZNK8QRawFont5styleEv(this.qclsinst)
+    C.C_ZNK8QRawFont5styleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "style", args)
   }
@@ -222,7 +222,7 @@ func (this *QRawFont) descent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont7descentEv
     // invoke: qreal descent()
-    C._ZNK8QRawFont7descentEv(this.qclsinst)
+    C.C_ZNK8QRawFont7descentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "descent", args)
   }
@@ -247,7 +247,7 @@ func NewQRawFont(args ...interface{}) QRawFont {
     // invoke: void QRawFont()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QRawFontC2Ev(qthis)
+    C.C_ZN8QRawFontC2Ev(qthis)
   case 1:
     // invoke: _ZN8QRawFontC1ERKS_
     // invoke: void QRawFont(const class QRawFont &)
@@ -255,7 +255,7 @@ func NewQRawFont(args ...interface{}) QRawFont {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN8QRawFontC2ERKS_(qthis, arg0)
+    C.C_ZN8QRawFontC2ERKS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QRawFont", "QRawFont", args)
   }
@@ -276,7 +276,7 @@ func (this *QRawFont) leading(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont7leadingEv
     // invoke: qreal leading()
-    C._ZNK8QRawFont7leadingEv(this.qclsinst)
+    C.C_ZNK8QRawFont7leadingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "leading", args)
   }
@@ -305,7 +305,7 @@ func (this *QRawFont) advancesForGlyphIndexes(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QRawFont", "advancesForGlyphIndexes", args)
   }
@@ -328,7 +328,7 @@ func (this *QRawFont) fontTable(args ...interface{}) () {
     // invoke: QByteArray fontTable(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C._ZNK8QRawFont9fontTableEPKc(this.qclsinst, arg0)
+    C.C_ZNK8QRawFont9fontTableEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRawFont", "fontTable", args)
   }
@@ -351,7 +351,7 @@ func (this *QRawFont) swap(args ...interface{}) () {
     // invoke: void swap(class QRawFont &)
     var arg0 = args[0].(QRawFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QRawFont4swapERS_(this.qclsinst, arg0)
+    C.C_ZN8QRawFont4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRawFont", "swap", args)
   }
@@ -371,7 +371,7 @@ func (this *QRawFont) pixelSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont9pixelSizeEv
     // invoke: qreal pixelSize()
-    C._ZNK8QRawFont9pixelSizeEv(this.qclsinst)
+    C.C_ZNK8QRawFont9pixelSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "pixelSize", args)
   }
@@ -403,7 +403,7 @@ func (this *QRawFont) glyphIndexesForChars(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C._ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRawFont", "glyphIndexesForChars", args)
   }
@@ -429,13 +429,13 @@ func (this *QRawFont) supportsCharacter(args ...interface{}) () {
     // invoke: bool supportsCharacter(class QChar)
     var arg0 = args[0].(QChar).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK8QRawFont17supportsCharacterE5QChar(this.qclsinst, arg0)
+    C.C_ZNK8QRawFont17supportsCharacterE5QChar(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK8QRawFont17supportsCharacterEj
     // invoke: bool supportsCharacter(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK8QRawFont17supportsCharacterEj(this.qclsinst, arg0)
+    C.C_ZNK8QRawFont17supportsCharacterEj(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRawFont", "supportsCharacter", args)
   }
@@ -458,7 +458,7 @@ func (this *QRawFont) glyphIndexesForString(args ...interface{}) () {
     // invoke: QVector<quint32> glyphIndexesForString(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK8QRawFont21glyphIndexesForStringERK7QString(this.qclsinst, arg0)
+    C.C_ZNK8QRawFont21glyphIndexesForStringERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRawFont", "glyphIndexesForString", args)
   }
@@ -478,7 +478,7 @@ func (this *QRawFont) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont7isValidEv
     // invoke: bool isValid()
-    C._ZNK8QRawFont7isValidEv(this.qclsinst)
+    C.C_ZNK8QRawFont7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "isValid", args)
   }
@@ -498,7 +498,7 @@ func (this *QRawFont) familyName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont10familyNameEv
     // invoke: QString familyName()
-    C._ZNK8QRawFont10familyNameEv(this.qclsinst)
+    C.C_ZNK8QRawFont10familyNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "familyName", args)
   }
@@ -518,7 +518,7 @@ func (this *QRawFont) weight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont6weightEv
     // invoke: int weight()
-    C._ZNK8QRawFont6weightEv(this.qclsinst)
+    C.C_ZNK8QRawFont6weightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "weight", args)
   }
@@ -538,7 +538,7 @@ func (this *QRawFont) hintingPreference(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont17hintingPreferenceEv
     // invoke: QFont::HintingPreference hintingPreference()
-    C._ZNK8QRawFont17hintingPreferenceEv(this.qclsinst)
+    C.C_ZNK8QRawFont17hintingPreferenceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "hintingPreference", args)
   }
@@ -561,7 +561,7 @@ func (this *QRawFont) pathForGlyph(args ...interface{}) () {
     // invoke: QPainterPath pathForGlyph(quint32)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK8QRawFont12pathForGlyphEj(this.qclsinst, arg0)
+    C.C_ZNK8QRawFont12pathForGlyphEj(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRawFont", "pathForGlyph", args)
   }
@@ -584,7 +584,7 @@ func (this *QRawFont) setPixelSize(args ...interface{}) () {
     // invoke: void setPixelSize(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN8QRawFont12setPixelSizeEd(this.qclsinst, arg0)
+    C.C_ZN8QRawFont12setPixelSizeEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRawFont", "setPixelSize", args)
   }
@@ -604,7 +604,7 @@ func (this *QRawFont) FreeQRawFont(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QRawFontD0Ev
     // invoke: void ~QRawFont()
-    C._ZN8QRawFontD2Ev(this.qclsinst)
+    C.C_ZN8QRawFontD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "~QRawFont", args)
   }
@@ -624,7 +624,7 @@ func (this *QRawFont) maxCharWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont12maxCharWidthEv
     // invoke: qreal maxCharWidth()
-    C._ZNK8QRawFont12maxCharWidthEv(this.qclsinst)
+    C.C_ZNK8QRawFont12maxCharWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "maxCharWidth", args)
   }
@@ -644,7 +644,7 @@ func (this *QRawFont) averageCharWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont16averageCharWidthEv
     // invoke: qreal averageCharWidth()
-    C._ZNK8QRawFont16averageCharWidthEv(this.qclsinst)
+    C.C_ZNK8QRawFont16averageCharWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "averageCharWidth", args)
   }
@@ -664,7 +664,7 @@ func (this *QRawFont) unitsPerEm(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont10unitsPerEmEv
     // invoke: qreal unitsPerEm()
-    C._ZNK8QRawFont10unitsPerEmEv(this.qclsinst)
+    C.C_ZNK8QRawFont10unitsPerEmEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "unitsPerEm", args)
   }
@@ -684,7 +684,7 @@ func (this *QRawFont) xHeight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont7xHeightEv
     // invoke: qreal xHeight()
-    C._ZNK8QRawFont7xHeightEv(this.qclsinst)
+    C.C_ZNK8QRawFont7xHeightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "xHeight", args)
   }
@@ -704,7 +704,7 @@ func (this *QRawFont) styleName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont9styleNameEv
     // invoke: QString styleName()
-    C._ZNK8QRawFont9styleNameEv(this.qclsinst)
+    C.C_ZNK8QRawFont9styleNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "styleName", args)
   }
@@ -724,7 +724,7 @@ func (this *QRawFont) supportedWritingSystems(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont23supportedWritingSystemsEv
     // invoke: QList<QFontDatabase::WritingSystem> supportedWritingSystems()
-    C._ZNK8QRawFont23supportedWritingSystemsEv(this.qclsinst)
+    C.C_ZNK8QRawFont23supportedWritingSystemsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRawFont", "supportedWritingSystems", args)
   }

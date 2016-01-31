@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qerrormessage.h
 // dst-file: /src/widgets/qerrormessage.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  const QMetaObject * QErrorMessage::metaObject();
-extern void _ZNK13QErrorMessage10metaObjectEv(void* qthis); // 4
+extern void C_ZNK13QErrorMessage10metaObjectEv(void* qthis); // 4
   // proto:  void QErrorMessage::QErrorMessage(QWidget * parent);
-extern void _ZN13QErrorMessageC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN13QErrorMessageC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QErrorMessage::~QErrorMessage();
-extern void _ZN13QErrorMessageD2Ev(void* qthis); // 4
+extern void C_ZN13QErrorMessageD2Ev(void* qthis); // 4
   // proto: static QErrorMessage * QErrorMessage::qtHandler();
-extern void _ZN13QErrorMessage9qtHandlerEv(); // 4
+extern void C_ZN13QErrorMessage9qtHandlerEv(); // 4
   // proto:  void QErrorMessage::showMessage(const QString & message, const QString & type);
-extern void _ZN13QErrorMessage11showMessageERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN13QErrorMessage11showMessageERK7QStringS2_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QErrorMessage::showMessage(const QString & message);
-extern void _ZN13QErrorMessage11showMessageERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN13QErrorMessage11showMessageERK7QString(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -71,7 +71,7 @@ func (this *QErrorMessage) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QErrorMessage10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK13QErrorMessage10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QErrorMessage10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QErrorMessage", "metaObject", args)
   }
@@ -96,7 +96,7 @@ func NewQErrorMessage(args ...interface{}) QErrorMessage {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QErrorMessageC2EP7QWidget(qthis, arg0)
+    C.C_ZN13QErrorMessageC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QErrorMessage", "QErrorMessage", args)
   }
@@ -117,7 +117,7 @@ func (this *QErrorMessage) FreeQErrorMessage(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QErrorMessageD0Ev
     // invoke: void ~QErrorMessage()
-    C._ZN13QErrorMessageD2Ev(this.qclsinst)
+    C.C_ZN13QErrorMessageD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QErrorMessage", "~QErrorMessage", args)
   }
@@ -137,7 +137,7 @@ func (this *QErrorMessage) qtHandler_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QErrorMessage9qtHandlerEv
     // invoke: QErrorMessage * qtHandler()
-    C._ZN13QErrorMessage9qtHandlerEv()
+    C.C_ZN13QErrorMessage9qtHandlerEv()
   default:
     qtrt.ErrorResolve("QErrorMessage", "qtHandler", args)
   }
@@ -166,13 +166,13 @@ func (this *QErrorMessage) showMessage(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN13QErrorMessage11showMessageERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN13QErrorMessage11showMessageERK7QStringS2_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN13QErrorMessage11showMessageERK7QString
     // invoke: void showMessage(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QErrorMessage11showMessageERK7QString(this.qclsinst, arg0)
+    C.C_ZN13QErrorMessage11showMessageERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QErrorMessage", "showMessage", args)
   }

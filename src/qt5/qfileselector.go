@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qfileselector.h
 // dst-file: /src/core/qfileselector.go
 //
@@ -29,21 +29,21 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QFileSelector::QFileSelector(QObject * parent);
-extern void _ZN13QFileSelectorC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN13QFileSelectorC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  const QMetaObject * QFileSelector::metaObject();
-extern void _ZNK13QFileSelector10metaObjectEv(void* qthis); // 4
+extern void C_ZNK13QFileSelector10metaObjectEv(void* qthis); // 4
   // proto:  QStringList QFileSelector::allSelectors();
-extern void _ZNK13QFileSelector12allSelectorsEv(void* qthis); // 4
+extern void C_ZNK13QFileSelector12allSelectorsEv(void* qthis); // 4
   // proto:  QStringList QFileSelector::extraSelectors();
-extern void _ZNK13QFileSelector14extraSelectorsEv(void* qthis); // 4
+extern void C_ZNK13QFileSelector14extraSelectorsEv(void* qthis); // 4
   // proto:  void QFileSelector::setExtraSelectors(const QStringList & list);
-extern void _ZN13QFileSelector17setExtraSelectorsERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN13QFileSelector17setExtraSelectorsERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  void QFileSelector::~QFileSelector();
-extern void _ZN13QFileSelectorD2Ev(void* qthis); // 4
+extern void C_ZN13QFileSelectorD2Ev(void* qthis); // 4
   // proto:  QString QFileSelector::select(const QString & filePath);
-extern void _ZNK13QFileSelector6selectERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK13QFileSelector6selectERK7QString(void* qthis, void* arg0); // 4
   // proto:  QUrl QFileSelector::select(const QUrl & filePath);
-extern void _ZNK13QFileSelector6selectERK4QUrl(void* qthis, void* arg0); // 4
+extern void C_ZNK13QFileSelector6selectERK4QUrl(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -80,7 +80,7 @@ func NewQFileSelector(args ...interface{}) QFileSelector {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QFileSelectorC2EP7QObject(qthis, arg0)
+    C.C_ZN13QFileSelectorC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QFileSelector", "QFileSelector", args)
   }
@@ -101,7 +101,7 @@ func (this *QFileSelector) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QFileSelector10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK13QFileSelector10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QFileSelector10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSelector", "metaObject", args)
   }
@@ -121,7 +121,7 @@ func (this *QFileSelector) allSelectors(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QFileSelector12allSelectorsEv
     // invoke: QStringList allSelectors()
-    C._ZNK13QFileSelector12allSelectorsEv(this.qclsinst)
+    C.C_ZNK13QFileSelector12allSelectorsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSelector", "allSelectors", args)
   }
@@ -141,7 +141,7 @@ func (this *QFileSelector) extraSelectors(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QFileSelector14extraSelectorsEv
     // invoke: QStringList extraSelectors()
-    C._ZNK13QFileSelector14extraSelectorsEv(this.qclsinst)
+    C.C_ZNK13QFileSelector14extraSelectorsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSelector", "extraSelectors", args)
   }
@@ -164,7 +164,7 @@ func (this *QFileSelector) setExtraSelectors(args ...interface{}) () {
     // invoke: void setExtraSelectors(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QFileSelector17setExtraSelectorsERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN13QFileSelector17setExtraSelectorsERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSelector", "setExtraSelectors", args)
   }
@@ -184,7 +184,7 @@ func (this *QFileSelector) FreeQFileSelector(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QFileSelectorD0Ev
     // invoke: void ~QFileSelector()
-    C._ZN13QFileSelectorD2Ev(this.qclsinst)
+    C.C_ZN13QFileSelectorD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSelector", "~QFileSelector", args)
   }
@@ -210,13 +210,13 @@ func (this *QFileSelector) select_(args ...interface{}) () {
     // invoke: QString select(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QFileSelector6selectERK7QString(this.qclsinst, arg0)
+    C.C_ZNK13QFileSelector6selectERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QFileSelector6selectERK4QUrl
     // invoke: QUrl select(const class QUrl &)
     var arg0 = args[0].(QUrl).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QFileSelector6selectERK4QUrl(this.qclsinst, arg0)
+    C.C_ZNK13QFileSelector6selectERK4QUrl(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSelector", "select", args)
   }

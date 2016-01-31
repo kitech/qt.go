@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qeventloop.h
 // dst-file: /src/core/qeventloop.go
 //
@@ -29,29 +29,29 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QEventLoop::quit();
-extern void _ZN10QEventLoop4quitEv(void* qthis); // 4
+extern void C_ZN10QEventLoop4quitEv(void* qthis); // 4
   // proto:  bool QEventLoop::isRunning();
-extern void _ZNK10QEventLoop9isRunningEv(void* qthis); // 4
+extern void C_ZNK10QEventLoop9isRunningEv(void* qthis); // 4
   // proto:  void QEventLoop::QEventLoop(QObject * parent);
-extern void _ZN10QEventLoopC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN10QEventLoopC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QEventLoop::exit(int returnCode);
-extern void _ZN10QEventLoop4exitEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QEventLoop4exitEi(void* qthis, int32_t arg0); // 4
   // proto:  void QEventLoop::wakeUp();
-extern void _ZN10QEventLoop6wakeUpEv(void* qthis); // 4
+extern void C_ZN10QEventLoop6wakeUpEv(void* qthis); // 4
   // proto:  void QEventLoop::~QEventLoop();
-extern void _ZN10QEventLoopD2Ev(void* qthis); // 4
+extern void C_ZN10QEventLoopD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QEventLoop::metaObject();
-extern void _ZNK10QEventLoop10metaObjectEv(void* qthis); // 4
+extern void C_ZNK10QEventLoop10metaObjectEv(void* qthis); // 4
   // proto:  bool QEventLoop::event(QEvent * event);
-extern void _ZN10QEventLoop5eventEP6QEvent(void* qthis, void* arg0); // 4
+extern void C_ZN10QEventLoop5eventEP6QEvent(void* qthis, void* arg0); // 4
   // proto:  void QEventLoopLocker::~QEventLoopLocker();
-extern void _ZN16QEventLoopLockerD2Ev(void* qthis); // 4
+extern void C_ZN16QEventLoopLockerD2Ev(void* qthis); // 4
   // proto:  void QEventLoopLocker::QEventLoopLocker();
-extern void _ZN16QEventLoopLockerC2Ev(void* qthis); // 3
+extern void C_ZN16QEventLoopLockerC2Ev(void* qthis); // 3
   // proto:  void QEventLoopLocker::QEventLoopLocker(QThread * thread);
-extern void _ZN16QEventLoopLockerC2EP7QThread(void* qthis, void* arg0); // 3
+extern void C_ZN16QEventLoopLockerC2EP7QThread(void* qthis, void* arg0); // 3
   // proto:  void QEventLoopLocker::QEventLoopLocker(QEventLoop * loop);
-extern void _ZN16QEventLoopLockerC2EP10QEventLoop(void* qthis, void* arg0); // 3
+extern void C_ZN16QEventLoopLockerC2EP10QEventLoop(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -89,7 +89,7 @@ func (this *QEventLoop) quit(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QEventLoop4quitEv
     // invoke: void quit()
-    C._ZN10QEventLoop4quitEv(this.qclsinst)
+    C.C_ZN10QEventLoop4quitEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "quit", args)
   }
@@ -109,7 +109,7 @@ func (this *QEventLoop) isRunning(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QEventLoop9isRunningEv
     // invoke: bool isRunning()
-    C._ZNK10QEventLoop9isRunningEv(this.qclsinst)
+    C.C_ZNK10QEventLoop9isRunningEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "isRunning", args)
   }
@@ -134,7 +134,7 @@ func NewQEventLoop(args ...interface{}) QEventLoop {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QEventLoopC2EP7QObject(qthis, arg0)
+    C.C_ZN10QEventLoopC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QEventLoop", "QEventLoop", args)
   }
@@ -158,7 +158,7 @@ func (this *QEventLoop) exit(args ...interface{}) () {
     // invoke: void exit(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QEventLoop4exitEi(this.qclsinst, arg0)
+    C.C_ZN10QEventLoop4exitEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEventLoop", "exit", args)
   }
@@ -178,7 +178,7 @@ func (this *QEventLoop) wakeUp(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QEventLoop6wakeUpEv
     // invoke: void wakeUp()
-    C._ZN10QEventLoop6wakeUpEv(this.qclsinst)
+    C.C_ZN10QEventLoop6wakeUpEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "wakeUp", args)
   }
@@ -198,7 +198,7 @@ func (this *QEventLoop) FreeQEventLoop(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QEventLoopD0Ev
     // invoke: void ~QEventLoop()
-    C._ZN10QEventLoopD2Ev(this.qclsinst)
+    C.C_ZN10QEventLoopD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "~QEventLoop", args)
   }
@@ -218,7 +218,7 @@ func (this *QEventLoop) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QEventLoop10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK10QEventLoop10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QEventLoop10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "metaObject", args)
   }
@@ -241,7 +241,7 @@ func (this *QEventLoop) event(args ...interface{}) () {
     // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QEventLoop5eventEP6QEvent(this.qclsinst, arg0)
+    C.C_ZN10QEventLoop5eventEP6QEvent(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEventLoop", "event", args)
   }
@@ -261,7 +261,7 @@ func (this *QEventLoopLocker) FreeQEventLoopLocker(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QEventLoopLockerD0Ev
     // invoke: void ~QEventLoopLocker()
-    C._ZN16QEventLoopLockerD2Ev(this.qclsinst)
+    C.C_ZN16QEventLoopLockerD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoopLocker", "~QEventLoopLocker", args)
   }
@@ -289,7 +289,7 @@ func NewQEventLoopLocker(args ...interface{}) QEventLoopLocker {
     // invoke: void QEventLoopLocker()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QEventLoopLockerC2Ev(qthis)
+    C.C_ZN16QEventLoopLockerC2Ev(qthis)
   case 1:
     // invoke: _ZN16QEventLoopLockerC1EP7QThread
     // invoke: void QEventLoopLocker(class QThread *)
@@ -297,7 +297,7 @@ func NewQEventLoopLocker(args ...interface{}) QEventLoopLocker {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QEventLoopLockerC2EP7QThread(qthis, arg0)
+    C.C_ZN16QEventLoopLockerC2EP7QThread(qthis, arg0)
   case 2:
     // invoke: _ZN16QEventLoopLockerC1EP10QEventLoop
     // invoke: void QEventLoopLocker(class QEventLoop *)
@@ -305,7 +305,7 @@ func NewQEventLoopLocker(args ...interface{}) QEventLoopLocker {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QEventLoopLockerC2EP10QEventLoop(qthis, arg0)
+    C.C_ZN16QEventLoopLockerC2EP10QEventLoop(qthis, arg0)
   default:
     qtrt.ErrorResolve("QEventLoopLocker", "QEventLoopLocker", args)
   }

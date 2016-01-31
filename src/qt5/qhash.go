@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QHashData::rehash(int hint);
-extern void _ZN9QHashData6rehashEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QHashData6rehashEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QHashData::willGrow();
-extern void _ZN9QHashData8willGrowEv(void* qthis); // 2
+extern void C_ZN9QHashData8willGrowEv(void* qthis); // 2
   // proto:  void * QHashData::allocateNode(int nodeAlign);
-extern void _ZN9QHashData12allocateNodeEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QHashData12allocateNodeEi(void* qthis, int32_t arg0); // 4
   // proto:  void QHashData::freeNode(void * node);
-extern void _ZN9QHashData8freeNodeEPv(void* qthis, void* arg0); // 4
+extern void C_ZN9QHashData8freeNodeEPv(void* qthis, void* arg0); // 4
   // proto:  QHashData::Node * QHashData::firstNode();
-extern void _ZN9QHashData9firstNodeEv(void* qthis); // 2
+extern void C_ZN9QHashData9firstNodeEv(void* qthis); // 2
   // proto:  void QHashData::hasShrunk();
-extern void _ZN9QHashData9hasShrunkEv(void* qthis); // 2
+extern void C_ZN9QHashData9hasShrunkEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -80,7 +80,7 @@ func (this *QHashData) rehash(args ...interface{}) () {
     // invoke: void rehash(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QHashData6rehashEi(this.qclsinst, arg0)
+    C.C_ZN9QHashData6rehashEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHashData", "rehash", args)
   }
@@ -100,7 +100,7 @@ func (this *QHashData) willGrow(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QHashData8willGrowEv
     // invoke: bool willGrow()
-    C._ZN9QHashData8willGrowEv(this.qclsinst)
+    C.C_ZN9QHashData8willGrowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHashData", "willGrow", args)
   }
@@ -123,7 +123,7 @@ func (this *QHashData) allocateNode(args ...interface{}) () {
     // invoke: void * allocateNode(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QHashData12allocateNodeEi(this.qclsinst, arg0)
+    C.C_ZN9QHashData12allocateNodeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHashData", "allocateNode", args)
   }
@@ -146,7 +146,7 @@ func (this *QHashData) freeNode(args ...interface{}) () {
     // invoke: void freeNode(void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
-    C._ZN9QHashData8freeNodeEPv(this.qclsinst, arg0)
+    C.C_ZN9QHashData8freeNodeEPv(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHashData", "freeNode", args)
   }
@@ -166,7 +166,7 @@ func (this *QHashData) firstNode(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QHashData9firstNodeEv
     // invoke: QHashData::Node * firstNode()
-    C._ZN9QHashData9firstNodeEv(this.qclsinst)
+    C.C_ZN9QHashData9firstNodeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHashData", "firstNode", args)
   }
@@ -186,7 +186,7 @@ func (this *QHashData) hasShrunk(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QHashData9hasShrunkEv
     // invoke: void hasShrunk()
-    C._ZN9QHashData9hasShrunkEv(this.qclsinst)
+    C.C_ZN9QHashData9hasShrunkEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHashData", "hasShrunk", args)
   }

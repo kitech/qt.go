@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.go
 //
@@ -29,101 +29,101 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QStyleHints * QGuiApplication::styleHints();
-extern void _ZN15QGuiApplication10styleHintsEv(); // 4
+extern void C_ZN15QGuiApplication10styleHintsEv(); // 4
   // proto: static void QGuiApplication::setOverrideCursor(const QCursor & );
-extern void _ZN15QGuiApplication17setOverrideCursorERK7QCursor(void* arg0); // 4
+extern void C_ZN15QGuiApplication17setOverrideCursorERK7QCursor(void* arg0); // 4
   // proto: static void QGuiApplication::sync();
-extern void _ZN15QGuiApplication4syncEv(); // 4
+extern void C_ZN15QGuiApplication4syncEv(); // 4
   // proto: static void QGuiApplication::setPalette(const QPalette & pal);
-extern void _ZN15QGuiApplication10setPaletteERK8QPalette(void* arg0); // 4
+extern void C_ZN15QGuiApplication10setPaletteERK8QPalette(void* arg0); // 4
   // proto: static QList<QScreen *> QGuiApplication::screens();
-extern void _ZN15QGuiApplication7screensEv(); // 4
+extern void C_ZN15QGuiApplication7screensEv(); // 4
   // proto: static Qt::ApplicationState QGuiApplication::applicationState();
-extern void _ZN15QGuiApplication16applicationStateEv(); // 4
+extern void C_ZN15QGuiApplication16applicationStateEv(); // 4
   // proto:  bool QGuiApplication::notify(QObject * , QEvent * );
-extern void _ZN15QGuiApplication6notifyEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN15QGuiApplication6notifyEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1); // 4
   // proto: static Qt::KeyboardModifiers QGuiApplication::queryKeyboardModifiers();
-extern void _ZN15QGuiApplication22queryKeyboardModifiersEv(); // 4
+extern void C_ZN15QGuiApplication22queryKeyboardModifiersEv(); // 4
   // proto:  bool QGuiApplication::isSavingSession();
-extern void _ZNK15QGuiApplication15isSavingSessionEv(void* qthis); // 4
+extern void C_ZNK15QGuiApplication15isSavingSessionEv(void* qthis); // 4
   // proto: static void QGuiApplication::changeOverrideCursor(const QCursor & );
-extern void _ZN15QGuiApplication20changeOverrideCursorERK7QCursor(void* arg0); // 4
+extern void C_ZN15QGuiApplication20changeOverrideCursorERK7QCursor(void* arg0); // 4
   // proto: static QFont QGuiApplication::font();
-extern void _ZN15QGuiApplication4fontEv(); // 4
+extern void C_ZN15QGuiApplication4fontEv(); // 4
   // proto: static bool QGuiApplication::quitOnLastWindowClosed();
-extern void _ZN15QGuiApplication22quitOnLastWindowClosedEv(); // 4
+extern void C_ZN15QGuiApplication22quitOnLastWindowClosedEv(); // 4
   // proto: static QPalette QGuiApplication::palette();
-extern void _ZN15QGuiApplication7paletteEv(); // 4
+extern void C_ZN15QGuiApplication7paletteEv(); // 4
   // proto: static void QGuiApplication::setApplicationDisplayName(const QString & name);
-extern void _ZN15QGuiApplication25setApplicationDisplayNameERK7QString(void* arg0); // 4
+extern void C_ZN15QGuiApplication25setApplicationDisplayNameERK7QString(void* arg0); // 4
   // proto: static Qt::LayoutDirection QGuiApplication::layoutDirection();
-extern void _ZN15QGuiApplication15layoutDirectionEv(); // 4
+extern void C_ZN15QGuiApplication15layoutDirectionEv(); // 4
   // proto: static int QGuiApplication::exec();
-extern void _ZN15QGuiApplication4execEv(); // 4
+extern void C_ZN15QGuiApplication4execEv(); // 4
   // proto:  QString QGuiApplication::sessionId();
-extern void _ZNK15QGuiApplication9sessionIdEv(void* qthis); // 4
+extern void C_ZNK15QGuiApplication9sessionIdEv(void* qthis); // 4
   // proto:  QString QGuiApplication::sessionKey();
-extern void _ZNK15QGuiApplication10sessionKeyEv(void* qthis); // 4
+extern void C_ZNK15QGuiApplication10sessionKeyEv(void* qthis); // 4
   // proto: static QObject * QGuiApplication::focusObject();
-extern void _ZN15QGuiApplication11focusObjectEv(); // 4
+extern void C_ZN15QGuiApplication11focusObjectEv(); // 4
   // proto: static QFunctionPointer QGuiApplication::platformFunction(const QByteArray & function);
-extern void _ZN15QGuiApplication16platformFunctionERK10QByteArray(void* arg0); // 4
+extern void C_ZN15QGuiApplication16platformFunctionERK10QByteArray(void* arg0); // 4
   // proto: static Qt::KeyboardModifiers QGuiApplication::keyboardModifiers();
-extern void _ZN15QGuiApplication17keyboardModifiersEv(); // 4
+extern void C_ZN15QGuiApplication17keyboardModifiersEv(); // 4
   // proto: static QString QGuiApplication::platformName();
-extern void _ZN15QGuiApplication12platformNameEv(); // 4
+extern void C_ZN15QGuiApplication12platformNameEv(); // 4
   // proto: static QWindow * QGuiApplication::focusWindow();
-extern void _ZN15QGuiApplication11focusWindowEv(); // 4
+extern void C_ZN15QGuiApplication11focusWindowEv(); // 4
   // proto: static bool QGuiApplication::isRightToLeft();
-extern void _ZN15QGuiApplication13isRightToLeftEv(); // 2
+extern void C_ZN15QGuiApplication13isRightToLeftEv(); // 2
   // proto: static QWindow * QGuiApplication::topLevelAt(const QPoint & pos);
-extern void _ZN15QGuiApplication10topLevelAtERK6QPoint(void* arg0); // 4
+extern void C_ZN15QGuiApplication10topLevelAtERK6QPoint(void* arg0); // 4
   // proto: static QString QGuiApplication::applicationDisplayName();
-extern void _ZN15QGuiApplication22applicationDisplayNameEv(); // 4
+extern void C_ZN15QGuiApplication22applicationDisplayNameEv(); // 4
   // proto: static QInputMethod * QGuiApplication::inputMethod();
-extern void _ZN15QGuiApplication11inputMethodEv(); // 4
+extern void C_ZN15QGuiApplication11inputMethodEv(); // 4
   // proto: static QClipboard * QGuiApplication::clipboard();
-extern void _ZN15QGuiApplication9clipboardEv(); // 4
+extern void C_ZN15QGuiApplication9clipboardEv(); // 4
   // proto: static QCursor * QGuiApplication::overrideCursor();
-extern void _ZN15QGuiApplication14overrideCursorEv(); // 4
+extern void C_ZN15QGuiApplication14overrideCursorEv(); // 4
   // proto: static QScreen * QGuiApplication::primaryScreen();
-extern void _ZN15QGuiApplication13primaryScreenEv(); // 4
+extern void C_ZN15QGuiApplication13primaryScreenEv(); // 4
   // proto: static QWindowList QGuiApplication::allWindows();
-extern void _ZN15QGuiApplication10allWindowsEv(); // 4
+extern void C_ZN15QGuiApplication10allWindowsEv(); // 4
   // proto:  void QGuiApplication::~QGuiApplication();
-extern void _ZN15QGuiApplicationD2Ev(void* qthis); // 4
+extern void C_ZN15QGuiApplicationD2Ev(void* qthis); // 4
   // proto: static void QGuiApplication::setDesktopSettingsAware(bool on);
-extern void _ZN15QGuiApplication23setDesktopSettingsAwareEb(bool arg0); // 4
+extern void C_ZN15QGuiApplication23setDesktopSettingsAwareEb(bool arg0); // 4
   // proto: static Qt::MouseButtons QGuiApplication::mouseButtons();
-extern void _ZN15QGuiApplication12mouseButtonsEv(); // 4
+extern void C_ZN15QGuiApplication12mouseButtonsEv(); // 4
   // proto: static QPlatformNativeInterface * QGuiApplication::platformNativeInterface();
-extern void _ZN15QGuiApplication23platformNativeInterfaceEv(); // 4
+extern void C_ZN15QGuiApplication23platformNativeInterfaceEv(); // 4
   // proto:  const QMetaObject * QGuiApplication::metaObject();
-extern void _ZNK15QGuiApplication10metaObjectEv(void* qthis); // 4
+extern void C_ZNK15QGuiApplication10metaObjectEv(void* qthis); // 4
   // proto:  qreal QGuiApplication::devicePixelRatio();
-extern void _ZNK15QGuiApplication16devicePixelRatioEv(void* qthis); // 4
+extern void C_ZNK15QGuiApplication16devicePixelRatioEv(void* qthis); // 4
   // proto: static QWindow * QGuiApplication::modalWindow();
-extern void _ZN15QGuiApplication11modalWindowEv(); // 4
+extern void C_ZN15QGuiApplication11modalWindowEv(); // 4
   // proto:  void QGuiApplication::QGuiApplication(int & argc, char ** argv, int );
-extern void _ZN15QGuiApplicationC2ERiPPci(void* qthis, int32_t* arg0, unsigned char* arg1, int32_t arg2); // 3
+extern void C_ZN15QGuiApplicationC2ERiPPci(void* qthis, int32_t* arg0, unsigned char* arg1, int32_t arg2); // 3
   // proto: static bool QGuiApplication::isLeftToRight();
-extern void _ZN15QGuiApplication13isLeftToRightEv(); // 2
+extern void C_ZN15QGuiApplication13isLeftToRightEv(); // 2
   // proto: static void QGuiApplication::setWindowIcon(const QIcon & icon);
-extern void _ZN15QGuiApplication13setWindowIconERK5QIcon(void* arg0); // 4
+extern void C_ZN15QGuiApplication13setWindowIconERK5QIcon(void* arg0); // 4
   // proto: static void QGuiApplication::setQuitOnLastWindowClosed(bool quit);
-extern void _ZN15QGuiApplication25setQuitOnLastWindowClosedEb(bool arg0); // 4
+extern void C_ZN15QGuiApplication25setQuitOnLastWindowClosedEb(bool arg0); // 4
   // proto: static bool QGuiApplication::desktopSettingsAware();
-extern void _ZN15QGuiApplication20desktopSettingsAwareEv(); // 4
+extern void C_ZN15QGuiApplication20desktopSettingsAwareEv(); // 4
   // proto: static void QGuiApplication::setFont(const QFont & );
-extern void _ZN15QGuiApplication7setFontERK5QFont(void* arg0); // 4
+extern void C_ZN15QGuiApplication7setFontERK5QFont(void* arg0); // 4
   // proto: static QWindowList QGuiApplication::topLevelWindows();
-extern void _ZN15QGuiApplication15topLevelWindowsEv(); // 4
+extern void C_ZN15QGuiApplication15topLevelWindowsEv(); // 4
   // proto:  bool QGuiApplication::isSessionRestored();
-extern void _ZNK15QGuiApplication17isSessionRestoredEv(void* qthis); // 4
+extern void C_ZNK15QGuiApplication17isSessionRestoredEv(void* qthis); // 4
   // proto: static void QGuiApplication::restoreOverrideCursor();
-extern void _ZN15QGuiApplication21restoreOverrideCursorEv(); // 4
+extern void C_ZN15QGuiApplication21restoreOverrideCursorEv(); // 4
   // proto: static QIcon QGuiApplication::windowIcon();
-extern void _ZN15QGuiApplication10windowIconEv(); // 4
+extern void C_ZN15QGuiApplication10windowIconEv(); // 4
 */
 import "C"
 // } // <= ext block end
@@ -166,7 +166,7 @@ func (this *QGuiApplication) styleHints_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication10styleHintsEv
     // invoke: QStyleHints * styleHints()
-    C._ZN15QGuiApplication10styleHintsEv()
+    C.C_ZN15QGuiApplication10styleHintsEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "styleHints", args)
   }
@@ -189,7 +189,7 @@ func (this *QGuiApplication) setOverrideCursor_s(args ...interface{}) () {
     // invoke: void setOverrideCursor(const class QCursor &)
     var arg0 = args[0].(QCursor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGuiApplication17setOverrideCursorERK7QCursor(arg0)
+    C.C_ZN15QGuiApplication17setOverrideCursorERK7QCursor(arg0)
   default:
     qtrt.ErrorResolve("QGuiApplication", "setOverrideCursor", args)
   }
@@ -209,7 +209,7 @@ func (this *QGuiApplication) sync_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication4syncEv
     // invoke: void sync()
-    C._ZN15QGuiApplication4syncEv()
+    C.C_ZN15QGuiApplication4syncEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "sync", args)
   }
@@ -232,7 +232,7 @@ func (this *QGuiApplication) setPalette_s(args ...interface{}) () {
     // invoke: void setPalette(const class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGuiApplication10setPaletteERK8QPalette(arg0)
+    C.C_ZN15QGuiApplication10setPaletteERK8QPalette(arg0)
   default:
     qtrt.ErrorResolve("QGuiApplication", "setPalette", args)
   }
@@ -252,7 +252,7 @@ func (this *QGuiApplication) screens_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication7screensEv
     // invoke: QList<QScreen *> screens()
-    C._ZN15QGuiApplication7screensEv()
+    C.C_ZN15QGuiApplication7screensEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "screens", args)
   }
@@ -272,7 +272,7 @@ func (this *QGuiApplication) applicationState_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication16applicationStateEv
     // invoke: Qt::ApplicationState applicationState()
-    C._ZN15QGuiApplication16applicationStateEv()
+    C.C_ZN15QGuiApplication16applicationStateEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "applicationState", args)
   }
@@ -298,7 +298,7 @@ func (this *QGuiApplication) notify(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QGuiApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
+    C.C_ZN15QGuiApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGuiApplication", "notify", args)
   }
@@ -318,7 +318,7 @@ func (this *QGuiApplication) queryKeyboardModifiers_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication22queryKeyboardModifiersEv
     // invoke: Qt::KeyboardModifiers queryKeyboardModifiers()
-    C._ZN15QGuiApplication22queryKeyboardModifiersEv()
+    C.C_ZN15QGuiApplication22queryKeyboardModifiersEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "queryKeyboardModifiers", args)
   }
@@ -338,7 +338,7 @@ func (this *QGuiApplication) isSavingSession(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGuiApplication15isSavingSessionEv
     // invoke: bool isSavingSession()
-    C._ZNK15QGuiApplication15isSavingSessionEv(this.qclsinst)
+    C.C_ZNK15QGuiApplication15isSavingSessionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "isSavingSession", args)
   }
@@ -361,7 +361,7 @@ func (this *QGuiApplication) changeOverrideCursor_s(args ...interface{}) () {
     // invoke: void changeOverrideCursor(const class QCursor &)
     var arg0 = args[0].(QCursor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGuiApplication20changeOverrideCursorERK7QCursor(arg0)
+    C.C_ZN15QGuiApplication20changeOverrideCursorERK7QCursor(arg0)
   default:
     qtrt.ErrorResolve("QGuiApplication", "changeOverrideCursor", args)
   }
@@ -381,7 +381,7 @@ func (this *QGuiApplication) font_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication4fontEv
     // invoke: QFont font()
-    C._ZN15QGuiApplication4fontEv()
+    C.C_ZN15QGuiApplication4fontEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "font", args)
   }
@@ -401,7 +401,7 @@ func (this *QGuiApplication) quitOnLastWindowClosed_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication22quitOnLastWindowClosedEv
     // invoke: bool quitOnLastWindowClosed()
-    C._ZN15QGuiApplication22quitOnLastWindowClosedEv()
+    C.C_ZN15QGuiApplication22quitOnLastWindowClosedEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "quitOnLastWindowClosed", args)
   }
@@ -421,7 +421,7 @@ func (this *QGuiApplication) palette_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication7paletteEv
     // invoke: QPalette palette()
-    C._ZN15QGuiApplication7paletteEv()
+    C.C_ZN15QGuiApplication7paletteEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "palette", args)
   }
@@ -444,7 +444,7 @@ func (this *QGuiApplication) setApplicationDisplayName_s(args ...interface{}) ()
     // invoke: void setApplicationDisplayName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGuiApplication25setApplicationDisplayNameERK7QString(arg0)
+    C.C_ZN15QGuiApplication25setApplicationDisplayNameERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QGuiApplication", "setApplicationDisplayName", args)
   }
@@ -464,7 +464,7 @@ func (this *QGuiApplication) layoutDirection_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication15layoutDirectionEv
     // invoke: Qt::LayoutDirection layoutDirection()
-    C._ZN15QGuiApplication15layoutDirectionEv()
+    C.C_ZN15QGuiApplication15layoutDirectionEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "layoutDirection", args)
   }
@@ -484,7 +484,7 @@ func (this *QGuiApplication) exec_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication4execEv
     // invoke: int exec()
-    C._ZN15QGuiApplication4execEv()
+    C.C_ZN15QGuiApplication4execEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "exec", args)
   }
@@ -504,7 +504,7 @@ func (this *QGuiApplication) sessionId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGuiApplication9sessionIdEv
     // invoke: QString sessionId()
-    C._ZNK15QGuiApplication9sessionIdEv(this.qclsinst)
+    C.C_ZNK15QGuiApplication9sessionIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "sessionId", args)
   }
@@ -524,7 +524,7 @@ func (this *QGuiApplication) sessionKey(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGuiApplication10sessionKeyEv
     // invoke: QString sessionKey()
-    C._ZNK15QGuiApplication10sessionKeyEv(this.qclsinst)
+    C.C_ZNK15QGuiApplication10sessionKeyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "sessionKey", args)
   }
@@ -544,7 +544,7 @@ func (this *QGuiApplication) focusObject_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication11focusObjectEv
     // invoke: QObject * focusObject()
-    C._ZN15QGuiApplication11focusObjectEv()
+    C.C_ZN15QGuiApplication11focusObjectEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "focusObject", args)
   }
@@ -567,7 +567,7 @@ func (this *QGuiApplication) platformFunction_s(args ...interface{}) () {
     // invoke: QFunctionPointer platformFunction(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGuiApplication16platformFunctionERK10QByteArray(arg0)
+    C.C_ZN15QGuiApplication16platformFunctionERK10QByteArray(arg0)
   default:
     qtrt.ErrorResolve("QGuiApplication", "platformFunction", args)
   }
@@ -587,7 +587,7 @@ func (this *QGuiApplication) keyboardModifiers_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication17keyboardModifiersEv
     // invoke: Qt::KeyboardModifiers keyboardModifiers()
-    C._ZN15QGuiApplication17keyboardModifiersEv()
+    C.C_ZN15QGuiApplication17keyboardModifiersEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "keyboardModifiers", args)
   }
@@ -607,7 +607,7 @@ func (this *QGuiApplication) platformName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication12platformNameEv
     // invoke: QString platformName()
-    C._ZN15QGuiApplication12platformNameEv()
+    C.C_ZN15QGuiApplication12platformNameEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "platformName", args)
   }
@@ -627,7 +627,7 @@ func (this *QGuiApplication) focusWindow_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication11focusWindowEv
     // invoke: QWindow * focusWindow()
-    C._ZN15QGuiApplication11focusWindowEv()
+    C.C_ZN15QGuiApplication11focusWindowEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "focusWindow", args)
   }
@@ -647,7 +647,7 @@ func (this *QGuiApplication) isRightToLeft_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication13isRightToLeftEv
     // invoke: bool isRightToLeft()
-    C._ZN15QGuiApplication13isRightToLeftEv()
+    C.C_ZN15QGuiApplication13isRightToLeftEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "isRightToLeft", args)
   }
@@ -670,7 +670,7 @@ func (this *QGuiApplication) topLevelAt_s(args ...interface{}) () {
     // invoke: QWindow * topLevelAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGuiApplication10topLevelAtERK6QPoint(arg0)
+    C.C_ZN15QGuiApplication10topLevelAtERK6QPoint(arg0)
   default:
     qtrt.ErrorResolve("QGuiApplication", "topLevelAt", args)
   }
@@ -690,7 +690,7 @@ func (this *QGuiApplication) applicationDisplayName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication22applicationDisplayNameEv
     // invoke: QString applicationDisplayName()
-    C._ZN15QGuiApplication22applicationDisplayNameEv()
+    C.C_ZN15QGuiApplication22applicationDisplayNameEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "applicationDisplayName", args)
   }
@@ -710,7 +710,7 @@ func (this *QGuiApplication) inputMethod_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication11inputMethodEv
     // invoke: QInputMethod * inputMethod()
-    C._ZN15QGuiApplication11inputMethodEv()
+    C.C_ZN15QGuiApplication11inputMethodEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "inputMethod", args)
   }
@@ -730,7 +730,7 @@ func (this *QGuiApplication) clipboard_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication9clipboardEv
     // invoke: QClipboard * clipboard()
-    C._ZN15QGuiApplication9clipboardEv()
+    C.C_ZN15QGuiApplication9clipboardEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "clipboard", args)
   }
@@ -750,7 +750,7 @@ func (this *QGuiApplication) overrideCursor_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication14overrideCursorEv
     // invoke: QCursor * overrideCursor()
-    C._ZN15QGuiApplication14overrideCursorEv()
+    C.C_ZN15QGuiApplication14overrideCursorEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "overrideCursor", args)
   }
@@ -770,7 +770,7 @@ func (this *QGuiApplication) primaryScreen_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication13primaryScreenEv
     // invoke: QScreen * primaryScreen()
-    C._ZN15QGuiApplication13primaryScreenEv()
+    C.C_ZN15QGuiApplication13primaryScreenEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "primaryScreen", args)
   }
@@ -790,7 +790,7 @@ func (this *QGuiApplication) allWindows_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication10allWindowsEv
     // invoke: QWindowList allWindows()
-    C._ZN15QGuiApplication10allWindowsEv()
+    C.C_ZN15QGuiApplication10allWindowsEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "allWindows", args)
   }
@@ -810,7 +810,7 @@ func (this *QGuiApplication) FreeQGuiApplication(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplicationD0Ev
     // invoke: void ~QGuiApplication()
-    C._ZN15QGuiApplicationD2Ev(this.qclsinst)
+    C.C_ZN15QGuiApplicationD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "~QGuiApplication", args)
   }
@@ -833,7 +833,7 @@ func (this *QGuiApplication) setDesktopSettingsAware_s(args ...interface{}) () {
     // invoke: void setDesktopSettingsAware(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QGuiApplication23setDesktopSettingsAwareEb(arg0)
+    C.C_ZN15QGuiApplication23setDesktopSettingsAwareEb(arg0)
   default:
     qtrt.ErrorResolve("QGuiApplication", "setDesktopSettingsAware", args)
   }
@@ -853,7 +853,7 @@ func (this *QGuiApplication) mouseButtons_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication12mouseButtonsEv
     // invoke: Qt::MouseButtons mouseButtons()
-    C._ZN15QGuiApplication12mouseButtonsEv()
+    C.C_ZN15QGuiApplication12mouseButtonsEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "mouseButtons", args)
   }
@@ -873,7 +873,7 @@ func (this *QGuiApplication) platformNativeInterface_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication23platformNativeInterfaceEv
     // invoke: QPlatformNativeInterface * platformNativeInterface()
-    C._ZN15QGuiApplication23platformNativeInterfaceEv()
+    C.C_ZN15QGuiApplication23platformNativeInterfaceEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "platformNativeInterface", args)
   }
@@ -893,7 +893,7 @@ func (this *QGuiApplication) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGuiApplication10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK15QGuiApplication10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QGuiApplication10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "metaObject", args)
   }
@@ -913,7 +913,7 @@ func (this *QGuiApplication) devicePixelRatio(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGuiApplication16devicePixelRatioEv
     // invoke: qreal devicePixelRatio()
-    C._ZNK15QGuiApplication16devicePixelRatioEv(this.qclsinst)
+    C.C_ZNK15QGuiApplication16devicePixelRatioEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "devicePixelRatio", args)
   }
@@ -933,7 +933,7 @@ func (this *QGuiApplication) modalWindow_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication11modalWindowEv
     // invoke: QWindow * modalWindow()
-    C._ZN15QGuiApplication11modalWindowEv()
+    C.C_ZN15QGuiApplication11modalWindowEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "modalWindow", args)
   }
@@ -964,7 +964,7 @@ func NewQGuiApplication(args ...interface{}) QGuiApplication {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QGuiApplicationC2ERiPPci(qthis, arg0, arg1, arg2)
+    C.C_ZN15QGuiApplicationC2ERiPPci(qthis, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGuiApplication", "QGuiApplication", args)
   }
@@ -985,7 +985,7 @@ func (this *QGuiApplication) isLeftToRight_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication13isLeftToRightEv
     // invoke: bool isLeftToRight()
-    C._ZN15QGuiApplication13isLeftToRightEv()
+    C.C_ZN15QGuiApplication13isLeftToRightEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "isLeftToRight", args)
   }
@@ -1008,7 +1008,7 @@ func (this *QGuiApplication) setWindowIcon_s(args ...interface{}) () {
     // invoke: void setWindowIcon(const class QIcon &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGuiApplication13setWindowIconERK5QIcon(arg0)
+    C.C_ZN15QGuiApplication13setWindowIconERK5QIcon(arg0)
   default:
     qtrt.ErrorResolve("QGuiApplication", "setWindowIcon", args)
   }
@@ -1031,7 +1031,7 @@ func (this *QGuiApplication) setQuitOnLastWindowClosed_s(args ...interface{}) ()
     // invoke: void setQuitOnLastWindowClosed(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QGuiApplication25setQuitOnLastWindowClosedEb(arg0)
+    C.C_ZN15QGuiApplication25setQuitOnLastWindowClosedEb(arg0)
   default:
     qtrt.ErrorResolve("QGuiApplication", "setQuitOnLastWindowClosed", args)
   }
@@ -1051,7 +1051,7 @@ func (this *QGuiApplication) desktopSettingsAware_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication20desktopSettingsAwareEv
     // invoke: bool desktopSettingsAware()
-    C._ZN15QGuiApplication20desktopSettingsAwareEv()
+    C.C_ZN15QGuiApplication20desktopSettingsAwareEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "desktopSettingsAware", args)
   }
@@ -1074,7 +1074,7 @@ func (this *QGuiApplication) setFont_s(args ...interface{}) () {
     // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGuiApplication7setFontERK5QFont(arg0)
+    C.C_ZN15QGuiApplication7setFontERK5QFont(arg0)
   default:
     qtrt.ErrorResolve("QGuiApplication", "setFont", args)
   }
@@ -1094,7 +1094,7 @@ func (this *QGuiApplication) topLevelWindows_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication15topLevelWindowsEv
     // invoke: QWindowList topLevelWindows()
-    C._ZN15QGuiApplication15topLevelWindowsEv()
+    C.C_ZN15QGuiApplication15topLevelWindowsEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "topLevelWindows", args)
   }
@@ -1114,7 +1114,7 @@ func (this *QGuiApplication) isSessionRestored(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGuiApplication17isSessionRestoredEv
     // invoke: bool isSessionRestored()
-    C._ZNK15QGuiApplication17isSessionRestoredEv(this.qclsinst)
+    C.C_ZNK15QGuiApplication17isSessionRestoredEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "isSessionRestored", args)
   }
@@ -1134,7 +1134,7 @@ func (this *QGuiApplication) restoreOverrideCursor_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication21restoreOverrideCursorEv
     // invoke: void restoreOverrideCursor()
-    C._ZN15QGuiApplication21restoreOverrideCursorEv()
+    C.C_ZN15QGuiApplication21restoreOverrideCursorEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "restoreOverrideCursor", args)
   }
@@ -1154,7 +1154,7 @@ func (this *QGuiApplication) windowIcon_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication10windowIconEv
     // invoke: QIcon windowIcon()
-    C._ZN15QGuiApplication10windowIconEv()
+    C.C_ZN15QGuiApplication10windowIconEv()
   default:
     qtrt.ErrorResolve("QGuiApplication", "windowIcon", args)
   }

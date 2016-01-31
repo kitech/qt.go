@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/quuid.h
 // dst-file: /src/core/quuid.go
 //
@@ -29,39 +29,39 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QUuid QUuid::createUuidV5(const QUuid & ns, const QByteArray & baseData);
-extern void _ZN5QUuid12createUuidV5ERKS_RK10QByteArray(void* arg0, void* arg1); // 4
+extern void C_ZN5QUuid12createUuidV5ERKS_RK10QByteArray(void* arg0, void* arg1); // 4
   // proto: static QUuid QUuid::createUuidV5(const QUuid & ns, const QString & baseData);
-extern void _ZN5QUuid12createUuidV5ERKS_RK7QString(void* arg0, void* arg1); // 2
+extern void C_ZN5QUuid12createUuidV5ERKS_RK7QString(void* arg0, void* arg1); // 2
   // proto: static QUuid QUuid::createUuidV3(const QUuid & ns, const QString & baseData);
-extern void _ZN5QUuid12createUuidV3ERKS_RK7QString(void* arg0, void* arg1); // 2
+extern void C_ZN5QUuid12createUuidV3ERKS_RK7QString(void* arg0, void* arg1); // 2
   // proto: static QUuid QUuid::createUuidV3(const QUuid & ns, const QByteArray & baseData);
-extern void _ZN5QUuid12createUuidV3ERKS_RK10QByteArray(void* arg0, void* arg1); // 4
+extern void C_ZN5QUuid12createUuidV3ERKS_RK10QByteArray(void* arg0, void* arg1); // 4
   // proto: static QUuid QUuid::fromRfc4122(const QByteArray & );
-extern void _ZN5QUuid11fromRfc4122ERK10QByteArray(void* arg0); // 4
+extern void C_ZN5QUuid11fromRfc4122ERK10QByteArray(void* arg0); // 4
   // proto:  QUuid::Variant QUuid::variant();
-extern void _ZNK5QUuid7variantEv(void* qthis); // 4
+extern void C_ZNK5QUuid7variantEv(void* qthis); // 4
   // proto:  bool QUuid::isNull();
-extern void _ZNK5QUuid6isNullEv(void* qthis); // 4
+extern void C_ZNK5QUuid6isNullEv(void* qthis); // 4
   // proto:  QUuid::Version QUuid::version();
-extern void _ZNK5QUuid7versionEv(void* qthis); // 4
+extern void C_ZNK5QUuid7versionEv(void* qthis); // 4
   // proto:  QString QUuid::toString();
-extern void _ZNK5QUuid8toStringEv(void* qthis); // 4
+extern void C_ZNK5QUuid8toStringEv(void* qthis); // 4
   // proto:  void QUuid::QUuid();
-extern void _ZN5QUuidC2Ev(void* qthis); // 1
+extern void C_ZN5QUuidC2Ev(void* qthis); // 1
   // proto:  void QUuid::QUuid(const QString & );
-extern void _ZN5QUuidC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN5QUuidC2ERK7QString(void* qthis, void* arg0); // 3
   // proto:  void QUuid::QUuid(const char * );
-extern void _ZN5QUuidC2EPKc(void* qthis, unsigned char* arg0); // 3
+extern void C_ZN5QUuidC2EPKc(void* qthis, unsigned char* arg0); // 3
   // proto:  void QUuid::QUuid(const QByteArray & );
-extern void _ZN5QUuidC2ERK10QByteArray(void* qthis, void* arg0); // 3
+extern void C_ZN5QUuidC2ERK10QByteArray(void* qthis, void* arg0); // 3
   // proto:  void QUuid::QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8);
-extern void _ZN5QUuidC2Ejtthhhhhhhh(void* qthis, int32_t arg0, int16_t arg1, int16_t arg2, unsigned char arg3, unsigned char arg4, unsigned char arg5, unsigned char arg6, unsigned char arg7, unsigned char arg8, unsigned char arg9, unsigned char arg10); // 1
+extern void C_ZN5QUuidC2Ejtthhhhhhhh(void* qthis, int32_t arg0, int16_t arg1, int16_t arg2, unsigned char arg3, unsigned char arg4, unsigned char arg5, unsigned char arg6, unsigned char arg7, unsigned char arg8, unsigned char arg9, unsigned char arg10); // 1
   // proto:  QByteArray QUuid::toRfc4122();
-extern void _ZNK5QUuid9toRfc4122Ev(void* qthis); // 4
+extern void C_ZNK5QUuid9toRfc4122Ev(void* qthis); // 4
   // proto:  QByteArray QUuid::toByteArray();
-extern void _ZNK5QUuid11toByteArrayEv(void* qthis); // 4
+extern void C_ZNK5QUuid11toByteArrayEv(void* qthis); // 4
   // proto: static QUuid QUuid::createUuid();
-extern void _ZN5QUuid10createUuidEv(); // 4
+extern void C_ZN5QUuid10createUuidEv(); // 4
 */
 import "C"
 // } // <= ext block end
@@ -103,7 +103,7 @@ func (this *QUuid) createUuidV5_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN5QUuid12createUuidV5ERKS_RK10QByteArray(arg0, arg1)
+    C.C_ZN5QUuid12createUuidV5ERKS_RK10QByteArray(arg0, arg1)
   case 1:
     // invoke: _ZN5QUuid12createUuidV5ERKS_RK7QString
     // invoke: QUuid createUuidV5(const class QUuid &, const class QString &)
@@ -111,7 +111,7 @@ func (this *QUuid) createUuidV5_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN5QUuid12createUuidV5ERKS_RK7QString(arg0, arg1)
+    C.C_ZN5QUuid12createUuidV5ERKS_RK7QString(arg0, arg1)
   default:
     qtrt.ErrorResolve("QUuid", "createUuidV5", args)
   }
@@ -141,7 +141,7 @@ func (this *QUuid) createUuidV3_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN5QUuid12createUuidV3ERKS_RK7QString(arg0, arg1)
+    C.C_ZN5QUuid12createUuidV3ERKS_RK7QString(arg0, arg1)
   case 1:
     // invoke: _ZN5QUuid12createUuidV3ERKS_RK10QByteArray
     // invoke: QUuid createUuidV3(const class QUuid &, const class QByteArray &)
@@ -149,7 +149,7 @@ func (this *QUuid) createUuidV3_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN5QUuid12createUuidV3ERKS_RK10QByteArray(arg0, arg1)
+    C.C_ZN5QUuid12createUuidV3ERKS_RK10QByteArray(arg0, arg1)
   default:
     qtrt.ErrorResolve("QUuid", "createUuidV3", args)
   }
@@ -172,7 +172,7 @@ func (this *QUuid) fromRfc4122_s(args ...interface{}) () {
     // invoke: QUuid fromRfc4122(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QUuid11fromRfc4122ERK10QByteArray(arg0)
+    C.C_ZN5QUuid11fromRfc4122ERK10QByteArray(arg0)
   default:
     qtrt.ErrorResolve("QUuid", "fromRfc4122", args)
   }
@@ -192,7 +192,7 @@ func (this *QUuid) variant(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QUuid7variantEv
     // invoke: QUuid::Variant variant()
-    C._ZNK5QUuid7variantEv(this.qclsinst)
+    C.C_ZNK5QUuid7variantEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUuid", "variant", args)
   }
@@ -212,7 +212,7 @@ func (this *QUuid) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QUuid6isNullEv
     // invoke: bool isNull()
-    C._ZNK5QUuid6isNullEv(this.qclsinst)
+    C.C_ZNK5QUuid6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUuid", "isNull", args)
   }
@@ -232,7 +232,7 @@ func (this *QUuid) version(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QUuid7versionEv
     // invoke: QUuid::Version version()
-    C._ZNK5QUuid7versionEv(this.qclsinst)
+    C.C_ZNK5QUuid7versionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUuid", "version", args)
   }
@@ -252,7 +252,7 @@ func (this *QUuid) toString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QUuid8toStringEv
     // invoke: QString toString()
-    C._ZNK5QUuid8toStringEv(this.qclsinst)
+    C.C_ZNK5QUuid8toStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUuid", "toString", args)
   }
@@ -296,7 +296,7 @@ func NewQUuid(args ...interface{}) QUuid {
     // invoke: void QUuid()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QUuidC2Ev(qthis)
+    C.C_ZN5QUuidC2Ev(qthis)
   case 1:
     // invoke: _ZN5QUuidC1ERK7QString
     // invoke: void QUuid(const class QString &)
@@ -304,7 +304,7 @@ func NewQUuid(args ...interface{}) QUuid {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QUuidC2ERK7QString(qthis, arg0)
+    C.C_ZN5QUuidC2ERK7QString(qthis, arg0)
   case 2:
     // invoke: _ZN5QUuidC1EPKc
     // invoke: void QUuid(const char *)
@@ -312,7 +312,7 @@ func NewQUuid(args ...interface{}) QUuid {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QUuidC2EPKc(qthis, arg0)
+    C.C_ZN5QUuidC2EPKc(qthis, arg0)
   case 3:
     // invoke: _ZN5QUuidC1ERK10QByteArray
     // invoke: void QUuid(const class QByteArray &)
@@ -320,7 +320,7 @@ func NewQUuid(args ...interface{}) QUuid {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QUuidC2ERK10QByteArray(qthis, arg0)
+    C.C_ZN5QUuidC2ERK10QByteArray(qthis, arg0)
   case 4:
     // invoke: _ZN5QUuidC1Ejtthhhhhhhh
     // invoke: void QUuid(uint, ushort, ushort, uchar, uchar, uchar, uchar, uchar, uchar, uchar, uchar)
@@ -348,7 +348,7 @@ func NewQUuid(args ...interface{}) QUuid {
     if false {fmt.Println(arg10)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QUuidC2Ejtthhhhhhhh(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
+    C.C_ZN5QUuidC2Ejtthhhhhhhh(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
   default:
     qtrt.ErrorResolve("QUuid", "QUuid", args)
   }
@@ -369,7 +369,7 @@ func (this *QUuid) toRfc4122(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QUuid9toRfc4122Ev
     // invoke: QByteArray toRfc4122()
-    C._ZNK5QUuid9toRfc4122Ev(this.qclsinst)
+    C.C_ZNK5QUuid9toRfc4122Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUuid", "toRfc4122", args)
   }
@@ -389,7 +389,7 @@ func (this *QUuid) toByteArray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QUuid11toByteArrayEv
     // invoke: QByteArray toByteArray()
-    C._ZNK5QUuid11toByteArrayEv(this.qclsinst)
+    C.C_ZNK5QUuid11toByteArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUuid", "toByteArray", args)
   }
@@ -409,7 +409,7 @@ func (this *QUuid) createUuid_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QUuid10createUuidEv
     // invoke: QUuid createUuid()
-    C._ZN5QUuid10createUuidEv()
+    C.C_ZN5QUuid10createUuidEv()
   default:
     qtrt.ErrorResolve("QUuid", "createUuid", args)
   }

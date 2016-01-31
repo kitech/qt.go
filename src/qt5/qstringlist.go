@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.go
 //
@@ -29,35 +29,35 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QStringList::indexOf(const QRegExp & rx, int from);
-extern void _ZNK11QStringList7indexOfERK7QRegExpi(void* qthis, void* arg0, int32_t arg1); // 2
+extern void C_ZNK11QStringList7indexOfERK7QRegExpi(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  int QStringList::indexOf(const QRegularExpression & re, int from);
-extern void _ZNK11QStringList7indexOfERK18QRegularExpressioni(void* qthis, void* arg0, int32_t arg1); // 2
+extern void C_ZNK11QStringList7indexOfERK18QRegularExpressioni(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  int QStringList::indexOf(QRegExp & rx, int from);
-extern void _ZNK11QStringList7indexOfER7QRegExpi(void* qthis, void* arg0, int32_t arg1); // 2
+extern void C_ZNK11QStringList7indexOfER7QRegExpi(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  void QStringList::QStringList();
-extern void _ZN11QStringListC2Ev(void* qthis); // 1
+extern void C_ZN11QStringListC2Ev(void* qthis); // 1
   // proto:  void QStringList::QStringList(const QString & i);
-extern void _ZN11QStringListC2ERK7QString(void* qthis, void* arg0); // 1
+extern void C_ZN11QStringListC2ERK7QString(void* qthis, void* arg0); // 1
   // proto:  int QStringList::lastIndexOf(const QRegExp & rx, int from);
-extern void _ZNK11QStringList11lastIndexOfERK7QRegExpi(void* qthis, void* arg0, int32_t arg1); // 2
+extern void C_ZNK11QStringList11lastIndexOfERK7QRegExpi(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
-extern void _ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(void* qthis, void* arg0, int32_t arg1); // 2
+extern void C_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  int QStringList::lastIndexOf(QRegExp & rx, int from);
-extern void _ZNK11QStringList11lastIndexOfER7QRegExpi(void* qthis, void* arg0, int32_t arg1); // 2
+extern void C_ZNK11QStringList11lastIndexOfER7QRegExpi(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegularExpression & re, const QString & after);
-extern void _ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(void* qthis, void* arg0, void* arg1); // 2
+extern void C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(void* qthis, void* arg0, void* arg1); // 2
   // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegExp & rx, const QString & after);
-extern void _ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(void* qthis, void* arg0, void* arg1); // 2
+extern void C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(void* qthis, void* arg0, void* arg1); // 2
   // proto:  QString QListSpecialMethods<QString>::join(const QString & sep);
-extern void _ZNK19QListSpecialMethodsI7QStringE4joinERKS0_(void* qthis, void* arg0); // 2
+extern void C_ZNK19QListSpecialMethodsI7QStringE4joinERKS0_(void* qthis, void* arg0); // 2
   // proto:  QString QListSpecialMethods<QString>::join(QChar sep);
-extern void _ZNK19QListSpecialMethodsI7QStringE4joinE5QChar(void* qthis, void* arg0); // 2
+extern void C_ZNK19QListSpecialMethodsI7QStringE4joinE5QChar(void* qthis, void* arg0); // 2
   // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegularExpression & re);
-extern void _ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(void* qthis, void* arg0); // 2
+extern void C_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(void* qthis, void* arg0); // 2
   // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegExp & rx);
-extern void _ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(void* qthis, void* arg0); // 2
+extern void C_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(void* qthis, void* arg0); // 2
   // proto:  int QListSpecialMethods<QString>::removeDuplicates();
-extern void _ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv(void* qthis); // 2
+extern void C_ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -77,7 +77,7 @@ type QStringList struct {
 }
 
 // class sizeof(QListSpecialMethods<QString>)=1
-type QListSpecialMethods_QString_ struct {
+type QListSpecialMethodsLQStringG struct {
   // qbase: None;
   qclsinst unsafe.Pointer /* *C.void */;
 }
@@ -109,7 +109,7 @@ func (this *QStringList) indexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK11QStringList7indexOfERK7QRegExpi(this.qclsinst, arg0, arg1)
+    C.C_ZNK11QStringList7indexOfERK7QRegExpi(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK11QStringList7indexOfERK18QRegularExpressioni
     // invoke: int indexOf(const class QRegularExpression &, int)
@@ -117,7 +117,7 @@ func (this *QStringList) indexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK11QStringList7indexOfERK18QRegularExpressioni(this.qclsinst, arg0, arg1)
+    C.C_ZNK11QStringList7indexOfERK18QRegularExpressioni(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZNK11QStringList7indexOfER7QRegExpi
     // invoke: int indexOf(class QRegExp &, int)
@@ -125,7 +125,7 @@ func (this *QStringList) indexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK11QStringList7indexOfER7QRegExpi(this.qclsinst, arg0, arg1)
+    C.C_ZNK11QStringList7indexOfER7QRegExpi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStringList", "indexOf", args)
   }
@@ -150,7 +150,7 @@ func NewQStringList(args ...interface{}) QStringList {
     // invoke: void QStringList()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QStringListC2Ev(qthis)
+    C.C_ZN11QStringListC2Ev(qthis)
   case 1:
     // invoke: _ZN11QStringListC1ERK7QString
     // invoke: void QStringList(const class QString &)
@@ -158,7 +158,7 @@ func NewQStringList(args ...interface{}) QStringList {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QStringListC2ERK7QString(qthis, arg0)
+    C.C_ZN11QStringListC2ERK7QString(qthis, arg0)
   default:
     qtrt.ErrorResolve("QStringList", "QStringList", args)
   }
@@ -193,7 +193,7 @@ func (this *QStringList) lastIndexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK11QStringList11lastIndexOfERK7QRegExpi(this.qclsinst, arg0, arg1)
+    C.C_ZNK11QStringList11lastIndexOfERK7QRegExpi(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK11QStringList11lastIndexOfERK18QRegularExpressioni
     // invoke: int lastIndexOf(const class QRegularExpression &, int)
@@ -201,7 +201,7 @@ func (this *QStringList) lastIndexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(this.qclsinst, arg0, arg1)
+    C.C_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZNK11QStringList11lastIndexOfER7QRegExpi
     // invoke: int lastIndexOf(class QRegExp &, int)
@@ -209,7 +209,7 @@ func (this *QStringList) lastIndexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK11QStringList11lastIndexOfER7QRegExpi(this.qclsinst, arg0, arg1)
+    C.C_ZNK11QStringList11lastIndexOfER7QRegExpi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStringList", "lastIndexOf", args)
   }
@@ -217,7 +217,7 @@ func (this *QStringList) lastIndexOf(args ...interface{}) () {
 }
 
 // replaceInStrings(const class QRegularExpression &, const class QString &)
-func (this *QListSpecialMethods_QString_) replaceInStrings(args ...interface{}) () {
+func (this *QListSpecialMethodsLQStringG) replaceInStrings(args ...interface{}) () {
   // replaceInStrings(const class QRegularExpression &, const class QString &)
   // replaceInStrings(const class QRegExp &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -239,7 +239,7 @@ func (this *QListSpecialMethods_QString_) replaceInStrings(args ...interface{}) 
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(this.qclsinst, arg0, arg1)
+    C.C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_
     // invoke: QStringList & replaceInStrings(const class QRegExp &, const class QString &)
@@ -247,7 +247,7 @@ func (this *QListSpecialMethods_QString_) replaceInStrings(args ...interface{}) 
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(this.qclsinst, arg0, arg1)
+    C.C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QListSpecialMethods<QString>", "replaceInStrings", args)
   }
@@ -255,7 +255,7 @@ func (this *QListSpecialMethods_QString_) replaceInStrings(args ...interface{}) 
 }
 
 // join(const class QString &)
-func (this *QListSpecialMethods_QString_) join(args ...interface{}) () {
+func (this *QListSpecialMethodsLQStringG) join(args ...interface{}) () {
   // join(const class QString &)
   // join(class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -273,13 +273,13 @@ func (this *QListSpecialMethods_QString_) join(args ...interface{}) () {
     // invoke: QString join(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QListSpecialMethodsI7QStringE4joinERKS0_(this.qclsinst, arg0)
+    C.C_ZNK19QListSpecialMethodsI7QStringE4joinERKS0_(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK19QListSpecialMethodsI7QStringE4joinE5QChar
     // invoke: QString join(class QChar)
     var arg0 = args[0].(QChar).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QListSpecialMethodsI7QStringE4joinE5QChar(this.qclsinst, arg0)
+    C.C_ZNK19QListSpecialMethodsI7QStringE4joinE5QChar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListSpecialMethods<QString>", "join", args)
   }
@@ -287,7 +287,7 @@ func (this *QListSpecialMethods_QString_) join(args ...interface{}) () {
 }
 
 // filter(const class QRegularExpression &)
-func (this *QListSpecialMethods_QString_) filter(args ...interface{}) () {
+func (this *QListSpecialMethodsLQStringG) filter(args ...interface{}) () {
   // filter(const class QRegularExpression &)
   // filter(const class QRegExp &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -305,13 +305,13 @@ func (this *QListSpecialMethods_QString_) filter(args ...interface{}) () {
     // invoke: QStringList filter(const class QRegularExpression &)
     var arg0 = args[0].(QRegularExpression).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(this.qclsinst, arg0)
+    C.C_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp
     // invoke: QStringList filter(const class QRegExp &)
     var arg0 = args[0].(QRegExp).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(this.qclsinst, arg0)
+    C.C_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListSpecialMethods<QString>", "filter", args)
   }
@@ -319,7 +319,7 @@ func (this *QListSpecialMethods_QString_) filter(args ...interface{}) () {
 }
 
 // removeDuplicates()
-func (this *QListSpecialMethods_QString_) removeDuplicates(args ...interface{}) () {
+func (this *QListSpecialMethodsLQStringG) removeDuplicates(args ...interface{}) () {
   // removeDuplicates()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -331,7 +331,7 @@ func (this *QListSpecialMethods_QString_) removeDuplicates(args ...interface{}) 
   case 0:
     // invoke: _ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv
     // invoke: int removeDuplicates()
-    C._ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv(this.qclsinst)
+    C.C_ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListSpecialMethods<QString>", "removeDuplicates", args)
   }

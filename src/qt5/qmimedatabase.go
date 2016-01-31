@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qmimedatabase.h
 // dst-file: /src/core/qmimedatabase.go
 //
@@ -29,27 +29,27 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QMimeType QMimeDatabase::mimeTypeForName(const QString & nameOrAlias);
-extern void _ZNK13QMimeDatabase15mimeTypeForNameERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK13QMimeDatabase15mimeTypeForNameERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QMimeDatabase::QMimeDatabase();
-extern void _ZN13QMimeDatabaseC2Ev(void* qthis); // 3
+extern void C_ZN13QMimeDatabaseC2Ev(void* qthis); // 3
   // proto:  void QMimeDatabase::~QMimeDatabase();
-extern void _ZN13QMimeDatabaseD2Ev(void* qthis); // 4
+extern void C_ZN13QMimeDatabaseD2Ev(void* qthis); // 4
   // proto:  QList<QMimeType> QMimeDatabase::allMimeTypes();
-extern void _ZNK13QMimeDatabase12allMimeTypesEv(void* qthis); // 4
+extern void C_ZNK13QMimeDatabase12allMimeTypesEv(void* qthis); // 4
   // proto:  QMimeType QMimeDatabase::mimeTypeForData(QIODevice * device);
-extern void _ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice(void* qthis, void* arg0); // 4
+extern void C_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  QMimeType QMimeDatabase::mimeTypeForData(const QByteArray & data);
-extern void _ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray(void* qthis, void* arg0); // 4
+extern void C_ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  QMimeType QMimeDatabase::mimeTypeForUrl(const QUrl & url);
-extern void _ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(void* qthis, void* arg0); // 4
+extern void C_ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(void* qthis, void* arg0); // 4
   // proto:  QMimeType QMimeDatabase::mimeTypeForFileNameAndData(const QString & fileName, const QByteArray & data);
-extern void _ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QMimeType QMimeDatabase::mimeTypeForFileNameAndData(const QString & fileName, QIODevice * device);
-extern void _ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QList<QMimeType> QMimeDatabase::mimeTypesForFileName(const QString & fileName);
-extern void _ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QMimeDatabase::suffixForFileName(const QString & fileName);
-extern void _ZNK13QMimeDatabase17suffixForFileNameERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK13QMimeDatabase17suffixForFileNameERK7QString(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -84,7 +84,7 @@ func (this *QMimeDatabase) mimeTypeForName(args ...interface{}) () {
     // invoke: QMimeType mimeTypeForName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QMimeDatabase15mimeTypeForNameERK7QString(this.qclsinst, arg0)
+    C.C_ZNK13QMimeDatabase15mimeTypeForNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypeForName", args)
   }
@@ -106,7 +106,7 @@ func NewQMimeDatabase(args ...interface{}) QMimeDatabase {
     // invoke: void QMimeDatabase()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QMimeDatabaseC2Ev(qthis)
+    C.C_ZN13QMimeDatabaseC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "QMimeDatabase", args)
   }
@@ -127,7 +127,7 @@ func (this *QMimeDatabase) FreeQMimeDatabase(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QMimeDatabaseD0Ev
     // invoke: void ~QMimeDatabase()
-    C._ZN13QMimeDatabaseD2Ev(this.qclsinst)
+    C.C_ZN13QMimeDatabaseD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "~QMimeDatabase", args)
   }
@@ -147,7 +147,7 @@ func (this *QMimeDatabase) allMimeTypes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMimeDatabase12allMimeTypesEv
     // invoke: QList<QMimeType> allMimeTypes()
-    C._ZNK13QMimeDatabase12allMimeTypesEv(this.qclsinst)
+    C.C_ZNK13QMimeDatabase12allMimeTypesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "allMimeTypes", args)
   }
@@ -173,13 +173,13 @@ func (this *QMimeDatabase) mimeTypeForData(args ...interface{}) () {
     // invoke: QMimeType mimeTypeForData(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice(this.qclsinst, arg0)
+    C.C_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray
     // invoke: QMimeType mimeTypeForData(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypeForData", args)
   }
@@ -202,7 +202,7 @@ func (this *QMimeDatabase) mimeTypeForUrl(args ...interface{}) () {
     // invoke: QMimeType mimeTypeForUrl(const class QUrl &)
     var arg0 = args[0].(QUrl).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(this.qclsinst, arg0)
+    C.C_ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypeForUrl", args)
   }
@@ -232,7 +232,7 @@ func (this *QMimeDatabase) mimeTypeForFileNameAndData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice
     // invoke: QMimeType mimeTypeForFileNameAndData(const class QString &, class QIODevice *)
@@ -240,7 +240,7 @@ func (this *QMimeDatabase) mimeTypeForFileNameAndData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QIODevice).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypeForFileNameAndData", args)
   }
@@ -263,7 +263,7 @@ func (this *QMimeDatabase) mimeTypesForFileName(args ...interface{}) () {
     // invoke: QList<QMimeType> mimeTypesForFileName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(this.qclsinst, arg0)
+    C.C_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypesForFileName", args)
   }
@@ -286,7 +286,7 @@ func (this *QMimeDatabase) suffixForFileName(args ...interface{}) () {
     // invoke: QString suffixForFileName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK13QMimeDatabase17suffixForFileNameERK7QString(this.qclsinst, arg0)
+    C.C_ZNK13QMimeDatabase17suffixForFileNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "suffixForFileName", args)
   }

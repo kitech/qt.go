@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.go
 //
@@ -29,27 +29,27 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QOpenGLWidget::UpdateBehavior QOpenGLWidget::updateBehavior();
-extern void _ZNK13QOpenGLWidget14updateBehaviorEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLWidget14updateBehaviorEv(void* qthis); // 4
   // proto:  void QOpenGLWidget::doneCurrent();
-extern void _ZN13QOpenGLWidget11doneCurrentEv(void* qthis); // 4
+extern void C_ZN13QOpenGLWidget11doneCurrentEv(void* qthis); // 4
   // proto:  void QOpenGLWidget::setFormat(const QSurfaceFormat & format);
-extern void _ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat(void* qthis, void* arg0); // 4
+extern void C_ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat(void* qthis, void* arg0); // 4
   // proto:  QSurfaceFormat QOpenGLWidget::format();
-extern void _ZNK13QOpenGLWidget6formatEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLWidget6formatEv(void* qthis); // 4
   // proto:  void QOpenGLWidget::~QOpenGLWidget();
-extern void _ZN13QOpenGLWidgetD2Ev(void* qthis); // 4
+extern void C_ZN13QOpenGLWidgetD2Ev(void* qthis); // 4
   // proto:  bool QOpenGLWidget::isValid();
-extern void _ZNK13QOpenGLWidget7isValidEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLWidget7isValidEv(void* qthis); // 4
   // proto:  GLuint QOpenGLWidget::defaultFramebufferObject();
-extern void _ZNK13QOpenGLWidget24defaultFramebufferObjectEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLWidget24defaultFramebufferObjectEv(void* qthis); // 4
   // proto:  const QMetaObject * QOpenGLWidget::metaObject();
-extern void _ZNK13QOpenGLWidget10metaObjectEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLWidget10metaObjectEv(void* qthis); // 4
   // proto:  void QOpenGLWidget::makeCurrent();
-extern void _ZN13QOpenGLWidget11makeCurrentEv(void* qthis); // 4
+extern void C_ZN13QOpenGLWidget11makeCurrentEv(void* qthis); // 4
   // proto:  QImage QOpenGLWidget::grabFramebuffer();
-extern void _ZN13QOpenGLWidget15grabFramebufferEv(void* qthis); // 4
+extern void C_ZN13QOpenGLWidget15grabFramebufferEv(void* qthis); // 4
   // proto:  QOpenGLContext * QOpenGLWidget::context();
-extern void _ZNK13QOpenGLWidget7contextEv(void* qthis); // 4
+extern void C_ZNK13QOpenGLWidget7contextEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -85,7 +85,7 @@ func (this *QOpenGLWidget) updateBehavior(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWidget14updateBehaviorEv
     // invoke: QOpenGLWidget::UpdateBehavior updateBehavior()
-    C._ZNK13QOpenGLWidget14updateBehaviorEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWidget14updateBehaviorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "updateBehavior", args)
   }
@@ -105,7 +105,7 @@ func (this *QOpenGLWidget) doneCurrent(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWidget11doneCurrentEv
     // invoke: void doneCurrent()
-    C._ZN13QOpenGLWidget11doneCurrentEv(this.qclsinst)
+    C.C_ZN13QOpenGLWidget11doneCurrentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "doneCurrent", args)
   }
@@ -128,7 +128,7 @@ func (this *QOpenGLWidget) setFormat(args ...interface{}) () {
     // invoke: void setFormat(const class QSurfaceFormat &)
     var arg0 = args[0].(QSurfaceFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat(this.qclsinst, arg0)
+    C.C_ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "setFormat", args)
   }
@@ -148,7 +148,7 @@ func (this *QOpenGLWidget) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWidget6formatEv
     // invoke: QSurfaceFormat format()
-    C._ZNK13QOpenGLWidget6formatEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWidget6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "format", args)
   }
@@ -168,7 +168,7 @@ func (this *QOpenGLWidget) FreeQOpenGLWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWidgetD0Ev
     // invoke: void ~QOpenGLWidget()
-    C._ZN13QOpenGLWidgetD2Ev(this.qclsinst)
+    C.C_ZN13QOpenGLWidgetD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "~QOpenGLWidget", args)
   }
@@ -188,7 +188,7 @@ func (this *QOpenGLWidget) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWidget7isValidEv
     // invoke: bool isValid()
-    C._ZNK13QOpenGLWidget7isValidEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWidget7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "isValid", args)
   }
@@ -208,7 +208,7 @@ func (this *QOpenGLWidget) defaultFramebufferObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWidget24defaultFramebufferObjectEv
     // invoke: GLuint defaultFramebufferObject()
-    C._ZNK13QOpenGLWidget24defaultFramebufferObjectEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWidget24defaultFramebufferObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "defaultFramebufferObject", args)
   }
@@ -228,7 +228,7 @@ func (this *QOpenGLWidget) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWidget10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK13QOpenGLWidget10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWidget10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "metaObject", args)
   }
@@ -248,7 +248,7 @@ func (this *QOpenGLWidget) makeCurrent(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWidget11makeCurrentEv
     // invoke: void makeCurrent()
-    C._ZN13QOpenGLWidget11makeCurrentEv(this.qclsinst)
+    C.C_ZN13QOpenGLWidget11makeCurrentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "makeCurrent", args)
   }
@@ -268,7 +268,7 @@ func (this *QOpenGLWidget) grabFramebuffer(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWidget15grabFramebufferEv
     // invoke: QImage grabFramebuffer()
-    C._ZN13QOpenGLWidget15grabFramebufferEv(this.qclsinst)
+    C.C_ZN13QOpenGLWidget15grabFramebufferEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "grabFramebuffer", args)
   }
@@ -288,7 +288,7 @@ func (this *QOpenGLWidget) context(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWidget7contextEv
     // invoke: QOpenGLContext * context()
-    C._ZNK13QOpenGLWidget7contextEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWidget7contextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "context", args)
   }

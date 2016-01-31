@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qpixmap.h
 // dst-file: /src/gui/qpixmap.go
 //
@@ -29,87 +29,87 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QPixmap::height();
-extern void _ZNK7QPixmap6heightEv(void* qthis); // 4
+extern void C_ZNK7QPixmap6heightEv(void* qthis); // 4
   // proto: static QPixmap QPixmap::grabWidget(QObject * widget, int x, int y, int w, int h);
-extern void _ZN7QPixmap10grabWidgetEP7QObjectiiii(void* arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4); // 2
+extern void C_ZN7QPixmap10grabWidgetEP7QObjectiiii(void* arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4); // 2
   // proto: static QPixmap QPixmap::grabWidget(QObject * widget, const QRect & rect);
-extern void _ZN7QPixmap10grabWidgetEP7QObjectRK5QRect(void* arg0, void* arg1); // 4
+extern void C_ZN7QPixmap10grabWidgetEP7QObjectRK5QRect(void* arg0, void* arg1); // 4
   // proto:  QPaintEngine * QPixmap::paintEngine();
-extern void _ZNK7QPixmap11paintEngineEv(void* qthis); // 4
+extern void C_ZNK7QPixmap11paintEngineEv(void* qthis); // 4
   // proto:  QPlatformPixmap * QPixmap::handle();
-extern void _ZNK7QPixmap6handleEv(void* qthis); // 4
+extern void C_ZNK7QPixmap6handleEv(void* qthis); // 4
   // proto:  void QPixmap::~QPixmap();
-extern void _ZN7QPixmapD2Ev(void* qthis); // 4
+extern void C_ZN7QPixmapD2Ev(void* qthis); // 4
   // proto:  void QPixmap::fill(const QColor & fillColor);
-extern void _ZN7QPixmap4fillERK6QColor(void* qthis, void* arg0); // 4
+extern void C_ZN7QPixmap4fillERK6QColor(void* qthis, void* arg0); // 4
   // proto:  void QPixmap::fill(const QPaintDevice * device, int xofs, int yofs);
-extern void _ZN7QPixmap4fillEPK12QPaintDeviceii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 2
+extern void C_ZN7QPixmap4fillEPK12QPaintDeviceii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 2
   // proto:  void QPixmap::fill(const QPaintDevice * device, const QPoint & ofs);
-extern void _ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QRect QPixmap::rect();
-extern void _ZNK7QPixmap4rectEv(void* qthis); // 4
+extern void C_ZNK7QPixmap4rectEv(void* qthis); // 4
   // proto: static QMatrix QPixmap::trueMatrix(const QMatrix & m, int w, int h);
-extern void _ZN7QPixmap10trueMatrixERK7QMatrixii(void* arg0, int32_t arg1, int32_t arg2); // 4
+extern void C_ZN7QPixmap10trueMatrixERK7QMatrixii(void* arg0, int32_t arg1, int32_t arg2); // 4
   // proto: static QTransform QPixmap::trueMatrix(const QTransform & m, int w, int h);
-extern void _ZN7QPixmap10trueMatrixERK10QTransformii(void* arg0, int32_t arg1, int32_t arg2); // 4
+extern void C_ZN7QPixmap10trueMatrixERK10QTransformii(void* arg0, int32_t arg1, int32_t arg2); // 4
   // proto:  void QPixmap::detach();
-extern void _ZN7QPixmap6detachEv(void* qthis); // 4
+extern void C_ZN7QPixmap6detachEv(void* qthis); // 4
   // proto:  QSize QPixmap::size();
-extern void _ZNK7QPixmap4sizeEv(void* qthis); // 4
+extern void C_ZNK7QPixmap4sizeEv(void* qthis); // 4
   // proto:  int QPixmap::depth();
-extern void _ZNK7QPixmap5depthEv(void* qthis); // 4
+extern void C_ZNK7QPixmap5depthEv(void* qthis); // 4
   // proto:  int QPixmap::width();
-extern void _ZNK7QPixmap5widthEv(void* qthis); // 4
+extern void C_ZNK7QPixmap5widthEv(void* qthis); // 4
   // proto:  void QPixmap::swap(QPixmap & other);
-extern void _ZN7QPixmap4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN7QPixmap4swapERS_(void* qthis, void* arg0); // 2
   // proto:  bool QPixmap::isDetached();
-extern void _ZNK7QPixmap10isDetachedEv(void* qthis); // 4
+extern void C_ZNK7QPixmap10isDetachedEv(void* qthis); // 4
   // proto:  qint64 QPixmap::cacheKey();
-extern void _ZNK7QPixmap8cacheKeyEv(void* qthis); // 4
+extern void C_ZNK7QPixmap8cacheKeyEv(void* qthis); // 4
   // proto:  void QPixmap::setDevicePixelRatio(qreal scaleFactor);
-extern void _ZN7QPixmap19setDevicePixelRatioEd(void* qthis, double arg0); // 4
+extern void C_ZN7QPixmap19setDevicePixelRatioEd(void* qthis, double arg0); // 4
   // proto:  bool QPixmap::hasAlphaChannel();
-extern void _ZNK7QPixmap15hasAlphaChannelEv(void* qthis); // 4
+extern void C_ZNK7QPixmap15hasAlphaChannelEv(void* qthis); // 4
   // proto:  bool QPixmap::hasAlpha();
-extern void _ZNK7QPixmap8hasAlphaEv(void* qthis); // 4
+extern void C_ZNK7QPixmap8hasAlphaEv(void* qthis); // 4
   // proto:  void QPixmap::setMask(const QBitmap & );
-extern void _ZN7QPixmap7setMaskERK7QBitmap(void* qthis, void* arg0); // 4
+extern void C_ZN7QPixmap7setMaskERK7QBitmap(void* qthis, void* arg0); // 4
   // proto:  QBitmap QPixmap::createHeuristicMask(bool clipTight);
-extern void _ZNK7QPixmap19createHeuristicMaskEb(void* qthis, bool arg0); // 4
+extern void C_ZNK7QPixmap19createHeuristicMaskEb(void* qthis, bool arg0); // 4
   // proto: static int QPixmap::defaultDepth();
-extern void _ZN7QPixmap12defaultDepthEv(); // 4
+extern void C_ZN7QPixmap12defaultDepthEv(); // 4
   // proto:  QPixmap QPixmap::copy(const QRect & rect);
-extern void _ZNK7QPixmap4copyERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZNK7QPixmap4copyERK5QRect(void* qthis, void* arg0); // 4
   // proto:  QPixmap QPixmap::copy(int x, int y, int width, int height);
-extern void _ZNK7QPixmap4copyEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
+extern void C_ZNK7QPixmap4copyEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
   // proto:  bool QPixmap::save(const QString & fileName, const char * format, int quality);
-extern void _ZNK7QPixmap4saveERK7QStringPKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2); // 4
+extern void C_ZNK7QPixmap4saveERK7QStringPKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2); // 4
   // proto:  bool QPixmap::save(QIODevice * device, const char * format, int quality);
-extern void _ZNK7QPixmap4saveEP9QIODevicePKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2); // 4
+extern void C_ZNK7QPixmap4saveEP9QIODevicePKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2); // 4
   // proto:  qreal QPixmap::devicePixelRatio();
-extern void _ZNK7QPixmap16devicePixelRatioEv(void* qthis); // 4
+extern void C_ZNK7QPixmap16devicePixelRatioEv(void* qthis); // 4
   // proto:  bool QPixmap::isQBitmap();
-extern void _ZNK7QPixmap9isQBitmapEv(void* qthis); // 4
+extern void C_ZNK7QPixmap9isQBitmapEv(void* qthis); // 4
   // proto:  QBitmap QPixmap::mask();
-extern void _ZNK7QPixmap4maskEv(void* qthis); // 4
+extern void C_ZNK7QPixmap4maskEv(void* qthis); // 4
   // proto:  QImage QPixmap::toImage();
-extern void _ZNK7QPixmap7toImageEv(void* qthis); // 4
+extern void C_ZNK7QPixmap7toImageEv(void* qthis); // 4
   // proto:  void QPixmap::QPixmap();
-extern void _ZN7QPixmapC2Ev(void* qthis); // 3
+extern void C_ZN7QPixmapC2Ev(void* qthis); // 3
   // proto:  void QPixmap::QPixmap(int w, int h);
-extern void _ZN7QPixmapC2Eii(void* qthis, int32_t arg0, int32_t arg1); // 3
+extern void C_ZN7QPixmapC2Eii(void* qthis, int32_t arg0, int32_t arg1); // 3
   // proto:  void QPixmap::QPixmap(const QPixmap & );
-extern void _ZN7QPixmapC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN7QPixmapC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QPixmap::QPixmap(const QSize & );
-extern void _ZN7QPixmapC2ERK5QSize(void* qthis, void* arg0); // 3
+extern void C_ZN7QPixmapC2ERK5QSize(void* qthis, void* arg0); // 3
   // proto:  bool QPixmap::isNull();
-extern void _ZNK7QPixmap6isNullEv(void* qthis); // 4
+extern void C_ZNK7QPixmap6isNullEv(void* qthis); // 4
   // proto:  int QPixmap::devType();
-extern void _ZNK7QPixmap7devTypeEv(void* qthis); // 4
+extern void C_ZNK7QPixmap7devTypeEv(void* qthis); // 4
   // proto:  void QPixmap::scroll(int dx, int dy, int x, int y, int width, int height, QRegion * exposed);
-extern void _ZN7QPixmap6scrollEiiiiiiP7QRegion(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, void* arg6); // 2
+extern void C_ZN7QPixmap6scrollEiiiiiiP7QRegion(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, void* arg6); // 2
   // proto:  void QPixmap::scroll(int dx, int dy, const QRect & rect, QRegion * exposed);
-extern void _ZN7QPixmap6scrollEiiRK5QRectP7QRegion(void* qthis, int32_t arg0, int32_t arg1, void* arg2, void* arg3); // 4
+extern void C_ZN7QPixmap6scrollEiiRK5QRectP7QRegion(void* qthis, int32_t arg0, int32_t arg1, void* arg2, void* arg3); // 4
 */
 import "C"
 // } // <= ext block end
@@ -141,7 +141,7 @@ func (this *QPixmap) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap6heightEv
     // invoke: int height()
-    C._ZNK7QPixmap6heightEv(this.qclsinst)
+    C.C_ZNK7QPixmap6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "height", args)
   }
@@ -180,7 +180,7 @@ func (this *QPixmap) grabWidget_s(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.int32_t(args[4].(int32))
     if false {fmt.Println(arg4)}
-    C._ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0, arg1, arg2, arg3, arg4)
+    C.C_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0, arg1, arg2, arg3, arg4)
   case 1:
     // invoke: _ZN7QPixmap10grabWidgetEP7QObjectRK5QRect
     // invoke: QPixmap grabWidget(class QObject *, const class QRect &)
@@ -188,7 +188,7 @@ func (this *QPixmap) grabWidget_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QRect).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN7QPixmap10grabWidgetEP7QObjectRK5QRect(arg0, arg1)
+    C.C_ZN7QPixmap10grabWidgetEP7QObjectRK5QRect(arg0, arg1)
   default:
     qtrt.ErrorResolve("QPixmap", "grabWidget", args)
   }
@@ -208,7 +208,7 @@ func (this *QPixmap) paintEngine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap11paintEngineEv
     // invoke: QPaintEngine * paintEngine()
-    C._ZNK7QPixmap11paintEngineEv(this.qclsinst)
+    C.C_ZNK7QPixmap11paintEngineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "paintEngine", args)
   }
@@ -228,7 +228,7 @@ func (this *QPixmap) handle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap6handleEv
     // invoke: QPlatformPixmap * handle()
-    C._ZNK7QPixmap6handleEv(this.qclsinst)
+    C.C_ZNK7QPixmap6handleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "handle", args)
   }
@@ -248,7 +248,7 @@ func (this *QPixmap) FreeQPixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QPixmapD0Ev
     // invoke: void ~QPixmap()
-    C._ZN7QPixmapD2Ev(this.qclsinst)
+    C.C_ZN7QPixmapD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "~QPixmap", args)
   }
@@ -280,7 +280,7 @@ func (this *QPixmap) fill(args ...interface{}) () {
     // invoke: void fill(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QPixmap4fillERK6QColor(this.qclsinst, arg0)
+    C.C_ZN7QPixmap4fillERK6QColor(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN7QPixmap4fillEPK12QPaintDeviceii
     // invoke: void fill(const class QPaintDevice *, int, int)
@@ -290,7 +290,7 @@ func (this *QPixmap) fill(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN7QPixmap4fillEPK12QPaintDeviceii(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN7QPixmap4fillEPK12QPaintDeviceii(this.qclsinst, arg0, arg1, arg2)
   case 2:
     // invoke: _ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint
     // invoke: void fill(const class QPaintDevice *, const class QPoint &)
@@ -298,7 +298,7 @@ func (this *QPixmap) fill(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPoint).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint(this.qclsinst, arg0, arg1)
+    C.C_ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPixmap", "fill", args)
   }
@@ -318,7 +318,7 @@ func (this *QPixmap) rect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap4rectEv
     // invoke: QRect rect()
-    C._ZNK7QPixmap4rectEv(this.qclsinst)
+    C.C_ZNK7QPixmap4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "rect", args)
   }
@@ -352,7 +352,7 @@ func (this *QPixmap) trueMatrix_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN7QPixmap10trueMatrixERK7QMatrixii(arg0, arg1, arg2)
+    C.C_ZN7QPixmap10trueMatrixERK7QMatrixii(arg0, arg1, arg2)
   case 1:
     // invoke: _ZN7QPixmap10trueMatrixERK10QTransformii
     // invoke: QTransform trueMatrix(const class QTransform &, int, int)
@@ -362,7 +362,7 @@ func (this *QPixmap) trueMatrix_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN7QPixmap10trueMatrixERK10QTransformii(arg0, arg1, arg2)
+    C.C_ZN7QPixmap10trueMatrixERK10QTransformii(arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPixmap", "trueMatrix", args)
   }
@@ -382,7 +382,7 @@ func (this *QPixmap) detach(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QPixmap6detachEv
     // invoke: void detach()
-    C._ZN7QPixmap6detachEv(this.qclsinst)
+    C.C_ZN7QPixmap6detachEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "detach", args)
   }
@@ -402,7 +402,7 @@ func (this *QPixmap) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap4sizeEv
     // invoke: QSize size()
-    C._ZNK7QPixmap4sizeEv(this.qclsinst)
+    C.C_ZNK7QPixmap4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "size", args)
   }
@@ -422,7 +422,7 @@ func (this *QPixmap) depth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap5depthEv
     // invoke: int depth()
-    C._ZNK7QPixmap5depthEv(this.qclsinst)
+    C.C_ZNK7QPixmap5depthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "depth", args)
   }
@@ -442,7 +442,7 @@ func (this *QPixmap) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap5widthEv
     // invoke: int width()
-    C._ZNK7QPixmap5widthEv(this.qclsinst)
+    C.C_ZNK7QPixmap5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "width", args)
   }
@@ -465,7 +465,7 @@ func (this *QPixmap) swap(args ...interface{}) () {
     // invoke: void swap(class QPixmap &)
     var arg0 = args[0].(QPixmap).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QPixmap4swapERS_(this.qclsinst, arg0)
+    C.C_ZN7QPixmap4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPixmap", "swap", args)
   }
@@ -485,7 +485,7 @@ func (this *QPixmap) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap10isDetachedEv
     // invoke: bool isDetached()
-    C._ZNK7QPixmap10isDetachedEv(this.qclsinst)
+    C.C_ZNK7QPixmap10isDetachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "isDetached", args)
   }
@@ -505,7 +505,7 @@ func (this *QPixmap) cacheKey(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap8cacheKeyEv
     // invoke: qint64 cacheKey()
-    C._ZNK7QPixmap8cacheKeyEv(this.qclsinst)
+    C.C_ZNK7QPixmap8cacheKeyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "cacheKey", args)
   }
@@ -528,7 +528,7 @@ func (this *QPixmap) setDevicePixelRatio(args ...interface{}) () {
     // invoke: void setDevicePixelRatio(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN7QPixmap19setDevicePixelRatioEd(this.qclsinst, arg0)
+    C.C_ZN7QPixmap19setDevicePixelRatioEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPixmap", "setDevicePixelRatio", args)
   }
@@ -548,7 +548,7 @@ func (this *QPixmap) hasAlphaChannel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap15hasAlphaChannelEv
     // invoke: bool hasAlphaChannel()
-    C._ZNK7QPixmap15hasAlphaChannelEv(this.qclsinst)
+    C.C_ZNK7QPixmap15hasAlphaChannelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "hasAlphaChannel", args)
   }
@@ -568,7 +568,7 @@ func (this *QPixmap) hasAlpha(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap8hasAlphaEv
     // invoke: bool hasAlpha()
-    C._ZNK7QPixmap8hasAlphaEv(this.qclsinst)
+    C.C_ZNK7QPixmap8hasAlphaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "hasAlpha", args)
   }
@@ -591,7 +591,7 @@ func (this *QPixmap) setMask(args ...interface{}) () {
     // invoke: void setMask(const class QBitmap &)
     var arg0 = args[0].(QBitmap).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN7QPixmap7setMaskERK7QBitmap(this.qclsinst, arg0)
+    C.C_ZN7QPixmap7setMaskERK7QBitmap(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPixmap", "setMask", args)
   }
@@ -614,7 +614,7 @@ func (this *QPixmap) createHeuristicMask(args ...interface{}) () {
     // invoke: QBitmap createHeuristicMask(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZNK7QPixmap19createHeuristicMaskEb(this.qclsinst, arg0)
+    C.C_ZNK7QPixmap19createHeuristicMaskEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPixmap", "createHeuristicMask", args)
   }
@@ -634,7 +634,7 @@ func (this *QPixmap) defaultDepth_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QPixmap12defaultDepthEv
     // invoke: int defaultDepth()
-    C._ZN7QPixmap12defaultDepthEv()
+    C.C_ZN7QPixmap12defaultDepthEv()
   default:
     qtrt.ErrorResolve("QPixmap", "defaultDepth", args)
   }
@@ -663,7 +663,7 @@ func (this *QPixmap) copy(args ...interface{}) () {
     // invoke: QPixmap copy(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK7QPixmap4copyERK5QRect(this.qclsinst, arg0)
+    C.C_ZNK7QPixmap4copyERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK7QPixmap4copyEiiii
     // invoke: QPixmap copy(int, int, int, int)
@@ -675,7 +675,7 @@ func (this *QPixmap) copy(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZNK7QPixmap4copyEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK7QPixmap4copyEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QPixmap", "copy", args)
   }
@@ -709,7 +709,7 @@ func (this *QPixmap) save(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZNK7QPixmap4saveERK7QStringPKci(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK7QPixmap4saveERK7QStringPKci(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZNK7QPixmap4saveEP9QIODevicePKci
     // invoke: bool save(class QIODevice *, const char *, int)
@@ -719,7 +719,7 @@ func (this *QPixmap) save(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZNK7QPixmap4saveEP9QIODevicePKci(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK7QPixmap4saveEP9QIODevicePKci(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPixmap", "save", args)
   }
@@ -739,7 +739,7 @@ func (this *QPixmap) devicePixelRatio(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap16devicePixelRatioEv
     // invoke: qreal devicePixelRatio()
-    C._ZNK7QPixmap16devicePixelRatioEv(this.qclsinst)
+    C.C_ZNK7QPixmap16devicePixelRatioEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "devicePixelRatio", args)
   }
@@ -759,7 +759,7 @@ func (this *QPixmap) isQBitmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap9isQBitmapEv
     // invoke: bool isQBitmap()
-    C._ZNK7QPixmap9isQBitmapEv(this.qclsinst)
+    C.C_ZNK7QPixmap9isQBitmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "isQBitmap", args)
   }
@@ -779,7 +779,7 @@ func (this *QPixmap) mask(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap4maskEv
     // invoke: QBitmap mask()
-    C._ZNK7QPixmap4maskEv(this.qclsinst)
+    C.C_ZNK7QPixmap4maskEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "mask", args)
   }
@@ -799,7 +799,7 @@ func (this *QPixmap) toImage(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap7toImageEv
     // invoke: QImage toImage()
-    C._ZNK7QPixmap7toImageEv(this.qclsinst)
+    C.C_ZNK7QPixmap7toImageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "toImage", args)
   }
@@ -831,7 +831,7 @@ func NewQPixmap(args ...interface{}) QPixmap {
     // invoke: void QPixmap()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN7QPixmapC2Ev(qthis)
+    C.C_ZN7QPixmapC2Ev(qthis)
   case 1:
     // invoke: _ZN7QPixmapC1Eii
     // invoke: void QPixmap(int, int)
@@ -841,7 +841,7 @@ func NewQPixmap(args ...interface{}) QPixmap {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN7QPixmapC2Eii(qthis, arg0, arg1)
+    C.C_ZN7QPixmapC2Eii(qthis, arg0, arg1)
   case 2:
     // invoke: _ZN7QPixmapC1ERKS_
     // invoke: void QPixmap(const class QPixmap &)
@@ -849,7 +849,7 @@ func NewQPixmap(args ...interface{}) QPixmap {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN7QPixmapC2ERKS_(qthis, arg0)
+    C.C_ZN7QPixmapC2ERKS_(qthis, arg0)
   case 3:
     // invoke: _ZN7QPixmapC1ERK5QSize
     // invoke: void QPixmap(const class QSize &)
@@ -857,7 +857,7 @@ func NewQPixmap(args ...interface{}) QPixmap {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN7QPixmapC2ERK5QSize(qthis, arg0)
+    C.C_ZN7QPixmapC2ERK5QSize(qthis, arg0)
   default:
     qtrt.ErrorResolve("QPixmap", "QPixmap", args)
   }
@@ -878,7 +878,7 @@ func (this *QPixmap) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap6isNullEv
     // invoke: bool isNull()
-    C._ZNK7QPixmap6isNullEv(this.qclsinst)
+    C.C_ZNK7QPixmap6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "isNull", args)
   }
@@ -898,7 +898,7 @@ func (this *QPixmap) devType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap7devTypeEv
     // invoke: int devType()
-    C._ZNK7QPixmap7devTypeEv(this.qclsinst)
+    C.C_ZNK7QPixmap7devTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixmap", "devType", args)
   }
@@ -945,7 +945,7 @@ func (this *QPixmap) scroll(args ...interface{}) () {
     if false {fmt.Println(arg5)}
     var arg6 = args[6].(QRegion).qclsinst
     if false {fmt.Println(arg6)}
-    C._ZN7QPixmap6scrollEiiiiiiP7QRegion(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+    C.C_ZN7QPixmap6scrollEiiiiiiP7QRegion(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)
   case 1:
     // invoke: _ZN7QPixmap6scrollEiiRK5QRectP7QRegion
     // invoke: void scroll(int, int, const class QRect &, class QRegion *)
@@ -957,7 +957,7 @@ func (this *QPixmap) scroll(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QRegion).qclsinst
     if false {fmt.Println(arg3)}
-    C._ZN7QPixmap6scrollEiiRK5QRectP7QRegion(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN7QPixmap6scrollEiiRK5QRectP7QRegion(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QPixmap", "scroll", args)
   }

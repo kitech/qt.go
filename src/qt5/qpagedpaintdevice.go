@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qpagedpaintdevice.h
 // dst-file: /src/gui/qpagedpaintdevice.go
 //
@@ -29,25 +29,25 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QPagedPaintDevice::setPageMargins(const QMarginsF & margins);
-extern void _ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF(void* qthis, void* arg0); // 4
+extern void C_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF(void* qthis, void* arg0); // 4
   // proto:  QPageLayout QPagedPaintDevice::pageLayout();
-extern void _ZNK17QPagedPaintDevice10pageLayoutEv(void* qthis); // 4
+extern void C_ZNK17QPagedPaintDevice10pageLayoutEv(void* qthis); // 4
   // proto:  bool QPagedPaintDevice::setPageSize(const QPageSize & pageSize);
-extern void _ZN17QPagedPaintDevice11setPageSizeERK9QPageSize(void* qthis, void* arg0); // 4
+extern void C_ZN17QPagedPaintDevice11setPageSizeERK9QPageSize(void* qthis, void* arg0); // 4
   // proto:  bool QPagedPaintDevice::setPageLayout(const QPageLayout & pageLayout);
-extern void _ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout(void* qthis, void* arg0); // 4
+extern void C_ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout(void* qthis, void* arg0); // 4
   // proto:  void QPagedPaintDevice::QPagedPaintDevice();
-extern void _ZN17QPagedPaintDeviceC2Ev(void* qthis); // 3
+extern void C_ZN17QPagedPaintDeviceC2Ev(void* qthis); // 3
   // proto:  void QPagedPaintDevice::~QPagedPaintDevice();
-extern void _ZN17QPagedPaintDeviceD2Ev(void* qthis); // 4
+extern void C_ZN17QPagedPaintDeviceD2Ev(void* qthis); // 4
   // proto:  QSizeF QPagedPaintDevice::pageSizeMM();
-extern void _ZNK17QPagedPaintDevice10pageSizeMMEv(void* qthis); // 4
+extern void C_ZNK17QPagedPaintDevice10pageSizeMMEv(void* qthis); // 4
   // proto:  void QPagedPaintDevice::setPageSizeMM(const QSizeF & size);
-extern void _ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF(void* qthis, void* arg0); // 4
+extern void C_ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF(void* qthis, void* arg0); // 4
   // proto:  QPagedPaintDevice::Margins QPagedPaintDevice::margins();
-extern void _ZNK17QPagedPaintDevice7marginsEv(void* qthis); // 4
+extern void C_ZNK17QPagedPaintDevice7marginsEv(void* qthis); // 4
   // proto:  QPagedPaintDevice::PageSize QPagedPaintDevice::pageSize();
-extern void _ZNK17QPagedPaintDevice8pageSizeEv(void* qthis); // 4
+extern void C_ZNK17QPagedPaintDevice8pageSizeEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -82,7 +82,7 @@ func (this *QPagedPaintDevice) setPageMargins(args ...interface{}) () {
     // invoke: bool setPageMargins(const class QMarginsF &)
     var arg0 = args[0].(QMarginsF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF(this.qclsinst, arg0)
+    C.C_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "setPageMargins", args)
   }
@@ -102,7 +102,7 @@ func (this *QPagedPaintDevice) pageLayout(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPagedPaintDevice10pageLayoutEv
     // invoke: QPageLayout pageLayout()
-    C._ZNK17QPagedPaintDevice10pageLayoutEv(this.qclsinst)
+    C.C_ZNK17QPagedPaintDevice10pageLayoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "pageLayout", args)
   }
@@ -125,7 +125,7 @@ func (this *QPagedPaintDevice) setPageSize(args ...interface{}) () {
     // invoke: bool setPageSize(const class QPageSize &)
     var arg0 = args[0].(QPageSize).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QPagedPaintDevice11setPageSizeERK9QPageSize(this.qclsinst, arg0)
+    C.C_ZN17QPagedPaintDevice11setPageSizeERK9QPageSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "setPageSize", args)
   }
@@ -148,7 +148,7 @@ func (this *QPagedPaintDevice) setPageLayout(args ...interface{}) () {
     // invoke: bool setPageLayout(const class QPageLayout &)
     var arg0 = args[0].(QPageLayout).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout(this.qclsinst, arg0)
+    C.C_ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "setPageLayout", args)
   }
@@ -170,7 +170,7 @@ func NewQPagedPaintDevice(args ...interface{}) QPagedPaintDevice {
     // invoke: void QPagedPaintDevice()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QPagedPaintDeviceC2Ev(qthis)
+    C.C_ZN17QPagedPaintDeviceC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "QPagedPaintDevice", args)
   }
@@ -191,7 +191,7 @@ func (this *QPagedPaintDevice) FreeQPagedPaintDevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QPagedPaintDeviceD0Ev
     // invoke: void ~QPagedPaintDevice()
-    C._ZN17QPagedPaintDeviceD2Ev(this.qclsinst)
+    C.C_ZN17QPagedPaintDeviceD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "~QPagedPaintDevice", args)
   }
@@ -211,7 +211,7 @@ func (this *QPagedPaintDevice) pageSizeMM(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPagedPaintDevice10pageSizeMMEv
     // invoke: QSizeF pageSizeMM()
-    C._ZNK17QPagedPaintDevice10pageSizeMMEv(this.qclsinst)
+    C.C_ZNK17QPagedPaintDevice10pageSizeMMEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "pageSizeMM", args)
   }
@@ -234,7 +234,7 @@ func (this *QPagedPaintDevice) setPageSizeMM(args ...interface{}) () {
     // invoke: void setPageSizeMM(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "setPageSizeMM", args)
   }
@@ -254,7 +254,7 @@ func (this *QPagedPaintDevice) margins(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPagedPaintDevice7marginsEv
     // invoke: QPagedPaintDevice::Margins margins()
-    C._ZNK17QPagedPaintDevice7marginsEv(this.qclsinst)
+    C.C_ZNK17QPagedPaintDevice7marginsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "margins", args)
   }
@@ -274,7 +274,7 @@ func (this *QPagedPaintDevice) pageSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPagedPaintDevice8pageSizeEv
     // invoke: QPagedPaintDevice::PageSize pageSize()
-    C._ZNK17QPagedPaintDevice8pageSizeEv(this.qclsinst)
+    C.C_ZNK17QPagedPaintDevice8pageSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "pageSize", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qabstractitemdelegate.h
 // dst-file: /src/widgets/qabstractitemdelegate.go
 //
@@ -29,27 +29,27 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QWidget * QAbstractItemDelegate::createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index);
-extern void _ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QAbstractItemDelegate::updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index);
-extern void _ZNK21QAbstractItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZNK21QAbstractItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QAbstractItemDelegate::setModelData(QWidget * editor, QAbstractItemModel * model, const QModelIndex & index);
-extern void _ZNK21QAbstractItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZNK21QAbstractItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QAbstractItemDelegate::destroyEditor(QWidget * editor, const QModelIndex & index);
-extern void _ZNK21QAbstractItemDelegate13destroyEditorEP7QWidgetRK11QModelIndex(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK21QAbstractItemDelegate13destroyEditorEP7QWidgetRK11QModelIndex(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QAbstractItemDelegate::QAbstractItemDelegate(QObject * parent);
-extern void _ZN21QAbstractItemDelegateC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN21QAbstractItemDelegateC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  bool QAbstractItemDelegate::editorEvent(QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index);
-extern void _ZN21QAbstractItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
+extern void C_ZN21QAbstractItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
   // proto:  void QAbstractItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
-extern void _ZNK21QAbstractItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZNK21QAbstractItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QVector<int> QAbstractItemDelegate::paintingRoles();
-extern void _ZNK21QAbstractItemDelegate13paintingRolesEv(void* qthis); // 4
+extern void C_ZNK21QAbstractItemDelegate13paintingRolesEv(void* qthis); // 4
   // proto:  bool QAbstractItemDelegate::helpEvent(QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index);
-extern void _ZN21QAbstractItemDelegate9helpEventEP10QHelpEventP17QAbstractItemViewRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
+extern void C_ZN21QAbstractItemDelegate9helpEventEP10QHelpEventP17QAbstractItemViewRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
   // proto:  const QMetaObject * QAbstractItemDelegate::metaObject();
-extern void _ZNK21QAbstractItemDelegate10metaObjectEv(void* qthis); // 4
+extern void C_ZNK21QAbstractItemDelegate10metaObjectEv(void* qthis); // 4
   // proto:  void QAbstractItemDelegate::~QAbstractItemDelegate();
-extern void _ZN21QAbstractItemDelegateD2Ev(void* qthis); // 4
+extern void C_ZN21QAbstractItemDelegateD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -93,7 +93,7 @@ func (this *QAbstractItemDelegate) createEditor(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "createEditor", args)
   }
@@ -122,7 +122,7 @@ func (this *QAbstractItemDelegate) updateEditorGeometry(args ...interface{}) () 
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZNK21QAbstractItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK21QAbstractItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "updateEditorGeometry", args)
   }
@@ -151,7 +151,7 @@ func (this *QAbstractItemDelegate) setModelData(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZNK21QAbstractItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK21QAbstractItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "setModelData", args)
   }
@@ -177,7 +177,7 @@ func (this *QAbstractItemDelegate) destroyEditor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK21QAbstractItemDelegate13destroyEditorEP7QWidgetRK11QModelIndex(this.qclsinst, arg0, arg1)
+    C.C_ZNK21QAbstractItemDelegate13destroyEditorEP7QWidgetRK11QModelIndex(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "destroyEditor", args)
   }
@@ -202,7 +202,7 @@ func NewQAbstractItemDelegate(args ...interface{}) QAbstractItemDelegate {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN21QAbstractItemDelegateC2EP7QObject(qthis, arg0)
+    C.C_ZN21QAbstractItemDelegateC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "QAbstractItemDelegate", args)
   }
@@ -235,7 +235,7 @@ func (this *QAbstractItemDelegate) editorEvent(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QModelIndex).qclsinst
     if false {fmt.Println(arg3)}
-    C._ZN21QAbstractItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN21QAbstractItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "editorEvent", args)
   }
@@ -261,7 +261,7 @@ func (this *QAbstractItemDelegate) setEditorData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZNK21QAbstractItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(this.qclsinst, arg0, arg1)
+    C.C_ZNK21QAbstractItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "setEditorData", args)
   }
@@ -281,7 +281,7 @@ func (this *QAbstractItemDelegate) paintingRoles(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate13paintingRolesEv
     // invoke: QVector<int> paintingRoles()
-    C._ZNK21QAbstractItemDelegate13paintingRolesEv(this.qclsinst)
+    C.C_ZNK21QAbstractItemDelegate13paintingRolesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "paintingRoles", args)
   }
@@ -313,7 +313,7 @@ func (this *QAbstractItemDelegate) helpEvent(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QModelIndex).qclsinst
     if false {fmt.Println(arg3)}
-    C._ZN21QAbstractItemDelegate9helpEventEP10QHelpEventP17QAbstractItemViewRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN21QAbstractItemDelegate9helpEventEP10QHelpEventP17QAbstractItemViewRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "helpEvent", args)
   }
@@ -333,7 +333,7 @@ func (this *QAbstractItemDelegate) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK21QAbstractItemDelegate10metaObjectEv(this.qclsinst)
+    C.C_ZNK21QAbstractItemDelegate10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "metaObject", args)
   }
@@ -353,7 +353,7 @@ func (this *QAbstractItemDelegate) FreeQAbstractItemDelegate(args ...interface{}
   case 0:
     // invoke: _ZN21QAbstractItemDelegateD0Ev
     // invoke: void ~QAbstractItemDelegate()
-    C._ZN21QAbstractItemDelegateD2Ev(this.qclsinst)
+    C.C_ZN21QAbstractItemDelegateD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "~QAbstractItemDelegate", args)
   }

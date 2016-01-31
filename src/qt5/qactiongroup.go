@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.go
 //
@@ -29,37 +29,37 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QAction * QActionGroup::addAction(QAction * a);
-extern void _ZN12QActionGroup9addActionEP7QAction(void* qthis, void* arg0); // 4
+extern void C_ZN12QActionGroup9addActionEP7QAction(void* qthis, void* arg0); // 4
   // proto:  QAction * QActionGroup::addAction(const QIcon & icon, const QString & text);
-extern void _ZN12QActionGroup9addActionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN12QActionGroup9addActionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QAction * QActionGroup::addAction(const QString & text);
-extern void _ZN12QActionGroup9addActionERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN12QActionGroup9addActionERK7QString(void* qthis, void* arg0); // 4
   // proto:  QList<QAction *> QActionGroup::actions();
-extern void _ZNK12QActionGroup7actionsEv(void* qthis); // 4
+extern void C_ZNK12QActionGroup7actionsEv(void* qthis); // 4
   // proto:  QAction * QActionGroup::checkedAction();
-extern void _ZNK12QActionGroup13checkedActionEv(void* qthis); // 4
+extern void C_ZNK12QActionGroup13checkedActionEv(void* qthis); // 4
   // proto:  void QActionGroup::setDisabled(bool b);
-extern void _ZN12QActionGroup11setDisabledEb(void* qthis, bool arg0); // 2
+extern void C_ZN12QActionGroup11setDisabledEb(void* qthis, bool arg0); // 2
   // proto:  void QActionGroup::QActionGroup(QObject * parent);
-extern void _ZN12QActionGroupC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN12QActionGroupC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QActionGroup::setEnabled(bool );
-extern void _ZN12QActionGroup10setEnabledEb(void* qthis, bool arg0); // 4
+extern void C_ZN12QActionGroup10setEnabledEb(void* qthis, bool arg0); // 4
   // proto:  void QActionGroup::setExclusive(bool );
-extern void _ZN12QActionGroup12setExclusiveEb(void* qthis, bool arg0); // 4
+extern void C_ZN12QActionGroup12setExclusiveEb(void* qthis, bool arg0); // 4
   // proto:  void QActionGroup::removeAction(QAction * a);
-extern void _ZN12QActionGroup12removeActionEP7QAction(void* qthis, void* arg0); // 4
+extern void C_ZN12QActionGroup12removeActionEP7QAction(void* qthis, void* arg0); // 4
   // proto:  bool QActionGroup::isExclusive();
-extern void _ZNK12QActionGroup11isExclusiveEv(void* qthis); // 4
+extern void C_ZNK12QActionGroup11isExclusiveEv(void* qthis); // 4
   // proto:  const QMetaObject * QActionGroup::metaObject();
-extern void _ZNK12QActionGroup10metaObjectEv(void* qthis); // 4
+extern void C_ZNK12QActionGroup10metaObjectEv(void* qthis); // 4
   // proto:  void QActionGroup::~QActionGroup();
-extern void _ZN12QActionGroupD2Ev(void* qthis); // 4
+extern void C_ZN12QActionGroupD2Ev(void* qthis); // 4
   // proto:  bool QActionGroup::isVisible();
-extern void _ZNK12QActionGroup9isVisibleEv(void* qthis); // 4
+extern void C_ZNK12QActionGroup9isVisibleEv(void* qthis); // 4
   // proto:  void QActionGroup::setVisible(bool );
-extern void _ZN12QActionGroup10setVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN12QActionGroup10setVisibleEb(void* qthis, bool arg0); // 4
   // proto:  bool QActionGroup::isEnabled();
-extern void _ZNK12QActionGroup9isEnabledEv(void* qthis); // 4
+extern void C_ZNK12QActionGroup9isEnabledEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -103,7 +103,7 @@ func (this *QActionGroup) addAction(args ...interface{}) () {
     // invoke: QAction * addAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QActionGroup9addActionEP7QAction(this.qclsinst, arg0)
+    C.C_ZN12QActionGroup9addActionEP7QAction(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN12QActionGroup9addActionERK5QIconRK7QString
     // invoke: QAction * addAction(const class QIcon &, const class QString &)
@@ -111,13 +111,13 @@ func (this *QActionGroup) addAction(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN12QActionGroup9addActionERK5QIconRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN12QActionGroup9addActionERK5QIconRK7QString(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN12QActionGroup9addActionERK7QString
     // invoke: QAction * addAction(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QActionGroup9addActionERK7QString(this.qclsinst, arg0)
+    C.C_ZN12QActionGroup9addActionERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QActionGroup", "addAction", args)
   }
@@ -137,7 +137,7 @@ func (this *QActionGroup) actions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionGroup7actionsEv
     // invoke: QList<QAction *> actions()
-    C._ZNK12QActionGroup7actionsEv(this.qclsinst)
+    C.C_ZNK12QActionGroup7actionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QActionGroup", "actions", args)
   }
@@ -157,7 +157,7 @@ func (this *QActionGroup) checkedAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionGroup13checkedActionEv
     // invoke: QAction * checkedAction()
-    C._ZNK12QActionGroup13checkedActionEv(this.qclsinst)
+    C.C_ZNK12QActionGroup13checkedActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QActionGroup", "checkedAction", args)
   }
@@ -180,7 +180,7 @@ func (this *QActionGroup) setDisabled(args ...interface{}) () {
     // invoke: void setDisabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN12QActionGroup11setDisabledEb(this.qclsinst, arg0)
+    C.C_ZN12QActionGroup11setDisabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QActionGroup", "setDisabled", args)
   }
@@ -205,7 +205,7 @@ func NewQActionGroup(args ...interface{}) QActionGroup {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN12QActionGroupC2EP7QObject(qthis, arg0)
+    C.C_ZN12QActionGroupC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QActionGroup", "QActionGroup", args)
   }
@@ -229,7 +229,7 @@ func (this *QActionGroup) setEnabled(args ...interface{}) () {
     // invoke: void setEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN12QActionGroup10setEnabledEb(this.qclsinst, arg0)
+    C.C_ZN12QActionGroup10setEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QActionGroup", "setEnabled", args)
   }
@@ -252,7 +252,7 @@ func (this *QActionGroup) setExclusive(args ...interface{}) () {
     // invoke: void setExclusive(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN12QActionGroup12setExclusiveEb(this.qclsinst, arg0)
+    C.C_ZN12QActionGroup12setExclusiveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QActionGroup", "setExclusive", args)
   }
@@ -275,7 +275,7 @@ func (this *QActionGroup) removeAction(args ...interface{}) () {
     // invoke: void removeAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QActionGroup12removeActionEP7QAction(this.qclsinst, arg0)
+    C.C_ZN12QActionGroup12removeActionEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QActionGroup", "removeAction", args)
   }
@@ -295,7 +295,7 @@ func (this *QActionGroup) isExclusive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionGroup11isExclusiveEv
     // invoke: bool isExclusive()
-    C._ZNK12QActionGroup11isExclusiveEv(this.qclsinst)
+    C.C_ZNK12QActionGroup11isExclusiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QActionGroup", "isExclusive", args)
   }
@@ -315,7 +315,7 @@ func (this *QActionGroup) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionGroup10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK12QActionGroup10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QActionGroup10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QActionGroup", "metaObject", args)
   }
@@ -335,7 +335,7 @@ func (this *QActionGroup) FreeQActionGroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QActionGroupD0Ev
     // invoke: void ~QActionGroup()
-    C._ZN12QActionGroupD2Ev(this.qclsinst)
+    C.C_ZN12QActionGroupD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QActionGroup", "~QActionGroup", args)
   }
@@ -355,7 +355,7 @@ func (this *QActionGroup) isVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionGroup9isVisibleEv
     // invoke: bool isVisible()
-    C._ZNK12QActionGroup9isVisibleEv(this.qclsinst)
+    C.C_ZNK12QActionGroup9isVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QActionGroup", "isVisible", args)
   }
@@ -378,7 +378,7 @@ func (this *QActionGroup) setVisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN12QActionGroup10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN12QActionGroup10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QActionGroup", "setVisible", args)
   }
@@ -398,7 +398,7 @@ func (this *QActionGroup) isEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionGroup9isEnabledEv
     // invoke: bool isEnabled()
-    C._ZNK12QActionGroup9isEnabledEv(this.qclsinst)
+    C.C_ZNK12QActionGroup9isEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QActionGroup", "isEnabled", args)
   }

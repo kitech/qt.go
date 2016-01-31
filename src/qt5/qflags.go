@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qflags.h
 // dst-file: /src/core/qflags.go
 //
@@ -29,15 +29,15 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QIncompatibleFlag::QIncompatibleFlag(int i);
-extern void _ZN17QIncompatibleFlagC2Ei(void* qthis, int32_t arg0); // 1
+extern void C_ZN17QIncompatibleFlagC2Ei(void* qthis, int32_t arg0); // 1
   // proto:  void QFlag::QFlag(ushort ai);
-extern void _ZN5QFlagC2Et(void* qthis, int16_t arg0); // 1
+extern void C_ZN5QFlagC2Et(void* qthis, int16_t arg0); // 1
   // proto:  void QFlag::QFlag(int ai);
-extern void _ZN5QFlagC2Ei(void* qthis, int32_t arg0); // 1
+extern void C_ZN5QFlagC2Ei(void* qthis, int32_t arg0); // 1
   // proto:  void QFlag::QFlag(short ai);
-extern void _ZN5QFlagC2Es(void* qthis, int16_t arg0); // 1
+extern void C_ZN5QFlagC2Es(void* qthis, int16_t arg0); // 1
   // proto:  void QFlag::QFlag(uint ai);
-extern void _ZN5QFlagC2Ej(void* qthis, int32_t arg0); // 1
+extern void C_ZN5QFlagC2Ej(void* qthis, int32_t arg0); // 1
 */
 import "C"
 // } // <= ext block end
@@ -80,7 +80,7 @@ func NewQIncompatibleFlag(args ...interface{}) QIncompatibleFlag {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN17QIncompatibleFlagC2Ei(qthis, arg0)
+    C.C_ZN17QIncompatibleFlagC2Ei(qthis, arg0)
   default:
     qtrt.ErrorResolve("QIncompatibleFlag", "QIncompatibleFlag", args)
   }
@@ -115,7 +115,7 @@ func NewQFlag(args ...interface{}) QFlag {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QFlagC2Et(qthis, arg0)
+    C.C_ZN5QFlagC2Et(qthis, arg0)
   case 1:
     // invoke: _ZN5QFlagC1Ei
     // invoke: void QFlag(int)
@@ -123,7 +123,7 @@ func NewQFlag(args ...interface{}) QFlag {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QFlagC2Ei(qthis, arg0)
+    C.C_ZN5QFlagC2Ei(qthis, arg0)
   case 2:
     // invoke: _ZN5QFlagC1Es
     // invoke: void QFlag(short)
@@ -131,7 +131,7 @@ func NewQFlag(args ...interface{}) QFlag {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QFlagC2Es(qthis, arg0)
+    C.C_ZN5QFlagC2Es(qthis, arg0)
   case 3:
     // invoke: _ZN5QFlagC1Ej
     // invoke: void QFlag(uint)
@@ -139,7 +139,7 @@ func NewQFlag(args ...interface{}) QFlag {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QFlagC2Ej(qthis, arg0)
+    C.C_ZN5QFlagC2Ej(qthis, arg0)
   default:
     qtrt.ErrorResolve("QFlag", "QFlag", args)
   }

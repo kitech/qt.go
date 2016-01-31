@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.go
 //
@@ -29,37 +29,37 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QInputMethod::show();
-extern void _ZN12QInputMethod4showEv(void* qthis); // 4
+extern void C_ZN12QInputMethod4showEv(void* qthis); // 4
   // proto:  QLocale QInputMethod::locale();
-extern void _ZNK12QInputMethod6localeEv(void* qthis); // 4
+extern void C_ZNK12QInputMethod6localeEv(void* qthis); // 4
   // proto:  void QInputMethod::setInputItemRectangle(const QRectF & rect);
-extern void _ZN12QInputMethod21setInputItemRectangleERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZN12QInputMethod21setInputItemRectangleERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QInputMethod::hide();
-extern void _ZN12QInputMethod4hideEv(void* qthis); // 4
+extern void C_ZN12QInputMethod4hideEv(void* qthis); // 4
   // proto:  QRectF QInputMethod::cursorRectangle();
-extern void _ZNK12QInputMethod15cursorRectangleEv(void* qthis); // 4
+extern void C_ZNK12QInputMethod15cursorRectangleEv(void* qthis); // 4
   // proto:  QRectF QInputMethod::inputItemRectangle();
-extern void _ZNK12QInputMethod18inputItemRectangleEv(void* qthis); // 4
+extern void C_ZNK12QInputMethod18inputItemRectangleEv(void* qthis); // 4
   // proto:  bool QInputMethod::isAnimating();
-extern void _ZNK12QInputMethod11isAnimatingEv(void* qthis); // 4
+extern void C_ZNK12QInputMethod11isAnimatingEv(void* qthis); // 4
   // proto:  Qt::LayoutDirection QInputMethod::inputDirection();
-extern void _ZNK12QInputMethod14inputDirectionEv(void* qthis); // 4
+extern void C_ZNK12QInputMethod14inputDirectionEv(void* qthis); // 4
   // proto:  void QInputMethod::setInputItemTransform(const QTransform & transform);
-extern void _ZN12QInputMethod21setInputItemTransformERK10QTransform(void* qthis, void* arg0); // 4
+extern void C_ZN12QInputMethod21setInputItemTransformERK10QTransform(void* qthis, void* arg0); // 4
   // proto:  QRectF QInputMethod::keyboardRectangle();
-extern void _ZNK12QInputMethod17keyboardRectangleEv(void* qthis); // 4
+extern void C_ZNK12QInputMethod17keyboardRectangleEv(void* qthis); // 4
   // proto:  void QInputMethod::reset();
-extern void _ZN12QInputMethod5resetEv(void* qthis); // 4
+extern void C_ZN12QInputMethod5resetEv(void* qthis); // 4
   // proto:  const QMetaObject * QInputMethod::metaObject();
-extern void _ZNK12QInputMethod10metaObjectEv(void* qthis); // 4
+extern void C_ZNK12QInputMethod10metaObjectEv(void* qthis); // 4
   // proto:  QTransform QInputMethod::inputItemTransform();
-extern void _ZNK12QInputMethod18inputItemTransformEv(void* qthis); // 4
+extern void C_ZNK12QInputMethod18inputItemTransformEv(void* qthis); // 4
   // proto:  bool QInputMethod::isVisible();
-extern void _ZNK12QInputMethod9isVisibleEv(void* qthis); // 4
+extern void C_ZNK12QInputMethod9isVisibleEv(void* qthis); // 4
   // proto:  void QInputMethod::commit();
-extern void _ZN12QInputMethod6commitEv(void* qthis); // 4
+extern void C_ZN12QInputMethod6commitEv(void* qthis); // 4
   // proto:  void QInputMethod::setVisible(bool visible);
-extern void _ZN12QInputMethod10setVisibleEb(void* qthis, bool arg0); // 4
+extern void C_ZN12QInputMethod10setVisibleEb(void* qthis, bool arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -97,7 +97,7 @@ func (this *QInputMethod) show(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputMethod4showEv
     // invoke: void show()
-    C._ZN12QInputMethod4showEv(this.qclsinst)
+    C.C_ZN12QInputMethod4showEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "show", args)
   }
@@ -117,7 +117,7 @@ func (this *QInputMethod) locale(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod6localeEv
     // invoke: QLocale locale()
-    C._ZNK12QInputMethod6localeEv(this.qclsinst)
+    C.C_ZNK12QInputMethod6localeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "locale", args)
   }
@@ -140,7 +140,7 @@ func (this *QInputMethod) setInputItemRectangle(args ...interface{}) () {
     // invoke: void setInputItemRectangle(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QInputMethod21setInputItemRectangleERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN12QInputMethod21setInputItemRectangleERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputMethod", "setInputItemRectangle", args)
   }
@@ -160,7 +160,7 @@ func (this *QInputMethod) hide(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputMethod4hideEv
     // invoke: void hide()
-    C._ZN12QInputMethod4hideEv(this.qclsinst)
+    C.C_ZN12QInputMethod4hideEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "hide", args)
   }
@@ -180,7 +180,7 @@ func (this *QInputMethod) cursorRectangle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod15cursorRectangleEv
     // invoke: QRectF cursorRectangle()
-    C._ZNK12QInputMethod15cursorRectangleEv(this.qclsinst)
+    C.C_ZNK12QInputMethod15cursorRectangleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "cursorRectangle", args)
   }
@@ -200,7 +200,7 @@ func (this *QInputMethod) inputItemRectangle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod18inputItemRectangleEv
     // invoke: QRectF inputItemRectangle()
-    C._ZNK12QInputMethod18inputItemRectangleEv(this.qclsinst)
+    C.C_ZNK12QInputMethod18inputItemRectangleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "inputItemRectangle", args)
   }
@@ -220,7 +220,7 @@ func (this *QInputMethod) isAnimating(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod11isAnimatingEv
     // invoke: bool isAnimating()
-    C._ZNK12QInputMethod11isAnimatingEv(this.qclsinst)
+    C.C_ZNK12QInputMethod11isAnimatingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "isAnimating", args)
   }
@@ -240,7 +240,7 @@ func (this *QInputMethod) inputDirection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod14inputDirectionEv
     // invoke: Qt::LayoutDirection inputDirection()
-    C._ZNK12QInputMethod14inputDirectionEv(this.qclsinst)
+    C.C_ZNK12QInputMethod14inputDirectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "inputDirection", args)
   }
@@ -263,7 +263,7 @@ func (this *QInputMethod) setInputItemTransform(args ...interface{}) () {
     // invoke: void setInputItemTransform(const class QTransform &)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QInputMethod21setInputItemTransformERK10QTransform(this.qclsinst, arg0)
+    C.C_ZN12QInputMethod21setInputItemTransformERK10QTransform(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputMethod", "setInputItemTransform", args)
   }
@@ -283,7 +283,7 @@ func (this *QInputMethod) keyboardRectangle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod17keyboardRectangleEv
     // invoke: QRectF keyboardRectangle()
-    C._ZNK12QInputMethod17keyboardRectangleEv(this.qclsinst)
+    C.C_ZNK12QInputMethod17keyboardRectangleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "keyboardRectangle", args)
   }
@@ -303,7 +303,7 @@ func (this *QInputMethod) reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputMethod5resetEv
     // invoke: void reset()
-    C._ZN12QInputMethod5resetEv(this.qclsinst)
+    C.C_ZN12QInputMethod5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "reset", args)
   }
@@ -323,7 +323,7 @@ func (this *QInputMethod) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK12QInputMethod10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QInputMethod10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "metaObject", args)
   }
@@ -343,7 +343,7 @@ func (this *QInputMethod) inputItemTransform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod18inputItemTransformEv
     // invoke: QTransform inputItemTransform()
-    C._ZNK12QInputMethod18inputItemTransformEv(this.qclsinst)
+    C.C_ZNK12QInputMethod18inputItemTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "inputItemTransform", args)
   }
@@ -363,7 +363,7 @@ func (this *QInputMethod) isVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod9isVisibleEv
     // invoke: bool isVisible()
-    C._ZNK12QInputMethod9isVisibleEv(this.qclsinst)
+    C.C_ZNK12QInputMethod9isVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "isVisible", args)
   }
@@ -383,7 +383,7 @@ func (this *QInputMethod) commit(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputMethod6commitEv
     // invoke: void commit()
-    C._ZN12QInputMethod6commitEv(this.qclsinst)
+    C.C_ZN12QInputMethod6commitEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "commit", args)
   }
@@ -406,7 +406,7 @@ func (this *QInputMethod) setVisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN12QInputMethod10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN12QInputMethod10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputMethod", "setVisible", args)
   }

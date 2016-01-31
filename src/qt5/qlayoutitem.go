@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qlayoutitem.h
 // dst-file: /src/widgets/qlayoutitem.go
 //
@@ -29,83 +29,83 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QLayoutItem::invalidate();
-extern void _ZN11QLayoutItem10invalidateEv(void* qthis); // 4
+extern void C_ZN11QLayoutItem10invalidateEv(void* qthis); // 4
   // proto:  QWidget * QLayoutItem::widget();
-extern void _ZN11QLayoutItem6widgetEv(void* qthis); // 4
+extern void C_ZN11QLayoutItem6widgetEv(void* qthis); // 4
   // proto:  QLayout * QLayoutItem::layout();
-extern void _ZN11QLayoutItem6layoutEv(void* qthis); // 4
+extern void C_ZN11QLayoutItem6layoutEv(void* qthis); // 4
   // proto:  void QLayoutItem::~QLayoutItem();
-extern void _ZN11QLayoutItemD2Ev(void* qthis); // 4
+extern void C_ZN11QLayoutItemD2Ev(void* qthis); // 4
   // proto:  QSpacerItem * QLayoutItem::spacerItem();
-extern void _ZN11QLayoutItem10spacerItemEv(void* qthis); // 4
+extern void C_ZN11QLayoutItem10spacerItemEv(void* qthis); // 4
   // proto:  QSizePolicy::ControlTypes QLayoutItem::controlTypes();
-extern void _ZNK11QLayoutItem12controlTypesEv(void* qthis); // 4
+extern void C_ZNK11QLayoutItem12controlTypesEv(void* qthis); // 4
   // proto:  int QLayoutItem::heightForWidth(int );
-extern void _ZNK11QLayoutItem14heightForWidthEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QLayoutItem14heightForWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QLayoutItem::hasHeightForWidth();
-extern void _ZNK11QLayoutItem17hasHeightForWidthEv(void* qthis); // 4
+extern void C_ZNK11QLayoutItem17hasHeightForWidthEv(void* qthis); // 4
   // proto:  int QLayoutItem::minimumHeightForWidth(int );
-extern void _ZNK11QLayoutItem21minimumHeightForWidthEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QLayoutItem21minimumHeightForWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  Qt::Alignment QLayoutItem::alignment();
-extern void _ZNK11QLayoutItem9alignmentEv(void* qthis); // 2
+extern void C_ZNK11QLayoutItem9alignmentEv(void* qthis); // 2
   // proto:  Qt::Orientations QSpacerItem::expandingDirections();
-extern void _ZNK11QSpacerItem19expandingDirectionsEv(void* qthis); // 4
+extern void C_ZNK11QSpacerItem19expandingDirectionsEv(void* qthis); // 4
   // proto:  QSizePolicy QSpacerItem::sizePolicy();
-extern void _ZNK11QSpacerItem10sizePolicyEv(void* qthis); // 2
+extern void C_ZNK11QSpacerItem10sizePolicyEv(void* qthis); // 2
   // proto:  QSize QSpacerItem::sizeHint();
-extern void _ZNK11QSpacerItem8sizeHintEv(void* qthis); // 4
+extern void C_ZNK11QSpacerItem8sizeHintEv(void* qthis); // 4
   // proto:  QRect QSpacerItem::geometry();
-extern void _ZNK11QSpacerItem8geometryEv(void* qthis); // 4
+extern void C_ZNK11QSpacerItem8geometryEv(void* qthis); // 4
   // proto:  void QSpacerItem::setGeometry(const QRect & );
-extern void _ZN11QSpacerItem11setGeometryERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZN11QSpacerItem11setGeometryERK5QRect(void* qthis, void* arg0); // 4
   // proto:  QSize QSpacerItem::minimumSize();
-extern void _ZNK11QSpacerItem11minimumSizeEv(void* qthis); // 4
+extern void C_ZNK11QSpacerItem11minimumSizeEv(void* qthis); // 4
   // proto:  QSpacerItem * QSpacerItem::spacerItem();
-extern void _ZN11QSpacerItem10spacerItemEv(void* qthis); // 4
+extern void C_ZN11QSpacerItem10spacerItemEv(void* qthis); // 4
   // proto:  bool QSpacerItem::isEmpty();
-extern void _ZNK11QSpacerItem7isEmptyEv(void* qthis); // 4
+extern void C_ZNK11QSpacerItem7isEmptyEv(void* qthis); // 4
   // proto:  void QSpacerItem::~QSpacerItem();
-extern void _ZN11QSpacerItemD2Ev(void* qthis); // 4
+extern void C_ZN11QSpacerItemD2Ev(void* qthis); // 4
   // proto:  QSize QSpacerItem::maximumSize();
-extern void _ZNK11QSpacerItem11maximumSizeEv(void* qthis); // 4
+extern void C_ZNK11QSpacerItem11maximumSizeEv(void* qthis); // 4
   // proto:  Qt::Orientations QWidgetItem::expandingDirections();
-extern void _ZNK11QWidgetItem19expandingDirectionsEv(void* qthis); // 4
+extern void C_ZNK11QWidgetItem19expandingDirectionsEv(void* qthis); // 4
   // proto:  QWidget * QWidgetItem::widget();
-extern void _ZN11QWidgetItem6widgetEv(void* qthis); // 4
+extern void C_ZN11QWidgetItem6widgetEv(void* qthis); // 4
   // proto:  void QWidgetItem::setGeometry(const QRect & );
-extern void _ZN11QWidgetItem11setGeometryERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZN11QWidgetItem11setGeometryERK5QRect(void* qthis, void* arg0); // 4
   // proto:  QSize QWidgetItem::sizeHint();
-extern void _ZNK11QWidgetItem8sizeHintEv(void* qthis); // 4
+extern void C_ZNK11QWidgetItem8sizeHintEv(void* qthis); // 4
   // proto:  bool QWidgetItem::hasHeightForWidth();
-extern void _ZNK11QWidgetItem17hasHeightForWidthEv(void* qthis); // 4
+extern void C_ZNK11QWidgetItem17hasHeightForWidthEv(void* qthis); // 4
   // proto:  QRect QWidgetItem::geometry();
-extern void _ZNK11QWidgetItem8geometryEv(void* qthis); // 4
+extern void C_ZNK11QWidgetItem8geometryEv(void* qthis); // 4
   // proto:  void QWidgetItem::~QWidgetItem();
-extern void _ZN11QWidgetItemD2Ev(void* qthis); // 4
+extern void C_ZN11QWidgetItemD2Ev(void* qthis); // 4
   // proto:  void QWidgetItem::QWidgetItem(QWidget * w);
-extern void _ZN11QWidgetItemC2EP7QWidget(void* qthis, void* arg0); // 1
+extern void C_ZN11QWidgetItemC2EP7QWidget(void* qthis, void* arg0); // 1
   // proto:  QSize QWidgetItem::minimumSize();
-extern void _ZNK11QWidgetItem11minimumSizeEv(void* qthis); // 4
+extern void C_ZNK11QWidgetItem11minimumSizeEv(void* qthis); // 4
   // proto:  QSizePolicy::ControlTypes QWidgetItem::controlTypes();
-extern void _ZNK11QWidgetItem12controlTypesEv(void* qthis); // 4
+extern void C_ZNK11QWidgetItem12controlTypesEv(void* qthis); // 4
   // proto:  int QWidgetItem::heightForWidth(int );
-extern void _ZNK11QWidgetItem14heightForWidthEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QWidgetItem14heightForWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QWidgetItem::isEmpty();
-extern void _ZNK11QWidgetItem7isEmptyEv(void* qthis); // 4
+extern void C_ZNK11QWidgetItem7isEmptyEv(void* qthis); // 4
   // proto:  QSize QWidgetItem::maximumSize();
-extern void _ZNK11QWidgetItem11maximumSizeEv(void* qthis); // 4
+extern void C_ZNK11QWidgetItem11maximumSizeEv(void* qthis); // 4
   // proto:  void QWidgetItemV2::~QWidgetItemV2();
-extern void _ZN13QWidgetItemV2D2Ev(void* qthis); // 4
+extern void C_ZN13QWidgetItemV2D2Ev(void* qthis); // 4
   // proto:  QSize QWidgetItemV2::sizeHint();
-extern void _ZNK13QWidgetItemV28sizeHintEv(void* qthis); // 4
+extern void C_ZNK13QWidgetItemV28sizeHintEv(void* qthis); // 4
   // proto:  void QWidgetItemV2::QWidgetItemV2(QWidget * widget);
-extern void _ZN13QWidgetItemV2C2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN13QWidgetItemV2C2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  QSize QWidgetItemV2::minimumSize();
-extern void _ZNK13QWidgetItemV211minimumSizeEv(void* qthis); // 4
+extern void C_ZNK13QWidgetItemV211minimumSizeEv(void* qthis); // 4
   // proto:  int QWidgetItemV2::heightForWidth(int width);
-extern void _ZNK13QWidgetItemV214heightForWidthEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK13QWidgetItemV214heightForWidthEi(void* qthis, int32_t arg0); // 4
   // proto:  QSize QWidgetItemV2::maximumSize();
-extern void _ZNK13QWidgetItemV211maximumSizeEv(void* qthis); // 4
+extern void C_ZNK13QWidgetItemV211maximumSizeEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -155,7 +155,7 @@ func (this *QLayoutItem) invalidate(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QLayoutItem10invalidateEv
     // invoke: void invalidate()
-    C._ZN11QLayoutItem10invalidateEv(this.qclsinst)
+    C.C_ZN11QLayoutItem10invalidateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "invalidate", args)
   }
@@ -175,7 +175,7 @@ func (this *QLayoutItem) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QLayoutItem6widgetEv
     // invoke: QWidget * widget()
-    C._ZN11QLayoutItem6widgetEv(this.qclsinst)
+    C.C_ZN11QLayoutItem6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "widget", args)
   }
@@ -195,7 +195,7 @@ func (this *QLayoutItem) layout(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QLayoutItem6layoutEv
     // invoke: QLayout * layout()
-    C._ZN11QLayoutItem6layoutEv(this.qclsinst)
+    C.C_ZN11QLayoutItem6layoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "layout", args)
   }
@@ -215,7 +215,7 @@ func (this *QLayoutItem) FreeQLayoutItem(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QLayoutItemD0Ev
     // invoke: void ~QLayoutItem()
-    C._ZN11QLayoutItemD2Ev(this.qclsinst)
+    C.C_ZN11QLayoutItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "~QLayoutItem", args)
   }
@@ -235,7 +235,7 @@ func (this *QLayoutItem) spacerItem(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QLayoutItem10spacerItemEv
     // invoke: QSpacerItem * spacerItem()
-    C._ZN11QLayoutItem10spacerItemEv(this.qclsinst)
+    C.C_ZN11QLayoutItem10spacerItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "spacerItem", args)
   }
@@ -255,7 +255,7 @@ func (this *QLayoutItem) controlTypes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QLayoutItem12controlTypesEv
     // invoke: QSizePolicy::ControlTypes controlTypes()
-    C._ZNK11QLayoutItem12controlTypesEv(this.qclsinst)
+    C.C_ZNK11QLayoutItem12controlTypesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "controlTypes", args)
   }
@@ -278,7 +278,7 @@ func (this *QLayoutItem) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QLayoutItem14heightForWidthEi(this.qclsinst, arg0)
+    C.C_ZNK11QLayoutItem14heightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayoutItem", "heightForWidth", args)
   }
@@ -298,7 +298,7 @@ func (this *QLayoutItem) hasHeightForWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QLayoutItem17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    C._ZNK11QLayoutItem17hasHeightForWidthEv(this.qclsinst)
+    C.C_ZNK11QLayoutItem17hasHeightForWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "hasHeightForWidth", args)
   }
@@ -321,7 +321,7 @@ func (this *QLayoutItem) minimumHeightForWidth(args ...interface{}) () {
     // invoke: int minimumHeightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QLayoutItem21minimumHeightForWidthEi(this.qclsinst, arg0)
+    C.C_ZNK11QLayoutItem21minimumHeightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayoutItem", "minimumHeightForWidth", args)
   }
@@ -341,7 +341,7 @@ func (this *QLayoutItem) alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QLayoutItem9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C._ZNK11QLayoutItem9alignmentEv(this.qclsinst)
+    C.C_ZNK11QLayoutItem9alignmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "alignment", args)
   }
@@ -361,7 +361,7 @@ func (this *QSpacerItem) expandingDirections(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSpacerItem19expandingDirectionsEv
     // invoke: Qt::Orientations expandingDirections()
-    C._ZNK11QSpacerItem19expandingDirectionsEv(this.qclsinst)
+    C.C_ZNK11QSpacerItem19expandingDirectionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "expandingDirections", args)
   }
@@ -381,7 +381,7 @@ func (this *QSpacerItem) sizePolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSpacerItem10sizePolicyEv
     // invoke: QSizePolicy sizePolicy()
-    C._ZNK11QSpacerItem10sizePolicyEv(this.qclsinst)
+    C.C_ZNK11QSpacerItem10sizePolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "sizePolicy", args)
   }
@@ -401,7 +401,7 @@ func (this *QSpacerItem) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSpacerItem8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK11QSpacerItem8sizeHintEv(this.qclsinst)
+    C.C_ZNK11QSpacerItem8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "sizeHint", args)
   }
@@ -421,7 +421,7 @@ func (this *QSpacerItem) geometry(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSpacerItem8geometryEv
     // invoke: QRect geometry()
-    C._ZNK11QSpacerItem8geometryEv(this.qclsinst)
+    C.C_ZNK11QSpacerItem8geometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "geometry", args)
   }
@@ -444,7 +444,7 @@ func (this *QSpacerItem) setGeometry(args ...interface{}) () {
     // invoke: void setGeometry(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QSpacerItem11setGeometryERK5QRect(this.qclsinst, arg0)
+    C.C_ZN11QSpacerItem11setGeometryERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSpacerItem", "setGeometry", args)
   }
@@ -464,7 +464,7 @@ func (this *QSpacerItem) minimumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSpacerItem11minimumSizeEv
     // invoke: QSize minimumSize()
-    C._ZNK11QSpacerItem11minimumSizeEv(this.qclsinst)
+    C.C_ZNK11QSpacerItem11minimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "minimumSize", args)
   }
@@ -484,7 +484,7 @@ func (this *QSpacerItem) spacerItem(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QSpacerItem10spacerItemEv
     // invoke: QSpacerItem * spacerItem()
-    C._ZN11QSpacerItem10spacerItemEv(this.qclsinst)
+    C.C_ZN11QSpacerItem10spacerItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "spacerItem", args)
   }
@@ -504,7 +504,7 @@ func (this *QSpacerItem) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSpacerItem7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK11QSpacerItem7isEmptyEv(this.qclsinst)
+    C.C_ZNK11QSpacerItem7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "isEmpty", args)
   }
@@ -524,7 +524,7 @@ func (this *QSpacerItem) FreeQSpacerItem(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QSpacerItemD0Ev
     // invoke: void ~QSpacerItem()
-    C._ZN11QSpacerItemD2Ev(this.qclsinst)
+    C.C_ZN11QSpacerItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "~QSpacerItem", args)
   }
@@ -544,7 +544,7 @@ func (this *QSpacerItem) maximumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSpacerItem11maximumSizeEv
     // invoke: QSize maximumSize()
-    C._ZNK11QSpacerItem11maximumSizeEv(this.qclsinst)
+    C.C_ZNK11QSpacerItem11maximumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "maximumSize", args)
   }
@@ -564,7 +564,7 @@ func (this *QWidgetItem) expandingDirections(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWidgetItem19expandingDirectionsEv
     // invoke: Qt::Orientations expandingDirections()
-    C._ZNK11QWidgetItem19expandingDirectionsEv(this.qclsinst)
+    C.C_ZNK11QWidgetItem19expandingDirectionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "expandingDirections", args)
   }
@@ -584,7 +584,7 @@ func (this *QWidgetItem) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QWidgetItem6widgetEv
     // invoke: QWidget * widget()
-    C._ZN11QWidgetItem6widgetEv(this.qclsinst)
+    C.C_ZN11QWidgetItem6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "widget", args)
   }
@@ -607,7 +607,7 @@ func (this *QWidgetItem) setGeometry(args ...interface{}) () {
     // invoke: void setGeometry(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QWidgetItem11setGeometryERK5QRect(this.qclsinst, arg0)
+    C.C_ZN11QWidgetItem11setGeometryERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWidgetItem", "setGeometry", args)
   }
@@ -627,7 +627,7 @@ func (this *QWidgetItem) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWidgetItem8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK11QWidgetItem8sizeHintEv(this.qclsinst)
+    C.C_ZNK11QWidgetItem8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "sizeHint", args)
   }
@@ -647,7 +647,7 @@ func (this *QWidgetItem) hasHeightForWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWidgetItem17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    C._ZNK11QWidgetItem17hasHeightForWidthEv(this.qclsinst)
+    C.C_ZNK11QWidgetItem17hasHeightForWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "hasHeightForWidth", args)
   }
@@ -667,7 +667,7 @@ func (this *QWidgetItem) geometry(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWidgetItem8geometryEv
     // invoke: QRect geometry()
-    C._ZNK11QWidgetItem8geometryEv(this.qclsinst)
+    C.C_ZNK11QWidgetItem8geometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "geometry", args)
   }
@@ -687,7 +687,7 @@ func (this *QWidgetItem) FreeQWidgetItem(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QWidgetItemD0Ev
     // invoke: void ~QWidgetItem()
-    C._ZN11QWidgetItemD2Ev(this.qclsinst)
+    C.C_ZN11QWidgetItemD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "~QWidgetItem", args)
   }
@@ -712,7 +712,7 @@ func NewQWidgetItem(args ...interface{}) QWidgetItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QWidgetItemC2EP7QWidget(qthis, arg0)
+    C.C_ZN11QWidgetItemC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QWidgetItem", "QWidgetItem", args)
   }
@@ -733,7 +733,7 @@ func (this *QWidgetItem) minimumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWidgetItem11minimumSizeEv
     // invoke: QSize minimumSize()
-    C._ZNK11QWidgetItem11minimumSizeEv(this.qclsinst)
+    C.C_ZNK11QWidgetItem11minimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "minimumSize", args)
   }
@@ -753,7 +753,7 @@ func (this *QWidgetItem) controlTypes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWidgetItem12controlTypesEv
     // invoke: QSizePolicy::ControlTypes controlTypes()
-    C._ZNK11QWidgetItem12controlTypesEv(this.qclsinst)
+    C.C_ZNK11QWidgetItem12controlTypesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "controlTypes", args)
   }
@@ -776,7 +776,7 @@ func (this *QWidgetItem) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QWidgetItem14heightForWidthEi(this.qclsinst, arg0)
+    C.C_ZNK11QWidgetItem14heightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWidgetItem", "heightForWidth", args)
   }
@@ -796,7 +796,7 @@ func (this *QWidgetItem) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWidgetItem7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK11QWidgetItem7isEmptyEv(this.qclsinst)
+    C.C_ZNK11QWidgetItem7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "isEmpty", args)
   }
@@ -816,7 +816,7 @@ func (this *QWidgetItem) maximumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWidgetItem11maximumSizeEv
     // invoke: QSize maximumSize()
-    C._ZNK11QWidgetItem11maximumSizeEv(this.qclsinst)
+    C.C_ZNK11QWidgetItem11maximumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "maximumSize", args)
   }
@@ -836,7 +836,7 @@ func (this *QWidgetItemV2) FreeQWidgetItemV2(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QWidgetItemV2D0Ev
     // invoke: void ~QWidgetItemV2()
-    C._ZN13QWidgetItemV2D2Ev(this.qclsinst)
+    C.C_ZN13QWidgetItemV2D2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "~QWidgetItemV2", args)
   }
@@ -856,7 +856,7 @@ func (this *QWidgetItemV2) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QWidgetItemV28sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK13QWidgetItemV28sizeHintEv(this.qclsinst)
+    C.C_ZNK13QWidgetItemV28sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "sizeHint", args)
   }
@@ -881,7 +881,7 @@ func NewQWidgetItemV2(args ...interface{}) QWidgetItemV2 {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QWidgetItemV2C2EP7QWidget(qthis, arg0)
+    C.C_ZN13QWidgetItemV2C2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "QWidgetItemV2", args)
   }
@@ -902,7 +902,7 @@ func (this *QWidgetItemV2) minimumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QWidgetItemV211minimumSizeEv
     // invoke: QSize minimumSize()
-    C._ZNK13QWidgetItemV211minimumSizeEv(this.qclsinst)
+    C.C_ZNK13QWidgetItemV211minimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "minimumSize", args)
   }
@@ -925,7 +925,7 @@ func (this *QWidgetItemV2) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK13QWidgetItemV214heightForWidthEi(this.qclsinst, arg0)
+    C.C_ZNK13QWidgetItemV214heightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "heightForWidth", args)
   }
@@ -945,7 +945,7 @@ func (this *QWidgetItemV2) maximumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QWidgetItemV211maximumSizeEv
     // invoke: QSize maximumSize()
-    C._ZNK13QWidgetItemV211maximumSizeEv(this.qclsinst)
+    C.C_ZNK13QWidgetItemV211maximumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "maximumSize", args)
   }

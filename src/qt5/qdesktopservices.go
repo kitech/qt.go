@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qdesktopservices.h
 // dst-file: /src/gui/qdesktopservices.go
 //
@@ -29,11 +29,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static void QDesktopServices::setUrlHandler(const QString & scheme, QObject * receiver, const char * method);
-extern void _ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(void* arg0, void* arg1, unsigned char* arg2); // 4
+extern void C_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(void* arg0, void* arg1, unsigned char* arg2); // 4
   // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
-extern void _ZN16QDesktopServices15unsetUrlHandlerERK7QString(void* arg0); // 4
+extern void C_ZN16QDesktopServices15unsetUrlHandlerERK7QString(void* arg0); // 4
   // proto: static bool QDesktopServices::openUrl(const QUrl & url);
-extern void _ZN16QDesktopServices7openUrlERK4QUrl(void* arg0); // 4
+extern void C_ZN16QDesktopServices7openUrlERK4QUrl(void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -74,7 +74,7 @@ func (this *QDesktopServices) setUrlHandler_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).Pointer()))
     if false {fmt.Println(arg2)}
-    C._ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(arg0, arg1, arg2)
+    C.C_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QDesktopServices", "setUrlHandler", args)
   }
@@ -97,7 +97,7 @@ func (this *QDesktopServices) unsetUrlHandler_s(args ...interface{}) () {
     // invoke: void unsetUrlHandler(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QDesktopServices15unsetUrlHandlerERK7QString(arg0)
+    C.C_ZN16QDesktopServices15unsetUrlHandlerERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QDesktopServices", "unsetUrlHandler", args)
   }
@@ -120,7 +120,7 @@ func (this *QDesktopServices) openUrl_s(args ...interface{}) () {
     // invoke: bool openUrl(const class QUrl &)
     var arg0 = args[0].(QUrl).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QDesktopServices7openUrlERK4QUrl(arg0)
+    C.C_ZN16QDesktopServices7openUrlERK4QUrl(arg0)
   default:
     qtrt.ErrorResolve("QDesktopServices", "openUrl", args)
   }

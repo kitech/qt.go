@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qgraphicslinearlayout.h
 // dst-file: /src/widgets/qgraphicslinearlayout.go
 //
@@ -29,47 +29,47 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QGraphicsLinearLayout::invalidate();
-extern void _ZN21QGraphicsLinearLayout10invalidateEv(void* qthis); // 4
+extern void C_ZN21QGraphicsLinearLayout10invalidateEv(void* qthis); // 4
   // proto:  Qt::Orientation QGraphicsLinearLayout::orientation();
-extern void _ZNK21QGraphicsLinearLayout11orientationEv(void* qthis); // 4
+extern void C_ZNK21QGraphicsLinearLayout11orientationEv(void* qthis); // 4
   // proto:  void QGraphicsLinearLayout::dump(int indent);
-extern void _ZNK21QGraphicsLinearLayout4dumpEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK21QGraphicsLinearLayout4dumpEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsLinearLayout::~QGraphicsLinearLayout();
-extern void _ZN21QGraphicsLinearLayoutD2Ev(void* qthis); // 4
+extern void C_ZN21QGraphicsLinearLayoutD2Ev(void* qthis); // 4
   // proto:  void QGraphicsLinearLayout::insertStretch(int index, int stretch);
-extern void _ZN21QGraphicsLinearLayout13insertStretchEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN21QGraphicsLinearLayout13insertStretchEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  int QGraphicsLinearLayout::stretchFactor(QGraphicsLayoutItem * item);
-extern void _ZNK21QGraphicsLinearLayout13stretchFactorEP19QGraphicsLayoutItem(void* qthis, void* arg0); // 4
+extern void C_ZNK21QGraphicsLinearLayout13stretchFactorEP19QGraphicsLayoutItem(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsLinearLayout::setItemSpacing(int index, qreal spacing);
-extern void _ZN21QGraphicsLinearLayout14setItemSpacingEid(void* qthis, int32_t arg0, double arg1); // 4
+extern void C_ZN21QGraphicsLinearLayout14setItemSpacingEid(void* qthis, int32_t arg0, double arg1); // 4
   // proto:  Qt::Alignment QGraphicsLinearLayout::alignment(QGraphicsLayoutItem * item);
-extern void _ZNK21QGraphicsLinearLayout9alignmentEP19QGraphicsLayoutItem(void* qthis, void* arg0); // 4
+extern void C_ZNK21QGraphicsLinearLayout9alignmentEP19QGraphicsLayoutItem(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsLinearLayout::setSpacing(qreal spacing);
-extern void _ZN21QGraphicsLinearLayout10setSpacingEd(void* qthis, double arg0); // 4
+extern void C_ZN21QGraphicsLinearLayout10setSpacingEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsLinearLayout::setStretchFactor(QGraphicsLayoutItem * item, int stretch);
-extern void _ZN21QGraphicsLinearLayout16setStretchFactorEP19QGraphicsLayoutItemi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZN21QGraphicsLinearLayout16setStretchFactorEP19QGraphicsLayoutItemi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QGraphicsLinearLayout::QGraphicsLinearLayout(QGraphicsLayoutItem * parent);
-extern void _ZN21QGraphicsLinearLayoutC2EP19QGraphicsLayoutItem(void* qthis, void* arg0); // 3
+extern void C_ZN21QGraphicsLinearLayoutC2EP19QGraphicsLayoutItem(void* qthis, void* arg0); // 3
   // proto:  void QGraphicsLinearLayout::addStretch(int stretch);
-extern void _ZN21QGraphicsLinearLayout10addStretchEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN21QGraphicsLinearLayout10addStretchEi(void* qthis, int32_t arg0); // 2
   // proto:  void QGraphicsLinearLayout::setGeometry(const QRectF & rect);
-extern void _ZN21QGraphicsLinearLayout11setGeometryERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZN21QGraphicsLinearLayout11setGeometryERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsLinearLayout::insertItem(int index, QGraphicsLayoutItem * item);
-extern void _ZN21QGraphicsLinearLayout10insertItemEiP19QGraphicsLayoutItem(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN21QGraphicsLinearLayout10insertItemEiP19QGraphicsLayoutItem(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QGraphicsLinearLayout::addItem(QGraphicsLayoutItem * item);
-extern void _ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem(void* qthis, void* arg0); // 2
+extern void C_ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem(void* qthis, void* arg0); // 2
   // proto:  qreal QGraphicsLinearLayout::spacing();
-extern void _ZNK21QGraphicsLinearLayout7spacingEv(void* qthis); // 4
+extern void C_ZNK21QGraphicsLinearLayout7spacingEv(void* qthis); // 4
   // proto:  void QGraphicsLinearLayout::removeAt(int index);
-extern void _ZN21QGraphicsLinearLayout8removeAtEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN21QGraphicsLinearLayout8removeAtEi(void* qthis, int32_t arg0); // 4
   // proto:  int QGraphicsLinearLayout::count();
-extern void _ZNK21QGraphicsLinearLayout5countEv(void* qthis); // 4
+extern void C_ZNK21QGraphicsLinearLayout5countEv(void* qthis); // 4
   // proto:  QGraphicsLayoutItem * QGraphicsLinearLayout::itemAt(int index);
-extern void _ZNK21QGraphicsLinearLayout6itemAtEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK21QGraphicsLinearLayout6itemAtEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsLinearLayout::removeItem(QGraphicsLayoutItem * item);
-extern void _ZN21QGraphicsLinearLayout10removeItemEP19QGraphicsLayoutItem(void* qthis, void* arg0); // 4
+extern void C_ZN21QGraphicsLinearLayout10removeItemEP19QGraphicsLayoutItem(void* qthis, void* arg0); // 4
   // proto:  qreal QGraphicsLinearLayout::itemSpacing(int index);
-extern void _ZNK21QGraphicsLinearLayout11itemSpacingEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK21QGraphicsLinearLayout11itemSpacingEi(void* qthis, int32_t arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -101,7 +101,7 @@ func (this *QGraphicsLinearLayout) invalidate(args ...interface{}) () {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout10invalidateEv
     // invoke: void invalidate()
-    C._ZN21QGraphicsLinearLayout10invalidateEv(this.qclsinst)
+    C.C_ZN21QGraphicsLinearLayout10invalidateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "invalidate", args)
   }
@@ -121,7 +121,7 @@ func (this *QGraphicsLinearLayout) orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout11orientationEv
     // invoke: Qt::Orientation orientation()
-    C._ZNK21QGraphicsLinearLayout11orientationEv(this.qclsinst)
+    C.C_ZNK21QGraphicsLinearLayout11orientationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "orientation", args)
   }
@@ -144,7 +144,7 @@ func (this *QGraphicsLinearLayout) dump(args ...interface{}) () {
     // invoke: void dump(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK21QGraphicsLinearLayout4dumpEi(this.qclsinst, arg0)
+    C.C_ZNK21QGraphicsLinearLayout4dumpEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "dump", args)
   }
@@ -164,7 +164,7 @@ func (this *QGraphicsLinearLayout) FreeQGraphicsLinearLayout(args ...interface{}
   case 0:
     // invoke: _ZN21QGraphicsLinearLayoutD0Ev
     // invoke: void ~QGraphicsLinearLayout()
-    C._ZN21QGraphicsLinearLayoutD2Ev(this.qclsinst)
+    C.C_ZN21QGraphicsLinearLayoutD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "~QGraphicsLinearLayout", args)
   }
@@ -190,7 +190,7 @@ func (this *QGraphicsLinearLayout) insertStretch(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN21QGraphicsLinearLayout13insertStretchEii(this.qclsinst, arg0, arg1)
+    C.C_ZN21QGraphicsLinearLayout13insertStretchEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "insertStretch", args)
   }
@@ -213,7 +213,7 @@ func (this *QGraphicsLinearLayout) stretchFactor(args ...interface{}) () {
     // invoke: int stretchFactor(class QGraphicsLayoutItem *)
     var arg0 = args[0].(QGraphicsLayoutItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK21QGraphicsLinearLayout13stretchFactorEP19QGraphicsLayoutItem(this.qclsinst, arg0)
+    C.C_ZNK21QGraphicsLinearLayout13stretchFactorEP19QGraphicsLayoutItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "stretchFactor", args)
   }
@@ -239,7 +239,7 @@ func (this *QGraphicsLinearLayout) setItemSpacing(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN21QGraphicsLinearLayout14setItemSpacingEid(this.qclsinst, arg0, arg1)
+    C.C_ZN21QGraphicsLinearLayout14setItemSpacingEid(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "setItemSpacing", args)
   }
@@ -262,7 +262,7 @@ func (this *QGraphicsLinearLayout) alignment(args ...interface{}) () {
     // invoke: Qt::Alignment alignment(class QGraphicsLayoutItem *)
     var arg0 = args[0].(QGraphicsLayoutItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK21QGraphicsLinearLayout9alignmentEP19QGraphicsLayoutItem(this.qclsinst, arg0)
+    C.C_ZNK21QGraphicsLinearLayout9alignmentEP19QGraphicsLayoutItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "alignment", args)
   }
@@ -285,7 +285,7 @@ func (this *QGraphicsLinearLayout) setSpacing(args ...interface{}) () {
     // invoke: void setSpacing(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN21QGraphicsLinearLayout10setSpacingEd(this.qclsinst, arg0)
+    C.C_ZN21QGraphicsLinearLayout10setSpacingEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "setSpacing", args)
   }
@@ -311,7 +311,7 @@ func (this *QGraphicsLinearLayout) setStretchFactor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN21QGraphicsLinearLayout16setStretchFactorEP19QGraphicsLayoutItemi(this.qclsinst, arg0, arg1)
+    C.C_ZN21QGraphicsLinearLayout16setStretchFactorEP19QGraphicsLayoutItemi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "setStretchFactor", args)
   }
@@ -336,7 +336,7 @@ func NewQGraphicsLinearLayout(args ...interface{}) QGraphicsLinearLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN21QGraphicsLinearLayoutC2EP19QGraphicsLayoutItem(qthis, arg0)
+    C.C_ZN21QGraphicsLinearLayoutC2EP19QGraphicsLayoutItem(qthis, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "QGraphicsLinearLayout", args)
   }
@@ -360,7 +360,7 @@ func (this *QGraphicsLinearLayout) addStretch(args ...interface{}) () {
     // invoke: void addStretch(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN21QGraphicsLinearLayout10addStretchEi(this.qclsinst, arg0)
+    C.C_ZN21QGraphicsLinearLayout10addStretchEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "addStretch", args)
   }
@@ -383,7 +383,7 @@ func (this *QGraphicsLinearLayout) setGeometry(args ...interface{}) () {
     // invoke: void setGeometry(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN21QGraphicsLinearLayout11setGeometryERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN21QGraphicsLinearLayout11setGeometryERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "setGeometry", args)
   }
@@ -409,7 +409,7 @@ func (this *QGraphicsLinearLayout) insertItem(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QGraphicsLayoutItem).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN21QGraphicsLinearLayout10insertItemEiP19QGraphicsLayoutItem(this.qclsinst, arg0, arg1)
+    C.C_ZN21QGraphicsLinearLayout10insertItemEiP19QGraphicsLayoutItem(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "insertItem", args)
   }
@@ -432,7 +432,7 @@ func (this *QGraphicsLinearLayout) addItem(args ...interface{}) () {
     // invoke: void addItem(class QGraphicsLayoutItem *)
     var arg0 = args[0].(QGraphicsLayoutItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem(this.qclsinst, arg0)
+    C.C_ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "addItem", args)
   }
@@ -452,7 +452,7 @@ func (this *QGraphicsLinearLayout) spacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout7spacingEv
     // invoke: qreal spacing()
-    C._ZNK21QGraphicsLinearLayout7spacingEv(this.qclsinst)
+    C.C_ZNK21QGraphicsLinearLayout7spacingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "spacing", args)
   }
@@ -475,7 +475,7 @@ func (this *QGraphicsLinearLayout) removeAt(args ...interface{}) () {
     // invoke: void removeAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN21QGraphicsLinearLayout8removeAtEi(this.qclsinst, arg0)
+    C.C_ZN21QGraphicsLinearLayout8removeAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "removeAt", args)
   }
@@ -495,7 +495,7 @@ func (this *QGraphicsLinearLayout) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout5countEv
     // invoke: int count()
-    C._ZNK21QGraphicsLinearLayout5countEv(this.qclsinst)
+    C.C_ZNK21QGraphicsLinearLayout5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "count", args)
   }
@@ -518,7 +518,7 @@ func (this *QGraphicsLinearLayout) itemAt(args ...interface{}) () {
     // invoke: QGraphicsLayoutItem * itemAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK21QGraphicsLinearLayout6itemAtEi(this.qclsinst, arg0)
+    C.C_ZNK21QGraphicsLinearLayout6itemAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "itemAt", args)
   }
@@ -541,7 +541,7 @@ func (this *QGraphicsLinearLayout) removeItem(args ...interface{}) () {
     // invoke: void removeItem(class QGraphicsLayoutItem *)
     var arg0 = args[0].(QGraphicsLayoutItem).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN21QGraphicsLinearLayout10removeItemEP19QGraphicsLayoutItem(this.qclsinst, arg0)
+    C.C_ZN21QGraphicsLinearLayout10removeItemEP19QGraphicsLayoutItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "removeItem", args)
   }
@@ -564,7 +564,7 @@ func (this *QGraphicsLinearLayout) itemSpacing(args ...interface{}) () {
     // invoke: qreal itemSpacing(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK21QGraphicsLinearLayout11itemSpacingEi(this.qclsinst, arg0)
+    C.C_ZNK21QGraphicsLinearLayout11itemSpacingEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "itemSpacing", args)
   }

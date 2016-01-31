@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qgenericatomic.h
 // dst-file: /src/core/qgenericatomic.go
 //
@@ -41,7 +41,7 @@ func init() {
 }
 
 // class sizeof(QAtomicOpsSupport<4>)=1
-type QAtomicOpsSupport_4_ struct {
+type QAtomicOpsSupportL4G struct {
   // qbase: None;
   qclsinst unsafe.Pointer /* *C.void */;
 }

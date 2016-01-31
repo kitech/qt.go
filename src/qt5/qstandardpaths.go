@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qstandardpaths.h
 // dst-file: /src/core/qstandardpaths.go
 //
@@ -29,13 +29,13 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static void QStandardPaths::setTestModeEnabled(bool testMode);
-extern void _ZN14QStandardPaths18setTestModeEnabledEb(bool arg0); // 4
+extern void C_ZN14QStandardPaths18setTestModeEnabledEb(bool arg0); // 4
   // proto: static void QStandardPaths::enableTestMode(bool testMode);
-extern void _ZN14QStandardPaths14enableTestModeEb(bool arg0); // 4
+extern void C_ZN14QStandardPaths14enableTestModeEb(bool arg0); // 4
   // proto: static QString QStandardPaths::findExecutable(const QString & executableName, const QStringList & paths);
-extern void _ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(void* arg0, void* arg1); // 4
+extern void C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(void* arg0, void* arg1); // 4
   // proto: static bool QStandardPaths::isTestModeEnabled();
-extern void _ZN14QStandardPaths17isTestModeEnabledEv(); // 4
+extern void C_ZN14QStandardPaths17isTestModeEnabledEv(); // 4
 */
 import "C"
 // } // <= ext block end
@@ -70,7 +70,7 @@ func (this *QStandardPaths) setTestModeEnabled_s(args ...interface{}) () {
     // invoke: void setTestModeEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN14QStandardPaths18setTestModeEnabledEb(arg0)
+    C.C_ZN14QStandardPaths18setTestModeEnabledEb(arg0)
   default:
     qtrt.ErrorResolve("QStandardPaths", "setTestModeEnabled", args)
   }
@@ -93,7 +93,7 @@ func (this *QStandardPaths) enableTestMode_s(args ...interface{}) () {
     // invoke: void enableTestMode(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN14QStandardPaths14enableTestModeEb(arg0)
+    C.C_ZN14QStandardPaths14enableTestModeEb(arg0)
   default:
     qtrt.ErrorResolve("QStandardPaths", "enableTestMode", args)
   }
@@ -119,7 +119,7 @@ func (this *QStandardPaths) findExecutable_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStringList).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0, arg1)
+    C.C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0, arg1)
   default:
     qtrt.ErrorResolve("QStandardPaths", "findExecutable", args)
   }
@@ -139,7 +139,7 @@ func (this *QStandardPaths) isTestModeEnabled_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QStandardPaths17isTestModeEnabledEv
     // invoke: bool isTestModeEnabled()
-    C._ZN14QStandardPaths17isTestModeEnabledEv()
+    C.C_ZN14QStandardPaths17isTestModeEnabledEv()
   default:
     qtrt.ErrorResolve("QStandardPaths", "isTestModeEnabled", args)
   }

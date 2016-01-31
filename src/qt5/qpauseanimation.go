@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qpauseanimation.h
 // dst-file: /src/core/qpauseanimation.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QPauseAnimation::~QPauseAnimation();
-extern void _ZN15QPauseAnimationD2Ev(void* qthis); // 4
+extern void C_ZN15QPauseAnimationD2Ev(void* qthis); // 4
   // proto:  void QPauseAnimation::QPauseAnimation(int msecs, QObject * parent);
-extern void _ZN15QPauseAnimationC2EiP7QObject(void* qthis, int32_t arg0, void* arg1); // 3
+extern void C_ZN15QPauseAnimationC2EiP7QObject(void* qthis, int32_t arg0, void* arg1); // 3
   // proto:  void QPauseAnimation::QPauseAnimation(QObject * parent);
-extern void _ZN15QPauseAnimationC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN15QPauseAnimationC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  int QPauseAnimation::duration();
-extern void _ZNK15QPauseAnimation8durationEv(void* qthis); // 4
+extern void C_ZNK15QPauseAnimation8durationEv(void* qthis); // 4
   // proto:  const QMetaObject * QPauseAnimation::metaObject();
-extern void _ZNK15QPauseAnimation10metaObjectEv(void* qthis); // 4
+extern void C_ZNK15QPauseAnimation10metaObjectEv(void* qthis); // 4
   // proto:  void QPauseAnimation::setDuration(int msecs);
-extern void _ZN15QPauseAnimation11setDurationEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QPauseAnimation11setDurationEi(void* qthis, int32_t arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -71,7 +71,7 @@ func (this *QPauseAnimation) FreeQPauseAnimation(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QPauseAnimationD0Ev
     // invoke: void ~QPauseAnimation()
-    C._ZN15QPauseAnimationD2Ev(this.qclsinst)
+    C.C_ZN15QPauseAnimationD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPauseAnimation", "~QPauseAnimation", args)
   }
@@ -102,7 +102,7 @@ func NewQPauseAnimation(args ...interface{}) QPauseAnimation {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QPauseAnimationC2EiP7QObject(qthis, arg0, arg1)
+    C.C_ZN15QPauseAnimationC2EiP7QObject(qthis, arg0, arg1)
   case 1:
     // invoke: _ZN15QPauseAnimationC1EP7QObject
     // invoke: void QPauseAnimation(class QObject *)
@@ -110,7 +110,7 @@ func NewQPauseAnimation(args ...interface{}) QPauseAnimation {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QPauseAnimationC2EP7QObject(qthis, arg0)
+    C.C_ZN15QPauseAnimationC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QPauseAnimation", "QPauseAnimation", args)
   }
@@ -131,7 +131,7 @@ func (this *QPauseAnimation) duration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QPauseAnimation8durationEv
     // invoke: int duration()
-    C._ZNK15QPauseAnimation8durationEv(this.qclsinst)
+    C.C_ZNK15QPauseAnimation8durationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPauseAnimation", "duration", args)
   }
@@ -151,7 +151,7 @@ func (this *QPauseAnimation) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QPauseAnimation10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK15QPauseAnimation10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QPauseAnimation10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPauseAnimation", "metaObject", args)
   }
@@ -174,7 +174,7 @@ func (this *QPauseAnimation) setDuration(args ...interface{}) () {
     // invoke: void setDuration(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QPauseAnimation11setDurationEi(this.qclsinst, arg0)
+    C.C_ZN15QPauseAnimation11setDurationEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPauseAnimation", "setDuration", args)
   }

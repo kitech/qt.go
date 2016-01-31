@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.go
 //
@@ -29,65 +29,65 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QTimeLine::toggleDirection();
-extern void _ZN9QTimeLine15toggleDirectionEv(void* qthis); // 4
+extern void C_ZN9QTimeLine15toggleDirectionEv(void* qthis); // 4
   // proto:  void QTimeLine::setCurrentTime(int msec);
-extern void _ZN9QTimeLine14setCurrentTimeEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QTimeLine14setCurrentTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  qreal QTimeLine::valueForTime(int msec);
-extern void _ZNK9QTimeLine12valueForTimeEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK9QTimeLine12valueForTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTimeLine::setEasingCurve(const QEasingCurve & curve);
-extern void _ZN9QTimeLine14setEasingCurveERK12QEasingCurve(void* qthis, void* arg0); // 4
+extern void C_ZN9QTimeLine14setEasingCurveERK12QEasingCurve(void* qthis, void* arg0); // 4
   // proto:  qreal QTimeLine::currentValue();
-extern void _ZNK9QTimeLine12currentValueEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine12currentValueEv(void* qthis); // 4
   // proto:  void QTimeLine::QTimeLine(int duration, QObject * parent);
-extern void _ZN9QTimeLineC2EiP7QObject(void* qthis, int32_t arg0, void* arg1); // 3
+extern void C_ZN9QTimeLineC2EiP7QObject(void* qthis, int32_t arg0, void* arg1); // 3
   // proto:  void QTimeLine::setFrameRange(int startFrame, int endFrame);
-extern void _ZN9QTimeLine13setFrameRangeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN9QTimeLine13setFrameRangeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  int QTimeLine::duration();
-extern void _ZNK9QTimeLine8durationEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine8durationEv(void* qthis); // 4
   // proto:  int QTimeLine::loopCount();
-extern void _ZNK9QTimeLine9loopCountEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine9loopCountEv(void* qthis); // 4
   // proto:  void QTimeLine::resume();
-extern void _ZN9QTimeLine6resumeEv(void* qthis); // 4
+extern void C_ZN9QTimeLine6resumeEv(void* qthis); // 4
   // proto:  void QTimeLine::start();
-extern void _ZN9QTimeLine5startEv(void* qthis); // 4
+extern void C_ZN9QTimeLine5startEv(void* qthis); // 4
   // proto:  QTimeLine::State QTimeLine::state();
-extern void _ZNK9QTimeLine5stateEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine5stateEv(void* qthis); // 4
   // proto:  int QTimeLine::frameForTime(int msec);
-extern void _ZNK9QTimeLine12frameForTimeEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK9QTimeLine12frameForTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  QTimeLine::Direction QTimeLine::direction();
-extern void _ZNK9QTimeLine9directionEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine9directionEv(void* qthis); // 4
   // proto:  void QTimeLine::setLoopCount(int count);
-extern void _ZN9QTimeLine12setLoopCountEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QTimeLine12setLoopCountEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTimeLine::endFrame();
-extern void _ZNK9QTimeLine8endFrameEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine8endFrameEv(void* qthis); // 4
   // proto:  void QTimeLine::stop();
-extern void _ZN9QTimeLine4stopEv(void* qthis); // 4
+extern void C_ZN9QTimeLine4stopEv(void* qthis); // 4
   // proto:  int QTimeLine::startFrame();
-extern void _ZNK9QTimeLine10startFrameEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine10startFrameEv(void* qthis); // 4
   // proto:  int QTimeLine::updateInterval();
-extern void _ZNK9QTimeLine14updateIntervalEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine14updateIntervalEv(void* qthis); // 4
   // proto:  int QTimeLine::currentFrame();
-extern void _ZNK9QTimeLine12currentFrameEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine12currentFrameEv(void* qthis); // 4
   // proto:  const QMetaObject * QTimeLine::metaObject();
-extern void _ZNK9QTimeLine10metaObjectEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine10metaObjectEv(void* qthis); // 4
   // proto:  void QTimeLine::setUpdateInterval(int interval);
-extern void _ZN9QTimeLine17setUpdateIntervalEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QTimeLine17setUpdateIntervalEi(void* qthis, int32_t arg0); // 4
   // proto:  QTimeLine::CurveShape QTimeLine::curveShape();
-extern void _ZNK9QTimeLine10curveShapeEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine10curveShapeEv(void* qthis); // 4
   // proto:  int QTimeLine::currentTime();
-extern void _ZNK9QTimeLine11currentTimeEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine11currentTimeEv(void* qthis); // 4
   // proto:  QEasingCurve QTimeLine::easingCurve();
-extern void _ZNK9QTimeLine11easingCurveEv(void* qthis); // 4
+extern void C_ZNK9QTimeLine11easingCurveEv(void* qthis); // 4
   // proto:  void QTimeLine::setEndFrame(int frame);
-extern void _ZN9QTimeLine11setEndFrameEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QTimeLine11setEndFrameEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTimeLine::setDuration(int duration);
-extern void _ZN9QTimeLine11setDurationEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QTimeLine11setDurationEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTimeLine::~QTimeLine();
-extern void _ZN9QTimeLineD2Ev(void* qthis); // 4
+extern void C_ZN9QTimeLineD2Ev(void* qthis); // 4
   // proto:  void QTimeLine::setStartFrame(int frame);
-extern void _ZN9QTimeLine13setStartFrameEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN9QTimeLine13setStartFrameEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTimeLine::setPaused(bool paused);
-extern void _ZN9QTimeLine9setPausedEb(void* qthis, bool arg0); // 4
+extern void C_ZN9QTimeLine9setPausedEb(void* qthis, bool arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -123,7 +123,7 @@ func (this *QTimeLine) toggleDirection(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeLine15toggleDirectionEv
     // invoke: void toggleDirection()
-    C._ZN9QTimeLine15toggleDirectionEv(this.qclsinst)
+    C.C_ZN9QTimeLine15toggleDirectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "toggleDirection", args)
   }
@@ -146,7 +146,7 @@ func (this *QTimeLine) setCurrentTime(args ...interface{}) () {
     // invoke: void setCurrentTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeLine14setCurrentTimeEi(this.qclsinst, arg0)
+    C.C_ZN9QTimeLine14setCurrentTimeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setCurrentTime", args)
   }
@@ -169,7 +169,7 @@ func (this *QTimeLine) valueForTime(args ...interface{}) () {
     // invoke: qreal valueForTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK9QTimeLine12valueForTimeEi(this.qclsinst, arg0)
+    C.C_ZNK9QTimeLine12valueForTimeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "valueForTime", args)
   }
@@ -192,7 +192,7 @@ func (this *QTimeLine) setEasingCurve(args ...interface{}) () {
     // invoke: void setEasingCurve(const class QEasingCurve &)
     var arg0 = args[0].(QEasingCurve).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeLine14setEasingCurveERK12QEasingCurve(this.qclsinst, arg0)
+    C.C_ZN9QTimeLine14setEasingCurveERK12QEasingCurve(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setEasingCurve", args)
   }
@@ -212,7 +212,7 @@ func (this *QTimeLine) currentValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine12currentValueEv
     // invoke: qreal currentValue()
-    C._ZNK9QTimeLine12currentValueEv(this.qclsinst)
+    C.C_ZNK9QTimeLine12currentValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "currentValue", args)
   }
@@ -240,7 +240,7 @@ func NewQTimeLine(args ...interface{}) QTimeLine {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QTimeLineC2EiP7QObject(qthis, arg0, arg1)
+    C.C_ZN9QTimeLineC2EiP7QObject(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTimeLine", "QTimeLine", args)
   }
@@ -267,7 +267,7 @@ func (this *QTimeLine) setFrameRange(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN9QTimeLine13setFrameRangeEii(this.qclsinst, arg0, arg1)
+    C.C_ZN9QTimeLine13setFrameRangeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTimeLine", "setFrameRange", args)
   }
@@ -287,7 +287,7 @@ func (this *QTimeLine) duration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine8durationEv
     // invoke: int duration()
-    C._ZNK9QTimeLine8durationEv(this.qclsinst)
+    C.C_ZNK9QTimeLine8durationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "duration", args)
   }
@@ -307,7 +307,7 @@ func (this *QTimeLine) loopCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine9loopCountEv
     // invoke: int loopCount()
-    C._ZNK9QTimeLine9loopCountEv(this.qclsinst)
+    C.C_ZNK9QTimeLine9loopCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "loopCount", args)
   }
@@ -327,7 +327,7 @@ func (this *QTimeLine) resume(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeLine6resumeEv
     // invoke: void resume()
-    C._ZN9QTimeLine6resumeEv(this.qclsinst)
+    C.C_ZN9QTimeLine6resumeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "resume", args)
   }
@@ -347,7 +347,7 @@ func (this *QTimeLine) start(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeLine5startEv
     // invoke: void start()
-    C._ZN9QTimeLine5startEv(this.qclsinst)
+    C.C_ZN9QTimeLine5startEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "start", args)
   }
@@ -367,7 +367,7 @@ func (this *QTimeLine) state(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine5stateEv
     // invoke: QTimeLine::State state()
-    C._ZNK9QTimeLine5stateEv(this.qclsinst)
+    C.C_ZNK9QTimeLine5stateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "state", args)
   }
@@ -390,7 +390,7 @@ func (this *QTimeLine) frameForTime(args ...interface{}) () {
     // invoke: int frameForTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK9QTimeLine12frameForTimeEi(this.qclsinst, arg0)
+    C.C_ZNK9QTimeLine12frameForTimeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "frameForTime", args)
   }
@@ -410,7 +410,7 @@ func (this *QTimeLine) direction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine9directionEv
     // invoke: QTimeLine::Direction direction()
-    C._ZNK9QTimeLine9directionEv(this.qclsinst)
+    C.C_ZNK9QTimeLine9directionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "direction", args)
   }
@@ -433,7 +433,7 @@ func (this *QTimeLine) setLoopCount(args ...interface{}) () {
     // invoke: void setLoopCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeLine12setLoopCountEi(this.qclsinst, arg0)
+    C.C_ZN9QTimeLine12setLoopCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setLoopCount", args)
   }
@@ -453,7 +453,7 @@ func (this *QTimeLine) endFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine8endFrameEv
     // invoke: int endFrame()
-    C._ZNK9QTimeLine8endFrameEv(this.qclsinst)
+    C.C_ZNK9QTimeLine8endFrameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "endFrame", args)
   }
@@ -473,7 +473,7 @@ func (this *QTimeLine) stop(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeLine4stopEv
     // invoke: void stop()
-    C._ZN9QTimeLine4stopEv(this.qclsinst)
+    C.C_ZN9QTimeLine4stopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "stop", args)
   }
@@ -493,7 +493,7 @@ func (this *QTimeLine) startFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine10startFrameEv
     // invoke: int startFrame()
-    C._ZNK9QTimeLine10startFrameEv(this.qclsinst)
+    C.C_ZNK9QTimeLine10startFrameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "startFrame", args)
   }
@@ -513,7 +513,7 @@ func (this *QTimeLine) updateInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine14updateIntervalEv
     // invoke: int updateInterval()
-    C._ZNK9QTimeLine14updateIntervalEv(this.qclsinst)
+    C.C_ZNK9QTimeLine14updateIntervalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "updateInterval", args)
   }
@@ -533,7 +533,7 @@ func (this *QTimeLine) currentFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine12currentFrameEv
     // invoke: int currentFrame()
-    C._ZNK9QTimeLine12currentFrameEv(this.qclsinst)
+    C.C_ZNK9QTimeLine12currentFrameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "currentFrame", args)
   }
@@ -553,7 +553,7 @@ func (this *QTimeLine) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK9QTimeLine10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QTimeLine10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "metaObject", args)
   }
@@ -576,7 +576,7 @@ func (this *QTimeLine) setUpdateInterval(args ...interface{}) () {
     // invoke: void setUpdateInterval(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeLine17setUpdateIntervalEi(this.qclsinst, arg0)
+    C.C_ZN9QTimeLine17setUpdateIntervalEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setUpdateInterval", args)
   }
@@ -596,7 +596,7 @@ func (this *QTimeLine) curveShape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine10curveShapeEv
     // invoke: QTimeLine::CurveShape curveShape()
-    C._ZNK9QTimeLine10curveShapeEv(this.qclsinst)
+    C.C_ZNK9QTimeLine10curveShapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "curveShape", args)
   }
@@ -616,7 +616,7 @@ func (this *QTimeLine) currentTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine11currentTimeEv
     // invoke: int currentTime()
-    C._ZNK9QTimeLine11currentTimeEv(this.qclsinst)
+    C.C_ZNK9QTimeLine11currentTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "currentTime", args)
   }
@@ -636,7 +636,7 @@ func (this *QTimeLine) easingCurve(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine11easingCurveEv
     // invoke: QEasingCurve easingCurve()
-    C._ZNK9QTimeLine11easingCurveEv(this.qclsinst)
+    C.C_ZNK9QTimeLine11easingCurveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "easingCurve", args)
   }
@@ -659,7 +659,7 @@ func (this *QTimeLine) setEndFrame(args ...interface{}) () {
     // invoke: void setEndFrame(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeLine11setEndFrameEi(this.qclsinst, arg0)
+    C.C_ZN9QTimeLine11setEndFrameEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setEndFrame", args)
   }
@@ -682,7 +682,7 @@ func (this *QTimeLine) setDuration(args ...interface{}) () {
     // invoke: void setDuration(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeLine11setDurationEi(this.qclsinst, arg0)
+    C.C_ZN9QTimeLine11setDurationEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setDuration", args)
   }
@@ -702,7 +702,7 @@ func (this *QTimeLine) FreeQTimeLine(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeLineD0Ev
     // invoke: void ~QTimeLine()
-    C._ZN9QTimeLineD2Ev(this.qclsinst)
+    C.C_ZN9QTimeLineD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "~QTimeLine", args)
   }
@@ -725,7 +725,7 @@ func (this *QTimeLine) setStartFrame(args ...interface{}) () {
     // invoke: void setStartFrame(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeLine13setStartFrameEi(this.qclsinst, arg0)
+    C.C_ZN9QTimeLine13setStartFrameEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setStartFrame", args)
   }
@@ -748,7 +748,7 @@ func (this *QTimeLine) setPaused(args ...interface{}) () {
     // invoke: void setPaused(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeLine9setPausedEb(this.qclsinst, arg0)
+    C.C_ZN9QTimeLine9setPausedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setPaused", args)
   }

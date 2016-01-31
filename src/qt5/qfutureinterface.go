@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qfutureinterface.h
 // dst-file: /src/core/qfutureinterface.go
 //
@@ -29,89 +29,89 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QFutureInterfaceBase::waitForResume();
-extern void _ZN20QFutureInterfaceBase13waitForResumeEv(void* qthis); // 4
+extern void C_ZN20QFutureInterfaceBase13waitForResumeEv(void* qthis); // 4
   // proto:  QString QFutureInterfaceBase::progressText();
-extern void _ZNK20QFutureInterfaceBase12progressTextEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase12progressTextEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::setThrottled(bool enable);
-extern void _ZN20QFutureInterfaceBase12setThrottledEb(void* qthis, bool arg0); // 4
+extern void C_ZN20QFutureInterfaceBase12setThrottledEb(void* qthis, bool arg0); // 4
   // proto:  void QFutureInterfaceBase::reportCanceled();
-extern void _ZN20QFutureInterfaceBase14reportCanceledEv(void* qthis); // 4
+extern void C_ZN20QFutureInterfaceBase14reportCanceledEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::setFilterMode(bool enable);
-extern void _ZN20QFutureInterfaceBase13setFilterModeEb(void* qthis, bool arg0); // 4
+extern void C_ZN20QFutureInterfaceBase13setFilterModeEb(void* qthis, bool arg0); // 4
   // proto:  int QFutureInterfaceBase::progressMaximum();
-extern void _ZNK20QFutureInterfaceBase15progressMaximumEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase15progressMaximumEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::cancel();
-extern void _ZN20QFutureInterfaceBase6cancelEv(void* qthis); // 4
+extern void C_ZN20QFutureInterfaceBase6cancelEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::reportStarted();
-extern void _ZN20QFutureInterfaceBase13reportStartedEv(void* qthis); // 4
+extern void C_ZN20QFutureInterfaceBase13reportStartedEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::togglePaused();
-extern void _ZN20QFutureInterfaceBase12togglePausedEv(void* qthis); // 4
+extern void C_ZN20QFutureInterfaceBase12togglePausedEv(void* qthis); // 4
   // proto:  bool QFutureInterfaceBase::isProgressUpdateNeeded();
-extern void _ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv(void* qthis); // 4
   // proto:  int QFutureInterfaceBase::progressMinimum();
-extern void _ZNK20QFutureInterfaceBase15progressMinimumEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase15progressMinimumEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::waitForFinished();
-extern void _ZN20QFutureInterfaceBase15waitForFinishedEv(void* qthis); // 4
+extern void C_ZN20QFutureInterfaceBase15waitForFinishedEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::QFutureInterfaceBase(const QFutureInterfaceBase & other);
-extern void _ZN20QFutureInterfaceBaseC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN20QFutureInterfaceBaseC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  bool QFutureInterfaceBase::isStarted();
-extern void _ZNK20QFutureInterfaceBase9isStartedEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase9isStartedEv(void* qthis); // 4
   // proto:  QtPrivate::ExceptionStore & QFutureInterfaceBase::exceptionStore();
-extern void _ZN20QFutureInterfaceBase14exceptionStoreEv(void* qthis); // 4
+extern void C_ZN20QFutureInterfaceBase14exceptionStoreEv(void* qthis); // 4
   // proto:  QMutex * QFutureInterfaceBase::mutex();
-extern void _ZNK20QFutureInterfaceBase5mutexEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase5mutexEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::setExpectedResultCount(int resultCount);
-extern void _ZN20QFutureInterfaceBase22setExpectedResultCountEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN20QFutureInterfaceBase22setExpectedResultCountEi(void* qthis, int32_t arg0); // 4
   // proto:  void QFutureInterfaceBase::setRunnable(QRunnable * runnable);
-extern void _ZN20QFutureInterfaceBase11setRunnableEP9QRunnable(void* qthis, void* arg0); // 4
+extern void C_ZN20QFutureInterfaceBase11setRunnableEP9QRunnable(void* qthis, void* arg0); // 4
   // proto:  bool QFutureInterfaceBase::isThrottled();
-extern void _ZNK20QFutureInterfaceBase11isThrottledEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase11isThrottledEv(void* qthis); // 4
   // proto:  bool QFutureInterfaceBase::waitForNextResult();
-extern void _ZN20QFutureInterfaceBase17waitForNextResultEv(void* qthis); // 4
+extern void C_ZN20QFutureInterfaceBase17waitForNextResultEv(void* qthis); // 4
   // proto:  bool QFutureInterfaceBase::isFinished();
-extern void _ZNK20QFutureInterfaceBase10isFinishedEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase10isFinishedEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::reportFinished();
-extern void _ZN20QFutureInterfaceBase14reportFinishedEv(void* qthis); // 4
+extern void C_ZN20QFutureInterfaceBase14reportFinishedEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::waitForResult(int resultIndex);
-extern void _ZN20QFutureInterfaceBase13waitForResultEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN20QFutureInterfaceBase13waitForResultEi(void* qthis, int32_t arg0); // 4
   // proto:  int QFutureInterfaceBase::expectedResultCount();
-extern void _ZN20QFutureInterfaceBase19expectedResultCountEv(void* qthis); // 4
+extern void C_ZN20QFutureInterfaceBase19expectedResultCountEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::setProgressValueAndText(int progressValue, const QString & progressText);
-extern void _ZN20QFutureInterfaceBase23setProgressValueAndTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN20QFutureInterfaceBase23setProgressValueAndTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  int QFutureInterfaceBase::resultCount();
-extern void _ZNK20QFutureInterfaceBase11resultCountEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase11resultCountEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::setProgressValue(int progressValue);
-extern void _ZN20QFutureInterfaceBase16setProgressValueEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN20QFutureInterfaceBase16setProgressValueEi(void* qthis, int32_t arg0); // 4
   // proto:  void QFutureInterfaceBase::~QFutureInterfaceBase();
-extern void _ZN20QFutureInterfaceBaseD2Ev(void* qthis); // 4
+extern void C_ZN20QFutureInterfaceBaseD2Ev(void* qthis); // 4
   // proto:  bool QFutureInterfaceBase::isRunning();
-extern void _ZNK20QFutureInterfaceBase9isRunningEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase9isRunningEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::setProgressRange(int minimum, int maximum);
-extern void _ZN20QFutureInterfaceBase16setProgressRangeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN20QFutureInterfaceBase16setProgressRangeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  QtPrivate::ResultStoreBase & QFutureInterfaceBase::resultStoreBase();
-extern void _ZN20QFutureInterfaceBase15resultStoreBaseEv(void* qthis); // 4
+extern void C_ZN20QFutureInterfaceBase15resultStoreBaseEv(void* qthis); // 4
   // proto:  bool QFutureInterfaceBase::isCanceled();
-extern void _ZNK20QFutureInterfaceBase10isCanceledEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase10isCanceledEv(void* qthis); // 4
   // proto:  bool QFutureInterfaceBase::isResultReadyAt(int index);
-extern void _ZNK20QFutureInterfaceBase15isResultReadyAtEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK20QFutureInterfaceBase15isResultReadyAtEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QFutureInterfaceBase::isPaused();
-extern void _ZNK20QFutureInterfaceBase8isPausedEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase8isPausedEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::setThreadPool(QThreadPool * pool);
-extern void _ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool(void* qthis, void* arg0); // 4
+extern void C_ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool(void* qthis, void* arg0); // 4
   // proto:  void QFutureInterfaceBase::setPaused(bool paused);
-extern void _ZN20QFutureInterfaceBase9setPausedEb(void* qthis, bool arg0); // 4
+extern void C_ZN20QFutureInterfaceBase9setPausedEb(void* qthis, bool arg0); // 4
   // proto:  int QFutureInterfaceBase::progressValue();
-extern void _ZNK20QFutureInterfaceBase13progressValueEv(void* qthis); // 4
+extern void C_ZNK20QFutureInterfaceBase13progressValueEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::reportResultsReady(int beginIndex, int endIndex);
-extern void _ZN20QFutureInterfaceBase18reportResultsReadyEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN20QFutureInterfaceBase18reportResultsReadyEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QFutureInterface<void>::reportFinished(const void * );
-extern void _ZN16QFutureInterfaceIvE14reportFinishedEPKv(void* qthis, void* arg0); // 2
+extern void C_ZN16QFutureInterfaceIvE14reportFinishedEPKv(void* qthis, void* arg0); // 2
   // proto:  void QFutureInterface<void>::reportResult(const void * , int );
-extern void _ZN16QFutureInterfaceIvE12reportResultEPKvi(void* qthis, void* arg0, int32_t arg1); // 2
+extern void C_ZN16QFutureInterfaceIvE12reportResultEPKvi(void* qthis, void* arg0, int32_t arg1); // 2
   // proto:  QFuture<void> QFutureInterface<void>::future();
-extern void _ZN16QFutureInterfaceIvE6futureEv(void* qthis); // 2
+extern void C_ZN16QFutureInterfaceIvE6futureEv(void* qthis); // 2
   // proto: static QFutureInterface<void> QFutureInterface<void>::canceledResult();
-extern void _ZN16QFutureInterfaceIvE14canceledResultEv(); // 2
+extern void C_ZN16QFutureInterfaceIvE14canceledResultEv(); // 2
 */
 import "C"
 // } // <= ext block end
@@ -131,7 +131,7 @@ type QFutureInterfaceBase struct {
 }
 
 // class sizeof(QFutureInterface<void>)=16
-type QFutureInterface_void_ struct {
+type QFutureInterfaceLvoidG struct {
   /*qbase*/ QFutureInterfaceBase;
   qclsinst unsafe.Pointer /* *C.void */;
 }
@@ -149,7 +149,7 @@ func (this *QFutureInterfaceBase) waitForResume(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase13waitForResumeEv
     // invoke: void waitForResume()
-    C._ZN20QFutureInterfaceBase13waitForResumeEv(this.qclsinst)
+    C.C_ZN20QFutureInterfaceBase13waitForResumeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "waitForResume", args)
   }
@@ -169,7 +169,7 @@ func (this *QFutureInterfaceBase) progressText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase12progressTextEv
     // invoke: QString progressText()
-    C._ZNK20QFutureInterfaceBase12progressTextEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase12progressTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "progressText", args)
   }
@@ -192,7 +192,7 @@ func (this *QFutureInterfaceBase) setThrottled(args ...interface{}) () {
     // invoke: void setThrottled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN20QFutureInterfaceBase12setThrottledEb(this.qclsinst, arg0)
+    C.C_ZN20QFutureInterfaceBase12setThrottledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setThrottled", args)
   }
@@ -212,7 +212,7 @@ func (this *QFutureInterfaceBase) reportCanceled(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase14reportCanceledEv
     // invoke: void reportCanceled()
-    C._ZN20QFutureInterfaceBase14reportCanceledEv(this.qclsinst)
+    C.C_ZN20QFutureInterfaceBase14reportCanceledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "reportCanceled", args)
   }
@@ -235,7 +235,7 @@ func (this *QFutureInterfaceBase) setFilterMode(args ...interface{}) () {
     // invoke: void setFilterMode(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN20QFutureInterfaceBase13setFilterModeEb(this.qclsinst, arg0)
+    C.C_ZN20QFutureInterfaceBase13setFilterModeEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setFilterMode", args)
   }
@@ -255,7 +255,7 @@ func (this *QFutureInterfaceBase) progressMaximum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase15progressMaximumEv
     // invoke: int progressMaximum()
-    C._ZNK20QFutureInterfaceBase15progressMaximumEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase15progressMaximumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "progressMaximum", args)
   }
@@ -275,7 +275,7 @@ func (this *QFutureInterfaceBase) cancel(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase6cancelEv
     // invoke: void cancel()
-    C._ZN20QFutureInterfaceBase6cancelEv(this.qclsinst)
+    C.C_ZN20QFutureInterfaceBase6cancelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "cancel", args)
   }
@@ -295,7 +295,7 @@ func (this *QFutureInterfaceBase) reportStarted(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase13reportStartedEv
     // invoke: void reportStarted()
-    C._ZN20QFutureInterfaceBase13reportStartedEv(this.qclsinst)
+    C.C_ZN20QFutureInterfaceBase13reportStartedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "reportStarted", args)
   }
@@ -315,7 +315,7 @@ func (this *QFutureInterfaceBase) togglePaused(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase12togglePausedEv
     // invoke: void togglePaused()
-    C._ZN20QFutureInterfaceBase12togglePausedEv(this.qclsinst)
+    C.C_ZN20QFutureInterfaceBase12togglePausedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "togglePaused", args)
   }
@@ -335,7 +335,7 @@ func (this *QFutureInterfaceBase) isProgressUpdateNeeded(args ...interface{}) ()
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv
     // invoke: bool isProgressUpdateNeeded()
-    C._ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isProgressUpdateNeeded", args)
   }
@@ -355,7 +355,7 @@ func (this *QFutureInterfaceBase) progressMinimum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase15progressMinimumEv
     // invoke: int progressMinimum()
-    C._ZNK20QFutureInterfaceBase15progressMinimumEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase15progressMinimumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "progressMinimum", args)
   }
@@ -375,7 +375,7 @@ func (this *QFutureInterfaceBase) waitForFinished(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase15waitForFinishedEv
     // invoke: void waitForFinished()
-    C._ZN20QFutureInterfaceBase15waitForFinishedEv(this.qclsinst)
+    C.C_ZN20QFutureInterfaceBase15waitForFinishedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "waitForFinished", args)
   }
@@ -400,7 +400,7 @@ func NewQFutureInterfaceBase(args ...interface{}) QFutureInterfaceBase {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN20QFutureInterfaceBaseC2ERKS_(qthis, arg0)
+    C.C_ZN20QFutureInterfaceBaseC2ERKS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "QFutureInterfaceBase", args)
   }
@@ -421,7 +421,7 @@ func (this *QFutureInterfaceBase) isStarted(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase9isStartedEv
     // invoke: bool isStarted()
-    C._ZNK20QFutureInterfaceBase9isStartedEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase9isStartedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isStarted", args)
   }
@@ -441,7 +441,7 @@ func (this *QFutureInterfaceBase) exceptionStore(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase14exceptionStoreEv
     // invoke: QtPrivate::ExceptionStore & exceptionStore()
-    C._ZN20QFutureInterfaceBase14exceptionStoreEv(this.qclsinst)
+    C.C_ZN20QFutureInterfaceBase14exceptionStoreEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "exceptionStore", args)
   }
@@ -461,7 +461,7 @@ func (this *QFutureInterfaceBase) mutex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase5mutexEv
     // invoke: QMutex * mutex()
-    C._ZNK20QFutureInterfaceBase5mutexEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase5mutexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "mutex", args)
   }
@@ -484,7 +484,7 @@ func (this *QFutureInterfaceBase) setExpectedResultCount(args ...interface{}) ()
     // invoke: void setExpectedResultCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN20QFutureInterfaceBase22setExpectedResultCountEi(this.qclsinst, arg0)
+    C.C_ZN20QFutureInterfaceBase22setExpectedResultCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setExpectedResultCount", args)
   }
@@ -507,7 +507,7 @@ func (this *QFutureInterfaceBase) setRunnable(args ...interface{}) () {
     // invoke: void setRunnable(class QRunnable *)
     var arg0 = args[0].(QRunnable).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN20QFutureInterfaceBase11setRunnableEP9QRunnable(this.qclsinst, arg0)
+    C.C_ZN20QFutureInterfaceBase11setRunnableEP9QRunnable(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setRunnable", args)
   }
@@ -527,7 +527,7 @@ func (this *QFutureInterfaceBase) isThrottled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase11isThrottledEv
     // invoke: bool isThrottled()
-    C._ZNK20QFutureInterfaceBase11isThrottledEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase11isThrottledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isThrottled", args)
   }
@@ -547,7 +547,7 @@ func (this *QFutureInterfaceBase) waitForNextResult(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase17waitForNextResultEv
     // invoke: bool waitForNextResult()
-    C._ZN20QFutureInterfaceBase17waitForNextResultEv(this.qclsinst)
+    C.C_ZN20QFutureInterfaceBase17waitForNextResultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "waitForNextResult", args)
   }
@@ -567,7 +567,7 @@ func (this *QFutureInterfaceBase) isFinished(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase10isFinishedEv
     // invoke: bool isFinished()
-    C._ZNK20QFutureInterfaceBase10isFinishedEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase10isFinishedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isFinished", args)
   }
@@ -587,7 +587,7 @@ func (this *QFutureInterfaceBase) reportFinished(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase14reportFinishedEv
     // invoke: void reportFinished()
-    C._ZN20QFutureInterfaceBase14reportFinishedEv(this.qclsinst)
+    C.C_ZN20QFutureInterfaceBase14reportFinishedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "reportFinished", args)
   }
@@ -610,7 +610,7 @@ func (this *QFutureInterfaceBase) waitForResult(args ...interface{}) () {
     // invoke: void waitForResult(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN20QFutureInterfaceBase13waitForResultEi(this.qclsinst, arg0)
+    C.C_ZN20QFutureInterfaceBase13waitForResultEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "waitForResult", args)
   }
@@ -630,7 +630,7 @@ func (this *QFutureInterfaceBase) expectedResultCount(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase19expectedResultCountEv
     // invoke: int expectedResultCount()
-    C._ZN20QFutureInterfaceBase19expectedResultCountEv(this.qclsinst)
+    C.C_ZN20QFutureInterfaceBase19expectedResultCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "expectedResultCount", args)
   }
@@ -656,7 +656,7 @@ func (this *QFutureInterfaceBase) setProgressValueAndText(args ...interface{}) (
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN20QFutureInterfaceBase23setProgressValueAndTextEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN20QFutureInterfaceBase23setProgressValueAndTextEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setProgressValueAndText", args)
   }
@@ -676,7 +676,7 @@ func (this *QFutureInterfaceBase) resultCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase11resultCountEv
     // invoke: int resultCount()
-    C._ZNK20QFutureInterfaceBase11resultCountEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase11resultCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "resultCount", args)
   }
@@ -699,7 +699,7 @@ func (this *QFutureInterfaceBase) setProgressValue(args ...interface{}) () {
     // invoke: void setProgressValue(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN20QFutureInterfaceBase16setProgressValueEi(this.qclsinst, arg0)
+    C.C_ZN20QFutureInterfaceBase16setProgressValueEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setProgressValue", args)
   }
@@ -719,7 +719,7 @@ func (this *QFutureInterfaceBase) FreeQFutureInterfaceBase(args ...interface{}) 
   case 0:
     // invoke: _ZN20QFutureInterfaceBaseD0Ev
     // invoke: void ~QFutureInterfaceBase()
-    C._ZN20QFutureInterfaceBaseD2Ev(this.qclsinst)
+    C.C_ZN20QFutureInterfaceBaseD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "~QFutureInterfaceBase", args)
   }
@@ -739,7 +739,7 @@ func (this *QFutureInterfaceBase) isRunning(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase9isRunningEv
     // invoke: bool isRunning()
-    C._ZNK20QFutureInterfaceBase9isRunningEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase9isRunningEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isRunning", args)
   }
@@ -765,7 +765,7 @@ func (this *QFutureInterfaceBase) setProgressRange(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN20QFutureInterfaceBase16setProgressRangeEii(this.qclsinst, arg0, arg1)
+    C.C_ZN20QFutureInterfaceBase16setProgressRangeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setProgressRange", args)
   }
@@ -785,7 +785,7 @@ func (this *QFutureInterfaceBase) resultStoreBase(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase15resultStoreBaseEv
     // invoke: QtPrivate::ResultStoreBase & resultStoreBase()
-    C._ZN20QFutureInterfaceBase15resultStoreBaseEv(this.qclsinst)
+    C.C_ZN20QFutureInterfaceBase15resultStoreBaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "resultStoreBase", args)
   }
@@ -805,7 +805,7 @@ func (this *QFutureInterfaceBase) isCanceled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase10isCanceledEv
     // invoke: bool isCanceled()
-    C._ZNK20QFutureInterfaceBase10isCanceledEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase10isCanceledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isCanceled", args)
   }
@@ -828,7 +828,7 @@ func (this *QFutureInterfaceBase) isResultReadyAt(args ...interface{}) () {
     // invoke: bool isResultReadyAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK20QFutureInterfaceBase15isResultReadyAtEi(this.qclsinst, arg0)
+    C.C_ZNK20QFutureInterfaceBase15isResultReadyAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isResultReadyAt", args)
   }
@@ -848,7 +848,7 @@ func (this *QFutureInterfaceBase) isPaused(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase8isPausedEv
     // invoke: bool isPaused()
-    C._ZNK20QFutureInterfaceBase8isPausedEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase8isPausedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isPaused", args)
   }
@@ -871,7 +871,7 @@ func (this *QFutureInterfaceBase) setThreadPool(args ...interface{}) () {
     // invoke: void setThreadPool(class QThreadPool *)
     var arg0 = args[0].(QThreadPool).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool(this.qclsinst, arg0)
+    C.C_ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setThreadPool", args)
   }
@@ -894,7 +894,7 @@ func (this *QFutureInterfaceBase) setPaused(args ...interface{}) () {
     // invoke: void setPaused(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN20QFutureInterfaceBase9setPausedEb(this.qclsinst, arg0)
+    C.C_ZN20QFutureInterfaceBase9setPausedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setPaused", args)
   }
@@ -914,7 +914,7 @@ func (this *QFutureInterfaceBase) progressValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase13progressValueEv
     // invoke: int progressValue()
-    C._ZNK20QFutureInterfaceBase13progressValueEv(this.qclsinst)
+    C.C_ZNK20QFutureInterfaceBase13progressValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "progressValue", args)
   }
@@ -940,7 +940,7 @@ func (this *QFutureInterfaceBase) reportResultsReady(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN20QFutureInterfaceBase18reportResultsReadyEii(this.qclsinst, arg0, arg1)
+    C.C_ZN20QFutureInterfaceBase18reportResultsReadyEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "reportResultsReady", args)
   }
@@ -948,7 +948,7 @@ func (this *QFutureInterfaceBase) reportResultsReady(args ...interface{}) () {
 }
 
 // reportFinished(const void *)
-func (this *QFutureInterface_void_) reportFinished(args ...interface{}) () {
+func (this *QFutureInterfaceLvoidG) reportFinished(args ...interface{}) () {
   // reportFinished(const void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -963,7 +963,7 @@ func (this *QFutureInterface_void_) reportFinished(args ...interface{}) () {
     // invoke: void reportFinished(const void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
-    C._ZN16QFutureInterfaceIvE14reportFinishedEPKv(this.qclsinst, arg0)
+    C.C_ZN16QFutureInterfaceIvE14reportFinishedEPKv(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureInterface<void>", "reportFinished", args)
   }
@@ -971,7 +971,7 @@ func (this *QFutureInterface_void_) reportFinished(args ...interface{}) () {
 }
 
 // reportResult(const void *, int)
-func (this *QFutureInterface_void_) reportResult(args ...interface{}) () {
+func (this *QFutureInterfaceLvoidG) reportResult(args ...interface{}) () {
   // reportResult(const void *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -989,7 +989,7 @@ func (this *QFutureInterface_void_) reportResult(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN16QFutureInterfaceIvE12reportResultEPKvi(this.qclsinst, arg0, arg1)
+    C.C_ZN16QFutureInterfaceIvE12reportResultEPKvi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFutureInterface<void>", "reportResult", args)
   }
@@ -997,7 +997,7 @@ func (this *QFutureInterface_void_) reportResult(args ...interface{}) () {
 }
 
 // future()
-func (this *QFutureInterface_void_) future(args ...interface{}) () {
+func (this *QFutureInterfaceLvoidG) future(args ...interface{}) () {
   // future()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1009,7 +1009,7 @@ func (this *QFutureInterface_void_) future(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QFutureInterfaceIvE6futureEv
     // invoke: QFuture<void> future()
-    C._ZN16QFutureInterfaceIvE6futureEv(this.qclsinst)
+    C.C_ZN16QFutureInterfaceIvE6futureEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureInterface<void>", "future", args)
   }
@@ -1017,7 +1017,7 @@ func (this *QFutureInterface_void_) future(args ...interface{}) () {
 }
 
 // canceledResult()
-func (this *QFutureInterface_void_) canceledResult_s(args ...interface{}) () {
+func (this *QFutureInterfaceLvoidG) canceledResult_s(args ...interface{}) () {
   // canceledResult()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1029,7 +1029,7 @@ func (this *QFutureInterface_void_) canceledResult_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QFutureInterfaceIvE14canceledResultEv
     // invoke: QFutureInterface<void> canceledResult()
-    C._ZN16QFutureInterfaceIvE14canceledResultEv()
+    C.C_ZN16QFutureInterfaceIvE14canceledResultEv()
   default:
     qtrt.ErrorResolve("QFutureInterface<void>", "canceledResult", args)
   }

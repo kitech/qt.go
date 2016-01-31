@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  const QMetaObject * QKeyEventTransition::metaObject();
-extern void _ZNK19QKeyEventTransition10metaObjectEv(void* qthis); // 4
+extern void C_ZNK19QKeyEventTransition10metaObjectEv(void* qthis); // 4
   // proto:  int QKeyEventTransition::key();
-extern void _ZNK19QKeyEventTransition3keyEv(void* qthis); // 4
+extern void C_ZNK19QKeyEventTransition3keyEv(void* qthis); // 4
   // proto:  Qt::KeyboardModifiers QKeyEventTransition::modifierMask();
-extern void _ZNK19QKeyEventTransition12modifierMaskEv(void* qthis); // 4
+extern void C_ZNK19QKeyEventTransition12modifierMaskEv(void* qthis); // 4
   // proto:  void QKeyEventTransition::setKey(int key);
-extern void _ZN19QKeyEventTransition6setKeyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN19QKeyEventTransition6setKeyEi(void* qthis, int32_t arg0); // 4
   // proto:  void QKeyEventTransition::~QKeyEventTransition();
-extern void _ZN19QKeyEventTransitionD2Ev(void* qthis); // 4
+extern void C_ZN19QKeyEventTransitionD2Ev(void* qthis); // 4
   // proto:  void QKeyEventTransition::QKeyEventTransition(QState * sourceState);
-extern void _ZN19QKeyEventTransitionC2EP6QState(void* qthis, void* arg0); // 3
+extern void C_ZN19QKeyEventTransitionC2EP6QState(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -71,7 +71,7 @@ func (this *QKeyEventTransition) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QKeyEventTransition10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK19QKeyEventTransition10metaObjectEv(this.qclsinst)
+    C.C_ZNK19QKeyEventTransition10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "metaObject", args)
   }
@@ -91,7 +91,7 @@ func (this *QKeyEventTransition) key(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QKeyEventTransition3keyEv
     // invoke: int key()
-    C._ZNK19QKeyEventTransition3keyEv(this.qclsinst)
+    C.C_ZNK19QKeyEventTransition3keyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "key", args)
   }
@@ -111,7 +111,7 @@ func (this *QKeyEventTransition) modifierMask(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QKeyEventTransition12modifierMaskEv
     // invoke: Qt::KeyboardModifiers modifierMask()
-    C._ZNK19QKeyEventTransition12modifierMaskEv(this.qclsinst)
+    C.C_ZNK19QKeyEventTransition12modifierMaskEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "modifierMask", args)
   }
@@ -134,7 +134,7 @@ func (this *QKeyEventTransition) setKey(args ...interface{}) () {
     // invoke: void setKey(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN19QKeyEventTransition6setKeyEi(this.qclsinst, arg0)
+    C.C_ZN19QKeyEventTransition6setKeyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "setKey", args)
   }
@@ -154,7 +154,7 @@ func (this *QKeyEventTransition) FreeQKeyEventTransition(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QKeyEventTransitionD0Ev
     // invoke: void ~QKeyEventTransition()
-    C._ZN19QKeyEventTransitionD2Ev(this.qclsinst)
+    C.C_ZN19QKeyEventTransitionD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "~QKeyEventTransition", args)
   }
@@ -179,7 +179,7 @@ func NewQKeyEventTransition(args ...interface{}) QKeyEventTransition {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN19QKeyEventTransitionC2EP6QState(qthis, arg0)
+    C.C_ZN19QKeyEventTransitionC2EP6QState(qthis, arg0)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "QKeyEventTransition", args)
   }

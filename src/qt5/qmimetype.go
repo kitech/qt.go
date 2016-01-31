@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qmimetype.h
 // dst-file: /src/core/qmimetype.go
 //
@@ -29,41 +29,41 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QString QMimeType::comment();
-extern void _ZNK9QMimeType7commentEv(void* qthis); // 4
+extern void C_ZNK9QMimeType7commentEv(void* qthis); // 4
   // proto:  bool QMimeType::inherits(const QString & mimeTypeName);
-extern void _ZNK9QMimeType8inheritsERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK9QMimeType8inheritsERK7QString(void* qthis, void* arg0); // 4
   // proto:  QStringList QMimeType::parentMimeTypes();
-extern void _ZNK9QMimeType15parentMimeTypesEv(void* qthis); // 4
+extern void C_ZNK9QMimeType15parentMimeTypesEv(void* qthis); // 4
   // proto:  QString QMimeType::filterString();
-extern void _ZNK9QMimeType12filterStringEv(void* qthis); // 4
+extern void C_ZNK9QMimeType12filterStringEv(void* qthis); // 4
   // proto:  bool QMimeType::isValid();
-extern void _ZNK9QMimeType7isValidEv(void* qthis); // 4
+extern void C_ZNK9QMimeType7isValidEv(void* qthis); // 4
   // proto:  QString QMimeType::preferredSuffix();
-extern void _ZNK9QMimeType15preferredSuffixEv(void* qthis); // 4
+extern void C_ZNK9QMimeType15preferredSuffixEv(void* qthis); // 4
   // proto:  QStringList QMimeType::globPatterns();
-extern void _ZNK9QMimeType12globPatternsEv(void* qthis); // 4
+extern void C_ZNK9QMimeType12globPatternsEv(void* qthis); // 4
   // proto:  QString QMimeType::genericIconName();
-extern void _ZNK9QMimeType15genericIconNameEv(void* qthis); // 4
+extern void C_ZNK9QMimeType15genericIconNameEv(void* qthis); // 4
   // proto:  QString QMimeType::iconName();
-extern void _ZNK9QMimeType8iconNameEv(void* qthis); // 4
+extern void C_ZNK9QMimeType8iconNameEv(void* qthis); // 4
   // proto:  void QMimeType::swap(QMimeType & other);
-extern void _ZN9QMimeType4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN9QMimeType4swapERS_(void* qthis, void* arg0); // 2
   // proto:  void QMimeType::QMimeType(const QMimeType & other);
-extern void _ZN9QMimeTypeC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN9QMimeTypeC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QMimeType::QMimeType();
-extern void _ZN9QMimeTypeC2Ev(void* qthis); // 3
+extern void C_ZN9QMimeTypeC2Ev(void* qthis); // 3
   // proto:  void QMimeType::~QMimeType();
-extern void _ZN9QMimeTypeD2Ev(void* qthis); // 4
+extern void C_ZN9QMimeTypeD2Ev(void* qthis); // 4
   // proto:  QStringList QMimeType::allAncestors();
-extern void _ZNK9QMimeType12allAncestorsEv(void* qthis); // 4
+extern void C_ZNK9QMimeType12allAncestorsEv(void* qthis); // 4
   // proto:  QStringList QMimeType::suffixes();
-extern void _ZNK9QMimeType8suffixesEv(void* qthis); // 4
+extern void C_ZNK9QMimeType8suffixesEv(void* qthis); // 4
   // proto:  QString QMimeType::name();
-extern void _ZNK9QMimeType4nameEv(void* qthis); // 4
+extern void C_ZNK9QMimeType4nameEv(void* qthis); // 4
   // proto:  bool QMimeType::isDefault();
-extern void _ZNK9QMimeType9isDefaultEv(void* qthis); // 4
+extern void C_ZNK9QMimeType9isDefaultEv(void* qthis); // 4
   // proto:  QStringList QMimeType::aliases();
-extern void _ZNK9QMimeType7aliasesEv(void* qthis); // 4
+extern void C_ZNK9QMimeType7aliasesEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -95,7 +95,7 @@ func (this *QMimeType) comment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType7commentEv
     // invoke: QString comment()
-    C._ZNK9QMimeType7commentEv(this.qclsinst)
+    C.C_ZNK9QMimeType7commentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "comment", args)
   }
@@ -118,7 +118,7 @@ func (this *QMimeType) inherits(args ...interface{}) () {
     // invoke: bool inherits(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QMimeType8inheritsERK7QString(this.qclsinst, arg0)
+    C.C_ZNK9QMimeType8inheritsERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeType", "inherits", args)
   }
@@ -138,7 +138,7 @@ func (this *QMimeType) parentMimeTypes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType15parentMimeTypesEv
     // invoke: QStringList parentMimeTypes()
-    C._ZNK9QMimeType15parentMimeTypesEv(this.qclsinst)
+    C.C_ZNK9QMimeType15parentMimeTypesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "parentMimeTypes", args)
   }
@@ -158,7 +158,7 @@ func (this *QMimeType) filterString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType12filterStringEv
     // invoke: QString filterString()
-    C._ZNK9QMimeType12filterStringEv(this.qclsinst)
+    C.C_ZNK9QMimeType12filterStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "filterString", args)
   }
@@ -178,7 +178,7 @@ func (this *QMimeType) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType7isValidEv
     // invoke: bool isValid()
-    C._ZNK9QMimeType7isValidEv(this.qclsinst)
+    C.C_ZNK9QMimeType7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "isValid", args)
   }
@@ -198,7 +198,7 @@ func (this *QMimeType) preferredSuffix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType15preferredSuffixEv
     // invoke: QString preferredSuffix()
-    C._ZNK9QMimeType15preferredSuffixEv(this.qclsinst)
+    C.C_ZNK9QMimeType15preferredSuffixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "preferredSuffix", args)
   }
@@ -218,7 +218,7 @@ func (this *QMimeType) globPatterns(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType12globPatternsEv
     // invoke: QStringList globPatterns()
-    C._ZNK9QMimeType12globPatternsEv(this.qclsinst)
+    C.C_ZNK9QMimeType12globPatternsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "globPatterns", args)
   }
@@ -238,7 +238,7 @@ func (this *QMimeType) genericIconName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType15genericIconNameEv
     // invoke: QString genericIconName()
-    C._ZNK9QMimeType15genericIconNameEv(this.qclsinst)
+    C.C_ZNK9QMimeType15genericIconNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "genericIconName", args)
   }
@@ -258,7 +258,7 @@ func (this *QMimeType) iconName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType8iconNameEv
     // invoke: QString iconName()
-    C._ZNK9QMimeType8iconNameEv(this.qclsinst)
+    C.C_ZNK9QMimeType8iconNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "iconName", args)
   }
@@ -281,7 +281,7 @@ func (this *QMimeType) swap(args ...interface{}) () {
     // invoke: void swap(class QMimeType &)
     var arg0 = args[0].(QMimeType).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QMimeType4swapERS_(this.qclsinst, arg0)
+    C.C_ZN9QMimeType4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeType", "swap", args)
   }
@@ -308,13 +308,13 @@ func NewQMimeType(args ...interface{}) QMimeType {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QMimeTypeC2ERKS_(qthis, arg0)
+    C.C_ZN9QMimeTypeC2ERKS_(qthis, arg0)
   case 1:
     // invoke: _ZN9QMimeTypeC1Ev
     // invoke: void QMimeType()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QMimeTypeC2Ev(qthis)
+    C.C_ZN9QMimeTypeC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QMimeType", "QMimeType", args)
   }
@@ -335,7 +335,7 @@ func (this *QMimeType) FreeQMimeType(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeTypeD0Ev
     // invoke: void ~QMimeType()
-    C._ZN9QMimeTypeD2Ev(this.qclsinst)
+    C.C_ZN9QMimeTypeD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "~QMimeType", args)
   }
@@ -355,7 +355,7 @@ func (this *QMimeType) allAncestors(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType12allAncestorsEv
     // invoke: QStringList allAncestors()
-    C._ZNK9QMimeType12allAncestorsEv(this.qclsinst)
+    C.C_ZNK9QMimeType12allAncestorsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "allAncestors", args)
   }
@@ -375,7 +375,7 @@ func (this *QMimeType) suffixes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType8suffixesEv
     // invoke: QStringList suffixes()
-    C._ZNK9QMimeType8suffixesEv(this.qclsinst)
+    C.C_ZNK9QMimeType8suffixesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "suffixes", args)
   }
@@ -395,7 +395,7 @@ func (this *QMimeType) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType4nameEv
     // invoke: QString name()
-    C._ZNK9QMimeType4nameEv(this.qclsinst)
+    C.C_ZNK9QMimeType4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "name", args)
   }
@@ -415,7 +415,7 @@ func (this *QMimeType) isDefault(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType9isDefaultEv
     // invoke: bool isDefault()
-    C._ZNK9QMimeType9isDefaultEv(this.qclsinst)
+    C.C_ZNK9QMimeType9isDefaultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "isDefault", args)
   }
@@ -435,7 +435,7 @@ func (this *QMimeType) aliases(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType7aliasesEv
     // invoke: QStringList aliases()
-    C._ZNK9QMimeType7aliasesEv(this.qclsinst)
+    C.C_ZNK9QMimeType7aliasesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeType", "aliases", args)
   }

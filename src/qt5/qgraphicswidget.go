@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.go
 //
@@ -29,103 +29,103 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QRectF QGraphicsWidget::boundingRect();
-extern void _ZNK15QGraphicsWidget12boundingRectEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget12boundingRectEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::setLayout(QGraphicsLayout * layout);
-extern void _ZN15QGraphicsWidget9setLayoutEP15QGraphicsLayout(void* qthis, void* arg0); // 4
+extern void C_ZN15QGraphicsWidget9setLayoutEP15QGraphicsLayout(void* qthis, void* arg0); // 4
   // proto:  QList<QAction *> QGraphicsWidget::actions();
-extern void _ZNK15QGraphicsWidget7actionsEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget7actionsEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::setStyle(QStyle * style);
-extern void _ZN15QGraphicsWidget8setStyleEP6QStyle(void* qthis, void* arg0); // 4
+extern void C_ZN15QGraphicsWidget8setStyleEP6QStyle(void* qthis, void* arg0); // 4
   // proto:  QPainterPath QGraphicsWidget::shape();
-extern void _ZNK15QGraphicsWidget5shapeEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget5shapeEv(void* qthis); // 4
   // proto:  QRectF QGraphicsWidget::windowFrameGeometry();
-extern void _ZNK15QGraphicsWidget19windowFrameGeometryEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget19windowFrameGeometryEv(void* qthis); // 4
   // proto:  QGraphicsWidget * QGraphicsWidget::focusWidget();
-extern void _ZNK15QGraphicsWidget11focusWidgetEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget11focusWidgetEv(void* qthis); // 4
   // proto:  QFont QGraphicsWidget::font();
-extern void _ZNK15QGraphicsWidget4fontEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget4fontEv(void* qthis); // 4
   // proto:  QStyle * QGraphicsWidget::style();
-extern void _ZNK15QGraphicsWidget5styleEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget5styleEv(void* qthis); // 4
   // proto:  QGraphicsLayout * QGraphicsWidget::layout();
-extern void _ZNK15QGraphicsWidget6layoutEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget6layoutEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::unsetLayoutDirection();
-extern void _ZN15QGraphicsWidget20unsetLayoutDirectionEv(void* qthis); // 4
+extern void C_ZN15QGraphicsWidget20unsetLayoutDirectionEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::insertAction(QAction * before, QAction * action);
-extern void _ZN15QGraphicsWidget12insertActionEP7QActionS1_(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN15QGraphicsWidget12insertActionEP7QActionS1_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QGraphicsWidget::unsetWindowFrameMargins();
-extern void _ZN15QGraphicsWidget23unsetWindowFrameMarginsEv(void* qthis); // 4
+extern void C_ZN15QGraphicsWidget23unsetWindowFrameMarginsEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::setShortcutAutoRepeat(int id, bool enabled);
-extern void _ZN15QGraphicsWidget21setShortcutAutoRepeatEib(void* qthis, int32_t arg0, bool arg1); // 4
+extern void C_ZN15QGraphicsWidget21setShortcutAutoRepeatEib(void* qthis, int32_t arg0, bool arg1); // 4
   // proto:  void QGraphicsWidget::setGeometry(const QRectF & rect);
-extern void _ZN15QGraphicsWidget11setGeometryERK6QRectF(void* qthis, void* arg0); // 4
+extern void C_ZN15QGraphicsWidget11setGeometryERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsWidget::setGeometry(qreal x, qreal y, qreal w, qreal h);
-extern void _ZN15QGraphicsWidget11setGeometryEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZN15QGraphicsWidget11setGeometryEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  Qt::WindowType QGraphicsWidget::windowType();
-extern void _ZNK15QGraphicsWidget10windowTypeEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget10windowTypeEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::removeAction(QAction * action);
-extern void _ZN15QGraphicsWidget12removeActionEP7QAction(void* qthis, void* arg0); // 4
+extern void C_ZN15QGraphicsWidget12removeActionEP7QAction(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QGraphicsWidget::metaObject();
-extern void _ZNK15QGraphicsWidget10metaObjectEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget10metaObjectEv(void* qthis); // 4
   // proto:  Qt::FocusPolicy QGraphicsWidget::focusPolicy();
-extern void _ZNK15QGraphicsWidget11focusPolicyEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget11focusPolicyEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::paintWindowFrame(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-extern void _ZN15QGraphicsWidget16paintWindowFrameEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN15QGraphicsWidget16paintWindowFrameEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  bool QGraphicsWidget::close();
-extern void _ZN15QGraphicsWidget5closeEv(void* qthis); // 4
+extern void C_ZN15QGraphicsWidget5closeEv(void* qthis); // 4
   // proto:  QPalette QGraphicsWidget::palette();
-extern void _ZNK15QGraphicsWidget7paletteEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget7paletteEv(void* qthis); // 4
   // proto:  QString QGraphicsWidget::windowTitle();
-extern void _ZNK15QGraphicsWidget11windowTitleEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget11windowTitleEv(void* qthis); // 4
   // proto:  Qt::WindowFlags QGraphicsWidget::windowFlags();
-extern void _ZNK15QGraphicsWidget11windowFlagsEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget11windowFlagsEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::setContentsMargins(qreal left, qreal top, qreal right, qreal bottom);
-extern void _ZN15QGraphicsWidget18setContentsMarginsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
+extern void C_ZN15QGraphicsWidget18setContentsMarginsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
   // proto:  void QGraphicsWidget::adjustSize();
-extern void _ZN15QGraphicsWidget10adjustSizeEv(void* qthis); // 4
+extern void C_ZN15QGraphicsWidget10adjustSizeEv(void* qthis); // 4
   // proto:  QRectF QGraphicsWidget::windowFrameRect();
-extern void _ZNK15QGraphicsWidget15windowFrameRectEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget15windowFrameRectEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::getWindowFrameMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
-extern void _ZNK15QGraphicsWidget21getWindowFrameMarginsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
+extern void C_ZNK15QGraphicsWidget21getWindowFrameMarginsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
   // proto:  void QGraphicsWidget::addAction(QAction * action);
-extern void _ZN15QGraphicsWidget9addActionEP7QAction(void* qthis, void* arg0); // 4
+extern void C_ZN15QGraphicsWidget9addActionEP7QAction(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsWidget::setAutoFillBackground(bool enabled);
-extern void _ZN15QGraphicsWidget21setAutoFillBackgroundEb(void* qthis, bool arg0); // 4
+extern void C_ZN15QGraphicsWidget21setAutoFillBackgroundEb(void* qthis, bool arg0); // 4
   // proto:  void QGraphicsWidget::setPalette(const QPalette & palette);
-extern void _ZN15QGraphicsWidget10setPaletteERK8QPalette(void* qthis, void* arg0); // 4
+extern void C_ZN15QGraphicsWidget10setPaletteERK8QPalette(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsWidget::~QGraphicsWidget();
-extern void _ZN15QGraphicsWidgetD2Ev(void* qthis); // 4
+extern void C_ZN15QGraphicsWidgetD2Ev(void* qthis); // 4
   // proto:  bool QGraphicsWidget::isActiveWindow();
-extern void _ZNK15QGraphicsWidget14isActiveWindowEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget14isActiveWindowEv(void* qthis); // 4
   // proto:  QSizeF QGraphicsWidget::size();
-extern void _ZNK15QGraphicsWidget4sizeEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget4sizeEv(void* qthis); // 4
   // proto:  bool QGraphicsWidget::autoFillBackground();
-extern void _ZNK15QGraphicsWidget18autoFillBackgroundEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget18autoFillBackgroundEv(void* qthis); // 4
   // proto:  Qt::LayoutDirection QGraphicsWidget::layoutDirection();
-extern void _ZNK15QGraphicsWidget15layoutDirectionEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget15layoutDirectionEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::setShortcutEnabled(int id, bool enabled);
-extern void _ZN15QGraphicsWidget18setShortcutEnabledEib(void* qthis, int32_t arg0, bool arg1); // 4
+extern void C_ZN15QGraphicsWidget18setShortcutEnabledEib(void* qthis, int32_t arg0, bool arg1); // 4
   // proto:  void QGraphicsWidget::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-extern void _ZN15QGraphicsWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN15QGraphicsWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  QRectF QGraphicsWidget::rect();
-extern void _ZNK15QGraphicsWidget4rectEv(void* qthis); // 2
+extern void C_ZNK15QGraphicsWidget4rectEv(void* qthis); // 2
   // proto:  int QGraphicsWidget::type();
-extern void _ZNK15QGraphicsWidget4typeEv(void* qthis); // 4
+extern void C_ZNK15QGraphicsWidget4typeEv(void* qthis); // 4
   // proto:  void QGraphicsWidget::resize(qreal w, qreal h);
-extern void _ZN15QGraphicsWidget6resizeEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZN15QGraphicsWidget6resizeEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QGraphicsWidget::resize(const QSizeF & size);
-extern void _ZN15QGraphicsWidget6resizeERK6QSizeF(void* qthis, void* arg0); // 4
+extern void C_ZN15QGraphicsWidget6resizeERK6QSizeF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsWidget::releaseShortcut(int id);
-extern void _ZN15QGraphicsWidget15releaseShortcutEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QGraphicsWidget15releaseShortcutEi(void* qthis, int32_t arg0); // 4
   // proto: static void QGraphicsWidget::setTabOrder(QGraphicsWidget * first, QGraphicsWidget * second);
-extern void _ZN15QGraphicsWidget11setTabOrderEPS_S0_(void* arg0, void* arg1); // 4
+extern void C_ZN15QGraphicsWidget11setTabOrderEPS_S0_(void* arg0, void* arg1); // 4
   // proto:  void QGraphicsWidget::setWindowTitle(const QString & title);
-extern void _ZN15QGraphicsWidget14setWindowTitleERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN15QGraphicsWidget14setWindowTitleERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsWidget::setWindowFrameMargins(qreal left, qreal top, qreal right, qreal bottom);
-extern void _ZN15QGraphicsWidget21setWindowFrameMarginsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
+extern void C_ZN15QGraphicsWidget21setWindowFrameMarginsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
   // proto:  void QGraphicsWidget::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
-extern void _ZNK15QGraphicsWidget18getContentsMarginsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
+extern void C_ZNK15QGraphicsWidget18getContentsMarginsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
   // proto:  void QGraphicsWidget::setFont(const QFont & font);
-extern void _ZN15QGraphicsWidget7setFontERK5QFont(void* qthis, void* arg0); // 4
+extern void C_ZN15QGraphicsWidget7setFontERK5QFont(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -159,7 +159,7 @@ func (this *QGraphicsWidget) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget12boundingRectEv
     // invoke: QRectF boundingRect()
-    C._ZNK15QGraphicsWidget12boundingRectEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "boundingRect", args)
   }
@@ -182,7 +182,7 @@ func (this *QGraphicsWidget) setLayout(args ...interface{}) () {
     // invoke: void setLayout(class QGraphicsLayout *)
     var arg0 = args[0].(QGraphicsLayout).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsWidget9setLayoutEP15QGraphicsLayout(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget9setLayoutEP15QGraphicsLayout(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setLayout", args)
   }
@@ -202,7 +202,7 @@ func (this *QGraphicsWidget) actions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget7actionsEv
     // invoke: QList<QAction *> actions()
-    C._ZNK15QGraphicsWidget7actionsEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget7actionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "actions", args)
   }
@@ -225,7 +225,7 @@ func (this *QGraphicsWidget) setStyle(args ...interface{}) () {
     // invoke: void setStyle(class QStyle *)
     var arg0 = args[0].(QStyle).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsWidget8setStyleEP6QStyle(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget8setStyleEP6QStyle(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setStyle", args)
   }
@@ -245,7 +245,7 @@ func (this *QGraphicsWidget) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget5shapeEv
     // invoke: QPainterPath shape()
-    C._ZNK15QGraphicsWidget5shapeEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "shape", args)
   }
@@ -265,7 +265,7 @@ func (this *QGraphicsWidget) windowFrameGeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget19windowFrameGeometryEv
     // invoke: QRectF windowFrameGeometry()
-    C._ZNK15QGraphicsWidget19windowFrameGeometryEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget19windowFrameGeometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowFrameGeometry", args)
   }
@@ -285,7 +285,7 @@ func (this *QGraphicsWidget) focusWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget11focusWidgetEv
     // invoke: QGraphicsWidget * focusWidget()
-    C._ZNK15QGraphicsWidget11focusWidgetEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget11focusWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "focusWidget", args)
   }
@@ -305,7 +305,7 @@ func (this *QGraphicsWidget) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4fontEv
     // invoke: QFont font()
-    C._ZNK15QGraphicsWidget4fontEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "font", args)
   }
@@ -325,7 +325,7 @@ func (this *QGraphicsWidget) style(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget5styleEv
     // invoke: QStyle * style()
-    C._ZNK15QGraphicsWidget5styleEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget5styleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "style", args)
   }
@@ -345,7 +345,7 @@ func (this *QGraphicsWidget) layout(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget6layoutEv
     // invoke: QGraphicsLayout * layout()
-    C._ZNK15QGraphicsWidget6layoutEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget6layoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "layout", args)
   }
@@ -365,7 +365,7 @@ func (this *QGraphicsWidget) unsetLayoutDirection(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget20unsetLayoutDirectionEv
     // invoke: void unsetLayoutDirection()
-    C._ZN15QGraphicsWidget20unsetLayoutDirectionEv(this.qclsinst)
+    C.C_ZN15QGraphicsWidget20unsetLayoutDirectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "unsetLayoutDirection", args)
   }
@@ -391,7 +391,7 @@ func (this *QGraphicsWidget) insertAction(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QAction).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QGraphicsWidget12insertActionEP7QActionS1_(this.qclsinst, arg0, arg1)
+    C.C_ZN15QGraphicsWidget12insertActionEP7QActionS1_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "insertAction", args)
   }
@@ -411,7 +411,7 @@ func (this *QGraphicsWidget) unsetWindowFrameMargins(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget23unsetWindowFrameMarginsEv
     // invoke: void unsetWindowFrameMargins()
-    C._ZN15QGraphicsWidget23unsetWindowFrameMarginsEv(this.qclsinst)
+    C.C_ZN15QGraphicsWidget23unsetWindowFrameMarginsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "unsetWindowFrameMargins", args)
   }
@@ -437,7 +437,7 @@ func (this *QGraphicsWidget) setShortcutAutoRepeat(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN15QGraphicsWidget21setShortcutAutoRepeatEib(this.qclsinst, arg0, arg1)
+    C.C_ZN15QGraphicsWidget21setShortcutAutoRepeatEib(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setShortcutAutoRepeat", args)
   }
@@ -466,7 +466,7 @@ func (this *QGraphicsWidget) setGeometry(args ...interface{}) () {
     // invoke: void setGeometry(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsWidget11setGeometryERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget11setGeometryERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN15QGraphicsWidget11setGeometryEdddd
     // invoke: void setGeometry(qreal, qreal, qreal, qreal)
@@ -478,7 +478,7 @@ func (this *QGraphicsWidget) setGeometry(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN15QGraphicsWidget11setGeometryEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN15QGraphicsWidget11setGeometryEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setGeometry", args)
   }
@@ -498,7 +498,7 @@ func (this *QGraphicsWidget) windowType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget10windowTypeEv
     // invoke: Qt::WindowType windowType()
-    C._ZNK15QGraphicsWidget10windowTypeEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget10windowTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowType", args)
   }
@@ -521,7 +521,7 @@ func (this *QGraphicsWidget) removeAction(args ...interface{}) () {
     // invoke: void removeAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsWidget12removeActionEP7QAction(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget12removeActionEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "removeAction", args)
   }
@@ -541,7 +541,7 @@ func (this *QGraphicsWidget) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK15QGraphicsWidget10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "metaObject", args)
   }
@@ -561,7 +561,7 @@ func (this *QGraphicsWidget) focusPolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget11focusPolicyEv
     // invoke: Qt::FocusPolicy focusPolicy()
-    C._ZNK15QGraphicsWidget11focusPolicyEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget11focusPolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "focusPolicy", args)
   }
@@ -590,7 +590,7 @@ func (this *QGraphicsWidget) paintWindowFrame(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN15QGraphicsWidget16paintWindowFrameEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN15QGraphicsWidget16paintWindowFrameEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "paintWindowFrame", args)
   }
@@ -610,7 +610,7 @@ func (this *QGraphicsWidget) close(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget5closeEv
     // invoke: bool close()
-    C._ZN15QGraphicsWidget5closeEv(this.qclsinst)
+    C.C_ZN15QGraphicsWidget5closeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "close", args)
   }
@@ -630,7 +630,7 @@ func (this *QGraphicsWidget) palette(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget7paletteEv
     // invoke: QPalette palette()
-    C._ZNK15QGraphicsWidget7paletteEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget7paletteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "palette", args)
   }
@@ -650,7 +650,7 @@ func (this *QGraphicsWidget) windowTitle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget11windowTitleEv
     // invoke: QString windowTitle()
-    C._ZNK15QGraphicsWidget11windowTitleEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget11windowTitleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowTitle", args)
   }
@@ -670,7 +670,7 @@ func (this *QGraphicsWidget) windowFlags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget11windowFlagsEv
     // invoke: Qt::WindowFlags windowFlags()
-    C._ZNK15QGraphicsWidget11windowFlagsEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget11windowFlagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowFlags", args)
   }
@@ -702,7 +702,7 @@ func (this *QGraphicsWidget) setContentsMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN15QGraphicsWidget18setContentsMarginsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN15QGraphicsWidget18setContentsMarginsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setContentsMargins", args)
   }
@@ -722,7 +722,7 @@ func (this *QGraphicsWidget) adjustSize(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget10adjustSizeEv
     // invoke: void adjustSize()
-    C._ZN15QGraphicsWidget10adjustSizeEv(this.qclsinst)
+    C.C_ZN15QGraphicsWidget10adjustSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "adjustSize", args)
   }
@@ -742,7 +742,7 @@ func (this *QGraphicsWidget) windowFrameRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget15windowFrameRectEv
     // invoke: QRectF windowFrameRect()
-    C._ZNK15QGraphicsWidget15windowFrameRectEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget15windowFrameRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowFrameRect", args)
   }
@@ -774,7 +774,7 @@ func (this *QGraphicsWidget) getWindowFrameMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C._ZNK15QGraphicsWidget21getWindowFrameMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK15QGraphicsWidget21getWindowFrameMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "getWindowFrameMargins", args)
   }
@@ -797,7 +797,7 @@ func (this *QGraphicsWidget) addAction(args ...interface{}) () {
     // invoke: void addAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsWidget9addActionEP7QAction(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget9addActionEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "addAction", args)
   }
@@ -820,7 +820,7 @@ func (this *QGraphicsWidget) setAutoFillBackground(args ...interface{}) () {
     // invoke: void setAutoFillBackground(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsWidget21setAutoFillBackgroundEb(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget21setAutoFillBackgroundEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setAutoFillBackground", args)
   }
@@ -843,7 +843,7 @@ func (this *QGraphicsWidget) setPalette(args ...interface{}) () {
     // invoke: void setPalette(const class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsWidget10setPaletteERK8QPalette(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget10setPaletteERK8QPalette(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setPalette", args)
   }
@@ -863,7 +863,7 @@ func (this *QGraphicsWidget) FreeQGraphicsWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidgetD0Ev
     // invoke: void ~QGraphicsWidget()
-    C._ZN15QGraphicsWidgetD2Ev(this.qclsinst)
+    C.C_ZN15QGraphicsWidgetD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "~QGraphicsWidget", args)
   }
@@ -883,7 +883,7 @@ func (this *QGraphicsWidget) isActiveWindow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget14isActiveWindowEv
     // invoke: bool isActiveWindow()
-    C._ZNK15QGraphicsWidget14isActiveWindowEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget14isActiveWindowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "isActiveWindow", args)
   }
@@ -903,7 +903,7 @@ func (this *QGraphicsWidget) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4sizeEv
     // invoke: QSizeF size()
-    C._ZNK15QGraphicsWidget4sizeEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "size", args)
   }
@@ -923,7 +923,7 @@ func (this *QGraphicsWidget) autoFillBackground(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget18autoFillBackgroundEv
     // invoke: bool autoFillBackground()
-    C._ZNK15QGraphicsWidget18autoFillBackgroundEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget18autoFillBackgroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "autoFillBackground", args)
   }
@@ -943,7 +943,7 @@ func (this *QGraphicsWidget) layoutDirection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget15layoutDirectionEv
     // invoke: Qt::LayoutDirection layoutDirection()
-    C._ZNK15QGraphicsWidget15layoutDirectionEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget15layoutDirectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "layoutDirection", args)
   }
@@ -969,7 +969,7 @@ func (this *QGraphicsWidget) setShortcutEnabled(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZN15QGraphicsWidget18setShortcutEnabledEib(this.qclsinst, arg0, arg1)
+    C.C_ZN15QGraphicsWidget18setShortcutEnabledEib(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setShortcutEnabled", args)
   }
@@ -998,7 +998,7 @@ func (this *QGraphicsWidget) paint(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN15QGraphicsWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN15QGraphicsWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "paint", args)
   }
@@ -1018,7 +1018,7 @@ func (this *QGraphicsWidget) rect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4rectEv
     // invoke: QRectF rect()
-    C._ZNK15QGraphicsWidget4rectEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "rect", args)
   }
@@ -1038,7 +1038,7 @@ func (this *QGraphicsWidget) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4typeEv
     // invoke: int type()
-    C._ZNK15QGraphicsWidget4typeEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "type", args)
   }
@@ -1067,13 +1067,13 @@ func (this *QGraphicsWidget) resize(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN15QGraphicsWidget6resizeEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN15QGraphicsWidget6resizeEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN15QGraphicsWidget6resizeERK6QSizeF
     // invoke: void resize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsWidget6resizeERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget6resizeERK6QSizeF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "resize", args)
   }
@@ -1096,7 +1096,7 @@ func (this *QGraphicsWidget) releaseShortcut(args ...interface{}) () {
     // invoke: void releaseShortcut(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsWidget15releaseShortcutEi(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget15releaseShortcutEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "releaseShortcut", args)
   }
@@ -1122,7 +1122,7 @@ func (this *QGraphicsWidget) setTabOrder_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QGraphicsWidget).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN15QGraphicsWidget11setTabOrderEPS_S0_(arg0, arg1)
+    C.C_ZN15QGraphicsWidget11setTabOrderEPS_S0_(arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setTabOrder", args)
   }
@@ -1145,7 +1145,7 @@ func (this *QGraphicsWidget) setWindowTitle(args ...interface{}) () {
     // invoke: void setWindowTitle(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsWidget14setWindowTitleERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget14setWindowTitleERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setWindowTitle", args)
   }
@@ -1177,7 +1177,7 @@ func (this *QGraphicsWidget) setWindowFrameMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN15QGraphicsWidget21setWindowFrameMarginsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN15QGraphicsWidget21setWindowFrameMarginsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setWindowFrameMargins", args)
   }
@@ -1209,7 +1209,7 @@ func (this *QGraphicsWidget) getContentsMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C._ZNK15QGraphicsWidget18getContentsMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK15QGraphicsWidget18getContentsMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "getContentsMargins", args)
   }
@@ -1232,7 +1232,7 @@ func (this *QGraphicsWidget) setFont(args ...interface{}) () {
     // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsWidget7setFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget7setFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setFont", args)
   }

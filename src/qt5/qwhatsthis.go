@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qwhatsthis.h
 // dst-file: /src/widgets/qwhatsthis.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static void QWhatsThis::enterWhatsThisMode();
-extern void _ZN10QWhatsThis18enterWhatsThisModeEv(); // 4
+extern void C_ZN10QWhatsThis18enterWhatsThisModeEv(); // 4
   // proto: static void QWhatsThis::leaveWhatsThisMode();
-extern void _ZN10QWhatsThis18leaveWhatsThisModeEv(); // 4
+extern void C_ZN10QWhatsThis18leaveWhatsThisModeEv(); // 4
   // proto: static void QWhatsThis::hideText();
-extern void _ZN10QWhatsThis8hideTextEv(); // 4
+extern void C_ZN10QWhatsThis8hideTextEv(); // 4
   // proto: static QAction * QWhatsThis::createAction(QObject * parent);
-extern void _ZN10QWhatsThis12createActionEP7QObject(void* arg0); // 4
+extern void C_ZN10QWhatsThis12createActionEP7QObject(void* arg0); // 4
   // proto: static void QWhatsThis::showText(const QPoint & pos, const QString & text, QWidget * w);
-extern void _ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget(void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget(void* arg0, void* arg1, void* arg2); // 4
   // proto: static bool QWhatsThis::inWhatsThisMode();
-extern void _ZN10QWhatsThis15inWhatsThisModeEv(); // 4
+extern void C_ZN10QWhatsThis15inWhatsThisModeEv(); // 4
 */
 import "C"
 // } // <= ext block end
@@ -71,7 +71,7 @@ func (this *QWhatsThis) enterWhatsThisMode_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QWhatsThis18enterWhatsThisModeEv
     // invoke: void enterWhatsThisMode()
-    C._ZN10QWhatsThis18enterWhatsThisModeEv()
+    C.C_ZN10QWhatsThis18enterWhatsThisModeEv()
   default:
     qtrt.ErrorResolve("QWhatsThis", "enterWhatsThisMode", args)
   }
@@ -91,7 +91,7 @@ func (this *QWhatsThis) leaveWhatsThisMode_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QWhatsThis18leaveWhatsThisModeEv
     // invoke: void leaveWhatsThisMode()
-    C._ZN10QWhatsThis18leaveWhatsThisModeEv()
+    C.C_ZN10QWhatsThis18leaveWhatsThisModeEv()
   default:
     qtrt.ErrorResolve("QWhatsThis", "leaveWhatsThisMode", args)
   }
@@ -111,7 +111,7 @@ func (this *QWhatsThis) hideText_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QWhatsThis8hideTextEv
     // invoke: void hideText()
-    C._ZN10QWhatsThis8hideTextEv()
+    C.C_ZN10QWhatsThis8hideTextEv()
   default:
     qtrt.ErrorResolve("QWhatsThis", "hideText", args)
   }
@@ -134,7 +134,7 @@ func (this *QWhatsThis) createAction_s(args ...interface{}) () {
     // invoke: QAction * createAction(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QWhatsThis12createActionEP7QObject(arg0)
+    C.C_ZN10QWhatsThis12createActionEP7QObject(arg0)
   default:
     qtrt.ErrorResolve("QWhatsThis", "createAction", args)
   }
@@ -163,7 +163,7 @@ func (this *QWhatsThis) showText_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget(arg0, arg1, arg2)
+    C.C_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget(arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QWhatsThis", "showText", args)
   }
@@ -183,7 +183,7 @@ func (this *QWhatsThis) inWhatsThisMode_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QWhatsThis15inWhatsThisModeEv
     // invoke: bool inWhatsThisMode()
-    C._ZN10QWhatsThis15inWhatsThisModeEv()
+    C.C_ZN10QWhatsThis15inWhatsThisModeEv()
   default:
     qtrt.ErrorResolve("QWhatsThis", "inWhatsThisMode", args)
   }

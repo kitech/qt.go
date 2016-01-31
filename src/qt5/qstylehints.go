@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.go
 //
@@ -29,49 +29,49 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QStyleHints::setFocusOnTouchRelease();
-extern void _ZNK11QStyleHints22setFocusOnTouchReleaseEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints22setFocusOnTouchReleaseEv(void* qthis); // 4
   // proto:  int QStyleHints::startDragDistance();
-extern void _ZNK11QStyleHints17startDragDistanceEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints17startDragDistanceEv(void* qthis); // 4
   // proto:  int QStyleHints::keyboardAutoRepeatRate();
-extern void _ZNK11QStyleHints22keyboardAutoRepeatRateEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints22keyboardAutoRepeatRateEv(void* qthis); // 4
   // proto:  int QStyleHints::passwordMaskDelay();
-extern void _ZNK11QStyleHints17passwordMaskDelayEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints17passwordMaskDelayEv(void* qthis); // 4
   // proto:  void QStyleHints::setMouseDoubleClickInterval(int mouseDoubleClickInterval);
-extern void _ZN11QStyleHints27setMouseDoubleClickIntervalEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN11QStyleHints27setMouseDoubleClickIntervalEi(void* qthis, int32_t arg0); // 4
   // proto:  int QStyleHints::cursorFlashTime();
-extern void _ZNK11QStyleHints15cursorFlashTimeEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints15cursorFlashTimeEv(void* qthis); // 4
   // proto:  int QStyleHints::mousePressAndHoldInterval();
-extern void _ZNK11QStyleHints25mousePressAndHoldIntervalEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints25mousePressAndHoldIntervalEv(void* qthis); // 4
   // proto:  int QStyleHints::startDragVelocity();
-extern void _ZNK11QStyleHints17startDragVelocityEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints17startDragVelocityEv(void* qthis); // 4
   // proto:  bool QStyleHints::useRtlExtensions();
-extern void _ZNK11QStyleHints16useRtlExtensionsEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints16useRtlExtensionsEv(void* qthis); // 4
   // proto:  void QStyleHints::setKeyboardInputInterval(int keyboardInputInterval);
-extern void _ZN11QStyleHints24setKeyboardInputIntervalEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN11QStyleHints24setKeyboardInputIntervalEi(void* qthis, int32_t arg0); // 4
   // proto:  Qt::TabFocusBehavior QStyleHints::tabFocusBehavior();
-extern void _ZNK11QStyleHints16tabFocusBehaviorEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints16tabFocusBehaviorEv(void* qthis); // 4
   // proto:  void QStyleHints::setStartDragTime(int startDragTime);
-extern void _ZN11QStyleHints16setStartDragTimeEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN11QStyleHints16setStartDragTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  void QStyleHints::setCursorFlashTime(int cursorFlashTime);
-extern void _ZN11QStyleHints18setCursorFlashTimeEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN11QStyleHints18setCursorFlashTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  qreal QStyleHints::fontSmoothingGamma();
-extern void _ZNK11QStyleHints18fontSmoothingGammaEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints18fontSmoothingGammaEv(void* qthis); // 4
   // proto:  void QStyleHints::setStartDragDistance(int startDragDistance);
-extern void _ZN11QStyleHints20setStartDragDistanceEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN11QStyleHints20setStartDragDistanceEi(void* qthis, int32_t arg0); // 4
   // proto:  const QMetaObject * QStyleHints::metaObject();
-extern void _ZNK11QStyleHints10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints10metaObjectEv(void* qthis); // 4
   // proto:  int QStyleHints::keyboardInputInterval();
-extern void _ZNK11QStyleHints21keyboardInputIntervalEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints21keyboardInputIntervalEv(void* qthis); // 4
   // proto:  bool QStyleHints::showIsFullScreen();
-extern void _ZNK11QStyleHints16showIsFullScreenEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints16showIsFullScreenEv(void* qthis); // 4
   // proto:  int QStyleHints::startDragTime();
-extern void _ZNK11QStyleHints13startDragTimeEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints13startDragTimeEv(void* qthis); // 4
   // proto:  bool QStyleHints::singleClickActivation();
-extern void _ZNK11QStyleHints21singleClickActivationEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints21singleClickActivationEv(void* qthis); // 4
   // proto:  QChar QStyleHints::passwordMaskCharacter();
-extern void _ZNK11QStyleHints21passwordMaskCharacterEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints21passwordMaskCharacterEv(void* qthis); // 4
   // proto:  int QStyleHints::mouseDoubleClickInterval();
-extern void _ZNK11QStyleHints24mouseDoubleClickIntervalEv(void* qthis); // 4
+extern void C_ZNK11QStyleHints24mouseDoubleClickIntervalEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -108,7 +108,7 @@ func (this *QStyleHints) setFocusOnTouchRelease(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints22setFocusOnTouchReleaseEv
     // invoke: bool setFocusOnTouchRelease()
-    C._ZNK11QStyleHints22setFocusOnTouchReleaseEv(this.qclsinst)
+    C.C_ZNK11QStyleHints22setFocusOnTouchReleaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "setFocusOnTouchRelease", args)
   }
@@ -128,7 +128,7 @@ func (this *QStyleHints) startDragDistance(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints17startDragDistanceEv
     // invoke: int startDragDistance()
-    C._ZNK11QStyleHints17startDragDistanceEv(this.qclsinst)
+    C.C_ZNK11QStyleHints17startDragDistanceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "startDragDistance", args)
   }
@@ -148,7 +148,7 @@ func (this *QStyleHints) keyboardAutoRepeatRate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints22keyboardAutoRepeatRateEv
     // invoke: int keyboardAutoRepeatRate()
-    C._ZNK11QStyleHints22keyboardAutoRepeatRateEv(this.qclsinst)
+    C.C_ZNK11QStyleHints22keyboardAutoRepeatRateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "keyboardAutoRepeatRate", args)
   }
@@ -168,7 +168,7 @@ func (this *QStyleHints) passwordMaskDelay(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints17passwordMaskDelayEv
     // invoke: int passwordMaskDelay()
-    C._ZNK11QStyleHints17passwordMaskDelayEv(this.qclsinst)
+    C.C_ZNK11QStyleHints17passwordMaskDelayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "passwordMaskDelay", args)
   }
@@ -191,7 +191,7 @@ func (this *QStyleHints) setMouseDoubleClickInterval(args ...interface{}) () {
     // invoke: void setMouseDoubleClickInterval(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QStyleHints27setMouseDoubleClickIntervalEi(this.qclsinst, arg0)
+    C.C_ZN11QStyleHints27setMouseDoubleClickIntervalEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyleHints", "setMouseDoubleClickInterval", args)
   }
@@ -211,7 +211,7 @@ func (this *QStyleHints) cursorFlashTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints15cursorFlashTimeEv
     // invoke: int cursorFlashTime()
-    C._ZNK11QStyleHints15cursorFlashTimeEv(this.qclsinst)
+    C.C_ZNK11QStyleHints15cursorFlashTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "cursorFlashTime", args)
   }
@@ -231,7 +231,7 @@ func (this *QStyleHints) mousePressAndHoldInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints25mousePressAndHoldIntervalEv
     // invoke: int mousePressAndHoldInterval()
-    C._ZNK11QStyleHints25mousePressAndHoldIntervalEv(this.qclsinst)
+    C.C_ZNK11QStyleHints25mousePressAndHoldIntervalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "mousePressAndHoldInterval", args)
   }
@@ -251,7 +251,7 @@ func (this *QStyleHints) startDragVelocity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints17startDragVelocityEv
     // invoke: int startDragVelocity()
-    C._ZNK11QStyleHints17startDragVelocityEv(this.qclsinst)
+    C.C_ZNK11QStyleHints17startDragVelocityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "startDragVelocity", args)
   }
@@ -271,7 +271,7 @@ func (this *QStyleHints) useRtlExtensions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints16useRtlExtensionsEv
     // invoke: bool useRtlExtensions()
-    C._ZNK11QStyleHints16useRtlExtensionsEv(this.qclsinst)
+    C.C_ZNK11QStyleHints16useRtlExtensionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "useRtlExtensions", args)
   }
@@ -294,7 +294,7 @@ func (this *QStyleHints) setKeyboardInputInterval(args ...interface{}) () {
     // invoke: void setKeyboardInputInterval(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QStyleHints24setKeyboardInputIntervalEi(this.qclsinst, arg0)
+    C.C_ZN11QStyleHints24setKeyboardInputIntervalEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyleHints", "setKeyboardInputInterval", args)
   }
@@ -314,7 +314,7 @@ func (this *QStyleHints) tabFocusBehavior(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints16tabFocusBehaviorEv
     // invoke: Qt::TabFocusBehavior tabFocusBehavior()
-    C._ZNK11QStyleHints16tabFocusBehaviorEv(this.qclsinst)
+    C.C_ZNK11QStyleHints16tabFocusBehaviorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "tabFocusBehavior", args)
   }
@@ -337,7 +337,7 @@ func (this *QStyleHints) setStartDragTime(args ...interface{}) () {
     // invoke: void setStartDragTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QStyleHints16setStartDragTimeEi(this.qclsinst, arg0)
+    C.C_ZN11QStyleHints16setStartDragTimeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyleHints", "setStartDragTime", args)
   }
@@ -360,7 +360,7 @@ func (this *QStyleHints) setCursorFlashTime(args ...interface{}) () {
     // invoke: void setCursorFlashTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QStyleHints18setCursorFlashTimeEi(this.qclsinst, arg0)
+    C.C_ZN11QStyleHints18setCursorFlashTimeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyleHints", "setCursorFlashTime", args)
   }
@@ -380,7 +380,7 @@ func (this *QStyleHints) fontSmoothingGamma(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints18fontSmoothingGammaEv
     // invoke: qreal fontSmoothingGamma()
-    C._ZNK11QStyleHints18fontSmoothingGammaEv(this.qclsinst)
+    C.C_ZNK11QStyleHints18fontSmoothingGammaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "fontSmoothingGamma", args)
   }
@@ -403,7 +403,7 @@ func (this *QStyleHints) setStartDragDistance(args ...interface{}) () {
     // invoke: void setStartDragDistance(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QStyleHints20setStartDragDistanceEi(this.qclsinst, arg0)
+    C.C_ZN11QStyleHints20setStartDragDistanceEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyleHints", "setStartDragDistance", args)
   }
@@ -423,7 +423,7 @@ func (this *QStyleHints) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QStyleHints10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QStyleHints10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "metaObject", args)
   }
@@ -443,7 +443,7 @@ func (this *QStyleHints) keyboardInputInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints21keyboardInputIntervalEv
     // invoke: int keyboardInputInterval()
-    C._ZNK11QStyleHints21keyboardInputIntervalEv(this.qclsinst)
+    C.C_ZNK11QStyleHints21keyboardInputIntervalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "keyboardInputInterval", args)
   }
@@ -463,7 +463,7 @@ func (this *QStyleHints) showIsFullScreen(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints16showIsFullScreenEv
     // invoke: bool showIsFullScreen()
-    C._ZNK11QStyleHints16showIsFullScreenEv(this.qclsinst)
+    C.C_ZNK11QStyleHints16showIsFullScreenEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "showIsFullScreen", args)
   }
@@ -483,7 +483,7 @@ func (this *QStyleHints) startDragTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints13startDragTimeEv
     // invoke: int startDragTime()
-    C._ZNK11QStyleHints13startDragTimeEv(this.qclsinst)
+    C.C_ZNK11QStyleHints13startDragTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "startDragTime", args)
   }
@@ -503,7 +503,7 @@ func (this *QStyleHints) singleClickActivation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints21singleClickActivationEv
     // invoke: bool singleClickActivation()
-    C._ZNK11QStyleHints21singleClickActivationEv(this.qclsinst)
+    C.C_ZNK11QStyleHints21singleClickActivationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "singleClickActivation", args)
   }
@@ -523,7 +523,7 @@ func (this *QStyleHints) passwordMaskCharacter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints21passwordMaskCharacterEv
     // invoke: QChar passwordMaskCharacter()
-    C._ZNK11QStyleHints21passwordMaskCharacterEv(this.qclsinst)
+    C.C_ZNK11QStyleHints21passwordMaskCharacterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "passwordMaskCharacter", args)
   }
@@ -543,7 +543,7 @@ func (this *QStyleHints) mouseDoubleClickInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints24mouseDoubleClickIntervalEv
     // invoke: int mouseDoubleClickInterval()
-    C._ZNK11QStyleHints24mouseDoubleClickIntervalEv(this.qclsinst)
+    C.C_ZNK11QStyleHints24mouseDoubleClickIntervalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "mouseDoubleClickInterval", args)
   }

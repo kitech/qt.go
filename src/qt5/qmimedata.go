@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.go
 //
@@ -29,51 +29,51 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QMimeData::~QMimeData();
-extern void _ZN9QMimeDataD2Ev(void* qthis); // 4
+extern void C_ZN9QMimeDataD2Ev(void* qthis); // 4
   // proto:  QVariant QMimeData::imageData();
-extern void _ZNK9QMimeData9imageDataEv(void* qthis); // 4
+extern void C_ZNK9QMimeData9imageDataEv(void* qthis); // 4
   // proto:  QString QMimeData::text();
-extern void _ZNK9QMimeData4textEv(void* qthis); // 4
+extern void C_ZNK9QMimeData4textEv(void* qthis); // 4
   // proto:  void QMimeData::setHtml(const QString & html);
-extern void _ZN9QMimeData7setHtmlERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN9QMimeData7setHtmlERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QMimeData::hasHtml();
-extern void _ZNK9QMimeData7hasHtmlEv(void* qthis); // 4
+extern void C_ZNK9QMimeData7hasHtmlEv(void* qthis); // 4
   // proto:  bool QMimeData::hasText();
-extern void _ZNK9QMimeData7hasTextEv(void* qthis); // 4
+extern void C_ZNK9QMimeData7hasTextEv(void* qthis); // 4
   // proto:  void QMimeData::QMimeData();
-extern void _ZN9QMimeDataC2Ev(void* qthis); // 3
+extern void C_ZN9QMimeDataC2Ev(void* qthis); // 3
   // proto:  bool QMimeData::hasUrls();
-extern void _ZNK9QMimeData7hasUrlsEv(void* qthis); // 4
+extern void C_ZNK9QMimeData7hasUrlsEv(void* qthis); // 4
   // proto:  void QMimeData::setImageData(const QVariant & image);
-extern void _ZN9QMimeData12setImageDataERK8QVariant(void* qthis, void* arg0); // 4
+extern void C_ZN9QMimeData12setImageDataERK8QVariant(void* qthis, void* arg0); // 4
   // proto:  QString QMimeData::html();
-extern void _ZNK9QMimeData4htmlEv(void* qthis); // 4
+extern void C_ZNK9QMimeData4htmlEv(void* qthis); // 4
   // proto:  void QMimeData::setColorData(const QVariant & color);
-extern void _ZN9QMimeData12setColorDataERK8QVariant(void* qthis, void* arg0); // 4
+extern void C_ZN9QMimeData12setColorDataERK8QVariant(void* qthis, void* arg0); // 4
   // proto:  void QMimeData::setData(const QString & mimetype, const QByteArray & data);
-extern void _ZN9QMimeData7setDataERK7QStringRK10QByteArray(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN9QMimeData7setDataERK7QStringRK10QByteArray(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QMimeData::removeFormat(const QString & mimetype);
-extern void _ZN9QMimeData12removeFormatERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN9QMimeData12removeFormatERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QMimeData::hasFormat(const QString & mimetype);
-extern void _ZNK9QMimeData9hasFormatERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK9QMimeData9hasFormatERK7QString(void* qthis, void* arg0); // 4
   // proto:  QByteArray QMimeData::data(const QString & mimetype);
-extern void _ZNK9QMimeData4dataERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK9QMimeData4dataERK7QString(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QMimeData::metaObject();
-extern void _ZNK9QMimeData10metaObjectEv(void* qthis); // 4
+extern void C_ZNK9QMimeData10metaObjectEv(void* qthis); // 4
   // proto:  void QMimeData::setText(const QString & text);
-extern void _ZN9QMimeData7setTextERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN9QMimeData7setTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QVariant QMimeData::colorData();
-extern void _ZNK9QMimeData9colorDataEv(void* qthis); // 4
+extern void C_ZNK9QMimeData9colorDataEv(void* qthis); // 4
   // proto:  bool QMimeData::hasColor();
-extern void _ZNK9QMimeData8hasColorEv(void* qthis); // 4
+extern void C_ZNK9QMimeData8hasColorEv(void* qthis); // 4
   // proto:  QList<QUrl> QMimeData::urls();
-extern void _ZNK9QMimeData4urlsEv(void* qthis); // 4
+extern void C_ZNK9QMimeData4urlsEv(void* qthis); // 4
   // proto:  QStringList QMimeData::formats();
-extern void _ZNK9QMimeData7formatsEv(void* qthis); // 4
+extern void C_ZNK9QMimeData7formatsEv(void* qthis); // 4
   // proto:  bool QMimeData::hasImage();
-extern void _ZNK9QMimeData8hasImageEv(void* qthis); // 4
+extern void C_ZNK9QMimeData8hasImageEv(void* qthis); // 4
   // proto:  void QMimeData::clear();
-extern void _ZN9QMimeData5clearEv(void* qthis); // 4
+extern void C_ZN9QMimeData5clearEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -105,7 +105,7 @@ func (this *QMimeData) FreeQMimeData(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeDataD0Ev
     // invoke: void ~QMimeData()
-    C._ZN9QMimeDataD2Ev(this.qclsinst)
+    C.C_ZN9QMimeDataD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "~QMimeData", args)
   }
@@ -125,7 +125,7 @@ func (this *QMimeData) imageData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData9imageDataEv
     // invoke: QVariant imageData()
-    C._ZNK9QMimeData9imageDataEv(this.qclsinst)
+    C.C_ZNK9QMimeData9imageDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "imageData", args)
   }
@@ -145,7 +145,7 @@ func (this *QMimeData) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData4textEv
     // invoke: QString text()
-    C._ZNK9QMimeData4textEv(this.qclsinst)
+    C.C_ZNK9QMimeData4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "text", args)
   }
@@ -168,7 +168,7 @@ func (this *QMimeData) setHtml(args ...interface{}) () {
     // invoke: void setHtml(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QMimeData7setHtmlERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QMimeData7setHtmlERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "setHtml", args)
   }
@@ -188,7 +188,7 @@ func (this *QMimeData) hasHtml(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData7hasHtmlEv
     // invoke: bool hasHtml()
-    C._ZNK9QMimeData7hasHtmlEv(this.qclsinst)
+    C.C_ZNK9QMimeData7hasHtmlEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "hasHtml", args)
   }
@@ -208,7 +208,7 @@ func (this *QMimeData) hasText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData7hasTextEv
     // invoke: bool hasText()
-    C._ZNK9QMimeData7hasTextEv(this.qclsinst)
+    C.C_ZNK9QMimeData7hasTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "hasText", args)
   }
@@ -230,7 +230,7 @@ func NewQMimeData(args ...interface{}) QMimeData {
     // invoke: void QMimeData()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QMimeDataC2Ev(qthis)
+    C.C_ZN9QMimeDataC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QMimeData", "QMimeData", args)
   }
@@ -251,7 +251,7 @@ func (this *QMimeData) hasUrls(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData7hasUrlsEv
     // invoke: bool hasUrls()
-    C._ZNK9QMimeData7hasUrlsEv(this.qclsinst)
+    C.C_ZNK9QMimeData7hasUrlsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "hasUrls", args)
   }
@@ -274,7 +274,7 @@ func (this *QMimeData) setImageData(args ...interface{}) () {
     // invoke: void setImageData(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QMimeData12setImageDataERK8QVariant(this.qclsinst, arg0)
+    C.C_ZN9QMimeData12setImageDataERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "setImageData", args)
   }
@@ -294,7 +294,7 @@ func (this *QMimeData) html(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData4htmlEv
     // invoke: QString html()
-    C._ZNK9QMimeData4htmlEv(this.qclsinst)
+    C.C_ZNK9QMimeData4htmlEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "html", args)
   }
@@ -317,7 +317,7 @@ func (this *QMimeData) setColorData(args ...interface{}) () {
     // invoke: void setColorData(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QMimeData12setColorDataERK8QVariant(this.qclsinst, arg0)
+    C.C_ZN9QMimeData12setColorDataERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "setColorData", args)
   }
@@ -343,7 +343,7 @@ func (this *QMimeData) setData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN9QMimeData7setDataERK7QStringRK10QByteArray(this.qclsinst, arg0, arg1)
+    C.C_ZN9QMimeData7setDataERK7QStringRK10QByteArray(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMimeData", "setData", args)
   }
@@ -366,7 +366,7 @@ func (this *QMimeData) removeFormat(args ...interface{}) () {
     // invoke: void removeFormat(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QMimeData12removeFormatERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QMimeData12removeFormatERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "removeFormat", args)
   }
@@ -389,7 +389,7 @@ func (this *QMimeData) hasFormat(args ...interface{}) () {
     // invoke: bool hasFormat(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QMimeData9hasFormatERK7QString(this.qclsinst, arg0)
+    C.C_ZNK9QMimeData9hasFormatERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "hasFormat", args)
   }
@@ -412,7 +412,7 @@ func (this *QMimeData) data(args ...interface{}) () {
     // invoke: QByteArray data(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QMimeData4dataERK7QString(this.qclsinst, arg0)
+    C.C_ZNK9QMimeData4dataERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "data", args)
   }
@@ -432,7 +432,7 @@ func (this *QMimeData) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK9QMimeData10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QMimeData10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "metaObject", args)
   }
@@ -455,7 +455,7 @@ func (this *QMimeData) setText(args ...interface{}) () {
     // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QMimeData7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QMimeData7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "setText", args)
   }
@@ -475,7 +475,7 @@ func (this *QMimeData) colorData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData9colorDataEv
     // invoke: QVariant colorData()
-    C._ZNK9QMimeData9colorDataEv(this.qclsinst)
+    C.C_ZNK9QMimeData9colorDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "colorData", args)
   }
@@ -495,7 +495,7 @@ func (this *QMimeData) hasColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData8hasColorEv
     // invoke: bool hasColor()
-    C._ZNK9QMimeData8hasColorEv(this.qclsinst)
+    C.C_ZNK9QMimeData8hasColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "hasColor", args)
   }
@@ -515,7 +515,7 @@ func (this *QMimeData) urls(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData4urlsEv
     // invoke: QList<QUrl> urls()
-    C._ZNK9QMimeData4urlsEv(this.qclsinst)
+    C.C_ZNK9QMimeData4urlsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "urls", args)
   }
@@ -535,7 +535,7 @@ func (this *QMimeData) formats(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData7formatsEv
     // invoke: QStringList formats()
-    C._ZNK9QMimeData7formatsEv(this.qclsinst)
+    C.C_ZNK9QMimeData7formatsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "formats", args)
   }
@@ -555,7 +555,7 @@ func (this *QMimeData) hasImage(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData8hasImageEv
     // invoke: bool hasImage()
-    C._ZNK9QMimeData8hasImageEv(this.qclsinst)
+    C.C_ZNK9QMimeData8hasImageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "hasImage", args)
   }
@@ -575,7 +575,7 @@ func (this *QMimeData) clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeData5clearEv
     // invoke: void clear()
-    C._ZN9QMimeData5clearEv(this.qclsinst)
+    C.C_ZN9QMimeData5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "clear", args)
   }

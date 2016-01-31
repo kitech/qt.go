@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qtoolbutton.h
 // dst-file: /src/widgets/qtoolbutton.go
 //
@@ -29,35 +29,35 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QToolButton::showMenu();
-extern void _ZN11QToolButton8showMenuEv(void* qthis); // 4
+extern void C_ZN11QToolButton8showMenuEv(void* qthis); // 4
   // proto:  void QToolButton::QToolButton(QWidget * parent);
-extern void _ZN11QToolButtonC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN11QToolButtonC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QToolButton::setMenu(QMenu * menu);
-extern void _ZN11QToolButton7setMenuEP5QMenu(void* qthis, void* arg0); // 4
+extern void C_ZN11QToolButton7setMenuEP5QMenu(void* qthis, void* arg0); // 4
   // proto:  void QToolButton::~QToolButton();
-extern void _ZN11QToolButtonD2Ev(void* qthis); // 4
+extern void C_ZN11QToolButtonD2Ev(void* qthis); // 4
   // proto:  void QToolButton::setAutoRaise(bool enable);
-extern void _ZN11QToolButton12setAutoRaiseEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QToolButton12setAutoRaiseEb(void* qthis, bool arg0); // 4
   // proto:  QMenu * QToolButton::menu();
-extern void _ZNK11QToolButton4menuEv(void* qthis); // 4
+extern void C_ZNK11QToolButton4menuEv(void* qthis); // 4
   // proto:  bool QToolButton::autoRaise();
-extern void _ZNK11QToolButton9autoRaiseEv(void* qthis); // 4
+extern void C_ZNK11QToolButton9autoRaiseEv(void* qthis); // 4
   // proto:  QAction * QToolButton::defaultAction();
-extern void _ZNK11QToolButton13defaultActionEv(void* qthis); // 4
+extern void C_ZNK11QToolButton13defaultActionEv(void* qthis); // 4
   // proto:  void QToolButton::setDefaultAction(QAction * );
-extern void _ZN11QToolButton16setDefaultActionEP7QAction(void* qthis, void* arg0); // 4
+extern void C_ZN11QToolButton16setDefaultActionEP7QAction(void* qthis, void* arg0); // 4
   // proto:  QSize QToolButton::sizeHint();
-extern void _ZNK11QToolButton8sizeHintEv(void* qthis); // 4
+extern void C_ZNK11QToolButton8sizeHintEv(void* qthis); // 4
   // proto:  const QMetaObject * QToolButton::metaObject();
-extern void _ZNK11QToolButton10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QToolButton10metaObjectEv(void* qthis); // 4
   // proto:  QSize QToolButton::minimumSizeHint();
-extern void _ZNK11QToolButton15minimumSizeHintEv(void* qthis); // 4
+extern void C_ZNK11QToolButton15minimumSizeHintEv(void* qthis); // 4
   // proto:  Qt::ArrowType QToolButton::arrowType();
-extern void _ZNK11QToolButton9arrowTypeEv(void* qthis); // 4
+extern void C_ZNK11QToolButton9arrowTypeEv(void* qthis); // 4
   // proto:  Qt::ToolButtonStyle QToolButton::toolButtonStyle();
-extern void _ZNK11QToolButton15toolButtonStyleEv(void* qthis); // 4
+extern void C_ZNK11QToolButton15toolButtonStyleEv(void* qthis); // 4
   // proto:  QToolButton::ToolButtonPopupMode QToolButton::popupMode();
-extern void _ZNK11QToolButton9popupModeEv(void* qthis); // 4
+extern void C_ZNK11QToolButton9popupModeEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -90,7 +90,7 @@ func (this *QToolButton) showMenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QToolButton8showMenuEv
     // invoke: void showMenu()
-    C._ZN11QToolButton8showMenuEv(this.qclsinst)
+    C.C_ZN11QToolButton8showMenuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "showMenu", args)
   }
@@ -115,7 +115,7 @@ func NewQToolButton(args ...interface{}) QToolButton {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QToolButtonC2EP7QWidget(qthis, arg0)
+    C.C_ZN11QToolButtonC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QToolButton", "QToolButton", args)
   }
@@ -139,7 +139,7 @@ func (this *QToolButton) setMenu(args ...interface{}) () {
     // invoke: void setMenu(class QMenu *)
     var arg0 = args[0].(QMenu).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QToolButton7setMenuEP5QMenu(this.qclsinst, arg0)
+    C.C_ZN11QToolButton7setMenuEP5QMenu(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolButton", "setMenu", args)
   }
@@ -159,7 +159,7 @@ func (this *QToolButton) FreeQToolButton(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QToolButtonD0Ev
     // invoke: void ~QToolButton()
-    C._ZN11QToolButtonD2Ev(this.qclsinst)
+    C.C_ZN11QToolButtonD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "~QToolButton", args)
   }
@@ -182,7 +182,7 @@ func (this *QToolButton) setAutoRaise(args ...interface{}) () {
     // invoke: void setAutoRaise(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QToolButton12setAutoRaiseEb(this.qclsinst, arg0)
+    C.C_ZN11QToolButton12setAutoRaiseEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolButton", "setAutoRaise", args)
   }
@@ -202,7 +202,7 @@ func (this *QToolButton) menu(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton4menuEv
     // invoke: QMenu * menu()
-    C._ZNK11QToolButton4menuEv(this.qclsinst)
+    C.C_ZNK11QToolButton4menuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "menu", args)
   }
@@ -222,7 +222,7 @@ func (this *QToolButton) autoRaise(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton9autoRaiseEv
     // invoke: bool autoRaise()
-    C._ZNK11QToolButton9autoRaiseEv(this.qclsinst)
+    C.C_ZNK11QToolButton9autoRaiseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "autoRaise", args)
   }
@@ -242,7 +242,7 @@ func (this *QToolButton) defaultAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton13defaultActionEv
     // invoke: QAction * defaultAction()
-    C._ZNK11QToolButton13defaultActionEv(this.qclsinst)
+    C.C_ZNK11QToolButton13defaultActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "defaultAction", args)
   }
@@ -265,7 +265,7 @@ func (this *QToolButton) setDefaultAction(args ...interface{}) () {
     // invoke: void setDefaultAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QToolButton16setDefaultActionEP7QAction(this.qclsinst, arg0)
+    C.C_ZN11QToolButton16setDefaultActionEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolButton", "setDefaultAction", args)
   }
@@ -285,7 +285,7 @@ func (this *QToolButton) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton8sizeHintEv
     // invoke: QSize sizeHint()
-    C._ZNK11QToolButton8sizeHintEv(this.qclsinst)
+    C.C_ZNK11QToolButton8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "sizeHint", args)
   }
@@ -305,7 +305,7 @@ func (this *QToolButton) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QToolButton10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QToolButton10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "metaObject", args)
   }
@@ -325,7 +325,7 @@ func (this *QToolButton) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C._ZNK11QToolButton15minimumSizeHintEv(this.qclsinst)
+    C.C_ZNK11QToolButton15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "minimumSizeHint", args)
   }
@@ -345,7 +345,7 @@ func (this *QToolButton) arrowType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton9arrowTypeEv
     // invoke: Qt::ArrowType arrowType()
-    C._ZNK11QToolButton9arrowTypeEv(this.qclsinst)
+    C.C_ZNK11QToolButton9arrowTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "arrowType", args)
   }
@@ -365,7 +365,7 @@ func (this *QToolButton) toolButtonStyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton15toolButtonStyleEv
     // invoke: Qt::ToolButtonStyle toolButtonStyle()
-    C._ZNK11QToolButton15toolButtonStyleEv(this.qclsinst)
+    C.C_ZNK11QToolButton15toolButtonStyleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "toolButtonStyle", args)
   }
@@ -385,7 +385,7 @@ func (this *QToolButton) popupMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QToolButton9popupModeEv
     // invoke: QToolButton::ToolButtonPopupMode popupMode()
-    C._ZNK11QToolButton9popupModeEv(this.qclsinst)
+    C.C_ZNK11QToolButton9popupModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "popupMode", args)
   }

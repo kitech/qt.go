@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.go
 //
@@ -29,33 +29,33 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QBackingStore::QBackingStore(QWindow * window);
-extern void _ZN13QBackingStoreC2EP7QWindow(void* qthis, void* arg0); // 3
+extern void C_ZN13QBackingStoreC2EP7QWindow(void* qthis, void* arg0); // 3
   // proto:  QPlatformBackingStore * QBackingStore::handle();
-extern void _ZNK13QBackingStore6handleEv(void* qthis); // 4
+extern void C_ZNK13QBackingStore6handleEv(void* qthis); // 4
   // proto:  QPaintDevice * QBackingStore::paintDevice();
-extern void _ZN13QBackingStore11paintDeviceEv(void* qthis); // 4
+extern void C_ZN13QBackingStore11paintDeviceEv(void* qthis); // 4
   // proto:  QRegion QBackingStore::staticContents();
-extern void _ZNK13QBackingStore14staticContentsEv(void* qthis); // 4
+extern void C_ZNK13QBackingStore14staticContentsEv(void* qthis); // 4
   // proto:  void QBackingStore::beginPaint(const QRegion & );
-extern void _ZN13QBackingStore10beginPaintERK7QRegion(void* qthis, void* arg0); // 4
+extern void C_ZN13QBackingStore10beginPaintERK7QRegion(void* qthis, void* arg0); // 4
   // proto:  void QBackingStore::endPaint();
-extern void _ZN13QBackingStore8endPaintEv(void* qthis); // 4
+extern void C_ZN13QBackingStore8endPaintEv(void* qthis); // 4
   // proto:  bool QBackingStore::hasStaticContents();
-extern void _ZNK13QBackingStore17hasStaticContentsEv(void* qthis); // 4
+extern void C_ZNK13QBackingStore17hasStaticContentsEv(void* qthis); // 4
   // proto:  QWindow * QBackingStore::window();
-extern void _ZNK13QBackingStore6windowEv(void* qthis); // 4
+extern void C_ZNK13QBackingStore6windowEv(void* qthis); // 4
   // proto:  void QBackingStore::setStaticContents(const QRegion & region);
-extern void _ZN13QBackingStore17setStaticContentsERK7QRegion(void* qthis, void* arg0); // 4
+extern void C_ZN13QBackingStore17setStaticContentsERK7QRegion(void* qthis, void* arg0); // 4
   // proto:  void QBackingStore::flush(const QRegion & region, QWindow * window, const QPoint & offset);
-extern void _ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  QSize QBackingStore::size();
-extern void _ZNK13QBackingStore4sizeEv(void* qthis); // 4
+extern void C_ZNK13QBackingStore4sizeEv(void* qthis); // 4
   // proto:  bool QBackingStore::scroll(const QRegion & area, int dx, int dy);
-extern void _ZN13QBackingStore6scrollERK7QRegionii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
+extern void C_ZN13QBackingStore6scrollERK7QRegionii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
   // proto:  void QBackingStore::resize(const QSize & size);
-extern void _ZN13QBackingStore6resizeERK5QSize(void* qthis, void* arg0); // 4
+extern void C_ZN13QBackingStore6resizeERK5QSize(void* qthis, void* arg0); // 4
   // proto:  void QBackingStore::~QBackingStore();
-extern void _ZN13QBackingStoreD2Ev(void* qthis); // 4
+extern void C_ZN13QBackingStoreD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -92,7 +92,7 @@ func NewQBackingStore(args ...interface{}) QBackingStore {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN13QBackingStoreC2EP7QWindow(qthis, arg0)
+    C.C_ZN13QBackingStoreC2EP7QWindow(qthis, arg0)
   default:
     qtrt.ErrorResolve("QBackingStore", "QBackingStore", args)
   }
@@ -113,7 +113,7 @@ func (this *QBackingStore) handle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QBackingStore6handleEv
     // invoke: QPlatformBackingStore * handle()
-    C._ZNK13QBackingStore6handleEv(this.qclsinst)
+    C.C_ZNK13QBackingStore6handleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "handle", args)
   }
@@ -133,7 +133,7 @@ func (this *QBackingStore) paintDevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QBackingStore11paintDeviceEv
     // invoke: QPaintDevice * paintDevice()
-    C._ZN13QBackingStore11paintDeviceEv(this.qclsinst)
+    C.C_ZN13QBackingStore11paintDeviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "paintDevice", args)
   }
@@ -153,7 +153,7 @@ func (this *QBackingStore) staticContents(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QBackingStore14staticContentsEv
     // invoke: QRegion staticContents()
-    C._ZNK13QBackingStore14staticContentsEv(this.qclsinst)
+    C.C_ZNK13QBackingStore14staticContentsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "staticContents", args)
   }
@@ -176,7 +176,7 @@ func (this *QBackingStore) beginPaint(args ...interface{}) () {
     // invoke: void beginPaint(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QBackingStore10beginPaintERK7QRegion(this.qclsinst, arg0)
+    C.C_ZN13QBackingStore10beginPaintERK7QRegion(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBackingStore", "beginPaint", args)
   }
@@ -196,7 +196,7 @@ func (this *QBackingStore) endPaint(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QBackingStore8endPaintEv
     // invoke: void endPaint()
-    C._ZN13QBackingStore8endPaintEv(this.qclsinst)
+    C.C_ZN13QBackingStore8endPaintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "endPaint", args)
   }
@@ -216,7 +216,7 @@ func (this *QBackingStore) hasStaticContents(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QBackingStore17hasStaticContentsEv
     // invoke: bool hasStaticContents()
-    C._ZNK13QBackingStore17hasStaticContentsEv(this.qclsinst)
+    C.C_ZNK13QBackingStore17hasStaticContentsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "hasStaticContents", args)
   }
@@ -236,7 +236,7 @@ func (this *QBackingStore) window(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QBackingStore6windowEv
     // invoke: QWindow * window()
-    C._ZNK13QBackingStore6windowEv(this.qclsinst)
+    C.C_ZNK13QBackingStore6windowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "window", args)
   }
@@ -259,7 +259,7 @@ func (this *QBackingStore) setStaticContents(args ...interface{}) () {
     // invoke: void setStaticContents(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QBackingStore17setStaticContentsERK7QRegion(this.qclsinst, arg0)
+    C.C_ZN13QBackingStore17setStaticContentsERK7QRegion(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBackingStore", "setStaticContents", args)
   }
@@ -288,7 +288,7 @@ func (this *QBackingStore) flush(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPoint).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QBackingStore", "flush", args)
   }
@@ -308,7 +308,7 @@ func (this *QBackingStore) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QBackingStore4sizeEv
     // invoke: QSize size()
-    C._ZNK13QBackingStore4sizeEv(this.qclsinst)
+    C.C_ZNK13QBackingStore4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "size", args)
   }
@@ -337,7 +337,7 @@ func (this *QBackingStore) scroll(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN13QBackingStore6scrollERK7QRegionii(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QBackingStore6scrollERK7QRegionii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QBackingStore", "scroll", args)
   }
@@ -360,7 +360,7 @@ func (this *QBackingStore) resize(args ...interface{}) () {
     // invoke: void resize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QBackingStore6resizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN13QBackingStore6resizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBackingStore", "resize", args)
   }
@@ -380,7 +380,7 @@ func (this *QBackingStore) FreeQBackingStore(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QBackingStoreD0Ev
     // invoke: void ~QBackingStore()
-    C._ZN13QBackingStoreD2Ev(this.qclsinst)
+    C.C_ZN13QBackingStoreD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "~QBackingStore", args)
   }

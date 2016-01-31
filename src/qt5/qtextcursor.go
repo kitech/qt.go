@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qtextcursor.h
 // dst-file: /src/gui/qtextcursor.go
 //
@@ -29,139 +29,139 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QTextCursor::isCopyOf(const QTextCursor & other);
-extern void _ZNK11QTextCursor8isCopyOfERKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK11QTextCursor8isCopyOfERKS_(void* qthis, void* arg0); // 4
   // proto:  void QTextCursor::insertText(const QString & text, const QTextCharFormat & format);
-extern void _ZN11QTextCursor10insertTextERK7QStringRK15QTextCharFormat(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN11QTextCursor10insertTextERK7QStringRK15QTextCharFormat(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QTextCursor::insertText(const QString & text);
-extern void _ZN11QTextCursor10insertTextERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor10insertTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QTextCursor::atStart();
-extern void _ZNK11QTextCursor7atStartEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor7atStartEv(void* qthis); // 4
   // proto:  QTextDocumentFragment QTextCursor::selection();
-extern void _ZNK11QTextCursor9selectionEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor9selectionEv(void* qthis); // 4
   // proto:  QTextFrame * QTextCursor::insertFrame(const QTextFrameFormat & format);
-extern void _ZN11QTextCursor11insertFrameERK16QTextFrameFormat(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor11insertFrameERK16QTextFrameFormat(void* qthis, void* arg0); // 4
   // proto:  void QTextCursor::insertHtml(const QString & html);
-extern void _ZN11QTextCursor10insertHtmlERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor10insertHtmlERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QTextCursor::deleteChar();
-extern void _ZN11QTextCursor10deleteCharEv(void* qthis); // 4
+extern void C_ZN11QTextCursor10deleteCharEv(void* qthis); // 4
   // proto:  void QTextCursor::endEditBlock();
-extern void _ZN11QTextCursor12endEditBlockEv(void* qthis); // 4
+extern void C_ZN11QTextCursor12endEditBlockEv(void* qthis); // 4
   // proto:  bool QTextCursor::atBlockEnd();
-extern void _ZNK11QTextCursor10atBlockEndEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor10atBlockEndEv(void* qthis); // 4
   // proto:  int QTextCursor::selectionStart();
-extern void _ZNK11QTextCursor14selectionStartEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor14selectionStartEv(void* qthis); // 4
   // proto:  int QTextCursor::selectionEnd();
-extern void _ZNK11QTextCursor12selectionEndEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor12selectionEndEv(void* qthis); // 4
   // proto:  void QTextCursor::QTextCursor(QTextDocument * document);
-extern void _ZN11QTextCursorC2EP13QTextDocument(void* qthis, void* arg0); // 3
+extern void C_ZN11QTextCursorC2EP13QTextDocument(void* qthis, void* arg0); // 3
   // proto:  void QTextCursor::QTextCursor(const QTextCursor & cursor);
-extern void _ZN11QTextCursorC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN11QTextCursorC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QTextCursor::QTextCursor(QTextFrame * frame);
-extern void _ZN11QTextCursorC2EP10QTextFrame(void* qthis, void* arg0); // 3
+extern void C_ZN11QTextCursorC2EP10QTextFrame(void* qthis, void* arg0); // 3
   // proto:  void QTextCursor::QTextCursor();
-extern void _ZN11QTextCursorC2Ev(void* qthis); // 3
+extern void C_ZN11QTextCursorC2Ev(void* qthis); // 3
   // proto:  void QTextCursor::QTextCursor(const QTextBlock & block);
-extern void _ZN11QTextCursorC2ERK10QTextBlock(void* qthis, void* arg0); // 3
+extern void C_ZN11QTextCursorC2ERK10QTextBlock(void* qthis, void* arg0); // 3
   // proto:  QTextTable * QTextCursor::currentTable();
-extern void _ZNK11QTextCursor12currentTableEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor12currentTableEv(void* qthis); // 4
   // proto:  void QTextCursor::setKeepPositionOnInsert(bool b);
-extern void _ZN11QTextCursor23setKeepPositionOnInsertEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QTextCursor23setKeepPositionOnInsertEb(void* qthis, bool arg0); // 4
   // proto:  void QTextCursor::clearSelection();
-extern void _ZN11QTextCursor14clearSelectionEv(void* qthis); // 4
+extern void C_ZN11QTextCursor14clearSelectionEv(void* qthis); // 4
   // proto:  bool QTextCursor::atBlockStart();
-extern void _ZNK11QTextCursor12atBlockStartEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor12atBlockStartEv(void* qthis); // 4
   // proto:  void QTextCursor::setVerticalMovementX(int x);
-extern void _ZN11QTextCursor20setVerticalMovementXEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN11QTextCursor20setVerticalMovementXEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTextCursor::deletePreviousChar();
-extern void _ZN11QTextCursor18deletePreviousCharEv(void* qthis); // 4
+extern void C_ZN11QTextCursor18deletePreviousCharEv(void* qthis); // 4
   // proto:  void QTextCursor::mergeCharFormat(const QTextCharFormat & modifier);
-extern void _ZN11QTextCursor15mergeCharFormatERK15QTextCharFormat(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor15mergeCharFormatERK15QTextCharFormat(void* qthis, void* arg0); // 4
   // proto:  void QTextCursor::setVisualNavigation(bool b);
-extern void _ZN11QTextCursor19setVisualNavigationEb(void* qthis, bool arg0); // 4
+extern void C_ZN11QTextCursor19setVisualNavigationEb(void* qthis, bool arg0); // 4
   // proto:  void QTextCursor::mergeBlockCharFormat(const QTextCharFormat & modifier);
-extern void _ZN11QTextCursor20mergeBlockCharFormatERK15QTextCharFormat(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor20mergeBlockCharFormatERK15QTextCharFormat(void* qthis, void* arg0); // 4
   // proto:  void QTextCursor::beginEditBlock();
-extern void _ZN11QTextCursor14beginEditBlockEv(void* qthis); // 4
+extern void C_ZN11QTextCursor14beginEditBlockEv(void* qthis); // 4
   // proto:  QTextCharFormat QTextCursor::charFormat();
-extern void _ZNK11QTextCursor10charFormatEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor10charFormatEv(void* qthis); // 4
   // proto:  QTextList * QTextCursor::currentList();
-extern void _ZNK11QTextCursor11currentListEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor11currentListEv(void* qthis); // 4
   // proto:  QTextBlockFormat QTextCursor::blockFormat();
-extern void _ZNK11QTextCursor11blockFormatEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor11blockFormatEv(void* qthis); // 4
   // proto:  void QTextCursor::swap(QTextCursor & other);
-extern void _ZN11QTextCursor4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN11QTextCursor4swapERS_(void* qthis, void* arg0); // 2
   // proto:  int QTextCursor::positionInBlock();
-extern void _ZNK11QTextCursor15positionInBlockEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor15positionInBlockEv(void* qthis); // 4
   // proto:  QTextDocument * QTextCursor::document();
-extern void _ZNK11QTextCursor8documentEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor8documentEv(void* qthis); // 4
   // proto:  bool QTextCursor::hasSelection();
-extern void _ZNK11QTextCursor12hasSelectionEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor12hasSelectionEv(void* qthis); // 4
   // proto:  void QTextCursor::mergeBlockFormat(const QTextBlockFormat & modifier);
-extern void _ZN11QTextCursor16mergeBlockFormatERK16QTextBlockFormat(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor16mergeBlockFormatERK16QTextBlockFormat(void* qthis, void* arg0); // 4
   // proto:  void QTextCursor::insertFragment(const QTextDocumentFragment & fragment);
-extern void _ZN11QTextCursor14insertFragmentERK21QTextDocumentFragment(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor14insertFragmentERK21QTextDocumentFragment(void* qthis, void* arg0); // 4
   // proto:  void QTextCursor::setCharFormat(const QTextCharFormat & format);
-extern void _ZN11QTextCursor13setCharFormatERK15QTextCharFormat(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor13setCharFormatERK15QTextCharFormat(void* qthis, void* arg0); // 4
   // proto:  void QTextCursor::~QTextCursor();
-extern void _ZN11QTextCursorD2Ev(void* qthis); // 4
+extern void C_ZN11QTextCursorD2Ev(void* qthis); // 4
   // proto:  QTextCharFormat QTextCursor::blockCharFormat();
-extern void _ZNK11QTextCursor15blockCharFormatEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor15blockCharFormatEv(void* qthis); // 4
   // proto:  void QTextCursor::selectedTableCells(int * firstRow, int * numRows, int * firstColumn, int * numColumns);
-extern void _ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 4
+extern void C_ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 4
   // proto:  int QTextCursor::blockNumber();
-extern void _ZNK11QTextCursor11blockNumberEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor11blockNumberEv(void* qthis); // 4
   // proto:  QString QTextCursor::selectedText();
-extern void _ZNK11QTextCursor12selectedTextEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor12selectedTextEv(void* qthis); // 4
   // proto:  void QTextCursor::setBlockFormat(const QTextBlockFormat & format);
-extern void _ZN11QTextCursor14setBlockFormatERK16QTextBlockFormat(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor14setBlockFormatERK16QTextBlockFormat(void* qthis, void* arg0); // 4
   // proto:  QTextList * QTextCursor::insertList(const QTextListFormat & format);
-extern void _ZN11QTextCursor10insertListERK15QTextListFormat(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor10insertListERK15QTextListFormat(void* qthis, void* arg0); // 4
   // proto:  bool QTextCursor::visualNavigation();
-extern void _ZNK11QTextCursor16visualNavigationEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor16visualNavigationEv(void* qthis); // 4
   // proto:  void QTextCursor::insertBlock(const QTextBlockFormat & format);
-extern void _ZN11QTextCursor11insertBlockERK16QTextBlockFormat(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor11insertBlockERK16QTextBlockFormat(void* qthis, void* arg0); // 4
   // proto:  void QTextCursor::insertBlock();
-extern void _ZN11QTextCursor11insertBlockEv(void* qthis); // 4
+extern void C_ZN11QTextCursor11insertBlockEv(void* qthis); // 4
   // proto:  void QTextCursor::insertBlock(const QTextBlockFormat & format, const QTextCharFormat & charFormat);
-extern void _ZN11QTextCursor11insertBlockERK16QTextBlockFormatRK15QTextCharFormat(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN11QTextCursor11insertBlockERK16QTextBlockFormatRK15QTextCharFormat(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QTextFrame * QTextCursor::currentFrame();
-extern void _ZNK11QTextCursor12currentFrameEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor12currentFrameEv(void* qthis); // 4
   // proto:  void QTextCursor::setBlockCharFormat(const QTextCharFormat & format);
-extern void _ZN11QTextCursor18setBlockCharFormatERK15QTextCharFormat(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor18setBlockCharFormatERK15QTextCharFormat(void* qthis, void* arg0); // 4
   // proto:  int QTextCursor::columnNumber();
-extern void _ZNK11QTextCursor12columnNumberEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor12columnNumberEv(void* qthis); // 4
   // proto:  void QTextCursor::insertImage(const QTextImageFormat & format);
-extern void _ZN11QTextCursor11insertImageERK16QTextImageFormat(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor11insertImageERK16QTextImageFormat(void* qthis, void* arg0); // 4
   // proto:  void QTextCursor::insertImage(const QImage & image, const QString & name);
-extern void _ZN11QTextCursor11insertImageERK6QImageRK7QString(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN11QTextCursor11insertImageERK6QImageRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QTextCursor::insertImage(const QString & name);
-extern void _ZN11QTextCursor11insertImageERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor11insertImageERK7QString(void* qthis, void* arg0); // 4
   // proto:  bool QTextCursor::keepPositionOnInsert();
-extern void _ZNK11QTextCursor20keepPositionOnInsertEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor20keepPositionOnInsertEv(void* qthis); // 4
   // proto:  void QTextCursor::joinPreviousEditBlock();
-extern void _ZN11QTextCursor21joinPreviousEditBlockEv(void* qthis); // 4
+extern void C_ZN11QTextCursor21joinPreviousEditBlockEv(void* qthis); // 4
   // proto:  bool QTextCursor::atEnd();
-extern void _ZNK11QTextCursor5atEndEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor5atEndEv(void* qthis); // 4
   // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols);
-extern void _ZN11QTextCursor11insertTableEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN11QTextCursor11insertTableEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols, const QTextTableFormat & format);
-extern void _ZN11QTextCursor11insertTableEiiRK16QTextTableFormat(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN11QTextCursor11insertTableEiiRK16QTextTableFormat(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  int QTextCursor::anchor();
-extern void _ZNK11QTextCursor6anchorEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor6anchorEv(void* qthis); // 4
   // proto:  bool QTextCursor::isNull();
-extern void _ZNK11QTextCursor6isNullEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor6isNullEv(void* qthis); // 4
   // proto:  int QTextCursor::verticalMovementX();
-extern void _ZNK11QTextCursor17verticalMovementXEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor17verticalMovementXEv(void* qthis); // 4
   // proto:  void QTextCursor::removeSelectedText();
-extern void _ZN11QTextCursor18removeSelectedTextEv(void* qthis); // 4
+extern void C_ZN11QTextCursor18removeSelectedTextEv(void* qthis); // 4
   // proto:  QTextList * QTextCursor::createList(const QTextListFormat & format);
-extern void _ZN11QTextCursor10createListERK15QTextListFormat(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextCursor10createListERK15QTextListFormat(void* qthis, void* arg0); // 4
   // proto:  int QTextCursor::position();
-extern void _ZNK11QTextCursor8positionEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor8positionEv(void* qthis); // 4
   // proto:  bool QTextCursor::hasComplexSelection();
-extern void _ZNK11QTextCursor19hasComplexSelectionEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor19hasComplexSelectionEv(void* qthis); // 4
   // proto:  QTextBlock QTextCursor::block();
-extern void _ZNK11QTextCursor5blockEv(void* qthis); // 4
+extern void C_ZNK11QTextCursor5blockEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -196,7 +196,7 @@ func (this *QTextCursor) isCopyOf(args ...interface{}) () {
     // invoke: bool isCopyOf(const class QTextCursor &)
     var arg0 = args[0].(QTextCursor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextCursor8isCopyOfERKS_(this.qclsinst, arg0)
+    C.C_ZNK11QTextCursor8isCopyOfERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "isCopyOf", args)
   }
@@ -225,13 +225,13 @@ func (this *QTextCursor) insertText(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTextCharFormat).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN11QTextCursor10insertTextERK7QStringRK15QTextCharFormat(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTextCursor10insertTextERK7QStringRK15QTextCharFormat(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN11QTextCursor10insertTextERK7QString
     // invoke: void insertText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor10insertTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor10insertTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "insertText", args)
   }
@@ -251,7 +251,7 @@ func (this *QTextCursor) atStart(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor7atStartEv
     // invoke: bool atStart()
-    C._ZNK11QTextCursor7atStartEv(this.qclsinst)
+    C.C_ZNK11QTextCursor7atStartEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "atStart", args)
   }
@@ -271,7 +271,7 @@ func (this *QTextCursor) selection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor9selectionEv
     // invoke: QTextDocumentFragment selection()
-    C._ZNK11QTextCursor9selectionEv(this.qclsinst)
+    C.C_ZNK11QTextCursor9selectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "selection", args)
   }
@@ -294,7 +294,7 @@ func (this *QTextCursor) insertFrame(args ...interface{}) () {
     // invoke: QTextFrame * insertFrame(const class QTextFrameFormat &)
     var arg0 = args[0].(QTextFrameFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor11insertFrameERK16QTextFrameFormat(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor11insertFrameERK16QTextFrameFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "insertFrame", args)
   }
@@ -317,7 +317,7 @@ func (this *QTextCursor) insertHtml(args ...interface{}) () {
     // invoke: void insertHtml(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor10insertHtmlERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor10insertHtmlERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "insertHtml", args)
   }
@@ -337,7 +337,7 @@ func (this *QTextCursor) deleteChar(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextCursor10deleteCharEv
     // invoke: void deleteChar()
-    C._ZN11QTextCursor10deleteCharEv(this.qclsinst)
+    C.C_ZN11QTextCursor10deleteCharEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "deleteChar", args)
   }
@@ -357,7 +357,7 @@ func (this *QTextCursor) endEditBlock(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextCursor12endEditBlockEv
     // invoke: void endEditBlock()
-    C._ZN11QTextCursor12endEditBlockEv(this.qclsinst)
+    C.C_ZN11QTextCursor12endEditBlockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "endEditBlock", args)
   }
@@ -377,7 +377,7 @@ func (this *QTextCursor) atBlockEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor10atBlockEndEv
     // invoke: bool atBlockEnd()
-    C._ZNK11QTextCursor10atBlockEndEv(this.qclsinst)
+    C.C_ZNK11QTextCursor10atBlockEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "atBlockEnd", args)
   }
@@ -397,7 +397,7 @@ func (this *QTextCursor) selectionStart(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor14selectionStartEv
     // invoke: int selectionStart()
-    C._ZNK11QTextCursor14selectionStartEv(this.qclsinst)
+    C.C_ZNK11QTextCursor14selectionStartEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "selectionStart", args)
   }
@@ -417,7 +417,7 @@ func (this *QTextCursor) selectionEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor12selectionEndEv
     // invoke: int selectionEnd()
-    C._ZNK11QTextCursor12selectionEndEv(this.qclsinst)
+    C.C_ZNK11QTextCursor12selectionEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "selectionEnd", args)
   }
@@ -453,7 +453,7 @@ func NewQTextCursor(args ...interface{}) QTextCursor {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QTextCursorC2EP13QTextDocument(qthis, arg0)
+    C.C_ZN11QTextCursorC2EP13QTextDocument(qthis, arg0)
   case 1:
     // invoke: _ZN11QTextCursorC1ERKS_
     // invoke: void QTextCursor(const class QTextCursor &)
@@ -461,7 +461,7 @@ func NewQTextCursor(args ...interface{}) QTextCursor {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QTextCursorC2ERKS_(qthis, arg0)
+    C.C_ZN11QTextCursorC2ERKS_(qthis, arg0)
   case 2:
     // invoke: _ZN11QTextCursorC1EP10QTextFrame
     // invoke: void QTextCursor(class QTextFrame *)
@@ -469,13 +469,13 @@ func NewQTextCursor(args ...interface{}) QTextCursor {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QTextCursorC2EP10QTextFrame(qthis, arg0)
+    C.C_ZN11QTextCursorC2EP10QTextFrame(qthis, arg0)
   case 3:
     // invoke: _ZN11QTextCursorC1Ev
     // invoke: void QTextCursor()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QTextCursorC2Ev(qthis)
+    C.C_ZN11QTextCursorC2Ev(qthis)
   case 4:
     // invoke: _ZN11QTextCursorC1ERK10QTextBlock
     // invoke: void QTextCursor(const class QTextBlock &)
@@ -483,7 +483,7 @@ func NewQTextCursor(args ...interface{}) QTextCursor {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QTextCursorC2ERK10QTextBlock(qthis, arg0)
+    C.C_ZN11QTextCursorC2ERK10QTextBlock(qthis, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "QTextCursor", args)
   }
@@ -504,7 +504,7 @@ func (this *QTextCursor) currentTable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor12currentTableEv
     // invoke: QTextTable * currentTable()
-    C._ZNK11QTextCursor12currentTableEv(this.qclsinst)
+    C.C_ZNK11QTextCursor12currentTableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "currentTable", args)
   }
@@ -527,7 +527,7 @@ func (this *QTextCursor) setKeepPositionOnInsert(args ...interface{}) () {
     // invoke: void setKeepPositionOnInsert(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor23setKeepPositionOnInsertEb(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor23setKeepPositionOnInsertEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "setKeepPositionOnInsert", args)
   }
@@ -547,7 +547,7 @@ func (this *QTextCursor) clearSelection(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextCursor14clearSelectionEv
     // invoke: void clearSelection()
-    C._ZN11QTextCursor14clearSelectionEv(this.qclsinst)
+    C.C_ZN11QTextCursor14clearSelectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "clearSelection", args)
   }
@@ -567,7 +567,7 @@ func (this *QTextCursor) atBlockStart(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor12atBlockStartEv
     // invoke: bool atBlockStart()
-    C._ZNK11QTextCursor12atBlockStartEv(this.qclsinst)
+    C.C_ZNK11QTextCursor12atBlockStartEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "atBlockStart", args)
   }
@@ -590,7 +590,7 @@ func (this *QTextCursor) setVerticalMovementX(args ...interface{}) () {
     // invoke: void setVerticalMovementX(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor20setVerticalMovementXEi(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor20setVerticalMovementXEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "setVerticalMovementX", args)
   }
@@ -610,7 +610,7 @@ func (this *QTextCursor) deletePreviousChar(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextCursor18deletePreviousCharEv
     // invoke: void deletePreviousChar()
-    C._ZN11QTextCursor18deletePreviousCharEv(this.qclsinst)
+    C.C_ZN11QTextCursor18deletePreviousCharEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "deletePreviousChar", args)
   }
@@ -633,7 +633,7 @@ func (this *QTextCursor) mergeCharFormat(args ...interface{}) () {
     // invoke: void mergeCharFormat(const class QTextCharFormat &)
     var arg0 = args[0].(QTextCharFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor15mergeCharFormatERK15QTextCharFormat(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor15mergeCharFormatERK15QTextCharFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "mergeCharFormat", args)
   }
@@ -656,7 +656,7 @@ func (this *QTextCursor) setVisualNavigation(args ...interface{}) () {
     // invoke: void setVisualNavigation(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor19setVisualNavigationEb(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor19setVisualNavigationEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "setVisualNavigation", args)
   }
@@ -679,7 +679,7 @@ func (this *QTextCursor) mergeBlockCharFormat(args ...interface{}) () {
     // invoke: void mergeBlockCharFormat(const class QTextCharFormat &)
     var arg0 = args[0].(QTextCharFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor20mergeBlockCharFormatERK15QTextCharFormat(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor20mergeBlockCharFormatERK15QTextCharFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "mergeBlockCharFormat", args)
   }
@@ -699,7 +699,7 @@ func (this *QTextCursor) beginEditBlock(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextCursor14beginEditBlockEv
     // invoke: void beginEditBlock()
-    C._ZN11QTextCursor14beginEditBlockEv(this.qclsinst)
+    C.C_ZN11QTextCursor14beginEditBlockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "beginEditBlock", args)
   }
@@ -719,7 +719,7 @@ func (this *QTextCursor) charFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor10charFormatEv
     // invoke: QTextCharFormat charFormat()
-    C._ZNK11QTextCursor10charFormatEv(this.qclsinst)
+    C.C_ZNK11QTextCursor10charFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "charFormat", args)
   }
@@ -739,7 +739,7 @@ func (this *QTextCursor) currentList(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor11currentListEv
     // invoke: QTextList * currentList()
-    C._ZNK11QTextCursor11currentListEv(this.qclsinst)
+    C.C_ZNK11QTextCursor11currentListEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "currentList", args)
   }
@@ -759,7 +759,7 @@ func (this *QTextCursor) blockFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor11blockFormatEv
     // invoke: QTextBlockFormat blockFormat()
-    C._ZNK11QTextCursor11blockFormatEv(this.qclsinst)
+    C.C_ZNK11QTextCursor11blockFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "blockFormat", args)
   }
@@ -782,7 +782,7 @@ func (this *QTextCursor) swap(args ...interface{}) () {
     // invoke: void swap(class QTextCursor &)
     var arg0 = args[0].(QTextCursor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor4swapERS_(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "swap", args)
   }
@@ -802,7 +802,7 @@ func (this *QTextCursor) positionInBlock(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor15positionInBlockEv
     // invoke: int positionInBlock()
-    C._ZNK11QTextCursor15positionInBlockEv(this.qclsinst)
+    C.C_ZNK11QTextCursor15positionInBlockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "positionInBlock", args)
   }
@@ -822,7 +822,7 @@ func (this *QTextCursor) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor8documentEv
     // invoke: QTextDocument * document()
-    C._ZNK11QTextCursor8documentEv(this.qclsinst)
+    C.C_ZNK11QTextCursor8documentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "document", args)
   }
@@ -842,7 +842,7 @@ func (this *QTextCursor) hasSelection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor12hasSelectionEv
     // invoke: bool hasSelection()
-    C._ZNK11QTextCursor12hasSelectionEv(this.qclsinst)
+    C.C_ZNK11QTextCursor12hasSelectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "hasSelection", args)
   }
@@ -865,7 +865,7 @@ func (this *QTextCursor) mergeBlockFormat(args ...interface{}) () {
     // invoke: void mergeBlockFormat(const class QTextBlockFormat &)
     var arg0 = args[0].(QTextBlockFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor16mergeBlockFormatERK16QTextBlockFormat(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor16mergeBlockFormatERK16QTextBlockFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "mergeBlockFormat", args)
   }
@@ -888,7 +888,7 @@ func (this *QTextCursor) insertFragment(args ...interface{}) () {
     // invoke: void insertFragment(const class QTextDocumentFragment &)
     var arg0 = args[0].(QTextDocumentFragment).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor14insertFragmentERK21QTextDocumentFragment(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor14insertFragmentERK21QTextDocumentFragment(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "insertFragment", args)
   }
@@ -911,7 +911,7 @@ func (this *QTextCursor) setCharFormat(args ...interface{}) () {
     // invoke: void setCharFormat(const class QTextCharFormat &)
     var arg0 = args[0].(QTextCharFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor13setCharFormatERK15QTextCharFormat(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor13setCharFormatERK15QTextCharFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "setCharFormat", args)
   }
@@ -931,7 +931,7 @@ func (this *QTextCursor) FreeQTextCursor(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextCursorD0Ev
     // invoke: void ~QTextCursor()
-    C._ZN11QTextCursorD2Ev(this.qclsinst)
+    C.C_ZN11QTextCursorD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "~QTextCursor", args)
   }
@@ -951,7 +951,7 @@ func (this *QTextCursor) blockCharFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor15blockCharFormatEv
     // invoke: QTextCharFormat blockCharFormat()
-    C._ZNK11QTextCursor15blockCharFormatEv(this.qclsinst)
+    C.C_ZNK11QTextCursor15blockCharFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "blockCharFormat", args)
   }
@@ -983,7 +983,7 @@ func (this *QTextCursor) selectedTableCells(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C._ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QTextCursor", "selectedTableCells", args)
   }
@@ -1003,7 +1003,7 @@ func (this *QTextCursor) blockNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor11blockNumberEv
     // invoke: int blockNumber()
-    C._ZNK11QTextCursor11blockNumberEv(this.qclsinst)
+    C.C_ZNK11QTextCursor11blockNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "blockNumber", args)
   }
@@ -1023,7 +1023,7 @@ func (this *QTextCursor) selectedText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor12selectedTextEv
     // invoke: QString selectedText()
-    C._ZNK11QTextCursor12selectedTextEv(this.qclsinst)
+    C.C_ZNK11QTextCursor12selectedTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "selectedText", args)
   }
@@ -1046,7 +1046,7 @@ func (this *QTextCursor) setBlockFormat(args ...interface{}) () {
     // invoke: void setBlockFormat(const class QTextBlockFormat &)
     var arg0 = args[0].(QTextBlockFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor14setBlockFormatERK16QTextBlockFormat(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor14setBlockFormatERK16QTextBlockFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "setBlockFormat", args)
   }
@@ -1069,7 +1069,7 @@ func (this *QTextCursor) insertList(args ...interface{}) () {
     // invoke: QTextList * insertList(const class QTextListFormat &)
     var arg0 = args[0].(QTextListFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor10insertListERK15QTextListFormat(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor10insertListERK15QTextListFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "insertList", args)
   }
@@ -1089,7 +1089,7 @@ func (this *QTextCursor) visualNavigation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor16visualNavigationEv
     // invoke: bool visualNavigation()
-    C._ZNK11QTextCursor16visualNavigationEv(this.qclsinst)
+    C.C_ZNK11QTextCursor16visualNavigationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "visualNavigation", args)
   }
@@ -1118,11 +1118,11 @@ func (this *QTextCursor) insertBlock(args ...interface{}) () {
     // invoke: void insertBlock(const class QTextBlockFormat &)
     var arg0 = args[0].(QTextBlockFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor11insertBlockERK16QTextBlockFormat(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor11insertBlockERK16QTextBlockFormat(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN11QTextCursor11insertBlockEv
     // invoke: void insertBlock()
-    C._ZN11QTextCursor11insertBlockEv(this.qclsinst)
+    C.C_ZN11QTextCursor11insertBlockEv(this.qclsinst)
   case 2:
     // invoke: _ZN11QTextCursor11insertBlockERK16QTextBlockFormatRK15QTextCharFormat
     // invoke: void insertBlock(const class QTextBlockFormat &, const class QTextCharFormat &)
@@ -1130,7 +1130,7 @@ func (this *QTextCursor) insertBlock(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTextCharFormat).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN11QTextCursor11insertBlockERK16QTextBlockFormatRK15QTextCharFormat(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTextCursor11insertBlockERK16QTextBlockFormatRK15QTextCharFormat(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextCursor", "insertBlock", args)
   }
@@ -1150,7 +1150,7 @@ func (this *QTextCursor) currentFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor12currentFrameEv
     // invoke: QTextFrame * currentFrame()
-    C._ZNK11QTextCursor12currentFrameEv(this.qclsinst)
+    C.C_ZNK11QTextCursor12currentFrameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "currentFrame", args)
   }
@@ -1173,7 +1173,7 @@ func (this *QTextCursor) setBlockCharFormat(args ...interface{}) () {
     // invoke: void setBlockCharFormat(const class QTextCharFormat &)
     var arg0 = args[0].(QTextCharFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor18setBlockCharFormatERK15QTextCharFormat(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor18setBlockCharFormatERK15QTextCharFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "setBlockCharFormat", args)
   }
@@ -1193,7 +1193,7 @@ func (this *QTextCursor) columnNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor12columnNumberEv
     // invoke: int columnNumber()
-    C._ZNK11QTextCursor12columnNumberEv(this.qclsinst)
+    C.C_ZNK11QTextCursor12columnNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "columnNumber", args)
   }
@@ -1223,7 +1223,7 @@ func (this *QTextCursor) insertImage(args ...interface{}) () {
     // invoke: void insertImage(const class QTextImageFormat &)
     var arg0 = args[0].(QTextImageFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor11insertImageERK16QTextImageFormat(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor11insertImageERK16QTextImageFormat(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN11QTextCursor11insertImageERK6QImageRK7QString
     // invoke: void insertImage(const class QImage &, const class QString &)
@@ -1231,13 +1231,13 @@ func (this *QTextCursor) insertImage(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN11QTextCursor11insertImageERK6QImageRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTextCursor11insertImageERK6QImageRK7QString(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN11QTextCursor11insertImageERK7QString
     // invoke: void insertImage(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor11insertImageERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor11insertImageERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "insertImage", args)
   }
@@ -1257,7 +1257,7 @@ func (this *QTextCursor) keepPositionOnInsert(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor20keepPositionOnInsertEv
     // invoke: bool keepPositionOnInsert()
-    C._ZNK11QTextCursor20keepPositionOnInsertEv(this.qclsinst)
+    C.C_ZNK11QTextCursor20keepPositionOnInsertEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "keepPositionOnInsert", args)
   }
@@ -1277,7 +1277,7 @@ func (this *QTextCursor) joinPreviousEditBlock(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextCursor21joinPreviousEditBlockEv
     // invoke: void joinPreviousEditBlock()
-    C._ZN11QTextCursor21joinPreviousEditBlockEv(this.qclsinst)
+    C.C_ZN11QTextCursor21joinPreviousEditBlockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "joinPreviousEditBlock", args)
   }
@@ -1297,7 +1297,7 @@ func (this *QTextCursor) atEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor5atEndEv
     // invoke: bool atEnd()
-    C._ZNK11QTextCursor5atEndEv(this.qclsinst)
+    C.C_ZNK11QTextCursor5atEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "atEnd", args)
   }
@@ -1328,7 +1328,7 @@ func (this *QTextCursor) insertTable(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN11QTextCursor11insertTableEii(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTextCursor11insertTableEii(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN11QTextCursor11insertTableEiiRK16QTextTableFormat
     // invoke: QTextTable * insertTable(int, int, const class QTextTableFormat &)
@@ -1338,7 +1338,7 @@ func (this *QTextCursor) insertTable(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QTextTableFormat).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN11QTextCursor11insertTableEiiRK16QTextTableFormat(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN11QTextCursor11insertTableEiiRK16QTextTableFormat(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTextCursor", "insertTable", args)
   }
@@ -1358,7 +1358,7 @@ func (this *QTextCursor) anchor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor6anchorEv
     // invoke: int anchor()
-    C._ZNK11QTextCursor6anchorEv(this.qclsinst)
+    C.C_ZNK11QTextCursor6anchorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "anchor", args)
   }
@@ -1378,7 +1378,7 @@ func (this *QTextCursor) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor6isNullEv
     // invoke: bool isNull()
-    C._ZNK11QTextCursor6isNullEv(this.qclsinst)
+    C.C_ZNK11QTextCursor6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "isNull", args)
   }
@@ -1398,7 +1398,7 @@ func (this *QTextCursor) verticalMovementX(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor17verticalMovementXEv
     // invoke: int verticalMovementX()
-    C._ZNK11QTextCursor17verticalMovementXEv(this.qclsinst)
+    C.C_ZNK11QTextCursor17verticalMovementXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "verticalMovementX", args)
   }
@@ -1418,7 +1418,7 @@ func (this *QTextCursor) removeSelectedText(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextCursor18removeSelectedTextEv
     // invoke: void removeSelectedText()
-    C._ZN11QTextCursor18removeSelectedTextEv(this.qclsinst)
+    C.C_ZN11QTextCursor18removeSelectedTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "removeSelectedText", args)
   }
@@ -1441,7 +1441,7 @@ func (this *QTextCursor) createList(args ...interface{}) () {
     // invoke: QTextList * createList(const class QTextListFormat &)
     var arg0 = args[0].(QTextListFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor10createListERK15QTextListFormat(this.qclsinst, arg0)
+    C.C_ZN11QTextCursor10createListERK15QTextListFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "createList", args)
   }
@@ -1461,7 +1461,7 @@ func (this *QTextCursor) position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor8positionEv
     // invoke: int position()
-    C._ZNK11QTextCursor8positionEv(this.qclsinst)
+    C.C_ZNK11QTextCursor8positionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "position", args)
   }
@@ -1481,7 +1481,7 @@ func (this *QTextCursor) hasComplexSelection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor19hasComplexSelectionEv
     // invoke: bool hasComplexSelection()
-    C._ZNK11QTextCursor19hasComplexSelectionEv(this.qclsinst)
+    C.C_ZNK11QTextCursor19hasComplexSelectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "hasComplexSelection", args)
   }
@@ -1501,7 +1501,7 @@ func (this *QTextCursor) block(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextCursor5blockEv
     // invoke: QTextBlock block()
-    C._ZNK11QTextCursor5blockEv(this.qclsinst)
+    C.C_ZNK11QTextCursor5blockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCursor", "block", args)
   }

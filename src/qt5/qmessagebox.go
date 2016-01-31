@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.go
 //
@@ -29,85 +29,85 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QMessageBox::setCheckBox(QCheckBox * cb);
-extern void _ZN11QMessageBox11setCheckBoxEP9QCheckBox(void* qthis, void* arg0); // 4
+extern void C_ZN11QMessageBox11setCheckBoxEP9QCheckBox(void* qthis, void* arg0); // 4
   // proto:  Qt::TextInteractionFlags QMessageBox::textInteractionFlags();
-extern void _ZNK11QMessageBox20textInteractionFlagsEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox20textInteractionFlagsEv(void* qthis); // 4
   // proto:  void QMessageBox::setDetailedText(const QString & text);
-extern void _ZN11QMessageBox15setDetailedTextERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QMessageBox15setDetailedTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QMessageBox::text();
-extern void _ZNK11QMessageBox4textEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox4textEv(void* qthis); // 4
   // proto:  void QMessageBox::setButtonText(int button, const QString & text);
-extern void _ZN11QMessageBox13setButtonTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN11QMessageBox13setButtonTextEiRK7QString(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  QPixmap QMessageBox::iconPixmap();
-extern void _ZNK11QMessageBox10iconPixmapEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox10iconPixmapEv(void* qthis); // 4
   // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern void _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
+extern void C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
   // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern void _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
+extern void C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
   // proto:  QString QMessageBox::detailedText();
-extern void _ZNK11QMessageBox12detailedTextEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox12detailedTextEv(void* qthis); // 4
   // proto:  QMessageBox::StandardButton QMessageBox::standardButton(QAbstractButton * button);
-extern void _ZNK11QMessageBox14standardButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
+extern void C_ZNK11QMessageBox14standardButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  void QMessageBox::removeButton(QAbstractButton * button);
-extern void _ZN11QMessageBox12removeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
+extern void C_ZN11QMessageBox12removeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  void QMessageBox::open(QObject * receiver, const char * member);
-extern void _ZN11QMessageBox4openEP7QObjectPKc(void* qthis, void* arg0, unsigned char* arg1); // 4
+extern void C_ZN11QMessageBox4openEP7QObjectPKc(void* qthis, void* arg0, unsigned char* arg1); // 4
   // proto: static void QMessageBox::aboutQt(QWidget * parent, const QString & title);
-extern void _ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(void* arg0, void* arg1); // 4
+extern void C_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(void* arg0, void* arg1); // 4
   // proto:  QString QMessageBox::informativeText();
-extern void _ZNK11QMessageBox15informativeTextEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox15informativeTextEv(void* qthis); // 4
   // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern void _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
+extern void C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
   // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern void _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
+extern void C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
   // proto:  QMessageBox::ButtonRole QMessageBox::buttonRole(QAbstractButton * button);
-extern void _ZNK11QMessageBox10buttonRoleEP15QAbstractButton(void* qthis, void* arg0); // 4
+extern void C_ZNK11QMessageBox10buttonRoleEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  QList<QAbstractButton *> QMessageBox::buttons();
-extern void _ZNK11QMessageBox7buttonsEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox7buttonsEv(void* qthis); // 4
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern void _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
+extern void C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern void _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
+extern void C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
   // proto:  QAbstractButton * QMessageBox::escapeButton();
-extern void _ZNK11QMessageBox12escapeButtonEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox12escapeButtonEv(void* qthis); // 4
   // proto:  void QMessageBox::setIconPixmap(const QPixmap & pixmap);
-extern void _ZN11QMessageBox13setIconPixmapERK7QPixmap(void* qthis, void* arg0); // 4
+extern void C_ZN11QMessageBox13setIconPixmapERK7QPixmap(void* qthis, void* arg0); // 4
   // proto:  void QMessageBox::setWindowTitle(const QString & title);
-extern void _ZN11QMessageBox14setWindowTitleERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QMessageBox14setWindowTitleERK7QString(void* qthis, void* arg0); // 4
   // proto:  QAbstractButton * QMessageBox::clickedButton();
-extern void _ZNK11QMessageBox13clickedButtonEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox13clickedButtonEv(void* qthis); // 4
   // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern void _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
+extern void C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5); // 4
   // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern void _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
+extern void C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7); // 4
   // proto:  void QMessageBox::setInformativeText(const QString & text);
-extern void _ZN11QMessageBox18setInformativeTextERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QMessageBox18setInformativeTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QCheckBox * QMessageBox::checkBox();
-extern void _ZNK11QMessageBox8checkBoxEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox8checkBoxEv(void* qthis); // 4
   // proto:  void QMessageBox::setEscapeButton(QAbstractButton * button);
-extern void _ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
+extern void C_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  QMessageBox::Icon QMessageBox::icon();
-extern void _ZNK11QMessageBox4iconEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox4iconEv(void* qthis); // 4
   // proto: static void QMessageBox::about(QWidget * parent, const QString & title, const QString & text);
-extern void _ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_(void* arg0, void* arg1, void* arg2); // 4
+extern void C_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_(void* arg0, void* arg1, void* arg2); // 4
   // proto:  const QMetaObject * QMessageBox::metaObject();
-extern void _ZNK11QMessageBox10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox10metaObjectEv(void* qthis); // 4
   // proto:  void QMessageBox::~QMessageBox();
-extern void _ZN11QMessageBoxD2Ev(void* qthis); // 4
+extern void C_ZN11QMessageBoxD2Ev(void* qthis); // 4
   // proto:  void QMessageBox::setText(const QString & text);
-extern void _ZN11QMessageBox7setTextERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QMessageBox7setTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QMessageBox::buttonText(int button);
-extern void _ZNK11QMessageBox10buttonTextEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QMessageBox10buttonTextEi(void* qthis, int32_t arg0); // 4
   // proto:  StandardButtons QMessageBox::standardButtons();
-extern void _ZNK11QMessageBox15standardButtonsEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox15standardButtonsEv(void* qthis); // 4
   // proto:  QPushButton * QMessageBox::defaultButton();
-extern void _ZNK11QMessageBox13defaultButtonEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox13defaultButtonEv(void* qthis); // 4
   // proto:  void QMessageBox::setDefaultButton(QPushButton * button);
-extern void _ZN11QMessageBox16setDefaultButtonEP11QPushButton(void* qthis, void* arg0); // 4
+extern void C_ZN11QMessageBox16setDefaultButtonEP11QPushButton(void* qthis, void* arg0); // 4
   // proto:  void QMessageBox::QMessageBox(QWidget * parent);
-extern void _ZN11QMessageBoxC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN11QMessageBoxC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  Qt::TextFormat QMessageBox::textFormat();
-extern void _ZNK11QMessageBox10textFormatEv(void* qthis); // 4
+extern void C_ZNK11QMessageBox10textFormatEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -143,7 +143,7 @@ func (this *QMessageBox) setCheckBox(args ...interface{}) () {
     // invoke: void setCheckBox(class QCheckBox *)
     var arg0 = args[0].(QCheckBox).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMessageBox11setCheckBoxEP9QCheckBox(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox11setCheckBoxEP9QCheckBox(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setCheckBox", args)
   }
@@ -163,7 +163,7 @@ func (this *QMessageBox) textInteractionFlags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox20textInteractionFlagsEv
     // invoke: Qt::TextInteractionFlags textInteractionFlags()
-    C._ZNK11QMessageBox20textInteractionFlagsEv(this.qclsinst)
+    C.C_ZNK11QMessageBox20textInteractionFlagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "textInteractionFlags", args)
   }
@@ -186,7 +186,7 @@ func (this *QMessageBox) setDetailedText(args ...interface{}) () {
     // invoke: void setDetailedText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMessageBox15setDetailedTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox15setDetailedTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setDetailedText", args)
   }
@@ -206,7 +206,7 @@ func (this *QMessageBox) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox4textEv
     // invoke: QString text()
-    C._ZNK11QMessageBox4textEv(this.qclsinst)
+    C.C_ZNK11QMessageBox4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "text", args)
   }
@@ -232,7 +232,7 @@ func (this *QMessageBox) setButtonText(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN11QMessageBox13setButtonTextEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN11QMessageBox13setButtonTextEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMessageBox", "setButtonText", args)
   }
@@ -252,7 +252,7 @@ func (this *QMessageBox) iconPixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox10iconPixmapEv
     // invoke: QPixmap iconPixmap()
-    C._ZNK11QMessageBox10iconPixmapEv(this.qclsinst)
+    C.C_ZNK11QMessageBox10iconPixmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "iconPixmap", args)
   }
@@ -304,7 +304,7 @@ func (this *QMessageBox) warning_s(args ...interface{}) () {
     if false {fmt.Println(arg6)}
     var arg7 = C.int32_t(args[7].(int32))
     if false {fmt.Println(arg7)}
-    C._ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
   case 1:
     // invoke: _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii
     // invoke: int warning(class QWidget *, const class QString &, const class QString &, int, int, int)
@@ -320,7 +320,7 @@ func (this *QMessageBox) warning_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    C._ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
   default:
     qtrt.ErrorResolve("QMessageBox", "warning", args)
   }
@@ -340,7 +340,7 @@ func (this *QMessageBox) detailedText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox12detailedTextEv
     // invoke: QString detailedText()
-    C._ZNK11QMessageBox12detailedTextEv(this.qclsinst)
+    C.C_ZNK11QMessageBox12detailedTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "detailedText", args)
   }
@@ -363,7 +363,7 @@ func (this *QMessageBox) standardButton(args ...interface{}) () {
     // invoke: QMessageBox::StandardButton standardButton(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QMessageBox14standardButtonEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZNK11QMessageBox14standardButtonEP15QAbstractButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "standardButton", args)
   }
@@ -386,7 +386,7 @@ func (this *QMessageBox) removeButton(args ...interface{}) () {
     // invoke: void removeButton(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMessageBox12removeButtonEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox12removeButtonEP15QAbstractButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "removeButton", args)
   }
@@ -412,7 +412,7 @@ func (this *QMessageBox) open(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C._ZN11QMessageBox4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
+    C.C_ZN11QMessageBox4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMessageBox", "open", args)
   }
@@ -438,7 +438,7 @@ func (this *QMessageBox) aboutQt_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(arg0, arg1)
+    C.C_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(arg0, arg1)
   default:
     qtrt.ErrorResolve("QMessageBox", "aboutQt", args)
   }
@@ -458,7 +458,7 @@ func (this *QMessageBox) informativeText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox15informativeTextEv
     // invoke: QString informativeText()
-    C._ZNK11QMessageBox15informativeTextEv(this.qclsinst)
+    C.C_ZNK11QMessageBox15informativeTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "informativeText", args)
   }
@@ -510,7 +510,7 @@ func (this *QMessageBox) question_s(args ...interface{}) () {
     if false {fmt.Println(arg6)}
     var arg7 = C.int32_t(args[7].(int32))
     if false {fmt.Println(arg7)}
-    C._ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
   case 1:
     // invoke: _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii
     // invoke: int question(class QWidget *, const class QString &, const class QString &, int, int, int)
@@ -526,7 +526,7 @@ func (this *QMessageBox) question_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    C._ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
   default:
     qtrt.ErrorResolve("QMessageBox", "question", args)
   }
@@ -549,7 +549,7 @@ func (this *QMessageBox) buttonRole(args ...interface{}) () {
     // invoke: QMessageBox::ButtonRole buttonRole(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK11QMessageBox10buttonRoleEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZNK11QMessageBox10buttonRoleEP15QAbstractButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "buttonRole", args)
   }
@@ -569,7 +569,7 @@ func (this *QMessageBox) buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox7buttonsEv
     // invoke: QList<QAbstractButton *> buttons()
-    C._ZNK11QMessageBox7buttonsEv(this.qclsinst)
+    C.C_ZNK11QMessageBox7buttonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "buttons", args)
   }
@@ -617,7 +617,7 @@ func (this *QMessageBox) critical_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    C._ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
   case 1:
     // invoke: _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii
     // invoke: int critical(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
@@ -637,7 +637,7 @@ func (this *QMessageBox) critical_s(args ...interface{}) () {
     if false {fmt.Println(arg6)}
     var arg7 = C.int32_t(args[7].(int32))
     if false {fmt.Println(arg7)}
-    C._ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
   default:
     qtrt.ErrorResolve("QMessageBox", "critical", args)
   }
@@ -657,7 +657,7 @@ func (this *QMessageBox) escapeButton(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox12escapeButtonEv
     // invoke: QAbstractButton * escapeButton()
-    C._ZNK11QMessageBox12escapeButtonEv(this.qclsinst)
+    C.C_ZNK11QMessageBox12escapeButtonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "escapeButton", args)
   }
@@ -680,7 +680,7 @@ func (this *QMessageBox) setIconPixmap(args ...interface{}) () {
     // invoke: void setIconPixmap(const class QPixmap &)
     var arg0 = args[0].(QPixmap).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMessageBox13setIconPixmapERK7QPixmap(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox13setIconPixmapERK7QPixmap(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setIconPixmap", args)
   }
@@ -703,7 +703,7 @@ func (this *QMessageBox) setWindowTitle(args ...interface{}) () {
     // invoke: void setWindowTitle(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMessageBox14setWindowTitleERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox14setWindowTitleERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setWindowTitle", args)
   }
@@ -723,7 +723,7 @@ func (this *QMessageBox) clickedButton(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox13clickedButtonEv
     // invoke: QAbstractButton * clickedButton()
-    C._ZNK11QMessageBox13clickedButtonEv(this.qclsinst)
+    C.C_ZNK11QMessageBox13clickedButtonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "clickedButton", args)
   }
@@ -771,7 +771,7 @@ func (this *QMessageBox) information_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    C._ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
   case 1:
     // invoke: _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii
     // invoke: int information(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
@@ -791,7 +791,7 @@ func (this *QMessageBox) information_s(args ...interface{}) () {
     if false {fmt.Println(arg6)}
     var arg7 = C.int32_t(args[7].(int32))
     if false {fmt.Println(arg7)}
-    C._ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
   default:
     qtrt.ErrorResolve("QMessageBox", "information", args)
   }
@@ -814,7 +814,7 @@ func (this *QMessageBox) setInformativeText(args ...interface{}) () {
     // invoke: void setInformativeText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMessageBox18setInformativeTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox18setInformativeTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setInformativeText", args)
   }
@@ -834,7 +834,7 @@ func (this *QMessageBox) checkBox(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox8checkBoxEv
     // invoke: QCheckBox * checkBox()
-    C._ZNK11QMessageBox8checkBoxEv(this.qclsinst)
+    C.C_ZNK11QMessageBox8checkBoxEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "checkBox", args)
   }
@@ -857,7 +857,7 @@ func (this *QMessageBox) setEscapeButton(args ...interface{}) () {
     // invoke: void setEscapeButton(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setEscapeButton", args)
   }
@@ -877,7 +877,7 @@ func (this *QMessageBox) icon(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox4iconEv
     // invoke: QMessageBox::Icon icon()
-    C._ZNK11QMessageBox4iconEv(this.qclsinst)
+    C.C_ZNK11QMessageBox4iconEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "icon", args)
   }
@@ -906,7 +906,7 @@ func (this *QMessageBox) about_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_(arg0, arg1, arg2)
+    C.C_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_(arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QMessageBox", "about", args)
   }
@@ -926,7 +926,7 @@ func (this *QMessageBox) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QMessageBox10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QMessageBox10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "metaObject", args)
   }
@@ -946,7 +946,7 @@ func (this *QMessageBox) FreeQMessageBox(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBoxD0Ev
     // invoke: void ~QMessageBox()
-    C._ZN11QMessageBoxD2Ev(this.qclsinst)
+    C.C_ZN11QMessageBoxD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "~QMessageBox", args)
   }
@@ -969,7 +969,7 @@ func (this *QMessageBox) setText(args ...interface{}) () {
     // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMessageBox7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setText", args)
   }
@@ -992,7 +992,7 @@ func (this *QMessageBox) buttonText(args ...interface{}) () {
     // invoke: QString buttonText(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QMessageBox10buttonTextEi(this.qclsinst, arg0)
+    C.C_ZNK11QMessageBox10buttonTextEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "buttonText", args)
   }
@@ -1012,7 +1012,7 @@ func (this *QMessageBox) standardButtons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox15standardButtonsEv
     // invoke: StandardButtons standardButtons()
-    C._ZNK11QMessageBox15standardButtonsEv(this.qclsinst)
+    C.C_ZNK11QMessageBox15standardButtonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "standardButtons", args)
   }
@@ -1032,7 +1032,7 @@ func (this *QMessageBox) defaultButton(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox13defaultButtonEv
     // invoke: QPushButton * defaultButton()
-    C._ZNK11QMessageBox13defaultButtonEv(this.qclsinst)
+    C.C_ZNK11QMessageBox13defaultButtonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "defaultButton", args)
   }
@@ -1055,7 +1055,7 @@ func (this *QMessageBox) setDefaultButton(args ...interface{}) () {
     // invoke: void setDefaultButton(class QPushButton *)
     var arg0 = args[0].(QPushButton).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QMessageBox16setDefaultButtonEP11QPushButton(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox16setDefaultButtonEP11QPushButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setDefaultButton", args)
   }
@@ -1080,7 +1080,7 @@ func NewQMessageBox(args ...interface{}) QMessageBox {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QMessageBoxC2EP7QWidget(qthis, arg0)
+    C.C_ZN11QMessageBoxC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "QMessageBox", args)
   }
@@ -1101,7 +1101,7 @@ func (this *QMessageBox) textFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox10textFormatEv
     // invoke: Qt::TextFormat textFormat()
-    C._ZNK11QMessageBox10textFormatEv(this.qclsinst)
+    C.C_ZNK11QMessageBox10textFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "textFormat", args)
   }

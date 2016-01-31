@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qarraydata.h
 // dst-file: /src/core/qarraydata.go
 //
@@ -29,15 +29,15 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  AllocationOptions QArrayData::detachFlags();
-extern void _ZNK10QArrayData11detachFlagsEv(void* qthis); // 2
+extern void C_ZNK10QArrayData11detachFlagsEv(void* qthis); // 2
   // proto:  AllocationOptions QArrayData::cloneFlags();
-extern void _ZNK10QArrayData10cloneFlagsEv(void* qthis); // 2
+extern void C_ZNK10QArrayData10cloneFlagsEv(void* qthis); // 2
   // proto:  void * QArrayData::data();
-extern void _ZN10QArrayData4dataEv(void* qthis); // 2
+extern void C_ZN10QArrayData4dataEv(void* qthis); // 2
   // proto: static QArrayData * QArrayData::sharedNull();
-extern void _ZN10QArrayData10sharedNullEv(); // 2
+extern void C_ZN10QArrayData10sharedNullEv(); // 2
   // proto:  bool QArrayData::isMutable();
-extern void _ZNK10QArrayData9isMutableEv(void* qthis); // 2
+extern void C_ZNK10QArrayData9isMutableEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -69,7 +69,7 @@ func (this *QArrayData) detachFlags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QArrayData11detachFlagsEv
     // invoke: AllocationOptions detachFlags()
-    C._ZNK10QArrayData11detachFlagsEv(this.qclsinst)
+    C.C_ZNK10QArrayData11detachFlagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QArrayData", "detachFlags", args)
   }
@@ -89,7 +89,7 @@ func (this *QArrayData) cloneFlags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QArrayData10cloneFlagsEv
     // invoke: AllocationOptions cloneFlags()
-    C._ZNK10QArrayData10cloneFlagsEv(this.qclsinst)
+    C.C_ZNK10QArrayData10cloneFlagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QArrayData", "cloneFlags", args)
   }
@@ -109,7 +109,7 @@ func (this *QArrayData) data(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QArrayData4dataEv
     // invoke: void * data()
-    C._ZN10QArrayData4dataEv(this.qclsinst)
+    C.C_ZN10QArrayData4dataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QArrayData", "data", args)
   }
@@ -129,7 +129,7 @@ func (this *QArrayData) sharedNull_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QArrayData10sharedNullEv
     // invoke: QArrayData * sharedNull()
-    C._ZN10QArrayData10sharedNullEv()
+    C.C_ZN10QArrayData10sharedNullEv()
   default:
     qtrt.ErrorResolve("QArrayData", "sharedNull", args)
   }
@@ -149,7 +149,7 @@ func (this *QArrayData) isMutable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QArrayData9isMutableEv
     // invoke: bool isMutable()
-    C._ZNK10QArrayData9isMutableEv(this.qclsinst)
+    C.C_ZNK10QArrayData9isMutableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QArrayData", "isMutable", args)
   }

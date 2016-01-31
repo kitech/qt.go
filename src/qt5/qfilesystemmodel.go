@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.go
 //
@@ -29,91 +29,91 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QFileSystemModel::setNameFilters(const QStringList & filters);
-extern void _ZN16QFileSystemModel14setNameFiltersERK11QStringList(void* qthis, void* arg0); // 4
+extern void C_ZN16QFileSystemModel14setNameFiltersERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  int QFileSystemModel::columnCount(const QModelIndex & parent);
-extern void _ZNK16QFileSystemModel11columnCountERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK16QFileSystemModel11columnCountERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QVariant QFileSystemModel::myComputer(int role);
-extern void _ZNK16QFileSystemModel10myComputerEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK16QFileSystemModel10myComputerEi(void* qthis, int32_t arg0); // 4
   // proto:  QModelIndex QFileSystemModel::mkdir(const QModelIndex & parent, const QString & name);
-extern void _ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QModelIndex QFileSystemModel::setRootPath(const QString & path);
-extern void _ZN16QFileSystemModel11setRootPathERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN16QFileSystemModel11setRootPathERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QFileSystemModel::~QFileSystemModel();
-extern void _ZN16QFileSystemModelD2Ev(void* qthis); // 4
+extern void C_ZN16QFileSystemModelD2Ev(void* qthis); // 4
   // proto:  void QFileSystemModel::QFileSystemModel(QObject * parent);
-extern void _ZN16QFileSystemModelC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN16QFileSystemModelC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  qint64 QFileSystemModel::size(const QModelIndex & index);
-extern void _ZNK16QFileSystemModel4sizeERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK16QFileSystemModel4sizeERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QModelIndex QFileSystemModel::index(const QString & path, int column);
-extern void _ZNK16QFileSystemModel5indexERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZNK16QFileSystemModel5indexERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QModelIndex QFileSystemModel::index(int row, int column, const QModelIndex & parent);
-extern void _ZNK16QFileSystemModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZNK16QFileSystemModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  bool QFileSystemModel::resolveSymlinks();
-extern void _ZNK16QFileSystemModel15resolveSymlinksEv(void* qthis); // 4
+extern void C_ZNK16QFileSystemModel15resolveSymlinksEv(void* qthis); // 4
   // proto:  bool QFileSystemModel::hasChildren(const QModelIndex & parent);
-extern void _ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  bool QFileSystemModel::isReadOnly();
-extern void _ZNK16QFileSystemModel10isReadOnlyEv(void* qthis); // 4
+extern void C_ZNK16QFileSystemModel10isReadOnlyEv(void* qthis); // 4
   // proto:  bool QFileSystemModel::isDir(const QModelIndex & index);
-extern void _ZNK16QFileSystemModel5isDirERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK16QFileSystemModel5isDirERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QStringList QFileSystemModel::nameFilters();
-extern void _ZNK16QFileSystemModel11nameFiltersEv(void* qthis); // 4
+extern void C_ZNK16QFileSystemModel11nameFiltersEv(void* qthis); // 4
   // proto:  bool QFileSystemModel::rmdir(const QModelIndex & index);
-extern void _ZN16QFileSystemModel5rmdirERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZN16QFileSystemModel5rmdirERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QFileInfo QFileSystemModel::fileInfo(const QModelIndex & index);
-extern void _ZNK16QFileSystemModel8fileInfoERK11QModelIndex(void* qthis, void* arg0); // 2
+extern void C_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(void* qthis, void* arg0); // 2
   // proto:  QFile::Permissions QFileSystemModel::permissions(const QModelIndex & index);
-extern void _ZNK16QFileSystemModel11permissionsERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK16QFileSystemModel11permissionsERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QString QFileSystemModel::type(const QModelIndex & index);
-extern void _ZNK16QFileSystemModel4typeERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK16QFileSystemModel4typeERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  void QFileSystemModel::setNameFilterDisables(bool enable);
-extern void _ZN16QFileSystemModel21setNameFilterDisablesEb(void* qthis, bool arg0); // 4
+extern void C_ZN16QFileSystemModel21setNameFilterDisablesEb(void* qthis, bool arg0); // 4
   // proto:  void QFileSystemModel::setIconProvider(QFileIconProvider * provider);
-extern void _ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0); // 4
+extern void C_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0); // 4
   // proto:  bool QFileSystemModel::setData(const QModelIndex & index, const QVariant & value, int role);
-extern void _ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
+extern void C_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
   // proto:  bool QFileSystemModel::canFetchMore(const QModelIndex & parent);
-extern void _ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QModelIndex QFileSystemModel::parent(const QModelIndex & child);
-extern void _ZNK16QFileSystemModel6parentERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK16QFileSystemModel6parentERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QString QFileSystemModel::filePath(const QModelIndex & index);
-extern void _ZNK16QFileSystemModel8filePathERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK16QFileSystemModel8filePathERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QString QFileSystemModel::fileName(const QModelIndex & index);
-extern void _ZNK16QFileSystemModel8fileNameERK11QModelIndex(void* qthis, void* arg0); // 2
+extern void C_ZNK16QFileSystemModel8fileNameERK11QModelIndex(void* qthis, void* arg0); // 2
   // proto:  int QFileSystemModel::rowCount(const QModelIndex & parent);
-extern void _ZNK16QFileSystemModel8rowCountERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK16QFileSystemModel8rowCountERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QFileIconProvider * QFileSystemModel::iconProvider();
-extern void _ZNK16QFileSystemModel12iconProviderEv(void* qthis); // 4
+extern void C_ZNK16QFileSystemModel12iconProviderEv(void* qthis); // 4
   // proto:  bool QFileSystemModel::nameFilterDisables();
-extern void _ZNK16QFileSystemModel18nameFilterDisablesEv(void* qthis); // 4
+extern void C_ZNK16QFileSystemModel18nameFilterDisablesEv(void* qthis); // 4
   // proto:  QVariant QFileSystemModel::data(const QModelIndex & index, int role);
-extern void _ZNK16QFileSystemModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1); // 4
+extern void C_ZNK16QFileSystemModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QStringList QFileSystemModel::mimeTypes();
-extern void _ZNK16QFileSystemModel9mimeTypesEv(void* qthis); // 4
+extern void C_ZNK16QFileSystemModel9mimeTypesEv(void* qthis); // 4
   // proto:  const QMetaObject * QFileSystemModel::metaObject();
-extern void _ZNK16QFileSystemModel10metaObjectEv(void* qthis); // 4
+extern void C_ZNK16QFileSystemModel10metaObjectEv(void* qthis); // 4
   // proto:  void QFileSystemModel::setResolveSymlinks(bool enable);
-extern void _ZN16QFileSystemModel18setResolveSymlinksEb(void* qthis, bool arg0); // 4
+extern void C_ZN16QFileSystemModel18setResolveSymlinksEb(void* qthis, bool arg0); // 4
   // proto:  QString QFileSystemModel::rootPath();
-extern void _ZNK16QFileSystemModel8rootPathEv(void* qthis); // 4
+extern void C_ZNK16QFileSystemModel8rootPathEv(void* qthis); // 4
   // proto:  bool QFileSystemModel::remove(const QModelIndex & index);
-extern void _ZN16QFileSystemModel6removeERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZN16QFileSystemModel6removeERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QDir::Filters QFileSystemModel::filter();
-extern void _ZNK16QFileSystemModel6filterEv(void* qthis); // 4
+extern void C_ZNK16QFileSystemModel6filterEv(void* qthis); // 4
   // proto:  void QFileSystemModel::setReadOnly(bool enable);
-extern void _ZN16QFileSystemModel11setReadOnlyEb(void* qthis, bool arg0); // 4
+extern void C_ZN16QFileSystemModel11setReadOnlyEb(void* qthis, bool arg0); // 4
   // proto:  Qt::ItemFlags QFileSystemModel::flags(const QModelIndex & index);
-extern void _ZNK16QFileSystemModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK16QFileSystemModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QDir QFileSystemModel::rootDirectory();
-extern void _ZNK16QFileSystemModel13rootDirectoryEv(void* qthis); // 4
+extern void C_ZNK16QFileSystemModel13rootDirectoryEv(void* qthis); // 4
   // proto:  QDateTime QFileSystemModel::lastModified(const QModelIndex & index);
-extern void _ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QIcon QFileSystemModel::fileIcon(const QModelIndex & index);
-extern void _ZNK16QFileSystemModel8fileIconERK11QModelIndex(void* qthis, void* arg0); // 2
+extern void C_ZNK16QFileSystemModel8fileIconERK11QModelIndex(void* qthis, void* arg0); // 2
   // proto:  void QFileSystemModel::fetchMore(const QModelIndex & parent);
-extern void _ZN16QFileSystemModel9fetchMoreERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZN16QFileSystemModel9fetchMoreERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  Qt::DropActions QFileSystemModel::supportedDropActions();
-extern void _ZNK16QFileSystemModel20supportedDropActionsEv(void* qthis); // 4
+extern void C_ZNK16QFileSystemModel20supportedDropActionsEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -151,7 +151,7 @@ func (this *QFileSystemModel) setNameFilters(args ...interface{}) () {
     // invoke: void setNameFilters(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QFileSystemModel14setNameFiltersERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel14setNameFiltersERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setNameFilters", args)
   }
@@ -174,7 +174,7 @@ func (this *QFileSystemModel) columnCount(args ...interface{}) () {
     // invoke: int columnCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "columnCount", args)
   }
@@ -197,7 +197,7 @@ func (this *QFileSystemModel) myComputer(args ...interface{}) () {
     // invoke: QVariant myComputer(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel10myComputerEi(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel10myComputerEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "myComputer", args)
   }
@@ -223,7 +223,7 @@ func (this *QFileSystemModel) mkdir(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "mkdir", args)
   }
@@ -246,7 +246,7 @@ func (this *QFileSystemModel) setRootPath(args ...interface{}) () {
     // invoke: QModelIndex setRootPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QFileSystemModel11setRootPathERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel11setRootPathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setRootPath", args)
   }
@@ -266,7 +266,7 @@ func (this *QFileSystemModel) FreeQFileSystemModel(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QFileSystemModelD0Ev
     // invoke: void ~QFileSystemModel()
-    C._ZN16QFileSystemModelD2Ev(this.qclsinst)
+    C.C_ZN16QFileSystemModelD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "~QFileSystemModel", args)
   }
@@ -291,7 +291,7 @@ func NewQFileSystemModel(args ...interface{}) QFileSystemModel {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QFileSystemModelC2EP7QObject(qthis, arg0)
+    C.C_ZN16QFileSystemModelC2EP7QObject(qthis, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "QFileSystemModel", args)
   }
@@ -315,7 +315,7 @@ func (this *QFileSystemModel) size(args ...interface{}) () {
     // invoke: qint64 size(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel4sizeERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel4sizeERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "size", args)
   }
@@ -346,7 +346,7 @@ func (this *QFileSystemModel) index(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK16QFileSystemModel5indexERK7QStringi(this.qclsinst, arg0, arg1)
+    C.C_ZNK16QFileSystemModel5indexERK7QStringi(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK16QFileSystemModel5indexEiiRK11QModelIndex
     // invoke: QModelIndex index(int, int, const class QModelIndex &)
@@ -356,7 +356,7 @@ func (this *QFileSystemModel) index(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZNK16QFileSystemModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK16QFileSystemModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "index", args)
   }
@@ -376,7 +376,7 @@ func (this *QFileSystemModel) resolveSymlinks(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel15resolveSymlinksEv
     // invoke: bool resolveSymlinks()
-    C._ZNK16QFileSystemModel15resolveSymlinksEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel15resolveSymlinksEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "resolveSymlinks", args)
   }
@@ -399,7 +399,7 @@ func (this *QFileSystemModel) hasChildren(args ...interface{}) () {
     // invoke: bool hasChildren(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "hasChildren", args)
   }
@@ -419,7 +419,7 @@ func (this *QFileSystemModel) isReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel10isReadOnlyEv
     // invoke: bool isReadOnly()
-    C._ZNK16QFileSystemModel10isReadOnlyEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel10isReadOnlyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "isReadOnly", args)
   }
@@ -442,7 +442,7 @@ func (this *QFileSystemModel) isDir(args ...interface{}) () {
     // invoke: bool isDir(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel5isDirERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel5isDirERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "isDir", args)
   }
@@ -462,7 +462,7 @@ func (this *QFileSystemModel) nameFilters(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel11nameFiltersEv
     // invoke: QStringList nameFilters()
-    C._ZNK16QFileSystemModel11nameFiltersEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel11nameFiltersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "nameFilters", args)
   }
@@ -485,7 +485,7 @@ func (this *QFileSystemModel) rmdir(args ...interface{}) () {
     // invoke: bool rmdir(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QFileSystemModel5rmdirERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel5rmdirERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "rmdir", args)
   }
@@ -508,7 +508,7 @@ func (this *QFileSystemModel) fileInfo(args ...interface{}) () {
     // invoke: QFileInfo fileInfo(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel8fileInfoERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "fileInfo", args)
   }
@@ -531,7 +531,7 @@ func (this *QFileSystemModel) permissions(args ...interface{}) () {
     // invoke: QFile::Permissions permissions(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel11permissionsERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel11permissionsERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "permissions", args)
   }
@@ -554,7 +554,7 @@ func (this *QFileSystemModel) type_(args ...interface{}) () {
     // invoke: QString type(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel4typeERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel4typeERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "type", args)
   }
@@ -577,7 +577,7 @@ func (this *QFileSystemModel) setNameFilterDisables(args ...interface{}) () {
     // invoke: void setNameFilterDisables(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN16QFileSystemModel21setNameFilterDisablesEb(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel21setNameFilterDisablesEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setNameFilterDisables", args)
   }
@@ -600,7 +600,7 @@ func (this *QFileSystemModel) setIconProvider(args ...interface{}) () {
     // invoke: void setIconProvider(class QFileIconProvider *)
     var arg0 = args[0].(QFileIconProvider).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setIconProvider", args)
   }
@@ -629,7 +629,7 @@ func (this *QFileSystemModel) setData(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C._ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setData", args)
   }
@@ -652,7 +652,7 @@ func (this *QFileSystemModel) canFetchMore(args ...interface{}) () {
     // invoke: bool canFetchMore(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "canFetchMore", args)
   }
@@ -675,7 +675,7 @@ func (this *QFileSystemModel) parent(args ...interface{}) () {
     // invoke: QModelIndex parent(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel6parentERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel6parentERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "parent", args)
   }
@@ -698,7 +698,7 @@ func (this *QFileSystemModel) filePath(args ...interface{}) () {
     // invoke: QString filePath(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel8filePathERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel8filePathERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "filePath", args)
   }
@@ -721,7 +721,7 @@ func (this *QFileSystemModel) fileName(args ...interface{}) () {
     // invoke: QString fileName(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel8fileNameERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel8fileNameERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "fileName", args)
   }
@@ -744,7 +744,7 @@ func (this *QFileSystemModel) rowCount(args ...interface{}) () {
     // invoke: int rowCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "rowCount", args)
   }
@@ -764,7 +764,7 @@ func (this *QFileSystemModel) iconProvider(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel12iconProviderEv
     // invoke: QFileIconProvider * iconProvider()
-    C._ZNK16QFileSystemModel12iconProviderEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel12iconProviderEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "iconProvider", args)
   }
@@ -784,7 +784,7 @@ func (this *QFileSystemModel) nameFilterDisables(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel18nameFilterDisablesEv
     // invoke: bool nameFilterDisables()
-    C._ZNK16QFileSystemModel18nameFilterDisablesEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel18nameFilterDisablesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "nameFilterDisables", args)
   }
@@ -810,7 +810,7 @@ func (this *QFileSystemModel) data(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK16QFileSystemModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
+    C.C_ZNK16QFileSystemModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "data", args)
   }
@@ -830,7 +830,7 @@ func (this *QFileSystemModel) mimeTypes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel9mimeTypesEv
     // invoke: QStringList mimeTypes()
-    C._ZNK16QFileSystemModel9mimeTypesEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel9mimeTypesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "mimeTypes", args)
   }
@@ -850,7 +850,7 @@ func (this *QFileSystemModel) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK16QFileSystemModel10metaObjectEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "metaObject", args)
   }
@@ -873,7 +873,7 @@ func (this *QFileSystemModel) setResolveSymlinks(args ...interface{}) () {
     // invoke: void setResolveSymlinks(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN16QFileSystemModel18setResolveSymlinksEb(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel18setResolveSymlinksEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setResolveSymlinks", args)
   }
@@ -893,7 +893,7 @@ func (this *QFileSystemModel) rootPath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel8rootPathEv
     // invoke: QString rootPath()
-    C._ZNK16QFileSystemModel8rootPathEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel8rootPathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "rootPath", args)
   }
@@ -916,7 +916,7 @@ func (this *QFileSystemModel) remove(args ...interface{}) () {
     // invoke: bool remove(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QFileSystemModel6removeERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel6removeERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "remove", args)
   }
@@ -936,7 +936,7 @@ func (this *QFileSystemModel) filter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel6filterEv
     // invoke: QDir::Filters filter()
-    C._ZNK16QFileSystemModel6filterEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel6filterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "filter", args)
   }
@@ -959,7 +959,7 @@ func (this *QFileSystemModel) setReadOnly(args ...interface{}) () {
     // invoke: void setReadOnly(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN16QFileSystemModel11setReadOnlyEb(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel11setReadOnlyEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setReadOnly", args)
   }
@@ -982,7 +982,7 @@ func (this *QFileSystemModel) flags(args ...interface{}) () {
     // invoke: Qt::ItemFlags flags(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel5flagsERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel5flagsERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "flags", args)
   }
@@ -1002,7 +1002,7 @@ func (this *QFileSystemModel) rootDirectory(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel13rootDirectoryEv
     // invoke: QDir rootDirectory()
-    C._ZNK16QFileSystemModel13rootDirectoryEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel13rootDirectoryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "rootDirectory", args)
   }
@@ -1025,7 +1025,7 @@ func (this *QFileSystemModel) lastModified(args ...interface{}) () {
     // invoke: QDateTime lastModified(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "lastModified", args)
   }
@@ -1048,7 +1048,7 @@ func (this *QFileSystemModel) fileIcon(args ...interface{}) () {
     // invoke: QIcon fileIcon(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK16QFileSystemModel8fileIconERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel8fileIconERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "fileIcon", args)
   }
@@ -1071,7 +1071,7 @@ func (this *QFileSystemModel) fetchMore(args ...interface{}) () {
     // invoke: void fetchMore(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QFileSystemModel9fetchMoreERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel9fetchMoreERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "fetchMore", args)
   }
@@ -1091,7 +1091,7 @@ func (this *QFileSystemModel) supportedDropActions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel20supportedDropActionsEv
     // invoke: Qt::DropActions supportedDropActions()
-    C._ZNK16QFileSystemModel20supportedDropActionsEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel20supportedDropActionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "supportedDropActions", args)
   }

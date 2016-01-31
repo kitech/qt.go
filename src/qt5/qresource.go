@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.go
 //
@@ -29,39 +29,39 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QStringList QResource::searchPaths();
-extern void _ZN9QResource11searchPathsEv(); // 4
+extern void C_ZN9QResource11searchPathsEv(); // 4
   // proto:  bool QResource::isCompressed();
-extern void _ZNK9QResource12isCompressedEv(void* qthis); // 4
+extern void C_ZNK9QResource12isCompressedEv(void* qthis); // 4
   // proto:  void QResource::setLocale(const QLocale & locale);
-extern void _ZN9QResource9setLocaleERK7QLocale(void* qthis, void* arg0); // 4
+extern void C_ZN9QResource9setLocaleERK7QLocale(void* qthis, void* arg0); // 4
   // proto:  QLocale QResource::locale();
-extern void _ZNK9QResource6localeEv(void* qthis); // 4
+extern void C_ZNK9QResource6localeEv(void* qthis); // 4
   // proto:  QString QResource::absoluteFilePath();
-extern void _ZNK9QResource16absoluteFilePathEv(void* qthis); // 4
+extern void C_ZNK9QResource16absoluteFilePathEv(void* qthis); // 4
   // proto:  void QResource::~QResource();
-extern void _ZN9QResourceD2Ev(void* qthis); // 4
+extern void C_ZN9QResourceD2Ev(void* qthis); // 4
   // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
-extern void _ZN9QResourceC2ERK7QStringRK7QLocale(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN9QResourceC2ERK7QStringRK7QLocale(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QResource::setFileName(const QString & file);
-extern void _ZN9QResource11setFileNameERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN9QResource11setFileNameERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QResource::fileName();
-extern void _ZNK9QResource8fileNameEv(void* qthis); // 4
+extern void C_ZNK9QResource8fileNameEv(void* qthis); // 4
   // proto: static bool QResource::unregisterResource(const QString & rccFilename, const QString & resourceRoot);
-extern void _ZN9QResource18unregisterResourceERK7QStringS2_(void* arg0, void* arg1); // 4
+extern void C_ZN9QResource18unregisterResourceERK7QStringS2_(void* arg0, void* arg1); // 4
   // proto: static bool QResource::unregisterResource(const uchar * rccData, const QString & resourceRoot);
-extern void _ZN9QResource18unregisterResourceEPKhRK7QString(unsigned char* arg0, void* arg1); // 4
+extern void C_ZN9QResource18unregisterResourceEPKhRK7QString(unsigned char* arg0, void* arg1); // 4
   // proto: static bool QResource::registerResource(const uchar * rccData, const QString & resourceRoot);
-extern void _ZN9QResource16registerResourceEPKhRK7QString(unsigned char* arg0, void* arg1); // 4
+extern void C_ZN9QResource16registerResourceEPKhRK7QString(unsigned char* arg0, void* arg1); // 4
   // proto: static bool QResource::registerResource(const QString & rccFilename, const QString & resourceRoot);
-extern void _ZN9QResource16registerResourceERK7QStringS2_(void* arg0, void* arg1); // 4
+extern void C_ZN9QResource16registerResourceERK7QStringS2_(void* arg0, void* arg1); // 4
   // proto:  bool QResource::isValid();
-extern void _ZNK9QResource7isValidEv(void* qthis); // 4
+extern void C_ZNK9QResource7isValidEv(void* qthis); // 4
   // proto: static void QResource::addSearchPath(const QString & path);
-extern void _ZN9QResource13addSearchPathERK7QString(void* arg0); // 4
+extern void C_ZN9QResource13addSearchPathERK7QString(void* arg0); // 4
   // proto:  const uchar * QResource::data();
-extern void _ZNK9QResource4dataEv(void* qthis); // 4
+extern void C_ZNK9QResource4dataEv(void* qthis); // 4
   // proto:  qint64 QResource::size();
-extern void _ZNK9QResource4sizeEv(void* qthis); // 4
+extern void C_ZNK9QResource4sizeEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -93,7 +93,7 @@ func (this *QResource) searchPaths_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QResource11searchPathsEv
     // invoke: QStringList searchPaths()
-    C._ZN9QResource11searchPathsEv()
+    C.C_ZN9QResource11searchPathsEv()
   default:
     qtrt.ErrorResolve("QResource", "searchPaths", args)
   }
@@ -113,7 +113,7 @@ func (this *QResource) isCompressed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource12isCompressedEv
     // invoke: bool isCompressed()
-    C._ZNK9QResource12isCompressedEv(this.qclsinst)
+    C.C_ZNK9QResource12isCompressedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "isCompressed", args)
   }
@@ -136,7 +136,7 @@ func (this *QResource) setLocale(args ...interface{}) () {
     // invoke: void setLocale(const class QLocale &)
     var arg0 = args[0].(QLocale).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QResource9setLocaleERK7QLocale(this.qclsinst, arg0)
+    C.C_ZN9QResource9setLocaleERK7QLocale(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QResource", "setLocale", args)
   }
@@ -156,7 +156,7 @@ func (this *QResource) locale(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource6localeEv
     // invoke: QLocale locale()
-    C._ZNK9QResource6localeEv(this.qclsinst)
+    C.C_ZNK9QResource6localeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "locale", args)
   }
@@ -176,7 +176,7 @@ func (this *QResource) absoluteFilePath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource16absoluteFilePathEv
     // invoke: QString absoluteFilePath()
-    C._ZNK9QResource16absoluteFilePathEv(this.qclsinst)
+    C.C_ZNK9QResource16absoluteFilePathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "absoluteFilePath", args)
   }
@@ -196,7 +196,7 @@ func (this *QResource) FreeQResource(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QResourceD0Ev
     // invoke: void ~QResource()
-    C._ZN9QResourceD2Ev(this.qclsinst)
+    C.C_ZN9QResourceD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "~QResource", args)
   }
@@ -224,7 +224,7 @@ func NewQResource(args ...interface{}) QResource {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN9QResourceC2ERK7QStringRK7QLocale(qthis, arg0, arg1)
+    C.C_ZN9QResourceC2ERK7QStringRK7QLocale(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QResource", "QResource", args)
   }
@@ -248,7 +248,7 @@ func (this *QResource) setFileName(args ...interface{}) () {
     // invoke: void setFileName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QResource11setFileNameERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QResource11setFileNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QResource", "setFileName", args)
   }
@@ -268,7 +268,7 @@ func (this *QResource) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource8fileNameEv
     // invoke: QString fileName()
-    C._ZNK9QResource8fileNameEv(this.qclsinst)
+    C.C_ZNK9QResource8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "fileName", args)
   }
@@ -298,7 +298,7 @@ func (this *QResource) unregisterResource_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN9QResource18unregisterResourceERK7QStringS2_(arg0, arg1)
+    C.C_ZN9QResource18unregisterResourceERK7QStringS2_(arg0, arg1)
   case 1:
     // invoke: _ZN9QResource18unregisterResourceEPKhRK7QString
     // invoke: bool unregisterResource(const uchar *, const class QString &)
@@ -306,7 +306,7 @@ func (this *QResource) unregisterResource_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN9QResource18unregisterResourceEPKhRK7QString(arg0, arg1)
+    C.C_ZN9QResource18unregisterResourceEPKhRK7QString(arg0, arg1)
   default:
     qtrt.ErrorResolve("QResource", "unregisterResource", args)
   }
@@ -336,7 +336,7 @@ func (this *QResource) registerResource_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN9QResource16registerResourceEPKhRK7QString(arg0, arg1)
+    C.C_ZN9QResource16registerResourceEPKhRK7QString(arg0, arg1)
   case 1:
     // invoke: _ZN9QResource16registerResourceERK7QStringS2_
     // invoke: bool registerResource(const class QString &, const class QString &)
@@ -344,7 +344,7 @@ func (this *QResource) registerResource_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN9QResource16registerResourceERK7QStringS2_(arg0, arg1)
+    C.C_ZN9QResource16registerResourceERK7QStringS2_(arg0, arg1)
   default:
     qtrt.ErrorResolve("QResource", "registerResource", args)
   }
@@ -364,7 +364,7 @@ func (this *QResource) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource7isValidEv
     // invoke: bool isValid()
-    C._ZNK9QResource7isValidEv(this.qclsinst)
+    C.C_ZNK9QResource7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "isValid", args)
   }
@@ -387,7 +387,7 @@ func (this *QResource) addSearchPath_s(args ...interface{}) () {
     // invoke: void addSearchPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QResource13addSearchPathERK7QString(arg0)
+    C.C_ZN9QResource13addSearchPathERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QResource", "addSearchPath", args)
   }
@@ -407,7 +407,7 @@ func (this *QResource) data(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource4dataEv
     // invoke: const uchar * data()
-    C._ZNK9QResource4dataEv(this.qclsinst)
+    C.C_ZNK9QResource4dataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "data", args)
   }
@@ -427,7 +427,7 @@ func (this *QResource) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource4sizeEv
     // invoke: qint64 size()
-    C._ZNK9QResource4sizeEv(this.qclsinst)
+    C.C_ZNK9QResource4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "size", args)
   }

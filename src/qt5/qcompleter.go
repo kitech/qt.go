@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.go
 //
@@ -29,73 +29,73 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QCompleter::setCurrentRow(int row);
-extern void _ZN10QCompleter13setCurrentRowEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QCompleter13setCurrentRowEi(void* qthis, int32_t arg0); // 4
   // proto:  QAbstractItemModel * QCompleter::completionModel();
-extern void _ZNK10QCompleter15completionModelEv(void* qthis); // 4
+extern void C_ZNK10QCompleter15completionModelEv(void* qthis); // 4
   // proto:  int QCompleter::completionRole();
-extern void _ZNK10QCompleter14completionRoleEv(void* qthis); // 4
+extern void C_ZNK10QCompleter14completionRoleEv(void* qthis); // 4
   // proto:  int QCompleter::maxVisibleItems();
-extern void _ZNK10QCompleter15maxVisibleItemsEv(void* qthis); // 4
+extern void C_ZNK10QCompleter15maxVisibleItemsEv(void* qthis); // 4
   // proto:  bool QCompleter::wrapAround();
-extern void _ZNK10QCompleter10wrapAroundEv(void* qthis); // 4
+extern void C_ZNK10QCompleter10wrapAroundEv(void* qthis); // 4
   // proto:  QString QCompleter::completionPrefix();
-extern void _ZNK10QCompleter16completionPrefixEv(void* qthis); // 4
+extern void C_ZNK10QCompleter16completionPrefixEv(void* qthis); // 4
   // proto:  void QCompleter::setCompletionColumn(int column);
-extern void _ZN10QCompleter19setCompletionColumnEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QCompleter19setCompletionColumnEi(void* qthis, int32_t arg0); // 4
   // proto:  QStringList QCompleter::splitPath(const QString & path);
-extern void _ZNK10QCompleter9splitPathERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZNK10QCompleter9splitPathERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QCompleter::setWidget(QWidget * widget);
-extern void _ZN10QCompleter9setWidgetEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN10QCompleter9setWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QCompleter::setPopup(QAbstractItemView * popup);
-extern void _ZN10QCompleter8setPopupEP17QAbstractItemView(void* qthis, void* arg0); // 4
+extern void C_ZN10QCompleter8setPopupEP17QAbstractItemView(void* qthis, void* arg0); // 4
   // proto:  void QCompleter::setWrapAround(bool wrap);
-extern void _ZN10QCompleter13setWrapAroundEb(void* qthis, bool arg0); // 4
+extern void C_ZN10QCompleter13setWrapAroundEb(void* qthis, bool arg0); // 4
   // proto:  void QCompleter::setCompletionPrefix(const QString & prefix);
-extern void _ZN10QCompleter19setCompletionPrefixERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN10QCompleter19setCompletionPrefixERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QCompleter::~QCompleter();
-extern void _ZN10QCompleterD2Ev(void* qthis); // 4
+extern void C_ZN10QCompleterD2Ev(void* qthis); // 4
   // proto:  QCompleter::CompletionMode QCompleter::completionMode();
-extern void _ZNK10QCompleter14completionModeEv(void* qthis); // 4
+extern void C_ZNK10QCompleter14completionModeEv(void* qthis); // 4
   // proto:  Qt::CaseSensitivity QCompleter::caseSensitivity();
-extern void _ZNK10QCompleter15caseSensitivityEv(void* qthis); // 4
+extern void C_ZNK10QCompleter15caseSensitivityEv(void* qthis); // 4
   // proto:  QWidget * QCompleter::widget();
-extern void _ZNK10QCompleter6widgetEv(void* qthis); // 4
+extern void C_ZNK10QCompleter6widgetEv(void* qthis); // 4
   // proto:  QAbstractItemView * QCompleter::popup();
-extern void _ZNK10QCompleter5popupEv(void* qthis); // 4
+extern void C_ZNK10QCompleter5popupEv(void* qthis); // 4
   // proto:  void QCompleter::complete(const QRect & rect);
-extern void _ZN10QCompleter8completeERK5QRect(void* qthis, void* arg0); // 4
+extern void C_ZN10QCompleter8completeERK5QRect(void* qthis, void* arg0); // 4
   // proto:  int QCompleter::completionColumn();
-extern void _ZNK10QCompleter16completionColumnEv(void* qthis); // 4
+extern void C_ZNK10QCompleter16completionColumnEv(void* qthis); // 4
   // proto:  void QCompleter::setModel(QAbstractItemModel * c);
-extern void _ZN10QCompleter8setModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
+extern void C_ZN10QCompleter8setModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
   // proto:  void QCompleter::QCompleter(QObject * parent);
-extern void _ZN10QCompleterC2EP7QObject(void* qthis, void* arg0); // 3
+extern void C_ZN10QCompleterC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QCompleter::QCompleter(QAbstractItemModel * model, QObject * parent);
-extern void _ZN10QCompleterC2EP18QAbstractItemModelP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN10QCompleterC2EP18QAbstractItemModelP7QObject(void* qthis, void* arg0, void* arg1); // 3
   // proto:  void QCompleter::QCompleter(const QStringList & completions, QObject * parent);
-extern void _ZN10QCompleterC2ERK11QStringListP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void C_ZN10QCompleterC2ERK11QStringListP7QObject(void* qthis, void* arg0, void* arg1); // 3
   // proto:  QCompleter::ModelSorting QCompleter::modelSorting();
-extern void _ZNK10QCompleter12modelSortingEv(void* qthis); // 4
+extern void C_ZNK10QCompleter12modelSortingEv(void* qthis); // 4
   // proto:  int QCompleter::currentRow();
-extern void _ZNK10QCompleter10currentRowEv(void* qthis); // 4
+extern void C_ZNK10QCompleter10currentRowEv(void* qthis); // 4
   // proto:  const QMetaObject * QCompleter::metaObject();
-extern void _ZNK10QCompleter10metaObjectEv(void* qthis); // 4
+extern void C_ZNK10QCompleter10metaObjectEv(void* qthis); // 4
   // proto:  QString QCompleter::currentCompletion();
-extern void _ZNK10QCompleter17currentCompletionEv(void* qthis); // 4
+extern void C_ZNK10QCompleter17currentCompletionEv(void* qthis); // 4
   // proto:  void QCompleter::setMaxVisibleItems(int maxItems);
-extern void _ZN10QCompleter18setMaxVisibleItemsEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QCompleter18setMaxVisibleItemsEi(void* qthis, int32_t arg0); // 4
   // proto:  int QCompleter::completionCount();
-extern void _ZNK10QCompleter15completionCountEv(void* qthis); // 4
+extern void C_ZNK10QCompleter15completionCountEv(void* qthis); // 4
   // proto:  void QCompleter::setCompletionRole(int role);
-extern void _ZN10QCompleter17setCompletionRoleEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN10QCompleter17setCompletionRoleEi(void* qthis, int32_t arg0); // 4
   // proto:  QModelIndex QCompleter::currentIndex();
-extern void _ZNK10QCompleter12currentIndexEv(void* qthis); // 4
+extern void C_ZNK10QCompleter12currentIndexEv(void* qthis); // 4
   // proto:  QString QCompleter::pathFromIndex(const QModelIndex & index);
-extern void _ZNK10QCompleter13pathFromIndexERK11QModelIndex(void* qthis, void* arg0); // 4
+extern void C_ZNK10QCompleter13pathFromIndexERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  Qt::MatchFlags QCompleter::filterMode();
-extern void _ZNK10QCompleter10filterModeEv(void* qthis); // 4
+extern void C_ZNK10QCompleter10filterModeEv(void* qthis); // 4
   // proto:  QAbstractItemModel * QCompleter::model();
-extern void _ZNK10QCompleter5modelEv(void* qthis); // 4
+extern void C_ZNK10QCompleter5modelEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -132,7 +132,7 @@ func (this *QCompleter) setCurrentRow(args ...interface{}) () {
     // invoke: bool setCurrentRow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QCompleter13setCurrentRowEi(this.qclsinst, arg0)
+    C.C_ZN10QCompleter13setCurrentRowEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setCurrentRow", args)
   }
@@ -152,7 +152,7 @@ func (this *QCompleter) completionModel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter15completionModelEv
     // invoke: QAbstractItemModel * completionModel()
-    C._ZNK10QCompleter15completionModelEv(this.qclsinst)
+    C.C_ZNK10QCompleter15completionModelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "completionModel", args)
   }
@@ -172,7 +172,7 @@ func (this *QCompleter) completionRole(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter14completionRoleEv
     // invoke: int completionRole()
-    C._ZNK10QCompleter14completionRoleEv(this.qclsinst)
+    C.C_ZNK10QCompleter14completionRoleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "completionRole", args)
   }
@@ -192,7 +192,7 @@ func (this *QCompleter) maxVisibleItems(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter15maxVisibleItemsEv
     // invoke: int maxVisibleItems()
-    C._ZNK10QCompleter15maxVisibleItemsEv(this.qclsinst)
+    C.C_ZNK10QCompleter15maxVisibleItemsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "maxVisibleItems", args)
   }
@@ -212,7 +212,7 @@ func (this *QCompleter) wrapAround(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter10wrapAroundEv
     // invoke: bool wrapAround()
-    C._ZNK10QCompleter10wrapAroundEv(this.qclsinst)
+    C.C_ZNK10QCompleter10wrapAroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "wrapAround", args)
   }
@@ -232,7 +232,7 @@ func (this *QCompleter) completionPrefix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter16completionPrefixEv
     // invoke: QString completionPrefix()
-    C._ZNK10QCompleter16completionPrefixEv(this.qclsinst)
+    C.C_ZNK10QCompleter16completionPrefixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "completionPrefix", args)
   }
@@ -255,7 +255,7 @@ func (this *QCompleter) setCompletionColumn(args ...interface{}) () {
     // invoke: void setCompletionColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QCompleter19setCompletionColumnEi(this.qclsinst, arg0)
+    C.C_ZN10QCompleter19setCompletionColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setCompletionColumn", args)
   }
@@ -278,7 +278,7 @@ func (this *QCompleter) splitPath(args ...interface{}) () {
     // invoke: QStringList splitPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK10QCompleter9splitPathERK7QString(this.qclsinst, arg0)
+    C.C_ZNK10QCompleter9splitPathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "splitPath", args)
   }
@@ -301,7 +301,7 @@ func (this *QCompleter) setWidget(args ...interface{}) () {
     // invoke: void setWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QCompleter9setWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN10QCompleter9setWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setWidget", args)
   }
@@ -324,7 +324,7 @@ func (this *QCompleter) setPopup(args ...interface{}) () {
     // invoke: void setPopup(class QAbstractItemView *)
     var arg0 = args[0].(QAbstractItemView).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QCompleter8setPopupEP17QAbstractItemView(this.qclsinst, arg0)
+    C.C_ZN10QCompleter8setPopupEP17QAbstractItemView(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setPopup", args)
   }
@@ -347,7 +347,7 @@ func (this *QCompleter) setWrapAround(args ...interface{}) () {
     // invoke: void setWrapAround(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN10QCompleter13setWrapAroundEb(this.qclsinst, arg0)
+    C.C_ZN10QCompleter13setWrapAroundEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setWrapAround", args)
   }
@@ -370,7 +370,7 @@ func (this *QCompleter) setCompletionPrefix(args ...interface{}) () {
     // invoke: void setCompletionPrefix(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QCompleter19setCompletionPrefixERK7QString(this.qclsinst, arg0)
+    C.C_ZN10QCompleter19setCompletionPrefixERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setCompletionPrefix", args)
   }
@@ -390,7 +390,7 @@ func (this *QCompleter) FreeQCompleter(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QCompleterD0Ev
     // invoke: void ~QCompleter()
-    C._ZN10QCompleterD2Ev(this.qclsinst)
+    C.C_ZN10QCompleterD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "~QCompleter", args)
   }
@@ -410,7 +410,7 @@ func (this *QCompleter) completionMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter14completionModeEv
     // invoke: QCompleter::CompletionMode completionMode()
-    C._ZNK10QCompleter14completionModeEv(this.qclsinst)
+    C.C_ZNK10QCompleter14completionModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "completionMode", args)
   }
@@ -430,7 +430,7 @@ func (this *QCompleter) caseSensitivity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter15caseSensitivityEv
     // invoke: Qt::CaseSensitivity caseSensitivity()
-    C._ZNK10QCompleter15caseSensitivityEv(this.qclsinst)
+    C.C_ZNK10QCompleter15caseSensitivityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "caseSensitivity", args)
   }
@@ -450,7 +450,7 @@ func (this *QCompleter) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter6widgetEv
     // invoke: QWidget * widget()
-    C._ZNK10QCompleter6widgetEv(this.qclsinst)
+    C.C_ZNK10QCompleter6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "widget", args)
   }
@@ -470,7 +470,7 @@ func (this *QCompleter) popup(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter5popupEv
     // invoke: QAbstractItemView * popup()
-    C._ZNK10QCompleter5popupEv(this.qclsinst)
+    C.C_ZNK10QCompleter5popupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "popup", args)
   }
@@ -493,7 +493,7 @@ func (this *QCompleter) complete(args ...interface{}) () {
     // invoke: void complete(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QCompleter8completeERK5QRect(this.qclsinst, arg0)
+    C.C_ZN10QCompleter8completeERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "complete", args)
   }
@@ -513,7 +513,7 @@ func (this *QCompleter) completionColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter16completionColumnEv
     // invoke: int completionColumn()
-    C._ZNK10QCompleter16completionColumnEv(this.qclsinst)
+    C.C_ZNK10QCompleter16completionColumnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "completionColumn", args)
   }
@@ -536,7 +536,7 @@ func (this *QCompleter) setModel(args ...interface{}) () {
     // invoke: void setModel(class QAbstractItemModel *)
     var arg0 = args[0].(QAbstractItemModel).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QCompleter8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
+    C.C_ZN10QCompleter8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setModel", args)
   }
@@ -569,7 +569,7 @@ func NewQCompleter(args ...interface{}) QCompleter {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QCompleterC2EP7QObject(qthis, arg0)
+    C.C_ZN10QCompleterC2EP7QObject(qthis, arg0)
   case 1:
     // invoke: _ZN10QCompleterC1EP18QAbstractItemModelP7QObject
     // invoke: void QCompleter(class QAbstractItemModel *, class QObject *)
@@ -579,7 +579,7 @@ func NewQCompleter(args ...interface{}) QCompleter {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QCompleterC2EP18QAbstractItemModelP7QObject(qthis, arg0, arg1)
+    C.C_ZN10QCompleterC2EP18QAbstractItemModelP7QObject(qthis, arg0, arg1)
   case 2:
     // invoke: _ZN10QCompleterC1ERK11QStringListP7QObject
     // invoke: void QCompleter(const class QStringList &, class QObject *)
@@ -589,7 +589,7 @@ func NewQCompleter(args ...interface{}) QCompleter {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN10QCompleterC2ERK11QStringListP7QObject(qthis, arg0, arg1)
+    C.C_ZN10QCompleterC2ERK11QStringListP7QObject(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QCompleter", "QCompleter", args)
   }
@@ -610,7 +610,7 @@ func (this *QCompleter) modelSorting(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter12modelSortingEv
     // invoke: QCompleter::ModelSorting modelSorting()
-    C._ZNK10QCompleter12modelSortingEv(this.qclsinst)
+    C.C_ZNK10QCompleter12modelSortingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "modelSorting", args)
   }
@@ -630,7 +630,7 @@ func (this *QCompleter) currentRow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter10currentRowEv
     // invoke: int currentRow()
-    C._ZNK10QCompleter10currentRowEv(this.qclsinst)
+    C.C_ZNK10QCompleter10currentRowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "currentRow", args)
   }
@@ -650,7 +650,7 @@ func (this *QCompleter) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK10QCompleter10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QCompleter10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "metaObject", args)
   }
@@ -670,7 +670,7 @@ func (this *QCompleter) currentCompletion(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter17currentCompletionEv
     // invoke: QString currentCompletion()
-    C._ZNK10QCompleter17currentCompletionEv(this.qclsinst)
+    C.C_ZNK10QCompleter17currentCompletionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "currentCompletion", args)
   }
@@ -693,7 +693,7 @@ func (this *QCompleter) setMaxVisibleItems(args ...interface{}) () {
     // invoke: void setMaxVisibleItems(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QCompleter18setMaxVisibleItemsEi(this.qclsinst, arg0)
+    C.C_ZN10QCompleter18setMaxVisibleItemsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setMaxVisibleItems", args)
   }
@@ -713,7 +713,7 @@ func (this *QCompleter) completionCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter15completionCountEv
     // invoke: int completionCount()
-    C._ZNK10QCompleter15completionCountEv(this.qclsinst)
+    C.C_ZNK10QCompleter15completionCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "completionCount", args)
   }
@@ -736,7 +736,7 @@ func (this *QCompleter) setCompletionRole(args ...interface{}) () {
     // invoke: void setCompletionRole(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QCompleter17setCompletionRoleEi(this.qclsinst, arg0)
+    C.C_ZN10QCompleter17setCompletionRoleEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setCompletionRole", args)
   }
@@ -756,7 +756,7 @@ func (this *QCompleter) currentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter12currentIndexEv
     // invoke: QModelIndex currentIndex()
-    C._ZNK10QCompleter12currentIndexEv(this.qclsinst)
+    C.C_ZNK10QCompleter12currentIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "currentIndex", args)
   }
@@ -779,7 +779,7 @@ func (this *QCompleter) pathFromIndex(args ...interface{}) () {
     // invoke: QString pathFromIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK10QCompleter13pathFromIndexERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK10QCompleter13pathFromIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "pathFromIndex", args)
   }
@@ -799,7 +799,7 @@ func (this *QCompleter) filterMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter10filterModeEv
     // invoke: Qt::MatchFlags filterMode()
-    C._ZNK10QCompleter10filterModeEv(this.qclsinst)
+    C.C_ZNK10QCompleter10filterModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "filterMode", args)
   }
@@ -819,7 +819,7 @@ func (this *QCompleter) model(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter5modelEv
     // invoke: QAbstractItemModel * model()
-    C._ZNK10QCompleter5modelEv(this.qclsinst)
+    C.C_ZNK10QCompleter5modelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "model", args)
   }

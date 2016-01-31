@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.go
 //
@@ -29,55 +29,55 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QAbstractSlider::setTracking(bool enable);
-extern void _ZN15QAbstractSlider11setTrackingEb(void* qthis, bool arg0); // 4
+extern void C_ZN15QAbstractSlider11setTrackingEb(void* qthis, bool arg0); // 4
   // proto:  Qt::Orientation QAbstractSlider::orientation();
-extern void _ZNK15QAbstractSlider11orientationEv(void* qthis); // 4
+extern void C_ZNK15QAbstractSlider11orientationEv(void* qthis); // 4
   // proto:  bool QAbstractSlider::invertedControls();
-extern void _ZNK15QAbstractSlider16invertedControlsEv(void* qthis); // 4
+extern void C_ZNK15QAbstractSlider16invertedControlsEv(void* qthis); // 4
   // proto:  int QAbstractSlider::singleStep();
-extern void _ZNK15QAbstractSlider10singleStepEv(void* qthis); // 4
+extern void C_ZNK15QAbstractSlider10singleStepEv(void* qthis); // 4
   // proto:  int QAbstractSlider::minimum();
-extern void _ZNK15QAbstractSlider7minimumEv(void* qthis); // 4
+extern void C_ZNK15QAbstractSlider7minimumEv(void* qthis); // 4
   // proto:  void QAbstractSlider::setSliderDown(bool );
-extern void _ZN15QAbstractSlider13setSliderDownEb(void* qthis, bool arg0); // 4
+extern void C_ZN15QAbstractSlider13setSliderDownEb(void* qthis, bool arg0); // 4
   // proto:  void QAbstractSlider::~QAbstractSlider();
-extern void _ZN15QAbstractSliderD2Ev(void* qthis); // 4
+extern void C_ZN15QAbstractSliderD2Ev(void* qthis); // 4
   // proto:  int QAbstractSlider::pageStep();
-extern void _ZNK15QAbstractSlider8pageStepEv(void* qthis); // 4
+extern void C_ZNK15QAbstractSlider8pageStepEv(void* qthis); // 4
   // proto:  void QAbstractSlider::setInvertedControls(bool );
-extern void _ZN15QAbstractSlider19setInvertedControlsEb(void* qthis, bool arg0); // 4
+extern void C_ZN15QAbstractSlider19setInvertedControlsEb(void* qthis, bool arg0); // 4
   // proto:  void QAbstractSlider::setPageStep(int );
-extern void _ZN15QAbstractSlider11setPageStepEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QAbstractSlider11setPageStepEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QAbstractSlider::isSliderDown();
-extern void _ZNK15QAbstractSlider12isSliderDownEv(void* qthis); // 4
+extern void C_ZNK15QAbstractSlider12isSliderDownEv(void* qthis); // 4
   // proto:  void QAbstractSlider::setSingleStep(int );
-extern void _ZN15QAbstractSlider13setSingleStepEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QAbstractSlider13setSingleStepEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QAbstractSlider::hasTracking();
-extern void _ZNK15QAbstractSlider11hasTrackingEv(void* qthis); // 4
+extern void C_ZNK15QAbstractSlider11hasTrackingEv(void* qthis); // 4
   // proto:  void QAbstractSlider::setMaximum(int );
-extern void _ZN15QAbstractSlider10setMaximumEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QAbstractSlider10setMaximumEi(void* qthis, int32_t arg0); // 4
   // proto:  void QAbstractSlider::setValue(int );
-extern void _ZN15QAbstractSlider8setValueEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QAbstractSlider8setValueEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QAbstractSlider::invertedAppearance();
-extern void _ZNK15QAbstractSlider18invertedAppearanceEv(void* qthis); // 4
+extern void C_ZNK15QAbstractSlider18invertedAppearanceEv(void* qthis); // 4
   // proto:  int QAbstractSlider::sliderPosition();
-extern void _ZNK15QAbstractSlider14sliderPositionEv(void* qthis); // 4
+extern void C_ZNK15QAbstractSlider14sliderPositionEv(void* qthis); // 4
   // proto:  void QAbstractSlider::setRange(int min, int max);
-extern void _ZN15QAbstractSlider8setRangeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+extern void C_ZN15QAbstractSlider8setRangeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QAbstractSlider::setInvertedAppearance(bool );
-extern void _ZN15QAbstractSlider21setInvertedAppearanceEb(void* qthis, bool arg0); // 4
+extern void C_ZN15QAbstractSlider21setInvertedAppearanceEb(void* qthis, bool arg0); // 4
   // proto:  const QMetaObject * QAbstractSlider::metaObject();
-extern void _ZNK15QAbstractSlider10metaObjectEv(void* qthis); // 4
+extern void C_ZNK15QAbstractSlider10metaObjectEv(void* qthis); // 4
   // proto:  void QAbstractSlider::QAbstractSlider(QWidget * parent);
-extern void _ZN15QAbstractSliderC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void C_ZN15QAbstractSliderC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  int QAbstractSlider::maximum();
-extern void _ZNK15QAbstractSlider7maximumEv(void* qthis); // 4
+extern void C_ZNK15QAbstractSlider7maximumEv(void* qthis); // 4
   // proto:  int QAbstractSlider::value();
-extern void _ZNK15QAbstractSlider5valueEv(void* qthis); // 4
+extern void C_ZNK15QAbstractSlider5valueEv(void* qthis); // 4
   // proto:  void QAbstractSlider::setSliderPosition(int );
-extern void _ZN15QAbstractSlider17setSliderPositionEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QAbstractSlider17setSliderPositionEi(void* qthis, int32_t arg0); // 4
   // proto:  void QAbstractSlider::setMinimum(int );
-extern void _ZN15QAbstractSlider10setMinimumEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN15QAbstractSlider10setMinimumEi(void* qthis, int32_t arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -118,7 +118,7 @@ func (this *QAbstractSlider) setTracking(args ...interface{}) () {
     // invoke: void setTracking(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractSlider11setTrackingEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider11setTrackingEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setTracking", args)
   }
@@ -138,7 +138,7 @@ func (this *QAbstractSlider) orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider11orientationEv
     // invoke: Qt::Orientation orientation()
-    C._ZNK15QAbstractSlider11orientationEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider11orientationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "orientation", args)
   }
@@ -158,7 +158,7 @@ func (this *QAbstractSlider) invertedControls(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider16invertedControlsEv
     // invoke: bool invertedControls()
-    C._ZNK15QAbstractSlider16invertedControlsEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider16invertedControlsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "invertedControls", args)
   }
@@ -178,7 +178,7 @@ func (this *QAbstractSlider) singleStep(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider10singleStepEv
     // invoke: int singleStep()
-    C._ZNK15QAbstractSlider10singleStepEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider10singleStepEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "singleStep", args)
   }
@@ -198,7 +198,7 @@ func (this *QAbstractSlider) minimum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider7minimumEv
     // invoke: int minimum()
-    C._ZNK15QAbstractSlider7minimumEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider7minimumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "minimum", args)
   }
@@ -221,7 +221,7 @@ func (this *QAbstractSlider) setSliderDown(args ...interface{}) () {
     // invoke: void setSliderDown(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractSlider13setSliderDownEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider13setSliderDownEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setSliderDown", args)
   }
@@ -241,7 +241,7 @@ func (this *QAbstractSlider) FreeQAbstractSlider(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSliderD0Ev
     // invoke: void ~QAbstractSlider()
-    C._ZN15QAbstractSliderD2Ev(this.qclsinst)
+    C.C_ZN15QAbstractSliderD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "~QAbstractSlider", args)
   }
@@ -261,7 +261,7 @@ func (this *QAbstractSlider) pageStep(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider8pageStepEv
     // invoke: int pageStep()
-    C._ZNK15QAbstractSlider8pageStepEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider8pageStepEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "pageStep", args)
   }
@@ -284,7 +284,7 @@ func (this *QAbstractSlider) setInvertedControls(args ...interface{}) () {
     // invoke: void setInvertedControls(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractSlider19setInvertedControlsEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider19setInvertedControlsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setInvertedControls", args)
   }
@@ -307,7 +307,7 @@ func (this *QAbstractSlider) setPageStep(args ...interface{}) () {
     // invoke: void setPageStep(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractSlider11setPageStepEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider11setPageStepEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setPageStep", args)
   }
@@ -327,7 +327,7 @@ func (this *QAbstractSlider) isSliderDown(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider12isSliderDownEv
     // invoke: bool isSliderDown()
-    C._ZNK15QAbstractSlider12isSliderDownEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider12isSliderDownEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "isSliderDown", args)
   }
@@ -350,7 +350,7 @@ func (this *QAbstractSlider) setSingleStep(args ...interface{}) () {
     // invoke: void setSingleStep(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractSlider13setSingleStepEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider13setSingleStepEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setSingleStep", args)
   }
@@ -370,7 +370,7 @@ func (this *QAbstractSlider) hasTracking(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider11hasTrackingEv
     // invoke: bool hasTracking()
-    C._ZNK15QAbstractSlider11hasTrackingEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider11hasTrackingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "hasTracking", args)
   }
@@ -393,7 +393,7 @@ func (this *QAbstractSlider) setMaximum(args ...interface{}) () {
     // invoke: void setMaximum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractSlider10setMaximumEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider10setMaximumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setMaximum", args)
   }
@@ -416,7 +416,7 @@ func (this *QAbstractSlider) setValue(args ...interface{}) () {
     // invoke: void setValue(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractSlider8setValueEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider8setValueEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setValue", args)
   }
@@ -436,7 +436,7 @@ func (this *QAbstractSlider) invertedAppearance(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider18invertedAppearanceEv
     // invoke: bool invertedAppearance()
-    C._ZNK15QAbstractSlider18invertedAppearanceEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider18invertedAppearanceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "invertedAppearance", args)
   }
@@ -456,7 +456,7 @@ func (this *QAbstractSlider) sliderPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider14sliderPositionEv
     // invoke: int sliderPosition()
-    C._ZNK15QAbstractSlider14sliderPositionEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider14sliderPositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "sliderPosition", args)
   }
@@ -482,7 +482,7 @@ func (this *QAbstractSlider) setRange(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN15QAbstractSlider8setRangeEii(this.qclsinst, arg0, arg1)
+    C.C_ZN15QAbstractSlider8setRangeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setRange", args)
   }
@@ -505,7 +505,7 @@ func (this *QAbstractSlider) setInvertedAppearance(args ...interface{}) () {
     // invoke: void setInvertedAppearance(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractSlider21setInvertedAppearanceEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider21setInvertedAppearanceEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setInvertedAppearance", args)
   }
@@ -525,7 +525,7 @@ func (this *QAbstractSlider) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK15QAbstractSlider10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "metaObject", args)
   }
@@ -550,7 +550,7 @@ func NewQAbstractSlider(args ...interface{}) QAbstractSlider {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QAbstractSliderC2EP7QWidget(qthis, arg0)
+    C.C_ZN15QAbstractSliderC2EP7QWidget(qthis, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "QAbstractSlider", args)
   }
@@ -571,7 +571,7 @@ func (this *QAbstractSlider) maximum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider7maximumEv
     // invoke: int maximum()
-    C._ZNK15QAbstractSlider7maximumEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider7maximumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "maximum", args)
   }
@@ -591,7 +591,7 @@ func (this *QAbstractSlider) value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider5valueEv
     // invoke: int value()
-    C._ZNK15QAbstractSlider5valueEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "value", args)
   }
@@ -614,7 +614,7 @@ func (this *QAbstractSlider) setSliderPosition(args ...interface{}) () {
     // invoke: void setSliderPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractSlider17setSliderPositionEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider17setSliderPositionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setSliderPosition", args)
   }
@@ -637,7 +637,7 @@ func (this *QAbstractSlider) setMinimum(args ...interface{}) () {
     // invoke: void setMinimum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QAbstractSlider10setMinimumEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider10setMinimumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setMinimum", args)
   }

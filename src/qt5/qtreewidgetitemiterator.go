@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qtreewidgetitemiterator.h
 // dst-file: /src/widgets/qtreewidgetitemiterator.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QTreeWidgetItemIterator::~QTreeWidgetItemIterator();
-extern void _ZN23QTreeWidgetItemIteratorD2Ev(void* qthis); // 4
+extern void C_ZN23QTreeWidgetItemIteratorD2Ev(void* qthis); // 4
   // proto:  void QTreeWidgetItemIterator::QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it);
-extern void _ZN23QTreeWidgetItemIteratorC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN23QTreeWidgetItemIteratorC2ERKS_(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -63,7 +63,7 @@ func (this *QTreeWidgetItemIterator) FreeQTreeWidgetItemIterator(args ...interfa
   case 0:
     // invoke: _ZN23QTreeWidgetItemIteratorD0Ev
     // invoke: void ~QTreeWidgetItemIterator()
-    C._ZN23QTreeWidgetItemIteratorD2Ev(this.qclsinst)
+    C.C_ZN23QTreeWidgetItemIteratorD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItemIterator", "~QTreeWidgetItemIterator", args)
   }
@@ -88,7 +88,7 @@ func NewQTreeWidgetItemIterator(args ...interface{}) QTreeWidgetItemIterator {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN23QTreeWidgetItemIteratorC2ERKS_(qthis, arg0)
+    C.C_ZN23QTreeWidgetItemIteratorC2ERKS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QTreeWidgetItemIterator", "QTreeWidgetItemIterator", args)
   }

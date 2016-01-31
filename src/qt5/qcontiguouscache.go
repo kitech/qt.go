@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qcontiguouscache.h
 // dst-file: /src/core/qcontiguouscache.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QContiguousCacheData * QContiguousCacheData::allocateData(int size, int alignment);
-extern void _ZN20QContiguousCacheData12allocateDataEii(int32_t arg0, int32_t arg1); // 4
+extern void C_ZN20QContiguousCacheData12allocateDataEii(int32_t arg0, int32_t arg1); // 4
   // proto: static void QContiguousCacheData::freeData(QContiguousCacheData * data);
-extern void _ZN20QContiguousCacheData8freeDataEPS_(void* arg0); // 4
+extern void C_ZN20QContiguousCacheData8freeDataEPS_(void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -69,7 +69,7 @@ func (this *QContiguousCacheData) allocateData_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN20QContiguousCacheData12allocateDataEii(arg0, arg1)
+    C.C_ZN20QContiguousCacheData12allocateDataEii(arg0, arg1)
   default:
     qtrt.ErrorResolve("QContiguousCacheData", "allocateData", args)
   }
@@ -92,7 +92,7 @@ func (this *QContiguousCacheData) freeData_s(args ...interface{}) () {
     // invoke: void freeData(struct QContiguousCacheData *)
     var arg0 = args[0].(QContiguousCacheData).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN20QContiguousCacheData8freeDataEPS_(arg0)
+    C.C_ZN20QContiguousCacheData8freeDataEPS_(arg0)
   default:
     qtrt.ErrorResolve("QContiguousCacheData", "freeData", args)
   }

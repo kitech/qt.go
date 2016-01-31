@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.go
 //
@@ -29,23 +29,23 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  const QPixmap QSplashScreen::pixmap();
-extern void _ZNK13QSplashScreen6pixmapEv(void* qthis); // 4
+extern void C_ZNK13QSplashScreen6pixmapEv(void* qthis); // 4
   // proto:  void QSplashScreen::repaint();
-extern void _ZN13QSplashScreen7repaintEv(void* qthis); // 4
+extern void C_ZN13QSplashScreen7repaintEv(void* qthis); // 4
   // proto:  void QSplashScreen::finish(QWidget * w);
-extern void _ZN13QSplashScreen6finishEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN13QSplashScreen6finishEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QSplashScreen::metaObject();
-extern void _ZNK13QSplashScreen10metaObjectEv(void* qthis); // 4
+extern void C_ZNK13QSplashScreen10metaObjectEv(void* qthis); // 4
   // proto:  void QSplashScreen::setPixmap(const QPixmap & pixmap);
-extern void _ZN13QSplashScreen9setPixmapERK7QPixmap(void* qthis, void* arg0); // 4
+extern void C_ZN13QSplashScreen9setPixmapERK7QPixmap(void* qthis, void* arg0); // 4
   // proto:  void QSplashScreen::clearMessage();
-extern void _ZN13QSplashScreen12clearMessageEv(void* qthis); // 4
+extern void C_ZN13QSplashScreen12clearMessageEv(void* qthis); // 4
   // proto:  QString QSplashScreen::message();
-extern void _ZNK13QSplashScreen7messageEv(void* qthis); // 4
+extern void C_ZNK13QSplashScreen7messageEv(void* qthis); // 4
   // proto:  void QSplashScreen::showMessage(const QString & message, int alignment, const QColor & color);
-extern void _ZN13QSplashScreen11showMessageERK7QStringiRK6QColor(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
   // proto:  void QSplashScreen::~QSplashScreen();
-extern void _ZN13QSplashScreenD2Ev(void* qthis); // 4
+extern void C_ZN13QSplashScreenD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -78,7 +78,7 @@ func (this *QSplashScreen) pixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QSplashScreen6pixmapEv
     // invoke: const QPixmap pixmap()
-    C._ZNK13QSplashScreen6pixmapEv(this.qclsinst)
+    C.C_ZNK13QSplashScreen6pixmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplashScreen", "pixmap", args)
   }
@@ -98,7 +98,7 @@ func (this *QSplashScreen) repaint(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QSplashScreen7repaintEv
     // invoke: void repaint()
-    C._ZN13QSplashScreen7repaintEv(this.qclsinst)
+    C.C_ZN13QSplashScreen7repaintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplashScreen", "repaint", args)
   }
@@ -121,7 +121,7 @@ func (this *QSplashScreen) finish(args ...interface{}) () {
     // invoke: void finish(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QSplashScreen6finishEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN13QSplashScreen6finishEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSplashScreen", "finish", args)
   }
@@ -141,7 +141,7 @@ func (this *QSplashScreen) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QSplashScreen10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK13QSplashScreen10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QSplashScreen10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplashScreen", "metaObject", args)
   }
@@ -164,7 +164,7 @@ func (this *QSplashScreen) setPixmap(args ...interface{}) () {
     // invoke: void setPixmap(const class QPixmap &)
     var arg0 = args[0].(QPixmap).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QSplashScreen9setPixmapERK7QPixmap(this.qclsinst, arg0)
+    C.C_ZN13QSplashScreen9setPixmapERK7QPixmap(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSplashScreen", "setPixmap", args)
   }
@@ -184,7 +184,7 @@ func (this *QSplashScreen) clearMessage(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QSplashScreen12clearMessageEv
     // invoke: void clearMessage()
-    C._ZN13QSplashScreen12clearMessageEv(this.qclsinst)
+    C.C_ZN13QSplashScreen12clearMessageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplashScreen", "clearMessage", args)
   }
@@ -204,7 +204,7 @@ func (this *QSplashScreen) message(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QSplashScreen7messageEv
     // invoke: QString message()
-    C._ZNK13QSplashScreen7messageEv(this.qclsinst)
+    C.C_ZNK13QSplashScreen7messageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplashScreen", "message", args)
   }
@@ -233,7 +233,7 @@ func (this *QSplashScreen) showMessage(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QColor).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZN13QSplashScreen11showMessageERK7QStringiRK6QColor(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QSplashScreen", "showMessage", args)
   }
@@ -253,7 +253,7 @@ func (this *QSplashScreen) FreeQSplashScreen(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QSplashScreenD0Ev
     // invoke: void ~QSplashScreen()
-    C._ZN13QSplashScreenD2Ev(this.qclsinst)
+    C.C_ZN13QSplashScreenD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplashScreen", "~QSplashScreen", args)
   }

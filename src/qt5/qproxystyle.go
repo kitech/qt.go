@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:13 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.go
 //
@@ -29,35 +29,35 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QProxyStyle::QProxyStyle(QStyle * style);
-extern void _ZN11QProxyStyleC2EP6QStyle(void* qthis, void* arg0); // 3
+extern void C_ZN11QProxyStyleC2EP6QStyle(void* qthis, void* arg0); // 3
   // proto:  void QProxyStyle::QProxyStyle(const QString & key);
-extern void _ZN11QProxyStyleC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN11QProxyStyleC2ERK7QString(void* qthis, void* arg0); // 3
   // proto:  void QProxyStyle::polish(QWidget * widget);
-extern void _ZN11QProxyStyle6polishEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN11QProxyStyle6polishEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QProxyStyle::polish(QPalette & pal);
-extern void _ZN11QProxyStyle6polishER8QPalette(void* qthis, void* arg0); // 4
+extern void C_ZN11QProxyStyle6polishER8QPalette(void* qthis, void* arg0); // 4
   // proto:  void QProxyStyle::polish(QApplication * app);
-extern void _ZN11QProxyStyle6polishEP12QApplication(void* qthis, void* arg0); // 4
+extern void C_ZN11QProxyStyle6polishEP12QApplication(void* qthis, void* arg0); // 4
   // proto:  QStyle * QProxyStyle::baseStyle();
-extern void _ZNK11QProxyStyle9baseStyleEv(void* qthis); // 4
+extern void C_ZNK11QProxyStyle9baseStyleEv(void* qthis); // 4
   // proto:  QPalette QProxyStyle::standardPalette();
-extern void _ZNK11QProxyStyle15standardPaletteEv(void* qthis); // 4
+extern void C_ZNK11QProxyStyle15standardPaletteEv(void* qthis); // 4
   // proto:  void QProxyStyle::setBaseStyle(QStyle * style);
-extern void _ZN11QProxyStyle12setBaseStyleEP6QStyle(void* qthis, void* arg0); // 4
+extern void C_ZN11QProxyStyle12setBaseStyleEP6QStyle(void* qthis, void* arg0); // 4
   // proto:  void QProxyStyle::drawItemPixmap(QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap);
-extern void _ZNK11QProxyStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(void* qthis, void* arg0, void* arg1, int32_t arg2, void* arg3); // 4
+extern void C_ZNK11QProxyStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(void* qthis, void* arg0, void* arg1, int32_t arg2, void* arg3); // 4
   // proto:  const QMetaObject * QProxyStyle::metaObject();
-extern void _ZNK11QProxyStyle10metaObjectEv(void* qthis); // 4
+extern void C_ZNK11QProxyStyle10metaObjectEv(void* qthis); // 4
   // proto:  void QProxyStyle::~QProxyStyle();
-extern void _ZN11QProxyStyleD2Ev(void* qthis); // 4
+extern void C_ZN11QProxyStyleD2Ev(void* qthis); // 4
   // proto:  QRect QProxyStyle::itemTextRect(const QFontMetrics & fm, const QRect & r, int flags, bool enabled, const QString & text);
-extern void _ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(void* qthis, void* arg0, void* arg1, int32_t arg2, bool arg3, void* arg4); // 4
+extern void C_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(void* qthis, void* arg0, void* arg1, int32_t arg2, bool arg3, void* arg4); // 4
   // proto:  QRect QProxyStyle::itemPixmapRect(const QRect & r, int flags, const QPixmap & pixmap);
-extern void _ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
+extern void C_ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(void* qthis, void* arg0, int32_t arg1, void* arg2); // 4
   // proto:  void QProxyStyle::unpolish(QWidget * widget);
-extern void _ZN11QProxyStyle8unpolishEP7QWidget(void* qthis, void* arg0); // 4
+extern void C_ZN11QProxyStyle8unpolishEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QProxyStyle::unpolish(QApplication * app);
-extern void _ZN11QProxyStyle8unpolishEP12QApplication(void* qthis, void* arg0); // 4
+extern void C_ZN11QProxyStyle8unpolishEP12QApplication(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -97,7 +97,7 @@ func NewQProxyStyle(args ...interface{}) QProxyStyle {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QProxyStyleC2EP6QStyle(qthis, arg0)
+    C.C_ZN11QProxyStyleC2EP6QStyle(qthis, arg0)
   case 1:
     // invoke: _ZN11QProxyStyleC1ERK7QString
     // invoke: void QProxyStyle(const class QString &)
@@ -105,7 +105,7 @@ func NewQProxyStyle(args ...interface{}) QProxyStyle {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QProxyStyleC2ERK7QString(qthis, arg0)
+    C.C_ZN11QProxyStyleC2ERK7QString(qthis, arg0)
   default:
     qtrt.ErrorResolve("QProxyStyle", "QProxyStyle", args)
   }
@@ -135,19 +135,19 @@ func (this *QProxyStyle) polish(args ...interface{}) () {
     // invoke: void polish(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QProxyStyle6polishEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN11QProxyStyle6polishEP7QWidget(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN11QProxyStyle6polishER8QPalette
     // invoke: void polish(class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QProxyStyle6polishER8QPalette(this.qclsinst, arg0)
+    C.C_ZN11QProxyStyle6polishER8QPalette(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN11QProxyStyle6polishEP12QApplication
     // invoke: void polish(class QApplication *)
     var arg0 = args[0].(QApplication).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QProxyStyle6polishEP12QApplication(this.qclsinst, arg0)
+    C.C_ZN11QProxyStyle6polishEP12QApplication(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProxyStyle", "polish", args)
   }
@@ -167,7 +167,7 @@ func (this *QProxyStyle) baseStyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QProxyStyle9baseStyleEv
     // invoke: QStyle * baseStyle()
-    C._ZNK11QProxyStyle9baseStyleEv(this.qclsinst)
+    C.C_ZNK11QProxyStyle9baseStyleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProxyStyle", "baseStyle", args)
   }
@@ -187,7 +187,7 @@ func (this *QProxyStyle) standardPalette(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QProxyStyle15standardPaletteEv
     // invoke: QPalette standardPalette()
-    C._ZNK11QProxyStyle15standardPaletteEv(this.qclsinst)
+    C.C_ZNK11QProxyStyle15standardPaletteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProxyStyle", "standardPalette", args)
   }
@@ -210,7 +210,7 @@ func (this *QProxyStyle) setBaseStyle(args ...interface{}) () {
     // invoke: void setBaseStyle(class QStyle *)
     var arg0 = args[0].(QStyle).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QProxyStyle12setBaseStyleEP6QStyle(this.qclsinst, arg0)
+    C.C_ZN11QProxyStyle12setBaseStyleEP6QStyle(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProxyStyle", "setBaseStyle", args)
   }
@@ -242,7 +242,7 @@ func (this *QProxyStyle) drawItemPixmap(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QPixmap).qclsinst
     if false {fmt.Println(arg3)}
-    C._ZNK11QProxyStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK11QProxyStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QProxyStyle", "drawItemPixmap", args)
   }
@@ -262,7 +262,7 @@ func (this *QProxyStyle) metaObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QProxyStyle10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK11QProxyStyle10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QProxyStyle10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProxyStyle", "metaObject", args)
   }
@@ -282,7 +282,7 @@ func (this *QProxyStyle) FreeQProxyStyle(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QProxyStyleD0Ev
     // invoke: void ~QProxyStyle()
-    C._ZN11QProxyStyleD2Ev(this.qclsinst)
+    C.C_ZN11QProxyStyleD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProxyStyle", "~QProxyStyle", args)
   }
@@ -317,7 +317,7 @@ func (this *QProxyStyle) itemTextRect(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QString).qclsinst
     if false {fmt.Println(arg4)}
-    C._ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    C.C_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QProxyStyle", "itemTextRect", args)
   }
@@ -346,7 +346,7 @@ func (this *QProxyStyle) itemPixmapRect(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPixmap).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QProxyStyle", "itemPixmapRect", args)
   }
@@ -372,13 +372,13 @@ func (this *QProxyStyle) unpolish(args ...interface{}) () {
     // invoke: void unpolish(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QProxyStyle8unpolishEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN11QProxyStyle8unpolishEP7QWidget(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN11QProxyStyle8unpolishEP12QApplication
     // invoke: void unpolish(class QApplication *)
     var arg0 = args[0].(QApplication).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QProxyStyle8unpolishEP12QApplication(this.qclsinst, arg0)
+    C.C_ZN11QProxyStyle8unpolishEP12QApplication(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProxyStyle", "unpolish", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qtextformat.h
 // dst-file: /src/gui/qtextformat.go
 //
@@ -29,399 +29,399 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  qreal QTextLength::rawValue();
-extern void _ZNK11QTextLength8rawValueEv(void* qthis); // 2
+extern void C_ZNK11QTextLength8rawValueEv(void* qthis); // 2
   // proto:  qreal QTextLength::value(qreal maximumLength);
-extern void _ZNK11QTextLength5valueEd(void* qthis, double arg0); // 2
+extern void C_ZNK11QTextLength5valueEd(void* qthis, double arg0); // 2
   // proto:  void QTextLength::QTextLength();
-extern void _ZN11QTextLengthC2Ev(void* qthis); // 1
+extern void C_ZN11QTextLengthC2Ev(void* qthis); // 1
   // proto:  QTextLength::Type QTextLength::type();
-extern void _ZNK11QTextLength4typeEv(void* qthis); // 2
+extern void C_ZNK11QTextLength4typeEv(void* qthis); // 2
   // proto:  void QTextImageFormat::setHeight(qreal height);
-extern void _ZN16QTextImageFormat9setHeightEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextImageFormat9setHeightEd(void* qthis, double arg0); // 2
   // proto:  QString QTextImageFormat::name();
-extern void _ZNK16QTextImageFormat4nameEv(void* qthis); // 2
+extern void C_ZNK16QTextImageFormat4nameEv(void* qthis); // 2
   // proto:  void QTextImageFormat::setName(const QString & name);
-extern void _ZN16QTextImageFormat7setNameERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN16QTextImageFormat7setNameERK7QString(void* qthis, void* arg0); // 2
   // proto:  bool QTextImageFormat::isValid();
-extern void _ZNK16QTextImageFormat7isValidEv(void* qthis); // 2
+extern void C_ZNK16QTextImageFormat7isValidEv(void* qthis); // 2
   // proto:  qreal QTextImageFormat::height();
-extern void _ZNK16QTextImageFormat6heightEv(void* qthis); // 2
+extern void C_ZNK16QTextImageFormat6heightEv(void* qthis); // 2
   // proto:  qreal QTextImageFormat::width();
-extern void _ZNK16QTextImageFormat5widthEv(void* qthis); // 2
+extern void C_ZNK16QTextImageFormat5widthEv(void* qthis); // 2
   // proto:  void QTextImageFormat::QTextImageFormat();
-extern void _ZN16QTextImageFormatC2Ev(void* qthis); // 3
+extern void C_ZN16QTextImageFormatC2Ev(void* qthis); // 3
   // proto:  void QTextImageFormat::setWidth(qreal width);
-extern void _ZN16QTextImageFormat8setWidthEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextImageFormat8setWidthEd(void* qthis, double arg0); // 2
   // proto:  QTextBlockFormat QTextFormat::toBlockFormat();
-extern void _ZNK11QTextFormat13toBlockFormatEv(void* qthis); // 4
+extern void C_ZNK11QTextFormat13toBlockFormatEv(void* qthis); // 4
   // proto:  int QTextFormat::intProperty(int propertyId);
-extern void _ZNK11QTextFormat11intPropertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QTextFormat11intPropertyEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QTextFormat::isFrameFormat();
-extern void _ZNK11QTextFormat13isFrameFormatEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat13isFrameFormatEv(void* qthis); // 2
   // proto:  QTextImageFormat QTextFormat::toImageFormat();
-extern void _ZNK11QTextFormat13toImageFormatEv(void* qthis); // 4
+extern void C_ZNK11QTextFormat13toImageFormatEv(void* qthis); // 4
   // proto:  QColor QTextFormat::colorProperty(int propertyId);
-extern void _ZNK11QTextFormat13colorPropertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QTextFormat13colorPropertyEi(void* qthis, int32_t arg0); // 4
   // proto:  QString QTextFormat::stringProperty(int propertyId);
-extern void _ZNK11QTextFormat14stringPropertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QTextFormat14stringPropertyEi(void* qthis, int32_t arg0); // 4
   // proto:  qreal QTextFormat::doubleProperty(int propertyId);
-extern void _ZNK11QTextFormat14doublePropertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QTextFormat14doublePropertyEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTextFormat::clearForeground();
-extern void _ZN11QTextFormat15clearForegroundEv(void* qthis); // 2
+extern void C_ZN11QTextFormat15clearForegroundEv(void* qthis); // 2
   // proto:  int QTextFormat::objectIndex();
-extern void _ZNK11QTextFormat11objectIndexEv(void* qthis); // 4
+extern void C_ZNK11QTextFormat11objectIndexEv(void* qthis); // 4
   // proto:  bool QTextFormat::isImageFormat();
-extern void _ZNK11QTextFormat13isImageFormatEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat13isImageFormatEv(void* qthis); // 2
   // proto:  int QTextFormat::objectType();
-extern void _ZNK11QTextFormat10objectTypeEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat10objectTypeEv(void* qthis); // 2
   // proto:  bool QTextFormat::hasProperty(int propertyId);
-extern void _ZNK11QTextFormat11hasPropertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QTextFormat11hasPropertyEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTextFormat::setForeground(const QBrush & brush);
-extern void _ZN11QTextFormat13setForegroundERK6QBrush(void* qthis, void* arg0); // 2
+extern void C_ZN11QTextFormat13setForegroundERK6QBrush(void* qthis, void* arg0); // 2
   // proto:  bool QTextFormat::isCharFormat();
-extern void _ZNK11QTextFormat12isCharFormatEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat12isCharFormatEv(void* qthis); // 2
   // proto:  QTextTableCellFormat QTextFormat::toTableCellFormat();
-extern void _ZNK11QTextFormat17toTableCellFormatEv(void* qthis); // 4
+extern void C_ZNK11QTextFormat17toTableCellFormatEv(void* qthis); // 4
   // proto:  void QTextFormat::setBackground(const QBrush & brush);
-extern void _ZN11QTextFormat13setBackgroundERK6QBrush(void* qthis, void* arg0); // 2
+extern void C_ZN11QTextFormat13setBackgroundERK6QBrush(void* qthis, void* arg0); // 2
   // proto:  bool QTextFormat::isEmpty();
-extern void _ZNK11QTextFormat7isEmptyEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat7isEmptyEv(void* qthis); // 2
   // proto:  void QTextFormat::swap(QTextFormat & other);
-extern void _ZN11QTextFormat4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN11QTextFormat4swapERS_(void* qthis, void* arg0); // 2
   // proto:  void QTextFormat::QTextFormat();
-extern void _ZN11QTextFormatC2Ev(void* qthis); // 3
+extern void C_ZN11QTextFormatC2Ev(void* qthis); // 3
   // proto:  void QTextFormat::QTextFormat(int type);
-extern void _ZN11QTextFormatC2Ei(void* qthis, int32_t arg0); // 3
+extern void C_ZN11QTextFormatC2Ei(void* qthis, int32_t arg0); // 3
   // proto:  void QTextFormat::QTextFormat(const QTextFormat & rhs);
-extern void _ZN11QTextFormatC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN11QTextFormatC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  bool QTextFormat::isBlockFormat();
-extern void _ZNK11QTextFormat13isBlockFormatEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat13isBlockFormatEv(void* qthis); // 2
   // proto:  void QTextFormat::clearBackground();
-extern void _ZN11QTextFormat15clearBackgroundEv(void* qthis); // 2
+extern void C_ZN11QTextFormat15clearBackgroundEv(void* qthis); // 2
   // proto:  int QTextFormat::type();
-extern void _ZNK11QTextFormat4typeEv(void* qthis); // 4
+extern void C_ZNK11QTextFormat4typeEv(void* qthis); // 4
   // proto:  QBrush QTextFormat::foreground();
-extern void _ZNK11QTextFormat10foregroundEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat10foregroundEv(void* qthis); // 2
   // proto:  QTextCharFormat QTextFormat::toCharFormat();
-extern void _ZNK11QTextFormat12toCharFormatEv(void* qthis); // 4
+extern void C_ZNK11QTextFormat12toCharFormatEv(void* qthis); // 4
   // proto:  void QTextFormat::~QTextFormat();
-extern void _ZN11QTextFormatD2Ev(void* qthis); // 4
+extern void C_ZN11QTextFormatD2Ev(void* qthis); // 4
   // proto:  bool QTextFormat::isValid();
-extern void _ZNK11QTextFormat7isValidEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat7isValidEv(void* qthis); // 2
   // proto:  bool QTextFormat::boolProperty(int propertyId);
-extern void _ZNK11QTextFormat12boolPropertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QTextFormat12boolPropertyEi(void* qthis, int32_t arg0); // 4
   // proto:  QTextLength QTextFormat::lengthProperty(int propertyId);
-extern void _ZNK11QTextFormat14lengthPropertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QTextFormat14lengthPropertyEi(void* qthis, int32_t arg0); // 4
   // proto:  QBrush QTextFormat::background();
-extern void _ZNK11QTextFormat10backgroundEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat10backgroundEv(void* qthis); // 2
   // proto:  void QTextFormat::setProperty(int propertyId, const QVariant & value);
-extern void _ZN11QTextFormat11setPropertyEiRK8QVariant(void* qthis, int32_t arg0, void* arg1); // 4
+extern void C_ZN11QTextFormat11setPropertyEiRK8QVariant(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  QTextListFormat QTextFormat::toListFormat();
-extern void _ZNK11QTextFormat12toListFormatEv(void* qthis); // 4
+extern void C_ZNK11QTextFormat12toListFormatEv(void* qthis); // 4
   // proto:  QMap<int, QVariant> QTextFormat::properties();
-extern void _ZNK11QTextFormat10propertiesEv(void* qthis); // 4
+extern void C_ZNK11QTextFormat10propertiesEv(void* qthis); // 4
   // proto:  QTextFrameFormat QTextFormat::toFrameFormat();
-extern void _ZNK11QTextFormat13toFrameFormatEv(void* qthis); // 4
+extern void C_ZNK11QTextFormat13toFrameFormatEv(void* qthis); // 4
   // proto:  QPen QTextFormat::penProperty(int propertyId);
-extern void _ZNK11QTextFormat11penPropertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QTextFormat11penPropertyEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QTextFormat::isTableCellFormat();
-extern void _ZNK11QTextFormat17isTableCellFormatEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat17isTableCellFormatEv(void* qthis); // 2
   // proto:  void QTextFormat::setObjectIndex(int object);
-extern void _ZN11QTextFormat14setObjectIndexEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN11QTextFormat14setObjectIndexEi(void* qthis, int32_t arg0); // 4
   // proto:  Qt::LayoutDirection QTextFormat::layoutDirection();
-extern void _ZNK11QTextFormat15layoutDirectionEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat15layoutDirectionEv(void* qthis); // 2
   // proto:  void QTextFormat::clearProperty(int propertyId);
-extern void _ZN11QTextFormat13clearPropertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZN11QTextFormat13clearPropertyEi(void* qthis, int32_t arg0); // 4
   // proto:  QBrush QTextFormat::brushProperty(int propertyId);
-extern void _ZNK11QTextFormat13brushPropertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QTextFormat13brushPropertyEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTextFormat::propertyCount();
-extern void _ZNK11QTextFormat13propertyCountEv(void* qthis); // 4
+extern void C_ZNK11QTextFormat13propertyCountEv(void* qthis); // 4
   // proto:  void QTextFormat::merge(const QTextFormat & other);
-extern void _ZN11QTextFormat5mergeERKS_(void* qthis, void* arg0); // 4
+extern void C_ZN11QTextFormat5mergeERKS_(void* qthis, void* arg0); // 4
   // proto:  QVector<QTextLength> QTextFormat::lengthVectorProperty(int propertyId);
-extern void _ZNK11QTextFormat20lengthVectorPropertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QTextFormat20lengthVectorPropertyEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QTextFormat::isTableFormat();
-extern void _ZNK11QTextFormat13isTableFormatEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat13isTableFormatEv(void* qthis); // 2
   // proto:  QTextTableFormat QTextFormat::toTableFormat();
-extern void _ZNK11QTextFormat13toTableFormatEv(void* qthis); // 4
+extern void C_ZNK11QTextFormat13toTableFormatEv(void* qthis); // 4
   // proto:  QVariant QTextFormat::property(int propertyId);
-extern void _ZNK11QTextFormat8propertyEi(void* qthis, int32_t arg0); // 4
+extern void C_ZNK11QTextFormat8propertyEi(void* qthis, int32_t arg0); // 4
   // proto:  bool QTextFormat::isListFormat();
-extern void _ZNK11QTextFormat12isListFormatEv(void* qthis); // 2
+extern void C_ZNK11QTextFormat12isListFormatEv(void* qthis); // 2
   // proto:  void QTextFormat::setObjectType(int type);
-extern void _ZN11QTextFormat13setObjectTypeEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN11QTextFormat13setObjectTypeEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTextBlockFormat::setTextIndent(qreal aindent);
-extern void _ZN16QTextBlockFormat13setTextIndentEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextBlockFormat13setTextIndentEd(void* qthis, double arg0); // 2
   // proto:  int QTextBlockFormat::lineHeightType();
-extern void _ZNK16QTextBlockFormat14lineHeightTypeEv(void* qthis); // 2
+extern void C_ZNK16QTextBlockFormat14lineHeightTypeEv(void* qthis); // 2
   // proto:  Qt::Alignment QTextBlockFormat::alignment();
-extern void _ZNK16QTextBlockFormat9alignmentEv(void* qthis); // 2
+extern void C_ZNK16QTextBlockFormat9alignmentEv(void* qthis); // 2
   // proto:  qreal QTextBlockFormat::leftMargin();
-extern void _ZNK16QTextBlockFormat10leftMarginEv(void* qthis); // 2
+extern void C_ZNK16QTextBlockFormat10leftMarginEv(void* qthis); // 2
   // proto:  qreal QTextBlockFormat::topMargin();
-extern void _ZNK16QTextBlockFormat9topMarginEv(void* qthis); // 2
+extern void C_ZNK16QTextBlockFormat9topMarginEv(void* qthis); // 2
   // proto:  void QTextBlockFormat::setLeftMargin(qreal margin);
-extern void _ZN16QTextBlockFormat13setLeftMarginEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextBlockFormat13setLeftMarginEd(void* qthis, double arg0); // 2
   // proto:  qreal QTextBlockFormat::lineHeight();
-extern void _ZNK16QTextBlockFormat10lineHeightEv(void* qthis); // 2
+extern void C_ZNK16QTextBlockFormat10lineHeightEv(void* qthis); // 2
   // proto:  qreal QTextBlockFormat::lineHeight(qreal scriptLineHeight, qreal scaling);
-extern void _ZNK16QTextBlockFormat10lineHeightEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZNK16QTextBlockFormat10lineHeightEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QTextBlockFormat::setTopMargin(qreal margin);
-extern void _ZN16QTextBlockFormat12setTopMarginEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextBlockFormat12setTopMarginEd(void* qthis, double arg0); // 2
   // proto:  qreal QTextBlockFormat::rightMargin();
-extern void _ZNK16QTextBlockFormat11rightMarginEv(void* qthis); // 2
+extern void C_ZNK16QTextBlockFormat11rightMarginEv(void* qthis); // 2
   // proto:  bool QTextBlockFormat::isValid();
-extern void _ZNK16QTextBlockFormat7isValidEv(void* qthis); // 2
+extern void C_ZNK16QTextBlockFormat7isValidEv(void* qthis); // 2
   // proto:  void QTextBlockFormat::setIndent(int indent);
-extern void _ZN16QTextBlockFormat9setIndentEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN16QTextBlockFormat9setIndentEi(void* qthis, int32_t arg0); // 2
   // proto:  PageBreakFlags QTextBlockFormat::pageBreakPolicy();
-extern void _ZNK16QTextBlockFormat15pageBreakPolicyEv(void* qthis); // 2
+extern void C_ZNK16QTextBlockFormat15pageBreakPolicyEv(void* qthis); // 2
   // proto:  qreal QTextBlockFormat::bottomMargin();
-extern void _ZNK16QTextBlockFormat12bottomMarginEv(void* qthis); // 2
+extern void C_ZNK16QTextBlockFormat12bottomMarginEv(void* qthis); // 2
   // proto:  void QTextBlockFormat::setLineHeight(qreal height, int heightType);
-extern void _ZN16QTextBlockFormat13setLineHeightEdi(void* qthis, double arg0, int32_t arg1); // 2
+extern void C_ZN16QTextBlockFormat13setLineHeightEdi(void* qthis, double arg0, int32_t arg1); // 2
   // proto:  void QTextBlockFormat::setNonBreakableLines(bool b);
-extern void _ZN16QTextBlockFormat20setNonBreakableLinesEb(void* qthis, bool arg0); // 2
+extern void C_ZN16QTextBlockFormat20setNonBreakableLinesEb(void* qthis, bool arg0); // 2
   // proto:  void QTextBlockFormat::setRightMargin(qreal margin);
-extern void _ZN16QTextBlockFormat14setRightMarginEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextBlockFormat14setRightMarginEd(void* qthis, double arg0); // 2
   // proto:  int QTextBlockFormat::indent();
-extern void _ZNK16QTextBlockFormat6indentEv(void* qthis); // 2
+extern void C_ZNK16QTextBlockFormat6indentEv(void* qthis); // 2
   // proto:  QList<QTextOption::Tab> QTextBlockFormat::tabPositions();
-extern void _ZNK16QTextBlockFormat12tabPositionsEv(void* qthis); // 4
+extern void C_ZNK16QTextBlockFormat12tabPositionsEv(void* qthis); // 4
   // proto:  qreal QTextBlockFormat::textIndent();
-extern void _ZNK16QTextBlockFormat10textIndentEv(void* qthis); // 2
+extern void C_ZNK16QTextBlockFormat10textIndentEv(void* qthis); // 2
   // proto:  void QTextBlockFormat::setBottomMargin(qreal margin);
-extern void _ZN16QTextBlockFormat15setBottomMarginEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextBlockFormat15setBottomMarginEd(void* qthis, double arg0); // 2
   // proto:  bool QTextBlockFormat::nonBreakableLines();
-extern void _ZNK16QTextBlockFormat17nonBreakableLinesEv(void* qthis); // 2
+extern void C_ZNK16QTextBlockFormat17nonBreakableLinesEv(void* qthis); // 2
   // proto:  void QTextBlockFormat::QTextBlockFormat();
-extern void _ZN16QTextBlockFormatC2Ev(void* qthis); // 3
+extern void C_ZN16QTextBlockFormatC2Ev(void* qthis); // 3
   // proto:  void QTextCharFormat::setTableCellColumnSpan(int tableCellColumnSpan);
-extern void _ZN15QTextCharFormat22setTableCellColumnSpanEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN15QTextCharFormat22setTableCellColumnSpanEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTextCharFormat::setAnchorHref(const QString & value);
-extern void _ZN15QTextCharFormat13setAnchorHrefERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN15QTextCharFormat13setAnchorHrefERK7QString(void* qthis, void* arg0); // 2
   // proto:  void QTextCharFormat::setFontOverline(bool overline);
-extern void _ZN15QTextCharFormat15setFontOverlineEb(void* qthis, bool arg0); // 2
+extern void C_ZN15QTextCharFormat15setFontOverlineEb(void* qthis, bool arg0); // 2
   // proto:  void QTextCharFormat::setTextOutline(const QPen & pen);
-extern void _ZN15QTextCharFormat14setTextOutlineERK4QPen(void* qthis, void* arg0); // 2
+extern void C_ZN15QTextCharFormat14setTextOutlineERK4QPen(void* qthis, void* arg0); // 2
   // proto:  QString QTextCharFormat::fontFamily();
-extern void _ZNK15QTextCharFormat10fontFamilyEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat10fontFamilyEv(void* qthis); // 2
   // proto:  QStringList QTextCharFormat::anchorNames();
-extern void _ZNK15QTextCharFormat11anchorNamesEv(void* qthis); // 4
+extern void C_ZNK15QTextCharFormat11anchorNamesEv(void* qthis); // 4
   // proto:  QFont::StyleHint QTextCharFormat::fontStyleHint();
-extern void _ZNK15QTextCharFormat13fontStyleHintEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat13fontStyleHintEv(void* qthis); // 2
   // proto:  void QTextCharFormat::setFontStretch(int factor);
-extern void _ZN15QTextCharFormat14setFontStretchEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN15QTextCharFormat14setFontStretchEi(void* qthis, int32_t arg0); // 2
   // proto:  QFont QTextCharFormat::font();
-extern void _ZNK15QTextCharFormat4fontEv(void* qthis); // 4
+extern void C_ZNK15QTextCharFormat4fontEv(void* qthis); // 4
   // proto:  bool QTextCharFormat::fontItalic();
-extern void _ZNK15QTextCharFormat10fontItalicEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat10fontItalicEv(void* qthis); // 2
   // proto:  bool QTextCharFormat::fontKerning();
-extern void _ZNK15QTextCharFormat11fontKerningEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat11fontKerningEv(void* qthis); // 2
   // proto:  qreal QTextCharFormat::fontWordSpacing();
-extern void _ZNK15QTextCharFormat15fontWordSpacingEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat15fontWordSpacingEv(void* qthis); // 2
   // proto:  bool QTextCharFormat::fontOverline();
-extern void _ZNK15QTextCharFormat12fontOverlineEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat12fontOverlineEv(void* qthis); // 2
   // proto:  void QTextCharFormat::setFontUnderline(bool underline);
-extern void _ZN15QTextCharFormat16setFontUnderlineEb(void* qthis, bool arg0); // 2
+extern void C_ZN15QTextCharFormat16setFontUnderlineEb(void* qthis, bool arg0); // 2
   // proto:  QTextCharFormat::UnderlineStyle QTextCharFormat::underlineStyle();
-extern void _ZNK15QTextCharFormat14underlineStyleEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat14underlineStyleEv(void* qthis); // 2
   // proto:  QFont::StyleStrategy QTextCharFormat::fontStyleStrategy();
-extern void _ZNK15QTextCharFormat17fontStyleStrategyEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat17fontStyleStrategyEv(void* qthis); // 2
   // proto:  void QTextCharFormat::setFontWordSpacing(qreal spacing);
-extern void _ZN15QTextCharFormat18setFontWordSpacingEd(void* qthis, double arg0); // 2
+extern void C_ZN15QTextCharFormat18setFontWordSpacingEd(void* qthis, double arg0); // 2
   // proto:  void QTextCharFormat::setFontWeight(int weight);
-extern void _ZN15QTextCharFormat13setFontWeightEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN15QTextCharFormat13setFontWeightEi(void* qthis, int32_t arg0); // 2
   // proto:  QTextCharFormat::VerticalAlignment QTextCharFormat::verticalAlignment();
-extern void _ZNK15QTextCharFormat17verticalAlignmentEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat17verticalAlignmentEv(void* qthis); // 2
   // proto:  void QTextCharFormat::setFontFamily(const QString & family);
-extern void _ZN15QTextCharFormat13setFontFamilyERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN15QTextCharFormat13setFontFamilyERK7QString(void* qthis, void* arg0); // 2
   // proto:  void QTextCharFormat::setAnchorNames(const QStringList & names);
-extern void _ZN15QTextCharFormat14setAnchorNamesERK11QStringList(void* qthis, void* arg0); // 2
+extern void C_ZN15QTextCharFormat14setAnchorNamesERK11QStringList(void* qthis, void* arg0); // 2
   // proto:  void QTextCharFormat::setTableCellRowSpan(int tableCellRowSpan);
-extern void _ZN15QTextCharFormat19setTableCellRowSpanEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN15QTextCharFormat19setTableCellRowSpanEi(void* qthis, int32_t arg0); // 2
   // proto:  void QTextCharFormat::setFontKerning(bool enable);
-extern void _ZN15QTextCharFormat14setFontKerningEb(void* qthis, bool arg0); // 2
+extern void C_ZN15QTextCharFormat14setFontKerningEb(void* qthis, bool arg0); // 2
   // proto:  void QTextCharFormat::setFontLetterSpacing(qreal spacing);
-extern void _ZN15QTextCharFormat20setFontLetterSpacingEd(void* qthis, double arg0); // 2
+extern void C_ZN15QTextCharFormat20setFontLetterSpacingEd(void* qthis, double arg0); // 2
   // proto:  QFont::SpacingType QTextCharFormat::fontLetterSpacingType();
-extern void _ZNK15QTextCharFormat21fontLetterSpacingTypeEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat21fontLetterSpacingTypeEv(void* qthis); // 2
   // proto:  bool QTextCharFormat::fontUnderline();
-extern void _ZNK15QTextCharFormat13fontUnderlineEv(void* qthis); // 4
+extern void C_ZNK15QTextCharFormat13fontUnderlineEv(void* qthis); // 4
   // proto:  QFont::HintingPreference QTextCharFormat::fontHintingPreference();
-extern void _ZNK15QTextCharFormat21fontHintingPreferenceEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat21fontHintingPreferenceEv(void* qthis); // 2
   // proto:  void QTextCharFormat::setFontStrikeOut(bool strikeOut);
-extern void _ZN15QTextCharFormat16setFontStrikeOutEb(void* qthis, bool arg0); // 2
+extern void C_ZN15QTextCharFormat16setFontStrikeOutEb(void* qthis, bool arg0); // 2
   // proto:  QString QTextCharFormat::anchorName();
-extern void _ZNK15QTextCharFormat10anchorNameEv(void* qthis); // 4
+extern void C_ZNK15QTextCharFormat10anchorNameEv(void* qthis); // 4
   // proto:  qreal QTextCharFormat::fontPointSize();
-extern void _ZNK15QTextCharFormat13fontPointSizeEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat13fontPointSizeEv(void* qthis); // 2
   // proto:  bool QTextCharFormat::fontFixedPitch();
-extern void _ZNK15QTextCharFormat14fontFixedPitchEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat14fontFixedPitchEv(void* qthis); // 2
   // proto:  bool QTextCharFormat::isValid();
-extern void _ZNK15QTextCharFormat7isValidEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat7isValidEv(void* qthis); // 2
   // proto:  QString QTextCharFormat::toolTip();
-extern void _ZNK15QTextCharFormat7toolTipEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat7toolTipEv(void* qthis); // 2
   // proto:  void QTextCharFormat::setFontPointSize(qreal size);
-extern void _ZN15QTextCharFormat16setFontPointSizeEd(void* qthis, double arg0); // 2
+extern void C_ZN15QTextCharFormat16setFontPointSizeEd(void* qthis, double arg0); // 2
   // proto:  void QTextCharFormat::setAnchor(bool anchor);
-extern void _ZN15QTextCharFormat9setAnchorEb(void* qthis, bool arg0); // 2
+extern void C_ZN15QTextCharFormat9setAnchorEb(void* qthis, bool arg0); // 2
   // proto:  void QTextCharFormat::setAnchorName(const QString & name);
-extern void _ZN15QTextCharFormat13setAnchorNameERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN15QTextCharFormat13setAnchorNameERK7QString(void* qthis, void* arg0); // 2
   // proto:  qreal QTextCharFormat::fontLetterSpacing();
-extern void _ZNK15QTextCharFormat17fontLetterSpacingEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat17fontLetterSpacingEv(void* qthis); // 2
   // proto:  bool QTextCharFormat::isAnchor();
-extern void _ZNK15QTextCharFormat8isAnchorEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat8isAnchorEv(void* qthis); // 2
   // proto:  void QTextCharFormat::setFontItalic(bool italic);
-extern void _ZN15QTextCharFormat13setFontItalicEb(void* qthis, bool arg0); // 2
+extern void C_ZN15QTextCharFormat13setFontItalicEb(void* qthis, bool arg0); // 2
   // proto:  void QTextCharFormat::QTextCharFormat();
-extern void _ZN15QTextCharFormatC2Ev(void* qthis); // 3
+extern void C_ZN15QTextCharFormatC2Ev(void* qthis); // 3
   // proto:  QColor QTextCharFormat::underlineColor();
-extern void _ZNK15QTextCharFormat14underlineColorEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat14underlineColorEv(void* qthis); // 2
   // proto:  void QTextCharFormat::setUnderlineColor(const QColor & color);
-extern void _ZN15QTextCharFormat17setUnderlineColorERK6QColor(void* qthis, void* arg0); // 2
+extern void C_ZN15QTextCharFormat17setUnderlineColorERK6QColor(void* qthis, void* arg0); // 2
   // proto:  int QTextCharFormat::fontWeight();
-extern void _ZNK15QTextCharFormat10fontWeightEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat10fontWeightEv(void* qthis); // 2
   // proto:  void QTextCharFormat::setToolTip(const QString & tip);
-extern void _ZN15QTextCharFormat10setToolTipERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN15QTextCharFormat10setToolTipERK7QString(void* qthis, void* arg0); // 2
   // proto:  int QTextCharFormat::tableCellColumnSpan();
-extern void _ZNK15QTextCharFormat19tableCellColumnSpanEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat19tableCellColumnSpanEv(void* qthis); // 2
   // proto:  QString QTextCharFormat::anchorHref();
-extern void _ZNK15QTextCharFormat10anchorHrefEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat10anchorHrefEv(void* qthis); // 2
   // proto:  QFont::Capitalization QTextCharFormat::fontCapitalization();
-extern void _ZNK15QTextCharFormat18fontCapitalizationEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat18fontCapitalizationEv(void* qthis); // 2
   // proto:  QPen QTextCharFormat::textOutline();
-extern void _ZNK15QTextCharFormat11textOutlineEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat11textOutlineEv(void* qthis); // 2
   // proto:  int QTextCharFormat::tableCellRowSpan();
-extern void _ZNK15QTextCharFormat16tableCellRowSpanEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat16tableCellRowSpanEv(void* qthis); // 2
   // proto:  void QTextCharFormat::setFontFixedPitch(bool fixedPitch);
-extern void _ZN15QTextCharFormat17setFontFixedPitchEb(void* qthis, bool arg0); // 2
+extern void C_ZN15QTextCharFormat17setFontFixedPitchEb(void* qthis, bool arg0); // 2
   // proto:  void QTextCharFormat::setFont(const QFont & font);
-extern void _ZN15QTextCharFormat7setFontERK5QFont(void* qthis, void* arg0); // 4
+extern void C_ZN15QTextCharFormat7setFontERK5QFont(void* qthis, void* arg0); // 4
   // proto:  int QTextCharFormat::fontStretch();
-extern void _ZNK15QTextCharFormat11fontStretchEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat11fontStretchEv(void* qthis); // 2
   // proto:  bool QTextCharFormat::fontStrikeOut();
-extern void _ZNK15QTextCharFormat13fontStrikeOutEv(void* qthis); // 2
+extern void C_ZNK15QTextCharFormat13fontStrikeOutEv(void* qthis); // 2
   // proto:  void QTextTableFormat::clearColumnWidthConstraints();
-extern void _ZN16QTextTableFormat27clearColumnWidthConstraintsEv(void* qthis); // 2
+extern void C_ZN16QTextTableFormat27clearColumnWidthConstraintsEv(void* qthis); // 2
   // proto:  QVector<QTextLength> QTextTableFormat::columnWidthConstraints();
-extern void _ZNK16QTextTableFormat22columnWidthConstraintsEv(void* qthis); // 2
+extern void C_ZNK16QTextTableFormat22columnWidthConstraintsEv(void* qthis); // 2
   // proto:  void QTextTableFormat::QTextTableFormat();
-extern void _ZN16QTextTableFormatC2Ev(void* qthis); // 3
+extern void C_ZN16QTextTableFormatC2Ev(void* qthis); // 3
   // proto:  void QTextTableFormat::setHeaderRowCount(int count);
-extern void _ZN16QTextTableFormat17setHeaderRowCountEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN16QTextTableFormat17setHeaderRowCountEi(void* qthis, int32_t arg0); // 2
   // proto:  int QTextTableFormat::headerRowCount();
-extern void _ZNK16QTextTableFormat14headerRowCountEv(void* qthis); // 2
+extern void C_ZNK16QTextTableFormat14headerRowCountEv(void* qthis); // 2
   // proto:  void QTextTableFormat::setColumns(int columns);
-extern void _ZN16QTextTableFormat10setColumnsEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN16QTextTableFormat10setColumnsEi(void* qthis, int32_t arg0); // 2
   // proto:  Qt::Alignment QTextTableFormat::alignment();
-extern void _ZNK16QTextTableFormat9alignmentEv(void* qthis); // 2
+extern void C_ZNK16QTextTableFormat9alignmentEv(void* qthis); // 2
   // proto:  bool QTextTableFormat::isValid();
-extern void _ZNK16QTextTableFormat7isValidEv(void* qthis); // 2
+extern void C_ZNK16QTextTableFormat7isValidEv(void* qthis); // 2
   // proto:  qreal QTextTableFormat::cellPadding();
-extern void _ZNK16QTextTableFormat11cellPaddingEv(void* qthis); // 2
+extern void C_ZNK16QTextTableFormat11cellPaddingEv(void* qthis); // 2
   // proto:  void QTextTableFormat::setCellSpacing(qreal spacing);
-extern void _ZN16QTextTableFormat14setCellSpacingEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextTableFormat14setCellSpacingEd(void* qthis, double arg0); // 2
   // proto:  qreal QTextTableFormat::cellSpacing();
-extern void _ZNK16QTextTableFormat11cellSpacingEv(void* qthis); // 2
+extern void C_ZNK16QTextTableFormat11cellSpacingEv(void* qthis); // 2
   // proto:  void QTextTableFormat::setCellPadding(qreal padding);
-extern void _ZN16QTextTableFormat14setCellPaddingEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextTableFormat14setCellPaddingEd(void* qthis, double arg0); // 2
   // proto:  int QTextTableFormat::columns();
-extern void _ZNK16QTextTableFormat7columnsEv(void* qthis); // 2
+extern void C_ZNK16QTextTableFormat7columnsEv(void* qthis); // 2
   // proto:  void QTextTableCellFormat::setLeftPadding(qreal padding);
-extern void _ZN20QTextTableCellFormat14setLeftPaddingEd(void* qthis, double arg0); // 2
+extern void C_ZN20QTextTableCellFormat14setLeftPaddingEd(void* qthis, double arg0); // 2
   // proto:  qreal QTextTableCellFormat::leftPadding();
-extern void _ZNK20QTextTableCellFormat11leftPaddingEv(void* qthis); // 2
+extern void C_ZNK20QTextTableCellFormat11leftPaddingEv(void* qthis); // 2
   // proto:  void QTextTableCellFormat::setBottomPadding(qreal padding);
-extern void _ZN20QTextTableCellFormat16setBottomPaddingEd(void* qthis, double arg0); // 2
+extern void C_ZN20QTextTableCellFormat16setBottomPaddingEd(void* qthis, double arg0); // 2
   // proto:  void QTextTableCellFormat::QTextTableCellFormat();
-extern void _ZN20QTextTableCellFormatC2Ev(void* qthis); // 3
+extern void C_ZN20QTextTableCellFormatC2Ev(void* qthis); // 3
   // proto:  void QTextTableCellFormat::setTopPadding(qreal padding);
-extern void _ZN20QTextTableCellFormat13setTopPaddingEd(void* qthis, double arg0); // 2
+extern void C_ZN20QTextTableCellFormat13setTopPaddingEd(void* qthis, double arg0); // 2
   // proto:  qreal QTextTableCellFormat::rightPadding();
-extern void _ZNK20QTextTableCellFormat12rightPaddingEv(void* qthis); // 2
+extern void C_ZNK20QTextTableCellFormat12rightPaddingEv(void* qthis); // 2
   // proto:  void QTextTableCellFormat::setRightPadding(qreal padding);
-extern void _ZN20QTextTableCellFormat15setRightPaddingEd(void* qthis, double arg0); // 2
+extern void C_ZN20QTextTableCellFormat15setRightPaddingEd(void* qthis, double arg0); // 2
   // proto:  bool QTextTableCellFormat::isValid();
-extern void _ZNK20QTextTableCellFormat7isValidEv(void* qthis); // 2
+extern void C_ZNK20QTextTableCellFormat7isValidEv(void* qthis); // 2
   // proto:  qreal QTextTableCellFormat::topPadding();
-extern void _ZNK20QTextTableCellFormat10topPaddingEv(void* qthis); // 2
+extern void C_ZNK20QTextTableCellFormat10topPaddingEv(void* qthis); // 2
   // proto:  void QTextTableCellFormat::setPadding(qreal padding);
-extern void _ZN20QTextTableCellFormat10setPaddingEd(void* qthis, double arg0); // 2
+extern void C_ZN20QTextTableCellFormat10setPaddingEd(void* qthis, double arg0); // 2
   // proto:  qreal QTextTableCellFormat::bottomPadding();
-extern void _ZNK20QTextTableCellFormat13bottomPaddingEv(void* qthis); // 2
+extern void C_ZNK20QTextTableCellFormat13bottomPaddingEv(void* qthis); // 2
   // proto:  QTextListFormat::Style QTextListFormat::style();
-extern void _ZNK15QTextListFormat5styleEv(void* qthis); // 2
+extern void C_ZNK15QTextListFormat5styleEv(void* qthis); // 2
   // proto:  QString QTextListFormat::numberPrefix();
-extern void _ZNK15QTextListFormat12numberPrefixEv(void* qthis); // 2
+extern void C_ZNK15QTextListFormat12numberPrefixEv(void* qthis); // 2
   // proto:  int QTextListFormat::indent();
-extern void _ZNK15QTextListFormat6indentEv(void* qthis); // 2
+extern void C_ZNK15QTextListFormat6indentEv(void* qthis); // 2
   // proto:  void QTextListFormat::setNumberPrefix(const QString & numberPrefix);
-extern void _ZN15QTextListFormat15setNumberPrefixERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN15QTextListFormat15setNumberPrefixERK7QString(void* qthis, void* arg0); // 2
   // proto:  bool QTextListFormat::isValid();
-extern void _ZNK15QTextListFormat7isValidEv(void* qthis); // 2
+extern void C_ZNK15QTextListFormat7isValidEv(void* qthis); // 2
   // proto:  void QTextListFormat::QTextListFormat();
-extern void _ZN15QTextListFormatC2Ev(void* qthis); // 3
+extern void C_ZN15QTextListFormatC2Ev(void* qthis); // 3
   // proto:  void QTextListFormat::setIndent(int indent);
-extern void _ZN15QTextListFormat9setIndentEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN15QTextListFormat9setIndentEi(void* qthis, int32_t arg0); // 2
   // proto:  QString QTextListFormat::numberSuffix();
-extern void _ZNK15QTextListFormat12numberSuffixEv(void* qthis); // 2
+extern void C_ZNK15QTextListFormat12numberSuffixEv(void* qthis); // 2
   // proto:  void QTextListFormat::setNumberSuffix(const QString & numberSuffix);
-extern void _ZN15QTextListFormat15setNumberSuffixERK7QString(void* qthis, void* arg0); // 2
+extern void C_ZN15QTextListFormat15setNumberSuffixERK7QString(void* qthis, void* arg0); // 2
   // proto:  void QTextFrameFormat::setBorderBrush(const QBrush & brush);
-extern void _ZN16QTextFrameFormat14setBorderBrushERK6QBrush(void* qthis, void* arg0); // 2
+extern void C_ZN16QTextFrameFormat14setBorderBrushERK6QBrush(void* qthis, void* arg0); // 2
   // proto:  QTextLength QTextFrameFormat::height();
-extern void _ZNK16QTextFrameFormat6heightEv(void* qthis); // 2
+extern void C_ZNK16QTextFrameFormat6heightEv(void* qthis); // 2
   // proto:  void QTextFrameFormat::setWidth(qreal width);
-extern void _ZN16QTextFrameFormat8setWidthEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextFrameFormat8setWidthEd(void* qthis, double arg0); // 2
   // proto:  void QTextFrameFormat::setWidth(const QTextLength & length);
-extern void _ZN16QTextFrameFormat8setWidthERK11QTextLength(void* qthis, void* arg0); // 2
+extern void C_ZN16QTextFrameFormat8setWidthERK11QTextLength(void* qthis, void* arg0); // 2
   // proto:  qreal QTextFrameFormat::topMargin();
-extern void _ZNK16QTextFrameFormat9topMarginEv(void* qthis); // 4
+extern void C_ZNK16QTextFrameFormat9topMarginEv(void* qthis); // 4
   // proto:  qreal QTextFrameFormat::border();
-extern void _ZNK16QTextFrameFormat6borderEv(void* qthis); // 2
+extern void C_ZNK16QTextFrameFormat6borderEv(void* qthis); // 2
   // proto:  QTextLength QTextFrameFormat::width();
-extern void _ZNK16QTextFrameFormat5widthEv(void* qthis); // 2
+extern void C_ZNK16QTextFrameFormat5widthEv(void* qthis); // 2
   // proto:  void QTextFrameFormat::setLeftMargin(qreal margin);
-extern void _ZN16QTextFrameFormat13setLeftMarginEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextFrameFormat13setLeftMarginEd(void* qthis, double arg0); // 2
   // proto:  qreal QTextFrameFormat::leftMargin();
-extern void _ZNK16QTextFrameFormat10leftMarginEv(void* qthis); // 4
+extern void C_ZNK16QTextFrameFormat10leftMarginEv(void* qthis); // 4
   // proto:  void QTextFrameFormat::setPadding(qreal padding);
-extern void _ZN16QTextFrameFormat10setPaddingEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextFrameFormat10setPaddingEd(void* qthis, double arg0); // 2
   // proto:  void QTextFrameFormat::setTopMargin(qreal margin);
-extern void _ZN16QTextFrameFormat12setTopMarginEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextFrameFormat12setTopMarginEd(void* qthis, double arg0); // 2
   // proto:  qreal QTextFrameFormat::rightMargin();
-extern void _ZNK16QTextFrameFormat11rightMarginEv(void* qthis); // 4
+extern void C_ZNK16QTextFrameFormat11rightMarginEv(void* qthis); // 4
   // proto:  bool QTextFrameFormat::isValid();
-extern void _ZNK16QTextFrameFormat7isValidEv(void* qthis); // 2
+extern void C_ZNK16QTextFrameFormat7isValidEv(void* qthis); // 2
   // proto:  PageBreakFlags QTextFrameFormat::pageBreakPolicy();
-extern void _ZNK16QTextFrameFormat15pageBreakPolicyEv(void* qthis); // 2
+extern void C_ZNK16QTextFrameFormat15pageBreakPolicyEv(void* qthis); // 2
   // proto:  qreal QTextFrameFormat::padding();
-extern void _ZNK16QTextFrameFormat7paddingEv(void* qthis); // 2
+extern void C_ZNK16QTextFrameFormat7paddingEv(void* qthis); // 2
   // proto:  void QTextFrameFormat::setMargin(qreal margin);
-extern void _ZN16QTextFrameFormat9setMarginEd(void* qthis, double arg0); // 4
+extern void C_ZN16QTextFrameFormat9setMarginEd(void* qthis, double arg0); // 4
   // proto:  qreal QTextFrameFormat::bottomMargin();
-extern void _ZNK16QTextFrameFormat12bottomMarginEv(void* qthis); // 4
+extern void C_ZNK16QTextFrameFormat12bottomMarginEv(void* qthis); // 4
   // proto:  void QTextFrameFormat::QTextFrameFormat();
-extern void _ZN16QTextFrameFormatC2Ev(void* qthis); // 3
+extern void C_ZN16QTextFrameFormatC2Ev(void* qthis); // 3
   // proto:  void QTextFrameFormat::setHeight(qreal height);
-extern void _ZN16QTextFrameFormat9setHeightEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextFrameFormat9setHeightEd(void* qthis, double arg0); // 2
   // proto:  void QTextFrameFormat::setHeight(const QTextLength & height);
-extern void _ZN16QTextFrameFormat9setHeightERK11QTextLength(void* qthis, void* arg0); // 2
+extern void C_ZN16QTextFrameFormat9setHeightERK11QTextLength(void* qthis, void* arg0); // 2
   // proto:  QBrush QTextFrameFormat::borderBrush();
-extern void _ZNK16QTextFrameFormat11borderBrushEv(void* qthis); // 2
+extern void C_ZNK16QTextFrameFormat11borderBrushEv(void* qthis); // 2
   // proto:  void QTextFrameFormat::setRightMargin(qreal margin);
-extern void _ZN16QTextFrameFormat14setRightMarginEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextFrameFormat14setRightMarginEd(void* qthis, double arg0); // 2
   // proto:  void QTextFrameFormat::setBorder(qreal border);
-extern void _ZN16QTextFrameFormat9setBorderEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextFrameFormat9setBorderEd(void* qthis, double arg0); // 2
   // proto:  void QTextFrameFormat::setBottomMargin(qreal margin);
-extern void _ZN16QTextFrameFormat15setBottomMarginEd(void* qthis, double arg0); // 2
+extern void C_ZN16QTextFrameFormat15setBottomMarginEd(void* qthis, double arg0); // 2
   // proto:  QTextFrameFormat::Position QTextFrameFormat::position();
-extern void _ZNK16QTextFrameFormat8positionEv(void* qthis); // 2
+extern void C_ZNK16QTextFrameFormat8positionEv(void* qthis); // 2
   // proto:  QTextFrameFormat::BorderStyle QTextFrameFormat::borderStyle();
-extern void _ZNK16QTextFrameFormat11borderStyleEv(void* qthis); // 2
+extern void C_ZNK16QTextFrameFormat11borderStyleEv(void* qthis); // 2
   // proto:  qreal QTextFrameFormat::margin();
-extern void _ZNK16QTextFrameFormat6marginEv(void* qthis); // 2
+extern void C_ZNK16QTextFrameFormat6marginEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -501,7 +501,7 @@ func (this *QTextLength) rawValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLength8rawValueEv
     // invoke: qreal rawValue()
-    C._ZNK11QTextLength8rawValueEv(this.qclsinst)
+    C.C_ZNK11QTextLength8rawValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextLength", "rawValue", args)
   }
@@ -524,7 +524,7 @@ func (this *QTextLength) value(args ...interface{}) () {
     // invoke: qreal value(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextLength5valueEd(this.qclsinst, arg0)
+    C.C_ZNK11QTextLength5valueEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextLength", "value", args)
   }
@@ -546,7 +546,7 @@ func NewQTextLength(args ...interface{}) QTextLength {
     // invoke: void QTextLength()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QTextLengthC2Ev(qthis)
+    C.C_ZN11QTextLengthC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QTextLength", "QTextLength", args)
   }
@@ -567,7 +567,7 @@ func (this *QTextLength) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLength4typeEv
     // invoke: QTextLength::Type type()
-    C._ZNK11QTextLength4typeEv(this.qclsinst)
+    C.C_ZNK11QTextLength4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextLength", "type", args)
   }
@@ -590,7 +590,7 @@ func (this *QTextImageFormat) setHeight(args ...interface{}) () {
     // invoke: void setHeight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextImageFormat9setHeightEd(this.qclsinst, arg0)
+    C.C_ZN16QTextImageFormat9setHeightEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextImageFormat", "setHeight", args)
   }
@@ -610,7 +610,7 @@ func (this *QTextImageFormat) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextImageFormat4nameEv
     // invoke: QString name()
-    C._ZNK16QTextImageFormat4nameEv(this.qclsinst)
+    C.C_ZNK16QTextImageFormat4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextImageFormat", "name", args)
   }
@@ -633,7 +633,7 @@ func (this *QTextImageFormat) setName(args ...interface{}) () {
     // invoke: void setName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTextImageFormat7setNameERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QTextImageFormat7setNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextImageFormat", "setName", args)
   }
@@ -653,7 +653,7 @@ func (this *QTextImageFormat) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextImageFormat7isValidEv
     // invoke: bool isValid()
-    C._ZNK16QTextImageFormat7isValidEv(this.qclsinst)
+    C.C_ZNK16QTextImageFormat7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextImageFormat", "isValid", args)
   }
@@ -673,7 +673,7 @@ func (this *QTextImageFormat) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextImageFormat6heightEv
     // invoke: qreal height()
-    C._ZNK16QTextImageFormat6heightEv(this.qclsinst)
+    C.C_ZNK16QTextImageFormat6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextImageFormat", "height", args)
   }
@@ -693,7 +693,7 @@ func (this *QTextImageFormat) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextImageFormat5widthEv
     // invoke: qreal width()
-    C._ZNK16QTextImageFormat5widthEv(this.qclsinst)
+    C.C_ZNK16QTextImageFormat5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextImageFormat", "width", args)
   }
@@ -715,7 +715,7 @@ func NewQTextImageFormat(args ...interface{}) QTextImageFormat {
     // invoke: void QTextImageFormat()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QTextImageFormatC2Ev(qthis)
+    C.C_ZN16QTextImageFormatC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QTextImageFormat", "QTextImageFormat", args)
   }
@@ -739,7 +739,7 @@ func (this *QTextImageFormat) setWidth(args ...interface{}) () {
     // invoke: void setWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextImageFormat8setWidthEd(this.qclsinst, arg0)
+    C.C_ZN16QTextImageFormat8setWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextImageFormat", "setWidth", args)
   }
@@ -759,7 +759,7 @@ func (this *QTextFormat) toBlockFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat13toBlockFormatEv
     // invoke: QTextBlockFormat toBlockFormat()
-    C._ZNK11QTextFormat13toBlockFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat13toBlockFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "toBlockFormat", args)
   }
@@ -782,7 +782,7 @@ func (this *QTextFormat) intProperty(args ...interface{}) () {
     // invoke: int intProperty(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextFormat11intPropertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QTextFormat11intPropertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "intProperty", args)
   }
@@ -802,7 +802,7 @@ func (this *QTextFormat) isFrameFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat13isFrameFormatEv
     // invoke: bool isFrameFormat()
-    C._ZNK11QTextFormat13isFrameFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat13isFrameFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "isFrameFormat", args)
   }
@@ -822,7 +822,7 @@ func (this *QTextFormat) toImageFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat13toImageFormatEv
     // invoke: QTextImageFormat toImageFormat()
-    C._ZNK11QTextFormat13toImageFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat13toImageFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "toImageFormat", args)
   }
@@ -845,7 +845,7 @@ func (this *QTextFormat) colorProperty(args ...interface{}) () {
     // invoke: QColor colorProperty(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextFormat13colorPropertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QTextFormat13colorPropertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "colorProperty", args)
   }
@@ -868,7 +868,7 @@ func (this *QTextFormat) stringProperty(args ...interface{}) () {
     // invoke: QString stringProperty(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextFormat14stringPropertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QTextFormat14stringPropertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "stringProperty", args)
   }
@@ -891,7 +891,7 @@ func (this *QTextFormat) doubleProperty(args ...interface{}) () {
     // invoke: qreal doubleProperty(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextFormat14doublePropertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QTextFormat14doublePropertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "doubleProperty", args)
   }
@@ -911,7 +911,7 @@ func (this *QTextFormat) clearForeground(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormat15clearForegroundEv
     // invoke: void clearForeground()
-    C._ZN11QTextFormat15clearForegroundEv(this.qclsinst)
+    C.C_ZN11QTextFormat15clearForegroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "clearForeground", args)
   }
@@ -931,7 +931,7 @@ func (this *QTextFormat) objectIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat11objectIndexEv
     // invoke: int objectIndex()
-    C._ZNK11QTextFormat11objectIndexEv(this.qclsinst)
+    C.C_ZNK11QTextFormat11objectIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "objectIndex", args)
   }
@@ -951,7 +951,7 @@ func (this *QTextFormat) isImageFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat13isImageFormatEv
     // invoke: bool isImageFormat()
-    C._ZNK11QTextFormat13isImageFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat13isImageFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "isImageFormat", args)
   }
@@ -971,7 +971,7 @@ func (this *QTextFormat) objectType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat10objectTypeEv
     // invoke: int objectType()
-    C._ZNK11QTextFormat10objectTypeEv(this.qclsinst)
+    C.C_ZNK11QTextFormat10objectTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "objectType", args)
   }
@@ -994,7 +994,7 @@ func (this *QTextFormat) hasProperty(args ...interface{}) () {
     // invoke: bool hasProperty(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextFormat11hasPropertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QTextFormat11hasPropertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "hasProperty", args)
   }
@@ -1017,7 +1017,7 @@ func (this *QTextFormat) setForeground(args ...interface{}) () {
     // invoke: void setForeground(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextFormat13setForegroundERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat13setForegroundERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "setForeground", args)
   }
@@ -1037,7 +1037,7 @@ func (this *QTextFormat) isCharFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat12isCharFormatEv
     // invoke: bool isCharFormat()
-    C._ZNK11QTextFormat12isCharFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat12isCharFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "isCharFormat", args)
   }
@@ -1057,7 +1057,7 @@ func (this *QTextFormat) toTableCellFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat17toTableCellFormatEv
     // invoke: QTextTableCellFormat toTableCellFormat()
-    C._ZNK11QTextFormat17toTableCellFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat17toTableCellFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "toTableCellFormat", args)
   }
@@ -1080,7 +1080,7 @@ func (this *QTextFormat) setBackground(args ...interface{}) () {
     // invoke: void setBackground(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextFormat13setBackgroundERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat13setBackgroundERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "setBackground", args)
   }
@@ -1100,7 +1100,7 @@ func (this *QTextFormat) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK11QTextFormat7isEmptyEv(this.qclsinst)
+    C.C_ZNK11QTextFormat7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "isEmpty", args)
   }
@@ -1123,7 +1123,7 @@ func (this *QTextFormat) swap(args ...interface{}) () {
     // invoke: void swap(class QTextFormat &)
     var arg0 = args[0].(QTextFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextFormat4swapERS_(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "swap", args)
   }
@@ -1151,7 +1151,7 @@ func NewQTextFormat(args ...interface{}) QTextFormat {
     // invoke: void QTextFormat()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QTextFormatC2Ev(qthis)
+    C.C_ZN11QTextFormatC2Ev(qthis)
   case 1:
     // invoke: _ZN11QTextFormatC1Ei
     // invoke: void QTextFormat(int)
@@ -1159,7 +1159,7 @@ func NewQTextFormat(args ...interface{}) QTextFormat {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QTextFormatC2Ei(qthis, arg0)
+    C.C_ZN11QTextFormatC2Ei(qthis, arg0)
   case 2:
     // invoke: _ZN11QTextFormatC1ERKS_
     // invoke: void QTextFormat(const class QTextFormat &)
@@ -1167,7 +1167,7 @@ func NewQTextFormat(args ...interface{}) QTextFormat {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QTextFormatC2ERKS_(qthis, arg0)
+    C.C_ZN11QTextFormatC2ERKS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "QTextFormat", args)
   }
@@ -1188,7 +1188,7 @@ func (this *QTextFormat) isBlockFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat13isBlockFormatEv
     // invoke: bool isBlockFormat()
-    C._ZNK11QTextFormat13isBlockFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat13isBlockFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "isBlockFormat", args)
   }
@@ -1208,7 +1208,7 @@ func (this *QTextFormat) clearBackground(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormat15clearBackgroundEv
     // invoke: void clearBackground()
-    C._ZN11QTextFormat15clearBackgroundEv(this.qclsinst)
+    C.C_ZN11QTextFormat15clearBackgroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "clearBackground", args)
   }
@@ -1228,7 +1228,7 @@ func (this *QTextFormat) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat4typeEv
     // invoke: int type()
-    C._ZNK11QTextFormat4typeEv(this.qclsinst)
+    C.C_ZNK11QTextFormat4typeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "type", args)
   }
@@ -1248,7 +1248,7 @@ func (this *QTextFormat) foreground(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat10foregroundEv
     // invoke: QBrush foreground()
-    C._ZNK11QTextFormat10foregroundEv(this.qclsinst)
+    C.C_ZNK11QTextFormat10foregroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "foreground", args)
   }
@@ -1268,7 +1268,7 @@ func (this *QTextFormat) toCharFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat12toCharFormatEv
     // invoke: QTextCharFormat toCharFormat()
-    C._ZNK11QTextFormat12toCharFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat12toCharFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "toCharFormat", args)
   }
@@ -1288,7 +1288,7 @@ func (this *QTextFormat) FreeQTextFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormatD0Ev
     // invoke: void ~QTextFormat()
-    C._ZN11QTextFormatD2Ev(this.qclsinst)
+    C.C_ZN11QTextFormatD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "~QTextFormat", args)
   }
@@ -1308,7 +1308,7 @@ func (this *QTextFormat) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat7isValidEv
     // invoke: bool isValid()
-    C._ZNK11QTextFormat7isValidEv(this.qclsinst)
+    C.C_ZNK11QTextFormat7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "isValid", args)
   }
@@ -1331,7 +1331,7 @@ func (this *QTextFormat) boolProperty(args ...interface{}) () {
     // invoke: bool boolProperty(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextFormat12boolPropertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QTextFormat12boolPropertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "boolProperty", args)
   }
@@ -1354,7 +1354,7 @@ func (this *QTextFormat) lengthProperty(args ...interface{}) () {
     // invoke: QTextLength lengthProperty(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextFormat14lengthPropertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QTextFormat14lengthPropertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "lengthProperty", args)
   }
@@ -1374,7 +1374,7 @@ func (this *QTextFormat) background(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat10backgroundEv
     // invoke: QBrush background()
-    C._ZNK11QTextFormat10backgroundEv(this.qclsinst)
+    C.C_ZNK11QTextFormat10backgroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "background", args)
   }
@@ -1400,7 +1400,7 @@ func (this *QTextFormat) setProperty(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN11QTextFormat11setPropertyEiRK8QVariant(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTextFormat11setPropertyEiRK8QVariant(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextFormat", "setProperty", args)
   }
@@ -1420,7 +1420,7 @@ func (this *QTextFormat) toListFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat12toListFormatEv
     // invoke: QTextListFormat toListFormat()
-    C._ZNK11QTextFormat12toListFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat12toListFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "toListFormat", args)
   }
@@ -1440,7 +1440,7 @@ func (this *QTextFormat) properties(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat10propertiesEv
     // invoke: QMap<int, QVariant> properties()
-    C._ZNK11QTextFormat10propertiesEv(this.qclsinst)
+    C.C_ZNK11QTextFormat10propertiesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "properties", args)
   }
@@ -1460,7 +1460,7 @@ func (this *QTextFormat) toFrameFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat13toFrameFormatEv
     // invoke: QTextFrameFormat toFrameFormat()
-    C._ZNK11QTextFormat13toFrameFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat13toFrameFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "toFrameFormat", args)
   }
@@ -1483,7 +1483,7 @@ func (this *QTextFormat) penProperty(args ...interface{}) () {
     // invoke: QPen penProperty(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextFormat11penPropertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QTextFormat11penPropertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "penProperty", args)
   }
@@ -1503,7 +1503,7 @@ func (this *QTextFormat) isTableCellFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat17isTableCellFormatEv
     // invoke: bool isTableCellFormat()
-    C._ZNK11QTextFormat17isTableCellFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat17isTableCellFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "isTableCellFormat", args)
   }
@@ -1526,7 +1526,7 @@ func (this *QTextFormat) setObjectIndex(args ...interface{}) () {
     // invoke: void setObjectIndex(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QTextFormat14setObjectIndexEi(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat14setObjectIndexEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "setObjectIndex", args)
   }
@@ -1546,7 +1546,7 @@ func (this *QTextFormat) layoutDirection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat15layoutDirectionEv
     // invoke: Qt::LayoutDirection layoutDirection()
-    C._ZNK11QTextFormat15layoutDirectionEv(this.qclsinst)
+    C.C_ZNK11QTextFormat15layoutDirectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "layoutDirection", args)
   }
@@ -1569,7 +1569,7 @@ func (this *QTextFormat) clearProperty(args ...interface{}) () {
     // invoke: void clearProperty(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QTextFormat13clearPropertyEi(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat13clearPropertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "clearProperty", args)
   }
@@ -1592,7 +1592,7 @@ func (this *QTextFormat) brushProperty(args ...interface{}) () {
     // invoke: QBrush brushProperty(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextFormat13brushPropertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QTextFormat13brushPropertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "brushProperty", args)
   }
@@ -1612,7 +1612,7 @@ func (this *QTextFormat) propertyCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat13propertyCountEv
     // invoke: int propertyCount()
-    C._ZNK11QTextFormat13propertyCountEv(this.qclsinst)
+    C.C_ZNK11QTextFormat13propertyCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "propertyCount", args)
   }
@@ -1635,7 +1635,7 @@ func (this *QTextFormat) merge(args ...interface{}) () {
     // invoke: void merge(const class QTextFormat &)
     var arg0 = args[0].(QTextFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextFormat5mergeERKS_(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat5mergeERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "merge", args)
   }
@@ -1658,7 +1658,7 @@ func (this *QTextFormat) lengthVectorProperty(args ...interface{}) () {
     // invoke: QVector<QTextLength> lengthVectorProperty(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextFormat20lengthVectorPropertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QTextFormat20lengthVectorPropertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "lengthVectorProperty", args)
   }
@@ -1678,7 +1678,7 @@ func (this *QTextFormat) isTableFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat13isTableFormatEv
     // invoke: bool isTableFormat()
-    C._ZNK11QTextFormat13isTableFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat13isTableFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "isTableFormat", args)
   }
@@ -1698,7 +1698,7 @@ func (this *QTextFormat) toTableFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat13toTableFormatEv
     // invoke: QTextTableFormat toTableFormat()
-    C._ZNK11QTextFormat13toTableFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat13toTableFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "toTableFormat", args)
   }
@@ -1721,7 +1721,7 @@ func (this *QTextFormat) property(args ...interface{}) () {
     // invoke: QVariant property(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK11QTextFormat8propertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QTextFormat8propertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "property", args)
   }
@@ -1741,7 +1741,7 @@ func (this *QTextFormat) isListFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat12isListFormatEv
     // invoke: bool isListFormat()
-    C._ZNK11QTextFormat12isListFormatEv(this.qclsinst)
+    C.C_ZNK11QTextFormat12isListFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "isListFormat", args)
   }
@@ -1764,7 +1764,7 @@ func (this *QTextFormat) setObjectType(args ...interface{}) () {
     // invoke: void setObjectType(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN11QTextFormat13setObjectTypeEi(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat13setObjectTypeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "setObjectType", args)
   }
@@ -1787,7 +1787,7 @@ func (this *QTextBlockFormat) setTextIndent(args ...interface{}) () {
     // invoke: void setTextIndent(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextBlockFormat13setTextIndentEd(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat13setTextIndentEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setTextIndent", args)
   }
@@ -1807,7 +1807,7 @@ func (this *QTextBlockFormat) lineHeightType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat14lineHeightTypeEv
     // invoke: int lineHeightType()
-    C._ZNK16QTextBlockFormat14lineHeightTypeEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat14lineHeightTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "lineHeightType", args)
   }
@@ -1827,7 +1827,7 @@ func (this *QTextBlockFormat) alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C._ZNK16QTextBlockFormat9alignmentEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat9alignmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "alignment", args)
   }
@@ -1847,7 +1847,7 @@ func (this *QTextBlockFormat) leftMargin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat10leftMarginEv
     // invoke: qreal leftMargin()
-    C._ZNK16QTextBlockFormat10leftMarginEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat10leftMarginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "leftMargin", args)
   }
@@ -1867,7 +1867,7 @@ func (this *QTextBlockFormat) topMargin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat9topMarginEv
     // invoke: qreal topMargin()
-    C._ZNK16QTextBlockFormat9topMarginEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat9topMarginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "topMargin", args)
   }
@@ -1890,7 +1890,7 @@ func (this *QTextBlockFormat) setLeftMargin(args ...interface{}) () {
     // invoke: void setLeftMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextBlockFormat13setLeftMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat13setLeftMarginEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setLeftMargin", args)
   }
@@ -1914,7 +1914,7 @@ func (this *QTextBlockFormat) lineHeight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat10lineHeightEv
     // invoke: qreal lineHeight()
-    C._ZNK16QTextBlockFormat10lineHeightEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat10lineHeightEv(this.qclsinst)
   case 1:
     // invoke: _ZNK16QTextBlockFormat10lineHeightEdd
     // invoke: qreal lineHeight(qreal, qreal)
@@ -1922,7 +1922,7 @@ func (this *QTextBlockFormat) lineHeight(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZNK16QTextBlockFormat10lineHeightEdd(this.qclsinst, arg0, arg1)
+    C.C_ZNK16QTextBlockFormat10lineHeightEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "lineHeight", args)
   }
@@ -1945,7 +1945,7 @@ func (this *QTextBlockFormat) setTopMargin(args ...interface{}) () {
     // invoke: void setTopMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextBlockFormat12setTopMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat12setTopMarginEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setTopMargin", args)
   }
@@ -1965,7 +1965,7 @@ func (this *QTextBlockFormat) rightMargin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat11rightMarginEv
     // invoke: qreal rightMargin()
-    C._ZNK16QTextBlockFormat11rightMarginEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat11rightMarginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "rightMargin", args)
   }
@@ -1985,7 +1985,7 @@ func (this *QTextBlockFormat) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat7isValidEv
     // invoke: bool isValid()
-    C._ZNK16QTextBlockFormat7isValidEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "isValid", args)
   }
@@ -2008,7 +2008,7 @@ func (this *QTextBlockFormat) setIndent(args ...interface{}) () {
     // invoke: void setIndent(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextBlockFormat9setIndentEi(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat9setIndentEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setIndent", args)
   }
@@ -2028,7 +2028,7 @@ func (this *QTextBlockFormat) pageBreakPolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat15pageBreakPolicyEv
     // invoke: PageBreakFlags pageBreakPolicy()
-    C._ZNK16QTextBlockFormat15pageBreakPolicyEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat15pageBreakPolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "pageBreakPolicy", args)
   }
@@ -2048,7 +2048,7 @@ func (this *QTextBlockFormat) bottomMargin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat12bottomMarginEv
     // invoke: qreal bottomMargin()
-    C._ZNK16QTextBlockFormat12bottomMarginEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat12bottomMarginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "bottomMargin", args)
   }
@@ -2074,7 +2074,7 @@ func (this *QTextBlockFormat) setLineHeight(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN16QTextBlockFormat13setLineHeightEdi(this.qclsinst, arg0, arg1)
+    C.C_ZN16QTextBlockFormat13setLineHeightEdi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setLineHeight", args)
   }
@@ -2097,7 +2097,7 @@ func (this *QTextBlockFormat) setNonBreakableLines(args ...interface{}) () {
     // invoke: void setNonBreakableLines(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextBlockFormat20setNonBreakableLinesEb(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat20setNonBreakableLinesEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setNonBreakableLines", args)
   }
@@ -2120,7 +2120,7 @@ func (this *QTextBlockFormat) setRightMargin(args ...interface{}) () {
     // invoke: void setRightMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextBlockFormat14setRightMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat14setRightMarginEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setRightMargin", args)
   }
@@ -2140,7 +2140,7 @@ func (this *QTextBlockFormat) indent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat6indentEv
     // invoke: int indent()
-    C._ZNK16QTextBlockFormat6indentEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat6indentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "indent", args)
   }
@@ -2160,7 +2160,7 @@ func (this *QTextBlockFormat) tabPositions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat12tabPositionsEv
     // invoke: QList<QTextOption::Tab> tabPositions()
-    C._ZNK16QTextBlockFormat12tabPositionsEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat12tabPositionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "tabPositions", args)
   }
@@ -2180,7 +2180,7 @@ func (this *QTextBlockFormat) textIndent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat10textIndentEv
     // invoke: qreal textIndent()
-    C._ZNK16QTextBlockFormat10textIndentEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat10textIndentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "textIndent", args)
   }
@@ -2203,7 +2203,7 @@ func (this *QTextBlockFormat) setBottomMargin(args ...interface{}) () {
     // invoke: void setBottomMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextBlockFormat15setBottomMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat15setBottomMarginEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setBottomMargin", args)
   }
@@ -2223,7 +2223,7 @@ func (this *QTextBlockFormat) nonBreakableLines(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat17nonBreakableLinesEv
     // invoke: bool nonBreakableLines()
-    C._ZNK16QTextBlockFormat17nonBreakableLinesEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat17nonBreakableLinesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "nonBreakableLines", args)
   }
@@ -2245,7 +2245,7 @@ func NewQTextBlockFormat(args ...interface{}) QTextBlockFormat {
     // invoke: void QTextBlockFormat()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QTextBlockFormatC2Ev(qthis)
+    C.C_ZN16QTextBlockFormatC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "QTextBlockFormat", args)
   }
@@ -2269,7 +2269,7 @@ func (this *QTextCharFormat) setTableCellColumnSpan(args ...interface{}) () {
     // invoke: void setTableCellColumnSpan(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat22setTableCellColumnSpanEi(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat22setTableCellColumnSpanEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setTableCellColumnSpan", args)
   }
@@ -2292,7 +2292,7 @@ func (this *QTextCharFormat) setAnchorHref(args ...interface{}) () {
     // invoke: void setAnchorHref(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat13setAnchorHrefERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat13setAnchorHrefERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setAnchorHref", args)
   }
@@ -2315,7 +2315,7 @@ func (this *QTextCharFormat) setFontOverline(args ...interface{}) () {
     // invoke: void setFontOverline(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat15setFontOverlineEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat15setFontOverlineEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontOverline", args)
   }
@@ -2338,7 +2338,7 @@ func (this *QTextCharFormat) setTextOutline(args ...interface{}) () {
     // invoke: void setTextOutline(const class QPen &)
     var arg0 = args[0].(QPen).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat14setTextOutlineERK4QPen(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat14setTextOutlineERK4QPen(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setTextOutline", args)
   }
@@ -2358,7 +2358,7 @@ func (this *QTextCharFormat) fontFamily(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat10fontFamilyEv
     // invoke: QString fontFamily()
-    C._ZNK15QTextCharFormat10fontFamilyEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat10fontFamilyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontFamily", args)
   }
@@ -2378,7 +2378,7 @@ func (this *QTextCharFormat) anchorNames(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat11anchorNamesEv
     // invoke: QStringList anchorNames()
-    C._ZNK15QTextCharFormat11anchorNamesEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat11anchorNamesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "anchorNames", args)
   }
@@ -2398,7 +2398,7 @@ func (this *QTextCharFormat) fontStyleHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat13fontStyleHintEv
     // invoke: QFont::StyleHint fontStyleHint()
-    C._ZNK15QTextCharFormat13fontStyleHintEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat13fontStyleHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontStyleHint", args)
   }
@@ -2421,7 +2421,7 @@ func (this *QTextCharFormat) setFontStretch(args ...interface{}) () {
     // invoke: void setFontStretch(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat14setFontStretchEi(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat14setFontStretchEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontStretch", args)
   }
@@ -2441,7 +2441,7 @@ func (this *QTextCharFormat) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat4fontEv
     // invoke: QFont font()
-    C._ZNK15QTextCharFormat4fontEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "font", args)
   }
@@ -2461,7 +2461,7 @@ func (this *QTextCharFormat) fontItalic(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat10fontItalicEv
     // invoke: bool fontItalic()
-    C._ZNK15QTextCharFormat10fontItalicEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat10fontItalicEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontItalic", args)
   }
@@ -2481,7 +2481,7 @@ func (this *QTextCharFormat) fontKerning(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat11fontKerningEv
     // invoke: bool fontKerning()
-    C._ZNK15QTextCharFormat11fontKerningEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat11fontKerningEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontKerning", args)
   }
@@ -2501,7 +2501,7 @@ func (this *QTextCharFormat) fontWordSpacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat15fontWordSpacingEv
     // invoke: qreal fontWordSpacing()
-    C._ZNK15QTextCharFormat15fontWordSpacingEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat15fontWordSpacingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontWordSpacing", args)
   }
@@ -2521,7 +2521,7 @@ func (this *QTextCharFormat) fontOverline(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat12fontOverlineEv
     // invoke: bool fontOverline()
-    C._ZNK15QTextCharFormat12fontOverlineEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat12fontOverlineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontOverline", args)
   }
@@ -2544,7 +2544,7 @@ func (this *QTextCharFormat) setFontUnderline(args ...interface{}) () {
     // invoke: void setFontUnderline(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat16setFontUnderlineEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat16setFontUnderlineEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontUnderline", args)
   }
@@ -2564,7 +2564,7 @@ func (this *QTextCharFormat) underlineStyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat14underlineStyleEv
     // invoke: QTextCharFormat::UnderlineStyle underlineStyle()
-    C._ZNK15QTextCharFormat14underlineStyleEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat14underlineStyleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "underlineStyle", args)
   }
@@ -2584,7 +2584,7 @@ func (this *QTextCharFormat) fontStyleStrategy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat17fontStyleStrategyEv
     // invoke: QFont::StyleStrategy fontStyleStrategy()
-    C._ZNK15QTextCharFormat17fontStyleStrategyEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat17fontStyleStrategyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontStyleStrategy", args)
   }
@@ -2607,7 +2607,7 @@ func (this *QTextCharFormat) setFontWordSpacing(args ...interface{}) () {
     // invoke: void setFontWordSpacing(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat18setFontWordSpacingEd(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat18setFontWordSpacingEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontWordSpacing", args)
   }
@@ -2630,7 +2630,7 @@ func (this *QTextCharFormat) setFontWeight(args ...interface{}) () {
     // invoke: void setFontWeight(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat13setFontWeightEi(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat13setFontWeightEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontWeight", args)
   }
@@ -2650,7 +2650,7 @@ func (this *QTextCharFormat) verticalAlignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat17verticalAlignmentEv
     // invoke: QTextCharFormat::VerticalAlignment verticalAlignment()
-    C._ZNK15QTextCharFormat17verticalAlignmentEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat17verticalAlignmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "verticalAlignment", args)
   }
@@ -2673,7 +2673,7 @@ func (this *QTextCharFormat) setFontFamily(args ...interface{}) () {
     // invoke: void setFontFamily(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat13setFontFamilyERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat13setFontFamilyERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontFamily", args)
   }
@@ -2696,7 +2696,7 @@ func (this *QTextCharFormat) setAnchorNames(args ...interface{}) () {
     // invoke: void setAnchorNames(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat14setAnchorNamesERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat14setAnchorNamesERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setAnchorNames", args)
   }
@@ -2719,7 +2719,7 @@ func (this *QTextCharFormat) setTableCellRowSpan(args ...interface{}) () {
     // invoke: void setTableCellRowSpan(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat19setTableCellRowSpanEi(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat19setTableCellRowSpanEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setTableCellRowSpan", args)
   }
@@ -2742,7 +2742,7 @@ func (this *QTextCharFormat) setFontKerning(args ...interface{}) () {
     // invoke: void setFontKerning(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat14setFontKerningEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat14setFontKerningEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontKerning", args)
   }
@@ -2765,7 +2765,7 @@ func (this *QTextCharFormat) setFontLetterSpacing(args ...interface{}) () {
     // invoke: void setFontLetterSpacing(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat20setFontLetterSpacingEd(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat20setFontLetterSpacingEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontLetterSpacing", args)
   }
@@ -2785,7 +2785,7 @@ func (this *QTextCharFormat) fontLetterSpacingType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat21fontLetterSpacingTypeEv
     // invoke: QFont::SpacingType fontLetterSpacingType()
-    C._ZNK15QTextCharFormat21fontLetterSpacingTypeEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat21fontLetterSpacingTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontLetterSpacingType", args)
   }
@@ -2805,7 +2805,7 @@ func (this *QTextCharFormat) fontUnderline(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat13fontUnderlineEv
     // invoke: bool fontUnderline()
-    C._ZNK15QTextCharFormat13fontUnderlineEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat13fontUnderlineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontUnderline", args)
   }
@@ -2825,7 +2825,7 @@ func (this *QTextCharFormat) fontHintingPreference(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat21fontHintingPreferenceEv
     // invoke: QFont::HintingPreference fontHintingPreference()
-    C._ZNK15QTextCharFormat21fontHintingPreferenceEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat21fontHintingPreferenceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontHintingPreference", args)
   }
@@ -2848,7 +2848,7 @@ func (this *QTextCharFormat) setFontStrikeOut(args ...interface{}) () {
     // invoke: void setFontStrikeOut(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat16setFontStrikeOutEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat16setFontStrikeOutEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontStrikeOut", args)
   }
@@ -2868,7 +2868,7 @@ func (this *QTextCharFormat) anchorName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat10anchorNameEv
     // invoke: QString anchorName()
-    C._ZNK15QTextCharFormat10anchorNameEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat10anchorNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "anchorName", args)
   }
@@ -2888,7 +2888,7 @@ func (this *QTextCharFormat) fontPointSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat13fontPointSizeEv
     // invoke: qreal fontPointSize()
-    C._ZNK15QTextCharFormat13fontPointSizeEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat13fontPointSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontPointSize", args)
   }
@@ -2908,7 +2908,7 @@ func (this *QTextCharFormat) fontFixedPitch(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat14fontFixedPitchEv
     // invoke: bool fontFixedPitch()
-    C._ZNK15QTextCharFormat14fontFixedPitchEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat14fontFixedPitchEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontFixedPitch", args)
   }
@@ -2928,7 +2928,7 @@ func (this *QTextCharFormat) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat7isValidEv
     // invoke: bool isValid()
-    C._ZNK15QTextCharFormat7isValidEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "isValid", args)
   }
@@ -2948,7 +2948,7 @@ func (this *QTextCharFormat) toolTip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat7toolTipEv
     // invoke: QString toolTip()
-    C._ZNK15QTextCharFormat7toolTipEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat7toolTipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "toolTip", args)
   }
@@ -2971,7 +2971,7 @@ func (this *QTextCharFormat) setFontPointSize(args ...interface{}) () {
     // invoke: void setFontPointSize(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat16setFontPointSizeEd(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat16setFontPointSizeEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontPointSize", args)
   }
@@ -2994,7 +2994,7 @@ func (this *QTextCharFormat) setAnchor(args ...interface{}) () {
     // invoke: void setAnchor(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat9setAnchorEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat9setAnchorEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setAnchor", args)
   }
@@ -3017,7 +3017,7 @@ func (this *QTextCharFormat) setAnchorName(args ...interface{}) () {
     // invoke: void setAnchorName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat13setAnchorNameERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat13setAnchorNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setAnchorName", args)
   }
@@ -3037,7 +3037,7 @@ func (this *QTextCharFormat) fontLetterSpacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat17fontLetterSpacingEv
     // invoke: qreal fontLetterSpacing()
-    C._ZNK15QTextCharFormat17fontLetterSpacingEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat17fontLetterSpacingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontLetterSpacing", args)
   }
@@ -3057,7 +3057,7 @@ func (this *QTextCharFormat) isAnchor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat8isAnchorEv
     // invoke: bool isAnchor()
-    C._ZNK15QTextCharFormat8isAnchorEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat8isAnchorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "isAnchor", args)
   }
@@ -3080,7 +3080,7 @@ func (this *QTextCharFormat) setFontItalic(args ...interface{}) () {
     // invoke: void setFontItalic(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat13setFontItalicEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat13setFontItalicEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontItalic", args)
   }
@@ -3102,7 +3102,7 @@ func NewQTextCharFormat(args ...interface{}) QTextCharFormat {
     // invoke: void QTextCharFormat()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QTextCharFormatC2Ev(qthis)
+    C.C_ZN15QTextCharFormatC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "QTextCharFormat", args)
   }
@@ -3123,7 +3123,7 @@ func (this *QTextCharFormat) underlineColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat14underlineColorEv
     // invoke: QColor underlineColor()
-    C._ZNK15QTextCharFormat14underlineColorEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat14underlineColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "underlineColor", args)
   }
@@ -3146,7 +3146,7 @@ func (this *QTextCharFormat) setUnderlineColor(args ...interface{}) () {
     // invoke: void setUnderlineColor(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat17setUnderlineColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat17setUnderlineColorERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setUnderlineColor", args)
   }
@@ -3166,7 +3166,7 @@ func (this *QTextCharFormat) fontWeight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat10fontWeightEv
     // invoke: int fontWeight()
-    C._ZNK15QTextCharFormat10fontWeightEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat10fontWeightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontWeight", args)
   }
@@ -3189,7 +3189,7 @@ func (this *QTextCharFormat) setToolTip(args ...interface{}) () {
     // invoke: void setToolTip(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat10setToolTipERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat10setToolTipERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setToolTip", args)
   }
@@ -3209,7 +3209,7 @@ func (this *QTextCharFormat) tableCellColumnSpan(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat19tableCellColumnSpanEv
     // invoke: int tableCellColumnSpan()
-    C._ZNK15QTextCharFormat19tableCellColumnSpanEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat19tableCellColumnSpanEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "tableCellColumnSpan", args)
   }
@@ -3229,7 +3229,7 @@ func (this *QTextCharFormat) anchorHref(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat10anchorHrefEv
     // invoke: QString anchorHref()
-    C._ZNK15QTextCharFormat10anchorHrefEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat10anchorHrefEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "anchorHref", args)
   }
@@ -3249,7 +3249,7 @@ func (this *QTextCharFormat) fontCapitalization(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat18fontCapitalizationEv
     // invoke: QFont::Capitalization fontCapitalization()
-    C._ZNK15QTextCharFormat18fontCapitalizationEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat18fontCapitalizationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontCapitalization", args)
   }
@@ -3269,7 +3269,7 @@ func (this *QTextCharFormat) textOutline(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat11textOutlineEv
     // invoke: QPen textOutline()
-    C._ZNK15QTextCharFormat11textOutlineEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat11textOutlineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "textOutline", args)
   }
@@ -3289,7 +3289,7 @@ func (this *QTextCharFormat) tableCellRowSpan(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat16tableCellRowSpanEv
     // invoke: int tableCellRowSpan()
-    C._ZNK15QTextCharFormat16tableCellRowSpanEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat16tableCellRowSpanEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "tableCellRowSpan", args)
   }
@@ -3312,7 +3312,7 @@ func (this *QTextCharFormat) setFontFixedPitch(args ...interface{}) () {
     // invoke: void setFontFixedPitch(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat17setFontFixedPitchEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat17setFontFixedPitchEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontFixedPitch", args)
   }
@@ -3335,7 +3335,7 @@ func (this *QTextCharFormat) setFont(args ...interface{}) () {
     // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTextCharFormat7setFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat7setFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFont", args)
   }
@@ -3355,7 +3355,7 @@ func (this *QTextCharFormat) fontStretch(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat11fontStretchEv
     // invoke: int fontStretch()
-    C._ZNK15QTextCharFormat11fontStretchEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat11fontStretchEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontStretch", args)
   }
@@ -3375,7 +3375,7 @@ func (this *QTextCharFormat) fontStrikeOut(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat13fontStrikeOutEv
     // invoke: bool fontStrikeOut()
-    C._ZNK15QTextCharFormat13fontStrikeOutEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat13fontStrikeOutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontStrikeOut", args)
   }
@@ -3395,7 +3395,7 @@ func (this *QTextTableFormat) clearColumnWidthConstraints(args ...interface{}) (
   case 0:
     // invoke: _ZN16QTextTableFormat27clearColumnWidthConstraintsEv
     // invoke: void clearColumnWidthConstraints()
-    C._ZN16QTextTableFormat27clearColumnWidthConstraintsEv(this.qclsinst)
+    C.C_ZN16QTextTableFormat27clearColumnWidthConstraintsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "clearColumnWidthConstraints", args)
   }
@@ -3415,7 +3415,7 @@ func (this *QTextTableFormat) columnWidthConstraints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextTableFormat22columnWidthConstraintsEv
     // invoke: QVector<QTextLength> columnWidthConstraints()
-    C._ZNK16QTextTableFormat22columnWidthConstraintsEv(this.qclsinst)
+    C.C_ZNK16QTextTableFormat22columnWidthConstraintsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "columnWidthConstraints", args)
   }
@@ -3437,7 +3437,7 @@ func NewQTextTableFormat(args ...interface{}) QTextTableFormat {
     // invoke: void QTextTableFormat()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QTextTableFormatC2Ev(qthis)
+    C.C_ZN16QTextTableFormatC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "QTextTableFormat", args)
   }
@@ -3461,7 +3461,7 @@ func (this *QTextTableFormat) setHeaderRowCount(args ...interface{}) () {
     // invoke: void setHeaderRowCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextTableFormat17setHeaderRowCountEi(this.qclsinst, arg0)
+    C.C_ZN16QTextTableFormat17setHeaderRowCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "setHeaderRowCount", args)
   }
@@ -3481,7 +3481,7 @@ func (this *QTextTableFormat) headerRowCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextTableFormat14headerRowCountEv
     // invoke: int headerRowCount()
-    C._ZNK16QTextTableFormat14headerRowCountEv(this.qclsinst)
+    C.C_ZNK16QTextTableFormat14headerRowCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "headerRowCount", args)
   }
@@ -3504,7 +3504,7 @@ func (this *QTextTableFormat) setColumns(args ...interface{}) () {
     // invoke: void setColumns(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextTableFormat10setColumnsEi(this.qclsinst, arg0)
+    C.C_ZN16QTextTableFormat10setColumnsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "setColumns", args)
   }
@@ -3524,7 +3524,7 @@ func (this *QTextTableFormat) alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextTableFormat9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C._ZNK16QTextTableFormat9alignmentEv(this.qclsinst)
+    C.C_ZNK16QTextTableFormat9alignmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "alignment", args)
   }
@@ -3544,7 +3544,7 @@ func (this *QTextTableFormat) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextTableFormat7isValidEv
     // invoke: bool isValid()
-    C._ZNK16QTextTableFormat7isValidEv(this.qclsinst)
+    C.C_ZNK16QTextTableFormat7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "isValid", args)
   }
@@ -3564,7 +3564,7 @@ func (this *QTextTableFormat) cellPadding(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextTableFormat11cellPaddingEv
     // invoke: qreal cellPadding()
-    C._ZNK16QTextTableFormat11cellPaddingEv(this.qclsinst)
+    C.C_ZNK16QTextTableFormat11cellPaddingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "cellPadding", args)
   }
@@ -3587,7 +3587,7 @@ func (this *QTextTableFormat) setCellSpacing(args ...interface{}) () {
     // invoke: void setCellSpacing(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextTableFormat14setCellSpacingEd(this.qclsinst, arg0)
+    C.C_ZN16QTextTableFormat14setCellSpacingEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "setCellSpacing", args)
   }
@@ -3607,7 +3607,7 @@ func (this *QTextTableFormat) cellSpacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextTableFormat11cellSpacingEv
     // invoke: qreal cellSpacing()
-    C._ZNK16QTextTableFormat11cellSpacingEv(this.qclsinst)
+    C.C_ZNK16QTextTableFormat11cellSpacingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "cellSpacing", args)
   }
@@ -3630,7 +3630,7 @@ func (this *QTextTableFormat) setCellPadding(args ...interface{}) () {
     // invoke: void setCellPadding(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextTableFormat14setCellPaddingEd(this.qclsinst, arg0)
+    C.C_ZN16QTextTableFormat14setCellPaddingEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "setCellPadding", args)
   }
@@ -3650,7 +3650,7 @@ func (this *QTextTableFormat) columns(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextTableFormat7columnsEv
     // invoke: int columns()
-    C._ZNK16QTextTableFormat7columnsEv(this.qclsinst)
+    C.C_ZNK16QTextTableFormat7columnsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "columns", args)
   }
@@ -3673,7 +3673,7 @@ func (this *QTextTableCellFormat) setLeftPadding(args ...interface{}) () {
     // invoke: void setLeftPadding(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN20QTextTableCellFormat14setLeftPaddingEd(this.qclsinst, arg0)
+    C.C_ZN20QTextTableCellFormat14setLeftPaddingEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setLeftPadding", args)
   }
@@ -3693,7 +3693,7 @@ func (this *QTextTableCellFormat) leftPadding(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QTextTableCellFormat11leftPaddingEv
     // invoke: qreal leftPadding()
-    C._ZNK20QTextTableCellFormat11leftPaddingEv(this.qclsinst)
+    C.C_ZNK20QTextTableCellFormat11leftPaddingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "leftPadding", args)
   }
@@ -3716,7 +3716,7 @@ func (this *QTextTableCellFormat) setBottomPadding(args ...interface{}) () {
     // invoke: void setBottomPadding(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN20QTextTableCellFormat16setBottomPaddingEd(this.qclsinst, arg0)
+    C.C_ZN20QTextTableCellFormat16setBottomPaddingEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setBottomPadding", args)
   }
@@ -3738,7 +3738,7 @@ func NewQTextTableCellFormat(args ...interface{}) QTextTableCellFormat {
     // invoke: void QTextTableCellFormat()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN20QTextTableCellFormatC2Ev(qthis)
+    C.C_ZN20QTextTableCellFormatC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "QTextTableCellFormat", args)
   }
@@ -3762,7 +3762,7 @@ func (this *QTextTableCellFormat) setTopPadding(args ...interface{}) () {
     // invoke: void setTopPadding(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN20QTextTableCellFormat13setTopPaddingEd(this.qclsinst, arg0)
+    C.C_ZN20QTextTableCellFormat13setTopPaddingEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setTopPadding", args)
   }
@@ -3782,7 +3782,7 @@ func (this *QTextTableCellFormat) rightPadding(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QTextTableCellFormat12rightPaddingEv
     // invoke: qreal rightPadding()
-    C._ZNK20QTextTableCellFormat12rightPaddingEv(this.qclsinst)
+    C.C_ZNK20QTextTableCellFormat12rightPaddingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "rightPadding", args)
   }
@@ -3805,7 +3805,7 @@ func (this *QTextTableCellFormat) setRightPadding(args ...interface{}) () {
     // invoke: void setRightPadding(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN20QTextTableCellFormat15setRightPaddingEd(this.qclsinst, arg0)
+    C.C_ZN20QTextTableCellFormat15setRightPaddingEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setRightPadding", args)
   }
@@ -3825,7 +3825,7 @@ func (this *QTextTableCellFormat) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QTextTableCellFormat7isValidEv
     // invoke: bool isValid()
-    C._ZNK20QTextTableCellFormat7isValidEv(this.qclsinst)
+    C.C_ZNK20QTextTableCellFormat7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "isValid", args)
   }
@@ -3845,7 +3845,7 @@ func (this *QTextTableCellFormat) topPadding(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QTextTableCellFormat10topPaddingEv
     // invoke: qreal topPadding()
-    C._ZNK20QTextTableCellFormat10topPaddingEv(this.qclsinst)
+    C.C_ZNK20QTextTableCellFormat10topPaddingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "topPadding", args)
   }
@@ -3868,7 +3868,7 @@ func (this *QTextTableCellFormat) setPadding(args ...interface{}) () {
     // invoke: void setPadding(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN20QTextTableCellFormat10setPaddingEd(this.qclsinst, arg0)
+    C.C_ZN20QTextTableCellFormat10setPaddingEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setPadding", args)
   }
@@ -3888,7 +3888,7 @@ func (this *QTextTableCellFormat) bottomPadding(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QTextTableCellFormat13bottomPaddingEv
     // invoke: qreal bottomPadding()
-    C._ZNK20QTextTableCellFormat13bottomPaddingEv(this.qclsinst)
+    C.C_ZNK20QTextTableCellFormat13bottomPaddingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "bottomPadding", args)
   }
@@ -3908,7 +3908,7 @@ func (this *QTextListFormat) style(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextListFormat5styleEv
     // invoke: QTextListFormat::Style style()
-    C._ZNK15QTextListFormat5styleEv(this.qclsinst)
+    C.C_ZNK15QTextListFormat5styleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextListFormat", "style", args)
   }
@@ -3928,7 +3928,7 @@ func (this *QTextListFormat) numberPrefix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextListFormat12numberPrefixEv
     // invoke: QString numberPrefix()
-    C._ZNK15QTextListFormat12numberPrefixEv(this.qclsinst)
+    C.C_ZNK15QTextListFormat12numberPrefixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextListFormat", "numberPrefix", args)
   }
@@ -3948,7 +3948,7 @@ func (this *QTextListFormat) indent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextListFormat6indentEv
     // invoke: int indent()
-    C._ZNK15QTextListFormat6indentEv(this.qclsinst)
+    C.C_ZNK15QTextListFormat6indentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextListFormat", "indent", args)
   }
@@ -3971,7 +3971,7 @@ func (this *QTextListFormat) setNumberPrefix(args ...interface{}) () {
     // invoke: void setNumberPrefix(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTextListFormat15setNumberPrefixERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QTextListFormat15setNumberPrefixERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextListFormat", "setNumberPrefix", args)
   }
@@ -3991,7 +3991,7 @@ func (this *QTextListFormat) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextListFormat7isValidEv
     // invoke: bool isValid()
-    C._ZNK15QTextListFormat7isValidEv(this.qclsinst)
+    C.C_ZNK15QTextListFormat7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextListFormat", "isValid", args)
   }
@@ -4013,7 +4013,7 @@ func NewQTextListFormat(args ...interface{}) QTextListFormat {
     // invoke: void QTextListFormat()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN15QTextListFormatC2Ev(qthis)
+    C.C_ZN15QTextListFormatC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QTextListFormat", "QTextListFormat", args)
   }
@@ -4037,7 +4037,7 @@ func (this *QTextListFormat) setIndent(args ...interface{}) () {
     // invoke: void setIndent(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QTextListFormat9setIndentEi(this.qclsinst, arg0)
+    C.C_ZN15QTextListFormat9setIndentEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextListFormat", "setIndent", args)
   }
@@ -4057,7 +4057,7 @@ func (this *QTextListFormat) numberSuffix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextListFormat12numberSuffixEv
     // invoke: QString numberSuffix()
-    C._ZNK15QTextListFormat12numberSuffixEv(this.qclsinst)
+    C.C_ZNK15QTextListFormat12numberSuffixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextListFormat", "numberSuffix", args)
   }
@@ -4080,7 +4080,7 @@ func (this *QTextListFormat) setNumberSuffix(args ...interface{}) () {
     // invoke: void setNumberSuffix(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN15QTextListFormat15setNumberSuffixERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QTextListFormat15setNumberSuffixERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextListFormat", "setNumberSuffix", args)
   }
@@ -4103,7 +4103,7 @@ func (this *QTextFrameFormat) setBorderBrush(args ...interface{}) () {
     // invoke: void setBorderBrush(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTextFrameFormat14setBorderBrushERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat14setBorderBrushERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setBorderBrush", args)
   }
@@ -4123,7 +4123,7 @@ func (this *QTextFrameFormat) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat6heightEv
     // invoke: QTextLength height()
-    C._ZNK16QTextFrameFormat6heightEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "height", args)
   }
@@ -4149,13 +4149,13 @@ func (this *QTextFrameFormat) setWidth(args ...interface{}) () {
     // invoke: void setWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextFrameFormat8setWidthEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat8setWidthEd(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN16QTextFrameFormat8setWidthERK11QTextLength
     // invoke: void setWidth(const class QTextLength &)
     var arg0 = args[0].(QTextLength).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTextFrameFormat8setWidthERK11QTextLength(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat8setWidthERK11QTextLength(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setWidth", args)
   }
@@ -4175,7 +4175,7 @@ func (this *QTextFrameFormat) topMargin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat9topMarginEv
     // invoke: qreal topMargin()
-    C._ZNK16QTextFrameFormat9topMarginEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat9topMarginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "topMargin", args)
   }
@@ -4195,7 +4195,7 @@ func (this *QTextFrameFormat) border(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat6borderEv
     // invoke: qreal border()
-    C._ZNK16QTextFrameFormat6borderEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat6borderEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "border", args)
   }
@@ -4215,7 +4215,7 @@ func (this *QTextFrameFormat) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat5widthEv
     // invoke: QTextLength width()
-    C._ZNK16QTextFrameFormat5widthEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "width", args)
   }
@@ -4238,7 +4238,7 @@ func (this *QTextFrameFormat) setLeftMargin(args ...interface{}) () {
     // invoke: void setLeftMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextFrameFormat13setLeftMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat13setLeftMarginEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setLeftMargin", args)
   }
@@ -4258,7 +4258,7 @@ func (this *QTextFrameFormat) leftMargin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat10leftMarginEv
     // invoke: qreal leftMargin()
-    C._ZNK16QTextFrameFormat10leftMarginEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat10leftMarginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "leftMargin", args)
   }
@@ -4281,7 +4281,7 @@ func (this *QTextFrameFormat) setPadding(args ...interface{}) () {
     // invoke: void setPadding(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextFrameFormat10setPaddingEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat10setPaddingEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setPadding", args)
   }
@@ -4304,7 +4304,7 @@ func (this *QTextFrameFormat) setTopMargin(args ...interface{}) () {
     // invoke: void setTopMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextFrameFormat12setTopMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat12setTopMarginEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setTopMargin", args)
   }
@@ -4324,7 +4324,7 @@ func (this *QTextFrameFormat) rightMargin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat11rightMarginEv
     // invoke: qreal rightMargin()
-    C._ZNK16QTextFrameFormat11rightMarginEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat11rightMarginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "rightMargin", args)
   }
@@ -4344,7 +4344,7 @@ func (this *QTextFrameFormat) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat7isValidEv
     // invoke: bool isValid()
-    C._ZNK16QTextFrameFormat7isValidEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "isValid", args)
   }
@@ -4364,7 +4364,7 @@ func (this *QTextFrameFormat) pageBreakPolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat15pageBreakPolicyEv
     // invoke: PageBreakFlags pageBreakPolicy()
-    C._ZNK16QTextFrameFormat15pageBreakPolicyEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat15pageBreakPolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "pageBreakPolicy", args)
   }
@@ -4384,7 +4384,7 @@ func (this *QTextFrameFormat) padding(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat7paddingEv
     // invoke: qreal padding()
-    C._ZNK16QTextFrameFormat7paddingEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat7paddingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "padding", args)
   }
@@ -4407,7 +4407,7 @@ func (this *QTextFrameFormat) setMargin(args ...interface{}) () {
     // invoke: void setMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextFrameFormat9setMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat9setMarginEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setMargin", args)
   }
@@ -4427,7 +4427,7 @@ func (this *QTextFrameFormat) bottomMargin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat12bottomMarginEv
     // invoke: qreal bottomMargin()
-    C._ZNK16QTextFrameFormat12bottomMarginEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat12bottomMarginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "bottomMargin", args)
   }
@@ -4449,7 +4449,7 @@ func NewQTextFrameFormat(args ...interface{}) QTextFrameFormat {
     // invoke: void QTextFrameFormat()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN16QTextFrameFormatC2Ev(qthis)
+    C.C_ZN16QTextFrameFormatC2Ev(qthis)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "QTextFrameFormat", args)
   }
@@ -4476,13 +4476,13 @@ func (this *QTextFrameFormat) setHeight(args ...interface{}) () {
     // invoke: void setHeight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextFrameFormat9setHeightEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat9setHeightEd(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN16QTextFrameFormat9setHeightERK11QTextLength
     // invoke: void setHeight(const class QTextLength &)
     var arg0 = args[0].(QTextLength).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QTextFrameFormat9setHeightERK11QTextLength(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat9setHeightERK11QTextLength(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setHeight", args)
   }
@@ -4502,7 +4502,7 @@ func (this *QTextFrameFormat) borderBrush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat11borderBrushEv
     // invoke: QBrush borderBrush()
-    C._ZNK16QTextFrameFormat11borderBrushEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat11borderBrushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "borderBrush", args)
   }
@@ -4525,7 +4525,7 @@ func (this *QTextFrameFormat) setRightMargin(args ...interface{}) () {
     // invoke: void setRightMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextFrameFormat14setRightMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat14setRightMarginEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setRightMargin", args)
   }
@@ -4548,7 +4548,7 @@ func (this *QTextFrameFormat) setBorder(args ...interface{}) () {
     // invoke: void setBorder(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextFrameFormat9setBorderEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat9setBorderEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setBorder", args)
   }
@@ -4571,7 +4571,7 @@ func (this *QTextFrameFormat) setBottomMargin(args ...interface{}) () {
     // invoke: void setBottomMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN16QTextFrameFormat15setBottomMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat15setBottomMarginEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setBottomMargin", args)
   }
@@ -4591,7 +4591,7 @@ func (this *QTextFrameFormat) position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat8positionEv
     // invoke: QTextFrameFormat::Position position()
-    C._ZNK16QTextFrameFormat8positionEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat8positionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "position", args)
   }
@@ -4611,7 +4611,7 @@ func (this *QTextFrameFormat) borderStyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat11borderStyleEv
     // invoke: QTextFrameFormat::BorderStyle borderStyle()
-    C._ZNK16QTextFrameFormat11borderStyleEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat11borderStyleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "borderStyle", args)
   }
@@ -4631,7 +4631,7 @@ func (this *QTextFrameFormat) margin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat6marginEv
     // invoke: qreal margin()
-    C._ZNK16QTextFrameFormat6marginEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat6marginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "margin", args)
   }

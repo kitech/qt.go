@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtGui/qstatictext.h
 // dst-file: /src/gui/qstatictext.go
 //
@@ -29,35 +29,35 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QStaticText::swap(QStaticText & other);
-extern void _ZN11QStaticText4swapERS_(void* qthis, void* arg0); // 2
+extern void C_ZN11QStaticText4swapERS_(void* qthis, void* arg0); // 2
   // proto:  void QStaticText::prepare(const QTransform & matrix, const QFont & font);
-extern void _ZN11QStaticText7prepareERK10QTransformRK5QFont(void* qthis, void* arg0, void* arg1); // 4
+extern void C_ZN11QStaticText7prepareERK10QTransformRK5QFont(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QString QStaticText::text();
-extern void _ZNK11QStaticText4textEv(void* qthis); // 4
+extern void C_ZNK11QStaticText4textEv(void* qthis); // 4
   // proto:  void QStaticText::setText(const QString & text);
-extern void _ZN11QStaticText7setTextERK7QString(void* qthis, void* arg0); // 4
+extern void C_ZN11QStaticText7setTextERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QStaticText::~QStaticText();
-extern void _ZN11QStaticTextD2Ev(void* qthis); // 4
+extern void C_ZN11QStaticTextD2Ev(void* qthis); // 4
   // proto:  void QStaticText::setTextWidth(qreal textWidth);
-extern void _ZN11QStaticText12setTextWidthEd(void* qthis, double arg0); // 4
+extern void C_ZN11QStaticText12setTextWidthEd(void* qthis, double arg0); // 4
   // proto:  void QStaticText::setTextOption(const QTextOption & textOption);
-extern void _ZN11QStaticText13setTextOptionERK11QTextOption(void* qthis, void* arg0); // 4
+extern void C_ZN11QStaticText13setTextOptionERK11QTextOption(void* qthis, void* arg0); // 4
   // proto:  void QStaticText::QStaticText();
-extern void _ZN11QStaticTextC2Ev(void* qthis); // 3
+extern void C_ZN11QStaticTextC2Ev(void* qthis); // 3
   // proto:  void QStaticText::QStaticText(const QString & text);
-extern void _ZN11QStaticTextC2ERK7QString(void* qthis, void* arg0); // 3
+extern void C_ZN11QStaticTextC2ERK7QString(void* qthis, void* arg0); // 3
   // proto:  void QStaticText::QStaticText(const QStaticText & other);
-extern void _ZN11QStaticTextC2ERKS_(void* qthis, void* arg0); // 3
+extern void C_ZN11QStaticTextC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  qreal QStaticText::textWidth();
-extern void _ZNK11QStaticText9textWidthEv(void* qthis); // 4
+extern void C_ZNK11QStaticText9textWidthEv(void* qthis); // 4
   // proto:  Qt::TextFormat QStaticText::textFormat();
-extern void _ZNK11QStaticText10textFormatEv(void* qthis); // 4
+extern void C_ZNK11QStaticText10textFormatEv(void* qthis); // 4
   // proto:  QTextOption QStaticText::textOption();
-extern void _ZNK11QStaticText10textOptionEv(void* qthis); // 4
+extern void C_ZNK11QStaticText10textOptionEv(void* qthis); // 4
   // proto:  QStaticText::PerformanceHint QStaticText::performanceHint();
-extern void _ZNK11QStaticText15performanceHintEv(void* qthis); // 4
+extern void C_ZNK11QStaticText15performanceHintEv(void* qthis); // 4
   // proto:  QSizeF QStaticText::size();
-extern void _ZNK11QStaticText4sizeEv(void* qthis); // 4
+extern void C_ZNK11QStaticText4sizeEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -92,7 +92,7 @@ func (this *QStaticText) swap(args ...interface{}) () {
     // invoke: void swap(class QStaticText &)
     var arg0 = args[0].(QStaticText).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QStaticText4swapERS_(this.qclsinst, arg0)
+    C.C_ZN11QStaticText4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "swap", args)
   }
@@ -118,7 +118,7 @@ func (this *QStaticText) prepare(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QFont).qclsinst
     if false {fmt.Println(arg1)}
-    C._ZN11QStaticText7prepareERK10QTransformRK5QFont(this.qclsinst, arg0, arg1)
+    C.C_ZN11QStaticText7prepareERK10QTransformRK5QFont(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStaticText", "prepare", args)
   }
@@ -138,7 +138,7 @@ func (this *QStaticText) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStaticText4textEv
     // invoke: QString text()
-    C._ZNK11QStaticText4textEv(this.qclsinst)
+    C.C_ZNK11QStaticText4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "text", args)
   }
@@ -161,7 +161,7 @@ func (this *QStaticText) setText(args ...interface{}) () {
     // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QStaticText7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QStaticText7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "setText", args)
   }
@@ -181,7 +181,7 @@ func (this *QStaticText) FreeQStaticText(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStaticTextD0Ev
     // invoke: void ~QStaticText()
-    C._ZN11QStaticTextD2Ev(this.qclsinst)
+    C.C_ZN11QStaticTextD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "~QStaticText", args)
   }
@@ -204,7 +204,7 @@ func (this *QStaticText) setTextWidth(args ...interface{}) () {
     // invoke: void setTextWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN11QStaticText12setTextWidthEd(this.qclsinst, arg0)
+    C.C_ZN11QStaticText12setTextWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "setTextWidth", args)
   }
@@ -227,7 +227,7 @@ func (this *QStaticText) setTextOption(args ...interface{}) () {
     // invoke: void setTextOption(const class QTextOption &)
     var arg0 = args[0].(QTextOption).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QStaticText13setTextOptionERK11QTextOption(this.qclsinst, arg0)
+    C.C_ZN11QStaticText13setTextOptionERK11QTextOption(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "setTextOption", args)
   }
@@ -255,7 +255,7 @@ func NewQStaticText(args ...interface{}) QStaticText {
     // invoke: void QStaticText()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QStaticTextC2Ev(qthis)
+    C.C_ZN11QStaticTextC2Ev(qthis)
   case 1:
     // invoke: _ZN11QStaticTextC1ERK7QString
     // invoke: void QStaticText(const class QString &)
@@ -263,7 +263,7 @@ func NewQStaticText(args ...interface{}) QStaticText {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QStaticTextC2ERK7QString(qthis, arg0)
+    C.C_ZN11QStaticTextC2ERK7QString(qthis, arg0)
   case 2:
     // invoke: _ZN11QStaticTextC1ERKS_
     // invoke: void QStaticText(const class QStaticText &)
@@ -271,7 +271,7 @@ func NewQStaticText(args ...interface{}) QStaticText {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN11QStaticTextC2ERKS_(qthis, arg0)
+    C.C_ZN11QStaticTextC2ERKS_(qthis, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "QStaticText", args)
   }
@@ -292,7 +292,7 @@ func (this *QStaticText) textWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStaticText9textWidthEv
     // invoke: qreal textWidth()
-    C._ZNK11QStaticText9textWidthEv(this.qclsinst)
+    C.C_ZNK11QStaticText9textWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "textWidth", args)
   }
@@ -312,7 +312,7 @@ func (this *QStaticText) textFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStaticText10textFormatEv
     // invoke: Qt::TextFormat textFormat()
-    C._ZNK11QStaticText10textFormatEv(this.qclsinst)
+    C.C_ZNK11QStaticText10textFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "textFormat", args)
   }
@@ -332,7 +332,7 @@ func (this *QStaticText) textOption(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStaticText10textOptionEv
     // invoke: QTextOption textOption()
-    C._ZNK11QStaticText10textOptionEv(this.qclsinst)
+    C.C_ZNK11QStaticText10textOptionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "textOption", args)
   }
@@ -352,7 +352,7 @@ func (this *QStaticText) performanceHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStaticText15performanceHintEv
     // invoke: QStaticText::PerformanceHint performanceHint()
-    C._ZNK11QStaticText15performanceHintEv(this.qclsinst)
+    C.C_ZNK11QStaticText15performanceHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "performanceHint", args)
   }
@@ -372,7 +372,7 @@ func (this *QStaticText) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStaticText4sizeEv
     // invoke: QSizeF size()
-    C._ZNK11QStaticText4sizeEv(this.qclsinst)
+    C.C_ZNK11QStaticText4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "size", args)
   }

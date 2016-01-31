@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 17 14:31:14 2016
+// created: Sun Jan 31 12:22:27 2016
 // src-file: /QtCore/qrect.h
 // dst-file: /src/core/qrect.go
 //
@@ -29,269 +29,269 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QRect QRect::marginsRemoved(const QMargins & margins);
-extern void _ZNK5QRect14marginsRemovedERK8QMargins(void* qthis, void* arg0); // 2
+extern void C_ZNK5QRect14marginsRemovedERK8QMargins(void* qthis, void* arg0); // 2
   // proto:  void QRect::moveTo(int x, int t);
-extern void _ZN5QRect6moveToEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZN5QRect6moveToEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  void QRect::moveTo(const QPoint & p);
-extern void _ZN5QRect6moveToERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZN5QRect6moveToERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  int QRect::right();
-extern void _ZNK5QRect5rightEv(void* qthis); // 2
+extern void C_ZNK5QRect5rightEv(void* qthis); // 2
   // proto:  bool QRect::intersects(const QRect & r);
-extern void _ZNK5QRect10intersectsERKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK5QRect10intersectsERKS_(void* qthis, void* arg0); // 4
   // proto:  QPoint QRect::topLeft();
-extern void _ZNK5QRect7topLeftEv(void* qthis); // 2
+extern void C_ZNK5QRect7topLeftEv(void* qthis); // 2
   // proto:  void QRect::setBottom(int pos);
-extern void _ZN5QRect9setBottomEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN5QRect9setBottomEi(void* qthis, int32_t arg0); // 2
   // proto:  void QRect::setTopLeft(const QPoint & p);
-extern void _ZN5QRect10setTopLeftERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZN5QRect10setTopLeftERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  QRect QRect::adjusted(int x1, int y1, int x2, int y2);
-extern void _ZNK5QRect8adjustedEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
+extern void C_ZNK5QRect8adjustedEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
   // proto:  int QRect::height();
-extern void _ZNK5QRect6heightEv(void* qthis); // 2
+extern void C_ZNK5QRect6heightEv(void* qthis); // 2
   // proto:  void QRect::setBottomLeft(const QPoint & p);
-extern void _ZN5QRect13setBottomLeftERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZN5QRect13setBottomLeftERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  void QRect::moveRight(int pos);
-extern void _ZN5QRect9moveRightEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN5QRect9moveRightEi(void* qthis, int32_t arg0); // 2
   // proto:  void QRect::moveBottomLeft(const QPoint & p);
-extern void _ZN5QRect14moveBottomLeftERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZN5QRect14moveBottomLeftERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  void QRect::setWidth(int w);
-extern void _ZN5QRect8setWidthEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN5QRect8setWidthEi(void* qthis, int32_t arg0); // 2
   // proto:  QRect QRect::marginsAdded(const QMargins & margins);
-extern void _ZNK5QRect12marginsAddedERK8QMargins(void* qthis, void* arg0); // 2
+extern void C_ZNK5QRect12marginsAddedERK8QMargins(void* qthis, void* arg0); // 2
   // proto:  QSize QRect::size();
-extern void _ZNK5QRect4sizeEv(void* qthis); // 2
+extern void C_ZNK5QRect4sizeEv(void* qthis); // 2
   // proto:  void QRect::moveBottom(int pos);
-extern void _ZN5QRect10moveBottomEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN5QRect10moveBottomEi(void* qthis, int32_t arg0); // 2
   // proto:  QRect QRect::united(const QRect & other);
-extern void _ZNK5QRect6unitedERKS_(void* qthis, void* arg0); // 2
+extern void C_ZNK5QRect6unitedERKS_(void* qthis, void* arg0); // 2
   // proto:  QPoint QRect::bottomRight();
-extern void _ZNK5QRect11bottomRightEv(void* qthis); // 2
+extern void C_ZNK5QRect11bottomRightEv(void* qthis); // 2
   // proto:  QRect QRect::intersected(const QRect & other);
-extern void _ZNK5QRect11intersectedERKS_(void* qthis, void* arg0); // 2
+extern void C_ZNK5QRect11intersectedERKS_(void* qthis, void* arg0); // 2
   // proto:  void QRect::getRect(int * x, int * y, int * w, int * h);
-extern void _ZNK5QRect7getRectEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 2
+extern void C_ZNK5QRect7getRectEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 2
   // proto:  int QRect::top();
-extern void _ZNK5QRect3topEv(void* qthis); // 2
+extern void C_ZNK5QRect3topEv(void* qthis); // 2
   // proto:  bool QRect::contains(int x, int y, bool proper);
-extern void _ZNK5QRect8containsEiib(void* qthis, int32_t arg0, int32_t arg1, bool arg2); // 2
+extern void C_ZNK5QRect8containsEiib(void* qthis, int32_t arg0, int32_t arg1, bool arg2); // 2
   // proto:  bool QRect::contains(const QPoint & p, bool proper);
-extern void _ZNK5QRect8containsERK6QPointb(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZNK5QRect8containsERK6QPointb(void* qthis, void* arg0, bool arg1); // 4
   // proto:  bool QRect::contains(const QRect & r, bool proper);
-extern void _ZNK5QRect8containsERKS_b(void* qthis, void* arg0, bool arg1); // 4
+extern void C_ZNK5QRect8containsERKS_b(void* qthis, void* arg0, bool arg1); // 4
   // proto:  bool QRect::contains(int x, int y);
-extern void _ZNK5QRect8containsEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZNK5QRect8containsEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  void QRect::setTop(int pos);
-extern void _ZN5QRect6setTopEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN5QRect6setTopEi(void* qthis, int32_t arg0); // 2
   // proto:  QPoint QRect::topRight();
-extern void _ZNK5QRect8topRightEv(void* qthis); // 2
+extern void C_ZNK5QRect8topRightEv(void* qthis); // 2
   // proto:  void QRect::moveCenter(const QPoint & p);
-extern void _ZN5QRect10moveCenterERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZN5QRect10moveCenterERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  int QRect::width();
-extern void _ZNK5QRect5widthEv(void* qthis); // 2
+extern void C_ZNK5QRect5widthEv(void* qthis); // 2
   // proto:  bool QRect::isEmpty();
-extern void _ZNK5QRect7isEmptyEv(void* qthis); // 2
+extern void C_ZNK5QRect7isEmptyEv(void* qthis); // 2
   // proto:  void QRect::setX(int x);
-extern void _ZN5QRect4setXEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN5QRect4setXEi(void* qthis, int32_t arg0); // 2
   // proto:  void QRect::setRect(int x, int y, int w, int h);
-extern void _ZN5QRect7setRectEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
+extern void C_ZN5QRect7setRectEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
   // proto:  void QRect::setBottomRight(const QPoint & p);
-extern void _ZN5QRect14setBottomRightERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZN5QRect14setBottomRightERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  bool QRect::isValid();
-extern void _ZNK5QRect7isValidEv(void* qthis); // 2
+extern void C_ZNK5QRect7isValidEv(void* qthis); // 2
   // proto:  void QRect::moveLeft(int pos);
-extern void _ZN5QRect8moveLeftEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN5QRect8moveLeftEi(void* qthis, int32_t arg0); // 2
   // proto:  void QRect::setTopRight(const QPoint & p);
-extern void _ZN5QRect11setTopRightERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZN5QRect11setTopRightERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  void QRect::moveTop(int pos);
-extern void _ZN5QRect7moveTopEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN5QRect7moveTopEi(void* qthis, int32_t arg0); // 2
   // proto:  QRect QRect::translated(const QPoint & p);
-extern void _ZNK5QRect10translatedERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZNK5QRect10translatedERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  QRect QRect::translated(int dx, int dy);
-extern void _ZNK5QRect10translatedEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZNK5QRect10translatedEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  QRect QRect::normalized();
-extern void _ZNK5QRect10normalizedEv(void* qthis); // 4
+extern void C_ZNK5QRect10normalizedEv(void* qthis); // 4
   // proto:  void QRect::setCoords(int x1, int y1, int x2, int y2);
-extern void _ZN5QRect9setCoordsEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
+extern void C_ZN5QRect9setCoordsEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
   // proto:  void QRect::setLeft(int pos);
-extern void _ZN5QRect7setLeftEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN5QRect7setLeftEi(void* qthis, int32_t arg0); // 2
   // proto:  void QRect::setY(int y);
-extern void _ZN5QRect4setYEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN5QRect4setYEi(void* qthis, int32_t arg0); // 2
   // proto:  void QRect::setHeight(int h);
-extern void _ZN5QRect9setHeightEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN5QRect9setHeightEi(void* qthis, int32_t arg0); // 2
   // proto:  void QRect::QRect(const QPoint & topleft, const QSize & size);
-extern void _ZN5QRectC2ERK6QPointRK5QSize(void* qthis, void* arg0, void* arg1); // 1
+extern void C_ZN5QRectC2ERK6QPointRK5QSize(void* qthis, void* arg0, void* arg1); // 1
   // proto:  void QRect::QRect();
-extern void _ZN5QRectC2Ev(void* qthis); // 1
+extern void C_ZN5QRectC2Ev(void* qthis); // 1
   // proto:  void QRect::QRect(int left, int top, int width, int height);
-extern void _ZN5QRectC2Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 1
+extern void C_ZN5QRectC2Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 1
   // proto:  void QRect::QRect(const QPoint & topleft, const QPoint & bottomright);
-extern void _ZN5QRectC2ERK6QPointS2_(void* qthis, void* arg0, void* arg1); // 1
+extern void C_ZN5QRectC2ERK6QPointS2_(void* qthis, void* arg0, void* arg1); // 1
   // proto:  void QRect::translate(const QPoint & p);
-extern void _ZN5QRect9translateERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZN5QRect9translateERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  void QRect::translate(int dx, int dy);
-extern void _ZN5QRect9translateEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+extern void C_ZN5QRect9translateEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  QPoint QRect::bottomLeft();
-extern void _ZNK5QRect10bottomLeftEv(void* qthis); // 2
+extern void C_ZNK5QRect10bottomLeftEv(void* qthis); // 2
   // proto:  QPoint QRect::center();
-extern void _ZNK5QRect6centerEv(void* qthis); // 2
+extern void C_ZNK5QRect6centerEv(void* qthis); // 2
   // proto:  void QRect::moveTopRight(const QPoint & p);
-extern void _ZN5QRect12moveTopRightERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZN5QRect12moveTopRightERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  void QRect::moveTopLeft(const QPoint & p);
-extern void _ZN5QRect11moveTopLeftERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZN5QRect11moveTopLeftERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  int QRect::bottom();
-extern void _ZNK5QRect6bottomEv(void* qthis); // 2
+extern void C_ZNK5QRect6bottomEv(void* qthis); // 2
   // proto:  void QRect::getCoords(int * x1, int * y1, int * x2, int * y2);
-extern void _ZNK5QRect9getCoordsEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 2
+extern void C_ZNK5QRect9getCoordsEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3); // 2
   // proto:  void QRect::setRight(int pos);
-extern void _ZN5QRect8setRightEi(void* qthis, int32_t arg0); // 2
+extern void C_ZN5QRect8setRightEi(void* qthis, int32_t arg0); // 2
   // proto:  bool QRect::isNull();
-extern void _ZNK5QRect6isNullEv(void* qthis); // 2
+extern void C_ZNK5QRect6isNullEv(void* qthis); // 2
   // proto:  void QRect::adjust(int x1, int y1, int x2, int y2);
-extern void _ZN5QRect6adjustEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
+extern void C_ZN5QRect6adjustEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 2
   // proto:  int QRect::y();
-extern void _ZNK5QRect1yEv(void* qthis); // 2
+extern void C_ZNK5QRect1yEv(void* qthis); // 2
   // proto:  int QRect::x();
-extern void _ZNK5QRect1xEv(void* qthis); // 2
+extern void C_ZNK5QRect1xEv(void* qthis); // 2
   // proto:  void QRect::moveBottomRight(const QPoint & p);
-extern void _ZN5QRect15moveBottomRightERK6QPoint(void* qthis, void* arg0); // 2
+extern void C_ZN5QRect15moveBottomRightERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  void QRect::setSize(const QSize & s);
-extern void _ZN5QRect7setSizeERK5QSize(void* qthis, void* arg0); // 2
+extern void C_ZN5QRect7setSizeERK5QSize(void* qthis, void* arg0); // 2
   // proto:  int QRect::left();
-extern void _ZNK5QRect4leftEv(void* qthis); // 2
+extern void C_ZNK5QRect4leftEv(void* qthis); // 2
   // proto:  QRectF QRectF::marginsRemoved(const QMarginsF & margins);
-extern void _ZNK6QRectF14marginsRemovedERK9QMarginsF(void* qthis, void* arg0); // 2
+extern void C_ZNK6QRectF14marginsRemovedERK9QMarginsF(void* qthis, void* arg0); // 2
   // proto:  void QRectF::moveTo(const QPointF & p);
-extern void _ZN6QRectF6moveToERK7QPointF(void* qthis, void* arg0); // 2
+extern void C_ZN6QRectF6moveToERK7QPointF(void* qthis, void* arg0); // 2
   // proto:  void QRectF::moveTo(qreal x, qreal y);
-extern void _ZN6QRectF6moveToEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZN6QRectF6moveToEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QRectF::setBottomLeft(const QPointF & p);
-extern void _ZN6QRectF13setBottomLeftERK7QPointF(void* qthis, void* arg0); // 2
+extern void C_ZN6QRectF13setBottomLeftERK7QPointF(void* qthis, void* arg0); // 2
   // proto:  bool QRectF::intersects(const QRectF & r);
-extern void _ZNK6QRectF10intersectsERKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK6QRectF10intersectsERKS_(void* qthis, void* arg0); // 4
   // proto:  QPointF QRectF::topLeft();
-extern void _ZNK6QRectF7topLeftEv(void* qthis); // 2
+extern void C_ZNK6QRectF7topLeftEv(void* qthis); // 2
   // proto:  void QRectF::setBottom(qreal pos);
-extern void _ZN6QRectF9setBottomEd(void* qthis, double arg0); // 2
+extern void C_ZN6QRectF9setBottomEd(void* qthis, double arg0); // 2
   // proto:  void QRectF::setTopLeft(const QPointF & p);
-extern void _ZN6QRectF10setTopLeftERK7QPointF(void* qthis, void* arg0); // 2
+extern void C_ZN6QRectF10setTopLeftERK7QPointF(void* qthis, void* arg0); // 2
   // proto:  QRectF QRectF::adjusted(qreal x1, qreal y1, qreal x2, qreal y2);
-extern void _ZNK6QRectF8adjustedEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZNK6QRectF8adjustedEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  qreal QRectF::height();
-extern void _ZNK6QRectF6heightEv(void* qthis); // 2
+extern void C_ZNK6QRectF6heightEv(void* qthis); // 2
   // proto:  qreal QRectF::right();
-extern void _ZNK6QRectF5rightEv(void* qthis); // 2
+extern void C_ZNK6QRectF5rightEv(void* qthis); // 2
   // proto:  void QRectF::setLeft(qreal pos);
-extern void _ZN6QRectF7setLeftEd(void* qthis, double arg0); // 2
+extern void C_ZN6QRectF7setLeftEd(void* qthis, double arg0); // 2
   // proto:  void QRectF::moveRight(qreal pos);
-extern void _ZN6QRectF9moveRightEd(void* qthis, double arg0); // 2
+extern void C_ZN6QRectF9moveRightEd(void* qthis, double arg0); // 2
   // proto:  void QRectF::moveBottomLeft(const QPointF & p);
-extern void _ZN6QRectF14moveBottomLeftERK7QPointF(void* qthis, void* arg0); // 2
+extern void C_ZN6QRectF14moveBottomLeftERK7QPointF(void* qthis, void* arg0); // 2
   // proto:  void QRectF::setWidth(qreal w);
-extern void _ZN6QRectF8setWidthEd(void* qthis, double arg0); // 2
+extern void C_ZN6QRectF8setWidthEd(void* qthis, double arg0); // 2
   // proto:  QRectF QRectF::marginsAdded(const QMarginsF & margins);
-extern void _ZNK6QRectF12marginsAddedERK9QMarginsF(void* qthis, void* arg0); // 2
+extern void C_ZNK6QRectF12marginsAddedERK9QMarginsF(void* qthis, void* arg0); // 2
   // proto:  void QRectF::moveTop(qreal pos);
-extern void _ZN6QRectF7moveTopEd(void* qthis, double arg0); // 2
+extern void C_ZN6QRectF7moveTopEd(void* qthis, double arg0); // 2
   // proto:  QPointF QRectF::bottomRight();
-extern void _ZNK6QRectF11bottomRightEv(void* qthis); // 2
+extern void C_ZNK6QRectF11bottomRightEv(void* qthis); // 2
   // proto:  qreal QRectF::bottom();
-extern void _ZNK6QRectF6bottomEv(void* qthis); // 2
+extern void C_ZNK6QRectF6bottomEv(void* qthis); // 2
   // proto:  void QRectF::getRect(qreal * x, qreal * y, qreal * w, qreal * h);
-extern void _ZNK6QRectF7getRectEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 2
+extern void C_ZNK6QRectF7getRectEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 2
   // proto:  qreal QRectF::top();
-extern void _ZNK6QRectF3topEv(void* qthis); // 2
+extern void C_ZNK6QRectF3topEv(void* qthis); // 2
   // proto:  bool QRectF::contains(qreal x, qreal y);
-extern void _ZNK6QRectF8containsEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZNK6QRectF8containsEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  bool QRectF::contains(const QRectF & r);
-extern void _ZNK6QRectF8containsERKS_(void* qthis, void* arg0); // 4
+extern void C_ZNK6QRectF8containsERKS_(void* qthis, void* arg0); // 4
   // proto:  bool QRectF::contains(const QPointF & p);
-extern void _ZNK6QRectF8containsERK7QPointF(void* qthis, void* arg0); // 4
+extern void C_ZNK6QRectF8containsERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  QRect QRectF::toRect();
-extern void _ZNK6QRectF6toRectEv(void* qthis); // 2
+extern void C_ZNK6QRectF6toRectEv(void* qthis); // 2
   // proto:  QPointF QRectF::topRight();
-extern void _ZNK6QRectF8topRightEv(void* qthis); // 2
+extern void C_ZNK6QRectF8topRightEv(void* qthis); // 2
   // proto:  void QRectF::moveCenter(const QPointF & p);
-extern void _ZN6QRectF10moveCenterERK7QPointF(void* qthis, void* arg0); // 2
+extern void C_ZN6QRectF10moveCenterERK7QPointF(void* qthis, void* arg0); // 2
   // proto:  qreal QRectF::width();
-extern void _ZNK6QRectF5widthEv(void* qthis); // 2
+extern void C_ZNK6QRectF5widthEv(void* qthis); // 2
   // proto:  bool QRectF::isEmpty();
-extern void _ZNK6QRectF7isEmptyEv(void* qthis); // 2
+extern void C_ZNK6QRectF7isEmptyEv(void* qthis); // 2
   // proto:  void QRectF::QRectF(const QPointF & topleft, const QPointF & bottomRight);
-extern void _ZN6QRectFC2ERK7QPointFS2_(void* qthis, void* arg0, void* arg1); // 1
+extern void C_ZN6QRectFC2ERK7QPointFS2_(void* qthis, void* arg0, void* arg1); // 1
   // proto:  void QRectF::QRectF(qreal left, qreal top, qreal width, qreal height);
-extern void _ZN6QRectFC2Edddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 1
+extern void C_ZN6QRectFC2Edddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 1
   // proto:  void QRectF::QRectF();
-extern void _ZN6QRectFC2Ev(void* qthis); // 1
+extern void C_ZN6QRectFC2Ev(void* qthis); // 1
   // proto:  void QRectF::QRectF(const QPointF & topleft, const QSizeF & size);
-extern void _ZN6QRectFC2ERK7QPointFRK6QSizeF(void* qthis, void* arg0, void* arg1); // 1
+extern void C_ZN6QRectFC2ERK7QPointFRK6QSizeF(void* qthis, void* arg0, void* arg1); // 1
   // proto:  void QRectF::QRectF(const QRect & rect);
-extern void _ZN6QRectFC2ERK5QRect(void* qthis, void* arg0); // 1
+extern void C_ZN6QRectFC2ERK5QRect(void* qthis, void* arg0); // 1
   // proto:  QSizeF QRectF::size();
-extern void _ZNK6QRectF4sizeEv(void* qthis); // 2
+extern void C_ZNK6QRectF4sizeEv(void* qthis); // 2
   // proto:  void QRectF::setX(qreal pos);
-extern void _ZN6QRectF4setXEd(void* qthis, double arg0); // 2
+extern void C_ZN6QRectF4setXEd(void* qthis, double arg0); // 2
   // proto:  void QRectF::setRect(qreal x, qreal y, qreal w, qreal h);
-extern void _ZN6QRectF7setRectEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZN6QRectF7setRectEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  void QRectF::moveLeft(qreal pos);
-extern void _ZN6QRectF8moveLeftEd(void* qthis, double arg0); // 2
+extern void C_ZN6QRectF8moveLeftEd(void* qthis, double arg0); // 2
   // proto:  void QRectF::setBottomRight(const QPointF & p);
-extern void _ZN6QRectF14setBottomRightERK7QPointF(void* qthis, void* arg0); // 2
+extern void C_ZN6QRectF14setBottomRightERK7QPointF(void* qthis, void* arg0); // 2
   // proto:  bool QRectF::isValid();
-extern void _ZNK6QRectF7isValidEv(void* qthis); // 2
+extern void C_ZNK6QRectF7isValidEv(void* qthis); // 2
   // proto:  void QRectF::getCoords(qreal * x1, qreal * y1, qreal * x2, qreal * y2);
-extern void _ZNK6QRectF9getCoordsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 2
+extern void C_ZNK6QRectF9getCoordsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 2
   // proto:  void QRectF::setTopRight(const QPointF & p);
-extern void _ZN6QRectF11setTopRightERK7QPointF(void* qthis, void* arg0); // 2
+extern void C_ZN6QRectF11setTopRightERK7QPointF(void* qthis, void* arg0); // 2
   // proto:  QRectF QRectF::translated(qreal dx, qreal dy);
-extern void _ZNK6QRectF10translatedEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZNK6QRectF10translatedEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  QRectF QRectF::translated(const QPointF & p);
-extern void _ZNK6QRectF10translatedERK7QPointF(void* qthis, void* arg0); // 2
+extern void C_ZNK6QRectF10translatedERK7QPointF(void* qthis, void* arg0); // 2
   // proto:  QRectF QRectF::normalized();
-extern void _ZNK6QRectF10normalizedEv(void* qthis); // 4
+extern void C_ZNK6QRectF10normalizedEv(void* qthis); // 4
   // proto:  void QRectF::setTop(qreal pos);
-extern void _ZN6QRectF6setTopEd(void* qthis, double arg0); // 2
+extern void C_ZN6QRectF6setTopEd(void* qthis, double arg0); // 2
   // proto:  void QRectF::moveBottom(qreal pos);
-extern void _ZN6QRectF10moveBottomEd(void* qthis, double arg0); // 2
+extern void C_ZN6QRectF10moveBottomEd(void* qthis, double arg0); // 2
   // proto:  void QRectF::setY(qreal pos);
-extern void _ZN6QRectF4setYEd(void* qthis, double arg0); // 2
+extern void C_ZN6QRectF4setYEd(void* qthis, double arg0); // 2
   // proto:  void QRectF::setCoords(qreal x1, qreal y1, qreal x2, qreal y2);
-extern void _ZN6QRectF9setCoordsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZN6QRectF9setCoordsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  void QRectF::setHeight(qreal h);
-extern void _ZN6QRectF9setHeightEd(void* qthis, double arg0); // 2
+extern void C_ZN6QRectF9setHeightEd(void* qthis, double arg0); // 2
   // proto:  void QRectF::translate(const QPointF & p);
-extern void _ZN6QRectF9translateERK7QPointF(void* qthis, void* arg0); // 2
+extern void C_ZN6QRectF9translateERK7QPointF(void* qthis, void* arg0); // 2
   // proto:  void QRectF::translate(qreal dx, qreal dy);
-extern void _ZN6QRectF9translateEdd(void* qthis, double arg0, double arg1); // 2
+extern void C_ZN6QRectF9translateEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  QPointF QRectF::bottomLeft();
-extern void _ZNK6QRectF10bottomLeftEv(void* qthis); // 2
+extern void C_ZNK6QRectF10bottomLeftEv(void* qthis); // 2
   // proto:  QPointF QRectF::center();
-extern void _ZNK6QRectF6centerEv(void* qthis); // 2
+extern void C_ZNK6QRectF6centerEv(void* qthis); // 2
   // proto:  void QRectF::moveTopRight(const QPointF & p);
-extern void _ZN6QRectF12moveTopRightERK7QPointF(void* qthis, void* arg0); // 2
+extern void C_ZN6QRectF12moveTopRightERK7QPointF(void* qthis, void* arg0); // 2
   // proto:  void QRectF::moveTopLeft(const QPointF & p);
-extern void _ZN6QRectF11moveTopLeftERK7QPointF(void* qthis, void* arg0); // 2
+extern void C_ZN6QRectF11moveTopLeftERK7QPointF(void* qthis, void* arg0); // 2
   // proto:  QRect QRectF::toAlignedRect();
-extern void _ZNK6QRectF13toAlignedRectEv(void* qthis); // 4
+extern void C_ZNK6QRectF13toAlignedRectEv(void* qthis); // 4
   // proto:  QRectF QRectF::intersected(const QRectF & other);
-extern void _ZNK6QRectF11intersectedERKS_(void* qthis, void* arg0); // 2
+extern void C_ZNK6QRectF11intersectedERKS_(void* qthis, void* arg0); // 2
   // proto:  QRectF QRectF::united(const QRectF & other);
-extern void _ZNK6QRectF6unitedERKS_(void* qthis, void* arg0); // 2
+extern void C_ZNK6QRectF6unitedERKS_(void* qthis, void* arg0); // 2
   // proto:  void QRectF::setRight(qreal pos);
-extern void _ZN6QRectF8setRightEd(void* qthis, double arg0); // 2
+extern void C_ZN6QRectF8setRightEd(void* qthis, double arg0); // 2
   // proto:  bool QRectF::isNull();
-extern void _ZNK6QRectF6isNullEv(void* qthis); // 2
+extern void C_ZNK6QRectF6isNullEv(void* qthis); // 2
   // proto:  void QRectF::adjust(qreal x1, qreal y1, qreal x2, qreal y2);
-extern void _ZN6QRectF6adjustEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
+extern void C_ZN6QRectF6adjustEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 2
   // proto:  qreal QRectF::y();
-extern void _ZNK6QRectF1yEv(void* qthis); // 2
+extern void C_ZNK6QRectF1yEv(void* qthis); // 2
   // proto:  qreal QRectF::x();
-extern void _ZNK6QRectF1xEv(void* qthis); // 2
+extern void C_ZNK6QRectF1xEv(void* qthis); // 2
   // proto:  qreal QRectF::left();
-extern void _ZNK6QRectF4leftEv(void* qthis); // 2
+extern void C_ZNK6QRectF4leftEv(void* qthis); // 2
   // proto:  void QRectF::setSize(const QSizeF & s);
-extern void _ZN6QRectF7setSizeERK6QSizeF(void* qthis, void* arg0); // 2
+extern void C_ZN6QRectF7setSizeERK6QSizeF(void* qthis, void* arg0); // 2
   // proto:  void QRectF::moveBottomRight(const QPointF & p);
-extern void _ZN6QRectF15moveBottomRightERK7QPointF(void* qthis, void* arg0); // 2
+extern void C_ZN6QRectF15moveBottomRightERK7QPointF(void* qthis, void* arg0); // 2
 */
 import "C"
 // } // <= ext block end
@@ -332,7 +332,7 @@ func (this *QRect) marginsRemoved(args ...interface{}) () {
     // invoke: QRect marginsRemoved(const class QMargins &)
     var arg0 = args[0].(QMargins).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK5QRect14marginsRemovedERK8QMargins(this.qclsinst, arg0)
+    C.C_ZNK5QRect14marginsRemovedERK8QMargins(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "marginsRemoved", args)
   }
@@ -361,13 +361,13 @@ func (this *QRect) moveTo(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN5QRect6moveToEii(this.qclsinst, arg0, arg1)
+    C.C_ZN5QRect6moveToEii(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN5QRect6moveToERK6QPoint
     // invoke: void moveTo(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QRect6moveToERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QRect6moveToERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "moveTo", args)
   }
@@ -387,7 +387,7 @@ func (this *QRect) right(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect5rightEv
     // invoke: int right()
-    C._ZNK5QRect5rightEv(this.qclsinst)
+    C.C_ZNK5QRect5rightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "right", args)
   }
@@ -410,7 +410,7 @@ func (this *QRect) intersects(args ...interface{}) () {
     // invoke: bool intersects(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK5QRect10intersectsERKS_(this.qclsinst, arg0)
+    C.C_ZNK5QRect10intersectsERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "intersects", args)
   }
@@ -430,7 +430,7 @@ func (this *QRect) topLeft(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect7topLeftEv
     // invoke: QPoint topLeft()
-    C._ZNK5QRect7topLeftEv(this.qclsinst)
+    C.C_ZNK5QRect7topLeftEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "topLeft", args)
   }
@@ -453,7 +453,7 @@ func (this *QRect) setBottom(args ...interface{}) () {
     // invoke: void setBottom(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN5QRect9setBottomEi(this.qclsinst, arg0)
+    C.C_ZN5QRect9setBottomEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setBottom", args)
   }
@@ -476,7 +476,7 @@ func (this *QRect) setTopLeft(args ...interface{}) () {
     // invoke: void setTopLeft(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QRect10setTopLeftERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QRect10setTopLeftERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setTopLeft", args)
   }
@@ -508,7 +508,7 @@ func (this *QRect) adjusted(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZNK5QRect8adjustedEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK5QRect8adjustedEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRect", "adjusted", args)
   }
@@ -528,7 +528,7 @@ func (this *QRect) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect6heightEv
     // invoke: int height()
-    C._ZNK5QRect6heightEv(this.qclsinst)
+    C.C_ZNK5QRect6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "height", args)
   }
@@ -551,7 +551,7 @@ func (this *QRect) setBottomLeft(args ...interface{}) () {
     // invoke: void setBottomLeft(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QRect13setBottomLeftERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QRect13setBottomLeftERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setBottomLeft", args)
   }
@@ -574,7 +574,7 @@ func (this *QRect) moveRight(args ...interface{}) () {
     // invoke: void moveRight(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN5QRect9moveRightEi(this.qclsinst, arg0)
+    C.C_ZN5QRect9moveRightEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "moveRight", args)
   }
@@ -597,7 +597,7 @@ func (this *QRect) moveBottomLeft(args ...interface{}) () {
     // invoke: void moveBottomLeft(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QRect14moveBottomLeftERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QRect14moveBottomLeftERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "moveBottomLeft", args)
   }
@@ -620,7 +620,7 @@ func (this *QRect) setWidth(args ...interface{}) () {
     // invoke: void setWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN5QRect8setWidthEi(this.qclsinst, arg0)
+    C.C_ZN5QRect8setWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setWidth", args)
   }
@@ -643,7 +643,7 @@ func (this *QRect) marginsAdded(args ...interface{}) () {
     // invoke: QRect marginsAdded(const class QMargins &)
     var arg0 = args[0].(QMargins).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK5QRect12marginsAddedERK8QMargins(this.qclsinst, arg0)
+    C.C_ZNK5QRect12marginsAddedERK8QMargins(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "marginsAdded", args)
   }
@@ -663,7 +663,7 @@ func (this *QRect) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect4sizeEv
     // invoke: QSize size()
-    C._ZNK5QRect4sizeEv(this.qclsinst)
+    C.C_ZNK5QRect4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "size", args)
   }
@@ -686,7 +686,7 @@ func (this *QRect) moveBottom(args ...interface{}) () {
     // invoke: void moveBottom(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN5QRect10moveBottomEi(this.qclsinst, arg0)
+    C.C_ZN5QRect10moveBottomEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "moveBottom", args)
   }
@@ -709,7 +709,7 @@ func (this *QRect) united(args ...interface{}) () {
     // invoke: QRect united(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK5QRect6unitedERKS_(this.qclsinst, arg0)
+    C.C_ZNK5QRect6unitedERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "united", args)
   }
@@ -729,7 +729,7 @@ func (this *QRect) bottomRight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect11bottomRightEv
     // invoke: QPoint bottomRight()
-    C._ZNK5QRect11bottomRightEv(this.qclsinst)
+    C.C_ZNK5QRect11bottomRightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "bottomRight", args)
   }
@@ -752,7 +752,7 @@ func (this *QRect) intersected(args ...interface{}) () {
     // invoke: QRect intersected(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK5QRect11intersectedERKS_(this.qclsinst, arg0)
+    C.C_ZNK5QRect11intersectedERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "intersected", args)
   }
@@ -784,7 +784,7 @@ func (this *QRect) getRect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C._ZNK5QRect7getRectEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK5QRect7getRectEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRect", "getRect", args)
   }
@@ -804,7 +804,7 @@ func (this *QRect) top(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect3topEv
     // invoke: int top()
-    C._ZNK5QRect3topEv(this.qclsinst)
+    C.C_ZNK5QRect3topEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "top", args)
   }
@@ -845,7 +845,7 @@ func (this *QRect) contains(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.bool(args[2].(bool))
     if false {fmt.Println(arg2)}
-    C._ZNK5QRect8containsEiib(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK5QRect8containsEiib(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZNK5QRect8containsERK6QPointb
     // invoke: bool contains(const class QPoint &, _Bool)
@@ -853,7 +853,7 @@ func (this *QRect) contains(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZNK5QRect8containsERK6QPointb(this.qclsinst, arg0, arg1)
+    C.C_ZNK5QRect8containsERK6QPointb(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZNK5QRect8containsERKS_b
     // invoke: bool contains(const class QRect &, _Bool)
@@ -861,7 +861,7 @@ func (this *QRect) contains(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C._ZNK5QRect8containsERKS_b(this.qclsinst, arg0, arg1)
+    C.C_ZNK5QRect8containsERKS_b(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZNK5QRect8containsEii
     // invoke: bool contains(int, int)
@@ -869,7 +869,7 @@ func (this *QRect) contains(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK5QRect8containsEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK5QRect8containsEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QRect", "contains", args)
   }
@@ -892,7 +892,7 @@ func (this *QRect) setTop(args ...interface{}) () {
     // invoke: void setTop(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN5QRect6setTopEi(this.qclsinst, arg0)
+    C.C_ZN5QRect6setTopEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setTop", args)
   }
@@ -912,7 +912,7 @@ func (this *QRect) topRight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect8topRightEv
     // invoke: QPoint topRight()
-    C._ZNK5QRect8topRightEv(this.qclsinst)
+    C.C_ZNK5QRect8topRightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "topRight", args)
   }
@@ -935,7 +935,7 @@ func (this *QRect) moveCenter(args ...interface{}) () {
     // invoke: void moveCenter(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QRect10moveCenterERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QRect10moveCenterERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "moveCenter", args)
   }
@@ -955,7 +955,7 @@ func (this *QRect) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect5widthEv
     // invoke: int width()
-    C._ZNK5QRect5widthEv(this.qclsinst)
+    C.C_ZNK5QRect5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "width", args)
   }
@@ -975,7 +975,7 @@ func (this *QRect) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK5QRect7isEmptyEv(this.qclsinst)
+    C.C_ZNK5QRect7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "isEmpty", args)
   }
@@ -998,7 +998,7 @@ func (this *QRect) setX(args ...interface{}) () {
     // invoke: void setX(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN5QRect4setXEi(this.qclsinst, arg0)
+    C.C_ZN5QRect4setXEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setX", args)
   }
@@ -1030,7 +1030,7 @@ func (this *QRect) setRect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN5QRect7setRectEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN5QRect7setRectEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRect", "setRect", args)
   }
@@ -1053,7 +1053,7 @@ func (this *QRect) setBottomRight(args ...interface{}) () {
     // invoke: void setBottomRight(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QRect14setBottomRightERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QRect14setBottomRightERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setBottomRight", args)
   }
@@ -1073,7 +1073,7 @@ func (this *QRect) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect7isValidEv
     // invoke: bool isValid()
-    C._ZNK5QRect7isValidEv(this.qclsinst)
+    C.C_ZNK5QRect7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "isValid", args)
   }
@@ -1096,7 +1096,7 @@ func (this *QRect) moveLeft(args ...interface{}) () {
     // invoke: void moveLeft(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN5QRect8moveLeftEi(this.qclsinst, arg0)
+    C.C_ZN5QRect8moveLeftEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "moveLeft", args)
   }
@@ -1119,7 +1119,7 @@ func (this *QRect) setTopRight(args ...interface{}) () {
     // invoke: void setTopRight(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QRect11setTopRightERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QRect11setTopRightERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setTopRight", args)
   }
@@ -1142,7 +1142,7 @@ func (this *QRect) moveTop(args ...interface{}) () {
     // invoke: void moveTop(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN5QRect7moveTopEi(this.qclsinst, arg0)
+    C.C_ZN5QRect7moveTopEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "moveTop", args)
   }
@@ -1169,7 +1169,7 @@ func (this *QRect) translated(args ...interface{}) () {
     // invoke: QRect translated(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK5QRect10translatedERK6QPoint(this.qclsinst, arg0)
+    C.C_ZNK5QRect10translatedERK6QPoint(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK5QRect10translatedEii
     // invoke: QRect translated(int, int)
@@ -1177,7 +1177,7 @@ func (this *QRect) translated(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK5QRect10translatedEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK5QRect10translatedEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QRect", "translated", args)
   }
@@ -1197,7 +1197,7 @@ func (this *QRect) normalized(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect10normalizedEv
     // invoke: QRect normalized()
-    C._ZNK5QRect10normalizedEv(this.qclsinst)
+    C.C_ZNK5QRect10normalizedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "normalized", args)
   }
@@ -1229,7 +1229,7 @@ func (this *QRect) setCoords(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN5QRect9setCoordsEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN5QRect9setCoordsEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRect", "setCoords", args)
   }
@@ -1252,7 +1252,7 @@ func (this *QRect) setLeft(args ...interface{}) () {
     // invoke: void setLeft(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN5QRect7setLeftEi(this.qclsinst, arg0)
+    C.C_ZN5QRect7setLeftEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setLeft", args)
   }
@@ -1275,7 +1275,7 @@ func (this *QRect) setY(args ...interface{}) () {
     // invoke: void setY(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN5QRect4setYEi(this.qclsinst, arg0)
+    C.C_ZN5QRect4setYEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setY", args)
   }
@@ -1298,7 +1298,7 @@ func (this *QRect) setHeight(args ...interface{}) () {
     // invoke: void setHeight(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN5QRect9setHeightEi(this.qclsinst, arg0)
+    C.C_ZN5QRect9setHeightEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setHeight", args)
   }
@@ -1338,13 +1338,13 @@ func NewQRect(args ...interface{}) QRect {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QRectC2ERK6QPointRK5QSize(qthis, arg0, arg1)
+    C.C_ZN5QRectC2ERK6QPointRK5QSize(qthis, arg0, arg1)
   case 1:
     // invoke: _ZN5QRectC1Ev
     // invoke: void QRect()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QRectC2Ev(qthis)
+    C.C_ZN5QRectC2Ev(qthis)
   case 2:
     // invoke: _ZN5QRectC1Eiiii
     // invoke: void QRect(int, int, int, int)
@@ -1358,7 +1358,7 @@ func NewQRect(args ...interface{}) QRect {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QRectC2Eiiii(qthis, arg0, arg1, arg2, arg3)
+    C.C_ZN5QRectC2Eiiii(qthis, arg0, arg1, arg2, arg3)
   case 3:
     // invoke: _ZN5QRectC1ERK6QPointS2_
     // invoke: void QRect(const class QPoint &, const class QPoint &)
@@ -1368,7 +1368,7 @@ func NewQRect(args ...interface{}) QRect {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN5QRectC2ERK6QPointS2_(qthis, arg0, arg1)
+    C.C_ZN5QRectC2ERK6QPointS2_(qthis, arg0, arg1)
   default:
     qtrt.ErrorResolve("QRect", "QRect", args)
   }
@@ -1396,7 +1396,7 @@ func (this *QRect) translate(args ...interface{}) () {
     // invoke: void translate(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QRect9translateERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QRect9translateERK6QPoint(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN5QRect9translateEii
     // invoke: void translate(int, int)
@@ -1404,7 +1404,7 @@ func (this *QRect) translate(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN5QRect9translateEii(this.qclsinst, arg0, arg1)
+    C.C_ZN5QRect9translateEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QRect", "translate", args)
   }
@@ -1424,7 +1424,7 @@ func (this *QRect) bottomLeft(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect10bottomLeftEv
     // invoke: QPoint bottomLeft()
-    C._ZNK5QRect10bottomLeftEv(this.qclsinst)
+    C.C_ZNK5QRect10bottomLeftEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "bottomLeft", args)
   }
@@ -1444,7 +1444,7 @@ func (this *QRect) center(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect6centerEv
     // invoke: QPoint center()
-    C._ZNK5QRect6centerEv(this.qclsinst)
+    C.C_ZNK5QRect6centerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "center", args)
   }
@@ -1467,7 +1467,7 @@ func (this *QRect) moveTopRight(args ...interface{}) () {
     // invoke: void moveTopRight(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QRect12moveTopRightERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QRect12moveTopRightERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "moveTopRight", args)
   }
@@ -1490,7 +1490,7 @@ func (this *QRect) moveTopLeft(args ...interface{}) () {
     // invoke: void moveTopLeft(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QRect11moveTopLeftERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QRect11moveTopLeftERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "moveTopLeft", args)
   }
@@ -1510,7 +1510,7 @@ func (this *QRect) bottom(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect6bottomEv
     // invoke: int bottom()
-    C._ZNK5QRect6bottomEv(this.qclsinst)
+    C.C_ZNK5QRect6bottomEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "bottom", args)
   }
@@ -1542,7 +1542,7 @@ func (this *QRect) getCoords(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C._ZNK5QRect9getCoordsEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK5QRect9getCoordsEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRect", "getCoords", args)
   }
@@ -1565,7 +1565,7 @@ func (this *QRect) setRight(args ...interface{}) () {
     // invoke: void setRight(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN5QRect8setRightEi(this.qclsinst, arg0)
+    C.C_ZN5QRect8setRightEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setRight", args)
   }
@@ -1585,7 +1585,7 @@ func (this *QRect) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect6isNullEv
     // invoke: bool isNull()
-    C._ZNK5QRect6isNullEv(this.qclsinst)
+    C.C_ZNK5QRect6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "isNull", args)
   }
@@ -1617,7 +1617,7 @@ func (this *QRect) adjust(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C._ZN5QRect6adjustEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN5QRect6adjustEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRect", "adjust", args)
   }
@@ -1637,7 +1637,7 @@ func (this *QRect) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect1yEv
     // invoke: int y()
-    C._ZNK5QRect1yEv(this.qclsinst)
+    C.C_ZNK5QRect1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "y", args)
   }
@@ -1657,7 +1657,7 @@ func (this *QRect) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect1xEv
     // invoke: int x()
-    C._ZNK5QRect1xEv(this.qclsinst)
+    C.C_ZNK5QRect1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "x", args)
   }
@@ -1680,7 +1680,7 @@ func (this *QRect) moveBottomRight(args ...interface{}) () {
     // invoke: void moveBottomRight(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QRect15moveBottomRightERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QRect15moveBottomRightERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "moveBottomRight", args)
   }
@@ -1703,7 +1703,7 @@ func (this *QRect) setSize(args ...interface{}) () {
     // invoke: void setSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QRect7setSizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN5QRect7setSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRect", "setSize", args)
   }
@@ -1723,7 +1723,7 @@ func (this *QRect) left(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect4leftEv
     // invoke: int left()
-    C._ZNK5QRect4leftEv(this.qclsinst)
+    C.C_ZNK5QRect4leftEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRect", "left", args)
   }
@@ -1746,7 +1746,7 @@ func (this *QRectF) marginsRemoved(args ...interface{}) () {
     // invoke: QRectF marginsRemoved(const class QMarginsF &)
     var arg0 = args[0].(QMarginsF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QRectF14marginsRemovedERK9QMarginsF(this.qclsinst, arg0)
+    C.C_ZNK6QRectF14marginsRemovedERK9QMarginsF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "marginsRemoved", args)
   }
@@ -1773,7 +1773,7 @@ func (this *QRectF) moveTo(args ...interface{}) () {
     // invoke: void moveTo(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF6moveToERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN6QRectF6moveToERK7QPointF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN6QRectF6moveToEdd
     // invoke: void moveTo(qreal, qreal)
@@ -1781,7 +1781,7 @@ func (this *QRectF) moveTo(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN6QRectF6moveToEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN6QRectF6moveToEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QRectF", "moveTo", args)
   }
@@ -1804,7 +1804,7 @@ func (this *QRectF) setBottomLeft(args ...interface{}) () {
     // invoke: void setBottomLeft(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF13setBottomLeftERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN6QRectF13setBottomLeftERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setBottomLeft", args)
   }
@@ -1827,7 +1827,7 @@ func (this *QRectF) intersects(args ...interface{}) () {
     // invoke: bool intersects(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QRectF10intersectsERKS_(this.qclsinst, arg0)
+    C.C_ZNK6QRectF10intersectsERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "intersects", args)
   }
@@ -1847,7 +1847,7 @@ func (this *QRectF) topLeft(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF7topLeftEv
     // invoke: QPointF topLeft()
-    C._ZNK6QRectF7topLeftEv(this.qclsinst)
+    C.C_ZNK6QRectF7topLeftEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "topLeft", args)
   }
@@ -1870,7 +1870,7 @@ func (this *QRectF) setBottom(args ...interface{}) () {
     // invoke: void setBottom(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF9setBottomEd(this.qclsinst, arg0)
+    C.C_ZN6QRectF9setBottomEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setBottom", args)
   }
@@ -1893,7 +1893,7 @@ func (this *QRectF) setTopLeft(args ...interface{}) () {
     // invoke: void setTopLeft(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF10setTopLeftERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN6QRectF10setTopLeftERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setTopLeft", args)
   }
@@ -1925,7 +1925,7 @@ func (this *QRectF) adjusted(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZNK6QRectF8adjustedEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK6QRectF8adjustedEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRectF", "adjusted", args)
   }
@@ -1945,7 +1945,7 @@ func (this *QRectF) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF6heightEv
     // invoke: qreal height()
-    C._ZNK6QRectF6heightEv(this.qclsinst)
+    C.C_ZNK6QRectF6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "height", args)
   }
@@ -1965,7 +1965,7 @@ func (this *QRectF) right(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF5rightEv
     // invoke: qreal right()
-    C._ZNK6QRectF5rightEv(this.qclsinst)
+    C.C_ZNK6QRectF5rightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "right", args)
   }
@@ -1988,7 +1988,7 @@ func (this *QRectF) setLeft(args ...interface{}) () {
     // invoke: void setLeft(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF7setLeftEd(this.qclsinst, arg0)
+    C.C_ZN6QRectF7setLeftEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setLeft", args)
   }
@@ -2011,7 +2011,7 @@ func (this *QRectF) moveRight(args ...interface{}) () {
     // invoke: void moveRight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF9moveRightEd(this.qclsinst, arg0)
+    C.C_ZN6QRectF9moveRightEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "moveRight", args)
   }
@@ -2034,7 +2034,7 @@ func (this *QRectF) moveBottomLeft(args ...interface{}) () {
     // invoke: void moveBottomLeft(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF14moveBottomLeftERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN6QRectF14moveBottomLeftERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "moveBottomLeft", args)
   }
@@ -2057,7 +2057,7 @@ func (this *QRectF) setWidth(args ...interface{}) () {
     // invoke: void setWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF8setWidthEd(this.qclsinst, arg0)
+    C.C_ZN6QRectF8setWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setWidth", args)
   }
@@ -2080,7 +2080,7 @@ func (this *QRectF) marginsAdded(args ...interface{}) () {
     // invoke: QRectF marginsAdded(const class QMarginsF &)
     var arg0 = args[0].(QMarginsF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QRectF12marginsAddedERK9QMarginsF(this.qclsinst, arg0)
+    C.C_ZNK6QRectF12marginsAddedERK9QMarginsF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "marginsAdded", args)
   }
@@ -2103,7 +2103,7 @@ func (this *QRectF) moveTop(args ...interface{}) () {
     // invoke: void moveTop(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF7moveTopEd(this.qclsinst, arg0)
+    C.C_ZN6QRectF7moveTopEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "moveTop", args)
   }
@@ -2123,7 +2123,7 @@ func (this *QRectF) bottomRight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF11bottomRightEv
     // invoke: QPointF bottomRight()
-    C._ZNK6QRectF11bottomRightEv(this.qclsinst)
+    C.C_ZNK6QRectF11bottomRightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "bottomRight", args)
   }
@@ -2143,7 +2143,7 @@ func (this *QRectF) bottom(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF6bottomEv
     // invoke: qreal bottom()
-    C._ZNK6QRectF6bottomEv(this.qclsinst)
+    C.C_ZNK6QRectF6bottomEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "bottom", args)
   }
@@ -2175,7 +2175,7 @@ func (this *QRectF) getRect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C._ZNK6QRectF7getRectEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK6QRectF7getRectEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRectF", "getRect", args)
   }
@@ -2195,7 +2195,7 @@ func (this *QRectF) top(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF3topEv
     // invoke: qreal top()
-    C._ZNK6QRectF3topEv(this.qclsinst)
+    C.C_ZNK6QRectF3topEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "top", args)
   }
@@ -2227,19 +2227,19 @@ func (this *QRectF) contains(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZNK6QRectF8containsEdd(this.qclsinst, arg0, arg1)
+    C.C_ZNK6QRectF8containsEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK6QRectF8containsERKS_
     // invoke: bool contains(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QRectF8containsERKS_(this.qclsinst, arg0)
+    C.C_ZNK6QRectF8containsERKS_(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK6QRectF8containsERK7QPointF
     // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QRectF8containsERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK6QRectF8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "contains", args)
   }
@@ -2259,7 +2259,7 @@ func (this *QRectF) toRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF6toRectEv
     // invoke: QRect toRect()
-    C._ZNK6QRectF6toRectEv(this.qclsinst)
+    C.C_ZNK6QRectF6toRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "toRect", args)
   }
@@ -2279,7 +2279,7 @@ func (this *QRectF) topRight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF8topRightEv
     // invoke: QPointF topRight()
-    C._ZNK6QRectF8topRightEv(this.qclsinst)
+    C.C_ZNK6QRectF8topRightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "topRight", args)
   }
@@ -2302,7 +2302,7 @@ func (this *QRectF) moveCenter(args ...interface{}) () {
     // invoke: void moveCenter(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF10moveCenterERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN6QRectF10moveCenterERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "moveCenter", args)
   }
@@ -2322,7 +2322,7 @@ func (this *QRectF) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF5widthEv
     // invoke: qreal width()
-    C._ZNK6QRectF5widthEv(this.qclsinst)
+    C.C_ZNK6QRectF5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "width", args)
   }
@@ -2342,7 +2342,7 @@ func (this *QRectF) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK6QRectF7isEmptyEv(this.qclsinst)
+    C.C_ZNK6QRectF7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "isEmpty", args)
   }
@@ -2385,7 +2385,7 @@ func NewQRectF(args ...interface{}) QRectF {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QRectFC2ERK7QPointFS2_(qthis, arg0, arg1)
+    C.C_ZN6QRectFC2ERK7QPointFS2_(qthis, arg0, arg1)
   case 1:
     // invoke: _ZN6QRectFC1Edddd
     // invoke: void QRectF(qreal, qreal, qreal, qreal)
@@ -2399,13 +2399,13 @@ func NewQRectF(args ...interface{}) QRectF {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QRectFC2Edddd(qthis, arg0, arg1, arg2, arg3)
+    C.C_ZN6QRectFC2Edddd(qthis, arg0, arg1, arg2, arg3)
   case 2:
     // invoke: _ZN6QRectFC1Ev
     // invoke: void QRectF()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QRectFC2Ev(qthis)
+    C.C_ZN6QRectFC2Ev(qthis)
   case 3:
     // invoke: _ZN6QRectFC1ERK7QPointFRK6QSizeF
     // invoke: void QRectF(const class QPointF &, const class QSizeF &)
@@ -2415,7 +2415,7 @@ func NewQRectF(args ...interface{}) QRectF {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QRectFC2ERK7QPointFRK6QSizeF(qthis, arg0, arg1)
+    C.C_ZN6QRectFC2ERK7QPointFRK6QSizeF(qthis, arg0, arg1)
   case 4:
     // invoke: _ZN6QRectFC1ERK5QRect
     // invoke: void QRectF(const class QRect &)
@@ -2423,7 +2423,7 @@ func NewQRectF(args ...interface{}) QRectF {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C._ZN6QRectFC2ERK5QRect(qthis, arg0)
+    C.C_ZN6QRectFC2ERK5QRect(qthis, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "QRectF", args)
   }
@@ -2444,7 +2444,7 @@ func (this *QRectF) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF4sizeEv
     // invoke: QSizeF size()
-    C._ZNK6QRectF4sizeEv(this.qclsinst)
+    C.C_ZNK6QRectF4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "size", args)
   }
@@ -2467,7 +2467,7 @@ func (this *QRectF) setX(args ...interface{}) () {
     // invoke: void setX(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF4setXEd(this.qclsinst, arg0)
+    C.C_ZN6QRectF4setXEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setX", args)
   }
@@ -2499,7 +2499,7 @@ func (this *QRectF) setRect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN6QRectF7setRectEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN6QRectF7setRectEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRectF", "setRect", args)
   }
@@ -2522,7 +2522,7 @@ func (this *QRectF) moveLeft(args ...interface{}) () {
     // invoke: void moveLeft(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF8moveLeftEd(this.qclsinst, arg0)
+    C.C_ZN6QRectF8moveLeftEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "moveLeft", args)
   }
@@ -2545,7 +2545,7 @@ func (this *QRectF) setBottomRight(args ...interface{}) () {
     // invoke: void setBottomRight(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF14setBottomRightERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN6QRectF14setBottomRightERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setBottomRight", args)
   }
@@ -2565,7 +2565,7 @@ func (this *QRectF) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF7isValidEv
     // invoke: bool isValid()
-    C._ZNK6QRectF7isValidEv(this.qclsinst)
+    C.C_ZNK6QRectF7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "isValid", args)
   }
@@ -2597,7 +2597,7 @@ func (this *QRectF) getCoords(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C._ZNK6QRectF9getCoordsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK6QRectF9getCoordsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRectF", "getCoords", args)
   }
@@ -2620,7 +2620,7 @@ func (this *QRectF) setTopRight(args ...interface{}) () {
     // invoke: void setTopRight(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF11setTopRightERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN6QRectF11setTopRightERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setTopRight", args)
   }
@@ -2649,13 +2649,13 @@ func (this *QRectF) translated(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZNK6QRectF10translatedEdd(this.qclsinst, arg0, arg1)
+    C.C_ZNK6QRectF10translatedEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK6QRectF10translatedERK7QPointF
     // invoke: QRectF translated(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QRectF10translatedERK7QPointF(this.qclsinst, arg0)
+    C.C_ZNK6QRectF10translatedERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "translated", args)
   }
@@ -2675,7 +2675,7 @@ func (this *QRectF) normalized(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF10normalizedEv
     // invoke: QRectF normalized()
-    C._ZNK6QRectF10normalizedEv(this.qclsinst)
+    C.C_ZNK6QRectF10normalizedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "normalized", args)
   }
@@ -2698,7 +2698,7 @@ func (this *QRectF) setTop(args ...interface{}) () {
     // invoke: void setTop(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF6setTopEd(this.qclsinst, arg0)
+    C.C_ZN6QRectF6setTopEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setTop", args)
   }
@@ -2721,7 +2721,7 @@ func (this *QRectF) moveBottom(args ...interface{}) () {
     // invoke: void moveBottom(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF10moveBottomEd(this.qclsinst, arg0)
+    C.C_ZN6QRectF10moveBottomEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "moveBottom", args)
   }
@@ -2744,7 +2744,7 @@ func (this *QRectF) setY(args ...interface{}) () {
     // invoke: void setY(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF4setYEd(this.qclsinst, arg0)
+    C.C_ZN6QRectF4setYEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setY", args)
   }
@@ -2776,7 +2776,7 @@ func (this *QRectF) setCoords(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN6QRectF9setCoordsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN6QRectF9setCoordsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRectF", "setCoords", args)
   }
@@ -2799,7 +2799,7 @@ func (this *QRectF) setHeight(args ...interface{}) () {
     // invoke: void setHeight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF9setHeightEd(this.qclsinst, arg0)
+    C.C_ZN6QRectF9setHeightEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setHeight", args)
   }
@@ -2826,7 +2826,7 @@ func (this *QRectF) translate(args ...interface{}) () {
     // invoke: void translate(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF9translateERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN6QRectF9translateERK7QPointF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN6QRectF9translateEdd
     // invoke: void translate(qreal, qreal)
@@ -2834,7 +2834,7 @@ func (this *QRectF) translate(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZN6QRectF9translateEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN6QRectF9translateEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QRectF", "translate", args)
   }
@@ -2854,7 +2854,7 @@ func (this *QRectF) bottomLeft(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF10bottomLeftEv
     // invoke: QPointF bottomLeft()
-    C._ZNK6QRectF10bottomLeftEv(this.qclsinst)
+    C.C_ZNK6QRectF10bottomLeftEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "bottomLeft", args)
   }
@@ -2874,7 +2874,7 @@ func (this *QRectF) center(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF6centerEv
     // invoke: QPointF center()
-    C._ZNK6QRectF6centerEv(this.qclsinst)
+    C.C_ZNK6QRectF6centerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "center", args)
   }
@@ -2897,7 +2897,7 @@ func (this *QRectF) moveTopRight(args ...interface{}) () {
     // invoke: void moveTopRight(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF12moveTopRightERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN6QRectF12moveTopRightERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "moveTopRight", args)
   }
@@ -2920,7 +2920,7 @@ func (this *QRectF) moveTopLeft(args ...interface{}) () {
     // invoke: void moveTopLeft(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF11moveTopLeftERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN6QRectF11moveTopLeftERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "moveTopLeft", args)
   }
@@ -2940,7 +2940,7 @@ func (this *QRectF) toAlignedRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF13toAlignedRectEv
     // invoke: QRect toAlignedRect()
-    C._ZNK6QRectF13toAlignedRectEv(this.qclsinst)
+    C.C_ZNK6QRectF13toAlignedRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "toAlignedRect", args)
   }
@@ -2963,7 +2963,7 @@ func (this *QRectF) intersected(args ...interface{}) () {
     // invoke: QRectF intersected(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QRectF11intersectedERKS_(this.qclsinst, arg0)
+    C.C_ZNK6QRectF11intersectedERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "intersected", args)
   }
@@ -2986,7 +2986,7 @@ func (this *QRectF) united(args ...interface{}) () {
     // invoke: QRectF united(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QRectF6unitedERKS_(this.qclsinst, arg0)
+    C.C_ZNK6QRectF6unitedERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "united", args)
   }
@@ -3009,7 +3009,7 @@ func (this *QRectF) setRight(args ...interface{}) () {
     // invoke: void setRight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF8setRightEd(this.qclsinst, arg0)
+    C.C_ZN6QRectF8setRightEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setRight", args)
   }
@@ -3029,7 +3029,7 @@ func (this *QRectF) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF6isNullEv
     // invoke: bool isNull()
-    C._ZNK6QRectF6isNullEv(this.qclsinst)
+    C.C_ZNK6QRectF6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "isNull", args)
   }
@@ -3061,7 +3061,7 @@ func (this *QRectF) adjust(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C._ZN6QRectF6adjustEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN6QRectF6adjustEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QRectF", "adjust", args)
   }
@@ -3081,7 +3081,7 @@ func (this *QRectF) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF1yEv
     // invoke: qreal y()
-    C._ZNK6QRectF1yEv(this.qclsinst)
+    C.C_ZNK6QRectF1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "y", args)
   }
@@ -3101,7 +3101,7 @@ func (this *QRectF) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF1xEv
     // invoke: qreal x()
-    C._ZNK6QRectF1xEv(this.qclsinst)
+    C.C_ZNK6QRectF1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "x", args)
   }
@@ -3121,7 +3121,7 @@ func (this *QRectF) left(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF4leftEv
     // invoke: qreal left()
-    C._ZNK6QRectF4leftEv(this.qclsinst)
+    C.C_ZNK6QRectF4leftEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRectF", "left", args)
   }
@@ -3144,7 +3144,7 @@ func (this *QRectF) setSize(args ...interface{}) () {
     // invoke: void setSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF7setSizeERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN6QRectF7setSizeERK6QSizeF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "setSize", args)
   }
@@ -3167,7 +3167,7 @@ func (this *QRectF) moveBottomRight(args ...interface{}) () {
     // invoke: void moveBottomRight(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QRectF15moveBottomRightERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN6QRectF15moveBottomRightERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRectF", "moveBottomRight", args)
   }
