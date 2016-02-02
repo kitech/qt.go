@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"reflect"
 	"runtime"
+	"strings"
 	"unsafe"
 )
 
@@ -36,7 +37,7 @@ func SymbolResolve(args []interface{}, vtys map[int32]map[int32]reflect.Type) in
 			ety := vty[int32(idx)]
 			aty := reflect.TypeOf(args[idx])
 
-			if aty.ConvertibleTo(ety) || aty.AssignableTo(ety) {
+			if ety.Kind() != reflect.Struct && (aty.ConvertibleTo(ety) || aty.AssignableTo(ety)) {
 				matp[idx] = true
 			}
 			if matp[idx] == false {
@@ -83,13 +84,43 @@ func symbolResolveNotemp() {
 }
 
 func canHandyConvert(from reflect.Type, to reflect.Type) bool {
-	if to.Kind() == reflect.Ptr {
-		fmt.Println(from.Kind().String(), to.Kind().String(), to.Elem().Kind().String())
-	} else {
-		fmt.Println(from.Kind().String(), to.Kind().String())
+	infos := make([]string, 0)
+
+	infos = append(infos, from.Kind().String())
+	switch from.Kind() {
+	case reflect.Ptr:
+		infos = append(infos, from.Elem().Kind().String(), from.Elem().Name())
+	case reflect.Struct:
+		infos = append(infos, from.Name())
+	default:
 	}
+
+	infos = append(infos, "===")
+
+	infos = append(infos, to.Kind().String())
+	switch to.Kind() {
+	case reflect.Ptr:
+		infos = append(infos, to.Elem().Kind().String(), to.Elem().Name())
+	case reflect.Struct:
+		infos = append(infos, to.Name())
+	default:
+	}
+
+	fmt.Println(strings.Join(infos, ", "))
+
+	//
 	switch {
-	case from.Kind() == reflect.String && to.Kind() == reflect.Ptr && to.Elem().Kind() == reflect.Uint8:
+	// string => char *
+	case from.Kind() == reflect.String &&
+		to.Kind() == reflect.Ptr && to.Elem().Kind() == reflect.Uint8:
+		return true
+		// &QXxx => QXxx
+	case from.Kind() == reflect.Ptr &&
+		from.Elem().Kind() == to.Kind() && from.Elem().Name() == to.Name():
+		return true
+		// QXxx => QXxx
+	case from.Kind() == reflect.Struct &&
+		from.Kind() == to.Kind() && from.Name() == to.Name():
 		return true
 	}
 	return false

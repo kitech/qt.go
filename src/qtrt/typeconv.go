@@ -55,14 +55,29 @@ func HandyConvert2c(fv interface{}, to reflect.Type) (retv interface{}, free boo
 	return
 }
 
-func HandyConvert2go(fv interface{}, to reflect.Type) (retv interface{}, free bool) {
-	from := reflect.TypeOf(fv)
+func HandyConvert2go(fvi interface{}, to reflect.Type) (reti interface{}) {
+	from := reflect.TypeOf(fvi)
+	fv := reflect.ValueOf(fvi)
 
-	switch to.Kind() {
-	case reflect.Ptr:
-		log.Panicln("can's convert:", from.Kind().String(), to.Kind().String(), to.Elem().Kind().String())
-	default:
-		log.Panicln("can's convert:", from.Kind().String(), to.Kind().String())
+	switch {
+	case from.Kind() == reflect.UnsafePointer && to.Kind() == reflect.Struct:
+		retv := reflect.New(to)
+		retv.Elem().FieldByName("Qclsinst").Set(fv)
+		reti = retv.Interface()
 	}
+
+	return
+}
+
+// for argument of primitive type
+func PrimConv(fvi interface{}, to reflect.Type) (reti interface{}) {
+	from := reflect.TypeOf(fvi)
+	fv := reflect.ValueOf(fvi)
+
+	reti = fvi
+	if from.ConvertibleTo(to) {
+		reti = fv.Convert(to).Interface()
+	}
+
 	return
 }
