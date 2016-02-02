@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.go
 //
@@ -139,19 +139,19 @@ func init() {
 // class sizeof(QItemSelection)=1
 type QItemSelection struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QItemSelectionRange)=16
 type QItemSelectionRange struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QItemSelectionModel)=1
 type QItemSelectionModel struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _currentRowChanged QItemSelectionModel_currentRowChanged_signal;
 //  _currentColumnChanged QItemSelectionModel_currentColumnChanged_signal;
 //  _modelChanged QItemSelectionModel_modelChanged_signal;
@@ -173,13 +173,17 @@ func (this *QItemSelection) Contains(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QItemSelection8containsERK11QModelIndex
     // invoke: bool contains(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK14QItemSelection8containsERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK14QItemSelection8containsERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelection", "contains", args)
   }
@@ -200,7 +204,7 @@ func (this *QItemSelection) Indexes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QItemSelection7indexesEv
     // invoke: QModelIndexList indexes()
-    C.C_ZNK14QItemSelection7indexesEv(this.qclsinst)
+    C.C_ZNK14QItemSelection7indexesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemSelection", "indexes", args)
   }
@@ -225,26 +229,26 @@ func NewQItemSelection(args ...interface{}) *QItemSelection {
   case 0:
     // invoke: _ZN14QItemSelectionC1ERK11QModelIndexS2_
     // invoke: void QItemSelection(const class QModelIndex &, const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QModelIndex).qclsinst
+    var arg1 = args[1].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QItemSelectionC2ERK11QModelIndexS2_(arg0, arg1)
-    return &QItemSelection{qclsinst:qthis}
+    return &QItemSelection{Qclsinst:qthis}
   case 1:
     // invoke: _ZN14QItemSelectionC1Ev
     // invoke: void QItemSelection()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QItemSelectionC2Ev()
-    return &QItemSelection{qclsinst:qthis}
+    return &QItemSelection{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QItemSelection", "QItemSelection", args)
   }
 
-  return nil // QItemSelection{qclsinst:qthis}
+  return nil // QItemSelection{Qclsinst:qthis}
 }
 
 // split(const class QItemSelectionRange &, const class QItemSelectionRange &, class QItemSelection *)
@@ -263,11 +267,11 @@ func (this *QItemSelection) Split_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_
     // invoke: void split(const class QItemSelectionRange &, const class QItemSelectionRange &, class QItemSelection *)
-    var arg0 = args[0].(QItemSelectionRange).qclsinst
+    var arg0 = args[0].(*QItemSelectionRange).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QItemSelectionRange).qclsinst
+    var arg1 = args[1].(*QItemSelectionRange).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QItemSelection).qclsinst
+    var arg2 = args[2].(*QItemSelection).Qclsinst
     if false {fmt.Println(arg2)}
     C.C_ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_(arg0, arg1, arg2)
   default:
@@ -292,11 +296,11 @@ func (this *QItemSelection) Select_(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QItemSelection6selectERK11QModelIndexS2_
     // invoke: void select(const class QModelIndex &, const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QModelIndex).qclsinst
+    var arg1 = args[1].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN14QItemSelection6selectERK11QModelIndexS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN14QItemSelection6selectERK11QModelIndexS2_(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QItemSelection", "select", args)
   }
@@ -317,11 +321,15 @@ func (this *QItemSelectionRange) Topleft(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK19QItemSelectionRange7topLeftEv
     // invoke: const QPersistentModelIndex & topLeft()
-    var ret0 = C.C_ZNK19QItemSelectionRange7topLeftEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionRange7topLeftEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPersistentModelIndex{}) // "const QPersistentModelIndex &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "topLeft", args)
   }
@@ -342,11 +350,15 @@ func (this *QItemSelectionRange) Right(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QItemSelectionRange5rightEv
     // invoke: int right()
-    var ret0 = C.C_ZNK19QItemSelectionRange5rightEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionRange5rightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "right", args)
   }
@@ -367,11 +379,15 @@ func (this *QItemSelectionRange) Parent(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QItemSelectionRange6parentEv
     // invoke: QModelIndex parent()
-    var ret0 = C.C_ZNK19QItemSelectionRange6parentEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionRange6parentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "parent", args)
   }
@@ -392,11 +408,15 @@ func (this *QItemSelectionRange) Bottom(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QItemSelectionRange6bottomEv
     // invoke: int bottom()
-    var ret0 = C.C_ZNK19QItemSelectionRange6bottomEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionRange6bottomEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "bottom", args)
   }
@@ -417,11 +437,15 @@ func (this *QItemSelectionRange) Isvalid(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK19QItemSelectionRange7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK19QItemSelectionRange7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionRange7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "isValid", args)
   }
@@ -442,11 +466,15 @@ func (this *QItemSelectionRange) Top(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QItemSelectionRange3topEv
     // invoke: int top()
-    var ret0 = C.C_ZNK19QItemSelectionRange3topEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionRange3topEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "top", args)
   }
@@ -473,27 +501,35 @@ func (this *QItemSelectionRange) Contains(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK19QItemSelectionRange8containsERK11QModelIndex
     // invoke: bool contains(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QItemSelectionRange8containsERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QItemSelectionRange8containsERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK19QItemSelectionRange8containsEiiRK11QModelIndex
     // invoke: bool contains(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
+    var arg2 = args[2].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "contains", args)
   }
@@ -524,44 +560,44 @@ func NewQItemSelectionRange(args ...interface{}) *QItemSelectionRange {
   case 0:
     // invoke: _ZN19QItemSelectionRangeC1ERK11QModelIndex
     // invoke: void QItemSelectionRange(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionRangeC2ERK11QModelIndex(arg0)
-    return &QItemSelectionRange{qclsinst:qthis}
+    return &QItemSelectionRange{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QItemSelectionRangeC1Ev
     // invoke: void QItemSelectionRange()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionRangeC2Ev()
-    return &QItemSelectionRange{qclsinst:qthis}
+    return &QItemSelectionRange{Qclsinst:qthis}
   case 2:
     // invoke: _ZN19QItemSelectionRangeC1ERK11QModelIndexS2_
     // invoke: void QItemSelectionRange(const class QModelIndex &, const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QModelIndex).qclsinst
+    var arg1 = args[1].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionRangeC2ERK11QModelIndexS2_(arg0, arg1)
-    return &QItemSelectionRange{qclsinst:qthis}
+    return &QItemSelectionRange{Qclsinst:qthis}
   case 3:
     // invoke: _ZN19QItemSelectionRangeC1ERKS_
     // invoke: void QItemSelectionRange(const class QItemSelectionRange &)
-    var arg0 = args[0].(QItemSelectionRange).qclsinst
+    var arg0 = args[0].(*QItemSelectionRange).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionRangeC2ERKS_(arg0)
-    return &QItemSelectionRange{qclsinst:qthis}
+    return &QItemSelectionRange{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "QItemSelectionRange", args)
   }
 
-  return nil // QItemSelectionRange{qclsinst:qthis}
+  return nil // QItemSelectionRange{Qclsinst:qthis}
 }
 
 // indexes()
@@ -577,7 +613,7 @@ func (this *QItemSelectionRange) Indexes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange7indexesEv
     // invoke: QModelIndexList indexes()
-    C.C_ZNK19QItemSelectionRange7indexesEv(this.qclsinst)
+    C.C_ZNK19QItemSelectionRange7indexesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "indexes", args)
   }
@@ -598,11 +634,15 @@ func (this *QItemSelectionRange) Width(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QItemSelectionRange5widthEv
     // invoke: int width()
-    var ret0 = C.C_ZNK19QItemSelectionRange5widthEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionRange5widthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "width", args)
   }
@@ -623,11 +663,15 @@ func (this *QItemSelectionRange) Bottomright(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK19QItemSelectionRange11bottomRightEv
     // invoke: const QPersistentModelIndex & bottomRight()
-    var ret0 = C.C_ZNK19QItemSelectionRange11bottomRightEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionRange11bottomRightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPersistentModelIndex{}) // "const QPersistentModelIndex &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "bottomRight", args)
   }
@@ -648,11 +692,15 @@ func (this *QItemSelectionRange) Isempty(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK19QItemSelectionRange7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK19QItemSelectionRange7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionRange7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "isEmpty", args)
   }
@@ -674,13 +722,17 @@ func (this *QItemSelectionRange) Intersects(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK19QItemSelectionRange10intersectsERKS_
     // invoke: bool intersects(const class QItemSelectionRange &)
-    var arg0 = args[0].(QItemSelectionRange).qclsinst
+    var arg0 = args[0].(*QItemSelectionRange).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QItemSelectionRange10intersectsERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QItemSelectionRange10intersectsERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "intersects", args)
   }
@@ -701,7 +753,7 @@ func (this *QItemSelectionRange) Model(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange5modelEv
     // invoke: const QAbstractItemModel * model()
-    C.C_ZNK19QItemSelectionRange5modelEv(this.qclsinst)
+    C.C_ZNK19QItemSelectionRange5modelEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "model", args)
   }
@@ -722,11 +774,15 @@ func (this *QItemSelectionRange) Height(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QItemSelectionRange6heightEv
     // invoke: int height()
-    var ret0 = C.C_ZNK19QItemSelectionRange6heightEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionRange6heightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "height", args)
   }
@@ -748,13 +804,17 @@ func (this *QItemSelectionRange) Intersected(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK19QItemSelectionRange11intersectedERKS_
     // invoke: QItemSelectionRange intersected(const class QItemSelectionRange &)
-    var arg0 = args[0].(QItemSelectionRange).qclsinst
+    var arg0 = args[0].(*QItemSelectionRange).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QItemSelectionRange11intersectedERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QItemSelectionRange11intersectedERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QItemSelectionRange{}) // "QItemSelectionRange"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "intersected", args)
   }
@@ -775,11 +835,15 @@ func (this *QItemSelectionRange) Left(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QItemSelectionRange4leftEv
     // invoke: int left()
-    var ret0 = C.C_ZNK19QItemSelectionRange4leftEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionRange4leftEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "left", args)
   }
@@ -800,11 +864,15 @@ func (this *QItemSelectionModel) Selection(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK19QItemSelectionModel9selectionEv
     // invoke: const QItemSelection selection()
-    var ret0 = C.C_ZNK19QItemSelectionModel9selectionEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionModel9selectionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QItemSelection{}) // "const QItemSelection"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "selection", args)
   }
@@ -827,15 +895,19 @@ func (this *QItemSelectionModel) Iscolumnselected(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex
     // invoke: bool isColumnSelected(int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QModelIndex).qclsinst
+    var arg1 = args[1].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "isColumnSelected", args)
   }
@@ -857,9 +929,9 @@ func (this *QItemSelectionModel) Selectedcolumns(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionModel15selectedColumnsEi
     // invoke: QModelIndexList selectedColumns(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK19QItemSelectionModel15selectedColumnsEi(this.qclsinst, arg0)
+    C.C_ZNK19QItemSelectionModel15selectedColumnsEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "selectedColumns", args)
   }
@@ -880,7 +952,7 @@ func (this *QItemSelectionModel) Clearselection(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QItemSelectionModel14clearSelectionEv
     // invoke: void clearSelection()
-    C.C_ZN19QItemSelectionModel14clearSelectionEv(this.qclsinst)
+    C.C_ZN19QItemSelectionModel14clearSelectionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "clearSelection", args)
   }
@@ -901,7 +973,7 @@ func (this *QItemSelectionModel) Freeqitemselectionmodel(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QItemSelectionModelD0Ev
     // invoke: void ~QItemSelectionModel()
-    C.C_ZN19QItemSelectionModelD2Ev(this.qclsinst)
+    C.C_ZN19QItemSelectionModelD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "~QItemSelectionModel", args)
   }
@@ -923,13 +995,17 @@ func (this *QItemSelectionModel) Isselected(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK19QItemSelectionModel10isSelectedERK11QModelIndex
     // invoke: bool isSelected(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QItemSelectionModel10isSelectedERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QItemSelectionModel10isSelectedERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "isSelected", args)
   }
@@ -952,15 +1028,19 @@ func (this *QItemSelectionModel) Rowintersectsselection(args ...interface{}) (re
   case 0:
     // invoke: _ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex
     // invoke: bool rowIntersectsSelection(int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QModelIndex).qclsinst
+    var arg1 = args[1].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "rowIntersectsSelection", args)
   }
@@ -986,28 +1066,28 @@ func NewQItemSelectionModel(args ...interface{}) *QItemSelectionModel {
   case 0:
     // invoke: _ZN19QItemSelectionModelC1EP18QAbstractItemModelP7QObject
     // invoke: void QItemSelectionModel(class QAbstractItemModel *, class QObject *)
-    var arg0 = args[0].(QAbstractItemModel).qclsinst
+    var arg0 = args[0].(*QAbstractItemModel).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionModelC2EP18QAbstractItemModelP7QObject(arg0, arg1)
-    return &QItemSelectionModel{qclsinst:qthis}
+    return &QItemSelectionModel{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QItemSelectionModelC1EP18QAbstractItemModel
     // invoke: void QItemSelectionModel(class QAbstractItemModel *)
-    var arg0 = args[0].(QAbstractItemModel).qclsinst
+    var arg0 = args[0].(*QAbstractItemModel).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionModelC2EP18QAbstractItemModel(arg0)
-    return &QItemSelectionModel{qclsinst:qthis}
+    return &QItemSelectionModel{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "QItemSelectionModel", args)
   }
 
-  return nil // QItemSelectionModel{qclsinst:qthis}
+  return nil // QItemSelectionModel{Qclsinst:qthis}
 }
 
 // clearCurrentIndex()
@@ -1023,7 +1103,7 @@ func (this *QItemSelectionModel) Clearcurrentindex(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QItemSelectionModel17clearCurrentIndexEv
     // invoke: void clearCurrentIndex()
-    C.C_ZN19QItemSelectionModel17clearCurrentIndexEv(this.qclsinst)
+    C.C_ZN19QItemSelectionModel17clearCurrentIndexEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "clearCurrentIndex", args)
   }
@@ -1045,9 +1125,9 @@ func (this *QItemSelectionModel) Setmodel(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QItemSelectionModel8setModelEP18QAbstractItemModel
     // invoke: void setModel(class QAbstractItemModel *)
-    var arg0 = args[0].(QAbstractItemModel).qclsinst
+    var arg0 = args[0].(*QAbstractItemModel).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN19QItemSelectionModel8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
+    C.C_ZN19QItemSelectionModel8setModelEP18QAbstractItemModel(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "setModel", args)
   }
@@ -1070,15 +1150,19 @@ func (this *QItemSelectionModel) Isrowselected(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex
     // invoke: bool isRowSelected(int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QModelIndex).qclsinst
+    var arg1 = args[1].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "isRowSelected", args)
   }
@@ -1099,7 +1183,7 @@ func (this *QItemSelectionModel) Reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QItemSelectionModel5resetEv
     // invoke: void reset()
-    C.C_ZN19QItemSelectionModel5resetEv(this.qclsinst)
+    C.C_ZN19QItemSelectionModel5resetEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "reset", args)
   }
@@ -1120,7 +1204,7 @@ func (this *QItemSelectionModel) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionModel10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK19QItemSelectionModel10metaObjectEv(this.qclsinst)
+    C.C_ZNK19QItemSelectionModel10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "metaObject", args)
   }
@@ -1141,7 +1225,7 @@ func (this *QItemSelectionModel) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QItemSelectionModel5clearEv
     // invoke: void clear()
-    C.C_ZN19QItemSelectionModel5clearEv(this.qclsinst)
+    C.C_ZN19QItemSelectionModel5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "clear", args)
   }
@@ -1162,7 +1246,7 @@ func (this *QItemSelectionModel) Selectedindexes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionModel15selectedIndexesEv
     // invoke: QModelIndexList selectedIndexes()
-    C.C_ZNK19QItemSelectionModel15selectedIndexesEv(this.qclsinst)
+    C.C_ZNK19QItemSelectionModel15selectedIndexesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "selectedIndexes", args)
   }
@@ -1185,15 +1269,19 @@ func (this *QItemSelectionModel) Columnintersectsselection(args ...interface{}) 
   case 0:
     // invoke: _ZNK19QItemSelectionModel25columnIntersectsSelectionEiRK11QModelIndex
     // invoke: bool columnIntersectsSelection(int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QModelIndex).qclsinst
+    var arg1 = args[1].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK19QItemSelectionModel25columnIntersectsSelectionEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK19QItemSelectionModel25columnIntersectsSelectionEiRK11QModelIndex(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "columnIntersectsSelection", args)
   }
@@ -1214,11 +1302,15 @@ func (this *QItemSelectionModel) Currentindex(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK19QItemSelectionModel12currentIndexEv
     // invoke: QModelIndex currentIndex()
-    var ret0 = C.C_ZNK19QItemSelectionModel12currentIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionModel12currentIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "currentIndex", args)
   }
@@ -1240,9 +1332,9 @@ func (this *QItemSelectionModel) Selectedrows(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionModel12selectedRowsEi
     // invoke: QModelIndexList selectedRows(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK19QItemSelectionModel12selectedRowsEi(this.qclsinst, arg0)
+    C.C_ZNK19QItemSelectionModel12selectedRowsEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "selectedRows", args)
   }
@@ -1263,7 +1355,7 @@ func (this *QItemSelectionModel) Model(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QItemSelectionModel5modelEv
     // invoke: QAbstractItemModel * model()
-    C.C_ZN19QItemSelectionModel5modelEv(this.qclsinst)
+    C.C_ZN19QItemSelectionModel5modelEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "model", args)
   }
@@ -1284,11 +1376,15 @@ func (this *QItemSelectionModel) Hasselection(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK19QItemSelectionModel12hasSelectionEv
     // invoke: bool hasSelection()
-    var ret0 = C.C_ZNK19QItemSelectionModel12hasSelectionEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QItemSelectionModel12hasSelectionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "hasSelection", args)
   }

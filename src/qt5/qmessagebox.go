@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.go
 //
@@ -123,7 +123,7 @@ func init() {
 // class sizeof(QMessageBox)=1
 type QMessageBox struct {
   /*qbase*/ QDialog;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _buttonClicked QMessageBox_buttonClicked_signal;
 }
 
@@ -141,9 +141,9 @@ func (this *QMessageBox) Setcheckbox(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox11setCheckBoxEP9QCheckBox
     // invoke: void setCheckBox(class QCheckBox *)
-    var arg0 = args[0].(QCheckBox).qclsinst
+    var arg0 = args[0].(*QCheckBox).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox11setCheckBoxEP9QCheckBox(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox11setCheckBoxEP9QCheckBox(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setCheckBox", args)
   }
@@ -164,7 +164,7 @@ func (this *QMessageBox) Textinteractionflags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox20textInteractionFlagsEv
     // invoke: Qt::TextInteractionFlags textInteractionFlags()
-    C.C_ZNK11QMessageBox20textInteractionFlagsEv(this.qclsinst)
+    C.C_ZNK11QMessageBox20textInteractionFlagsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "textInteractionFlags", args)
   }
@@ -186,9 +186,9 @@ func (this *QMessageBox) Setdetailedtext(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox15setDetailedTextERK7QString
     // invoke: void setDetailedText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox15setDetailedTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox15setDetailedTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setDetailedText", args)
   }
@@ -209,11 +209,15 @@ func (this *QMessageBox) Text(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMessageBox4textEv
     // invoke: QString text()
-    var ret0 = C.C_ZNK11QMessageBox4textEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMessageBox4textEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageBox", "text", args)
   }
@@ -236,11 +240,11 @@ func (this *QMessageBox) Setbuttontext(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox13setButtonTextEiRK7QString
     // invoke: void setButtonText(int, const class QString &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN11QMessageBox13setButtonTextEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN11QMessageBox13setButtonTextEiRK7QString(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMessageBox", "setButtonText", args)
   }
@@ -261,11 +265,15 @@ func (this *QMessageBox) Iconpixmap(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMessageBox10iconPixmapEv
     // invoke: QPixmap iconPixmap()
-    var ret0 = C.C_ZNK11QMessageBox10iconPixmapEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMessageBox10iconPixmapEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPixmap{}) // "QPixmap"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageBox", "iconPixmap", args)
   }
@@ -302,47 +310,55 @@ func (this *QMessageBox) Warning_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii
     // invoke: int warning(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QString).qclsinst
+    var arg3 = args[3].(*QString).Qclsinst
     if false {fmt.Println(arg3)}
-    var arg4 = args[4].(QString).qclsinst
+    var arg4 = args[4].(*QString).Qclsinst
     if false {fmt.Println(arg4)}
-    var arg5 = args[5].(QString).qclsinst
+    var arg5 = args[5].(*QString).Qclsinst
     if false {fmt.Println(arg5)}
-    var arg6 = C.int32_t(args[6].(int32))
+    var arg6 = C.int32_t(qtrt.PrimConv(args[6], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg6)}
-    var arg7 = C.int32_t(args[7].(int32))
+    var arg7 = C.int32_t(qtrt.PrimConv(args[7], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg7)}
     var ret0 = C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii
     // invoke: int warning(class QWidget *, const class QString &, const class QString &, int, int, int)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(args[4].(int32))
+    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg4)}
-    var arg5 = C.int32_t(args[5].(int32))
+    var arg5 = C.int32_t(qtrt.PrimConv(args[5], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg5)}
     var ret0 = C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageBox", "warning", args)
   }
@@ -363,11 +379,15 @@ func (this *QMessageBox) Detailedtext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMessageBox12detailedTextEv
     // invoke: QString detailedText()
-    var ret0 = C.C_ZNK11QMessageBox12detailedTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMessageBox12detailedTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageBox", "detailedText", args)
   }
@@ -389,9 +409,9 @@ func (this *QMessageBox) Standardbutton(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox14standardButtonEP15QAbstractButton
     // invoke: QMessageBox::StandardButton standardButton(class QAbstractButton *)
-    var arg0 = args[0].(QAbstractButton).qclsinst
+    var arg0 = args[0].(*QAbstractButton).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QMessageBox14standardButtonEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZNK11QMessageBox14standardButtonEP15QAbstractButton(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "standardButton", args)
   }
@@ -413,9 +433,9 @@ func (this *QMessageBox) Removebutton(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox12removeButtonEP15QAbstractButton
     // invoke: void removeButton(class QAbstractButton *)
-    var arg0 = args[0].(QAbstractButton).qclsinst
+    var arg0 = args[0].(*QAbstractButton).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox12removeButtonEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox12removeButtonEP15QAbstractButton(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "removeButton", args)
   }
@@ -438,13 +458,13 @@ func (this *QMessageBox) Open(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox4openEP7QObjectPKc
     // invoke: void open(class QObject *, const char *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    C.C_ZN11QMessageBox4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
+    C.C_ZN11QMessageBox4openEP7QObjectPKc(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMessageBox", "open", args)
   }
@@ -467,9 +487,9 @@ func (this *QMessageBox) Aboutqt_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox7aboutQtEP7QWidgetRK7QString
     // invoke: void aboutQt(class QWidget *, const class QString &)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     C.C_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(arg0, arg1)
   default:
@@ -492,11 +512,15 @@ func (this *QMessageBox) Informativetext(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK11QMessageBox15informativeTextEv
     // invoke: QString informativeText()
-    var ret0 = C.C_ZNK11QMessageBox15informativeTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMessageBox15informativeTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageBox", "informativeText", args)
   }
@@ -533,47 +557,55 @@ func (this *QMessageBox) Question_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii
     // invoke: int question(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QString).qclsinst
+    var arg3 = args[3].(*QString).Qclsinst
     if false {fmt.Println(arg3)}
-    var arg4 = args[4].(QString).qclsinst
+    var arg4 = args[4].(*QString).Qclsinst
     if false {fmt.Println(arg4)}
-    var arg5 = args[5].(QString).qclsinst
+    var arg5 = args[5].(*QString).Qclsinst
     if false {fmt.Println(arg5)}
-    var arg6 = C.int32_t(args[6].(int32))
+    var arg6 = C.int32_t(qtrt.PrimConv(args[6], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg6)}
-    var arg7 = C.int32_t(args[7].(int32))
+    var arg7 = C.int32_t(qtrt.PrimConv(args[7], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg7)}
     var ret0 = C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii
     // invoke: int question(class QWidget *, const class QString &, const class QString &, int, int, int)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(args[4].(int32))
+    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg4)}
-    var arg5 = C.int32_t(args[5].(int32))
+    var arg5 = C.int32_t(qtrt.PrimConv(args[5], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg5)}
     var ret0 = C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageBox", "question", args)
   }
@@ -595,9 +627,9 @@ func (this *QMessageBox) Buttonrole(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox10buttonRoleEP15QAbstractButton
     // invoke: QMessageBox::ButtonRole buttonRole(class QAbstractButton *)
-    var arg0 = args[0].(QAbstractButton).qclsinst
+    var arg0 = args[0].(*QAbstractButton).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QMessageBox10buttonRoleEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZNK11QMessageBox10buttonRoleEP15QAbstractButton(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "buttonRole", args)
   }
@@ -618,7 +650,7 @@ func (this *QMessageBox) Buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox7buttonsEv
     // invoke: QList<QAbstractButton *> buttons()
-    C.C_ZNK11QMessageBox7buttonsEv(this.qclsinst)
+    C.C_ZNK11QMessageBox7buttonsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "buttons", args)
   }
@@ -655,47 +687,55 @@ func (this *QMessageBox) Critical_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii
     // invoke: int critical(class QWidget *, const class QString &, const class QString &, int, int, int)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(args[4].(int32))
+    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg4)}
-    var arg5 = C.int32_t(args[5].(int32))
+    var arg5 = C.int32_t(qtrt.PrimConv(args[5], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg5)}
     var ret0 = C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii
     // invoke: int critical(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QString).qclsinst
+    var arg3 = args[3].(*QString).Qclsinst
     if false {fmt.Println(arg3)}
-    var arg4 = args[4].(QString).qclsinst
+    var arg4 = args[4].(*QString).Qclsinst
     if false {fmt.Println(arg4)}
-    var arg5 = args[5].(QString).qclsinst
+    var arg5 = args[5].(*QString).Qclsinst
     if false {fmt.Println(arg5)}
-    var arg6 = C.int32_t(args[6].(int32))
+    var arg6 = C.int32_t(qtrt.PrimConv(args[6], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg6)}
-    var arg7 = C.int32_t(args[7].(int32))
+    var arg7 = C.int32_t(qtrt.PrimConv(args[7], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg7)}
     var ret0 = C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageBox", "critical", args)
   }
@@ -716,7 +756,7 @@ func (this *QMessageBox) Escapebutton(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox12escapeButtonEv
     // invoke: QAbstractButton * escapeButton()
-    C.C_ZNK11QMessageBox12escapeButtonEv(this.qclsinst)
+    C.C_ZNK11QMessageBox12escapeButtonEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "escapeButton", args)
   }
@@ -738,9 +778,9 @@ func (this *QMessageBox) Seticonpixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox13setIconPixmapERK7QPixmap
     // invoke: void setIconPixmap(const class QPixmap &)
-    var arg0 = args[0].(QPixmap).qclsinst
+    var arg0 = args[0].(*QPixmap).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox13setIconPixmapERK7QPixmap(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox13setIconPixmapERK7QPixmap(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setIconPixmap", args)
   }
@@ -762,9 +802,9 @@ func (this *QMessageBox) Setwindowtitle(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox14setWindowTitleERK7QString
     // invoke: void setWindowTitle(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox14setWindowTitleERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox14setWindowTitleERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setWindowTitle", args)
   }
@@ -785,7 +825,7 @@ func (this *QMessageBox) Clickedbutton(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox13clickedButtonEv
     // invoke: QAbstractButton * clickedButton()
-    C.C_ZNK11QMessageBox13clickedButtonEv(this.qclsinst)
+    C.C_ZNK11QMessageBox13clickedButtonEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "clickedButton", args)
   }
@@ -822,47 +862,55 @@ func (this *QMessageBox) Information_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii
     // invoke: int information(class QWidget *, const class QString &, const class QString &, int, int, int)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(args[4].(int32))
+    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg4)}
-    var arg5 = C.int32_t(args[5].(int32))
+    var arg5 = C.int32_t(qtrt.PrimConv(args[5], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg5)}
     var ret0 = C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii
     // invoke: int information(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QString).qclsinst
+    var arg3 = args[3].(*QString).Qclsinst
     if false {fmt.Println(arg3)}
-    var arg4 = args[4].(QString).qclsinst
+    var arg4 = args[4].(*QString).Qclsinst
     if false {fmt.Println(arg4)}
-    var arg5 = args[5].(QString).qclsinst
+    var arg5 = args[5].(*QString).Qclsinst
     if false {fmt.Println(arg5)}
-    var arg6 = C.int32_t(args[6].(int32))
+    var arg6 = C.int32_t(qtrt.PrimConv(args[6], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg6)}
-    var arg7 = C.int32_t(args[7].(int32))
+    var arg7 = C.int32_t(qtrt.PrimConv(args[7], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg7)}
     var ret0 = C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageBox", "information", args)
   }
@@ -884,9 +932,9 @@ func (this *QMessageBox) Setinformativetext(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox18setInformativeTextERK7QString
     // invoke: void setInformativeText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox18setInformativeTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox18setInformativeTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setInformativeText", args)
   }
@@ -907,11 +955,15 @@ func (this *QMessageBox) Checkbox(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMessageBox8checkBoxEv
     // invoke: QCheckBox * checkBox()
-    var ret0 = C.C_ZNK11QMessageBox8checkBoxEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMessageBox8checkBoxEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QCheckBox{}) // "QCheckBox *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageBox", "checkBox", args)
   }
@@ -933,9 +985,9 @@ func (this *QMessageBox) Setescapebutton(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox15setEscapeButtonEP15QAbstractButton
     // invoke: void setEscapeButton(class QAbstractButton *)
-    var arg0 = args[0].(QAbstractButton).qclsinst
+    var arg0 = args[0].(*QAbstractButton).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setEscapeButton", args)
   }
@@ -956,7 +1008,7 @@ func (this *QMessageBox) Icon(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox4iconEv
     // invoke: QMessageBox::Icon icon()
-    C.C_ZNK11QMessageBox4iconEv(this.qclsinst)
+    C.C_ZNK11QMessageBox4iconEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "icon", args)
   }
@@ -980,11 +1032,11 @@ func (this *QMessageBox) About_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_
     // invoke: void about(class QWidget *, const class QString &, const class QString &)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
     C.C_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_(arg0, arg1, arg2)
   default:
@@ -1007,7 +1059,7 @@ func (this *QMessageBox) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QMessageBox10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QMessageBox10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "metaObject", args)
   }
@@ -1028,7 +1080,7 @@ func (this *QMessageBox) Freeqmessagebox(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBoxD0Ev
     // invoke: void ~QMessageBox()
-    C.C_ZN11QMessageBoxD2Ev(this.qclsinst)
+    C.C_ZN11QMessageBoxD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "~QMessageBox", args)
   }
@@ -1050,9 +1102,9 @@ func (this *QMessageBox) Settext(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox7setTextERK7QString
     // invoke: void setText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox7setTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setText", args)
   }
@@ -1074,13 +1126,17 @@ func (this *QMessageBox) Buttontext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMessageBox10buttonTextEi
     // invoke: QString buttonText(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QMessageBox10buttonTextEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QMessageBox10buttonTextEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageBox", "buttonText", args)
   }
@@ -1101,7 +1157,7 @@ func (this *QMessageBox) Standardbuttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox15standardButtonsEv
     // invoke: StandardButtons standardButtons()
-    C.C_ZNK11QMessageBox15standardButtonsEv(this.qclsinst)
+    C.C_ZNK11QMessageBox15standardButtonsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "standardButtons", args)
   }
@@ -1122,11 +1178,15 @@ func (this *QMessageBox) Defaultbutton(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMessageBox13defaultButtonEv
     // invoke: QPushButton * defaultButton()
-    var ret0 = C.C_ZNK11QMessageBox13defaultButtonEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMessageBox13defaultButtonEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPushButton{}) // "QPushButton *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageBox", "defaultButton", args)
   }
@@ -1148,9 +1208,9 @@ func (this *QMessageBox) Setdefaultbutton(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMessageBox16setDefaultButtonEP11QPushButton
     // invoke: void setDefaultButton(class QPushButton *)
-    var arg0 = args[0].(QPushButton).qclsinst
+    var arg0 = args[0].(*QPushButton).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMessageBox16setDefaultButtonEP11QPushButton(this.qclsinst, arg0)
+    C.C_ZN11QMessageBox16setDefaultButtonEP11QPushButton(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageBox", "setDefaultButton", args)
   }
@@ -1172,17 +1232,17 @@ func NewQMessageBox(args ...interface{}) *QMessageBox {
   case 0:
     // invoke: _ZN11QMessageBoxC1EP7QWidget
     // invoke: void QMessageBox(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QMessageBoxC2EP7QWidget(arg0)
-    return &QMessageBox{qclsinst:qthis}
+    return &QMessageBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMessageBox", "QMessageBox", args)
   }
 
-  return nil // QMessageBox{qclsinst:qthis}
+  return nil // QMessageBox{Qclsinst:qthis}
 }
 
 // textFormat()
@@ -1198,7 +1258,7 @@ func (this *QMessageBox) Textformat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox10textFormatEv
     // invoke: Qt::TextFormat textFormat()
-    C.C_ZNK11QMessageBox10textFormatEv(this.qclsinst)
+    C.C_ZNK11QMessageBox10textFormatEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMessageBox", "textFormat", args)
   }

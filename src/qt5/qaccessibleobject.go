@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qaccessibleobject.h
 // dst-file: /src/gui/qaccessibleobject.go
 //
@@ -69,13 +69,13 @@ func init() {
 // class sizeof(QAccessibleApplication)=16
 type QAccessibleApplication struct {
   /*qbase*/ QAccessibleObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QAccessibleObject)=16
 type QAccessibleObject struct {
   /*qbase*/ QAccessibleInterface;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QAccessibleApplication()
@@ -94,12 +94,12 @@ func NewQAccessibleApplication(args ...interface{}) *QAccessibleApplication {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QAccessibleApplicationC2Ev()
-    return &QAccessibleApplication{qclsinst:qthis}
+    return &QAccessibleApplication{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "QAccessibleApplication", args)
   }
 
-  return nil // QAccessibleApplication{qclsinst:qthis}
+  return nil // QAccessibleApplication{Qclsinst:qthis}
 }
 
 // parent()
@@ -115,11 +115,15 @@ func (this *QAccessibleApplication) Parent(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK22QAccessibleApplication6parentEv
     // invoke: QAccessibleInterface * parent()
-    var ret0 = C.C_ZNK22QAccessibleApplication6parentEv(this.qclsinst)
+    var ret0 = C.C_ZNK22QAccessibleApplication6parentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "parent", args)
   }
@@ -141,13 +145,17 @@ func (this *QAccessibleApplication) Indexofchild(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface
     // invoke: int indexOfChild(const class QAccessibleInterface *)
-    var arg0 = args[0].(QAccessibleInterface).qclsinst
+    var arg0 = args[0].(*QAccessibleInterface).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "indexOfChild", args)
   }
@@ -168,7 +176,7 @@ func (this *QAccessibleApplication) State(args ...interface{}) () {
   case 0:
     // invoke: _ZNK22QAccessibleApplication5stateEv
     // invoke: QAccessible::State state()
-    C.C_ZNK22QAccessibleApplication5stateEv(this.qclsinst)
+    C.C_ZNK22QAccessibleApplication5stateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "state", args)
   }
@@ -189,11 +197,15 @@ func (this *QAccessibleApplication) Focuschild(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK22QAccessibleApplication10focusChildEv
     // invoke: QAccessibleInterface * focusChild()
-    var ret0 = C.C_ZNK22QAccessibleApplication10focusChildEv(this.qclsinst)
+    var ret0 = C.C_ZNK22QAccessibleApplication10focusChildEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "focusChild", args)
   }
@@ -214,11 +226,15 @@ func (this *QAccessibleApplication) Window(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK22QAccessibleApplication6windowEv
     // invoke: QWindow * window()
-    var ret0 = C.C_ZNK22QAccessibleApplication6windowEv(this.qclsinst)
+    var ret0 = C.C_ZNK22QAccessibleApplication6windowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWindow{}) // "QWindow *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "window", args)
   }
@@ -239,7 +255,7 @@ func (this *QAccessibleApplication) Role(args ...interface{}) () {
   case 0:
     // invoke: _ZNK22QAccessibleApplication4roleEv
     // invoke: QAccessible::Role role()
-    C.C_ZNK22QAccessibleApplication4roleEv(this.qclsinst)
+    C.C_ZNK22QAccessibleApplication4roleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "role", args)
   }
@@ -261,13 +277,17 @@ func (this *QAccessibleApplication) Child(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK22QAccessibleApplication5childEi
     // invoke: QAccessibleInterface * child(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK22QAccessibleApplication5childEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK22QAccessibleApplication5childEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "child", args)
   }
@@ -288,11 +308,15 @@ func (this *QAccessibleApplication) Childcount(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK22QAccessibleApplication10childCountEv
     // invoke: int childCount()
-    var ret0 = C.C_ZNK22QAccessibleApplication10childCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK22QAccessibleApplication10childCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "childCount", args)
   }
@@ -313,11 +337,15 @@ func (this *QAccessibleObject) Object(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QAccessibleObject6objectEv
     // invoke: QObject * object()
-    var ret0 = C.C_ZNK17QAccessibleObject6objectEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QAccessibleObject6objectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QObject{}) // "QObject *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAccessibleObject", "object", args)
   }
@@ -338,11 +366,15 @@ func (this *QAccessibleObject) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QAccessibleObject7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK17QAccessibleObject7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QAccessibleObject7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAccessibleObject", "isValid", args)
   }
@@ -365,15 +397,19 @@ func (this *QAccessibleObject) Childat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QAccessibleObject7childAtEii
     // invoke: QAccessibleInterface * childAt(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK17QAccessibleObject7childAtEii(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK17QAccessibleObject7childAtEii(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAccessibleObject", "childAt", args)
   }
@@ -394,11 +430,15 @@ func (this *QAccessibleObject) Rect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QAccessibleObject4rectEv
     // invoke: QRect rect()
-    var ret0 = C.C_ZNK17QAccessibleObject4rectEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QAccessibleObject4rectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAccessibleObject", "rect", args)
   }

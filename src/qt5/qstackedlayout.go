@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qstackedlayout.h
 // dst-file: /src/widgets/qstackedlayout.go
 //
@@ -87,7 +87,7 @@ func init() {
 // class sizeof(QStackedLayout)=1
 type QStackedLayout struct {
   /*qbase*/ QLayout;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _widgetRemoved QStackedLayout_widgetRemoved_signal;
 //  _currentChanged QStackedLayout_currentChanged_signal;
 }
@@ -106,13 +106,17 @@ func (this *QStackedLayout) Addwidget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN14QStackedLayout9addWidgetEP7QWidget
     // invoke: int addWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN14QStackedLayout9addWidgetEP7QWidget(this.qclsinst, arg0)
+    var ret0 = C.C_ZN14QStackedLayout9addWidgetEP7QWidget(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "addWidget", args)
   }
@@ -134,9 +138,9 @@ func (this *QStackedLayout) Setcurrentindex(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QStackedLayout15setCurrentIndexEi
     // invoke: void setCurrentIndex(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN14QStackedLayout15setCurrentIndexEi(this.qclsinst, arg0)
+    C.C_ZN14QStackedLayout15setCurrentIndexEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStackedLayout", "setCurrentIndex", args)
   }
@@ -157,11 +161,15 @@ func (this *QStackedLayout) Currentwidget(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK14QStackedLayout13currentWidgetEv
     // invoke: QWidget * currentWidget()
-    var ret0 = C.C_ZNK14QStackedLayout13currentWidgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QStackedLayout13currentWidgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "currentWidget", args)
   }
@@ -183,9 +191,9 @@ func (this *QStackedLayout) Setgeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QStackedLayout11setGeometryERK5QRect
     // invoke: void setGeometry(const class QRect &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN14QStackedLayout11setGeometryERK5QRect(this.qclsinst, arg0)
+    C.C_ZN14QStackedLayout11setGeometryERK5QRect(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStackedLayout", "setGeometry", args)
   }
@@ -206,7 +214,7 @@ func (this *QStackedLayout) Freeqstackedlayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QStackedLayoutD0Ev
     // invoke: void ~QStackedLayout()
-    C.C_ZN14QStackedLayoutD2Ev(this.qclsinst)
+    C.C_ZN14QStackedLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStackedLayout", "~QStackedLayout", args)
   }
@@ -228,9 +236,9 @@ func (this *QStackedLayout) Setcurrentwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QStackedLayout16setCurrentWidgetEP7QWidget
     // invoke: void setCurrentWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN14QStackedLayout16setCurrentWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN14QStackedLayout16setCurrentWidgetEP7QWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStackedLayout", "setCurrentWidget", args)
   }
@@ -252,13 +260,17 @@ func (this *QStackedLayout) Widget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QStackedLayout6widgetEi
     // invoke: QWidget * widget(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK14QStackedLayout6widgetEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK14QStackedLayout6widgetEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "widget", args)
   }
@@ -280,9 +292,9 @@ func (this *QStackedLayout) Additem(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QStackedLayout7addItemEP11QLayoutItem
     // invoke: void addItem(class QLayoutItem *)
-    var arg0 = args[0].(QLayoutItem).qclsinst
+    var arg0 = args[0].(*QLayoutItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN14QStackedLayout7addItemEP11QLayoutItem(this.qclsinst, arg0)
+    C.C_ZN14QStackedLayout7addItemEP11QLayoutItem(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStackedLayout", "addItem", args)
   }
@@ -304,13 +316,17 @@ func (this *QStackedLayout) Takeat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN14QStackedLayout6takeAtEi
     // invoke: QLayoutItem * takeAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN14QStackedLayout6takeAtEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN14QStackedLayout6takeAtEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "takeAt", args)
   }
@@ -333,15 +349,19 @@ func (this *QStackedLayout) Insertwidget(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZN14QStackedLayout12insertWidgetEiP7QWidget
     // invoke: int insertWidget(int, class QWidget *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN14QStackedLayout12insertWidgetEiP7QWidget(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN14QStackedLayout12insertWidgetEiP7QWidget(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "insertWidget", args)
   }
@@ -371,30 +391,30 @@ func NewQStackedLayout(args ...interface{}) *QStackedLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QStackedLayoutC2Ev()
-    return &QStackedLayout{qclsinst:qthis}
+    return &QStackedLayout{Qclsinst:qthis}
   case 1:
     // invoke: _ZN14QStackedLayoutC1EP7QLayout
     // invoke: void QStackedLayout(class QLayout *)
-    var arg0 = args[0].(QLayout).qclsinst
+    var arg0 = args[0].(*QLayout).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QStackedLayoutC2EP7QLayout(arg0)
-    return &QStackedLayout{qclsinst:qthis}
+    return &QStackedLayout{Qclsinst:qthis}
   case 2:
     // invoke: _ZN14QStackedLayoutC1EP7QWidget
     // invoke: void QStackedLayout(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QStackedLayoutC2EP7QWidget(arg0)
-    return &QStackedLayout{qclsinst:qthis}
+    return &QStackedLayout{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStackedLayout", "QStackedLayout", args)
   }
 
-  return nil // QStackedLayout{qclsinst:qthis}
+  return nil // QStackedLayout{Qclsinst:qthis}
 }
 
 // sizeHint()
@@ -410,11 +430,15 @@ func (this *QStackedLayout) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QStackedLayout8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK14QStackedLayout8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QStackedLayout8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "sizeHint", args)
   }
@@ -435,7 +459,7 @@ func (this *QStackedLayout) Stackingmode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout12stackingModeEv
     // invoke: QStackedLayout::StackingMode stackingMode()
-    C.C_ZNK14QStackedLayout12stackingModeEv(this.qclsinst)
+    C.C_ZNK14QStackedLayout12stackingModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStackedLayout", "stackingMode", args)
   }
@@ -456,11 +480,15 @@ func (this *QStackedLayout) Count(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QStackedLayout5countEv
     // invoke: int count()
-    var ret0 = C.C_ZNK14QStackedLayout5countEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QStackedLayout5countEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "count", args)
   }
@@ -481,7 +509,7 @@ func (this *QStackedLayout) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK14QStackedLayout10metaObjectEv(this.qclsinst)
+    C.C_ZNK14QStackedLayout10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStackedLayout", "metaObject", args)
   }
@@ -502,11 +530,15 @@ func (this *QStackedLayout) Hasheightforwidth(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK14QStackedLayout17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    var ret0 = C.C_ZNK14QStackedLayout17hasHeightForWidthEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QStackedLayout17hasHeightForWidthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "hasHeightForWidth", args)
   }
@@ -528,13 +560,17 @@ func (this *QStackedLayout) Itemat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QStackedLayout6itemAtEi
     // invoke: QLayoutItem * itemAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK14QStackedLayout6itemAtEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK14QStackedLayout6itemAtEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "itemAt", args)
   }
@@ -555,11 +591,15 @@ func (this *QStackedLayout) Minimumsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QStackedLayout11minimumSizeEv
     // invoke: QSize minimumSize()
-    var ret0 = C.C_ZNK14QStackedLayout11minimumSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QStackedLayout11minimumSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "minimumSize", args)
   }
@@ -581,13 +621,17 @@ func (this *QStackedLayout) Heightforwidth(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK14QStackedLayout14heightForWidthEi
     // invoke: int heightForWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK14QStackedLayout14heightForWidthEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK14QStackedLayout14heightForWidthEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "heightForWidth", args)
   }
@@ -608,11 +652,15 @@ func (this *QStackedLayout) Currentindex(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK14QStackedLayout12currentIndexEv
     // invoke: int currentIndex()
-    var ret0 = C.C_ZNK14QStackedLayout12currentIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QStackedLayout12currentIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "currentIndex", args)
   }

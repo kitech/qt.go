@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qlockfile.h
 // dst-file: /src/core/qlockfile.go
 //
@@ -65,7 +65,7 @@ func init() {
 // class sizeof(QLockFile)=1
 type QLockFile struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // getLockInfo(qint64 *, class QString *, class QString *)
@@ -86,15 +86,19 @@ func (this *QLockFile) Getlockinfo(args ...interface{}) (ret interface{}) {
     // invoke: bool getLockInfo(qint64 *, class QString *, class QString *)
     var arg0 = (unsafe.Pointer)(args[0].(*int64))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK9QLockFile11getLockInfoEPxP7QStringS2_(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK9QLockFile11getLockInfoEPxP7QStringS2_(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLockFile", "getLockInfo", args)
   }
@@ -116,9 +120,9 @@ func (this *QLockFile) Setstalelocktime(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLockFile16setStaleLockTimeEi
     // invoke: void setStaleLockTime(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QLockFile16setStaleLockTimeEi(this.qclsinst, arg0)
+    C.C_ZN9QLockFile16setStaleLockTimeEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLockFile", "setStaleLockTime", args)
   }
@@ -140,17 +144,17 @@ func NewQLockFile(args ...interface{}) *QLockFile {
   case 0:
     // invoke: _ZN9QLockFileC1ERK7QString
     // invoke: void QLockFile(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QLockFileC2ERK7QString(arg0)
-    return &QLockFile{qclsinst:qthis}
+    return &QLockFile{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QLockFile", "QLockFile", args)
   }
 
-  return nil // QLockFile{qclsinst:qthis}
+  return nil // QLockFile{Qclsinst:qthis}
 }
 
 // lock()
@@ -166,11 +170,15 @@ func (this *QLockFile) Lock(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QLockFile4lockEv
     // invoke: bool lock()
-    var ret0 = C.C_ZN9QLockFile4lockEv(this.qclsinst)
+    var ret0 = C.C_ZN9QLockFile4lockEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLockFile", "lock", args)
   }
@@ -191,7 +199,7 @@ func (this *QLockFile) Freeqlockfile(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLockFileD0Ev
     // invoke: void ~QLockFile()
-    C.C_ZN9QLockFileD2Ev(this.qclsinst)
+    C.C_ZN9QLockFileD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLockFile", "~QLockFile", args)
   }
@@ -212,11 +220,15 @@ func (this *QLockFile) Removestalelockfile(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZN9QLockFile19removeStaleLockFileEv
     // invoke: bool removeStaleLockFile()
-    var ret0 = C.C_ZN9QLockFile19removeStaleLockFileEv(this.qclsinst)
+    var ret0 = C.C_ZN9QLockFile19removeStaleLockFileEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLockFile", "removeStaleLockFile", args)
   }
@@ -237,11 +249,15 @@ func (this *QLockFile) Islocked(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QLockFile8isLockedEv
     // invoke: bool isLocked()
-    var ret0 = C.C_ZNK9QLockFile8isLockedEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QLockFile8isLockedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLockFile", "isLocked", args)
   }
@@ -262,11 +278,15 @@ func (this *QLockFile) Stalelocktime(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QLockFile13staleLockTimeEv
     // invoke: int staleLockTime()
-    var ret0 = C.C_ZNK9QLockFile13staleLockTimeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QLockFile13staleLockTimeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLockFile", "staleLockTime", args)
   }
@@ -288,13 +308,17 @@ func (this *QLockFile) Trylock(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QLockFile7tryLockEi
     // invoke: bool tryLock(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QLockFile7tryLockEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN9QLockFile7tryLockEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLockFile", "tryLock", args)
   }
@@ -315,7 +339,7 @@ func (this *QLockFile) Unlock(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLockFile6unlockEv
     // invoke: void unlock()
-    C.C_ZN9QLockFile6unlockEv(this.qclsinst)
+    C.C_ZN9QLockFile6unlockEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLockFile", "unlock", args)
   }
@@ -336,7 +360,7 @@ func (this *QLockFile) Error(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QLockFile5errorEv
     // invoke: QLockFile::LockError error()
-    C.C_ZNK9QLockFile5errorEv(this.qclsinst)
+    C.C_ZNK9QLockFile5errorEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLockFile", "error", args)
   }

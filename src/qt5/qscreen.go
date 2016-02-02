@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.go
 //
@@ -99,7 +99,7 @@ func init() {
 // class sizeof(QScreen)=1
 type QScreen struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _geometryChanged QScreen_geometryChanged_signal;
 //  _virtualGeometryChanged QScreen_virtualGeometryChanged_signal;
 //  _refreshRateChanged QScreen_refreshRateChanged_signal;
@@ -124,11 +124,15 @@ func (this *QScreen) Refreshrate(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QScreen11refreshRateEv
     // invoke: qreal refreshRate()
-    var ret0 = C.C_ZNK7QScreen11refreshRateEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen11refreshRateEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "refreshRate", args)
   }
@@ -149,11 +153,15 @@ func (this *QScreen) Availablevirtualsize(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK7QScreen20availableVirtualSizeEv
     // invoke: QSize availableVirtualSize()
-    var ret0 = C.C_ZNK7QScreen20availableVirtualSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen20availableVirtualSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "availableVirtualSize", args)
   }
@@ -174,7 +182,7 @@ func (this *QScreen) Orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen11orientationEv
     // invoke: Qt::ScreenOrientation orientation()
-    C.C_ZNK7QScreen11orientationEv(this.qclsinst)
+    C.C_ZNK7QScreen11orientationEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "orientation", args)
   }
@@ -202,19 +210,23 @@ func (this *QScreen) Grabwindow(args ...interface{}) (ret interface{}) {
     // invoke: QPixmap grabWindow(WId, int, int, int, int)
     var arg0 = (unsafe.Pointer)(args[0].(*int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(args[4].(int32))
+    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg4)}
-    var ret0 = C.C_ZN7QScreen10grabWindowEiiiii(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    var ret0 = C.C_ZN7QScreen10grabWindowEiiiii(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPixmap{}) // "QPixmap"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "grabWindow", args)
   }
@@ -235,7 +247,7 @@ func (this *QScreen) Nativeorientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen17nativeOrientationEv
     // invoke: Qt::ScreenOrientation nativeOrientation()
-    C.C_ZNK7QScreen17nativeOrientationEv(this.qclsinst)
+    C.C_ZNK7QScreen17nativeOrientationEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "nativeOrientation", args)
   }
@@ -256,11 +268,15 @@ func (this *QScreen) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QScreen4sizeEv
     // invoke: QSize size()
-    var ret0 = C.C_ZNK7QScreen4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "size", args)
   }
@@ -281,11 +297,15 @@ func (this *QScreen) Physicaldotsperinchy(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK7QScreen20physicalDotsPerInchYEv
     // invoke: qreal physicalDotsPerInchY()
-    var ret0 = C.C_ZNK7QScreen20physicalDotsPerInchYEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen20physicalDotsPerInchYEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "physicalDotsPerInchY", args)
   }
@@ -306,11 +326,15 @@ func (this *QScreen) Logicaldotsperinch(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QScreen18logicalDotsPerInchEv
     // invoke: qreal logicalDotsPerInch()
-    var ret0 = C.C_ZNK7QScreen18logicalDotsPerInchEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen18logicalDotsPerInchEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "logicalDotsPerInch", args)
   }
@@ -331,7 +355,7 @@ func (this *QScreen) Virtualsiblings(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen15virtualSiblingsEv
     // invoke: QList<QScreen *> virtualSiblings()
-    C.C_ZNK7QScreen15virtualSiblingsEv(this.qclsinst)
+    C.C_ZNK7QScreen15virtualSiblingsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "virtualSiblings", args)
   }
@@ -352,11 +376,15 @@ func (this *QScreen) Availablegeometry(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QScreen17availableGeometryEv
     // invoke: QRect availableGeometry()
-    var ret0 = C.C_ZNK7QScreen17availableGeometryEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen17availableGeometryEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "availableGeometry", args)
   }
@@ -377,7 +405,7 @@ func (this *QScreen) Orientationupdatemask(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen21orientationUpdateMaskEv
     // invoke: Qt::ScreenOrientations orientationUpdateMask()
-    C.C_ZNK7QScreen21orientationUpdateMaskEv(this.qclsinst)
+    C.C_ZNK7QScreen21orientationUpdateMaskEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "orientationUpdateMask", args)
   }
@@ -398,7 +426,7 @@ func (this *QScreen) Primaryorientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen18primaryOrientationEv
     // invoke: Qt::ScreenOrientation primaryOrientation()
-    C.C_ZNK7QScreen18primaryOrientationEv(this.qclsinst)
+    C.C_ZNK7QScreen18primaryOrientationEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "primaryOrientation", args)
   }
@@ -419,7 +447,7 @@ func (this *QScreen) Handle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen6handleEv
     // invoke: QPlatformScreen * handle()
-    C.C_ZNK7QScreen6handleEv(this.qclsinst)
+    C.C_ZNK7QScreen6handleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "handle", args)
   }
@@ -440,11 +468,15 @@ func (this *QScreen) Availablevirtualgeometry(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK7QScreen24availableVirtualGeometryEv
     // invoke: QRect availableVirtualGeometry()
-    var ret0 = C.C_ZNK7QScreen24availableVirtualGeometryEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen24availableVirtualGeometryEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "availableVirtualGeometry", args)
   }
@@ -465,7 +497,7 @@ func (this *QScreen) Freeqscreen(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QScreenD0Ev
     // invoke: void ~QScreen()
-    C.C_ZN7QScreenD2Ev(this.qclsinst)
+    C.C_ZN7QScreenD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "~QScreen", args)
   }
@@ -486,11 +518,15 @@ func (this *QScreen) Availablesize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QScreen13availableSizeEv
     // invoke: QSize availableSize()
-    var ret0 = C.C_ZNK7QScreen13availableSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen13availableSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "availableSize", args)
   }
@@ -511,11 +547,15 @@ func (this *QScreen) Virtualgeometry(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QScreen15virtualGeometryEv
     // invoke: QRect virtualGeometry()
-    var ret0 = C.C_ZNK7QScreen15virtualGeometryEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen15virtualGeometryEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "virtualGeometry", args)
   }
@@ -536,11 +576,15 @@ func (this *QScreen) Physicaldotsperinch(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK7QScreen19physicalDotsPerInchEv
     // invoke: qreal physicalDotsPerInch()
-    var ret0 = C.C_ZNK7QScreen19physicalDotsPerInchEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen19physicalDotsPerInchEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "physicalDotsPerInch", args)
   }
@@ -561,11 +605,15 @@ func (this *QScreen) Physicalsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QScreen12physicalSizeEv
     // invoke: QSizeF physicalSize()
-    var ret0 = C.C_ZNK7QScreen12physicalSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen12physicalSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "physicalSize", args)
   }
@@ -586,7 +634,7 @@ func (this *QScreen) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QScreen10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK7QScreen10metaObjectEv(this.qclsinst)
+    C.C_ZNK7QScreen10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "metaObject", args)
   }
@@ -607,11 +655,15 @@ func (this *QScreen) Name(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QScreen4nameEv
     // invoke: QString name()
-    var ret0 = C.C_ZNK7QScreen4nameEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen4nameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "name", args)
   }
@@ -632,11 +684,15 @@ func (this *QScreen) Logicaldotsperinchy(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK7QScreen19logicalDotsPerInchYEv
     // invoke: qreal logicalDotsPerInchY()
-    var ret0 = C.C_ZNK7QScreen19logicalDotsPerInchYEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen19logicalDotsPerInchYEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "logicalDotsPerInchY", args)
   }
@@ -657,11 +713,15 @@ func (this *QScreen) Logicaldotsperinchx(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK7QScreen19logicalDotsPerInchXEv
     // invoke: qreal logicalDotsPerInchX()
-    var ret0 = C.C_ZNK7QScreen19logicalDotsPerInchXEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen19logicalDotsPerInchXEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "logicalDotsPerInchX", args)
   }
@@ -682,11 +742,15 @@ func (this *QScreen) Devicepixelratio(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QScreen16devicePixelRatioEv
     // invoke: qreal devicePixelRatio()
-    var ret0 = C.C_ZNK7QScreen16devicePixelRatioEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen16devicePixelRatioEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "devicePixelRatio", args)
   }
@@ -707,11 +771,15 @@ func (this *QScreen) Geometry(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QScreen8geometryEv
     // invoke: QRect geometry()
-    var ret0 = C.C_ZNK7QScreen8geometryEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen8geometryEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "geometry", args)
   }
@@ -732,11 +800,15 @@ func (this *QScreen) Depth(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QScreen5depthEv
     // invoke: int depth()
-    var ret0 = C.C_ZNK7QScreen5depthEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen5depthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "depth", args)
   }
@@ -757,11 +829,15 @@ func (this *QScreen) Virtualsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QScreen11virtualSizeEv
     // invoke: QSize virtualSize()
-    var ret0 = C.C_ZNK7QScreen11virtualSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen11virtualSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "virtualSize", args)
   }
@@ -782,11 +858,15 @@ func (this *QScreen) Physicaldotsperinchx(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK7QScreen20physicalDotsPerInchXEv
     // invoke: qreal physicalDotsPerInchX()
-    var ret0 = C.C_ZNK7QScreen20physicalDotsPerInchXEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QScreen20physicalDotsPerInchXEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScreen", "physicalDotsPerInchX", args)
   }

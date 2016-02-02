@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qsharedmemory.h
 // dst-file: /src/core/qsharedmemory.go
 //
@@ -77,7 +77,7 @@ func init() {
 // class sizeof(QSharedMemory)=1
 type QSharedMemory struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // lock()
@@ -93,11 +93,15 @@ func (this *QSharedMemory) Lock(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN13QSharedMemory4lockEv
     // invoke: bool lock()
-    var ret0 = C.C_ZN13QSharedMemory4lockEv(this.qclsinst)
+    var ret0 = C.C_ZN13QSharedMemory4lockEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSharedMemory", "lock", args)
   }
@@ -118,11 +122,15 @@ func (this *QSharedMemory) Unlock(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN13QSharedMemory6unlockEv
     // invoke: bool unlock()
-    var ret0 = C.C_ZN13QSharedMemory6unlockEv(this.qclsinst)
+    var ret0 = C.C_ZN13QSharedMemory6unlockEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSharedMemory", "unlock", args)
   }
@@ -143,11 +151,15 @@ func (this *QSharedMemory) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QSharedMemory4sizeEv
     // invoke: int size()
-    var ret0 = C.C_ZNK13QSharedMemory4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QSharedMemory4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSharedMemory", "size", args)
   }
@@ -168,7 +180,7 @@ func (this *QSharedMemory) Constdata(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QSharedMemory9constDataEv
     // invoke: const void * constData()
-    C.C_ZNK13QSharedMemory9constDataEv(this.qclsinst)
+    C.C_ZNK13QSharedMemory9constDataEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "constData", args)
   }
@@ -190,9 +202,9 @@ func (this *QSharedMemory) Setkey(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QSharedMemory6setKeyERK7QString
     // invoke: void setKey(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QSharedMemory6setKeyERK7QString(this.qclsinst, arg0)
+    C.C_ZN13QSharedMemory6setKeyERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSharedMemory", "setKey", args)
   }
@@ -213,11 +225,15 @@ func (this *QSharedMemory) Isattached(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QSharedMemory10isAttachedEv
     // invoke: bool isAttached()
-    var ret0 = C.C_ZNK13QSharedMemory10isAttachedEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QSharedMemory10isAttachedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSharedMemory", "isAttached", args)
   }
@@ -238,11 +254,15 @@ func (this *QSharedMemory) Errorstring(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QSharedMemory11errorStringEv
     // invoke: QString errorString()
-    var ret0 = C.C_ZNK13QSharedMemory11errorStringEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QSharedMemory11errorStringEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSharedMemory", "errorString", args)
   }
@@ -263,11 +283,15 @@ func (this *QSharedMemory) Key(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QSharedMemory3keyEv
     // invoke: QString key()
-    var ret0 = C.C_ZNK13QSharedMemory3keyEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QSharedMemory3keyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSharedMemory", "key", args)
   }
@@ -293,28 +317,28 @@ func NewQSharedMemory(args ...interface{}) *QSharedMemory {
   case 0:
     // invoke: _ZN13QSharedMemoryC1ERK7QStringP7QObject
     // invoke: void QSharedMemory(const class QString &, class QObject *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QSharedMemoryC2ERK7QStringP7QObject(arg0, arg1)
-    return &QSharedMemory{qclsinst:qthis}
+    return &QSharedMemory{Qclsinst:qthis}
   case 1:
     // invoke: _ZN13QSharedMemoryC1EP7QObject
     // invoke: void QSharedMemory(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QSharedMemoryC2EP7QObject(arg0)
-    return &QSharedMemory{qclsinst:qthis}
+    return &QSharedMemory{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSharedMemory", "QSharedMemory", args)
   }
 
-  return nil // QSharedMemory{qclsinst:qthis}
+  return nil // QSharedMemory{Qclsinst:qthis}
 }
 
 // detach()
@@ -330,11 +354,15 @@ func (this *QSharedMemory) Detach(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN13QSharedMemory6detachEv
     // invoke: bool detach()
-    var ret0 = C.C_ZN13QSharedMemory6detachEv(this.qclsinst)
+    var ret0 = C.C_ZN13QSharedMemory6detachEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSharedMemory", "detach", args)
   }
@@ -355,7 +383,7 @@ func (this *QSharedMemory) Data(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QSharedMemory4dataEv
     // invoke: void * data()
-    C.C_ZN13QSharedMemory4dataEv(this.qclsinst)
+    C.C_ZN13QSharedMemory4dataEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "data", args)
   }
@@ -376,11 +404,15 @@ func (this *QSharedMemory) Nativekey(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QSharedMemory9nativeKeyEv
     // invoke: QString nativeKey()
-    var ret0 = C.C_ZNK13QSharedMemory9nativeKeyEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QSharedMemory9nativeKeyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSharedMemory", "nativeKey", args)
   }
@@ -401,7 +433,7 @@ func (this *QSharedMemory) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QSharedMemory10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK13QSharedMemory10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QSharedMemory10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "metaObject", args)
   }
@@ -422,7 +454,7 @@ func (this *QSharedMemory) Error(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QSharedMemory5errorEv
     // invoke: QSharedMemory::SharedMemoryError error()
-    C.C_ZNK13QSharedMemory5errorEv(this.qclsinst)
+    C.C_ZNK13QSharedMemory5errorEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "error", args)
   }
@@ -444,9 +476,9 @@ func (this *QSharedMemory) Setnativekey(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QSharedMemory12setNativeKeyERK7QString
     // invoke: void setNativeKey(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QSharedMemory12setNativeKeyERK7QString(this.qclsinst, arg0)
+    C.C_ZN13QSharedMemory12setNativeKeyERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSharedMemory", "setNativeKey", args)
   }
@@ -467,7 +499,7 @@ func (this *QSharedMemory) Freeqsharedmemory(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QSharedMemoryD0Ev
     // invoke: void ~QSharedMemory()
-    C.C_ZN13QSharedMemoryD2Ev(this.qclsinst)
+    C.C_ZN13QSharedMemoryD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "~QSharedMemory", args)
   }

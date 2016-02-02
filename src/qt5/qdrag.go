@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.go
 //
@@ -69,7 +69,7 @@ func init() {
 // class sizeof(QDrag)=1
 type QDrag struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _targetChanged QDrag_targetChanged_signal;
 //  _actionChanged QDrag_actionChanged_signal;
 }
@@ -88,9 +88,9 @@ func (this *QDrag) Setmimedata(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QDrag11setMimeDataEP9QMimeData
     // invoke: void setMimeData(class QMimeData *)
-    var arg0 = args[0].(QMimeData).qclsinst
+    var arg0 = args[0].(*QMimeData).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QDrag11setMimeDataEP9QMimeData(this.qclsinst, arg0)
+    C.C_ZN5QDrag11setMimeDataEP9QMimeData(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDrag", "setMimeData", args)
   }
@@ -112,17 +112,17 @@ func NewQDrag(args ...interface{}) *QDrag {
   case 0:
     // invoke: _ZN5QDragC1EP7QObject
     // invoke: void QDrag(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QDragC2EP7QObject(arg0)
-    return &QDrag{qclsinst:qthis}
+    return &QDrag{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDrag", "QDrag", args)
   }
 
-  return nil // QDrag{qclsinst:qthis}
+  return nil // QDrag{Qclsinst:qthis}
 }
 
 // pixmap()
@@ -138,11 +138,15 @@ func (this *QDrag) Pixmap(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDrag6pixmapEv
     // invoke: QPixmap pixmap()
-    var ret0 = C.C_ZNK5QDrag6pixmapEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDrag6pixmapEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPixmap{}) // "QPixmap"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDrag", "pixmap", args)
   }
@@ -163,7 +167,7 @@ func (this *QDrag) Freeqdrag(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QDragD0Ev
     // invoke: void ~QDrag()
-    C.C_ZN5QDragD2Ev(this.qclsinst)
+    C.C_ZN5QDragD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "~QDrag", args)
   }
@@ -184,7 +188,7 @@ func (this *QDrag) Defaultaction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag13defaultActionEv
     // invoke: Qt::DropAction defaultAction()
-    C.C_ZNK5QDrag13defaultActionEv(this.qclsinst)
+    C.C_ZNK5QDrag13defaultActionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "defaultAction", args)
   }
@@ -205,11 +209,15 @@ func (this *QDrag) Source(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDrag6sourceEv
     // invoke: QObject * source()
-    var ret0 = C.C_ZNK5QDrag6sourceEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDrag6sourceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QObject{}) // "QObject *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDrag", "source", args)
   }
@@ -230,7 +238,7 @@ func (this *QDrag) Supportedactions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag16supportedActionsEv
     // invoke: Qt::DropActions supportedActions()
-    C.C_ZNK5QDrag16supportedActionsEv(this.qclsinst)
+    C.C_ZNK5QDrag16supportedActionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "supportedActions", args)
   }
@@ -252,9 +260,9 @@ func (this *QDrag) Sethotspot(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QDrag10setHotSpotERK6QPoint
     // invoke: void setHotSpot(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QDrag10setHotSpotERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN5QDrag10setHotSpotERK6QPoint(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDrag", "setHotSpot", args)
   }
@@ -276,9 +284,9 @@ func (this *QDrag) Setpixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QDrag9setPixmapERK7QPixmap
     // invoke: void setPixmap(const class QPixmap &)
-    var arg0 = args[0].(QPixmap).qclsinst
+    var arg0 = args[0].(*QPixmap).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QDrag9setPixmapERK7QPixmap(this.qclsinst, arg0)
+    C.C_ZN5QDrag9setPixmapERK7QPixmap(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDrag", "setPixmap", args)
   }
@@ -299,11 +307,15 @@ func (this *QDrag) Hotspot(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDrag7hotSpotEv
     // invoke: QPoint hotSpot()
-    var ret0 = C.C_ZNK5QDrag7hotSpotEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDrag7hotSpotEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDrag", "hotSpot", args)
   }
@@ -324,11 +336,15 @@ func (this *QDrag) Mimedata(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDrag8mimeDataEv
     // invoke: QMimeData * mimeData()
-    var ret0 = C.C_ZNK5QDrag8mimeDataEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDrag8mimeDataEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMimeData{}) // "QMimeData *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDrag", "mimeData", args)
   }
@@ -349,7 +365,7 @@ func (this *QDrag) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK5QDrag10metaObjectEv(this.qclsinst)
+    C.C_ZNK5QDrag10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "metaObject", args)
   }
@@ -370,11 +386,15 @@ func (this *QDrag) Target(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDrag6targetEv
     // invoke: QObject * target()
-    var ret0 = C.C_ZNK5QDrag6targetEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDrag6targetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QObject{}) // "QObject *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDrag", "target", args)
   }

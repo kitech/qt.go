@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qicon.h
 // dst-file: /src/gui/qicon.go
 //
@@ -79,7 +79,7 @@ func init() {
 // class sizeof(QIcon)=8
 type QIcon struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // themeName()
@@ -99,7 +99,11 @@ func (this *QIcon) Themename_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIcon", "themeName", args)
   }
@@ -121,7 +125,7 @@ func (this *QIcon) Setthemename_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QIcon12setThemeNameERK7QString
     // invoke: void setThemeName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN5QIcon12setThemeNameERK7QString(arg0)
   default:
@@ -145,9 +149,9 @@ func (this *QIcon) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QIcon4swapERS_
     // invoke: void swap(class QIcon &)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QIcon4swapERS_(this.qclsinst, arg0)
+    C.C_ZN5QIcon4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIcon", "swap", args)
   }
@@ -168,11 +172,15 @@ func (this *QIcon) Isdetached(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QIcon10isDetachedEv
     // invoke: bool isDetached()
-    var ret0 = C.C_ZNK5QIcon10isDetachedEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QIcon10isDetachedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIcon", "isDetached", args)
   }
@@ -193,11 +201,15 @@ func (this *QIcon) Cachekey(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QIcon8cacheKeyEv
     // invoke: qint64 cacheKey()
-    var ret0 = C.C_ZNK5QIcon8cacheKeyEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QIcon8cacheKeyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIcon", "cacheKey", args)
   }
@@ -219,7 +231,7 @@ func (this *QIcon) Setthemesearchpaths_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QIcon19setThemeSearchPathsERK11QStringList
     // invoke: void setThemeSearchPaths(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN5QIcon19setThemeSearchPathsERK11QStringList(arg0)
   default:
@@ -242,7 +254,7 @@ func (this *QIcon) Detach(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QIcon6detachEv
     // invoke: void detach()
-    C.C_ZN5QIcon6detachEv(this.qclsinst)
+    C.C_ZN5QIcon6detachEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QIcon", "detach", args)
   }
@@ -263,11 +275,15 @@ func (this *QIcon) Name(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QIcon4nameEv
     // invoke: QString name()
-    var ret0 = C.C_ZNK5QIcon4nameEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QIcon4nameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIcon", "name", args)
   }
@@ -309,7 +325,7 @@ func (this *QIcon) Freeqicon(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QIconD0Ev
     // invoke: void ~QIcon()
-    C.C_ZN5QIconD2Ev(this.qclsinst)
+    C.C_ZN5QIconD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QIcon", "~QIcon", args)
   }
@@ -342,51 +358,51 @@ func NewQIcon(args ...interface{}) *QIcon {
   case 0:
     // invoke: _ZN5QIconC1ERK7QString
     // invoke: void QIcon(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QIconC2ERK7QString(arg0)
-    return &QIcon{qclsinst:qthis}
+    return &QIcon{Qclsinst:qthis}
   case 1:
     // invoke: _ZN5QIconC1ERK7QPixmap
     // invoke: void QIcon(const class QPixmap &)
-    var arg0 = args[0].(QPixmap).qclsinst
+    var arg0 = args[0].(*QPixmap).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QIconC2ERK7QPixmap(arg0)
-    return &QIcon{qclsinst:qthis}
+    return &QIcon{Qclsinst:qthis}
   case 2:
     // invoke: _ZN5QIconC1ERKS_
     // invoke: void QIcon(const class QIcon &)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QIconC2ERKS_(arg0)
-    return &QIcon{qclsinst:qthis}
+    return &QIcon{Qclsinst:qthis}
   case 3:
     // invoke: _ZN5QIconC1Ev
     // invoke: void QIcon()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QIconC2Ev()
-    return &QIcon{qclsinst:qthis}
+    return &QIcon{Qclsinst:qthis}
   case 4:
     // invoke: _ZN5QIconC1EP11QIconEngine
     // invoke: void QIcon(class QIconEngine *)
-    var arg0 = args[0].(QIconEngine).qclsinst
+    var arg0 = args[0].(*QIconEngine).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QIconC2EP11QIconEngine(arg0)
-    return &QIcon{qclsinst:qthis}
+    return &QIcon{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QIcon", "QIcon", args)
   }
 
-  return nil // QIcon{qclsinst:qthis}
+  return nil // QIcon{Qclsinst:qthis}
 }
 
 // hasThemeIcon(const class QString &)
@@ -403,13 +419,17 @@ func (this *QIcon) Hasthemeicon_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QIcon12hasThemeIconERK7QString
     // invoke: bool hasThemeIcon(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN5QIcon12hasThemeIconERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIcon", "hasThemeIcon", args)
   }
@@ -430,11 +450,15 @@ func (this *QIcon) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QIcon6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK5QIcon6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QIcon6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIcon", "isNull", args)
   }
@@ -457,15 +481,19 @@ func (this *QIcon) Fromtheme_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QIcon9fromThemeERK7QStringRKS_
     // invoke: QIcon fromTheme(const class QString &, const class QIcon &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QIcon).qclsinst
+    var arg1 = args[1].(*QIcon).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN5QIcon9fromThemeERK7QStringRKS_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIcon{}) // "QIcon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIcon", "fromTheme", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qtreewidgetitemiterator.h
 // dst-file: /src/widgets/qtreewidgetitemiterator.go
 //
@@ -47,7 +47,7 @@ func init() {
 // class sizeof(QTreeWidgetItemIterator)=1
 type QTreeWidgetItemIterator struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // ~QTreeWidgetItemIterator()
@@ -63,7 +63,7 @@ func (this *QTreeWidgetItemIterator) Freeqtreewidgetitemiterator(args ...interfa
   case 0:
     // invoke: _ZN23QTreeWidgetItemIteratorD0Ev
     // invoke: void ~QTreeWidgetItemIterator()
-    C.C_ZN23QTreeWidgetItemIteratorD2Ev(this.qclsinst)
+    C.C_ZN23QTreeWidgetItemIteratorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItemIterator", "~QTreeWidgetItemIterator", args)
   }
@@ -85,17 +85,17 @@ func NewQTreeWidgetItemIterator(args ...interface{}) *QTreeWidgetItemIterator {
   case 0:
     // invoke: _ZN23QTreeWidgetItemIteratorC1ERKS_
     // invoke: void QTreeWidgetItemIterator(const class QTreeWidgetItemIterator &)
-    var arg0 = args[0].(QTreeWidgetItemIterator).qclsinst
+    var arg0 = args[0].(*QTreeWidgetItemIterator).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QTreeWidgetItemIteratorC2ERKS_(arg0)
-    return &QTreeWidgetItemIterator{qclsinst:qthis}
+    return &QTreeWidgetItemIterator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTreeWidgetItemIterator", "QTreeWidgetItemIterator", args)
   }
 
-  return nil // QTreeWidgetItemIterator{qclsinst:qthis}
+  return nil // QTreeWidgetItemIterator{Qclsinst:qthis}
 }
 
 // <= body block end

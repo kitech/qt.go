@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qscrollbar.h
 // dst-file: /src/widgets/qscrollbar.go
 //
@@ -53,7 +53,7 @@ func init() {
 // class sizeof(QScrollBar)=1
 type QScrollBar struct {
   /*qbase*/ QAbstractSlider;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // metaObject()
@@ -69,7 +69,7 @@ func (this *QScrollBar) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QScrollBar10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QScrollBar10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QScrollBar10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScrollBar", "metaObject", args)
   }
@@ -90,11 +90,15 @@ func (this *QScrollBar) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QScrollBar8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK10QScrollBar8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QScrollBar8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScrollBar", "sizeHint", args)
   }
@@ -116,17 +120,17 @@ func NewQScrollBar(args ...interface{}) *QScrollBar {
   case 0:
     // invoke: _ZN10QScrollBarC1EP7QWidget
     // invoke: void QScrollBar(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QScrollBarC2EP7QWidget(arg0)
-    return &QScrollBar{qclsinst:qthis}
+    return &QScrollBar{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QScrollBar", "QScrollBar", args)
   }
 
-  return nil // QScrollBar{qclsinst:qthis}
+  return nil // QScrollBar{Qclsinst:qthis}
 }
 
 // ~QScrollBar()
@@ -142,7 +146,7 @@ func (this *QScrollBar) Freeqscrollbar(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QScrollBarD0Ev
     // invoke: void ~QScrollBar()
-    C.C_ZN10QScrollBarD2Ev(this.qclsinst)
+    C.C_ZN10QScrollBarD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScrollBar", "~QScrollBar", args)
   }
@@ -164,13 +168,17 @@ func (this *QScrollBar) Event(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QScrollBar5eventEP6QEvent
     // invoke: bool event(class QEvent *)
-    var arg0 = args[0].(QEvent).qclsinst
+    var arg0 = args[0].(*QEvent).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN10QScrollBar5eventEP6QEvent(this.qclsinst, arg0)
+    var ret0 = C.C_ZN10QScrollBar5eventEP6QEvent(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QScrollBar", "event", args)
   }

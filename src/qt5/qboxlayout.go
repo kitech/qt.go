@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qboxlayout.h
 // dst-file: /src/widgets/qboxlayout.go
 //
@@ -123,19 +123,19 @@ func init() {
 // class sizeof(QHBoxLayout)=1
 type QHBoxLayout struct {
   /*qbase*/ QBoxLayout;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QBoxLayout)=1
 type QBoxLayout struct {
   /*qbase*/ QLayout;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QVBoxLayout)=1
 type QVBoxLayout struct {
   /*qbase*/ QBoxLayout;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QHBoxLayout(class QWidget *)
@@ -154,24 +154,24 @@ func NewQHBoxLayout(args ...interface{}) *QHBoxLayout {
   case 0:
     // invoke: _ZN11QHBoxLayoutC1EP7QWidget
     // invoke: void QHBoxLayout(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QHBoxLayoutC2EP7QWidget(arg0)
-    return &QHBoxLayout{qclsinst:qthis}
+    return &QHBoxLayout{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QHBoxLayoutC1Ev
     // invoke: void QHBoxLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QHBoxLayoutC2Ev()
-    return &QHBoxLayout{qclsinst:qthis}
+    return &QHBoxLayout{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QHBoxLayout", "QHBoxLayout", args)
   }
 
-  return nil // QHBoxLayout{qclsinst:qthis}
+  return nil // QHBoxLayout{Qclsinst:qthis}
 }
 
 // metaObject()
@@ -187,7 +187,7 @@ func (this *QHBoxLayout) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QHBoxLayout10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QHBoxLayout10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QHBoxLayout10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QHBoxLayout", "metaObject", args)
   }
@@ -208,7 +208,7 @@ func (this *QHBoxLayout) Freeqhboxlayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHBoxLayoutD0Ev
     // invoke: void ~QHBoxLayout()
-    C.C_ZN11QHBoxLayoutD2Ev(this.qclsinst)
+    C.C_ZN11QHBoxLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QHBoxLayout", "~QHBoxLayout", args)
   }
@@ -229,7 +229,7 @@ func (this *QBoxLayout) Invalidate(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout10invalidateEv
     // invoke: void invalidate()
-    C.C_ZN10QBoxLayout10invalidateEv(this.qclsinst)
+    C.C_ZN10QBoxLayout10invalidateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "invalidate", args)
   }
@@ -252,11 +252,11 @@ func (this *QBoxLayout) Setstretch(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout10setStretchEii
     // invoke: void setStretch(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QBoxLayout10setStretchEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout10setStretchEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "setStretch", args)
   }
@@ -280,13 +280,13 @@ func (this *QBoxLayout) Insertlayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout12insertLayoutEiP7QLayouti
     // invoke: void insertLayout(int, class QLayout *, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QLayout).qclsinst
+    var arg1 = args[1].(*QLayout).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN10QBoxLayout12insertLayoutEiP7QLayouti(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN10QBoxLayout12insertLayoutEiP7QLayouti(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertLayout", args)
   }
@@ -309,11 +309,11 @@ func (this *QBoxLayout) Insertstretch(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout13insertStretchEii
     // invoke: void insertStretch(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QBoxLayout13insertStretchEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout13insertStretchEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertStretch", args)
   }
@@ -335,9 +335,9 @@ func (this *QBoxLayout) Addspaceritem(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout13addSpacerItemEP11QSpacerItem
     // invoke: void addSpacerItem(class QSpacerItem *)
-    var arg0 = args[0].(QSpacerItem).qclsinst
+    var arg0 = args[0].(*QSpacerItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QBoxLayout13addSpacerItemEP11QSpacerItem(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout13addSpacerItemEP11QSpacerItem(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "addSpacerItem", args)
   }
@@ -358,7 +358,7 @@ func (this *QBoxLayout) Expandingdirections(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout19expandingDirectionsEv
     // invoke: Qt::Orientations expandingDirections()
-    C.C_ZNK10QBoxLayout19expandingDirectionsEv(this.qclsinst)
+    C.C_ZNK10QBoxLayout19expandingDirectionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "expandingDirections", args)
   }
@@ -381,11 +381,11 @@ func (this *QBoxLayout) Insertspacing(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout13insertSpacingEii
     // invoke: void insertSpacing(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QBoxLayout13insertSpacingEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout13insertSpacingEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertSpacing", args)
   }
@@ -407,13 +407,17 @@ func (this *QBoxLayout) Stretch(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QBoxLayout7stretchEi
     // invoke: int stretch(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QBoxLayout7stretchEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QBoxLayout7stretchEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBoxLayout", "stretch", args)
   }
@@ -435,13 +439,17 @@ func (this *QBoxLayout) Minimumheightforwidth(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK10QBoxLayout21minimumHeightForWidthEi
     // invoke: int minimumHeightForWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QBoxLayout21minimumHeightForWidthEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QBoxLayout21minimumHeightForWidthEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBoxLayout", "minimumHeightForWidth", args)
   }
@@ -462,7 +470,7 @@ func (this *QBoxLayout) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QBoxLayout10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QBoxLayout10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "metaObject", args)
   }
@@ -484,9 +492,9 @@ func (this *QBoxLayout) Addstretch(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout10addStretchEi
     // invoke: void addStretch(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QBoxLayout10addStretchEi(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout10addStretchEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "addStretch", args)
   }
@@ -508,9 +516,9 @@ func (this *QBoxLayout) Addstrut(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout8addStrutEi
     // invoke: void addStrut(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QBoxLayout8addStrutEi(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout8addStrutEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "addStrut", args)
   }
@@ -531,7 +539,7 @@ func (this *QBoxLayout) Direction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout9directionEv
     // invoke: QBoxLayout::Direction direction()
-    C.C_ZNK10QBoxLayout9directionEv(this.qclsinst)
+    C.C_ZNK10QBoxLayout9directionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "direction", args)
   }
@@ -553,9 +561,9 @@ func (this *QBoxLayout) Additem(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout7addItemEP11QLayoutItem
     // invoke: void addItem(class QLayoutItem *)
-    var arg0 = args[0].(QLayoutItem).qclsinst
+    var arg0 = args[0].(*QLayoutItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QBoxLayout7addItemEP11QLayoutItem(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout7addItemEP11QLayoutItem(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "addItem", args)
   }
@@ -577,13 +585,17 @@ func (this *QBoxLayout) Takeat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QBoxLayout6takeAtEi
     // invoke: QLayoutItem * takeAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN10QBoxLayout6takeAtEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN10QBoxLayout6takeAtEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBoxLayout", "takeAt", args)
   }
@@ -606,11 +618,11 @@ func (this *QBoxLayout) Insertitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout10insertItemEiP11QLayoutItem
     // invoke: void insertItem(int, class QLayoutItem *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QLayoutItem).qclsinst
+    var arg1 = args[1].(*QLayoutItem).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN10QBoxLayout10insertItemEiP11QLayoutItem(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout10insertItemEiP11QLayoutItem(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertItem", args)
   }
@@ -632,9 +644,9 @@ func (this *QBoxLayout) Setspacing(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout10setSpacingEi
     // invoke: void setSpacing(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QBoxLayout10setSpacingEi(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout10setSpacingEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "setSpacing", args)
   }
@@ -656,9 +668,9 @@ func (this *QBoxLayout) Setgeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout11setGeometryERK5QRect
     // invoke: void setGeometry(const class QRect &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QBoxLayout11setGeometryERK5QRect(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout11setGeometryERK5QRect(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "setGeometry", args)
   }
@@ -679,11 +691,15 @@ func (this *QBoxLayout) Spacing(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QBoxLayout7spacingEv
     // invoke: int spacing()
-    var ret0 = C.C_ZNK10QBoxLayout7spacingEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QBoxLayout7spacingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBoxLayout", "spacing", args)
   }
@@ -704,7 +720,7 @@ func (this *QBoxLayout) Freeqboxlayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayoutD0Ev
     // invoke: void ~QBoxLayout()
-    C.C_ZN10QBoxLayoutD2Ev(this.qclsinst)
+    C.C_ZN10QBoxLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBoxLayout", "~QBoxLayout", args)
   }
@@ -725,11 +741,15 @@ func (this *QBoxLayout) Count(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QBoxLayout5countEv
     // invoke: int count()
-    var ret0 = C.C_ZNK10QBoxLayout5countEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QBoxLayout5countEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBoxLayout", "count", args)
   }
@@ -751,9 +771,9 @@ func (this *QBoxLayout) Addspacing(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout10addSpacingEi
     // invoke: void addSpacing(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QBoxLayout10addSpacingEi(this.qclsinst, arg0)
+    C.C_ZN10QBoxLayout10addSpacingEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBoxLayout", "addSpacing", args)
   }
@@ -774,11 +794,15 @@ func (this *QBoxLayout) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QBoxLayout8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK10QBoxLayout8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QBoxLayout8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBoxLayout", "sizeHint", args)
   }
@@ -799,11 +823,15 @@ func (this *QBoxLayout) Hasheightforwidth(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK10QBoxLayout17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    var ret0 = C.C_ZNK10QBoxLayout17hasHeightForWidthEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QBoxLayout17hasHeightForWidthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBoxLayout", "hasHeightForWidth", args)
   }
@@ -825,13 +853,17 @@ func (this *QBoxLayout) Itemat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QBoxLayout6itemAtEi
     // invoke: QLayoutItem * itemAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QBoxLayout6itemAtEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QBoxLayout6itemAtEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBoxLayout", "itemAt", args)
   }
@@ -852,11 +884,15 @@ func (this *QBoxLayout) Minimumsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QBoxLayout11minimumSizeEv
     // invoke: QSize minimumSize()
-    var ret0 = C.C_ZNK10QBoxLayout11minimumSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QBoxLayout11minimumSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBoxLayout", "minimumSize", args)
   }
@@ -878,13 +914,17 @@ func (this *QBoxLayout) Heightforwidth(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QBoxLayout14heightForWidthEi
     // invoke: int heightForWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QBoxLayout14heightForWidthEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QBoxLayout14heightForWidthEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBoxLayout", "heightForWidth", args)
   }
@@ -907,11 +947,11 @@ func (this *QBoxLayout) Insertspaceritem(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem
     // invoke: void insertSpacerItem(int, class QSpacerItem *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QSpacerItem).qclsinst
+    var arg1 = args[1].(*QSpacerItem).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertSpacerItem", args)
   }
@@ -934,11 +974,11 @@ func (this *QBoxLayout) Addlayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QBoxLayout9addLayoutEP7QLayouti
     // invoke: void addLayout(class QLayout *, int)
-    var arg0 = args[0].(QLayout).qclsinst
+    var arg0 = args[0].(*QLayout).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QBoxLayout9addLayoutEP7QLayouti(this.qclsinst, arg0, arg1)
+    C.C_ZN10QBoxLayout9addLayoutEP7QLayouti(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBoxLayout", "addLayout", args)
   }
@@ -965,27 +1005,35 @@ func (this *QBoxLayout) Setstretchfactor(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZN10QBoxLayout16setStretchFactorEP7QLayouti
     // invoke: bool setStretchFactor(class QLayout *, int)
-    var arg0 = args[0].(QLayout).qclsinst
+    var arg0 = args[0].(*QLayout).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QBoxLayout16setStretchFactorEP7QLayouti(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QBoxLayout16setStretchFactorEP7QLayouti(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN10QBoxLayout16setStretchFactorEP7QWidgeti
     // invoke: bool setStretchFactor(class QWidget *, int)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBoxLayout", "setStretchFactor", args)
   }
@@ -1006,11 +1054,15 @@ func (this *QBoxLayout) Maximumsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QBoxLayout11maximumSizeEv
     // invoke: QSize maximumSize()
-    var ret0 = C.C_ZNK10QBoxLayout11maximumSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QBoxLayout11maximumSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBoxLayout", "maximumSize", args)
   }
@@ -1037,21 +1089,21 @@ func NewQVBoxLayout(args ...interface{}) *QVBoxLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QVBoxLayoutC2Ev()
-    return &QVBoxLayout{qclsinst:qthis}
+    return &QVBoxLayout{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QVBoxLayoutC1EP7QWidget
     // invoke: void QVBoxLayout(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QVBoxLayoutC2EP7QWidget(arg0)
-    return &QVBoxLayout{qclsinst:qthis}
+    return &QVBoxLayout{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QVBoxLayout", "QVBoxLayout", args)
   }
 
-  return nil // QVBoxLayout{qclsinst:qthis}
+  return nil // QVBoxLayout{Qclsinst:qthis}
 }
 
 // ~QVBoxLayout()
@@ -1067,7 +1119,7 @@ func (this *QVBoxLayout) Freeqvboxlayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QVBoxLayoutD0Ev
     // invoke: void ~QVBoxLayout()
-    C.C_ZN11QVBoxLayoutD2Ev(this.qclsinst)
+    C.C_ZN11QVBoxLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVBoxLayout", "~QVBoxLayout", args)
   }
@@ -1088,7 +1140,7 @@ func (this *QVBoxLayout) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QVBoxLayout10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QVBoxLayout10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QVBoxLayout10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVBoxLayout", "metaObject", args)
   }

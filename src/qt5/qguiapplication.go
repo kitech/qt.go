@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.go
 //
@@ -139,7 +139,7 @@ func init() {
 // class sizeof(QGuiApplication)=1
 type QGuiApplication struct {
   /*qbase*/ QCoreApplication;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _saveStateRequest QGuiApplication_saveStateRequest_signal;
 //  _applicationStateChanged QGuiApplication_applicationStateChanged_signal;
 //  _screenAdded QGuiApplication_screenAdded_signal;
@@ -170,7 +170,11 @@ func (this *QGuiApplication) Stylehints_S(args ...interface{}) (ret interface{})
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QStyleHints{}) // "QStyleHints *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "styleHints", args)
   }
@@ -192,7 +196,7 @@ func (this *QGuiApplication) Setoverridecursor_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication17setOverrideCursorERK7QCursor
     // invoke: void setOverrideCursor(const class QCursor &)
-    var arg0 = args[0].(QCursor).qclsinst
+    var arg0 = args[0].(*QCursor).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN15QGuiApplication17setOverrideCursorERK7QCursor(arg0)
   default:
@@ -237,7 +241,7 @@ func (this *QGuiApplication) Setpalette_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication10setPaletteERK8QPalette
     // invoke: void setPalette(const class QPalette &)
-    var arg0 = args[0].(QPalette).qclsinst
+    var arg0 = args[0].(*QPalette).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN15QGuiApplication10setPaletteERK8QPalette(arg0)
   default:
@@ -304,15 +308,19 @@ func (this *QGuiApplication) Notify(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN15QGuiApplication6notifyEP7QObjectP6QEvent
     // invoke: bool notify(class QObject *, class QEvent *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QEvent).qclsinst
+    var arg1 = args[1].(*QEvent).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN15QGuiApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN15QGuiApplication6notifyEP7QObjectP6QEvent(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "notify", args)
   }
@@ -354,11 +362,15 @@ func (this *QGuiApplication) Issavingsession(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK15QGuiApplication15isSavingSessionEv
     // invoke: bool isSavingSession()
-    var ret0 = C.C_ZNK15QGuiApplication15isSavingSessionEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGuiApplication15isSavingSessionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "isSavingSession", args)
   }
@@ -380,7 +392,7 @@ func (this *QGuiApplication) Changeoverridecursor_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication20changeOverrideCursorERK7QCursor
     // invoke: void changeOverrideCursor(const class QCursor &)
-    var arg0 = args[0].(QCursor).qclsinst
+    var arg0 = args[0].(*QCursor).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN15QGuiApplication20changeOverrideCursorERK7QCursor(arg0)
   default:
@@ -407,7 +419,11 @@ func (this *QGuiApplication) Font_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFont{}) // "QFont"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "font", args)
   }
@@ -432,7 +448,11 @@ func (this *QGuiApplication) Quitonlastwindowclosed_S(args ...interface{}) (ret 
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "quitOnLastWindowClosed", args)
   }
@@ -457,7 +477,11 @@ func (this *QGuiApplication) Palette_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPalette{}) // "QPalette"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "palette", args)
   }
@@ -479,7 +503,7 @@ func (this *QGuiApplication) Setapplicationdisplayname_S(args ...interface{}) ()
   case 0:
     // invoke: _ZN15QGuiApplication25setApplicationDisplayNameERK7QString
     // invoke: void setApplicationDisplayName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN15QGuiApplication25setApplicationDisplayNameERK7QString(arg0)
   default:
@@ -527,7 +551,11 @@ func (this *QGuiApplication) Exec_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "exec", args)
   }
@@ -548,11 +576,15 @@ func (this *QGuiApplication) Sessionid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QGuiApplication9sessionIdEv
     // invoke: QString sessionId()
-    var ret0 = C.C_ZNK15QGuiApplication9sessionIdEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGuiApplication9sessionIdEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "sessionId", args)
   }
@@ -573,11 +605,15 @@ func (this *QGuiApplication) Sessionkey(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QGuiApplication10sessionKeyEv
     // invoke: QString sessionKey()
-    var ret0 = C.C_ZNK15QGuiApplication10sessionKeyEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGuiApplication10sessionKeyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "sessionKey", args)
   }
@@ -602,7 +638,11 @@ func (this *QGuiApplication) Focusobject_S(args ...interface{}) (ret interface{}
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QObject{}) // "QObject *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "focusObject", args)
   }
@@ -624,7 +664,7 @@ func (this *QGuiApplication) Platformfunction_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication16platformFunctionERK10QByteArray
     // invoke: QFunctionPointer platformFunction(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN15QGuiApplication16platformFunctionERK10QByteArray(arg0)
   default:
@@ -672,7 +712,11 @@ func (this *QGuiApplication) Platformname_S(args ...interface{}) (ret interface{
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "platformName", args)
   }
@@ -697,7 +741,11 @@ func (this *QGuiApplication) Focuswindow_S(args ...interface{}) (ret interface{}
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWindow{}) // "QWindow *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "focusWindow", args)
   }
@@ -722,7 +770,11 @@ func (this *QGuiApplication) Isrighttoleft_S(args ...interface{}) (ret interface
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "isRightToLeft", args)
   }
@@ -744,13 +796,17 @@ func (this *QGuiApplication) Toplevelat_S(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZN15QGuiApplication10topLevelAtERK6QPoint
     // invoke: QWindow * topLevelAt(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN15QGuiApplication10topLevelAtERK6QPoint(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWindow{}) // "QWindow *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "topLevelAt", args)
   }
@@ -775,7 +831,11 @@ func (this *QGuiApplication) Applicationdisplayname_S(args ...interface{}) (ret 
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "applicationDisplayName", args)
   }
@@ -800,7 +860,11 @@ func (this *QGuiApplication) Inputmethod_S(args ...interface{}) (ret interface{}
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QInputMethod{}) // "QInputMethod *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "inputMethod", args)
   }
@@ -825,7 +889,11 @@ func (this *QGuiApplication) Clipboard_S(args ...interface{}) (ret interface{}) 
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QClipboard{}) // "QClipboard *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "clipboard", args)
   }
@@ -850,7 +918,11 @@ func (this *QGuiApplication) Overridecursor_S(args ...interface{}) (ret interfac
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QCursor{}) // "QCursor *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "overrideCursor", args)
   }
@@ -875,7 +947,11 @@ func (this *QGuiApplication) Primaryscreen_S(args ...interface{}) (ret interface
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QScreen{}) // "QScreen *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "primaryScreen", args)
   }
@@ -917,7 +993,7 @@ func (this *QGuiApplication) Freeqguiapplication(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplicationD0Ev
     // invoke: void ~QGuiApplication()
-    C.C_ZN15QGuiApplicationD2Ev(this.qclsinst)
+    C.C_ZN15QGuiApplicationD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "~QGuiApplication", args)
   }
@@ -1004,7 +1080,7 @@ func (this *QGuiApplication) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGuiApplication10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QGuiApplication10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QGuiApplication10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "metaObject", args)
   }
@@ -1025,11 +1101,15 @@ func (this *QGuiApplication) Devicepixelratio(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK15QGuiApplication16devicePixelRatioEv
     // invoke: qreal devicePixelRatio()
-    var ret0 = C.C_ZNK15QGuiApplication16devicePixelRatioEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGuiApplication16devicePixelRatioEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "devicePixelRatio", args)
   }
@@ -1054,7 +1134,11 @@ func (this *QGuiApplication) Modalwindow_S(args ...interface{}) (ret interface{}
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWindow{}) // "QWindow *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "modalWindow", args)
   }
@@ -1084,17 +1168,17 @@ func NewQGuiApplication(args ...interface{}) *QGuiApplication {
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QGuiApplicationC2ERiPPci(arg0, arg1, arg2)
-    return &QGuiApplication{qclsinst:qthis}
+    return &QGuiApplication{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGuiApplication", "QGuiApplication", args)
   }
 
-  return nil // QGuiApplication{qclsinst:qthis}
+  return nil // QGuiApplication{Qclsinst:qthis}
 }
 
 // isLeftToRight()
@@ -1114,7 +1198,11 @@ func (this *QGuiApplication) Islefttoright_S(args ...interface{}) (ret interface
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "isLeftToRight", args)
   }
@@ -1136,7 +1224,7 @@ func (this *QGuiApplication) Setwindowicon_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication13setWindowIconERK5QIcon
     // invoke: void setWindowIcon(const class QIcon &)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN15QGuiApplication13setWindowIconERK5QIcon(arg0)
   default:
@@ -1187,7 +1275,11 @@ func (this *QGuiApplication) Desktopsettingsaware_S(args ...interface{}) (ret in
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "desktopSettingsAware", args)
   }
@@ -1209,7 +1301,7 @@ func (this *QGuiApplication) Setfont_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGuiApplication7setFontERK5QFont
     // invoke: void setFont(const class QFont &)
-    var arg0 = args[0].(QFont).qclsinst
+    var arg0 = args[0].(*QFont).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN15QGuiApplication7setFontERK5QFont(arg0)
   default:
@@ -1253,11 +1345,15 @@ func (this *QGuiApplication) Issessionrestored(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK15QGuiApplication17isSessionRestoredEv
     // invoke: bool isSessionRestored()
-    var ret0 = C.C_ZNK15QGuiApplication17isSessionRestoredEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGuiApplication17isSessionRestoredEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "isSessionRestored", args)
   }
@@ -1303,7 +1399,11 @@ func (this *QGuiApplication) Windowicon_S(args ...interface{}) (ret interface{})
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIcon{}) // "QIcon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGuiApplication", "windowIcon", args)
   }

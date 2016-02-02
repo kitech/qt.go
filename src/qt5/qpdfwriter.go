@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qpdfwriter.h
 // dst-file: /src/gui/qpdfwriter.go
 //
@@ -67,7 +67,7 @@ func init() {
 // class sizeof(QPdfWriter)=1
 type QPdfWriter struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // newPage()
@@ -83,11 +83,15 @@ func (this *QPdfWriter) Newpage(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QPdfWriter7newPageEv
     // invoke: bool newPage()
-    var ret0 = C.C_ZN10QPdfWriter7newPageEv(this.qclsinst)
+    var ret0 = C.C_ZN10QPdfWriter7newPageEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPdfWriter", "newPage", args)
   }
@@ -108,11 +112,15 @@ func (this *QPdfWriter) Creator(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QPdfWriter7creatorEv
     // invoke: QString creator()
-    var ret0 = C.C_ZNK10QPdfWriter7creatorEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QPdfWriter7creatorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPdfWriter", "creator", args)
   }
@@ -133,7 +141,7 @@ func (this *QPdfWriter) Freeqpdfwriter(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QPdfWriterD0Ev
     // invoke: void ~QPdfWriter()
-    C.C_ZN10QPdfWriterD2Ev(this.qclsinst)
+    C.C_ZN10QPdfWriterD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPdfWriter", "~QPdfWriter", args)
   }
@@ -155,9 +163,9 @@ func (this *QPdfWriter) Settitle(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QPdfWriter8setTitleERK7QString
     // invoke: void setTitle(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QPdfWriter8setTitleERK7QString(this.qclsinst, arg0)
+    C.C_ZN10QPdfWriter8setTitleERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPdfWriter", "setTitle", args)
   }
@@ -178,11 +186,15 @@ func (this *QPdfWriter) Title(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QPdfWriter5titleEv
     // invoke: QString title()
-    var ret0 = C.C_ZNK10QPdfWriter5titleEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QPdfWriter5titleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPdfWriter", "title", args)
   }
@@ -207,26 +219,26 @@ func NewQPdfWriter(args ...interface{}) *QPdfWriter {
   case 0:
     // invoke: _ZN10QPdfWriterC1ERK7QString
     // invoke: void QPdfWriter(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QPdfWriterC2ERK7QString(arg0)
-    return &QPdfWriter{qclsinst:qthis}
+    return &QPdfWriter{Qclsinst:qthis}
   case 1:
     // invoke: _ZN10QPdfWriterC1EP9QIODevice
     // invoke: void QPdfWriter(class QIODevice *)
-    var arg0 = args[0].(QIODevice).qclsinst
+    var arg0 = args[0].(*QIODevice).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QPdfWriterC2EP9QIODevice(arg0)
-    return &QPdfWriter{qclsinst:qthis}
+    return &QPdfWriter{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPdfWriter", "QPdfWriter", args)
   }
 
-  return nil // QPdfWriter{qclsinst:qthis}
+  return nil // QPdfWriter{Qclsinst:qthis}
 }
 
 // setPageSizeMM(const class QSizeF &)
@@ -243,9 +255,9 @@ func (this *QPdfWriter) Setpagesizemm(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QPdfWriter13setPageSizeMMERK6QSizeF
     // invoke: void setPageSizeMM(const class QSizeF &)
-    var arg0 = args[0].(QSizeF).qclsinst
+    var arg0 = args[0].(*QSizeF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QPdfWriter13setPageSizeMMERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN10QPdfWriter13setPageSizeMMERK6QSizeF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPdfWriter", "setPageSizeMM", args)
   }
@@ -267,9 +279,9 @@ func (this *QPdfWriter) Setresolution(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QPdfWriter13setResolutionEi
     // invoke: void setResolution(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QPdfWriter13setResolutionEi(this.qclsinst, arg0)
+    C.C_ZN10QPdfWriter13setResolutionEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPdfWriter", "setResolution", args)
   }
@@ -290,7 +302,7 @@ func (this *QPdfWriter) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QPdfWriter10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QPdfWriter10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QPdfWriter10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPdfWriter", "metaObject", args)
   }
@@ -312,9 +324,9 @@ func (this *QPdfWriter) Setcreator(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QPdfWriter10setCreatorERK7QString
     // invoke: void setCreator(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QPdfWriter10setCreatorERK7QString(this.qclsinst, arg0)
+    C.C_ZN10QPdfWriter10setCreatorERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPdfWriter", "setCreator", args)
   }
@@ -335,11 +347,15 @@ func (this *QPdfWriter) Resolution(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QPdfWriter10resolutionEv
     // invoke: int resolution()
-    var ret0 = C.C_ZNK10QPdfWriter10resolutionEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QPdfWriter10resolutionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPdfWriter", "resolution", args)
   }

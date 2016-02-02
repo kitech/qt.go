@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qpalette.h
 // dst-file: /src/gui/qpalette.go
 //
@@ -113,7 +113,7 @@ func init() {
 // class sizeof(QPalette)=16
 type QPalette struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // isCopyOf(const class QPalette &)
@@ -130,13 +130,17 @@ func (this *QPalette) Iscopyof(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette8isCopyOfERKS_
     // invoke: bool isCopyOf(const class QPalette &)
-    var arg0 = args[0].(QPalette).qclsinst
+    var arg0 = args[0].(*QPalette).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QPalette8isCopyOfERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QPalette8isCopyOfERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "isCopyOf", args)
   }
@@ -157,11 +161,15 @@ func (this *QPalette) Highlightedtext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette15highlightedTextEv
     // invoke: const QBrush & highlightedText()
-    var ret0 = C.C_ZNK8QPalette15highlightedTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette15highlightedTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "highlightedText", args)
   }
@@ -182,11 +190,15 @@ func (this *QPalette) Mid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette3midEv
     // invoke: const QBrush & mid()
-    var ret0 = C.C_ZNK8QPalette3midEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette3midEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "mid", args)
   }
@@ -207,11 +219,15 @@ func (this *QPalette) Windowtext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette10windowTextEv
     // invoke: const QBrush & windowText()
-    var ret0 = C.C_ZNK8QPalette10windowTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette10windowTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "windowText", args)
   }
@@ -262,90 +278,90 @@ func NewQPalette(args ...interface{}) *QPalette {
   case 0:
     // invoke: _ZN8QPaletteC1ERK6QColorS2_S2_S2_S2_S2_S2_
     // invoke: void QPalette(const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QColor).qclsinst
+    var arg1 = args[1].(*QColor).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QColor).qclsinst
+    var arg2 = args[2].(*QColor).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QColor).qclsinst
+    var arg3 = args[3].(*QColor).Qclsinst
     if false {fmt.Println(arg3)}
-    var arg4 = args[4].(QColor).qclsinst
+    var arg4 = args[4].(*QColor).Qclsinst
     if false {fmt.Println(arg4)}
-    var arg5 = args[5].(QColor).qclsinst
+    var arg5 = args[5].(*QColor).Qclsinst
     if false {fmt.Println(arg5)}
-    var arg6 = args[6].(QColor).qclsinst
+    var arg6 = args[6].(*QColor).Qclsinst
     if false {fmt.Println(arg6)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPaletteC2ERK6QColorS2_S2_S2_S2_S2_S2_(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-    return &QPalette{qclsinst:qthis}
+    return &QPalette{Qclsinst:qthis}
   case 1:
     // invoke: _ZN8QPaletteC1ERK6QColor
     // invoke: void QPalette(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPaletteC2ERK6QColor(arg0)
-    return &QPalette{qclsinst:qthis}
+    return &QPalette{Qclsinst:qthis}
   case 2:
     // invoke: _ZN8QPaletteC1ERKS_
     // invoke: void QPalette(const class QPalette &)
-    var arg0 = args[0].(QPalette).qclsinst
+    var arg0 = args[0].(*QPalette).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPaletteC2ERKS_(arg0)
-    return &QPalette{qclsinst:qthis}
+    return &QPalette{Qclsinst:qthis}
   case 3:
     // invoke: _ZN8QPaletteC1ERK6QColorS2_
     // invoke: void QPalette(const class QColor &, const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QColor).qclsinst
+    var arg1 = args[1].(*QColor).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPaletteC2ERK6QColorS2_(arg0, arg1)
-    return &QPalette{qclsinst:qthis}
+    return &QPalette{Qclsinst:qthis}
   case 4:
     // invoke: _ZN8QPaletteC1ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_
     // invoke: void QPalette(const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &)
-    var arg0 = args[0].(QBrush).qclsinst
+    var arg0 = args[0].(*QBrush).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QBrush).qclsinst
+    var arg1 = args[1].(*QBrush).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QBrush).qclsinst
+    var arg2 = args[2].(*QBrush).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QBrush).qclsinst
+    var arg3 = args[3].(*QBrush).Qclsinst
     if false {fmt.Println(arg3)}
-    var arg4 = args[4].(QBrush).qclsinst
+    var arg4 = args[4].(*QBrush).Qclsinst
     if false {fmt.Println(arg4)}
-    var arg5 = args[5].(QBrush).qclsinst
+    var arg5 = args[5].(*QBrush).Qclsinst
     if false {fmt.Println(arg5)}
-    var arg6 = args[6].(QBrush).qclsinst
+    var arg6 = args[6].(*QBrush).Qclsinst
     if false {fmt.Println(arg6)}
-    var arg7 = args[7].(QBrush).qclsinst
+    var arg7 = args[7].(*QBrush).Qclsinst
     if false {fmt.Println(arg7)}
-    var arg8 = args[8].(QBrush).qclsinst
+    var arg8 = args[8].(*QBrush).Qclsinst
     if false {fmt.Println(arg8)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPaletteC2ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-    return &QPalette{qclsinst:qthis}
+    return &QPalette{Qclsinst:qthis}
   case 5:
     // invoke: _ZN8QPaletteC1Ev
     // invoke: void QPalette()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPaletteC2Ev()
-    return &QPalette{qclsinst:qthis}
+    return &QPalette{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPalette", "QPalette", args)
   }
 
-  return nil // QPalette{qclsinst:qthis}
+  return nil // QPalette{Qclsinst:qthis}
 }
 
 // toolTipText()
@@ -361,11 +377,15 @@ func (this *QPalette) Tooltiptext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette11toolTipTextEv
     // invoke: const QBrush & toolTipText()
-    var ret0 = C.C_ZNK8QPalette11toolTipTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette11toolTipTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "toolTipText", args)
   }
@@ -386,11 +406,15 @@ func (this *QPalette) Midlight(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette8midlightEv
     // invoke: const QBrush & midlight()
-    var ret0 = C.C_ZNK8QPalette8midlightEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette8midlightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "midlight", args)
   }
@@ -411,11 +435,15 @@ func (this *QPalette) Window(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette6windowEv
     // invoke: const QBrush & window()
-    var ret0 = C.C_ZNK8QPalette6windowEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette6windowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "window", args)
   }
@@ -436,11 +464,15 @@ func (this *QPalette) Brighttext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette10brightTextEv
     // invoke: const QBrush & brightText()
-    var ret0 = C.C_ZNK8QPalette10brightTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette10brightTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "brightText", args)
   }
@@ -462,9 +494,9 @@ func (this *QPalette) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPalette4swapERS_
     // invoke: void swap(class QPalette &)
-    var arg0 = args[0].(QPalette).qclsinst
+    var arg0 = args[0].(*QPalette).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QPalette4swapERS_(this.qclsinst, arg0)
+    C.C_ZN8QPalette4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPalette", "swap", args)
   }
@@ -485,11 +517,15 @@ func (this *QPalette) Text(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette4textEv
     // invoke: const QBrush & text()
-    var ret0 = C.C_ZNK8QPalette4textEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette4textEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "text", args)
   }
@@ -510,7 +546,7 @@ func (this *QPalette) Currentcolorgroup(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette17currentColorGroupEv
     // invoke: QPalette::ColorGroup currentColorGroup()
-    C.C_ZNK8QPalette17currentColorGroupEv(this.qclsinst)
+    C.C_ZNK8QPalette17currentColorGroupEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "currentColorGroup", args)
   }
@@ -531,11 +567,15 @@ func (this *QPalette) Foreground(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette10foregroundEv
     // invoke: const QBrush & foreground()
-    var ret0 = C.C_ZNK8QPalette10foregroundEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette10foregroundEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "foreground", args)
   }
@@ -556,11 +596,15 @@ func (this *QPalette) Cachekey(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette8cacheKeyEv
     // invoke: qint64 cacheKey()
-    var ret0 = C.C_ZNK8QPalette8cacheKeyEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette8cacheKeyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "cacheKey", args)
   }
@@ -581,11 +625,15 @@ func (this *QPalette) Dark(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette4darkEv
     // invoke: const QBrush & dark()
-    var ret0 = C.C_ZNK8QPalette4darkEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette4darkEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "dark", args)
   }
@@ -606,11 +654,15 @@ func (this *QPalette) Base(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette4baseEv
     // invoke: const QBrush & base()
-    var ret0 = C.C_ZNK8QPalette4baseEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette4baseEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "base", args)
   }
@@ -631,11 +683,15 @@ func (this *QPalette) Link(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette4linkEv
     // invoke: const QBrush & link()
-    var ret0 = C.C_ZNK8QPalette4linkEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette4linkEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "link", args)
   }
@@ -656,11 +712,15 @@ func (this *QPalette) Background(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette10backgroundEv
     // invoke: const QBrush & background()
-    var ret0 = C.C_ZNK8QPalette10backgroundEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette10backgroundEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "background", args)
   }
@@ -681,11 +741,15 @@ func (this *QPalette) Shadow(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette6shadowEv
     // invoke: const QBrush & shadow()
-    var ret0 = C.C_ZNK8QPalette6shadowEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette6shadowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "shadow", args)
   }
@@ -706,11 +770,15 @@ func (this *QPalette) Tooltipbase(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette11toolTipBaseEv
     // invoke: const QBrush & toolTipBase()
-    var ret0 = C.C_ZNK8QPalette11toolTipBaseEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette11toolTipBaseEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "toolTipBase", args)
   }
@@ -731,11 +799,15 @@ func (this *QPalette) Linkvisited(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette11linkVisitedEv
     // invoke: const QBrush & linkVisited()
-    var ret0 = C.C_ZNK8QPalette11linkVisitedEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette11linkVisitedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "linkVisited", args)
   }
@@ -762,20 +834,20 @@ func (this *QPalette) Resolve(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPalette7resolveEj
     // invoke: void resolve(uint)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QPalette7resolveEj(this.qclsinst, arg0)
+    C.C_ZN8QPalette7resolveEj(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZNK8QPalette7resolveERKS_
     // invoke: QPalette resolve(const class QPalette &)
-    var arg0 = args[0].(QPalette).qclsinst
+    var arg0 = args[0].(*QPalette).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QPalette7resolveERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QPalette7resolveERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
   case 2:
     // invoke: _ZNK8QPalette7resolveEv
     // invoke: uint resolve()
-    var ret0 = C.C_ZNK8QPalette7resolveEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette7resolveEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
   default:
     qtrt.ErrorResolve("QPalette", "resolve", args)
@@ -797,11 +869,15 @@ func (this *QPalette) Light(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette5lightEv
     // invoke: const QBrush & light()
-    var ret0 = C.C_ZNK8QPalette5lightEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette5lightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "light", args)
   }
@@ -822,11 +898,15 @@ func (this *QPalette) Button(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette6buttonEv
     // invoke: const QBrush & button()
-    var ret0 = C.C_ZNK8QPalette6buttonEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette6buttonEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "button", args)
   }
@@ -847,11 +927,15 @@ func (this *QPalette) Buttontext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette10buttonTextEv
     // invoke: const QBrush & buttonText()
-    var ret0 = C.C_ZNK8QPalette10buttonTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette10buttonTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "buttonText", args)
   }
@@ -872,7 +956,7 @@ func (this *QPalette) Freeqpalette(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPaletteD0Ev
     // invoke: void ~QPalette()
-    C.C_ZN8QPaletteD2Ev(this.qclsinst)
+    C.C_ZN8QPaletteD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "~QPalette", args)
   }
@@ -893,11 +977,15 @@ func (this *QPalette) Alternatebase(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette13alternateBaseEv
     // invoke: const QBrush & alternateBase()
-    var ret0 = C.C_ZNK8QPalette13alternateBaseEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette13alternateBaseEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "alternateBase", args)
   }
@@ -918,11 +1006,15 @@ func (this *QPalette) Highlight(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPalette9highlightEv
     // invoke: const QBrush & highlight()
-    var ret0 = C.C_ZNK8QPalette9highlightEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPalette9highlightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "const QBrush &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPalette", "highlight", args)
   }

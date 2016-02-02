@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qpluginloader.h
 // dst-file: /src/core/qpluginloader.go
 //
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QPluginLoader)=1
 type QPluginLoader struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // load()
@@ -89,11 +89,15 @@ func (this *QPluginLoader) Load(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN13QPluginLoader4loadEv
     // invoke: bool load()
-    var ret0 = C.C_ZN13QPluginLoader4loadEv(this.qclsinst)
+    var ret0 = C.C_ZN13QPluginLoader4loadEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPluginLoader", "load", args)
   }
@@ -114,11 +118,15 @@ func (this *QPluginLoader) Errorstring(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QPluginLoader11errorStringEv
     // invoke: QString errorString()
-    var ret0 = C.C_ZNK13QPluginLoader11errorStringEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QPluginLoader11errorStringEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPluginLoader", "errorString", args)
   }
@@ -139,11 +147,15 @@ func (this *QPluginLoader) Unload(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN13QPluginLoader6unloadEv
     // invoke: bool unload()
-    var ret0 = C.C_ZN13QPluginLoader6unloadEv(this.qclsinst)
+    var ret0 = C.C_ZN13QPluginLoader6unloadEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPluginLoader", "unload", args)
   }
@@ -169,28 +181,28 @@ func NewQPluginLoader(args ...interface{}) *QPluginLoader {
   case 0:
     // invoke: _ZN13QPluginLoaderC1EP7QObject
     // invoke: void QPluginLoader(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QPluginLoaderC2EP7QObject(arg0)
-    return &QPluginLoader{qclsinst:qthis}
+    return &QPluginLoader{Qclsinst:qthis}
   case 1:
     // invoke: _ZN13QPluginLoaderC1ERK7QStringP7QObject
     // invoke: void QPluginLoader(const class QString &, class QObject *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QPluginLoaderC2ERK7QStringP7QObject(arg0, arg1)
-    return &QPluginLoader{qclsinst:qthis}
+    return &QPluginLoader{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPluginLoader", "QPluginLoader", args)
   }
 
-  return nil // QPluginLoader{qclsinst:qthis}
+  return nil // QPluginLoader{Qclsinst:qthis}
 }
 
 // ~QPluginLoader()
@@ -206,7 +218,7 @@ func (this *QPluginLoader) Freeqpluginloader(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QPluginLoaderD0Ev
     // invoke: void ~QPluginLoader()
-    C.C_ZN13QPluginLoaderD2Ev(this.qclsinst)
+    C.C_ZN13QPluginLoaderD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "~QPluginLoader", args)
   }
@@ -228,9 +240,9 @@ func (this *QPluginLoader) Setfilename(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QPluginLoader11setFileNameERK7QString
     // invoke: void setFileName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QPluginLoader11setFileNameERK7QString(this.qclsinst, arg0)
+    C.C_ZN13QPluginLoader11setFileNameERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPluginLoader", "setFileName", args)
   }
@@ -251,11 +263,15 @@ func (this *QPluginLoader) Isloaded(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QPluginLoader8isLoadedEv
     // invoke: bool isLoaded()
-    var ret0 = C.C_ZNK13QPluginLoader8isLoadedEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QPluginLoader8isLoadedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPluginLoader", "isLoaded", args)
   }
@@ -276,11 +292,15 @@ func (this *QPluginLoader) Instance(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN13QPluginLoader8instanceEv
     // invoke: QObject * instance()
-    var ret0 = C.C_ZN13QPluginLoader8instanceEv(this.qclsinst)
+    var ret0 = C.C_ZN13QPluginLoader8instanceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QObject{}) // "QObject *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPluginLoader", "instance", args)
   }
@@ -301,11 +321,15 @@ func (this *QPluginLoader) Filename(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QPluginLoader8fileNameEv
     // invoke: QString fileName()
-    var ret0 = C.C_ZNK13QPluginLoader8fileNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QPluginLoader8fileNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPluginLoader", "fileName", args)
   }
@@ -326,7 +350,7 @@ func (this *QPluginLoader) Loadhints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPluginLoader9loadHintsEv
     // invoke: QLibrary::LoadHints loadHints()
-    C.C_ZNK13QPluginLoader9loadHintsEv(this.qclsinst)
+    C.C_ZNK13QPluginLoader9loadHintsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "loadHints", args)
   }
@@ -347,7 +371,7 @@ func (this *QPluginLoader) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPluginLoader10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK13QPluginLoader10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QPluginLoader10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "metaObject", args)
   }
@@ -368,7 +392,7 @@ func (this *QPluginLoader) Metadata(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPluginLoader8metaDataEv
     // invoke: QJsonObject metaData()
-    C.C_ZNK13QPluginLoader8metaDataEv(this.qclsinst)
+    C.C_ZNK13QPluginLoader8metaDataEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "metaData", args)
   }

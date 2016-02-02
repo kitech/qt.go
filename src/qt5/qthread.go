@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.go
 //
@@ -93,7 +93,7 @@ func init() {
 // class sizeof(QThread)=1
 type QThread struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _started QThread_started_signal;
 //  _finished QThread_finished_signal;
 }
@@ -111,7 +111,7 @@ func (this *QThread) Eventdispatcher(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QThread15eventDispatcherEv
     // invoke: QAbstractEventDispatcher * eventDispatcher()
-    C.C_ZNK7QThread15eventDispatcherEv(this.qclsinst)
+    C.C_ZNK7QThread15eventDispatcherEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThread", "eventDispatcher", args)
   }
@@ -136,7 +136,11 @@ func (this *QThread) Currentthread_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QThread{}) // "QThread *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThread", "currentThread", args)
   }
@@ -157,7 +161,7 @@ func (this *QThread) Terminate(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThread9terminateEv
     // invoke: void terminate()
-    C.C_ZN7QThread9terminateEv(this.qclsinst)
+    C.C_ZN7QThread9terminateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThread", "terminate", args)
   }
@@ -179,7 +183,7 @@ func (this *QThread) Sleep_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThread5sleepEm
     // invoke: void sleep(unsigned long)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     C.C_ZN7QThread5sleepEm(arg0)
   default:
@@ -203,7 +207,7 @@ func (this *QThread) Msleep_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThread6msleepEm
     // invoke: void msleep(unsigned long)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     C.C_ZN7QThread6msleepEm(arg0)
   default:
@@ -226,11 +230,15 @@ func (this *QThread) Stacksize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QThread9stackSizeEv
     // invoke: uint stackSize()
-    var ret0 = C.C_ZNK7QThread9stackSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QThread9stackSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "uint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThread", "stackSize", args)
   }
@@ -252,13 +260,17 @@ func (this *QThread) Event(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QThread5eventEP6QEvent
     // invoke: bool event(class QEvent *)
-    var arg0 = args[0].(QEvent).qclsinst
+    var arg0 = args[0].(*QEvent).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN7QThread5eventEP6QEvent(this.qclsinst, arg0)
+    var ret0 = C.C_ZN7QThread5eventEP6QEvent(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThread", "event", args)
   }
@@ -280,7 +292,7 @@ func (this *QThread) Usleep_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThread6usleepEm
     // invoke: void usleep(unsigned long)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     C.C_ZN7QThread6usleepEm(arg0)
   default:
@@ -303,7 +315,7 @@ func (this *QThread) Quit(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThread4quitEv
     // invoke: void quit()
-    C.C_ZN7QThread4quitEv(this.qclsinst)
+    C.C_ZN7QThread4quitEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThread", "quit", args)
   }
@@ -324,11 +336,15 @@ func (this *QThread) Looplevel(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QThread9loopLevelEv
     // invoke: int loopLevel()
-    var ret0 = C.C_ZNK7QThread9loopLevelEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QThread9loopLevelEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThread", "loopLevel", args)
   }
@@ -349,7 +365,7 @@ func (this *QThread) Priority(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QThread8priorityEv
     // invoke: QThread::Priority priority()
-    C.C_ZNK7QThread8priorityEv(this.qclsinst)
+    C.C_ZNK7QThread8priorityEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThread", "priority", args)
   }
@@ -370,11 +386,15 @@ func (this *QThread) Isfinished(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QThread10isFinishedEv
     // invoke: bool isFinished()
-    var ret0 = C.C_ZNK7QThread10isFinishedEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QThread10isFinishedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThread", "isFinished", args)
   }
@@ -396,9 +416,9 @@ func (this *QThread) Exit(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThread4exitEi
     // invoke: void exit(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QThread4exitEi(this.qclsinst, arg0)
+    C.C_ZN7QThread4exitEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QThread", "exit", args)
   }
@@ -420,9 +440,9 @@ func (this *QThread) Seteventdispatcher(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher
     // invoke: void setEventDispatcher(class QAbstractEventDispatcher *)
-    var arg0 = args[0].(QAbstractEventDispatcher).qclsinst
+    var arg0 = args[0].(*QAbstractEventDispatcher).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher(this.qclsinst, arg0)
+    C.C_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QThread", "setEventDispatcher", args)
   }
@@ -444,9 +464,9 @@ func (this *QThread) Setstacksize(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThread12setStackSizeEj
     // invoke: void setStackSize(uint)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QThread12setStackSizeEj(this.qclsinst, arg0)
+    C.C_ZN7QThread12setStackSizeEj(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QThread", "setStackSize", args)
   }
@@ -467,7 +487,7 @@ func (this *QThread) Freeqthread(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThreadD0Ev
     // invoke: void ~QThread()
-    C.C_ZN7QThreadD2Ev(this.qclsinst)
+    C.C_ZN7QThreadD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThread", "~QThread", args)
   }
@@ -488,11 +508,15 @@ func (this *QThread) Isrunning(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QThread9isRunningEv
     // invoke: bool isRunning()
-    var ret0 = C.C_ZNK7QThread9isRunningEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QThread9isRunningEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThread", "isRunning", args)
   }
@@ -513,11 +537,15 @@ func (this *QThread) Isinterruptionrequested(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK7QThread23isInterruptionRequestedEv
     // invoke: bool isInterruptionRequested()
-    var ret0 = C.C_ZNK7QThread23isInterruptionRequestedEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QThread23isInterruptionRequestedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThread", "isInterruptionRequested", args)
   }
@@ -538,7 +566,7 @@ func (this *QThread) Requestinterruption(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThread19requestInterruptionEv
     // invoke: void requestInterruption()
-    C.C_ZN7QThread19requestInterruptionEv(this.qclsinst)
+    C.C_ZN7QThread19requestInterruptionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThread", "requestInterruption", args)
   }
@@ -560,17 +588,17 @@ func NewQThread(args ...interface{}) *QThread {
   case 0:
     // invoke: _ZN7QThreadC1EP7QObject
     // invoke: void QThread(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QThreadC2EP7QObject(arg0)
-    return &QThread{qclsinst:qthis}
+    return &QThread{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QThread", "QThread", args)
   }
 
-  return nil // QThread{qclsinst:qthis}
+  return nil // QThread{Qclsinst:qthis}
 }
 
 // wait(unsigned long)
@@ -587,13 +615,17 @@ func (this *QThread) Wait(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QThread4waitEm
     // invoke: bool wait(unsigned long)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN7QThread4waitEm(this.qclsinst, arg0)
+    var ret0 = C.C_ZN7QThread4waitEm(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThread", "wait", args)
   }
@@ -614,7 +646,7 @@ func (this *QThread) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QThread10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK7QThread10metaObjectEv(this.qclsinst)
+    C.C_ZNK7QThread10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThread", "metaObject", args)
   }
@@ -639,7 +671,11 @@ func (this *QThread) Idealthreadcount_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThread", "idealThreadCount", args)
   }

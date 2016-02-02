@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qfiledevice.h
 // dst-file: /src/core/qfiledevice.go
 //
@@ -75,7 +75,7 @@ func init() {
 // class sizeof(QFileDevice)=1
 type QFileDevice struct {
   /*qbase*/ QIODevice;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // pos()
@@ -91,11 +91,15 @@ func (this *QFileDevice) Pos(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QFileDevice3posEv
     // invoke: qint64 pos()
-    var ret0 = C.C_ZNK11QFileDevice3posEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QFileDevice3posEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileDevice", "pos", args)
   }
@@ -116,11 +120,15 @@ func (this *QFileDevice) Flush(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QFileDevice5flushEv
     // invoke: bool flush()
-    var ret0 = C.C_ZN11QFileDevice5flushEv(this.qclsinst)
+    var ret0 = C.C_ZN11QFileDevice5flushEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileDevice", "flush", args)
   }
@@ -141,7 +149,7 @@ func (this *QFileDevice) Close(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDevice5closeEv
     // invoke: void close()
-    C.C_ZN11QFileDevice5closeEv(this.qclsinst)
+    C.C_ZN11QFileDevice5closeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "close", args)
   }
@@ -163,13 +171,17 @@ func (this *QFileDevice) Seek(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QFileDevice4seekEx
     // invoke: bool seek(qint64)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QFileDevice4seekEx(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QFileDevice4seekEx(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileDevice", "seek", args)
   }
@@ -190,11 +202,15 @@ func (this *QFileDevice) Issequential(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QFileDevice12isSequentialEv
     // invoke: bool isSequential()
-    var ret0 = C.C_ZNK11QFileDevice12isSequentialEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QFileDevice12isSequentialEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileDevice", "isSequential", args)
   }
@@ -215,11 +231,15 @@ func (this *QFileDevice) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QFileDevice4sizeEv
     // invoke: qint64 size()
-    var ret0 = C.C_ZNK11QFileDevice4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QFileDevice4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileDevice", "size", args)
   }
@@ -240,7 +260,7 @@ func (this *QFileDevice) Unseterror(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDevice10unsetErrorEv
     // invoke: void unsetError()
-    C.C_ZN11QFileDevice10unsetErrorEv(this.qclsinst)
+    C.C_ZN11QFileDevice10unsetErrorEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "unsetError", args)
   }
@@ -261,11 +281,15 @@ func (this *QFileDevice) Handle(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QFileDevice6handleEv
     // invoke: int handle()
-    var ret0 = C.C_ZNK11QFileDevice6handleEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QFileDevice6handleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileDevice", "handle", args)
   }
@@ -286,11 +310,15 @@ func (this *QFileDevice) Filename(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QFileDevice8fileNameEv
     // invoke: QString fileName()
-    var ret0 = C.C_ZNK11QFileDevice8fileNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QFileDevice8fileNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileDevice", "fileName", args)
   }
@@ -311,7 +339,7 @@ func (this *QFileDevice) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QFileDevice10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QFileDevice10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "metaObject", args)
   }
@@ -333,13 +361,17 @@ func (this *QFileDevice) Resize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QFileDevice6resizeEx
     // invoke: bool resize(qint64)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QFileDevice6resizeEx(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QFileDevice6resizeEx(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileDevice", "resize", args)
   }
@@ -360,7 +392,7 @@ func (this *QFileDevice) Permissions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice11permissionsEv
     // invoke: Permissions permissions()
-    C.C_ZNK11QFileDevice11permissionsEv(this.qclsinst)
+    C.C_ZNK11QFileDevice11permissionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "permissions", args)
   }
@@ -386,11 +418,15 @@ func (this *QFileDevice) Unmap(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var ret0 = C.C_ZN11QFileDevice5unmapEPh(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QFileDevice5unmapEPh(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileDevice", "unmap", args)
   }
@@ -411,11 +447,15 @@ func (this *QFileDevice) Atend(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QFileDevice5atEndEv
     // invoke: bool atEnd()
-    var ret0 = C.C_ZNK11QFileDevice5atEndEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QFileDevice5atEndEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileDevice", "atEnd", args)
   }
@@ -436,7 +476,7 @@ func (this *QFileDevice) Freeqfiledevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDeviceD0Ev
     // invoke: void ~QFileDevice()
-    C.C_ZN11QFileDeviceD2Ev(this.qclsinst)
+    C.C_ZN11QFileDeviceD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "~QFileDevice", args)
   }
@@ -457,7 +497,7 @@ func (this *QFileDevice) Error(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice5errorEv
     // invoke: QFileDevice::FileError error()
-    C.C_ZNK11QFileDevice5errorEv(this.qclsinst)
+    C.C_ZNK11QFileDevice5errorEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "error", args)
   }

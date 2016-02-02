@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qoffscreensurface.h
 // dst-file: /src/gui/qoffscreensurface.go
 //
@@ -71,7 +71,7 @@ func init() {
 // class sizeof(QOffscreenSurface)=1
 type QOffscreenSurface struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _screenChanged QOffscreenSurface_screenChanged_signal;
 }
 
@@ -89,17 +89,17 @@ func NewQOffscreenSurface(args ...interface{}) *QOffscreenSurface {
   case 0:
     // invoke: _ZN17QOffscreenSurfaceC1EP7QScreen
     // invoke: void QOffscreenSurface(class QScreen *)
-    var arg0 = args[0].(QScreen).qclsinst
+    var arg0 = args[0].(*QScreen).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QOffscreenSurfaceC2EP7QScreen(arg0)
-    return &QOffscreenSurface{qclsinst:qthis}
+    return &QOffscreenSurface{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "QOffscreenSurface", args)
   }
 
-  return nil // QOffscreenSurface{qclsinst:qthis}
+  return nil // QOffscreenSurface{Qclsinst:qthis}
 }
 
 // surfaceType()
@@ -115,7 +115,7 @@ func (this *QOffscreenSurface) Surfacetype(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QOffscreenSurface11surfaceTypeEv
     // invoke: QSurface::SurfaceType surfaceType()
-    C.C_ZNK17QOffscreenSurface11surfaceTypeEv(this.qclsinst)
+    C.C_ZNK17QOffscreenSurface11surfaceTypeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "surfaceType", args)
   }
@@ -136,11 +136,15 @@ func (this *QOffscreenSurface) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QOffscreenSurface4sizeEv
     // invoke: QSize size()
-    var ret0 = C.C_ZNK17QOffscreenSurface4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QOffscreenSurface4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "size", args)
   }
@@ -162,9 +166,9 @@ func (this *QOffscreenSurface) Setscreen(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOffscreenSurface9setScreenEP7QScreen
     // invoke: void setScreen(class QScreen *)
-    var arg0 = args[0].(QScreen).qclsinst
+    var arg0 = args[0].(*QScreen).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QOffscreenSurface9setScreenEP7QScreen(this.qclsinst, arg0)
+    C.C_ZN17QOffscreenSurface9setScreenEP7QScreen(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "setScreen", args)
   }
@@ -186,9 +190,9 @@ func (this *QOffscreenSurface) Setformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat
     // invoke: void setFormat(const class QSurfaceFormat &)
-    var arg0 = args[0].(QSurfaceFormat).qclsinst
+    var arg0 = args[0].(*QSurfaceFormat).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat(this.qclsinst, arg0)
+    C.C_ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "setFormat", args)
   }
@@ -209,7 +213,7 @@ func (this *QOffscreenSurface) Create(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOffscreenSurface6createEv
     // invoke: void create()
-    C.C_ZN17QOffscreenSurface6createEv(this.qclsinst)
+    C.C_ZN17QOffscreenSurface6createEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "create", args)
   }
@@ -230,11 +234,15 @@ func (this *QOffscreenSurface) Format(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QOffscreenSurface6formatEv
     // invoke: QSurfaceFormat format()
-    var ret0 = C.C_ZNK17QOffscreenSurface6formatEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QOffscreenSurface6formatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSurfaceFormat{}) // "QSurfaceFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "format", args)
   }
@@ -255,7 +263,7 @@ func (this *QOffscreenSurface) Destroy(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOffscreenSurface7destroyEv
     // invoke: void destroy()
-    C.C_ZN17QOffscreenSurface7destroyEv(this.qclsinst)
+    C.C_ZN17QOffscreenSurface7destroyEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "destroy", args)
   }
@@ -276,7 +284,7 @@ func (this *QOffscreenSurface) Handle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QOffscreenSurface6handleEv
     // invoke: QPlatformOffscreenSurface * handle()
-    C.C_ZNK17QOffscreenSurface6handleEv(this.qclsinst)
+    C.C_ZNK17QOffscreenSurface6handleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "handle", args)
   }
@@ -297,11 +305,15 @@ func (this *QOffscreenSurface) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QOffscreenSurface7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK17QOffscreenSurface7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QOffscreenSurface7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "isValid", args)
   }
@@ -322,11 +334,15 @@ func (this *QOffscreenSurface) Screen(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QOffscreenSurface6screenEv
     // invoke: QScreen * screen()
-    var ret0 = C.C_ZNK17QOffscreenSurface6screenEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QOffscreenSurface6screenEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QScreen{}) // "QScreen *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "screen", args)
   }
@@ -347,7 +363,7 @@ func (this *QOffscreenSurface) Freeqoffscreensurface(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOffscreenSurfaceD0Ev
     // invoke: void ~QOffscreenSurface()
-    C.C_ZN17QOffscreenSurfaceD2Ev(this.qclsinst)
+    C.C_ZN17QOffscreenSurfaceD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "~QOffscreenSurface", args)
   }
@@ -368,7 +384,7 @@ func (this *QOffscreenSurface) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QOffscreenSurface10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK17QOffscreenSurface10metaObjectEv(this.qclsinst)
+    C.C_ZNK17QOffscreenSurface10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "metaObject", args)
   }
@@ -389,11 +405,15 @@ func (this *QOffscreenSurface) Requestedformat(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK17QOffscreenSurface15requestedFormatEv
     // invoke: QSurfaceFormat requestedFormat()
-    var ret0 = C.C_ZNK17QOffscreenSurface15requestedFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QOffscreenSurface15requestedFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSurfaceFormat{}) // "QSurfaceFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "requestedFormat", args)
   }

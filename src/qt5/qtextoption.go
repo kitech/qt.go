@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qtextoption.h
 // dst-file: /src/gui/qtextoption.go
 //
@@ -69,7 +69,7 @@ func init() {
 // class sizeof(QTextOption)=32
 type QTextOption struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // ~QTextOption()
@@ -85,7 +85,7 @@ func (this *QTextOption) Freeqtextoption(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextOptionD0Ev
     // invoke: void ~QTextOption()
-    C.C_ZN11QTextOptionD2Ev(this.qclsinst)
+    C.C_ZN11QTextOptionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextOption", "~QTextOption", args)
   }
@@ -109,7 +109,7 @@ func (this *QTextOption) Setusedesignmetrics(args ...interface{}) () {
     // invoke: void setUseDesignMetrics(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QTextOption19setUseDesignMetricsEb(this.qclsinst, arg0)
+    C.C_ZN11QTextOption19setUseDesignMetricsEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextOption", "setUseDesignMetrics", args)
   }
@@ -130,11 +130,15 @@ func (this *QTextOption) Usedesignmetrics(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK11QTextOption16useDesignMetricsEv
     // invoke: bool useDesignMetrics()
-    var ret0 = C.C_ZNK11QTextOption16useDesignMetricsEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextOption16useDesignMetricsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextOption", "useDesignMetrics", args)
   }
@@ -156,9 +160,9 @@ func (this *QTextOption) Settabstop(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextOption10setTabStopEd
     // invoke: void setTabStop(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QTextOption10setTabStopEd(this.qclsinst, arg0)
+    C.C_ZN11QTextOption10setTabStopEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextOption", "setTabStop", args)
   }
@@ -179,7 +183,7 @@ func (this *QTextOption) Tabs(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextOption4tabsEv
     // invoke: QList<QTextOption::Tab> tabs()
-    C.C_ZNK11QTextOption4tabsEv(this.qclsinst)
+    C.C_ZNK11QTextOption4tabsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextOption", "tabs", args)
   }
@@ -200,11 +204,15 @@ func (this *QTextOption) Tabstop(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextOption7tabStopEv
     // invoke: qreal tabStop()
-    var ret0 = C.C_ZNK11QTextOption7tabStopEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextOption7tabStopEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextOption", "tabStop", args)
   }
@@ -225,7 +233,7 @@ func (this *QTextOption) Tabarray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextOption8tabArrayEv
     // invoke: QList<qreal> tabArray()
-    C.C_ZNK11QTextOption8tabArrayEv(this.qclsinst)
+    C.C_ZNK11QTextOption8tabArrayEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextOption", "tabArray", args)
   }
@@ -246,7 +254,7 @@ func (this *QTextOption) Flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextOption5flagsEv
     // invoke: Flags flags()
-    C.C_ZNK11QTextOption5flagsEv(this.qclsinst)
+    C.C_ZNK11QTextOption5flagsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextOption", "flags", args)
   }
@@ -270,24 +278,24 @@ func NewQTextOption(args ...interface{}) *QTextOption {
   case 0:
     // invoke: _ZN11QTextOptionC1ERKS_
     // invoke: void QTextOption(const class QTextOption &)
-    var arg0 = args[0].(QTextOption).qclsinst
+    var arg0 = args[0].(*QTextOption).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextOptionC2ERKS_(arg0)
-    return &QTextOption{qclsinst:qthis}
+    return &QTextOption{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QTextOptionC1Ev
     // invoke: void QTextOption()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextOptionC2Ev()
-    return &QTextOption{qclsinst:qthis}
+    return &QTextOption{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextOption", "QTextOption", args)
   }
 
-  return nil // QTextOption{qclsinst:qthis}
+  return nil // QTextOption{Qclsinst:qthis}
 }
 
 // wrapMode()
@@ -303,7 +311,7 @@ func (this *QTextOption) Wrapmode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextOption8wrapModeEv
     // invoke: QTextOption::WrapMode wrapMode()
-    C.C_ZNK11QTextOption8wrapModeEv(this.qclsinst)
+    C.C_ZNK11QTextOption8wrapModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextOption", "wrapMode", args)
   }
@@ -324,7 +332,7 @@ func (this *QTextOption) Alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextOption9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C.C_ZNK11QTextOption9alignmentEv(this.qclsinst)
+    C.C_ZNK11QTextOption9alignmentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextOption", "alignment", args)
   }
@@ -345,7 +353,7 @@ func (this *QTextOption) Textdirection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextOption13textDirectionEv
     // invoke: Qt::LayoutDirection textDirection()
-    C.C_ZNK11QTextOption13textDirectionEv(this.qclsinst)
+    C.C_ZNK11QTextOption13textDirectionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextOption", "textDirection", args)
   }

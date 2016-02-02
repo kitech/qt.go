@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.go
 //
@@ -55,7 +55,7 @@ func init() {
 // class sizeof(QClipboard)=1
 type QClipboard struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _changed QClipboard_changed_signal;
 //  _findBufferChanged QClipboard_findBufferChanged_signal;
 //  _selectionChanged QClipboard_selectionChanged_signal;
@@ -75,11 +75,15 @@ func (this *QClipboard) Ownsclipboard(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QClipboard13ownsClipboardEv
     // invoke: bool ownsClipboard()
-    var ret0 = C.C_ZNK10QClipboard13ownsClipboardEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QClipboard13ownsClipboardEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QClipboard", "ownsClipboard", args)
   }
@@ -100,11 +104,15 @@ func (this *QClipboard) Supportsfindbuffer(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK10QClipboard18supportsFindBufferEv
     // invoke: bool supportsFindBuffer()
-    var ret0 = C.C_ZNK10QClipboard18supportsFindBufferEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QClipboard18supportsFindBufferEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QClipboard", "supportsFindBuffer", args)
   }
@@ -125,11 +133,15 @@ func (this *QClipboard) Ownsfindbuffer(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QClipboard14ownsFindBufferEv
     // invoke: bool ownsFindBuffer()
-    var ret0 = C.C_ZNK10QClipboard14ownsFindBufferEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QClipboard14ownsFindBufferEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QClipboard", "ownsFindBuffer", args)
   }
@@ -150,11 +162,15 @@ func (this *QClipboard) Supportsselection(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK10QClipboard17supportsSelectionEv
     // invoke: bool supportsSelection()
-    var ret0 = C.C_ZNK10QClipboard17supportsSelectionEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QClipboard17supportsSelectionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QClipboard", "supportsSelection", args)
   }
@@ -175,7 +191,7 @@ func (this *QClipboard) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QClipboard10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QClipboard10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "metaObject", args)
   }
@@ -196,11 +212,15 @@ func (this *QClipboard) Ownsselection(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QClipboard13ownsSelectionEv
     // invoke: bool ownsSelection()
-    var ret0 = C.C_ZNK10QClipboard13ownsSelectionEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QClipboard13ownsSelectionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QClipboard", "ownsSelection", args)
   }

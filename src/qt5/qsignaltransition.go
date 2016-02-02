@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qsignaltransition.h
 // dst-file: /src/core/qsignaltransition.go
 //
@@ -59,7 +59,7 @@ func init() {
 // class sizeof(QSignalTransition)=1
 type QSignalTransition struct {
   /*qbase*/ QAbstractTransition;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _senderObjectChanged QSignalTransition_senderObjectChanged_signal;
 //  _signalChanged QSignalTransition_signalChanged_signal;
 }
@@ -77,11 +77,15 @@ func (this *QSignalTransition) Signal(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QSignalTransition6signalEv
     // invoke: QByteArray signal()
-    var ret0 = C.C_ZNK17QSignalTransition6signalEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QSignalTransition6signalEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSignalTransition", "signal", args)
   }
@@ -102,7 +106,7 @@ func (this *QSignalTransition) Freeqsignaltransition(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QSignalTransitionD0Ev
     // invoke: void ~QSignalTransition()
-    C.C_ZN17QSignalTransitionD2Ev(this.qclsinst)
+    C.C_ZN17QSignalTransitionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSignalTransition", "~QSignalTransition", args)
   }
@@ -129,32 +133,32 @@ func NewQSignalTransition(args ...interface{}) *QSignalTransition {
   case 0:
     // invoke: _ZN17QSignalTransitionC1EP6QState
     // invoke: void QSignalTransition(class QState *)
-    var arg0 = args[0].(QState).qclsinst
+    var arg0 = args[0].(*QState).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QSignalTransitionC2EP6QState(arg0)
-    return &QSignalTransition{qclsinst:qthis}
+    return &QSignalTransition{Qclsinst:qthis}
   case 1:
     // invoke: _ZN17QSignalTransitionC1EPK7QObjectPKcP6QState
     // invoke: void QSignalTransition(const class QObject *, const char *, class QState *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[1][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    var arg2 = args[2].(QState).qclsinst
+    var arg2 = args[2].(*QState).Qclsinst
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QSignalTransitionC2EPK7QObjectPKcP6QState(arg0, arg1, arg2)
-    return &QSignalTransition{qclsinst:qthis}
+    return &QSignalTransition{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSignalTransition", "QSignalTransition", args)
   }
 
-  return nil // QSignalTransition{qclsinst:qthis}
+  return nil // QSignalTransition{Qclsinst:qthis}
 }
 
 // metaObject()
@@ -170,7 +174,7 @@ func (this *QSignalTransition) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QSignalTransition10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK17QSignalTransition10metaObjectEv(this.qclsinst)
+    C.C_ZNK17QSignalTransition10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSignalTransition", "metaObject", args)
   }
@@ -192,9 +196,9 @@ func (this *QSignalTransition) Setsenderobject(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QSignalTransition15setSenderObjectEPK7QObject
     // invoke: void setSenderObject(const class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QSignalTransition15setSenderObjectEPK7QObject(this.qclsinst, arg0)
+    C.C_ZN17QSignalTransition15setSenderObjectEPK7QObject(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSignalTransition", "setSenderObject", args)
   }
@@ -215,11 +219,15 @@ func (this *QSignalTransition) Senderobject(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK17QSignalTransition12senderObjectEv
     // invoke: QObject * senderObject()
-    var ret0 = C.C_ZNK17QSignalTransition12senderObjectEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QSignalTransition12senderObjectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QObject{}) // "QObject *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSignalTransition", "senderObject", args)
   }
@@ -241,9 +249,9 @@ func (this *QSignalTransition) Setsignal(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QSignalTransition9setSignalERK10QByteArray
     // invoke: void setSignal(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QSignalTransition9setSignalERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN17QSignalTransition9setSignalERK10QByteArray(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSignalTransition", "setSignal", args)
   }

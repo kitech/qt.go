@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.go
 //
@@ -63,7 +63,7 @@ func init() {
 // class sizeof(QOpenGLWindow)=1
 type QOpenGLWindow struct {
   /*qbase*/ QPaintDeviceWindow;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _frameSwapped QOpenGLWindow_frameSwapped_signal;
 }
 
@@ -80,7 +80,7 @@ func (this *QOpenGLWindow) Updatebehavior(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow14updateBehaviorEv
     // invoke: QOpenGLWindow::UpdateBehavior updateBehavior()
-    C.C_ZNK13QOpenGLWindow14updateBehaviorEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWindow14updateBehaviorEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "updateBehavior", args)
   }
@@ -101,7 +101,7 @@ func (this *QOpenGLWindow) Sharecontext(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow12shareContextEv
     // invoke: QOpenGLContext * shareContext()
-    C.C_ZNK13QOpenGLWindow12shareContextEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWindow12shareContextEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "shareContext", args)
   }
@@ -122,7 +122,7 @@ func (this *QOpenGLWindow) Donecurrent(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWindow11doneCurrentEv
     // invoke: void doneCurrent()
-    C.C_ZN13QOpenGLWindow11doneCurrentEv(this.qclsinst)
+    C.C_ZN13QOpenGLWindow11doneCurrentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "doneCurrent", args)
   }
@@ -143,11 +143,15 @@ func (this *QOpenGLWindow) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QOpenGLWindow7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK13QOpenGLWindow7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QOpenGLWindow7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "isValid", args)
   }
@@ -168,11 +172,15 @@ func (this *QOpenGLWindow) Defaultframebufferobject(args ...interface{}) (ret in
   case 0:
     // invoke: _ZNK13QOpenGLWindow24defaultFramebufferObjectEv
     // invoke: GLuint defaultFramebufferObject()
-    var ret0 = C.C_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "GLuint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "defaultFramebufferObject", args)
   }
@@ -193,7 +201,7 @@ func (this *QOpenGLWindow) Freeqopenglwindow(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWindowD0Ev
     // invoke: void ~QOpenGLWindow()
-    C.C_ZN13QOpenGLWindowD2Ev(this.qclsinst)
+    C.C_ZN13QOpenGLWindowD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "~QOpenGLWindow", args)
   }
@@ -214,7 +222,7 @@ func (this *QOpenGLWindow) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK13QOpenGLWindow10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWindow10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "metaObject", args)
   }
@@ -235,7 +243,7 @@ func (this *QOpenGLWindow) Makecurrent(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWindow11makeCurrentEv
     // invoke: void makeCurrent()
-    C.C_ZN13QOpenGLWindow11makeCurrentEv(this.qclsinst)
+    C.C_ZN13QOpenGLWindow11makeCurrentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "makeCurrent", args)
   }
@@ -256,11 +264,15 @@ func (this *QOpenGLWindow) Grabframebuffer(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZN13QOpenGLWindow15grabFramebufferEv
     // invoke: QImage grabFramebuffer()
-    var ret0 = C.C_ZN13QOpenGLWindow15grabFramebufferEv(this.qclsinst)
+    var ret0 = C.C_ZN13QOpenGLWindow15grabFramebufferEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QImage{}) // "QImage"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "grabFramebuffer", args)
   }
@@ -281,7 +293,7 @@ func (this *QOpenGLWindow) Context(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow7contextEv
     // invoke: QOpenGLContext * context()
-    C.C_ZNK13QOpenGLWindow7contextEv(this.qclsinst)
+    C.C_ZNK13QOpenGLWindow7contextEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "context", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qsizegrip.h
 // dst-file: /src/widgets/qsizegrip.go
 //
@@ -53,7 +53,7 @@ func init() {
 // class sizeof(QSizeGrip)=1
 type QSizeGrip struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QSizeGrip(class QWidget *)
@@ -70,17 +70,17 @@ func NewQSizeGrip(args ...interface{}) *QSizeGrip {
   case 0:
     // invoke: _ZN9QSizeGripC1EP7QWidget
     // invoke: void QSizeGrip(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QSizeGripC2EP7QWidget(arg0)
-    return &QSizeGrip{qclsinst:qthis}
+    return &QSizeGrip{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSizeGrip", "QSizeGrip", args)
   }
 
-  return nil // QSizeGrip{qclsinst:qthis}
+  return nil // QSizeGrip{Qclsinst:qthis}
 }
 
 // sizeHint()
@@ -96,11 +96,15 @@ func (this *QSizeGrip) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QSizeGrip8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK9QSizeGrip8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QSizeGrip8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizeGrip", "sizeHint", args)
   }
@@ -121,7 +125,7 @@ func (this *QSizeGrip) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSizeGrip10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QSizeGrip10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QSizeGrip10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSizeGrip", "metaObject", args)
   }
@@ -145,7 +149,7 @@ func (this *QSizeGrip) Setvisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QSizeGrip10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN9QSizeGrip10setVisibleEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizeGrip", "setVisible", args)
   }
@@ -166,7 +170,7 @@ func (this *QSizeGrip) Freeqsizegrip(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSizeGripD0Ev
     // invoke: void ~QSizeGrip()
-    C.C_ZN9QSizeGripD2Ev(this.qclsinst)
+    C.C_ZN9QSizeGripD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSizeGrip", "~QSizeGrip", args)
   }

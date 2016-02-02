@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qmdisubwindow.h
 // dst-file: /src/widgets/qmdisubwindow.go
 //
@@ -79,7 +79,7 @@ func init() {
 // class sizeof(QMdiSubWindow)=1
 type QMdiSubWindow struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _aboutToActivate QMdiSubWindow_aboutToActivate_signal;
 //  _windowStateChanged QMdiSubWindow_windowStateChanged_signal;
 }
@@ -98,9 +98,9 @@ func (this *QMdiSubWindow) Setkeyboardpagestep(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QMdiSubWindow19setKeyboardPageStepEi
     // invoke: void setKeyboardPageStep(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QMdiSubWindow19setKeyboardPageStepEi(this.qclsinst, arg0)
+    C.C_ZN13QMdiSubWindow19setKeyboardPageStepEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "setKeyboardPageStep", args)
   }
@@ -121,7 +121,7 @@ func (this *QMdiSubWindow) Freeqmdisubwindow(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QMdiSubWindowD0Ev
     // invoke: void ~QMdiSubWindow()
-    C.C_ZN13QMdiSubWindowD2Ev(this.qclsinst)
+    C.C_ZN13QMdiSubWindowD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "~QMdiSubWindow", args)
   }
@@ -143,9 +143,9 @@ func (this *QMdiSubWindow) Setwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QMdiSubWindow9setWidgetEP7QWidget
     // invoke: void setWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QMdiSubWindow9setWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN13QMdiSubWindow9setWidgetEP7QWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "setWidget", args)
   }
@@ -166,11 +166,15 @@ func (this *QMdiSubWindow) Maximizedbuttonswidget(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK13QMdiSubWindow22maximizedButtonsWidgetEv
     // invoke: QWidget * maximizedButtonsWidget()
-    var ret0 = C.C_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "maximizedButtonsWidget", args)
   }
@@ -191,11 +195,15 @@ func (this *QMdiSubWindow) Mdiarea(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QMdiSubWindow7mdiAreaEv
     // invoke: QMdiArea * mdiArea()
-    var ret0 = C.C_ZNK13QMdiSubWindow7mdiAreaEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QMdiSubWindow7mdiAreaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMdiArea{}) // "QMdiArea *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "mdiArea", args)
   }
@@ -217,9 +225,9 @@ func (this *QMdiSubWindow) Setsystemmenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QMdiSubWindow13setSystemMenuEP5QMenu
     // invoke: void setSystemMenu(class QMenu *)
-    var arg0 = args[0].(QMenu).qclsinst
+    var arg0 = args[0].(*QMenu).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QMdiSubWindow13setSystemMenuEP5QMenu(this.qclsinst, arg0)
+    C.C_ZN13QMdiSubWindow13setSystemMenuEP5QMenu(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "setSystemMenu", args)
   }
@@ -240,11 +248,15 @@ func (this *QMdiSubWindow) Keyboardpagestep(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK13QMdiSubWindow16keyboardPageStepEv
     // invoke: int keyboardPageStep()
-    var ret0 = C.C_ZNK13QMdiSubWindow16keyboardPageStepEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QMdiSubWindow16keyboardPageStepEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "keyboardPageStep", args)
   }
@@ -266,9 +278,9 @@ func (this *QMdiSubWindow) Setkeyboardsinglestep(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QMdiSubWindow21setKeyboardSingleStepEi
     // invoke: void setKeyboardSingleStep(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QMdiSubWindow21setKeyboardSingleStepEi(this.qclsinst, arg0)
+    C.C_ZN13QMdiSubWindow21setKeyboardSingleStepEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "setKeyboardSingleStep", args)
   }
@@ -289,7 +301,7 @@ func (this *QMdiSubWindow) Showshaded(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QMdiSubWindow10showShadedEv
     // invoke: void showShaded()
-    C.C_ZN13QMdiSubWindow10showShadedEv(this.qclsinst)
+    C.C_ZN13QMdiSubWindow10showShadedEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "showShaded", args)
   }
@@ -310,11 +322,15 @@ func (this *QMdiSubWindow) Widget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QMdiSubWindow6widgetEv
     // invoke: QWidget * widget()
-    var ret0 = C.C_ZNK13QMdiSubWindow6widgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QMdiSubWindow6widgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "widget", args)
   }
@@ -335,11 +351,15 @@ func (this *QMdiSubWindow) Keyboardsinglestep(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK13QMdiSubWindow18keyboardSingleStepEv
     // invoke: int keyboardSingleStep()
-    var ret0 = C.C_ZNK13QMdiSubWindow18keyboardSingleStepEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QMdiSubWindow18keyboardSingleStepEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "keyboardSingleStep", args)
   }
@@ -360,11 +380,15 @@ func (this *QMdiSubWindow) Systemmenu(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QMdiSubWindow10systemMenuEv
     // invoke: QMenu * systemMenu()
-    var ret0 = C.C_ZNK13QMdiSubWindow10systemMenuEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QMdiSubWindow10systemMenuEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "systemMenu", args)
   }
@@ -385,7 +409,7 @@ func (this *QMdiSubWindow) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMdiSubWindow10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK13QMdiSubWindow10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QMdiSubWindow10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "metaObject", args)
   }
@@ -406,11 +430,15 @@ func (this *QMdiSubWindow) Isshaded(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QMdiSubWindow8isShadedEv
     // invoke: bool isShaded()
-    var ret0 = C.C_ZNK13QMdiSubWindow8isShadedEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QMdiSubWindow8isShadedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "isShaded", args)
   }
@@ -431,11 +459,15 @@ func (this *QMdiSubWindow) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QMdiSubWindow8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK13QMdiSubWindow8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QMdiSubWindow8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "sizeHint", args)
   }
@@ -456,11 +488,15 @@ func (this *QMdiSubWindow) Minimumsizehint(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK13QMdiSubWindow15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK13QMdiSubWindow15minimumSizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QMdiSubWindow15minimumSizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "minimumSizeHint", args)
   }
@@ -481,7 +517,7 @@ func (this *QMdiSubWindow) Showsystemmenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QMdiSubWindow14showSystemMenuEv
     // invoke: void showSystemMenu()
-    C.C_ZN13QMdiSubWindow14showSystemMenuEv(this.qclsinst)
+    C.C_ZN13QMdiSubWindow14showSystemMenuEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "showSystemMenu", args)
   }
@@ -502,11 +538,15 @@ func (this *QMdiSubWindow) Maximizedsystemmenuiconwidget(args ...interface{}) (r
   case 0:
     // invoke: _ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv
     // invoke: QWidget * maximizedSystemMenuIconWidget()
-    var ret0 = C.C_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "maximizedSystemMenuIconWidget", args)
   }

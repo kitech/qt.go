@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qshareddata.h
 // dst-file: /src/core/qshareddata.go
 //
@@ -47,7 +47,7 @@ func init() {
 // class sizeof(QSharedData)=1
 type QSharedData struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QSharedData()
@@ -69,21 +69,21 @@ func NewQSharedData(args ...interface{}) *QSharedData {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QSharedDataC2Ev()
-    return &QSharedData{qclsinst:qthis}
+    return &QSharedData{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QSharedDataC1ERKS_
     // invoke: void QSharedData(const class QSharedData &)
-    var arg0 = args[0].(QSharedData).qclsinst
+    var arg0 = args[0].(*QSharedData).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QSharedDataC2ERKS_(arg0)
-    return &QSharedData{qclsinst:qthis}
+    return &QSharedData{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSharedData", "QSharedData", args)
   }
 
-  return nil // QSharedData{qclsinst:qthis}
+  return nil // QSharedData{Qclsinst:qthis}
 }
 
 // <= body block end

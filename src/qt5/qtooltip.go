@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.go
 //
@@ -63,7 +63,7 @@ func init() {
 // class sizeof(QToolTip)=1
 type QToolTip struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // palette()
@@ -83,7 +83,11 @@ func (this *QToolTip) Palette_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPalette{}) // "QPalette"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolTip", "palette", args)
   }
@@ -129,7 +133,11 @@ func (this *QToolTip) Text_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolTip", "text", args)
   }
@@ -151,7 +159,7 @@ func (this *QToolTip) Setpalette_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip10setPaletteERK8QPalette
     // invoke: void setPalette(const class QPalette &)
-    var arg0 = args[0].(QPalette).qclsinst
+    var arg0 = args[0].(*QPalette).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN8QToolTip10setPaletteERK8QPalette(arg0)
   default:
@@ -190,37 +198,37 @@ func (this *QToolTip) Showtext_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect
     // invoke: void showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QRect).qclsinst
+    var arg3 = args[3].(*QRect).Qclsinst
     if false {fmt.Println(arg3)}
     C.C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti
     // invoke: void showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &, int)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QRect).qclsinst
+    var arg3 = args[3].(*QRect).Qclsinst
     if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(args[4].(int32))
+    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg4)}
     C.C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(arg0, arg1, arg2, arg3, arg4)
   case 2:
     // invoke: _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget
     // invoke: void showText(const class QPoint &, const class QString &, class QWidget *)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
     C.C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget(arg0, arg1, arg2)
   default:
@@ -247,7 +255,11 @@ func (this *QToolTip) Isvisible_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolTip", "isVisible", args)
   }
@@ -269,7 +281,7 @@ func (this *QToolTip) Setfont_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip7setFontERK5QFont
     // invoke: void setFont(const class QFont &)
-    var arg0 = args[0].(QFont).qclsinst
+    var arg0 = args[0].(*QFont).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN8QToolTip7setFontERK5QFont(arg0)
   default:
@@ -296,7 +308,11 @@ func (this *QToolTip) Font_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFont{}) // "QFont"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolTip", "font", args)
   }

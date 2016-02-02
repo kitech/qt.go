@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qarraydata.h
 // dst-file: /src/core/qarraydata.go
 //
@@ -53,7 +53,7 @@ func init() {
 // class sizeof(QArrayData)=1
 type QArrayData struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // detachFlags()
@@ -69,7 +69,7 @@ func (this *QArrayData) Detachflags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QArrayData11detachFlagsEv
     // invoke: AllocationOptions detachFlags()
-    C.C_ZNK10QArrayData11detachFlagsEv(this.qclsinst)
+    C.C_ZNK10QArrayData11detachFlagsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QArrayData", "detachFlags", args)
   }
@@ -90,7 +90,7 @@ func (this *QArrayData) Cloneflags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QArrayData10cloneFlagsEv
     // invoke: AllocationOptions cloneFlags()
-    C.C_ZNK10QArrayData10cloneFlagsEv(this.qclsinst)
+    C.C_ZNK10QArrayData10cloneFlagsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QArrayData", "cloneFlags", args)
   }
@@ -111,11 +111,15 @@ func (this *QArrayData) Data(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QArrayData4dataEv
     // invoke: void * data()
-    var ret0 = C.C_ZN10QArrayData4dataEv(this.qclsinst)
+    var ret0 = C.C_ZN10QArrayData4dataEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.VoidpTy() // "void *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QArrayData", "data", args)
   }
@@ -140,7 +144,11 @@ func (this *QArrayData) Sharednull_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QArrayData{}) // "QArrayData *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QArrayData", "sharedNull", args)
   }
@@ -161,11 +169,15 @@ func (this *QArrayData) Ismutable(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QArrayData9isMutableEv
     // invoke: bool isMutable()
-    var ret0 = C.C_ZNK10QArrayData9isMutableEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QArrayData9isMutableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QArrayData", "isMutable", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.go
 //
@@ -69,19 +69,19 @@ func init() {
 // class sizeof(QMutexLocker)=4
 type QMutexLocker struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QBasicMutex)=1
 type QBasicMutex struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QMutex)=1
 type QMutex struct {
   /*qbase*/ QBasicMutex;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // ~QMutexLocker()
@@ -97,7 +97,7 @@ func (this *QMutexLocker) Freeqmutexlocker(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMutexLockerD0Ev
     // invoke: void ~QMutexLocker()
-    C.C_ZN12QMutexLockerD2Ev(this.qclsinst)
+    C.C_ZN12QMutexLockerD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMutexLocker", "~QMutexLocker", args)
   }
@@ -118,7 +118,7 @@ func (this *QMutexLocker) Unlock(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMutexLocker6unlockEv
     // invoke: void unlock()
-    C.C_ZN12QMutexLocker6unlockEv(this.qclsinst)
+    C.C_ZN12QMutexLocker6unlockEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMutexLocker", "unlock", args)
   }
@@ -140,17 +140,17 @@ func NewQMutexLocker(args ...interface{}) *QMutexLocker {
   case 0:
     // invoke: _ZN12QMutexLockerC1EP11QBasicMutex
     // invoke: void QMutexLocker(class QBasicMutex *)
-    var arg0 = args[0].(QBasicMutex).qclsinst
+    var arg0 = args[0].(*QBasicMutex).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QMutexLockerC2EP11QBasicMutex(arg0)
-    return &QMutexLocker{qclsinst:qthis}
+    return &QMutexLocker{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMutexLocker", "QMutexLocker", args)
   }
 
-  return nil // QMutexLocker{qclsinst:qthis}
+  return nil // QMutexLocker{Qclsinst:qthis}
 }
 
 // mutex()
@@ -166,11 +166,15 @@ func (this *QMutexLocker) Mutex(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QMutexLocker5mutexEv
     // invoke: QMutex * mutex()
-    var ret0 = C.C_ZNK12QMutexLocker5mutexEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QMutexLocker5mutexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMutex{}) // "QMutex *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMutexLocker", "mutex", args)
   }
@@ -191,7 +195,7 @@ func (this *QMutexLocker) Relock(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMutexLocker6relockEv
     // invoke: void relock()
-    C.C_ZN12QMutexLocker6relockEv(this.qclsinst)
+    C.C_ZN12QMutexLocker6relockEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMutexLocker", "relock", args)
   }
@@ -212,7 +216,7 @@ func (this *QBasicMutex) Lock(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QBasicMutex4lockEv
     // invoke: void lock()
-    C.C_ZN11QBasicMutex4lockEv(this.qclsinst)
+    C.C_ZN11QBasicMutex4lockEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBasicMutex", "lock", args)
   }
@@ -233,7 +237,7 @@ func (this *QBasicMutex) Unlock(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QBasicMutex6unlockEv
     // invoke: void unlock()
-    C.C_ZN11QBasicMutex6unlockEv(this.qclsinst)
+    C.C_ZN11QBasicMutex6unlockEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBasicMutex", "unlock", args)
   }
@@ -254,11 +258,15 @@ func (this *QBasicMutex) Trylock(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QBasicMutex7tryLockEv
     // invoke: bool tryLock()
-    var ret0 = C.C_ZN11QBasicMutex7tryLockEv(this.qclsinst)
+    var ret0 = C.C_ZN11QBasicMutex7tryLockEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBasicMutex", "tryLock", args)
   }
@@ -279,11 +287,15 @@ func (this *QBasicMutex) Isrecursive(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QBasicMutex11isRecursiveEv
     // invoke: bool isRecursive()
-    var ret0 = C.C_ZN11QBasicMutex11isRecursiveEv(this.qclsinst)
+    var ret0 = C.C_ZN11QBasicMutex11isRecursiveEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBasicMutex", "isRecursive", args)
   }
@@ -304,7 +316,7 @@ func (this *QMutex) Lock(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMutex4lockEv
     // invoke: void lock()
-    C.C_ZN6QMutex4lockEv(this.qclsinst)
+    C.C_ZN6QMutex4lockEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMutex", "lock", args)
   }
@@ -325,7 +337,7 @@ func (this *QMutex) Freeqmutex(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMutexD0Ev
     // invoke: void ~QMutex()
-    C.C_ZN6QMutexD2Ev(this.qclsinst)
+    C.C_ZN6QMutexD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMutex", "~QMutex", args)
   }
@@ -346,7 +358,7 @@ func (this *QMutex) Unlock(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMutex6unlockEv
     // invoke: void unlock()
-    C.C_ZN6QMutex6unlockEv(this.qclsinst)
+    C.C_ZN6QMutex6unlockEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMutex", "unlock", args)
   }
@@ -368,13 +380,17 @@ func (this *QMutex) Trylock(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN6QMutex7tryLockEi
     // invoke: bool tryLock(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN6QMutex7tryLockEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN6QMutex7tryLockEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMutex", "tryLock", args)
   }

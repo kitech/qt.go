@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qbytearray.h
 // dst-file: /src/core/qbytearray.go
 //
@@ -301,19 +301,19 @@ func init() {
 // class sizeof(QByteRef)=16
 type QByteRef struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QByteArray)=8
 type QByteArray struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QByteArrayDataPtr)=8
 type QByteArrayDataPtr struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // detach()
@@ -329,7 +329,7 @@ func (this *QByteArray) Detach(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray6detachEv
     // invoke: void detach()
-    C.C_ZN10QByteArray6detachEv(this.qclsinst)
+    C.C_ZN10QByteArray6detachEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "detach", args)
   }
@@ -351,9 +351,9 @@ func (this *QByteArray) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray4swapERS_
     // invoke: void swap(class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray4swapERS_(this.qclsinst, arg0)
+    C.C_ZN10QByteArray4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "swap", args)
   }
@@ -377,17 +377,21 @@ func (this *QByteArray) Rightjustified(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray14rightJustifiedEicb
     // invoke: QByteArray rightJustified(int, char, _Bool)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
     var arg2 = C.bool(args[2].(bool))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK10QByteArray14rightJustifiedEicb(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK10QByteArray14rightJustifiedEicb(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "rightJustified", args)
   }
@@ -427,69 +431,89 @@ func (this *QByteArray) Insert(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QByteArray6insertEiRK7QString
     // invoke: QByteArray & insert(int, const class QString &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray6insertEiRK7QString(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray6insertEiRK7QString(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN10QByteArray6insertEiPKc
     // invoke: QByteArray & insert(int, const char *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[1][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    var ret0 = C.C_ZN10QByteArray6insertEiPKc(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray6insertEiPKc(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN10QByteArray6insertEiRKS_
     // invoke: QByteArray & insert(int, const class QByteArray &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
+    var arg1 = args[1].(*QByteArray).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray6insertEiRKS_(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray6insertEiRKS_(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZN10QByteArray6insertEic
     // invoke: QByteArray & insert(int, char)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray6insertEic(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray6insertEic(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 4:
     // invoke: _ZN10QByteArray6insertEiPKci
     // invoke: QByteArray & insert(int, const char *, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[4][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN10QByteArray6insertEiPKci(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN10QByteArray6insertEiPKci(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "insert", args)
   }
@@ -512,15 +536,19 @@ func (this *QByteArray) Remove(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QByteArray6removeEii
     // invoke: QByteArray & remove(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray6removeEii(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray6removeEii(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "remove", args)
   }
@@ -541,11 +569,15 @@ func (this *QByteArray) Trimmed(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNKR10QByteArray7trimmedEv
     // invoke: QByteArray trimmed()
-    var ret0 = C.C_ZNKR10QByteArray7trimmedEv(this.qclsinst)
+    var ret0 = C.C_ZNKR10QByteArray7trimmedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "trimmed", args)
   }
@@ -566,11 +598,15 @@ func (this *QByteArray) Constend(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray8constEndEv
     // invoke: const_iterator constEnd()
-    var ret0 = C.C_ZNK10QByteArray8constEndEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray8constEndEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(true) // "const_iterator"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "constEnd", args)
   }
@@ -592,13 +628,17 @@ func (this *QByteArray) Issharedwith(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray12isSharedWithERKS_
     // invoke: bool isSharedWith(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray12isSharedWithERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray12isSharedWithERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "isSharedWith", args)
   }
@@ -620,13 +660,17 @@ func (this *QByteArray) Right(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray5rightEi
     // invoke: QByteArray right(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray5rightEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray5rightEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "right", args)
   }
@@ -651,13 +695,17 @@ func (this *QByteArray) Touint(args ...interface{}) (ret interface{}) {
     // invoke: uint toUInt(_Bool *, int)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray6toUIntEPbi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray6toUIntEPbi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "uint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toUInt", args)
   }
@@ -694,11 +742,15 @@ func (this *QByteArray) Append(args ...interface{}) (ret interface{}) {
     // invoke: QByteArray & append(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN10QByteArray6appendEc(this.qclsinst, arg0)
+    var ret0 = C.C_ZN10QByteArray6appendEc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN10QByteArray6appendEPKci
     // invoke: QByteArray & append(const char *, int)
@@ -706,33 +758,45 @@ func (this *QByteArray) Append(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray6appendEPKci(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray6appendEPKci(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN10QByteArray6appendERKS_
     // invoke: QByteArray & append(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN10QByteArray6appendERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZN10QByteArray6appendERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZN10QByteArray6appendERK7QString
     // invoke: QByteArray & append(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN10QByteArray6appendERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN10QByteArray6appendERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 4:
     // invoke: _ZN10QByteArray6appendEPKc
     // invoke: QByteArray & append(const char *)
@@ -740,11 +804,15 @@ func (this *QByteArray) Append(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var ret0 = C.C_ZN10QByteArray6appendEPKc(this.qclsinst, arg0)
+    var ret0 = C.C_ZN10QByteArray6appendEPKc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "append", args)
   }
@@ -776,31 +844,43 @@ func (this *QByteArray) Startswith(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var ret0 = C.C_ZNK10QByteArray10startsWithEPKc(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray10startsWithEPKc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK10QByteArray10startsWithERKS_
     // invoke: bool startsWith(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray10startsWithERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray10startsWithERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK10QByteArray10startsWithEc
     // invoke: bool startsWith(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray10startsWithEc(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray10startsWithEc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "startsWith", args)
   }
@@ -821,11 +901,15 @@ func (this *QByteArray) Capacity(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray8capacityEv
     // invoke: int capacity()
-    var ret0 = C.C_ZNK10QByteArray8capacityEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray8capacityEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "capacity", args)
   }
@@ -846,11 +930,15 @@ func (this *QByteArray) Tolower(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNKR10QByteArray7toLowerEv
     // invoke: QByteArray toLower()
-    var ret0 = C.C_ZNKR10QByteArray7toLowerEv(this.qclsinst)
+    var ret0 = C.C_ZNKR10QByteArray7toLowerEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toLower", args)
   }
@@ -871,11 +959,15 @@ func (this *QByteArray) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK10QByteArray6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "isNull", args)
   }
@@ -896,7 +988,7 @@ func (this *QByteArray) Tostdstring(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray11toStdStringB5cxx11Ev
     // invoke: std::string toStdString()
-    C.C_ZNK10QByteArray11toStdStringB5cxx11Ev(this.qclsinst)
+    C.C_ZNK10QByteArray11toStdStringB5cxx11Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "toStdString", args)
   }
@@ -917,11 +1009,15 @@ func (this *QByteArray) Tohex(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray5toHexEv
     // invoke: QByteArray toHex()
-    var ret0 = C.C_ZNK10QByteArray5toHexEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray5toHexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toHex", args)
   }
@@ -960,49 +1056,65 @@ func (this *QByteArray) Indexof(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray7indexOfEPKci(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray7indexOfEPKci(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK10QByteArray7indexOfEci
     // invoke: int indexOf(char, int)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray7indexOfEci(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray7indexOfEci(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK10QByteArray7indexOfERKS_i
     // invoke: int indexOf(const class QByteArray &, int)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray7indexOfERKS_i(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray7indexOfERKS_i(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZNK10QByteArray7indexOfERK7QStringi
     // invoke: int indexOf(const class QString &, int)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray7indexOfERK7QStringi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray7indexOfERK7QStringi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "indexOf", args)
   }
@@ -1023,11 +1135,15 @@ func (this *QByteArray) Cbegin(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray6cbeginEv
     // invoke: const_iterator cbegin()
-    var ret0 = C.C_ZNK10QByteArray6cbeginEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray6cbeginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(true) // "const_iterator"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "cbegin", args)
   }
@@ -1062,16 +1178,16 @@ func NewQByteArray(args ...interface{}) *QByteArray {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QByteArrayC2Ev()
-    return &QByteArray{qclsinst:qthis}
+    return &QByteArray{Qclsinst:qthis}
   case 1:
     // invoke: _ZN10QByteArrayC1ERKS_
     // invoke: void QByteArray(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QByteArrayC2ERKS_(arg0)
-    return &QByteArray{qclsinst:qthis}
+    return &QByteArray{Qclsinst:qthis}
   case 2:
     // invoke: _ZN10QByteArrayC1EPKci
     // invoke: void QByteArray(const char *, int)
@@ -1079,28 +1195,28 @@ func NewQByteArray(args ...interface{}) *QByteArray {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QByteArrayC2EPKci(arg0, arg1)
-    return &QByteArray{qclsinst:qthis}
+    return &QByteArray{Qclsinst:qthis}
   case 3:
     // invoke: _ZN10QByteArrayC1Eic
     // invoke: void QByteArray(int, char)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QByteArrayC2Eic(arg0, arg1)
-    return &QByteArray{qclsinst:qthis}
+    return &QByteArray{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QByteArray", "QByteArray", args)
   }
 
-  return nil // QByteArray{qclsinst:qthis}
+  return nil // QByteArray{Qclsinst:qthis}
 }
 
 // fromBase64(const class QByteArray &)
@@ -1117,13 +1233,17 @@ func (this *QByteArray) Frombase64_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QByteArray10fromBase64ERKS_
     // invoke: QByteArray fromBase64(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN10QByteArray10fromBase64ERKS_(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "fromBase64", args)
   }
@@ -1145,13 +1265,17 @@ func (this *QByteArray) Fromhex_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QByteArray7fromHexERKS_
     // invoke: QByteArray fromHex(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN10QByteArray7fromHexERKS_(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "fromHex", args)
   }
@@ -1173,9 +1297,9 @@ func (this *QByteArray) Chop(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray4chopEi
     // invoke: void chop(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray4chopEi(this.qclsinst, arg0)
+    C.C_ZN10QByteArray4chopEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "chop", args)
   }
@@ -1196,11 +1320,15 @@ func (this *QByteArray) Length(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray6lengthEv
     // invoke: int length()
-    var ret0 = C.C_ZNK10QByteArray6lengthEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray6lengthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "length", args)
   }
@@ -1224,11 +1352,15 @@ func (this *QByteArray) Todouble(args ...interface{}) (ret interface{}) {
     // invoke: double toDouble(_Bool *)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray8toDoubleEPb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray8toDoubleEPb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "double"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toDouble", args)
   }
@@ -1253,13 +1385,17 @@ func (this *QByteArray) Tolong(args ...interface{}) (ret interface{}) {
     // invoke: long toLong(_Bool *, int)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray6toLongEPbi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray6toLongEPbi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "long"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toLong", args)
   }
@@ -1283,17 +1419,21 @@ func (this *QByteArray) Topercentencoding(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK10QByteArray17toPercentEncodingERKS_S1_c
     // invoke: QByteArray toPercentEncoding(const class QByteArray &, const class QByteArray &, char)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
+    var arg1 = args[1].(*QByteArray).Qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = C.uchar(args[2].(byte))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK10QByteArray17toPercentEncodingERKS_S1_c(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK10QByteArray17toPercentEncodingERKS_S1_c(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toPercentEncoding", args)
   }
@@ -1318,13 +1458,17 @@ func (this *QByteArray) Toushort(args ...interface{}) (ret interface{}) {
     // invoke: ushort toUShort(_Bool *, int)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray8toUShortEPbi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray8toUShortEPbi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int16Ty(false) // "ushort"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toUShort", args)
   }
@@ -1345,11 +1489,15 @@ func (this *QByteArray) Constbegin(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray10constBeginEv
     // invoke: const_iterator constBegin()
-    var ret0 = C.C_ZNK10QByteArray10constBeginEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray10constBeginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(true) // "const_iterator"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "constBegin", args)
   }
@@ -1374,13 +1522,17 @@ func (this *QByteArray) Toshort(args ...interface{}) (ret interface{}) {
     // invoke: short toShort(_Bool *, int)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray7toShortEPbi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray7toShortEPbi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int16Ty(false) // "short"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toShort", args)
   }
@@ -1420,65 +1572,85 @@ func (this *QByteArray) Number_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QByteArray6numberExi
     // invoke: QByteArray number(qlonglong, int)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN10QByteArray6numberExi(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN10QByteArray6numberEyi
     // invoke: QByteArray number(qulonglong, int)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN10QByteArray6numberEyi(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN10QByteArray6numberEii
     // invoke: QByteArray number(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN10QByteArray6numberEii(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZN10QByteArray6numberEji
     // invoke: QByteArray number(uint, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN10QByteArray6numberEji(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 4:
     // invoke: _ZN10QByteArray6numberEdci
     // invoke: QByteArray number(double, char, int)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
     var ret0 = C.C_ZN10QByteArray6numberEdci(arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "number", args)
   }
@@ -1559,43 +1731,55 @@ func (this *QByteArray) Replace(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QByteArray7replaceERK7QStringPKc
     // invoke: QByteArray & replace(const class QString &, const char *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    var ret0 = C.C_ZN10QByteArray7replaceERK7QStringPKc(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray7replaceERK7QStringPKc(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN10QByteArray7replaceEcRKS_
     // invoke: QByteArray & replace(char, const class QByteArray &)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
+    var arg1 = args[1].(*QByteArray).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray7replaceEcRKS_(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray7replaceEcRKS_(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN10QByteArray7replaceEiiRKS_
     // invoke: QByteArray & replace(int, int, const class QByteArray &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QByteArray).qclsinst
+    var arg2 = args[2].(*QByteArray).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN10QByteArray7replaceEiiRKS_(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN10QByteArray7replaceEiiRKS_(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZN10QByteArray7replaceEcPKc
     // invoke: QByteArray & replace(char, const char *)
@@ -1605,11 +1789,15 @@ func (this *QByteArray) Replace(args ...interface{}) (ret interface{}) {
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    var ret0 = C.C_ZN10QByteArray7replaceEcPKc(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray7replaceEcPKc(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 4:
     // invoke: _ZN10QByteArray7replaceEcc
     // invoke: QByteArray & replace(char, char)
@@ -1617,71 +1805,91 @@ func (this *QByteArray) Replace(args ...interface{}) (ret interface{}) {
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray7replaceEcc(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray7replaceEcc(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 5:
     // invoke: _ZN10QByteArray7replaceERKS_S1_
     // invoke: QByteArray & replace(const class QByteArray &, const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
+    var arg1 = args[1].(*QByteArray).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray7replaceERKS_S1_(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray7replaceERKS_S1_(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 6:
     // invoke: _ZN10QByteArray7replaceERKS_PKc
     // invoke: QByteArray & replace(const class QByteArray &, const char *)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[6][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    var ret0 = C.C_ZN10QByteArray7replaceERKS_PKc(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray7replaceERKS_PKc(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 7:
     // invoke: _ZN10QByteArray7replaceEiiPKc
     // invoke: QByteArray & replace(int, int, const char *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[7][2])
     var arg2 = argif2.(unsafe.Pointer)
     if false {fmt.Println(argif2, arg2)}
     if free2 {defer C.free(arg2)}
-    var ret0 = C.C_ZN10QByteArray7replaceEiiPKc(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN10QByteArray7replaceEiiPKc(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 8:
     // invoke: _ZN10QByteArray7replaceEiiPKci
     // invoke: QByteArray & replace(int, int, const char *, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[8][2])
     var arg2 = argif2.(unsafe.Pointer)
     if false {fmt.Println(argif2, arg2)}
     if free2 {defer C.free(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN10QByteArray7replaceEiiPKci(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZN10QByteArray7replaceEiiPKci(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 9:
     // invoke: _ZN10QByteArray7replaceEPKcRKS_
     // invoke: QByteArray & replace(const char *, const class QByteArray &)
@@ -1689,13 +1897,17 @@ func (this *QByteArray) Replace(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
+    var arg1 = args[1].(*QByteArray).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray7replaceEPKcRKS_(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray7replaceEPKcRKS_(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 10:
     // invoke: _ZN10QByteArray7replaceEPKcS1_
     // invoke: QByteArray & replace(const char *, const char *)
@@ -1707,35 +1919,47 @@ func (this *QByteArray) Replace(args ...interface{}) (ret interface{}) {
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    var ret0 = C.C_ZN10QByteArray7replaceEPKcS1_(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray7replaceEPKcS1_(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 11:
     // invoke: _ZN10QByteArray7replaceEcRK7QString
     // invoke: QByteArray & replace(char, const class QString &)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray7replaceEcRK7QString(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray7replaceEcRK7QString(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 12:
     // invoke: _ZN10QByteArray7replaceERK7QStringRKS_
     // invoke: QByteArray & replace(const class QString &, const class QByteArray &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
+    var arg1 = args[1].(*QByteArray).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray7replaceERK7QStringRKS_(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray7replaceERK7QStringRKS_(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 13:
     // invoke: _ZN10QByteArray7replaceEPKciS1_i
     // invoke: QByteArray & replace(const char *, int, const char *, int)
@@ -1743,19 +1967,23 @@ func (this *QByteArray) Replace(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[13][2])
     var arg2 = argif2.(unsafe.Pointer)
     if false {fmt.Println(argif2, arg2)}
     if free2 {defer C.free(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN10QByteArray7replaceEPKciS1_i(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZN10QByteArray7replaceEPKciS1_i(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "replace", args)
   }
@@ -1783,9 +2011,9 @@ func (this *QByteArray) Push_Back(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray9push_backERKS_
     // invoke: void push_back(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray9push_backERKS_(this.qclsinst, arg0)
+    C.C_ZN10QByteArray9push_backERKS_(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN10QByteArray9push_backEPKc
     // invoke: void push_back(const char *)
@@ -1793,13 +2021,13 @@ func (this *QByteArray) Push_Back(args ...interface{}) () {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    C.C_ZN10QByteArray9push_backEPKc(this.qclsinst, arg0)
+    C.C_ZN10QByteArray9push_backEPKc(this.Qclsinst, arg0)
   case 2:
     // invoke: _ZN10QByteArray9push_backEc
     // invoke: void push_back(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray9push_backEc(this.qclsinst, arg0)
+    C.C_ZN10QByteArray9push_backEc(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "push_back", args)
   }
@@ -1820,11 +2048,15 @@ func (this *QByteArray) Simplified(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNKR10QByteArray10simplifiedEv
     // invoke: QByteArray simplified()
-    var ret0 = C.C_ZNKR10QByteArray10simplifiedEv(this.qclsinst)
+    var ret0 = C.C_ZNKR10QByteArray10simplifiedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "simplified", args)
   }
@@ -1845,11 +2077,15 @@ func (this *QByteArray) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray4sizeEv
     // invoke: int size()
-    var ret0 = C.C_ZNK10QByteArray4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "size", args)
   }
@@ -1879,21 +2115,29 @@ func (this *QByteArray) Contains(args ...interface{}) (ret interface{}) {
     // invoke: bool contains(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray8containsEc(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray8containsEc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK10QByteArray8containsERKS_
     // invoke: bool contains(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray8containsERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray8containsERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK10QByteArray8containsEPKc
     // invoke: bool contains(const char *)
@@ -1901,11 +2145,15 @@ func (this *QByteArray) Contains(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var ret0 = C.C_ZNK10QByteArray8containsEPKc(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray8containsEPKc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "contains", args)
   }
@@ -1928,7 +2176,7 @@ func (this *QByteArray) Frompercentencoding_S(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZN10QByteArray19fromPercentEncodingERKS_c
     // invoke: QByteArray fromPercentEncoding(const class QByteArray &, char)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
@@ -1936,7 +2184,11 @@ func (this *QByteArray) Frompercentencoding_S(args ...interface{}) (ret interfac
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "fromPercentEncoding", args)
   }
@@ -1957,11 +2209,15 @@ func (this *QByteArray) Cend(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray4cendEv
     // invoke: const_iterator cend()
-    var ret0 = C.C_ZNK10QByteArray4cendEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray4cendEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(true) // "const_iterator"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "cend", args)
   }
@@ -1985,17 +2241,21 @@ func (this *QByteArray) Leftjustified(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray13leftJustifiedEicb
     // invoke: QByteArray leftJustified(int, char, _Bool)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
     var arg2 = C.bool(args[2].(bool))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK10QByteArray13leftJustifiedEicb(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK10QByteArray13leftJustifiedEicb(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "leftJustified", args)
   }
@@ -2017,13 +2277,17 @@ func (this *QByteArray) Repeated(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray8repeatedEi
     // invoke: QByteArray repeated(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray8repeatedEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray8repeatedEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "repeated", args)
   }
@@ -2050,13 +2314,17 @@ func (this *QByteArray) Fromrawdata_S(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN10QByteArray11fromRawDataEPKci(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "fromRawData", args)
   }
@@ -2077,7 +2345,7 @@ func (this *QByteArray) Squeeze(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray7squeezeEv
     // invoke: void squeeze()
-    C.C_ZN10QByteArray7squeezeEv(this.qclsinst)
+    C.C_ZN10QByteArray7squeezeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "squeeze", args)
   }
@@ -2099,9 +2367,9 @@ func (this *QByteArray) Resize(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray6resizeEi
     // invoke: void resize(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray6resizeEi(this.qclsinst, arg0)
+    C.C_ZN10QByteArray6resizeEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "resize", args)
   }
@@ -2126,13 +2394,17 @@ func (this *QByteArray) Toulonglong(args ...interface{}) (ret interface{}) {
     // invoke: qulonglong toULongLong(_Bool *, int)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray11toULongLongEPbi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray11toULongLongEPbi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qulonglong"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toULongLong", args)
   }
@@ -2162,11 +2434,15 @@ func (this *QByteArray) Count(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray5countEv
     // invoke: int count()
-    var ret0 = C.C_ZNK10QByteArray5countEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray5countEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK10QByteArray5countEPKc
     // invoke: int count(const char *)
@@ -2174,31 +2450,43 @@ func (this *QByteArray) Count(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var ret0 = C.C_ZNK10QByteArray5countEPKc(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray5countEPKc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK10QByteArray5countEc
     // invoke: int count(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray5countEc(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray5countEc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZNK10QByteArray5countERKS_
     // invoke: int count(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray5countERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray5countERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "count", args)
   }
@@ -2219,7 +2507,7 @@ func (this *QByteArray) Freeqbytearray(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArrayD0Ev
     // invoke: void ~QByteArray()
-    C.C_ZN10QByteArrayD2Ev(this.qclsinst)
+    C.C_ZN10QByteArrayD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "~QByteArray", args)
   }
@@ -2243,11 +2531,15 @@ func (this *QByteArray) Tofloat(args ...interface{}) (ret interface{}) {
     // invoke: float toFloat(_Bool *)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray7toFloatEPb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray7toFloatEPb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.FloatTy(false) // "float"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toFloat", args)
   }
@@ -2269,13 +2561,17 @@ func (this *QByteArray) At(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray2atEi
     // invoke: char at(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray2atEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray2atEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "char"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "at", args)
   }
@@ -2300,13 +2596,17 @@ func (this *QByteArray) Fill(args ...interface{}) (ret interface{}) {
     // invoke: QByteArray & fill(char, int)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray4fillEci(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray4fillEci(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "fill", args)
   }
@@ -2331,13 +2631,17 @@ func (this *QByteArray) Toulong(args ...interface{}) (ret interface{}) {
     // invoke: ulong toULong(_Bool *, int)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray7toULongEPbi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray7toULongEPbi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "ulong"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toULong", args)
   }
@@ -2358,11 +2662,15 @@ func (this *QByteArray) End(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QByteArray3endEv
     // invoke: iterator end()
-    var ret0 = C.C_ZN10QByteArray3endEv(this.qclsinst)
+    var ret0 = C.C_ZN10QByteArray3endEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(true) // "iterator"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "end", args)
   }
@@ -2385,15 +2693,19 @@ func (this *QByteArray) Mid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray3midEii
     // invoke: QByteArray mid(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray3midEii(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray3midEii(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "mid", args)
   }
@@ -2429,21 +2741,29 @@ func (this *QByteArray) Prepend(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var ret0 = C.C_ZN10QByteArray7prependEPKc(this.qclsinst, arg0)
+    var ret0 = C.C_ZN10QByteArray7prependEPKc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN10QByteArray7prependEc
     // invoke: QByteArray & prepend(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN10QByteArray7prependEc(this.qclsinst, arg0)
+    var ret0 = C.C_ZN10QByteArray7prependEc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN10QByteArray7prependEPKci
     // invoke: QByteArray & prepend(const char *, int)
@@ -2451,23 +2771,31 @@ func (this *QByteArray) Prepend(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray7prependEPKci(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray7prependEPKci(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZN10QByteArray7prependERKS_
     // invoke: QByteArray & prepend(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN10QByteArray7prependERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZN10QByteArray7prependERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "prepend", args)
   }
@@ -2488,11 +2816,15 @@ func (this *QByteArray) Constdata(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray9constDataEv
     // invoke: const char * constData()
-    var ret0 = C.C_ZNK10QByteArray9constDataEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray9constDataEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(true) // "const char *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "constData", args)
   }
@@ -2517,13 +2849,17 @@ func (this *QByteArray) Tolonglong(args ...interface{}) (ret interface{}) {
     // invoke: qlonglong toLongLong(_Bool *, int)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray10toLongLongEPbi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray10toLongLongEPbi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qlonglong"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toLongLong", args)
   }
@@ -2544,11 +2880,15 @@ func (this *QByteArray) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK10QByteArray7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "isEmpty", args)
   }
@@ -2572,7 +2912,7 @@ func (this *QByteArray) Split(args ...interface{}) () {
     // invoke: QList<QByteArray> split(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray5splitEc(this.qclsinst, arg0)
+    C.C_ZNK10QByteArray5splitEc(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "split", args)
   }
@@ -2599,13 +2939,17 @@ func (this *QByteArray) Setrawdata(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray10setRawDataEPKcj(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray10setRawDataEPKcj(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "setRawData", args)
   }
@@ -2626,11 +2970,15 @@ func (this *QByteArray) Isdetached(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray10isDetachedEv
     // invoke: bool isDetached()
-    var ret0 = C.C_ZNK10QByteArray10isDetachedEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray10isDetachedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "isDetached", args)
   }
@@ -2651,11 +2999,15 @@ func (this *QByteArray) Begin(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QByteArray5beginEv
     // invoke: iterator begin()
-    var ret0 = C.C_ZN10QByteArray5beginEv(this.qclsinst)
+    var ret0 = C.C_ZN10QByteArray5beginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(true) // "iterator"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "begin", args)
   }
@@ -2694,49 +3046,65 @@ func (this *QByteArray) Lastindexof(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray11lastIndexOfEPKci(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray11lastIndexOfEPKci(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK10QByteArray11lastIndexOfERK7QStringi
     // invoke: int lastIndexOf(const class QString &, int)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray11lastIndexOfERK7QStringi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray11lastIndexOfERK7QStringi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK10QByteArray11lastIndexOfERKS_i
     // invoke: int lastIndexOf(const class QByteArray &, int)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray11lastIndexOfERKS_i(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray11lastIndexOfERKS_i(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZNK10QByteArray11lastIndexOfEci
     // invoke: int lastIndexOf(char, int)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray11lastIndexOfEci(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray11lastIndexOfEci(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "lastIndexOf", args)
   }
@@ -2757,11 +3125,15 @@ func (this *QByteArray) Toupper(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNKR10QByteArray7toUpperEv
     // invoke: QByteArray toUpper()
-    var ret0 = C.C_ZNKR10QByteArray7toUpperEv(this.qclsinst)
+    var ret0 = C.C_ZNKR10QByteArray7toUpperEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toUpper", args)
   }
@@ -2783,9 +3155,9 @@ func (this *QByteArray) Truncate(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray8truncateEi
     // invoke: void truncate(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray8truncateEi(this.qclsinst, arg0)
+    C.C_ZN10QByteArray8truncateEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "truncate", args)
   }
@@ -2806,11 +3178,15 @@ func (this *QByteArray) Tobase64(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray8toBase64Ev
     // invoke: QByteArray toBase64()
-    var ret0 = C.C_ZNK10QByteArray8toBase64Ev(this.qclsinst)
+    var ret0 = C.C_ZNK10QByteArray8toBase64Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toBase64", args)
   }
@@ -2831,11 +3207,15 @@ func (this *QByteArray) Data(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QByteArray4dataEv
     // invoke: char * data()
-    var ret0 = C.C_ZN10QByteArray4dataEv(this.qclsinst)
+    var ret0 = C.C_ZN10QByteArray4dataEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(true) // "char *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "data", args)
   }
@@ -2856,7 +3236,7 @@ func (this *QByteArray) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray5clearEv
     // invoke: void clear()
-    C.C_ZN10QByteArray5clearEv(this.qclsinst)
+    C.C_ZN10QByteArray5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QByteArray", "clear", args)
   }
@@ -2881,13 +3261,17 @@ func (this *QByteArray) Toint(args ...interface{}) (ret interface{}) {
     // invoke: int toInt(_Bool *, int)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QByteArray5toIntEPbi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QByteArray5toIntEPbi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "toInt", args)
   }
@@ -2915,13 +3299,17 @@ func (this *QByteArray) Endswith(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray8endsWithERKS_
     // invoke: bool endsWith(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray8endsWithERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray8endsWithERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK10QByteArray8endsWithEPKc
     // invoke: bool endsWith(const char *)
@@ -2929,21 +3317,29 @@ func (this *QByteArray) Endswith(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var ret0 = C.C_ZNK10QByteArray8endsWithEPKc(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray8endsWithEPKc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK10QByteArray8endsWithEc
     // invoke: bool endsWith(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray8endsWithEc(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray8endsWithEc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "endsWith", args)
   }
@@ -2996,103 +3392,135 @@ func (this *QByteArray) Setnum(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QByteArray6setNumEji
     // invoke: QByteArray & setNum(uint, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray6setNumEji(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray6setNumEji(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN10QByteArray6setNumEii
     // invoke: QByteArray & setNum(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray6setNumEii(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray6setNumEii(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN10QByteArray6setNumEsi
     // invoke: QByteArray & setNum(short, int)
-    var arg0 = C.int16_t(args[0].(int16))
+    var arg0 = C.int16_t(qtrt.PrimConv(args[0], qtrt.Int16Ty(false)).(int16))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray6setNumEsi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray6setNumEsi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZN10QByteArray6setNumEdci
     // invoke: QByteArray & setNum(double, char, int)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN10QByteArray6setNumEdci(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN10QByteArray6setNumEdci(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 4:
     // invoke: _ZN10QByteArray6setNumEfci
     // invoke: QByteArray & setNum(float, char, int)
-    var arg0 = C.float(args[0].(float32))
+    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN10QByteArray6setNumEfci(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN10QByteArray6setNumEfci(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 5:
     // invoke: _ZN10QByteArray6setNumEyi
     // invoke: QByteArray & setNum(qulonglong, int)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray6setNumEyi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray6setNumEyi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 6:
     // invoke: _ZN10QByteArray6setNumExi
     // invoke: QByteArray & setNum(qlonglong, int)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray6setNumExi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray6setNumExi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 7:
     // invoke: _ZN10QByteArray6setNumEti
     // invoke: QByteArray & setNum(ushort, int)
-    var arg0 = C.int16_t(args[0].(int16))
+    var arg0 = C.int16_t(qtrt.PrimConv(args[0], qtrt.Int16Ty(false)).(int16))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QByteArray6setNumEti(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QByteArray6setNumEti(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "setNum", args)
   }
@@ -3114,9 +3542,9 @@ func (this *QByteArray) Reserve(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray7reserveEi
     // invoke: void reserve(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray7reserveEi(this.qclsinst, arg0)
+    C.C_ZN10QByteArray7reserveEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "reserve", args)
   }
@@ -3146,13 +3574,13 @@ func (this *QByteArray) Push_Front(args ...interface{}) () {
     // invoke: void push_front(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray10push_frontEc(this.qclsinst, arg0)
+    C.C_ZN10QByteArray10push_frontEc(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN10QByteArray10push_frontERKS_
     // invoke: void push_front(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray10push_frontERKS_(this.qclsinst, arg0)
+    C.C_ZN10QByteArray10push_frontERKS_(this.Qclsinst, arg0)
   case 2:
     // invoke: _ZN10QByteArray10push_frontEPKc
     // invoke: void push_front(const char *)
@@ -3160,7 +3588,7 @@ func (this *QByteArray) Push_Front(args ...interface{}) () {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    C.C_ZN10QByteArray10push_frontEPKc(this.qclsinst, arg0)
+    C.C_ZN10QByteArray10push_frontEPKc(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArray", "push_front", args)
   }
@@ -3182,13 +3610,17 @@ func (this *QByteArray) Left(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QByteArray4leftEi
     // invoke: QByteArray left(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QByteArray4leftEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QByteArray4leftEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "left", args)
   }

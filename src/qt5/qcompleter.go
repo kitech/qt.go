@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.go
 //
@@ -111,7 +111,7 @@ func init() {
 // class sizeof(QCompleter)=1
 type QCompleter struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _highlighted QCompleter_highlighted_signal;
 //  _activated QCompleter_activated_signal;
 }
@@ -130,13 +130,17 @@ func (this *QCompleter) Setcurrentrow(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QCompleter13setCurrentRowEi
     // invoke: bool setCurrentRow(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN10QCompleter13setCurrentRowEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN10QCompleter13setCurrentRowEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCompleter", "setCurrentRow", args)
   }
@@ -157,7 +161,7 @@ func (this *QCompleter) Completionmodel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter15completionModelEv
     // invoke: QAbstractItemModel * completionModel()
-    C.C_ZNK10QCompleter15completionModelEv(this.qclsinst)
+    C.C_ZNK10QCompleter15completionModelEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "completionModel", args)
   }
@@ -178,11 +182,15 @@ func (this *QCompleter) Completionrole(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QCompleter14completionRoleEv
     // invoke: int completionRole()
-    var ret0 = C.C_ZNK10QCompleter14completionRoleEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QCompleter14completionRoleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCompleter", "completionRole", args)
   }
@@ -203,11 +211,15 @@ func (this *QCompleter) Maxvisibleitems(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QCompleter15maxVisibleItemsEv
     // invoke: int maxVisibleItems()
-    var ret0 = C.C_ZNK10QCompleter15maxVisibleItemsEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QCompleter15maxVisibleItemsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCompleter", "maxVisibleItems", args)
   }
@@ -228,11 +240,15 @@ func (this *QCompleter) Wraparound(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QCompleter10wrapAroundEv
     // invoke: bool wrapAround()
-    var ret0 = C.C_ZNK10QCompleter10wrapAroundEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QCompleter10wrapAroundEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCompleter", "wrapAround", args)
   }
@@ -253,11 +269,15 @@ func (this *QCompleter) Completionprefix(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK10QCompleter16completionPrefixEv
     // invoke: QString completionPrefix()
-    var ret0 = C.C_ZNK10QCompleter16completionPrefixEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QCompleter16completionPrefixEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCompleter", "completionPrefix", args)
   }
@@ -279,9 +299,9 @@ func (this *QCompleter) Setcompletioncolumn(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QCompleter19setCompletionColumnEi
     // invoke: void setCompletionColumn(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QCompleter19setCompletionColumnEi(this.qclsinst, arg0)
+    C.C_ZN10QCompleter19setCompletionColumnEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setCompletionColumn", args)
   }
@@ -303,9 +323,9 @@ func (this *QCompleter) Splitpath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter9splitPathERK7QString
     // invoke: QStringList splitPath(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QCompleter9splitPathERK7QString(this.qclsinst, arg0)
+    C.C_ZNK10QCompleter9splitPathERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "splitPath", args)
   }
@@ -327,9 +347,9 @@ func (this *QCompleter) Setwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QCompleter9setWidgetEP7QWidget
     // invoke: void setWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QCompleter9setWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN10QCompleter9setWidgetEP7QWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setWidget", args)
   }
@@ -351,9 +371,9 @@ func (this *QCompleter) Setpopup(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QCompleter8setPopupEP17QAbstractItemView
     // invoke: void setPopup(class QAbstractItemView *)
-    var arg0 = args[0].(QAbstractItemView).qclsinst
+    var arg0 = args[0].(*QAbstractItemView).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QCompleter8setPopupEP17QAbstractItemView(this.qclsinst, arg0)
+    C.C_ZN10QCompleter8setPopupEP17QAbstractItemView(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setPopup", args)
   }
@@ -377,7 +397,7 @@ func (this *QCompleter) Setwraparound(args ...interface{}) () {
     // invoke: void setWrapAround(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QCompleter13setWrapAroundEb(this.qclsinst, arg0)
+    C.C_ZN10QCompleter13setWrapAroundEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setWrapAround", args)
   }
@@ -399,9 +419,9 @@ func (this *QCompleter) Setcompletionprefix(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QCompleter19setCompletionPrefixERK7QString
     // invoke: void setCompletionPrefix(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QCompleter19setCompletionPrefixERK7QString(this.qclsinst, arg0)
+    C.C_ZN10QCompleter19setCompletionPrefixERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setCompletionPrefix", args)
   }
@@ -422,7 +442,7 @@ func (this *QCompleter) Freeqcompleter(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QCompleterD0Ev
     // invoke: void ~QCompleter()
-    C.C_ZN10QCompleterD2Ev(this.qclsinst)
+    C.C_ZN10QCompleterD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "~QCompleter", args)
   }
@@ -443,7 +463,7 @@ func (this *QCompleter) Completionmode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter14completionModeEv
     // invoke: QCompleter::CompletionMode completionMode()
-    C.C_ZNK10QCompleter14completionModeEv(this.qclsinst)
+    C.C_ZNK10QCompleter14completionModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "completionMode", args)
   }
@@ -464,7 +484,7 @@ func (this *QCompleter) Casesensitivity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter15caseSensitivityEv
     // invoke: Qt::CaseSensitivity caseSensitivity()
-    C.C_ZNK10QCompleter15caseSensitivityEv(this.qclsinst)
+    C.C_ZNK10QCompleter15caseSensitivityEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "caseSensitivity", args)
   }
@@ -485,11 +505,15 @@ func (this *QCompleter) Widget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QCompleter6widgetEv
     // invoke: QWidget * widget()
-    var ret0 = C.C_ZNK10QCompleter6widgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QCompleter6widgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCompleter", "widget", args)
   }
@@ -510,7 +534,7 @@ func (this *QCompleter) Popup(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter5popupEv
     // invoke: QAbstractItemView * popup()
-    C.C_ZNK10QCompleter5popupEv(this.qclsinst)
+    C.C_ZNK10QCompleter5popupEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "popup", args)
   }
@@ -532,9 +556,9 @@ func (this *QCompleter) Complete(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QCompleter8completeERK5QRect
     // invoke: void complete(const class QRect &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QCompleter8completeERK5QRect(this.qclsinst, arg0)
+    C.C_ZN10QCompleter8completeERK5QRect(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "complete", args)
   }
@@ -555,11 +579,15 @@ func (this *QCompleter) Completioncolumn(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK10QCompleter16completionColumnEv
     // invoke: int completionColumn()
-    var ret0 = C.C_ZNK10QCompleter16completionColumnEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QCompleter16completionColumnEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCompleter", "completionColumn", args)
   }
@@ -581,9 +609,9 @@ func (this *QCompleter) Setmodel(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QCompleter8setModelEP18QAbstractItemModel
     // invoke: void setModel(class QAbstractItemModel *)
-    var arg0 = args[0].(QAbstractItemModel).qclsinst
+    var arg0 = args[0].(*QAbstractItemModel).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QCompleter8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
+    C.C_ZN10QCompleter8setModelEP18QAbstractItemModel(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setModel", args)
   }
@@ -613,39 +641,39 @@ func NewQCompleter(args ...interface{}) *QCompleter {
   case 0:
     // invoke: _ZN10QCompleterC1EP7QObject
     // invoke: void QCompleter(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QCompleterC2EP7QObject(arg0)
-    return &QCompleter{qclsinst:qthis}
+    return &QCompleter{Qclsinst:qthis}
   case 1:
     // invoke: _ZN10QCompleterC1EP18QAbstractItemModelP7QObject
     // invoke: void QCompleter(class QAbstractItemModel *, class QObject *)
-    var arg0 = args[0].(QAbstractItemModel).qclsinst
+    var arg0 = args[0].(*QAbstractItemModel).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QCompleterC2EP18QAbstractItemModelP7QObject(arg0, arg1)
-    return &QCompleter{qclsinst:qthis}
+    return &QCompleter{Qclsinst:qthis}
   case 2:
     // invoke: _ZN10QCompleterC1ERK11QStringListP7QObject
     // invoke: void QCompleter(const class QStringList &, class QObject *)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QCompleterC2ERK11QStringListP7QObject(arg0, arg1)
-    return &QCompleter{qclsinst:qthis}
+    return &QCompleter{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCompleter", "QCompleter", args)
   }
 
-  return nil // QCompleter{qclsinst:qthis}
+  return nil // QCompleter{Qclsinst:qthis}
 }
 
 // modelSorting()
@@ -661,7 +689,7 @@ func (this *QCompleter) Modelsorting(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter12modelSortingEv
     // invoke: QCompleter::ModelSorting modelSorting()
-    C.C_ZNK10QCompleter12modelSortingEv(this.qclsinst)
+    C.C_ZNK10QCompleter12modelSortingEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "modelSorting", args)
   }
@@ -682,11 +710,15 @@ func (this *QCompleter) Currentrow(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QCompleter10currentRowEv
     // invoke: int currentRow()
-    var ret0 = C.C_ZNK10QCompleter10currentRowEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QCompleter10currentRowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCompleter", "currentRow", args)
   }
@@ -707,7 +739,7 @@ func (this *QCompleter) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QCompleter10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QCompleter10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "metaObject", args)
   }
@@ -728,11 +760,15 @@ func (this *QCompleter) Currentcompletion(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK10QCompleter17currentCompletionEv
     // invoke: QString currentCompletion()
-    var ret0 = C.C_ZNK10QCompleter17currentCompletionEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QCompleter17currentCompletionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCompleter", "currentCompletion", args)
   }
@@ -754,9 +790,9 @@ func (this *QCompleter) Setmaxvisibleitems(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QCompleter18setMaxVisibleItemsEi
     // invoke: void setMaxVisibleItems(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QCompleter18setMaxVisibleItemsEi(this.qclsinst, arg0)
+    C.C_ZN10QCompleter18setMaxVisibleItemsEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setMaxVisibleItems", args)
   }
@@ -777,11 +813,15 @@ func (this *QCompleter) Completioncount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QCompleter15completionCountEv
     // invoke: int completionCount()
-    var ret0 = C.C_ZNK10QCompleter15completionCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QCompleter15completionCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCompleter", "completionCount", args)
   }
@@ -803,9 +843,9 @@ func (this *QCompleter) Setcompletionrole(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QCompleter17setCompletionRoleEi
     // invoke: void setCompletionRole(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QCompleter17setCompletionRoleEi(this.qclsinst, arg0)
+    C.C_ZN10QCompleter17setCompletionRoleEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCompleter", "setCompletionRole", args)
   }
@@ -826,11 +866,15 @@ func (this *QCompleter) Currentindex(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QCompleter12currentIndexEv
     // invoke: QModelIndex currentIndex()
-    var ret0 = C.C_ZNK10QCompleter12currentIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QCompleter12currentIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCompleter", "currentIndex", args)
   }
@@ -852,13 +896,17 @@ func (this *QCompleter) Pathfromindex(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QCompleter13pathFromIndexERK11QModelIndex
     // invoke: QString pathFromIndex(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QCompleter13pathFromIndexERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QCompleter13pathFromIndexERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCompleter", "pathFromIndex", args)
   }
@@ -879,7 +927,7 @@ func (this *QCompleter) Filtermode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter10filterModeEv
     // invoke: Qt::MatchFlags filterMode()
-    C.C_ZNK10QCompleter10filterModeEv(this.qclsinst)
+    C.C_ZNK10QCompleter10filterModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "filterMode", args)
   }
@@ -900,7 +948,7 @@ func (this *QCompleter) Model(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter5modelEv
     // invoke: QAbstractItemModel * model()
-    C.C_ZNK10QCompleter5modelEv(this.qclsinst)
+    C.C_ZNK10QCompleter5modelEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCompleter", "model", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qpolygon.h
 // dst-file: /src/gui/qpolygon.go
 //
@@ -125,13 +125,13 @@ func init() {
 // class sizeof(QPolygon)=1
 type QPolygon struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QPolygonF)=1
 type QPolygonF struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // united(const class QPolygon &)
@@ -148,13 +148,17 @@ func (this *QPolygon) United(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPolygon6unitedERKS_
     // invoke: QPolygon united(const class QPolygon &)
-    var arg0 = args[0].(QPolygon).qclsinst
+    var arg0 = args[0].(*QPolygon).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QPolygon6unitedERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QPolygon6unitedERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPolygon", "united", args)
   }
@@ -176,13 +180,17 @@ func (this *QPolygon) Subtracted(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPolygon10subtractedERKS_
     // invoke: QPolygon subtracted(const class QPolygon &)
-    var arg0 = args[0].(QPolygon).qclsinst
+    var arg0 = args[0].(*QPolygon).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QPolygon10subtractedERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QPolygon10subtractedERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPolygon", "subtracted", args)
   }
@@ -203,11 +211,15 @@ func (this *QPolygon) Boundingrect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPolygon12boundingRectEv
     // invoke: QRect boundingRect()
-    var ret0 = C.C_ZNK8QPolygon12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QPolygon12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPolygon", "boundingRect", args)
   }
@@ -229,13 +241,17 @@ func (this *QPolygon) Intersected(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPolygon11intersectedERKS_
     // invoke: QPolygon intersected(const class QPolygon &)
-    var arg0 = args[0].(QPolygon).qclsinst
+    var arg0 = args[0].(*QPolygon).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QPolygon11intersectedERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QPolygon11intersectedERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPolygon", "intersected", args)
   }
@@ -270,55 +286,55 @@ func NewQPolygon(args ...interface{}) *QPolygon {
   case 0:
     // invoke: _ZN8QPolygonC1ERK5QRectb
     // invoke: void QPolygon(const class QRect &, _Bool)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPolygonC2ERK5QRectb(arg0, arg1)
-    return &QPolygon{qclsinst:qthis}
+    return &QPolygon{Qclsinst:qthis}
   case 1:
     // invoke: _ZN8QPolygonC1ERKS_
     // invoke: void QPolygon(const class QPolygon &)
-    var arg0 = args[0].(QPolygon).qclsinst
+    var arg0 = args[0].(*QPolygon).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPolygonC2ERKS_(arg0)
-    return &QPolygon{qclsinst:qthis}
+    return &QPolygon{Qclsinst:qthis}
   case 2:
     // invoke: _ZN8QPolygonC1EiPKi
     // invoke: void QPolygon(int, const int *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = (unsafe.Pointer)(args[1].(*int32))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPolygonC2EiPKi(arg0, arg1)
-    return &QPolygon{qclsinst:qthis}
+    return &QPolygon{Qclsinst:qthis}
   case 3:
     // invoke: _ZN8QPolygonC1Ei
     // invoke: void QPolygon(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPolygonC2Ei(arg0)
-    return &QPolygon{qclsinst:qthis}
+    return &QPolygon{Qclsinst:qthis}
   case 4:
     // invoke: _ZN8QPolygonC1Ev
     // invoke: void QPolygon()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPolygonC2Ev()
-    return &QPolygon{qclsinst:qthis}
+    return &QPolygon{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPolygon", "QPolygon", args)
   }
 
-  return nil // QPolygon{qclsinst:qthis}
+  return nil // QPolygon{Qclsinst:qthis}
 }
 
 // setPoint(int, const class QPoint &)
@@ -341,21 +357,21 @@ func (this *QPolygon) Setpoint(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPolygon8setPointEiRK6QPoint
     // invoke: void setPoint(int, const class QPoint &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPoint).qclsinst
+    var arg1 = args[1].(*QPoint).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN8QPolygon8setPointEiRK6QPoint(this.qclsinst, arg0, arg1)
+    C.C_ZN8QPolygon8setPointEiRK6QPoint(this.Qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN8QPolygon8setPointEiii
     // invoke: void setPoint(int, int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN8QPolygon8setPointEiii(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN8QPolygon8setPointEiii(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPolygon", "setPoint", args)
   }
@@ -382,19 +398,19 @@ func (this *QPolygon) Point(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPolygon5pointEiPiS0_
     // invoke: void point(int, int *, int *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = (unsafe.Pointer)(args[1].(*int32))
     if false {fmt.Println(arg1)}
     var arg2 = (unsafe.Pointer)(args[2].(*int32))
     if false {fmt.Println(arg2)}
-    C.C_ZNK8QPolygon5pointEiPiS0_(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZNK8QPolygon5pointEiPiS0_(this.Qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZNK8QPolygon5pointEi
     // invoke: QPoint point(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QPolygon5pointEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QPolygon5pointEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
   default:
     qtrt.ErrorResolve("QPolygon", "point", args)
@@ -417,9 +433,9 @@ func (this *QPolygon) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPolygon4swapERS_
     // invoke: void swap(class QPolygon &)
-    var arg0 = args[0].(QPolygon).qclsinst
+    var arg0 = args[0].(*QPolygon).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QPolygon4swapERS_(this.qclsinst, arg0)
+    C.C_ZN8QPolygon4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPolygon", "swap", args)
   }
@@ -455,37 +471,37 @@ func (this *QPolygon) Putpoints(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPolygon9putPointsEiiPKi
     // invoke: void putPoints(int, int, const int *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var arg2 = (unsafe.Pointer)(args[2].(*int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN8QPolygon9putPointsEiiPKi(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN8QPolygon9putPointsEiiPKi(this.Qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN8QPolygon9putPointsEiiRKS_i
     // invoke: void putPoints(int, int, const class QPolygon &, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QPolygon).qclsinst
+    var arg2 = args[2].(*QPolygon).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    C.C_ZN8QPolygon9putPointsEiiRKS_i(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN8QPolygon9putPointsEiiRKS_i(this.Qclsinst, arg0, arg1, arg2, arg3)
   case 2:
     // invoke: _ZN8QPolygon9putPointsEiiiiz
     // invoke: void putPoints(int, int, int, int, ...)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    C.C_ZN8QPolygon9putPointsEiiiiz(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN8QPolygon9putPointsEiiiiz(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QPolygon", "putPoints", args)
   }
@@ -511,25 +527,33 @@ func (this *QPolygon) Translated(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QPolygon10translatedEii
     // invoke: QPolygon translated(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK8QPolygon10translatedEii(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK8QPolygon10translatedEii(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK8QPolygon10translatedERK6QPoint
     // invoke: QPolygon translated(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QPolygon10translatedERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QPolygon10translatedERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPolygon", "translated", args)
   }
@@ -555,17 +579,17 @@ func (this *QPolygon) Translate(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPolygon9translateEii
     // invoke: void translate(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN8QPolygon9translateEii(this.qclsinst, arg0, arg1)
+    C.C_ZN8QPolygon9translateEii(this.Qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN8QPolygon9translateERK6QPoint
     // invoke: void translate(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QPolygon9translateERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN8QPolygon9translateERK6QPoint(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPolygon", "translate", args)
   }
@@ -593,21 +617,21 @@ func (this *QPolygon) Setpoints(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPolygon9setPointsEiiiz
     // invoke: void setPoints(int, int, int, ...)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN8QPolygon9setPointsEiiiz(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN8QPolygon9setPointsEiiiz(this.Qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN8QPolygon9setPointsEiPKi
     // invoke: void setPoints(int, const int *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = (unsafe.Pointer)(args[1].(*int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN8QPolygon9setPointsEiPKi(this.qclsinst, arg0, arg1)
+    C.C_ZN8QPolygon9setPointsEiPKi(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPolygon", "setPoints", args)
   }
@@ -628,7 +652,7 @@ func (this *QPolygon) Freeqpolygon(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPolygonD0Ev
     // invoke: void ~QPolygon()
-    C.C_ZN8QPolygonD2Ev(this.qclsinst)
+    C.C_ZN8QPolygonD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPolygon", "~QPolygon", args)
   }
@@ -650,13 +674,17 @@ func (this *QPolygonF) United(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPolygonF6unitedERKS_
     // invoke: QPolygonF united(const class QPolygonF &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QPolygonF6unitedERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QPolygonF6unitedERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPolygonF", "united", args)
   }
@@ -678,13 +706,17 @@ func (this *QPolygonF) Subtracted(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPolygonF10subtractedERKS_
     // invoke: QPolygonF subtracted(const class QPolygonF &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QPolygonF10subtractedERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QPolygonF10subtractedERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPolygonF", "subtracted", args)
   }
@@ -705,11 +737,15 @@ func (this *QPolygonF) Boundingrect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPolygonF12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK9QPolygonF12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QPolygonF12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPolygonF", "boundingRect", args)
   }
@@ -731,13 +767,17 @@ func (this *QPolygonF) Intersected(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPolygonF11intersectedERKS_
     // invoke: QPolygonF intersected(const class QPolygonF &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QPolygonF11intersectedERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QPolygonF11intersectedERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPolygonF", "intersected", args)
   }
@@ -758,7 +798,7 @@ func (this *QPolygonF) Freeqpolygonf(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QPolygonFD0Ev
     // invoke: void ~QPolygonF()
-    C.C_ZN9QPolygonFD2Ev(this.qclsinst)
+    C.C_ZN9QPolygonFD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPolygonF", "~QPolygonF", args)
   }
@@ -791,51 +831,51 @@ func NewQPolygonF(args ...interface{}) *QPolygonF {
   case 0:
     // invoke: _ZN9QPolygonFC1ERK6QRectF
     // invoke: void QPolygonF(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPolygonFC2ERK6QRectF(arg0)
-    return &QPolygonF{qclsinst:qthis}
+    return &QPolygonF{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QPolygonFC1ERKS_
     // invoke: void QPolygonF(const class QPolygonF &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPolygonFC2ERKS_(arg0)
-    return &QPolygonF{qclsinst:qthis}
+    return &QPolygonF{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QPolygonFC1Ev
     // invoke: void QPolygonF()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPolygonFC2Ev()
-    return &QPolygonF{qclsinst:qthis}
+    return &QPolygonF{Qclsinst:qthis}
   case 3:
     // invoke: _ZN9QPolygonFC1Ei
     // invoke: void QPolygonF(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPolygonFC2Ei(arg0)
-    return &QPolygonF{qclsinst:qthis}
+    return &QPolygonF{Qclsinst:qthis}
   case 4:
     // invoke: _ZN9QPolygonFC1ERK8QPolygon
     // invoke: void QPolygonF(const class QPolygon &)
-    var arg0 = args[0].(QPolygon).qclsinst
+    var arg0 = args[0].(*QPolygon).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPolygonFC2ERK8QPolygon(arg0)
-    return &QPolygonF{qclsinst:qthis}
+    return &QPolygonF{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPolygonF", "QPolygonF", args)
   }
 
-  return nil // QPolygonF{qclsinst:qthis}
+  return nil // QPolygonF{Qclsinst:qthis}
 }
 
 // isClosed()
@@ -851,11 +891,15 @@ func (this *QPolygonF) Isclosed(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPolygonF8isClosedEv
     // invoke: bool isClosed()
-    var ret0 = C.C_ZNK9QPolygonF8isClosedEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QPolygonF8isClosedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPolygonF", "isClosed", args)
   }
@@ -877,9 +921,9 @@ func (this *QPolygonF) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QPolygonF4swapERS_
     // invoke: void swap(class QPolygonF &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QPolygonF4swapERS_(this.qclsinst, arg0)
+    C.C_ZN9QPolygonF4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPolygonF", "swap", args)
   }
@@ -900,11 +944,15 @@ func (this *QPolygonF) Topolygon(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPolygonF9toPolygonEv
     // invoke: QPolygon toPolygon()
-    var ret0 = C.C_ZNK9QPolygonF9toPolygonEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QPolygonF9toPolygonEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPolygonF", "toPolygon", args)
   }
@@ -930,25 +978,33 @@ func (this *QPolygonF) Translated(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPolygonF10translatedEdd
     // invoke: QPolygonF translated(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK9QPolygonF10translatedEdd(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK9QPolygonF10translatedEdd(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK9QPolygonF10translatedERK7QPointF
     // invoke: QPolygonF translated(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QPolygonF10translatedERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QPolygonF10translatedERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPolygonF", "translated", args)
   }
@@ -974,17 +1030,17 @@ func (this *QPolygonF) Translate(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QPolygonF9translateERK7QPointF
     // invoke: void translate(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QPolygonF9translateERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN9QPolygonF9translateERK7QPointF(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN9QPolygonF9translateEdd
     // invoke: void translate(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN9QPolygonF9translateEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN9QPolygonF9translateEdd(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPolygonF", "translate", args)
   }

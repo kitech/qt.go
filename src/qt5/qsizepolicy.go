@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qsizepolicy.h
 // dst-file: /src/widgets/qsizepolicy.go
 //
@@ -75,7 +75,7 @@ func init() {
 // class sizeof(QSizePolicy)=4
 type QSizePolicy struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QSizePolicy()
@@ -94,12 +94,12 @@ func NewQSizePolicy(args ...interface{}) *QSizePolicy {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QSizePolicyC2Ev()
-    return &QSizePolicy{qclsinst:qthis}
+    return &QSizePolicy{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSizePolicy", "QSizePolicy", args)
   }
 
-  return nil // QSizePolicy{qclsinst:qthis}
+  return nil // QSizePolicy{Qclsinst:qthis}
 }
 
 // setHorizontalStretch(int)
@@ -116,9 +116,9 @@ func (this *QSizePolicy) Sethorizontalstretch(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QSizePolicy20setHorizontalStretchEi
     // invoke: void setHorizontalStretch(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QSizePolicy20setHorizontalStretchEi(this.qclsinst, arg0)
+    C.C_ZN11QSizePolicy20setHorizontalStretchEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizePolicy", "setHorizontalStretch", args)
   }
@@ -139,7 +139,7 @@ func (this *QSizePolicy) Expandingdirections(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSizePolicy19expandingDirectionsEv
     // invoke: Qt::Orientations expandingDirections()
-    C.C_ZNK11QSizePolicy19expandingDirectionsEv(this.qclsinst)
+    C.C_ZNK11QSizePolicy19expandingDirectionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSizePolicy", "expandingDirections", args)
   }
@@ -163,7 +163,7 @@ func (this *QSizePolicy) Setwidthforheight(args ...interface{}) () {
     // invoke: void setWidthForHeight(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QSizePolicy17setWidthForHeightEb(this.qclsinst, arg0)
+    C.C_ZN11QSizePolicy17setWidthForHeightEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizePolicy", "setWidthForHeight", args)
   }
@@ -184,11 +184,15 @@ func (this *QSizePolicy) Haswidthforheight(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK11QSizePolicy17hasWidthForHeightEv
     // invoke: bool hasWidthForHeight()
-    var ret0 = C.C_ZNK11QSizePolicy17hasWidthForHeightEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QSizePolicy17hasWidthForHeightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizePolicy", "hasWidthForHeight", args)
   }
@@ -209,11 +213,15 @@ func (this *QSizePolicy) Verticalstretch(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK11QSizePolicy15verticalStretchEv
     // invoke: int verticalStretch()
-    var ret0 = C.C_ZNK11QSizePolicy15verticalStretchEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QSizePolicy15verticalStretchEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizePolicy", "verticalStretch", args)
   }
@@ -234,7 +242,7 @@ func (this *QSizePolicy) Transpose(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QSizePolicy9transposeEv
     // invoke: void transpose()
-    C.C_ZN11QSizePolicy9transposeEv(this.qclsinst)
+    C.C_ZN11QSizePolicy9transposeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSizePolicy", "transpose", args)
   }
@@ -255,11 +263,15 @@ func (this *QSizePolicy) Retainsizewhenhidden(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK11QSizePolicy20retainSizeWhenHiddenEv
     // invoke: bool retainSizeWhenHidden()
-    var ret0 = C.C_ZNK11QSizePolicy20retainSizeWhenHiddenEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QSizePolicy20retainSizeWhenHiddenEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizePolicy", "retainSizeWhenHidden", args)
   }
@@ -281,9 +293,9 @@ func (this *QSizePolicy) Setverticalstretch(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QSizePolicy18setVerticalStretchEi
     // invoke: void setVerticalStretch(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QSizePolicy18setVerticalStretchEi(this.qclsinst, arg0)
+    C.C_ZN11QSizePolicy18setVerticalStretchEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizePolicy", "setVerticalStretch", args)
   }
@@ -304,7 +316,7 @@ func (this *QSizePolicy) Verticalpolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSizePolicy14verticalPolicyEv
     // invoke: QSizePolicy::Policy verticalPolicy()
-    C.C_ZNK11QSizePolicy14verticalPolicyEv(this.qclsinst)
+    C.C_ZNK11QSizePolicy14verticalPolicyEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSizePolicy", "verticalPolicy", args)
   }
@@ -328,7 +340,7 @@ func (this *QSizePolicy) Setheightforwidth(args ...interface{}) () {
     // invoke: void setHeightForWidth(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QSizePolicy17setHeightForWidthEb(this.qclsinst, arg0)
+    C.C_ZN11QSizePolicy17setHeightForWidthEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizePolicy", "setHeightForWidth", args)
   }
@@ -349,11 +361,15 @@ func (this *QSizePolicy) Hasheightforwidth(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK11QSizePolicy17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    var ret0 = C.C_ZNK11QSizePolicy17hasHeightForWidthEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QSizePolicy17hasHeightForWidthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizePolicy", "hasHeightForWidth", args)
   }
@@ -374,11 +390,15 @@ func (this *QSizePolicy) Horizontalstretch(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK11QSizePolicy17horizontalStretchEv
     // invoke: int horizontalStretch()
-    var ret0 = C.C_ZNK11QSizePolicy17horizontalStretchEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QSizePolicy17horizontalStretchEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizePolicy", "horizontalStretch", args)
   }
@@ -402,7 +422,7 @@ func (this *QSizePolicy) Setretainsizewhenhidden(args ...interface{}) () {
     // invoke: void setRetainSizeWhenHidden(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QSizePolicy23setRetainSizeWhenHiddenEb(this.qclsinst, arg0)
+    C.C_ZN11QSizePolicy23setRetainSizeWhenHiddenEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizePolicy", "setRetainSizeWhenHidden", args)
   }
@@ -423,7 +443,7 @@ func (this *QSizePolicy) Controltype(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSizePolicy11controlTypeEv
     // invoke: QSizePolicy::ControlType controlType()
-    C.C_ZNK11QSizePolicy11controlTypeEv(this.qclsinst)
+    C.C_ZNK11QSizePolicy11controlTypeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSizePolicy", "controlType", args)
   }
@@ -444,7 +464,7 @@ func (this *QSizePolicy) Horizontalpolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSizePolicy16horizontalPolicyEv
     // invoke: QSizePolicy::Policy horizontalPolicy()
-    C.C_ZNK11QSizePolicy16horizontalPolicyEv(this.qclsinst)
+    C.C_ZNK11QSizePolicy16horizontalPolicyEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSizePolicy", "horizontalPolicy", args)
   }

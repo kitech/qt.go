@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.go
 //
@@ -73,13 +73,13 @@ func init() {
 // class sizeof(QStringList)=1
 type QStringList struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QListSpecialMethods<QString>)=1
 type QListSpecialMethodsLQStringG struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // indexOf(const class QRegExp &, int)
@@ -105,39 +105,51 @@ func (this *QStringList) Indexof(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QStringList7indexOfERK7QRegExpi
     // invoke: int indexOf(const class QRegExp &, int)
-    var arg0 = args[0].(QRegExp).qclsinst
+    var arg0 = args[0].(*QRegExp).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QStringList7indexOfERK7QRegExpi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK11QStringList7indexOfERK7QRegExpi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK11QStringList7indexOfERK18QRegularExpressioni
     // invoke: int indexOf(const class QRegularExpression &, int)
-    var arg0 = args[0].(QRegularExpression).qclsinst
+    var arg0 = args[0].(*QRegularExpression).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QStringList7indexOfERK18QRegularExpressioni(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK11QStringList7indexOfERK18QRegularExpressioni(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK11QStringList7indexOfER7QRegExpi
     // invoke: int indexOf(class QRegExp &, int)
-    var arg0 = args[0].(QRegExp).qclsinst
+    var arg0 = args[0].(*QRegExp).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QStringList7indexOfER7QRegExpi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK11QStringList7indexOfER7QRegExpi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStringList", "indexOf", args)
   }
@@ -164,21 +176,21 @@ func NewQStringList(args ...interface{}) *QStringList {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QStringListC2Ev()
-    return &QStringList{qclsinst:qthis}
+    return &QStringList{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QStringListC1ERK7QString
     // invoke: void QStringList(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QStringListC2ERK7QString(arg0)
-    return &QStringList{qclsinst:qthis}
+    return &QStringList{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStringList", "QStringList", args)
   }
 
-  return nil // QStringList{qclsinst:qthis}
+  return nil // QStringList{Qclsinst:qthis}
 }
 
 // lastIndexOf(const class QRegExp &, int)
@@ -204,39 +216,51 @@ func (this *QStringList) Lastindexof(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QStringList11lastIndexOfERK7QRegExpi
     // invoke: int lastIndexOf(const class QRegExp &, int)
-    var arg0 = args[0].(QRegExp).qclsinst
+    var arg0 = args[0].(*QRegExp).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QStringList11lastIndexOfERK7QRegExpi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK11QStringList11lastIndexOfERK7QRegExpi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK11QStringList11lastIndexOfERK18QRegularExpressioni
     // invoke: int lastIndexOf(const class QRegularExpression &, int)
-    var arg0 = args[0].(QRegularExpression).qclsinst
+    var arg0 = args[0].(*QRegularExpression).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK11QStringList11lastIndexOfER7QRegExpi
     // invoke: int lastIndexOf(class QRegExp &, int)
-    var arg0 = args[0].(QRegExp).qclsinst
+    var arg0 = args[0].(*QRegExp).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK11QStringList11lastIndexOfER7QRegExpi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK11QStringList11lastIndexOfER7QRegExpi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStringList", "lastIndexOf", args)
   }
@@ -263,19 +287,19 @@ func (this *QListSpecialMethodsLQStringG) Replaceinstrings(args ...interface{}) 
   case 0:
     // invoke: _ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_
     // invoke: QStringList & replaceInStrings(const class QRegularExpression &, const class QString &)
-    var arg0 = args[0].(QRegularExpression).qclsinst
+    var arg0 = args[0].(*QRegularExpression).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(this.qclsinst, arg0, arg1)
+    C.C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(this.Qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_
     // invoke: QStringList & replaceInStrings(const class QRegExp &, const class QString &)
-    var arg0 = args[0].(QRegExp).qclsinst
+    var arg0 = args[0].(*QRegExp).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(this.qclsinst, arg0, arg1)
+    C.C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QListSpecialMethods<QString>", "replaceInStrings", args)
   }
@@ -300,23 +324,31 @@ func (this *QListSpecialMethodsLQStringG) Join(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK19QListSpecialMethodsI7QStringE4joinERKS0_
     // invoke: QString join(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QListSpecialMethodsI7QStringE4joinERKS0_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QListSpecialMethodsI7QStringE4joinERKS0_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK19QListSpecialMethodsI7QStringE4joinE5QChar
     // invoke: QString join(class QChar)
-    var arg0 = args[0].(QChar).qclsinst
+    var arg0 = args[0].(*QChar).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QListSpecialMethodsI7QStringE4joinE5QChar(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QListSpecialMethodsI7QStringE4joinE5QChar(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QListSpecialMethods<QString>", "join", args)
   }
@@ -341,15 +373,15 @@ func (this *QListSpecialMethodsLQStringG) Filter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression
     // invoke: QStringList filter(const class QRegularExpression &)
-    var arg0 = args[0].(QRegularExpression).qclsinst
+    var arg0 = args[0].(*QRegularExpression).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(this.qclsinst, arg0)
+    C.C_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp
     // invoke: QStringList filter(const class QRegExp &)
-    var arg0 = args[0].(QRegExp).qclsinst
+    var arg0 = args[0].(*QRegExp).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(this.qclsinst, arg0)
+    C.C_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListSpecialMethods<QString>", "filter", args)
   }
@@ -370,11 +402,15 @@ func (this *QListSpecialMethodsLQStringG) Removeduplicates(args ...interface{}) 
   case 0:
     // invoke: _ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv
     // invoke: int removeDuplicates()
-    var ret0 = C.C_ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv(this.qclsinst)
+    var ret0 = C.C_ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QListSpecialMethods<QString>", "removeDuplicates", args)
   }

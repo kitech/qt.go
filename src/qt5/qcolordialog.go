@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qcolordialog.h
 // dst-file: /src/widgets/qcolordialog.go
 //
@@ -75,7 +75,7 @@ func init() {
 // class sizeof(QColorDialog)=1
 type QColorDialog struct {
   /*qbase*/ QDialog;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _colorSelected QColorDialog_colorSelected_signal;
 //  _currentColorChanged QColorDialog_currentColorChanged_signal;
 }
@@ -94,9 +94,9 @@ func (this *QColorDialog) Setcurrentcolor(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QColorDialog15setCurrentColorERK6QColor
     // invoke: void setCurrentColor(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QColorDialog15setCurrentColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN12QColorDialog15setCurrentColorERK6QColor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColorDialog", "setCurrentColor", args)
   }
@@ -119,9 +119,9 @@ func (this *QColorDialog) Setcustomcolor_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QColorDialog14setCustomColorEi6QColor
     // invoke: void setCustomColor(int, class QColor)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QColor).qclsinst
+    var arg1 = args[1].(*QColor).Qclsinst
     if false {fmt.Println(arg1)}
     C.C_ZN12QColorDialog14setCustomColorEi6QColor(arg0, arg1)
   default:
@@ -147,17 +147,21 @@ func (this *QColorDialog) Getrgba_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QColorDialog7getRgbaEjPbP7QWidget
     // invoke: QRgb getRgba(QRgb, _Bool *, class QWidget *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = (unsafe.Pointer)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
     var ret0 = C.C_ZN12QColorDialog7getRgbaEjPbP7QWidget(arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "QRgb"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QColorDialog", "getRgba", args)
   }
@@ -180,13 +184,13 @@ func (this *QColorDialog) Open(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QColorDialog4openEP7QObjectPKc
     // invoke: void open(class QObject *, const char *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    C.C_ZN12QColorDialog4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
+    C.C_ZN12QColorDialog4openEP7QObjectPKc(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QColorDialog", "open", args)
   }
@@ -208,13 +212,17 @@ func (this *QColorDialog) Standardcolor_S(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZN12QColorDialog13standardColorEi
     // invoke: QColor standardColor(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN12QColorDialog13standardColorEi(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QColorDialog", "standardColor", args)
   }
@@ -237,9 +245,9 @@ func (this *QColorDialog) Setstandardcolor_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QColorDialog16setStandardColorEi6QColor
     // invoke: void setStandardColor(int, class QColor)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QColor).qclsinst
+    var arg1 = args[1].(*QColor).Qclsinst
     if false {fmt.Println(arg1)}
     C.C_ZN12QColorDialog16setStandardColorEi6QColor(arg0, arg1)
   default:
@@ -262,7 +270,7 @@ func (this *QColorDialog) Freeqcolordialog(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QColorDialogD0Ev
     // invoke: void ~QColorDialog()
-    C.C_ZN12QColorDialogD2Ev(this.qclsinst)
+    C.C_ZN12QColorDialogD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QColorDialog", "~QColorDialog", args)
   }
@@ -287,7 +295,11 @@ func (this *QColorDialog) Customcount_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QColorDialog", "customCount", args)
   }
@@ -308,7 +320,7 @@ func (this *QColorDialog) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QColorDialog10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK12QColorDialog10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QColorDialog10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QColorDialog", "metaObject", args)
   }
@@ -329,11 +341,15 @@ func (this *QColorDialog) Currentcolor(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QColorDialog12currentColorEv
     // invoke: QColor currentColor()
-    var ret0 = C.C_ZNK12QColorDialog12currentColorEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QColorDialog12currentColorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QColorDialog", "currentColor", args)
   }
@@ -354,11 +370,15 @@ func (this *QColorDialog) Selectedcolor(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QColorDialog13selectedColorEv
     // invoke: QColor selectedColor()
-    var ret0 = C.C_ZNK12QColorDialog13selectedColorEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QColorDialog13selectedColorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QColorDialog", "selectedColor", args)
   }
@@ -384,28 +404,28 @@ func NewQColorDialog(args ...interface{}) *QColorDialog {
   case 0:
     // invoke: _ZN12QColorDialogC1EP7QWidget
     // invoke: void QColorDialog(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QColorDialogC2EP7QWidget(arg0)
-    return &QColorDialog{qclsinst:qthis}
+    return &QColorDialog{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QColorDialogC1ERK6QColorP7QWidget
     // invoke: void QColorDialog(const class QColor &, class QWidget *)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QColorDialogC2ERK6QColorP7QWidget(arg0, arg1)
-    return &QColorDialog{qclsinst:qthis}
+    return &QColorDialog{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QColorDialog", "QColorDialog", args)
   }
 
-  return nil // QColorDialog{qclsinst:qthis}
+  return nil // QColorDialog{Qclsinst:qthis}
 }
 
 // customColor(int)
@@ -422,13 +442,17 @@ func (this *QColorDialog) Customcolor_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QColorDialog11customColorEi
     // invoke: QColor customColor(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN12QColorDialog11customColorEi(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QColorDialog", "customColor", args)
   }
@@ -452,7 +476,7 @@ func (this *QColorDialog) Setvisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QColorDialog10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN12QColorDialog10setVisibleEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColorDialog", "setVisible", args)
   }
@@ -473,7 +497,7 @@ func (this *QColorDialog) Options(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QColorDialog7optionsEv
     // invoke: ColorDialogOptions options()
-    C.C_ZNK12QColorDialog7optionsEv(this.qclsinst)
+    C.C_ZNK12QColorDialog7optionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QColorDialog", "options", args)
   }

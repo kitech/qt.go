@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qstorageinfo.h
 // dst-file: /src/core/qstorageinfo.go
 //
@@ -87,7 +87,7 @@ func init() {
 // class sizeof(QStorageInfo)=1
 type QStorageInfo struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // isReady()
@@ -103,11 +103,15 @@ func (this *QStorageInfo) Isready(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QStorageInfo7isReadyEv
     // invoke: bool isReady()
-    var ret0 = C.C_ZNK12QStorageInfo7isReadyEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QStorageInfo7isReadyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "isReady", args)
   }
@@ -149,11 +153,15 @@ func (this *QStorageInfo) Name(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QStorageInfo4nameEv
     // invoke: QString name()
-    var ret0 = C.C_ZNK12QStorageInfo4nameEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QStorageInfo4nameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "name", args)
   }
@@ -174,11 +182,15 @@ func (this *QStorageInfo) Isroot(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QStorageInfo6isRootEv
     // invoke: bool isRoot()
-    var ret0 = C.C_ZNK12QStorageInfo6isRootEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QStorageInfo6isRootEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "isRoot", args)
   }
@@ -199,11 +211,15 @@ func (this *QStorageInfo) Isreadonly(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QStorageInfo10isReadOnlyEv
     // invoke: bool isReadOnly()
-    var ret0 = C.C_ZNK12QStorageInfo10isReadOnlyEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QStorageInfo10isReadOnlyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "isReadOnly", args)
   }
@@ -224,11 +240,15 @@ func (this *QStorageInfo) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QStorageInfo7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK12QStorageInfo7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QStorageInfo7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "isValid", args)
   }
@@ -249,11 +269,15 @@ func (this *QStorageInfo) Filesystemtype(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK12QStorageInfo14fileSystemTypeEv
     // invoke: QByteArray fileSystemType()
-    var ret0 = C.C_ZNK12QStorageInfo14fileSystemTypeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QStorageInfo14fileSystemTypeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "fileSystemType", args)
   }
@@ -274,11 +298,15 @@ func (this *QStorageInfo) Rootpath(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QStorageInfo8rootPathEv
     // invoke: QString rootPath()
-    var ret0 = C.C_ZNK12QStorageInfo8rootPathEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QStorageInfo8rootPathEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "rootPath", args)
   }
@@ -299,7 +327,7 @@ func (this *QStorageInfo) Refresh(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStorageInfo7refreshEv
     // invoke: void refresh()
-    C.C_ZN12QStorageInfo7refreshEv(this.qclsinst)
+    C.C_ZN12QStorageInfo7refreshEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "refresh", args)
   }
@@ -320,11 +348,15 @@ func (this *QStorageInfo) Bytesavailable(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK12QStorageInfo14bytesAvailableEv
     // invoke: qint64 bytesAvailable()
-    var ret0 = C.C_ZNK12QStorageInfo14bytesAvailableEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QStorageInfo14bytesAvailableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "bytesAvailable", args)
   }
@@ -345,11 +377,15 @@ func (this *QStorageInfo) Bytesfree(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QStorageInfo9bytesFreeEv
     // invoke: qint64 bytesFree()
-    var ret0 = C.C_ZNK12QStorageInfo9bytesFreeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QStorageInfo9bytesFreeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "bytesFree", args)
   }
@@ -370,11 +406,15 @@ func (this *QStorageInfo) Bytestotal(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QStorageInfo10bytesTotalEv
     // invoke: qint64 bytesTotal()
-    var ret0 = C.C_ZNK12QStorageInfo10bytesTotalEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QStorageInfo10bytesTotalEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "bytesTotal", args)
   }
@@ -395,11 +435,15 @@ func (this *QStorageInfo) Device(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QStorageInfo6deviceEv
     // invoke: QByteArray device()
-    var ret0 = C.C_ZNK12QStorageInfo6deviceEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QStorageInfo6deviceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "device", args)
   }
@@ -421,9 +465,9 @@ func (this *QStorageInfo) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStorageInfo4swapERS_
     // invoke: void swap(class QStorageInfo &)
-    var arg0 = args[0].(QStorageInfo).qclsinst
+    var arg0 = args[0].(*QStorageInfo).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QStorageInfo4swapERS_(this.qclsinst, arg0)
+    C.C_ZN12QStorageInfo4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStorageInfo", "swap", args)
   }
@@ -453,42 +497,42 @@ func NewQStorageInfo(args ...interface{}) *QStorageInfo {
   case 0:
     // invoke: _ZN12QStorageInfoC1ERK4QDir
     // invoke: void QStorageInfo(const class QDir &)
-    var arg0 = args[0].(QDir).qclsinst
+    var arg0 = args[0].(*QDir).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStorageInfoC2ERK4QDir(arg0)
-    return &QStorageInfo{qclsinst:qthis}
+    return &QStorageInfo{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QStorageInfoC1ERKS_
     // invoke: void QStorageInfo(const class QStorageInfo &)
-    var arg0 = args[0].(QStorageInfo).qclsinst
+    var arg0 = args[0].(*QStorageInfo).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStorageInfoC2ERKS_(arg0)
-    return &QStorageInfo{qclsinst:qthis}
+    return &QStorageInfo{Qclsinst:qthis}
   case 2:
     // invoke: _ZN12QStorageInfoC1Ev
     // invoke: void QStorageInfo()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStorageInfoC2Ev()
-    return &QStorageInfo{qclsinst:qthis}
+    return &QStorageInfo{Qclsinst:qthis}
   case 3:
     // invoke: _ZN12QStorageInfoC1ERK7QString
     // invoke: void QStorageInfo(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStorageInfoC2ERK7QString(arg0)
-    return &QStorageInfo{qclsinst:qthis}
+    return &QStorageInfo{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStorageInfo", "QStorageInfo", args)
   }
 
-  return nil // QStorageInfo{qclsinst:qthis}
+  return nil // QStorageInfo{Qclsinst:qthis}
 }
 
 // displayName()
@@ -504,11 +548,15 @@ func (this *QStorageInfo) Displayname(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QStorageInfo11displayNameEv
     // invoke: QString displayName()
-    var ret0 = C.C_ZNK12QStorageInfo11displayNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QStorageInfo11displayNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "displayName", args)
   }
@@ -530,9 +578,9 @@ func (this *QStorageInfo) Setpath(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStorageInfo7setPathERK7QString
     // invoke: void setPath(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QStorageInfo7setPathERK7QString(this.qclsinst, arg0)
+    C.C_ZN12QStorageInfo7setPathERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStorageInfo", "setPath", args)
   }
@@ -557,7 +605,11 @@ func (this *QStorageInfo) Root_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QStorageInfo{}) // "QStorageInfo"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "root", args)
   }
@@ -578,7 +630,7 @@ func (this *QStorageInfo) Freeqstorageinfo(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStorageInfoD0Ev
     // invoke: void ~QStorageInfo()
-    C.C_ZN12QStorageInfoD2Ev(this.qclsinst)
+    C.C_ZN12QStorageInfoD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "~QStorageInfo", args)
   }

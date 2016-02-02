@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qscrollerproperties.h
 // dst-file: /src/widgets/qscrollerproperties.go
 //
@@ -53,7 +53,7 @@ func init() {
 // class sizeof(QScrollerProperties)=1
 type QScrollerProperties struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // unsetDefaultScrollerProperties()
@@ -96,21 +96,21 @@ func NewQScrollerProperties(args ...interface{}) *QScrollerProperties {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QScrollerPropertiesC2Ev()
-    return &QScrollerProperties{qclsinst:qthis}
+    return &QScrollerProperties{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QScrollerPropertiesC1ERKS_
     // invoke: void QScrollerProperties(const class QScrollerProperties &)
-    var arg0 = args[0].(QScrollerProperties).qclsinst
+    var arg0 = args[0].(*QScrollerProperties).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QScrollerPropertiesC2ERKS_(arg0)
-    return &QScrollerProperties{qclsinst:qthis}
+    return &QScrollerProperties{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QScrollerProperties", "QScrollerProperties", args)
   }
 
-  return nil // QScrollerProperties{qclsinst:qthis}
+  return nil // QScrollerProperties{Qclsinst:qthis}
 }
 
 // setDefaultScrollerProperties(const class QScrollerProperties &)
@@ -127,7 +127,7 @@ func (this *QScrollerProperties) Setdefaultscrollerproperties_S(args ...interfac
   case 0:
     // invoke: _ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_
     // invoke: void setDefaultScrollerProperties(const class QScrollerProperties &)
-    var arg0 = args[0].(QScrollerProperties).qclsinst
+    var arg0 = args[0].(*QScrollerProperties).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_(arg0)
   default:
@@ -150,7 +150,7 @@ func (this *QScrollerProperties) Freeqscrollerproperties(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QScrollerPropertiesD0Ev
     // invoke: void ~QScrollerProperties()
-    C.C_ZN19QScrollerPropertiesD2Ev(this.qclsinst)
+    C.C_ZN19QScrollerPropertiesD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QScrollerProperties", "~QScrollerProperties", args)
   }

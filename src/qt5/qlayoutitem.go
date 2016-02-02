@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qlayoutitem.h
 // dst-file: /src/widgets/qlayoutitem.go
 //
@@ -121,25 +121,25 @@ func init() {
 // class sizeof(QLayoutItem)=1
 type QLayoutItem struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QSpacerItem)=1
 type QSpacerItem struct {
   /*qbase*/ QLayoutItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QWidgetItem)=1
 type QWidgetItem struct {
   /*qbase*/ QLayoutItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QWidgetItemV2)=1
 type QWidgetItemV2 struct {
   /*qbase*/ QWidgetItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // invalidate()
@@ -155,7 +155,7 @@ func (this *QLayoutItem) Invalidate(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QLayoutItem10invalidateEv
     // invoke: void invalidate()
-    C.C_ZN11QLayoutItem10invalidateEv(this.qclsinst)
+    C.C_ZN11QLayoutItem10invalidateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "invalidate", args)
   }
@@ -176,11 +176,15 @@ func (this *QLayoutItem) Widget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QLayoutItem6widgetEv
     // invoke: QWidget * widget()
-    var ret0 = C.C_ZN11QLayoutItem6widgetEv(this.qclsinst)
+    var ret0 = C.C_ZN11QLayoutItem6widgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLayoutItem", "widget", args)
   }
@@ -201,11 +205,15 @@ func (this *QLayoutItem) Layout(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QLayoutItem6layoutEv
     // invoke: QLayout * layout()
-    var ret0 = C.C_ZN11QLayoutItem6layoutEv(this.qclsinst)
+    var ret0 = C.C_ZN11QLayoutItem6layoutEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLayout{}) // "QLayout *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLayoutItem", "layout", args)
   }
@@ -226,7 +234,7 @@ func (this *QLayoutItem) Freeqlayoutitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QLayoutItemD0Ev
     // invoke: void ~QLayoutItem()
-    C.C_ZN11QLayoutItemD2Ev(this.qclsinst)
+    C.C_ZN11QLayoutItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "~QLayoutItem", args)
   }
@@ -247,11 +255,15 @@ func (this *QLayoutItem) Spaceritem(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QLayoutItem10spacerItemEv
     // invoke: QSpacerItem * spacerItem()
-    var ret0 = C.C_ZN11QLayoutItem10spacerItemEv(this.qclsinst)
+    var ret0 = C.C_ZN11QLayoutItem10spacerItemEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSpacerItem{}) // "QSpacerItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLayoutItem", "spacerItem", args)
   }
@@ -272,7 +284,7 @@ func (this *QLayoutItem) Controltypes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QLayoutItem12controlTypesEv
     // invoke: QSizePolicy::ControlTypes controlTypes()
-    C.C_ZNK11QLayoutItem12controlTypesEv(this.qclsinst)
+    C.C_ZNK11QLayoutItem12controlTypesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "controlTypes", args)
   }
@@ -294,13 +306,17 @@ func (this *QLayoutItem) Heightforwidth(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QLayoutItem14heightForWidthEi
     // invoke: int heightForWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QLayoutItem14heightForWidthEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QLayoutItem14heightForWidthEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLayoutItem", "heightForWidth", args)
   }
@@ -321,11 +337,15 @@ func (this *QLayoutItem) Hasheightforwidth(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK11QLayoutItem17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    var ret0 = C.C_ZNK11QLayoutItem17hasHeightForWidthEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QLayoutItem17hasHeightForWidthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLayoutItem", "hasHeightForWidth", args)
   }
@@ -347,13 +367,17 @@ func (this *QLayoutItem) Minimumheightforwidth(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK11QLayoutItem21minimumHeightForWidthEi
     // invoke: int minimumHeightForWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QLayoutItem21minimumHeightForWidthEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QLayoutItem21minimumHeightForWidthEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLayoutItem", "minimumHeightForWidth", args)
   }
@@ -374,7 +398,7 @@ func (this *QLayoutItem) Alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QLayoutItem9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C.C_ZNK11QLayoutItem9alignmentEv(this.qclsinst)
+    C.C_ZNK11QLayoutItem9alignmentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "alignment", args)
   }
@@ -395,7 +419,7 @@ func (this *QSpacerItem) Expandingdirections(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSpacerItem19expandingDirectionsEv
     // invoke: Qt::Orientations expandingDirections()
-    C.C_ZNK11QSpacerItem19expandingDirectionsEv(this.qclsinst)
+    C.C_ZNK11QSpacerItem19expandingDirectionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "expandingDirections", args)
   }
@@ -416,11 +440,15 @@ func (this *QSpacerItem) Sizepolicy(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QSpacerItem10sizePolicyEv
     // invoke: QSizePolicy sizePolicy()
-    var ret0 = C.C_ZNK11QSpacerItem10sizePolicyEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QSpacerItem10sizePolicyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSizePolicy{}) // "QSizePolicy"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSpacerItem", "sizePolicy", args)
   }
@@ -441,11 +469,15 @@ func (this *QSpacerItem) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QSpacerItem8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK11QSpacerItem8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QSpacerItem8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSpacerItem", "sizeHint", args)
   }
@@ -466,11 +498,15 @@ func (this *QSpacerItem) Geometry(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QSpacerItem8geometryEv
     // invoke: QRect geometry()
-    var ret0 = C.C_ZNK11QSpacerItem8geometryEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QSpacerItem8geometryEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSpacerItem", "geometry", args)
   }
@@ -492,9 +528,9 @@ func (this *QSpacerItem) Setgeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QSpacerItem11setGeometryERK5QRect
     // invoke: void setGeometry(const class QRect &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QSpacerItem11setGeometryERK5QRect(this.qclsinst, arg0)
+    C.C_ZN11QSpacerItem11setGeometryERK5QRect(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSpacerItem", "setGeometry", args)
   }
@@ -515,11 +551,15 @@ func (this *QSpacerItem) Minimumsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QSpacerItem11minimumSizeEv
     // invoke: QSize minimumSize()
-    var ret0 = C.C_ZNK11QSpacerItem11minimumSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QSpacerItem11minimumSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSpacerItem", "minimumSize", args)
   }
@@ -540,11 +580,15 @@ func (this *QSpacerItem) Spaceritem(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QSpacerItem10spacerItemEv
     // invoke: QSpacerItem * spacerItem()
-    var ret0 = C.C_ZN11QSpacerItem10spacerItemEv(this.qclsinst)
+    var ret0 = C.C_ZN11QSpacerItem10spacerItemEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSpacerItem{}) // "QSpacerItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSpacerItem", "spacerItem", args)
   }
@@ -565,11 +609,15 @@ func (this *QSpacerItem) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QSpacerItem7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK11QSpacerItem7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QSpacerItem7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSpacerItem", "isEmpty", args)
   }
@@ -590,7 +638,7 @@ func (this *QSpacerItem) Freeqspaceritem(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QSpacerItemD0Ev
     // invoke: void ~QSpacerItem()
-    C.C_ZN11QSpacerItemD2Ev(this.qclsinst)
+    C.C_ZN11QSpacerItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "~QSpacerItem", args)
   }
@@ -611,11 +659,15 @@ func (this *QSpacerItem) Maximumsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QSpacerItem11maximumSizeEv
     // invoke: QSize maximumSize()
-    var ret0 = C.C_ZNK11QSpacerItem11maximumSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QSpacerItem11maximumSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSpacerItem", "maximumSize", args)
   }
@@ -636,7 +688,7 @@ func (this *QWidgetItem) Expandingdirections(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWidgetItem19expandingDirectionsEv
     // invoke: Qt::Orientations expandingDirections()
-    C.C_ZNK11QWidgetItem19expandingDirectionsEv(this.qclsinst)
+    C.C_ZNK11QWidgetItem19expandingDirectionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "expandingDirections", args)
   }
@@ -657,11 +709,15 @@ func (this *QWidgetItem) Widget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QWidgetItem6widgetEv
     // invoke: QWidget * widget()
-    var ret0 = C.C_ZN11QWidgetItem6widgetEv(this.qclsinst)
+    var ret0 = C.C_ZN11QWidgetItem6widgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetItem", "widget", args)
   }
@@ -683,9 +739,9 @@ func (this *QWidgetItem) Setgeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QWidgetItem11setGeometryERK5QRect
     // invoke: void setGeometry(const class QRect &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QWidgetItem11setGeometryERK5QRect(this.qclsinst, arg0)
+    C.C_ZN11QWidgetItem11setGeometryERK5QRect(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWidgetItem", "setGeometry", args)
   }
@@ -706,11 +762,15 @@ func (this *QWidgetItem) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QWidgetItem8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK11QWidgetItem8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QWidgetItem8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetItem", "sizeHint", args)
   }
@@ -731,11 +791,15 @@ func (this *QWidgetItem) Hasheightforwidth(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK11QWidgetItem17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    var ret0 = C.C_ZNK11QWidgetItem17hasHeightForWidthEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QWidgetItem17hasHeightForWidthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetItem", "hasHeightForWidth", args)
   }
@@ -756,11 +820,15 @@ func (this *QWidgetItem) Geometry(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QWidgetItem8geometryEv
     // invoke: QRect geometry()
-    var ret0 = C.C_ZNK11QWidgetItem8geometryEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QWidgetItem8geometryEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetItem", "geometry", args)
   }
@@ -781,7 +849,7 @@ func (this *QWidgetItem) Freeqwidgetitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QWidgetItemD0Ev
     // invoke: void ~QWidgetItem()
-    C.C_ZN11QWidgetItemD2Ev(this.qclsinst)
+    C.C_ZN11QWidgetItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "~QWidgetItem", args)
   }
@@ -803,17 +871,17 @@ func NewQWidgetItem(args ...interface{}) *QWidgetItem {
   case 0:
     // invoke: _ZN11QWidgetItemC1EP7QWidget
     // invoke: void QWidgetItem(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QWidgetItemC2EP7QWidget(arg0)
-    return &QWidgetItem{qclsinst:qthis}
+    return &QWidgetItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QWidgetItem", "QWidgetItem", args)
   }
 
-  return nil // QWidgetItem{qclsinst:qthis}
+  return nil // QWidgetItem{Qclsinst:qthis}
 }
 
 // minimumSize()
@@ -829,11 +897,15 @@ func (this *QWidgetItem) Minimumsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QWidgetItem11minimumSizeEv
     // invoke: QSize minimumSize()
-    var ret0 = C.C_ZNK11QWidgetItem11minimumSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QWidgetItem11minimumSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetItem", "minimumSize", args)
   }
@@ -854,7 +926,7 @@ func (this *QWidgetItem) Controltypes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWidgetItem12controlTypesEv
     // invoke: QSizePolicy::ControlTypes controlTypes()
-    C.C_ZNK11QWidgetItem12controlTypesEv(this.qclsinst)
+    C.C_ZNK11QWidgetItem12controlTypesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "controlTypes", args)
   }
@@ -876,13 +948,17 @@ func (this *QWidgetItem) Heightforwidth(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QWidgetItem14heightForWidthEi
     // invoke: int heightForWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QWidgetItem14heightForWidthEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QWidgetItem14heightForWidthEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetItem", "heightForWidth", args)
   }
@@ -903,11 +979,15 @@ func (this *QWidgetItem) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QWidgetItem7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK11QWidgetItem7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QWidgetItem7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetItem", "isEmpty", args)
   }
@@ -928,11 +1008,15 @@ func (this *QWidgetItem) Maximumsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QWidgetItem11maximumSizeEv
     // invoke: QSize maximumSize()
-    var ret0 = C.C_ZNK11QWidgetItem11maximumSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QWidgetItem11maximumSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetItem", "maximumSize", args)
   }
@@ -953,7 +1037,7 @@ func (this *QWidgetItemV2) Freeqwidgetitemv2(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QWidgetItemV2D0Ev
     // invoke: void ~QWidgetItemV2()
-    C.C_ZN13QWidgetItemV2D2Ev(this.qclsinst)
+    C.C_ZN13QWidgetItemV2D2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "~QWidgetItemV2", args)
   }
@@ -974,11 +1058,15 @@ func (this *QWidgetItemV2) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QWidgetItemV28sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK13QWidgetItemV28sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QWidgetItemV28sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "sizeHint", args)
   }
@@ -1000,17 +1088,17 @@ func NewQWidgetItemV2(args ...interface{}) *QWidgetItemV2 {
   case 0:
     // invoke: _ZN13QWidgetItemV2C1EP7QWidget
     // invoke: void QWidgetItemV2(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QWidgetItemV2C2EP7QWidget(arg0)
-    return &QWidgetItemV2{qclsinst:qthis}
+    return &QWidgetItemV2{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "QWidgetItemV2", args)
   }
 
-  return nil // QWidgetItemV2{qclsinst:qthis}
+  return nil // QWidgetItemV2{Qclsinst:qthis}
 }
 
 // minimumSize()
@@ -1026,11 +1114,15 @@ func (this *QWidgetItemV2) Minimumsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QWidgetItemV211minimumSizeEv
     // invoke: QSize minimumSize()
-    var ret0 = C.C_ZNK13QWidgetItemV211minimumSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QWidgetItemV211minimumSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "minimumSize", args)
   }
@@ -1052,13 +1144,17 @@ func (this *QWidgetItemV2) Heightforwidth(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK13QWidgetItemV214heightForWidthEi
     // invoke: int heightForWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QWidgetItemV214heightForWidthEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QWidgetItemV214heightForWidthEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "heightForWidth", args)
   }
@@ -1079,11 +1175,15 @@ func (this *QWidgetItemV2) Maximumsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QWidgetItemV211maximumSizeEv
     // invoke: QSize maximumSize()
-    var ret0 = C.C_ZNK13QWidgetItemV211maximumSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QWidgetItemV211maximumSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "maximumSize", args)
   }

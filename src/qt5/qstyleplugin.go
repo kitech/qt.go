@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qstyleplugin.h
 // dst-file: /src/widgets/qstyleplugin.go
 //
@@ -49,7 +49,7 @@ func init() {
 // class sizeof(QStylePlugin)=1
 type QStylePlugin struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // ~QStylePlugin()
@@ -65,7 +65,7 @@ func (this *QStylePlugin) Freeqstyleplugin(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStylePluginD0Ev
     // invoke: void ~QStylePlugin()
-    C.C_ZN12QStylePluginD2Ev(this.qclsinst)
+    C.C_ZN12QStylePluginD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStylePlugin", "~QStylePlugin", args)
   }
@@ -86,7 +86,7 @@ func (this *QStylePlugin) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QStylePlugin10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK12QStylePlugin10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QStylePlugin10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStylePlugin", "metaObject", args)
   }
@@ -108,17 +108,17 @@ func NewQStylePlugin(args ...interface{}) *QStylePlugin {
   case 0:
     // invoke: _ZN12QStylePluginC1EP7QObject
     // invoke: void QStylePlugin(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStylePluginC2EP7QObject(arg0)
-    return &QStylePlugin{qclsinst:qthis}
+    return &QStylePlugin{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStylePlugin", "QStylePlugin", args)
   }
 
-  return nil // QStylePlugin{qclsinst:qthis}
+  return nil // QStylePlugin{Qclsinst:qthis}
 }
 
 // <= body block end

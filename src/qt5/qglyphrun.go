@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qglyphrun.h
 // dst-file: /src/gui/qglyphrun.go
 //
@@ -87,7 +87,7 @@ func init() {
 // class sizeof(QGlyphRun)=1
 type QGlyphRun struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // boundingRect()
@@ -103,11 +103,15 @@ func (this *QGlyphRun) Boundingrect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QGlyphRun12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK9QGlyphRun12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QGlyphRun12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGlyphRun", "boundingRect", args)
   }
@@ -128,11 +132,15 @@ func (this *QGlyphRun) Rawfont(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QGlyphRun7rawFontEv
     // invoke: QRawFont rawFont()
-    var ret0 = C.C_ZNK9QGlyphRun7rawFontEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QGlyphRun7rawFontEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRawFont{}) // "QRawFont"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGlyphRun", "rawFont", args)
   }
@@ -153,11 +161,15 @@ func (this *QGlyphRun) Underline(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QGlyphRun9underlineEv
     // invoke: bool underline()
-    var ret0 = C.C_ZNK9QGlyphRun9underlineEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QGlyphRun9underlineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGlyphRun", "underline", args)
   }
@@ -179,9 +191,9 @@ func (this *QGlyphRun) Setboundingrect(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGlyphRun15setBoundingRectERK6QRectF
     // invoke: void setBoundingRect(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QGlyphRun15setBoundingRectERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN9QGlyphRun15setBoundingRectERK6QRectF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setBoundingRect", args)
   }
@@ -203,9 +215,9 @@ func (this *QGlyphRun) Setrawfont(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGlyphRun10setRawFontERK8QRawFont
     // invoke: void setRawFont(const class QRawFont &)
-    var arg0 = args[0].(QRawFont).qclsinst
+    var arg0 = args[0].(*QRawFont).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QGlyphRun10setRawFontERK8QRawFont(this.qclsinst, arg0)
+    C.C_ZN9QGlyphRun10setRawFontERK8QRawFont(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setRawFont", args)
   }
@@ -226,11 +238,15 @@ func (this *QGlyphRun) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QGlyphRun7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK9QGlyphRun7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QGlyphRun7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGlyphRun", "isEmpty", args)
   }
@@ -252,9 +268,9 @@ func (this *QGlyphRun) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGlyphRun4swapERS_
     // invoke: void swap(class QGlyphRun &)
-    var arg0 = args[0].(QGlyphRun).qclsinst
+    var arg0 = args[0].(*QGlyphRun).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QGlyphRun4swapERS_(this.qclsinst, arg0)
+    C.C_ZN9QGlyphRun4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "swap", args)
   }
@@ -280,11 +296,11 @@ func (this *QGlyphRun) Setrawdata(args ...interface{}) () {
     // invoke: void setRawData(const quint32 *, const class QPointF *, int)
     var arg0 = (unsafe.Pointer)(args[0].(*int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPointF).qclsinst
+    var arg1 = args[1].(*QPointF).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN9QGlyphRun10setRawDataEPKjPK7QPointFi(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN9QGlyphRun10setRawDataEPKjPK7QPointFi(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setRawData", args)
   }
@@ -305,11 +321,15 @@ func (this *QGlyphRun) Isrighttoleft(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QGlyphRun13isRightToLeftEv
     // invoke: bool isRightToLeft()
-    var ret0 = C.C_ZNK9QGlyphRun13isRightToLeftEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QGlyphRun13isRightToLeftEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGlyphRun", "isRightToLeft", args)
   }
@@ -330,11 +350,15 @@ func (this *QGlyphRun) Strikeout(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QGlyphRun9strikeOutEv
     // invoke: bool strikeOut()
-    var ret0 = C.C_ZNK9QGlyphRun9strikeOutEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QGlyphRun9strikeOutEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGlyphRun", "strikeOut", args)
   }
@@ -355,7 +379,7 @@ func (this *QGlyphRun) Freeqglyphrun(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGlyphRunD0Ev
     // invoke: void ~QGlyphRun()
-    C.C_ZN9QGlyphRunD2Ev(this.qclsinst)
+    C.C_ZN9QGlyphRunD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "~QGlyphRun", args)
   }
@@ -379,7 +403,7 @@ func (this *QGlyphRun) Setoverline(args ...interface{}) () {
     // invoke: void setOverline(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QGlyphRun11setOverlineEb(this.qclsinst, arg0)
+    C.C_ZN9QGlyphRun11setOverlineEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setOverline", args)
   }
@@ -403,7 +427,7 @@ func (this *QGlyphRun) Setrighttoleft(args ...interface{}) () {
     // invoke: void setRightToLeft(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QGlyphRun14setRightToLeftEb(this.qclsinst, arg0)
+    C.C_ZN9QGlyphRun14setRightToLeftEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setRightToLeft", args)
   }
@@ -427,7 +451,7 @@ func (this *QGlyphRun) Setstrikeout(args ...interface{}) () {
     // invoke: void setStrikeOut(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QGlyphRun12setStrikeOutEb(this.qclsinst, arg0)
+    C.C_ZN9QGlyphRun12setStrikeOutEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setStrikeOut", args)
   }
@@ -448,7 +472,7 @@ func (this *QGlyphRun) Positions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGlyphRun9positionsEv
     // invoke: QVector<QPointF> positions()
-    C.C_ZNK9QGlyphRun9positionsEv(this.qclsinst)
+    C.C_ZNK9QGlyphRun9positionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "positions", args)
   }
@@ -469,7 +493,7 @@ func (this *QGlyphRun) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGlyphRun5clearEv
     // invoke: void clear()
-    C.C_ZN9QGlyphRun5clearEv(this.qclsinst)
+    C.C_ZN9QGlyphRun5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "clear", args)
   }
@@ -493,24 +517,24 @@ func NewQGlyphRun(args ...interface{}) *QGlyphRun {
   case 0:
     // invoke: _ZN9QGlyphRunC1ERKS_
     // invoke: void QGlyphRun(const class QGlyphRun &)
-    var arg0 = args[0].(QGlyphRun).qclsinst
+    var arg0 = args[0].(*QGlyphRun).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QGlyphRunC2ERKS_(arg0)
-    return &QGlyphRun{qclsinst:qthis}
+    return &QGlyphRun{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QGlyphRunC1Ev
     // invoke: void QGlyphRun()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QGlyphRunC2Ev()
-    return &QGlyphRun{qclsinst:qthis}
+    return &QGlyphRun{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGlyphRun", "QGlyphRun", args)
   }
 
-  return nil // QGlyphRun{qclsinst:qthis}
+  return nil // QGlyphRun{Qclsinst:qthis}
 }
 
 // overline()
@@ -526,11 +550,15 @@ func (this *QGlyphRun) Overline(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QGlyphRun8overlineEv
     // invoke: bool overline()
-    var ret0 = C.C_ZNK9QGlyphRun8overlineEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QGlyphRun8overlineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGlyphRun", "overline", args)
   }
@@ -551,7 +579,7 @@ func (this *QGlyphRun) Flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGlyphRun5flagsEv
     // invoke: GlyphRunFlags flags()
-    C.C_ZNK9QGlyphRun5flagsEv(this.qclsinst)
+    C.C_ZNK9QGlyphRun5flagsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "flags", args)
   }
@@ -575,7 +603,7 @@ func (this *QGlyphRun) Setunderline(args ...interface{}) () {
     // invoke: void setUnderline(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QGlyphRun12setUnderlineEb(this.qclsinst, arg0)
+    C.C_ZN9QGlyphRun12setUnderlineEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setUnderline", args)
   }
@@ -596,7 +624,7 @@ func (this *QGlyphRun) Glyphindexes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGlyphRun12glyphIndexesEv
     // invoke: QVector<quint32> glyphIndexes()
-    C.C_ZNK9QGlyphRun12glyphIndexesEv(this.qclsinst)
+    C.C_ZNK9QGlyphRun12glyphIndexesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "glyphIndexes", args)
   }

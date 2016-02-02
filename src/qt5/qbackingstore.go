@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.go
 //
@@ -71,7 +71,7 @@ func init() {
 // class sizeof(QBackingStore)=1
 type QBackingStore struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QBackingStore(class QWindow *)
@@ -88,17 +88,17 @@ func NewQBackingStore(args ...interface{}) *QBackingStore {
   case 0:
     // invoke: _ZN13QBackingStoreC1EP7QWindow
     // invoke: void QBackingStore(class QWindow *)
-    var arg0 = args[0].(QWindow).qclsinst
+    var arg0 = args[0].(*QWindow).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QBackingStoreC2EP7QWindow(arg0)
-    return &QBackingStore{qclsinst:qthis}
+    return &QBackingStore{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QBackingStore", "QBackingStore", args)
   }
 
-  return nil // QBackingStore{qclsinst:qthis}
+  return nil // QBackingStore{Qclsinst:qthis}
 }
 
 // handle()
@@ -114,7 +114,7 @@ func (this *QBackingStore) Handle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QBackingStore6handleEv
     // invoke: QPlatformBackingStore * handle()
-    C.C_ZNK13QBackingStore6handleEv(this.qclsinst)
+    C.C_ZNK13QBackingStore6handleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "handle", args)
   }
@@ -135,11 +135,15 @@ func (this *QBackingStore) Paintdevice(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN13QBackingStore11paintDeviceEv
     // invoke: QPaintDevice * paintDevice()
-    var ret0 = C.C_ZN13QBackingStore11paintDeviceEv(this.qclsinst)
+    var ret0 = C.C_ZN13QBackingStore11paintDeviceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPaintDevice{}) // "QPaintDevice *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBackingStore", "paintDevice", args)
   }
@@ -160,11 +164,15 @@ func (this *QBackingStore) Staticcontents(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK13QBackingStore14staticContentsEv
     // invoke: QRegion staticContents()
-    var ret0 = C.C_ZNK13QBackingStore14staticContentsEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QBackingStore14staticContentsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBackingStore", "staticContents", args)
   }
@@ -186,9 +194,9 @@ func (this *QBackingStore) Beginpaint(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QBackingStore10beginPaintERK7QRegion
     // invoke: void beginPaint(const class QRegion &)
-    var arg0 = args[0].(QRegion).qclsinst
+    var arg0 = args[0].(*QRegion).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QBackingStore10beginPaintERK7QRegion(this.qclsinst, arg0)
+    C.C_ZN13QBackingStore10beginPaintERK7QRegion(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBackingStore", "beginPaint", args)
   }
@@ -209,7 +217,7 @@ func (this *QBackingStore) Endpaint(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QBackingStore8endPaintEv
     // invoke: void endPaint()
-    C.C_ZN13QBackingStore8endPaintEv(this.qclsinst)
+    C.C_ZN13QBackingStore8endPaintEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "endPaint", args)
   }
@@ -230,11 +238,15 @@ func (this *QBackingStore) Hasstaticcontents(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK13QBackingStore17hasStaticContentsEv
     // invoke: bool hasStaticContents()
-    var ret0 = C.C_ZNK13QBackingStore17hasStaticContentsEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QBackingStore17hasStaticContentsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBackingStore", "hasStaticContents", args)
   }
@@ -255,11 +267,15 @@ func (this *QBackingStore) Window(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QBackingStore6windowEv
     // invoke: QWindow * window()
-    var ret0 = C.C_ZNK13QBackingStore6windowEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QBackingStore6windowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWindow{}) // "QWindow *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBackingStore", "window", args)
   }
@@ -281,9 +297,9 @@ func (this *QBackingStore) Setstaticcontents(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QBackingStore17setStaticContentsERK7QRegion
     // invoke: void setStaticContents(const class QRegion &)
-    var arg0 = args[0].(QRegion).qclsinst
+    var arg0 = args[0].(*QRegion).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QBackingStore17setStaticContentsERK7QRegion(this.qclsinst, arg0)
+    C.C_ZN13QBackingStore17setStaticContentsERK7QRegion(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBackingStore", "setStaticContents", args)
   }
@@ -307,13 +323,13 @@ func (this *QBackingStore) Flush(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint
     // invoke: void flush(const class QRegion &, class QWindow *, const class QPoint &)
-    var arg0 = args[0].(QRegion).qclsinst
+    var arg0 = args[0].(*QRegion).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWindow).qclsinst
+    var arg1 = args[1].(*QWindow).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QPoint).qclsinst
+    var arg2 = args[2].(*QPoint).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QBackingStore", "flush", args)
   }
@@ -334,11 +350,15 @@ func (this *QBackingStore) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QBackingStore4sizeEv
     // invoke: QSize size()
-    var ret0 = C.C_ZNK13QBackingStore4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QBackingStore4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBackingStore", "size", args)
   }
@@ -362,17 +382,21 @@ func (this *QBackingStore) Scroll(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN13QBackingStore6scrollERK7QRegionii
     // invoke: bool scroll(const class QRegion &, int, int)
-    var arg0 = args[0].(QRegion).qclsinst
+    var arg0 = args[0].(*QRegion).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN13QBackingStore6scrollERK7QRegionii(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN13QBackingStore6scrollERK7QRegionii(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBackingStore", "scroll", args)
   }
@@ -394,9 +418,9 @@ func (this *QBackingStore) Resize(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QBackingStore6resizeERK5QSize
     // invoke: void resize(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QBackingStore6resizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN13QBackingStore6resizeERK5QSize(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBackingStore", "resize", args)
   }
@@ -417,7 +441,7 @@ func (this *QBackingStore) Freeqbackingstore(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QBackingStoreD0Ev
     // invoke: void ~QBackingStore()
-    C.C_ZN13QBackingStoreD2Ev(this.qclsinst)
+    C.C_ZN13QBackingStoreD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "~QBackingStore", args)
   }

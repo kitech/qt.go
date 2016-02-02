@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qopenglcontext.h
 // dst-file: /src/gui/qopenglcontext.go
 //
@@ -137,20 +137,20 @@ func init() {
 // class sizeof(QOpenGLVersionProfile)=8
 type QOpenGLVersionProfile struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLContext)=1
 type QOpenGLContext struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _aboutToBeDestroyed QOpenGLContext_aboutToBeDestroyed_signal;
 }
 
 // class sizeof(QOpenGLContextGroup)=1
 type QOpenGLContextGroup struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // profile()
@@ -166,7 +166,7 @@ func (this *QOpenGLVersionProfile) Profile(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QOpenGLVersionProfile7profileEv
     // invoke: QSurfaceFormat::OpenGLContextProfile profile()
-    C.C_ZNK21QOpenGLVersionProfile7profileEv(this.qclsinst)
+    C.C_ZNK21QOpenGLVersionProfile7profileEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "profile", args)
   }
@@ -193,33 +193,33 @@ func NewQOpenGLVersionProfile(args ...interface{}) *QOpenGLVersionProfile {
   case 0:
     // invoke: _ZN21QOpenGLVersionProfileC1ERK14QSurfaceFormat
     // invoke: void QOpenGLVersionProfile(const class QSurfaceFormat &)
-    var arg0 = args[0].(QSurfaceFormat).qclsinst
+    var arg0 = args[0].(*QSurfaceFormat).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QOpenGLVersionProfileC2ERK14QSurfaceFormat(arg0)
-    return &QOpenGLVersionProfile{qclsinst:qthis}
+    return &QOpenGLVersionProfile{Qclsinst:qthis}
   case 1:
     // invoke: _ZN21QOpenGLVersionProfileC1Ev
     // invoke: void QOpenGLVersionProfile()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QOpenGLVersionProfileC2Ev()
-    return &QOpenGLVersionProfile{qclsinst:qthis}
+    return &QOpenGLVersionProfile{Qclsinst:qthis}
   case 2:
     // invoke: _ZN21QOpenGLVersionProfileC1ERKS_
     // invoke: void QOpenGLVersionProfile(const class QOpenGLVersionProfile &)
-    var arg0 = args[0].(QOpenGLVersionProfile).qclsinst
+    var arg0 = args[0].(*QOpenGLVersionProfile).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QOpenGLVersionProfileC2ERKS_(arg0)
-    return &QOpenGLVersionProfile{qclsinst:qthis}
+    return &QOpenGLVersionProfile{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "QOpenGLVersionProfile", args)
   }
 
-  return nil // QOpenGLVersionProfile{qclsinst:qthis}
+  return nil // QOpenGLVersionProfile{Qclsinst:qthis}
 }
 
 // hasProfiles()
@@ -235,11 +235,15 @@ func (this *QOpenGLVersionProfile) Hasprofiles(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK21QOpenGLVersionProfile11hasProfilesEv
     // invoke: bool hasProfiles()
-    var ret0 = C.C_ZNK21QOpenGLVersionProfile11hasProfilesEv(this.qclsinst)
+    var ret0 = C.C_ZNK21QOpenGLVersionProfile11hasProfilesEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "hasProfiles", args)
   }
@@ -260,11 +264,15 @@ func (this *QOpenGLVersionProfile) Isvalid(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK21QOpenGLVersionProfile7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK21QOpenGLVersionProfile7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK21QOpenGLVersionProfile7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "isValid", args)
   }
@@ -285,7 +293,7 @@ func (this *QOpenGLVersionProfile) Freeqopenglversionprofile(args ...interface{}
   case 0:
     // invoke: _ZN21QOpenGLVersionProfileD0Ev
     // invoke: void ~QOpenGLVersionProfile()
-    C.C_ZN21QOpenGLVersionProfileD2Ev(this.qclsinst)
+    C.C_ZN21QOpenGLVersionProfileD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "~QOpenGLVersionProfile", args)
   }
@@ -306,7 +314,7 @@ func (this *QOpenGLVersionProfile) Version(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QOpenGLVersionProfile7versionEv
     // invoke: QPair<int, int> version()
-    C.C_ZNK21QOpenGLVersionProfile7versionEv(this.qclsinst)
+    C.C_ZNK21QOpenGLVersionProfile7versionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "version", args)
   }
@@ -327,11 +335,15 @@ func (this *QOpenGLVersionProfile) Islegacyversion(args ...interface{}) (ret int
   case 0:
     // invoke: _ZNK21QOpenGLVersionProfile15isLegacyVersionEv
     // invoke: bool isLegacyVersion()
-    var ret0 = C.C_ZNK21QOpenGLVersionProfile15isLegacyVersionEv(this.qclsinst)
+    var ret0 = C.C_ZNK21QOpenGLVersionProfile15isLegacyVersionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "isLegacyVersion", args)
   }
@@ -354,11 +366,11 @@ func (this *QOpenGLVersionProfile) Setversion(args ...interface{}) () {
   case 0:
     // invoke: _ZN21QOpenGLVersionProfile10setVersionEii
     // invoke: void setVersion(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN21QOpenGLVersionProfile10setVersionEii(this.qclsinst, arg0, arg1)
+    C.C_ZN21QOpenGLVersionProfile10setVersionEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "setVersion", args)
   }
@@ -379,7 +391,7 @@ func (this *QOpenGLContext) Freeqopenglcontext(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContextD0Ev
     // invoke: void ~QOpenGLContext()
-    C.C_ZN14QOpenGLContextD2Ev(this.qclsinst)
+    C.C_ZN14QOpenGLContextD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "~QOpenGLContext", args)
   }
@@ -404,7 +416,11 @@ func (this *QOpenGLContext) Openglmodulehandle_S(args ...interface{}) (ret inter
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.VoidpTy() // "void *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "openGLModuleHandle", args)
   }
@@ -425,7 +441,7 @@ func (this *QOpenGLContext) Sharecontext(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext12shareContextEv
     // invoke: QOpenGLContext * shareContext()
-    C.C_ZNK14QOpenGLContext12shareContextEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext12shareContextEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "shareContext", args)
   }
@@ -446,7 +462,7 @@ func (this *QOpenGLContext) Donecurrent(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext11doneCurrentEv
     // invoke: void doneCurrent()
-    C.C_ZN14QOpenGLContext11doneCurrentEv(this.qclsinst)
+    C.C_ZN14QOpenGLContext11doneCurrentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "doneCurrent", args)
   }
@@ -467,11 +483,15 @@ func (this *QOpenGLContext) Surface(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QOpenGLContext7surfaceEv
     // invoke: QSurface * surface()
-    var ret0 = C.C_ZNK14QOpenGLContext7surfaceEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QOpenGLContext7surfaceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSurface{}) // "QSurface *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "surface", args)
   }
@@ -493,9 +513,9 @@ func (this *QOpenGLContext) Setnativehandle(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext15setNativeHandleERK8QVariant
     // invoke: void setNativeHandle(const class QVariant &)
-    var arg0 = args[0].(QVariant).qclsinst
+    var arg0 = args[0].(*QVariant).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN14QOpenGLContext15setNativeHandleERK8QVariant(this.qclsinst, arg0)
+    C.C_ZN14QOpenGLContext15setNativeHandleERK8QVariant(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "setNativeHandle", args)
   }
@@ -520,7 +540,11 @@ func (this *QOpenGLContext) Supportsthreadedopengl_S(args ...interface{}) (ret i
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "supportsThreadedOpenGL", args)
   }
@@ -541,7 +565,7 @@ func (this *QOpenGLContext) Functions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext9functionsEv
     // invoke: QOpenGLFunctions * functions()
-    C.C_ZNK14QOpenGLContext9functionsEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext9functionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "functions", args)
   }
@@ -564,15 +588,19 @@ func (this *QOpenGLContext) Aresharing_S(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZN14QOpenGLContext10areSharingEPS_S0_
     // invoke: bool areSharing(class QOpenGLContext *, class QOpenGLContext *)
-    var arg0 = args[0].(QOpenGLContext).qclsinst
+    var arg0 = args[0].(*QOpenGLContext).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QOpenGLContext).qclsinst
+    var arg1 = args[1].(*QOpenGLContext).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN14QOpenGLContext10areSharingEPS_S0_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "areSharing", args)
   }
@@ -594,9 +622,9 @@ func (this *QOpenGLContext) Setscreen(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext9setScreenEP7QScreen
     // invoke: void setScreen(class QScreen *)
-    var arg0 = args[0].(QScreen).qclsinst
+    var arg0 = args[0].(*QScreen).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN14QOpenGLContext9setScreenEP7QScreen(this.qclsinst, arg0)
+    C.C_ZN14QOpenGLContext9setScreenEP7QScreen(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "setScreen", args)
   }
@@ -639,9 +667,9 @@ func (this *QOpenGLContext) Setsharecontext(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext15setShareContextEPS_
     // invoke: void setShareContext(class QOpenGLContext *)
-    var arg0 = args[0].(QOpenGLContext).qclsinst
+    var arg0 = args[0].(*QOpenGLContext).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN14QOpenGLContext15setShareContextEPS_(this.qclsinst, arg0)
+    C.C_ZN14QOpenGLContext15setShareContextEPS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "setShareContext", args)
   }
@@ -704,11 +732,15 @@ func (this *QOpenGLContext) Isopengles(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QOpenGLContext10isOpenGLESEv
     // invoke: bool isOpenGLES()
-    var ret0 = C.C_ZNK14QOpenGLContext10isOpenGLESEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QOpenGLContext10isOpenGLESEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "isOpenGLES", args)
   }
@@ -730,9 +762,9 @@ func (this *QOpenGLContext) Versionfunctions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext16versionFunctionsERK21QOpenGLVersionProfile
     // invoke: QAbstractOpenGLFunctions * versionFunctions(const class QOpenGLVersionProfile &)
-    var arg0 = args[0].(QOpenGLVersionProfile).qclsinst
+    var arg0 = args[0].(*QOpenGLVersionProfile).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QOpenGLContext16versionFunctionsERK21QOpenGLVersionProfile(this.qclsinst, arg0)
+    C.C_ZNK14QOpenGLContext16versionFunctionsERK21QOpenGLVersionProfile(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "versionFunctions", args)
   }
@@ -753,11 +785,15 @@ func (this *QOpenGLContext) Screen(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QOpenGLContext6screenEv
     // invoke: QScreen * screen()
-    var ret0 = C.C_ZNK14QOpenGLContext6screenEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QOpenGLContext6screenEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QScreen{}) // "QScreen *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "screen", args)
   }
@@ -779,9 +815,9 @@ func (this *QOpenGLContext) Swapbuffers(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext11swapBuffersEP8QSurface
     // invoke: void swapBuffers(class QSurface *)
-    var arg0 = args[0].(QSurface).qclsinst
+    var arg0 = args[0].(*QSurface).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN14QOpenGLContext11swapBuffersEP8QSurface(this.qclsinst, arg0)
+    C.C_ZN14QOpenGLContext11swapBuffersEP8QSurface(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "swapBuffers", args)
   }
@@ -802,7 +838,7 @@ func (this *QOpenGLContext) Handle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext6handleEv
     // invoke: QPlatformOpenGLContext * handle()
-    C.C_ZNK14QOpenGLContext6handleEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext6handleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "handle", args)
   }
@@ -823,11 +859,15 @@ func (this *QOpenGLContext) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QOpenGLContext7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK14QOpenGLContext7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QOpenGLContext7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "isValid", args)
   }
@@ -849,13 +889,17 @@ func (this *QOpenGLContext) Hasextension(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK14QOpenGLContext12hasExtensionERK10QByteArray
     // invoke: bool hasExtension(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK14QOpenGLContext12hasExtensionERK10QByteArray(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK14QOpenGLContext12hasExtensionERK10QByteArray(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "hasExtension", args)
   }
@@ -876,11 +920,15 @@ func (this *QOpenGLContext) Defaultframebufferobject(args ...interface{}) (ret i
   case 0:
     // invoke: _ZNK14QOpenGLContext24defaultFramebufferObjectEv
     // invoke: GLuint defaultFramebufferObject()
-    var ret0 = C.C_ZNK14QOpenGLContext24defaultFramebufferObjectEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QOpenGLContext24defaultFramebufferObjectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "GLuint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "defaultFramebufferObject", args)
   }
@@ -902,9 +950,9 @@ func (this *QOpenGLContext) Getprocaddress(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext14getProcAddressERK10QByteArray
     // invoke: QFunctionPointer getProcAddress(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QOpenGLContext14getProcAddressERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZNK14QOpenGLContext14getProcAddressERK10QByteArray(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "getProcAddress", args)
   }
@@ -925,7 +973,7 @@ func (this *QOpenGLContext) Sharegroup(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext10shareGroupEv
     // invoke: QOpenGLContextGroup * shareGroup()
-    C.C_ZNK14QOpenGLContext10shareGroupEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext10shareGroupEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "shareGroup", args)
   }
@@ -946,7 +994,7 @@ func (this *QOpenGLContext) Sharehandle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext11shareHandleEv
     // invoke: QPlatformOpenGLContext * shareHandle()
-    C.C_ZNK14QOpenGLContext11shareHandleEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext11shareHandleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "shareHandle", args)
   }
@@ -967,7 +1015,7 @@ func (this *QOpenGLContext) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK14QOpenGLContext10metaObjectEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "metaObject", args)
   }
@@ -989,17 +1037,17 @@ func NewQOpenGLContext(args ...interface{}) *QOpenGLContext {
   case 0:
     // invoke: _ZN14QOpenGLContextC1EP7QObject
     // invoke: void QOpenGLContext(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QOpenGLContextC2EP7QObject(arg0)
-    return &QOpenGLContext{qclsinst:qthis}
+    return &QOpenGLContext{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOpenGLContext", "QOpenGLContext", args)
   }
 
-  return nil // QOpenGLContext{qclsinst:qthis}
+  return nil // QOpenGLContext{Qclsinst:qthis}
 }
 
 // setFormat(const class QSurfaceFormat &)
@@ -1016,9 +1064,9 @@ func (this *QOpenGLContext) Setformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContext9setFormatERK14QSurfaceFormat
     // invoke: void setFormat(const class QSurfaceFormat &)
-    var arg0 = args[0].(QSurfaceFormat).qclsinst
+    var arg0 = args[0].(*QSurfaceFormat).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN14QOpenGLContext9setFormatERK14QSurfaceFormat(this.qclsinst, arg0)
+    C.C_ZN14QOpenGLContext9setFormatERK14QSurfaceFormat(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "setFormat", args)
   }
@@ -1040,13 +1088,17 @@ func (this *QOpenGLContext) Makecurrent(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN14QOpenGLContext11makeCurrentEP8QSurface
     // invoke: bool makeCurrent(class QSurface *)
-    var arg0 = args[0].(QSurface).qclsinst
+    var arg0 = args[0].(*QSurface).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN14QOpenGLContext11makeCurrentEP8QSurface(this.qclsinst, arg0)
+    var ret0 = C.C_ZN14QOpenGLContext11makeCurrentEP8QSurface(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "makeCurrent", args)
   }
@@ -1067,11 +1119,15 @@ func (this *QOpenGLContext) Nativehandle(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK14QOpenGLContext12nativeHandleEv
     // invoke: QVariant nativeHandle()
-    var ret0 = C.C_ZNK14QOpenGLContext12nativeHandleEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QOpenGLContext12nativeHandleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "nativeHandle", args)
   }
@@ -1092,7 +1148,7 @@ func (this *QOpenGLContext) Extensions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLContext10extensionsEv
     // invoke: QSet<QByteArray> extensions()
-    C.C_ZNK14QOpenGLContext10extensionsEv(this.qclsinst)
+    C.C_ZNK14QOpenGLContext10extensionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContext", "extensions", args)
   }
@@ -1113,11 +1169,15 @@ func (this *QOpenGLContext) Format(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QOpenGLContext6formatEv
     // invoke: QSurfaceFormat format()
-    var ret0 = C.C_ZNK14QOpenGLContext6formatEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QOpenGLContext6formatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSurfaceFormat{}) // "QSurfaceFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "format", args)
   }
@@ -1138,11 +1198,15 @@ func (this *QOpenGLContext) Create(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN14QOpenGLContext6createEv
     // invoke: bool create()
-    var ret0 = C.C_ZN14QOpenGLContext6createEv(this.qclsinst)
+    var ret0 = C.C_ZN14QOpenGLContext6createEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "create", args)
   }
@@ -1163,7 +1227,7 @@ func (this *QOpenGLContextGroup) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QOpenGLContextGroup10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK19QOpenGLContextGroup10metaObjectEv(this.qclsinst)
+    C.C_ZNK19QOpenGLContextGroup10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContextGroup", "metaObject", args)
   }
@@ -1205,7 +1269,7 @@ func (this *QOpenGLContextGroup) Shares(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QOpenGLContextGroup6sharesEv
     // invoke: QList<QOpenGLContext *> shares()
-    C.C_ZNK19QOpenGLContextGroup6sharesEv(this.qclsinst)
+    C.C_ZNK19QOpenGLContextGroup6sharesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContextGroup", "shares", args)
   }
@@ -1226,7 +1290,7 @@ func (this *QOpenGLContextGroup) Freeqopenglcontextgroup(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QOpenGLContextGroupD0Ev
     // invoke: void ~QOpenGLContextGroup()
-    C.C_ZN19QOpenGLContextGroupD2Ev(this.qclsinst)
+    C.C_ZN19QOpenGLContextGroupD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLContextGroup", "~QOpenGLContextGroup", args)
   }

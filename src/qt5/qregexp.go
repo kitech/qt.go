@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.go
 //
@@ -83,7 +83,7 @@ func init() {
 // class sizeof(QRegExp)=8
 type QRegExp struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // pos(int)
@@ -100,13 +100,17 @@ func (this *QRegExp) Pos(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QRegExp3posEi
     // invoke: int pos(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN7QRegExp3posEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN7QRegExp3posEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegExp", "pos", args)
   }
@@ -127,11 +131,15 @@ func (this *QRegExp) Matchedlength(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QRegExp13matchedLengthEv
     // invoke: int matchedLength()
-    var ret0 = C.C_ZNK7QRegExp13matchedLengthEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QRegExp13matchedLengthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegExp", "matchedLength", args)
   }
@@ -155,7 +163,7 @@ func (this *QRegExp) Setminimal(args ...interface{}) () {
     // invoke: void setMinimal(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QRegExp10setMinimalEb(this.qclsinst, arg0)
+    C.C_ZN7QRegExp10setMinimalEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegExp", "setMinimal", args)
   }
@@ -182,21 +190,21 @@ func NewQRegExp(args ...interface{}) *QRegExp {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QRegExpC2Ev()
-    return &QRegExp{qclsinst:qthis}
+    return &QRegExp{Qclsinst:qthis}
   case 1:
     // invoke: _ZN7QRegExpC1ERKS_
     // invoke: void QRegExp(const class QRegExp &)
-    var arg0 = args[0].(QRegExp).qclsinst
+    var arg0 = args[0].(*QRegExp).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QRegExpC2ERKS_(arg0)
-    return &QRegExp{qclsinst:qthis}
+    return &QRegExp{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegExp", "QRegExp", args)
   }
 
-  return nil // QRegExp{qclsinst:qthis}
+  return nil // QRegExp{Qclsinst:qthis}
 }
 
 // escape(const class QString &)
@@ -213,13 +221,17 @@ func (this *QRegExp) Escape_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QRegExp6escapeERK7QString
     // invoke: QString escape(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN7QRegExp6escapeERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegExp", "escape", args)
   }
@@ -241,9 +253,9 @@ func (this *QRegExp) Setpattern(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QRegExp10setPatternERK7QString
     // invoke: void setPattern(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QRegExp10setPatternERK7QString(this.qclsinst, arg0)
+    C.C_ZN7QRegExp10setPatternERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegExp", "setPattern", args)
   }
@@ -264,11 +276,15 @@ func (this *QRegExp) Pattern(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QRegExp7patternEv
     // invoke: QString pattern()
-    var ret0 = C.C_ZNK7QRegExp7patternEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QRegExp7patternEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegExp", "pattern", args)
   }
@@ -289,7 +305,7 @@ func (this *QRegExp) Patternsyntax(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QRegExp13patternSyntaxEv
     // invoke: QRegExp::PatternSyntax patternSyntax()
-    C.C_ZNK7QRegExp13patternSyntaxEv(this.qclsinst)
+    C.C_ZNK7QRegExp13patternSyntaxEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegExp", "patternSyntax", args)
   }
@@ -310,11 +326,15 @@ func (this *QRegExp) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QRegExp7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK7QRegExp7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QRegExp7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegExp", "isEmpty", args)
   }
@@ -336,9 +356,9 @@ func (this *QRegExp) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QRegExp4swapERS_
     // invoke: void swap(class QRegExp &)
-    var arg0 = args[0].(QRegExp).qclsinst
+    var arg0 = args[0].(*QRegExp).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QRegExp4swapERS_(this.qclsinst, arg0)
+    C.C_ZN7QRegExp4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegExp", "swap", args)
   }
@@ -359,7 +379,7 @@ func (this *QRegExp) Casesensitivity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QRegExp15caseSensitivityEv
     // invoke: Qt::CaseSensitivity caseSensitivity()
-    C.C_ZNK7QRegExp15caseSensitivityEv(this.qclsinst)
+    C.C_ZNK7QRegExp15caseSensitivityEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegExp", "caseSensitivity", args)
   }
@@ -380,11 +400,15 @@ func (this *QRegExp) Errorstring(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QRegExp11errorStringEv
     // invoke: QString errorString()
-    var ret0 = C.C_ZN7QRegExp11errorStringEv(this.qclsinst)
+    var ret0 = C.C_ZN7QRegExp11errorStringEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegExp", "errorString", args)
   }
@@ -405,7 +429,7 @@ func (this *QRegExp) Capturedtexts(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QRegExp13capturedTextsEv
     // invoke: QStringList capturedTexts()
-    C.C_ZN7QRegExp13capturedTextsEv(this.qclsinst)
+    C.C_ZN7QRegExp13capturedTextsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegExp", "capturedTexts", args)
   }
@@ -426,11 +450,15 @@ func (this *QRegExp) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QRegExp7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK7QRegExp7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QRegExp7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegExp", "isValid", args)
   }
@@ -452,13 +480,17 @@ func (this *QRegExp) Exactmatch(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QRegExp10exactMatchERK7QString
     // invoke: bool exactMatch(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QRegExp10exactMatchERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QRegExp10exactMatchERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegExp", "exactMatch", args)
   }
@@ -480,13 +512,17 @@ func (this *QRegExp) Cap(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QRegExp3capEi
     // invoke: QString cap(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN7QRegExp3capEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN7QRegExp3capEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegExp", "cap", args)
   }
@@ -507,11 +543,15 @@ func (this *QRegExp) Isminimal(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QRegExp9isMinimalEv
     // invoke: bool isMinimal()
-    var ret0 = C.C_ZNK7QRegExp9isMinimalEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QRegExp9isMinimalEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegExp", "isMinimal", args)
   }
@@ -532,7 +572,7 @@ func (this *QRegExp) Freeqregexp(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QRegExpD0Ev
     // invoke: void ~QRegExp()
-    C.C_ZN7QRegExpD2Ev(this.qclsinst)
+    C.C_ZN7QRegExpD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegExp", "~QRegExp", args)
   }
@@ -553,11 +593,15 @@ func (this *QRegExp) Capturecount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QRegExp12captureCountEv
     // invoke: int captureCount()
-    var ret0 = C.C_ZNK7QRegExp12captureCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QRegExp12captureCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegExp", "captureCount", args)
   }

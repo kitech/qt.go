@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qstandardpaths.h
 // dst-file: /src/core/qstandardpaths.go
 //
@@ -51,7 +51,7 @@ func init() {
 // class sizeof(QStandardPaths)=1
 type QStandardPaths struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // setTestModeEnabled(_Bool)
@@ -117,15 +117,19 @@ func (this *QStandardPaths) Findexecutable_S(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList
     // invoke: QString findExecutable(const class QString &, const class QStringList &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStringList).qclsinst
+    var arg1 = args[1].(*QStringList).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStandardPaths", "findExecutable", args)
   }
@@ -150,7 +154,11 @@ func (this *QStandardPaths) Istestmodeenabled_S(args ...interface{}) (ret interf
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStandardPaths", "isTestModeEnabled", args)
   }

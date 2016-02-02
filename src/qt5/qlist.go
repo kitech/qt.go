@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qlist.h
 // dst-file: /src/core/qlist.go
 //
@@ -79,7 +79,7 @@ func init() {
 // class sizeof(QListData)=8
 type QListData struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // insert(int)
@@ -96,13 +96,17 @@ func (this *QListData) Insert(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QListData6insertEi
     // invoke: void ** insert(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QListData6insertEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN9QListData6insertEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.VoidpTy() // "void **"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QListData", "insert", args)
   }
@@ -123,11 +127,15 @@ func (this *QListData) Begin(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QListData5beginEv
     // invoke: void ** begin()
-    var ret0 = C.C_ZNK9QListData5beginEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QListData5beginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.VoidpTy() // "void **"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QListData", "begin", args)
   }
@@ -148,11 +156,15 @@ func (this *QListData) End(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QListData3endEv
     // invoke: void ** end()
-    var ret0 = C.C_ZNK9QListData3endEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QListData3endEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.VoidpTy() // "void **"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QListData", "end", args)
   }
@@ -174,9 +186,9 @@ func (this *QListData) Realloc(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListData7reallocEi
     // invoke: void realloc(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QListData7reallocEi(this.qclsinst, arg0)
+    C.C_ZN9QListData7reallocEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListData", "realloc", args)
   }
@@ -199,11 +211,11 @@ func (this *QListData) Move_(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListData4moveEii
     // invoke: void move(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN9QListData4moveEii(this.qclsinst, arg0, arg1)
+    C.C_ZN9QListData4moveEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QListData", "move", args)
   }
@@ -224,7 +236,7 @@ func (this *QListData) Dispose(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListData7disposeEv
     // invoke: void dispose()
-    C.C_ZN9QListData7disposeEv(this.qclsinst)
+    C.C_ZN9QListData7disposeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QListData", "dispose", args)
   }
@@ -250,17 +262,17 @@ func (this *QListData) Remove(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListData6removeEi
     // invoke: void remove(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QListData6removeEi(this.qclsinst, arg0)
+    C.C_ZN9QListData6removeEi(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN9QListData6removeEii
     // invoke: void remove(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN9QListData6removeEii(this.qclsinst, arg0, arg1)
+    C.C_ZN9QListData6removeEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QListData", "remove", args)
   }
@@ -281,11 +293,15 @@ func (this *QListData) Prepend(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QListData7prependEv
     // invoke: void ** prepend()
-    var ret0 = C.C_ZN9QListData7prependEv(this.qclsinst)
+    var ret0 = C.C_ZN9QListData7prependEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.VoidpTy() // "void **"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QListData", "prepend", args)
   }
@@ -309,11 +325,15 @@ func (this *QListData) Erase(args ...interface{}) (ret interface{}) {
     // invoke: void ** erase(void **)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QListData5eraseEPPv(this.qclsinst, arg0)
+    var ret0 = C.C_ZN9QListData5eraseEPPv(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.VoidpTy() // "void **"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QListData", "erase", args)
   }
@@ -334,11 +354,15 @@ func (this *QListData) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QListData7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK9QListData7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QListData7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QListData", "isEmpty", args)
   }
@@ -360,13 +384,17 @@ func (this *QListData) At(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QListData2atEi
     // invoke: void ** at(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QListData2atEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QListData2atEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.VoidpTy() // "void **"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QListData", "at", args)
   }
@@ -391,9 +419,9 @@ func (this *QListData) Detach_Grow(args ...interface{}) () {
     // invoke: QListData::Data * detach_grow(int *, int)
     var arg0 = (unsafe.Pointer)(args[0].(*int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN9QListData11detach_growEPii(this.qclsinst, arg0, arg1)
+    C.C_ZN9QListData11detach_growEPii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QListData", "detach_grow", args)
   }
@@ -415,9 +443,9 @@ func (this *QListData) Detach(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListData6detachEi
     // invoke: QListData::Data * detach(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QListData6detachEi(this.qclsinst, arg0)
+    C.C_ZN9QListData6detachEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListData", "detach", args)
   }
@@ -444,31 +472,43 @@ func (this *QListData) Append(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QListData6appendEi
     // invoke: void ** append(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QListData6appendEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN9QListData6appendEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.VoidpTy() // "void **"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN9QListData6appendERKS_
     // invoke: void ** append(const struct QListData &)
-    var arg0 = args[0].(QListData).qclsinst
+    var arg0 = args[0].(*QListData).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QListData6appendERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZN9QListData6appendERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.VoidpTy() // "void **"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN9QListData6appendEv
     // invoke: void ** append()
-    var ret0 = C.C_ZN9QListData6appendEv(this.qclsinst)
+    var ret0 = C.C_ZN9QListData6appendEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.VoidpTy() // "void **"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QListData", "append", args)
   }
@@ -489,11 +529,15 @@ func (this *QListData) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QListData4sizeEv
     // invoke: int size()
-    var ret0 = C.C_ZNK9QListData4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QListData4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QListData", "size", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qdiriterator.h
 // dst-file: /src/core/qdiriterator.go
 //
@@ -57,7 +57,7 @@ func init() {
 // class sizeof(QDirIterator)=1
 type QDirIterator struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // ~QDirIterator()
@@ -73,7 +73,7 @@ func (this *QDirIterator) Freeqdiriterator(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QDirIteratorD0Ev
     // invoke: void ~QDirIterator()
-    C.C_ZN12QDirIteratorD2Ev(this.qclsinst)
+    C.C_ZN12QDirIteratorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "~QDirIterator", args)
   }
@@ -94,11 +94,15 @@ func (this *QDirIterator) Filepath(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QDirIterator8filePathEv
     // invoke: QString filePath()
-    var ret0 = C.C_ZNK12QDirIterator8filePathEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QDirIterator8filePathEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirIterator", "filePath", args)
   }
@@ -119,11 +123,15 @@ func (this *QDirIterator) Next(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QDirIterator4nextEv
     // invoke: QString next()
-    var ret0 = C.C_ZN12QDirIterator4nextEv(this.qclsinst)
+    var ret0 = C.C_ZN12QDirIterator4nextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirIterator", "next", args)
   }
@@ -144,11 +152,15 @@ func (this *QDirIterator) Hasnext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QDirIterator7hasNextEv
     // invoke: bool hasNext()
-    var ret0 = C.C_ZNK12QDirIterator7hasNextEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QDirIterator7hasNextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirIterator", "hasNext", args)
   }
@@ -169,11 +181,15 @@ func (this *QDirIterator) Path(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QDirIterator4pathEv
     // invoke: QString path()
-    var ret0 = C.C_ZNK12QDirIterator4pathEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QDirIterator4pathEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirIterator", "path", args)
   }
@@ -194,11 +210,15 @@ func (this *QDirIterator) Fileinfo(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QDirIterator8fileInfoEv
     // invoke: QFileInfo fileInfo()
-    var ret0 = C.C_ZNK12QDirIterator8fileInfoEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QDirIterator8fileInfoEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFileInfo{}) // "QFileInfo"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirIterator", "fileInfo", args)
   }
@@ -219,11 +239,15 @@ func (this *QDirIterator) Filename(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QDirIterator8fileNameEv
     // invoke: QString fileName()
-    var ret0 = C.C_ZNK12QDirIterator8fileNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QDirIterator8fileNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirIterator", "fileName", args)
   }

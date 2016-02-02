@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.go
 //
@@ -77,7 +77,7 @@ func init() {
 // class sizeof(QResource)=1
 type QResource struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // searchPaths()
@@ -114,11 +114,15 @@ func (this *QResource) Iscompressed(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QResource12isCompressedEv
     // invoke: bool isCompressed()
-    var ret0 = C.C_ZNK9QResource12isCompressedEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QResource12isCompressedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QResource", "isCompressed", args)
   }
@@ -140,9 +144,9 @@ func (this *QResource) Setlocale(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QResource9setLocaleERK7QLocale
     // invoke: void setLocale(const class QLocale &)
-    var arg0 = args[0].(QLocale).qclsinst
+    var arg0 = args[0].(*QLocale).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QResource9setLocaleERK7QLocale(this.qclsinst, arg0)
+    C.C_ZN9QResource9setLocaleERK7QLocale(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QResource", "setLocale", args)
   }
@@ -163,11 +167,15 @@ func (this *QResource) Locale(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QResource6localeEv
     // invoke: QLocale locale()
-    var ret0 = C.C_ZNK9QResource6localeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QResource6localeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLocale{}) // "QLocale"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QResource", "locale", args)
   }
@@ -188,11 +196,15 @@ func (this *QResource) Absolutefilepath(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QResource16absoluteFilePathEv
     // invoke: QString absoluteFilePath()
-    var ret0 = C.C_ZNK9QResource16absoluteFilePathEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QResource16absoluteFilePathEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QResource", "absoluteFilePath", args)
   }
@@ -213,7 +225,7 @@ func (this *QResource) Freeqresource(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QResourceD0Ev
     // invoke: void ~QResource()
-    C.C_ZN9QResourceD2Ev(this.qclsinst)
+    C.C_ZN9QResourceD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "~QResource", args)
   }
@@ -236,19 +248,19 @@ func NewQResource(args ...interface{}) *QResource {
   case 0:
     // invoke: _ZN9QResourceC1ERK7QStringRK7QLocale
     // invoke: void QResource(const class QString &, const class QLocale &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QLocale).qclsinst
+    var arg1 = args[1].(*QLocale).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QResourceC2ERK7QStringRK7QLocale(arg0, arg1)
-    return &QResource{qclsinst:qthis}
+    return &QResource{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QResource", "QResource", args)
   }
 
-  return nil // QResource{qclsinst:qthis}
+  return nil // QResource{Qclsinst:qthis}
 }
 
 // setFileName(const class QString &)
@@ -265,9 +277,9 @@ func (this *QResource) Setfilename(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QResource11setFileNameERK7QString
     // invoke: void setFileName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QResource11setFileNameERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QResource11setFileNameERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QResource", "setFileName", args)
   }
@@ -288,11 +300,15 @@ func (this *QResource) Filename(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QResource8fileNameEv
     // invoke: QString fileName()
-    var ret0 = C.C_ZNK9QResource8fileNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QResource8fileNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QResource", "fileName", args)
   }
@@ -319,15 +335,19 @@ func (this *QResource) Unregisterresource_S(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZN9QResource18unregisterResourceERK7QStringS2_
     // invoke: bool unregisterResource(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN9QResource18unregisterResourceERK7QStringS2_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN9QResource18unregisterResourceEPKhRK7QString
     // invoke: bool unregisterResource(const uchar *, const class QString &)
@@ -335,13 +355,17 @@ func (this *QResource) Unregisterresource_S(args ...interface{}) (ret interface{
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN9QResource18unregisterResourceEPKhRK7QString(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QResource", "unregisterResource", args)
   }
@@ -372,25 +396,33 @@ func (this *QResource) Registerresource_S(args ...interface{}) (ret interface{})
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN9QResource16registerResourceEPKhRK7QString(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN9QResource16registerResourceERK7QStringS2_
     // invoke: bool registerResource(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN9QResource16registerResourceERK7QStringS2_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QResource", "registerResource", args)
   }
@@ -411,11 +443,15 @@ func (this *QResource) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QResource7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK9QResource7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QResource7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QResource", "isValid", args)
   }
@@ -437,7 +473,7 @@ func (this *QResource) Addsearchpath_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QResource13addSearchPathERK7QString
     // invoke: void addSearchPath(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN9QResource13addSearchPathERK7QString(arg0)
   default:
@@ -460,11 +496,15 @@ func (this *QResource) Data(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QResource4dataEv
     // invoke: const uchar * data()
-    var ret0 = C.C_ZNK9QResource4dataEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QResource4dataEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(true) // "const uchar *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QResource", "data", args)
   }
@@ -485,11 +525,15 @@ func (this *QResource) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QResource4sizeEv
     // invoke: qint64 size()
-    var ret0 = C.C_ZNK9QResource4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QResource4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QResource", "size", args)
   }

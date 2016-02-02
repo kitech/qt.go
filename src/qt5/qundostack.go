@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qundostack.h
 // dst-file: /src/widgets/qundostack.go
 //
@@ -121,7 +121,7 @@ func init() {
 // class sizeof(QUndoStack)=1
 type QUndoStack struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _redoTextChanged QUndoStack_redoTextChanged_signal;
 //  _cleanChanged QUndoStack_cleanChanged_signal;
 //  _canUndoChanged QUndoStack_canUndoChanged_signal;
@@ -133,7 +133,7 @@ type QUndoStack struct {
 // class sizeof(QUndoCommand)=16
 type QUndoCommand struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // createUndoAction(class QObject *, const class QString &)
@@ -151,15 +151,19 @@ func (this *QUndoStack) Createundoaction(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString
     // invoke: QAction * createUndoAction(class QObject *, const class QString &)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "createUndoAction", args)
   }
@@ -183,7 +187,7 @@ func (this *QUndoStack) Setactive(args ...interface{}) () {
     // invoke: void setActive(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QUndoStack9setActiveEb(this.qclsinst, arg0)
+    C.C_ZN10QUndoStack9setActiveEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoStack", "setActive", args)
   }
@@ -205,9 +209,9 @@ func (this *QUndoStack) Setindex(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStack8setIndexEi
     // invoke: void setIndex(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QUndoStack8setIndexEi(this.qclsinst, arg0)
+    C.C_ZN10QUndoStack8setIndexEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoStack", "setIndex", args)
   }
@@ -228,7 +232,7 @@ func (this *QUndoStack) Redo(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStack4redoEv
     // invoke: void redo()
-    C.C_ZN10QUndoStack4redoEv(this.qclsinst)
+    C.C_ZN10QUndoStack4redoEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoStack", "redo", args)
   }
@@ -249,11 +253,15 @@ func (this *QUndoStack) Canundo(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QUndoStack7canUndoEv
     // invoke: bool canUndo()
-    var ret0 = C.C_ZNK10QUndoStack7canUndoEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QUndoStack7canUndoEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "canUndo", args)
   }
@@ -274,11 +282,15 @@ func (this *QUndoStack) Isclean(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QUndoStack7isCleanEv
     // invoke: bool isClean()
-    var ret0 = C.C_ZNK10QUndoStack7isCleanEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QUndoStack7isCleanEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "isClean", args)
   }
@@ -299,11 +311,15 @@ func (this *QUndoStack) Cleanindex(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QUndoStack10cleanIndexEv
     // invoke: int cleanIndex()
-    var ret0 = C.C_ZNK10QUndoStack10cleanIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QUndoStack10cleanIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "cleanIndex", args)
   }
@@ -325,17 +341,17 @@ func NewQUndoStack(args ...interface{}) *QUndoStack {
   case 0:
     // invoke: _ZN10QUndoStackC1EP7QObject
     // invoke: void QUndoStack(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QUndoStackC2EP7QObject(arg0)
-    return &QUndoStack{qclsinst:qthis}
+    return &QUndoStack{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QUndoStack", "QUndoStack", args)
   }
 
-  return nil // QUndoStack{qclsinst:qthis}
+  return nil // QUndoStack{Qclsinst:qthis}
 }
 
 // ~QUndoStack()
@@ -351,7 +367,7 @@ func (this *QUndoStack) Freequndostack(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStackD0Ev
     // invoke: void ~QUndoStack()
-    C.C_ZN10QUndoStackD2Ev(this.qclsinst)
+    C.C_ZN10QUndoStackD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoStack", "~QUndoStack", args)
   }
@@ -373,13 +389,17 @@ func (this *QUndoStack) Text(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QUndoStack4textEi
     // invoke: QString text(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QUndoStack4textEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QUndoStack4textEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "text", args)
   }
@@ -400,11 +420,15 @@ func (this *QUndoStack) Redotext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QUndoStack8redoTextEv
     // invoke: QString redoText()
-    var ret0 = C.C_ZNK10QUndoStack8redoTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QUndoStack8redoTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "redoText", args)
   }
@@ -425,11 +449,15 @@ func (this *QUndoStack) Count(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QUndoStack5countEv
     // invoke: int count()
-    var ret0 = C.C_ZNK10QUndoStack5countEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QUndoStack5countEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "count", args)
   }
@@ -450,11 +478,15 @@ func (this *QUndoStack) Index(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QUndoStack5indexEv
     // invoke: int index()
-    var ret0 = C.C_ZNK10QUndoStack5indexEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QUndoStack5indexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "index", args)
   }
@@ -476,9 +508,9 @@ func (this *QUndoStack) Beginmacro(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStack10beginMacroERK7QString
     // invoke: void beginMacro(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QUndoStack10beginMacroERK7QString(this.qclsinst, arg0)
+    C.C_ZN10QUndoStack10beginMacroERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoStack", "beginMacro", args)
   }
@@ -499,7 +531,7 @@ func (this *QUndoStack) Undo(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStack4undoEv
     // invoke: void undo()
-    C.C_ZN10QUndoStack4undoEv(this.qclsinst)
+    C.C_ZN10QUndoStack4undoEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoStack", "undo", args)
   }
@@ -520,11 +552,15 @@ func (this *QUndoStack) Undolimit(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QUndoStack9undoLimitEv
     // invoke: int undoLimit()
-    var ret0 = C.C_ZNK10QUndoStack9undoLimitEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QUndoStack9undoLimitEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "undoLimit", args)
   }
@@ -545,11 +581,15 @@ func (this *QUndoStack) Canredo(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QUndoStack7canRedoEv
     // invoke: bool canRedo()
-    var ret0 = C.C_ZNK10QUndoStack7canRedoEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QUndoStack7canRedoEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "canRedo", args)
   }
@@ -570,7 +610,7 @@ func (this *QUndoStack) Setclean(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStack8setCleanEv
     // invoke: void setClean()
-    C.C_ZN10QUndoStack8setCleanEv(this.qclsinst)
+    C.C_ZN10QUndoStack8setCleanEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoStack", "setClean", args)
   }
@@ -591,11 +631,15 @@ func (this *QUndoStack) Isactive(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QUndoStack8isActiveEv
     // invoke: bool isActive()
-    var ret0 = C.C_ZNK10QUndoStack8isActiveEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QUndoStack8isActiveEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "isActive", args)
   }
@@ -618,15 +662,19 @@ func (this *QUndoStack) Createredoaction(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString
     // invoke: QAction * createRedoAction(class QObject *, const class QString &)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "createRedoAction", args)
   }
@@ -647,7 +695,7 @@ func (this *QUndoStack) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoStack10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QUndoStack10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QUndoStack10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoStack", "metaObject", args)
   }
@@ -668,11 +716,15 @@ func (this *QUndoStack) Undotext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QUndoStack8undoTextEv
     // invoke: QString undoText()
-    var ret0 = C.C_ZNK10QUndoStack8undoTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QUndoStack8undoTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "undoText", args)
   }
@@ -693,7 +745,7 @@ func (this *QUndoStack) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStack5clearEv
     // invoke: void clear()
-    C.C_ZN10QUndoStack5clearEv(this.qclsinst)
+    C.C_ZN10QUndoStack5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoStack", "clear", args)
   }
@@ -715,9 +767,9 @@ func (this *QUndoStack) Setundolimit(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStack12setUndoLimitEi
     // invoke: void setUndoLimit(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QUndoStack12setUndoLimitEi(this.qclsinst, arg0)
+    C.C_ZN10QUndoStack12setUndoLimitEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoStack", "setUndoLimit", args)
   }
@@ -739,13 +791,17 @@ func (this *QUndoStack) Command(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QUndoStack7commandEi
     // invoke: const QUndoCommand * command(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QUndoStack7commandEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QUndoStack7commandEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QUndoCommand{}) // "const QUndoCommand *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "command", args)
   }
@@ -766,7 +822,7 @@ func (this *QUndoStack) Endmacro(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStack8endMacroEv
     // invoke: void endMacro()
-    C.C_ZN10QUndoStack8endMacroEv(this.qclsinst)
+    C.C_ZN10QUndoStack8endMacroEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoStack", "endMacro", args)
   }
@@ -788,9 +844,9 @@ func (this *QUndoStack) Push(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStack4pushEP12QUndoCommand
     // invoke: void push(class QUndoCommand *)
-    var arg0 = args[0].(QUndoCommand).qclsinst
+    var arg0 = args[0].(*QUndoCommand).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QUndoStack4pushEP12QUndoCommand(this.qclsinst, arg0)
+    C.C_ZN10QUndoStack4pushEP12QUndoCommand(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoStack", "push", args)
   }
@@ -811,11 +867,15 @@ func (this *QUndoCommand) Actiontext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QUndoCommand10actionTextEv
     // invoke: QString actionText()
-    var ret0 = C.C_ZNK12QUndoCommand10actionTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QUndoCommand10actionTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoCommand", "actionText", args)
   }
@@ -837,13 +897,17 @@ func (this *QUndoCommand) Mergewith(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QUndoCommand9mergeWithEPKS_
     // invoke: bool mergeWith(const class QUndoCommand *)
-    var arg0 = args[0].(QUndoCommand).qclsinst
+    var arg0 = args[0].(*QUndoCommand).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QUndoCommand9mergeWithEPKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZN12QUndoCommand9mergeWithEPKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoCommand", "mergeWith", args)
   }
@@ -864,11 +928,15 @@ func (this *QUndoCommand) Text(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QUndoCommand4textEv
     // invoke: QString text()
-    var ret0 = C.C_ZNK12QUndoCommand4textEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QUndoCommand4textEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoCommand", "text", args)
   }
@@ -890,9 +958,9 @@ func (this *QUndoCommand) Settext(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QUndoCommand7setTextERK7QString
     // invoke: void setText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QUndoCommand7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN12QUndoCommand7setTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoCommand", "setText", args)
   }
@@ -913,7 +981,7 @@ func (this *QUndoCommand) Undo(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QUndoCommand4undoEv
     // invoke: void undo()
-    C.C_ZN12QUndoCommand4undoEv(this.qclsinst)
+    C.C_ZN12QUndoCommand4undoEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoCommand", "undo", args)
   }
@@ -934,11 +1002,15 @@ func (this *QUndoCommand) Childcount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QUndoCommand10childCountEv
     // invoke: int childCount()
-    var ret0 = C.C_ZNK12QUndoCommand10childCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QUndoCommand10childCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoCommand", "childCount", args)
   }
@@ -964,28 +1036,28 @@ func NewQUndoCommand(args ...interface{}) *QUndoCommand {
   case 0:
     // invoke: _ZN12QUndoCommandC1ERK7QStringPS_
     // invoke: void QUndoCommand(const class QString &, class QUndoCommand *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QUndoCommand).qclsinst
+    var arg1 = args[1].(*QUndoCommand).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QUndoCommandC2ERK7QStringPS_(arg0, arg1)
-    return &QUndoCommand{qclsinst:qthis}
+    return &QUndoCommand{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QUndoCommandC1EPS_
     // invoke: void QUndoCommand(class QUndoCommand *)
-    var arg0 = args[0].(QUndoCommand).qclsinst
+    var arg0 = args[0].(*QUndoCommand).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QUndoCommandC2EPS_(arg0)
-    return &QUndoCommand{qclsinst:qthis}
+    return &QUndoCommand{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QUndoCommand", "QUndoCommand", args)
   }
 
-  return nil // QUndoCommand{qclsinst:qthis}
+  return nil // QUndoCommand{Qclsinst:qthis}
 }
 
 // ~QUndoCommand()
@@ -1001,7 +1073,7 @@ func (this *QUndoCommand) Freequndocommand(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QUndoCommandD0Ev
     // invoke: void ~QUndoCommand()
-    C.C_ZN12QUndoCommandD2Ev(this.qclsinst)
+    C.C_ZN12QUndoCommandD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoCommand", "~QUndoCommand", args)
   }
@@ -1023,13 +1095,17 @@ func (this *QUndoCommand) Child(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QUndoCommand5childEi
     // invoke: const QUndoCommand * child(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK12QUndoCommand5childEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK12QUndoCommand5childEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QUndoCommand{}) // "const QUndoCommand *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoCommand", "child", args)
   }
@@ -1050,7 +1126,7 @@ func (this *QUndoCommand) Redo(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QUndoCommand4redoEv
     // invoke: void redo()
-    C.C_ZN12QUndoCommand4redoEv(this.qclsinst)
+    C.C_ZN12QUndoCommand4redoEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoCommand", "redo", args)
   }
@@ -1071,11 +1147,15 @@ func (this *QUndoCommand) Id(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QUndoCommand2idEv
     // invoke: int id()
-    var ret0 = C.C_ZNK12QUndoCommand2idEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QUndoCommand2idEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoCommand", "id", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.go
 //
@@ -81,7 +81,7 @@ func init() {
 // class sizeof(QDataStream)=1
 type QDataStream struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // ~QDataStream()
@@ -97,7 +97,7 @@ func (this *QDataStream) Freeqdatastream(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStreamD0Ev
     // invoke: void ~QDataStream()
-    C.C_ZN11QDataStreamD2Ev(this.qclsinst)
+    C.C_ZN11QDataStreamD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "~QDataStream", args)
   }
@@ -119,13 +119,17 @@ func (this *QDataStream) Skiprawdata(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QDataStream11skipRawDataEi
     // invoke: int skipRawData(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QDataStream11skipRawDataEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QDataStream11skipRawDataEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDataStream", "skipRawData", args)
   }
@@ -147,9 +151,9 @@ func (this *QDataStream) Setversion(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream10setVersionEi
     // invoke: void setVersion(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QDataStream10setVersionEi(this.qclsinst, arg0)
+    C.C_ZN11QDataStream10setVersionEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataStream", "setVersion", args)
   }
@@ -176,13 +180,17 @@ func (this *QDataStream) Writebytes(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN11QDataStream10writeBytesEPKcj(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN11QDataStream10writeBytesEPKcj(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDataStream{}) // "QDataStream &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDataStream", "writeBytes", args)
   }
@@ -203,7 +211,7 @@ func (this *QDataStream) Unsetdevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream11unsetDeviceEv
     // invoke: void unsetDevice()
-    C.C_ZN11QDataStream11unsetDeviceEv(this.qclsinst)
+    C.C_ZN11QDataStream11unsetDeviceEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "unsetDevice", args)
   }
@@ -224,11 +232,15 @@ func (this *QDataStream) Version(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QDataStream7versionEv
     // invoke: int version()
-    var ret0 = C.C_ZNK11QDataStream7versionEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QDataStream7versionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDataStream", "version", args)
   }
@@ -257,11 +269,15 @@ func (this *QDataStream) Readbytes(args ...interface{}) (ret interface{}) {
     if free0 {defer C.free(arg0)}
     var arg1 = (unsafe.Pointer)(args[1].(*int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN11QDataStream9readBytesERPcRj(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN11QDataStream9readBytesERPcRj(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDataStream{}) // "QDataStream &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDataStream", "readBytes", args)
   }
@@ -283,9 +299,9 @@ func (this *QDataStream) Setdevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream9setDeviceEP9QIODevice
     // invoke: void setDevice(class QIODevice *)
-    var arg0 = args[0].(QIODevice).qclsinst
+    var arg0 = args[0].(*QIODevice).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QDataStream9setDeviceEP9QIODevice(this.qclsinst, arg0)
+    C.C_ZN11QDataStream9setDeviceEP9QIODevice(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataStream", "setDevice", args)
   }
@@ -306,7 +322,7 @@ func (this *QDataStream) Byteorder(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream9byteOrderEv
     // invoke: QDataStream::ByteOrder byteOrder()
-    C.C_ZNK11QDataStream9byteOrderEv(this.qclsinst)
+    C.C_ZNK11QDataStream9byteOrderEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "byteOrder", args)
   }
@@ -327,7 +343,7 @@ func (this *QDataStream) Status(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream6statusEv
     // invoke: QDataStream::Status status()
-    C.C_ZNK11QDataStream6statusEv(this.qclsinst)
+    C.C_ZNK11QDataStream6statusEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "status", args)
   }
@@ -354,13 +370,17 @@ func (this *QDataStream) Readrawdata(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN11QDataStream11readRawDataEPci(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN11QDataStream11readRawDataEPci(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDataStream", "readRawData", args)
   }
@@ -381,7 +401,7 @@ func (this *QDataStream) Floatingpointprecision(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream22floatingPointPrecisionEv
     // invoke: QDataStream::FloatingPointPrecision floatingPointPrecision()
-    C.C_ZNK11QDataStream22floatingPointPrecisionEv(this.qclsinst)
+    C.C_ZNK11QDataStream22floatingPointPrecisionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "floatingPointPrecision", args)
   }
@@ -408,13 +428,17 @@ func (this *QDataStream) Writerawdata(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN11QDataStream12writeRawDataEPKci(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN11QDataStream12writeRawDataEPKci(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDataStream", "writeRawData", args)
   }
@@ -435,11 +459,15 @@ func (this *QDataStream) Device(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QDataStream6deviceEv
     // invoke: QIODevice * device()
-    var ret0 = C.C_ZNK11QDataStream6deviceEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QDataStream6deviceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIODevice{}) // "QIODevice *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDataStream", "device", args)
   }
@@ -460,7 +488,7 @@ func (this *QDataStream) Resetstatus(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream11resetStatusEv
     // invoke: void resetStatus()
-    C.C_ZN11QDataStream11resetStatusEv(this.qclsinst)
+    C.C_ZN11QDataStream11resetStatusEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "resetStatus", args)
   }
@@ -481,11 +509,15 @@ func (this *QDataStream) Atend(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QDataStream5atEndEv
     // invoke: bool atEnd()
-    var ret0 = C.C_ZNK11QDataStream5atEndEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QDataStream5atEndEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDataStream", "atEnd", args)
   }
@@ -512,33 +544,33 @@ func NewQDataStream(args ...interface{}) *QDataStream {
   case 0:
     // invoke: _ZN11QDataStreamC1ERK10QByteArray
     // invoke: void QDataStream(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QDataStreamC2ERK10QByteArray(arg0)
-    return &QDataStream{qclsinst:qthis}
+    return &QDataStream{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QDataStreamC1Ev
     // invoke: void QDataStream()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QDataStreamC2Ev()
-    return &QDataStream{qclsinst:qthis}
+    return &QDataStream{Qclsinst:qthis}
   case 2:
     // invoke: _ZN11QDataStreamC1EP9QIODevice
     // invoke: void QDataStream(class QIODevice *)
-    var arg0 = args[0].(QIODevice).qclsinst
+    var arg0 = args[0].(*QIODevice).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QDataStreamC2EP9QIODevice(arg0)
-    return &QDataStream{qclsinst:qthis}
+    return &QDataStream{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDataStream", "QDataStream", args)
   }
 
-  return nil // QDataStream{qclsinst:qthis}
+  return nil // QDataStream{Qclsinst:qthis}
 }
 
 // <= body block end

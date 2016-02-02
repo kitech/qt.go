@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.go
 //
@@ -93,7 +93,7 @@ func init() {
 // class sizeof(QAbstractSlider)=1
 type QAbstractSlider struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _sliderReleased QAbstractSlider_sliderReleased_signal;
 //  _rangeChanged QAbstractSlider_rangeChanged_signal;
 //  _sliderPressed QAbstractSlider_sliderPressed_signal;
@@ -118,7 +118,7 @@ func (this *QAbstractSlider) Settracking(args ...interface{}) () {
     // invoke: void setTracking(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractSlider11setTrackingEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider11setTrackingEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setTracking", args)
   }
@@ -139,7 +139,7 @@ func (this *QAbstractSlider) Orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider11orientationEv
     // invoke: Qt::Orientation orientation()
-    C.C_ZNK15QAbstractSlider11orientationEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider11orientationEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "orientation", args)
   }
@@ -160,11 +160,15 @@ func (this *QAbstractSlider) Invertedcontrols(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK15QAbstractSlider16invertedControlsEv
     // invoke: bool invertedControls()
-    var ret0 = C.C_ZNK15QAbstractSlider16invertedControlsEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractSlider16invertedControlsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSlider", "invertedControls", args)
   }
@@ -185,11 +189,15 @@ func (this *QAbstractSlider) Singlestep(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractSlider10singleStepEv
     // invoke: int singleStep()
-    var ret0 = C.C_ZNK15QAbstractSlider10singleStepEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractSlider10singleStepEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSlider", "singleStep", args)
   }
@@ -210,11 +218,15 @@ func (this *QAbstractSlider) Minimum(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractSlider7minimumEv
     // invoke: int minimum()
-    var ret0 = C.C_ZNK15QAbstractSlider7minimumEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractSlider7minimumEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSlider", "minimum", args)
   }
@@ -238,7 +250,7 @@ func (this *QAbstractSlider) Setsliderdown(args ...interface{}) () {
     // invoke: void setSliderDown(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractSlider13setSliderDownEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider13setSliderDownEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setSliderDown", args)
   }
@@ -259,7 +271,7 @@ func (this *QAbstractSlider) Freeqabstractslider(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSliderD0Ev
     // invoke: void ~QAbstractSlider()
-    C.C_ZN15QAbstractSliderD2Ev(this.qclsinst)
+    C.C_ZN15QAbstractSliderD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "~QAbstractSlider", args)
   }
@@ -280,11 +292,15 @@ func (this *QAbstractSlider) Pagestep(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractSlider8pageStepEv
     // invoke: int pageStep()
-    var ret0 = C.C_ZNK15QAbstractSlider8pageStepEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractSlider8pageStepEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSlider", "pageStep", args)
   }
@@ -308,7 +324,7 @@ func (this *QAbstractSlider) Setinvertedcontrols(args ...interface{}) () {
     // invoke: void setInvertedControls(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractSlider19setInvertedControlsEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider19setInvertedControlsEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setInvertedControls", args)
   }
@@ -330,9 +346,9 @@ func (this *QAbstractSlider) Setpagestep(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSlider11setPageStepEi
     // invoke: void setPageStep(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractSlider11setPageStepEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider11setPageStepEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setPageStep", args)
   }
@@ -353,11 +369,15 @@ func (this *QAbstractSlider) Issliderdown(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK15QAbstractSlider12isSliderDownEv
     // invoke: bool isSliderDown()
-    var ret0 = C.C_ZNK15QAbstractSlider12isSliderDownEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractSlider12isSliderDownEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSlider", "isSliderDown", args)
   }
@@ -379,9 +399,9 @@ func (this *QAbstractSlider) Setsinglestep(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSlider13setSingleStepEi
     // invoke: void setSingleStep(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractSlider13setSingleStepEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider13setSingleStepEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setSingleStep", args)
   }
@@ -402,11 +422,15 @@ func (this *QAbstractSlider) Hastracking(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK15QAbstractSlider11hasTrackingEv
     // invoke: bool hasTracking()
-    var ret0 = C.C_ZNK15QAbstractSlider11hasTrackingEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractSlider11hasTrackingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSlider", "hasTracking", args)
   }
@@ -428,9 +452,9 @@ func (this *QAbstractSlider) Setmaximum(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSlider10setMaximumEi
     // invoke: void setMaximum(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractSlider10setMaximumEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider10setMaximumEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setMaximum", args)
   }
@@ -452,9 +476,9 @@ func (this *QAbstractSlider) Setvalue(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSlider8setValueEi
     // invoke: void setValue(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractSlider8setValueEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider8setValueEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setValue", args)
   }
@@ -475,11 +499,15 @@ func (this *QAbstractSlider) Invertedappearance(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK15QAbstractSlider18invertedAppearanceEv
     // invoke: bool invertedAppearance()
-    var ret0 = C.C_ZNK15QAbstractSlider18invertedAppearanceEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractSlider18invertedAppearanceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSlider", "invertedAppearance", args)
   }
@@ -500,11 +528,15 @@ func (this *QAbstractSlider) Sliderposition(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK15QAbstractSlider14sliderPositionEv
     // invoke: int sliderPosition()
-    var ret0 = C.C_ZNK15QAbstractSlider14sliderPositionEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractSlider14sliderPositionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSlider", "sliderPosition", args)
   }
@@ -527,11 +559,11 @@ func (this *QAbstractSlider) Setrange(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSlider8setRangeEii
     // invoke: void setRange(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN15QAbstractSlider8setRangeEii(this.qclsinst, arg0, arg1)
+    C.C_ZN15QAbstractSlider8setRangeEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setRange", args)
   }
@@ -555,7 +587,7 @@ func (this *QAbstractSlider) Setinvertedappearance(args ...interface{}) () {
     // invoke: void setInvertedAppearance(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractSlider21setInvertedAppearanceEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider21setInvertedAppearanceEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setInvertedAppearance", args)
   }
@@ -576,7 +608,7 @@ func (this *QAbstractSlider) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractSlider10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QAbstractSlider10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QAbstractSlider10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "metaObject", args)
   }
@@ -598,17 +630,17 @@ func NewQAbstractSlider(args ...interface{}) *QAbstractSlider {
   case 0:
     // invoke: _ZN15QAbstractSliderC1EP7QWidget
     // invoke: void QAbstractSlider(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QAbstractSliderC2EP7QWidget(arg0)
-    return &QAbstractSlider{qclsinst:qthis}
+    return &QAbstractSlider{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractSlider", "QAbstractSlider", args)
   }
 
-  return nil // QAbstractSlider{qclsinst:qthis}
+  return nil // QAbstractSlider{Qclsinst:qthis}
 }
 
 // maximum()
@@ -624,11 +656,15 @@ func (this *QAbstractSlider) Maximum(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractSlider7maximumEv
     // invoke: int maximum()
-    var ret0 = C.C_ZNK15QAbstractSlider7maximumEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractSlider7maximumEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSlider", "maximum", args)
   }
@@ -649,11 +685,15 @@ func (this *QAbstractSlider) Value(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractSlider5valueEv
     // invoke: int value()
-    var ret0 = C.C_ZNK15QAbstractSlider5valueEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractSlider5valueEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSlider", "value", args)
   }
@@ -675,9 +715,9 @@ func (this *QAbstractSlider) Setsliderposition(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSlider17setSliderPositionEi
     // invoke: void setSliderPosition(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractSlider17setSliderPositionEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider17setSliderPositionEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setSliderPosition", args)
   }
@@ -699,9 +739,9 @@ func (this *QAbstractSlider) Setminimum(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSlider10setMinimumEi
     // invoke: void setMinimum(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractSlider10setMinimumEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractSlider10setMinimumEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setMinimum", args)
   }

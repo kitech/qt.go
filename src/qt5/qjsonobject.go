@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qjsonobject.h
 // dst-file: /src/core/qjsonobject.go
 //
@@ -83,7 +83,7 @@ func init() {
 // class sizeof(QJsonObject)=16
 type QJsonObject struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // constBegin()
@@ -99,7 +99,7 @@ func (this *QJsonObject) Constbegin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject10constBeginEv
     // invoke: QJsonObject::const_iterator constBegin()
-    C.C_ZNK11QJsonObject10constBeginEv(this.qclsinst)
+    C.C_ZNK11QJsonObject10constBeginEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "constBegin", args)
   }
@@ -121,9 +121,9 @@ func (this *QJsonObject) Value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject5valueERK7QString
     // invoke: QJsonValue value(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QJsonObject5valueERK7QString(this.qclsinst, arg0)
+    C.C_ZNK11QJsonObject5valueERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonObject", "value", args)
   }
@@ -145,9 +145,9 @@ func (this *QJsonObject) Constfind(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject9constFindERK7QString
     // invoke: QJsonObject::const_iterator constFind(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QJsonObject9constFindERK7QString(this.qclsinst, arg0)
+    C.C_ZNK11QJsonObject9constFindERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonObject", "constFind", args)
   }
@@ -169,9 +169,9 @@ func (this *QJsonObject) Find(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QJsonObject4findERK7QString
     // invoke: QJsonObject::iterator find(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QJsonObject4findERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QJsonObject4findERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonObject", "find", args)
   }
@@ -192,11 +192,15 @@ func (this *QJsonObject) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QJsonObject4sizeEv
     // invoke: int size()
-    var ret0 = C.C_ZNK11QJsonObject4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QJsonObject4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonObject", "size", args)
   }
@@ -217,7 +221,7 @@ func (this *QJsonObject) End(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QJsonObject3endEv
     // invoke: QJsonObject::iterator end()
-    C.C_ZN11QJsonObject3endEv(this.qclsinst)
+    C.C_ZN11QJsonObject3endEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "end", args)
   }
@@ -239,13 +243,17 @@ func (this *QJsonObject) Contains(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QJsonObject8containsERK7QString
     // invoke: bool contains(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QJsonObject8containsERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QJsonObject8containsERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonObject", "contains", args)
   }
@@ -266,11 +274,15 @@ func (this *QJsonObject) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QJsonObject7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK11QJsonObject7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QJsonObject7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonObject", "isEmpty", args)
   }
@@ -292,9 +304,9 @@ func (this *QJsonObject) Take(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QJsonObject4takeERK7QString
     // invoke: QJsonValue take(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QJsonObject4takeERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QJsonObject4takeERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonObject", "take", args)
   }
@@ -315,11 +327,15 @@ func (this *QJsonObject) Empty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QJsonObject5emptyEv
     // invoke: bool empty()
-    var ret0 = C.C_ZNK11QJsonObject5emptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QJsonObject5emptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonObject", "empty", args)
   }
@@ -340,7 +356,7 @@ func (this *QJsonObject) Begin(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QJsonObject5beginEv
     // invoke: QJsonObject::iterator begin()
-    C.C_ZN11QJsonObject5beginEv(this.qclsinst)
+    C.C_ZN11QJsonObject5beginEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "begin", args)
   }
@@ -361,7 +377,7 @@ func (this *QJsonObject) Tovarianthash(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject13toVariantHashEv
     // invoke: QVariantHash toVariantHash()
-    C.C_ZNK11QJsonObject13toVariantHashEv(this.qclsinst)
+    C.C_ZNK11QJsonObject13toVariantHashEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "toVariantHash", args)
   }
@@ -382,7 +398,7 @@ func (this *QJsonObject) Keys(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject4keysEv
     // invoke: QStringList keys()
-    C.C_ZNK11QJsonObject4keysEv(this.qclsinst)
+    C.C_ZNK11QJsonObject4keysEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "keys", args)
   }
@@ -403,7 +419,7 @@ func (this *QJsonObject) Freeqjsonobject(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QJsonObjectD0Ev
     // invoke: void ~QJsonObject()
-    C.C_ZN11QJsonObjectD2Ev(this.qclsinst)
+    C.C_ZN11QJsonObjectD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "~QJsonObject", args)
   }
@@ -424,7 +440,7 @@ func (this *QJsonObject) Tovariantmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject12toVariantMapEv
     // invoke: QVariantMap toVariantMap()
-    C.C_ZNK11QJsonObject12toVariantMapEv(this.qclsinst)
+    C.C_ZNK11QJsonObject12toVariantMapEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "toVariantMap", args)
   }
@@ -445,11 +461,15 @@ func (this *QJsonObject) Count(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QJsonObject5countEv
     // invoke: int count()
-    var ret0 = C.C_ZNK11QJsonObject5countEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QJsonObject5countEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonObject", "count", args)
   }
@@ -473,12 +493,12 @@ func NewQJsonObject(args ...interface{}) *QJsonObject {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QJsonObjectC2Ev()
-    return &QJsonObject{qclsinst:qthis}
+    return &QJsonObject{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QJsonObject", "QJsonObject", args)
   }
 
-  return nil // QJsonObject{qclsinst:qthis}
+  return nil // QJsonObject{Qclsinst:qthis}
 }
 
 // remove(const class QString &)
@@ -495,9 +515,9 @@ func (this *QJsonObject) Remove(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QJsonObject6removeERK7QString
     // invoke: void remove(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QJsonObject6removeERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QJsonObject6removeERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonObject", "remove", args)
   }
@@ -518,11 +538,15 @@ func (this *QJsonObject) Length(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QJsonObject6lengthEv
     // invoke: int length()
-    var ret0 = C.C_ZNK11QJsonObject6lengthEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QJsonObject6lengthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonObject", "length", args)
   }
@@ -543,7 +567,7 @@ func (this *QJsonObject) Constend(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject8constEndEv
     // invoke: QJsonObject::const_iterator constEnd()
-    C.C_ZNK11QJsonObject8constEndEv(this.qclsinst)
+    C.C_ZNK11QJsonObject8constEndEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "constEnd", args)
   }

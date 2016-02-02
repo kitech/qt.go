@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qeventloop.h
 // dst-file: /src/core/qeventloop.go
 //
@@ -67,13 +67,13 @@ func init() {
 // class sizeof(QEventLoop)=1
 type QEventLoop struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QEventLoopLocker)=8
 type QEventLoopLocker struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // quit()
@@ -89,7 +89,7 @@ func (this *QEventLoop) Quit(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QEventLoop4quitEv
     // invoke: void quit()
-    C.C_ZN10QEventLoop4quitEv(this.qclsinst)
+    C.C_ZN10QEventLoop4quitEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "quit", args)
   }
@@ -110,11 +110,15 @@ func (this *QEventLoop) Isrunning(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QEventLoop9isRunningEv
     // invoke: bool isRunning()
-    var ret0 = C.C_ZNK10QEventLoop9isRunningEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QEventLoop9isRunningEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QEventLoop", "isRunning", args)
   }
@@ -136,17 +140,17 @@ func NewQEventLoop(args ...interface{}) *QEventLoop {
   case 0:
     // invoke: _ZN10QEventLoopC1EP7QObject
     // invoke: void QEventLoop(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QEventLoopC2EP7QObject(arg0)
-    return &QEventLoop{qclsinst:qthis}
+    return &QEventLoop{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QEventLoop", "QEventLoop", args)
   }
 
-  return nil // QEventLoop{qclsinst:qthis}
+  return nil // QEventLoop{Qclsinst:qthis}
 }
 
 // exit(int)
@@ -163,9 +167,9 @@ func (this *QEventLoop) Exit(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QEventLoop4exitEi
     // invoke: void exit(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QEventLoop4exitEi(this.qclsinst, arg0)
+    C.C_ZN10QEventLoop4exitEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEventLoop", "exit", args)
   }
@@ -186,7 +190,7 @@ func (this *QEventLoop) Wakeup(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QEventLoop6wakeUpEv
     // invoke: void wakeUp()
-    C.C_ZN10QEventLoop6wakeUpEv(this.qclsinst)
+    C.C_ZN10QEventLoop6wakeUpEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "wakeUp", args)
   }
@@ -207,7 +211,7 @@ func (this *QEventLoop) Freeqeventloop(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QEventLoopD0Ev
     // invoke: void ~QEventLoop()
-    C.C_ZN10QEventLoopD2Ev(this.qclsinst)
+    C.C_ZN10QEventLoopD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "~QEventLoop", args)
   }
@@ -228,7 +232,7 @@ func (this *QEventLoop) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QEventLoop10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QEventLoop10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QEventLoop10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "metaObject", args)
   }
@@ -250,13 +254,17 @@ func (this *QEventLoop) Event(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QEventLoop5eventEP6QEvent
     // invoke: bool event(class QEvent *)
-    var arg0 = args[0].(QEvent).qclsinst
+    var arg0 = args[0].(*QEvent).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN10QEventLoop5eventEP6QEvent(this.qclsinst, arg0)
+    var ret0 = C.C_ZN10QEventLoop5eventEP6QEvent(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QEventLoop", "event", args)
   }
@@ -277,7 +285,7 @@ func (this *QEventLoopLocker) Freeqeventlooplocker(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QEventLoopLockerD0Ev
     // invoke: void ~QEventLoopLocker()
-    C.C_ZN16QEventLoopLockerD2Ev(this.qclsinst)
+    C.C_ZN16QEventLoopLockerD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoopLocker", "~QEventLoopLocker", args)
   }
@@ -307,30 +315,30 @@ func NewQEventLoopLocker(args ...interface{}) *QEventLoopLocker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QEventLoopLockerC2Ev()
-    return &QEventLoopLocker{qclsinst:qthis}
+    return &QEventLoopLocker{Qclsinst:qthis}
   case 1:
     // invoke: _ZN16QEventLoopLockerC1EP7QThread
     // invoke: void QEventLoopLocker(class QThread *)
-    var arg0 = args[0].(QThread).qclsinst
+    var arg0 = args[0].(*QThread).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QEventLoopLockerC2EP7QThread(arg0)
-    return &QEventLoopLocker{qclsinst:qthis}
+    return &QEventLoopLocker{Qclsinst:qthis}
   case 2:
     // invoke: _ZN16QEventLoopLockerC1EP10QEventLoop
     // invoke: void QEventLoopLocker(class QEventLoop *)
-    var arg0 = args[0].(QEventLoop).qclsinst
+    var arg0 = args[0].(*QEventLoop).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QEventLoopLockerC2EP10QEventLoop(arg0)
-    return &QEventLoopLocker{qclsinst:qthis}
+    return &QEventLoopLocker{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QEventLoopLocker", "QEventLoopLocker", args)
   }
 
-  return nil // QEventLoopLocker{qclsinst:qthis}
+  return nil // QEventLoopLocker{Qclsinst:qthis}
 }
 
 // <= body block end

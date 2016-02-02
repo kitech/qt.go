@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qvariant.h
 // dst-file: /src/core/qvariant.go
 //
@@ -253,25 +253,25 @@ func init() {
 // class sizeof(QVariantComparisonHelper)=8
 type QVariantComparisonHelper struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QVariant)=16
 type QVariant struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QSequentialIterable)=104
 type QSequentialIterable struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QAssociativeIterable)=112
 type QAssociativeIterable struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QVariantComparisonHelper(const class QVariant &)
@@ -288,17 +288,17 @@ func NewQVariantComparisonHelper(args ...interface{}) *QVariantComparisonHelper 
   case 0:
     // invoke: _ZN24QVariantComparisonHelperC1ERK8QVariant
     // invoke: void QVariantComparisonHelper(const class QVariant &)
-    var arg0 = args[0].(QVariant).qclsinst
+    var arg0 = args[0].(*QVariant).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN24QVariantComparisonHelperC2ERK8QVariant(arg0)
-    return &QVariantComparisonHelper{qclsinst:qthis}
+    return &QVariantComparisonHelper{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QVariantComparisonHelper", "QVariantComparisonHelper", args)
   }
 
-  return nil // QVariantComparisonHelper{qclsinst:qthis}
+  return nil // QVariantComparisonHelper{Qclsinst:qthis}
 }
 
 // load(class QDataStream &)
@@ -315,9 +315,9 @@ func (this *QVariant) Load(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QVariant4loadER11QDataStream
     // invoke: void load(class QDataStream &)
-    var arg0 = args[0].(QDataStream).qclsinst
+    var arg0 = args[0].(*QDataStream).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QVariant4loadER11QDataStream(this.qclsinst, arg0)
+    C.C_ZN8QVariant4loadER11QDataStream(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "load", args)
   }
@@ -341,11 +341,15 @@ func (this *QVariant) Toint(args ...interface{}) (ret interface{}) {
     // invoke: int toInt(_Bool *)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QVariant5toIntEPb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QVariant5toIntEPb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toInt", args)
   }
@@ -369,11 +373,15 @@ func (this *QVariant) Touint(args ...interface{}) (ret interface{}) {
     // invoke: uint toUInt(_Bool *)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QVariant6toUIntEPb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QVariant6toUIntEPb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "uint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toUInt", args)
   }
@@ -397,11 +405,15 @@ func (this *QVariant) Tofloat(args ...interface{}) (ret interface{}) {
     // invoke: float toFloat(_Bool *)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QVariant7toFloatEPb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QVariant7toFloatEPb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.FloatTy(false) // "float"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toFloat", args)
   }
@@ -422,11 +434,15 @@ func (this *QVariant) Tochar(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant6toCharEv
     // invoke: QChar toChar()
-    var ret0 = C.C_ZNK8QVariant6toCharEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant6toCharEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QChar{}) // "QChar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toChar", args)
   }
@@ -447,11 +463,15 @@ func (this *QVariant) Typename(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant8typeNameEv
     // invoke: const char * typeName()
-    var ret0 = C.C_ZNK8QVariant8typeNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant8typeNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(true) // "const char *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "typeName", args)
   }
@@ -472,11 +492,15 @@ func (this *QVariant) Toregularexpression(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK8QVariant19toRegularExpressionEv
     // invoke: QRegularExpression toRegularExpression()
-    var ret0 = C.C_ZNK8QVariant19toRegularExpressionEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant19toRegularExpressionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRegularExpression{}) // "QRegularExpression"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toRegularExpression", args)
   }
@@ -523,11 +547,15 @@ func (this *QVariant) Toeasingcurve(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant13toEasingCurveEv
     // invoke: QEasingCurve toEasingCurve()
-    var ret0 = C.C_ZNK8QVariant13toEasingCurveEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant13toEasingCurveEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QEasingCurve{}) // "QEasingCurve"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toEasingCurve", args)
   }
@@ -548,7 +576,7 @@ func (this *QVariant) Tolist(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6toListEv
     // invoke: QList<QVariant> toList()
-    C.C_ZNK8QVariant6toListEv(this.qclsinst)
+    C.C_ZNK8QVariant6toListEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toList", args)
   }
@@ -569,7 +597,7 @@ func (this *QVariant) Tomap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant5toMapEv
     // invoke: QMap<QString, QVariant> toMap()
-    C.C_ZNK8QVariant5toMapEv(this.qclsinst)
+    C.C_ZNK8QVariant5toMapEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toMap", args)
   }
@@ -591,13 +619,17 @@ func (this *QVariant) Typetoname_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QVariant10typeToNameEi
     // invoke: const char * typeToName(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN8QVariant10typeToNameEi(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(true) // "const char *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "typeToName", args)
   }
@@ -618,11 +650,15 @@ func (this *QVariant) Tobool(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant6toBoolEv
     // invoke: bool toBool()
-    var ret0 = C.C_ZNK8QVariant6toBoolEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant6toBoolEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toBool", args)
   }
@@ -643,11 +679,15 @@ func (this *QVariant) Tobitarray(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant10toBitArrayEv
     // invoke: QBitArray toBitArray()
-    var ret0 = C.C_ZNK8QVariant10toBitArrayEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant10toBitArrayEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBitArray{}) // "QBitArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toBitArray", args)
   }
@@ -668,11 +708,15 @@ func (this *QVariant) Usertype(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant8userTypeEv
     // invoke: int userType()
-    var ret0 = C.C_ZNK8QVariant8userTypeEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant8userTypeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "userType", args)
   }
@@ -696,11 +740,15 @@ func (this *QVariant) Tolonglong(args ...interface{}) (ret interface{}) {
     // invoke: qlonglong toLongLong(_Bool *)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QVariant10toLongLongEPb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QVariant10toLongLongEPb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qlonglong"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toLongLong", args)
   }
@@ -721,7 +769,7 @@ func (this *QVariant) Constdata(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant9constDataEv
     // invoke: const void * constData()
-    C.C_ZNK8QVariant9constDataEv(this.qclsinst)
+    C.C_ZNK8QVariant9constDataEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "constData", args)
   }
@@ -742,11 +790,15 @@ func (this *QVariant) Tostring(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant8toStringEv
     // invoke: QString toString()
-    var ret0 = C.C_ZNK8QVariant8toStringEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant8toStringEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toString", args)
   }
@@ -768,9 +820,9 @@ func (this *QVariant) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QVariant4swapERS_
     // invoke: void swap(class QVariant &)
-    var arg0 = args[0].(QVariant).qclsinst
+    var arg0 = args[0].(*QVariant).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QVariant4swapERS_(this.qclsinst, arg0)
+    C.C_ZN8QVariant4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "swap", args)
   }
@@ -791,7 +843,7 @@ func (this *QVariant) Tojsonobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant12toJsonObjectEv
     // invoke: QJsonObject toJsonObject()
-    C.C_ZNK8QVariant12toJsonObjectEv(this.qclsinst)
+    C.C_ZNK8QVariant12toJsonObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toJsonObject", args)
   }
@@ -812,7 +864,7 @@ func (this *QVariant) Type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant4typeEv
     // invoke: QVariant::Type type()
-    C.C_ZNK8QVariant4typeEv(this.qclsinst)
+    C.C_ZNK8QVariant4typeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "type", args)
   }
@@ -833,11 +885,15 @@ func (this *QVariant) Tosize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant6toSizeEv
     // invoke: QSize toSize()
-    var ret0 = C.C_ZNK8QVariant6toSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant6toSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toSize", args)
   }
@@ -858,11 +914,15 @@ func (this *QVariant) Isdetached(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant10isDetachedEv
     // invoke: bool isDetached()
-    var ret0 = C.C_ZNK8QVariant10isDetachedEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant10isDetachedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "isDetached", args)
   }
@@ -883,11 +943,15 @@ func (this *QVariant) Tolocale(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant8toLocaleEv
     // invoke: QLocale toLocale()
-    var ret0 = C.C_ZNK8QVariant8toLocaleEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant8toLocaleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLocale{}) // "QLocale"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toLocale", args)
   }
@@ -1019,21 +1083,21 @@ func NewQVariant(args ...interface{}) *QVariant {
   case 0:
     // invoke: _ZN8QVariantC1ERK6QRectF
     // invoke: void QVariant(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK6QRectF(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 1:
     // invoke: _ZN8QVariantC1E5QChar
     // invoke: void QVariant(class QChar)
-    var arg0 = args[0].(QChar).qclsinst
+    var arg0 = args[0].(*QChar).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2E5QChar(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 2:
     // invoke: _ZN8QVariantC1EPKc
     // invoke: void QVariant(const char *)
@@ -1044,164 +1108,164 @@ func NewQVariant(args ...interface{}) *QVariant {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2EPKc(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 3:
     // invoke: _ZN8QVariantC1ERK7QPointF
     // invoke: void QVariant(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK7QPointF(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 4:
     // invoke: _ZN8QVariantC1ERK5QRect
     // invoke: void QVariant(const class QRect &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK5QRect(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 5:
     // invoke: _ZN8QVariantC1EiPKv
     // invoke: void QVariant(int, const void *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2EiPKv(arg0, arg1)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 6:
     // invoke: _ZN8QVariantC1ERK6QPoint
     // invoke: void QVariant(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK6QPoint(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 7:
     // invoke: _ZN8QVariantC1Ej
     // invoke: void QVariant(uint)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2Ej(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 8:
     // invoke: _ZN8QVariantC1ERK7QLocale
     // invoke: void QVariant(const class QLocale &)
-    var arg0 = args[0].(QLocale).qclsinst
+    var arg0 = args[0].(*QLocale).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK7QLocale(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 9:
     // invoke: _ZN8QVariantC1ERK10QByteArray
     // invoke: void QVariant(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK10QByteArray(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 10:
     // invoke: _ZN8QVariantC1Ex
     // invoke: void QVariant(qlonglong)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2Ex(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 11:
     // invoke: _ZN8QVariantC1Ey
     // invoke: void QVariant(qulonglong)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2Ey(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 12:
     // invoke: _ZN8QVariantC1Ev
     // invoke: void QVariant()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2Ev()
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 13:
     // invoke: _ZN8QVariantC1ERK21QPersistentModelIndex
     // invoke: void QVariant(const class QPersistentModelIndex &)
-    var arg0 = args[0].(QPersistentModelIndex).qclsinst
+    var arg0 = args[0].(*QPersistentModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK21QPersistentModelIndex(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 14:
     // invoke: _ZN8QVariantC1EiPKvj
     // invoke: void QVariant(int, const void *, uint)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2EiPKvj(arg0, arg1, arg2)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 15:
     // invoke: _ZN8QVariantC1ERK6QLineF
     // invoke: void QVariant(const class QLineF &)
-    var arg0 = args[0].(QLineF).qclsinst
+    var arg0 = args[0].(*QLineF).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK6QLineF(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 16:
     // invoke: _ZN8QVariantC1Ei
     // invoke: void QVariant(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2Ei(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 17:
     // invoke: _ZN8QVariantC1Ef
     // invoke: void QVariant(float)
-    var arg0 = C.float(args[0].(float32))
+    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2Ef(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 18:
     // invoke: _ZN8QVariantC1ERK7QString
     // invoke: void QVariant(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK7QString(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 19:
     // invoke: _ZN8QVariantC1Ed
     // invoke: void QVariant(double)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2Ed(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 20:
     // invoke: _ZN8QVariantC1Eb
     // invoke: void QVariant(_Bool)
@@ -1210,156 +1274,156 @@ func NewQVariant(args ...interface{}) *QVariant {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2Eb(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 21:
     // invoke: _ZN8QVariantC1ERK12QEasingCurve
     // invoke: void QVariant(const class QEasingCurve &)
-    var arg0 = args[0].(QEasingCurve).qclsinst
+    var arg0 = args[0].(*QEasingCurve).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK12QEasingCurve(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 22:
     // invoke: _ZN8QVariantC1ER11QDataStream
     // invoke: void QVariant(class QDataStream &)
-    var arg0 = args[0].(QDataStream).qclsinst
+    var arg0 = args[0].(*QDataStream).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ER11QDataStream(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 23:
     // invoke: _ZN8QVariantC1ERK6QSizeF
     // invoke: void QVariant(const class QSizeF &)
-    var arg0 = args[0].(QSizeF).qclsinst
+    var arg0 = args[0].(*QSizeF).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK6QSizeF(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 24:
     // invoke: _ZN8QVariantC1ERK11QStringList
     // invoke: void QVariant(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK11QStringList(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 25:
     // invoke: _ZN8QVariantC1ERK5QUuid
     // invoke: void QVariant(const class QUuid &)
-    var arg0 = args[0].(QUuid).qclsinst
+    var arg0 = args[0].(*QUuid).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK5QUuid(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 26:
     // invoke: _ZN8QVariantC1ERK5QDate
     // invoke: void QVariant(const class QDate &)
-    var arg0 = args[0].(QDate).qclsinst
+    var arg0 = args[0].(*QDate).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK5QDate(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 27:
     // invoke: _ZN8QVariantC1ERK9QBitArray
     // invoke: void QVariant(const class QBitArray &)
-    var arg0 = args[0].(QBitArray).qclsinst
+    var arg0 = args[0].(*QBitArray).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK9QBitArray(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 28:
     // invoke: _ZN8QVariantC1ERK11QModelIndex
     // invoke: void QVariant(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK11QModelIndex(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 29:
     // invoke: _ZN8QVariantC1ERK4QUrl
     // invoke: void QVariant(const class QUrl &)
-    var arg0 = args[0].(QUrl).qclsinst
+    var arg0 = args[0].(*QUrl).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK4QUrl(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 30:
     // invoke: _ZN8QVariantC1ERKS_
     // invoke: void QVariant(const class QVariant &)
-    var arg0 = args[0].(QVariant).qclsinst
+    var arg0 = args[0].(*QVariant).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERKS_(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 31:
     // invoke: _ZN8QVariantC1ERK5QSize
     // invoke: void QVariant(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK5QSize(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 32:
     // invoke: _ZN8QVariantC1ERK5QLine
     // invoke: void QVariant(const class QLine &)
-    var arg0 = args[0].(QLine).qclsinst
+    var arg0 = args[0].(*QLine).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK5QLine(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 33:
     // invoke: _ZN8QVariantC1ERK18QRegularExpression
     // invoke: void QVariant(const class QRegularExpression &)
-    var arg0 = args[0].(QRegularExpression).qclsinst
+    var arg0 = args[0].(*QRegularExpression).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK18QRegularExpression(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 34:
     // invoke: _ZN8QVariantC1ERK5QTime
     // invoke: void QVariant(const class QTime &)
-    var arg0 = args[0].(QTime).qclsinst
+    var arg0 = args[0].(*QTime).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK5QTime(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 35:
     // invoke: _ZN8QVariantC1ERK9QDateTime
     // invoke: void QVariant(const class QDateTime &)
-    var arg0 = args[0].(QDateTime).qclsinst
+    var arg0 = args[0].(*QDateTime).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK9QDateTime(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   case 36:
     // invoke: _ZN8QVariantC1ERK7QRegExp
     // invoke: void QVariant(const class QRegExp &)
-    var arg0 = args[0].(QRegExp).qclsinst
+    var arg0 = args[0].(*QRegExp).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QVariantC2ERK7QRegExp(arg0)
-    return &QVariant{qclsinst:qthis}
+    return &QVariant{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QVariant", "QVariant", args)
   }
 
-  return nil // QVariant{qclsinst:qthis}
+  return nil // QVariant{Qclsinst:qthis}
 }
 
 // toDateTime()
@@ -1375,11 +1439,15 @@ func (this *QVariant) Todatetime(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant10toDateTimeEv
     // invoke: QDateTime toDateTime()
-    var ret0 = C.C_ZNK8QVariant10toDateTimeEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant10toDateTimeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toDateTime", args)
   }
@@ -1400,7 +1468,7 @@ func (this *QVariant) Tojsonarray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant11toJsonArrayEv
     // invoke: QJsonArray toJsonArray()
-    C.C_ZNK8QVariant11toJsonArrayEv(this.qclsinst)
+    C.C_ZNK8QVariant11toJsonArrayEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toJsonArray", args)
   }
@@ -1421,11 +1489,15 @@ func (this *QVariant) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK8QVariant7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "isValid", args)
   }
@@ -1446,11 +1518,15 @@ func (this *QVariant) Tolinef(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant7toLineFEv
     // invoke: QLineF toLineF()
-    var ret0 = C.C_ZNK8QVariant7toLineFEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant7toLineFEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLineF{}) // "QLineF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toLineF", args)
   }
@@ -1471,7 +1547,7 @@ func (this *QVariant) Tojsonvalue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant11toJsonValueEv
     // invoke: QJsonValue toJsonValue()
-    C.C_ZNK8QVariant11toJsonValueEv(this.qclsinst)
+    C.C_ZNK8QVariant11toJsonValueEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toJsonValue", args)
   }
@@ -1493,13 +1569,17 @@ func (this *QVariant) Canconvert(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant10canConvertEi
     // invoke: bool canConvert(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QVariant10canConvertEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QVariant10canConvertEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "canConvert", args)
   }
@@ -1520,11 +1600,15 @@ func (this *QVariant) Topersistentmodelindex(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK8QVariant22toPersistentModelIndexEv
     // invoke: QPersistentModelIndex toPersistentModelIndex()
-    var ret0 = C.C_ZNK8QVariant22toPersistentModelIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant22toPersistentModelIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPersistentModelIndex{}) // "QPersistentModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toPersistentModelIndex", args)
   }
@@ -1545,11 +1629,15 @@ func (this *QVariant) Topointf(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant8toPointFEv
     // invoke: QPointF toPointF()
-    var ret0 = C.C_ZNK8QVariant8toPointFEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant8toPointFEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toPointF", args)
   }
@@ -1570,7 +1658,7 @@ func (this *QVariant) Tojsondocument(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant14toJsonDocumentEv
     // invoke: QJsonDocument toJsonDocument()
-    C.C_ZNK8QVariant14toJsonDocumentEv(this.qclsinst)
+    C.C_ZNK8QVariant14toJsonDocumentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toJsonDocument", args)
   }
@@ -1591,11 +1679,15 @@ func (this *QVariant) Tomodelindex(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant12toModelIndexEv
     // invoke: QModelIndex toModelIndex()
-    var ret0 = C.C_ZNK8QVariant12toModelIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant12toModelIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toModelIndex", args)
   }
@@ -1616,7 +1708,7 @@ func (this *QVariant) Detach(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QVariant6detachEv
     // invoke: void detach()
-    C.C_ZN8QVariant6detachEv(this.qclsinst)
+    C.C_ZN8QVariant6detachEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "detach", args)
   }
@@ -1637,7 +1729,7 @@ func (this *QVariant) Data(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QVariant4dataEv
     // invoke: void * data()
-    C.C_ZN8QVariant4dataEv(this.qclsinst)
+    C.C_ZN8QVariant4dataEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "data", args)
   }
@@ -1661,11 +1753,15 @@ func (this *QVariant) Toulonglong(args ...interface{}) (ret interface{}) {
     // invoke: qulonglong toULongLong(_Bool *)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QVariant11toULongLongEPb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QVariant11toULongLongEPb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qulonglong"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toULongLong", args)
   }
@@ -1686,11 +1782,15 @@ func (this *QVariant) Topoint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant7toPointEv
     // invoke: QPoint toPoint()
-    var ret0 = C.C_ZNK8QVariant7toPointEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant7toPointEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toPoint", args)
   }
@@ -1711,7 +1811,7 @@ func (this *QVariant) Tohash(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant6toHashEv
     // invoke: QHash<QString, QVariant> toHash()
-    C.C_ZNK8QVariant6toHashEv(this.qclsinst)
+    C.C_ZNK8QVariant6toHashEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toHash", args)
   }
@@ -1733,13 +1833,17 @@ func (this *QVariant) Convert(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QVariant7convertEi
     // invoke: bool convert(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QVariant7convertEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN8QVariant7convertEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "convert", args)
   }
@@ -1761,9 +1865,9 @@ func (this *QVariant) Save(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant4saveER11QDataStream
     // invoke: void save(class QDataStream &)
-    var arg0 = args[0].(QDataStream).qclsinst
+    var arg0 = args[0].(*QDataStream).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK8QVariant4saveER11QDataStream(this.qclsinst, arg0)
+    C.C_ZNK8QVariant4saveER11QDataStream(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "save", args)
   }
@@ -1784,11 +1888,15 @@ func (this *QVariant) Toregexp(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant8toRegExpEv
     // invoke: QRegExp toRegExp()
-    var ret0 = C.C_ZNK8QVariant8toRegExpEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant8toRegExpEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRegExp{}) // "QRegExp"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toRegExp", args)
   }
@@ -1809,11 +1917,15 @@ func (this *QVariant) Toline(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant6toLineEv
     // invoke: QLine toLine()
-    var ret0 = C.C_ZNK8QVariant6toLineEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant6toLineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLine{}) // "QLine"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toLine", args)
   }
@@ -1834,7 +1946,7 @@ func (this *QVariant) Tostringlist(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QVariant12toStringListEv
     // invoke: QStringList toStringList()
-    C.C_ZNK8QVariant12toStringListEv(this.qclsinst)
+    C.C_ZNK8QVariant12toStringListEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toStringList", args)
   }
@@ -1855,11 +1967,15 @@ func (this *QVariant) Tosizef(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant7toSizeFEv
     // invoke: QSizeF toSizeF()
-    var ret0 = C.C_ZNK8QVariant7toSizeFEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant7toSizeFEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toSizeF", args)
   }
@@ -1880,11 +1996,15 @@ func (this *QVariant) Torectf(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant7toRectFEv
     // invoke: QRectF toRectF()
-    var ret0 = C.C_ZNK8QVariant7toRectFEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant7toRectFEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toRectF", args)
   }
@@ -1905,11 +2025,15 @@ func (this *QVariant) Tourl(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant5toUrlEv
     // invoke: QUrl toUrl()
-    var ret0 = C.C_ZNK8QVariant5toUrlEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant5toUrlEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QUrl{}) // "QUrl"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toUrl", args)
   }
@@ -1930,11 +2054,15 @@ func (this *QVariant) Touuid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant6toUuidEv
     // invoke: QUuid toUuid()
-    var ret0 = C.C_ZNK8QVariant6toUuidEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant6toUuidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QUuid{}) // "QUuid"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toUuid", args)
   }
@@ -1958,11 +2086,15 @@ func (this *QVariant) Toreal(args ...interface{}) (ret interface{}) {
     // invoke: qreal toReal(_Bool *)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QVariant6toRealEPb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QVariant6toRealEPb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toReal", args)
   }
@@ -1983,7 +2115,7 @@ func (this *QVariant) Freeqvariant(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QVariantD0Ev
     // invoke: void ~QVariant()
-    C.C_ZN8QVariantD2Ev(this.qclsinst)
+    C.C_ZN8QVariantD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "~QVariant", args)
   }
@@ -2004,11 +2136,15 @@ func (this *QVariant) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK8QVariant6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "isNull", args)
   }
@@ -2029,11 +2165,15 @@ func (this *QVariant) Tobytearray(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant11toByteArrayEv
     // invoke: QByteArray toByteArray()
-    var ret0 = C.C_ZNK8QVariant11toByteArrayEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant11toByteArrayEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toByteArray", args)
   }
@@ -2057,11 +2197,15 @@ func (this *QVariant) Todouble(args ...interface{}) (ret interface{}) {
     // invoke: double toDouble(_Bool *)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QVariant8toDoubleEPb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QVariant8toDoubleEPb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "double"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toDouble", args)
   }
@@ -2082,11 +2226,15 @@ func (this *QVariant) Totime(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant6toTimeEv
     // invoke: QTime toTime()
-    var ret0 = C.C_ZNK8QVariant6toTimeEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant6toTimeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTime{}) // "QTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toTime", args)
   }
@@ -2107,11 +2255,15 @@ func (this *QVariant) Todate(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant6toDateEv
     // invoke: QDate toDate()
-    var ret0 = C.C_ZNK8QVariant6toDateEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant6toDateEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDate{}) // "QDate"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toDate", args)
   }
@@ -2132,7 +2284,7 @@ func (this *QVariant) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QVariant5clearEv
     // invoke: void clear()
-    C.C_ZN8QVariant5clearEv(this.qclsinst)
+    C.C_ZN8QVariant5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "clear", args)
   }
@@ -2153,11 +2305,15 @@ func (this *QVariant) Torect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QVariant6toRectEv
     // invoke: QRect toRect()
-    var ret0 = C.C_ZNK8QVariant6toRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QVariant6toRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariant", "toRect", args)
   }
@@ -2178,7 +2334,7 @@ func (this *QSequentialIterable) Begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QSequentialIterable5beginEv
     // invoke: QSequentialIterable::const_iterator begin()
-    C.C_ZNK19QSequentialIterable5beginEv(this.qclsinst)
+    C.C_ZNK19QSequentialIterable5beginEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialIterable", "begin", args)
   }
@@ -2199,7 +2355,7 @@ func (this *QSequentialIterable) End(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QSequentialIterable3endEv
     // invoke: QSequentialIterable::const_iterator end()
-    C.C_ZNK19QSequentialIterable3endEv(this.qclsinst)
+    C.C_ZNK19QSequentialIterable3endEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialIterable", "end", args)
   }
@@ -2220,11 +2376,15 @@ func (this *QSequentialIterable) Canreverseiterate(args ...interface{}) (ret int
   case 0:
     // invoke: _ZNK19QSequentialIterable17canReverseIterateEv
     // invoke: bool canReverseIterate()
-    var ret0 = C.C_ZNK19QSequentialIterable17canReverseIterateEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QSequentialIterable17canReverseIterateEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSequentialIterable", "canReverseIterate", args)
   }
@@ -2246,13 +2406,17 @@ func (this *QSequentialIterable) At(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QSequentialIterable2atEi
     // invoke: QVariant at(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QSequentialIterable2atEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QSequentialIterable2atEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSequentialIterable", "at", args)
   }
@@ -2273,11 +2437,15 @@ func (this *QSequentialIterable) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QSequentialIterable4sizeEv
     // invoke: int size()
-    var ret0 = C.C_ZNK19QSequentialIterable4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QSequentialIterable4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSequentialIterable", "size", args)
   }
@@ -2298,7 +2466,7 @@ func (this *QAssociativeIterable) Begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QAssociativeIterable5beginEv
     // invoke: QAssociativeIterable::const_iterator begin()
-    C.C_ZNK20QAssociativeIterable5beginEv(this.qclsinst)
+    C.C_ZNK20QAssociativeIterable5beginEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "begin", args)
   }
@@ -2320,13 +2488,17 @@ func (this *QAssociativeIterable) Value(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK20QAssociativeIterable5valueERK8QVariant
     // invoke: QVariant value(const class QVariant &)
-    var arg0 = args[0].(QVariant).qclsinst
+    var arg0 = args[0].(*QVariant).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK20QAssociativeIterable5valueERK8QVariant(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK20QAssociativeIterable5valueERK8QVariant(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "value", args)
   }
@@ -2347,7 +2519,7 @@ func (this *QAssociativeIterable) End(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QAssociativeIterable3endEv
     // invoke: QAssociativeIterable::const_iterator end()
-    C.C_ZNK20QAssociativeIterable3endEv(this.qclsinst)
+    C.C_ZNK20QAssociativeIterable3endEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "end", args)
   }
@@ -2369,9 +2541,9 @@ func (this *QAssociativeIterable) Find(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QAssociativeIterable4findERK8QVariant
     // invoke: QAssociativeIterable::const_iterator find(const class QVariant &)
-    var arg0 = args[0].(QVariant).qclsinst
+    var arg0 = args[0].(*QVariant).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK20QAssociativeIterable4findERK8QVariant(this.qclsinst, arg0)
+    C.C_ZNK20QAssociativeIterable4findERK8QVariant(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "find", args)
   }
@@ -2392,11 +2564,15 @@ func (this *QAssociativeIterable) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK20QAssociativeIterable4sizeEv
     // invoke: int size()
-    var ret0 = C.C_ZNK20QAssociativeIterable4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QAssociativeIterable4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "size", args)
   }

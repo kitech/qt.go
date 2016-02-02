@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qrunnable.h
 // dst-file: /src/core/qrunnable.go
 //
@@ -47,7 +47,7 @@ func init() {
 // class sizeof(QRunnable)=16
 type QRunnable struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // setAutoDelete(_Bool)
@@ -66,7 +66,7 @@ func (this *QRunnable) Setautodelete(args ...interface{}) () {
     // invoke: void setAutoDelete(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QRunnable13setAutoDeleteEb(this.qclsinst, arg0)
+    C.C_ZN9QRunnable13setAutoDeleteEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRunnable", "setAutoDelete", args)
   }
@@ -87,11 +87,15 @@ func (this *QRunnable) Autodelete(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QRunnable10autoDeleteEv
     // invoke: bool autoDelete()
-    var ret0 = C.C_ZNK9QRunnable10autoDeleteEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QRunnable10autoDeleteEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRunnable", "autoDelete", args)
   }

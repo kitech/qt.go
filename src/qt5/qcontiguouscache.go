@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qcontiguouscache.h
 // dst-file: /src/core/qcontiguouscache.go
 //
@@ -47,7 +47,7 @@ func init() {
 // class sizeof(QContiguousCacheData)=1
 type QContiguousCacheData struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // allocateData(int, int)
@@ -65,15 +65,19 @@ func (this *QContiguousCacheData) Allocatedata_S(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZN20QContiguousCacheData12allocateDataEii
     // invoke: QContiguousCacheData * allocateData(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN20QContiguousCacheData12allocateDataEii(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QContiguousCacheData{}) // "QContiguousCacheData *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QContiguousCacheData", "allocateData", args)
   }
@@ -95,7 +99,7 @@ func (this *QContiguousCacheData) Freedata_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QContiguousCacheData8freeDataEPS_
     // invoke: void freeData(struct QContiguousCacheData *)
-    var arg0 = args[0].(QContiguousCacheData).qclsinst
+    var arg0 = args[0].(*QContiguousCacheData).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN20QContiguousCacheData8freeDataEPS_(arg0)
   default:

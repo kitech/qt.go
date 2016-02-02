@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.go
 //
@@ -55,7 +55,7 @@ func init() {
 // class sizeof(QSocketNotifier)=1
 type QSocketNotifier struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _activated QSocketNotifier_activated_signal;
 }
 
@@ -75,7 +75,7 @@ func (this *QSocketNotifier) Setenabled(args ...interface{}) () {
     // invoke: void setEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QSocketNotifier10setEnabledEb(this.qclsinst, arg0)
+    C.C_ZN15QSocketNotifier10setEnabledEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSocketNotifier", "setEnabled", args)
   }
@@ -96,11 +96,15 @@ func (this *QSocketNotifier) Socket(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QSocketNotifier6socketEv
     // invoke: qintptr socket()
-    var ret0 = C.C_ZNK15QSocketNotifier6socketEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QSocketNotifier6socketEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "qintptr"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSocketNotifier", "socket", args)
   }
@@ -121,7 +125,7 @@ func (this *QSocketNotifier) Freeqsocketnotifier(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSocketNotifierD0Ev
     // invoke: void ~QSocketNotifier()
-    C.C_ZN15QSocketNotifierD2Ev(this.qclsinst)
+    C.C_ZN15QSocketNotifierD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSocketNotifier", "~QSocketNotifier", args)
   }
@@ -142,11 +146,15 @@ func (this *QSocketNotifier) Isenabled(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QSocketNotifier9isEnabledEv
     // invoke: bool isEnabled()
-    var ret0 = C.C_ZNK15QSocketNotifier9isEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QSocketNotifier9isEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSocketNotifier", "isEnabled", args)
   }
@@ -167,7 +175,7 @@ func (this *QSocketNotifier) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSocketNotifier10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QSocketNotifier10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QSocketNotifier10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSocketNotifier", "metaObject", args)
   }
@@ -188,7 +196,7 @@ func (this *QSocketNotifier) Type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSocketNotifier4typeEv
     // invoke: QSocketNotifier::Type type()
-    C.C_ZNK15QSocketNotifier4typeEv(this.qclsinst)
+    C.C_ZNK15QSocketNotifier4typeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSocketNotifier", "type", args)
   }

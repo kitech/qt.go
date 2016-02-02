@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qvector2d.h
 // dst-file: /src/gui/qvector2d.go
 //
@@ -87,7 +87,7 @@ func init() {
 // class sizeof(QVector2D)=8
 type QVector2D struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // toVector4D()
@@ -103,11 +103,15 @@ func (this *QVector2D) Tovector4D(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QVector2D10toVector4DEv
     // invoke: QVector4D toVector4D()
-    var ret0 = C.C_ZNK9QVector2D10toVector4DEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QVector2D10toVector4DEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVector4D{}) // "QVector4D"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVector2D", "toVector4D", args)
   }
@@ -128,7 +132,7 @@ func (this *QVector2D) Normalize(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QVector2D9normalizeEv
     // invoke: void normalize()
-    C.C_ZN9QVector2D9normalizeEv(this.qclsinst)
+    C.C_ZN9QVector2D9normalizeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVector2D", "normalize", args)
   }
@@ -151,15 +155,19 @@ func (this *QVector2D) Dotproduct_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QVector2D10dotProductERKS_S1_
     // invoke: float dotProduct(const class QVector2D &, const class QVector2D &)
-    var arg0 = args[0].(QVector2D).qclsinst
+    var arg0 = args[0].(*QVector2D).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QVector2D).qclsinst
+    var arg1 = args[1].(*QVector2D).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN9QVector2D10dotProductERKS_S1_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.FloatTy(false) // "float"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVector2D", "dotProduct", args)
   }
@@ -196,62 +204,62 @@ func NewQVector2D(args ...interface{}) *QVector2D {
   case 0:
     // invoke: _ZN9QVector2DC1ERK6QPoint
     // invoke: void QVector2D(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector2DC2ERK6QPoint(arg0)
-    return &QVector2D{qclsinst:qthis}
+    return &QVector2D{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QVector2DC1Eff
     // invoke: void QVector2D(float, float)
-    var arg0 = C.float(args[0].(float32))
+    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.float(args[1].(float32))
+    var arg1 = C.float(qtrt.PrimConv(args[1], qtrt.FloatTy(false)).(float32))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector2DC2Eff(arg0, arg1)
-    return &QVector2D{qclsinst:qthis}
+    return &QVector2D{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QVector2DC1ERK9QVector4D
     // invoke: void QVector2D(const class QVector4D &)
-    var arg0 = args[0].(QVector4D).qclsinst
+    var arg0 = args[0].(*QVector4D).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector2DC2ERK9QVector4D(arg0)
-    return &QVector2D{qclsinst:qthis}
+    return &QVector2D{Qclsinst:qthis}
   case 3:
     // invoke: _ZN9QVector2DC1Ev
     // invoke: void QVector2D()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector2DC2Ev()
-    return &QVector2D{qclsinst:qthis}
+    return &QVector2D{Qclsinst:qthis}
   case 4:
     // invoke: _ZN9QVector2DC1ERK9QVector3D
     // invoke: void QVector2D(const class QVector3D &)
-    var arg0 = args[0].(QVector3D).qclsinst
+    var arg0 = args[0].(*QVector3D).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector2DC2ERK9QVector3D(arg0)
-    return &QVector2D{qclsinst:qthis}
+    return &QVector2D{Qclsinst:qthis}
   case 5:
     // invoke: _ZN9QVector2DC1ERK7QPointF
     // invoke: void QVector2D(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector2DC2ERK7QPointF(arg0)
-    return &QVector2D{qclsinst:qthis}
+    return &QVector2D{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QVector2D", "QVector2D", args)
   }
 
-  return nil // QVector2D{qclsinst:qthis}
+  return nil // QVector2D{Qclsinst:qthis}
 }
 
 // toPointF()
@@ -267,11 +275,15 @@ func (this *QVector2D) Topointf(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QVector2D8toPointFEv
     // invoke: QPointF toPointF()
-    var ret0 = C.C_ZNK9QVector2D8toPointFEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QVector2D8toPointFEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVector2D", "toPointF", args)
   }
@@ -292,11 +304,15 @@ func (this *QVector2D) Tovector3D(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QVector2D10toVector3DEv
     // invoke: QVector3D toVector3D()
-    var ret0 = C.C_ZNK9QVector2D10toVector3DEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QVector2D10toVector3DEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVector3D{}) // "QVector3D"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVector2D", "toVector3D", args)
   }
@@ -317,11 +333,15 @@ func (this *QVector2D) Lengthsquared(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QVector2D13lengthSquaredEv
     // invoke: float lengthSquared()
-    var ret0 = C.C_ZNK9QVector2D13lengthSquaredEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QVector2D13lengthSquaredEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.FloatTy(false) // "float"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVector2D", "lengthSquared", args)
   }
@@ -342,11 +362,15 @@ func (this *QVector2D) Normalized(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QVector2D10normalizedEv
     // invoke: QVector2D normalized()
-    var ret0 = C.C_ZNK9QVector2D10normalizedEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QVector2D10normalizedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVector2D{}) // "QVector2D"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVector2D", "normalized", args)
   }
@@ -368,9 +392,9 @@ func (this *QVector2D) Setx(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QVector2D4setXEf
     // invoke: void setX(float)
-    var arg0 = C.float(args[0].(float32))
+    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QVector2D4setXEf(this.qclsinst, arg0)
+    C.C_ZN9QVector2D4setXEf(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVector2D", "setX", args)
   }
@@ -392,9 +416,9 @@ func (this *QVector2D) Sety(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QVector2D4setYEf
     // invoke: void setY(float)
-    var arg0 = C.float(args[0].(float32))
+    var arg0 = C.float(qtrt.PrimConv(args[0], qtrt.FloatTy(false)).(float32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QVector2D4setYEf(this.qclsinst, arg0)
+    C.C_ZN9QVector2D4setYEf(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVector2D", "setY", args)
   }
@@ -415,11 +439,15 @@ func (this *QVector2D) Topoint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QVector2D7toPointEv
     // invoke: QPoint toPoint()
-    var ret0 = C.C_ZNK9QVector2D7toPointEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QVector2D7toPointEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVector2D", "toPoint", args)
   }
@@ -442,15 +470,19 @@ func (this *QVector2D) Distancetoline(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QVector2D14distanceToLineERKS_S1_
     // invoke: float distanceToLine(const class QVector2D &, const class QVector2D &)
-    var arg0 = args[0].(QVector2D).qclsinst
+    var arg0 = args[0].(*QVector2D).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QVector2D).qclsinst
+    var arg1 = args[1].(*QVector2D).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK9QVector2D14distanceToLineERKS_S1_(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK9QVector2D14distanceToLineERKS_S1_(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.FloatTy(false) // "float"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVector2D", "distanceToLine", args)
   }
@@ -471,11 +503,15 @@ func (this *QVector2D) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QVector2D6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK9QVector2D6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QVector2D6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVector2D", "isNull", args)
   }
@@ -496,11 +532,15 @@ func (this *QVector2D) Length(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QVector2D6lengthEv
     // invoke: float length()
-    var ret0 = C.C_ZNK9QVector2D6lengthEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QVector2D6lengthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.FloatTy(false) // "float"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVector2D", "length", args)
   }
@@ -522,13 +562,17 @@ func (this *QVector2D) Distancetopoint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QVector2D15distanceToPointERKS_
     // invoke: float distanceToPoint(const class QVector2D &)
-    var arg0 = args[0].(QVector2D).qclsinst
+    var arg0 = args[0].(*QVector2D).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QVector2D15distanceToPointERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QVector2D15distanceToPointERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.FloatTy(false) // "float"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVector2D", "distanceToPoint", args)
   }
@@ -549,7 +593,7 @@ func (this *QVector2D) Y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector2D1yEv
     // invoke: float y()
-    C.C_ZNK9QVector2D1yEv(this.qclsinst)
+    C.C_ZNK9QVector2D1yEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVector2D", "y", args)
   }
@@ -570,7 +614,7 @@ func (this *QVector2D) X(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector2D1xEv
     // invoke: float x()
-    C.C_ZNK9QVector2D1xEv(this.qclsinst)
+    C.C_ZNK9QVector2D1xEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVector2D", "x", args)
   }

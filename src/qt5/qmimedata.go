@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.go
 //
@@ -89,7 +89,7 @@ func init() {
 // class sizeof(QMimeData)=1
 type QMimeData struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // ~QMimeData()
@@ -105,7 +105,7 @@ func (this *QMimeData) Freeqmimedata(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeDataD0Ev
     // invoke: void ~QMimeData()
-    C.C_ZN9QMimeDataD2Ev(this.qclsinst)
+    C.C_ZN9QMimeDataD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "~QMimeData", args)
   }
@@ -126,11 +126,15 @@ func (this *QMimeData) Imagedata(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QMimeData9imageDataEv
     // invoke: QVariant imageData()
-    var ret0 = C.C_ZNK9QMimeData9imageDataEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QMimeData9imageDataEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeData", "imageData", args)
   }
@@ -151,11 +155,15 @@ func (this *QMimeData) Text(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QMimeData4textEv
     // invoke: QString text()
-    var ret0 = C.C_ZNK9QMimeData4textEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QMimeData4textEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeData", "text", args)
   }
@@ -177,9 +185,9 @@ func (this *QMimeData) Sethtml(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeData7setHtmlERK7QString
     // invoke: void setHtml(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMimeData7setHtmlERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QMimeData7setHtmlERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "setHtml", args)
   }
@@ -200,11 +208,15 @@ func (this *QMimeData) Hashtml(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QMimeData7hasHtmlEv
     // invoke: bool hasHtml()
-    var ret0 = C.C_ZNK9QMimeData7hasHtmlEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QMimeData7hasHtmlEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeData", "hasHtml", args)
   }
@@ -225,11 +237,15 @@ func (this *QMimeData) Hastext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QMimeData7hasTextEv
     // invoke: bool hasText()
-    var ret0 = C.C_ZNK9QMimeData7hasTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QMimeData7hasTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeData", "hasText", args)
   }
@@ -253,12 +269,12 @@ func NewQMimeData(args ...interface{}) *QMimeData {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMimeDataC2Ev()
-    return &QMimeData{qclsinst:qthis}
+    return &QMimeData{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMimeData", "QMimeData", args)
   }
 
-  return nil // QMimeData{qclsinst:qthis}
+  return nil // QMimeData{Qclsinst:qthis}
 }
 
 // hasUrls()
@@ -274,11 +290,15 @@ func (this *QMimeData) Hasurls(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QMimeData7hasUrlsEv
     // invoke: bool hasUrls()
-    var ret0 = C.C_ZNK9QMimeData7hasUrlsEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QMimeData7hasUrlsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeData", "hasUrls", args)
   }
@@ -300,9 +320,9 @@ func (this *QMimeData) Setimagedata(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeData12setImageDataERK8QVariant
     // invoke: void setImageData(const class QVariant &)
-    var arg0 = args[0].(QVariant).qclsinst
+    var arg0 = args[0].(*QVariant).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMimeData12setImageDataERK8QVariant(this.qclsinst, arg0)
+    C.C_ZN9QMimeData12setImageDataERK8QVariant(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "setImageData", args)
   }
@@ -323,11 +343,15 @@ func (this *QMimeData) Html(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QMimeData4htmlEv
     // invoke: QString html()
-    var ret0 = C.C_ZNK9QMimeData4htmlEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QMimeData4htmlEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeData", "html", args)
   }
@@ -349,9 +373,9 @@ func (this *QMimeData) Setcolordata(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeData12setColorDataERK8QVariant
     // invoke: void setColorData(const class QVariant &)
-    var arg0 = args[0].(QVariant).qclsinst
+    var arg0 = args[0].(*QVariant).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMimeData12setColorDataERK8QVariant(this.qclsinst, arg0)
+    C.C_ZN9QMimeData12setColorDataERK8QVariant(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "setColorData", args)
   }
@@ -374,11 +398,11 @@ func (this *QMimeData) Setdata(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeData7setDataERK7QStringRK10QByteArray
     // invoke: void setData(const class QString &, const class QByteArray &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
+    var arg1 = args[1].(*QByteArray).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN9QMimeData7setDataERK7QStringRK10QByteArray(this.qclsinst, arg0, arg1)
+    C.C_ZN9QMimeData7setDataERK7QStringRK10QByteArray(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMimeData", "setData", args)
   }
@@ -400,9 +424,9 @@ func (this *QMimeData) Removeformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeData12removeFormatERK7QString
     // invoke: void removeFormat(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMimeData12removeFormatERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QMimeData12removeFormatERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "removeFormat", args)
   }
@@ -424,13 +448,17 @@ func (this *QMimeData) Hasformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QMimeData9hasFormatERK7QString
     // invoke: bool hasFormat(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QMimeData9hasFormatERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QMimeData9hasFormatERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeData", "hasFormat", args)
   }
@@ -452,13 +480,17 @@ func (this *QMimeData) Data(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QMimeData4dataERK7QString
     // invoke: QByteArray data(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QMimeData4dataERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QMimeData4dataERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeData", "data", args)
   }
@@ -479,7 +511,7 @@ func (this *QMimeData) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QMimeData10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QMimeData10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "metaObject", args)
   }
@@ -501,9 +533,9 @@ func (this *QMimeData) Settext(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeData7setTextERK7QString
     // invoke: void setText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMimeData7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QMimeData7setTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "setText", args)
   }
@@ -524,11 +556,15 @@ func (this *QMimeData) Colordata(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QMimeData9colorDataEv
     // invoke: QVariant colorData()
-    var ret0 = C.C_ZNK9QMimeData9colorDataEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QMimeData9colorDataEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeData", "colorData", args)
   }
@@ -549,11 +585,15 @@ func (this *QMimeData) Hascolor(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QMimeData8hasColorEv
     // invoke: bool hasColor()
-    var ret0 = C.C_ZNK9QMimeData8hasColorEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QMimeData8hasColorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeData", "hasColor", args)
   }
@@ -574,7 +614,7 @@ func (this *QMimeData) Urls(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData4urlsEv
     // invoke: QList<QUrl> urls()
-    C.C_ZNK9QMimeData4urlsEv(this.qclsinst)
+    C.C_ZNK9QMimeData4urlsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "urls", args)
   }
@@ -595,7 +635,7 @@ func (this *QMimeData) Formats(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeData7formatsEv
     // invoke: QStringList formats()
-    C.C_ZNK9QMimeData7formatsEv(this.qclsinst)
+    C.C_ZNK9QMimeData7formatsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "formats", args)
   }
@@ -616,11 +656,15 @@ func (this *QMimeData) Hasimage(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QMimeData8hasImageEv
     // invoke: bool hasImage()
-    var ret0 = C.C_ZNK9QMimeData8hasImageEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QMimeData8hasImageEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeData", "hasImage", args)
   }
@@ -641,7 +685,7 @@ func (this *QMimeData) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeData5clearEv
     // invoke: void clear()
-    C.C_ZN9QMimeData5clearEv(this.qclsinst)
+    C.C_ZN9QMimeData5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "clear", args)
   }

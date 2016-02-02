@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qidentityproxymodel.h
 // dst-file: /src/core/qidentityproxymodel.go
 //
@@ -77,7 +77,7 @@ func init() {
 // class sizeof(QIdentityProxyModel)=1
 type QIdentityProxyModel struct {
   /*qbase*/ QAbstractProxyModel;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // columnCount(const class QModelIndex &)
@@ -94,13 +94,17 @@ func (this *QIdentityProxyModel) Columncount(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK19QIdentityProxyModel11columnCountERK11QModelIndex
     // invoke: int columnCount(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "columnCount", args)
   }
@@ -122,13 +126,17 @@ func (this *QIdentityProxyModel) Mapselectiontosource(args ...interface{}) (ret 
   case 0:
     // invoke: _ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection
     // invoke: QItemSelection mapSelectionToSource(const class QItemSelection &)
-    var arg0 = args[0].(QItemSelection).qclsinst
+    var arg0 = args[0].(*QItemSelection).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QItemSelection{}) // "QItemSelection"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "mapSelectionToSource", args)
   }
@@ -150,9 +158,9 @@ func (this *QIdentityProxyModel) Setsourcemodel(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QIdentityProxyModel14setSourceModelEP18QAbstractItemModel
     // invoke: void setSourceModel(class QAbstractItemModel *)
-    var arg0 = args[0].(QAbstractItemModel).qclsinst
+    var arg0 = args[0].(*QAbstractItemModel).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN19QIdentityProxyModel14setSourceModelEP18QAbstractItemModel(this.qclsinst, arg0)
+    C.C_ZN19QIdentityProxyModel14setSourceModelEP18QAbstractItemModel(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "setSourceModel", args)
   }
@@ -176,17 +184,21 @@ func (this *QIdentityProxyModel) Sibling(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex
     // invoke: QModelIndex sibling(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
+    var arg2 = args[2].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "sibling", args)
   }
@@ -210,17 +222,21 @@ func (this *QIdentityProxyModel) Index(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex
     // invoke: QModelIndex index(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
+    var arg2 = args[2].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "index", args)
   }
@@ -242,13 +258,17 @@ func (this *QIdentityProxyModel) Mapfromsource(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex
     // invoke: QModelIndex mapFromSource(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "mapFromSource", args)
   }
@@ -272,17 +292,21 @@ func (this *QIdentityProxyModel) Removerows(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex
     // invoke: bool removeRows(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
+    var arg2 = args[2].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "removeRows", args)
   }
@@ -303,7 +327,7 @@ func (this *QIdentityProxyModel) Freeqidentityproxymodel(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QIdentityProxyModelD0Ev
     // invoke: void ~QIdentityProxyModel()
-    C.C_ZN19QIdentityProxyModelD2Ev(this.qclsinst)
+    C.C_ZN19QIdentityProxyModelD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "~QIdentityProxyModel", args)
   }
@@ -325,13 +349,17 @@ func (this *QIdentityProxyModel) Parent(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel6parentERK11QModelIndex
     // invoke: QModelIndex parent(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QIdentityProxyModel6parentERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QIdentityProxyModel6parentERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "parent", args)
   }
@@ -353,13 +381,17 @@ func (this *QIdentityProxyModel) Mapselectionfromsource(args ...interface{}) (re
   case 0:
     // invoke: _ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection
     // invoke: QItemSelection mapSelectionFromSource(const class QItemSelection &)
-    var arg0 = args[0].(QItemSelection).qclsinst
+    var arg0 = args[0].(*QItemSelection).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QItemSelection{}) // "QItemSelection"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "mapSelectionFromSource", args)
   }
@@ -383,17 +415,21 @@ func (this *QIdentityProxyModel) Insertrows(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex
     // invoke: bool insertRows(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
+    var arg2 = args[2].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "insertRows", args)
   }
@@ -415,17 +451,17 @@ func NewQIdentityProxyModel(args ...interface{}) *QIdentityProxyModel {
   case 0:
     // invoke: _ZN19QIdentityProxyModelC1EP7QObject
     // invoke: void QIdentityProxyModel(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QIdentityProxyModelC2EP7QObject(arg0)
-    return &QIdentityProxyModel{qclsinst:qthis}
+    return &QIdentityProxyModel{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "QIdentityProxyModel", args)
   }
 
-  return nil // QIdentityProxyModel{qclsinst:qthis}
+  return nil // QIdentityProxyModel{Qclsinst:qthis}
 }
 
 // metaObject()
@@ -441,7 +477,7 @@ func (this *QIdentityProxyModel) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK19QIdentityProxyModel10metaObjectEv(this.qclsinst)
+    C.C_ZNK19QIdentityProxyModel10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "metaObject", args)
   }
@@ -463,13 +499,17 @@ func (this *QIdentityProxyModel) Rowcount(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK19QIdentityProxyModel8rowCountERK11QModelIndex
     // invoke: int rowCount(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "rowCount", args)
   }
@@ -491,13 +531,17 @@ func (this *QIdentityProxyModel) Maptosource(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex
     // invoke: QModelIndex mapToSource(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "mapToSource", args)
   }
@@ -521,17 +565,21 @@ func (this *QIdentityProxyModel) Insertcolumns(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex
     // invoke: bool insertColumns(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
+    var arg2 = args[2].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "insertColumns", args)
   }
@@ -555,17 +603,21 @@ func (this *QIdentityProxyModel) Removecolumns(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex
     // invoke: bool removeColumns(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
+    var arg2 = args[2].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "removeColumns", args)
   }

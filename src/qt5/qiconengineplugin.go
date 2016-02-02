@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.go
 //
@@ -49,7 +49,7 @@ func init() {
 // class sizeof(QIconEnginePlugin)=1
 type QIconEnginePlugin struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // metaObject()
@@ -65,7 +65,7 @@ func (this *QIconEnginePlugin) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QIconEnginePlugin10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK17QIconEnginePlugin10metaObjectEv(this.qclsinst)
+    C.C_ZNK17QIconEnginePlugin10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QIconEnginePlugin", "metaObject", args)
   }
@@ -87,17 +87,17 @@ func NewQIconEnginePlugin(args ...interface{}) *QIconEnginePlugin {
   case 0:
     // invoke: _ZN17QIconEnginePluginC1EP7QObject
     // invoke: void QIconEnginePlugin(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QIconEnginePluginC2EP7QObject(arg0)
-    return &QIconEnginePlugin{qclsinst:qthis}
+    return &QIconEnginePlugin{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QIconEnginePlugin", "QIconEnginePlugin", args)
   }
 
-  return nil // QIconEnginePlugin{qclsinst:qthis}
+  return nil // QIconEnginePlugin{Qclsinst:qthis}
 }
 
 // ~QIconEnginePlugin()
@@ -113,7 +113,7 @@ func (this *QIconEnginePlugin) Freeqiconengineplugin(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QIconEnginePluginD0Ev
     // invoke: void ~QIconEnginePlugin()
-    C.C_ZN17QIconEnginePluginD2Ev(this.qclsinst)
+    C.C_ZN17QIconEnginePluginD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QIconEnginePlugin", "~QIconEnginePlugin", args)
   }

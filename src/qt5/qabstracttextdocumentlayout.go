@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.go
 //
@@ -63,13 +63,13 @@ func init() {
 // class sizeof(QTextObjectInterface)=8
 type QTextObjectInterface struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QAbstractTextDocumentLayout)=1
 type QAbstractTextDocumentLayout struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _updateBlock QAbstractTextDocumentLayout_updateBlock_signal;
 //  _pageCountChanged QAbstractTextDocumentLayout_pageCountChanged_signal;
 //  _update QAbstractTextDocumentLayout_update_signal;
@@ -91,11 +91,11 @@ func (this *QAbstractTextDocumentLayout) Unregisterhandler(args ...interface{}) 
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject
     // invoke: void unregisterHandler(int, class QObject *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(this.qclsinst, arg0, arg1)
+    C.C_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "unregisterHandler", args)
   }
@@ -117,9 +117,9 @@ func (this *QAbstractTextDocumentLayout) Setpaintdevice(args ...interface{}) () 
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice
     // invoke: void setPaintDevice(class QPaintDevice *)
-    var arg0 = args[0].(QPaintDevice).qclsinst
+    var arg0 = args[0].(*QPaintDevice).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(this.qclsinst, arg0)
+    C.C_ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "setPaintDevice", args)
   }
@@ -141,13 +141,17 @@ func (this *QAbstractTextDocumentLayout) Anchorat(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF
     // invoke: QString anchorAt(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "anchorAt", args)
   }
@@ -169,17 +173,17 @@ func NewQAbstractTextDocumentLayout(args ...interface{}) *QAbstractTextDocumentL
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument
     // invoke: void QAbstractTextDocumentLayout(class QTextDocument *)
-    var arg0 = args[0].(QTextDocument).qclsinst
+    var arg0 = args[0].(*QTextDocument).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(arg0)
-    return &QAbstractTextDocumentLayout{qclsinst:qthis}
+    return &QAbstractTextDocumentLayout{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "QAbstractTextDocumentLayout", args)
   }
 
-  return nil // QAbstractTextDocumentLayout{qclsinst:qthis}
+  return nil // QAbstractTextDocumentLayout{Qclsinst:qthis}
 }
 
 // paintDevice()
@@ -195,11 +199,15 @@ func (this *QAbstractTextDocumentLayout) Paintdevice(args ...interface{}) (ret i
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout11paintDeviceEv
     // invoke: QPaintDevice * paintDevice()
-    var ret0 = C.C_ZNK27QAbstractTextDocumentLayout11paintDeviceEv(this.qclsinst)
+    var ret0 = C.C_ZNK27QAbstractTextDocumentLayout11paintDeviceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPaintDevice{}) // "QPaintDevice *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "paintDevice", args)
   }
@@ -220,11 +228,15 @@ func (this *QAbstractTextDocumentLayout) Document(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout8documentEv
     // invoke: QTextDocument * document()
-    var ret0 = C.C_ZNK27QAbstractTextDocumentLayout8documentEv(this.qclsinst)
+    var ret0 = C.C_ZNK27QAbstractTextDocumentLayout8documentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextDocument{}) // "QTextDocument *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "document", args)
   }
@@ -247,11 +259,11 @@ func (this *QAbstractTextDocumentLayout) Registerhandler(args ...interface{}) ()
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject
     // invoke: void registerHandler(int, class QObject *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject(this.qclsinst, arg0, arg1)
+    C.C_ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "registerHandler", args)
   }
@@ -272,7 +284,7 @@ func (this *QAbstractTextDocumentLayout) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK27QAbstractTextDocumentLayout10metaObjectEv(this.qclsinst)
+    C.C_ZNK27QAbstractTextDocumentLayout10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "metaObject", args)
   }
@@ -293,7 +305,7 @@ func (this *QAbstractTextDocumentLayout) Freeqabstracttextdocumentlayout(args ..
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayoutD0Ev
     // invoke: void ~QAbstractTextDocumentLayout()
-    C.C_ZN27QAbstractTextDocumentLayoutD2Ev(this.qclsinst)
+    C.C_ZN27QAbstractTextDocumentLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "~QAbstractTextDocumentLayout", args)
   }
@@ -315,13 +327,17 @@ func (this *QAbstractTextDocumentLayout) Handlerforobject(args ...interface{}) (
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout16handlerForObjectEi
     // invoke: QTextObjectInterface * handlerForObject(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextObjectInterface{}) // "QTextObjectInterface *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "handlerForObject", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.go
 //
@@ -107,7 +107,7 @@ func init() {
 // class sizeof(QMatrix)=48
 type QMatrix struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QMatrix(const class QMatrix &)
@@ -134,43 +134,43 @@ func NewQMatrix(args ...interface{}) *QMatrix {
   case 0:
     // invoke: _ZN7QMatrixC1ERKS_
     // invoke: void QMatrix(const class QMatrix &)
-    var arg0 = args[0].(QMatrix).qclsinst
+    var arg0 = args[0].(*QMatrix).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QMatrixC2ERKS_(arg0)
-    return &QMatrix{qclsinst:qthis}
+    return &QMatrix{Qclsinst:qthis}
   case 1:
     // invoke: _ZN7QMatrixC1Edddddd
     // invoke: void QMatrix(qreal, qreal, qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = C.double(args[4].(float64))
+    var arg4 = C.double(qtrt.PrimConv(args[4], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg4)}
-    var arg5 = C.double(args[5].(float64))
+    var arg5 = C.double(qtrt.PrimConv(args[5], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg5)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QMatrixC2Edddddd(arg0, arg1, arg2, arg3, arg4, arg5)
-    return &QMatrix{qclsinst:qthis}
+    return &QMatrix{Qclsinst:qthis}
   case 2:
     // invoke: _ZN7QMatrixC1Ev
     // invoke: void QMatrix()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QMatrixC2Ev()
-    return &QMatrix{qclsinst:qthis}
+    return &QMatrix{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMatrix", "QMatrix", args)
   }
 
-  return nil // QMatrix{qclsinst:qthis}
+  return nil // QMatrix{Qclsinst:qthis}
 }
 
 // setMatrix(qreal, qreal, qreal, qreal, qreal, qreal)
@@ -192,19 +192,19 @@ func (this *QMatrix) Setmatrix(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QMatrix9setMatrixEdddddd
     // invoke: void setMatrix(qreal, qreal, qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = C.double(args[4].(float64))
+    var arg4 = C.double(qtrt.PrimConv(args[4], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg4)}
-    var arg5 = C.double(args[5].(float64))
+    var arg5 = C.double(qtrt.PrimConv(args[5], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg5)}
-    C.C_ZN7QMatrix9setMatrixEdddddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
+    C.C_ZN7QMatrix9setMatrixEdddddd(this.Qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
   default:
     qtrt.ErrorResolve("QMatrix", "setMatrix", args)
   }
@@ -229,23 +229,31 @@ func (this *QMatrix) Maprect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QMatrix7mapRectERK5QRect
     // invoke: QRect mapRect(const class QRect &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QMatrix7mapRectERK5QRect(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QMatrix7mapRectERK5QRect(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK7QMatrix7mapRectERK6QRectF
     // invoke: QRectF mapRect(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QMatrix7mapRectERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QMatrix7mapRectERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "mapRect", args)
   }
@@ -269,11 +277,15 @@ func (this *QMatrix) Inverted(args ...interface{}) (ret interface{}) {
     // invoke: QMatrix inverted(_Bool *)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QMatrix8invertedEPb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QMatrix8invertedEPb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMatrix{}) // "QMatrix"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "inverted", args)
   }
@@ -294,11 +306,15 @@ func (this *QMatrix) M11(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QMatrix3m11Ev
     // invoke: qreal m11()
-    var ret0 = C.C_ZNK7QMatrix3m11Ev(this.qclsinst)
+    var ret0 = C.C_ZNK7QMatrix3m11Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "m11", args)
   }
@@ -319,11 +335,15 @@ func (this *QMatrix) Isinvertible(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QMatrix12isInvertibleEv
     // invoke: bool isInvertible()
-    var ret0 = C.C_ZNK7QMatrix12isInvertibleEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QMatrix12isInvertibleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "isInvertible", args)
   }
@@ -346,15 +366,19 @@ func (this *QMatrix) Scale(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QMatrix5scaleEdd
     // invoke: QMatrix & scale(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN7QMatrix5scaleEdd(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN7QMatrix5scaleEdd(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMatrix{}) // "QMatrix &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "scale", args)
   }
@@ -376,13 +400,17 @@ func (this *QMatrix) Maptopolygon(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QMatrix12mapToPolygonERK5QRect
     // invoke: QPolygon mapToPolygon(const class QRect &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QMatrix12mapToPolygonERK5QRect(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QMatrix12mapToPolygonERK5QRect(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "mapToPolygon", args)
   }
@@ -405,15 +433,19 @@ func (this *QMatrix) Translate(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QMatrix9translateEdd
     // invoke: QMatrix & translate(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN7QMatrix9translateEdd(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN7QMatrix9translateEdd(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMatrix{}) // "QMatrix &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "translate", args)
   }
@@ -436,15 +468,19 @@ func (this *QMatrix) Shear(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QMatrix5shearEdd
     // invoke: QMatrix & shear(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN7QMatrix5shearEdd(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN7QMatrix5shearEdd(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMatrix{}) // "QMatrix &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "shear", args)
   }
@@ -499,107 +535,139 @@ func (this *QMatrix) Map_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QMatrix3mapERK12QPainterPath
     // invoke: QPainterPath map(const class QPainterPath &)
-    var arg0 = args[0].(QPainterPath).qclsinst
+    var arg0 = args[0].(*QPainterPath).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QMatrix3mapERK12QPainterPath(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QMatrix3mapERK12QPainterPath(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK7QMatrix3mapERK8QPolygon
     // invoke: QPolygon map(const class QPolygon &)
-    var arg0 = args[0].(QPolygon).qclsinst
+    var arg0 = args[0].(*QPolygon).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QMatrix3mapERK8QPolygon(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QMatrix3mapERK8QPolygon(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK7QMatrix3mapERK6QLineF
     // invoke: QLineF map(const class QLineF &)
-    var arg0 = args[0].(QLineF).qclsinst
+    var arg0 = args[0].(*QLineF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QMatrix3mapERK6QLineF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QMatrix3mapERK6QLineF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLineF{}) // "QLineF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZNK7QMatrix3mapEddPdS0_
     // invoke: void map(qreal, qreal, qreal *, qreal *)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
     var arg2 = (unsafe.Pointer)(args[2].(*float64))
     if false {fmt.Println(arg2)}
     var arg3 = (unsafe.Pointer)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C.C_ZNK7QMatrix3mapEddPdS0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK7QMatrix3mapEddPdS0_(this.Qclsinst, arg0, arg1, arg2, arg3)
   case 4:
     // invoke: _ZNK7QMatrix3mapERK9QPolygonF
     // invoke: QPolygonF map(const class QPolygonF &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QMatrix3mapERK9QPolygonF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QMatrix3mapERK9QPolygonF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 5:
     // invoke: _ZNK7QMatrix3mapERK6QPoint
     // invoke: QPoint map(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QMatrix3mapERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QMatrix3mapERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 6:
     // invoke: _ZNK7QMatrix3mapERK5QLine
     // invoke: QLine map(const class QLine &)
-    var arg0 = args[0].(QLine).qclsinst
+    var arg0 = args[0].(*QLine).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QMatrix3mapERK5QLine(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QMatrix3mapERK5QLine(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLine{}) // "QLine"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 7:
     // invoke: _ZNK7QMatrix3mapEiiPiS0_
     // invoke: void map(int, int, int *, int *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var arg2 = (unsafe.Pointer)(args[2].(*int32))
     if false {fmt.Println(arg2)}
     var arg3 = (unsafe.Pointer)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C.C_ZNK7QMatrix3mapEiiPiS0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK7QMatrix3mapEiiPiS0_(this.Qclsinst, arg0, arg1, arg2, arg3)
   case 8:
     // invoke: _ZNK7QMatrix3mapERK7QRegion
     // invoke: QRegion map(const class QRegion &)
-    var arg0 = args[0].(QRegion).qclsinst
+    var arg0 = args[0].(*QRegion).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QMatrix3mapERK7QRegion(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QMatrix3mapERK7QRegion(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 9:
     // invoke: _ZNK7QMatrix3mapERK7QPointF
     // invoke: QPointF map(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QMatrix3mapERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QMatrix3mapERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "map", args)
   }
@@ -620,11 +688,15 @@ func (this *QMatrix) Determinant(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QMatrix11determinantEv
     // invoke: qreal determinant()
-    var ret0 = C.C_ZNK7QMatrix11determinantEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QMatrix11determinantEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "determinant", args)
   }
@@ -645,11 +717,15 @@ func (this *QMatrix) Dx(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QMatrix2dxEv
     // invoke: qreal dx()
-    var ret0 = C.C_ZNK7QMatrix2dxEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QMatrix2dxEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "dx", args)
   }
@@ -670,11 +746,15 @@ func (this *QMatrix) Dy(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QMatrix2dyEv
     // invoke: qreal dy()
-    var ret0 = C.C_ZNK7QMatrix2dyEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QMatrix2dyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "dy", args)
   }
@@ -695,7 +775,7 @@ func (this *QMatrix) Reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QMatrix5resetEv
     // invoke: void reset()
-    C.C_ZN7QMatrix5resetEv(this.qclsinst)
+    C.C_ZN7QMatrix5resetEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "reset", args)
   }
@@ -717,13 +797,17 @@ func (this *QMatrix) Rotate(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QMatrix6rotateEd
     // invoke: QMatrix & rotate(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN7QMatrix6rotateEd(this.qclsinst, arg0)
+    var ret0 = C.C_ZN7QMatrix6rotateEd(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMatrix{}) // "QMatrix &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "rotate", args)
   }
@@ -744,11 +828,15 @@ func (this *QMatrix) M21(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QMatrix3m21Ev
     // invoke: qreal m21()
-    var ret0 = C.C_ZNK7QMatrix3m21Ev(this.qclsinst)
+    var ret0 = C.C_ZNK7QMatrix3m21Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "m21", args)
   }
@@ -769,11 +857,15 @@ func (this *QMatrix) M22(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QMatrix3m22Ev
     // invoke: qreal m22()
-    var ret0 = C.C_ZNK7QMatrix3m22Ev(this.qclsinst)
+    var ret0 = C.C_ZNK7QMatrix3m22Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "m22", args)
   }
@@ -794,11 +886,15 @@ func (this *QMatrix) M12(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QMatrix3m12Ev
     // invoke: qreal m12()
-    var ret0 = C.C_ZNK7QMatrix3m12Ev(this.qclsinst)
+    var ret0 = C.C_ZNK7QMatrix3m12Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "m12", args)
   }
@@ -819,11 +915,15 @@ func (this *QMatrix) Isidentity(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QMatrix10isIdentityEv
     // invoke: bool isIdentity()
-    var ret0 = C.C_ZNK7QMatrix10isIdentityEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QMatrix10isIdentityEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMatrix", "isIdentity", args)
   }

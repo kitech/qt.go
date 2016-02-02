@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qstylepainter.h
 // dst-file: /src/widgets/qstylepainter.go
 //
@@ -57,7 +57,7 @@ func init() {
 // class sizeof(QStylePainter)=1
 type QStylePainter struct {
   /*qbase*/ QPainter;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // drawItemPixmap(const class QRect &, int, const class QPixmap &)
@@ -76,13 +76,13 @@ func (this *QStylePainter) Drawitempixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap
     // invoke: void drawItemPixmap(const class QRect &, int, const class QPixmap &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QPixmap).qclsinst
+    var arg2 = args[2].(*QPixmap).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QStylePainter", "drawItemPixmap", args)
   }
@@ -110,35 +110,35 @@ func NewQStylePainter(args ...interface{}) *QStylePainter {
   case 0:
     // invoke: _ZN13QStylePainterC1EP7QWidget
     // invoke: void QStylePainter(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QStylePainterC2EP7QWidget(arg0)
-    return &QStylePainter{qclsinst:qthis}
+    return &QStylePainter{Qclsinst:qthis}
   case 1:
     // invoke: _ZN13QStylePainterC1EP12QPaintDeviceP7QWidget
     // invoke: void QStylePainter(class QPaintDevice *, class QWidget *)
-    var arg0 = args[0].(QPaintDevice).qclsinst
+    var arg0 = args[0].(*QPaintDevice).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QStylePainterC2EP12QPaintDeviceP7QWidget(arg0, arg1)
-    return &QStylePainter{qclsinst:qthis}
+    return &QStylePainter{Qclsinst:qthis}
   case 2:
     // invoke: _ZN13QStylePainterC1Ev
     // invoke: void QStylePainter()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QStylePainterC2Ev()
-    return &QStylePainter{qclsinst:qthis}
+    return &QStylePainter{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStylePainter", "QStylePainter", args)
   }
 
-  return nil // QStylePainter{qclsinst:qthis}
+  return nil // QStylePainter{Qclsinst:qthis}
 }
 
 // begin(class QPaintDevice *, class QWidget *)
@@ -159,25 +159,33 @@ func (this *QStylePainter) Begin(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget
     // invoke: bool begin(class QPaintDevice *, class QWidget *)
-    var arg0 = args[0].(QPaintDevice).qclsinst
+    var arg0 = args[0].(*QPaintDevice).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN13QStylePainter5beginEP7QWidget
     // invoke: bool begin(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN13QStylePainter5beginEP7QWidget(this.qclsinst, arg0)
+    var ret0 = C.C_ZN13QStylePainter5beginEP7QWidget(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStylePainter", "begin", args)
   }
@@ -198,11 +206,15 @@ func (this *QStylePainter) Style(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QStylePainter5styleEv
     // invoke: QStyle * style()
-    var ret0 = C.C_ZNK13QStylePainter5styleEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QStylePainter5styleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QStyle{}) // "QStyle *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStylePainter", "style", args)
   }

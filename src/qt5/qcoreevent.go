@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qcoreevent.h
 // dst-file: /src/core/qcoreevent.go
 //
@@ -89,31 +89,31 @@ func init() {
 // class sizeof(QDeferredDeleteEvent)=24
 type QDeferredDeleteEvent struct {
   /*qbase*/ QEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QDynamicPropertyChangeEvent)=32
 type QDynamicPropertyChangeEvent struct {
   /*qbase*/ QEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTimerEvent)=24
 type QTimerEvent struct {
   /*qbase*/ QEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QChildEvent)=32
 type QChildEvent struct {
   /*qbase*/ QEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QEvent)=24
 type QEvent struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QDeferredDeleteEvent()
@@ -132,12 +132,12 @@ func NewQDeferredDeleteEvent(args ...interface{}) *QDeferredDeleteEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QDeferredDeleteEventC2Ev()
-    return &QDeferredDeleteEvent{qclsinst:qthis}
+    return &QDeferredDeleteEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "QDeferredDeleteEvent", args)
   }
 
-  return nil // QDeferredDeleteEvent{qclsinst:qthis}
+  return nil // QDeferredDeleteEvent{Qclsinst:qthis}
 }
 
 // ~QDeferredDeleteEvent()
@@ -153,7 +153,7 @@ func (this *QDeferredDeleteEvent) Freeqdeferreddeleteevent(args ...interface{}) 
   case 0:
     // invoke: _ZN20QDeferredDeleteEventD0Ev
     // invoke: void ~QDeferredDeleteEvent()
-    C.C_ZN20QDeferredDeleteEventD2Ev(this.qclsinst)
+    C.C_ZN20QDeferredDeleteEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "~QDeferredDeleteEvent", args)
   }
@@ -174,11 +174,15 @@ func (this *QDeferredDeleteEvent) Looplevel(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK20QDeferredDeleteEvent9loopLevelEv
     // invoke: int loopLevel()
-    var ret0 = C.C_ZNK20QDeferredDeleteEvent9loopLevelEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QDeferredDeleteEvent9loopLevelEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "loopLevel", args)
   }
@@ -200,17 +204,17 @@ func NewQDynamicPropertyChangeEvent(args ...interface{}) *QDynamicPropertyChange
   case 0:
     // invoke: _ZN27QDynamicPropertyChangeEventC1ERK10QByteArray
     // invoke: void QDynamicPropertyChangeEvent(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray(arg0)
-    return &QDynamicPropertyChangeEvent{qclsinst:qthis}
+    return &QDynamicPropertyChangeEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "QDynamicPropertyChangeEvent", args)
   }
 
-  return nil // QDynamicPropertyChangeEvent{qclsinst:qthis}
+  return nil // QDynamicPropertyChangeEvent{Qclsinst:qthis}
 }
 
 // propertyName()
@@ -226,11 +230,15 @@ func (this *QDynamicPropertyChangeEvent) Propertyname(args ...interface{}) (ret 
   case 0:
     // invoke: _ZNK27QDynamicPropertyChangeEvent12propertyNameEv
     // invoke: QByteArray propertyName()
-    var ret0 = C.C_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "propertyName", args)
   }
@@ -251,7 +259,7 @@ func (this *QDynamicPropertyChangeEvent) Freeqdynamicpropertychangeevent(args ..
   case 0:
     // invoke: _ZN27QDynamicPropertyChangeEventD0Ev
     // invoke: void ~QDynamicPropertyChangeEvent()
-    C.C_ZN27QDynamicPropertyChangeEventD2Ev(this.qclsinst)
+    C.C_ZN27QDynamicPropertyChangeEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "~QDynamicPropertyChangeEvent", args)
   }
@@ -272,11 +280,15 @@ func (this *QTimerEvent) Timerid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTimerEvent7timerIdEv
     // invoke: int timerId()
-    var ret0 = C.C_ZNK11QTimerEvent7timerIdEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTimerEvent7timerIdEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTimerEvent", "timerId", args)
   }
@@ -297,7 +309,7 @@ func (this *QTimerEvent) Freeqtimerevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTimerEventD0Ev
     // invoke: void ~QTimerEvent()
-    C.C_ZN11QTimerEventD2Ev(this.qclsinst)
+    C.C_ZN11QTimerEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTimerEvent", "~QTimerEvent", args)
   }
@@ -319,17 +331,17 @@ func NewQTimerEvent(args ...interface{}) *QTimerEvent {
   case 0:
     // invoke: _ZN11QTimerEventC1Ei
     // invoke: void QTimerEvent(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTimerEventC2Ei(arg0)
-    return &QTimerEvent{qclsinst:qthis}
+    return &QTimerEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTimerEvent", "QTimerEvent", args)
   }
 
-  return nil // QTimerEvent{qclsinst:qthis}
+  return nil // QTimerEvent{Qclsinst:qthis}
 }
 
 // added()
@@ -345,11 +357,15 @@ func (this *QChildEvent) Added(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QChildEvent5addedEv
     // invoke: bool added()
-    var ret0 = C.C_ZNK11QChildEvent5addedEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QChildEvent5addedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QChildEvent", "added", args)
   }
@@ -370,11 +386,15 @@ func (this *QChildEvent) Polished(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QChildEvent8polishedEv
     // invoke: bool polished()
-    var ret0 = C.C_ZNK11QChildEvent8polishedEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QChildEvent8polishedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QChildEvent", "polished", args)
   }
@@ -395,7 +415,7 @@ func (this *QChildEvent) Freeqchildevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QChildEventD0Ev
     // invoke: void ~QChildEvent()
-    C.C_ZN11QChildEventD2Ev(this.qclsinst)
+    C.C_ZN11QChildEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "~QChildEvent", args)
   }
@@ -416,11 +436,15 @@ func (this *QChildEvent) Child(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QChildEvent5childEv
     // invoke: QObject * child()
-    var ret0 = C.C_ZNK11QChildEvent5childEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QChildEvent5childEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QObject{}) // "QObject *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QChildEvent", "child", args)
   }
@@ -441,11 +465,15 @@ func (this *QChildEvent) Removed(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QChildEvent7removedEv
     // invoke: bool removed()
-    var ret0 = C.C_ZNK11QChildEvent7removedEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QChildEvent7removedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QChildEvent", "removed", args)
   }
@@ -467,13 +495,17 @@ func (this *QEvent) Registereventtype_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN6QEvent17registerEventTypeEi
     // invoke: int registerEventType(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN6QEvent17registerEventTypeEi(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QEvent", "registerEventType", args)
   }
@@ -494,11 +526,15 @@ func (this *QEvent) Spontaneous(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QEvent11spontaneousEv
     // invoke: bool spontaneous()
-    var ret0 = C.C_ZNK6QEvent11spontaneousEv(this.qclsinst)
+    var ret0 = C.C_ZNK6QEvent11spontaneousEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QEvent", "spontaneous", args)
   }
@@ -519,7 +555,7 @@ func (this *QEvent) Accept(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QEvent6acceptEv
     // invoke: void accept()
-    C.C_ZN6QEvent6acceptEv(this.qclsinst)
+    C.C_ZN6QEvent6acceptEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "accept", args)
   }
@@ -540,7 +576,7 @@ func (this *QEvent) Ignore(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QEvent6ignoreEv
     // invoke: void ignore()
-    C.C_ZN6QEvent6ignoreEv(this.qclsinst)
+    C.C_ZN6QEvent6ignoreEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "ignore", args)
   }
@@ -561,11 +597,15 @@ func (this *QEvent) Isaccepted(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QEvent10isAcceptedEv
     // invoke: bool isAccepted()
-    var ret0 = C.C_ZNK6QEvent10isAcceptedEv(this.qclsinst)
+    var ret0 = C.C_ZNK6QEvent10isAcceptedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QEvent", "isAccepted", args)
   }
@@ -589,7 +629,7 @@ func (this *QEvent) Setaccepted(args ...interface{}) () {
     // invoke: void setAccepted(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN6QEvent11setAcceptedEb(this.qclsinst, arg0)
+    C.C_ZN6QEvent11setAcceptedEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEvent", "setAccepted", args)
   }
@@ -610,7 +650,7 @@ func (this *QEvent) Type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QEvent4typeEv
     // invoke: QEvent::Type type()
-    C.C_ZNK6QEvent4typeEv(this.qclsinst)
+    C.C_ZNK6QEvent4typeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "type", args)
   }
@@ -632,17 +672,17 @@ func NewQEvent(args ...interface{}) *QEvent {
   case 0:
     // invoke: _ZN6QEventC1ERKS_
     // invoke: void QEvent(const class QEvent &)
-    var arg0 = args[0].(QEvent).qclsinst
+    var arg0 = args[0].(*QEvent).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QEventC2ERKS_(arg0)
-    return &QEvent{qclsinst:qthis}
+    return &QEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QEvent", "QEvent", args)
   }
 
-  return nil // QEvent{qclsinst:qthis}
+  return nil // QEvent{Qclsinst:qthis}
 }
 
 // ~QEvent()
@@ -658,7 +698,7 @@ func (this *QEvent) Freeqevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QEventD0Ev
     // invoke: void ~QEvent()
-    C.C_ZN6QEventD2Ev(this.qclsinst)
+    C.C_ZN6QEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "~QEvent", args)
   }

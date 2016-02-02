@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.go
 //
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QEasingCurve)=8
 type QEasingCurve struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // overshoot()
@@ -89,11 +89,15 @@ func (this *QEasingCurve) Overshoot(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QEasingCurve9overshootEv
     // invoke: qreal overshoot()
-    var ret0 = C.C_ZNK12QEasingCurve9overshootEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QEasingCurve9overshootEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QEasingCurve", "overshoot", args)
   }
@@ -114,11 +118,15 @@ func (this *QEasingCurve) Period(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QEasingCurve6periodEv
     // invoke: qreal period()
-    var ret0 = C.C_ZNK12QEasingCurve6periodEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QEasingCurve6periodEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QEasingCurve", "period", args)
   }
@@ -140,13 +148,17 @@ func (this *QEasingCurve) Valueforprogress(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK12QEasingCurve16valueForProgressEd
     // invoke: qreal valueForProgress(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK12QEasingCurve16valueForProgressEd(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK12QEasingCurve16valueForProgressEd(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QEasingCurve", "valueForProgress", args)
   }
@@ -167,7 +179,7 @@ func (this *QEasingCurve) Tocubicspline(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QEasingCurve13toCubicSplineEv
     // invoke: QVector<QPointF> toCubicSpline()
-    C.C_ZNK12QEasingCurve13toCubicSplineEv(this.qclsinst)
+    C.C_ZNK12QEasingCurve13toCubicSplineEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEasingCurve", "toCubicSpline", args)
   }
@@ -191,13 +203,13 @@ func (this *QEasingCurve) Addcubicbeziersegment(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_
     // invoke: void addCubicBezierSegment(const class QPointF &, const class QPointF &, const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPointF).qclsinst
+    var arg1 = args[1].(*QPointF).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QPointF).qclsinst
+    var arg2 = args[2].(*QPointF).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QEasingCurve", "addCubicBezierSegment", args)
   }
@@ -219,17 +231,17 @@ func NewQEasingCurve(args ...interface{}) *QEasingCurve {
   case 0:
     // invoke: _ZN12QEasingCurveC1ERKS_
     // invoke: void QEasingCurve(const class QEasingCurve &)
-    var arg0 = args[0].(QEasingCurve).qclsinst
+    var arg0 = args[0].(*QEasingCurve).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QEasingCurveC2ERKS_(arg0)
-    return &QEasingCurve{qclsinst:qthis}
+    return &QEasingCurve{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QEasingCurve", "QEasingCurve", args)
   }
 
-  return nil // QEasingCurve{qclsinst:qthis}
+  return nil // QEasingCurve{Qclsinst:qthis}
 }
 
 // type()
@@ -245,7 +257,7 @@ func (this *QEasingCurve) Type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QEasingCurve4typeEv
     // invoke: QEasingCurve::Type type()
-    C.C_ZNK12QEasingCurve4typeEv(this.qclsinst)
+    C.C_ZNK12QEasingCurve4typeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEasingCurve", "type", args)
   }
@@ -267,9 +279,9 @@ func (this *QEasingCurve) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QEasingCurve4swapERS_
     // invoke: void swap(class QEasingCurve &)
-    var arg0 = args[0].(QEasingCurve).qclsinst
+    var arg0 = args[0].(*QEasingCurve).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QEasingCurve4swapERS_(this.qclsinst, arg0)
+    C.C_ZN12QEasingCurve4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEasingCurve", "swap", args)
   }
@@ -294,15 +306,15 @@ func (this *QEasingCurve) Addtcbsegment(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QEasingCurve13addTCBSegmentERK7QPointFddd
     // invoke: void addTCBSegment(const class QPointF &, qreal, qreal, qreal)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    C.C_ZN12QEasingCurve13addTCBSegmentERK7QPointFddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN12QEasingCurve13addTCBSegmentERK7QPointFddd(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QEasingCurve", "addTCBSegment", args)
   }
@@ -324,9 +336,9 @@ func (this *QEasingCurve) Setamplitude(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QEasingCurve12setAmplitudeEd
     // invoke: void setAmplitude(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QEasingCurve12setAmplitudeEd(this.qclsinst, arg0)
+    C.C_ZN12QEasingCurve12setAmplitudeEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEasingCurve", "setAmplitude", args)
   }
@@ -347,7 +359,7 @@ func (this *QEasingCurve) Freeqeasingcurve(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QEasingCurveD0Ev
     // invoke: void ~QEasingCurve()
-    C.C_ZN12QEasingCurveD2Ev(this.qclsinst)
+    C.C_ZN12QEasingCurveD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEasingCurve", "~QEasingCurve", args)
   }
@@ -369,9 +381,9 @@ func (this *QEasingCurve) Setperiod(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QEasingCurve9setPeriodEd
     // invoke: void setPeriod(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QEasingCurve9setPeriodEd(this.qclsinst, arg0)
+    C.C_ZN12QEasingCurve9setPeriodEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEasingCurve", "setPeriod", args)
   }
@@ -392,7 +404,7 @@ func (this *QEasingCurve) Customtype(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QEasingCurve10customTypeEv
     // invoke: EasingFunction customType()
-    C.C_ZNK12QEasingCurve10customTypeEv(this.qclsinst)
+    C.C_ZNK12QEasingCurve10customTypeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEasingCurve", "customType", args)
   }
@@ -414,9 +426,9 @@ func (this *QEasingCurve) Setovershoot(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QEasingCurve12setOvershootEd
     // invoke: void setOvershoot(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QEasingCurve12setOvershootEd(this.qclsinst, arg0)
+    C.C_ZN12QEasingCurve12setOvershootEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEasingCurve", "setOvershoot", args)
   }
@@ -437,11 +449,15 @@ func (this *QEasingCurve) Amplitude(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QEasingCurve9amplitudeEv
     // invoke: qreal amplitude()
-    var ret0 = C.C_ZNK12QEasingCurve9amplitudeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QEasingCurve9amplitudeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QEasingCurve", "amplitude", args)
   }

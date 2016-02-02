@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qcollator.h
 // dst-file: /src/core/qcollator.go
 //
@@ -79,13 +79,13 @@ func init() {
 // class sizeof(QCollator)=8
 type QCollator struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QCollatorSortKey)=1
 type QCollatorSortKey struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // setIgnorePunctuation(_Bool)
@@ -104,7 +104,7 @@ func (this *QCollator) Setignorepunctuation(args ...interface{}) () {
     // invoke: void setIgnorePunctuation(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QCollator20setIgnorePunctuationEb(this.qclsinst, arg0)
+    C.C_ZN9QCollator20setIgnorePunctuationEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCollator", "setIgnorePunctuation", args)
   }
@@ -133,31 +133,39 @@ func (this *QCollator) Compare(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QCollator7compareEPK5QChariS2_i
     // invoke: int compare(const class QChar *, int, const class QChar *, int)
-    var arg0 = args[0].(QChar).qclsinst
+    var arg0 = args[0].(*QChar).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QChar).qclsinst
+    var arg2 = args[2].(*QChar).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK9QCollator7compareEPK5QChariS2_i(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZNK9QCollator7compareEPK5QChariS2_i(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK9QCollator7compareERK7QStringS2_
     // invoke: int compare(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK9QCollator7compareERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK9QCollator7compareERK7QStringS2_(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCollator", "compare", args)
   }
@@ -179,9 +187,9 @@ func (this *QCollator) Setlocale(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QCollator9setLocaleERK7QLocale
     // invoke: void setLocale(const class QLocale &)
-    var arg0 = args[0].(QLocale).qclsinst
+    var arg0 = args[0].(*QLocale).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QCollator9setLocaleERK7QLocale(this.qclsinst, arg0)
+    C.C_ZN9QCollator9setLocaleERK7QLocale(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCollator", "setLocale", args)
   }
@@ -202,11 +210,15 @@ func (this *QCollator) Locale(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QCollator6localeEv
     // invoke: QLocale locale()
-    var ret0 = C.C_ZNK9QCollator6localeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QCollator6localeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLocale{}) // "QLocale"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCollator", "locale", args)
   }
@@ -227,11 +239,15 @@ func (this *QCollator) Numericmode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QCollator11numericModeEv
     // invoke: bool numericMode()
-    var ret0 = C.C_ZNK9QCollator11numericModeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QCollator11numericModeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCollator", "numericMode", args)
   }
@@ -255,7 +271,7 @@ func (this *QCollator) Setnumericmode(args ...interface{}) () {
     // invoke: void setNumericMode(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QCollator14setNumericModeEb(this.qclsinst, arg0)
+    C.C_ZN9QCollator14setNumericModeEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCollator", "setNumericMode", args)
   }
@@ -277,13 +293,17 @@ func (this *QCollator) Sortkey(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QCollator7sortKeyERK7QString
     // invoke: QCollatorSortKey sortKey(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QCollator7sortKeyERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QCollator7sortKeyERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QCollatorSortKey{}) // "QCollatorSortKey"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCollator", "sortKey", args)
   }
@@ -304,7 +324,7 @@ func (this *QCollator) Freeqcollator(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QCollatorD0Ev
     // invoke: void ~QCollator()
-    C.C_ZN9QCollatorD2Ev(this.qclsinst)
+    C.C_ZN9QCollatorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCollator", "~QCollator", args)
   }
@@ -325,11 +345,15 @@ func (this *QCollator) Ignorepunctuation(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK9QCollator17ignorePunctuationEv
     // invoke: bool ignorePunctuation()
-    var ret0 = C.C_ZNK9QCollator17ignorePunctuationEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QCollator17ignorePunctuationEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCollator", "ignorePunctuation", args)
   }
@@ -351,9 +375,9 @@ func (this *QCollator) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QCollator4swapERS_
     // invoke: void swap(class QCollator &)
-    var arg0 = args[0].(QCollator).qclsinst
+    var arg0 = args[0].(*QCollator).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QCollator4swapERS_(this.qclsinst, arg0)
+    C.C_ZN9QCollator4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCollator", "swap", args)
   }
@@ -378,26 +402,26 @@ func NewQCollator(args ...interface{}) *QCollator {
   case 0:
     // invoke: _ZN9QCollatorC1ERK7QLocale
     // invoke: void QCollator(const class QLocale &)
-    var arg0 = args[0].(QLocale).qclsinst
+    var arg0 = args[0].(*QLocale).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QCollatorC2ERK7QLocale(arg0)
-    return &QCollator{qclsinst:qthis}
+    return &QCollator{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QCollatorC1ERKS_
     // invoke: void QCollator(const class QCollator &)
-    var arg0 = args[0].(QCollator).qclsinst
+    var arg0 = args[0].(*QCollator).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QCollatorC2ERKS_(arg0)
-    return &QCollator{qclsinst:qthis}
+    return &QCollator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCollator", "QCollator", args)
   }
 
-  return nil // QCollator{qclsinst:qthis}
+  return nil // QCollator{Qclsinst:qthis}
 }
 
 // caseSensitivity()
@@ -413,7 +437,7 @@ func (this *QCollator) Casesensitivity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QCollator15caseSensitivityEv
     // invoke: Qt::CaseSensitivity caseSensitivity()
-    C.C_ZNK9QCollator15caseSensitivityEv(this.qclsinst)
+    C.C_ZNK9QCollator15caseSensitivityEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCollator", "caseSensitivity", args)
   }
@@ -435,17 +459,17 @@ func NewQCollatorSortKey(args ...interface{}) *QCollatorSortKey {
   case 0:
     // invoke: _ZN16QCollatorSortKeyC1ERKS_
     // invoke: void QCollatorSortKey(const class QCollatorSortKey &)
-    var arg0 = args[0].(QCollatorSortKey).qclsinst
+    var arg0 = args[0].(*QCollatorSortKey).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QCollatorSortKeyC2ERKS_(arg0)
-    return &QCollatorSortKey{qclsinst:qthis}
+    return &QCollatorSortKey{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCollatorSortKey", "QCollatorSortKey", args)
   }
 
-  return nil // QCollatorSortKey{qclsinst:qthis}
+  return nil // QCollatorSortKey{Qclsinst:qthis}
 }
 
 // compare(const class QCollatorSortKey &)
@@ -462,13 +486,17 @@ func (this *QCollatorSortKey) Compare(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QCollatorSortKey7compareERKS_
     // invoke: int compare(const class QCollatorSortKey &)
-    var arg0 = args[0].(QCollatorSortKey).qclsinst
+    var arg0 = args[0].(*QCollatorSortKey).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QCollatorSortKey7compareERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QCollatorSortKey7compareERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCollatorSortKey", "compare", args)
   }
@@ -490,9 +518,9 @@ func (this *QCollatorSortKey) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCollatorSortKey4swapERS_
     // invoke: void swap(class QCollatorSortKey &)
-    var arg0 = args[0].(QCollatorSortKey).qclsinst
+    var arg0 = args[0].(*QCollatorSortKey).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QCollatorSortKey4swapERS_(this.qclsinst, arg0)
+    C.C_ZN16QCollatorSortKey4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCollatorSortKey", "swap", args)
   }
@@ -513,7 +541,7 @@ func (this *QCollatorSortKey) Freeqcollatorsortkey(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCollatorSortKeyD0Ev
     // invoke: void ~QCollatorSortKey()
-    C.C_ZN16QCollatorSortKeyD2Ev(this.qclsinst)
+    C.C_ZN16QCollatorSortKeyD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCollatorSortKey", "~QCollatorSortKey", args)
   }

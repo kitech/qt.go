@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.go
 //
@@ -125,7 +125,7 @@ func init() {
 // class sizeof(QMainWindow)=1
 type QMainWindow struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _toolButtonStyleChanged QMainWindow_toolButtonStyleChanged_signal;
 //  _iconSizeChanged QMainWindow_iconSizeChanged_signal;
 }
@@ -144,9 +144,9 @@ func (this *QMainWindow) Setmenuwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow13setMenuWidgetEP7QWidget
     // invoke: void setMenuWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow13setMenuWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow13setMenuWidgetEP7QWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setMenuWidget", args)
   }
@@ -168,9 +168,9 @@ func (this *QMainWindow) Removetoolbar(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow13removeToolBarEP8QToolBar
     // invoke: void removeToolBar(class QToolBar *)
-    var arg0 = args[0].(QToolBar).qclsinst
+    var arg0 = args[0].(*QToolBar).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow13removeToolBarEP8QToolBar(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow13removeToolBarEP8QToolBar(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "removeToolBar", args)
   }
@@ -192,9 +192,9 @@ func (this *QMainWindow) Dockwidgetarea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow14dockWidgetAreaEP11QDockWidget
     // invoke: Qt::DockWidgetArea dockWidgetArea(class QDockWidget *)
-    var arg0 = args[0].(QDockWidget).qclsinst
+    var arg0 = args[0].(*QDockWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QMainWindow14dockWidgetAreaEP11QDockWidget(this.qclsinst, arg0)
+    C.C_ZNK11QMainWindow14dockWidgetAreaEP11QDockWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "dockWidgetArea", args)
   }
@@ -216,9 +216,9 @@ func (this *QMainWindow) Setmenubar(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow10setMenuBarEP8QMenuBar
     // invoke: void setMenuBar(class QMenuBar *)
-    var arg0 = args[0].(QMenuBar).qclsinst
+    var arg0 = args[0].(*QMenuBar).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow10setMenuBarEP8QMenuBar(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow10setMenuBarEP8QMenuBar(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setMenuBar", args)
   }
@@ -240,13 +240,17 @@ func (this *QMainWindow) Savestate(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMainWindow9saveStateEi
     // invoke: QByteArray saveState(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QMainWindow9saveStateEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QMainWindow9saveStateEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "saveState", args)
   }
@@ -269,11 +273,11 @@ func (this *QMainWindow) Inserttoolbar(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow13insertToolBarEP8QToolBarS1_
     // invoke: void insertToolBar(class QToolBar *, class QToolBar *)
-    var arg0 = args[0].(QToolBar).qclsinst
+    var arg0 = args[0].(*QToolBar).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QToolBar).qclsinst
+    var arg1 = args[1].(*QToolBar).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN11QMainWindow13insertToolBarEP8QToolBarS1_(this.qclsinst, arg0, arg1)
+    C.C_ZN11QMainWindow13insertToolBarEP8QToolBarS1_(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMainWindow", "insertToolBar", args)
   }
@@ -295,9 +299,9 @@ func (this *QMainWindow) Tabifieddockwidgets(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget
     // invoke: QList<QDockWidget *> tabifiedDockWidgets(class QDockWidget *)
-    var arg0 = args[0].(QDockWidget).qclsinst
+    var arg0 = args[0].(*QDockWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(this.qclsinst, arg0)
+    C.C_ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "tabifiedDockWidgets", args)
   }
@@ -322,15 +326,15 @@ func (this *QMainWindow) Addtoolbar(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow10addToolBarEP8QToolBar
     // invoke: void addToolBar(class QToolBar *)
-    var arg0 = args[0].(QToolBar).qclsinst
+    var arg0 = args[0].(*QToolBar).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow10addToolBarEP8QToolBar(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow10addToolBarEP8QToolBar(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN11QMainWindow10addToolBarERK7QString
     // invoke: QToolBar * addToolBar(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QMainWindow10addToolBarERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QMainWindow10addToolBarERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "addToolBar", args)
@@ -352,11 +356,15 @@ func (this *QMainWindow) Isanimated(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMainWindow10isAnimatedEv
     // invoke: bool isAnimated()
-    var ret0 = C.C_ZNK11QMainWindow10isAnimatedEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMainWindow10isAnimatedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "isAnimated", args)
   }
@@ -380,7 +388,7 @@ func (this *QMainWindow) Setunifiedtitleandtoolbaronmac(args ...interface{}) () 
     // invoke: void setUnifiedTitleAndToolBarOnMac(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setUnifiedTitleAndToolBarOnMac", args)
   }
@@ -402,9 +410,9 @@ func (this *QMainWindow) Setcentralwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow16setCentralWidgetEP7QWidget
     // invoke: void setCentralWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow16setCentralWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow16setCentralWidgetEP7QWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setCentralWidget", args)
   }
@@ -426,9 +434,9 @@ func (this *QMainWindow) Removedockwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow16removeDockWidgetEP11QDockWidget
     // invoke: void removeDockWidget(class QDockWidget *)
-    var arg0 = args[0].(QDockWidget).qclsinst
+    var arg0 = args[0].(*QDockWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow16removeDockWidgetEP11QDockWidget(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow16removeDockWidgetEP11QDockWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "removeDockWidget", args)
   }
@@ -450,9 +458,9 @@ func (this *QMainWindow) Toolbararea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow11toolBarAreaEP8QToolBar
     // invoke: Qt::ToolBarArea toolBarArea(class QToolBar *)
-    var arg0 = args[0].(QToolBar).qclsinst
+    var arg0 = args[0].(*QToolBar).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QMainWindow11toolBarAreaEP8QToolBar(this.qclsinst, arg0)
+    C.C_ZNK11QMainWindow11toolBarAreaEP8QToolBar(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "toolBarArea", args)
   }
@@ -473,11 +481,15 @@ func (this *QMainWindow) Unifiedtitleandtoolbaronmac(args ...interface{}) (ret i
   case 0:
     // invoke: _ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv
     // invoke: bool unifiedTitleAndToolBarOnMac()
-    var ret0 = C.C_ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "unifiedTitleAndToolBarOnMac", args)
   }
@@ -498,7 +510,7 @@ func (this *QMainWindow) Tabshape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow8tabShapeEv
     // invoke: QTabWidget::TabShape tabShape()
-    C.C_ZNK11QMainWindow8tabShapeEv(this.qclsinst)
+    C.C_ZNK11QMainWindow8tabShapeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "tabShape", args)
   }
@@ -519,11 +531,15 @@ func (this *QMainWindow) Iconsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMainWindow8iconSizeEv
     // invoke: QSize iconSize()
-    var ret0 = C.C_ZNK11QMainWindow8iconSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMainWindow8iconSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "iconSize", args)
   }
@@ -546,11 +562,11 @@ func (this *QMainWindow) Tabifydockwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_
     // invoke: void tabifyDockWidget(class QDockWidget *, class QDockWidget *)
-    var arg0 = args[0].(QDockWidget).qclsinst
+    var arg0 = args[0].(*QDockWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QDockWidget).qclsinst
+    var arg1 = args[1].(*QDockWidget).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_(this.qclsinst, arg0, arg1)
+    C.C_ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMainWindow", "tabifyDockWidget", args)
   }
@@ -572,13 +588,17 @@ func (this *QMainWindow) Toolbarbreak(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMainWindow12toolBarBreakEP8QToolBar
     // invoke: bool toolBarBreak(class QToolBar *)
-    var arg0 = args[0].(QToolBar).qclsinst
+    var arg0 = args[0].(*QToolBar).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QMainWindow12toolBarBreakEP8QToolBar(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QMainWindow12toolBarBreakEP8QToolBar(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "toolBarBreak", args)
   }
@@ -599,11 +619,15 @@ func (this *QMainWindow) Documentmode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMainWindow12documentModeEv
     // invoke: bool documentMode()
-    var ret0 = C.C_ZNK11QMainWindow12documentModeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMainWindow12documentModeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "documentMode", args)
   }
@@ -625,9 +649,9 @@ func (this *QMainWindow) Inserttoolbarbreak(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow18insertToolBarBreakEP8QToolBar
     // invoke: void insertToolBarBreak(class QToolBar *)
-    var arg0 = args[0].(QToolBar).qclsinst
+    var arg0 = args[0].(*QToolBar).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow18insertToolBarBreakEP8QToolBar(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow18insertToolBarBreakEP8QToolBar(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "insertToolBarBreak", args)
   }
@@ -650,15 +674,19 @@ func (this *QMainWindow) Restorestate(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QMainWindow12restoreStateERK10QByteArrayi
     // invoke: bool restoreState(const class QByteArray &, int)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN11QMainWindow12restoreStateERK10QByteArrayi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN11QMainWindow12restoreStateERK10QByteArrayi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "restoreState", args)
   }
@@ -680,13 +708,17 @@ func (this *QMainWindow) Restoredockwidget(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZN11QMainWindow17restoreDockWidgetEP11QDockWidget
     // invoke: bool restoreDockWidget(class QDockWidget *)
-    var arg0 = args[0].(QDockWidget).qclsinst
+    var arg0 = args[0].(*QDockWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QMainWindow17restoreDockWidgetEP11QDockWidget(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QMainWindow17restoreDockWidgetEP11QDockWidget(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "restoreDockWidget", args)
   }
@@ -707,11 +739,15 @@ func (this *QMainWindow) Statusbar(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMainWindow9statusBarEv
     // invoke: QStatusBar * statusBar()
-    var ret0 = C.C_ZNK11QMainWindow9statusBarEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMainWindow9statusBarEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QStatusBar{}) // "QStatusBar *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "statusBar", args)
   }
@@ -732,7 +768,7 @@ func (this *QMainWindow) Dockoptions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow11dockOptionsEv
     // invoke: DockOptions dockOptions()
-    C.C_ZNK11QMainWindow11dockOptionsEv(this.qclsinst)
+    C.C_ZNK11QMainWindow11dockOptionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "dockOptions", args)
   }
@@ -754,9 +790,9 @@ func (this *QMainWindow) Removetoolbarbreak(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow18removeToolBarBreakEP8QToolBar
     // invoke: void removeToolBarBreak(class QToolBar *)
-    var arg0 = args[0].(QToolBar).qclsinst
+    var arg0 = args[0].(*QToolBar).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow18removeToolBarBreakEP8QToolBar(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow18removeToolBarBreakEP8QToolBar(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "removeToolBarBreak", args)
   }
@@ -780,7 +816,7 @@ func (this *QMainWindow) Setanimated(args ...interface{}) () {
     // invoke: void setAnimated(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow11setAnimatedEb(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow11setAnimatedEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setAnimated", args)
   }
@@ -801,7 +837,7 @@ func (this *QMainWindow) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QMainWindow10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QMainWindow10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "metaObject", args)
   }
@@ -825,7 +861,7 @@ func (this *QMainWindow) Setdocumentmode(args ...interface{}) () {
     // invoke: void setDocumentMode(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow15setDocumentModeEb(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow15setDocumentModeEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setDocumentMode", args)
   }
@@ -846,11 +882,15 @@ func (this *QMainWindow) Takecentralwidget(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZN11QMainWindow17takeCentralWidgetEv
     // invoke: QWidget * takeCentralWidget()
-    var ret0 = C.C_ZN11QMainWindow17takeCentralWidgetEv(this.qclsinst)
+    var ret0 = C.C_ZN11QMainWindow17takeCentralWidgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "takeCentralWidget", args)
   }
@@ -871,11 +911,15 @@ func (this *QMainWindow) Createpopupmenu(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZN11QMainWindow15createPopupMenuEv
     // invoke: QMenu * createPopupMenu()
-    var ret0 = C.C_ZN11QMainWindow15createPopupMenuEv(this.qclsinst)
+    var ret0 = C.C_ZN11QMainWindow15createPopupMenuEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "createPopupMenu", args)
   }
@@ -899,7 +943,7 @@ func (this *QMainWindow) Setdocknestingenabled(args ...interface{}) () {
     // invoke: void setDockNestingEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow21setDockNestingEnabledEb(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow21setDockNestingEnabledEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setDockNestingEnabled", args)
   }
@@ -920,11 +964,15 @@ func (this *QMainWindow) Centralwidget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMainWindow13centralWidgetEv
     // invoke: QWidget * centralWidget()
-    var ret0 = C.C_ZNK11QMainWindow13centralWidgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMainWindow13centralWidgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "centralWidget", args)
   }
@@ -946,9 +994,9 @@ func (this *QMainWindow) Seticonsize(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow11setIconSizeERK5QSize
     // invoke: void setIconSize(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow11setIconSizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow11setIconSizeERK5QSize(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setIconSize", args)
   }
@@ -970,9 +1018,9 @@ func (this *QMainWindow) Setstatusbar(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow12setStatusBarEP10QStatusBar
     // invoke: void setStatusBar(class QStatusBar *)
-    var arg0 = args[0].(QStatusBar).qclsinst
+    var arg0 = args[0].(*QStatusBar).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow12setStatusBarEP10QStatusBar(this.qclsinst, arg0)
+    C.C_ZN11QMainWindow12setStatusBarEP10QStatusBar(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMainWindow", "setStatusBar", args)
   }
@@ -994,13 +1042,17 @@ func (this *QMainWindow) Isseparator(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMainWindow11isSeparatorERK6QPoint
     // invoke: bool isSeparator(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QMainWindow11isSeparatorERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QMainWindow11isSeparatorERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "isSeparator", args)
   }
@@ -1021,11 +1073,15 @@ func (this *QMainWindow) Menuwidget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMainWindow10menuWidgetEv
     // invoke: QWidget * menuWidget()
-    var ret0 = C.C_ZNK11QMainWindow10menuWidgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMainWindow10menuWidgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "menuWidget", args)
   }
@@ -1046,7 +1102,7 @@ func (this *QMainWindow) Toolbuttonstyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow15toolButtonStyleEv
     // invoke: Qt::ToolButtonStyle toolButtonStyle()
-    C.C_ZNK11QMainWindow15toolButtonStyleEv(this.qclsinst)
+    C.C_ZNK11QMainWindow15toolButtonStyleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "toolButtonStyle", args)
   }
@@ -1067,7 +1123,7 @@ func (this *QMainWindow) Freeqmainwindow(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindowD0Ev
     // invoke: void ~QMainWindow()
-    C.C_ZN11QMainWindowD2Ev(this.qclsinst)
+    C.C_ZN11QMainWindowD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMainWindow", "~QMainWindow", args)
   }
@@ -1088,11 +1144,15 @@ func (this *QMainWindow) Isdocknestingenabled(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK11QMainWindow20isDockNestingEnabledEv
     // invoke: bool isDockNestingEnabled()
-    var ret0 = C.C_ZNK11QMainWindow20isDockNestingEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMainWindow20isDockNestingEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "isDockNestingEnabled", args)
   }
@@ -1113,11 +1173,15 @@ func (this *QMainWindow) Menubar(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QMainWindow7menuBarEv
     // invoke: QMenuBar * menuBar()
-    var ret0 = C.C_ZNK11QMainWindow7menuBarEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QMainWindow7menuBarEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMenuBar{}) // "QMenuBar *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMainWindow", "menuBar", args)
   }

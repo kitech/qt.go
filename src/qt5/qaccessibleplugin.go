@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qaccessibleplugin.h
 // dst-file: /src/gui/qaccessibleplugin.go
 //
@@ -49,7 +49,7 @@ func init() {
 // class sizeof(QAccessiblePlugin)=1
 type QAccessiblePlugin struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QAccessiblePlugin(class QObject *)
@@ -66,17 +66,17 @@ func NewQAccessiblePlugin(args ...interface{}) *QAccessiblePlugin {
   case 0:
     // invoke: _ZN17QAccessiblePluginC1EP7QObject
     // invoke: void QAccessiblePlugin(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QAccessiblePluginC2EP7QObject(arg0)
-    return &QAccessiblePlugin{qclsinst:qthis}
+    return &QAccessiblePlugin{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessiblePlugin", "QAccessiblePlugin", args)
   }
 
-  return nil // QAccessiblePlugin{qclsinst:qthis}
+  return nil // QAccessiblePlugin{Qclsinst:qthis}
 }
 
 // metaObject()
@@ -92,7 +92,7 @@ func (this *QAccessiblePlugin) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QAccessiblePlugin10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK17QAccessiblePlugin10metaObjectEv(this.qclsinst)
+    C.C_ZNK17QAccessiblePlugin10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAccessiblePlugin", "metaObject", args)
   }
@@ -113,7 +113,7 @@ func (this *QAccessiblePlugin) Freeqaccessibleplugin(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QAccessiblePluginD0Ev
     // invoke: void ~QAccessiblePlugin()
-    C.C_ZN17QAccessiblePluginD2Ev(this.qclsinst)
+    C.C_ZN17QAccessiblePluginD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAccessiblePlugin", "~QAccessiblePlugin", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.go
 //
@@ -109,7 +109,7 @@ func init() {
 // class sizeof(QAbstractSpinBox)=1
 type QAbstractSpinBox struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _editingFinished QAbstractSpinBox_editingFinished_signal;
 }
 
@@ -126,7 +126,7 @@ func (this *QAbstractSpinBox) Selectall(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox9selectAllEv
     // invoke: void selectAll()
-    C.C_ZN16QAbstractSpinBox9selectAllEv(this.qclsinst)
+    C.C_ZN16QAbstractSpinBox9selectAllEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "selectAll", args)
   }
@@ -147,11 +147,15 @@ func (this *QAbstractSpinBox) Text(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QAbstractSpinBox4textEv
     // invoke: QString text()
-    var ret0 = C.C_ZNK16QAbstractSpinBox4textEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QAbstractSpinBox4textEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "text", args)
   }
@@ -175,7 +179,7 @@ func (this *QAbstractSpinBox) Setaccelerated(args ...interface{}) () {
     // invoke: void setAccelerated(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QAbstractSpinBox14setAcceleratedEb(this.qclsinst, arg0)
+    C.C_ZN16QAbstractSpinBox14setAcceleratedEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setAccelerated", args)
   }
@@ -196,11 +200,15 @@ func (this *QAbstractSpinBox) Keyboardtracking(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK16QAbstractSpinBox16keyboardTrackingEv
     // invoke: bool keyboardTracking()
-    var ret0 = C.C_ZNK16QAbstractSpinBox16keyboardTrackingEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QAbstractSpinBox16keyboardTrackingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "keyboardTracking", args)
   }
@@ -221,11 +229,15 @@ func (this *QAbstractSpinBox) Hasacceptableinput(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK16QAbstractSpinBox18hasAcceptableInputEv
     // invoke: bool hasAcceptableInput()
-    var ret0 = C.C_ZNK16QAbstractSpinBox18hasAcceptableInputEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QAbstractSpinBox18hasAcceptableInputEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "hasAcceptableInput", args)
   }
@@ -246,7 +258,7 @@ func (this *QAbstractSpinBox) Buttonsymbols(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAbstractSpinBox13buttonSymbolsEv
     // invoke: QAbstractSpinBox::ButtonSymbols buttonSymbols()
-    C.C_ZNK16QAbstractSpinBox13buttonSymbolsEv(this.qclsinst)
+    C.C_ZNK16QAbstractSpinBox13buttonSymbolsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "buttonSymbols", args)
   }
@@ -267,11 +279,15 @@ func (this *QAbstractSpinBox) Hasframe(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QAbstractSpinBox8hasFrameEv
     // invoke: bool hasFrame()
-    var ret0 = C.C_ZNK16QAbstractSpinBox8hasFrameEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QAbstractSpinBox8hasFrameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "hasFrame", args)
   }
@@ -295,7 +311,7 @@ func (this *QAbstractSpinBox) Setwrapping(args ...interface{}) () {
     // invoke: void setWrapping(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QAbstractSpinBox11setWrappingEb(this.qclsinst, arg0)
+    C.C_ZN16QAbstractSpinBox11setWrappingEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setWrapping", args)
   }
@@ -317,13 +333,17 @@ func (this *QAbstractSpinBox) Event(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN16QAbstractSpinBox5eventEP6QEvent
     // invoke: bool event(class QEvent *)
-    var arg0 = args[0].(QEvent).qclsinst
+    var arg0 = args[0].(*QEvent).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN16QAbstractSpinBox5eventEP6QEvent(this.qclsinst, arg0)
+    var ret0 = C.C_ZN16QAbstractSpinBox5eventEP6QEvent(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "event", args)
   }
@@ -344,7 +364,7 @@ func (this *QAbstractSpinBox) Alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAbstractSpinBox9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C.C_ZNK16QAbstractSpinBox9alignmentEv(this.qclsinst)
+    C.C_ZNK16QAbstractSpinBox9alignmentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "alignment", args)
   }
@@ -366,9 +386,9 @@ func (this *QAbstractSpinBox) Fixup(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAbstractSpinBox5fixupER7QString
     // invoke: void fixup(class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK16QAbstractSpinBox5fixupER7QString(this.qclsinst, arg0)
+    C.C_ZNK16QAbstractSpinBox5fixupER7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "fixup", args)
   }
@@ -390,9 +410,9 @@ func (this *QAbstractSpinBox) Setspecialvaluetext(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox19setSpecialValueTextERK7QString
     // invoke: void setSpecialValueText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QAbstractSpinBox19setSpecialValueTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QAbstractSpinBox19setSpecialValueTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setSpecialValueText", args)
   }
@@ -413,11 +433,15 @@ func (this *QAbstractSpinBox) Isreadonly(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK16QAbstractSpinBox10isReadOnlyEv
     // invoke: bool isReadOnly()
-    var ret0 = C.C_ZNK16QAbstractSpinBox10isReadOnlyEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QAbstractSpinBox10isReadOnlyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "isReadOnly", args)
   }
@@ -441,7 +465,7 @@ func (this *QAbstractSpinBox) Setgroupseparatorshown(args ...interface{}) () {
     // invoke: void setGroupSeparatorShown(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QAbstractSpinBox22setGroupSeparatorShownEb(this.qclsinst, arg0)
+    C.C_ZN16QAbstractSpinBox22setGroupSeparatorShownEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setGroupSeparatorShown", args)
   }
@@ -462,7 +486,7 @@ func (this *QAbstractSpinBox) Freeqabstractspinbox(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBoxD0Ev
     // invoke: void ~QAbstractSpinBox()
-    C.C_ZN16QAbstractSpinBoxD2Ev(this.qclsinst)
+    C.C_ZN16QAbstractSpinBoxD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "~QAbstractSpinBox", args)
   }
@@ -483,7 +507,7 @@ func (this *QAbstractSpinBox) Stepup(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox6stepUpEv
     // invoke: void stepUp()
-    C.C_ZN16QAbstractSpinBox6stepUpEv(this.qclsinst)
+    C.C_ZN16QAbstractSpinBox6stepUpEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "stepUp", args)
   }
@@ -505,9 +529,9 @@ func (this *QAbstractSpinBox) Stepby(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox6stepByEi
     // invoke: void stepBy(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QAbstractSpinBox6stepByEi(this.qclsinst, arg0)
+    C.C_ZN16QAbstractSpinBox6stepByEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "stepBy", args)
   }
@@ -528,11 +552,15 @@ func (this *QAbstractSpinBox) Specialvaluetext(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK16QAbstractSpinBox16specialValueTextEv
     // invoke: QString specialValueText()
-    var ret0 = C.C_ZNK16QAbstractSpinBox16specialValueTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QAbstractSpinBox16specialValueTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "specialValueText", args)
   }
@@ -553,11 +581,15 @@ func (this *QAbstractSpinBox) Isaccelerated(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK16QAbstractSpinBox13isAcceleratedEv
     // invoke: bool isAccelerated()
-    var ret0 = C.C_ZNK16QAbstractSpinBox13isAcceleratedEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QAbstractSpinBox13isAcceleratedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "isAccelerated", args)
   }
@@ -578,11 +610,15 @@ func (this *QAbstractSpinBox) Wrapping(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QAbstractSpinBox8wrappingEv
     // invoke: bool wrapping()
-    var ret0 = C.C_ZNK16QAbstractSpinBox8wrappingEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QAbstractSpinBox8wrappingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "wrapping", args)
   }
@@ -603,11 +639,15 @@ func (this *QAbstractSpinBox) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QAbstractSpinBox8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK16QAbstractSpinBox8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QAbstractSpinBox8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "sizeHint", args)
   }
@@ -628,7 +668,7 @@ func (this *QAbstractSpinBox) Interprettext(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox13interpretTextEv
     // invoke: void interpretText()
-    C.C_ZN16QAbstractSpinBox13interpretTextEv(this.qclsinst)
+    C.C_ZN16QAbstractSpinBox13interpretTextEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "interpretText", args)
   }
@@ -651,11 +691,11 @@ func (this *QAbstractSpinBox) Validate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAbstractSpinBox8validateER7QStringRi
     // invoke: QValidator::State validate(class QString &, int &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = (unsafe.Pointer)(args[1].(*int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK16QAbstractSpinBox8validateER7QStringRi(this.qclsinst, arg0, arg1)
+    C.C_ZNK16QAbstractSpinBox8validateER7QStringRi(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "validate", args)
   }
@@ -676,11 +716,15 @@ func (this *QAbstractSpinBox) Isgroupseparatorshown(args ...interface{}) (ret in
   case 0:
     // invoke: _ZNK16QAbstractSpinBox21isGroupSeparatorShownEv
     // invoke: bool isGroupSeparatorShown()
-    var ret0 = C.C_ZNK16QAbstractSpinBox21isGroupSeparatorShownEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QAbstractSpinBox21isGroupSeparatorShownEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "isGroupSeparatorShown", args)
   }
@@ -701,7 +745,7 @@ func (this *QAbstractSpinBox) Correctionmode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAbstractSpinBox14correctionModeEv
     // invoke: QAbstractSpinBox::CorrectionMode correctionMode()
-    C.C_ZNK16QAbstractSpinBox14correctionModeEv(this.qclsinst)
+    C.C_ZNK16QAbstractSpinBox14correctionModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "correctionMode", args)
   }
@@ -722,7 +766,7 @@ func (this *QAbstractSpinBox) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAbstractSpinBox10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK16QAbstractSpinBox10metaObjectEv(this.qclsinst)
+    C.C_ZNK16QAbstractSpinBox10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "metaObject", args)
   }
@@ -744,17 +788,17 @@ func NewQAbstractSpinBox(args ...interface{}) *QAbstractSpinBox {
   case 0:
     // invoke: _ZN16QAbstractSpinBoxC1EP7QWidget
     // invoke: void QAbstractSpinBox(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QAbstractSpinBoxC2EP7QWidget(arg0)
-    return &QAbstractSpinBox{qclsinst:qthis}
+    return &QAbstractSpinBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "QAbstractSpinBox", args)
   }
 
-  return nil // QAbstractSpinBox{qclsinst:qthis}
+  return nil // QAbstractSpinBox{Qclsinst:qthis}
 }
 
 // stepDown()
@@ -770,7 +814,7 @@ func (this *QAbstractSpinBox) Stepdown(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox8stepDownEv
     // invoke: void stepDown()
-    C.C_ZN16QAbstractSpinBox8stepDownEv(this.qclsinst)
+    C.C_ZN16QAbstractSpinBox8stepDownEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "stepDown", args)
   }
@@ -794,7 +838,7 @@ func (this *QAbstractSpinBox) Setframe(args ...interface{}) () {
     // invoke: void setFrame(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QAbstractSpinBox8setFrameEb(this.qclsinst, arg0)
+    C.C_ZN16QAbstractSpinBox8setFrameEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setFrame", args)
   }
@@ -815,7 +859,7 @@ func (this *QAbstractSpinBox) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox5clearEv
     // invoke: void clear()
-    C.C_ZN16QAbstractSpinBox5clearEv(this.qclsinst)
+    C.C_ZN16QAbstractSpinBox5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "clear", args)
   }
@@ -836,11 +880,15 @@ func (this *QAbstractSpinBox) Minimumsizehint(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK16QAbstractSpinBox15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK16QAbstractSpinBox15minimumSizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QAbstractSpinBox15minimumSizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "minimumSizeHint", args)
   }
@@ -864,7 +912,7 @@ func (this *QAbstractSpinBox) Setkeyboardtracking(args ...interface{}) () {
     // invoke: void setKeyboardTracking(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QAbstractSpinBox19setKeyboardTrackingEb(this.qclsinst, arg0)
+    C.C_ZN16QAbstractSpinBox19setKeyboardTrackingEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setKeyboardTracking", args)
   }
@@ -888,7 +936,7 @@ func (this *QAbstractSpinBox) Setreadonly(args ...interface{}) () {
     // invoke: void setReadOnly(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QAbstractSpinBox11setReadOnlyEb(this.qclsinst, arg0)
+    C.C_ZN16QAbstractSpinBox11setReadOnlyEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setReadOnly", args)
   }

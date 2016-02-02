@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.go
 //
@@ -53,7 +53,7 @@ func init() {
 // class sizeof(QAbstractState)=1
 type QAbstractState struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _entered QAbstractState_entered_signal;
 //  _exited QAbstractState_exited_signal;
 //  _activeChanged QAbstractState_activeChanged_signal;
@@ -72,11 +72,15 @@ func (this *QAbstractState) Machine(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QAbstractState7machineEv
     // invoke: QStateMachine * machine()
-    var ret0 = C.C_ZNK14QAbstractState7machineEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QAbstractState7machineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QStateMachine{}) // "QStateMachine *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractState", "machine", args)
   }
@@ -97,11 +101,15 @@ func (this *QAbstractState) Active(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QAbstractState6activeEv
     // invoke: bool active()
-    var ret0 = C.C_ZNK14QAbstractState6activeEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QAbstractState6activeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractState", "active", args)
   }
@@ -122,7 +130,7 @@ func (this *QAbstractState) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QAbstractState10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK14QAbstractState10metaObjectEv(this.qclsinst)
+    C.C_ZNK14QAbstractState10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractState", "metaObject", args)
   }
@@ -143,11 +151,15 @@ func (this *QAbstractState) Parentstate(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QAbstractState11parentStateEv
     // invoke: QState * parentState()
-    var ret0 = C.C_ZNK14QAbstractState11parentStateEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QAbstractState11parentStateEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QState{}) // "QState *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractState", "parentState", args)
   }
@@ -168,7 +180,7 @@ func (this *QAbstractState) Freeqabstractstate(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QAbstractStateD0Ev
     // invoke: void ~QAbstractState()
-    C.C_ZN14QAbstractStateD2Ev(this.qclsinst)
+    C.C_ZN14QAbstractStateD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractState", "~QAbstractState", args)
   }

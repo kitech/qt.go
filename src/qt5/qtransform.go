@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qtransform.h
 // dst-file: /src/gui/qtransform.go
 //
@@ -145,7 +145,7 @@ func init() {
 // class sizeof(QTransform)=88
 type QTransform struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // dx()
@@ -161,11 +161,15 @@ func (this *QTransform) Dx(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform2dxEv
     // invoke: qreal dx()
-    var ret0 = C.C_ZNK10QTransform2dxEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform2dxEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "dx", args)
   }
@@ -195,25 +199,25 @@ func (this *QTransform) Setmatrix(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTransform9setMatrixEddddddddd
     // invoke: void setMatrix(qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = C.double(args[4].(float64))
+    var arg4 = C.double(qtrt.PrimConv(args[4], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg4)}
-    var arg5 = C.double(args[5].(float64))
+    var arg5 = C.double(qtrt.PrimConv(args[5], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg5)}
-    var arg6 = C.double(args[6].(float64))
+    var arg6 = C.double(qtrt.PrimConv(args[6], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg6)}
-    var arg7 = C.double(args[7].(float64))
+    var arg7 = C.double(qtrt.PrimConv(args[7], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg7)}
-    var arg8 = C.double(args[8].(float64))
+    var arg8 = C.double(qtrt.PrimConv(args[8], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg8)}
-    C.C_ZN10QTransform9setMatrixEddddddddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+    C.C_ZN10QTransform9setMatrixEddddddddd(this.Qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
   default:
     qtrt.ErrorResolve("QTransform", "setMatrix", args)
   }
@@ -238,23 +242,31 @@ func (this *QTransform) Maprect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform7mapRectERK5QRect
     // invoke: QRect mapRect(const class QRect &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTransform7mapRectERK5QRect(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTransform7mapRectERK5QRect(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK10QTransform7mapRectERK6QRectF
     // invoke: QRectF mapRect(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTransform7mapRectERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTransform7mapRectERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "mapRect", args)
   }
@@ -275,11 +287,15 @@ func (this *QTransform) M21(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform3m21Ev
     // invoke: qreal m21()
-    var ret0 = C.C_ZNK10QTransform3m21Ev(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform3m21Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "m21", args)
   }
@@ -300,11 +316,15 @@ func (this *QTransform) M11(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform3m11Ev
     // invoke: qreal m11()
-    var ret0 = C.C_ZNK10QTransform3m11Ev(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform3m11Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "m11", args)
   }
@@ -325,11 +345,15 @@ func (this *QTransform) M13(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform3m13Ev
     // invoke: qreal m13()
-    var ret0 = C.C_ZNK10QTransform3m13Ev(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform3m13Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "m13", args)
   }
@@ -350,11 +374,15 @@ func (this *QTransform) Isinvertible(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform12isInvertibleEv
     // invoke: bool isInvertible()
-    var ret0 = C.C_ZNK10QTransform12isInvertibleEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform12isInvertibleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "isInvertible", args)
   }
@@ -375,11 +403,15 @@ func (this *QTransform) M23(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform3m23Ev
     // invoke: qreal m23()
-    var ret0 = C.C_ZNK10QTransform3m23Ev(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform3m23Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "m23", args)
   }
@@ -402,15 +434,19 @@ func (this *QTransform) Scale(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QTransform5scaleEdd
     // invoke: QTransform & scale(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QTransform5scaleEdd(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QTransform5scaleEdd(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "scale", args)
   }
@@ -432,13 +468,17 @@ func (this *QTransform) Maptopolygon(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform12mapToPolygonERK5QRect
     // invoke: QPolygon mapToPolygon(const class QRect &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTransform12mapToPolygonERK5QRect(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTransform12mapToPolygonERK5QRect(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "mapToPolygon", args)
   }
@@ -459,11 +499,15 @@ func (this *QTransform) Adjoint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform7adjointEv
     // invoke: QTransform adjoint()
-    var ret0 = C.C_ZNK10QTransform7adjointEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform7adjointEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "adjoint", args)
   }
@@ -484,11 +528,15 @@ func (this *QTransform) M33(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform3m33Ev
     // invoke: qreal m33()
-    var ret0 = C.C_ZNK10QTransform3m33Ev(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform3m33Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "m33", args)
   }
@@ -509,11 +557,15 @@ func (this *QTransform) M32(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform3m32Ev
     // invoke: qreal m32()
-    var ret0 = C.C_ZNK10QTransform3m32Ev(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform3m32Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "m32", args)
   }
@@ -534,11 +586,15 @@ func (this *QTransform) M31(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform3m31Ev
     // invoke: qreal m31()
-    var ret0 = C.C_ZNK10QTransform3m31Ev(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform3m31Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "m31", args)
   }
@@ -561,15 +617,19 @@ func (this *QTransform) Translate(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QTransform9translateEdd
     // invoke: QTransform & translate(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QTransform9translateEdd(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QTransform9translateEdd(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "translate", args)
   }
@@ -590,7 +650,7 @@ func (this *QTransform) Type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform4typeEv
     // invoke: QTransform::TransformationType type()
-    C.C_ZNK10QTransform4typeEv(this.qclsinst)
+    C.C_ZNK10QTransform4typeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTransform", "type", args)
   }
@@ -613,15 +673,19 @@ func (this *QTransform) Shear(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QTransform5shearEdd
     // invoke: QTransform & shear(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QTransform5shearEdd(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QTransform5shearEdd(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "shear", args)
   }
@@ -676,107 +740,139 @@ func (this *QTransform) Map_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform3mapERK6QPoint
     // invoke: QPoint map(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTransform3mapERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTransform3mapERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK10QTransform3mapERK12QPainterPath
     // invoke: QPainterPath map(const class QPainterPath &)
-    var arg0 = args[0].(QPainterPath).qclsinst
+    var arg0 = args[0].(*QPainterPath).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTransform3mapERK12QPainterPath(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTransform3mapERK12QPainterPath(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK10QTransform3mapERK5QLine
     // invoke: QLine map(const class QLine &)
-    var arg0 = args[0].(QLine).qclsinst
+    var arg0 = args[0].(*QLine).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTransform3mapERK5QLine(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTransform3mapERK5QLine(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLine{}) // "QLine"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZNK10QTransform3mapERK9QPolygonF
     // invoke: QPolygonF map(const class QPolygonF &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTransform3mapERK9QPolygonF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTransform3mapERK9QPolygonF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 4:
     // invoke: _ZNK10QTransform3mapERK7QPointF
     // invoke: QPointF map(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTransform3mapERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTransform3mapERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 5:
     // invoke: _ZNK10QTransform3mapEddPdS0_
     // invoke: void map(qreal, qreal, qreal *, qreal *)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
     var arg2 = (unsafe.Pointer)(args[2].(*float64))
     if false {fmt.Println(arg2)}
     var arg3 = (unsafe.Pointer)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C.C_ZNK10QTransform3mapEddPdS0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK10QTransform3mapEddPdS0_(this.Qclsinst, arg0, arg1, arg2, arg3)
   case 6:
     // invoke: _ZNK10QTransform3mapERK8QPolygon
     // invoke: QPolygon map(const class QPolygon &)
-    var arg0 = args[0].(QPolygon).qclsinst
+    var arg0 = args[0].(*QPolygon).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTransform3mapERK8QPolygon(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTransform3mapERK8QPolygon(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygon{}) // "QPolygon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 7:
     // invoke: _ZNK10QTransform3mapEiiPiS0_
     // invoke: void map(int, int, int *, int *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var arg2 = (unsafe.Pointer)(args[2].(*int32))
     if false {fmt.Println(arg2)}
     var arg3 = (unsafe.Pointer)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C.C_ZNK10QTransform3mapEiiPiS0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK10QTransform3mapEiiPiS0_(this.Qclsinst, arg0, arg1, arg2, arg3)
   case 8:
     // invoke: _ZNK10QTransform3mapERK7QRegion
     // invoke: QRegion map(const class QRegion &)
-    var arg0 = args[0].(QRegion).qclsinst
+    var arg0 = args[0].(*QRegion).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTransform3mapERK7QRegion(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTransform3mapERK7QRegion(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 9:
     // invoke: _ZNK10QTransform3mapERK6QLineF
     // invoke: QLineF map(const class QLineF &)
-    var arg0 = args[0].(QLineF).qclsinst
+    var arg0 = args[0].(*QLineF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTransform3mapERK6QLineF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTransform3mapERK6QLineF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLineF{}) // "QLineF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "map", args)
   }
@@ -797,11 +893,15 @@ func (this *QTransform) Determinant(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform11determinantEv
     // invoke: qreal determinant()
-    var ret0 = C.C_ZNK10QTransform11determinantEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform11determinantEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "determinant", args)
   }
@@ -822,11 +922,15 @@ func (this *QTransform) Dy(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform2dyEv
     // invoke: qreal dy()
-    var ret0 = C.C_ZNK10QTransform2dyEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform2dyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "dy", args)
   }
@@ -847,11 +951,15 @@ func (this *QTransform) Toaffine(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform8toAffineEv
     // invoke: const QMatrix & toAffine()
-    var ret0 = C.C_ZNK10QTransform8toAffineEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform8toAffineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMatrix{}) // "const QMatrix &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "toAffine", args)
   }
@@ -872,11 +980,15 @@ func (this *QTransform) Isrotating(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform10isRotatingEv
     // invoke: bool isRotating()
-    var ret0 = C.C_ZNK10QTransform10isRotatingEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform10isRotatingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "isRotating", args)
   }
@@ -900,11 +1012,15 @@ func (this *QTransform) Inverted(args ...interface{}) (ret interface{}) {
     // invoke: QTransform inverted(_Bool *)
     var arg0 = (unsafe.Pointer)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTransform8invertedEPb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTransform8invertedEPb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "inverted", args)
   }
@@ -927,15 +1043,19 @@ func (this *QTransform) Squaretoquad_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QTransform12squareToQuadERK9QPolygonFRS_
     // invoke: bool squareToQuad(const class QPolygonF &, class QTransform &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QTransform).qclsinst
+    var arg1 = args[1].(*QTransform).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN10QTransform12squareToQuadERK9QPolygonFRS_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "squareToQuad", args)
   }
@@ -956,7 +1076,7 @@ func (this *QTransform) Reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTransform5resetEv
     // invoke: void reset()
-    C.C_ZN10QTransform5resetEv(this.qclsinst)
+    C.C_ZN10QTransform5resetEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTransform", "reset", args)
   }
@@ -977,11 +1097,15 @@ func (this *QTransform) Transposed(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform10transposedEv
     // invoke: QTransform transposed()
-    var ret0 = C.C_ZNK10QTransform10transposedEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform10transposedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "transposed", args)
   }
@@ -1002,11 +1126,15 @@ func (this *QTransform) Det(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform3detEv
     // invoke: qreal det()
-    var ret0 = C.C_ZNK10QTransform3detEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform3detEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "det", args)
   }
@@ -1052,65 +1180,65 @@ func NewQTransform(args ...interface{}) *QTransform {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTransformC2Ev()
-    return &QTransform{qclsinst:qthis}
+    return &QTransform{Qclsinst:qthis}
   case 1:
     // invoke: _ZN10QTransformC1ERK7QMatrix
     // invoke: void QTransform(const class QMatrix &)
-    var arg0 = args[0].(QMatrix).qclsinst
+    var arg0 = args[0].(*QMatrix).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTransformC2ERK7QMatrix(arg0)
-    return &QTransform{qclsinst:qthis}
+    return &QTransform{Qclsinst:qthis}
   case 2:
     // invoke: _ZN10QTransformC1Eddddddddd
     // invoke: void QTransform(qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = C.double(args[4].(float64))
+    var arg4 = C.double(qtrt.PrimConv(args[4], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg4)}
-    var arg5 = C.double(args[5].(float64))
+    var arg5 = C.double(qtrt.PrimConv(args[5], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg5)}
-    var arg6 = C.double(args[6].(float64))
+    var arg6 = C.double(qtrt.PrimConv(args[6], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg6)}
-    var arg7 = C.double(args[7].(float64))
+    var arg7 = C.double(qtrt.PrimConv(args[7], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg7)}
-    var arg8 = C.double(args[8].(float64))
+    var arg8 = C.double(qtrt.PrimConv(args[8], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg8)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTransformC2Eddddddddd(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-    return &QTransform{qclsinst:qthis}
+    return &QTransform{Qclsinst:qthis}
   case 3:
     // invoke: _ZN10QTransformC1Edddddd
     // invoke: void QTransform(qreal, qreal, qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = C.double(args[4].(float64))
+    var arg4 = C.double(qtrt.PrimConv(args[4], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg4)}
-    var arg5 = C.double(args[5].(float64))
+    var arg5 = C.double(qtrt.PrimConv(args[5], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg5)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTransformC2Edddddd(arg0, arg1, arg2, arg3, arg4, arg5)
-    return &QTransform{qclsinst:qthis}
+    return &QTransform{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTransform", "QTransform", args)
   }
 
-  return nil // QTransform{qclsinst:qthis}
+  return nil // QTransform{Qclsinst:qthis}
 }
 
 // m22()
@@ -1126,11 +1254,15 @@ func (this *QTransform) M22(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform3m22Ev
     // invoke: qreal m22()
-    var ret0 = C.C_ZNK10QTransform3m22Ev(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform3m22Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "m22", args)
   }
@@ -1153,15 +1285,19 @@ func (this *QTransform) Fromscale_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QTransform9fromScaleEdd
     // invoke: QTransform fromScale(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN10QTransform9fromScaleEdd(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "fromScale", args)
   }
@@ -1185,17 +1321,21 @@ func (this *QTransform) Quadtoquad_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QTransform10quadToQuadERK9QPolygonFS2_RS_
     // invoke: bool quadToQuad(const class QPolygonF &, const class QPolygonF &, class QTransform &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPolygonF).qclsinst
+    var arg1 = args[1].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QTransform).qclsinst
+    var arg2 = args[2].(*QTransform).Qclsinst
     if false {fmt.Println(arg2)}
     var ret0 = C.C_ZN10QTransform10quadToQuadERK9QPolygonFS2_RS_(arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "quadToQuad", args)
   }
@@ -1216,11 +1356,15 @@ func (this *QTransform) M12(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform3m12Ev
     // invoke: qreal m12()
-    var ret0 = C.C_ZNK10QTransform3m12Ev(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform3m12Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "m12", args)
   }
@@ -1241,11 +1385,15 @@ func (this *QTransform) Isidentity(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform10isIdentityEv
     // invoke: bool isIdentity()
-    var ret0 = C.C_ZNK10QTransform10isIdentityEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform10isIdentityEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "isIdentity", args)
   }
@@ -1266,11 +1414,15 @@ func (this *QTransform) Isscaling(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform9isScalingEv
     // invoke: bool isScaling()
-    var ret0 = C.C_ZNK10QTransform9isScalingEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform9isScalingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "isScaling", args)
   }
@@ -1293,15 +1445,19 @@ func (this *QTransform) Quadtosquare_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QTransform12quadToSquareERK9QPolygonFRS_
     // invoke: bool quadToSquare(const class QPolygonF &, class QTransform &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QTransform).qclsinst
+    var arg1 = args[1].(*QTransform).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN10QTransform12quadToSquareERK9QPolygonFRS_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "quadToSquare", args)
   }
@@ -1322,11 +1478,15 @@ func (this *QTransform) Isaffine(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform8isAffineEv
     // invoke: bool isAffine()
-    var ret0 = C.C_ZNK10QTransform8isAffineEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform8isAffineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "isAffine", args)
   }
@@ -1347,11 +1507,15 @@ func (this *QTransform) Istranslating(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTransform13isTranslatingEv
     // invoke: bool isTranslating()
-    var ret0 = C.C_ZNK10QTransform13isTranslatingEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTransform13isTranslatingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "isTranslating", args)
   }
@@ -1374,15 +1538,19 @@ func (this *QTransform) Fromtranslate_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QTransform13fromTranslateEdd
     // invoke: QTransform fromTranslate(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN10QTransform13fromTranslateEdd(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTransform", "fromTranslate", args)
   }

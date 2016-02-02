@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qwhatsthis.h
 // dst-file: /src/widgets/qwhatsthis.go
 //
@@ -55,7 +55,7 @@ func init() {
 // class sizeof(QWhatsThis)=1
 type QWhatsThis struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // enterWhatsThisMode()
@@ -135,13 +135,17 @@ func (this *QWhatsThis) Createaction_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QWhatsThis12createActionEP7QObject
     // invoke: QAction * createAction(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN10QWhatsThis12createActionEP7QObject(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWhatsThis", "createAction", args)
   }
@@ -165,11 +169,11 @@ func (this *QWhatsThis) Showtext_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget
     // invoke: void showText(const class QPoint &, const class QString &, class QWidget *)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
     C.C_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget(arg0, arg1, arg2)
   default:
@@ -196,7 +200,11 @@ func (this *QWhatsThis) Inwhatsthismode_S(args ...interface{}) (ret interface{})
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWhatsThis", "inWhatsThisMode", args)
   }

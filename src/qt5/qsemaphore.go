@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.go
 //
@@ -57,7 +57,7 @@ func init() {
 // class sizeof(QSemaphore)=8
 type QSemaphore struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // available()
@@ -73,11 +73,15 @@ func (this *QSemaphore) Available(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QSemaphore9availableEv
     // invoke: int available()
-    var ret0 = C.C_ZNK10QSemaphore9availableEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QSemaphore9availableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSemaphore", "available", args)
   }
@@ -98,7 +102,7 @@ func (this *QSemaphore) Freeqsemaphore(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QSemaphoreD0Ev
     // invoke: void ~QSemaphore()
-    C.C_ZN10QSemaphoreD2Ev(this.qclsinst)
+    C.C_ZN10QSemaphoreD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSemaphore", "~QSemaphore", args)
   }
@@ -120,9 +124,9 @@ func (this *QSemaphore) Acquire(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QSemaphore7acquireEi
     // invoke: void acquire(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QSemaphore7acquireEi(this.qclsinst, arg0)
+    C.C_ZN10QSemaphore7acquireEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSemaphore", "acquire", args)
   }
@@ -148,25 +152,33 @@ func (this *QSemaphore) Tryacquire(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QSemaphore10tryAcquireEi
     // invoke: bool tryAcquire(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN10QSemaphore10tryAcquireEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN10QSemaphore10tryAcquireEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN10QSemaphore10tryAcquireEii
     // invoke: bool tryAcquire(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN10QSemaphore10tryAcquireEii(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN10QSemaphore10tryAcquireEii(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSemaphore", "tryAcquire", args)
   }
@@ -188,9 +200,9 @@ func (this *QSemaphore) Release(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QSemaphore7releaseEi
     // invoke: void release(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QSemaphore7releaseEi(this.qclsinst, arg0)
+    C.C_ZN10QSemaphore7releaseEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSemaphore", "release", args)
   }
@@ -212,17 +224,17 @@ func NewQSemaphore(args ...interface{}) *QSemaphore {
   case 0:
     // invoke: _ZN10QSemaphoreC1Ei
     // invoke: void QSemaphore(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QSemaphoreC2Ei(arg0)
-    return &QSemaphore{qclsinst:qthis}
+    return &QSemaphore{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSemaphore", "QSemaphore", args)
   }
 
-  return nil // QSemaphore{qclsinst:qthis}
+  return nil // QSemaphore{Qclsinst:qthis}
 }
 
 // <= body block end

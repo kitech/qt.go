@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qsystemsemaphore.h
 // dst-file: /src/core/qsystemsemaphore.go
 //
@@ -55,7 +55,7 @@ func init() {
 // class sizeof(QSystemSemaphore)=1
 type QSystemSemaphore struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // errorString()
@@ -71,11 +71,15 @@ func (this *QSystemSemaphore) Errorstring(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK16QSystemSemaphore11errorStringEv
     // invoke: QString errorString()
-    var ret0 = C.C_ZNK16QSystemSemaphore11errorStringEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QSystemSemaphore11errorStringEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "errorString", args)
   }
@@ -96,11 +100,15 @@ func (this *QSystemSemaphore) Acquire(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN16QSystemSemaphore7acquireEv
     // invoke: bool acquire()
-    var ret0 = C.C_ZN16QSystemSemaphore7acquireEv(this.qclsinst)
+    var ret0 = C.C_ZN16QSystemSemaphore7acquireEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "acquire", args)
   }
@@ -121,7 +129,7 @@ func (this *QSystemSemaphore) Freeqsystemsemaphore(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QSystemSemaphoreD0Ev
     // invoke: void ~QSystemSemaphore()
-    C.C_ZN16QSystemSemaphoreD2Ev(this.qclsinst)
+    C.C_ZN16QSystemSemaphoreD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "~QSystemSemaphore", args)
   }
@@ -142,11 +150,15 @@ func (this *QSystemSemaphore) Key(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QSystemSemaphore3keyEv
     // invoke: QString key()
-    var ret0 = C.C_ZNK16QSystemSemaphore3keyEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QSystemSemaphore3keyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "key", args)
   }
@@ -167,7 +179,7 @@ func (this *QSystemSemaphore) Error(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QSystemSemaphore5errorEv
     // invoke: QSystemSemaphore::SystemSemaphoreError error()
-    C.C_ZNK16QSystemSemaphore5errorEv(this.qclsinst)
+    C.C_ZNK16QSystemSemaphore5errorEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "error", args)
   }
@@ -189,13 +201,17 @@ func (this *QSystemSemaphore) Release(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN16QSystemSemaphore7releaseEi
     // invoke: bool release(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN16QSystemSemaphore7releaseEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN16QSystemSemaphore7releaseEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "release", args)
   }

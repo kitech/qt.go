@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qmouseeventtransition.h
 // dst-file: /src/widgets/qmouseeventtransition.go
 //
@@ -57,7 +57,7 @@ func init() {
 // class sizeof(QMouseEventTransition)=1
 type QMouseEventTransition struct {
   /*qbase*/ QEventTransition;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // metaObject()
@@ -73,7 +73,7 @@ func (this *QMouseEventTransition) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QMouseEventTransition10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK21QMouseEventTransition10metaObjectEv(this.qclsinst)
+    C.C_ZNK21QMouseEventTransition10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "metaObject", args)
   }
@@ -95,9 +95,9 @@ func (this *QMouseEventTransition) Sethittestpath(args ...interface{}) () {
   case 0:
     // invoke: _ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath
     // invoke: void setHitTestPath(const class QPainterPath &)
-    var arg0 = args[0].(QPainterPath).qclsinst
+    var arg0 = args[0].(*QPainterPath).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath(this.qclsinst, arg0)
+    C.C_ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "setHitTestPath", args)
   }
@@ -118,7 +118,7 @@ func (this *QMouseEventTransition) Modifiermask(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QMouseEventTransition12modifierMaskEv
     // invoke: Qt::KeyboardModifiers modifierMask()
-    C.C_ZNK21QMouseEventTransition12modifierMaskEv(this.qclsinst)
+    C.C_ZNK21QMouseEventTransition12modifierMaskEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "modifierMask", args)
   }
@@ -139,11 +139,15 @@ func (this *QMouseEventTransition) Hittestpath(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK21QMouseEventTransition11hitTestPathEv
     // invoke: QPainterPath hitTestPath()
-    var ret0 = C.C_ZNK21QMouseEventTransition11hitTestPathEv(this.qclsinst)
+    var ret0 = C.C_ZNK21QMouseEventTransition11hitTestPathEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "hitTestPath", args)
   }
@@ -164,7 +168,7 @@ func (this *QMouseEventTransition) Freeqmouseeventtransition(args ...interface{}
   case 0:
     // invoke: _ZN21QMouseEventTransitionD0Ev
     // invoke: void ~QMouseEventTransition()
-    C.C_ZN21QMouseEventTransitionD2Ev(this.qclsinst)
+    C.C_ZN21QMouseEventTransitionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "~QMouseEventTransition", args)
   }
@@ -185,7 +189,7 @@ func (this *QMouseEventTransition) Button(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QMouseEventTransition6buttonEv
     // invoke: Qt::MouseButton button()
-    C.C_ZNK21QMouseEventTransition6buttonEv(this.qclsinst)
+    C.C_ZNK21QMouseEventTransition6buttonEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "button", args)
   }
@@ -207,17 +211,17 @@ func NewQMouseEventTransition(args ...interface{}) *QMouseEventTransition {
   case 0:
     // invoke: _ZN21QMouseEventTransitionC1EP6QState
     // invoke: void QMouseEventTransition(class QState *)
-    var arg0 = args[0].(QState).qclsinst
+    var arg0 = args[0].(*QState).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QMouseEventTransitionC2EP6QState(arg0)
-    return &QMouseEventTransition{qclsinst:qthis}
+    return &QMouseEventTransition{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "QMouseEventTransition", args)
   }
 
-  return nil // QMouseEventTransition{qclsinst:qthis}
+  return nil // QMouseEventTransition{Qclsinst:qthis}
 }
 
 // <= body block end

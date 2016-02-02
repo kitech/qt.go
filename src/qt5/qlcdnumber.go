@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.go
 //
@@ -87,7 +87,7 @@ func init() {
 // class sizeof(QLCDNumber)=1
 type QLCDNumber struct {
   /*qbase*/ QFrame;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _overflow QLCDNumber_overflow_signal;
 }
 
@@ -107,7 +107,7 @@ func (this *QLCDNumber) Setsmalldecimalpoint(args ...interface{}) () {
     // invoke: void setSmallDecimalPoint(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QLCDNumber20setSmallDecimalPointEb(this.qclsinst, arg0)
+    C.C_ZN10QLCDNumber20setSmallDecimalPointEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLCDNumber", "setSmallDecimalPoint", args)
   }
@@ -128,7 +128,7 @@ func (this *QLCDNumber) Setdecmode(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QLCDNumber10setDecModeEv
     // invoke: void setDecMode()
-    C.C_ZN10QLCDNumber10setDecModeEv(this.qclsinst)
+    C.C_ZN10QLCDNumber10setDecModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "setDecMode", args)
   }
@@ -149,11 +149,15 @@ func (this *QLCDNumber) Smalldecimalpoint(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK10QLCDNumber17smallDecimalPointEv
     // invoke: bool smallDecimalPoint()
-    var ret0 = C.C_ZNK10QLCDNumber17smallDecimalPointEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QLCDNumber17smallDecimalPointEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLCDNumber", "smallDecimalPoint", args)
   }
@@ -174,7 +178,7 @@ func (this *QLCDNumber) Sethexmode(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QLCDNumber10setHexModeEv
     // invoke: void setHexMode()
-    C.C_ZN10QLCDNumber10setHexModeEv(this.qclsinst)
+    C.C_ZN10QLCDNumber10setHexModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "setHexMode", args)
   }
@@ -195,7 +199,7 @@ func (this *QLCDNumber) Freeqlcdnumber(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QLCDNumberD0Ev
     // invoke: void ~QLCDNumber()
-    C.C_ZN10QLCDNumberD2Ev(this.qclsinst)
+    C.C_ZN10QLCDNumberD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "~QLCDNumber", args)
   }
@@ -216,7 +220,7 @@ func (this *QLCDNumber) Segmentstyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QLCDNumber12segmentStyleEv
     // invoke: QLCDNumber::SegmentStyle segmentStyle()
-    C.C_ZNK10QLCDNumber12segmentStyleEv(this.qclsinst)
+    C.C_ZNK10QLCDNumber12segmentStyleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "segmentStyle", args)
   }
@@ -242,28 +246,28 @@ func NewQLCDNumber(args ...interface{}) *QLCDNumber {
   case 0:
     // invoke: _ZN10QLCDNumberC1EjP7QWidget
     // invoke: void QLCDNumber(uint, class QWidget *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QLCDNumberC2EjP7QWidget(arg0, arg1)
-    return &QLCDNumber{qclsinst:qthis}
+    return &QLCDNumber{Qclsinst:qthis}
   case 1:
     // invoke: _ZN10QLCDNumberC1EP7QWidget
     // invoke: void QLCDNumber(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QLCDNumberC2EP7QWidget(arg0)
-    return &QLCDNumber{qclsinst:qthis}
+    return &QLCDNumber{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QLCDNumber", "QLCDNumber", args)
   }
 
-  return nil // QLCDNumber{qclsinst:qthis}
+  return nil // QLCDNumber{Qclsinst:qthis}
 }
 
 // intValue()
@@ -279,11 +283,15 @@ func (this *QLCDNumber) Intvalue(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QLCDNumber8intValueEv
     // invoke: int intValue()
-    var ret0 = C.C_ZNK10QLCDNumber8intValueEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QLCDNumber8intValueEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLCDNumber", "intValue", args)
   }
@@ -304,11 +312,15 @@ func (this *QLCDNumber) Digitcount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QLCDNumber10digitCountEv
     // invoke: int digitCount()
-    var ret0 = C.C_ZNK10QLCDNumber10digitCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QLCDNumber10digitCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLCDNumber", "digitCount", args)
   }
@@ -329,11 +341,15 @@ func (this *QLCDNumber) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QLCDNumber8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK10QLCDNumber8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QLCDNumber8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLCDNumber", "sizeHint", args)
   }
@@ -354,7 +370,7 @@ func (this *QLCDNumber) Setoctmode(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QLCDNumber10setOctModeEv
     // invoke: void setOctMode()
-    C.C_ZN10QLCDNumber10setOctModeEv(this.qclsinst)
+    C.C_ZN10QLCDNumber10setOctModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "setOctMode", args)
   }
@@ -375,7 +391,7 @@ func (this *QLCDNumber) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QLCDNumber10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QLCDNumber10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QLCDNumber10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "metaObject", args)
   }
@@ -396,7 +412,7 @@ func (this *QLCDNumber) Setbinmode(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QLCDNumber10setBinModeEv
     // invoke: void setBinMode()
-    C.C_ZN10QLCDNumber10setBinModeEv(this.qclsinst)
+    C.C_ZN10QLCDNumber10setBinModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "setBinMode", args)
   }
@@ -417,11 +433,15 @@ func (this *QLCDNumber) Value(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QLCDNumber5valueEv
     // invoke: double value()
-    var ret0 = C.C_ZNK10QLCDNumber5valueEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QLCDNumber5valueEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "double"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLCDNumber", "value", args)
   }
@@ -443,9 +463,9 @@ func (this *QLCDNumber) Setdigitcount(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QLCDNumber13setDigitCountEi
     // invoke: void setDigitCount(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QLCDNumber13setDigitCountEi(this.qclsinst, arg0)
+    C.C_ZN10QLCDNumber13setDigitCountEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLCDNumber", "setDigitCount", args)
   }
@@ -466,7 +486,7 @@ func (this *QLCDNumber) Mode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QLCDNumber4modeEv
     // invoke: QLCDNumber::Mode mode()
-    C.C_ZNK10QLCDNumber4modeEv(this.qclsinst)
+    C.C_ZNK10QLCDNumber4modeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "mode", args)
   }
@@ -491,23 +511,31 @@ func (this *QLCDNumber) Checkoverflow(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QLCDNumber13checkOverflowEi
     // invoke: bool checkOverflow(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QLCDNumber13checkOverflowEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QLCDNumber13checkOverflowEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK10QLCDNumber13checkOverflowEd
     // invoke: bool checkOverflow(double)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QLCDNumber13checkOverflowEd(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QLCDNumber13checkOverflowEd(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLCDNumber", "checkOverflow", args)
   }
@@ -535,21 +563,21 @@ func (this *QLCDNumber) Display(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QLCDNumber7displayEi
     // invoke: void display(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QLCDNumber7displayEi(this.qclsinst, arg0)
+    C.C_ZN10QLCDNumber7displayEi(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN10QLCDNumber7displayEd
     // invoke: void display(double)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QLCDNumber7displayEd(this.qclsinst, arg0)
+    C.C_ZN10QLCDNumber7displayEd(this.Qclsinst, arg0)
   case 2:
     // invoke: _ZN10QLCDNumber7displayERK7QString
     // invoke: void display(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QLCDNumber7displayERK7QString(this.qclsinst, arg0)
+    C.C_ZN10QLCDNumber7displayERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLCDNumber", "display", args)
   }

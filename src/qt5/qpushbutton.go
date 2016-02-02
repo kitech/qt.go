@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qpushbutton.h
 // dst-file: /src/widgets/qpushbutton.go
 //
@@ -75,7 +75,7 @@ func init() {
 // class sizeof(QPushButton)=1
 type QPushButton struct {
   /*qbase*/ QAbstractButton;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // showMenu()
@@ -91,7 +91,7 @@ func (this *QPushButton) Showmenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPushButton8showMenuEv
     // invoke: void showMenu()
-    C.C_ZN11QPushButton8showMenuEv(this.qclsinst)
+    C.C_ZN11QPushButton8showMenuEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPushButton", "showMenu", args)
   }
@@ -113,9 +113,9 @@ func (this *QPushButton) Setmenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPushButton7setMenuEP5QMenu
     // invoke: void setMenu(class QMenu *)
-    var arg0 = args[0].(QMenu).qclsinst
+    var arg0 = args[0].(*QMenu).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QPushButton7setMenuEP5QMenu(this.qclsinst, arg0)
+    C.C_ZN11QPushButton7setMenuEP5QMenu(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPushButton", "setMenu", args)
   }
@@ -136,7 +136,7 @@ func (this *QPushButton) Freeqpushbutton(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPushButtonD0Ev
     // invoke: void ~QPushButton()
-    C.C_ZN11QPushButtonD2Ev(this.qclsinst)
+    C.C_ZN11QPushButtonD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPushButton", "~QPushButton", args)
   }
@@ -160,7 +160,7 @@ func (this *QPushButton) Setautodefault(args ...interface{}) () {
     // invoke: void setAutoDefault(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QPushButton14setAutoDefaultEb(this.qclsinst, arg0)
+    C.C_ZN11QPushButton14setAutoDefaultEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPushButton", "setAutoDefault", args)
   }
@@ -184,7 +184,7 @@ func (this *QPushButton) Setflat(args ...interface{}) () {
     // invoke: void setFlat(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QPushButton7setFlatEb(this.qclsinst, arg0)
+    C.C_ZN11QPushButton7setFlatEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPushButton", "setFlat", args)
   }
@@ -205,11 +205,15 @@ func (this *QPushButton) Menu(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPushButton4menuEv
     // invoke: QMenu * menu()
-    var ret0 = C.C_ZNK11QPushButton4menuEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPushButton4menuEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPushButton", "menu", args)
   }
@@ -240,41 +244,41 @@ func NewQPushButton(args ...interface{}) *QPushButton {
   case 0:
     // invoke: _ZN11QPushButtonC1ERK7QStringP7QWidget
     // invoke: void QPushButton(const class QString &, class QWidget *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QPushButtonC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QPushButton{qclsinst:qthis}
+    return &QPushButton{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QPushButtonC1ERK5QIconRK7QStringP7QWidget
     // invoke: void QPushButton(const class QIcon &, const class QString &, class QWidget *)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QPushButtonC2ERK5QIconRK7QStringP7QWidget(arg0, arg1, arg2)
-    return &QPushButton{qclsinst:qthis}
+    return &QPushButton{Qclsinst:qthis}
   case 2:
     // invoke: _ZN11QPushButtonC1EP7QWidget
     // invoke: void QPushButton(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QPushButtonC2EP7QWidget(arg0)
-    return &QPushButton{qclsinst:qthis}
+    return &QPushButton{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPushButton", "QPushButton", args)
   }
 
-  return nil // QPushButton{qclsinst:qthis}
+  return nil // QPushButton{Qclsinst:qthis}
 }
 
 // isFlat()
@@ -290,11 +294,15 @@ func (this *QPushButton) Isflat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPushButton6isFlatEv
     // invoke: bool isFlat()
-    var ret0 = C.C_ZNK11QPushButton6isFlatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPushButton6isFlatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPushButton", "isFlat", args)
   }
@@ -315,11 +323,15 @@ func (this *QPushButton) Isdefault(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPushButton9isDefaultEv
     // invoke: bool isDefault()
-    var ret0 = C.C_ZNK11QPushButton9isDefaultEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPushButton9isDefaultEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPushButton", "isDefault", args)
   }
@@ -343,7 +355,7 @@ func (this *QPushButton) Setdefault(args ...interface{}) () {
     // invoke: void setDefault(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QPushButton10setDefaultEb(this.qclsinst, arg0)
+    C.C_ZN11QPushButton10setDefaultEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPushButton", "setDefault", args)
   }
@@ -364,7 +376,7 @@ func (this *QPushButton) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPushButton10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QPushButton10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QPushButton10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPushButton", "metaObject", args)
   }
@@ -385,11 +397,15 @@ func (this *QPushButton) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPushButton8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK11QPushButton8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPushButton8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPushButton", "sizeHint", args)
   }
@@ -410,11 +426,15 @@ func (this *QPushButton) Minimumsizehint(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK11QPushButton15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK11QPushButton15minimumSizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPushButton15minimumSizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPushButton", "minimumSizeHint", args)
   }
@@ -435,11 +455,15 @@ func (this *QPushButton) Autodefault(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPushButton11autoDefaultEv
     // invoke: bool autoDefault()
-    var ret0 = C.C_ZNK11QPushButton11autoDefaultEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPushButton11autoDefaultEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPushButton", "autoDefault", args)
   }

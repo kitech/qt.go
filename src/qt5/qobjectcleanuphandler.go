@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qobjectcleanuphandler.h
 // dst-file: /src/core/qobjectcleanuphandler.go
 //
@@ -57,7 +57,7 @@ func init() {
 // class sizeof(QObjectCleanupHandler)=1
 type QObjectCleanupHandler struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // metaObject()
@@ -73,7 +73,7 @@ func (this *QObjectCleanupHandler) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QObjectCleanupHandler10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK21QObjectCleanupHandler10metaObjectEv(this.qclsinst)
+    C.C_ZNK21QObjectCleanupHandler10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "metaObject", args)
   }
@@ -94,7 +94,7 @@ func (this *QObjectCleanupHandler) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN21QObjectCleanupHandler5clearEv
     // invoke: void clear()
-    C.C_ZN21QObjectCleanupHandler5clearEv(this.qclsinst)
+    C.C_ZN21QObjectCleanupHandler5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "clear", args)
   }
@@ -118,12 +118,12 @@ func NewQObjectCleanupHandler(args ...interface{}) *QObjectCleanupHandler {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QObjectCleanupHandlerC2Ev()
-    return &QObjectCleanupHandler{qclsinst:qthis}
+    return &QObjectCleanupHandler{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "QObjectCleanupHandler", args)
   }
 
-  return nil // QObjectCleanupHandler{qclsinst:qthis}
+  return nil // QObjectCleanupHandler{Qclsinst:qthis}
 }
 
 // add(class QObject *)
@@ -140,13 +140,17 @@ func (this *QObjectCleanupHandler) Add(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN21QObjectCleanupHandler3addEP7QObject
     // invoke: QObject * add(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN21QObjectCleanupHandler3addEP7QObject(this.qclsinst, arg0)
+    var ret0 = C.C_ZN21QObjectCleanupHandler3addEP7QObject(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QObject{}) // "QObject *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "add", args)
   }
@@ -167,11 +171,15 @@ func (this *QObjectCleanupHandler) Isempty(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK21QObjectCleanupHandler7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK21QObjectCleanupHandler7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK21QObjectCleanupHandler7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "isEmpty", args)
   }
@@ -193,9 +201,9 @@ func (this *QObjectCleanupHandler) Remove(args ...interface{}) () {
   case 0:
     // invoke: _ZN21QObjectCleanupHandler6removeEP7QObject
     // invoke: void remove(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN21QObjectCleanupHandler6removeEP7QObject(this.qclsinst, arg0)
+    C.C_ZN21QObjectCleanupHandler6removeEP7QObject(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "remove", args)
   }
@@ -216,7 +224,7 @@ func (this *QObjectCleanupHandler) Freeqobjectcleanuphandler(args ...interface{}
   case 0:
     // invoke: _ZN21QObjectCleanupHandlerD0Ev
     // invoke: void ~QObjectCleanupHandler()
-    C.C_ZN21QObjectCleanupHandlerD2Ev(this.qclsinst)
+    C.C_ZN21QObjectCleanupHandlerD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "~QObjectCleanupHandler", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qdirmodel.h
 // dst-file: /src/widgets/qdirmodel.go
 //
@@ -113,7 +113,7 @@ func init() {
 // class sizeof(QDirModel)=1
 type QDirModel struct {
   /*qbase*/ QAbstractItemModel;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // columnCount(const class QModelIndex &)
@@ -130,13 +130,17 @@ func (this *QDirModel) Columncount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel11columnCountERK11QModelIndex
     // invoke: int columnCount(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDirModel11columnCountERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "columnCount", args)
   }
@@ -158,9 +162,9 @@ func (this *QDirModel) Setnamefilters(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDirModel14setNameFiltersERK11QStringList
     // invoke: void setNameFilters(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel14setNameFiltersERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN9QDirModel14setNameFiltersERK11QStringList(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "setNameFilters", args)
   }
@@ -182,9 +186,9 @@ func (this *QDirModel) Seticonprovider(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDirModel15setIconProviderEP17QFileIconProvider
     // invoke: void setIconProvider(class QFileIconProvider *)
-    var arg0 = args[0].(QFileIconProvider).qclsinst
+    var arg0 = args[0].(*QFileIconProvider).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel15setIconProviderEP17QFileIconProvider(this.qclsinst, arg0)
+    C.C_ZN9QDirModel15setIconProviderEP17QFileIconProvider(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "setIconProvider", args)
   }
@@ -208,7 +212,7 @@ func (this *QDirModel) Setlazychildcount(args ...interface{}) () {
     // invoke: void setLazyChildCount(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel17setLazyChildCountEb(this.qclsinst, arg0)
+    C.C_ZN9QDirModel17setLazyChildCountEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "setLazyChildCount", args)
   }
@@ -230,13 +234,17 @@ func (this *QDirModel) Isdir(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel5isDirERK11QModelIndex
     // invoke: bool isDir(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel5isDirERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDirModel5isDirERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "isDir", args)
   }
@@ -257,11 +265,15 @@ func (this *QDirModel) Lazychildcount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel14lazyChildCountEv
     // invoke: bool lazyChildCount()
-    var ret0 = C.C_ZNK9QDirModel14lazyChildCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDirModel14lazyChildCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "lazyChildCount", args)
   }
@@ -283,9 +295,9 @@ func (this *QDirModel) Refresh(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDirModel7refreshERK11QModelIndex
     // invoke: void refresh(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel7refreshERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN9QDirModel7refreshERK11QModelIndex(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "refresh", args)
   }
@@ -306,11 +318,15 @@ func (this *QDirModel) Resolvesymlinks(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel15resolveSymlinksEv
     // invoke: bool resolveSymlinks()
-    var ret0 = C.C_ZNK9QDirModel15resolveSymlinksEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDirModel15resolveSymlinksEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "resolveSymlinks", args)
   }
@@ -338,29 +354,37 @@ func (this *QDirModel) Index(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel5indexEiiRK11QModelIndex
     // invoke: QModelIndex index(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
+    var arg2 = args[2].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK9QDirModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK9QDirModel5indexEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK9QDirModel5indexERK7QStringi
     // invoke: QModelIndex index(const class QString &, int)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK9QDirModel5indexERK7QStringi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK9QDirModel5indexERK7QStringi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "index", args)
   }
@@ -382,13 +406,17 @@ func (this *QDirModel) Haschildren(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel11hasChildrenERK11QModelIndex
     // invoke: bool hasChildren(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDirModel11hasChildrenERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "hasChildren", args)
   }
@@ -409,11 +437,15 @@ func (this *QDirModel) Isreadonly(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel10isReadOnlyEv
     // invoke: bool isReadOnly()
-    var ret0 = C.C_ZNK9QDirModel10isReadOnlyEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDirModel10isReadOnlyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "isReadOnly", args)
   }
@@ -435,13 +467,17 @@ func (this *QDirModel) Filepath(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel8filePathERK11QModelIndex
     // invoke: QString filePath(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel8filePathERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDirModel8filePathERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "filePath", args)
   }
@@ -464,15 +500,19 @@ func (this *QDirModel) Mkdir(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QDirModel5mkdirERK11QModelIndexRK7QString
     // invoke: QModelIndex mkdir(const class QModelIndex &, const class QString &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN9QDirModel5mkdirERK11QModelIndexRK7QString(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN9QDirModel5mkdirERK11QModelIndexRK7QString(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "mkdir", args)
   }
@@ -494,13 +534,17 @@ func (this *QDirModel) Rmdir(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QDirModel5rmdirERK11QModelIndex
     // invoke: bool rmdir(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QDirModel5rmdirERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZN9QDirModel5rmdirERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "rmdir", args)
   }
@@ -524,7 +568,7 @@ func (this *QDirModel) Setresolvesymlinks(args ...interface{}) () {
     // invoke: void setResolveSymlinks(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel18setResolveSymlinksEb(this.qclsinst, arg0)
+    C.C_ZN9QDirModel18setResolveSymlinksEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "setResolveSymlinks", args)
   }
@@ -546,13 +590,17 @@ func (this *QDirModel) Fileinfo(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel8fileInfoERK11QModelIndex
     // invoke: QFileInfo fileInfo(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel8fileInfoERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDirModel8fileInfoERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFileInfo{}) // "QFileInfo"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "fileInfo", args)
   }
@@ -576,17 +624,21 @@ func (this *QDirModel) Setdata(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti
     // invoke: bool setData(const class QModelIndex &, const class QVariant &, int)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QVariant).qclsinst
+    var arg1 = args[1].(*QVariant).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "setData", args)
   }
@@ -608,13 +660,17 @@ func (this *QDirModel) Parent(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel6parentERK11QModelIndex
     // invoke: QModelIndex parent(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel6parentERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDirModel6parentERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "parent", args)
   }
@@ -636,13 +692,17 @@ func (this *QDirModel) Filename(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel8fileNameERK11QModelIndex
     // invoke: QString fileName(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel8fileNameERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDirModel8fileNameERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "fileName", args)
   }
@@ -664,13 +724,17 @@ func (this *QDirModel) Rowcount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel8rowCountERK11QModelIndex
     // invoke: int rowCount(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDirModel8rowCountERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "rowCount", args)
   }
@@ -691,7 +755,7 @@ func (this *QDirModel) Freeqdirmodel(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDirModelD0Ev
     // invoke: void ~QDirModel()
-    C.C_ZN9QDirModelD2Ev(this.qclsinst)
+    C.C_ZN9QDirModelD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "~QDirModel", args)
   }
@@ -712,7 +776,7 @@ func (this *QDirModel) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QDirModel10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QDirModel10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "metaObject", args)
   }
@@ -735,15 +799,19 @@ func (this *QDirModel) Data(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel4dataERK11QModelIndexi
     // invoke: QVariant data(const class QModelIndex &, int)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK9QDirModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK9QDirModel4dataERK11QModelIndexi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "data", args)
   }
@@ -764,7 +832,7 @@ func (this *QDirModel) Mimetypes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel9mimeTypesEv
     // invoke: QStringList mimeTypes()
-    C.C_ZNK9QDirModel9mimeTypesEv(this.qclsinst)
+    C.C_ZNK9QDirModel9mimeTypesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "mimeTypes", args)
   }
@@ -785,7 +853,7 @@ func (this *QDirModel) Sorting(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel7sortingEv
     // invoke: QDir::SortFlags sorting()
-    C.C_ZNK9QDirModel7sortingEv(this.qclsinst)
+    C.C_ZNK9QDirModel7sortingEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "sorting", args)
   }
@@ -806,11 +874,15 @@ func (this *QDirModel) Iconprovider(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel12iconProviderEv
     // invoke: QFileIconProvider * iconProvider()
-    var ret0 = C.C_ZNK9QDirModel12iconProviderEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDirModel12iconProviderEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFileIconProvider{}) // "QFileIconProvider *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "iconProvider", args)
   }
@@ -831,7 +903,7 @@ func (this *QDirModel) Namefilters(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel11nameFiltersEv
     // invoke: QStringList nameFilters()
-    C.C_ZNK9QDirModel11nameFiltersEv(this.qclsinst)
+    C.C_ZNK9QDirModel11nameFiltersEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "nameFilters", args)
   }
@@ -853,17 +925,17 @@ func NewQDirModel(args ...interface{}) *QDirModel {
   case 0:
     // invoke: _ZN9QDirModelC1EP7QObject
     // invoke: void QDirModel(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDirModelC2EP7QObject(arg0)
-    return &QDirModel{qclsinst:qthis}
+    return &QDirModel{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDirModel", "QDirModel", args)
   }
 
-  return nil // QDirModel{qclsinst:qthis}
+  return nil // QDirModel{Qclsinst:qthis}
 }
 
 // remove(const class QModelIndex &)
@@ -880,13 +952,17 @@ func (this *QDirModel) Remove(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QDirModel6removeERK11QModelIndex
     // invoke: bool remove(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QDirModel6removeERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZN9QDirModel6removeERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "remove", args)
   }
@@ -907,7 +983,7 @@ func (this *QDirModel) Filter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel6filterEv
     // invoke: QDir::Filters filter()
-    C.C_ZNK9QDirModel6filterEv(this.qclsinst)
+    C.C_ZNK9QDirModel6filterEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "filter", args)
   }
@@ -931,7 +1007,7 @@ func (this *QDirModel) Setreadonly(args ...interface{}) () {
     // invoke: void setReadOnly(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel11setReadOnlyEb(this.qclsinst, arg0)
+    C.C_ZN9QDirModel11setReadOnlyEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "setReadOnly", args)
   }
@@ -953,9 +1029,9 @@ func (this *QDirModel) Flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel5flagsERK11QModelIndex
     // invoke: Qt::ItemFlags flags(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QDirModel5flagsERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK9QDirModel5flagsERK11QModelIndex(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDirModel", "flags", args)
   }
@@ -977,13 +1053,17 @@ func (this *QDirModel) Fileicon(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDirModel8fileIconERK11QModelIndex
     // invoke: QIcon fileIcon(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDirModel8fileIconERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDirModel8fileIconERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIcon{}) // "QIcon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "fileIcon", args)
   }
@@ -1004,7 +1084,7 @@ func (this *QDirModel) Supporteddropactions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel20supportedDropActionsEv
     // invoke: Qt::DropActions supportedDropActions()
-    C.C_ZNK9QDirModel20supportedDropActionsEv(this.qclsinst)
+    C.C_ZNK9QDirModel20supportedDropActionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDirModel", "supportedDropActions", args)
   }

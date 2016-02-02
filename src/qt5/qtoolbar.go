@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.go
 //
@@ -99,7 +99,7 @@ func init() {
 // class sizeof(QToolBar)=1
 type QToolBar struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _iconSizeChanged QToolBar_iconSizeChanged_signal;
 //  _allowedAreasChanged QToolBar_allowedAreasChanged_signal;
 //  _movableChanged QToolBar_movableChanged_signal;
@@ -139,59 +139,75 @@ func (this *QToolBar) Addaction(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc
     // invoke: QAction * addAction(const class QIcon &, const class QString &, const class QObject *, const char *)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QObject).qclsinst
+    var arg2 = args[2].(*QObject).Qclsinst
     if false {fmt.Println(arg2)}
     argif3, free3 := qtrt.HandyConvert2c(args[3], vtys[0][3])
     var arg3 = argif3.(unsafe.Pointer)
     if false {fmt.Println(argif3, arg3)}
     if free3 {defer C.free(arg3)}
-    var ret0 = C.C_ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN8QToolBar9addActionERK7QStringPK7QObjectPKc
     // invoke: QAction * addAction(const class QString &, const class QObject *, const char *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
     argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[1][2])
     var arg2 = argif2.(unsafe.Pointer)
     if false {fmt.Println(argif2, arg2)}
     if free2 {defer C.free(arg2)}
-    var ret0 = C.C_ZN8QToolBar9addActionERK7QStringPK7QObjectPKc(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN8QToolBar9addActionERK7QStringPK7QObjectPKc(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN8QToolBar9addActionERK5QIconRK7QString
     // invoke: QAction * addAction(const class QIcon &, const class QString &)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN8QToolBar9addActionERK5QIconRK7QString(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN8QToolBar9addActionERK5QIconRK7QString(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZN8QToolBar9addActionERK7QString
     // invoke: QAction * addAction(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QToolBar9addActionERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN8QToolBar9addActionERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "addAction", args)
   }
@@ -212,7 +228,7 @@ func (this *QToolBar) Orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QToolBar11orientationEv
     // invoke: Qt::Orientation orientation()
-    C.C_ZNK8QToolBar11orientationEv(this.qclsinst)
+    C.C_ZNK8QToolBar11orientationEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QToolBar", "orientation", args)
   }
@@ -238,25 +254,33 @@ func (this *QToolBar) Actionat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QToolBar8actionAtEii
     // invoke: QAction * actionAt(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK8QToolBar8actionAtEii(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK8QToolBar8actionAtEii(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK8QToolBar8actionAtERK6QPoint
     // invoke: QAction * actionAt(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QToolBar8actionAtERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QToolBar8actionAtERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "actionAt", args)
   }
@@ -277,11 +301,15 @@ func (this *QToolBar) Isfloating(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QToolBar10isFloatingEv
     // invoke: bool isFloating()
-    var ret0 = C.C_ZNK8QToolBar10isFloatingEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QToolBar10isFloatingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "isFloating", args)
   }
@@ -303,13 +331,17 @@ func (this *QToolBar) Actiongeometry(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QToolBar14actionGeometryEP7QAction
     // invoke: QRect actionGeometry(class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QToolBar14actionGeometryEP7QAction(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QToolBar14actionGeometryEP7QAction(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "actionGeometry", args)
   }
@@ -330,11 +362,15 @@ func (this *QToolBar) Isfloatable(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QToolBar11isFloatableEv
     // invoke: bool isFloatable()
-    var ret0 = C.C_ZNK8QToolBar11isFloatableEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QToolBar11isFloatableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "isFloatable", args)
   }
@@ -356,13 +392,17 @@ func (this *QToolBar) Insertseparator(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QToolBar15insertSeparatorEP7QAction
     // invoke: QAction * insertSeparator(class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QToolBar15insertSeparatorEP7QAction(this.qclsinst, arg0)
+    var ret0 = C.C_ZN8QToolBar15insertSeparatorEP7QAction(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "insertSeparator", args)
   }
@@ -383,11 +423,15 @@ func (this *QToolBar) Toggleviewaction(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QToolBar16toggleViewActionEv
     // invoke: QAction * toggleViewAction()
-    var ret0 = C.C_ZNK8QToolBar16toggleViewActionEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QToolBar16toggleViewActionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "toggleViewAction", args)
   }
@@ -411,7 +455,7 @@ func (this *QToolBar) Setmovable(args ...interface{}) () {
     // invoke: void setMovable(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QToolBar10setMovableEb(this.qclsinst, arg0)
+    C.C_ZN8QToolBar10setMovableEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBar", "setMovable", args)
   }
@@ -432,11 +476,15 @@ func (this *QToolBar) Ismovable(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QToolBar9isMovableEv
     // invoke: bool isMovable()
-    var ret0 = C.C_ZNK8QToolBar9isMovableEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QToolBar9isMovableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "isMovable", args)
   }
@@ -462,28 +510,28 @@ func NewQToolBar(args ...interface{}) *QToolBar {
   case 0:
     // invoke: _ZN8QToolBarC1EP7QWidget
     // invoke: void QToolBar(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QToolBarC2EP7QWidget(arg0)
-    return &QToolBar{qclsinst:qthis}
+    return &QToolBar{Qclsinst:qthis}
   case 1:
     // invoke: _ZN8QToolBarC1ERK7QStringP7QWidget
     // invoke: void QToolBar(const class QString &, class QWidget *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QToolBarC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QToolBar{qclsinst:qthis}
+    return &QToolBar{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QToolBar", "QToolBar", args)
   }
 
-  return nil // QToolBar{qclsinst:qthis}
+  return nil // QToolBar{Qclsinst:qthis}
 }
 
 // addSeparator()
@@ -499,11 +547,15 @@ func (this *QToolBar) Addseparator(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QToolBar12addSeparatorEv
     // invoke: QAction * addSeparator()
-    var ret0 = C.C_ZN8QToolBar12addSeparatorEv(this.qclsinst)
+    var ret0 = C.C_ZN8QToolBar12addSeparatorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "addSeparator", args)
   }
@@ -524,11 +576,15 @@ func (this *QToolBar) Iconsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QToolBar8iconSizeEv
     // invoke: QSize iconSize()
-    var ret0 = C.C_ZNK8QToolBar8iconSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QToolBar8iconSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "iconSize", args)
   }
@@ -551,15 +607,19 @@ func (this *QToolBar) Insertwidget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QToolBar12insertWidgetEP7QActionP7QWidget
     // invoke: QAction * insertWidget(class QAction *, class QWidget *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN8QToolBar12insertWidgetEP7QActionP7QWidget(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN8QToolBar12insertWidgetEP7QActionP7QWidget(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "insertWidget", args)
   }
@@ -580,7 +640,7 @@ func (this *QToolBar) Freeqtoolbar(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolBarD0Ev
     // invoke: void ~QToolBar()
-    C.C_ZN8QToolBarD2Ev(this.qclsinst)
+    C.C_ZN8QToolBarD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QToolBar", "~QToolBar", args)
   }
@@ -602,13 +662,17 @@ func (this *QToolBar) Widgetforaction(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QToolBar15widgetForActionEP7QAction
     // invoke: QWidget * widgetForAction(class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QToolBar15widgetForActionEP7QAction(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QToolBar15widgetForActionEP7QAction(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "widgetForAction", args)
   }
@@ -630,13 +694,17 @@ func (this *QToolBar) Addwidget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QToolBar9addWidgetEP7QWidget
     // invoke: QAction * addWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QToolBar9addWidgetEP7QWidget(this.qclsinst, arg0)
+    var ret0 = C.C_ZN8QToolBar9addWidgetEP7QWidget(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "addWidget", args)
   }
@@ -657,7 +725,7 @@ func (this *QToolBar) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QToolBar10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK8QToolBar10metaObjectEv(this.qclsinst)
+    C.C_ZNK8QToolBar10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QToolBar", "metaObject", args)
   }
@@ -681,7 +749,7 @@ func (this *QToolBar) Setfloatable(args ...interface{}) () {
     // invoke: void setFloatable(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QToolBar12setFloatableEb(this.qclsinst, arg0)
+    C.C_ZN8QToolBar12setFloatableEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBar", "setFloatable", args)
   }
@@ -702,7 +770,7 @@ func (this *QToolBar) Allowedareas(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QToolBar12allowedAreasEv
     // invoke: Qt::ToolBarAreas allowedAreas()
-    C.C_ZNK8QToolBar12allowedAreasEv(this.qclsinst)
+    C.C_ZNK8QToolBar12allowedAreasEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QToolBar", "allowedAreas", args)
   }
@@ -723,7 +791,7 @@ func (this *QToolBar) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolBar5clearEv
     // invoke: void clear()
-    C.C_ZN8QToolBar5clearEv(this.qclsinst)
+    C.C_ZN8QToolBar5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QToolBar", "clear", args)
   }
@@ -745,9 +813,9 @@ func (this *QToolBar) Seticonsize(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolBar11setIconSizeERK5QSize
     // invoke: void setIconSize(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QToolBar11setIconSizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN8QToolBar11setIconSizeERK5QSize(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBar", "setIconSize", args)
   }
@@ -768,7 +836,7 @@ func (this *QToolBar) Toolbuttonstyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QToolBar15toolButtonStyleEv
     // invoke: Qt::ToolButtonStyle toolButtonStyle()
-    C.C_ZNK8QToolBar15toolButtonStyleEv(this.qclsinst)
+    C.C_ZNK8QToolBar15toolButtonStyleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QToolBar", "toolButtonStyle", args)
   }

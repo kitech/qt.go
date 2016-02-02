@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qdatetime.h
 // dst-file: /src/core/qdatetime.go
 //
@@ -229,19 +229,19 @@ func init() {
 // class sizeof(QTime)=4
 type QTime struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QDateTime)=1
 type QDateTime struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QDate)=8
 type QDate struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // fromString(const class QString &, const class QString &)
@@ -259,15 +259,19 @@ func (this *QTime) Fromstring_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QTime10fromStringERK7QStringS2_
     // invoke: QTime fromString(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN5QTime10fromStringERK7QStringS2_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTime{}) // "QTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "fromString", args)
   }
@@ -294,30 +298,30 @@ func NewQTime(args ...interface{}) *QTime {
   case 0:
     // invoke: _ZN5QTimeC1Eiiii
     // invoke: void QTime(int, int, int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QTimeC2Eiiii(arg0, arg1, arg2, arg3)
-    return &QTime{qclsinst:qthis}
+    return &QTime{Qclsinst:qthis}
   case 1:
     // invoke: _ZN5QTimeC1Ev
     // invoke: void QTime()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QTimeC2Ev()
-    return &QTime{qclsinst:qthis}
+    return &QTime{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTime", "QTime", args)
   }
 
-  return nil // QTime{qclsinst:qthis}
+  return nil // QTime{Qclsinst:qthis}
 }
 
 // msec()
@@ -333,11 +337,15 @@ func (this *QTime) Msec(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QTime4msecEv
     // invoke: int msec()
-    var ret0 = C.C_ZNK5QTime4msecEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QTime4msecEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "msec", args)
   }
@@ -358,11 +366,15 @@ func (this *QTime) Second(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QTime6secondEv
     // invoke: int second()
-    var ret0 = C.C_ZNK5QTime6secondEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QTime6secondEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "second", args)
   }
@@ -383,11 +395,15 @@ func (this *QTime) Msecssincestartofday(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QTime20msecsSinceStartOfDayEv
     // invoke: int msecsSinceStartOfDay()
-    var ret0 = C.C_ZNK5QTime20msecsSinceStartOfDayEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QTime20msecsSinceStartOfDayEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "msecsSinceStartOfDay", args)
   }
@@ -412,19 +428,23 @@ func (this *QTime) Sethms(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QTime6setHMSEiiii
     // invoke: bool setHMS(int, int, int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN5QTime6setHMSEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZN5QTime6setHMSEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "setHMS", args)
   }
@@ -446,13 +466,17 @@ func (this *QTime) Addmsecs(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QTime8addMSecsEi
     // invoke: QTime addMSecs(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QTime8addMSecsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QTime8addMSecsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTime{}) // "QTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "addMSecs", args)
   }
@@ -473,7 +497,7 @@ func (this *QTime) Start(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QTime5startEv
     // invoke: void start()
-    C.C_ZN5QTime5startEv(this.qclsinst)
+    C.C_ZN5QTime5startEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTime", "start", args)
   }
@@ -495,13 +519,17 @@ func (this *QTime) Frommsecssincestartofday_S(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZN5QTime24fromMSecsSinceStartOfDayEi
     // invoke: QTime fromMSecsSinceStartOfDay(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN5QTime24fromMSecsSinceStartOfDayEi(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTime{}) // "QTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "fromMSecsSinceStartOfDay", args)
   }
@@ -522,11 +550,15 @@ func (this *QTime) Minute(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QTime6minuteEv
     // invoke: int minute()
-    var ret0 = C.C_ZNK5QTime6minuteEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QTime6minuteEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "minute", args)
   }
@@ -548,13 +580,17 @@ func (this *QTime) Tostring(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QTime8toStringERK7QString
     // invoke: QString toString(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QTime8toStringERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QTime8toStringERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "toString", args)
   }
@@ -581,27 +617,35 @@ func (this *QTime) Isvalid_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QTime7isValidEiiii
     // invoke: bool isValid(int, int, int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
     var ret0 = C.C_ZN5QTime7isValidEiiii(arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK5QTime7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK5QTime7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QTime7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "isValid", args)
   }
@@ -623,13 +667,17 @@ func (this *QTime) Secsto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QTime6secsToERKS_
     // invoke: int secsTo(const class QTime &)
-    var arg0 = args[0].(QTime).qclsinst
+    var arg0 = args[0].(*QTime).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QTime6secsToERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QTime6secsToERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "secsTo", args)
   }
@@ -650,11 +698,15 @@ func (this *QTime) Elapsed(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QTime7elapsedEv
     // invoke: int elapsed()
-    var ret0 = C.C_ZNK5QTime7elapsedEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QTime7elapsedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "elapsed", args)
   }
@@ -676,13 +728,17 @@ func (this *QTime) Addsecs(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QTime7addSecsEi
     // invoke: QTime addSecs(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QTime7addSecsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QTime7addSecsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTime{}) // "QTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "addSecs", args)
   }
@@ -704,13 +760,17 @@ func (this *QTime) Msecsto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QTime7msecsToERKS_
     // invoke: int msecsTo(const class QTime &)
-    var arg0 = args[0].(QTime).qclsinst
+    var arg0 = args[0].(*QTime).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QTime7msecsToERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QTime7msecsToERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "msecsTo", args)
   }
@@ -731,11 +791,15 @@ func (this *QTime) Restart(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QTime7restartEv
     // invoke: int restart()
-    var ret0 = C.C_ZN5QTime7restartEv(this.qclsinst)
+    var ret0 = C.C_ZN5QTime7restartEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "restart", args)
   }
@@ -756,11 +820,15 @@ func (this *QTime) Hour(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QTime4hourEv
     // invoke: int hour()
-    var ret0 = C.C_ZNK5QTime4hourEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QTime4hourEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "hour", args)
   }
@@ -785,7 +853,11 @@ func (this *QTime) Currenttime_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTime{}) // "QTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "currentTime", args)
   }
@@ -806,11 +878,15 @@ func (this *QTime) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QTime6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK5QTime6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QTime6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTime", "isNull", args)
   }
@@ -833,15 +909,19 @@ func (this *QDateTime) Fromstring_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QDateTime10fromStringERK7QStringS2_
     // invoke: QDateTime fromString(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN9QDateTime10fromStringERK7QStringS2_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "fromString", args)
   }
@@ -863,9 +943,9 @@ func (this *QDateTime) Setoffsetfromutc(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDateTime16setOffsetFromUtcEi
     // invoke: void setOffsetFromUtc(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDateTime16setOffsetFromUtcEi(this.qclsinst, arg0)
+    C.C_ZN9QDateTime16setOffsetFromUtcEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDateTime", "setOffsetFromUtc", args)
   }
@@ -886,11 +966,15 @@ func (this *QDateTime) Totime_T(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime8toTime_tEv
     // invoke: uint toTime_t()
-    var ret0 = C.C_ZNK9QDateTime8toTime_tEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime8toTime_tEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "uint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "toTime_t", args)
   }
@@ -912,13 +996,17 @@ func (this *QDateTime) Totimezone(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime10toTimeZoneERK9QTimeZone
     // invoke: QDateTime toTimeZone(const class QTimeZone &)
-    var arg0 = args[0].(QTimeZone).qclsinst
+    var arg0 = args[0].(*QTimeZone).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDateTime10toTimeZoneERK9QTimeZone(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDateTime10toTimeZoneERK9QTimeZone(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "toTimeZone", args)
   }
@@ -939,11 +1027,15 @@ func (this *QDateTime) Toutc(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime5toUTCEv
     // invoke: QDateTime toUTC()
-    var ret0 = C.C_ZNK9QDateTime5toUTCEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime5toUTCEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "toUTC", args)
   }
@@ -965,9 +1057,9 @@ func (this *QDateTime) Setutcoffset(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDateTime12setUtcOffsetEi
     // invoke: void setUtcOffset(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDateTime12setUtcOffsetEi(this.qclsinst, arg0)
+    C.C_ZN9QDateTime12setUtcOffsetEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDateTime", "setUtcOffset", args)
   }
@@ -989,9 +1081,9 @@ func (this *QDateTime) Settimezone(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDateTime11setTimeZoneERK9QTimeZone
     // invoke: void setTimeZone(const class QTimeZone &)
-    var arg0 = args[0].(QTimeZone).qclsinst
+    var arg0 = args[0].(*QTimeZone).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDateTime11setTimeZoneERK9QTimeZone(this.qclsinst, arg0)
+    C.C_ZN9QDateTime11setTimeZoneERK9QTimeZone(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDateTime", "setTimeZone", args)
   }
@@ -1023,46 +1115,46 @@ func NewQDateTime(args ...interface{}) *QDateTime {
   case 0:
     // invoke: _ZN9QDateTimeC1ERKS_
     // invoke: void QDateTime(const class QDateTime &)
-    var arg0 = args[0].(QDateTime).qclsinst
+    var arg0 = args[0].(*QDateTime).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateTimeC2ERKS_(arg0)
-    return &QDateTime{qclsinst:qthis}
+    return &QDateTime{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QDateTimeC1ERK5QDate
     // invoke: void QDateTime(const class QDate &)
-    var arg0 = args[0].(QDate).qclsinst
+    var arg0 = args[0].(*QDate).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateTimeC2ERK5QDate(arg0)
-    return &QDateTime{qclsinst:qthis}
+    return &QDateTime{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QDateTimeC1Ev
     // invoke: void QDateTime()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateTimeC2Ev()
-    return &QDateTime{qclsinst:qthis}
+    return &QDateTime{Qclsinst:qthis}
   case 3:
     // invoke: _ZN9QDateTimeC1ERK5QDateRK5QTimeRK9QTimeZone
     // invoke: void QDateTime(const class QDate &, const class QTime &, const class QTimeZone &)
-    var arg0 = args[0].(QDate).qclsinst
+    var arg0 = args[0].(*QDate).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QTime).qclsinst
+    var arg1 = args[1].(*QTime).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QTimeZone).qclsinst
+    var arg2 = args[2].(*QTimeZone).Qclsinst
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateTimeC2ERK5QDateRK5QTimeRK9QTimeZone(arg0, arg1, arg2)
-    return &QDateTime{qclsinst:qthis}
+    return &QDateTime{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDateTime", "QDateTime", args)
   }
 
-  return nil // QDateTime{qclsinst:qthis}
+  return nil // QDateTime{Qclsinst:qthis}
 }
 
 // ~QDateTime()
@@ -1078,7 +1170,7 @@ func (this *QDateTime) Freeqdatetime(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDateTimeD0Ev
     // invoke: void ~QDateTime()
-    C.C_ZN9QDateTimeD2Ev(this.qclsinst)
+    C.C_ZN9QDateTimeD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDateTime", "~QDateTime", args)
   }
@@ -1100,13 +1192,17 @@ func (this *QDateTime) Tooffsetfromutc(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime15toOffsetFromUtcEi
     // invoke: QDateTime toOffsetFromUtc(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDateTime15toOffsetFromUtcEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDateTime15toOffsetFromUtcEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "toOffsetFromUtc", args)
   }
@@ -1128,13 +1224,17 @@ func (this *QDateTime) Addmsecs(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime8addMSecsEx
     // invoke: QDateTime addMSecs(qint64)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDateTime8addMSecsEx(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDateTime8addMSecsEx(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "addMSecs", args)
   }
@@ -1156,13 +1256,17 @@ func (this *QDateTime) Addmonths(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime9addMonthsEi
     // invoke: QDateTime addMonths(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDateTime9addMonthsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDateTime9addMonthsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "addMonths", args)
   }
@@ -1183,11 +1287,15 @@ func (this *QDateTime) Offsetfromutc(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime13offsetFromUtcEv
     // invoke: int offsetFromUtc()
-    var ret0 = C.C_ZNK9QDateTime13offsetFromUtcEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime13offsetFromUtcEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "offsetFromUtc", args)
   }
@@ -1209,13 +1317,17 @@ func (this *QDateTime) Tostring(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime8toStringERK7QString
     // invoke: QString toString(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDateTime8toStringERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDateTime8toStringERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "toString", args)
   }
@@ -1237,9 +1349,9 @@ func (this *QDateTime) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDateTime4swapERS_
     // invoke: void swap(class QDateTime &)
-    var arg0 = args[0].(QDateTime).qclsinst
+    var arg0 = args[0].(*QDateTime).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDateTime4swapERS_(this.qclsinst, arg0)
+    C.C_ZN9QDateTime4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDateTime", "swap", args)
   }
@@ -1261,9 +1373,9 @@ func (this *QDateTime) Setdate(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDateTime7setDateERK5QDate
     // invoke: void setDate(const class QDate &)
-    var arg0 = args[0].(QDate).qclsinst
+    var arg0 = args[0].(*QDate).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDateTime7setDateERK5QDate(this.qclsinst, arg0)
+    C.C_ZN9QDateTime7setDateERK5QDate(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDateTime", "setDate", args)
   }
@@ -1288,7 +1400,11 @@ func (this *QDateTime) Currentdatetime_S(args ...interface{}) (ret interface{}) 
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "currentDateTime", args)
   }
@@ -1313,7 +1429,11 @@ func (this *QDateTime) Currentdatetimeutc_S(args ...interface{}) (ret interface{
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "currentDateTimeUtc", args)
   }
@@ -1338,7 +1458,11 @@ func (this *QDateTime) Currentmsecssinceepoch_S(args ...interface{}) (ret interf
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "currentMSecsSinceEpoch", args)
   }
@@ -1359,11 +1483,15 @@ func (this *QDateTime) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK9QDateTime7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "isValid", args)
   }
@@ -1385,13 +1513,17 @@ func (this *QDateTime) Secsto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime6secsToERKS_
     // invoke: qint64 secsTo(const class QDateTime &)
-    var arg0 = args[0].(QDateTime).qclsinst
+    var arg0 = args[0].(*QDateTime).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDateTime6secsToERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDateTime6secsToERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "secsTo", args)
   }
@@ -1413,9 +1545,9 @@ func (this *QDateTime) Setmsecssinceepoch(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDateTime18setMSecsSinceEpochEx
     // invoke: void setMSecsSinceEpoch(qint64)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDateTime18setMSecsSinceEpochEx(this.qclsinst, arg0)
+    C.C_ZN9QDateTime18setMSecsSinceEpochEx(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDateTime", "setMSecsSinceEpoch", args)
   }
@@ -1437,13 +1569,17 @@ func (this *QDateTime) Adddays(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime7addDaysEx
     // invoke: QDateTime addDays(qint64)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDateTime7addDaysEx(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDateTime7addDaysEx(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "addDays", args)
   }
@@ -1465,9 +1601,9 @@ func (this *QDateTime) Settime_T(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDateTime9setTime_tEj
     // invoke: void setTime_t(uint)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDateTime9setTime_tEj(this.qclsinst, arg0)
+    C.C_ZN9QDateTime9setTime_tEj(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDateTime", "setTime_t", args)
   }
@@ -1489,13 +1625,17 @@ func (this *QDateTime) Addsecs(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime7addSecsEx
     // invoke: QDateTime addSecs(qint64)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDateTime7addSecsEx(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDateTime7addSecsEx(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "addSecs", args)
   }
@@ -1516,11 +1656,15 @@ func (this *QDateTime) Timezoneabbreviation(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK9QDateTime20timeZoneAbbreviationEv
     // invoke: QString timeZoneAbbreviation()
-    var ret0 = C.C_ZNK9QDateTime20timeZoneAbbreviationEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime20timeZoneAbbreviationEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "timeZoneAbbreviation", args)
   }
@@ -1542,9 +1686,9 @@ func (this *QDateTime) Settime(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDateTime7setTimeERK5QTime
     // invoke: void setTime(const class QTime &)
-    var arg0 = args[0].(QTime).qclsinst
+    var arg0 = args[0].(*QTime).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDateTime7setTimeERK5QTime(this.qclsinst, arg0)
+    C.C_ZN9QDateTime7setTimeERK5QTime(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDateTime", "setTime", args)
   }
@@ -1565,11 +1709,15 @@ func (this *QDateTime) Tomsecssinceepoch(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK9QDateTime17toMSecsSinceEpochEv
     // invoke: qint64 toMSecsSinceEpoch()
-    var ret0 = C.C_ZNK9QDateTime17toMSecsSinceEpochEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime17toMSecsSinceEpochEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "toMSecsSinceEpoch", args)
   }
@@ -1591,13 +1739,17 @@ func (this *QDateTime) Msecsto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime7msecsToERKS_
     // invoke: qint64 msecsTo(const class QDateTime &)
-    var arg0 = args[0].(QDateTime).qclsinst
+    var arg0 = args[0].(*QDateTime).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDateTime7msecsToERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDateTime7msecsToERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "msecsTo", args)
   }
@@ -1618,11 +1770,15 @@ func (this *QDateTime) Date(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime4dateEv
     // invoke: QDate date()
-    var ret0 = C.C_ZNK9QDateTime4dateEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime4dateEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDate{}) // "QDate"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "date", args)
   }
@@ -1644,13 +1800,17 @@ func (this *QDateTime) Daysto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime6daysToERKS_
     // invoke: qint64 daysTo(const class QDateTime &)
-    var arg0 = args[0].(QDateTime).qclsinst
+    var arg0 = args[0].(*QDateTime).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDateTime6daysToERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDateTime6daysToERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "daysTo", args)
   }
@@ -1671,11 +1831,15 @@ func (this *QDateTime) Tolocaltime(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime11toLocalTimeEv
     // invoke: QDateTime toLocalTime()
-    var ret0 = C.C_ZNK9QDateTime11toLocalTimeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime11toLocalTimeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "toLocalTime", args)
   }
@@ -1696,7 +1860,7 @@ func (this *QDateTime) Timespec(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDateTime8timeSpecEv
     // invoke: Qt::TimeSpec timeSpec()
-    C.C_ZNK9QDateTime8timeSpecEv(this.qclsinst)
+    C.C_ZNK9QDateTime8timeSpecEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDateTime", "timeSpec", args)
   }
@@ -1722,25 +1886,33 @@ func (this *QDateTime) Fromtime_T_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QDateTime10fromTime_tEjRK9QTimeZone
     // invoke: QDateTime fromTime_t(uint, const class QTimeZone &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QTimeZone).qclsinst
+    var arg1 = args[1].(*QTimeZone).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN9QDateTime10fromTime_tEjRK9QTimeZone(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN9QDateTime10fromTime_tEj
     // invoke: QDateTime fromTime_t(uint)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN9QDateTime10fromTime_tEj(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "fromTime_t", args)
   }
@@ -1766,25 +1938,33 @@ func (this *QDateTime) Frommsecssinceepoch_S(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZN9QDateTime19fromMSecsSinceEpochEx
     // invoke: QDateTime fromMSecsSinceEpoch(qint64)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN9QDateTime19fromMSecsSinceEpochEx(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN9QDateTime19fromMSecsSinceEpochExRK9QTimeZone
     // invoke: QDateTime fromMSecsSinceEpoch(qint64, const class QTimeZone &)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QTimeZone).qclsinst
+    var arg1 = args[1].(*QTimeZone).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN9QDateTime19fromMSecsSinceEpochExRK9QTimeZone(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "fromMSecsSinceEpoch", args)
   }
@@ -1805,11 +1985,15 @@ func (this *QDateTime) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK9QDateTime6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "isNull", args)
   }
@@ -1830,11 +2014,15 @@ func (this *QDateTime) Utcoffset(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime9utcOffsetEv
     // invoke: int utcOffset()
-    var ret0 = C.C_ZNK9QDateTime9utcOffsetEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime9utcOffsetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "utcOffset", args)
   }
@@ -1855,11 +2043,15 @@ func (this *QDateTime) Time(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime4timeEv
     // invoke: QTime time()
-    var ret0 = C.C_ZNK9QDateTime4timeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime4timeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTime{}) // "QTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "time", args)
   }
@@ -1880,11 +2072,15 @@ func (this *QDateTime) Timezone(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime8timeZoneEv
     // invoke: QTimeZone timeZone()
-    var ret0 = C.C_ZNK9QDateTime8timeZoneEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime8timeZoneEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTimeZone{}) // "QTimeZone"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "timeZone", args)
   }
@@ -1905,11 +2101,15 @@ func (this *QDateTime) Isdaylighttime(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime14isDaylightTimeEv
     // invoke: bool isDaylightTime()
-    var ret0 = C.C_ZNK9QDateTime14isDaylightTimeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QDateTime14isDaylightTimeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "isDaylightTime", args)
   }
@@ -1931,13 +2131,17 @@ func (this *QDateTime) Addyears(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QDateTime8addYearsEi
     // invoke: QDateTime addYears(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QDateTime8addYearsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QDateTime8addYearsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "addYears", args)
   }
@@ -1960,15 +2164,19 @@ func (this *QDate) Fromstring_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QDate10fromStringERK7QStringS2_
     // invoke: QDate fromString(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN5QDate10fromStringERK7QStringS2_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDate{}) // "QDate"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "fromString", args)
   }
@@ -1989,11 +2197,15 @@ func (this *QDate) Month(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate5monthEv
     // invoke: int month()
-    var ret0 = C.C_ZNK5QDate5monthEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDate5monthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "month", args)
   }
@@ -2014,11 +2226,15 @@ func (this *QDate) Year(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate4yearEv
     // invoke: int year()
-    var ret0 = C.C_ZNK5QDate4yearEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDate4yearEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "year", args)
   }
@@ -2039,11 +2255,15 @@ func (this *QDate) Daysinmonth(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate11daysInMonthEv
     // invoke: int daysInMonth()
-    var ret0 = C.C_ZNK5QDate11daysInMonthEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDate11daysInMonthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "daysInMonth", args)
   }
@@ -2065,13 +2285,17 @@ func (this *QDate) Daysto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate6daysToERKS_
     // invoke: qint64 daysTo(const class QDate &)
-    var arg0 = args[0].(QDate).qclsinst
+    var arg0 = args[0].(*QDate).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QDate6daysToERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QDate6daysToERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "daysTo", args)
   }
@@ -2095,11 +2319,15 @@ func (this *QDate) Weeknumber(args ...interface{}) (ret interface{}) {
     // invoke: int weekNumber(int *)
     var arg0 = (unsafe.Pointer)(args[0].(*int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QDate10weekNumberEPi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QDate10weekNumberEPi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "weekNumber", args)
   }
@@ -2120,11 +2348,15 @@ func (this *QDate) Daysinyear(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate10daysInYearEv
     // invoke: int daysInYear()
-    var ret0 = C.C_ZNK5QDate10daysInYearEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDate10daysInYearEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "daysInYear", args)
   }
@@ -2146,13 +2378,17 @@ func (this *QDate) Addmonths(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate9addMonthsEi
     // invoke: QDate addMonths(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QDate9addMonthsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QDate9addMonthsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDate{}) // "QDate"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "addMonths", args)
   }
@@ -2173,11 +2409,15 @@ func (this *QDate) Tojulianday(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate11toJulianDayEv
     // invoke: qint64 toJulianDay()
-    var ret0 = C.C_ZNK5QDate11toJulianDayEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDate11toJulianDayEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "toJulianDay", args)
   }
@@ -2199,13 +2439,17 @@ func (this *QDate) Tostring(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate8toStringERK7QString
     // invoke: QString toString(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QDate8toStringERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QDate8toStringERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "toString", args)
   }
@@ -2227,13 +2471,17 @@ func (this *QDate) Fromjulianday_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QDate13fromJulianDayEx
     // invoke: QDate fromJulianDay(qint64)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN5QDate13fromJulianDayEx(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDate{}) // "QDate"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "fromJulianDay", args)
   }
@@ -2257,17 +2505,21 @@ func (this *QDate) Setdate(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QDate7setDateEiii
     // invoke: bool setDate(int, int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN5QDate7setDateEiii(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN5QDate7setDateEiii(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "setDate", args)
   }
@@ -2297,7 +2549,7 @@ func (this *QDate) Getdate(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = (unsafe.Pointer)(args[2].(*int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN5QDate7getDateEPiS0_S0_(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN5QDate7getDateEPiS0_S0_(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QDate", "getDate", args)
   }
@@ -2318,11 +2570,15 @@ func (this *QDate) Dayofweek(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate9dayOfWeekEv
     // invoke: int dayOfWeek()
-    var ret0 = C.C_ZNK5QDate9dayOfWeekEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDate9dayOfWeekEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "dayOfWeek", args)
   }
@@ -2344,13 +2600,17 @@ func (this *QDate) Isleapyear_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QDate10isLeapYearEi
     // invoke: bool isLeapYear(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN5QDate10isLeapYearEi(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "isLeapYear", args)
   }
@@ -2379,25 +2639,25 @@ func NewQDate(args ...interface{}) *QDate {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QDateC2Ev()
-    return &QDate{qclsinst:qthis}
+    return &QDate{Qclsinst:qthis}
   case 1:
     // invoke: _ZN5QDateC1Eiii
     // invoke: void QDate(int, int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QDateC2Eiii(arg0, arg1, arg2)
-    return &QDate{qclsinst:qthis}
+    return &QDate{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDate", "QDate", args)
   }
 
-  return nil // QDate{qclsinst:qthis}
+  return nil // QDate{Qclsinst:qthis}
 }
 
 // isValid()
@@ -2418,25 +2678,33 @@ func (this *QDate) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK5QDate7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDate7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN5QDate7isValidEiii
     // invoke: bool isValid(int, int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
     var ret0 = C.C_ZN5QDate7isValidEiii(arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "isValid", args)
   }
@@ -2458,13 +2726,17 @@ func (this *QDate) Adddays(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate7addDaysEx
     // invoke: QDate addDays(qint64)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QDate7addDaysEx(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QDate7addDaysEx(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDate{}) // "QDate"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "addDays", args)
   }
@@ -2485,11 +2757,15 @@ func (this *QDate) Day(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate3dayEv
     // invoke: int day()
-    var ret0 = C.C_ZNK5QDate3dayEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDate3dayEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "day", args)
   }
@@ -2511,13 +2787,17 @@ func (this *QDate) Addyears(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate8addYearsEi
     // invoke: QDate addYears(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QDate8addYearsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QDate8addYearsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDate{}) // "QDate"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "addYears", args)
   }
@@ -2538,11 +2818,15 @@ func (this *QDate) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK5QDate6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDate6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "isNull", args)
   }
@@ -2563,11 +2847,15 @@ func (this *QDate) Dayofyear(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QDate9dayOfYearEv
     // invoke: int dayOfYear()
-    var ret0 = C.C_ZNK5QDate9dayOfYearEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QDate9dayOfYearEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "dayOfYear", args)
   }
@@ -2592,7 +2880,11 @@ func (this *QDate) Currentdate_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDate{}) // "QDate"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDate", "currentDate", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qpagelayout.h
 // dst-file: /src/gui/qpagelayout.go
 //
@@ -99,7 +99,7 @@ func init() {
 // class sizeof(QPageLayout)=1
 type QPageLayout struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // orientation()
@@ -115,7 +115,7 @@ func (this *QPageLayout) Orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout11orientationEv
     // invoke: QPageLayout::Orientation orientation()
-    C.C_ZNK11QPageLayout11orientationEv(this.qclsinst)
+    C.C_ZNK11QPageLayout11orientationEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPageLayout", "orientation", args)
   }
@@ -136,11 +136,15 @@ func (this *QPageLayout) Pagesize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPageLayout8pageSizeEv
     // invoke: QPageSize pageSize()
-    var ret0 = C.C_ZNK11QPageLayout8pageSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPageLayout8pageSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPageSize{}) // "QPageSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "pageSize", args)
   }
@@ -163,11 +167,11 @@ func (this *QPageLayout) Setpagesize(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF
     // invoke: void setPageSize(const class QPageSize &, const class QMarginsF &)
-    var arg0 = args[0].(QPageSize).qclsinst
+    var arg0 = args[0].(*QPageSize).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QMarginsF).qclsinst
+    var arg1 = args[1].(*QMarginsF).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF(this.qclsinst, arg0, arg1)
+    C.C_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPageLayout", "setPageSize", args)
   }
@@ -188,11 +192,15 @@ func (this *QPageLayout) Paintrectpoints(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK11QPageLayout15paintRectPointsEv
     // invoke: QRect paintRectPoints()
-    var ret0 = C.C_ZNK11QPageLayout15paintRectPointsEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPageLayout15paintRectPointsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "paintRectPoints", args)
   }
@@ -213,11 +221,15 @@ func (this *QPageLayout) Margins(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPageLayout7marginsEv
     // invoke: QMarginsF margins()
-    var ret0 = C.C_ZNK11QPageLayout7marginsEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPageLayout7marginsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMarginsF{}) // "QMarginsF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "margins", args)
   }
@@ -238,11 +250,15 @@ func (this *QPageLayout) Minimummargins(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPageLayout14minimumMarginsEv
     // invoke: QMarginsF minimumMargins()
-    var ret0 = C.C_ZNK11QPageLayout14minimumMarginsEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPageLayout14minimumMarginsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMarginsF{}) // "QMarginsF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "minimumMargins", args)
   }
@@ -264,9 +280,9 @@ func (this *QPageLayout) Setminimummargins(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPageLayout17setMinimumMarginsERK9QMarginsF
     // invoke: void setMinimumMargins(const class QMarginsF &)
-    var arg0 = args[0].(QMarginsF).qclsinst
+    var arg0 = args[0].(*QMarginsF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QPageLayout17setMinimumMarginsERK9QMarginsF(this.qclsinst, arg0)
+    C.C_ZN11QPageLayout17setMinimumMarginsERK9QMarginsF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPageLayout", "setMinimumMargins", args)
   }
@@ -290,24 +306,24 @@ func NewQPageLayout(args ...interface{}) *QPageLayout {
   case 0:
     // invoke: _ZN11QPageLayoutC1ERKS_
     // invoke: void QPageLayout(const class QPageLayout &)
-    var arg0 = args[0].(QPageLayout).qclsinst
+    var arg0 = args[0].(*QPageLayout).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QPageLayoutC2ERKS_(arg0)
-    return &QPageLayout{qclsinst:qthis}
+    return &QPageLayout{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QPageLayoutC1Ev
     // invoke: void QPageLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QPageLayoutC2Ev()
-    return &QPageLayout{qclsinst:qthis}
+    return &QPageLayout{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPageLayout", "QPageLayout", args)
   }
 
-  return nil // QPageLayout{qclsinst:qthis}
+  return nil // QPageLayout{Qclsinst:qthis}
 }
 
 // fullRectPoints()
@@ -323,11 +339,15 @@ func (this *QPageLayout) Fullrectpoints(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPageLayout14fullRectPointsEv
     // invoke: QRect fullRectPoints()
-    var ret0 = C.C_ZNK11QPageLayout14fullRectPointsEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPageLayout14fullRectPointsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "fullRectPoints", args)
   }
@@ -348,11 +368,15 @@ func (this *QPageLayout) Fullrect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPageLayout8fullRectEv
     // invoke: QRectF fullRect()
-    var ret0 = C.C_ZNK11QPageLayout8fullRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPageLayout8fullRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "fullRect", args)
   }
@@ -373,11 +397,15 @@ func (this *QPageLayout) Marginspoints(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPageLayout13marginsPointsEv
     // invoke: QMargins marginsPoints()
-    var ret0 = C.C_ZNK11QPageLayout13marginsPointsEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPageLayout13marginsPointsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMargins{}) // "QMargins"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "marginsPoints", args)
   }
@@ -399,9 +427,9 @@ func (this *QPageLayout) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPageLayout4swapERS_
     // invoke: void swap(class QPageLayout &)
-    var arg0 = args[0].(QPageLayout).qclsinst
+    var arg0 = args[0].(*QPageLayout).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QPageLayout4swapERS_(this.qclsinst, arg0)
+    C.C_ZN11QPageLayout4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPageLayout", "swap", args)
   }
@@ -422,7 +450,7 @@ func (this *QPageLayout) Freeqpagelayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPageLayoutD0Ev
     // invoke: void ~QPageLayout()
-    C.C_ZN11QPageLayoutD2Ev(this.qclsinst)
+    C.C_ZN11QPageLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPageLayout", "~QPageLayout", args)
   }
@@ -443,11 +471,15 @@ func (this *QPageLayout) Maximummargins(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPageLayout14maximumMarginsEv
     // invoke: QMarginsF maximumMargins()
-    var ret0 = C.C_ZNK11QPageLayout14maximumMarginsEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPageLayout14maximumMarginsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMarginsF{}) // "QMarginsF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "maximumMargins", args)
   }
@@ -469,13 +501,17 @@ func (this *QPageLayout) Fullrectpixels(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPageLayout14fullRectPixelsEi
     // invoke: QRect fullRectPixels(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QPageLayout14fullRectPixelsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QPageLayout14fullRectPixelsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "fullRectPixels", args)
   }
@@ -497,13 +533,17 @@ func (this *QPageLayout) Settopmargin(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QPageLayout12setTopMarginEd
     // invoke: bool setTopMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QPageLayout12setTopMarginEd(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QPageLayout12setTopMarginEd(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "setTopMargin", args)
   }
@@ -524,11 +564,15 @@ func (this *QPageLayout) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPageLayout7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK11QPageLayout7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPageLayout7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "isValid", args)
   }
@@ -549,7 +593,7 @@ func (this *QPageLayout) Units(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout5unitsEv
     // invoke: QPageLayout::Unit units()
-    C.C_ZNK11QPageLayout5unitsEv(this.qclsinst)
+    C.C_ZNK11QPageLayout5unitsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPageLayout", "units", args)
   }
@@ -571,13 +615,17 @@ func (this *QPageLayout) Paintrectpixels(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK11QPageLayout15paintRectPixelsEi
     // invoke: QRect paintRectPixels(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QPageLayout15paintRectPixelsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QPageLayout15paintRectPixelsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "paintRectPixels", args)
   }
@@ -598,11 +646,15 @@ func (this *QPageLayout) Paintrect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPageLayout9paintRectEv
     // invoke: QRectF paintRect()
-    var ret0 = C.C_ZNK11QPageLayout9paintRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QPageLayout9paintRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "paintRect", args)
   }
@@ -624,13 +676,17 @@ func (this *QPageLayout) Setleftmargin(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QPageLayout13setLeftMarginEd
     // invoke: bool setLeftMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QPageLayout13setLeftMarginEd(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QPageLayout13setLeftMarginEd(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "setLeftMargin", args)
   }
@@ -652,13 +708,17 @@ func (this *QPageLayout) Setrightmargin(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QPageLayout14setRightMarginEd
     // invoke: bool setRightMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QPageLayout14setRightMarginEd(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QPageLayout14setRightMarginEd(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "setRightMargin", args)
   }
@@ -680,13 +740,17 @@ func (this *QPageLayout) Isequivalentto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPageLayout14isEquivalentToERKS_
     // invoke: bool isEquivalentTo(const class QPageLayout &)
-    var arg0 = args[0].(QPageLayout).qclsinst
+    var arg0 = args[0].(*QPageLayout).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QPageLayout14isEquivalentToERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QPageLayout14isEquivalentToERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "isEquivalentTo", args)
   }
@@ -708,13 +772,17 @@ func (this *QPageLayout) Marginspixels(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QPageLayout13marginsPixelsEi
     // invoke: QMargins marginsPixels(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QPageLayout13marginsPixelsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QPageLayout13marginsPixelsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMargins{}) // "QMargins"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "marginsPixels", args)
   }
@@ -735,7 +803,7 @@ func (this *QPageLayout) Mode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout4modeEv
     // invoke: QPageLayout::Mode mode()
-    C.C_ZNK11QPageLayout4modeEv(this.qclsinst)
+    C.C_ZNK11QPageLayout4modeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPageLayout", "mode", args)
   }
@@ -757,13 +825,17 @@ func (this *QPageLayout) Setmargins(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QPageLayout10setMarginsERK9QMarginsF
     // invoke: bool setMargins(const class QMarginsF &)
-    var arg0 = args[0].(QMarginsF).qclsinst
+    var arg0 = args[0].(*QMarginsF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QPageLayout10setMarginsERK9QMarginsF(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QPageLayout10setMarginsERK9QMarginsF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "setMargins", args)
   }
@@ -785,13 +857,17 @@ func (this *QPageLayout) Setbottommargin(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZN11QPageLayout15setBottomMarginEd
     // invoke: bool setBottomMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QPageLayout15setBottomMarginEd(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QPageLayout15setBottomMarginEd(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageLayout", "setBottomMargin", args)
   }

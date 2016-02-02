@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qtabbar.h
 // dst-file: /src/widgets/qtabbar.go
 //
@@ -145,7 +145,7 @@ func init() {
 // class sizeof(QTabBar)=1
 type QTabBar struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _tabCloseRequested QTabBar_tabCloseRequested_signal;
 //  _tabBarDoubleClicked QTabBar_tabBarDoubleClicked_signal;
 //  _tabMoved QTabBar_tabMoved_signal;
@@ -167,13 +167,17 @@ func (this *QTabBar) Tabtooltip(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar10tabToolTipEi
     // invoke: QString tabToolTip(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QTabBar10tabToolTipEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QTabBar10tabToolTipEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "tabToolTip", args)
   }
@@ -195,9 +199,9 @@ func (this *QTabBar) Seticonsize(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar11setIconSizeERK5QSize
     // invoke: void setIconSize(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QTabBar11setIconSizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN7QTabBar11setIconSizeERK5QSize(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setIconSize", args)
   }
@@ -218,11 +222,15 @@ func (this *QTabBar) Usesscrollbuttons(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar17usesScrollButtonsEv
     // invoke: bool usesScrollButtons()
-    var ret0 = C.C_ZNK7QTabBar17usesScrollButtonsEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar17usesScrollButtonsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "usesScrollButtons", args)
   }
@@ -244,13 +252,17 @@ func (this *QTabBar) Istabenabled(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar12isTabEnabledEi
     // invoke: bool isTabEnabled(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QTabBar12isTabEnabledEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QTabBar12isTabEnabledEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "isTabEnabled", args)
   }
@@ -271,11 +283,15 @@ func (this *QTabBar) Expanding(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar9expandingEv
     // invoke: bool expanding()
-    var ret0 = C.C_ZNK7QTabBar9expandingEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar9expandingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "expanding", args)
   }
@@ -297,13 +313,17 @@ func (this *QTabBar) Tabwhatsthis(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar12tabWhatsThisEi
     // invoke: QString tabWhatsThis(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QTabBar12tabWhatsThisEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QTabBar12tabWhatsThisEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "tabWhatsThis", args)
   }
@@ -325,17 +345,17 @@ func NewQTabBar(args ...interface{}) *QTabBar {
   case 0:
     // invoke: _ZN7QTabBarC1EP7QWidget
     // invoke: void QTabBar(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QTabBarC2EP7QWidget(arg0)
-    return &QTabBar{qclsinst:qthis}
+    return &QTabBar{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTabBar", "QTabBar", args)
   }
 
-  return nil // QTabBar{qclsinst:qthis}
+  return nil // QTabBar{Qclsinst:qthis}
 }
 
 // insertTab(int, const class QIcon &, const class QString &)
@@ -358,29 +378,37 @@ func (this *QTabBar) Inserttab(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QTabBar9insertTabEiRK5QIconRK7QString
     // invoke: int insertTab(int, const class QIcon &, const class QString &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QIcon).qclsinst
+    var arg1 = args[1].(*QIcon).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN7QTabBar9insertTabEiRK5QIconRK7QString(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN7QTabBar9insertTabEiRK5QIconRK7QString(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN7QTabBar9insertTabEiRK7QString
     // invoke: int insertTab(int, const class QString &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN7QTabBar9insertTabEiRK7QString(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN7QTabBar9insertTabEiRK7QString(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "insertTab", args)
   }
@@ -401,7 +429,7 @@ func (this *QTabBar) Shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QTabBar5shapeEv
     // invoke: QTabBar::Shape shape()
-    C.C_ZNK7QTabBar5shapeEv(this.qclsinst)
+    C.C_ZNK7QTabBar5shapeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "shape", args)
   }
@@ -423,9 +451,9 @@ func (this *QTabBar) Setcurrentindex(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar15setCurrentIndexEi
     // invoke: void setCurrentIndex(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QTabBar15setCurrentIndexEi(this.qclsinst, arg0)
+    C.C_ZN7QTabBar15setCurrentIndexEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setCurrentIndex", args)
   }
@@ -448,11 +476,11 @@ func (this *QTabBar) Settabtextcolor(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar15setTabTextColorEiRK6QColor
     // invoke: void setTabTextColor(int, const class QColor &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QColor).qclsinst
+    var arg1 = args[1].(*QColor).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN7QTabBar15setTabTextColorEiRK6QColor(this.qclsinst, arg0, arg1)
+    C.C_ZN7QTabBar15setTabTextColorEiRK6QColor(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabTextColor", args)
   }
@@ -476,7 +504,7 @@ func (this *QTabBar) Setmovable(args ...interface{}) () {
     // invoke: void setMovable(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QTabBar10setMovableEb(this.qclsinst, arg0)
+    C.C_ZN7QTabBar10setMovableEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setMovable", args)
   }
@@ -500,7 +528,7 @@ func (this *QTabBar) Setdrawbase(args ...interface{}) () {
     // invoke: void setDrawBase(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QTabBar11setDrawBaseEb(this.qclsinst, arg0)
+    C.C_ZN7QTabBar11setDrawBaseEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setDrawBase", args)
   }
@@ -521,11 +549,15 @@ func (this *QTabBar) Tabsclosable(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar12tabsClosableEv
     // invoke: bool tabsClosable()
-    var ret0 = C.C_ZNK7QTabBar12tabsClosableEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar12tabsClosableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "tabsClosable", args)
   }
@@ -548,11 +580,11 @@ func (this *QTabBar) Settabicon(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar10setTabIconEiRK5QIcon
     // invoke: void setTabIcon(int, const class QIcon &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QIcon).qclsinst
+    var arg1 = args[1].(*QIcon).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN7QTabBar10setTabIconEiRK5QIcon(this.qclsinst, arg0, arg1)
+    C.C_ZN7QTabBar10setTabIconEiRK5QIcon(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabIcon", args)
   }
@@ -573,11 +605,15 @@ func (this *QTabBar) Drawbase(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar8drawBaseEv
     // invoke: bool drawBase()
-    var ret0 = C.C_ZNK7QTabBar8drawBaseEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar8drawBaseEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "drawBase", args)
   }
@@ -598,7 +634,7 @@ func (this *QTabBar) Freeqtabbar(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBarD0Ev
     // invoke: void ~QTabBar()
-    C.C_ZN7QTabBarD2Ev(this.qclsinst)
+    C.C_ZN7QTabBarD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "~QTabBar", args)
   }
@@ -621,11 +657,11 @@ func (this *QTabBar) Settabdata(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar10setTabDataEiRK8QVariant
     // invoke: void setTabData(int, const class QVariant &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QVariant).qclsinst
+    var arg1 = args[1].(*QVariant).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN7QTabBar10setTabDataEiRK8QVariant(this.qclsinst, arg0, arg1)
+    C.C_ZN7QTabBar10setTabDataEiRK8QVariant(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabData", args)
   }
@@ -647,13 +683,17 @@ func (this *QTabBar) Tabicon(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar7tabIconEi
     // invoke: QIcon tabIcon(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QTabBar7tabIconEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QTabBar7tabIconEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIcon{}) // "QIcon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "tabIcon", args)
   }
@@ -674,11 +714,15 @@ func (this *QTabBar) Autohide(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar8autoHideEv
     // invoke: bool autoHide()
-    var ret0 = C.C_ZNK7QTabBar8autoHideEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar8autoHideEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "autoHide", args)
   }
@@ -700,13 +744,17 @@ func (this *QTabBar) Tabtextcolor(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar12tabTextColorEi
     // invoke: QColor tabTextColor(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QTabBar12tabTextColorEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QTabBar12tabTextColorEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "tabTextColor", args)
   }
@@ -727,11 +775,15 @@ func (this *QTabBar) Ismovable(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar9isMovableEv
     // invoke: bool isMovable()
-    var ret0 = C.C_ZNK7QTabBar9isMovableEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar9isMovableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "isMovable", args)
   }
@@ -753,13 +805,17 @@ func (this *QTabBar) Tabrect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar7tabRectEi
     // invoke: QRect tabRect(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QTabBar7tabRectEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QTabBar7tabRectEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "tabRect", args)
   }
@@ -780,11 +836,15 @@ func (this *QTabBar) Documentmode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar12documentModeEv
     // invoke: bool documentMode()
-    var ret0 = C.C_ZNK7QTabBar12documentModeEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar12documentModeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "documentMode", args)
   }
@@ -808,7 +868,7 @@ func (this *QTabBar) Settabsclosable(args ...interface{}) () {
     // invoke: void setTabsClosable(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QTabBar15setTabsClosableEb(this.qclsinst, arg0)
+    C.C_ZN7QTabBar15setTabsClosableEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabsClosable", args)
   }
@@ -830,9 +890,9 @@ func (this *QTabBar) Removetab(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar9removeTabEi
     // invoke: void removeTab(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QTabBar9removeTabEi(this.qclsinst, arg0)
+    C.C_ZN7QTabBar9removeTabEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "removeTab", args)
   }
@@ -853,11 +913,15 @@ func (this *QTabBar) Iconsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar8iconSizeEv
     // invoke: QSize iconSize()
-    var ret0 = C.C_ZNK7QTabBar8iconSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar8iconSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "iconSize", args)
   }
@@ -880,11 +944,11 @@ func (this *QTabBar) Settabtext(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar10setTabTextEiRK7QString
     // invoke: void setTabText(int, const class QString &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN7QTabBar10setTabTextEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN7QTabBar10setTabTextEiRK7QString(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabText", args)
   }
@@ -906,13 +970,17 @@ func (this *QTabBar) Tabat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar5tabAtERK6QPoint
     // invoke: int tabAt(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QTabBar5tabAtERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QTabBar5tabAtERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "tabAt", args)
   }
@@ -933,11 +1001,15 @@ func (this *QTabBar) Changecurrentondrag(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK7QTabBar19changeCurrentOnDragEv
     // invoke: bool changeCurrentOnDrag()
-    var ret0 = C.C_ZNK7QTabBar19changeCurrentOnDragEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar19changeCurrentOnDragEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "changeCurrentOnDrag", args)
   }
@@ -959,13 +1031,17 @@ func (this *QTabBar) Tabtext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar7tabTextEi
     // invoke: QString tabText(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QTabBar7tabTextEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QTabBar7tabTextEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "tabText", args)
   }
@@ -991,25 +1067,33 @@ func (this *QTabBar) Addtab(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QTabBar6addTabERK5QIconRK7QString
     // invoke: int addTab(const class QIcon &, const class QString &)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN7QTabBar6addTabERK5QIconRK7QString(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN7QTabBar6addTabERK5QIconRK7QString(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN7QTabBar6addTabERK7QString
     // invoke: int addTab(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN7QTabBar6addTabERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN7QTabBar6addTabERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "addTab", args)
   }
@@ -1033,7 +1117,7 @@ func (this *QTabBar) Setautohide(args ...interface{}) () {
     // invoke: void setAutoHide(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QTabBar11setAutoHideEb(this.qclsinst, arg0)
+    C.C_ZN7QTabBar11setAutoHideEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setAutoHide", args)
   }
@@ -1057,7 +1141,7 @@ func (this *QTabBar) Setdocumentmode(args ...interface{}) () {
     // invoke: void setDocumentMode(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QTabBar15setDocumentModeEb(this.qclsinst, arg0)
+    C.C_ZN7QTabBar15setDocumentModeEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setDocumentMode", args)
   }
@@ -1078,11 +1162,15 @@ func (this *QTabBar) Count(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar5countEv
     // invoke: int count()
-    var ret0 = C.C_ZNK7QTabBar5countEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar5countEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "count", args)
   }
@@ -1106,7 +1194,7 @@ func (this *QTabBar) Setusesscrollbuttons(args ...interface{}) () {
     // invoke: void setUsesScrollButtons(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QTabBar20setUsesScrollButtonsEb(this.qclsinst, arg0)
+    C.C_ZN7QTabBar20setUsesScrollButtonsEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setUsesScrollButtons", args)
   }
@@ -1127,7 +1215,7 @@ func (this *QTabBar) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QTabBar10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK7QTabBar10metaObjectEv(this.qclsinst)
+    C.C_ZNK7QTabBar10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "metaObject", args)
   }
@@ -1148,7 +1236,7 @@ func (this *QTabBar) Elidemode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QTabBar9elideModeEv
     // invoke: Qt::TextElideMode elideMode()
-    C.C_ZNK7QTabBar9elideModeEv(this.qclsinst)
+    C.C_ZNK7QTabBar9elideModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "elideMode", args)
   }
@@ -1169,11 +1257,15 @@ func (this *QTabBar) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK7QTabBar8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "sizeHint", args)
   }
@@ -1194,11 +1286,15 @@ func (this *QTabBar) Minimumsizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK7QTabBar15minimumSizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar15minimumSizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "minimumSizeHint", args)
   }
@@ -1222,7 +1318,7 @@ func (this *QTabBar) Setchangecurrentondrag(args ...interface{}) () {
     // invoke: void setChangeCurrentOnDrag(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QTabBar22setChangeCurrentOnDragEb(this.qclsinst, arg0)
+    C.C_ZN7QTabBar22setChangeCurrentOnDragEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setChangeCurrentOnDrag", args)
   }
@@ -1245,11 +1341,11 @@ func (this *QTabBar) Settabwhatsthis(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar15setTabWhatsThisEiRK7QString
     // invoke: void setTabWhatsThis(int, const class QString &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN7QTabBar15setTabWhatsThisEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN7QTabBar15setTabWhatsThisEiRK7QString(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabWhatsThis", args)
   }
@@ -1272,11 +1368,11 @@ func (this *QTabBar) Settabtooltip(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar13setTabToolTipEiRK7QString
     // invoke: void setTabToolTip(int, const class QString &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN7QTabBar13setTabToolTipEiRK7QString(this.qclsinst, arg0, arg1)
+    C.C_ZN7QTabBar13setTabToolTipEiRK7QString(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabToolTip", args)
   }
@@ -1300,7 +1396,7 @@ func (this *QTabBar) Setexpanding(args ...interface{}) () {
     // invoke: void setExpanding(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QTabBar12setExpandingEb(this.qclsinst, arg0)
+    C.C_ZN7QTabBar12setExpandingEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setExpanding", args)
   }
@@ -1323,11 +1419,11 @@ func (this *QTabBar) Settabenabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar13setTabEnabledEib
     // invoke: void setTabEnabled(int, _Bool)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C.C_ZN7QTabBar13setTabEnabledEib(this.qclsinst, arg0, arg1)
+    C.C_ZN7QTabBar13setTabEnabledEib(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabEnabled", args)
   }
@@ -1348,7 +1444,7 @@ func (this *QTabBar) Selectionbehavioronremove(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QTabBar25selectionBehaviorOnRemoveEv
     // invoke: QTabBar::SelectionBehavior selectionBehaviorOnRemove()
-    C.C_ZNK7QTabBar25selectionBehaviorOnRemoveEv(this.qclsinst)
+    C.C_ZNK7QTabBar25selectionBehaviorOnRemoveEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "selectionBehaviorOnRemove", args)
   }
@@ -1370,13 +1466,17 @@ func (this *QTabBar) Tabdata(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar7tabDataEi
     // invoke: QVariant tabData(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QTabBar7tabDataEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QTabBar7tabDataEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "tabData", args)
   }
@@ -1397,11 +1497,15 @@ func (this *QTabBar) Currentindex(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QTabBar12currentIndexEv
     // invoke: int currentIndex()
-    var ret0 = C.C_ZNK7QTabBar12currentIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QTabBar12currentIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTabBar", "currentIndex", args)
   }
@@ -1424,11 +1528,11 @@ func (this *QTabBar) Movetab(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar7moveTabEii
     // invoke: void moveTab(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN7QTabBar7moveTabEii(this.qclsinst, arg0, arg1)
+    C.C_ZN7QTabBar7moveTabEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "moveTab", args)
   }

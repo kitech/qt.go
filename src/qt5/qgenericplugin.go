@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qgenericplugin.h
 // dst-file: /src/gui/qgenericplugin.go
 //
@@ -49,7 +49,7 @@ func init() {
 // class sizeof(QGenericPlugin)=1
 type QGenericPlugin struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // metaObject()
@@ -65,7 +65,7 @@ func (this *QGenericPlugin) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QGenericPlugin10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK14QGenericPlugin10metaObjectEv(this.qclsinst)
+    C.C_ZNK14QGenericPlugin10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGenericPlugin", "metaObject", args)
   }
@@ -87,17 +87,17 @@ func NewQGenericPlugin(args ...interface{}) *QGenericPlugin {
   case 0:
     // invoke: _ZN14QGenericPluginC1EP7QObject
     // invoke: void QGenericPlugin(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QGenericPluginC2EP7QObject(arg0)
-    return &QGenericPlugin{qclsinst:qthis}
+    return &QGenericPlugin{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGenericPlugin", "QGenericPlugin", args)
   }
 
-  return nil // QGenericPlugin{qclsinst:qthis}
+  return nil // QGenericPlugin{Qclsinst:qthis}
 }
 
 // ~QGenericPlugin()
@@ -113,7 +113,7 @@ func (this *QGenericPlugin) Freeqgenericplugin(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QGenericPluginD0Ev
     // invoke: void ~QGenericPlugin()
-    C.C_ZN14QGenericPluginD2Ev(this.qclsinst)
+    C.C_ZN14QGenericPluginD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGenericPlugin", "~QGenericPlugin", args)
   }

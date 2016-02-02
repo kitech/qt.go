@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qgraphicssceneevent.h
 // dst-file: /src/widgets/qgraphicssceneevent.go
 //
@@ -223,55 +223,55 @@ func init() {
 // class sizeof(QGraphicsSceneMoveEvent)=1
 type QGraphicsSceneMoveEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneContextMenuEvent)=1
 type QGraphicsSceneContextMenuEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneMouseEvent)=1
 type QGraphicsSceneMouseEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneHelpEvent)=1
 type QGraphicsSceneHelpEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneHoverEvent)=1
 type QGraphicsSceneHoverEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneWheelEvent)=1
 type QGraphicsSceneWheelEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneDragDropEvent)=1
 type QGraphicsSceneDragDropEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneEvent)=1
 type QGraphicsSceneEvent struct {
   /*qbase*/ QEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneResizeEvent)=1
 type QGraphicsSceneResizeEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // setNewPos(const class QPointF &)
@@ -288,9 +288,9 @@ func (this *QGraphicsSceneMoveEvent) Setnewpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF
     // invoke: void setNewPos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "setNewPos", args)
   }
@@ -311,11 +311,15 @@ func (this *QGraphicsSceneMoveEvent) Newpos(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK23QGraphicsSceneMoveEvent6newPosEv
     // invoke: QPointF newPos()
-    var ret0 = C.C_ZNK23QGraphicsSceneMoveEvent6newPosEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QGraphicsSceneMoveEvent6newPosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "newPos", args)
   }
@@ -339,12 +343,12 @@ func NewQGraphicsSceneMoveEvent(args ...interface{}) *QGraphicsSceneMoveEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QGraphicsSceneMoveEventC2Ev()
-    return &QGraphicsSceneMoveEvent{qclsinst:qthis}
+    return &QGraphicsSceneMoveEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "QGraphicsSceneMoveEvent", args)
   }
 
-  return nil // QGraphicsSceneMoveEvent{qclsinst:qthis}
+  return nil // QGraphicsSceneMoveEvent{Qclsinst:qthis}
 }
 
 // ~QGraphicsSceneMoveEvent()
@@ -360,7 +364,7 @@ func (this *QGraphicsSceneMoveEvent) Freeqgraphicsscenemoveevent(args ...interfa
   case 0:
     // invoke: _ZN23QGraphicsSceneMoveEventD0Ev
     // invoke: void ~QGraphicsSceneMoveEvent()
-    C.C_ZN23QGraphicsSceneMoveEventD2Ev(this.qclsinst)
+    C.C_ZN23QGraphicsSceneMoveEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "~QGraphicsSceneMoveEvent", args)
   }
@@ -381,11 +385,15 @@ func (this *QGraphicsSceneMoveEvent) Oldpos(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK23QGraphicsSceneMoveEvent6oldPosEv
     // invoke: QPointF oldPos()
-    var ret0 = C.C_ZNK23QGraphicsSceneMoveEvent6oldPosEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QGraphicsSceneMoveEvent6oldPosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "oldPos", args)
   }
@@ -407,9 +415,9 @@ func (this *QGraphicsSceneMoveEvent) Setoldpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF
     // invoke: void setOldPos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "setOldPos", args)
   }
@@ -430,7 +438,7 @@ func (this *QGraphicsSceneContextMenuEvent) Modifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent9modifiersEv
     // invoke: Qt::KeyboardModifiers modifiers()
-    C.C_ZNK30QGraphicsSceneContextMenuEvent9modifiersEv(this.qclsinst)
+    C.C_ZNK30QGraphicsSceneContextMenuEvent9modifiersEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "modifiers", args)
   }
@@ -452,9 +460,9 @@ func (this *QGraphicsSceneContextMenuEvent) Setscreenpos(args ...interface{}) ()
   case 0:
     // invoke: _ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint
     // invoke: void setScreenPos(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "setScreenPos", args)
   }
@@ -476,9 +484,9 @@ func (this *QGraphicsSceneContextMenuEvent) Setpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF
     // invoke: void setPos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "setPos", args)
   }
@@ -499,11 +507,15 @@ func (this *QGraphicsSceneContextMenuEvent) Pos(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent3posEv
     // invoke: QPointF pos()
-    var ret0 = C.C_ZNK30QGraphicsSceneContextMenuEvent3posEv(this.qclsinst)
+    var ret0 = C.C_ZNK30QGraphicsSceneContextMenuEvent3posEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "pos", args)
   }
@@ -525,9 +537,9 @@ func (this *QGraphicsSceneContextMenuEvent) Setscenepos(args ...interface{}) () 
   case 0:
     // invoke: _ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF
     // invoke: void setScenePos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "setScenePos", args)
   }
@@ -548,7 +560,7 @@ func (this *QGraphicsSceneContextMenuEvent) Reason(args ...interface{}) () {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent6reasonEv
     // invoke: QGraphicsSceneContextMenuEvent::Reason reason()
-    C.C_ZNK30QGraphicsSceneContextMenuEvent6reasonEv(this.qclsinst)
+    C.C_ZNK30QGraphicsSceneContextMenuEvent6reasonEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "reason", args)
   }
@@ -569,11 +581,15 @@ func (this *QGraphicsSceneContextMenuEvent) Screenpos(args ...interface{}) (ret 
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent9screenPosEv
     // invoke: QPoint screenPos()
-    var ret0 = C.C_ZNK30QGraphicsSceneContextMenuEvent9screenPosEv(this.qclsinst)
+    var ret0 = C.C_ZNK30QGraphicsSceneContextMenuEvent9screenPosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "screenPos", args)
   }
@@ -594,11 +610,15 @@ func (this *QGraphicsSceneContextMenuEvent) Scenepos(args ...interface{}) (ret i
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent8scenePosEv
     // invoke: QPointF scenePos()
-    var ret0 = C.C_ZNK30QGraphicsSceneContextMenuEvent8scenePosEv(this.qclsinst)
+    var ret0 = C.C_ZNK30QGraphicsSceneContextMenuEvent8scenePosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "scenePos", args)
   }
@@ -619,7 +639,7 @@ func (this *QGraphicsSceneContextMenuEvent) Freeqgraphicsscenecontextmenuevent(a
   case 0:
     // invoke: _ZN30QGraphicsSceneContextMenuEventD0Ev
     // invoke: void ~QGraphicsSceneContextMenuEvent()
-    C.C_ZN30QGraphicsSceneContextMenuEventD2Ev(this.qclsinst)
+    C.C_ZN30QGraphicsSceneContextMenuEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "~QGraphicsSceneContextMenuEvent", args)
   }
@@ -641,9 +661,9 @@ func (this *QGraphicsSceneMouseEvent) Setscreenpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint
     // invoke: void setScreenPos(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setScreenPos", args)
   }
@@ -664,11 +684,15 @@ func (this *QGraphicsSceneMouseEvent) Lastpos(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent7lastPosEv
     // invoke: QPointF lastPos()
-    var ret0 = C.C_ZNK24QGraphicsSceneMouseEvent7lastPosEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneMouseEvent7lastPosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "lastPos", args)
   }
@@ -689,11 +713,15 @@ func (this *QGraphicsSceneMouseEvent) Pos(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent3posEv
     // invoke: QPointF pos()
-    var ret0 = C.C_ZNK24QGraphicsSceneMouseEvent3posEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneMouseEvent3posEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "pos", args)
   }
@@ -714,11 +742,15 @@ func (this *QGraphicsSceneMouseEvent) Lastscenepos(args ...interface{}) (ret int
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent12lastScenePosEv
     // invoke: QPointF lastScenePos()
-    var ret0 = C.C_ZNK24QGraphicsSceneMouseEvent12lastScenePosEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneMouseEvent12lastScenePosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "lastScenePos", args)
   }
@@ -739,7 +771,7 @@ func (this *QGraphicsSceneMouseEvent) Modifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent9modifiersEv
     // invoke: Qt::KeyboardModifiers modifiers()
-    C.C_ZNK24QGraphicsSceneMouseEvent9modifiersEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent9modifiersEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "modifiers", args)
   }
@@ -761,9 +793,9 @@ func (this *QGraphicsSceneMouseEvent) Setlastpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF
     // invoke: void setLastPos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setLastPos", args)
   }
@@ -784,7 +816,7 @@ func (this *QGraphicsSceneMouseEvent) Freeqgraphicsscenemouseevent(args ...inter
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEventD0Ev
     // invoke: void ~QGraphicsSceneMouseEvent()
-    C.C_ZN24QGraphicsSceneMouseEventD2Ev(this.qclsinst)
+    C.C_ZN24QGraphicsSceneMouseEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "~QGraphicsSceneMouseEvent", args)
   }
@@ -805,7 +837,7 @@ func (this *QGraphicsSceneMouseEvent) Buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent7buttonsEv
     // invoke: Qt::MouseButtons buttons()
-    C.C_ZNK24QGraphicsSceneMouseEvent7buttonsEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent7buttonsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "buttons", args)
   }
@@ -826,7 +858,7 @@ func (this *QGraphicsSceneMouseEvent) Source(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent6sourceEv
     // invoke: Qt::MouseEventSource source()
-    C.C_ZNK24QGraphicsSceneMouseEvent6sourceEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent6sourceEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "source", args)
   }
@@ -847,11 +879,15 @@ func (this *QGraphicsSceneMouseEvent) Scenepos(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent8scenePosEv
     // invoke: QPointF scenePos()
-    var ret0 = C.C_ZNK24QGraphicsSceneMouseEvent8scenePosEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneMouseEvent8scenePosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "scenePos", args)
   }
@@ -873,9 +909,9 @@ func (this *QGraphicsSceneMouseEvent) Setscenepos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF
     // invoke: void setScenePos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setScenePos", args)
   }
@@ -897,9 +933,9 @@ func (this *QGraphicsSceneMouseEvent) Setlastscreenpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint
     // invoke: void setLastScreenPos(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setLastScreenPos", args)
   }
@@ -920,11 +956,15 @@ func (this *QGraphicsSceneMouseEvent) Screenpos(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent9screenPosEv
     // invoke: QPoint screenPos()
-    var ret0 = C.C_ZNK24QGraphicsSceneMouseEvent9screenPosEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneMouseEvent9screenPosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "screenPos", args)
   }
@@ -945,11 +985,15 @@ func (this *QGraphicsSceneMouseEvent) Lastscreenpos(args ...interface{}) (ret in
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv
     // invoke: QPoint lastScreenPos()
-    var ret0 = C.C_ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "lastScreenPos", args)
   }
@@ -971,9 +1015,9 @@ func (this *QGraphicsSceneMouseEvent) Setpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF
     // invoke: void setPos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setPos", args)
   }
@@ -994,7 +1038,7 @@ func (this *QGraphicsSceneMouseEvent) Button(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent6buttonEv
     // invoke: Qt::MouseButton button()
-    C.C_ZNK24QGraphicsSceneMouseEvent6buttonEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent6buttonEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "button", args)
   }
@@ -1015,7 +1059,7 @@ func (this *QGraphicsSceneMouseEvent) Flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent5flagsEv
     // invoke: Qt::MouseEventFlags flags()
-    C.C_ZNK24QGraphicsSceneMouseEvent5flagsEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneMouseEvent5flagsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "flags", args)
   }
@@ -1037,9 +1081,9 @@ func (this *QGraphicsSceneMouseEvent) Setlastscenepos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF
     // invoke: void setLastScenePos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setLastScenePos", args)
   }
@@ -1060,11 +1104,15 @@ func (this *QGraphicsSceneHelpEvent) Screenpos(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK23QGraphicsSceneHelpEvent9screenPosEv
     // invoke: QPoint screenPos()
-    var ret0 = C.C_ZNK23QGraphicsSceneHelpEvent9screenPosEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QGraphicsSceneHelpEvent9screenPosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "screenPos", args)
   }
@@ -1086,9 +1134,9 @@ func (this *QGraphicsSceneHelpEvent) Setscreenpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint
     // invoke: void setScreenPos(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "setScreenPos", args)
   }
@@ -1109,7 +1157,7 @@ func (this *QGraphicsSceneHelpEvent) Freeqgraphicsscenehelpevent(args ...interfa
   case 0:
     // invoke: _ZN23QGraphicsSceneHelpEventD0Ev
     // invoke: void ~QGraphicsSceneHelpEvent()
-    C.C_ZN23QGraphicsSceneHelpEventD2Ev(this.qclsinst)
+    C.C_ZN23QGraphicsSceneHelpEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "~QGraphicsSceneHelpEvent", args)
   }
@@ -1131,9 +1179,9 @@ func (this *QGraphicsSceneHelpEvent) Setscenepos(args ...interface{}) () {
   case 0:
     // invoke: _ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF
     // invoke: void setScenePos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "setScenePos", args)
   }
@@ -1154,11 +1202,15 @@ func (this *QGraphicsSceneHelpEvent) Scenepos(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK23QGraphicsSceneHelpEvent8scenePosEv
     // invoke: QPointF scenePos()
-    var ret0 = C.C_ZNK23QGraphicsSceneHelpEvent8scenePosEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QGraphicsSceneHelpEvent8scenePosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "scenePos", args)
   }
@@ -1179,7 +1231,7 @@ func (this *QGraphicsSceneHoverEvent) Modifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent9modifiersEv
     // invoke: Qt::KeyboardModifiers modifiers()
-    C.C_ZNK24QGraphicsSceneHoverEvent9modifiersEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneHoverEvent9modifiersEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "modifiers", args)
   }
@@ -1201,9 +1253,9 @@ func (this *QGraphicsSceneHoverEvent) Setlastpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF
     // invoke: void setLastPos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setLastPos", args)
   }
@@ -1225,9 +1277,9 @@ func (this *QGraphicsSceneHoverEvent) Setscreenpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint
     // invoke: void setScreenPos(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setScreenPos", args)
   }
@@ -1248,11 +1300,15 @@ func (this *QGraphicsSceneHoverEvent) Lastpos(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent7lastPosEv
     // invoke: QPointF lastPos()
-    var ret0 = C.C_ZNK24QGraphicsSceneHoverEvent7lastPosEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneHoverEvent7lastPosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "lastPos", args)
   }
@@ -1273,11 +1329,15 @@ func (this *QGraphicsSceneHoverEvent) Lastscreenpos(args ...interface{}) (ret in
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv
     // invoke: QPoint lastScreenPos()
-    var ret0 = C.C_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "lastScreenPos", args)
   }
@@ -1298,11 +1358,15 @@ func (this *QGraphicsSceneHoverEvent) Pos(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent3posEv
     // invoke: QPointF pos()
-    var ret0 = C.C_ZNK24QGraphicsSceneHoverEvent3posEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneHoverEvent3posEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "pos", args)
   }
@@ -1324,9 +1388,9 @@ func (this *QGraphicsSceneHoverEvent) Setscenepos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF
     // invoke: void setScenePos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setScenePos", args)
   }
@@ -1348,9 +1412,9 @@ func (this *QGraphicsSceneHoverEvent) Setpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF
     // invoke: void setPos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setPos", args)
   }
@@ -1371,11 +1435,15 @@ func (this *QGraphicsSceneHoverEvent) Screenpos(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent9screenPosEv
     // invoke: QPoint screenPos()
-    var ret0 = C.C_ZNK24QGraphicsSceneHoverEvent9screenPosEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneHoverEvent9screenPosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "screenPos", args)
   }
@@ -1397,9 +1465,9 @@ func (this *QGraphicsSceneHoverEvent) Setlastscenepos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF
     // invoke: void setLastScenePos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setLastScenePos", args)
   }
@@ -1420,11 +1488,15 @@ func (this *QGraphicsSceneHoverEvent) Lastscenepos(args ...interface{}) (ret int
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent12lastScenePosEv
     // invoke: QPointF lastScenePos()
-    var ret0 = C.C_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "lastScenePos", args)
   }
@@ -1445,7 +1517,7 @@ func (this *QGraphicsSceneHoverEvent) Freeqgraphicsscenehoverevent(args ...inter
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEventD0Ev
     // invoke: void ~QGraphicsSceneHoverEvent()
-    C.C_ZN24QGraphicsSceneHoverEventD2Ev(this.qclsinst)
+    C.C_ZN24QGraphicsSceneHoverEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "~QGraphicsSceneHoverEvent", args)
   }
@@ -1467,9 +1539,9 @@ func (this *QGraphicsSceneHoverEvent) Setlastscreenpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint
     // invoke: void setLastScreenPos(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setLastScreenPos", args)
   }
@@ -1490,11 +1562,15 @@ func (this *QGraphicsSceneHoverEvent) Scenepos(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent8scenePosEv
     // invoke: QPointF scenePos()
-    var ret0 = C.C_ZNK24QGraphicsSceneHoverEvent8scenePosEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneHoverEvent8scenePosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "scenePos", args)
   }
@@ -1515,7 +1591,7 @@ func (this *QGraphicsSceneWheelEvent) Modifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent9modifiersEv
     // invoke: Qt::KeyboardModifiers modifiers()
-    C.C_ZNK24QGraphicsSceneWheelEvent9modifiersEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneWheelEvent9modifiersEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "modifiers", args)
   }
@@ -1537,9 +1613,9 @@ func (this *QGraphicsSceneWheelEvent) Setdelta(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEvent8setDeltaEi
     // invoke: void setDelta(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneWheelEvent8setDeltaEi(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneWheelEvent8setDeltaEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setDelta", args)
   }
@@ -1560,7 +1636,7 @@ func (this *QGraphicsSceneWheelEvent) Orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent11orientationEv
     // invoke: Qt::Orientation orientation()
-    C.C_ZNK24QGraphicsSceneWheelEvent11orientationEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneWheelEvent11orientationEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "orientation", args)
   }
@@ -1582,9 +1658,9 @@ func (this *QGraphicsSceneWheelEvent) Setscreenpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint
     // invoke: void setScreenPos(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setScreenPos", args)
   }
@@ -1606,9 +1682,9 @@ func (this *QGraphicsSceneWheelEvent) Setpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF
     // invoke: void setPos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setPos", args)
   }
@@ -1629,11 +1705,15 @@ func (this *QGraphicsSceneWheelEvent) Pos(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent3posEv
     // invoke: QPointF pos()
-    var ret0 = C.C_ZNK24QGraphicsSceneWheelEvent3posEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneWheelEvent3posEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "pos", args)
   }
@@ -1655,9 +1735,9 @@ func (this *QGraphicsSceneWheelEvent) Setscenepos(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF
     // invoke: void setScenePos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setScenePos", args)
   }
@@ -1678,7 +1758,7 @@ func (this *QGraphicsSceneWheelEvent) Buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent7buttonsEv
     // invoke: Qt::MouseButtons buttons()
-    C.C_ZNK24QGraphicsSceneWheelEvent7buttonsEv(this.qclsinst)
+    C.C_ZNK24QGraphicsSceneWheelEvent7buttonsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "buttons", args)
   }
@@ -1699,11 +1779,15 @@ func (this *QGraphicsSceneWheelEvent) Screenpos(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent9screenPosEv
     // invoke: QPoint screenPos()
-    var ret0 = C.C_ZNK24QGraphicsSceneWheelEvent9screenPosEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneWheelEvent9screenPosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "screenPos", args)
   }
@@ -1724,11 +1808,15 @@ func (this *QGraphicsSceneWheelEvent) Delta(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent5deltaEv
     // invoke: int delta()
-    var ret0 = C.C_ZNK24QGraphicsSceneWheelEvent5deltaEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneWheelEvent5deltaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "delta", args)
   }
@@ -1749,7 +1837,7 @@ func (this *QGraphicsSceneWheelEvent) Freeqgraphicsscenewheelevent(args ...inter
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEventD0Ev
     // invoke: void ~QGraphicsSceneWheelEvent()
-    C.C_ZN24QGraphicsSceneWheelEventD2Ev(this.qclsinst)
+    C.C_ZN24QGraphicsSceneWheelEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "~QGraphicsSceneWheelEvent", args)
   }
@@ -1770,11 +1858,15 @@ func (this *QGraphicsSceneWheelEvent) Scenepos(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent8scenePosEv
     // invoke: QPointF scenePos()
-    var ret0 = C.C_ZNK24QGraphicsSceneWheelEvent8scenePosEv(this.qclsinst)
+    var ret0 = C.C_ZNK24QGraphicsSceneWheelEvent8scenePosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "scenePos", args)
   }
@@ -1796,9 +1888,9 @@ func (this *QGraphicsSceneDragDropEvent) Setmimedata(args ...interface{}) () {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData
     // invoke: void setMimeData(const class QMimeData *)
-    var arg0 = args[0].(QMimeData).qclsinst
+    var arg0 = args[0].(*QMimeData).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData(this.qclsinst, arg0)
+    C.C_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setMimeData", args)
   }
@@ -1820,9 +1912,9 @@ func (this *QGraphicsSceneDragDropEvent) Setscreenpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint
     // invoke: void setScreenPos(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setScreenPos", args)
   }
@@ -1843,11 +1935,15 @@ func (this *QGraphicsSceneDragDropEvent) Pos(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent3posEv
     // invoke: QPointF pos()
-    var ret0 = C.C_ZNK27QGraphicsSceneDragDropEvent3posEv(this.qclsinst)
+    var ret0 = C.C_ZNK27QGraphicsSceneDragDropEvent3posEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "pos", args)
   }
@@ -1869,9 +1965,9 @@ func (this *QGraphicsSceneDragDropEvent) Setsource(args ...interface{}) () {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget
     // invoke: void setSource(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setSource", args)
   }
@@ -1892,7 +1988,7 @@ func (this *QGraphicsSceneDragDropEvent) Acceptproposedaction(args ...interface{
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv
     // invoke: void acceptProposedAction()
-    C.C_ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv(this.qclsinst)
+    C.C_ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "acceptProposedAction", args)
   }
@@ -1913,7 +2009,7 @@ func (this *QGraphicsSceneDragDropEvent) Buttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent7buttonsEv
     // invoke: Qt::MouseButtons buttons()
-    C.C_ZNK27QGraphicsSceneDragDropEvent7buttonsEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent7buttonsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "buttons", args)
   }
@@ -1934,11 +2030,15 @@ func (this *QGraphicsSceneDragDropEvent) Source(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent6sourceEv
     // invoke: QWidget * source()
-    var ret0 = C.C_ZNK27QGraphicsSceneDragDropEvent6sourceEv(this.qclsinst)
+    var ret0 = C.C_ZNK27QGraphicsSceneDragDropEvent6sourceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "source", args)
   }
@@ -1959,11 +2059,15 @@ func (this *QGraphicsSceneDragDropEvent) Scenepos(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent8scenePosEv
     // invoke: QPointF scenePos()
-    var ret0 = C.C_ZNK27QGraphicsSceneDragDropEvent8scenePosEv(this.qclsinst)
+    var ret0 = C.C_ZNK27QGraphicsSceneDragDropEvent8scenePosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "scenePos", args)
   }
@@ -1984,7 +2088,7 @@ func (this *QGraphicsSceneDragDropEvent) Proposedaction(args ...interface{}) () 
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent14proposedActionEv
     // invoke: Qt::DropAction proposedAction()
-    C.C_ZNK27QGraphicsSceneDragDropEvent14proposedActionEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent14proposedActionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "proposedAction", args)
   }
@@ -2006,9 +2110,9 @@ func (this *QGraphicsSceneDragDropEvent) Setscenepos(args ...interface{}) () {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF
     // invoke: void setScenePos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setScenePos", args)
   }
@@ -2029,7 +2133,7 @@ func (this *QGraphicsSceneDragDropEvent) Possibleactions(args ...interface{}) ()
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent15possibleActionsEv
     // invoke: Qt::DropActions possibleActions()
-    C.C_ZNK27QGraphicsSceneDragDropEvent15possibleActionsEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent15possibleActionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "possibleActions", args)
   }
@@ -2050,7 +2154,7 @@ func (this *QGraphicsSceneDragDropEvent) Dropaction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent10dropActionEv
     // invoke: Qt::DropAction dropAction()
-    C.C_ZNK27QGraphicsSceneDragDropEvent10dropActionEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent10dropActionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "dropAction", args)
   }
@@ -2071,7 +2175,7 @@ func (this *QGraphicsSceneDragDropEvent) Freeqgraphicsscenedragdropevent(args ..
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEventD0Ev
     // invoke: void ~QGraphicsSceneDragDropEvent()
-    C.C_ZN27QGraphicsSceneDragDropEventD2Ev(this.qclsinst)
+    C.C_ZN27QGraphicsSceneDragDropEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "~QGraphicsSceneDragDropEvent", args)
   }
@@ -2092,11 +2196,15 @@ func (this *QGraphicsSceneDragDropEvent) Screenpos(args ...interface{}) (ret int
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent9screenPosEv
     // invoke: QPoint screenPos()
-    var ret0 = C.C_ZNK27QGraphicsSceneDragDropEvent9screenPosEv(this.qclsinst)
+    var ret0 = C.C_ZNK27QGraphicsSceneDragDropEvent9screenPosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "screenPos", args)
   }
@@ -2117,11 +2225,15 @@ func (this *QGraphicsSceneDragDropEvent) Mimedata(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent8mimeDataEv
     // invoke: const QMimeData * mimeData()
-    var ret0 = C.C_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv(this.qclsinst)
+    var ret0 = C.C_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMimeData{}) // "const QMimeData *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "mimeData", args)
   }
@@ -2142,7 +2254,7 @@ func (this *QGraphicsSceneDragDropEvent) Modifiers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent9modifiersEv
     // invoke: Qt::KeyboardModifiers modifiers()
-    C.C_ZNK27QGraphicsSceneDragDropEvent9modifiersEv(this.qclsinst)
+    C.C_ZNK27QGraphicsSceneDragDropEvent9modifiersEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "modifiers", args)
   }
@@ -2164,9 +2276,9 @@ func (this *QGraphicsSceneDragDropEvent) Setpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF
     // invoke: void setPos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setPos", args)
   }
@@ -2187,7 +2299,7 @@ func (this *QGraphicsSceneEvent) Freeqgraphicssceneevent(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QGraphicsSceneEventD0Ev
     // invoke: void ~QGraphicsSceneEvent()
-    C.C_ZN19QGraphicsSceneEventD2Ev(this.qclsinst)
+    C.C_ZN19QGraphicsSceneEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneEvent", "~QGraphicsSceneEvent", args)
   }
@@ -2208,11 +2320,15 @@ func (this *QGraphicsSceneEvent) Widget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QGraphicsSceneEvent6widgetEv
     // invoke: QWidget * widget()
-    var ret0 = C.C_ZNK19QGraphicsSceneEvent6widgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QGraphicsSceneEvent6widgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneEvent", "widget", args)
   }
@@ -2234,9 +2350,9 @@ func (this *QGraphicsSceneEvent) Setwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QGraphicsSceneEvent9setWidgetEP7QWidget
     // invoke: void setWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneEvent", "setWidget", args)
   }
@@ -2257,11 +2373,15 @@ func (this *QGraphicsSceneResizeEvent) Newsize(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK25QGraphicsSceneResizeEvent7newSizeEv
     // invoke: QSizeF newSize()
-    var ret0 = C.C_ZNK25QGraphicsSceneResizeEvent7newSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK25QGraphicsSceneResizeEvent7newSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "newSize", args)
   }
@@ -2282,11 +2402,15 @@ func (this *QGraphicsSceneResizeEvent) Oldsize(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK25QGraphicsSceneResizeEvent7oldSizeEv
     // invoke: QSizeF oldSize()
-    var ret0 = C.C_ZNK25QGraphicsSceneResizeEvent7oldSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK25QGraphicsSceneResizeEvent7oldSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "oldSize", args)
   }
@@ -2308,9 +2432,9 @@ func (this *QGraphicsSceneResizeEvent) Setoldsize(args ...interface{}) () {
   case 0:
     // invoke: _ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF
     // invoke: void setOldSize(const class QSizeF &)
-    var arg0 = args[0].(QSizeF).qclsinst
+    var arg0 = args[0].(*QSizeF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "setOldSize", args)
   }
@@ -2332,9 +2456,9 @@ func (this *QGraphicsSceneResizeEvent) Setnewsize(args ...interface{}) () {
   case 0:
     // invoke: _ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF
     // invoke: void setNewSize(const class QSizeF &)
-    var arg0 = args[0].(QSizeF).qclsinst
+    var arg0 = args[0].(*QSizeF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "setNewSize", args)
   }
@@ -2355,7 +2479,7 @@ func (this *QGraphicsSceneResizeEvent) Freeqgraphicssceneresizeevent(args ...int
   case 0:
     // invoke: _ZN25QGraphicsSceneResizeEventD0Ev
     // invoke: void ~QGraphicsSceneResizeEvent()
-    C.C_ZN25QGraphicsSceneResizeEventD2Ev(this.qclsinst)
+    C.C_ZN25QGraphicsSceneResizeEventD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "~QGraphicsSceneResizeEvent", args)
   }
@@ -2379,12 +2503,12 @@ func NewQGraphicsSceneResizeEvent(args ...interface{}) *QGraphicsSceneResizeEven
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN25QGraphicsSceneResizeEventC2Ev()
-    return &QGraphicsSceneResizeEvent{qclsinst:qthis}
+    return &QGraphicsSceneResizeEvent{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "QGraphicsSceneResizeEvent", args)
   }
 
-  return nil // QGraphicsSceneResizeEvent{qclsinst:qthis}
+  return nil // QGraphicsSceneResizeEvent{Qclsinst:qthis}
 }
 
 // <= body block end

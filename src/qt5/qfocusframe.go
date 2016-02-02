@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qfocusframe.h
 // dst-file: /src/widgets/qfocusframe.go
 //
@@ -53,7 +53,7 @@ func init() {
 // class sizeof(QFocusFrame)=1
 type QFocusFrame struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // ~QFocusFrame()
@@ -69,7 +69,7 @@ func (this *QFocusFrame) Freeqfocusframe(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFocusFrameD0Ev
     // invoke: void ~QFocusFrame()
-    C.C_ZN11QFocusFrameD2Ev(this.qclsinst)
+    C.C_ZN11QFocusFrameD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFocusFrame", "~QFocusFrame", args)
   }
@@ -90,11 +90,15 @@ func (this *QFocusFrame) Widget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QFocusFrame6widgetEv
     // invoke: QWidget * widget()
-    var ret0 = C.C_ZNK11QFocusFrame6widgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QFocusFrame6widgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFocusFrame", "widget", args)
   }
@@ -116,9 +120,9 @@ func (this *QFocusFrame) Setwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFocusFrame9setWidgetEP7QWidget
     // invoke: void setWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QFocusFrame9setWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN11QFocusFrame9setWidgetEP7QWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFocusFrame", "setWidget", args)
   }
@@ -140,17 +144,17 @@ func NewQFocusFrame(args ...interface{}) *QFocusFrame {
   case 0:
     // invoke: _ZN11QFocusFrameC1EP7QWidget
     // invoke: void QFocusFrame(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QFocusFrameC2EP7QWidget(arg0)
-    return &QFocusFrame{qclsinst:qthis}
+    return &QFocusFrame{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFocusFrame", "QFocusFrame", args)
   }
 
-  return nil // QFocusFrame{qclsinst:qthis}
+  return nil // QFocusFrame{Qclsinst:qthis}
 }
 
 // metaObject()
@@ -166,7 +170,7 @@ func (this *QFocusFrame) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFocusFrame10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QFocusFrame10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QFocusFrame10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFocusFrame", "metaObject", args)
   }

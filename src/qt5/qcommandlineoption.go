@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.go
 //
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QCommandLineOption)=1
 type QCommandLineOption struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // setDescription(const class QString &)
@@ -90,9 +90,9 @@ func (this *QCommandLineOption) Setdescription(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineOption14setDescriptionERK7QString
     // invoke: void setDescription(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QCommandLineOption14setDescriptionERK7QString(this.qclsinst, arg0)
+    C.C_ZN18QCommandLineOption14setDescriptionERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setDescription", args)
   }
@@ -113,7 +113,7 @@ func (this *QCommandLineOption) Defaultvalues(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCommandLineOption13defaultValuesEv
     // invoke: QStringList defaultValues()
-    C.C_ZNK18QCommandLineOption13defaultValuesEv(this.qclsinst)
+    C.C_ZNK18QCommandLineOption13defaultValuesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "defaultValues", args)
   }
@@ -134,11 +134,15 @@ func (this *QCommandLineOption) Description(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK18QCommandLineOption11descriptionEv
     // invoke: QString description()
-    var ret0 = C.C_ZNK18QCommandLineOption11descriptionEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QCommandLineOption11descriptionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCommandLineOption", "description", args)
   }
@@ -178,65 +182,65 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
   case 0:
     // invoke: _ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_
     // invoke: void QCommandLineOption(const class QStringList &, const class QString &, const class QString &, const class QString &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QString).qclsinst
+    var arg3 = args[3].(*QString).Qclsinst
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERK11QStringListRK7QStringS5_S5_(arg0, arg1, arg2, arg3)
-    return &QCommandLineOption{qclsinst:qthis}
+    return &QCommandLineOption{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QCommandLineOptionC1ERK11QStringList
     // invoke: void QCommandLineOption(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERK11QStringList(arg0)
-    return &QCommandLineOption{qclsinst:qthis}
+    return &QCommandLineOption{Qclsinst:qthis}
   case 2:
     // invoke: _ZN18QCommandLineOptionC1ERKS_
     // invoke: void QCommandLineOption(const class QCommandLineOption &)
-    var arg0 = args[0].(QCommandLineOption).qclsinst
+    var arg0 = args[0].(*QCommandLineOption).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERKS_(arg0)
-    return &QCommandLineOption{qclsinst:qthis}
+    return &QCommandLineOption{Qclsinst:qthis}
   case 3:
     // invoke: _ZN18QCommandLineOptionC1ERK7QString
     // invoke: void QCommandLineOption(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERK7QString(arg0)
-    return &QCommandLineOption{qclsinst:qthis}
+    return &QCommandLineOption{Qclsinst:qthis}
   case 4:
     // invoke: _ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_
     // invoke: void QCommandLineOption(const class QString &, const class QString &, const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QString).qclsinst
+    var arg3 = args[3].(*QString).Qclsinst
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERK7QStringS2_S2_S2_(arg0, arg1, arg2, arg3)
-    return &QCommandLineOption{qclsinst:qthis}
+    return &QCommandLineOption{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCommandLineOption", "QCommandLineOption", args)
   }
 
-  return nil // QCommandLineOption{qclsinst:qthis}
+  return nil // QCommandLineOption{Qclsinst:qthis}
 }
 
 // setDefaultValue(const class QString &)
@@ -253,9 +257,9 @@ func (this *QCommandLineOption) Setdefaultvalue(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineOption15setDefaultValueERK7QString
     // invoke: void setDefaultValue(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QCommandLineOption15setDefaultValueERK7QString(this.qclsinst, arg0)
+    C.C_ZN18QCommandLineOption15setDefaultValueERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setDefaultValue", args)
   }
@@ -276,7 +280,7 @@ func (this *QCommandLineOption) Freeqcommandlineoption(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineOptionD0Ev
     // invoke: void ~QCommandLineOption()
-    C.C_ZN18QCommandLineOptionD2Ev(this.qclsinst)
+    C.C_ZN18QCommandLineOptionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "~QCommandLineOption", args)
   }
@@ -298,9 +302,9 @@ func (this *QCommandLineOption) Setdefaultvalues(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineOption16setDefaultValuesERK11QStringList
     // invoke: void setDefaultValues(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QCommandLineOption16setDefaultValuesERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN18QCommandLineOption16setDefaultValuesERK11QStringList(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setDefaultValues", args)
   }
@@ -322,9 +326,9 @@ func (this *QCommandLineOption) Setvaluename(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineOption12setValueNameERK7QString
     // invoke: void setValueName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QCommandLineOption12setValueNameERK7QString(this.qclsinst, arg0)
+    C.C_ZN18QCommandLineOption12setValueNameERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setValueName", args)
   }
@@ -345,7 +349,7 @@ func (this *QCommandLineOption) Names(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCommandLineOption5namesEv
     // invoke: QStringList names()
-    C.C_ZNK18QCommandLineOption5namesEv(this.qclsinst)
+    C.C_ZNK18QCommandLineOption5namesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "names", args)
   }
@@ -366,11 +370,15 @@ func (this *QCommandLineOption) Valuename(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK18QCommandLineOption9valueNameEv
     // invoke: QString valueName()
-    var ret0 = C.C_ZNK18QCommandLineOption9valueNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QCommandLineOption9valueNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCommandLineOption", "valueName", args)
   }
@@ -392,9 +400,9 @@ func (this *QCommandLineOption) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineOption4swapERS_
     // invoke: void swap(class QCommandLineOption &)
-    var arg0 = args[0].(QCommandLineOption).qclsinst
+    var arg0 = args[0].(*QCommandLineOption).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QCommandLineOption4swapERS_(this.qclsinst, arg0)
+    C.C_ZN18QCommandLineOption4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "swap", args)
   }

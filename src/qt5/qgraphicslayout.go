@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qgraphicslayout.h
 // dst-file: /src/widgets/qgraphicslayout.go
 //
@@ -65,7 +65,7 @@ func init() {
 // class sizeof(QGraphicsLayout)=1
 type QGraphicsLayout struct {
   /*qbase*/ QGraphicsLayoutItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // updateGeometry()
@@ -81,7 +81,7 @@ func (this *QGraphicsLayout) Updategeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsLayout14updateGeometryEv
     // invoke: void updateGeometry()
-    C.C_ZN15QGraphicsLayout14updateGeometryEv(this.qclsinst)
+    C.C_ZN15QGraphicsLayout14updateGeometryEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "updateGeometry", args)
   }
@@ -102,7 +102,7 @@ func (this *QGraphicsLayout) Activate(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsLayout8activateEv
     // invoke: void activate()
-    C.C_ZN15QGraphicsLayout8activateEv(this.qclsinst)
+    C.C_ZN15QGraphicsLayout8activateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "activate", args)
   }
@@ -123,11 +123,15 @@ func (this *QGraphicsLayout) Isactivated(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK15QGraphicsLayout11isActivatedEv
     // invoke: bool isActivated()
-    var ret0 = C.C_ZNK15QGraphicsLayout11isActivatedEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsLayout11isActivatedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "isActivated", args)
   }
@@ -148,7 +152,7 @@ func (this *QGraphicsLayout) Invalidate(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsLayout10invalidateEv
     // invoke: void invalidate()
-    C.C_ZN15QGraphicsLayout10invalidateEv(this.qclsinst)
+    C.C_ZN15QGraphicsLayout10invalidateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "invalidate", args)
   }
@@ -181,7 +185,7 @@ func (this *QGraphicsLayout) Getcontentsmargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (unsafe.Pointer)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C.C_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "getContentsMargins", args)
   }
@@ -206,15 +210,15 @@ func (this *QGraphicsLayout) Setcontentsmargins(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsLayout18setContentsMarginsEdddd
     // invoke: void setContentsMargins(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    C.C_ZN15QGraphicsLayout18setContentsMarginsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN15QGraphicsLayout18setContentsMarginsEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "setContentsMargins", args)
   }
@@ -235,7 +239,7 @@ func (this *QGraphicsLayout) Freeqgraphicslayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsLayoutD0Ev
     // invoke: void ~QGraphicsLayout()
-    C.C_ZN15QGraphicsLayoutD2Ev(this.qclsinst)
+    C.C_ZN15QGraphicsLayoutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "~QGraphicsLayout", args)
   }
@@ -284,7 +288,11 @@ func (this *QGraphicsLayout) Instantinvalidatepropagation_S(args ...interface{})
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "instantInvalidatePropagation", args)
   }
@@ -306,9 +314,9 @@ func (this *QGraphicsLayout) Widgetevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsLayout11widgetEventEP6QEvent
     // invoke: void widgetEvent(class QEvent *)
-    var arg0 = args[0].(QEvent).qclsinst
+    var arg0 = args[0].(*QEvent).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsLayout11widgetEventEP6QEvent(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsLayout11widgetEventEP6QEvent(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "widgetEvent", args)
   }
@@ -330,17 +338,17 @@ func NewQGraphicsLayout(args ...interface{}) *QGraphicsLayout {
   case 0:
     // invoke: _ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem
     // invoke: void QGraphicsLayout(class QGraphicsLayoutItem *)
-    var arg0 = args[0].(QGraphicsLayoutItem).qclsinst
+    var arg0 = args[0].(*QGraphicsLayoutItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(arg0)
-    return &QGraphicsLayout{qclsinst:qthis}
+    return &QGraphicsLayout{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "QGraphicsLayout", args)
   }
 
-  return nil // QGraphicsLayout{qclsinst:qthis}
+  return nil // QGraphicsLayout{Qclsinst:qthis}
 }
 
 // <= body block end

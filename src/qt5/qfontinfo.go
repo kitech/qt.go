@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.go
 //
@@ -83,7 +83,7 @@ func init() {
 // class sizeof(QFontInfo)=1
 type QFontInfo struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // styleHint()
@@ -99,7 +99,7 @@ func (this *QFontInfo) Stylehint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFontInfo9styleHintEv
     // invoke: QFont::StyleHint styleHint()
-    C.C_ZNK9QFontInfo9styleHintEv(this.qclsinst)
+    C.C_ZNK9QFontInfo9styleHintEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "styleHint", args)
   }
@@ -120,7 +120,7 @@ func (this *QFontInfo) Style(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFontInfo5styleEv
     // invoke: QFont::Style style()
-    C.C_ZNK9QFontInfo5styleEv(this.qclsinst)
+    C.C_ZNK9QFontInfo5styleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "style", args)
   }
@@ -141,11 +141,15 @@ func (this *QFontInfo) Strikeout(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo9strikeOutEv
     // invoke: bool strikeOut()
-    var ret0 = C.C_ZNK9QFontInfo9strikeOutEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo9strikeOutEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "strikeOut", args)
   }
@@ -166,11 +170,15 @@ func (this *QFontInfo) Pointsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo9pointSizeEv
     // invoke: int pointSize()
-    var ret0 = C.C_ZNK9QFontInfo9pointSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo9pointSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "pointSize", args)
   }
@@ -191,11 +199,15 @@ func (this *QFontInfo) Bold(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo4boldEv
     // invoke: bool bold()
-    var ret0 = C.C_ZNK9QFontInfo4boldEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo4boldEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "bold", args)
   }
@@ -216,11 +228,15 @@ func (this *QFontInfo) Family(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo6familyEv
     // invoke: QString family()
-    var ret0 = C.C_ZNK9QFontInfo6familyEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo6familyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "family", args)
   }
@@ -241,11 +257,15 @@ func (this *QFontInfo) Weight(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo6weightEv
     // invoke: int weight()
-    var ret0 = C.C_ZNK9QFontInfo6weightEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo6weightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "weight", args)
   }
@@ -266,11 +286,15 @@ func (this *QFontInfo) Pointsizef(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo10pointSizeFEv
     // invoke: qreal pointSizeF()
-    var ret0 = C.C_ZNK9QFontInfo10pointSizeFEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo10pointSizeFEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "pointSizeF", args)
   }
@@ -291,11 +315,15 @@ func (this *QFontInfo) Exactmatch(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo10exactMatchEv
     // invoke: bool exactMatch()
-    var ret0 = C.C_ZNK9QFontInfo10exactMatchEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo10exactMatchEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "exactMatch", args)
   }
@@ -316,11 +344,15 @@ func (this *QFontInfo) Underline(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo9underlineEv
     // invoke: bool underline()
-    var ret0 = C.C_ZNK9QFontInfo9underlineEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo9underlineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "underline", args)
   }
@@ -341,11 +373,15 @@ func (this *QFontInfo) Overline(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo8overlineEv
     // invoke: bool overline()
-    var ret0 = C.C_ZNK9QFontInfo8overlineEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo8overlineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "overline", args)
   }
@@ -366,11 +402,15 @@ func (this *QFontInfo) Fixedpitch(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo10fixedPitchEv
     // invoke: bool fixedPitch()
-    var ret0 = C.C_ZNK9QFontInfo10fixedPitchEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo10fixedPitchEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "fixedPitch", args)
   }
@@ -392,9 +432,9 @@ func (this *QFontInfo) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QFontInfo4swapERS_
     // invoke: void swap(class QFontInfo &)
-    var arg0 = args[0].(QFontInfo).qclsinst
+    var arg0 = args[0].(*QFontInfo).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QFontInfo4swapERS_(this.qclsinst, arg0)
+    C.C_ZN9QFontInfo4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontInfo", "swap", args)
   }
@@ -415,11 +455,15 @@ func (this *QFontInfo) Italic(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo6italicEv
     // invoke: bool italic()
-    var ret0 = C.C_ZNK9QFontInfo6italicEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo6italicEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "italic", args)
   }
@@ -440,11 +484,15 @@ func (this *QFontInfo) Rawmode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo7rawModeEv
     // invoke: bool rawMode()
-    var ret0 = C.C_ZNK9QFontInfo7rawModeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo7rawModeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "rawMode", args)
   }
@@ -465,11 +513,15 @@ func (this *QFontInfo) Pixelsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo9pixelSizeEv
     // invoke: int pixelSize()
-    var ret0 = C.C_ZNK9QFontInfo9pixelSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo9pixelSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "pixelSize", args)
   }
@@ -490,11 +542,15 @@ func (this *QFontInfo) Stylename(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QFontInfo9styleNameEv
     // invoke: QString styleName()
-    var ret0 = C.C_ZNK9QFontInfo9styleNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QFontInfo9styleNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "styleName", args)
   }
@@ -515,7 +571,7 @@ func (this *QFontInfo) Freeqfontinfo(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QFontInfoD0Ev
     // invoke: void ~QFontInfo()
-    C.C_ZN9QFontInfoD2Ev(this.qclsinst)
+    C.C_ZN9QFontInfoD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "~QFontInfo", args)
   }
@@ -540,26 +596,26 @@ func NewQFontInfo(args ...interface{}) *QFontInfo {
   case 0:
     // invoke: _ZN9QFontInfoC1ERKS_
     // invoke: void QFontInfo(const class QFontInfo &)
-    var arg0 = args[0].(QFontInfo).qclsinst
+    var arg0 = args[0].(*QFontInfo).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QFontInfoC2ERKS_(arg0)
-    return &QFontInfo{qclsinst:qthis}
+    return &QFontInfo{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QFontInfoC1ERK5QFont
     // invoke: void QFontInfo(const class QFont &)
-    var arg0 = args[0].(QFont).qclsinst
+    var arg0 = args[0].(*QFont).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QFontInfoC2ERK5QFont(arg0)
-    return &QFontInfo{qclsinst:qthis}
+    return &QFontInfo{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFontInfo", "QFontInfo", args)
   }
 
-  return nil // QFontInfo{qclsinst:qthis}
+  return nil // QFontInfo{Qclsinst:qthis}
 }
 
 // <= body block end

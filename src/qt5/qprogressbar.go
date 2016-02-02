@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qprogressbar.h
 // dst-file: /src/widgets/qprogressbar.go
 //
@@ -91,7 +91,7 @@ func init() {
 // class sizeof(QProgressBar)=1
 type QProgressBar struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _valueChanged QProgressBar_valueChanged_signal;
 }
 
@@ -108,7 +108,7 @@ func (this *QProgressBar) Orientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar11orientationEv
     // invoke: Qt::Orientation orientation()
-    C.C_ZNK12QProgressBar11orientationEv(this.qclsinst)
+    C.C_ZNK12QProgressBar11orientationEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "orientation", args)
   }
@@ -129,11 +129,15 @@ func (this *QProgressBar) Text(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QProgressBar4textEv
     // invoke: QString text()
-    var ret0 = C.C_ZNK12QProgressBar4textEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QProgressBar4textEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProgressBar", "text", args)
   }
@@ -154,11 +158,15 @@ func (this *QProgressBar) Istextvisible(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QProgressBar13isTextVisibleEv
     // invoke: bool isTextVisible()
-    var ret0 = C.C_ZNK12QProgressBar13isTextVisibleEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QProgressBar13isTextVisibleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProgressBar", "isTextVisible", args)
   }
@@ -180,17 +188,17 @@ func NewQProgressBar(args ...interface{}) *QProgressBar {
   case 0:
     // invoke: _ZN12QProgressBarC1EP7QWidget
     // invoke: void QProgressBar(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QProgressBarC2EP7QWidget(arg0)
-    return &QProgressBar{qclsinst:qthis}
+    return &QProgressBar{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QProgressBar", "QProgressBar", args)
   }
 
-  return nil // QProgressBar{qclsinst:qthis}
+  return nil // QProgressBar{Qclsinst:qthis}
 }
 
 // minimum()
@@ -206,11 +214,15 @@ func (this *QProgressBar) Minimum(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QProgressBar7minimumEv
     // invoke: int minimum()
-    var ret0 = C.C_ZNK12QProgressBar7minimumEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QProgressBar7minimumEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProgressBar", "minimum", args)
   }
@@ -231,7 +243,7 @@ func (this *QProgressBar) Alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C.C_ZNK12QProgressBar9alignmentEv(this.qclsinst)
+    C.C_ZNK12QProgressBar9alignmentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "alignment", args)
   }
@@ -252,7 +264,7 @@ func (this *QProgressBar) Textdirection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar13textDirectionEv
     // invoke: QProgressBar::Direction textDirection()
-    C.C_ZNK12QProgressBar13textDirectionEv(this.qclsinst)
+    C.C_ZNK12QProgressBar13textDirectionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "textDirection", args)
   }
@@ -273,7 +285,7 @@ func (this *QProgressBar) Resetformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBar11resetFormatEv
     // invoke: void resetFormat()
-    C.C_ZN12QProgressBar11resetFormatEv(this.qclsinst)
+    C.C_ZN12QProgressBar11resetFormatEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "resetFormat", args)
   }
@@ -294,7 +306,7 @@ func (this *QProgressBar) Freeqprogressbar(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBarD0Ev
     // invoke: void ~QProgressBar()
-    C.C_ZN12QProgressBarD2Ev(this.qclsinst)
+    C.C_ZN12QProgressBarD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "~QProgressBar", args)
   }
@@ -316,9 +328,9 @@ func (this *QProgressBar) Setformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBar9setFormatERK7QString
     // invoke: void setFormat(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QProgressBar9setFormatERK7QString(this.qclsinst, arg0)
+    C.C_ZN12QProgressBar9setFormatERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setFormat", args)
   }
@@ -340,9 +352,9 @@ func (this *QProgressBar) Setmaximum(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBar10setMaximumEi
     // invoke: void setMaximum(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QProgressBar10setMaximumEi(this.qclsinst, arg0)
+    C.C_ZN12QProgressBar10setMaximumEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setMaximum", args)
   }
@@ -364,9 +376,9 @@ func (this *QProgressBar) Setvalue(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBar8setValueEi
     // invoke: void setValue(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QProgressBar8setValueEi(this.qclsinst, arg0)
+    C.C_ZN12QProgressBar8setValueEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setValue", args)
   }
@@ -387,11 +399,15 @@ func (this *QProgressBar) Format(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QProgressBar6formatEv
     // invoke: QString format()
-    var ret0 = C.C_ZNK12QProgressBar6formatEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QProgressBar6formatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProgressBar", "format", args)
   }
@@ -412,11 +428,15 @@ func (this *QProgressBar) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QProgressBar8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK12QProgressBar8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QProgressBar8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProgressBar", "sizeHint", args)
   }
@@ -439,11 +459,11 @@ func (this *QProgressBar) Setrange(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBar8setRangeEii
     // invoke: void setRange(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN12QProgressBar8setRangeEii(this.qclsinst, arg0, arg1)
+    C.C_ZN12QProgressBar8setRangeEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QProgressBar", "setRange", args)
   }
@@ -464,7 +484,7 @@ func (this *QProgressBar) Reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBar5resetEv
     // invoke: void reset()
-    C.C_ZN12QProgressBar5resetEv(this.qclsinst)
+    C.C_ZN12QProgressBar5resetEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "reset", args)
   }
@@ -488,7 +508,7 @@ func (this *QProgressBar) Setinvertedappearance(args ...interface{}) () {
     // invoke: void setInvertedAppearance(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QProgressBar21setInvertedAppearanceEb(this.qclsinst, arg0)
+    C.C_ZN12QProgressBar21setInvertedAppearanceEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setInvertedAppearance", args)
   }
@@ -509,7 +529,7 @@ func (this *QProgressBar) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QProgressBar10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK12QProgressBar10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QProgressBar10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "metaObject", args)
   }
@@ -533,7 +553,7 @@ func (this *QProgressBar) Settextvisible(args ...interface{}) () {
     // invoke: void setTextVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QProgressBar14setTextVisibleEb(this.qclsinst, arg0)
+    C.C_ZN12QProgressBar14setTextVisibleEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setTextVisible", args)
   }
@@ -554,11 +574,15 @@ func (this *QProgressBar) Minimumsizehint(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK12QProgressBar15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK12QProgressBar15minimumSizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QProgressBar15minimumSizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProgressBar", "minimumSizeHint", args)
   }
@@ -579,11 +603,15 @@ func (this *QProgressBar) Maximum(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QProgressBar7maximumEv
     // invoke: int maximum()
-    var ret0 = C.C_ZNK12QProgressBar7maximumEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QProgressBar7maximumEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProgressBar", "maximum", args)
   }
@@ -604,11 +632,15 @@ func (this *QProgressBar) Value(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QProgressBar5valueEv
     // invoke: int value()
-    var ret0 = C.C_ZNK12QProgressBar5valueEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QProgressBar5valueEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProgressBar", "value", args)
   }
@@ -629,11 +661,15 @@ func (this *QProgressBar) Invertedappearance(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK12QProgressBar18invertedAppearanceEv
     // invoke: bool invertedAppearance()
-    var ret0 = C.C_ZNK12QProgressBar18invertedAppearanceEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QProgressBar18invertedAppearanceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProgressBar", "invertedAppearance", args)
   }
@@ -655,9 +691,9 @@ func (this *QProgressBar) Setminimum(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBar10setMinimumEi
     // invoke: void setMinimum(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QProgressBar10setMinimumEi(this.qclsinst, arg0)
+    C.C_ZN12QProgressBar10setMinimumEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setMinimum", args)
   }

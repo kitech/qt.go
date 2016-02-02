@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qundoview.h
 // dst-file: /src/widgets/qundoview.go
 //
@@ -69,7 +69,7 @@ func init() {
 // class sizeof(QUndoView)=1
 type QUndoView struct {
   /*qbase*/ QListView;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // setCleanIcon(const class QIcon &)
@@ -86,9 +86,9 @@ func (this *QUndoView) Setcleanicon(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUndoView12setCleanIconERK5QIcon
     // invoke: void setCleanIcon(const class QIcon &)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QUndoView12setCleanIconERK5QIcon(this.qclsinst, arg0)
+    C.C_ZN9QUndoView12setCleanIconERK5QIcon(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoView", "setCleanIcon", args)
   }
@@ -109,7 +109,7 @@ func (this *QUndoView) Freequndoview(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUndoViewD0Ev
     // invoke: void ~QUndoView()
-    C.C_ZN9QUndoViewD2Ev(this.qclsinst)
+    C.C_ZN9QUndoViewD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "~QUndoView", args)
   }
@@ -130,11 +130,15 @@ func (this *QUndoView) Cleanicon(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QUndoView9cleanIconEv
     // invoke: QIcon cleanIcon()
-    var ret0 = C.C_ZNK9QUndoView9cleanIconEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QUndoView9cleanIconEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIcon{}) // "QIcon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoView", "cleanIcon", args)
   }
@@ -164,39 +168,39 @@ func NewQUndoView(args ...interface{}) *QUndoView {
   case 0:
     // invoke: _ZN9QUndoViewC1EP7QWidget
     // invoke: void QUndoView(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QUndoViewC2EP7QWidget(arg0)
-    return &QUndoView{qclsinst:qthis}
+    return &QUndoView{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QUndoViewC1EP10QUndoGroupP7QWidget
     // invoke: void QUndoView(class QUndoGroup *, class QWidget *)
-    var arg0 = args[0].(QUndoGroup).qclsinst
+    var arg0 = args[0].(*QUndoGroup).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QUndoViewC2EP10QUndoGroupP7QWidget(arg0, arg1)
-    return &QUndoView{qclsinst:qthis}
+    return &QUndoView{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QUndoViewC1EP10QUndoStackP7QWidget
     // invoke: void QUndoView(class QUndoStack *, class QWidget *)
-    var arg0 = args[0].(QUndoStack).qclsinst
+    var arg0 = args[0].(*QUndoStack).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QUndoViewC2EP10QUndoStackP7QWidget(arg0, arg1)
-    return &QUndoView{qclsinst:qthis}
+    return &QUndoView{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QUndoView", "QUndoView", args)
   }
 
-  return nil // QUndoView{qclsinst:qthis}
+  return nil // QUndoView{Qclsinst:qthis}
 }
 
 // emptyLabel()
@@ -212,11 +216,15 @@ func (this *QUndoView) Emptylabel(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QUndoView10emptyLabelEv
     // invoke: QString emptyLabel()
-    var ret0 = C.C_ZNK9QUndoView10emptyLabelEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QUndoView10emptyLabelEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoView", "emptyLabel", args)
   }
@@ -238,9 +246,9 @@ func (this *QUndoView) Setemptylabel(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUndoView13setEmptyLabelERK7QString
     // invoke: void setEmptyLabel(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QUndoView13setEmptyLabelERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QUndoView13setEmptyLabelERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoView", "setEmptyLabel", args)
   }
@@ -262,9 +270,9 @@ func (this *QUndoView) Setstack(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUndoView8setStackEP10QUndoStack
     // invoke: void setStack(class QUndoStack *)
-    var arg0 = args[0].(QUndoStack).qclsinst
+    var arg0 = args[0].(*QUndoStack).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QUndoView8setStackEP10QUndoStack(this.qclsinst, arg0)
+    C.C_ZN9QUndoView8setStackEP10QUndoStack(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoView", "setStack", args)
   }
@@ -285,7 +293,7 @@ func (this *QUndoView) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUndoView10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QUndoView10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QUndoView10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "metaObject", args)
   }
@@ -307,9 +315,9 @@ func (this *QUndoView) Setgroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUndoView8setGroupEP10QUndoGroup
     // invoke: void setGroup(class QUndoGroup *)
-    var arg0 = args[0].(QUndoGroup).qclsinst
+    var arg0 = args[0].(*QUndoGroup).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QUndoView8setGroupEP10QUndoGroup(this.qclsinst, arg0)
+    C.C_ZN9QUndoView8setGroupEP10QUndoGroup(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoView", "setGroup", args)
   }
@@ -330,11 +338,15 @@ func (this *QUndoView) Group(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QUndoView5groupEv
     // invoke: QUndoGroup * group()
-    var ret0 = C.C_ZNK9QUndoView5groupEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QUndoView5groupEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QUndoGroup{}) // "QUndoGroup *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoView", "group", args)
   }
@@ -355,11 +367,15 @@ func (this *QUndoView) Stack(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QUndoView5stackEv
     // invoke: QUndoStack * stack()
-    var ret0 = C.C_ZNK9QUndoView5stackEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QUndoView5stackEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QUndoStack{}) // "QUndoStack *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUndoView", "stack", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qbytearraymatcher.h
 // dst-file: /src/core/qbytearraymatcher.go
 //
@@ -61,7 +61,7 @@ func init() {
 // class sizeof(QByteArrayMatcher)=1040
 type QByteArrayMatcher struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // indexIn(const char *, int, int)
@@ -88,27 +88,35 @@ func (this *QByteArrayMatcher) Indexin(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK17QByteArrayMatcher7indexInEPKcii(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK17QByteArrayMatcher7indexInEPKcii(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK17QByteArrayMatcher7indexInERK10QByteArrayi
     // invoke: int indexIn(const class QByteArray &, int)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArrayMatcher", "indexIn", args)
   }
@@ -129,11 +137,15 @@ func (this *QByteArrayMatcher) Pattern(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QByteArrayMatcher7patternEv
     // invoke: QByteArray pattern()
-    var ret0 = C.C_ZNK17QByteArrayMatcher7patternEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QByteArrayMatcher7patternEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QByteArrayMatcher", "pattern", args)
   }
@@ -164,19 +176,19 @@ func NewQByteArrayMatcher(args ...interface{}) *QByteArrayMatcher {
   case 0:
     // invoke: _ZN17QByteArrayMatcherC1ERKS_
     // invoke: void QByteArrayMatcher(const class QByteArrayMatcher &)
-    var arg0 = args[0].(QByteArrayMatcher).qclsinst
+    var arg0 = args[0].(*QByteArrayMatcher).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QByteArrayMatcherC2ERKS_(arg0)
-    return &QByteArrayMatcher{qclsinst:qthis}
+    return &QByteArrayMatcher{Qclsinst:qthis}
   case 1:
     // invoke: _ZN17QByteArrayMatcherC1Ev
     // invoke: void QByteArrayMatcher()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QByteArrayMatcherC2Ev()
-    return &QByteArrayMatcher{qclsinst:qthis}
+    return &QByteArrayMatcher{Qclsinst:qthis}
   case 2:
     // invoke: _ZN17QByteArrayMatcherC1EPKci
     // invoke: void QByteArrayMatcher(const char *, int)
@@ -184,26 +196,26 @@ func NewQByteArrayMatcher(args ...interface{}) *QByteArrayMatcher {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QByteArrayMatcherC2EPKci(arg0, arg1)
-    return &QByteArrayMatcher{qclsinst:qthis}
+    return &QByteArrayMatcher{Qclsinst:qthis}
   case 3:
     // invoke: _ZN17QByteArrayMatcherC1ERK10QByteArray
     // invoke: void QByteArrayMatcher(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QByteArrayMatcherC2ERK10QByteArray(arg0)
-    return &QByteArrayMatcher{qclsinst:qthis}
+    return &QByteArrayMatcher{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QByteArrayMatcher", "QByteArrayMatcher", args)
   }
 
-  return nil // QByteArrayMatcher{qclsinst:qthis}
+  return nil // QByteArrayMatcher{Qclsinst:qthis}
 }
 
 // setPattern(const class QByteArray &)
@@ -220,9 +232,9 @@ func (this *QByteArrayMatcher) Setpattern(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QByteArrayMatcher10setPatternERK10QByteArray
     // invoke: void setPattern(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QByteArrayMatcher10setPatternERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN17QByteArrayMatcher10setPatternERK10QByteArray(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArrayMatcher", "setPattern", args)
   }
@@ -243,7 +255,7 @@ func (this *QByteArrayMatcher) Freeqbytearraymatcher(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QByteArrayMatcherD0Ev
     // invoke: void ~QByteArrayMatcher()
-    C.C_ZN17QByteArrayMatcherD2Ev(this.qclsinst)
+    C.C_ZN17QByteArrayMatcherD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QByteArrayMatcher", "~QByteArrayMatcher", args)
   }

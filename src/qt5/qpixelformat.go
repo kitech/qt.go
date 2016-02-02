@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qpixelformat.h
 // dst-file: /src/gui/qpixelformat.go
 //
@@ -89,7 +89,7 @@ func init() {
 // class sizeof(QPixelFormat)=8
 type QPixelFormat struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // yuvLayout()
@@ -105,7 +105,7 @@ func (this *QPixelFormat) Yuvlayout(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPixelFormat9yuvLayoutEv
     // invoke: QPixelFormat::YUVLayout yuvLayout()
-    C.C_ZNK12QPixelFormat9yuvLayoutEv(this.qclsinst)
+    C.C_ZNK12QPixelFormat9yuvLayoutEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "yuvLayout", args)
   }
@@ -126,11 +126,15 @@ func (this *QPixelFormat) Yellowsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat10yellowSizeEv
     // invoke: uchar yellowSize()
-    var ret0 = C.C_ZNK12QPixelFormat10yellowSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat10yellowSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "yellowSize", args)
   }
@@ -151,7 +155,7 @@ func (this *QPixelFormat) Alphaposition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPixelFormat13alphaPositionEv
     // invoke: QPixelFormat::AlphaPosition alphaPosition()
-    C.C_ZNK12QPixelFormat13alphaPositionEv(this.qclsinst)
+    C.C_ZNK12QPixelFormat13alphaPositionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "alphaPosition", args)
   }
@@ -172,11 +176,15 @@ func (this *QPixelFormat) Cyansize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat8cyanSizeEv
     // invoke: uchar cyanSize()
-    var ret0 = C.C_ZNK12QPixelFormat8cyanSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat8cyanSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "cyanSize", args)
   }
@@ -197,11 +205,15 @@ func (this *QPixelFormat) Lightnesssize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat13lightnessSizeEv
     // invoke: uchar lightnessSize()
-    var ret0 = C.C_ZNK12QPixelFormat13lightnessSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat13lightnessSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "lightnessSize", args)
   }
@@ -222,11 +234,15 @@ func (this *QPixelFormat) Brightnesssize(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK12QPixelFormat14brightnessSizeEv
     // invoke: uchar brightnessSize()
-    var ret0 = C.C_ZNK12QPixelFormat14brightnessSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat14brightnessSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "brightnessSize", args)
   }
@@ -250,12 +266,12 @@ func NewQPixelFormat(args ...interface{}) *QPixelFormat {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QPixelFormatC2Ev()
-    return &QPixelFormat{qclsinst:qthis}
+    return &QPixelFormat{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPixelFormat", "QPixelFormat", args)
   }
 
-  return nil // QPixelFormat{qclsinst:qthis}
+  return nil // QPixelFormat{Qclsinst:qthis}
 }
 
 // bitsPerPixel()
@@ -271,11 +287,15 @@ func (this *QPixelFormat) Bitsperpixel(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat12bitsPerPixelEv
     // invoke: uchar bitsPerPixel()
-    var ret0 = C.C_ZNK12QPixelFormat12bitsPerPixelEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat12bitsPerPixelEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "bitsPerPixel", args)
   }
@@ -296,11 +316,15 @@ func (this *QPixelFormat) Blacksize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat9blackSizeEv
     // invoke: uchar blackSize()
-    var ret0 = C.C_ZNK12QPixelFormat9blackSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat9blackSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "blackSize", args)
   }
@@ -321,11 +345,15 @@ func (this *QPixelFormat) Redsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat7redSizeEv
     // invoke: uchar redSize()
-    var ret0 = C.C_ZNK12QPixelFormat7redSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat7redSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "redSize", args)
   }
@@ -346,7 +374,7 @@ func (this *QPixelFormat) Byteorder(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPixelFormat9byteOrderEv
     // invoke: QPixelFormat::ByteOrder byteOrder()
-    C.C_ZNK12QPixelFormat9byteOrderEv(this.qclsinst)
+    C.C_ZNK12QPixelFormat9byteOrderEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "byteOrder", args)
   }
@@ -367,7 +395,7 @@ func (this *QPixelFormat) Typeinterpretation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPixelFormat18typeInterpretationEv
     // invoke: QPixelFormat::TypeInterpretation typeInterpretation()
-    C.C_ZNK12QPixelFormat18typeInterpretationEv(this.qclsinst)
+    C.C_ZNK12QPixelFormat18typeInterpretationEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "typeInterpretation", args)
   }
@@ -388,11 +416,15 @@ func (this *QPixelFormat) Channelcount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat12channelCountEv
     // invoke: uchar channelCount()
-    var ret0 = C.C_ZNK12QPixelFormat12channelCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat12channelCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "channelCount", args)
   }
@@ -413,11 +445,15 @@ func (this *QPixelFormat) Alphasize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat9alphaSizeEv
     // invoke: uchar alphaSize()
-    var ret0 = C.C_ZNK12QPixelFormat9alphaSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat9alphaSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "alphaSize", args)
   }
@@ -438,11 +474,15 @@ func (this *QPixelFormat) Huesize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat7hueSizeEv
     // invoke: uchar hueSize()
-    var ret0 = C.C_ZNK12QPixelFormat7hueSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat7hueSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "hueSize", args)
   }
@@ -463,11 +503,15 @@ func (this *QPixelFormat) Saturationsize(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK12QPixelFormat14saturationSizeEv
     // invoke: uchar saturationSize()
-    var ret0 = C.C_ZNK12QPixelFormat14saturationSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat14saturationSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "saturationSize", args)
   }
@@ -488,11 +532,15 @@ func (this *QPixelFormat) Magentasize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat11magentaSizeEv
     // invoke: uchar magentaSize()
-    var ret0 = C.C_ZNK12QPixelFormat11magentaSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat11magentaSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "magentaSize", args)
   }
@@ -513,7 +561,7 @@ func (this *QPixelFormat) Premultiplied(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPixelFormat13premultipliedEv
     // invoke: QPixelFormat::AlphaPremultiplied premultiplied()
-    C.C_ZNK12QPixelFormat13premultipliedEv(this.qclsinst)
+    C.C_ZNK12QPixelFormat13premultipliedEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "premultiplied", args)
   }
@@ -534,11 +582,15 @@ func (this *QPixelFormat) Subenum(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat7subEnumEv
     // invoke: uchar subEnum()
-    var ret0 = C.C_ZNK12QPixelFormat7subEnumEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat7subEnumEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "subEnum", args)
   }
@@ -559,11 +611,15 @@ func (this *QPixelFormat) Greensize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat9greenSizeEv
     // invoke: uchar greenSize()
-    var ret0 = C.C_ZNK12QPixelFormat9greenSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat9greenSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "greenSize", args)
   }
@@ -584,7 +640,7 @@ func (this *QPixelFormat) Colormodel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPixelFormat10colorModelEv
     // invoke: QPixelFormat::ColorModel colorModel()
-    C.C_ZNK12QPixelFormat10colorModelEv(this.qclsinst)
+    C.C_ZNK12QPixelFormat10colorModelEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "colorModel", args)
   }
@@ -605,7 +661,7 @@ func (this *QPixelFormat) Alphausage(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPixelFormat10alphaUsageEv
     // invoke: QPixelFormat::AlphaUsage alphaUsage()
-    C.C_ZNK12QPixelFormat10alphaUsageEv(this.qclsinst)
+    C.C_ZNK12QPixelFormat10alphaUsageEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "alphaUsage", args)
   }
@@ -626,11 +682,15 @@ func (this *QPixelFormat) Bluesize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPixelFormat8blueSizeEv
     // invoke: uchar blueSize()
-    var ret0 = C.C_ZNK12QPixelFormat8blueSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPixelFormat8blueSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(false) // "uchar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixelFormat", "blueSize", args)
   }

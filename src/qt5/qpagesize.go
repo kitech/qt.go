@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qpagesize.h
 // dst-file: /src/gui/qpagesize.go
 //
@@ -77,7 +77,7 @@ func init() {
 // class sizeof(QPageSize)=1
 type QPageSize struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // windowsId()
@@ -93,11 +93,15 @@ func (this *QPageSize) Windowsid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPageSize9windowsIdEv
     // invoke: int windowsId()
-    var ret0 = C.C_ZNK9QPageSize9windowsIdEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QPageSize9windowsIdEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageSize", "windowsId", args)
   }
@@ -119,13 +123,17 @@ func (this *QPageSize) Sizepixels(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPageSize10sizePixelsEi
     // invoke: QSize sizePixels(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QPageSize10sizePixelsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QPageSize10sizePixelsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageSize", "sizePixels", args)
   }
@@ -147,13 +155,17 @@ func (this *QPageSize) Rectpixels(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPageSize10rectPixelsEi
     // invoke: QRect rectPixels(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QPageSize10rectPixelsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QPageSize10rectPixelsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageSize", "rectPixels", args)
   }
@@ -174,11 +186,15 @@ func (this *QPageSize) Name(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPageSize4nameEv
     // invoke: QString name()
-    var ret0 = C.C_ZNK9QPageSize4nameEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QPageSize4nameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageSize", "name", args)
   }
@@ -199,7 +215,7 @@ func (this *QPageSize) Definitionunits(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QPageSize15definitionUnitsEv
     // invoke: QPageSize::Unit definitionUnits()
-    C.C_ZNK9QPageSize15definitionUnitsEv(this.qclsinst)
+    C.C_ZNK9QPageSize15definitionUnitsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPageSize", "definitionUnits", args)
   }
@@ -220,11 +236,15 @@ func (this *QPageSize) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPageSize7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK9QPageSize7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QPageSize7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageSize", "isValid", args)
   }
@@ -246,13 +266,17 @@ func (this *QPageSize) Isequivalentto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPageSize14isEquivalentToERKS_
     // invoke: bool isEquivalentTo(const class QPageSize &)
-    var arg0 = args[0].(QPageSize).qclsinst
+    var arg0 = args[0].(*QPageSize).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QPageSize14isEquivalentToERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QPageSize14isEquivalentToERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageSize", "isEquivalentTo", args)
   }
@@ -273,7 +297,7 @@ func (this *QPageSize) Freeqpagesize(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QPageSizeD0Ev
     // invoke: void ~QPageSize()
-    C.C_ZN9QPageSizeD2Ev(this.qclsinst)
+    C.C_ZN9QPageSizeD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPageSize", "~QPageSize", args)
   }
@@ -294,11 +318,15 @@ func (this *QPageSize) Sizepoints(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPageSize10sizePointsEv
     // invoke: QSize sizePoints()
-    var ret0 = C.C_ZNK9QPageSize10sizePointsEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QPageSize10sizePointsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageSize", "sizePoints", args)
   }
@@ -320,9 +348,9 @@ func (this *QPageSize) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QPageSize4swapERS_
     // invoke: void swap(class QPageSize &)
-    var arg0 = args[0].(QPageSize).qclsinst
+    var arg0 = args[0].(*QPageSize).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QPageSize4swapERS_(this.qclsinst, arg0)
+    C.C_ZN9QPageSize4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPageSize", "swap", args)
   }
@@ -343,11 +371,15 @@ func (this *QPageSize) Key(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPageSize3keyEv
     // invoke: QString key()
-    var ret0 = C.C_ZNK9QPageSize3keyEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QPageSize3keyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageSize", "key", args)
   }
@@ -368,11 +400,15 @@ func (this *QPageSize) Rectpoints(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPageSize10rectPointsEv
     // invoke: QRect rectPoints()
-    var ret0 = C.C_ZNK9QPageSize10rectPointsEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QPageSize10rectPointsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageSize", "rectPoints", args)
   }
@@ -396,24 +432,24 @@ func NewQPageSize(args ...interface{}) *QPageSize {
   case 0:
     // invoke: _ZN9QPageSizeC1ERKS_
     // invoke: void QPageSize(const class QPageSize &)
-    var arg0 = args[0].(QPageSize).qclsinst
+    var arg0 = args[0].(*QPageSize).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPageSizeC2ERKS_(arg0)
-    return &QPageSize{qclsinst:qthis}
+    return &QPageSize{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QPageSizeC1Ev
     // invoke: void QPageSize()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPageSizeC2Ev()
-    return &QPageSize{qclsinst:qthis}
+    return &QPageSize{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPageSize", "QPageSize", args)
   }
 
-  return nil // QPageSize{qclsinst:qthis}
+  return nil // QPageSize{Qclsinst:qthis}
 }
 
 // id(int)
@@ -432,13 +468,13 @@ func (this *QPageSize) Id_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QPageSize2idEi
     // invoke: QPageSize::PageSizeId id(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     C.C_ZN9QPageSize2idEi(arg0)
   case 1:
     // invoke: _ZNK9QPageSize2idEv
     // invoke: QPageSize::PageSizeId id()
-    C.C_ZNK9QPageSize2idEv(this.qclsinst)
+    C.C_ZNK9QPageSize2idEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPageSize", "id", args)
   }
@@ -459,11 +495,15 @@ func (this *QPageSize) Definitionsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QPageSize14definitionSizeEv
     // invoke: QSizeF definitionSize()
-    var ret0 = C.C_ZNK9QPageSize14definitionSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QPageSize14definitionSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPageSize", "definitionSize", args)
   }

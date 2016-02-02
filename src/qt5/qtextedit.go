@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qtextedit.h
 // dst-file: /src/widgets/qtextedit.go
 //
@@ -205,7 +205,7 @@ func init() {
 // class sizeof(QTextEdit)=1
 type QTextEdit struct {
   /*qbase*/ QAbstractScrollArea;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _cursorPositionChanged QTextEdit_cursorPositionChanged_signal;
 //  _redoAvailable QTextEdit_redoAvailable_signal;
 //  _selectionChanged QTextEdit_selectionChanged_signal;
@@ -228,7 +228,7 @@ func (this *QTextEdit) Autoformatting(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit14autoFormattingEv
     // invoke: AutoFormatting autoFormatting()
-    C.C_ZNK9QTextEdit14autoFormattingEv(this.qclsinst)
+    C.C_ZNK9QTextEdit14autoFormattingEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "autoFormatting", args)
   }
@@ -250,9 +250,9 @@ func (this *QTextEdit) Settabstopwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit15setTabStopWidthEi
     // invoke: void setTabStopWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit15setTabStopWidthEi(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit15setTabStopWidthEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setTabStopWidth", args)
   }
@@ -273,11 +273,15 @@ func (this *QTextEdit) Textbackgroundcolor(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK9QTextEdit19textBackgroundColorEv
     // invoke: QColor textBackgroundColor()
-    var ret0 = C.C_ZNK9QTextEdit19textBackgroundColorEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit19textBackgroundColorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "textBackgroundColor", args)
   }
@@ -298,7 +302,7 @@ func (this *QTextEdit) Ensurecursorvisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit19ensureCursorVisibleEv
     // invoke: void ensureCursorVisible()
-    C.C_ZN9QTextEdit19ensureCursorVisibleEv(this.qclsinst)
+    C.C_ZN9QTextEdit19ensureCursorVisibleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "ensureCursorVisible", args)
   }
@@ -320,9 +324,9 @@ func (this *QTextEdit) Setcurrentcharformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit20setCurrentCharFormatERK15QTextCharFormat
     // invoke: void setCurrentCharFormat(const class QTextCharFormat &)
-    var arg0 = args[0].(QTextCharFormat).qclsinst
+    var arg0 = args[0].(*QTextCharFormat).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit20setCurrentCharFormatERK15QTextCharFormat(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit20setCurrentCharFormatERK15QTextCharFormat(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setCurrentCharFormat", args)
   }
@@ -343,11 +347,15 @@ func (this *QTextEdit) Tabchangesfocus(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit15tabChangesFocusEv
     // invoke: bool tabChangesFocus()
-    var ret0 = C.C_ZNK9QTextEdit15tabChangesFocusEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit15tabChangesFocusEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "tabChangesFocus", args)
   }
@@ -368,7 +376,7 @@ func (this *QTextEdit) Alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C.C_ZNK9QTextEdit9alignmentEv(this.qclsinst)
+    C.C_ZNK9QTextEdit9alignmentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "alignment", args)
   }
@@ -389,11 +397,15 @@ func (this *QTextEdit) Isundoredoenabled(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK9QTextEdit17isUndoRedoEnabledEv
     // invoke: bool isUndoRedoEnabled()
-    var ret0 = C.C_ZNK9QTextEdit17isUndoRedoEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit17isUndoRedoEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "isUndoRedoEnabled", args)
   }
@@ -414,7 +426,7 @@ func (this *QTextEdit) Cut(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit3cutEv
     // invoke: void cut()
-    C.C_ZN9QTextEdit3cutEv(this.qclsinst)
+    C.C_ZN9QTextEdit3cutEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "cut", args)
   }
@@ -438,21 +450,29 @@ func (this *QTextEdit) Createstandardcontextmenu(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZN9QTextEdit25createStandardContextMenuERK6QPoint
     // invoke: QMenu * createStandardContextMenu(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QTextEdit25createStandardContextMenuERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZN9QTextEdit25createStandardContextMenuERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN9QTextEdit25createStandardContextMenuEv
     // invoke: QMenu * createStandardContextMenu()
-    var ret0 = C.C_ZN9QTextEdit25createStandardContextMenuEv(this.qclsinst)
+    var ret0 = C.C_ZN9QTextEdit25createStandardContextMenuEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "createStandardContextMenu", args)
   }
@@ -474,9 +494,9 @@ func (this *QTextEdit) Setfontpointsize(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit16setFontPointSizeEd
     // invoke: void setFontPointSize(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit16setFontPointSizeEd(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit16setFontPointSizeEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setFontPointSize", args)
   }
@@ -498,9 +518,9 @@ func (this *QTextEdit) Mergecurrentcharformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit22mergeCurrentCharFormatERK15QTextCharFormat
     // invoke: void mergeCurrentCharFormat(const class QTextCharFormat &)
-    var arg0 = args[0].(QTextCharFormat).qclsinst
+    var arg0 = args[0].(*QTextCharFormat).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit22mergeCurrentCharFormatERK15QTextCharFormat(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit22mergeCurrentCharFormatERK15QTextCharFormat(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "mergeCurrentCharFormat", args)
   }
@@ -521,11 +541,15 @@ func (this *QTextEdit) Documenttitle(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit13documentTitleEv
     // invoke: QString documentTitle()
-    var ret0 = C.C_ZNK9QTextEdit13documentTitleEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit13documentTitleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "documentTitle", args)
   }
@@ -546,11 +570,15 @@ func (this *QTextEdit) Tohtml(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit6toHtmlEv
     // invoke: QString toHtml()
-    var ret0 = C.C_ZNK9QTextEdit6toHtmlEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit6toHtmlEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "toHtml", args)
   }
@@ -572,9 +600,9 @@ func (this *QTextEdit) Insertplaintext(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit15insertPlainTextERK7QString
     // invoke: void insertPlainText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit15insertPlainTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit15insertPlainTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "insertPlainText", args)
   }
@@ -595,11 +623,15 @@ func (this *QTextEdit) Fontpointsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit13fontPointSizeEv
     // invoke: qreal fontPointSize()
-    var ret0 = C.C_ZNK9QTextEdit13fontPointSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit13fontPointSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "fontPointSize", args)
   }
@@ -620,11 +652,15 @@ func (this *QTextEdit) Textcolor(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit9textColorEv
     // invoke: QColor textColor()
-    var ret0 = C.C_ZNK9QTextEdit9textColorEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit9textColorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "textColor", args)
   }
@@ -645,7 +681,7 @@ func (this *QTextEdit) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QTextEdit10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QTextEdit10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "metaObject", args)
   }
@@ -667,9 +703,9 @@ func (this *QTextEdit) Settextbackgroundcolor(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit22setTextBackgroundColorERK6QColor
     // invoke: void setTextBackgroundColor(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit22setTextBackgroundColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit22setTextBackgroundColorERK6QColor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setTextBackgroundColor", args)
   }
@@ -693,7 +729,7 @@ func (this *QTextEdit) Settabchangesfocus(args ...interface{}) () {
     // invoke: void setTabChangesFocus(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit18setTabChangesFocusEb(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit18setTabChangesFocusEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setTabChangesFocus", args)
   }
@@ -714,11 +750,15 @@ func (this *QTextEdit) Toplaintext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit11toPlainTextEv
     // invoke: QString toPlainText()
-    var ret0 = C.C_ZNK9QTextEdit11toPlainTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit11toPlainTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "toPlainText", args)
   }
@@ -740,9 +780,9 @@ func (this *QTextEdit) Zoomin(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit6zoomInEi
     // invoke: void zoomIn(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit6zoomInEi(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit6zoomInEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "zoomIn", args)
   }
@@ -764,9 +804,9 @@ func (this *QTextEdit) Zoomout(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit7zoomOutEi
     // invoke: void zoomOut(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit7zoomOutEi(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit7zoomOutEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "zoomOut", args)
   }
@@ -790,21 +830,29 @@ func (this *QTextEdit) Cursorrect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit10cursorRectERK11QTextCursor
     // invoke: QRect cursorRect(const class QTextCursor &)
-    var arg0 = args[0].(QTextCursor).qclsinst
+    var arg0 = args[0].(*QTextCursor).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTextEdit10cursorRectERK11QTextCursor(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QTextEdit10cursorRectERK11QTextCursor(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK9QTextEdit10cursorRectEv
     // invoke: QRect cursorRect()
-    var ret0 = C.C_ZNK9QTextEdit10cursorRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit10cursorRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "cursorRect", args)
   }
@@ -828,7 +876,7 @@ func (this *QTextEdit) Setundoredoenabled(args ...interface{}) () {
     // invoke: void setUndoRedoEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit18setUndoRedoEnabledEb(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit18setUndoRedoEnabledEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setUndoRedoEnabled", args)
   }
@@ -849,11 +897,15 @@ func (this *QTextEdit) Textcursor(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit10textCursorEv
     // invoke: QTextCursor textCursor()
-    var ret0 = C.C_ZNK9QTextEdit10textCursorEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit10textCursorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCursor{}) // "QTextCursor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "textCursor", args)
   }
@@ -877,7 +929,7 @@ func (this *QTextEdit) Setacceptrichtext(args ...interface{}) () {
     // invoke: void setAcceptRichText(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit17setAcceptRichTextEb(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit17setAcceptRichTextEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setAcceptRichText", args)
   }
@@ -899,13 +951,17 @@ func (this *QTextEdit) Anchorat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit8anchorAtERK6QPoint
     // invoke: QString anchorAt(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTextEdit8anchorAtERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QTextEdit8anchorAtERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "anchorAt", args)
   }
@@ -927,9 +983,9 @@ func (this *QTextEdit) Sethtml(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit7setHtmlERK7QString
     // invoke: void setHtml(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit7setHtmlERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit7setHtmlERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setHtml", args)
   }
@@ -951,9 +1007,9 @@ func (this *QTextEdit) Setdocument(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit11setDocumentEP13QTextDocument
     // invoke: void setDocument(class QTextDocument *)
-    var arg0 = args[0].(QTextDocument).qclsinst
+    var arg0 = args[0].(*QTextDocument).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit11setDocumentEP13QTextDocument(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit11setDocumentEP13QTextDocument(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setDocument", args)
   }
@@ -974,11 +1030,15 @@ func (this *QTextEdit) Fontitalic(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit10fontItalicEv
     // invoke: bool fontItalic()
-    var ret0 = C.C_ZNK9QTextEdit10fontItalicEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit10fontItalicEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "fontItalic", args)
   }
@@ -1000,9 +1060,9 @@ func (this *QTextEdit) Append(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit6appendERK7QString
     // invoke: void append(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit6appendERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit6appendERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "append", args)
   }
@@ -1024,9 +1084,9 @@ func (this *QTextEdit) Setfontfamily(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit13setFontFamilyERK7QString
     // invoke: void setFontFamily(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit13setFontFamilyERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit13setFontFamilyERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setFontFamily", args)
   }
@@ -1048,9 +1108,9 @@ func (this *QTextEdit) Print(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit5printEP17QPagedPaintDevice
     // invoke: void print(class QPagedPaintDevice *)
-    var arg0 = args[0].(QPagedPaintDevice).qclsinst
+    var arg0 = args[0].(*QPagedPaintDevice).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QTextEdit5printEP17QPagedPaintDevice(this.qclsinst, arg0)
+    C.C_ZNK9QTextEdit5printEP17QPagedPaintDevice(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "print", args)
   }
@@ -1073,15 +1133,19 @@ func (this *QTextEdit) Loadresource(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QTextEdit12loadResourceEiRK4QUrl
     // invoke: QVariant loadResource(int, const class QUrl &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QUrl).qclsinst
+    var arg1 = args[1].(*QUrl).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN9QTextEdit12loadResourceEiRK4QUrl(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN9QTextEdit12loadResourceEiRK4QUrl(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "loadResource", args)
   }
@@ -1102,7 +1166,7 @@ func (this *QTextEdit) Undo(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit4undoEv
     // invoke: void undo()
-    C.C_ZN9QTextEdit4undoEv(this.qclsinst)
+    C.C_ZN9QTextEdit4undoEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "undo", args)
   }
@@ -1123,11 +1187,15 @@ func (this *QTextEdit) Linewrapcolumnorwidth(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK9QTextEdit21lineWrapColumnOrWidthEv
     // invoke: int lineWrapColumnOrWidth()
-    var ret0 = C.C_ZNK9QTextEdit21lineWrapColumnOrWidthEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit21lineWrapColumnOrWidthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "lineWrapColumnOrWidth", args)
   }
@@ -1148,7 +1216,7 @@ func (this *QTextEdit) Paste(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit5pasteEv
     // invoke: void paste()
-    C.C_ZN9QTextEdit5pasteEv(this.qclsinst)
+    C.C_ZN9QTextEdit5pasteEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "paste", args)
   }
@@ -1170,9 +1238,9 @@ func (this *QTextEdit) Setfontweight(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit13setFontWeightEi
     // invoke: void setFontWeight(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit13setFontWeightEi(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit13setFontWeightEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setFontWeight", args)
   }
@@ -1194,9 +1262,9 @@ func (this *QTextEdit) Scrolltoanchor(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit14scrollToAnchorERK7QString
     // invoke: void scrollToAnchor(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit14scrollToAnchorERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit14scrollToAnchorERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "scrollToAnchor", args)
   }
@@ -1217,7 +1285,7 @@ func (this *QTextEdit) Selectall(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit9selectAllEv
     // invoke: void selectAll()
-    C.C_ZN9QTextEdit9selectAllEv(this.qclsinst)
+    C.C_ZN9QTextEdit9selectAllEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "selectAll", args)
   }
@@ -1238,7 +1306,7 @@ func (this *QTextEdit) Extraselections(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit15extraSelectionsEv
     // invoke: QList<QTextEdit::ExtraSelection> extraSelections()
-    C.C_ZNK9QTextEdit15extraSelectionsEv(this.qclsinst)
+    C.C_ZNK9QTextEdit15extraSelectionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "extraSelections", args)
   }
@@ -1259,7 +1327,7 @@ func (this *QTextEdit) Freeqtextedit(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEditD0Ev
     // invoke: void ~QTextEdit()
-    C.C_ZN9QTextEditD2Ev(this.qclsinst)
+    C.C_ZN9QTextEditD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "~QTextEdit", args)
   }
@@ -1280,7 +1348,7 @@ func (this *QTextEdit) Redo(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit4redoEv
     // invoke: void redo()
-    C.C_ZN9QTextEdit4redoEv(this.qclsinst)
+    C.C_ZN9QTextEdit4redoEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "redo", args)
   }
@@ -1304,7 +1372,7 @@ func (this *QTextEdit) Setfontunderline(args ...interface{}) () {
     // invoke: void setFontUnderline(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit16setFontUnderlineEb(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit16setFontUnderlineEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setFontUnderline", args)
   }
@@ -1325,11 +1393,15 @@ func (this *QTextEdit) Isreadonly(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit10isReadOnlyEv
     // invoke: bool isReadOnly()
-    var ret0 = C.C_ZNK9QTextEdit10isReadOnlyEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit10isReadOnlyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "isReadOnly", args)
   }
@@ -1351,9 +1423,9 @@ func (this *QTextEdit) Settextcursor(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit13setTextCursorERK11QTextCursor
     // invoke: void setTextCursor(const class QTextCursor &)
-    var arg0 = args[0].(QTextCursor).qclsinst
+    var arg0 = args[0].(*QTextCursor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit13setTextCursorERK11QTextCursor(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit13setTextCursorERK11QTextCursor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setTextCursor", args)
   }
@@ -1374,11 +1446,15 @@ func (this *QTextEdit) Overwritemode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit13overwriteModeEv
     // invoke: bool overwriteMode()
-    var ret0 = C.C_ZNK9QTextEdit13overwriteModeEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit13overwriteModeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "overwriteMode", args)
   }
@@ -1399,11 +1475,15 @@ func (this *QTextEdit) Acceptrichtext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit14acceptRichTextEv
     // invoke: bool acceptRichText()
-    var ret0 = C.C_ZNK9QTextEdit14acceptRichTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit14acceptRichTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "acceptRichText", args)
   }
@@ -1425,9 +1505,9 @@ func (this *QTextEdit) Setcursorwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit14setCursorWidthEi
     // invoke: void setCursorWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit14setCursorWidthEi(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit14setCursorWidthEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setCursorWidth", args)
   }
@@ -1449,9 +1529,9 @@ func (this *QTextEdit) Setlinewrapcolumnorwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit24setLineWrapColumnOrWidthEi
     // invoke: void setLineWrapColumnOrWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit24setLineWrapColumnOrWidthEi(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit24setLineWrapColumnOrWidthEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setLineWrapColumnOrWidth", args)
   }
@@ -1472,7 +1552,7 @@ func (this *QTextEdit) Textinteractionflags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit20textInteractionFlagsEv
     // invoke: Qt::TextInteractionFlags textInteractionFlags()
-    C.C_ZNK9QTextEdit20textInteractionFlagsEv(this.qclsinst)
+    C.C_ZNK9QTextEdit20textInteractionFlagsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "textInteractionFlags", args)
   }
@@ -1493,11 +1573,15 @@ func (this *QTextEdit) Currentfont(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit11currentFontEv
     // invoke: QFont currentFont()
-    var ret0 = C.C_ZNK9QTextEdit11currentFontEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit11currentFontEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFont{}) // "QFont"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "currentFont", args)
   }
@@ -1521,7 +1605,7 @@ func (this *QTextEdit) Setoverwritemode(args ...interface{}) () {
     // invoke: void setOverwriteMode(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit16setOverwriteModeEb(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit16setOverwriteModeEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setOverwriteMode", args)
   }
@@ -1542,7 +1626,7 @@ func (this *QTextEdit) Copy(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit4copyEv
     // invoke: void copy()
-    C.C_ZN9QTextEdit4copyEv(this.qclsinst)
+    C.C_ZN9QTextEdit4copyEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "copy", args)
   }
@@ -1563,11 +1647,15 @@ func (this *QTextEdit) Fontunderline(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit13fontUnderlineEv
     // invoke: bool fontUnderline()
-    var ret0 = C.C_ZNK9QTextEdit13fontUnderlineEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit13fontUnderlineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "fontUnderline", args)
   }
@@ -1588,11 +1676,15 @@ func (this *QTextEdit) Cursorwidth(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit11cursorWidthEv
     // invoke: int cursorWidth()
-    var ret0 = C.C_ZNK9QTextEdit11cursorWidthEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit11cursorWidthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "cursorWidth", args)
   }
@@ -1614,9 +1706,9 @@ func (this *QTextEdit) Setplaceholdertext(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit18setPlaceholderTextERK7QString
     // invoke: void setPlaceholderText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit18setPlaceholderTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit18setPlaceholderTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setPlaceholderText", args)
   }
@@ -1637,7 +1729,7 @@ func (this *QTextEdit) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit5clearEv
     // invoke: void clear()
-    C.C_ZN9QTextEdit5clearEv(this.qclsinst)
+    C.C_ZN9QTextEdit5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "clear", args)
   }
@@ -1659,9 +1751,9 @@ func (this *QTextEdit) Inserthtml(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit10insertHtmlERK7QString
     // invoke: void insertHtml(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit10insertHtmlERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit10insertHtmlERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "insertHtml", args)
   }
@@ -1683,9 +1775,9 @@ func (this *QTextEdit) Setplaintext(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit12setPlainTextERK7QString
     // invoke: void setPlainText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit12setPlainTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit12setPlainTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setPlainText", args)
   }
@@ -1706,11 +1798,15 @@ func (this *QTextEdit) Canpaste(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit8canPasteEv
     // invoke: bool canPaste()
-    var ret0 = C.C_ZNK9QTextEdit8canPasteEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit8canPasteEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "canPaste", args)
   }
@@ -1731,11 +1827,15 @@ func (this *QTextEdit) Fontfamily(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit10fontFamilyEv
     // invoke: QString fontFamily()
-    var ret0 = C.C_ZNK9QTextEdit10fontFamilyEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit10fontFamilyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "fontFamily", args)
   }
@@ -1761,28 +1861,28 @@ func NewQTextEdit(args ...interface{}) *QTextEdit {
   case 0:
     // invoke: _ZN9QTextEditC1EP7QWidget
     // invoke: void QTextEdit(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTextEditC2EP7QWidget(arg0)
-    return &QTextEdit{qclsinst:qthis}
+    return &QTextEdit{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QTextEditC1ERK7QStringP7QWidget
     // invoke: void QTextEdit(const class QString &, class QWidget *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTextEditC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QTextEdit{qclsinst:qthis}
+    return &QTextEdit{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextEdit", "QTextEdit", args)
   }
 
-  return nil // QTextEdit{qclsinst:qthis}
+  return nil // QTextEdit{Qclsinst:qthis}
 }
 
 // tabStopWidth()
@@ -1798,11 +1898,15 @@ func (this *QTextEdit) Tabstopwidth(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit12tabStopWidthEv
     // invoke: int tabStopWidth()
-    var ret0 = C.C_ZNK9QTextEdit12tabStopWidthEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit12tabStopWidthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "tabStopWidth", args)
   }
@@ -1823,7 +1927,7 @@ func (this *QTextEdit) Wordwrapmode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit12wordWrapModeEv
     // invoke: QTextOption::WrapMode wordWrapMode()
-    C.C_ZNK9QTextEdit12wordWrapModeEv(this.qclsinst)
+    C.C_ZNK9QTextEdit12wordWrapModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "wordWrapMode", args)
   }
@@ -1845,13 +1949,17 @@ func (this *QTextEdit) Cursorforposition(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK9QTextEdit17cursorForPositionERK6QPoint
     // invoke: QTextCursor cursorForPosition(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QTextEdit17cursorForPositionERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QTextEdit17cursorForPositionERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCursor{}) // "QTextCursor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "cursorForPosition", args)
   }
@@ -1873,9 +1981,9 @@ func (this *QTextEdit) Setdocumenttitle(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit16setDocumentTitleERK7QString
     // invoke: void setDocumentTitle(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit16setDocumentTitleERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit16setDocumentTitleERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setDocumentTitle", args)
   }
@@ -1899,7 +2007,7 @@ func (this *QTextEdit) Setfontitalic(args ...interface{}) () {
     // invoke: void setFontItalic(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit13setFontItalicEb(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit13setFontItalicEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setFontItalic", args)
   }
@@ -1920,11 +2028,15 @@ func (this *QTextEdit) Document(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit8documentEv
     // invoke: QTextDocument * document()
-    var ret0 = C.C_ZNK9QTextEdit8documentEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit8documentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextDocument{}) // "QTextDocument *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "document", args)
   }
@@ -1945,11 +2057,15 @@ func (this *QTextEdit) Currentcharformat(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK9QTextEdit17currentCharFormatEv
     // invoke: QTextCharFormat currentCharFormat()
-    var ret0 = C.C_ZNK9QTextEdit17currentCharFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit17currentCharFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCharFormat{}) // "QTextCharFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "currentCharFormat", args)
   }
@@ -1970,11 +2086,15 @@ func (this *QTextEdit) Fontweight(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit10fontWeightEv
     // invoke: int fontWeight()
-    var ret0 = C.C_ZNK9QTextEdit10fontWeightEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit10fontWeightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "fontWeight", args)
   }
@@ -1995,11 +2115,15 @@ func (this *QTextEdit) Placeholdertext(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QTextEdit15placeholderTextEv
     // invoke: QString placeholderText()
-    var ret0 = C.C_ZNK9QTextEdit15placeholderTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QTextEdit15placeholderTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "placeholderText", args)
   }
@@ -2021,9 +2145,9 @@ func (this *QTextEdit) Settextcolor(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit12setTextColorERK6QColor
     // invoke: void setTextColor(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit12setTextColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit12setTextColorERK6QColor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setTextColor", args)
   }
@@ -2044,7 +2168,7 @@ func (this *QTextEdit) Linewrapmode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit12lineWrapModeEv
     // invoke: QTextEdit::LineWrapMode lineWrapMode()
-    C.C_ZNK9QTextEdit12lineWrapModeEv(this.qclsinst)
+    C.C_ZNK9QTextEdit12lineWrapModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEdit", "lineWrapMode", args)
   }
@@ -2066,9 +2190,9 @@ func (this *QTextEdit) Settext(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit7setTextERK7QString
     // invoke: void setText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit7setTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setText", args)
   }
@@ -2090,9 +2214,9 @@ func (this *QTextEdit) Setcurrentfont(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit14setCurrentFontERK5QFont
     // invoke: void setCurrentFont(const class QFont &)
-    var arg0 = args[0].(QFont).qclsinst
+    var arg0 = args[0].(*QFont).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit14setCurrentFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit14setCurrentFontERK5QFont(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setCurrentFont", args)
   }
@@ -2116,7 +2240,7 @@ func (this *QTextEdit) Setreadonly(args ...interface{}) () {
     // invoke: void setReadOnly(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit11setReadOnlyEb(this.qclsinst, arg0)
+    C.C_ZN9QTextEdit11setReadOnlyEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextEdit", "setReadOnly", args)
   }

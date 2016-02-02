@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qsize.h
 // dst-file: /src/core/qsize.go
 //
@@ -107,13 +107,13 @@ func init() {
 // class sizeof(QSize)=8
 type QSize struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QSizeF)=16
 type QSizeF struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // boundedTo(const class QSize &)
@@ -130,13 +130,17 @@ func (this *QSize) Boundedto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QSize9boundedToERKS_
     // invoke: QSize boundedTo(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QSize9boundedToERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QSize9boundedToERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSize", "boundedTo", args)
   }
@@ -161,26 +165,26 @@ func NewQSize(args ...interface{}) *QSize {
   case 0:
     // invoke: _ZN5QSizeC1Eii
     // invoke: void QSize(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QSizeC2Eii(arg0, arg1)
-    return &QSize{qclsinst:qthis}
+    return &QSize{Qclsinst:qthis}
   case 1:
     // invoke: _ZN5QSizeC1Ev
     // invoke: void QSize()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QSizeC2Ev()
-    return &QSize{qclsinst:qthis}
+    return &QSize{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSize", "QSize", args)
   }
 
-  return nil // QSize{qclsinst:qthis}
+  return nil // QSize{Qclsinst:qthis}
 }
 
 // transposed()
@@ -196,11 +200,15 @@ func (this *QSize) Transposed(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QSize10transposedEv
     // invoke: QSize transposed()
-    var ret0 = C.C_ZNK5QSize10transposedEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QSize10transposedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSize", "transposed", args)
   }
@@ -221,11 +229,15 @@ func (this *QSize) Width(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QSize5widthEv
     // invoke: int width()
-    var ret0 = C.C_ZNK5QSize5widthEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QSize5widthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSize", "width", args)
   }
@@ -246,11 +258,15 @@ func (this *QSize) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QSize7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK5QSize7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QSize7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSize", "isValid", args)
   }
@@ -271,7 +287,7 @@ func (this *QSize) Transpose(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QSize9transposeEv
     // invoke: void transpose()
-    C.C_ZN5QSize9transposeEv(this.qclsinst)
+    C.C_ZN5QSize9transposeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "transpose", args)
   }
@@ -292,11 +308,15 @@ func (this *QSize) Height(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QSize6heightEv
     // invoke: int height()
-    var ret0 = C.C_ZNK5QSize6heightEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QSize6heightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSize", "height", args)
   }
@@ -317,11 +337,15 @@ func (this *QSize) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QSize6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK5QSize6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QSize6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSize", "isNull", args)
   }
@@ -343,13 +367,17 @@ func (this *QSize) Expandedto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QSize10expandedToERKS_
     // invoke: QSize expandedTo(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK5QSize10expandedToERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK5QSize10expandedToERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSize", "expandedTo", args)
   }
@@ -370,11 +398,15 @@ func (this *QSize) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QSize7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK5QSize7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QSize7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSize", "isEmpty", args)
   }
@@ -395,7 +427,7 @@ func (this *QSize) Rwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QSize6rwidthEv
     // invoke: int & rwidth()
-    C.C_ZN5QSize6rwidthEv(this.qclsinst)
+    C.C_ZN5QSize6rwidthEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "rwidth", args)
   }
@@ -416,7 +448,7 @@ func (this *QSize) Rheight(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QSize7rheightEv
     // invoke: int & rheight()
-    C.C_ZN5QSize7rheightEv(this.qclsinst)
+    C.C_ZN5QSize7rheightEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "rheight", args)
   }
@@ -438,9 +470,9 @@ func (this *QSize) Setwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QSize8setWidthEi
     // invoke: void setWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN5QSize8setWidthEi(this.qclsinst, arg0)
+    C.C_ZN5QSize8setWidthEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSize", "setWidth", args)
   }
@@ -462,9 +494,9 @@ func (this *QSize) Setheight(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QSize9setHeightEi
     // invoke: void setHeight(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN5QSize9setHeightEi(this.qclsinst, arg0)
+    C.C_ZN5QSize9setHeightEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSize", "setHeight", args)
   }
@@ -485,7 +517,7 @@ func (this *QSizeF) Rwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QSizeF6rwidthEv
     // invoke: qreal & rwidth()
-    C.C_ZN6QSizeF6rwidthEv(this.qclsinst)
+    C.C_ZN6QSizeF6rwidthEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "rwidth", args)
   }
@@ -506,11 +538,15 @@ func (this *QSizeF) Transposed(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QSizeF10transposedEv
     // invoke: QSizeF transposed()
-    var ret0 = C.C_ZNK6QSizeF10transposedEv(this.qclsinst)
+    var ret0 = C.C_ZNK6QSizeF10transposedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizeF", "transposed", args)
   }
@@ -531,11 +567,15 @@ func (this *QSizeF) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QSizeF6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK6QSizeF6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK6QSizeF6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizeF", "isNull", args)
   }
@@ -556,11 +596,15 @@ func (this *QSizeF) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QSizeF7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK6QSizeF7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK6QSizeF7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizeF", "isValid", args)
   }
@@ -582,13 +626,17 @@ func (this *QSizeF) Boundedto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QSizeF9boundedToERKS_
     // invoke: QSizeF boundedTo(const class QSizeF &)
-    var arg0 = args[0].(QSizeF).qclsinst
+    var arg0 = args[0].(*QSizeF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QSizeF9boundedToERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK6QSizeF9boundedToERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizeF", "boundedTo", args)
   }
@@ -609,7 +657,7 @@ func (this *QSizeF) Transpose(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QSizeF9transposeEv
     // invoke: void transpose()
-    C.C_ZN6QSizeF9transposeEv(this.qclsinst)
+    C.C_ZN6QSizeF9transposeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "transpose", args)
   }
@@ -631,13 +679,17 @@ func (this *QSizeF) Expandedto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QSizeF10expandedToERKS_
     // invoke: QSizeF expandedTo(const class QSizeF &)
-    var arg0 = args[0].(QSizeF).qclsinst
+    var arg0 = args[0].(*QSizeF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK6QSizeF10expandedToERKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK6QSizeF10expandedToERKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizeF", "expandedTo", args)
   }
@@ -658,11 +710,15 @@ func (this *QSizeF) Height(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QSizeF6heightEv
     // invoke: qreal height()
-    var ret0 = C.C_ZNK6QSizeF6heightEv(this.qclsinst)
+    var ret0 = C.C_ZNK6QSizeF6heightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizeF", "height", args)
   }
@@ -683,11 +739,15 @@ func (this *QSizeF) Width(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QSizeF5widthEv
     // invoke: qreal width()
-    var ret0 = C.C_ZNK6QSizeF5widthEv(this.qclsinst)
+    var ret0 = C.C_ZNK6QSizeF5widthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizeF", "width", args)
   }
@@ -718,32 +778,32 @@ func NewQSizeF(args ...interface{}) *QSizeF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QSizeFC2Ev()
-    return &QSizeF{qclsinst:qthis}
+    return &QSizeF{Qclsinst:qthis}
   case 1:
     // invoke: _ZN6QSizeFC1ERK5QSize
     // invoke: void QSizeF(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QSizeFC2ERK5QSize(arg0)
-    return &QSizeF{qclsinst:qthis}
+    return &QSizeF{Qclsinst:qthis}
   case 2:
     // invoke: _ZN6QSizeFC1Edd
     // invoke: void QSizeF(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QSizeFC2Edd(arg0, arg1)
-    return &QSizeF{qclsinst:qthis}
+    return &QSizeF{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSizeF", "QSizeF", args)
   }
 
-  return nil // QSizeF{qclsinst:qthis}
+  return nil // QSizeF{Qclsinst:qthis}
 }
 
 // isEmpty()
@@ -759,11 +819,15 @@ func (this *QSizeF) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QSizeF7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK6QSizeF7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK6QSizeF7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizeF", "isEmpty", args)
   }
@@ -785,9 +849,9 @@ func (this *QSizeF) Setheight(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QSizeF9setHeightEd
     // invoke: void setHeight(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN6QSizeF9setHeightEd(this.qclsinst, arg0)
+    C.C_ZN6QSizeF9setHeightEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizeF", "setHeight", args)
   }
@@ -808,7 +872,7 @@ func (this *QSizeF) Rheight(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QSizeF7rheightEv
     // invoke: qreal & rheight()
-    C.C_ZN6QSizeF7rheightEv(this.qclsinst)
+    C.C_ZN6QSizeF7rheightEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "rheight", args)
   }
@@ -830,9 +894,9 @@ func (this *QSizeF) Setwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QSizeF8setWidthEd
     // invoke: void setWidth(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN6QSizeF8setWidthEd(this.qclsinst, arg0)
+    C.C_ZN6QSizeF8setWidthEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizeF", "setWidth", args)
   }
@@ -853,11 +917,15 @@ func (this *QSizeF) Tosize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QSizeF6toSizeEv
     // invoke: QSize toSize()
-    var ret0 = C.C_ZNK6QSizeF6toSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK6QSizeF6toSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSizeF", "toSize", args)
   }

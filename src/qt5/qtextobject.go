@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qtextobject.h
 // dst-file: /src/gui/qtextobject.go
 //
@@ -181,43 +181,43 @@ func init() {
 // class sizeof(QTextObject)=1
 type QTextObject struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextBlockUserData)=8
 type QTextBlockUserData struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextFragment)=16
 type QTextFragment struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextFrameLayoutData)=8
 type QTextFrameLayoutData struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextBlock)=16
 type QTextBlock struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextBlockGroup)=1
 type QTextBlockGroup struct {
   /*qbase*/ QTextObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextFrame)=1
 type QTextFrame struct {
   /*qbase*/ QTextObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // format()
@@ -233,11 +233,15 @@ func (this *QTextObject) Format(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextObject6formatEv
     // invoke: QTextFormat format()
-    var ret0 = C.C_ZNK11QTextObject6formatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextObject6formatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextFormat{}) // "QTextFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextObject", "format", args)
   }
@@ -258,7 +262,7 @@ func (this *QTextObject) Dochandle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextObject9docHandleEv
     // invoke: QTextDocumentPrivate * docHandle()
-    C.C_ZNK11QTextObject9docHandleEv(this.qclsinst)
+    C.C_ZNK11QTextObject9docHandleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextObject", "docHandle", args)
   }
@@ -279,7 +283,7 @@ func (this *QTextObject) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextObject10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QTextObject10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QTextObject10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextObject", "metaObject", args)
   }
@@ -300,11 +304,15 @@ func (this *QTextObject) Formatindex(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextObject11formatIndexEv
     // invoke: int formatIndex()
-    var ret0 = C.C_ZNK11QTextObject11formatIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextObject11formatIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextObject", "formatIndex", args)
   }
@@ -325,11 +333,15 @@ func (this *QTextObject) Objectindex(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextObject11objectIndexEv
     // invoke: int objectIndex()
-    var ret0 = C.C_ZNK11QTextObject11objectIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextObject11objectIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextObject", "objectIndex", args)
   }
@@ -350,11 +362,15 @@ func (this *QTextObject) Document(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextObject8documentEv
     // invoke: QTextDocument * document()
-    var ret0 = C.C_ZNK11QTextObject8documentEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextObject8documentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextDocument{}) // "QTextDocument *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextObject", "document", args)
   }
@@ -375,7 +391,7 @@ func (this *QTextBlockUserData) Freeqtextblockuserdata(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QTextBlockUserDataD0Ev
     // invoke: void ~QTextBlockUserData()
-    C.C_ZN18QTextBlockUserDataD2Ev(this.qclsinst)
+    C.C_ZN18QTextBlockUserDataD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockUserData", "~QTextBlockUserData", args)
   }
@@ -396,11 +412,15 @@ func (this *QTextFragment) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QTextFragment7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK13QTextFragment7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QTextFragment7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFragment", "isValid", args)
   }
@@ -421,11 +441,15 @@ func (this *QTextFragment) Charformatindex(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK13QTextFragment15charFormatIndexEv
     // invoke: int charFormatIndex()
-    var ret0 = C.C_ZNK13QTextFragment15charFormatIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QTextFragment15charFormatIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFragment", "charFormatIndex", args)
   }
@@ -446,11 +470,15 @@ func (this *QTextFragment) Text(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QTextFragment4textEv
     // invoke: QString text()
-    var ret0 = C.C_ZNK13QTextFragment4textEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QTextFragment4textEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFragment", "text", args)
   }
@@ -472,13 +500,17 @@ func (this *QTextFragment) Contains(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QTextFragment8containsEi
     // invoke: bool contains(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QTextFragment8containsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QTextFragment8containsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFragment", "contains", args)
   }
@@ -499,11 +531,15 @@ func (this *QTextFragment) Charformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QTextFragment10charFormatEv
     // invoke: QTextCharFormat charFormat()
-    var ret0 = C.C_ZNK13QTextFragment10charFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QTextFragment10charFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCharFormat{}) // "QTextCharFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFragment", "charFormat", args)
   }
@@ -527,24 +563,24 @@ func NewQTextFragment(args ...interface{}) *QTextFragment {
   case 0:
     // invoke: _ZN13QTextFragmentC1ERKS_
     // invoke: void QTextFragment(const class QTextFragment &)
-    var arg0 = args[0].(QTextFragment).qclsinst
+    var arg0 = args[0].(*QTextFragment).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QTextFragmentC2ERKS_(arg0)
-    return &QTextFragment{qclsinst:qthis}
+    return &QTextFragment{Qclsinst:qthis}
   case 1:
     // invoke: _ZN13QTextFragmentC1Ev
     // invoke: void QTextFragment()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QTextFragmentC2Ev()
-    return &QTextFragment{qclsinst:qthis}
+    return &QTextFragment{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextFragment", "QTextFragment", args)
   }
 
-  return nil // QTextFragment{qclsinst:qthis}
+  return nil // QTextFragment{Qclsinst:qthis}
 }
 
 // length()
@@ -560,11 +596,15 @@ func (this *QTextFragment) Length(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QTextFragment6lengthEv
     // invoke: int length()
-    var ret0 = C.C_ZNK13QTextFragment6lengthEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QTextFragment6lengthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFragment", "length", args)
   }
@@ -585,11 +625,15 @@ func (this *QTextFragment) Position(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QTextFragment8positionEv
     // invoke: int position()
-    var ret0 = C.C_ZNK13QTextFragment8positionEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QTextFragment8positionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFragment", "position", args)
   }
@@ -612,11 +656,11 @@ func (this *QTextFragment) Glyphruns(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment9glyphRunsEii
     // invoke: QList<QGlyphRun> glyphRuns(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK13QTextFragment9glyphRunsEii(this.qclsinst, arg0, arg1)
+    C.C_ZNK13QTextFragment9glyphRunsEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextFragment", "glyphRuns", args)
   }
@@ -637,7 +681,7 @@ func (this *QTextFrameLayoutData) Freeqtextframelayoutdata(args ...interface{}) 
   case 0:
     // invoke: _ZN20QTextFrameLayoutDataD0Ev
     // invoke: void ~QTextFrameLayoutData()
-    C.C_ZN20QTextFrameLayoutDataD2Ev(this.qclsinst)
+    C.C_ZN20QTextFrameLayoutDataD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameLayoutData", "~QTextFrameLayoutData", args)
   }
@@ -658,11 +702,15 @@ func (this *QTextBlock) Blockformatindex(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK10QTextBlock16blockFormatIndexEv
     // invoke: int blockFormatIndex()
-    var ret0 = C.C_ZNK10QTextBlock16blockFormatIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock16blockFormatIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "blockFormatIndex", args)
   }
@@ -683,11 +731,15 @@ func (this *QTextBlock) Text(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock4textEv
     // invoke: QString text()
-    var ret0 = C.C_ZNK10QTextBlock4textEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock4textEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "text", args)
   }
@@ -708,11 +760,15 @@ func (this *QTextBlock) Linecount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock9lineCountEv
     // invoke: int lineCount()
-    var ret0 = C.C_ZNK10QTextBlock9lineCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock9lineCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "lineCount", args)
   }
@@ -733,7 +789,7 @@ func (this *QTextBlock) Clearlayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextBlock11clearLayoutEv
     // invoke: void clearLayout()
-    C.C_ZN10QTextBlock11clearLayoutEv(this.qclsinst)
+    C.C_ZN10QTextBlock11clearLayoutEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "clearLayout", args)
   }
@@ -754,11 +810,15 @@ func (this *QTextBlock) Charformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock10charFormatEv
     // invoke: QTextCharFormat charFormat()
-    var ret0 = C.C_ZNK10QTextBlock10charFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock10charFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCharFormat{}) // "QTextCharFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "charFormat", args)
   }
@@ -780,9 +840,9 @@ func (this *QTextBlock) Setrevision(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextBlock11setRevisionEi
     // invoke: void setRevision(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QTextBlock11setRevisionEi(this.qclsinst, arg0)
+    C.C_ZN10QTextBlock11setRevisionEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlock", "setRevision", args)
   }
@@ -803,11 +863,15 @@ func (this *QTextBlock) Textlist(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock8textListEv
     // invoke: QTextList * textList()
-    var ret0 = C.C_ZNK10QTextBlock8textListEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock8textListEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextList{}) // "QTextList *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "textList", args)
   }
@@ -828,11 +892,15 @@ func (this *QTextBlock) Userstate(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock9userStateEv
     // invoke: int userState()
-    var ret0 = C.C_ZNK10QTextBlock9userStateEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock9userStateEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "userState", args)
   }
@@ -854,9 +922,9 @@ func (this *QTextBlock) Setuserstate(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextBlock12setUserStateEi
     // invoke: void setUserState(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QTextBlock12setUserStateEi(this.qclsinst, arg0)
+    C.C_ZN10QTextBlock12setUserStateEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlock", "setUserState", args)
   }
@@ -877,7 +945,7 @@ func (this *QTextBlock) End(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock3endEv
     // invoke: QTextBlock::iterator end()
-    C.C_ZNK10QTextBlock3endEv(this.qclsinst)
+    C.C_ZNK10QTextBlock3endEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "end", args)
   }
@@ -898,11 +966,15 @@ func (this *QTextBlock) Blockformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock11blockFormatEv
     // invoke: QTextBlockFormat blockFormat()
-    var ret0 = C.C_ZNK10QTextBlock11blockFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock11blockFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextBlockFormat{}) // "QTextBlockFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "blockFormat", args)
   }
@@ -923,7 +995,7 @@ func (this *QTextBlock) Textformats(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock11textFormatsEv
     // invoke: QVector<QTextLayout::FormatRange> textFormats()
-    C.C_ZNK10QTextBlock11textFormatsEv(this.qclsinst)
+    C.C_ZNK10QTextBlock11textFormatsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "textFormats", args)
   }
@@ -945,13 +1017,17 @@ func (this *QTextBlock) Contains(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock8containsEi
     // invoke: bool contains(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTextBlock8containsEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTextBlock8containsEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "contains", args)
   }
@@ -972,11 +1048,15 @@ func (this *QTextBlock) Next(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock4nextEv
     // invoke: QTextBlock next()
-    var ret0 = C.C_ZNK10QTextBlock4nextEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock4nextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextBlock{}) // "QTextBlock"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "next", args)
   }
@@ -997,7 +1077,7 @@ func (this *QTextBlock) Dochandle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock9docHandleEv
     // invoke: QTextDocumentPrivate * docHandle()
-    C.C_ZNK10QTextBlock9docHandleEv(this.qclsinst)
+    C.C_ZNK10QTextBlock9docHandleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "docHandle", args)
   }
@@ -1018,11 +1098,15 @@ func (this *QTextBlock) Fragmentindex(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock13fragmentIndexEv
     // invoke: int fragmentIndex()
-    var ret0 = C.C_ZNK10QTextBlock13fragmentIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock13fragmentIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "fragmentIndex", args)
   }
@@ -1043,11 +1127,15 @@ func (this *QTextBlock) Firstlinenumber(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock15firstLineNumberEv
     // invoke: int firstLineNumber()
-    var ret0 = C.C_ZNK10QTextBlock15firstLineNumberEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock15firstLineNumberEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "firstLineNumber", args)
   }
@@ -1068,11 +1156,15 @@ func (this *QTextBlock) Document(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock8documentEv
     // invoke: const QTextDocument * document()
-    var ret0 = C.C_ZNK10QTextBlock8documentEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock8documentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextDocument{}) // "const QTextDocument *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "document", args)
   }
@@ -1093,11 +1185,15 @@ func (this *QTextBlock) Revision(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock8revisionEv
     // invoke: int revision()
-    var ret0 = C.C_ZNK10QTextBlock8revisionEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock8revisionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "revision", args)
   }
@@ -1118,11 +1214,15 @@ func (this *QTextBlock) Userdata(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock8userDataEv
     // invoke: QTextBlockUserData * userData()
-    var ret0 = C.C_ZNK10QTextBlock8userDataEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock8userDataEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextBlockUserData{}) // "QTextBlockUserData *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "userData", args)
   }
@@ -1143,7 +1243,7 @@ func (this *QTextBlock) Begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock5beginEv
     // invoke: QTextBlock::iterator begin()
-    C.C_ZNK10QTextBlock5beginEv(this.qclsinst)
+    C.C_ZNK10QTextBlock5beginEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "begin", args)
   }
@@ -1164,11 +1264,15 @@ func (this *QTextBlock) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK10QTextBlock7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "isValid", args)
   }
@@ -1190,9 +1294,9 @@ func (this *QTextBlock) Setlinecount(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextBlock12setLineCountEi
     // invoke: void setLineCount(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QTextBlock12setLineCountEi(this.qclsinst, arg0)
+    C.C_ZN10QTextBlock12setLineCountEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlock", "setLineCount", args)
   }
@@ -1213,11 +1317,15 @@ func (this *QTextBlock) Blocknumber(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock11blockNumberEv
     // invoke: int blockNumber()
-    var ret0 = C.C_ZNK10QTextBlock11blockNumberEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock11blockNumberEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "blockNumber", args)
   }
@@ -1238,11 +1346,15 @@ func (this *QTextBlock) Previous(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock8previousEv
     // invoke: QTextBlock previous()
-    var ret0 = C.C_ZNK10QTextBlock8previousEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock8previousEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextBlock{}) // "QTextBlock"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "previous", args)
   }
@@ -1263,11 +1375,15 @@ func (this *QTextBlock) Layout(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock6layoutEv
     // invoke: QTextLayout * layout()
-    var ret0 = C.C_ZNK10QTextBlock6layoutEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock6layoutEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextLayout{}) // "QTextLayout *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "layout", args)
   }
@@ -1289,9 +1405,9 @@ func (this *QTextBlock) Setuserdata(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextBlock11setUserDataEP18QTextBlockUserData
     // invoke: void setUserData(class QTextBlockUserData *)
-    var arg0 = args[0].(QTextBlockUserData).qclsinst
+    var arg0 = args[0].(*QTextBlockUserData).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QTextBlock11setUserDataEP18QTextBlockUserData(this.qclsinst, arg0)
+    C.C_ZN10QTextBlock11setUserDataEP18QTextBlockUserData(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlock", "setUserData", args)
   }
@@ -1312,7 +1428,7 @@ func (this *QTextBlock) Textdirection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock13textDirectionEv
     // invoke: Qt::LayoutDirection textDirection()
-    C.C_ZNK10QTextBlock13textDirectionEv(this.qclsinst)
+    C.C_ZNK10QTextBlock13textDirectionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "textDirection", args)
   }
@@ -1333,11 +1449,15 @@ func (this *QTextBlock) Charformatindex(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock15charFormatIndexEv
     // invoke: int charFormatIndex()
-    var ret0 = C.C_ZNK10QTextBlock15charFormatIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock15charFormatIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "charFormatIndex", args)
   }
@@ -1358,11 +1478,15 @@ func (this *QTextBlock) Length(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock6lengthEv
     // invoke: int length()
-    var ret0 = C.C_ZNK10QTextBlock6lengthEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock6lengthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "length", args)
   }
@@ -1386,24 +1510,24 @@ func NewQTextBlock(args ...interface{}) *QTextBlock {
   case 0:
     // invoke: _ZN10QTextBlockC1ERKS_
     // invoke: void QTextBlock(const class QTextBlock &)
-    var arg0 = args[0].(QTextBlock).qclsinst
+    var arg0 = args[0].(*QTextBlock).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTextBlockC2ERKS_(arg0)
-    return &QTextBlock{qclsinst:qthis}
+    return &QTextBlock{Qclsinst:qthis}
   case 1:
     // invoke: _ZN10QTextBlockC1Ev
     // invoke: void QTextBlock()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTextBlockC2Ev()
-    return &QTextBlock{qclsinst:qthis}
+    return &QTextBlock{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextBlock", "QTextBlock", args)
   }
 
-  return nil // QTextBlock{qclsinst:qthis}
+  return nil // QTextBlock{Qclsinst:qthis}
 }
 
 // isVisible()
@@ -1419,11 +1543,15 @@ func (this *QTextBlock) Isvisible(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock9isVisibleEv
     // invoke: bool isVisible()
-    var ret0 = C.C_ZNK10QTextBlock9isVisibleEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock9isVisibleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "isVisible", args)
   }
@@ -1444,11 +1572,15 @@ func (this *QTextBlock) Position(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextBlock8positionEv
     // invoke: int position()
-    var ret0 = C.C_ZNK10QTextBlock8positionEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextBlock8positionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlock", "position", args)
   }
@@ -1472,7 +1604,7 @@ func (this *QTextBlock) Setvisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QTextBlock10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN10QTextBlock10setVisibleEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlock", "setVisible", args)
   }
@@ -1493,7 +1625,7 @@ func (this *QTextBlockGroup) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextBlockGroup10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QTextBlockGroup10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QTextBlockGroup10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockGroup", "metaObject", args)
   }
@@ -1515,9 +1647,9 @@ func (this *QTextFrame) Setframeformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat
     // invoke: void setFrameFormat(const class QTextFrameFormat &)
-    var arg0 = args[0].(QTextFrameFormat).qclsinst
+    var arg0 = args[0].(*QTextFrameFormat).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(this.qclsinst, arg0)
+    C.C_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrame", "setFrameFormat", args)
   }
@@ -1538,7 +1670,7 @@ func (this *QTextFrame) Childframes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame11childFramesEv
     // invoke: QList<QTextFrame *> childFrames()
-    C.C_ZNK10QTextFrame11childFramesEv(this.qclsinst)
+    C.C_ZNK10QTextFrame11childFramesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "childFrames", args)
   }
@@ -1559,11 +1691,15 @@ func (this *QTextFrame) Parentframe(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextFrame11parentFrameEv
     // invoke: QTextFrame * parentFrame()
-    var ret0 = C.C_ZNK10QTextFrame11parentFrameEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextFrame11parentFrameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextFrame{}) // "QTextFrame *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrame", "parentFrame", args)
   }
@@ -1584,11 +1720,15 @@ func (this *QTextFrame) Firstcursorposition(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK10QTextFrame19firstCursorPositionEv
     // invoke: QTextCursor firstCursorPosition()
-    var ret0 = C.C_ZNK10QTextFrame19firstCursorPositionEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextFrame19firstCursorPositionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCursor{}) // "QTextCursor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrame", "firstCursorPosition", args)
   }
@@ -1609,11 +1749,15 @@ func (this *QTextFrame) Lastcursorposition(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK10QTextFrame18lastCursorPositionEv
     // invoke: QTextCursor lastCursorPosition()
-    var ret0 = C.C_ZNK10QTextFrame18lastCursorPositionEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextFrame18lastCursorPositionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCursor{}) // "QTextCursor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrame", "lastCursorPosition", args)
   }
@@ -1634,11 +1778,15 @@ func (this *QTextFrame) Firstposition(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextFrame13firstPositionEv
     // invoke: int firstPosition()
-    var ret0 = C.C_ZNK10QTextFrame13firstPositionEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextFrame13firstPositionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrame", "firstPosition", args)
   }
@@ -1659,7 +1807,7 @@ func (this *QTextFrame) Begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame5beginEv
     // invoke: QTextFrame::iterator begin()
-    C.C_ZNK10QTextFrame5beginEv(this.qclsinst)
+    C.C_ZNK10QTextFrame5beginEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "begin", args)
   }
@@ -1680,11 +1828,15 @@ func (this *QTextFrame) Layoutdata(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextFrame10layoutDataEv
     // invoke: QTextFrameLayoutData * layoutData()
-    var ret0 = C.C_ZNK10QTextFrame10layoutDataEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextFrame10layoutDataEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextFrameLayoutData{}) // "QTextFrameLayoutData *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrame", "layoutData", args)
   }
@@ -1705,7 +1857,7 @@ func (this *QTextFrame) End(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame3endEv
     // invoke: QTextFrame::iterator end()
-    C.C_ZNK10QTextFrame3endEv(this.qclsinst)
+    C.C_ZNK10QTextFrame3endEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "end", args)
   }
@@ -1726,7 +1878,7 @@ func (this *QTextFrame) Freeqtextframe(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextFrameD0Ev
     // invoke: void ~QTextFrame()
-    C.C_ZN10QTextFrameD2Ev(this.qclsinst)
+    C.C_ZN10QTextFrameD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "~QTextFrame", args)
   }
@@ -1748,17 +1900,17 @@ func NewQTextFrame(args ...interface{}) *QTextFrame {
   case 0:
     // invoke: _ZN10QTextFrameC1EP13QTextDocument
     // invoke: void QTextFrame(class QTextDocument *)
-    var arg0 = args[0].(QTextDocument).qclsinst
+    var arg0 = args[0].(*QTextDocument).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTextFrameC2EP13QTextDocument(arg0)
-    return &QTextFrame{qclsinst:qthis}
+    return &QTextFrame{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextFrame", "QTextFrame", args)
   }
 
-  return nil // QTextFrame{qclsinst:qthis}
+  return nil // QTextFrame{Qclsinst:qthis}
 }
 
 // metaObject()
@@ -1774,7 +1926,7 @@ func (this *QTextFrame) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QTextFrame10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QTextFrame10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "metaObject", args)
   }
@@ -1796,9 +1948,9 @@ func (this *QTextFrame) Setlayoutdata(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData
     // invoke: void setLayoutData(class QTextFrameLayoutData *)
-    var arg0 = args[0].(QTextFrameLayoutData).qclsinst
+    var arg0 = args[0].(*QTextFrameLayoutData).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData(this.qclsinst, arg0)
+    C.C_ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrame", "setLayoutData", args)
   }
@@ -1819,11 +1971,15 @@ func (this *QTextFrame) Frameformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextFrame11frameFormatEv
     // invoke: QTextFrameFormat frameFormat()
-    var ret0 = C.C_ZNK10QTextFrame11frameFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextFrame11frameFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextFrameFormat{}) // "QTextFrameFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrame", "frameFormat", args)
   }
@@ -1844,11 +2000,15 @@ func (this *QTextFrame) Lastposition(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextFrame12lastPositionEv
     // invoke: int lastPosition()
-    var ret0 = C.C_ZNK10QTextFrame12lastPositionEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextFrame12lastPositionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrame", "lastPosition", args)
   }

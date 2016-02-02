@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qanimationgroup.h
 // dst-file: /src/core/qanimationgroup.go
 //
@@ -63,7 +63,7 @@ func init() {
 // class sizeof(QAnimationGroup)=1
 type QAnimationGroup struct {
   /*qbase*/ QAbstractAnimation;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // animationCount()
@@ -79,11 +79,15 @@ func (this *QAnimationGroup) Animationcount(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK15QAnimationGroup14animationCountEv
     // invoke: int animationCount()
-    var ret0 = C.C_ZNK15QAnimationGroup14animationCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAnimationGroup14animationCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAnimationGroup", "animationCount", args)
   }
@@ -105,9 +109,9 @@ func (this *QAnimationGroup) Addanimation(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation
     // invoke: void addAnimation(class QAbstractAnimation *)
-    var arg0 = args[0].(QAbstractAnimation).qclsinst
+    var arg0 = args[0].(*QAbstractAnimation).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
+    C.C_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAnimationGroup", "addAnimation", args)
   }
@@ -129,13 +133,17 @@ func (this *QAnimationGroup) Indexofanimation(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation
     // invoke: int indexOfAnimation(class QAbstractAnimation *)
-    var arg0 = args[0].(QAbstractAnimation).qclsinst
+    var arg0 = args[0].(*QAbstractAnimation).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAnimationGroup", "indexOfAnimation", args)
   }
@@ -156,7 +164,7 @@ func (this *QAnimationGroup) Freeqanimationgroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAnimationGroupD0Ev
     // invoke: void ~QAnimationGroup()
-    C.C_ZN15QAnimationGroupD2Ev(this.qclsinst)
+    C.C_ZN15QAnimationGroupD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationGroup", "~QAnimationGroup", args)
   }
@@ -177,7 +185,7 @@ func (this *QAnimationGroup) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAnimationGroup5clearEv
     // invoke: void clear()
-    C.C_ZN15QAnimationGroup5clearEv(this.qclsinst)
+    C.C_ZN15QAnimationGroup5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationGroup", "clear", args)
   }
@@ -199,9 +207,9 @@ func (this *QAnimationGroup) Animationat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAnimationGroup11animationAtEi
     // invoke: QAbstractAnimation * animationAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK15QAnimationGroup11animationAtEi(this.qclsinst, arg0)
+    C.C_ZNK15QAnimationGroup11animationAtEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAnimationGroup", "animationAt", args)
   }
@@ -224,11 +232,11 @@ func (this *QAnimationGroup) Insertanimation(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation
     // invoke: void insertAnimation(int, class QAbstractAnimation *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QAbstractAnimation).qclsinst
+    var arg1 = args[1].(*QAbstractAnimation).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation(this.qclsinst, arg0, arg1)
+    C.C_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAnimationGroup", "insertAnimation", args)
   }
@@ -249,7 +257,7 @@ func (this *QAnimationGroup) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAnimationGroup10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QAnimationGroup10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QAnimationGroup10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationGroup", "metaObject", args)
   }
@@ -271,9 +279,9 @@ func (this *QAnimationGroup) Removeanimation(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation
     // invoke: void removeAnimation(class QAbstractAnimation *)
-    var arg0 = args[0].(QAbstractAnimation).qclsinst
+    var arg0 = args[0].(*QAbstractAnimation).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
+    C.C_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAnimationGroup", "removeAnimation", args)
   }
@@ -295,9 +303,9 @@ func (this *QAnimationGroup) Takeanimation(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAnimationGroup13takeAnimationEi
     // invoke: QAbstractAnimation * takeAnimation(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAnimationGroup13takeAnimationEi(this.qclsinst, arg0)
+    C.C_ZN15QAnimationGroup13takeAnimationEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAnimationGroup", "takeAnimation", args)
   }

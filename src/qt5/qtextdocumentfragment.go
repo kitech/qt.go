@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qtextdocumentfragment.h
 // dst-file: /src/gui/qtextdocumentfragment.go
 //
@@ -65,7 +65,7 @@ func init() {
 // class sizeof(QTextDocumentFragment)=8
 type QTextDocumentFragment struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // toHtml(const class QByteArray &)
@@ -82,13 +82,17 @@ func (this *QTextDocumentFragment) Tohtml(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK21QTextDocumentFragment6toHtmlERK10QByteArray
     // invoke: QString toHtml(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "toHtml", args)
   }
@@ -110,13 +114,17 @@ func (this *QTextDocumentFragment) Fromplaintext_S(args ...interface{}) (ret int
   case 0:
     // invoke: _ZN21QTextDocumentFragment13fromPlainTextERK7QString
     // invoke: QTextDocumentFragment fromPlainText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN21QTextDocumentFragment13fromPlainTextERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextDocumentFragment{}) // "QTextDocumentFragment"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "fromPlainText", args)
   }
@@ -137,7 +145,7 @@ func (this *QTextDocumentFragment) Freeqtextdocumentfragment(args ...interface{}
   case 0:
     // invoke: _ZN21QTextDocumentFragmentD0Ev
     // invoke: void ~QTextDocumentFragment()
-    C.C_ZN21QTextDocumentFragmentD2Ev(this.qclsinst)
+    C.C_ZN21QTextDocumentFragmentD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "~QTextDocumentFragment", args)
   }
@@ -158,11 +166,15 @@ func (this *QTextDocumentFragment) Isempty(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK21QTextDocumentFragment7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK21QTextDocumentFragment7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK21QTextDocumentFragment7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "isEmpty", args)
   }
@@ -183,11 +195,15 @@ func (this *QTextDocumentFragment) Toplaintext(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK21QTextDocumentFragment11toPlainTextEv
     // invoke: QString toPlainText()
-    var ret0 = C.C_ZNK21QTextDocumentFragment11toPlainTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK21QTextDocumentFragment11toPlainTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "toPlainText", args)
   }
@@ -217,42 +233,42 @@ func NewQTextDocumentFragment(args ...interface{}) *QTextDocumentFragment {
   case 0:
     // invoke: _ZN21QTextDocumentFragmentC1EPK13QTextDocument
     // invoke: void QTextDocumentFragment(const class QTextDocument *)
-    var arg0 = args[0].(QTextDocument).qclsinst
+    var arg0 = args[0].(*QTextDocument).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QTextDocumentFragmentC2EPK13QTextDocument(arg0)
-    return &QTextDocumentFragment{qclsinst:qthis}
+    return &QTextDocumentFragment{Qclsinst:qthis}
   case 1:
     // invoke: _ZN21QTextDocumentFragmentC1Ev
     // invoke: void QTextDocumentFragment()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QTextDocumentFragmentC2Ev()
-    return &QTextDocumentFragment{qclsinst:qthis}
+    return &QTextDocumentFragment{Qclsinst:qthis}
   case 2:
     // invoke: _ZN21QTextDocumentFragmentC1ERKS_
     // invoke: void QTextDocumentFragment(const class QTextDocumentFragment &)
-    var arg0 = args[0].(QTextDocumentFragment).qclsinst
+    var arg0 = args[0].(*QTextDocumentFragment).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QTextDocumentFragmentC2ERKS_(arg0)
-    return &QTextDocumentFragment{qclsinst:qthis}
+    return &QTextDocumentFragment{Qclsinst:qthis}
   case 3:
     // invoke: _ZN21QTextDocumentFragmentC1ERK11QTextCursor
     // invoke: void QTextDocumentFragment(const class QTextCursor &)
-    var arg0 = args[0].(QTextCursor).qclsinst
+    var arg0 = args[0].(*QTextCursor).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QTextDocumentFragmentC2ERK11QTextCursor(arg0)
-    return &QTextDocumentFragment{qclsinst:qthis}
+    return &QTextDocumentFragment{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "QTextDocumentFragment", args)
   }
 
-  return nil // QTextDocumentFragment{qclsinst:qthis}
+  return nil // QTextDocumentFragment{Qclsinst:qthis}
 }
 
 // fromHtml(const class QString &)
@@ -273,25 +289,33 @@ func (this *QTextDocumentFragment) Fromhtml_S(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZN21QTextDocumentFragment8fromHtmlERK7QString
     // invoke: QTextDocumentFragment fromHtml(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN21QTextDocumentFragment8fromHtmlERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextDocumentFragment{}) // "QTextDocumentFragment"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument
     // invoke: QTextDocumentFragment fromHtml(const class QString &, const class QTextDocument *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QTextDocument).qclsinst
+    var arg1 = args[1].(*QTextDocument).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextDocumentFragment{}) // "QTextDocumentFragment"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "fromHtml", args)
   }

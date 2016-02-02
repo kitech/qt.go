@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.go
 //
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QProxyStyle)=1
 type QProxyStyle struct {
   /*qbase*/ QCommonStyle;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QProxyStyle(class QStyle *)
@@ -93,26 +93,26 @@ func NewQProxyStyle(args ...interface{}) *QProxyStyle {
   case 0:
     // invoke: _ZN11QProxyStyleC1EP6QStyle
     // invoke: void QProxyStyle(class QStyle *)
-    var arg0 = args[0].(QStyle).qclsinst
+    var arg0 = args[0].(*QStyle).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QProxyStyleC2EP6QStyle(arg0)
-    return &QProxyStyle{qclsinst:qthis}
+    return &QProxyStyle{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QProxyStyleC1ERK7QString
     // invoke: void QProxyStyle(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QProxyStyleC2ERK7QString(arg0)
-    return &QProxyStyle{qclsinst:qthis}
+    return &QProxyStyle{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QProxyStyle", "QProxyStyle", args)
   }
 
-  return nil // QProxyStyle{qclsinst:qthis}
+  return nil // QProxyStyle{Qclsinst:qthis}
 }
 
 // polish(class QWidget *)
@@ -135,21 +135,21 @@ func (this *QProxyStyle) Polish(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QProxyStyle6polishEP7QWidget
     // invoke: void polish(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QProxyStyle6polishEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN11QProxyStyle6polishEP7QWidget(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN11QProxyStyle6polishER8QPalette
     // invoke: void polish(class QPalette &)
-    var arg0 = args[0].(QPalette).qclsinst
+    var arg0 = args[0].(*QPalette).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QProxyStyle6polishER8QPalette(this.qclsinst, arg0)
+    C.C_ZN11QProxyStyle6polishER8QPalette(this.Qclsinst, arg0)
   case 2:
     // invoke: _ZN11QProxyStyle6polishEP12QApplication
     // invoke: void polish(class QApplication *)
-    var arg0 = args[0].(QApplication).qclsinst
+    var arg0 = args[0].(*QApplication).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QProxyStyle6polishEP12QApplication(this.qclsinst, arg0)
+    C.C_ZN11QProxyStyle6polishEP12QApplication(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProxyStyle", "polish", args)
   }
@@ -170,11 +170,15 @@ func (this *QProxyStyle) Basestyle(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QProxyStyle9baseStyleEv
     // invoke: QStyle * baseStyle()
-    var ret0 = C.C_ZNK11QProxyStyle9baseStyleEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QProxyStyle9baseStyleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QStyle{}) // "QStyle *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProxyStyle", "baseStyle", args)
   }
@@ -195,11 +199,15 @@ func (this *QProxyStyle) Standardpalette(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK11QProxyStyle15standardPaletteEv
     // invoke: QPalette standardPalette()
-    var ret0 = C.C_ZNK11QProxyStyle15standardPaletteEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QProxyStyle15standardPaletteEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPalette{}) // "QPalette"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProxyStyle", "standardPalette", args)
   }
@@ -221,9 +229,9 @@ func (this *QProxyStyle) Setbasestyle(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QProxyStyle12setBaseStyleEP6QStyle
     // invoke: void setBaseStyle(class QStyle *)
-    var arg0 = args[0].(QStyle).qclsinst
+    var arg0 = args[0].(*QStyle).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QProxyStyle12setBaseStyleEP6QStyle(this.qclsinst, arg0)
+    C.C_ZN11QProxyStyle12setBaseStyleEP6QStyle(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProxyStyle", "setBaseStyle", args)
   }
@@ -248,15 +256,15 @@ func (this *QProxyStyle) Drawitempixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QProxyStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap
     // invoke: void drawItemPixmap(class QPainter *, const class QRect &, int, const class QPixmap &)
-    var arg0 = args[0].(QPainter).qclsinst
+    var arg0 = args[0].(*QPainter).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QRect).qclsinst
+    var arg1 = args[1].(*QRect).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QPixmap).qclsinst
+    var arg3 = args[3].(*QPixmap).Qclsinst
     if false {fmt.Println(arg3)}
-    C.C_ZNK11QProxyStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK11QProxyStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QProxyStyle", "drawItemPixmap", args)
   }
@@ -277,7 +285,7 @@ func (this *QProxyStyle) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QProxyStyle10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QProxyStyle10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QProxyStyle10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QProxyStyle", "metaObject", args)
   }
@@ -298,7 +306,7 @@ func (this *QProxyStyle) Freeqproxystyle(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QProxyStyleD0Ev
     // invoke: void ~QProxyStyle()
-    C.C_ZN11QProxyStyleD2Ev(this.qclsinst)
+    C.C_ZN11QProxyStyleD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QProxyStyle", "~QProxyStyle", args)
   }
@@ -324,21 +332,25 @@ func (this *QProxyStyle) Itemtextrect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString
     // invoke: QRect itemTextRect(const class QFontMetrics &, const class QRect &, int, _Bool, const class QString &)
-    var arg0 = args[0].(QFontMetrics).qclsinst
+    var arg0 = args[0].(*QFontMetrics).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QRect).qclsinst
+    var arg1 = args[1].(*QRect).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
     var arg3 = C.bool(args[3].(bool))
     if false {fmt.Println(arg3)}
-    var arg4 = args[4].(QString).qclsinst
+    var arg4 = args[4].(*QString).Qclsinst
     if false {fmt.Println(arg4)}
-    var ret0 = C.C_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    var ret0 = C.C_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProxyStyle", "itemTextRect", args)
   }
@@ -362,17 +374,21 @@ func (this *QProxyStyle) Itempixmaprect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap
     // invoke: QRect itemPixmapRect(const class QRect &, int, const class QPixmap &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QPixmap).qclsinst
+    var arg2 = args[2].(*QPixmap).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QProxyStyle", "itemPixmapRect", args)
   }
@@ -397,15 +413,15 @@ func (this *QProxyStyle) Unpolish(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QProxyStyle8unpolishEP7QWidget
     // invoke: void unpolish(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QProxyStyle8unpolishEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN11QProxyStyle8unpolishEP7QWidget(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN11QProxyStyle8unpolishEP12QApplication
     // invoke: void unpolish(class QApplication *)
-    var arg0 = args[0].(QApplication).qclsinst
+    var arg0 = args[0].(*QApplication).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QProxyStyle8unpolishEP12QApplication(this.qclsinst, arg0)
+    C.C_ZN11QProxyStyle8unpolishEP12QApplication(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProxyStyle", "unpolish", args)
   }

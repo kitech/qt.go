@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qstatictext.h
 // dst-file: /src/gui/qstatictext.go
 //
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QStaticText)=1
 type QStaticText struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // swap(class QStaticText &)
@@ -90,9 +90,9 @@ func (this *QStaticText) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStaticText4swapERS_
     // invoke: void swap(class QStaticText &)
-    var arg0 = args[0].(QStaticText).qclsinst
+    var arg0 = args[0].(*QStaticText).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QStaticText4swapERS_(this.qclsinst, arg0)
+    C.C_ZN11QStaticText4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "swap", args)
   }
@@ -115,11 +115,11 @@ func (this *QStaticText) Prepare(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStaticText7prepareERK10QTransformRK5QFont
     // invoke: void prepare(const class QTransform &, const class QFont &)
-    var arg0 = args[0].(QTransform).qclsinst
+    var arg0 = args[0].(*QTransform).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QFont).qclsinst
+    var arg1 = args[1].(*QFont).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN11QStaticText7prepareERK10QTransformRK5QFont(this.qclsinst, arg0, arg1)
+    C.C_ZN11QStaticText7prepareERK10QTransformRK5QFont(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStaticText", "prepare", args)
   }
@@ -140,11 +140,15 @@ func (this *QStaticText) Text(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QStaticText4textEv
     // invoke: QString text()
-    var ret0 = C.C_ZNK11QStaticText4textEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStaticText4textEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStaticText", "text", args)
   }
@@ -166,9 +170,9 @@ func (this *QStaticText) Settext(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStaticText7setTextERK7QString
     // invoke: void setText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QStaticText7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN11QStaticText7setTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "setText", args)
   }
@@ -189,7 +193,7 @@ func (this *QStaticText) Freeqstatictext(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStaticTextD0Ev
     // invoke: void ~QStaticText()
-    C.C_ZN11QStaticTextD2Ev(this.qclsinst)
+    C.C_ZN11QStaticTextD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "~QStaticText", args)
   }
@@ -211,9 +215,9 @@ func (this *QStaticText) Settextwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStaticText12setTextWidthEd
     // invoke: void setTextWidth(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QStaticText12setTextWidthEd(this.qclsinst, arg0)
+    C.C_ZN11QStaticText12setTextWidthEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "setTextWidth", args)
   }
@@ -235,9 +239,9 @@ func (this *QStaticText) Settextoption(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStaticText13setTextOptionERK11QTextOption
     // invoke: void setTextOption(const class QTextOption &)
-    var arg0 = args[0].(QTextOption).qclsinst
+    var arg0 = args[0].(*QTextOption).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QStaticText13setTextOptionERK11QTextOption(this.qclsinst, arg0)
+    C.C_ZN11QStaticText13setTextOptionERK11QTextOption(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "setTextOption", args)
   }
@@ -267,30 +271,30 @@ func NewQStaticText(args ...interface{}) *QStaticText {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QStaticTextC2Ev()
-    return &QStaticText{qclsinst:qthis}
+    return &QStaticText{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QStaticTextC1ERK7QString
     // invoke: void QStaticText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QStaticTextC2ERK7QString(arg0)
-    return &QStaticText{qclsinst:qthis}
+    return &QStaticText{Qclsinst:qthis}
   case 2:
     // invoke: _ZN11QStaticTextC1ERKS_
     // invoke: void QStaticText(const class QStaticText &)
-    var arg0 = args[0].(QStaticText).qclsinst
+    var arg0 = args[0].(*QStaticText).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QStaticTextC2ERKS_(arg0)
-    return &QStaticText{qclsinst:qthis}
+    return &QStaticText{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStaticText", "QStaticText", args)
   }
 
-  return nil // QStaticText{qclsinst:qthis}
+  return nil // QStaticText{Qclsinst:qthis}
 }
 
 // textWidth()
@@ -306,11 +310,15 @@ func (this *QStaticText) Textwidth(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QStaticText9textWidthEv
     // invoke: qreal textWidth()
-    var ret0 = C.C_ZNK11QStaticText9textWidthEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStaticText9textWidthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStaticText", "textWidth", args)
   }
@@ -331,7 +339,7 @@ func (this *QStaticText) Textformat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStaticText10textFormatEv
     // invoke: Qt::TextFormat textFormat()
-    C.C_ZNK11QStaticText10textFormatEv(this.qclsinst)
+    C.C_ZNK11QStaticText10textFormatEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "textFormat", args)
   }
@@ -352,11 +360,15 @@ func (this *QStaticText) Textoption(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QStaticText10textOptionEv
     // invoke: QTextOption textOption()
-    var ret0 = C.C_ZNK11QStaticText10textOptionEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStaticText10textOptionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextOption{}) // "QTextOption"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStaticText", "textOption", args)
   }
@@ -377,7 +389,7 @@ func (this *QStaticText) Performancehint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStaticText15performanceHintEv
     // invoke: QStaticText::PerformanceHint performanceHint()
-    C.C_ZNK11QStaticText15performanceHintEv(this.qclsinst)
+    C.C_ZNK11QStaticText15performanceHintEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "performanceHint", args)
   }
@@ -398,11 +410,15 @@ func (this *QStaticText) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QStaticText4sizeEv
     // invoke: QSizeF size()
-    var ret0 = C.C_ZNK11QStaticText4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStaticText4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStaticText", "size", args)
   }

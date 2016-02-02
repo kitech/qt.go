@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.go
 //
@@ -55,7 +55,7 @@ func init() {
 // class sizeof(QKeyEventTransition)=1
 type QKeyEventTransition struct {
   /*qbase*/ QEventTransition;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // metaObject()
@@ -71,7 +71,7 @@ func (this *QKeyEventTransition) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QKeyEventTransition10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK19QKeyEventTransition10metaObjectEv(this.qclsinst)
+    C.C_ZNK19QKeyEventTransition10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "metaObject", args)
   }
@@ -92,11 +92,15 @@ func (this *QKeyEventTransition) Key(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QKeyEventTransition3keyEv
     // invoke: int key()
-    var ret0 = C.C_ZNK19QKeyEventTransition3keyEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QKeyEventTransition3keyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "key", args)
   }
@@ -117,7 +121,7 @@ func (this *QKeyEventTransition) Modifiermask(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QKeyEventTransition12modifierMaskEv
     // invoke: Qt::KeyboardModifiers modifierMask()
-    C.C_ZNK19QKeyEventTransition12modifierMaskEv(this.qclsinst)
+    C.C_ZNK19QKeyEventTransition12modifierMaskEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "modifierMask", args)
   }
@@ -139,9 +143,9 @@ func (this *QKeyEventTransition) Setkey(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QKeyEventTransition6setKeyEi
     // invoke: void setKey(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN19QKeyEventTransition6setKeyEi(this.qclsinst, arg0)
+    C.C_ZN19QKeyEventTransition6setKeyEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "setKey", args)
   }
@@ -162,7 +166,7 @@ func (this *QKeyEventTransition) Freeqkeyeventtransition(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QKeyEventTransitionD0Ev
     // invoke: void ~QKeyEventTransition()
-    C.C_ZN19QKeyEventTransitionD2Ev(this.qclsinst)
+    C.C_ZN19QKeyEventTransitionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "~QKeyEventTransition", args)
   }
@@ -184,17 +188,17 @@ func NewQKeyEventTransition(args ...interface{}) *QKeyEventTransition {
   case 0:
     // invoke: _ZN19QKeyEventTransitionC1EP6QState
     // invoke: void QKeyEventTransition(class QState *)
-    var arg0 = args[0].(QState).qclsinst
+    var arg0 = args[0].(*QState).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QKeyEventTransitionC2EP6QState(arg0)
-    return &QKeyEventTransition{qclsinst:qthis}
+    return &QKeyEventTransition{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "QKeyEventTransition", args)
   }
 
-  return nil // QKeyEventTransition{qclsinst:qthis}
+  return nil // QKeyEventTransition{Qclsinst:qthis}
 }
 
 // <= body block end

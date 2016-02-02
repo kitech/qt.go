@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.go
 //
@@ -129,7 +129,7 @@ func init() {
 // class sizeof(QFileSystemModel)=1
 type QFileSystemModel struct {
   /*qbase*/ QAbstractItemModel;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _rootPathChanged QFileSystemModel_rootPathChanged_signal;
 //  _directoryLoaded QFileSystemModel_directoryLoaded_signal;
 //  _fileRenamed QFileSystemModel_fileRenamed_signal;
@@ -149,9 +149,9 @@ func (this *QFileSystemModel) Setnamefilters(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QFileSystemModel14setNameFiltersERK11QStringList
     // invoke: void setNameFilters(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QFileSystemModel14setNameFiltersERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel14setNameFiltersERK11QStringList(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setNameFilters", args)
   }
@@ -173,13 +173,17 @@ func (this *QFileSystemModel) Columncount(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK16QFileSystemModel11columnCountERK11QModelIndex
     // invoke: int columnCount(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel11columnCountERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "columnCount", args)
   }
@@ -201,13 +205,17 @@ func (this *QFileSystemModel) Mycomputer(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK16QFileSystemModel10myComputerEi
     // invoke: QVariant myComputer(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel10myComputerEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel10myComputerEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "myComputer", args)
   }
@@ -230,15 +238,19 @@ func (this *QFileSystemModel) Mkdir(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString
     // invoke: QModelIndex mkdir(const class QModelIndex &, const class QString &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "mkdir", args)
   }
@@ -260,13 +272,17 @@ func (this *QFileSystemModel) Setrootpath(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZN16QFileSystemModel11setRootPathERK7QString
     // invoke: QModelIndex setRootPath(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN16QFileSystemModel11setRootPathERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN16QFileSystemModel11setRootPathERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setRootPath", args)
   }
@@ -287,7 +303,7 @@ func (this *QFileSystemModel) Freeqfilesystemmodel(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QFileSystemModelD0Ev
     // invoke: void ~QFileSystemModel()
-    C.C_ZN16QFileSystemModelD2Ev(this.qclsinst)
+    C.C_ZN16QFileSystemModelD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "~QFileSystemModel", args)
   }
@@ -309,17 +325,17 @@ func NewQFileSystemModel(args ...interface{}) *QFileSystemModel {
   case 0:
     // invoke: _ZN16QFileSystemModelC1EP7QObject
     // invoke: void QFileSystemModel(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QFileSystemModelC2EP7QObject(arg0)
-    return &QFileSystemModel{qclsinst:qthis}
+    return &QFileSystemModel{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFileSystemModel", "QFileSystemModel", args)
   }
 
-  return nil // QFileSystemModel{qclsinst:qthis}
+  return nil // QFileSystemModel{Qclsinst:qthis}
 }
 
 // size(const class QModelIndex &)
@@ -336,13 +352,17 @@ func (this *QFileSystemModel) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QFileSystemModel4sizeERK11QModelIndex
     // invoke: qint64 size(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel4sizeERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel4sizeERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "size", args)
   }
@@ -370,29 +390,37 @@ func (this *QFileSystemModel) Index(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QFileSystemModel5indexERK7QStringi
     // invoke: QModelIndex index(const class QString &, int)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK16QFileSystemModel5indexERK7QStringi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK16QFileSystemModel5indexERK7QStringi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK16QFileSystemModel5indexEiiRK11QModelIndex
     // invoke: QModelIndex index(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
+    var arg2 = args[2].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK16QFileSystemModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK16QFileSystemModel5indexEiiRK11QModelIndex(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "index", args)
   }
@@ -413,11 +441,15 @@ func (this *QFileSystemModel) Resolvesymlinks(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK16QFileSystemModel15resolveSymlinksEv
     // invoke: bool resolveSymlinks()
-    var ret0 = C.C_ZNK16QFileSystemModel15resolveSymlinksEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QFileSystemModel15resolveSymlinksEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "resolveSymlinks", args)
   }
@@ -439,13 +471,17 @@ func (this *QFileSystemModel) Haschildren(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK16QFileSystemModel11hasChildrenERK11QModelIndex
     // invoke: bool hasChildren(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "hasChildren", args)
   }
@@ -466,11 +502,15 @@ func (this *QFileSystemModel) Isreadonly(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK16QFileSystemModel10isReadOnlyEv
     // invoke: bool isReadOnly()
-    var ret0 = C.C_ZNK16QFileSystemModel10isReadOnlyEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QFileSystemModel10isReadOnlyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "isReadOnly", args)
   }
@@ -492,13 +532,17 @@ func (this *QFileSystemModel) Isdir(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QFileSystemModel5isDirERK11QModelIndex
     // invoke: bool isDir(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel5isDirERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel5isDirERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "isDir", args)
   }
@@ -519,7 +563,7 @@ func (this *QFileSystemModel) Namefilters(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel11nameFiltersEv
     // invoke: QStringList nameFilters()
-    C.C_ZNK16QFileSystemModel11nameFiltersEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel11nameFiltersEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "nameFilters", args)
   }
@@ -541,13 +585,17 @@ func (this *QFileSystemModel) Rmdir(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN16QFileSystemModel5rmdirERK11QModelIndex
     // invoke: bool rmdir(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN16QFileSystemModel5rmdirERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZN16QFileSystemModel5rmdirERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "rmdir", args)
   }
@@ -569,13 +617,17 @@ func (this *QFileSystemModel) Fileinfo(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QFileSystemModel8fileInfoERK11QModelIndex
     // invoke: QFileInfo fileInfo(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFileInfo{}) // "QFileInfo"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "fileInfo", args)
   }
@@ -597,9 +649,9 @@ func (this *QFileSystemModel) Permissions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel11permissionsERK11QModelIndex
     // invoke: QFile::Permissions permissions(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK16QFileSystemModel11permissionsERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel11permissionsERK11QModelIndex(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "permissions", args)
   }
@@ -621,13 +673,17 @@ func (this *QFileSystemModel) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QFileSystemModel4typeERK11QModelIndex
     // invoke: QString type(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel4typeERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel4typeERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "type", args)
   }
@@ -651,7 +707,7 @@ func (this *QFileSystemModel) Setnamefilterdisables(args ...interface{}) () {
     // invoke: void setNameFilterDisables(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QFileSystemModel21setNameFilterDisablesEb(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel21setNameFilterDisablesEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setNameFilterDisables", args)
   }
@@ -673,9 +729,9 @@ func (this *QFileSystemModel) Seticonprovider(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider
     // invoke: void setIconProvider(class QFileIconProvider *)
-    var arg0 = args[0].(QFileIconProvider).qclsinst
+    var arg0 = args[0].(*QFileIconProvider).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setIconProvider", args)
   }
@@ -699,17 +755,21 @@ func (this *QFileSystemModel) Setdata(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti
     // invoke: bool setData(const class QModelIndex &, const class QVariant &, int)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QVariant).qclsinst
+    var arg1 = args[1].(*QVariant).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setData", args)
   }
@@ -731,13 +791,17 @@ func (this *QFileSystemModel) Canfetchmore(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex
     // invoke: bool canFetchMore(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "canFetchMore", args)
   }
@@ -759,13 +823,17 @@ func (this *QFileSystemModel) Parent(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QFileSystemModel6parentERK11QModelIndex
     // invoke: QModelIndex parent(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel6parentERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel6parentERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QModelIndex{}) // "QModelIndex"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "parent", args)
   }
@@ -787,13 +855,17 @@ func (this *QFileSystemModel) Filepath(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QFileSystemModel8filePathERK11QModelIndex
     // invoke: QString filePath(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel8filePathERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel8filePathERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "filePath", args)
   }
@@ -815,13 +887,17 @@ func (this *QFileSystemModel) Filename(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QFileSystemModel8fileNameERK11QModelIndex
     // invoke: QString fileName(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel8fileNameERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel8fileNameERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "fileName", args)
   }
@@ -843,13 +919,17 @@ func (this *QFileSystemModel) Rowcount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QFileSystemModel8rowCountERK11QModelIndex
     // invoke: int rowCount(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel8rowCountERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "rowCount", args)
   }
@@ -870,11 +950,15 @@ func (this *QFileSystemModel) Iconprovider(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK16QFileSystemModel12iconProviderEv
     // invoke: QFileIconProvider * iconProvider()
-    var ret0 = C.C_ZNK16QFileSystemModel12iconProviderEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QFileSystemModel12iconProviderEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFileIconProvider{}) // "QFileIconProvider *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "iconProvider", args)
   }
@@ -895,11 +979,15 @@ func (this *QFileSystemModel) Namefilterdisables(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK16QFileSystemModel18nameFilterDisablesEv
     // invoke: bool nameFilterDisables()
-    var ret0 = C.C_ZNK16QFileSystemModel18nameFilterDisablesEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QFileSystemModel18nameFilterDisablesEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "nameFilterDisables", args)
   }
@@ -922,15 +1010,19 @@ func (this *QFileSystemModel) Data(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QFileSystemModel4dataERK11QModelIndexi
     // invoke: QVariant data(const class QModelIndex &, int)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK16QFileSystemModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK16QFileSystemModel4dataERK11QModelIndexi(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "data", args)
   }
@@ -951,7 +1043,7 @@ func (this *QFileSystemModel) Mimetypes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel9mimeTypesEv
     // invoke: QStringList mimeTypes()
-    C.C_ZNK16QFileSystemModel9mimeTypesEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel9mimeTypesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "mimeTypes", args)
   }
@@ -972,7 +1064,7 @@ func (this *QFileSystemModel) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK16QFileSystemModel10metaObjectEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "metaObject", args)
   }
@@ -996,7 +1088,7 @@ func (this *QFileSystemModel) Setresolvesymlinks(args ...interface{}) () {
     // invoke: void setResolveSymlinks(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QFileSystemModel18setResolveSymlinksEb(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel18setResolveSymlinksEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setResolveSymlinks", args)
   }
@@ -1017,11 +1109,15 @@ func (this *QFileSystemModel) Rootpath(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QFileSystemModel8rootPathEv
     // invoke: QString rootPath()
-    var ret0 = C.C_ZNK16QFileSystemModel8rootPathEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QFileSystemModel8rootPathEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "rootPath", args)
   }
@@ -1043,13 +1139,17 @@ func (this *QFileSystemModel) Remove(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN16QFileSystemModel6removeERK11QModelIndex
     // invoke: bool remove(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN16QFileSystemModel6removeERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZN16QFileSystemModel6removeERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "remove", args)
   }
@@ -1070,7 +1170,7 @@ func (this *QFileSystemModel) Filter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel6filterEv
     // invoke: QDir::Filters filter()
-    C.C_ZNK16QFileSystemModel6filterEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel6filterEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "filter", args)
   }
@@ -1094,7 +1194,7 @@ func (this *QFileSystemModel) Setreadonly(args ...interface{}) () {
     // invoke: void setReadOnly(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QFileSystemModel11setReadOnlyEb(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel11setReadOnlyEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setReadOnly", args)
   }
@@ -1116,9 +1216,9 @@ func (this *QFileSystemModel) Flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel5flagsERK11QModelIndex
     // invoke: Qt::ItemFlags flags(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK16QFileSystemModel5flagsERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZNK16QFileSystemModel5flagsERK11QModelIndex(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "flags", args)
   }
@@ -1139,11 +1239,15 @@ func (this *QFileSystemModel) Rootdirectory(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK16QFileSystemModel13rootDirectoryEv
     // invoke: QDir rootDirectory()
-    var ret0 = C.C_ZNK16QFileSystemModel13rootDirectoryEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QFileSystemModel13rootDirectoryEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDir{}) // "QDir"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "rootDirectory", args)
   }
@@ -1165,13 +1269,17 @@ func (this *QFileSystemModel) Lastmodified(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK16QFileSystemModel12lastModifiedERK11QModelIndex
     // invoke: QDateTime lastModified(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDateTime{}) // "QDateTime"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "lastModified", args)
   }
@@ -1193,13 +1301,17 @@ func (this *QFileSystemModel) Fileicon(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QFileSystemModel8fileIconERK11QModelIndex
     // invoke: QIcon fileIcon(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QFileSystemModel8fileIconERK11QModelIndex(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QFileSystemModel8fileIconERK11QModelIndex(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIcon{}) // "QIcon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemModel", "fileIcon", args)
   }
@@ -1221,9 +1333,9 @@ func (this *QFileSystemModel) Fetchmore(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QFileSystemModel9fetchMoreERK11QModelIndex
     // invoke: void fetchMore(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
+    var arg0 = args[0].(*QModelIndex).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QFileSystemModel9fetchMoreERK11QModelIndex(this.qclsinst, arg0)
+    C.C_ZN16QFileSystemModel9fetchMoreERK11QModelIndex(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "fetchMore", args)
   }
@@ -1244,7 +1356,7 @@ func (this *QFileSystemModel) Supporteddropactions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QFileSystemModel20supportedDropActionsEv
     // invoke: Qt::DropActions supportedDropActions()
-    C.C_ZNK16QFileSystemModel20supportedDropActionsEv(this.qclsinst)
+    C.C_ZNK16QFileSystemModel20supportedDropActionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "supportedDropActions", args)
   }

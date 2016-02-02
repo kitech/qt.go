@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qjsonvalue.h
 // dst-file: /src/core/qjsonvalue.go
 //
@@ -127,25 +127,25 @@ func init() {
 // class sizeof(QJsonValueRefPtr)=16
 type QJsonValueRefPtr struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QJsonValuePtr)=24
 type QJsonValuePtr struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QJsonValue)=24
 type QJsonValue struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QJsonValueRef)=16
 type QJsonValueRef struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QJsonValue(double)
@@ -177,12 +177,12 @@ func NewQJsonValue(args ...interface{}) *QJsonValue {
   case 0:
     // invoke: _ZN10QJsonValueC1Ed
     // invoke: void QJsonValue(double)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonValueC2Ed(arg0)
-    return &QJsonValue{qclsinst:qthis}
+    return &QJsonValue{Qclsinst:qthis}
   case 1:
     // invoke: _ZN10QJsonValueC1Eb
     // invoke: void QJsonValue(_Bool)
@@ -191,25 +191,25 @@ func NewQJsonValue(args ...interface{}) *QJsonValue {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonValueC2Eb(arg0)
-    return &QJsonValue{qclsinst:qthis}
+    return &QJsonValue{Qclsinst:qthis}
   case 2:
     // invoke: _ZN10QJsonValueC1Ei
     // invoke: void QJsonValue(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonValueC2Ei(arg0)
-    return &QJsonValue{qclsinst:qthis}
+    return &QJsonValue{Qclsinst:qthis}
   case 3:
     // invoke: _ZN10QJsonValueC1ERK7QString
     // invoke: void QJsonValue(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonValueC2ERK7QString(arg0)
-    return &QJsonValue{qclsinst:qthis}
+    return &QJsonValue{Qclsinst:qthis}
   case 4:
     // invoke: _ZN10QJsonValueC1EPKc
     // invoke: void QJsonValue(const char *)
@@ -220,21 +220,21 @@ func NewQJsonValue(args ...interface{}) *QJsonValue {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonValueC2EPKc(arg0)
-    return &QJsonValue{qclsinst:qthis}
+    return &QJsonValue{Qclsinst:qthis}
   case 5:
     // invoke: _ZN10QJsonValueC1Ex
     // invoke: void QJsonValue(qint64)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonValueC2Ex(arg0)
-    return &QJsonValue{qclsinst:qthis}
+    return &QJsonValue{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QJsonValue", "QJsonValue", args)
   }
 
-  return nil // QJsonValue{qclsinst:qthis}
+  return nil // QJsonValue{Qclsinst:qthis}
 }
 
 // fromVariant(const class QVariant &)
@@ -251,7 +251,7 @@ func (this *QJsonValue) Fromvariant_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonValue11fromVariantERK8QVariant
     // invoke: QJsonValue fromVariant(const class QVariant &)
-    var arg0 = args[0].(QVariant).qclsinst
+    var arg0 = args[0].(*QVariant).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN10QJsonValue11fromVariantERK8QVariant(arg0)
   default:
@@ -274,7 +274,7 @@ func (this *QJsonValue) Freeqjsonvalue(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonValueD0Ev
     // invoke: void ~QJsonValue()
-    C.C_ZN10QJsonValueD2Ev(this.qclsinst)
+    C.C_ZN10QJsonValueD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "~QJsonValue", args)
   }
@@ -295,7 +295,7 @@ func (this *QJsonValue) Toobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue8toObjectEv
     // invoke: QJsonObject toObject()
-    C.C_ZNK10QJsonValue8toObjectEv(this.qclsinst)
+    C.C_ZNK10QJsonValue8toObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "toObject", args)
   }
@@ -319,11 +319,15 @@ func (this *QJsonValue) Tobool(args ...interface{}) (ret interface{}) {
     // invoke: bool toBool(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QJsonValue6toBoolEb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QJsonValue6toBoolEb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValue", "toBool", args)
   }
@@ -344,11 +348,15 @@ func (this *QJsonValue) Tovariant(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonValue9toVariantEv
     // invoke: QVariant toVariant()
-    var ret0 = C.C_ZNK10QJsonValue9toVariantEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QJsonValue9toVariantEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValue", "toVariant", args)
   }
@@ -370,13 +378,17 @@ func (this *QJsonValue) Tostring(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonValue8toStringERK7QString
     // invoke: QString toString(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QJsonValue8toStringERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QJsonValue8toStringERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValue", "toString", args)
   }
@@ -397,7 +409,7 @@ func (this *QJsonValue) Type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue4typeEv
     // invoke: QJsonValue::Type type()
-    C.C_ZNK10QJsonValue4typeEv(this.qclsinst)
+    C.C_ZNK10QJsonValue4typeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "type", args)
   }
@@ -418,11 +430,15 @@ func (this *QJsonValue) Isundefined(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonValue11isUndefinedEv
     // invoke: bool isUndefined()
-    var ret0 = C.C_ZNK10QJsonValue11isUndefinedEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QJsonValue11isUndefinedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValue", "isUndefined", args)
   }
@@ -443,11 +459,15 @@ func (this *QJsonValue) Isarray(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonValue7isArrayEv
     // invoke: bool isArray()
-    var ret0 = C.C_ZNK10QJsonValue7isArrayEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QJsonValue7isArrayEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValue", "isArray", args)
   }
@@ -468,11 +488,15 @@ func (this *QJsonValue) Isbool(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonValue6isBoolEv
     // invoke: bool isBool()
-    var ret0 = C.C_ZNK10QJsonValue6isBoolEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QJsonValue6isBoolEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValue", "isBool", args)
   }
@@ -493,11 +517,15 @@ func (this *QJsonValue) Isobject(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonValue8isObjectEv
     // invoke: bool isObject()
-    var ret0 = C.C_ZNK10QJsonValue8isObjectEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QJsonValue8isObjectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValue", "isObject", args)
   }
@@ -518,11 +546,15 @@ func (this *QJsonValue) Isdouble(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonValue8isDoubleEv
     // invoke: bool isDouble()
-    var ret0 = C.C_ZNK10QJsonValue8isDoubleEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QJsonValue8isDoubleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValue", "isDouble", args)
   }
@@ -543,7 +575,7 @@ func (this *QJsonValue) Toarray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue7toArrayEv
     // invoke: QJsonArray toArray()
-    C.C_ZNK10QJsonValue7toArrayEv(this.qclsinst)
+    C.C_ZNK10QJsonValue7toArrayEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "toArray", args)
   }
@@ -564,11 +596,15 @@ func (this *QJsonValue) Isstring(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonValue8isStringEv
     // invoke: bool isString()
-    var ret0 = C.C_ZNK10QJsonValue8isStringEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QJsonValue8isStringEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValue", "isString", args)
   }
@@ -590,13 +626,17 @@ func (this *QJsonValue) Toint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonValue5toIntEi
     // invoke: int toInt(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QJsonValue5toIntEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QJsonValue5toIntEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValue", "toInt", args)
   }
@@ -617,11 +657,15 @@ func (this *QJsonValue) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonValue6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK10QJsonValue6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QJsonValue6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValue", "isNull", args)
   }
@@ -643,13 +687,17 @@ func (this *QJsonValue) Todouble(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonValue8toDoubleEd
     // invoke: double toDouble(double)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QJsonValue8toDoubleEd(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QJsonValue8toDoubleEd(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "double"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValue", "toDouble", args)
   }
@@ -670,11 +718,15 @@ func (this *QJsonValueRef) Isarray(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QJsonValueRef7isArrayEv
     // invoke: bool isArray()
-    var ret0 = C.C_ZNK13QJsonValueRef7isArrayEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QJsonValueRef7isArrayEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isArray", args)
   }
@@ -695,7 +747,7 @@ func (this *QJsonValueRef) Toarray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef7toArrayEv
     // invoke: QJsonArray toArray()
-    C.C_ZNK13QJsonValueRef7toArrayEv(this.qclsinst)
+    C.C_ZNK13QJsonValueRef7toArrayEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toArray", args)
   }
@@ -716,11 +768,15 @@ func (this *QJsonValueRef) Isstring(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QJsonValueRef8isStringEv
     // invoke: bool isString()
-    var ret0 = C.C_ZNK13QJsonValueRef8isStringEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QJsonValueRef8isStringEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isString", args)
   }
@@ -741,7 +797,7 @@ func (this *QJsonValueRef) Toobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef8toObjectEv
     // invoke: QJsonObject toObject()
-    C.C_ZNK13QJsonValueRef8toObjectEv(this.qclsinst)
+    C.C_ZNK13QJsonValueRef8toObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toObject", args)
   }
@@ -765,21 +821,29 @@ func (this *QJsonValueRef) Toint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QJsonValueRef5toIntEi
     // invoke: int toInt(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QJsonValueRef5toIntEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QJsonValueRef5toIntEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QJsonValueRef5toIntEv
     // invoke: int toInt()
-    var ret0 = C.C_ZNK13QJsonValueRef5toIntEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QJsonValueRef5toIntEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toInt", args)
   }
@@ -800,11 +864,15 @@ func (this *QJsonValueRef) Isbool(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QJsonValueRef6isBoolEv
     // invoke: bool isBool()
-    var ret0 = C.C_ZNK13QJsonValueRef6isBoolEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QJsonValueRef6isBoolEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isBool", args)
   }
@@ -825,11 +893,15 @@ func (this *QJsonValueRef) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QJsonValueRef6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK13QJsonValueRef6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QJsonValueRef6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isNull", args)
   }
@@ -853,21 +925,29 @@ func (this *QJsonValueRef) Todouble(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QJsonValueRef8toDoubleEd
     // invoke: double toDouble(double)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QJsonValueRef8toDoubleEd(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QJsonValueRef8toDoubleEd(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "double"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QJsonValueRef8toDoubleEv
     // invoke: double toDouble()
-    var ret0 = C.C_ZNK13QJsonValueRef8toDoubleEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QJsonValueRef8toDoubleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "double"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toDouble", args)
   }
@@ -891,21 +971,29 @@ func (this *QJsonValueRef) Tobool(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QJsonValueRef6toBoolEv
     // invoke: bool toBool()
-    var ret0 = C.C_ZNK13QJsonValueRef6toBoolEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QJsonValueRef6toBoolEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QJsonValueRef6toBoolEb
     // invoke: bool toBool(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QJsonValueRef6toBoolEb(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QJsonValueRef6toBoolEb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toBool", args)
   }
@@ -926,11 +1014,15 @@ func (this *QJsonValueRef) Tovariant(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QJsonValueRef9toVariantEv
     // invoke: QVariant toVariant()
-    var ret0 = C.C_ZNK13QJsonValueRef9toVariantEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QJsonValueRef9toVariantEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toVariant", args)
   }
@@ -954,21 +1046,29 @@ func (this *QJsonValueRef) Tostring(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QJsonValueRef8toStringEv
     // invoke: QString toString()
-    var ret0 = C.C_ZNK13QJsonValueRef8toStringEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QJsonValueRef8toStringEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QJsonValueRef8toStringERK7QString
     // invoke: QString toString(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QJsonValueRef8toStringERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QJsonValueRef8toStringERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toString", args)
   }
@@ -989,11 +1089,15 @@ func (this *QJsonValueRef) Isundefined(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QJsonValueRef11isUndefinedEv
     // invoke: bool isUndefined()
-    var ret0 = C.C_ZNK13QJsonValueRef11isUndefinedEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QJsonValueRef11isUndefinedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isUndefined", args)
   }
@@ -1014,7 +1118,7 @@ func (this *QJsonValueRef) Type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef4typeEv
     // invoke: QJsonValue::Type type()
-    C.C_ZNK13QJsonValueRef4typeEv(this.qclsinst)
+    C.C_ZNK13QJsonValueRef4typeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "type", args)
   }
@@ -1035,11 +1139,15 @@ func (this *QJsonValueRef) Isobject(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QJsonValueRef8isObjectEv
     // invoke: bool isObject()
-    var ret0 = C.C_ZNK13QJsonValueRef8isObjectEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QJsonValueRef8isObjectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isObject", args)
   }
@@ -1060,11 +1168,15 @@ func (this *QJsonValueRef) Isdouble(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QJsonValueRef8isDoubleEv
     // invoke: bool isDouble()
-    var ret0 = C.C_ZNK13QJsonValueRef8isDoubleEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QJsonValueRef8isDoubleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isDouble", args)
   }

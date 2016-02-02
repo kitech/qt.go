@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qkeysequenceedit.h
 // dst-file: /src/widgets/qkeysequenceedit.go
 //
@@ -57,7 +57,7 @@ func init() {
 // class sizeof(QKeySequenceEdit)=1
 type QKeySequenceEdit struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _editingFinished QKeySequenceEdit_editingFinished_signal;
 //  _keySequenceChanged QKeySequenceEdit_keySequenceChanged_signal;
 }
@@ -80,28 +80,28 @@ func NewQKeySequenceEdit(args ...interface{}) *QKeySequenceEdit {
   case 0:
     // invoke: _ZN16QKeySequenceEditC1EP7QWidget
     // invoke: void QKeySequenceEdit(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QKeySequenceEditC2EP7QWidget(arg0)
-    return &QKeySequenceEdit{qclsinst:qthis}
+    return &QKeySequenceEdit{Qclsinst:qthis}
   case 1:
     // invoke: _ZN16QKeySequenceEditC1ERK12QKeySequenceP7QWidget
     // invoke: void QKeySequenceEdit(const class QKeySequence &, class QWidget *)
-    var arg0 = args[0].(QKeySequence).qclsinst
+    var arg0 = args[0].(*QKeySequence).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget(arg0, arg1)
-    return &QKeySequenceEdit{qclsinst:qthis}
+    return &QKeySequenceEdit{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "QKeySequenceEdit", args)
   }
 
-  return nil // QKeySequenceEdit{qclsinst:qthis}
+  return nil // QKeySequenceEdit{Qclsinst:qthis}
 }
 
 // clear()
@@ -117,7 +117,7 @@ func (this *QKeySequenceEdit) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QKeySequenceEdit5clearEv
     // invoke: void clear()
-    C.C_ZN16QKeySequenceEdit5clearEv(this.qclsinst)
+    C.C_ZN16QKeySequenceEdit5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "clear", args)
   }
@@ -138,7 +138,7 @@ func (this *QKeySequenceEdit) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QKeySequenceEdit10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK16QKeySequenceEdit10metaObjectEv(this.qclsinst)
+    C.C_ZNK16QKeySequenceEdit10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "metaObject", args)
   }
@@ -159,11 +159,15 @@ func (this *QKeySequenceEdit) Keysequence(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK16QKeySequenceEdit11keySequenceEv
     // invoke: QKeySequence keySequence()
-    var ret0 = C.C_ZNK16QKeySequenceEdit11keySequenceEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QKeySequenceEdit11keySequenceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QKeySequence{}) // "QKeySequence"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "keySequence", args)
   }
@@ -184,7 +188,7 @@ func (this *QKeySequenceEdit) Freeqkeysequenceedit(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QKeySequenceEditD0Ev
     // invoke: void ~QKeySequenceEdit()
-    C.C_ZN16QKeySequenceEditD2Ev(this.qclsinst)
+    C.C_ZN16QKeySequenceEditD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "~QKeySequenceEdit", args)
   }
@@ -206,9 +210,9 @@ func (this *QKeySequenceEdit) Setkeysequence(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence
     // invoke: void setKeySequence(const class QKeySequence &)
-    var arg0 = args[0].(QKeySequence).qclsinst
+    var arg0 = args[0].(*QKeySequence).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(this.qclsinst, arg0)
+    C.C_ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "setKeySequence", args)
   }

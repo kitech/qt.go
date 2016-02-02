@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qopengltimerquery.h
 // dst-file: /src/gui/qopengltimerquery.go
 //
@@ -97,13 +97,13 @@ func init() {
 // class sizeof(QOpenGLTimerQuery)=1
 type QOpenGLTimerQuery struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLTimeMonitor)=1
 type QOpenGLTimeMonitor struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // begin()
@@ -119,7 +119,7 @@ func (this *QOpenGLTimerQuery) Begin(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOpenGLTimerQuery5beginEv
     // invoke: void begin()
-    C.C_ZN17QOpenGLTimerQuery5beginEv(this.qclsinst)
+    C.C_ZN17QOpenGLTimerQuery5beginEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "begin", args)
   }
@@ -140,7 +140,7 @@ func (this *QOpenGLTimerQuery) End(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOpenGLTimerQuery3endEv
     // invoke: void end()
-    C.C_ZN17QOpenGLTimerQuery3endEv(this.qclsinst)
+    C.C_ZN17QOpenGLTimerQuery3endEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "end", args)
   }
@@ -161,11 +161,15 @@ func (this *QOpenGLTimerQuery) Objectid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery8objectIdEv
     // invoke: GLuint objectId()
-    var ret0 = C.C_ZNK17QOpenGLTimerQuery8objectIdEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QOpenGLTimerQuery8objectIdEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "GLuint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "objectId", args)
   }
@@ -186,11 +190,15 @@ func (this *QOpenGLTimerQuery) Waitfortimestamp(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery16waitForTimestampEv
     // invoke: GLuint64 waitForTimestamp()
-    var ret0 = C.C_ZNK17QOpenGLTimerQuery16waitForTimestampEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QOpenGLTimerQuery16waitForTimestampEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "GLuint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "waitForTimestamp", args)
   }
@@ -211,11 +219,15 @@ func (this *QOpenGLTimerQuery) Create(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN17QOpenGLTimerQuery6createEv
     // invoke: bool create()
-    var ret0 = C.C_ZN17QOpenGLTimerQuery6createEv(this.qclsinst)
+    var ret0 = C.C_ZN17QOpenGLTimerQuery6createEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "create", args)
   }
@@ -236,7 +248,7 @@ func (this *QOpenGLTimerQuery) Freeqopengltimerquery(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOpenGLTimerQueryD0Ev
     // invoke: void ~QOpenGLTimerQuery()
-    C.C_ZN17QOpenGLTimerQueryD2Ev(this.qclsinst)
+    C.C_ZN17QOpenGLTimerQueryD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "~QOpenGLTimerQuery", args)
   }
@@ -257,11 +269,15 @@ func (this *QOpenGLTimerQuery) Iscreated(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery9isCreatedEv
     // invoke: bool isCreated()
-    var ret0 = C.C_ZNK17QOpenGLTimerQuery9isCreatedEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QOpenGLTimerQuery9isCreatedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "isCreated", args)
   }
@@ -282,11 +298,15 @@ func (this *QOpenGLTimerQuery) Waitforresult(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery13waitForResultEv
     // invoke: GLuint64 waitForResult()
-    var ret0 = C.C_ZNK17QOpenGLTimerQuery13waitForResultEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QOpenGLTimerQuery13waitForResultEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "GLuint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "waitForResult", args)
   }
@@ -307,7 +327,7 @@ func (this *QOpenGLTimerQuery) Recordtimestamp(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOpenGLTimerQuery15recordTimestampEv
     // invoke: void recordTimestamp()
-    C.C_ZN17QOpenGLTimerQuery15recordTimestampEv(this.qclsinst)
+    C.C_ZN17QOpenGLTimerQuery15recordTimestampEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "recordTimestamp", args)
   }
@@ -328,7 +348,7 @@ func (this *QOpenGLTimerQuery) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK17QOpenGLTimerQuery10metaObjectEv(this.qclsinst)
+    C.C_ZNK17QOpenGLTimerQuery10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "metaObject", args)
   }
@@ -349,7 +369,7 @@ func (this *QOpenGLTimerQuery) Destroy(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOpenGLTimerQuery7destroyEv
     // invoke: void destroy()
-    C.C_ZN17QOpenGLTimerQuery7destroyEv(this.qclsinst)
+    C.C_ZN17QOpenGLTimerQuery7destroyEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "destroy", args)
   }
@@ -371,17 +391,17 @@ func NewQOpenGLTimerQuery(args ...interface{}) *QOpenGLTimerQuery {
   case 0:
     // invoke: _ZN17QOpenGLTimerQueryC1EP7QObject
     // invoke: void QOpenGLTimerQuery(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QOpenGLTimerQueryC2EP7QObject(arg0)
-    return &QOpenGLTimerQuery{qclsinst:qthis}
+    return &QOpenGLTimerQuery{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "QOpenGLTimerQuery", args)
   }
 
-  return nil // QOpenGLTimerQuery{qclsinst:qthis}
+  return nil // QOpenGLTimerQuery{Qclsinst:qthis}
 }
 
 // isResultAvailable()
@@ -397,11 +417,15 @@ func (this *QOpenGLTimerQuery) Isresultavailable(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery17isResultAvailableEv
     // invoke: bool isResultAvailable()
-    var ret0 = C.C_ZNK17QOpenGLTimerQuery17isResultAvailableEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QOpenGLTimerQuery17isResultAvailableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "isResultAvailable", args)
   }
@@ -422,7 +446,7 @@ func (this *QOpenGLTimeMonitor) Reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor5resetEv
     // invoke: void reset()
-    C.C_ZN18QOpenGLTimeMonitor5resetEv(this.qclsinst)
+    C.C_ZN18QOpenGLTimeMonitor5resetEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "reset", args)
   }
@@ -443,11 +467,15 @@ func (this *QOpenGLTimeMonitor) Recordsample(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor12recordSampleEv
     // invoke: int recordSample()
-    var ret0 = C.C_ZN18QOpenGLTimeMonitor12recordSampleEv(this.qclsinst)
+    var ret0 = C.C_ZN18QOpenGLTimeMonitor12recordSampleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "recordSample", args)
   }
@@ -468,7 +496,7 @@ func (this *QOpenGLTimeMonitor) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK18QOpenGLTimeMonitor10metaObjectEv(this.qclsinst)
+    C.C_ZNK18QOpenGLTimeMonitor10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "metaObject", args)
   }
@@ -489,7 +517,7 @@ func (this *QOpenGLTimeMonitor) Freeqopengltimemonitor(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitorD0Ev
     // invoke: void ~QOpenGLTimeMonitor()
-    C.C_ZN18QOpenGLTimeMonitorD2Ev(this.qclsinst)
+    C.C_ZN18QOpenGLTimeMonitorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "~QOpenGLTimeMonitor", args)
   }
@@ -510,11 +538,15 @@ func (this *QOpenGLTimeMonitor) Samplecount(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor11sampleCountEv
     // invoke: int sampleCount()
-    var ret0 = C.C_ZNK18QOpenGLTimeMonitor11sampleCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QOpenGLTimeMonitor11sampleCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "sampleCount", args)
   }
@@ -535,11 +567,15 @@ func (this *QOpenGLTimeMonitor) Create(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor6createEv
     // invoke: bool create()
-    var ret0 = C.C_ZN18QOpenGLTimeMonitor6createEv(this.qclsinst)
+    var ret0 = C.C_ZN18QOpenGLTimeMonitor6createEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "create", args)
   }
@@ -561,9 +597,9 @@ func (this *QOpenGLTimeMonitor) Setsamplecount(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor14setSampleCountEi
     // invoke: void setSampleCount(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN18QOpenGLTimeMonitor14setSampleCountEi(this.qclsinst, arg0)
+    C.C_ZN18QOpenGLTimeMonitor14setSampleCountEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "setSampleCount", args)
   }
@@ -584,7 +620,7 @@ func (this *QOpenGLTimeMonitor) Objectids(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor9objectIdsEv
     // invoke: QVector<GLuint> objectIds()
-    C.C_ZNK18QOpenGLTimeMonitor9objectIdsEv(this.qclsinst)
+    C.C_ZNK18QOpenGLTimeMonitor9objectIdsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "objectIds", args)
   }
@@ -605,11 +641,15 @@ func (this *QOpenGLTimeMonitor) Iscreated(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor9isCreatedEv
     // invoke: bool isCreated()
-    var ret0 = C.C_ZNK18QOpenGLTimeMonitor9isCreatedEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QOpenGLTimeMonitor9isCreatedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "isCreated", args)
   }
@@ -630,7 +670,7 @@ func (this *QOpenGLTimeMonitor) Waitforsamples(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor14waitForSamplesEv
     // invoke: QVector<GLuint64> waitForSamples()
-    C.C_ZNK18QOpenGLTimeMonitor14waitForSamplesEv(this.qclsinst)
+    C.C_ZNK18QOpenGLTimeMonitor14waitForSamplesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "waitForSamples", args)
   }
@@ -651,11 +691,15 @@ func (this *QOpenGLTimeMonitor) Isresultavailable(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor17isResultAvailableEv
     // invoke: bool isResultAvailable()
-    var ret0 = C.C_ZNK18QOpenGLTimeMonitor17isResultAvailableEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QOpenGLTimeMonitor17isResultAvailableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "isResultAvailable", args)
   }
@@ -676,7 +720,7 @@ func (this *QOpenGLTimeMonitor) Waitforintervals(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor16waitForIntervalsEv
     // invoke: QVector<GLuint64> waitForIntervals()
-    C.C_ZNK18QOpenGLTimeMonitor16waitForIntervalsEv(this.qclsinst)
+    C.C_ZNK18QOpenGLTimeMonitor16waitForIntervalsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "waitForIntervals", args)
   }
@@ -698,17 +742,17 @@ func NewQOpenGLTimeMonitor(args ...interface{}) *QOpenGLTimeMonitor {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitorC1EP7QObject
     // invoke: void QOpenGLTimeMonitor(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QOpenGLTimeMonitorC2EP7QObject(arg0)
-    return &QOpenGLTimeMonitor{qclsinst:qthis}
+    return &QOpenGLTimeMonitor{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "QOpenGLTimeMonitor", args)
   }
 
-  return nil // QOpenGLTimeMonitor{qclsinst:qthis}
+  return nil // QOpenGLTimeMonitor{Qclsinst:qthis}
 }
 
 // destroy()
@@ -724,7 +768,7 @@ func (this *QOpenGLTimeMonitor) Destroy(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor7destroyEv
     // invoke: void destroy()
-    C.C_ZN18QOpenGLTimeMonitor7destroyEv(this.qclsinst)
+    C.C_ZN18QOpenGLTimeMonitor7destroyEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "destroy", args)
   }

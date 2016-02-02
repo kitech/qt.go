@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qlogging.h
 // dst-file: /src/core/qlogging.go
 //
@@ -93,13 +93,13 @@ func init() {
 // class sizeof(QMessageLogContext)=32
 type QMessageLogContext struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QMessageLogger)=32
 type QMessageLogger struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // copy(const class QMessageLogContext &)
@@ -116,9 +116,9 @@ func (this *QMessageLogContext) Copy(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QMessageLogContext4copyERKS_
     // invoke: void copy(const class QMessageLogContext &)
-    var arg0 = args[0].(QMessageLogContext).qclsinst
+    var arg0 = args[0].(*QMessageLogContext).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QMessageLogContext4copyERKS_(this.qclsinst, arg0)
+    C.C_ZN18QMessageLogContext4copyERKS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageLogContext", "copy", args)
   }
@@ -149,7 +149,7 @@ func NewQMessageLogContext(args ...interface{}) *QMessageLogContext {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[0][2])
     var arg2 = argif2.(unsafe.Pointer)
@@ -162,19 +162,19 @@ func NewQMessageLogContext(args ...interface{}) *QMessageLogContext {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QMessageLogContextC2EPKciS1_S1_(arg0, arg1, arg2, arg3)
-    return &QMessageLogContext{qclsinst:qthis}
+    return &QMessageLogContext{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QMessageLogContextC1Ev
     // invoke: void QMessageLogContext()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QMessageLogContextC2Ev()
-    return &QMessageLogContext{qclsinst:qthis}
+    return &QMessageLogContext{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMessageLogContext", "QMessageLogContext", args)
   }
 
-  return nil // QMessageLogContext{qclsinst:qthis}
+  return nil // QMessageLogContext{Qclsinst:qthis}
 }
 
 // info(const class QLoggingCategory &, const char *, ...)
@@ -200,13 +200,13 @@ func (this *QMessageLogger) Info(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QMessageLogger4infoERK16QLoggingCategoryPKcz
     // invoke: void info(const class QLoggingCategory &, const char *, ...)
-    var arg0 = args[0].(QLoggingCategory).qclsinst
+    var arg0 = args[0].(*QLoggingCategory).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    C.C_ZNK14QMessageLogger4infoERK16QLoggingCategoryPKcz(this.qclsinst, arg0, arg1)
+    C.C_ZNK14QMessageLogger4infoERK16QLoggingCategoryPKcz(this.Qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK14QMessageLogger4infoEPKcz
     // invoke: void info(const char *, ...)
@@ -214,18 +214,18 @@ func (this *QMessageLogger) Info(args ...interface{}) () {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    C.C_ZNK14QMessageLogger4infoEPKcz(this.qclsinst, arg0)
+    C.C_ZNK14QMessageLogger4infoEPKcz(this.Qclsinst, arg0)
   case 2:
     // invoke: _ZNK14QMessageLogger4infoEv
     // invoke: QDebug info()
-    var ret0 = C.C_ZNK14QMessageLogger4infoEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QMessageLogger4infoEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
   case 3:
     // invoke: _ZNK14QMessageLogger4infoERK16QLoggingCategory
     // invoke: QDebug info(const class QLoggingCategory &)
-    var arg0 = args[0].(QLoggingCategory).qclsinst
+    var arg0 = args[0].(*QLoggingCategory).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK14QMessageLogger4infoERK16QLoggingCategory(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK14QMessageLogger4infoERK16QLoggingCategory(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
   default:
     qtrt.ErrorResolve("QMessageLogger", "info", args)
@@ -257,13 +257,17 @@ func (this *QMessageLogger) Warning(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QMessageLogger7warningERK16QLoggingCategory
     // invoke: QDebug warning(const class QLoggingCategory &)
-    var arg0 = args[0].(QLoggingCategory).qclsinst
+    var arg0 = args[0].(*QLoggingCategory).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK14QMessageLogger7warningERK16QLoggingCategory(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK14QMessageLogger7warningERK16QLoggingCategory(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDebug{}) // "QDebug"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK14QMessageLogger7warningEPKcz
     // invoke: void warning(const char *, ...)
@@ -271,25 +275,29 @@ func (this *QMessageLogger) Warning(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    C.C_ZNK14QMessageLogger7warningEPKcz(this.qclsinst, arg0)
+    C.C_ZNK14QMessageLogger7warningEPKcz(this.Qclsinst, arg0)
   case 2:
     // invoke: _ZNK14QMessageLogger7warningERK16QLoggingCategoryPKcz
     // invoke: void warning(const class QLoggingCategory &, const char *, ...)
-    var arg0 = args[0].(QLoggingCategory).qclsinst
+    var arg0 = args[0].(*QLoggingCategory).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[2][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    C.C_ZNK14QMessageLogger7warningERK16QLoggingCategoryPKcz(this.qclsinst, arg0, arg1)
+    C.C_ZNK14QMessageLogger7warningERK16QLoggingCategoryPKcz(this.Qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZNK14QMessageLogger7warningEv
     // invoke: QDebug warning()
-    var ret0 = C.C_ZNK14QMessageLogger7warningEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QMessageLogger7warningEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDebug{}) // "QDebug"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageLogger", "warning", args)
   }
@@ -320,11 +328,15 @@ func (this *QMessageLogger) Critical(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QMessageLogger8criticalEv
     // invoke: QDebug critical()
-    var ret0 = C.C_ZNK14QMessageLogger8criticalEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QMessageLogger8criticalEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDebug{}) // "QDebug"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK14QMessageLogger8criticalEPKcz
     // invoke: void critical(const char *, ...)
@@ -332,27 +344,31 @@ func (this *QMessageLogger) Critical(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    C.C_ZNK14QMessageLogger8criticalEPKcz(this.qclsinst, arg0)
+    C.C_ZNK14QMessageLogger8criticalEPKcz(this.Qclsinst, arg0)
   case 2:
     // invoke: _ZNK14QMessageLogger8criticalERK16QLoggingCategory
     // invoke: QDebug critical(const class QLoggingCategory &)
-    var arg0 = args[0].(QLoggingCategory).qclsinst
+    var arg0 = args[0].(*QLoggingCategory).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK14QMessageLogger8criticalERK16QLoggingCategory(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK14QMessageLogger8criticalERK16QLoggingCategory(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDebug{}) // "QDebug"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZNK14QMessageLogger8criticalERK16QLoggingCategoryPKcz
     // invoke: void critical(const class QLoggingCategory &, const char *, ...)
-    var arg0 = args[0].(QLoggingCategory).qclsinst
+    var arg0 = args[0].(*QLoggingCategory).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[3][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    C.C_ZNK14QMessageLogger8criticalERK16QLoggingCategoryPKcz(this.qclsinst, arg0, arg1)
+    C.C_ZNK14QMessageLogger8criticalERK16QLoggingCategoryPKcz(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMessageLogger", "critical", args)
   }
@@ -383,17 +399,17 @@ func (this *QMessageLogger) Debug(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QMessageLogger5debugERK16QLoggingCategoryPKcz
     // invoke: void debug(const class QLoggingCategory &, const char *, ...)
-    var arg0 = args[0].(QLoggingCategory).qclsinst
+    var arg0 = args[0].(*QLoggingCategory).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    C.C_ZNK14QMessageLogger5debugERK16QLoggingCategoryPKcz(this.qclsinst, arg0, arg1)
+    C.C_ZNK14QMessageLogger5debugERK16QLoggingCategoryPKcz(this.Qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK14QMessageLogger5debugEv
     // invoke: QDebug debug()
-    var ret0 = C.C_ZNK14QMessageLogger5debugEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QMessageLogger5debugEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
   case 2:
     // invoke: _ZNK14QMessageLogger5debugEPKcz
@@ -402,13 +418,13 @@ func (this *QMessageLogger) Debug(args ...interface{}) () {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    C.C_ZNK14QMessageLogger5debugEPKcz(this.qclsinst, arg0)
+    C.C_ZNK14QMessageLogger5debugEPKcz(this.Qclsinst, arg0)
   case 3:
     // invoke: _ZNK14QMessageLogger5debugERK16QLoggingCategory
     // invoke: QDebug debug(const class QLoggingCategory &)
-    var arg0 = args[0].(QLoggingCategory).qclsinst
+    var arg0 = args[0].(*QLoggingCategory).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK14QMessageLogger5debugERK16QLoggingCategory(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK14QMessageLogger5debugERK16QLoggingCategory(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
   default:
     qtrt.ErrorResolve("QMessageLogger", "debug", args)
@@ -435,7 +451,7 @@ func (this *QMessageLogger) Fatal(args ...interface{}) () {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    C.C_ZNK14QMessageLogger5fatalEPKcz(this.qclsinst, arg0)
+    C.C_ZNK14QMessageLogger5fatalEPKcz(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageLogger", "fatal", args)
   }
@@ -470,7 +486,7 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QMessageLoggerC2Ev()
-    return &QMessageLogger{qclsinst:qthis}
+    return &QMessageLogger{Qclsinst:qthis}
   case 1:
     // invoke: _ZN14QMessageLoggerC1EPKciS1_
     // invoke: void QMessageLogger(const char *, int, const char *)
@@ -478,7 +494,7 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[1][2])
     var arg2 = argif2.(unsafe.Pointer)
@@ -487,7 +503,7 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QMessageLoggerC2EPKciS1_(arg0, arg1, arg2)
-    return &QMessageLogger{qclsinst:qthis}
+    return &QMessageLogger{Qclsinst:qthis}
   case 2:
     // invoke: _ZN14QMessageLoggerC1EPKciS1_S1_
     // invoke: void QMessageLogger(const char *, int, const char *, const char *)
@@ -495,7 +511,7 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[2][2])
     var arg2 = argif2.(unsafe.Pointer)
@@ -508,12 +524,12 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QMessageLoggerC2EPKciS1_S1_(arg0, arg1, arg2, arg3)
-    return &QMessageLogger{qclsinst:qthis}
+    return &QMessageLogger{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMessageLogger", "QMessageLogger", args)
   }
 
-  return nil // QMessageLogger{qclsinst:qthis}
+  return nil // QMessageLogger{Qclsinst:qthis}
 }
 
 // noDebug(const char *, ...)
@@ -536,11 +552,11 @@ func (this *QMessageLogger) Nodebug(args ...interface{}) () {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    C.C_ZNK14QMessageLogger7noDebugEPKcz(this.qclsinst, arg0)
+    C.C_ZNK14QMessageLogger7noDebugEPKcz(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZNK14QMessageLogger7noDebugEv
     // invoke: QNoDebug noDebug()
-    var ret0 = C.C_ZNK14QMessageLogger7noDebugEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QMessageLogger7noDebugEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
   default:
     qtrt.ErrorResolve("QMessageLogger", "noDebug", args)

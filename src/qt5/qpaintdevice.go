@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qpaintdevice.h
 // dst-file: /src/gui/qpaintdevice.go
 //
@@ -71,7 +71,7 @@ func init() {
 // class sizeof(QPaintDevice)=24
 type QPaintDevice struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // physicalDpiX()
@@ -87,11 +87,15 @@ func (this *QPaintDevice) Physicaldpix(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPaintDevice12physicalDpiXEv
     // invoke: int physicalDpiX()
-    var ret0 = C.C_ZNK12QPaintDevice12physicalDpiXEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice12physicalDpiXEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "physicalDpiX", args)
   }
@@ -112,11 +116,15 @@ func (this *QPaintDevice) Physicaldpiy(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPaintDevice12physicalDpiYEv
     // invoke: int physicalDpiY()
-    var ret0 = C.C_ZNK12QPaintDevice12physicalDpiYEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice12physicalDpiYEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "physicalDpiY", args)
   }
@@ -137,11 +145,15 @@ func (this *QPaintDevice) Heightmm(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPaintDevice8heightMMEv
     // invoke: int heightMM()
-    var ret0 = C.C_ZNK12QPaintDevice8heightMMEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice8heightMMEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "heightMM", args)
   }
@@ -162,11 +174,15 @@ func (this *QPaintDevice) Devicepixelratio(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK12QPaintDevice16devicePixelRatioEv
     // invoke: int devicePixelRatio()
-    var ret0 = C.C_ZNK12QPaintDevice16devicePixelRatioEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice16devicePixelRatioEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "devicePixelRatio", args)
   }
@@ -187,11 +203,15 @@ func (this *QPaintDevice) Logicaldpix(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPaintDevice11logicalDpiXEv
     // invoke: int logicalDpiX()
-    var ret0 = C.C_ZNK12QPaintDevice11logicalDpiXEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice11logicalDpiXEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "logicalDpiX", args)
   }
@@ -212,11 +232,15 @@ func (this *QPaintDevice) Depth(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPaintDevice5depthEv
     // invoke: int depth()
-    var ret0 = C.C_ZNK12QPaintDevice5depthEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice5depthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "depth", args)
   }
@@ -237,11 +261,15 @@ func (this *QPaintDevice) Height(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPaintDevice6heightEv
     // invoke: int height()
-    var ret0 = C.C_ZNK12QPaintDevice6heightEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice6heightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "height", args)
   }
@@ -262,11 +290,15 @@ func (this *QPaintDevice) Colorcount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPaintDevice10colorCountEv
     // invoke: int colorCount()
-    var ret0 = C.C_ZNK12QPaintDevice10colorCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice10colorCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "colorCount", args)
   }
@@ -287,11 +319,15 @@ func (this *QPaintDevice) Width(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPaintDevice5widthEv
     // invoke: int width()
-    var ret0 = C.C_ZNK12QPaintDevice5widthEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice5widthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "width", args)
   }
@@ -312,11 +348,15 @@ func (this *QPaintDevice) Devtype(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPaintDevice7devTypeEv
     // invoke: int devType()
-    var ret0 = C.C_ZNK12QPaintDevice7devTypeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice7devTypeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "devType", args)
   }
@@ -337,11 +377,15 @@ func (this *QPaintDevice) Widthmm(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPaintDevice7widthMMEv
     // invoke: int widthMM()
-    var ret0 = C.C_ZNK12QPaintDevice7widthMMEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice7widthMMEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "widthMM", args)
   }
@@ -362,11 +406,15 @@ func (this *QPaintDevice) Logicaldpiy(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QPaintDevice11logicalDpiYEv
     // invoke: int logicalDpiY()
-    var ret0 = C.C_ZNK12QPaintDevice11logicalDpiYEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice11logicalDpiYEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "logicalDpiY", args)
   }
@@ -387,7 +435,7 @@ func (this *QPaintDevice) Freeqpaintdevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPaintDeviceD0Ev
     // invoke: void ~QPaintDevice()
-    C.C_ZN12QPaintDeviceD2Ev(this.qclsinst)
+    C.C_ZN12QPaintDeviceD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "~QPaintDevice", args)
   }
@@ -408,11 +456,15 @@ func (this *QPaintDevice) Paintingactive(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK12QPaintDevice14paintingActiveEv
     // invoke: bool paintingActive()
-    var ret0 = C.C_ZNK12QPaintDevice14paintingActiveEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QPaintDevice14paintingActiveEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "paintingActive", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.go
 //
@@ -87,7 +87,7 @@ func init() {
 // class sizeof(QFutureWatcherBase)=1
 type QFutureWatcherBase struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _progressRangeChanged QFutureWatcherBase_progressRangeChanged_signal;
 //  _resumed QFutureWatcherBase_resumed_signal;
 //  _progressValueChanged QFutureWatcherBase_progressValueChanged_signal;
@@ -103,7 +103,7 @@ type QFutureWatcherBase struct {
 // class sizeof(QFutureWatcher<void>)=1
 type QFutureWatcherLvoidG struct {
   /*qbase*/ QFutureWatcherBase;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // isStarted()
@@ -119,11 +119,15 @@ func (this *QFutureWatcherBase) Isstarted(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK18QFutureWatcherBase9isStartedEv
     // invoke: bool isStarted()
-    var ret0 = C.C_ZNK18QFutureWatcherBase9isStartedEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QFutureWatcherBase9isStartedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isStarted", args)
   }
@@ -144,7 +148,7 @@ func (this *QFutureWatcherBase) Cancel(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QFutureWatcherBase6cancelEv
     // invoke: void cancel()
-    C.C_ZN18QFutureWatcherBase6cancelEv(this.qclsinst)
+    C.C_ZN18QFutureWatcherBase6cancelEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "cancel", args)
   }
@@ -166,13 +170,17 @@ func (this *QFutureWatcherBase) Event(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN18QFutureWatcherBase5eventEP6QEvent
     // invoke: bool event(class QEvent *)
-    var arg0 = args[0].(QEvent).qclsinst
+    var arg0 = args[0].(*QEvent).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN18QFutureWatcherBase5eventEP6QEvent(this.qclsinst, arg0)
+    var ret0 = C.C_ZN18QFutureWatcherBase5eventEP6QEvent(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "event", args)
   }
@@ -193,7 +201,7 @@ func (this *QFutureWatcherBase) Togglepaused(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QFutureWatcherBase12togglePausedEv
     // invoke: void togglePaused()
-    C.C_ZN18QFutureWatcherBase12togglePausedEv(this.qclsinst)
+    C.C_ZN18QFutureWatcherBase12togglePausedEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "togglePaused", args)
   }
@@ -214,11 +222,15 @@ func (this *QFutureWatcherBase) Progressminimum(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK18QFutureWatcherBase15progressMinimumEv
     // invoke: int progressMinimum()
-    var ret0 = C.C_ZNK18QFutureWatcherBase15progressMinimumEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QFutureWatcherBase15progressMinimumEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "progressMinimum", args)
   }
@@ -239,7 +251,7 @@ func (this *QFutureWatcherBase) Waitforfinished(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QFutureWatcherBase15waitForFinishedEv
     // invoke: void waitForFinished()
-    C.C_ZN18QFutureWatcherBase15waitForFinishedEv(this.qclsinst)
+    C.C_ZN18QFutureWatcherBase15waitForFinishedEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "waitForFinished", args)
   }
@@ -260,7 +272,7 @@ func (this *QFutureWatcherBase) Resume(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QFutureWatcherBase6resumeEv
     // invoke: void resume()
-    C.C_ZN18QFutureWatcherBase6resumeEv(this.qclsinst)
+    C.C_ZN18QFutureWatcherBase6resumeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "resume", args)
   }
@@ -281,11 +293,15 @@ func (this *QFutureWatcherBase) Progressmaximum(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK18QFutureWatcherBase15progressMaximumEv
     // invoke: int progressMaximum()
-    var ret0 = C.C_ZNK18QFutureWatcherBase15progressMaximumEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QFutureWatcherBase15progressMaximumEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "progressMaximum", args)
   }
@@ -306,11 +322,15 @@ func (this *QFutureWatcherBase) Isfinished(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK18QFutureWatcherBase10isFinishedEv
     // invoke: bool isFinished()
-    var ret0 = C.C_ZNK18QFutureWatcherBase10isFinishedEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QFutureWatcherBase10isFinishedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isFinished", args)
   }
@@ -331,11 +351,15 @@ func (this *QFutureWatcherBase) Progresstext(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK18QFutureWatcherBase12progressTextEv
     // invoke: QString progressText()
-    var ret0 = C.C_ZNK18QFutureWatcherBase12progressTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QFutureWatcherBase12progressTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "progressText", args)
   }
@@ -357,9 +381,9 @@ func (this *QFutureWatcherBase) Setpendingresultslimit(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QFutureWatcherBase22setPendingResultsLimitEi
     // invoke: void setPendingResultsLimit(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN18QFutureWatcherBase22setPendingResultsLimitEi(this.qclsinst, arg0)
+    C.C_ZN18QFutureWatcherBase22setPendingResultsLimitEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "setPendingResultsLimit", args)
   }
@@ -380,7 +404,7 @@ func (this *QFutureWatcherBase) Pause(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QFutureWatcherBase5pauseEv
     // invoke: void pause()
-    C.C_ZN18QFutureWatcherBase5pauseEv(this.qclsinst)
+    C.C_ZN18QFutureWatcherBase5pauseEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "pause", args)
   }
@@ -401,7 +425,7 @@ func (this *QFutureWatcherBase) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK18QFutureWatcherBase10metaObjectEv(this.qclsinst)
+    C.C_ZNK18QFutureWatcherBase10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "metaObject", args)
   }
@@ -423,17 +447,17 @@ func NewQFutureWatcherBase(args ...interface{}) *QFutureWatcherBase {
   case 0:
     // invoke: _ZN18QFutureWatcherBaseC1EP7QObject
     // invoke: void QFutureWatcherBase(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QFutureWatcherBaseC2EP7QObject(arg0)
-    return &QFutureWatcherBase{qclsinst:qthis}
+    return &QFutureWatcherBase{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "QFutureWatcherBase", args)
   }
 
-  return nil // QFutureWatcherBase{qclsinst:qthis}
+  return nil // QFutureWatcherBase{Qclsinst:qthis}
 }
 
 // isRunning()
@@ -449,11 +473,15 @@ func (this *QFutureWatcherBase) Isrunning(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK18QFutureWatcherBase9isRunningEv
     // invoke: bool isRunning()
-    var ret0 = C.C_ZNK18QFutureWatcherBase9isRunningEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QFutureWatcherBase9isRunningEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isRunning", args)
   }
@@ -474,11 +502,15 @@ func (this *QFutureWatcherBase) Iscanceled(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK18QFutureWatcherBase10isCanceledEv
     // invoke: bool isCanceled()
-    var ret0 = C.C_ZNK18QFutureWatcherBase10isCanceledEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QFutureWatcherBase10isCanceledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isCanceled", args)
   }
@@ -499,11 +531,15 @@ func (this *QFutureWatcherBase) Ispaused(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK18QFutureWatcherBase8isPausedEv
     // invoke: bool isPaused()
-    var ret0 = C.C_ZNK18QFutureWatcherBase8isPausedEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QFutureWatcherBase8isPausedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isPaused", args)
   }
@@ -524,11 +560,15 @@ func (this *QFutureWatcherBase) Progressvalue(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK18QFutureWatcherBase13progressValueEv
     // invoke: int progressValue()
-    var ret0 = C.C_ZNK18QFutureWatcherBase13progressValueEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QFutureWatcherBase13progressValueEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "progressValue", args)
   }
@@ -552,7 +592,7 @@ func (this *QFutureWatcherBase) Setpaused(args ...interface{}) () {
     // invoke: void setPaused(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN18QFutureWatcherBase9setPausedEb(this.qclsinst, arg0)
+    C.C_ZN18QFutureWatcherBase9setPausedEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "setPaused", args)
   }
@@ -573,7 +613,7 @@ func (this *QFutureWatcherLvoidG) Freeqfuturewatcherlvoidg(args ...interface{}) 
   case 0:
     // invoke: _ZN14QFutureWatcherIvED0Ev
     // invoke: void ~QFutureWatcher()
-    C.C_ZN14QFutureWatcherIvED2Ev(this.qclsinst)
+    C.C_ZN14QFutureWatcherIvED2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcher<void>", "~QFutureWatcher", args)
   }
@@ -595,17 +635,17 @@ func NewQFutureWatcherLvoidG(args ...interface{}) *QFutureWatcherLvoidG {
   case 0:
     // invoke: _ZN14QFutureWatcherIvEC1EP7QObject
     // invoke: void QFutureWatcher(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QFutureWatcherIvEC2EP7QObject(arg0)
-    return &QFutureWatcherLvoidG{qclsinst:qthis}
+    return &QFutureWatcherLvoidG{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFutureWatcher<void>", "QFutureWatcher", args)
   }
 
-  return nil // QFutureWatcherLvoidG{qclsinst:qthis}
+  return nil // QFutureWatcherLvoidG{Qclsinst:qthis}
 }
 
 // future()
@@ -621,7 +661,7 @@ func (this *QFutureWatcherLvoidG) Future(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QFutureWatcherIvE6futureEv
     // invoke: QFuture<void> future()
-    C.C_ZNK14QFutureWatcherIvE6futureEv(this.qclsinst)
+    C.C_ZNK14QFutureWatcherIvE6futureEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcher<void>", "future", args)
   }

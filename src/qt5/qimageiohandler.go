@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qimageiohandler.h
 // dst-file: /src/gui/qimageiohandler.go
 //
@@ -79,13 +79,13 @@ func init() {
 // class sizeof(QImageIOHandler)=1
 type QImageIOHandler struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QImageIOPlugin)=1
 type QImageIOPlugin struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // device()
@@ -101,11 +101,15 @@ func (this *QImageIOHandler) Device(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QImageIOHandler6deviceEv
     // invoke: QIODevice * device()
-    var ret0 = C.C_ZNK15QImageIOHandler6deviceEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QImageIOHandler6deviceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIODevice{}) // "QIODevice *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QImageIOHandler", "device", args)
   }
@@ -126,11 +130,15 @@ func (this *QImageIOHandler) Imagecount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QImageIOHandler10imageCountEv
     // invoke: int imageCount()
-    var ret0 = C.C_ZNK15QImageIOHandler10imageCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QImageIOHandler10imageCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QImageIOHandler", "imageCount", args)
   }
@@ -151,11 +159,15 @@ func (this *QImageIOHandler) Loopcount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QImageIOHandler9loopCountEv
     // invoke: int loopCount()
-    var ret0 = C.C_ZNK15QImageIOHandler9loopCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QImageIOHandler9loopCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QImageIOHandler", "loopCount", args)
   }
@@ -177,9 +189,9 @@ func (this *QImageIOHandler) Setformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QImageIOHandler9setFormatERK10QByteArray
     // invoke: void setFormat(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QImageIOHandler9setFormatERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN15QImageIOHandler9setFormatERK10QByteArray(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "setFormat", args)
   }
@@ -200,11 +212,15 @@ func (this *QImageIOHandler) Format(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QImageIOHandler6formatEv
     // invoke: QByteArray format()
-    var ret0 = C.C_ZNK15QImageIOHandler6formatEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QImageIOHandler6formatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QImageIOHandler", "format", args)
   }
@@ -226,13 +242,17 @@ func (this *QImageIOHandler) Write(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN15QImageIOHandler5writeERK6QImage
     // invoke: bool write(const class QImage &)
-    var arg0 = args[0].(QImage).qclsinst
+    var arg0 = args[0].(*QImage).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN15QImageIOHandler5writeERK6QImage(this.qclsinst, arg0)
+    var ret0 = C.C_ZN15QImageIOHandler5writeERK6QImage(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QImageIOHandler", "write", args)
   }
@@ -254,13 +274,17 @@ func (this *QImageIOHandler) Jumptoimage(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZN15QImageIOHandler11jumpToImageEi
     // invoke: bool jumpToImage(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN15QImageIOHandler11jumpToImageEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN15QImageIOHandler11jumpToImageEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QImageIOHandler", "jumpToImage", args)
   }
@@ -282,9 +306,9 @@ func (this *QImageIOHandler) Setdevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QImageIOHandler9setDeviceEP9QIODevice
     // invoke: void setDevice(class QIODevice *)
-    var arg0 = args[0].(QIODevice).qclsinst
+    var arg0 = args[0].(*QIODevice).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QImageIOHandler9setDeviceEP9QIODevice(this.qclsinst, arg0)
+    C.C_ZN15QImageIOHandler9setDeviceEP9QIODevice(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "setDevice", args)
   }
@@ -305,11 +329,15 @@ func (this *QImageIOHandler) Jumptonextimage(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZN15QImageIOHandler15jumpToNextImageEv
     // invoke: bool jumpToNextImage()
-    var ret0 = C.C_ZN15QImageIOHandler15jumpToNextImageEv(this.qclsinst)
+    var ret0 = C.C_ZN15QImageIOHandler15jumpToNextImageEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QImageIOHandler", "jumpToNextImage", args)
   }
@@ -330,11 +358,15 @@ func (this *QImageIOHandler) Currentimagenumber(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK15QImageIOHandler18currentImageNumberEv
     // invoke: int currentImageNumber()
-    var ret0 = C.C_ZNK15QImageIOHandler18currentImageNumberEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QImageIOHandler18currentImageNumberEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QImageIOHandler", "currentImageNumber", args)
   }
@@ -355,7 +387,7 @@ func (this *QImageIOHandler) Freeqimageiohandler(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QImageIOHandlerD0Ev
     // invoke: void ~QImageIOHandler()
-    C.C_ZN15QImageIOHandlerD2Ev(this.qclsinst)
+    C.C_ZN15QImageIOHandlerD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOHandler", "~QImageIOHandler", args)
   }
@@ -379,12 +411,12 @@ func NewQImageIOHandler(args ...interface{}) *QImageIOHandler {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QImageIOHandlerC2Ev()
-    return &QImageIOHandler{qclsinst:qthis}
+    return &QImageIOHandler{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QImageIOHandler", "QImageIOHandler", args)
   }
 
-  return nil // QImageIOHandler{qclsinst:qthis}
+  return nil // QImageIOHandler{Qclsinst:qthis}
 }
 
 // currentImageRect()
@@ -400,11 +432,15 @@ func (this *QImageIOHandler) Currentimagerect(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK15QImageIOHandler16currentImageRectEv
     // invoke: QRect currentImageRect()
-    var ret0 = C.C_ZNK15QImageIOHandler16currentImageRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QImageIOHandler16currentImageRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QImageIOHandler", "currentImageRect", args)
   }
@@ -425,11 +461,15 @@ func (this *QImageIOHandler) Name(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QImageIOHandler4nameEv
     // invoke: QByteArray name()
-    var ret0 = C.C_ZNK15QImageIOHandler4nameEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QImageIOHandler4nameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QImageIOHandler", "name", args)
   }
@@ -450,11 +490,15 @@ func (this *QImageIOHandler) Nextimagedelay(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK15QImageIOHandler14nextImageDelayEv
     // invoke: int nextImageDelay()
-    var ret0 = C.C_ZNK15QImageIOHandler14nextImageDelayEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QImageIOHandler14nextImageDelayEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QImageIOHandler", "nextImageDelay", args)
   }
@@ -475,7 +519,7 @@ func (this *QImageIOPlugin) Freeqimageioplugin(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QImageIOPluginD0Ev
     // invoke: void ~QImageIOPlugin()
-    C.C_ZN14QImageIOPluginD2Ev(this.qclsinst)
+    C.C_ZN14QImageIOPluginD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOPlugin", "~QImageIOPlugin", args)
   }
@@ -497,17 +541,17 @@ func NewQImageIOPlugin(args ...interface{}) *QImageIOPlugin {
   case 0:
     // invoke: _ZN14QImageIOPluginC1EP7QObject
     // invoke: void QImageIOPlugin(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QImageIOPluginC2EP7QObject(arg0)
-    return &QImageIOPlugin{qclsinst:qthis}
+    return &QImageIOPlugin{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QImageIOPlugin", "QImageIOPlugin", args)
   }
 
-  return nil // QImageIOPlugin{qclsinst:qthis}
+  return nil // QImageIOPlugin{Qclsinst:qthis}
 }
 
 // metaObject()
@@ -523,7 +567,7 @@ func (this *QImageIOPlugin) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QImageIOPlugin10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK14QImageIOPlugin10metaObjectEv(this.qclsinst)
+    C.C_ZNK14QImageIOPlugin10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QImageIOPlugin", "metaObject", args)
   }

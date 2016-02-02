@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qjsonarray.h
 // dst-file: /src/core/qjsonarray.go
 //
@@ -85,7 +85,7 @@ func init() {
 // class sizeof(QJsonArray)=16
 type QJsonArray struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QJsonArray()
@@ -104,12 +104,12 @@ func NewQJsonArray(args ...interface{}) *QJsonArray {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QJsonArrayC2Ev()
-    return &QJsonArray{qclsinst:qthis}
+    return &QJsonArray{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QJsonArray", "QJsonArray", args)
   }
 
-  return nil // QJsonArray{qclsinst:qthis}
+  return nil // QJsonArray{Qclsinst:qthis}
 }
 
 // constBegin()
@@ -125,7 +125,7 @@ func (this *QJsonArray) Constbegin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray10constBeginEv
     // invoke: QJsonArray::const_iterator constBegin()
-    C.C_ZNK10QJsonArray10constBeginEv(this.qclsinst)
+    C.C_ZNK10QJsonArray10constBeginEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "constBegin", args)
   }
@@ -147,9 +147,9 @@ func (this *QJsonArray) Removeat(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray8removeAtEi
     // invoke: void removeAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QJsonArray8removeAtEi(this.qclsinst, arg0)
+    C.C_ZN10QJsonArray8removeAtEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonArray", "removeAt", args)
   }
@@ -171,9 +171,9 @@ func (this *QJsonArray) At(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray2atEi
     // invoke: QJsonValue at(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QJsonArray2atEi(this.qclsinst, arg0)
+    C.C_ZNK10QJsonArray2atEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonArray", "at", args)
   }
@@ -194,11 +194,15 @@ func (this *QJsonArray) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonArray4sizeEv
     // invoke: int size()
-    var ret0 = C.C_ZNK10QJsonArray4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QJsonArray4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonArray", "size", args)
   }
@@ -219,7 +223,7 @@ func (this *QJsonArray) End(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray3endEv
     // invoke: QJsonArray::iterator end()
-    C.C_ZN10QJsonArray3endEv(this.qclsinst)
+    C.C_ZN10QJsonArray3endEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "end", args)
   }
@@ -240,7 +244,7 @@ func (this *QJsonArray) Pop_Front(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray9pop_frontEv
     // invoke: void pop_front()
-    C.C_ZN10QJsonArray9pop_frontEv(this.qclsinst)
+    C.C_ZN10QJsonArray9pop_frontEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "pop_front", args)
   }
@@ -261,11 +265,15 @@ func (this *QJsonArray) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonArray7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK10QJsonArray7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QJsonArray7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonArray", "isEmpty", args)
   }
@@ -286,7 +294,7 @@ func (this *QJsonArray) Pop_Back(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray8pop_backEv
     // invoke: void pop_back()
-    C.C_ZN10QJsonArray8pop_backEv(this.qclsinst)
+    C.C_ZN10QJsonArray8pop_backEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "pop_back", args)
   }
@@ -307,11 +315,15 @@ func (this *QJsonArray) Empty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonArray5emptyEv
     // invoke: bool empty()
-    var ret0 = C.C_ZNK10QJsonArray5emptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QJsonArray5emptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonArray", "empty", args)
   }
@@ -332,7 +344,7 @@ func (this *QJsonArray) Begin(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray5beginEv
     // invoke: QJsonArray::iterator begin()
-    C.C_ZN10QJsonArray5beginEv(this.qclsinst)
+    C.C_ZN10QJsonArray5beginEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "begin", args)
   }
@@ -354,9 +366,9 @@ func (this *QJsonArray) Takeat(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray6takeAtEi
     // invoke: QJsonValue takeAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QJsonArray6takeAtEi(this.qclsinst, arg0)
+    C.C_ZN10QJsonArray6takeAtEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonArray", "takeAt", args)
   }
@@ -377,7 +389,7 @@ func (this *QJsonArray) Removefirst(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray11removeFirstEv
     // invoke: void removeFirst()
-    C.C_ZN10QJsonArray11removeFirstEv(this.qclsinst)
+    C.C_ZN10QJsonArray11removeFirstEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "removeFirst", args)
   }
@@ -399,7 +411,7 @@ func (this *QJsonArray) Fromstringlist_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray14fromStringListERK11QStringList
     // invoke: QJsonArray fromStringList(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN10QJsonArray14fromStringListERK11QStringList(arg0)
   default:
@@ -422,11 +434,15 @@ func (this *QJsonArray) Count(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QJsonArray5countEv
     // invoke: int count()
-    var ret0 = C.C_ZNK10QJsonArray5countEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QJsonArray5countEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QJsonArray", "count", args)
   }
@@ -447,7 +463,7 @@ func (this *QJsonArray) Last(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray4lastEv
     // invoke: QJsonValue last()
-    C.C_ZNK10QJsonArray4lastEv(this.qclsinst)
+    C.C_ZNK10QJsonArray4lastEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "last", args)
   }
@@ -468,7 +484,7 @@ func (this *QJsonArray) Tovariantlist(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray13toVariantListEv
     // invoke: QVariantList toVariantList()
-    C.C_ZNK10QJsonArray13toVariantListEv(this.qclsinst)
+    C.C_ZNK10QJsonArray13toVariantListEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "toVariantList", args)
   }
@@ -489,7 +505,7 @@ func (this *QJsonArray) Removelast(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArray10removeLastEv
     // invoke: void removeLast()
-    C.C_ZN10QJsonArray10removeLastEv(this.qclsinst)
+    C.C_ZN10QJsonArray10removeLastEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "removeLast", args)
   }
@@ -510,7 +526,7 @@ func (this *QJsonArray) Constend(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray8constEndEv
     // invoke: QJsonArray::const_iterator constEnd()
-    C.C_ZNK10QJsonArray8constEndEv(this.qclsinst)
+    C.C_ZNK10QJsonArray8constEndEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "constEnd", args)
   }
@@ -531,7 +547,7 @@ func (this *QJsonArray) Freeqjsonarray(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QJsonArrayD0Ev
     // invoke: void ~QJsonArray()
-    C.C_ZN10QJsonArrayD2Ev(this.qclsinst)
+    C.C_ZN10QJsonArrayD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "~QJsonArray", args)
   }
@@ -552,7 +568,7 @@ func (this *QJsonArray) First(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray5firstEv
     // invoke: QJsonValue first()
-    C.C_ZNK10QJsonArray5firstEv(this.qclsinst)
+    C.C_ZNK10QJsonArray5firstEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QJsonArray", "first", args)
   }

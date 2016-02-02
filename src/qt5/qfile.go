@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qfile.h
 // dst-file: /src/core/qfile.go
 //
@@ -103,7 +103,7 @@ func init() {
 // class sizeof(QFile)=1
 type QFile struct {
   /*qbase*/ QFileDevice;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // rename(const class QString &, const class QString &)
@@ -124,25 +124,33 @@ func (this *QFile) Rename_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QFile6renameERK7QStringS2_
     // invoke: bool rename(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN5QFile6renameERK7QStringS2_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN5QFile6renameERK7QString
     // invoke: bool rename(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN5QFile6renameERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN5QFile6renameERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFile", "rename", args)
   }
@@ -166,21 +174,29 @@ func (this *QFile) Exists_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QFile6existsERK7QString
     // invoke: bool exists(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN5QFile6existsERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK5QFile6existsEv
     // invoke: bool exists()
-    var ret0 = C.C_ZNK5QFile6existsEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QFile6existsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFile", "exists", args)
   }
@@ -204,21 +220,29 @@ func (this *QFile) Symlinktarget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QFile13symLinkTargetEv
     // invoke: QString symLinkTarget()
-    var ret0 = C.C_ZNK5QFile13symLinkTargetEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QFile13symLinkTargetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN5QFile13symLinkTargetERK7QString
     // invoke: QString symLinkTarget(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN5QFile13symLinkTargetERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFile", "symLinkTarget", args)
   }
@@ -239,11 +263,15 @@ func (this *QFile) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QFile4sizeEv
     // invoke: qint64 size()
-    var ret0 = C.C_ZNK5QFile4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QFile4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int64Ty(false) // "qint64"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFile", "size", args)
   }
@@ -265,13 +293,17 @@ func (this *QFile) Encodename_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QFile10encodeNameERK7QString
     // invoke: QByteArray encodeName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN5QFile10encodeNameERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFile", "encodeName", args)
   }
@@ -296,13 +328,17 @@ func (this *QFile) Decodename_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QFile10decodeNameERK10QByteArray
     // invoke: QString decodeName(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN5QFile10decodeNameERK10QByteArray(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN5QFile10decodeNameEPKc
     // invoke: QString decodeName(const char *)
@@ -314,7 +350,11 @@ func (this *QFile) Decodename_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFile", "decodeName", args)
   }
@@ -345,44 +385,44 @@ func NewQFile(args ...interface{}) *QFile {
   case 0:
     // invoke: _ZN5QFileC1ERK7QStringP7QObject
     // invoke: void QFile(const class QString &, class QObject *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFileC2ERK7QStringP7QObject(arg0, arg1)
-    return &QFile{qclsinst:qthis}
+    return &QFile{Qclsinst:qthis}
   case 1:
     // invoke: _ZN5QFileC1Ev
     // invoke: void QFile()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFileC2Ev()
-    return &QFile{qclsinst:qthis}
+    return &QFile{Qclsinst:qthis}
   case 2:
     // invoke: _ZN5QFileC1EP7QObject
     // invoke: void QFile(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFileC2EP7QObject(arg0)
-    return &QFile{qclsinst:qthis}
+    return &QFile{Qclsinst:qthis}
   case 3:
     // invoke: _ZN5QFileC1ERK7QString
     // invoke: void QFile(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFileC2ERK7QString(arg0)
-    return &QFile{qclsinst:qthis}
+    return &QFile{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFile", "QFile", args)
   }
 
-  return nil // QFile{qclsinst:qthis}
+  return nil // QFile{Qclsinst:qthis}
 }
 
 // fileName()
@@ -398,11 +438,15 @@ func (this *QFile) Filename(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK5QFile8fileNameEv
     // invoke: QString fileName()
-    var ret0 = C.C_ZNK5QFile8fileNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QFile8fileNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFile", "fileName", args)
   }
@@ -428,25 +472,33 @@ func (this *QFile) Link(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QFile4linkERK7QString
     // invoke: bool link(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN5QFile4linkERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN5QFile4linkERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN5QFile4linkERK7QStringS2_
     // invoke: bool link(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN5QFile4linkERK7QStringS2_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFile", "link", args)
   }
@@ -472,25 +524,33 @@ func (this *QFile) Copy_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QFile4copyERK7QStringS2_
     // invoke: bool copy(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN5QFile4copyERK7QStringS2_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN5QFile4copyERK7QString
     // invoke: bool copy(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN5QFile4copyERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN5QFile4copyERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFile", "copy", args)
   }
@@ -516,25 +576,33 @@ func (this *QFile) Resize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QFile6resizeEx
     // invoke: bool resize(qint64)
-    var arg0 = C.int64_t(args[0].(int64))
+    var arg0 = C.int64_t(qtrt.PrimConv(args[0], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN5QFile6resizeEx(this.qclsinst, arg0)
+    var ret0 = C.C_ZN5QFile6resizeEx(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN5QFile6resizeERK7QStringx
     // invoke: bool resize(const class QString &, qint64)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int64_t(args[1].(int64))
+    var arg1 = C.int64_t(qtrt.PrimConv(args[1], qtrt.Int64Ty(false)).(int64))
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN5QFile6resizeERK7QStringx(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFile", "resize", args)
   }
@@ -558,11 +626,11 @@ func (this *QFile) Permissions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QFile11permissionsEv
     // invoke: Permissions permissions()
-    C.C_ZNK5QFile11permissionsEv(this.qclsinst)
+    C.C_ZNK5QFile11permissionsEv(this.Qclsinst)
   case 1:
     // invoke: _ZN5QFile11permissionsERK7QString
     // invoke: Permissions permissions(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN5QFile11permissionsERK7QString(arg0)
   default:
@@ -585,7 +653,7 @@ func (this *QFile) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QFile10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK5QFile10metaObjectEv(this.qclsinst)
+    C.C_ZNK5QFile10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFile", "metaObject", args)
   }
@@ -606,7 +674,7 @@ func (this *QFile) Freeqfile(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QFileD0Ev
     // invoke: void ~QFile()
-    C.C_ZN5QFileD2Ev(this.qclsinst)
+    C.C_ZN5QFileD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFile", "~QFile", args)
   }
@@ -628,9 +696,9 @@ func (this *QFile) Setfilename(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QFile11setFileNameERK7QString
     // invoke: void setFileName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QFile11setFileNameERK7QString(this.qclsinst, arg0)
+    C.C_ZN5QFile11setFileNameERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFile", "setFileName", args)
   }
@@ -654,21 +722,29 @@ func (this *QFile) Remove_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QFile6removeERK7QString
     // invoke: bool remove(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN5QFile6removeERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN5QFile6removeEv
     // invoke: bool remove()
-    var ret0 = C.C_ZN5QFile6removeEv(this.qclsinst)
+    var ret0 = C.C_ZN5QFile6removeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFile", "remove", args)
   }
@@ -692,21 +768,29 @@ func (this *QFile) Readlink_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN5QFile8readLinkERK7QString
     // invoke: QString readLink(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN5QFile8readLinkERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK5QFile8readLinkEv
     // invoke: QString readLink()
-    var ret0 = C.C_ZNK5QFile8readLinkEv(this.qclsinst)
+    var ret0 = C.C_ZNK5QFile8readLinkEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFile", "readLink", args)
   }

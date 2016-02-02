@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qradiobutton.h
 // dst-file: /src/widgets/qradiobutton.go
 //
@@ -55,7 +55,7 @@ func init() {
 // class sizeof(QRadioButton)=1
 type QRadioButton struct {
   /*qbase*/ QAbstractButton;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // metaObject()
@@ -71,7 +71,7 @@ func (this *QRadioButton) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QRadioButton10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK12QRadioButton10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QRadioButton10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRadioButton", "metaObject", args)
   }
@@ -92,11 +92,15 @@ func (this *QRadioButton) Minimumsizehint(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK12QRadioButton15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK12QRadioButton15minimumSizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QRadioButton15minimumSizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRadioButton", "minimumSizeHint", args)
   }
@@ -117,11 +121,15 @@ func (this *QRadioButton) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QRadioButton8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK12QRadioButton8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QRadioButton8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRadioButton", "sizeHint", args)
   }
@@ -142,7 +150,7 @@ func (this *QRadioButton) Freeqradiobutton(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QRadioButtonD0Ev
     // invoke: void ~QRadioButton()
-    C.C_ZN12QRadioButtonD2Ev(this.qclsinst)
+    C.C_ZN12QRadioButtonD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRadioButton", "~QRadioButton", args)
   }
@@ -168,28 +176,28 @@ func NewQRadioButton(args ...interface{}) *QRadioButton {
   case 0:
     // invoke: _ZN12QRadioButtonC1EP7QWidget
     // invoke: void QRadioButton(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QRadioButtonC2EP7QWidget(arg0)
-    return &QRadioButton{qclsinst:qthis}
+    return &QRadioButton{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QRadioButtonC1ERK7QStringP7QWidget
     // invoke: void QRadioButton(const class QString &, class QWidget *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QRadioButtonC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QRadioButton{qclsinst:qthis}
+    return &QRadioButton{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRadioButton", "QRadioButton", args)
   }
 
-  return nil // QRadioButton{qclsinst:qthis}
+  return nil // QRadioButton{Qclsinst:qthis}
 }
 
 // <= body block end

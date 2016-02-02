@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qbytearraylist.h
 // dst-file: /src/core/qbytearraylist.go
 //
@@ -49,7 +49,7 @@ func init() {
 // class sizeof(QListSpecialMethods<QByteArray>)=1
 type QListSpecialMethodsLQByteArrayG struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // join()
@@ -71,31 +71,43 @@ func (this *QListSpecialMethodsLQByteArrayG) Join(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK19QListSpecialMethodsI10QByteArrayE4joinEv
     // invoke: QByteArray join()
-    var ret0 = C.C_ZNK19QListSpecialMethodsI10QByteArrayE4joinEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QListSpecialMethodsI10QByteArrayE4joinEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK19QListSpecialMethodsI10QByteArrayE4joinERKS0_
     // invoke: QByteArray join(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QListSpecialMethodsI10QByteArrayE4joinERKS0_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QListSpecialMethodsI10QByteArrayE4joinERKS0_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK19QListSpecialMethodsI10QByteArrayE4joinEc
     // invoke: QByteArray join(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QListSpecialMethodsI10QByteArrayE4joinEc(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QListSpecialMethodsI10QByteArrayE4joinEc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QListSpecialMethods<QByteArray>", "join", args)
   }

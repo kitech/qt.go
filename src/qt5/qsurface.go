@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.go
 //
@@ -49,7 +49,7 @@ func init() {
 // class sizeof(QSurface)=24
 type QSurface struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // ~QSurface()
@@ -65,7 +65,7 @@ func (this *QSurface) Freeqsurface(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSurfaceD0Ev
     // invoke: void ~QSurface()
-    C.C_ZN8QSurfaceD2Ev(this.qclsinst)
+    C.C_ZN8QSurfaceD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSurface", "~QSurface", args)
   }
@@ -86,7 +86,7 @@ func (this *QSurface) Surfaceclass(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QSurface12surfaceClassEv
     // invoke: QSurface::SurfaceClass surfaceClass()
-    C.C_ZNK8QSurface12surfaceClassEv(this.qclsinst)
+    C.C_ZNK8QSurface12surfaceClassEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSurface", "surfaceClass", args)
   }
@@ -107,11 +107,15 @@ func (this *QSurface) Supportsopengl(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QSurface14supportsOpenGLEv
     // invoke: bool supportsOpenGL()
-    var ret0 = C.C_ZNK8QSurface14supportsOpenGLEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QSurface14supportsOpenGLEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSurface", "supportsOpenGL", args)
   }

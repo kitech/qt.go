@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qplugin.h
 // dst-file: /src/core/qplugin.go
 //
@@ -45,7 +45,7 @@ func init() {
 // class sizeof(QStaticPlugin)=16
 type QStaticPlugin struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // metaData()
@@ -61,7 +61,7 @@ func (this *QStaticPlugin) Metadata(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStaticPlugin8metaDataEv
     // invoke: QJsonObject metaData()
-    C.C_ZNK13QStaticPlugin8metaDataEv(this.qclsinst)
+    C.C_ZNK13QStaticPlugin8metaDataEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStaticPlugin", "metaData", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qthreadpool.h
 // dst-file: /src/core/qthreadpool.go
 //
@@ -75,7 +75,7 @@ func init() {
 // class sizeof(QThreadPool)=1
 type QThreadPool struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // setExpiryTimeout(int)
@@ -92,9 +92,9 @@ func (this *QThreadPool) Setexpirytimeout(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QThreadPool16setExpiryTimeoutEi
     // invoke: void setExpiryTimeout(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QThreadPool16setExpiryTimeoutEi(this.qclsinst, arg0)
+    C.C_ZN11QThreadPool16setExpiryTimeoutEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QThreadPool", "setExpiryTimeout", args)
   }
@@ -115,7 +115,7 @@ func (this *QThreadPool) Reservethread(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QThreadPool13reserveThreadEv
     // invoke: void reserveThread()
-    C.C_ZN11QThreadPool13reserveThreadEv(this.qclsinst)
+    C.C_ZN11QThreadPool13reserveThreadEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThreadPool", "reserveThread", args)
   }
@@ -137,9 +137,9 @@ func (this *QThreadPool) Cancel(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QThreadPool6cancelEP9QRunnable
     // invoke: void cancel(class QRunnable *)
-    var arg0 = args[0].(QRunnable).qclsinst
+    var arg0 = args[0].(*QRunnable).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QThreadPool6cancelEP9QRunnable(this.qclsinst, arg0)
+    C.C_ZN11QThreadPool6cancelEP9QRunnable(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QThreadPool", "cancel", args)
   }
@@ -161,17 +161,17 @@ func NewQThreadPool(args ...interface{}) *QThreadPool {
   case 0:
     // invoke: _ZN11QThreadPoolC1EP7QObject
     // invoke: void QThreadPool(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QThreadPoolC2EP7QObject(arg0)
-    return &QThreadPool{qclsinst:qthis}
+    return &QThreadPool{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QThreadPool", "QThreadPool", args)
   }
 
-  return nil // QThreadPool{qclsinst:qthis}
+  return nil // QThreadPool{Qclsinst:qthis}
 }
 
 // waitForDone(int)
@@ -188,13 +188,17 @@ func (this *QThreadPool) Waitfordone(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QThreadPool11waitForDoneEi
     // invoke: bool waitForDone(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QThreadPool11waitForDoneEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QThreadPool11waitForDoneEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThreadPool", "waitForDone", args)
   }
@@ -217,11 +221,11 @@ func (this *QThreadPool) Start(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QThreadPool5startEP9QRunnablei
     // invoke: void start(class QRunnable *, int)
-    var arg0 = args[0].(QRunnable).qclsinst
+    var arg0 = args[0].(*QRunnable).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN11QThreadPool5startEP9QRunnablei(this.qclsinst, arg0, arg1)
+    C.C_ZN11QThreadPool5startEP9QRunnablei(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QThreadPool", "start", args)
   }
@@ -242,11 +246,15 @@ func (this *QThreadPool) Activethreadcount(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK11QThreadPool17activeThreadCountEv
     // invoke: int activeThreadCount()
-    var ret0 = C.C_ZNK11QThreadPool17activeThreadCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QThreadPool17activeThreadCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThreadPool", "activeThreadCount", args)
   }
@@ -268,9 +276,9 @@ func (this *QThreadPool) Setmaxthreadcount(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QThreadPool17setMaxThreadCountEi
     // invoke: void setMaxThreadCount(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QThreadPool17setMaxThreadCountEi(this.qclsinst, arg0)
+    C.C_ZN11QThreadPool17setMaxThreadCountEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QThreadPool", "setMaxThreadCount", args)
   }
@@ -291,7 +299,7 @@ func (this *QThreadPool) Freeqthreadpool(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QThreadPoolD0Ev
     // invoke: void ~QThreadPool()
-    C.C_ZN11QThreadPoolD2Ev(this.qclsinst)
+    C.C_ZN11QThreadPoolD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThreadPool", "~QThreadPool", args)
   }
@@ -316,7 +324,11 @@ func (this *QThreadPool) Globalinstance_S(args ...interface{}) (ret interface{})
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QThreadPool{}) // "QThreadPool *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThreadPool", "globalInstance", args)
   }
@@ -337,7 +349,7 @@ func (this *QThreadPool) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QThreadPool10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QThreadPool10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QThreadPool10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThreadPool", "metaObject", args)
   }
@@ -358,7 +370,7 @@ func (this *QThreadPool) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QThreadPool5clearEv
     // invoke: void clear()
-    C.C_ZN11QThreadPool5clearEv(this.qclsinst)
+    C.C_ZN11QThreadPool5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThreadPool", "clear", args)
   }
@@ -379,7 +391,7 @@ func (this *QThreadPool) Releasethread(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QThreadPool13releaseThreadEv
     // invoke: void releaseThread()
-    C.C_ZN11QThreadPool13releaseThreadEv(this.qclsinst)
+    C.C_ZN11QThreadPool13releaseThreadEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThreadPool", "releaseThread", args)
   }
@@ -401,13 +413,17 @@ func (this *QThreadPool) Trystart(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QThreadPool8tryStartEP9QRunnable
     // invoke: bool tryStart(class QRunnable *)
-    var arg0 = args[0].(QRunnable).qclsinst
+    var arg0 = args[0].(*QRunnable).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QThreadPool8tryStartEP9QRunnable(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QThreadPool8tryStartEP9QRunnable(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThreadPool", "tryStart", args)
   }
@@ -428,11 +444,15 @@ func (this *QThreadPool) Maxthreadcount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QThreadPool14maxThreadCountEv
     // invoke: int maxThreadCount()
-    var ret0 = C.C_ZNK11QThreadPool14maxThreadCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QThreadPool14maxThreadCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThreadPool", "maxThreadCount", args)
   }
@@ -453,11 +473,15 @@ func (this *QThreadPool) Expirytimeout(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QThreadPool13expiryTimeoutEv
     // invoke: int expiryTimeout()
-    var ret0 = C.C_ZNK11QThreadPool13expiryTimeoutEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QThreadPool13expiryTimeoutEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QThreadPool", "expiryTimeout", args)
   }

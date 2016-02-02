@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.go
 //
@@ -75,7 +75,7 @@ func init() {
 // class sizeof(QInputMethod)=1
 type QInputMethod struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _cursorRectangleChanged QInputMethod_cursorRectangleChanged_signal;
 //  _localeChanged QInputMethod_localeChanged_signal;
 //  _inputDirectionChanged QInputMethod_inputDirectionChanged_signal;
@@ -97,7 +97,7 @@ func (this *QInputMethod) Show(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputMethod4showEv
     // invoke: void show()
-    C.C_ZN12QInputMethod4showEv(this.qclsinst)
+    C.C_ZN12QInputMethod4showEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "show", args)
   }
@@ -118,11 +118,15 @@ func (this *QInputMethod) Locale(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QInputMethod6localeEv
     // invoke: QLocale locale()
-    var ret0 = C.C_ZNK12QInputMethod6localeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QInputMethod6localeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLocale{}) // "QLocale"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QInputMethod", "locale", args)
   }
@@ -144,9 +148,9 @@ func (this *QInputMethod) Setinputitemrectangle(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputMethod21setInputItemRectangleERK6QRectF
     // invoke: void setInputItemRectangle(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QInputMethod21setInputItemRectangleERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN12QInputMethod21setInputItemRectangleERK6QRectF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputMethod", "setInputItemRectangle", args)
   }
@@ -167,7 +171,7 @@ func (this *QInputMethod) Hide(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputMethod4hideEv
     // invoke: void hide()
-    C.C_ZN12QInputMethod4hideEv(this.qclsinst)
+    C.C_ZN12QInputMethod4hideEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "hide", args)
   }
@@ -188,11 +192,15 @@ func (this *QInputMethod) Cursorrectangle(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK12QInputMethod15cursorRectangleEv
     // invoke: QRectF cursorRectangle()
-    var ret0 = C.C_ZNK12QInputMethod15cursorRectangleEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QInputMethod15cursorRectangleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QInputMethod", "cursorRectangle", args)
   }
@@ -213,11 +221,15 @@ func (this *QInputMethod) Inputitemrectangle(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK12QInputMethod18inputItemRectangleEv
     // invoke: QRectF inputItemRectangle()
-    var ret0 = C.C_ZNK12QInputMethod18inputItemRectangleEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QInputMethod18inputItemRectangleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QInputMethod", "inputItemRectangle", args)
   }
@@ -238,11 +250,15 @@ func (this *QInputMethod) Isanimating(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QInputMethod11isAnimatingEv
     // invoke: bool isAnimating()
-    var ret0 = C.C_ZNK12QInputMethod11isAnimatingEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QInputMethod11isAnimatingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QInputMethod", "isAnimating", args)
   }
@@ -263,7 +279,7 @@ func (this *QInputMethod) Inputdirection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod14inputDirectionEv
     // invoke: Qt::LayoutDirection inputDirection()
-    C.C_ZNK12QInputMethod14inputDirectionEv(this.qclsinst)
+    C.C_ZNK12QInputMethod14inputDirectionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "inputDirection", args)
   }
@@ -285,9 +301,9 @@ func (this *QInputMethod) Setinputitemtransform(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputMethod21setInputItemTransformERK10QTransform
     // invoke: void setInputItemTransform(const class QTransform &)
-    var arg0 = args[0].(QTransform).qclsinst
+    var arg0 = args[0].(*QTransform).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QInputMethod21setInputItemTransformERK10QTransform(this.qclsinst, arg0)
+    C.C_ZN12QInputMethod21setInputItemTransformERK10QTransform(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputMethod", "setInputItemTransform", args)
   }
@@ -308,11 +324,15 @@ func (this *QInputMethod) Keyboardrectangle(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK12QInputMethod17keyboardRectangleEv
     // invoke: QRectF keyboardRectangle()
-    var ret0 = C.C_ZNK12QInputMethod17keyboardRectangleEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QInputMethod17keyboardRectangleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QInputMethod", "keyboardRectangle", args)
   }
@@ -333,7 +353,7 @@ func (this *QInputMethod) Reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputMethod5resetEv
     // invoke: void reset()
-    C.C_ZN12QInputMethod5resetEv(this.qclsinst)
+    C.C_ZN12QInputMethod5resetEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "reset", args)
   }
@@ -354,7 +374,7 @@ func (this *QInputMethod) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK12QInputMethod10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QInputMethod10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "metaObject", args)
   }
@@ -375,11 +395,15 @@ func (this *QInputMethod) Inputitemtransform(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK12QInputMethod18inputItemTransformEv
     // invoke: QTransform inputItemTransform()
-    var ret0 = C.C_ZNK12QInputMethod18inputItemTransformEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QInputMethod18inputItemTransformEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QInputMethod", "inputItemTransform", args)
   }
@@ -400,11 +424,15 @@ func (this *QInputMethod) Isvisible(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QInputMethod9isVisibleEv
     // invoke: bool isVisible()
-    var ret0 = C.C_ZNK12QInputMethod9isVisibleEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QInputMethod9isVisibleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QInputMethod", "isVisible", args)
   }
@@ -425,7 +453,7 @@ func (this *QInputMethod) Commit(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputMethod6commitEv
     // invoke: void commit()
-    C.C_ZN12QInputMethod6commitEv(this.qclsinst)
+    C.C_ZN12QInputMethod6commitEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "commit", args)
   }
@@ -449,7 +477,7 @@ func (this *QInputMethod) Setvisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QInputMethod10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN12QInputMethod10setVisibleEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputMethod", "setVisible", args)
   }

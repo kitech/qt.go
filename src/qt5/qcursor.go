@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qcursor.h
 // dst-file: /src/gui/qcursor.go
 //
@@ -75,7 +75,7 @@ func init() {
 // class sizeof(QCursor)=8
 type QCursor struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // pixmap()
@@ -91,11 +91,15 @@ func (this *QCursor) Pixmap(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QCursor6pixmapEv
     // invoke: QPixmap pixmap()
-    var ret0 = C.C_ZNK7QCursor6pixmapEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QCursor6pixmapEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPixmap{}) // "QPixmap"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCursor", "pixmap", args)
   }
@@ -130,33 +134,33 @@ func (this *QCursor) Setpos_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QCursor6setPosEP7QScreenii
     // invoke: void setPos(class QScreen *, int, int)
-    var arg0 = args[0].(QScreen).qclsinst
+    var arg0 = args[0].(*QScreen).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
     C.C_ZN7QCursor6setPosEP7QScreenii(arg0, arg1, arg2)
   case 1:
     // invoke: _ZN7QCursor6setPosEP7QScreenRK6QPoint
     // invoke: void setPos(class QScreen *, const class QPoint &)
-    var arg0 = args[0].(QScreen).qclsinst
+    var arg0 = args[0].(*QScreen).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPoint).qclsinst
+    var arg1 = args[1].(*QPoint).Qclsinst
     if false {fmt.Println(arg1)}
     C.C_ZN7QCursor6setPosEP7QScreenRK6QPoint(arg0, arg1)
   case 2:
     // invoke: _ZN7QCursor6setPosEii
     // invoke: void setPos(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     C.C_ZN7QCursor6setPosEii(arg0, arg1)
   case 3:
     // invoke: _ZN7QCursor6setPosERK6QPoint
     // invoke: void setPos(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN7QCursor6setPosERK6QPoint(arg0)
   default:
@@ -179,11 +183,15 @@ func (this *QCursor) Mask(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QCursor4maskEv
     // invoke: const QBitmap * mask()
-    var ret0 = C.C_ZNK7QCursor4maskEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QCursor4maskEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBitmap{}) // "const QBitmap *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCursor", "mask", args)
   }
@@ -211,17 +219,25 @@ func (this *QCursor) Pos_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN7QCursor3posEPK7QScreen
     // invoke: QPoint pos(const class QScreen *)
-    var arg0 = args[0].(QScreen).qclsinst
+    var arg0 = args[0].(*QScreen).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN7QCursor3posEPK7QScreen(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCursor", "pos", args)
   }
@@ -242,11 +258,15 @@ func (this *QCursor) Hotspot(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QCursor7hotSpotEv
     // invoke: QPoint hotSpot()
-    var ret0 = C.C_ZNK7QCursor7hotSpotEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QCursor7hotSpotEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCursor", "hotSpot", args)
   }
@@ -267,11 +287,15 @@ func (this *QCursor) Bitmap(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QCursor6bitmapEv
     // invoke: const QBitmap * bitmap()
-    var ret0 = C.C_ZNK7QCursor6bitmapEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QCursor6bitmapEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBitmap{}) // "const QBitmap *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCursor", "bitmap", args)
   }
@@ -292,7 +316,7 @@ func (this *QCursor) Freeqcursor(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QCursorD0Ev
     // invoke: void ~QCursor()
-    C.C_ZN7QCursorD2Ev(this.qclsinst)
+    C.C_ZN7QCursorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCursor", "~QCursor", args)
   }
@@ -313,7 +337,7 @@ func (this *QCursor) Shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QCursor5shapeEv
     // invoke: Qt::CursorShape shape()
-    C.C_ZNK7QCursor5shapeEv(this.qclsinst)
+    C.C_ZNK7QCursor5shapeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCursor", "shape", args)
   }
@@ -348,52 +372,52 @@ func NewQCursor(args ...interface{}) *QCursor {
   case 0:
     // invoke: _ZN7QCursorC1ERK7QBitmapS2_ii
     // invoke: void QCursor(const class QBitmap &, const class QBitmap &, int, int)
-    var arg0 = args[0].(QBitmap).qclsinst
+    var arg0 = args[0].(*QBitmap).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QBitmap).qclsinst
+    var arg1 = args[1].(*QBitmap).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QCursorC2ERK7QBitmapS2_ii(arg0, arg1, arg2, arg3)
-    return &QCursor{qclsinst:qthis}
+    return &QCursor{Qclsinst:qthis}
   case 1:
     // invoke: _ZN7QCursorC1ERK7QPixmapii
     // invoke: void QCursor(const class QPixmap &, int, int)
-    var arg0 = args[0].(QPixmap).qclsinst
+    var arg0 = args[0].(*QPixmap).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QCursorC2ERK7QPixmapii(arg0, arg1, arg2)
-    return &QCursor{qclsinst:qthis}
+    return &QCursor{Qclsinst:qthis}
   case 2:
     // invoke: _ZN7QCursorC1ERKS_
     // invoke: void QCursor(const class QCursor &)
-    var arg0 = args[0].(QCursor).qclsinst
+    var arg0 = args[0].(*QCursor).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QCursorC2ERKS_(arg0)
-    return &QCursor{qclsinst:qthis}
+    return &QCursor{Qclsinst:qthis}
   case 3:
     // invoke: _ZN7QCursorC1Ev
     // invoke: void QCursor()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QCursorC2Ev()
-    return &QCursor{qclsinst:qthis}
+    return &QCursor{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCursor", "QCursor", args)
   }
 
-  return nil // QCursor{qclsinst:qthis}
+  return nil // QCursor{Qclsinst:qthis}
 }
 
 // <= body block end

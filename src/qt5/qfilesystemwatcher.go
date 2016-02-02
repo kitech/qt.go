@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.go
 //
@@ -63,7 +63,7 @@ func init() {
 // class sizeof(QFileSystemWatcher)=1
 type QFileSystemWatcher struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _directoryChanged QFileSystemWatcher_directoryChanged_signal;
 //  _fileChanged QFileSystemWatcher_fileChanged_signal;
 }
@@ -81,7 +81,7 @@ func (this *QFileSystemWatcher) Files(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QFileSystemWatcher5filesEv
     // invoke: QStringList files()
-    C.C_ZNK18QFileSystemWatcher5filesEv(this.qclsinst)
+    C.C_ZNK18QFileSystemWatcher5filesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "files", args)
   }
@@ -102,7 +102,7 @@ func (this *QFileSystemWatcher) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QFileSystemWatcher10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK18QFileSystemWatcher10metaObjectEv(this.qclsinst)
+    C.C_ZNK18QFileSystemWatcher10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "metaObject", args)
   }
@@ -128,28 +128,28 @@ func NewQFileSystemWatcher(args ...interface{}) *QFileSystemWatcher {
   case 0:
     // invoke: _ZN18QFileSystemWatcherC1EP7QObject
     // invoke: void QFileSystemWatcher(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QFileSystemWatcherC2EP7QObject(arg0)
-    return &QFileSystemWatcher{qclsinst:qthis}
+    return &QFileSystemWatcher{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QFileSystemWatcherC1ERK11QStringListP7QObject
     // invoke: void QFileSystemWatcher(const class QStringList &, class QObject *)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject(arg0, arg1)
-    return &QFileSystemWatcher{qclsinst:qthis}
+    return &QFileSystemWatcher{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "QFileSystemWatcher", args)
   }
 
-  return nil // QFileSystemWatcher{qclsinst:qthis}
+  return nil // QFileSystemWatcher{Qclsinst:qthis}
 }
 
 // removePaths(const class QStringList &)
@@ -166,9 +166,9 @@ func (this *QFileSystemWatcher) Removepaths(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QFileSystemWatcher11removePathsERK11QStringList
     // invoke: QStringList removePaths(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QFileSystemWatcher11removePathsERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN18QFileSystemWatcher11removePathsERK11QStringList(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "removePaths", args)
   }
@@ -189,7 +189,7 @@ func (this *QFileSystemWatcher) Directories(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QFileSystemWatcher11directoriesEv
     // invoke: QStringList directories()
-    C.C_ZNK18QFileSystemWatcher11directoriesEv(this.qclsinst)
+    C.C_ZNK18QFileSystemWatcher11directoriesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "directories", args)
   }
@@ -211,13 +211,17 @@ func (this *QFileSystemWatcher) Addpath(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN18QFileSystemWatcher7addPathERK7QString
     // invoke: bool addPath(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN18QFileSystemWatcher7addPathERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN18QFileSystemWatcher7addPathERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "addPath", args)
   }
@@ -238,7 +242,7 @@ func (this *QFileSystemWatcher) Freeqfilesystemwatcher(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QFileSystemWatcherD0Ev
     // invoke: void ~QFileSystemWatcher()
-    C.C_ZN18QFileSystemWatcherD2Ev(this.qclsinst)
+    C.C_ZN18QFileSystemWatcherD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "~QFileSystemWatcher", args)
   }
@@ -260,9 +264,9 @@ func (this *QFileSystemWatcher) Addpaths(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QFileSystemWatcher8addPathsERK11QStringList
     // invoke: QStringList addPaths(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QFileSystemWatcher8addPathsERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN18QFileSystemWatcher8addPathsERK11QStringList(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "addPaths", args)
   }
@@ -284,13 +288,17 @@ func (this *QFileSystemWatcher) Removepath(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZN18QFileSystemWatcher10removePathERK7QString
     // invoke: bool removePath(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN18QFileSystemWatcher10removePathERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN18QFileSystemWatcher10removePathERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "removePath", args)
   }

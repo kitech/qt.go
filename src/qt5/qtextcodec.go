@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qtextcodec.h
 // dst-file: /src/core/qtextcodec.go
 //
@@ -99,19 +99,19 @@ func init() {
 // class sizeof(QTextEncoder)=1
 type QTextEncoder struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextCodec)=8
 type QTextCodec struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextDecoder)=1
 type QTextDecoder struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QTextEncoder(const class QTextCodec *)
@@ -128,17 +128,17 @@ func NewQTextEncoder(args ...interface{}) *QTextEncoder {
   case 0:
     // invoke: _ZN12QTextEncoderC1EPK10QTextCodec
     // invoke: void QTextEncoder(const class QTextCodec *)
-    var arg0 = args[0].(QTextCodec).qclsinst
+    var arg0 = args[0].(*QTextCodec).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QTextEncoderC2EPK10QTextCodec(arg0)
-    return &QTextEncoder{qclsinst:qthis}
+    return &QTextEncoder{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextEncoder", "QTextEncoder", args)
   }
 
-  return nil // QTextEncoder{qclsinst:qthis}
+  return nil // QTextEncoder{Qclsinst:qthis}
 }
 
 // hasFailure()
@@ -154,11 +154,15 @@ func (this *QTextEncoder) Hasfailure(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTextEncoder10hasFailureEv
     // invoke: bool hasFailure()
-    var ret0 = C.C_ZNK12QTextEncoder10hasFailureEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QTextEncoder10hasFailureEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEncoder", "hasFailure", args)
   }
@@ -184,25 +188,33 @@ func (this *QTextEncoder) Fromunicode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QTextEncoder11fromUnicodeEPK5QChari
     // invoke: QByteArray fromUnicode(const class QChar *, int)
-    var arg0 = args[0].(QChar).qclsinst
+    var arg0 = args[0].(*QChar).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN12QTextEncoder11fromUnicodeEPK5QChari(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN12QTextEncoder11fromUnicodeEPK5QChari(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN12QTextEncoder11fromUnicodeERK7QString
     // invoke: QByteArray fromUnicode(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QTextEncoder11fromUnicodeERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN12QTextEncoder11fromUnicodeERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextEncoder", "fromUnicode", args)
   }
@@ -223,7 +235,7 @@ func (this *QTextEncoder) Freeqtextencoder(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTextEncoderD0Ev
     // invoke: void ~QTextEncoder()
-    C.C_ZN12QTextEncoderD2Ev(this.qclsinst)
+    C.C_ZN12QTextEncoderD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextEncoder", "~QTextEncoder", args)
   }
@@ -245,7 +257,7 @@ func (this *QTextCodec) Setcodecforlocale_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextCodec17setCodecForLocaleEPS_
     // invoke: void setCodecForLocale(class QTextCodec *)
-    var arg0 = args[0].(QTextCodec).qclsinst
+    var arg0 = args[0].(*QTextCodec).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN10QTextCodec17setCodecForLocaleEPS_(arg0)
   default:
@@ -272,13 +284,17 @@ func (this *QTextCodec) Codecforname_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QTextCodec12codecForNameERK10QByteArray
     // invoke: QTextCodec * codecForName(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN10QTextCodec12codecForNameERK10QByteArray(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN10QTextCodec12codecForNameEPKc
     // invoke: QTextCodec * codecForName(const char *)
@@ -290,7 +306,11 @@ func (this *QTextCodec) Codecforname_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForName", args)
   }
@@ -315,23 +335,31 @@ func (this *QTextCodec) Canencode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextCodec9canEncodeE5QChar
     // invoke: bool canEncode(class QChar)
-    var arg0 = args[0].(QChar).qclsinst
+    var arg0 = args[0].(*QChar).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTextCodec9canEncodeE5QChar(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTextCodec9canEncodeE5QChar(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK10QTextCodec9canEncodeERK7QString
     // invoke: bool canEncode(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTextCodec9canEncodeERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTextCodec9canEncodeERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCodec", "canEncode", args)
   }
@@ -356,7 +384,11 @@ func (this *QTextCodec) Codecforlocale_S(args ...interface{}) (ret interface{}) 
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForLocale", args)
   }
@@ -382,25 +414,33 @@ func (this *QTextCodec) Codecforhtml_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QTextCodec12codecForHtmlERK10QByteArray
     // invoke: QTextCodec * codecForHtml(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN10QTextCodec12codecForHtmlERK10QByteArray(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN10QTextCodec12codecForHtmlERK10QByteArrayPS_
     // invoke: QTextCodec * codecForHtml(const class QByteArray &, class QTextCodec *)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QTextCodec).qclsinst
+    var arg1 = args[1].(*QTextCodec).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN10QTextCodec12codecForHtmlERK10QByteArrayPS_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForHtml", args)
   }
@@ -447,25 +487,33 @@ func (this *QTextCodec) Codecforutftext_S(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZN10QTextCodec15codecForUtfTextERK10QByteArrayPS_
     // invoke: QTextCodec * codecForUtfText(const class QByteArray &, class QTextCodec *)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QTextCodec).qclsinst
+    var arg1 = args[1].(*QTextCodec).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN10QTextCodec15codecForUtfTextERK10QByteArrayPS_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN10QTextCodec15codecForUtfTextERK10QByteArray
     // invoke: QTextCodec * codecForUtfText(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN10QTextCodec15codecForUtfTextERK10QByteArray(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForUtfText", args)
   }
@@ -508,13 +556,17 @@ func (this *QTextCodec) Fromunicode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextCodec11fromUnicodeERK7QString
     // invoke: QByteArray fromUnicode(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTextCodec11fromUnicodeERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTextCodec11fromUnicodeERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCodec", "fromUnicode", args)
   }
@@ -535,7 +587,7 @@ func (this *QTextCodec) Aliases(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextCodec7aliasesEv
     // invoke: QList<QByteArray> aliases()
-    C.C_ZNK10QTextCodec7aliasesEv(this.qclsinst)
+    C.C_ZNK10QTextCodec7aliasesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextCodec", "aliases", args)
   }
@@ -557,13 +609,17 @@ func (this *QTextCodec) Codecformib_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QTextCodec11codecForMibEi
     // invoke: QTextCodec * codecForMib(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN10QTextCodec11codecForMibEi(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForMib", args)
   }
@@ -588,13 +644,17 @@ func (this *QTextCodec) Tounicode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextCodec9toUnicodeERK10QByteArray
     // invoke: QString toUnicode(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTextCodec9toUnicodeERK10QByteArray(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTextCodec9toUnicodeERK10QByteArray(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK10QTextCodec9toUnicodeEPKc
     // invoke: QString toUnicode(const char *)
@@ -602,11 +662,15 @@ func (this *QTextCodec) Tounicode(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var ret0 = C.C_ZNK10QTextCodec9toUnicodeEPKc(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTextCodec9toUnicodeEPKc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCodec", "toUnicode", args)
   }
@@ -628,17 +692,17 @@ func NewQTextDecoder(args ...interface{}) *QTextDecoder {
   case 0:
     // invoke: _ZN12QTextDecoderC1EPK10QTextCodec
     // invoke: void QTextDecoder(const class QTextCodec *)
-    var arg0 = args[0].(QTextCodec).qclsinst
+    var arg0 = args[0].(*QTextCodec).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QTextDecoderC2EPK10QTextCodec(arg0)
-    return &QTextDecoder{qclsinst:qthis}
+    return &QTextDecoder{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextDecoder", "QTextDecoder", args)
   }
 
-  return nil // QTextDecoder{qclsinst:qthis}
+  return nil // QTextDecoder{Qclsinst:qthis}
 }
 
 // hasFailure()
@@ -654,11 +718,15 @@ func (this *QTextDecoder) Hasfailure(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTextDecoder10hasFailureEv
     // invoke: bool hasFailure()
-    var ret0 = C.C_ZNK12QTextDecoder10hasFailureEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QTextDecoder10hasFailureEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextDecoder", "hasFailure", args)
   }
@@ -679,7 +747,7 @@ func (this *QTextDecoder) Freeqtextdecoder(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTextDecoderD0Ev
     // invoke: void ~QTextDecoder()
-    C.C_ZN12QTextDecoderD2Ev(this.qclsinst)
+    C.C_ZN12QTextDecoderD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextDecoder", "~QTextDecoder", args)
   }
@@ -710,13 +778,17 @@ func (this *QTextDecoder) Tounicode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QTextDecoder9toUnicodeERK10QByteArray
     // invoke: QString toUnicode(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QTextDecoder9toUnicodeERK10QByteArray(this.qclsinst, arg0)
+    var ret0 = C.C_ZN12QTextDecoder9toUnicodeERK10QByteArray(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN12QTextDecoder9toUnicodeEPKci
     // invoke: QString toUnicode(const char *, int)
@@ -724,25 +796,29 @@ func (this *QTextDecoder) Tounicode(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN12QTextDecoder9toUnicodeEPKci(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN12QTextDecoder9toUnicodeEPKci(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN12QTextDecoder9toUnicodeEP7QStringPKci
     // invoke: void toUnicode(class QString *, const char *, int)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[2][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN12QTextDecoder9toUnicodeEP7QStringPKci(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN12QTextDecoder9toUnicodeEP7QStringPKci(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTextDecoder", "toUnicode", args)
   }

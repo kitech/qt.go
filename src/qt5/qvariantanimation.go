@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.go
 //
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QVariantAnimation)=1
 type QVariantAnimation struct {
   /*qbase*/ QAbstractAnimation;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _valueChanged QVariantAnimation_valueChanged_signal;
 }
 
@@ -91,13 +91,17 @@ func (this *QVariantAnimation) Keyvalueat(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK17QVariantAnimation10keyValueAtEd
     // invoke: QVariant keyValueAt(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QVariantAnimation10keyValueAtEd(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK17QVariantAnimation10keyValueAtEd(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariantAnimation", "keyValueAt", args)
   }
@@ -118,11 +122,15 @@ func (this *QVariantAnimation) Currentvalue(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK17QVariantAnimation12currentValueEv
     // invoke: QVariant currentValue()
-    var ret0 = C.C_ZNK17QVariantAnimation12currentValueEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QVariantAnimation12currentValueEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariantAnimation", "currentValue", args)
   }
@@ -144,9 +152,9 @@ func (this *QVariantAnimation) Seteasingcurve(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve
     // invoke: void setEasingCurve(const class QEasingCurve &)
-    var arg0 = args[0].(QEasingCurve).qclsinst
+    var arg0 = args[0].(*QEasingCurve).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(this.qclsinst, arg0)
+    C.C_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setEasingCurve", args)
   }
@@ -168,17 +176,17 @@ func NewQVariantAnimation(args ...interface{}) *QVariantAnimation {
   case 0:
     // invoke: _ZN17QVariantAnimationC1EP7QObject
     // invoke: void QVariantAnimation(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QVariantAnimationC2EP7QObject(arg0)
-    return &QVariantAnimation{qclsinst:qthis}
+    return &QVariantAnimation{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QVariantAnimation", "QVariantAnimation", args)
   }
 
-  return nil // QVariantAnimation{qclsinst:qthis}
+  return nil // QVariantAnimation{Qclsinst:qthis}
 }
 
 // duration()
@@ -194,11 +202,15 @@ func (this *QVariantAnimation) Duration(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QVariantAnimation8durationEv
     // invoke: int duration()
-    var ret0 = C.C_ZNK17QVariantAnimation8durationEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QVariantAnimation8durationEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariantAnimation", "duration", args)
   }
@@ -220,9 +232,9 @@ func (this *QVariantAnimation) Setstartvalue(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QVariantAnimation13setStartValueERK8QVariant
     // invoke: void setStartValue(const class QVariant &)
-    var arg0 = args[0].(QVariant).qclsinst
+    var arg0 = args[0].(*QVariant).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QVariantAnimation13setStartValueERK8QVariant(this.qclsinst, arg0)
+    C.C_ZN17QVariantAnimation13setStartValueERK8QVariant(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setStartValue", args)
   }
@@ -243,7 +255,7 @@ func (this *QVariantAnimation) Keyvalues(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation9keyValuesEv
     // invoke: KeyValues keyValues()
-    C.C_ZNK17QVariantAnimation9keyValuesEv(this.qclsinst)
+    C.C_ZNK17QVariantAnimation9keyValuesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "keyValues", args)
   }
@@ -264,7 +276,7 @@ func (this *QVariantAnimation) Freeqvariantanimation(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QVariantAnimationD0Ev
     // invoke: void ~QVariantAnimation()
-    C.C_ZN17QVariantAnimationD2Ev(this.qclsinst)
+    C.C_ZN17QVariantAnimationD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "~QVariantAnimation", args)
   }
@@ -285,11 +297,15 @@ func (this *QVariantAnimation) Endvalue(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QVariantAnimation8endValueEv
     // invoke: QVariant endValue()
-    var ret0 = C.C_ZNK17QVariantAnimation8endValueEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QVariantAnimation8endValueEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariantAnimation", "endValue", args)
   }
@@ -310,7 +326,7 @@ func (this *QVariantAnimation) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QVariantAnimation10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK17QVariantAnimation10metaObjectEv(this.qclsinst)
+    C.C_ZNK17QVariantAnimation10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "metaObject", args)
   }
@@ -333,11 +349,11 @@ func (this *QVariantAnimation) Setkeyvalueat(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant
     // invoke: void setKeyValueAt(qreal, const class QVariant &)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QVariant).qclsinst
+    var arg1 = args[1].(*QVariant).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(this.qclsinst, arg0, arg1)
+    C.C_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setKeyValueAt", args)
   }
@@ -358,11 +374,15 @@ func (this *QVariantAnimation) Easingcurve(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK17QVariantAnimation11easingCurveEv
     // invoke: QEasingCurve easingCurve()
-    var ret0 = C.C_ZNK17QVariantAnimation11easingCurveEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QVariantAnimation11easingCurveEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QEasingCurve{}) // "QEasingCurve"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariantAnimation", "easingCurve", args)
   }
@@ -384,9 +404,9 @@ func (this *QVariantAnimation) Setendvalue(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QVariantAnimation11setEndValueERK8QVariant
     // invoke: void setEndValue(const class QVariant &)
-    var arg0 = args[0].(QVariant).qclsinst
+    var arg0 = args[0].(*QVariant).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QVariantAnimation11setEndValueERK8QVariant(this.qclsinst, arg0)
+    C.C_ZN17QVariantAnimation11setEndValueERK8QVariant(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setEndValue", args)
   }
@@ -408,9 +428,9 @@ func (this *QVariantAnimation) Setduration(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QVariantAnimation11setDurationEi
     // invoke: void setDuration(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN17QVariantAnimation11setDurationEi(this.qclsinst, arg0)
+    C.C_ZN17QVariantAnimation11setDurationEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setDuration", args)
   }
@@ -431,11 +451,15 @@ func (this *QVariantAnimation) Startvalue(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK17QVariantAnimation10startValueEv
     // invoke: QVariant startValue()
-    var ret0 = C.C_ZNK17QVariantAnimation10startValueEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QVariantAnimation10startValueEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QVariantAnimation", "startValue", args)
   }

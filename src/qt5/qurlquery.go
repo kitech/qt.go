@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qurlquery.h
 // dst-file: /src/core/qurlquery.go
 //
@@ -81,7 +81,7 @@ func init() {
 // class sizeof(QUrlQuery)=1
 type QUrlQuery struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // addQueryItem(const class QString &, const class QString &)
@@ -99,11 +99,11 @@ func (this *QUrlQuery) Addqueryitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQuery12addQueryItemERK7QStringS2_
     // invoke: void addQueryItem(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN9QUrlQuery12addQueryItemERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN9QUrlQuery12addQueryItemERK7QStringS2_(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QUrlQuery", "addQueryItem", args)
   }
@@ -124,11 +124,15 @@ func (this *QUrlQuery) Queryvaluedelimiter(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK9QUrlQuery19queryValueDelimiterEv
     // invoke: QChar queryValueDelimiter()
-    var ret0 = C.C_ZNK9QUrlQuery19queryValueDelimiterEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QUrlQuery19queryValueDelimiterEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QChar{}) // "QChar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUrlQuery", "queryValueDelimiter", args)
   }
@@ -150,13 +154,17 @@ func (this *QUrlQuery) Hasqueryitem(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QUrlQuery12hasQueryItemERK7QString
     // invoke: bool hasQueryItem(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK9QUrlQuery12hasQueryItemERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK9QUrlQuery12hasQueryItemERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUrlQuery", "hasQueryItem", args)
   }
@@ -178,9 +186,9 @@ func (this *QUrlQuery) Removeallqueryitems(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQuery19removeAllQueryItemsERK7QString
     // invoke: void removeAllQueryItems(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QUrlQuery19removeAllQueryItemsERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QUrlQuery19removeAllQueryItemsERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "removeAllQueryItems", args)
   }
@@ -201,7 +209,7 @@ func (this *QUrlQuery) Freequrlquery(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQueryD0Ev
     // invoke: void ~QUrlQuery()
-    C.C_ZN9QUrlQueryD2Ev(this.qclsinst)
+    C.C_ZN9QUrlQueryD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "~QUrlQuery", args)
   }
@@ -222,11 +230,15 @@ func (this *QUrlQuery) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QUrlQuery7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK9QUrlQuery7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QUrlQuery7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUrlQuery", "isEmpty", args)
   }
@@ -248,9 +260,9 @@ func (this *QUrlQuery) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQuery4swapERS_
     // invoke: void swap(class QUrlQuery &)
-    var arg0 = args[0].(QUrlQuery).qclsinst
+    var arg0 = args[0].(*QUrlQuery).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QUrlQuery4swapERS_(this.qclsinst, arg0)
+    C.C_ZN9QUrlQuery4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "swap", args)
   }
@@ -271,11 +283,15 @@ func (this *QUrlQuery) Isdetached(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QUrlQuery10isDetachedEv
     // invoke: bool isDetached()
-    var ret0 = C.C_ZNK9QUrlQuery10isDetachedEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QUrlQuery10isDetachedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUrlQuery", "isDetached", args)
   }
@@ -300,7 +316,11 @@ func (this *QUrlQuery) Defaultquerypairdelimiter_S(args ...interface{}) (ret int
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QChar{}) // "QChar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUrlQuery", "defaultQueryPairDelimiter", args)
   }
@@ -333,39 +353,39 @@ func NewQUrlQuery(args ...interface{}) *QUrlQuery {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QUrlQueryC2Ev()
-    return &QUrlQuery{qclsinst:qthis}
+    return &QUrlQuery{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QUrlQueryC1ERK7QString
     // invoke: void QUrlQuery(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QUrlQueryC2ERK7QString(arg0)
-    return &QUrlQuery{qclsinst:qthis}
+    return &QUrlQuery{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QUrlQueryC1ERK4QUrl
     // invoke: void QUrlQuery(const class QUrl &)
-    var arg0 = args[0].(QUrl).qclsinst
+    var arg0 = args[0].(*QUrl).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QUrlQueryC2ERK4QUrl(arg0)
-    return &QUrlQuery{qclsinst:qthis}
+    return &QUrlQuery{Qclsinst:qthis}
   case 3:
     // invoke: _ZN9QUrlQueryC1ERKS_
     // invoke: void QUrlQuery(const class QUrlQuery &)
-    var arg0 = args[0].(QUrlQuery).qclsinst
+    var arg0 = args[0].(*QUrlQuery).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QUrlQueryC2ERKS_(arg0)
-    return &QUrlQuery{qclsinst:qthis}
+    return &QUrlQuery{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QUrlQuery", "QUrlQuery", args)
   }
 
-  return nil // QUrlQuery{qclsinst:qthis}
+  return nil // QUrlQuery{Qclsinst:qthis}
 }
 
 // setQueryDelimiters(class QChar, class QChar)
@@ -383,11 +403,11 @@ func (this *QUrlQuery) Setquerydelimiters(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQuery18setQueryDelimitersE5QCharS0_
     // invoke: void setQueryDelimiters(class QChar, class QChar)
-    var arg0 = args[0].(QChar).qclsinst
+    var arg0 = args[0].(*QChar).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QChar).qclsinst
+    var arg1 = args[1].(*QChar).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_(this.qclsinst, arg0, arg1)
+    C.C_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QUrlQuery", "setQueryDelimiters", args)
   }
@@ -408,7 +428,7 @@ func (this *QUrlQuery) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQuery5clearEv
     // invoke: void clear()
-    C.C_ZN9QUrlQuery5clearEv(this.qclsinst)
+    C.C_ZN9QUrlQuery5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "clear", args)
   }
@@ -429,11 +449,15 @@ func (this *QUrlQuery) Querypairdelimiter(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK9QUrlQuery18queryPairDelimiterEv
     // invoke: QChar queryPairDelimiter()
-    var ret0 = C.C_ZNK9QUrlQuery18queryPairDelimiterEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QUrlQuery18queryPairDelimiterEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QChar{}) // "QChar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUrlQuery", "queryPairDelimiter", args)
   }
@@ -455,9 +479,9 @@ func (this *QUrlQuery) Setquery(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQuery8setQueryERK7QString
     // invoke: void setQuery(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QUrlQuery8setQueryERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QUrlQuery8setQueryERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "setQuery", args)
   }
@@ -482,7 +506,11 @@ func (this *QUrlQuery) Defaultqueryvaluedelimiter_S(args ...interface{}) (ret in
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QChar{}) // "QChar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QUrlQuery", "defaultQueryValueDelimiter", args)
   }
@@ -504,9 +532,9 @@ func (this *QUrlQuery) Removequeryitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQuery15removeQueryItemERK7QString
     // invoke: void removeQueryItem(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QUrlQuery15removeQueryItemERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QUrlQuery15removeQueryItemERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "removeQueryItem", args)
   }

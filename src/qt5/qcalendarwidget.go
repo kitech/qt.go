@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qcalendarwidget.h
 // dst-file: /src/widgets/qcalendarwidget.go
 //
@@ -119,7 +119,7 @@ func init() {
 // class sizeof(QCalendarWidget)=1
 type QCalendarWidget struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _activated QCalendarWidget_activated_signal;
 //  _clicked QCalendarWidget_clicked_signal;
 //  _currentPageChanged QCalendarWidget_currentPageChanged_signal;
@@ -139,7 +139,7 @@ func (this *QCalendarWidget) Horizontalheaderformat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget22horizontalHeaderFormatEv
     // invoke: QCalendarWidget::HorizontalHeaderFormat horizontalHeaderFormat()
-    C.C_ZNK15QCalendarWidget22horizontalHeaderFormatEv(this.qclsinst)
+    C.C_ZNK15QCalendarWidget22horizontalHeaderFormatEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "horizontalHeaderFormat", args)
   }
@@ -161,9 +161,9 @@ func (this *QCalendarWidget) Setmaximumdate(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget14setMaximumDateERK5QDate
     // invoke: void setMaximumDate(const class QDate &)
-    var arg0 = args[0].(QDate).qclsinst
+    var arg0 = args[0].(*QDate).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QCalendarWidget14setMaximumDateERK5QDate(this.qclsinst, arg0)
+    C.C_ZN15QCalendarWidget14setMaximumDateERK5QDate(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setMaximumDate", args)
   }
@@ -184,11 +184,15 @@ func (this *QCalendarWidget) Headertextformat(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK15QCalendarWidget16headerTextFormatEv
     // invoke: QTextCharFormat headerTextFormat()
-    var ret0 = C.C_ZNK15QCalendarWidget16headerTextFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QCalendarWidget16headerTextFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCharFormat{}) // "QTextCharFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "headerTextFormat", args)
   }
@@ -209,7 +213,7 @@ func (this *QCalendarWidget) Showselecteddate(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget16showSelectedDateEv
     // invoke: void showSelectedDate()
-    C.C_ZN15QCalendarWidget16showSelectedDateEv(this.qclsinst)
+    C.C_ZN15QCalendarWidget16showSelectedDateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "showSelectedDate", args)
   }
@@ -233,7 +237,7 @@ func (this *QCalendarWidget) Setgridvisible(args ...interface{}) () {
     // invoke: void setGridVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QCalendarWidget14setGridVisibleEb(this.qclsinst, arg0)
+    C.C_ZN15QCalendarWidget14setGridVisibleEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setGridVisible", args)
   }
@@ -255,9 +259,9 @@ func (this *QCalendarWidget) Setdateeditacceptdelay(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget22setDateEditAcceptDelayEi
     // invoke: void setDateEditAcceptDelay(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QCalendarWidget22setDateEditAcceptDelayEi(this.qclsinst, arg0)
+    C.C_ZN15QCalendarWidget22setDateEditAcceptDelayEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setDateEditAcceptDelay", args)
   }
@@ -280,11 +284,11 @@ func (this *QCalendarWidget) Setdaterange(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget12setDateRangeERK5QDateS2_
     // invoke: void setDateRange(const class QDate &, const class QDate &)
-    var arg0 = args[0].(QDate).qclsinst
+    var arg0 = args[0].(*QDate).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QDate).qclsinst
+    var arg1 = args[1].(*QDate).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN15QCalendarWidget12setDateRangeERK5QDateS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN15QCalendarWidget12setDateRangeERK5QDateS2_(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setDateRange", args)
   }
@@ -305,11 +309,15 @@ func (this *QCalendarWidget) Isdateeditenabled(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK15QCalendarWidget17isDateEditEnabledEv
     // invoke: bool isDateEditEnabled()
-    var ret0 = C.C_ZNK15QCalendarWidget17isDateEditEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QCalendarWidget17isDateEditEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "isDateEditEnabled", args)
   }
@@ -330,7 +338,7 @@ func (this *QCalendarWidget) Freeqcalendarwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidgetD0Ev
     // invoke: void ~QCalendarWidget()
-    C.C_ZN15QCalendarWidgetD2Ev(this.qclsinst)
+    C.C_ZN15QCalendarWidgetD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "~QCalendarWidget", args)
   }
@@ -354,17 +362,21 @@ func (this *QCalendarWidget) Datetextformat(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK15QCalendarWidget14dateTextFormatERK5QDate
     // invoke: QTextCharFormat dateTextFormat(const class QDate &)
-    var arg0 = args[0].(QDate).qclsinst
+    var arg0 = args[0].(*QDate).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK15QCalendarWidget14dateTextFormatERK5QDate(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK15QCalendarWidget14dateTextFormatERK5QDate(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCharFormat{}) // "QTextCharFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK15QCalendarWidget14dateTextFormatEv
     // invoke: QMap<QDate, QTextCharFormat> dateTextFormat()
-    C.C_ZNK15QCalendarWidget14dateTextFormatEv(this.qclsinst)
+    C.C_ZNK15QCalendarWidget14dateTextFormatEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "dateTextFormat", args)
   }
@@ -385,11 +397,15 @@ func (this *QCalendarWidget) Isnavigationbarvisible(args ...interface{}) (ret in
   case 0:
     // invoke: _ZNK15QCalendarWidget22isNavigationBarVisibleEv
     // invoke: bool isNavigationBarVisible()
-    var ret0 = C.C_ZNK15QCalendarWidget22isNavigationBarVisibleEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QCalendarWidget22isNavigationBarVisibleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "isNavigationBarVisible", args)
   }
@@ -410,7 +426,7 @@ func (this *QCalendarWidget) Firstdayofweek(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget14firstDayOfWeekEv
     // invoke: Qt::DayOfWeek firstDayOfWeek()
-    C.C_ZNK15QCalendarWidget14firstDayOfWeekEv(this.qclsinst)
+    C.C_ZNK15QCalendarWidget14firstDayOfWeekEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "firstDayOfWeek", args)
   }
@@ -431,11 +447,15 @@ func (this *QCalendarWidget) Monthshown(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QCalendarWidget10monthShownEv
     // invoke: int monthShown()
-    var ret0 = C.C_ZNK15QCalendarWidget10monthShownEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QCalendarWidget10monthShownEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "monthShown", args)
   }
@@ -459,7 +479,7 @@ func (this *QCalendarWidget) Setnavigationbarvisible(args ...interface{}) () {
     // invoke: void setNavigationBarVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QCalendarWidget23setNavigationBarVisibleEb(this.qclsinst, arg0)
+    C.C_ZN15QCalendarWidget23setNavigationBarVisibleEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setNavigationBarVisible", args)
   }
@@ -480,7 +500,7 @@ func (this *QCalendarWidget) Shownextyear(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget12showNextYearEv
     // invoke: void showNextYear()
-    C.C_ZN15QCalendarWidget12showNextYearEv(this.qclsinst)
+    C.C_ZN15QCalendarWidget12showNextYearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "showNextYear", args)
   }
@@ -502,9 +522,9 @@ func (this *QCalendarWidget) Setminimumdate(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget14setMinimumDateERK5QDate
     // invoke: void setMinimumDate(const class QDate &)
-    var arg0 = args[0].(QDate).qclsinst
+    var arg0 = args[0].(*QDate).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QCalendarWidget14setMinimumDateERK5QDate(this.qclsinst, arg0)
+    C.C_ZN15QCalendarWidget14setMinimumDateERK5QDate(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setMinimumDate", args)
   }
@@ -525,11 +545,15 @@ func (this *QCalendarWidget) Yearshown(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QCalendarWidget9yearShownEv
     // invoke: int yearShown()
-    var ret0 = C.C_ZNK15QCalendarWidget9yearShownEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QCalendarWidget9yearShownEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "yearShown", args)
   }
@@ -551,9 +575,9 @@ func (this *QCalendarWidget) Setheadertextformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget19setHeaderTextFormatERK15QTextCharFormat
     // invoke: void setHeaderTextFormat(const class QTextCharFormat &)
-    var arg0 = args[0].(QTextCharFormat).qclsinst
+    var arg0 = args[0].(*QTextCharFormat).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QCalendarWidget19setHeaderTextFormatERK15QTextCharFormat(this.qclsinst, arg0)
+    C.C_ZN15QCalendarWidget19setHeaderTextFormatERK15QTextCharFormat(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setHeaderTextFormat", args)
   }
@@ -574,7 +598,7 @@ func (this *QCalendarWidget) Verticalheaderformat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget20verticalHeaderFormatEv
     // invoke: QCalendarWidget::VerticalHeaderFormat verticalHeaderFormat()
-    C.C_ZNK15QCalendarWidget20verticalHeaderFormatEv(this.qclsinst)
+    C.C_ZNK15QCalendarWidget20verticalHeaderFormatEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "verticalHeaderFormat", args)
   }
@@ -595,11 +619,15 @@ func (this *QCalendarWidget) Minimumdate(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK15QCalendarWidget11minimumDateEv
     // invoke: QDate minimumDate()
-    var ret0 = C.C_ZNK15QCalendarWidget11minimumDateEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QCalendarWidget11minimumDateEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDate{}) // "QDate"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "minimumDate", args)
   }
@@ -620,11 +648,15 @@ func (this *QCalendarWidget) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QCalendarWidget8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK15QCalendarWidget8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QCalendarWidget8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "sizeHint", args)
   }
@@ -646,9 +678,9 @@ func (this *QCalendarWidget) Setselecteddate(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget15setSelectedDateERK5QDate
     // invoke: void setSelectedDate(const class QDate &)
-    var arg0 = args[0].(QDate).qclsinst
+    var arg0 = args[0].(*QDate).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QCalendarWidget15setSelectedDateERK5QDate(this.qclsinst, arg0)
+    C.C_ZN15QCalendarWidget15setSelectedDateERK5QDate(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setSelectedDate", args)
   }
@@ -669,7 +701,7 @@ func (this *QCalendarWidget) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QCalendarWidget10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QCalendarWidget10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "metaObject", args)
   }
@@ -690,7 +722,7 @@ func (this *QCalendarWidget) Selectionmode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QCalendarWidget13selectionModeEv
     // invoke: QCalendarWidget::SelectionMode selectionMode()
-    C.C_ZNK15QCalendarWidget13selectionModeEv(this.qclsinst)
+    C.C_ZNK15QCalendarWidget13selectionModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "selectionMode", args)
   }
@@ -713,11 +745,11 @@ func (this *QCalendarWidget) Setcurrentpage(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget14setCurrentPageEii
     // invoke: void setCurrentPage(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN15QCalendarWidget14setCurrentPageEii(this.qclsinst, arg0, arg1)
+    C.C_ZN15QCalendarWidget14setCurrentPageEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setCurrentPage", args)
   }
@@ -740,11 +772,11 @@ func (this *QCalendarWidget) Setdatetextformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget17setDateTextFormatERK5QDateRK15QTextCharFormat
     // invoke: void setDateTextFormat(const class QDate &, const class QTextCharFormat &)
-    var arg0 = args[0].(QDate).qclsinst
+    var arg0 = args[0].(*QDate).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QTextCharFormat).qclsinst
+    var arg1 = args[1].(*QTextCharFormat).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN15QCalendarWidget17setDateTextFormatERK5QDateRK15QTextCharFormat(this.qclsinst, arg0, arg1)
+    C.C_ZN15QCalendarWidget17setDateTextFormatERK5QDateRK15QTextCharFormat(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setDateTextFormat", args)
   }
@@ -765,11 +797,15 @@ func (this *QCalendarWidget) Selecteddate(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK15QCalendarWidget12selectedDateEv
     // invoke: QDate selectedDate()
-    var ret0 = C.C_ZNK15QCalendarWidget12selectedDateEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QCalendarWidget12selectedDateEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDate{}) // "QDate"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "selectedDate", args)
   }
@@ -790,11 +826,15 @@ func (this *QCalendarWidget) Maximumdate(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK15QCalendarWidget11maximumDateEv
     // invoke: QDate maximumDate()
-    var ret0 = C.C_ZNK15QCalendarWidget11maximumDateEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QCalendarWidget11maximumDateEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDate{}) // "QDate"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "maximumDate", args)
   }
@@ -815,11 +855,15 @@ func (this *QCalendarWidget) Minimumsizehint(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK15QCalendarWidget15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK15QCalendarWidget15minimumSizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QCalendarWidget15minimumSizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "minimumSizeHint", args)
   }
@@ -840,7 +884,7 @@ func (this *QCalendarWidget) Showpreviousmonth(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget17showPreviousMonthEv
     // invoke: void showPreviousMonth()
-    C.C_ZN15QCalendarWidget17showPreviousMonthEv(this.qclsinst)
+    C.C_ZN15QCalendarWidget17showPreviousMonthEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "showPreviousMonth", args)
   }
@@ -861,11 +905,15 @@ func (this *QCalendarWidget) Dateeditacceptdelay(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK15QCalendarWidget19dateEditAcceptDelayEv
     // invoke: int dateEditAcceptDelay()
-    var ret0 = C.C_ZNK15QCalendarWidget19dateEditAcceptDelayEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QCalendarWidget19dateEditAcceptDelayEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "dateEditAcceptDelay", args)
   }
@@ -886,7 +934,7 @@ func (this *QCalendarWidget) Showpreviousyear(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget16showPreviousYearEv
     // invoke: void showPreviousYear()
-    C.C_ZN15QCalendarWidget16showPreviousYearEv(this.qclsinst)
+    C.C_ZN15QCalendarWidget16showPreviousYearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "showPreviousYear", args)
   }
@@ -907,11 +955,15 @@ func (this *QCalendarWidget) Isgridvisible(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK15QCalendarWidget13isGridVisibleEv
     // invoke: bool isGridVisible()
-    var ret0 = C.C_ZNK15QCalendarWidget13isGridVisibleEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QCalendarWidget13isGridVisibleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "isGridVisible", args)
   }
@@ -935,7 +987,7 @@ func (this *QCalendarWidget) Setdateeditenabled(args ...interface{}) () {
     // invoke: void setDateEditEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QCalendarWidget18setDateEditEnabledEb(this.qclsinst, arg0)
+    C.C_ZN15QCalendarWidget18setDateEditEnabledEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setDateEditEnabled", args)
   }
@@ -957,17 +1009,17 @@ func NewQCalendarWidget(args ...interface{}) *QCalendarWidget {
   case 0:
     // invoke: _ZN15QCalendarWidgetC1EP7QWidget
     // invoke: void QCalendarWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QCalendarWidgetC2EP7QWidget(arg0)
-    return &QCalendarWidget{qclsinst:qthis}
+    return &QCalendarWidget{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCalendarWidget", "QCalendarWidget", args)
   }
 
-  return nil // QCalendarWidget{qclsinst:qthis}
+  return nil // QCalendarWidget{Qclsinst:qthis}
 }
 
 // showNextMonth()
@@ -983,7 +1035,7 @@ func (this *QCalendarWidget) Shownextmonth(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget13showNextMonthEv
     // invoke: void showNextMonth()
-    C.C_ZN15QCalendarWidget13showNextMonthEv(this.qclsinst)
+    C.C_ZN15QCalendarWidget13showNextMonthEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "showNextMonth", args)
   }
@@ -1004,7 +1056,7 @@ func (this *QCalendarWidget) Showtoday(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget9showTodayEv
     // invoke: void showToday()
-    C.C_ZN15QCalendarWidget9showTodayEv(this.qclsinst)
+    C.C_ZN15QCalendarWidget9showTodayEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCalendarWidget", "showToday", args)
   }

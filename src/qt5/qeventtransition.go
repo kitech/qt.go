@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qeventtransition.h
 // dst-file: /src/core/qeventtransition.go
 //
@@ -55,7 +55,7 @@ func init() {
 // class sizeof(QEventTransition)=1
 type QEventTransition struct {
   /*qbase*/ QAbstractTransition;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // metaObject()
@@ -71,7 +71,7 @@ func (this *QEventTransition) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QEventTransition10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK16QEventTransition10metaObjectEv(this.qclsinst)
+    C.C_ZNK16QEventTransition10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEventTransition", "metaObject", args)
   }
@@ -93,9 +93,9 @@ func (this *QEventTransition) Seteventsource(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QEventTransition14setEventSourceEP7QObject
     // invoke: void setEventSource(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QEventTransition14setEventSourceEP7QObject(this.qclsinst, arg0)
+    C.C_ZN16QEventTransition14setEventSourceEP7QObject(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEventTransition", "setEventSource", args)
   }
@@ -117,17 +117,17 @@ func NewQEventTransition(args ...interface{}) *QEventTransition {
   case 0:
     // invoke: _ZN16QEventTransitionC1EP6QState
     // invoke: void QEventTransition(class QState *)
-    var arg0 = args[0].(QState).qclsinst
+    var arg0 = args[0].(*QState).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QEventTransitionC2EP6QState(arg0)
-    return &QEventTransition{qclsinst:qthis}
+    return &QEventTransition{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QEventTransition", "QEventTransition", args)
   }
 
-  return nil // QEventTransition{qclsinst:qthis}
+  return nil // QEventTransition{Qclsinst:qthis}
 }
 
 // eventSource()
@@ -143,11 +143,15 @@ func (this *QEventTransition) Eventsource(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK16QEventTransition11eventSourceEv
     // invoke: QObject * eventSource()
-    var ret0 = C.C_ZNK16QEventTransition11eventSourceEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QEventTransition11eventSourceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QObject{}) // "QObject *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QEventTransition", "eventSource", args)
   }
@@ -168,7 +172,7 @@ func (this *QEventTransition) Eventtype(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QEventTransition9eventTypeEv
     // invoke: QEvent::Type eventType()
-    C.C_ZNK16QEventTransition9eventTypeEv(this.qclsinst)
+    C.C_ZNK16QEventTransition9eventTypeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEventTransition", "eventType", args)
   }
@@ -189,7 +193,7 @@ func (this *QEventTransition) Freeqeventtransition(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QEventTransitionD0Ev
     // invoke: void ~QEventTransition()
-    C.C_ZN16QEventTransitionD2Ev(this.qclsinst)
+    C.C_ZN16QEventTransitionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QEventTransition", "~QEventTransition", args)
   }

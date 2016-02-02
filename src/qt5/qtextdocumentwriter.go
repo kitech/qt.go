@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qtextdocumentwriter.h
 // dst-file: /src/gui/qtextdocumentwriter.go
 //
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QTextDocumentWriter)=8
 type QTextDocumentWriter struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // format()
@@ -89,11 +89,15 @@ func (this *QTextDocumentWriter) Format(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QTextDocumentWriter6formatEv
     // invoke: QByteArray format()
-    var ret0 = C.C_ZNK19QTextDocumentWriter6formatEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QTextDocumentWriter6formatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "format", args)
   }
@@ -115,9 +119,9 @@ func (this *QTextDocumentWriter) Setformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QTextDocumentWriter9setFormatERK10QByteArray
     // invoke: void setFormat(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN19QTextDocumentWriter9setFormatERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN19QTextDocumentWriter9setFormatERK10QByteArray(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "setFormat", args)
   }
@@ -139,9 +143,9 @@ func (this *QTextDocumentWriter) Setfilename(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QTextDocumentWriter11setFileNameERK7QString
     // invoke: void setFileName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN19QTextDocumentWriter11setFileNameERK7QString(this.qclsinst, arg0)
+    C.C_ZN19QTextDocumentWriter11setFileNameERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "setFileName", args)
   }
@@ -173,34 +177,34 @@ func NewQTextDocumentWriter(args ...interface{}) *QTextDocumentWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QTextDocumentWriterC2Ev()
-    return &QTextDocumentWriter{qclsinst:qthis}
+    return &QTextDocumentWriter{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QTextDocumentWriterC1EP9QIODeviceRK10QByteArray
     // invoke: void QTextDocumentWriter(class QIODevice *, const class QByteArray &)
-    var arg0 = args[0].(QIODevice).qclsinst
+    var arg0 = args[0].(*QIODevice).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
+    var arg1 = args[1].(*QByteArray).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QTextDocumentWriterC2EP9QIODeviceRK10QByteArray(arg0, arg1)
-    return &QTextDocumentWriter{qclsinst:qthis}
+    return &QTextDocumentWriter{Qclsinst:qthis}
   case 2:
     // invoke: _ZN19QTextDocumentWriterC1ERK7QStringRK10QByteArray
     // invoke: void QTextDocumentWriter(const class QString &, const class QByteArray &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
+    var arg1 = args[1].(*QByteArray).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QTextDocumentWriterC2ERK7QStringRK10QByteArray(arg0, arg1)
-    return &QTextDocumentWriter{qclsinst:qthis}
+    return &QTextDocumentWriter{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "QTextDocumentWriter", args)
   }
 
-  return nil // QTextDocumentWriter{qclsinst:qthis}
+  return nil // QTextDocumentWriter{Qclsinst:qthis}
 }
 
 // fileName()
@@ -216,11 +220,15 @@ func (this *QTextDocumentWriter) Filename(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK19QTextDocumentWriter8fileNameEv
     // invoke: QString fileName()
-    var ret0 = C.C_ZNK19QTextDocumentWriter8fileNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QTextDocumentWriter8fileNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "fileName", args)
   }
@@ -245,23 +253,31 @@ func (this *QTextDocumentWriter) Write(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment
     // invoke: bool write(const class QTextDocumentFragment &)
-    var arg0 = args[0].(QTextDocumentFragment).qclsinst
+    var arg0 = args[0].(*QTextDocumentFragment).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment(this.qclsinst, arg0)
+    var ret0 = C.C_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN19QTextDocumentWriter5writeEPK13QTextDocument
     // invoke: bool write(const class QTextDocument *)
-    var arg0 = args[0].(QTextDocument).qclsinst
+    var arg0 = args[0].(*QTextDocument).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN19QTextDocumentWriter5writeEPK13QTextDocument(this.qclsinst, arg0)
+    var ret0 = C.C_ZN19QTextDocumentWriter5writeEPK13QTextDocument(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "write", args)
   }
@@ -282,11 +298,15 @@ func (this *QTextDocumentWriter) Codec(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QTextDocumentWriter5codecEv
     // invoke: QTextCodec * codec()
-    var ret0 = C.C_ZNK19QTextDocumentWriter5codecEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QTextDocumentWriter5codecEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCodec{}) // "QTextCodec *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "codec", args)
   }
@@ -307,7 +327,7 @@ func (this *QTextDocumentWriter) Freeqtextdocumentwriter(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QTextDocumentWriterD0Ev
     // invoke: void ~QTextDocumentWriter()
-    C.C_ZN19QTextDocumentWriterD2Ev(this.qclsinst)
+    C.C_ZN19QTextDocumentWriterD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "~QTextDocumentWriter", args)
   }
@@ -329,9 +349,9 @@ func (this *QTextDocumentWriter) Setdevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QTextDocumentWriter9setDeviceEP9QIODevice
     // invoke: void setDevice(class QIODevice *)
-    var arg0 = args[0].(QIODevice).qclsinst
+    var arg0 = args[0].(*QIODevice).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN19QTextDocumentWriter9setDeviceEP9QIODevice(this.qclsinst, arg0)
+    C.C_ZN19QTextDocumentWriter9setDeviceEP9QIODevice(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "setDevice", args)
   }
@@ -352,11 +372,15 @@ func (this *QTextDocumentWriter) Device(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QTextDocumentWriter6deviceEv
     // invoke: QIODevice * device()
-    var ret0 = C.C_ZNK19QTextDocumentWriter6deviceEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QTextDocumentWriter6deviceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIODevice{}) // "QIODevice *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "device", args)
   }
@@ -378,9 +402,9 @@ func (this *QTextDocumentWriter) Setcodec(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QTextDocumentWriter8setCodecEP10QTextCodec
     // invoke: void setCodec(class QTextCodec *)
-    var arg0 = args[0].(QTextCodec).qclsinst
+    var arg0 = args[0].(*QTextCodec).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN19QTextDocumentWriter8setCodecEP10QTextCodec(this.qclsinst, arg0)
+    C.C_ZN19QTextDocumentWriter8setCodecEP10QTextCodec(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "setCodec", args)
   }

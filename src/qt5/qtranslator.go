@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.go
 //
@@ -59,7 +59,7 @@ func init() {
 // class sizeof(QTranslator)=1
 type QTranslator struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // load(const class QString &, const class QString &, const class QString &, const class QString &)
@@ -91,37 +91,45 @@ func (this *QTranslator) Load(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QTranslator4loadERK7QStringS2_S2_S2_
     // invoke: bool load(const class QString &, const class QString &, const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QString).qclsinst
+    var arg3 = args[3].(*QString).Qclsinst
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN11QTranslator4loadERK7QStringS2_S2_S2_(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZN11QTranslator4loadERK7QStringS2_S2_S2_(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_
     // invoke: bool load(const class QLocale &, const class QString &, const class QString &, const class QString &, const class QString &)
-    var arg0 = args[0].(QLocale).qclsinst
+    var arg0 = args[0].(*QLocale).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = args[3].(QString).qclsinst
+    var arg3 = args[3].(*QString).Qclsinst
     if false {fmt.Println(arg3)}
-    var arg4 = args[4].(QString).qclsinst
+    var arg4 = args[4].(*QString).Qclsinst
     if false {fmt.Println(arg4)}
-    var ret0 = C.C_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    var ret0 = C.C_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN11QTranslator4loadEPKhiRK7QString
     // invoke: bool load(const uchar *, int, const class QString &)
@@ -129,15 +137,19 @@ func (this *QTranslator) Load(args ...interface{}) (ret interface{}) {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QString).qclsinst
+    var arg2 = args[2].(*QString).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN11QTranslator4loadEPKhiRK7QString(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN11QTranslator4loadEPKhiRK7QString(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTranslator", "load", args)
   }
@@ -158,7 +170,7 @@ func (this *QTranslator) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTranslator10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QTranslator10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QTranslator10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTranslator", "metaObject", args)
   }
@@ -179,7 +191,7 @@ func (this *QTranslator) Freeqtranslator(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTranslatorD0Ev
     // invoke: void ~QTranslator()
-    C.C_ZN11QTranslatorD2Ev(this.qclsinst)
+    C.C_ZN11QTranslatorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTranslator", "~QTranslator", args)
   }
@@ -200,11 +212,15 @@ func (this *QTranslator) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTranslator7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK11QTranslator7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTranslator7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTranslator", "isEmpty", args)
   }
@@ -226,17 +242,17 @@ func NewQTranslator(args ...interface{}) *QTranslator {
   case 0:
     // invoke: _ZN11QTranslatorC1EP7QObject
     // invoke: void QTranslator(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTranslatorC2EP7QObject(arg0)
-    return &QTranslator{qclsinst:qthis}
+    return &QTranslator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTranslator", "QTranslator", args)
   }
 
-  return nil // QTranslator{qclsinst:qthis}
+  return nil // QTranslator{Qclsinst:qthis}
 }
 
 // translate(const char *, const char *, const char *, int)
@@ -268,13 +284,17 @@ func (this *QTranslator) Translate(args ...interface{}) (ret interface{}) {
     var arg2 = argif2.(unsafe.Pointer)
     if false {fmt.Println(argif2, arg2)}
     if free2 {defer C.free(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK11QTranslator9translateEPKcS1_S1_i(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZNK11QTranslator9translateEPKcS1_S1_i(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTranslator", "translate", args)
   }

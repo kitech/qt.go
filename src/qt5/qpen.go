@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.go
 //
@@ -93,7 +93,7 @@ func init() {
 // class sizeof(QPen)=8
 type QPen struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // color()
@@ -109,11 +109,15 @@ func (this *QPen) Color(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK4QPen5colorEv
     // invoke: QColor color()
-    var ret0 = C.C_ZNK4QPen5colorEv(this.qclsinst)
+    var ret0 = C.C_ZNK4QPen5colorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPen", "color", args)
   }
@@ -134,11 +138,15 @@ func (this *QPen) Brush(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK4QPen5brushEv
     // invoke: QBrush brush()
-    var ret0 = C.C_ZNK4QPen5brushEv(this.qclsinst)
+    var ret0 = C.C_ZNK4QPen5brushEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "QBrush"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPen", "brush", args)
   }
@@ -160,9 +168,9 @@ func (this *QPen) Setwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QPen8setWidthEi
     // invoke: void setWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN4QPen8setWidthEi(this.qclsinst, arg0)
+    C.C_ZN4QPen8setWidthEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setWidth", args)
   }
@@ -183,7 +191,7 @@ func (this *QPen) Style(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QPen5styleEv
     // invoke: Qt::PenStyle style()
-    C.C_ZNK4QPen5styleEv(this.qclsinst)
+    C.C_ZNK4QPen5styleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "style", args)
   }
@@ -204,11 +212,15 @@ func (this *QPen) Iscosmetic(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK4QPen10isCosmeticEv
     // invoke: bool isCosmetic()
-    var ret0 = C.C_ZNK4QPen10isCosmeticEv(this.qclsinst)
+    var ret0 = C.C_ZNK4QPen10isCosmeticEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPen", "isCosmetic", args)
   }
@@ -229,7 +241,7 @@ func (this *QPen) Freeqpen(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QPenD0Ev
     // invoke: void ~QPen()
-    C.C_ZN4QPenD2Ev(this.qclsinst)
+    C.C_ZN4QPenD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "~QPen", args)
   }
@@ -250,7 +262,7 @@ func (this *QPen) Joinstyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QPen9joinStyleEv
     // invoke: Qt::PenJoinStyle joinStyle()
-    C.C_ZNK4QPen9joinStyleEv(this.qclsinst)
+    C.C_ZNK4QPen9joinStyleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "joinStyle", args)
   }
@@ -271,11 +283,15 @@ func (this *QPen) Width(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK4QPen5widthEv
     // invoke: int width()
-    var ret0 = C.C_ZNK4QPen5widthEv(this.qclsinst)
+    var ret0 = C.C_ZNK4QPen5widthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPen", "width", args)
   }
@@ -297,9 +313,9 @@ func (this *QPen) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QPen4swapERS_
     // invoke: void swap(class QPen &)
-    var arg0 = args[0].(QPen).qclsinst
+    var arg0 = args[0].(*QPen).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QPen4swapERS_(this.qclsinst, arg0)
+    C.C_ZN4QPen4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "swap", args)
   }
@@ -320,11 +336,15 @@ func (this *QPen) Dashoffset(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK4QPen10dashOffsetEv
     // invoke: qreal dashOffset()
-    var ret0 = C.C_ZNK4QPen10dashOffsetEv(this.qclsinst)
+    var ret0 = C.C_ZNK4QPen10dashOffsetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPen", "dashOffset", args)
   }
@@ -345,11 +365,15 @@ func (this *QPen) Isdetached(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN4QPen10isDetachedEv
     // invoke: bool isDetached()
-    var ret0 = C.C_ZN4QPen10isDetachedEv(this.qclsinst)
+    var ret0 = C.C_ZN4QPen10isDetachedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPen", "isDetached", args)
   }
@@ -370,11 +394,15 @@ func (this *QPen) Miterlimit(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK4QPen10miterLimitEv
     // invoke: qreal miterLimit()
-    var ret0 = C.C_ZNK4QPen10miterLimitEv(this.qclsinst)
+    var ret0 = C.C_ZNK4QPen10miterLimitEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPen", "miterLimit", args)
   }
@@ -395,11 +423,15 @@ func (this *QPen) Issolid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK4QPen7isSolidEv
     // invoke: bool isSolid()
-    var ret0 = C.C_ZNK4QPen7isSolidEv(this.qclsinst)
+    var ret0 = C.C_ZNK4QPen7isSolidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPen", "isSolid", args)
   }
@@ -426,33 +458,33 @@ func NewQPen(args ...interface{}) *QPen {
   case 0:
     // invoke: _ZN4QPenC1ERKS_
     // invoke: void QPen(const class QPen &)
-    var arg0 = args[0].(QPen).qclsinst
+    var arg0 = args[0].(*QPen).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QPenC2ERKS_(arg0)
-    return &QPen{qclsinst:qthis}
+    return &QPen{Qclsinst:qthis}
   case 1:
     // invoke: _ZN4QPenC1ERK6QColor
     // invoke: void QPen(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QPenC2ERK6QColor(arg0)
-    return &QPen{qclsinst:qthis}
+    return &QPen{Qclsinst:qthis}
   case 2:
     // invoke: _ZN4QPenC1Ev
     // invoke: void QPen()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QPenC2Ev()
-    return &QPen{qclsinst:qthis}
+    return &QPen{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPen", "QPen", args)
   }
 
-  return nil // QPen{qclsinst:qthis}
+  return nil // QPen{Qclsinst:qthis}
 }
 
 // widthF()
@@ -468,11 +500,15 @@ func (this *QPen) Widthf(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK4QPen6widthFEv
     // invoke: qreal widthF()
-    var ret0 = C.C_ZNK4QPen6widthFEv(this.qclsinst)
+    var ret0 = C.C_ZNK4QPen6widthFEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPen", "widthF", args)
   }
@@ -493,7 +529,7 @@ func (this *QPen) Dashpattern(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QPen11dashPatternEv
     // invoke: QVector<qreal> dashPattern()
-    C.C_ZNK4QPen11dashPatternEv(this.qclsinst)
+    C.C_ZNK4QPen11dashPatternEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "dashPattern", args)
   }
@@ -515,9 +551,9 @@ func (this *QPen) Setcolor(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QPen8setColorERK6QColor
     // invoke: void setColor(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QPen8setColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN4QPen8setColorERK6QColor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setColor", args)
   }
@@ -539,9 +575,9 @@ func (this *QPen) Setmiterlimit(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QPen13setMiterLimitEd
     // invoke: void setMiterLimit(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN4QPen13setMiterLimitEd(this.qclsinst, arg0)
+    C.C_ZN4QPen13setMiterLimitEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setMiterLimit", args)
   }
@@ -565,7 +601,7 @@ func (this *QPen) Setcosmetic(args ...interface{}) () {
     // invoke: void setCosmetic(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN4QPen11setCosmeticEb(this.qclsinst, arg0)
+    C.C_ZN4QPen11setCosmeticEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setCosmetic", args)
   }
@@ -587,9 +623,9 @@ func (this *QPen) Setwidthf(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QPen9setWidthFEd
     // invoke: void setWidthF(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN4QPen9setWidthFEd(this.qclsinst, arg0)
+    C.C_ZN4QPen9setWidthFEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setWidthF", args)
   }
@@ -610,7 +646,7 @@ func (this *QPen) Capstyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QPen8capStyleEv
     // invoke: Qt::PenCapStyle capStyle()
-    C.C_ZNK4QPen8capStyleEv(this.qclsinst)
+    C.C_ZNK4QPen8capStyleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "capStyle", args)
   }
@@ -632,9 +668,9 @@ func (this *QPen) Setbrush(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QPen8setBrushERK6QBrush
     // invoke: void setBrush(const class QBrush &)
-    var arg0 = args[0].(QBrush).qclsinst
+    var arg0 = args[0].(*QBrush).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QPen8setBrushERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN4QPen8setBrushERK6QBrush(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setBrush", args)
   }
@@ -656,9 +692,9 @@ func (this *QPen) Setdashoffset(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QPen13setDashOffsetEd
     // invoke: void setDashOffset(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN4QPen13setDashOffsetEd(this.qclsinst, arg0)
+    C.C_ZN4QPen13setDashOffsetEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setDashOffset", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.go
 //
@@ -55,13 +55,13 @@ func init() {
 // class sizeof(QHashDummyValue)=1
 type QHashDummyValue struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QHashData)=1
 type QHashData struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // rehash(int)
@@ -78,9 +78,9 @@ func (this *QHashData) Rehash(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QHashData6rehashEi
     // invoke: void rehash(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QHashData6rehashEi(this.qclsinst, arg0)
+    C.C_ZN9QHashData6rehashEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHashData", "rehash", args)
   }
@@ -101,11 +101,15 @@ func (this *QHashData) Willgrow(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QHashData8willGrowEv
     // invoke: bool willGrow()
-    var ret0 = C.C_ZN9QHashData8willGrowEv(this.qclsinst)
+    var ret0 = C.C_ZN9QHashData8willGrowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QHashData", "willGrow", args)
   }
@@ -127,13 +131,17 @@ func (this *QHashData) Allocatenode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QHashData12allocateNodeEi
     // invoke: void * allocateNode(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN9QHashData12allocateNodeEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN9QHashData12allocateNodeEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.VoidpTy() // "void *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QHashData", "allocateNode", args)
   }
@@ -157,7 +165,7 @@ func (this *QHashData) Freenode(args ...interface{}) () {
     // invoke: void freeNode(void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
-    C.C_ZN9QHashData8freeNodeEPv(this.qclsinst, arg0)
+    C.C_ZN9QHashData8freeNodeEPv(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHashData", "freeNode", args)
   }
@@ -178,7 +186,7 @@ func (this *QHashData) Firstnode(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QHashData9firstNodeEv
     // invoke: QHashData::Node * firstNode()
-    C.C_ZN9QHashData9firstNodeEv(this.qclsinst)
+    C.C_ZN9QHashData9firstNodeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QHashData", "firstNode", args)
   }
@@ -199,7 +207,7 @@ func (this *QHashData) Hasshrunk(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QHashData9hasShrunkEv
     // invoke: void hasShrunk()
-    C.C_ZN9QHashData9hasShrunkEv(this.qclsinst)
+    C.C_ZN9QHashData9hasShrunkEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QHashData", "hasShrunk", args)
   }

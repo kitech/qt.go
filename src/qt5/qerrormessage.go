@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qerrormessage.h
 // dst-file: /src/widgets/qerrormessage.go
 //
@@ -55,7 +55,7 @@ func init() {
 // class sizeof(QErrorMessage)=1
 type QErrorMessage struct {
   /*qbase*/ QDialog;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // metaObject()
@@ -71,7 +71,7 @@ func (this *QErrorMessage) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QErrorMessage10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK13QErrorMessage10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QErrorMessage10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QErrorMessage", "metaObject", args)
   }
@@ -93,17 +93,17 @@ func NewQErrorMessage(args ...interface{}) *QErrorMessage {
   case 0:
     // invoke: _ZN13QErrorMessageC1EP7QWidget
     // invoke: void QErrorMessage(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QErrorMessageC2EP7QWidget(arg0)
-    return &QErrorMessage{qclsinst:qthis}
+    return &QErrorMessage{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QErrorMessage", "QErrorMessage", args)
   }
 
-  return nil // QErrorMessage{qclsinst:qthis}
+  return nil // QErrorMessage{Qclsinst:qthis}
 }
 
 // ~QErrorMessage()
@@ -119,7 +119,7 @@ func (this *QErrorMessage) Freeqerrormessage(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QErrorMessageD0Ev
     // invoke: void ~QErrorMessage()
-    C.C_ZN13QErrorMessageD2Ev(this.qclsinst)
+    C.C_ZN13QErrorMessageD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QErrorMessage", "~QErrorMessage", args)
   }
@@ -144,7 +144,11 @@ func (this *QErrorMessage) Qthandler_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QErrorMessage{}) // "QErrorMessage *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QErrorMessage", "qtHandler", args)
   }
@@ -170,17 +174,17 @@ func (this *QErrorMessage) Showmessage(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QErrorMessage11showMessageERK7QStringS2_
     // invoke: void showMessage(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN13QErrorMessage11showMessageERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN13QErrorMessage11showMessageERK7QStringS2_(this.Qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN13QErrorMessage11showMessageERK7QString
     // invoke: void showMessage(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QErrorMessage11showMessageERK7QString(this.qclsinst, arg0)
+    C.C_ZN13QErrorMessage11showMessageERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QErrorMessage", "showMessage", args)
   }

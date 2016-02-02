@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qstringbuilder.h
 // dst-file: /src/core/qstringbuilder.go
 //
@@ -77,79 +77,79 @@ func init() {
 // class sizeof(QConcatenable<QLatin1String>)=1
 type QConcatenableLQLatin1StringG struct {
   /*qbase*/ QAbstractConcatenable;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QConcatenable<QCharRef>)=1
 type QConcatenableLQCharRefG struct {
   /*qbase*/ QAbstractConcatenable;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QConcatenable<QStringRef>)=1
 type QConcatenableLQStringRefG struct {
   /*qbase*/ QAbstractConcatenable;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QAbstractConcatenable)=1
 type QAbstractConcatenable struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QConcatenable<QString>)=1
 type QConcatenableLQStringG struct {
   /*qbase*/ QAbstractConcatenable;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QConcatenable<QLatin1Char>)=1
 type QConcatenableLQLatin1CharG struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QConcatenable<char>)=1
 type QConcatenableLcharG struct {
   /*qbase*/ QAbstractConcatenable;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QConcatenable<QByteArray>)=1
 type QConcatenableLQByteArrayG struct {
   /*qbase*/ QAbstractConcatenable;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QConcatenable<QChar::SpecialCharacter>)=1
 type QConcatenableLQChar__SpecialCharacterG struct {
   /*qbase*/ QAbstractConcatenable;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QConcatenable<QChar>)=1
 type QConcatenableLQCharG struct {
   /*qbase*/ QAbstractConcatenable;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStringBuilder<QByteArray, QByteArray>)=1
 type QStringBuilderLQByteArray_EQByteArrayG struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QConcatenable<const char *>)=1
 type QConcatenableLconstEcharEPG struct {
   /*qbase*/ QAbstractConcatenable;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStringBuilder<QString, QString>)=1
 type QStringBuilderLQString_EQStringG struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // appendTo(class QCharRef, class QChar *&)
@@ -167,9 +167,9 @@ func (this *QConcatenableLQCharRefG) Appendto_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QConcatenableI8QCharRefE8appendToES0_RP5QChar
     // invoke: void appendTo(class QCharRef, class QChar *&)
-    var arg0 = args[0].(QCharRef).qclsinst
+    var arg0 = args[0].(*QCharRef).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QChar).qclsinst
+    var arg1 = args[1].(*QChar).Qclsinst
     if false {fmt.Println(arg1)}
     C.C_ZN13QConcatenableI8QCharRefE8appendToES0_RP5QChar(arg0, arg1)
   default:
@@ -193,13 +193,17 @@ func (this *QConcatenableLQCharRefG) Size_S(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZN13QConcatenableI8QCharRefE4sizeES0_
     // invoke: int size(class QCharRef)
-    var arg0 = args[0].(QCharRef).qclsinst
+    var arg0 = args[0].(*QCharRef).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN13QConcatenableI8QCharRefE4sizeES0_(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QConcatenable<QCharRef>", "size", args)
   }
@@ -222,9 +226,9 @@ func (this *QConcatenableLQStringG) Appendto_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QConcatenableI7QStringE8appendToERKS0_RP5QChar
     // invoke: void appendTo(const class QString &, class QChar *&)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QChar).qclsinst
+    var arg1 = args[1].(*QChar).Qclsinst
     if false {fmt.Println(arg1)}
     C.C_ZN13QConcatenableI7QStringE8appendToERKS0_RP5QChar(arg0, arg1)
   default:
@@ -248,13 +252,17 @@ func (this *QConcatenableLQStringG) Size_S(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZN13QConcatenableI7QStringE4sizeERKS0_
     // invoke: int size(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN13QConcatenableI7QStringE4sizeERKS0_(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QConcatenable<QString>", "size", args)
   }
@@ -283,7 +291,7 @@ func (this *QConcatenableLcharG) Appendto_S(args ...interface{}) () {
     // invoke: void appendTo(const char, class QChar *&)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QChar).qclsinst
+    var arg1 = args[1].(*QChar).Qclsinst
     if false {fmt.Println(arg1)}
     C.C_ZN13QConcatenableIcE8appendToEcRP5QChar(arg0, arg1)
   case 1:
@@ -323,7 +331,11 @@ func (this *QConcatenableLcharG) Size_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QConcatenable<char>", "size", args)
   }
@@ -350,7 +362,7 @@ func (this *QConcatenableLQByteArrayG) Appendto_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QConcatenableI10QByteArrayE8appendToERKS0_RPc
     // invoke: void appendTo(const class QByteArray &, char *&)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
     var arg1 = argif1.(unsafe.Pointer)
@@ -360,9 +372,9 @@ func (this *QConcatenableLQByteArrayG) Appendto_S(args ...interface{}) () {
   case 1:
     // invoke: _ZN13QConcatenableI10QByteArrayE8appendToERKS0_RP5QChar
     // invoke: void appendTo(const class QByteArray &, class QChar *&)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QChar).qclsinst
+    var arg1 = args[1].(*QChar).Qclsinst
     if false {fmt.Println(arg1)}
     C.C_ZN13QConcatenableI10QByteArrayE8appendToERKS0_RP5QChar(arg0, arg1)
   default:
@@ -386,13 +398,17 @@ func (this *QConcatenableLQByteArrayG) Size_S(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZN13QConcatenableI10QByteArrayE4sizeERKS0_
     // invoke: int size(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN13QConcatenableI10QByteArrayE4sizeERKS0_(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QConcatenable<QByteArray>", "size", args)
   }
@@ -415,9 +431,9 @@ func (this *QConcatenableLQCharG) Appendto_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QConcatenableI5QCharE8appendToES0_RPS0_
     // invoke: void appendTo(const class QChar, class QChar *&)
-    var arg0 = args[0].(QChar).qclsinst
+    var arg0 = args[0].(*QChar).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QChar).qclsinst
+    var arg1 = args[1].(*QChar).Qclsinst
     if false {fmt.Println(arg1)}
     C.C_ZN13QConcatenableI5QCharE8appendToES0_RPS0_(arg0, arg1)
   default:
@@ -441,13 +457,17 @@ func (this *QConcatenableLQCharG) Size_S(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZN13QConcatenableI5QCharE4sizeES0_
     // invoke: int size(const class QChar)
-    var arg0 = args[0].(QChar).qclsinst
+    var arg0 = args[0].(*QChar).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN13QConcatenableI5QCharE4sizeES0_(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QConcatenable<QChar>", "size", args)
   }
@@ -470,19 +490,19 @@ func NewQStringBuilderLQByteArray_EQByteArrayG(args ...interface{}) *QStringBuil
   case 0:
     // invoke: _ZN14QStringBuilderI10QByteArrayS0_EC1ERKS0_S3_
     // invoke: void QStringBuilder(const class QByteArray &, const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
+    var arg1 = args[1].(*QByteArray).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QStringBuilderI10QByteArrayS0_EC2ERKS0_S3_(arg0, arg1)
-    return &QStringBuilderLQByteArray_EQByteArrayG{qclsinst:qthis}
+    return &QStringBuilderLQByteArray_EQByteArrayG{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStringBuilder<QByteArray, QByteArray>", "QStringBuilder", args)
   }
 
-  return nil // QStringBuilderLQByteArray_EQByteArrayG{qclsinst:qthis}
+  return nil // QStringBuilderLQByteArray_EQByteArrayG{Qclsinst:qthis}
 }
 
 // appendTo(const char *, class QChar *&)
@@ -508,7 +528,7 @@ func (this *QConcatenableLconstEcharEPG) Appendto_S(args ...interface{}) () {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = args[1].(QChar).qclsinst
+    var arg1 = args[1].(*QChar).Qclsinst
     if false {fmt.Println(arg1)}
     C.C_ZN13QConcatenableIPKcE8appendToES1_RP5QChar(arg0, arg1)
   case 1:
@@ -552,7 +572,11 @@ func (this *QConcatenableLconstEcharEPG) Size_S(args ...interface{}) (ret interf
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QConcatenable<const char *>", "size", args)
   }
@@ -575,19 +599,19 @@ func NewQStringBuilderLQString_EQStringG(args ...interface{}) *QStringBuilderLQS
   case 0:
     // invoke: _ZN14QStringBuilderI7QStringS0_EC1ERKS0_S3_
     // invoke: void QStringBuilder(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QStringBuilderI7QStringS0_EC2ERKS0_S3_(arg0, arg1)
-    return &QStringBuilderLQString_EQStringG{qclsinst:qthis}
+    return &QStringBuilderLQString_EQStringG{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStringBuilder<QString, QString>", "QStringBuilder", args)
   }
 
-  return nil // QStringBuilderLQString_EQStringG{qclsinst:qthis}
+  return nil // QStringBuilderLQString_EQStringG{Qclsinst:qthis}
 }
 
 // <= body block end

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qgraphicsitem.h
 // dst-file: /src/widgets/qgraphicsitem.go
 //
@@ -695,7 +695,7 @@ func init() {
 // class sizeof(QGraphicsTextItem)=1
 type QGraphicsTextItem struct {
   /*qbase*/ QGraphicsObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _linkActivated QGraphicsTextItem_linkActivated_signal;
 //  _linkHovered QGraphicsTextItem_linkHovered_signal;
 }
@@ -703,61 +703,61 @@ type QGraphicsTextItem struct {
 // class sizeof(QGraphicsPixmapItem)=1
 type QGraphicsPixmapItem struct {
   /*qbase*/ QGraphicsItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsRectItem)=1
 type QGraphicsRectItem struct {
   /*qbase*/ QAbstractGraphicsShapeItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsEllipseItem)=1
 type QGraphicsEllipseItem struct {
   /*qbase*/ QAbstractGraphicsShapeItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsPolygonItem)=1
 type QGraphicsPolygonItem struct {
   /*qbase*/ QAbstractGraphicsShapeItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsPathItem)=1
 type QGraphicsPathItem struct {
   /*qbase*/ QAbstractGraphicsShapeItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsLineItem)=1
 type QGraphicsLineItem struct {
   /*qbase*/ QGraphicsItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsItemGroup)=1
 type QGraphicsItemGroup struct {
   /*qbase*/ QGraphicsItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QAbstractGraphicsShapeItem)=1
 type QAbstractGraphicsShapeItem struct {
   /*qbase*/ QGraphicsItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsItem)=1
 type QGraphicsItem struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsObject)=1
 type QGraphicsObject struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _childrenChanged QGraphicsObject_childrenChanged_signal;
 //  _parentChanged QGraphicsObject_parentChanged_signal;
 //  _heightChanged QGraphicsObject_heightChanged_signal;
@@ -775,7 +775,7 @@ type QGraphicsObject struct {
 // class sizeof(QGraphicsSimpleTextItem)=1
 type QGraphicsSimpleTextItem struct {
   /*qbase*/ QAbstractGraphicsShapeItem;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // contains(const class QPointF &)
@@ -792,13 +792,17 @@ func (this *QGraphicsTextItem) Contains(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem8containsERK7QPointF
     // invoke: bool contains(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QGraphicsTextItem8containsERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK17QGraphicsTextItem8containsERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "contains", args)
   }
@@ -819,11 +823,15 @@ func (this *QGraphicsTextItem) Boundingrect(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK17QGraphicsTextItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK17QGraphicsTextItem12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "boundingRect", args)
   }
@@ -845,9 +853,9 @@ func (this *QGraphicsTextItem) Setplaintext(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItem12setPlainTextERK7QString
     // invoke: void setPlainText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsTextItem12setPlainTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem12setPlainTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setPlainText", args)
   }
@@ -869,9 +877,9 @@ func (this *QGraphicsTextItem) Sethtml(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItem7setHtmlERK7QString
     // invoke: void setHtml(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsTextItem7setHtmlERK7QString(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem7setHtmlERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setHtml", args)
   }
@@ -895,7 +903,7 @@ func (this *QGraphicsTextItem) Settabchangesfocus(args ...interface{}) () {
     // invoke: void setTabChangesFocus(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsTextItem18setTabChangesFocusEb(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem18setTabChangesFocusEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setTabChangesFocus", args)
   }
@@ -917,9 +925,9 @@ func (this *QGraphicsTextItem) Setdocument(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItem11setDocumentEP13QTextDocument
     // invoke: void setDocument(class QTextDocument *)
-    var arg0 = args[0].(QTextDocument).qclsinst
+    var arg0 = args[0].(*QTextDocument).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsTextItem11setDocumentEP13QTextDocument(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem11setDocumentEP13QTextDocument(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setDocument", args)
   }
@@ -943,7 +951,7 @@ func (this *QGraphicsTextItem) Setopenexternallinks(args ...interface{}) () {
     // invoke: void setOpenExternalLinks(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsTextItem20setOpenExternalLinksEb(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem20setOpenExternalLinksEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setOpenExternalLinks", args)
   }
@@ -964,11 +972,15 @@ func (this *QGraphicsTextItem) Font(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem4fontEv
     // invoke: QFont font()
-    var ret0 = C.C_ZNK17QGraphicsTextItem4fontEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem4fontEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFont{}) // "QFont"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "font", args)
   }
@@ -990,9 +1002,9 @@ func (this *QGraphicsTextItem) Setdefaulttextcolor(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor
     // invoke: void setDefaultTextColor(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setDefaultTextColor", args)
   }
@@ -1013,11 +1025,15 @@ func (this *QGraphicsTextItem) Openexternallinks(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK17QGraphicsTextItem17openExternalLinksEv
     // invoke: bool openExternalLinks()
-    var ret0 = C.C_ZNK17QGraphicsTextItem17openExternalLinksEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem17openExternalLinksEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "openExternalLinks", args)
   }
@@ -1039,9 +1055,9 @@ func (this *QGraphicsTextItem) Settextcursor(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor
     // invoke: void setTextCursor(const class QTextCursor &)
-    var arg0 = args[0].(QTextCursor).qclsinst
+    var arg0 = args[0].(*QTextCursor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setTextCursor", args)
   }
@@ -1062,11 +1078,15 @@ func (this *QGraphicsTextItem) Toplaintext(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK17QGraphicsTextItem11toPlainTextEv
     // invoke: QString toPlainText()
-    var ret0 = C.C_ZNK17QGraphicsTextItem11toPlainTextEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem11toPlainTextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "toPlainText", args)
   }
@@ -1087,11 +1107,15 @@ func (this *QGraphicsTextItem) Tabchangesfocus(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK17QGraphicsTextItem15tabChangesFocusEv
     // invoke: bool tabChangesFocus()
-    var ret0 = C.C_ZNK17QGraphicsTextItem15tabChangesFocusEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem15tabChangesFocusEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "tabChangesFocus", args)
   }
@@ -1112,11 +1136,15 @@ func (this *QGraphicsTextItem) Textcursor(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK17QGraphicsTextItem10textCursorEv
     // invoke: QTextCursor textCursor()
-    var ret0 = C.C_ZNK17QGraphicsTextItem10textCursorEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem10textCursorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCursor{}) // "QTextCursor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "textCursor", args)
   }
@@ -1140,13 +1168,13 @@ func (this *QGraphicsTextItem) Paint(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
     // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-    var arg0 = args[0].(QPainter).qclsinst
+    var arg0 = args[0].(*QPainter).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
+    var arg1 = args[1].(*QStyleOptionGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "paint", args)
   }
@@ -1172,28 +1200,28 @@ func NewQGraphicsTextItem(args ...interface{}) *QGraphicsTextItem {
   case 0:
     // invoke: _ZN17QGraphicsTextItemC1EP13QGraphicsItem
     // invoke: void QGraphicsTextItem(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsTextItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsTextItem{qclsinst:qthis}
+    return &QGraphicsTextItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN17QGraphicsTextItemC1ERK7QStringP13QGraphicsItem
     // invoke: void QGraphicsTextItem(const class QString &, class QGraphicsItem *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QGraphicsItem).qclsinst
+    var arg1 = args[1].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsTextItemC2ERK7QStringP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsTextItem{qclsinst:qthis}
+    return &QGraphicsTextItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "QGraphicsTextItem", args)
   }
 
-  return nil // QGraphicsTextItem{qclsinst:qthis}
+  return nil // QGraphicsTextItem{Qclsinst:qthis}
 }
 
 // type()
@@ -1209,11 +1237,15 @@ func (this *QGraphicsTextItem) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK17QGraphicsTextItem4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "type", args)
   }
@@ -1234,7 +1266,7 @@ func (this *QGraphicsTextItem) Textinteractionflags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem20textInteractionFlagsEv
     // invoke: Qt::TextInteractionFlags textInteractionFlags()
-    C.C_ZNK17QGraphicsTextItem20textInteractionFlagsEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem20textInteractionFlagsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "textInteractionFlags", args)
   }
@@ -1255,11 +1287,15 @@ func (this *QGraphicsTextItem) Tohtml(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem6toHtmlEv
     // invoke: QString toHtml()
-    var ret0 = C.C_ZNK17QGraphicsTextItem6toHtmlEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem6toHtmlEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "toHtml", args)
   }
@@ -1280,7 +1316,7 @@ func (this *QGraphicsTextItem) Adjustsize(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItem10adjustSizeEv
     // invoke: void adjustSize()
-    C.C_ZN17QGraphicsTextItem10adjustSizeEv(this.qclsinst)
+    C.C_ZN17QGraphicsTextItem10adjustSizeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "adjustSize", args)
   }
@@ -1301,7 +1337,7 @@ func (this *QGraphicsTextItem) Freeqgraphicstextitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItemD0Ev
     // invoke: void ~QGraphicsTextItem()
-    C.C_ZN17QGraphicsTextItemD2Ev(this.qclsinst)
+    C.C_ZN17QGraphicsTextItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "~QGraphicsTextItem", args)
   }
@@ -1323,9 +1359,9 @@ func (this *QGraphicsTextItem) Settextwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItem12setTextWidthEd
     // invoke: void setTextWidth(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsTextItem12setTextWidthEd(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem12setTextWidthEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setTextWidth", args)
   }
@@ -1347,13 +1383,17 @@ func (this *QGraphicsTextItem) Isobscuredby(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "isObscuredBy", args)
   }
@@ -1374,11 +1414,15 @@ func (this *QGraphicsTextItem) Document(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem8documentEv
     // invoke: QTextDocument * document()
-    var ret0 = C.C_ZNK17QGraphicsTextItem8documentEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem8documentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextDocument{}) // "QTextDocument *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "document", args)
   }
@@ -1399,11 +1443,15 @@ func (this *QGraphicsTextItem) Opaquearea(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK17QGraphicsTextItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    var ret0 = C.C_ZNK17QGraphicsTextItem10opaqueAreaEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem10opaqueAreaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "opaqueArea", args)
   }
@@ -1424,11 +1472,15 @@ func (this *QGraphicsTextItem) Defaulttextcolor(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK17QGraphicsTextItem16defaultTextColorEv
     // invoke: QColor defaultTextColor()
-    var ret0 = C.C_ZNK17QGraphicsTextItem16defaultTextColorEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem16defaultTextColorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "defaultTextColor", args)
   }
@@ -1449,7 +1501,7 @@ func (this *QGraphicsTextItem) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK17QGraphicsTextItem10metaObjectEv(this.qclsinst)
+    C.C_ZNK17QGraphicsTextItem10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "metaObject", args)
   }
@@ -1470,11 +1522,15 @@ func (this *QGraphicsTextItem) Shape(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem5shapeEv
     // invoke: QPainterPath shape()
-    var ret0 = C.C_ZNK17QGraphicsTextItem5shapeEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem5shapeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "shape", args)
   }
@@ -1496,9 +1552,9 @@ func (this *QGraphicsTextItem) Setfont(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItem7setFontERK5QFont
     // invoke: void setFont(const class QFont &)
-    var arg0 = args[0].(QFont).qclsinst
+    var arg0 = args[0].(*QFont).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsTextItem7setFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsTextItem7setFontERK5QFont(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setFont", args)
   }
@@ -1519,11 +1575,15 @@ func (this *QGraphicsTextItem) Textwidth(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK17QGraphicsTextItem9textWidthEv
     // invoke: qreal textWidth()
-    var ret0 = C.C_ZNK17QGraphicsTextItem9textWidthEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsTextItem9textWidthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "textWidth", args)
   }
@@ -1544,11 +1604,15 @@ func (this *QGraphicsPixmapItem) Boundingrect(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK19QGraphicsPixmapItem12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QGraphicsPixmapItem12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "boundingRect", args)
   }
@@ -1570,9 +1634,9 @@ func (this *QGraphicsPixmapItem) Setpixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap
     // invoke: void setPixmap(const class QPixmap &)
-    var arg0 = args[0].(QPixmap).qclsinst
+    var arg0 = args[0].(*QPixmap).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "setPixmap", args)
   }
@@ -1593,11 +1657,15 @@ func (this *QGraphicsPixmapItem) Shape(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem5shapeEv
     // invoke: QPainterPath shape()
-    var ret0 = C.C_ZNK19QGraphicsPixmapItem5shapeEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QGraphicsPixmapItem5shapeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "shape", args)
   }
@@ -1618,7 +1686,7 @@ func (this *QGraphicsPixmapItem) Transformationmode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem18transformationModeEv
     // invoke: Qt::TransformationMode transformationMode()
-    C.C_ZNK19QGraphicsPixmapItem18transformationModeEv(this.qclsinst)
+    C.C_ZNK19QGraphicsPixmapItem18transformationModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "transformationMode", args)
   }
@@ -1639,11 +1707,15 @@ func (this *QGraphicsPixmapItem) Pixmap(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem6pixmapEv
     // invoke: QPixmap pixmap()
-    var ret0 = C.C_ZNK19QGraphicsPixmapItem6pixmapEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QGraphicsPixmapItem6pixmapEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPixmap{}) // "QPixmap"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "pixmap", args)
   }
@@ -1665,13 +1737,17 @@ func (this *QGraphicsPixmapItem) Contains(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem8containsERK7QPointF
     // invoke: bool contains(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QGraphicsPixmapItem8containsERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QGraphicsPixmapItem8containsERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "contains", args)
   }
@@ -1692,7 +1768,7 @@ func (this *QGraphicsPixmapItem) Shapemode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem9shapeModeEv
     // invoke: QGraphicsPixmapItem::ShapeMode shapeMode()
-    C.C_ZNK19QGraphicsPixmapItem9shapeModeEv(this.qclsinst)
+    C.C_ZNK19QGraphicsPixmapItem9shapeModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "shapeMode", args)
   }
@@ -1716,13 +1792,13 @@ func (this *QGraphicsPixmapItem) Paint(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
     // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-    var arg0 = args[0].(QPainter).qclsinst
+    var arg0 = args[0].(*QPainter).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
+    var arg1 = args[1].(*QStyleOptionGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "paint", args)
   }
@@ -1748,17 +1824,17 @@ func (this *QGraphicsPixmapItem) Setoffset(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QGraphicsPixmapItem9setOffsetERK7QPointF
     // invoke: void setOffset(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN19QGraphicsPixmapItem9setOffsetERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsPixmapItem9setOffsetERK7QPointF(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN19QGraphicsPixmapItem9setOffsetEdd
     // invoke: void setOffset(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN19QGraphicsPixmapItem9setOffsetEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN19QGraphicsPixmapItem9setOffsetEdd(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "setOffset", args)
   }
@@ -1779,11 +1855,15 @@ func (this *QGraphicsPixmapItem) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK19QGraphicsPixmapItem4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QGraphicsPixmapItem4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "type", args)
   }
@@ -1804,7 +1884,7 @@ func (this *QGraphicsPixmapItem) Freeqgraphicspixmapitem(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QGraphicsPixmapItemD0Ev
     // invoke: void ~QGraphicsPixmapItem()
-    C.C_ZN19QGraphicsPixmapItemD2Ev(this.qclsinst)
+    C.C_ZN19QGraphicsPixmapItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "~QGraphicsPixmapItem", args)
   }
@@ -1825,11 +1905,15 @@ func (this *QGraphicsPixmapItem) Offset(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem6offsetEv
     // invoke: QPointF offset()
-    var ret0 = C.C_ZNK19QGraphicsPixmapItem6offsetEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QGraphicsPixmapItem6offsetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "offset", args)
   }
@@ -1855,28 +1939,28 @@ func NewQGraphicsPixmapItem(args ...interface{}) *QGraphicsPixmapItem {
   case 0:
     // invoke: _ZN19QGraphicsPixmapItemC1EP13QGraphicsItem
     // invoke: void QGraphicsPixmapItem(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QGraphicsPixmapItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsPixmapItem{qclsinst:qthis}
+    return &QGraphicsPixmapItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN19QGraphicsPixmapItemC1ERK7QPixmapP13QGraphicsItem
     // invoke: void QGraphicsPixmapItem(const class QPixmap &, class QGraphicsItem *)
-    var arg0 = args[0].(QPixmap).qclsinst
+    var arg0 = args[0].(*QPixmap).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QGraphicsItem).qclsinst
+    var arg1 = args[1].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QGraphicsPixmapItemC2ERK7QPixmapP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsPixmapItem{qclsinst:qthis}
+    return &QGraphicsPixmapItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "QGraphicsPixmapItem", args)
   }
 
-  return nil // QGraphicsPixmapItem{qclsinst:qthis}
+  return nil // QGraphicsPixmapItem{Qclsinst:qthis}
 }
 
 // isObscuredBy(const class QGraphicsItem *)
@@ -1893,13 +1977,17 @@ func (this *QGraphicsPixmapItem) Isobscuredby(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "isObscuredBy", args)
   }
@@ -1920,11 +2008,15 @@ func (this *QGraphicsPixmapItem) Opaquearea(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    var ret0 = C.C_ZNK19QGraphicsPixmapItem10opaqueAreaEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QGraphicsPixmapItem10opaqueAreaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "opaqueArea", args)
   }
@@ -1945,11 +2037,15 @@ func (this *QGraphicsRectItem) Opaquearea(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK17QGraphicsRectItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    var ret0 = C.C_ZNK17QGraphicsRectItem10opaqueAreaEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsRectItem10opaqueAreaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "opaqueArea", args)
   }
@@ -1970,11 +2066,15 @@ func (this *QGraphicsRectItem) Boundingrect(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK17QGraphicsRectItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK17QGraphicsRectItem12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsRectItem12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "boundingRect", args)
   }
@@ -1995,11 +2095,15 @@ func (this *QGraphicsRectItem) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK17QGraphicsRectItem4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsRectItem4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "type", args)
   }
@@ -2021,13 +2125,17 @@ func (this *QGraphicsRectItem) Contains(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem8containsERK7QPointF
     // invoke: bool contains(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QGraphicsRectItem8containsERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK17QGraphicsRectItem8containsERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "contains", args)
   }
@@ -2051,13 +2159,13 @@ func (this *QGraphicsRectItem) Paint(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
     // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-    var arg0 = args[0].(QPainter).qclsinst
+    var arg0 = args[0].(*QPainter).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
+    var arg1 = args[1].(*QStyleOptionGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "paint", args)
   }
@@ -2078,11 +2186,15 @@ func (this *QGraphicsRectItem) Shape(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem5shapeEv
     // invoke: QPainterPath shape()
-    var ret0 = C.C_ZNK17QGraphicsRectItem5shapeEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsRectItem5shapeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "shape", args)
   }
@@ -2115,45 +2227,45 @@ func NewQGraphicsRectItem(args ...interface{}) *QGraphicsRectItem {
   case 0:
     // invoke: _ZN17QGraphicsRectItemC1EP13QGraphicsItem
     // invoke: void QGraphicsRectItem(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsRectItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsRectItem{qclsinst:qthis}
+    return &QGraphicsRectItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN17QGraphicsRectItemC1ERK6QRectFP13QGraphicsItem
     // invoke: void QGraphicsRectItem(const class QRectF &, class QGraphicsItem *)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QGraphicsItem).qclsinst
+    var arg1 = args[1].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsRectItemC2ERK6QRectFP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsRectItem{qclsinst:qthis}
+    return &QGraphicsRectItem{Qclsinst:qthis}
   case 2:
     // invoke: _ZN17QGraphicsRectItemC1EddddP13QGraphicsItem
     // invoke: void QGraphicsRectItem(qreal, qreal, qreal, qreal, class QGraphicsItem *)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = args[4].(QGraphicsItem).qclsinst
+    var arg4 = args[4].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg4)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsRectItemC2EddddP13QGraphicsItem(arg0, arg1, arg2, arg3, arg4)
-    return &QGraphicsRectItem{qclsinst:qthis}
+    return &QGraphicsRectItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "QGraphicsRectItem", args)
   }
 
-  return nil // QGraphicsRectItem{qclsinst:qthis}
+  return nil // QGraphicsRectItem{Qclsinst:qthis}
 }
 
 // ~QGraphicsRectItem()
@@ -2169,7 +2281,7 @@ func (this *QGraphicsRectItem) Freeqgraphicsrectitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsRectItemD0Ev
     // invoke: void ~QGraphicsRectItem()
-    C.C_ZN17QGraphicsRectItemD2Ev(this.qclsinst)
+    C.C_ZN17QGraphicsRectItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "~QGraphicsRectItem", args)
   }
@@ -2191,13 +2303,17 @@ func (this *QGraphicsRectItem) Isobscuredby(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "isObscuredBy", args)
   }
@@ -2225,21 +2341,21 @@ func (this *QGraphicsRectItem) Setrect(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsRectItem7setRectERK6QRectF
     // invoke: void setRect(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsRectItem7setRectERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsRectItem7setRectERK6QRectF(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN17QGraphicsRectItem7setRectEdddd
     // invoke: void setRect(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    C.C_ZN17QGraphicsRectItem7setRectEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN17QGraphicsRectItem7setRectEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "setRect", args)
   }
@@ -2260,11 +2376,15 @@ func (this *QGraphicsRectItem) Rect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem4rectEv
     // invoke: QRectF rect()
-    var ret0 = C.C_ZNK17QGraphicsRectItem4rectEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsRectItem4rectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "rect", args)
   }
@@ -2285,11 +2405,15 @@ func (this *QGraphicsEllipseItem) Opaquearea(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    var ret0 = C.C_ZNK20QGraphicsEllipseItem10opaqueAreaEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QGraphicsEllipseItem10opaqueAreaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "opaqueArea", args)
   }
@@ -2310,11 +2434,15 @@ func (this *QGraphicsEllipseItem) Boundingrect(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK20QGraphicsEllipseItem12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QGraphicsEllipseItem12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "boundingRect", args)
   }
@@ -2335,11 +2463,15 @@ func (this *QGraphicsEllipseItem) Spanangle(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem9spanAngleEv
     // invoke: int spanAngle()
-    var ret0 = C.C_ZNK20QGraphicsEllipseItem9spanAngleEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QGraphicsEllipseItem9spanAngleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "spanAngle", args)
   }
@@ -2360,11 +2492,15 @@ func (this *QGraphicsEllipseItem) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK20QGraphicsEllipseItem4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QGraphicsEllipseItem4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "type", args)
   }
@@ -2386,13 +2522,17 @@ func (this *QGraphicsEllipseItem) Contains(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem8containsERK7QPointF
     // invoke: bool contains(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK20QGraphicsEllipseItem8containsERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK20QGraphicsEllipseItem8containsERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "contains", args)
   }
@@ -2414,9 +2554,9 @@ func (this *QGraphicsEllipseItem) Setspanangle(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItem12setSpanAngleEi
     // invoke: void setSpanAngle(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN20QGraphicsEllipseItem12setSpanAngleEi(this.qclsinst, arg0)
+    C.C_ZN20QGraphicsEllipseItem12setSpanAngleEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "setSpanAngle", args)
   }
@@ -2444,21 +2584,21 @@ func (this *QGraphicsEllipseItem) Setrect(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItem7setRectERK6QRectF
     // invoke: void setRect(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN20QGraphicsEllipseItem7setRectERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN20QGraphicsEllipseItem7setRectERK6QRectF(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN20QGraphicsEllipseItem7setRectEdddd
     // invoke: void setRect(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    C.C_ZN20QGraphicsEllipseItem7setRectEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN20QGraphicsEllipseItem7setRectEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "setRect", args)
   }
@@ -2480,9 +2620,9 @@ func (this *QGraphicsEllipseItem) Setstartangle(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItem13setStartAngleEi
     // invoke: void setStartAngle(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN20QGraphicsEllipseItem13setStartAngleEi(this.qclsinst, arg0)
+    C.C_ZN20QGraphicsEllipseItem13setStartAngleEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "setStartAngle", args)
   }
@@ -2506,13 +2646,13 @@ func (this *QGraphicsEllipseItem) Paint(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
     // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-    var arg0 = args[0].(QPainter).qclsinst
+    var arg0 = args[0].(*QPainter).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
+    var arg1 = args[1].(*QStyleOptionGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "paint", args)
   }
@@ -2533,11 +2673,15 @@ func (this *QGraphicsEllipseItem) Shape(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem5shapeEv
     // invoke: QPainterPath shape()
-    var ret0 = C.C_ZNK20QGraphicsEllipseItem5shapeEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QGraphicsEllipseItem5shapeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "shape", args)
   }
@@ -2558,7 +2702,7 @@ func (this *QGraphicsEllipseItem) Freeqgraphicsellipseitem(args ...interface{}) 
   case 0:
     // invoke: _ZN20QGraphicsEllipseItemD0Ev
     // invoke: void ~QGraphicsEllipseItem()
-    C.C_ZN20QGraphicsEllipseItemD2Ev(this.qclsinst)
+    C.C_ZN20QGraphicsEllipseItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "~QGraphicsEllipseItem", args)
   }
@@ -2579,11 +2723,15 @@ func (this *QGraphicsEllipseItem) Startangle(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem10startAngleEv
     // invoke: int startAngle()
-    var ret0 = C.C_ZNK20QGraphicsEllipseItem10startAngleEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QGraphicsEllipseItem10startAngleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "startAngle", args)
   }
@@ -2605,13 +2753,17 @@ func (this *QGraphicsEllipseItem) Isobscuredby(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "isObscuredBy", args)
   }
@@ -2644,45 +2796,45 @@ func NewQGraphicsEllipseItem(args ...interface{}) *QGraphicsEllipseItem {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItemC1EP13QGraphicsItem
     // invoke: void QGraphicsEllipseItem(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QGraphicsEllipseItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsEllipseItem{qclsinst:qthis}
+    return &QGraphicsEllipseItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN20QGraphicsEllipseItemC1EddddP13QGraphicsItem
     // invoke: void QGraphicsEllipseItem(qreal, qreal, qreal, qreal, class QGraphicsItem *)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = args[4].(QGraphicsItem).qclsinst
+    var arg4 = args[4].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg4)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QGraphicsEllipseItemC2EddddP13QGraphicsItem(arg0, arg1, arg2, arg3, arg4)
-    return &QGraphicsEllipseItem{qclsinst:qthis}
+    return &QGraphicsEllipseItem{Qclsinst:qthis}
   case 2:
     // invoke: _ZN20QGraphicsEllipseItemC1ERK6QRectFP13QGraphicsItem
     // invoke: void QGraphicsEllipseItem(const class QRectF &, class QGraphicsItem *)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QGraphicsItem).qclsinst
+    var arg1 = args[1].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QGraphicsEllipseItemC2ERK6QRectFP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsEllipseItem{qclsinst:qthis}
+    return &QGraphicsEllipseItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "QGraphicsEllipseItem", args)
   }
 
-  return nil // QGraphicsEllipseItem{qclsinst:qthis}
+  return nil // QGraphicsEllipseItem{Qclsinst:qthis}
 }
 
 // rect()
@@ -2698,11 +2850,15 @@ func (this *QGraphicsEllipseItem) Rect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem4rectEv
     // invoke: QRectF rect()
-    var ret0 = C.C_ZNK20QGraphicsEllipseItem4rectEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QGraphicsEllipseItem4rectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "rect", args)
   }
@@ -2723,11 +2879,15 @@ func (this *QGraphicsPolygonItem) Opaquearea(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    var ret0 = C.C_ZNK20QGraphicsPolygonItem10opaqueAreaEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QGraphicsPolygonItem10opaqueAreaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "opaqueArea", args)
   }
@@ -2748,11 +2908,15 @@ func (this *QGraphicsPolygonItem) Boundingrect(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK20QGraphicsPolygonItem12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QGraphicsPolygonItem12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "boundingRect", args)
   }
@@ -2774,9 +2938,9 @@ func (this *QGraphicsPolygonItem) Setpolygon(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF
     // invoke: void setPolygon(const class QPolygonF &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF(this.qclsinst, arg0)
+    C.C_ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "setPolygon", args)
   }
@@ -2797,11 +2961,15 @@ func (this *QGraphicsPolygonItem) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK20QGraphicsPolygonItem4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QGraphicsPolygonItem4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "type", args)
   }
@@ -2823,13 +2991,17 @@ func (this *QGraphicsPolygonItem) Contains(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem8containsERK7QPointF
     // invoke: bool contains(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK20QGraphicsPolygonItem8containsERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK20QGraphicsPolygonItem8containsERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "contains", args)
   }
@@ -2850,11 +3022,15 @@ func (this *QGraphicsPolygonItem) Polygon(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem7polygonEv
     // invoke: QPolygonF polygon()
-    var ret0 = C.C_ZNK20QGraphicsPolygonItem7polygonEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QGraphicsPolygonItem7polygonEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "polygon", args)
   }
@@ -2878,13 +3054,13 @@ func (this *QGraphicsPolygonItem) Paint(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
     // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-    var arg0 = args[0].(QPainter).qclsinst
+    var arg0 = args[0].(*QPainter).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
+    var arg1 = args[1].(*QStyleOptionGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "paint", args)
   }
@@ -2905,11 +3081,15 @@ func (this *QGraphicsPolygonItem) Shape(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem5shapeEv
     // invoke: QPainterPath shape()
-    var ret0 = C.C_ZNK20QGraphicsPolygonItem5shapeEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QGraphicsPolygonItem5shapeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "shape", args)
   }
@@ -2935,28 +3115,28 @@ func NewQGraphicsPolygonItem(args ...interface{}) *QGraphicsPolygonItem {
   case 0:
     // invoke: _ZN20QGraphicsPolygonItemC1ERK9QPolygonFP13QGraphicsItem
     // invoke: void QGraphicsPolygonItem(const class QPolygonF &, class QGraphicsItem *)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QGraphicsItem).qclsinst
+    var arg1 = args[1].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QGraphicsPolygonItemC2ERK9QPolygonFP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsPolygonItem{qclsinst:qthis}
+    return &QGraphicsPolygonItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN20QGraphicsPolygonItemC1EP13QGraphicsItem
     // invoke: void QGraphicsPolygonItem(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QGraphicsPolygonItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsPolygonItem{qclsinst:qthis}
+    return &QGraphicsPolygonItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "QGraphicsPolygonItem", args)
   }
 
-  return nil // QGraphicsPolygonItem{qclsinst:qthis}
+  return nil // QGraphicsPolygonItem{Qclsinst:qthis}
 }
 
 // ~QGraphicsPolygonItem()
@@ -2972,7 +3152,7 @@ func (this *QGraphicsPolygonItem) Freeqgraphicspolygonitem(args ...interface{}) 
   case 0:
     // invoke: _ZN20QGraphicsPolygonItemD0Ev
     // invoke: void ~QGraphicsPolygonItem()
-    C.C_ZN20QGraphicsPolygonItemD2Ev(this.qclsinst)
+    C.C_ZN20QGraphicsPolygonItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "~QGraphicsPolygonItem", args)
   }
@@ -2994,13 +3174,17 @@ func (this *QGraphicsPolygonItem) Isobscuredby(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "isObscuredBy", args)
   }
@@ -3021,7 +3205,7 @@ func (this *QGraphicsPolygonItem) Fillrule(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem8fillRuleEv
     // invoke: Qt::FillRule fillRule()
-    C.C_ZNK20QGraphicsPolygonItem8fillRuleEv(this.qclsinst)
+    C.C_ZNK20QGraphicsPolygonItem8fillRuleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "fillRule", args)
   }
@@ -3042,11 +3226,15 @@ func (this *QGraphicsPathItem) Opaquearea(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK17QGraphicsPathItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    var ret0 = C.C_ZNK17QGraphicsPathItem10opaqueAreaEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsPathItem10opaqueAreaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "opaqueArea", args)
   }
@@ -3067,7 +3255,7 @@ func (this *QGraphicsPathItem) Freeqgraphicspathitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsPathItemD0Ev
     // invoke: void ~QGraphicsPathItem()
-    C.C_ZN17QGraphicsPathItemD2Ev(this.qclsinst)
+    C.C_ZN17QGraphicsPathItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "~QGraphicsPathItem", args)
   }
@@ -3088,11 +3276,15 @@ func (this *QGraphicsPathItem) Boundingrect(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK17QGraphicsPathItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK17QGraphicsPathItem12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsPathItem12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "boundingRect", args)
   }
@@ -3114,13 +3306,17 @@ func (this *QGraphicsPathItem) Isobscuredby(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "isObscuredBy", args)
   }
@@ -3142,13 +3338,17 @@ func (this *QGraphicsPathItem) Contains(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem8containsERK7QPointF
     // invoke: bool contains(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QGraphicsPathItem8containsERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK17QGraphicsPathItem8containsERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "contains", args)
   }
@@ -3172,13 +3372,13 @@ func (this *QGraphicsPathItem) Paint(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
     // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-    var arg0 = args[0].(QPainter).qclsinst
+    var arg0 = args[0].(*QPainter).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
+    var arg1 = args[1].(*QStyleOptionGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "paint", args)
   }
@@ -3199,11 +3399,15 @@ func (this *QGraphicsPathItem) Shape(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem5shapeEv
     // invoke: QPainterPath shape()
-    var ret0 = C.C_ZNK17QGraphicsPathItem5shapeEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsPathItem5shapeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "shape", args)
   }
@@ -3224,11 +3428,15 @@ func (this *QGraphicsPathItem) Path(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem4pathEv
     // invoke: QPainterPath path()
-    var ret0 = C.C_ZNK17QGraphicsPathItem4pathEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsPathItem4pathEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "path", args)
   }
@@ -3250,9 +3458,9 @@ func (this *QGraphicsPathItem) Setpath(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsPathItem7setPathERK12QPainterPath
     // invoke: void setPath(const class QPainterPath &)
-    var arg0 = args[0].(QPainterPath).qclsinst
+    var arg0 = args[0].(*QPainterPath).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsPathItem7setPathERK12QPainterPath(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsPathItem7setPathERK12QPainterPath(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "setPath", args)
   }
@@ -3278,28 +3486,28 @@ func NewQGraphicsPathItem(args ...interface{}) *QGraphicsPathItem {
   case 0:
     // invoke: _ZN17QGraphicsPathItemC1ERK12QPainterPathP13QGraphicsItem
     // invoke: void QGraphicsPathItem(const class QPainterPath &, class QGraphicsItem *)
-    var arg0 = args[0].(QPainterPath).qclsinst
+    var arg0 = args[0].(*QPainterPath).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QGraphicsItem).qclsinst
+    var arg1 = args[1].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsPathItemC2ERK12QPainterPathP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsPathItem{qclsinst:qthis}
+    return &QGraphicsPathItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN17QGraphicsPathItemC1EP13QGraphicsItem
     // invoke: void QGraphicsPathItem(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsPathItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsPathItem{qclsinst:qthis}
+    return &QGraphicsPathItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "QGraphicsPathItem", args)
   }
 
-  return nil // QGraphicsPathItem{qclsinst:qthis}
+  return nil // QGraphicsPathItem{Qclsinst:qthis}
 }
 
 // type()
@@ -3315,11 +3523,15 @@ func (this *QGraphicsPathItem) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK17QGraphicsPathItem4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsPathItem4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "type", args)
   }
@@ -3340,11 +3552,15 @@ func (this *QGraphicsLineItem) Opaquearea(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK17QGraphicsLineItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    var ret0 = C.C_ZNK17QGraphicsLineItem10opaqueAreaEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsLineItem10opaqueAreaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "opaqueArea", args)
   }
@@ -3365,11 +3581,15 @@ func (this *QGraphicsLineItem) Boundingrect(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK17QGraphicsLineItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK17QGraphicsLineItem12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsLineItem12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "boundingRect", args)
   }
@@ -3390,11 +3610,15 @@ func (this *QGraphicsLineItem) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK17QGraphicsLineItem4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsLineItem4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "type", args)
   }
@@ -3416,13 +3640,17 @@ func (this *QGraphicsLineItem) Contains(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem8containsERK7QPointF
     // invoke: bool contains(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QGraphicsLineItem8containsERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK17QGraphicsLineItem8containsERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "contains", args)
   }
@@ -3443,11 +3671,15 @@ func (this *QGraphicsLineItem) Shape(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem5shapeEv
     // invoke: QPainterPath shape()
-    var ret0 = C.C_ZNK17QGraphicsLineItem5shapeEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsLineItem5shapeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "shape", args)
   }
@@ -3468,7 +3700,7 @@ func (this *QGraphicsLineItem) Freeqgraphicslineitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsLineItemD0Ev
     // invoke: void ~QGraphicsLineItem()
-    C.C_ZN17QGraphicsLineItemD2Ev(this.qclsinst)
+    C.C_ZN17QGraphicsLineItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "~QGraphicsLineItem", args)
   }
@@ -3501,45 +3733,45 @@ func NewQGraphicsLineItem(args ...interface{}) *QGraphicsLineItem {
   case 0:
     // invoke: _ZN17QGraphicsLineItemC1EP13QGraphicsItem
     // invoke: void QGraphicsLineItem(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsLineItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsLineItem{qclsinst:qthis}
+    return &QGraphicsLineItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN17QGraphicsLineItemC1ERK6QLineFP13QGraphicsItem
     // invoke: void QGraphicsLineItem(const class QLineF &, class QGraphicsItem *)
-    var arg0 = args[0].(QLineF).qclsinst
+    var arg0 = args[0].(*QLineF).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QGraphicsItem).qclsinst
+    var arg1 = args[1].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsLineItemC2ERK6QLineFP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsLineItem{qclsinst:qthis}
+    return &QGraphicsLineItem{Qclsinst:qthis}
   case 2:
     // invoke: _ZN17QGraphicsLineItemC1EddddP13QGraphicsItem
     // invoke: void QGraphicsLineItem(qreal, qreal, qreal, qreal, class QGraphicsItem *)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = args[4].(QGraphicsItem).qclsinst
+    var arg4 = args[4].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg4)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsLineItemC2EddddP13QGraphicsItem(arg0, arg1, arg2, arg3, arg4)
-    return &QGraphicsLineItem{qclsinst:qthis}
+    return &QGraphicsLineItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "QGraphicsLineItem", args)
   }
 
-  return nil // QGraphicsLineItem{qclsinst:qthis}
+  return nil // QGraphicsLineItem{Qclsinst:qthis}
 }
 
 // paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
@@ -3558,13 +3790,13 @@ func (this *QGraphicsLineItem) Paint(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
     // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-    var arg0 = args[0].(QPainter).qclsinst
+    var arg0 = args[0].(*QPainter).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
+    var arg1 = args[1].(*QStyleOptionGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "paint", args)
   }
@@ -3585,11 +3817,15 @@ func (this *QGraphicsLineItem) Pen(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem3penEv
     // invoke: QPen pen()
-    var ret0 = C.C_ZNK17QGraphicsLineItem3penEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsLineItem3penEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPen{}) // "QPen"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "pen", args)
   }
@@ -3611,9 +3847,9 @@ func (this *QGraphicsLineItem) Setpen(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsLineItem6setPenERK4QPen
     // invoke: void setPen(const class QPen &)
-    var arg0 = args[0].(QPen).qclsinst
+    var arg0 = args[0].(*QPen).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsLineItem6setPenERK4QPen(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsLineItem6setPenERK4QPen(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "setPen", args)
   }
@@ -3641,21 +3877,21 @@ func (this *QGraphicsLineItem) Setline(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsLineItem7setLineERK6QLineF
     // invoke: void setLine(const class QLineF &)
-    var arg0 = args[0].(QLineF).qclsinst
+    var arg0 = args[0].(*QLineF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QGraphicsLineItem7setLineERK6QLineF(this.qclsinst, arg0)
+    C.C_ZN17QGraphicsLineItem7setLineERK6QLineF(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN17QGraphicsLineItem7setLineEdddd
     // invoke: void setLine(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    C.C_ZN17QGraphicsLineItem7setLineEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN17QGraphicsLineItem7setLineEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "setLine", args)
   }
@@ -3676,11 +3912,15 @@ func (this *QGraphicsLineItem) Line(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem4lineEv
     // invoke: QLineF line()
-    var ret0 = C.C_ZNK17QGraphicsLineItem4lineEv(this.qclsinst)
+    var ret0 = C.C_ZNK17QGraphicsLineItem4lineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLineF{}) // "QLineF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "line", args)
   }
@@ -3702,13 +3942,17 @@ func (this *QGraphicsLineItem) Isobscuredby(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "isObscuredBy", args)
   }
@@ -3729,11 +3973,15 @@ func (this *QGraphicsItemGroup) Opaquearea(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    var ret0 = C.C_ZNK18QGraphicsItemGroup10opaqueAreaEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QGraphicsItemGroup10opaqueAreaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "opaqueArea", args)
   }
@@ -3755,9 +4003,9 @@ func (this *QGraphicsItemGroup) Addtogroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem
     // invoke: void addToGroup(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "addToGroup", args)
   }
@@ -3779,17 +4027,17 @@ func NewQGraphicsItemGroup(args ...interface{}) *QGraphicsItemGroup {
   case 0:
     // invoke: _ZN18QGraphicsItemGroupC1EP13QGraphicsItem
     // invoke: void QGraphicsItemGroup(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QGraphicsItemGroupC2EP13QGraphicsItem(arg0)
-    return &QGraphicsItemGroup{qclsinst:qthis}
+    return &QGraphicsItemGroup{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "QGraphicsItemGroup", args)
   }
 
-  return nil // QGraphicsItemGroup{qclsinst:qthis}
+  return nil // QGraphicsItemGroup{Qclsinst:qthis}
 }
 
 // boundingRect()
@@ -3805,11 +4053,15 @@ func (this *QGraphicsItemGroup) Boundingrect(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK18QGraphicsItemGroup12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QGraphicsItemGroup12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "boundingRect", args)
   }
@@ -3831,9 +4083,9 @@ func (this *QGraphicsItemGroup) Removefromgroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem
     // invoke: void removeFromGroup(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem(this.qclsinst, arg0)
+    C.C_ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "removeFromGroup", args)
   }
@@ -3855,13 +4107,17 @@ func (this *QGraphicsItemGroup) Isobscuredby(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "isObscuredBy", args)
   }
@@ -3885,13 +4141,13 @@ func (this *QGraphicsItemGroup) Paint(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
     // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-    var arg0 = args[0].(QPainter).qclsinst
+    var arg0 = args[0].(*QPainter).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
+    var arg1 = args[1].(*QStyleOptionGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "paint", args)
   }
@@ -3912,11 +4168,15 @@ func (this *QGraphicsItemGroup) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK18QGraphicsItemGroup4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QGraphicsItemGroup4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "type", args)
   }
@@ -3937,7 +4197,7 @@ func (this *QGraphicsItemGroup) Freeqgraphicsitemgroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QGraphicsItemGroupD0Ev
     // invoke: void ~QGraphicsItemGroup()
-    C.C_ZN18QGraphicsItemGroupD2Ev(this.qclsinst)
+    C.C_ZN18QGraphicsItemGroupD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "~QGraphicsItemGroup", args)
   }
@@ -3958,11 +4218,15 @@ func (this *QAbstractGraphicsShapeItem) Opaquearea(args ...interface{}) (ret int
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    var ret0 = C.C_ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv(this.qclsinst)
+    var ret0 = C.C_ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "opaqueArea", args)
   }
@@ -3984,13 +4248,17 @@ func (this *QAbstractGraphicsShapeItem) Isobscuredby(args ...interface{}) (ret i
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "isObscuredBy", args)
   }
@@ -4011,11 +4279,15 @@ func (this *QAbstractGraphicsShapeItem) Pen(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem3penEv
     // invoke: QPen pen()
-    var ret0 = C.C_ZNK26QAbstractGraphicsShapeItem3penEv(this.qclsinst)
+    var ret0 = C.C_ZNK26QAbstractGraphicsShapeItem3penEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPen{}) // "QPen"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "pen", args)
   }
@@ -4036,11 +4308,15 @@ func (this *QAbstractGraphicsShapeItem) Brush(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem5brushEv
     // invoke: QBrush brush()
-    var ret0 = C.C_ZNK26QAbstractGraphicsShapeItem5brushEv(this.qclsinst)
+    var ret0 = C.C_ZNK26QAbstractGraphicsShapeItem5brushEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "QBrush"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "brush", args)
   }
@@ -4062,9 +4338,9 @@ func (this *QAbstractGraphicsShapeItem) Setpen(args ...interface{}) () {
   case 0:
     // invoke: _ZN26QAbstractGraphicsShapeItem6setPenERK4QPen
     // invoke: void setPen(const class QPen &)
-    var arg0 = args[0].(QPen).qclsinst
+    var arg0 = args[0].(*QPen).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN26QAbstractGraphicsShapeItem6setPenERK4QPen(this.qclsinst, arg0)
+    C.C_ZN26QAbstractGraphicsShapeItem6setPenERK4QPen(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "setPen", args)
   }
@@ -4086,9 +4362,9 @@ func (this *QAbstractGraphicsShapeItem) Setbrush(args ...interface{}) () {
   case 0:
     // invoke: _ZN26QAbstractGraphicsShapeItem8setBrushERK6QBrush
     // invoke: void setBrush(const class QBrush &)
-    var arg0 = args[0].(QBrush).qclsinst
+    var arg0 = args[0].(*QBrush).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN26QAbstractGraphicsShapeItem8setBrushERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN26QAbstractGraphicsShapeItem8setBrushERK6QBrush(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "setBrush", args)
   }
@@ -4109,7 +4385,7 @@ func (this *QAbstractGraphicsShapeItem) Freeqabstractgraphicsshapeitem(args ...i
   case 0:
     // invoke: _ZN26QAbstractGraphicsShapeItemD0Ev
     // invoke: void ~QAbstractGraphicsShapeItem()
-    C.C_ZN26QAbstractGraphicsShapeItemD2Ev(this.qclsinst)
+    C.C_ZN26QAbstractGraphicsShapeItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "~QAbstractGraphicsShapeItem", args)
   }
@@ -4131,17 +4407,17 @@ func NewQAbstractGraphicsShapeItem(args ...interface{}) *QAbstractGraphicsShapeI
   case 0:
     // invoke: _ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItem
     // invoke: void QAbstractGraphicsShapeItem(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QAbstractGraphicsShapeItemC2EP13QGraphicsItem(arg0)
-    return &QAbstractGraphicsShapeItem{qclsinst:qthis}
+    return &QAbstractGraphicsShapeItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "QAbstractGraphicsShapeItem", args)
   }
 
-  return nil // QAbstractGraphicsShapeItem{qclsinst:qthis}
+  return nil // QAbstractGraphicsShapeItem{Qclsinst:qthis}
 }
 
 // show()
@@ -4157,7 +4433,7 @@ func (this *QGraphicsItem) Show(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem4showEv
     // invoke: void show()
-    C.C_ZN13QGraphicsItem4showEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem4showEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "show", args)
   }
@@ -4178,11 +4454,15 @@ func (this *QGraphicsItem) Hasfocus(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem8hasFocusEv
     // invoke: bool hasFocus()
-    var ret0 = C.C_ZNK13QGraphicsItem8hasFocusEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem8hasFocusEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "hasFocus", args)
   }
@@ -4204,9 +4484,9 @@ func (this *QGraphicsItem) Setgroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup
     // invoke: void setGroup(class QGraphicsItemGroup *)
-    var arg0 = args[0].(QGraphicsItemGroup).qclsinst
+    var arg0 = args[0].(*QGraphicsItemGroup).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setGroup", args)
   }
@@ -4227,11 +4507,15 @@ func (this *QGraphicsItem) Handleschildevents(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK13QGraphicsItem18handlesChildEventsEv
     // invoke: bool handlesChildEvents()
-    var ret0 = C.C_ZNK13QGraphicsItem18handlesChildEventsEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem18handlesChildEventsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "handlesChildEvents", args)
   }
@@ -4252,11 +4536,15 @@ func (this *QGraphicsItem) Shape(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem5shapeEv
     // invoke: QPainterPath shape()
-    var ret0 = C.C_ZNK13QGraphicsItem5shapeEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem5shapeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "shape", args)
   }
@@ -4277,11 +4565,15 @@ func (this *QGraphicsItem) Ispanel(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem7isPanelEv
     // invoke: bool isPanel()
-    var ret0 = C.C_ZNK13QGraphicsItem7isPanelEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem7isPanelEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isPanel", args)
   }
@@ -4303,13 +4595,17 @@ func (this *QGraphicsItem) Data(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem4dataEi
     // invoke: QVariant data(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem4dataEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem4dataEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "data", args)
   }
@@ -4330,7 +4626,7 @@ func (this *QGraphicsItem) Parentitem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem10parentItemEv
     // invoke: QGraphicsItem * parentItem()
-    C.C_ZNK13QGraphicsItem10parentItemEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem10parentItemEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "parentItem", args)
   }
@@ -4351,11 +4647,15 @@ func (this *QGraphicsItem) Childrenboundingrect(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK13QGraphicsItem20childrenBoundingRectEv
     // invoke: QRectF childrenBoundingRect()
-    var ret0 = C.C_ZNK13QGraphicsItem20childrenBoundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem20childrenBoundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "childrenBoundingRect", args)
   }
@@ -4376,7 +4676,7 @@ func (this *QGraphicsItem) Group(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem5groupEv
     // invoke: QGraphicsItemGroup * group()
-    C.C_ZNK13QGraphicsItem5groupEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem5groupEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "group", args)
   }
@@ -4397,11 +4697,15 @@ func (this *QGraphicsItem) Isenabled(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem9isEnabledEv
     // invoke: bool isEnabled()
-    var ret0 = C.C_ZNK13QGraphicsItem9isEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem9isEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isEnabled", args)
   }
@@ -4422,7 +4726,7 @@ func (this *QGraphicsItem) Window(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem6windowEv
     // invoke: QGraphicsWidget * window()
-    C.C_ZNK13QGraphicsItem6windowEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem6windowEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "window", args)
   }
@@ -4444,9 +4748,9 @@ func (this *QGraphicsItem) Setboundingregiongranularity(args ...interface{}) () 
   case 0:
     // invoke: _ZN13QGraphicsItem28setBoundingRegionGranularityEd
     // invoke: void setBoundingRegionGranularity(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem28setBoundingRegionGranularityEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem28setBoundingRegionGranularityEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setBoundingRegionGranularity", args)
   }
@@ -4468,9 +4772,9 @@ func (this *QGraphicsItem) Setrotation(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem11setRotationEd
     // invoke: void setRotation(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem11setRotationEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem11setRotationEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setRotation", args)
   }
@@ -4492,9 +4796,9 @@ func (this *QGraphicsItem) Commonancestoritem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem18commonAncestorItemEPKS_
     // invoke: QGraphicsItem * commonAncestorItem(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QGraphicsItem18commonAncestorItemEPKS_(this.qclsinst, arg0)
+    C.C_ZNK13QGraphicsItem18commonAncestorItemEPKS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "commonAncestorItem", args)
   }
@@ -4541,83 +4845,107 @@ func (this *QGraphicsItem) Maptoitem(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF
     // invoke: QPolygonF mapToItem(const class QGraphicsItem *, const class QPolygonF &)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPolygonF).qclsinst
+    var arg1 = args[1].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF
     // invoke: QPolygonF mapToItem(const class QGraphicsItem *, const class QRectF &)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QRectF).qclsinst
+    var arg1 = args[1].(*QRectF).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath
     // invoke: QPainterPath mapToItem(const class QGraphicsItem *, const class QPainterPath &)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPainterPath).qclsinst
+    var arg1 = args[1].(*QPainterPath).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF
     // invoke: QPointF mapToItem(const class QGraphicsItem *, const class QPointF &)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPointF).qclsinst
+    var arg1 = args[1].(*QPointF).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 4:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_dddd
     // invoke: QPolygonF mapToItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = C.double(args[4].(float64))
+    var arg4 = C.double(qtrt.PrimConv(args[4], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg4)}
-    var ret0 = C.C_ZNK13QGraphicsItem9mapToItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    var ret0 = C.C_ZNK13QGraphicsItem9mapToItemEPKS_dddd(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 5:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_dd
     // invoke: QPointF mapToItem(const class QGraphicsItem *, qreal, qreal)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK13QGraphicsItem9mapToItemEPKS_dd(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK13QGraphicsItem9mapToItemEPKS_dd(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapToItem", args)
   }
@@ -4638,7 +4966,7 @@ func (this *QGraphicsItem) Tographicsobject(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem16toGraphicsObjectEv
     // invoke: QGraphicsObject * toGraphicsObject()
-    C.C_ZN13QGraphicsItem16toGraphicsObjectEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem16toGraphicsObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "toGraphicsObject", args)
   }
@@ -4659,7 +4987,7 @@ func (this *QGraphicsItem) Acceptedmousebuttons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem20acceptedMouseButtonsEv
     // invoke: Qt::MouseButtons acceptedMouseButtons()
-    C.C_ZNK13QGraphicsItem20acceptedMouseButtonsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem20acceptedMouseButtonsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptedMouseButtons", args)
   }
@@ -4681,9 +5009,9 @@ func (this *QGraphicsItem) Setgraphicseffect(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem17setGraphicsEffectEP15QGraphicsEffect
     // invoke: void setGraphicsEffect(class QGraphicsEffect *)
-    var arg0 = args[0].(QGraphicsEffect).qclsinst
+    var arg0 = args[0].(*QGraphicsEffect).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem17setGraphicsEffectEP15QGraphicsEffect(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem17setGraphicsEffectEP15QGraphicsEffect(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setGraphicsEffect", args)
   }
@@ -4724,71 +5052,95 @@ func (this *QGraphicsItem) Maptoparent(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem11mapToParentEdddd
     // invoke: QPolygonF mapToParent(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK13QGraphicsItem11mapToParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZNK13QGraphicsItem11mapToParentEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK7QPointF
     // invoke: QPointF mapToParent(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem11mapToParentERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem11mapToParentERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK13QGraphicsItem11mapToParentEdd
     // invoke: QPointF mapToParent(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem11mapToParentEdd(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem11mapToParentEdd(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK12QPainterPath
     // invoke: QPainterPath mapToParent(const class QPainterPath &)
-    var arg0 = args[0].(QPainterPath).qclsinst
+    var arg0 = args[0].(*QPainterPath).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem11mapToParentERK12QPainterPath(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem11mapToParentERK12QPainterPath(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 4:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK6QRectF
     // invoke: QPolygonF mapToParent(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem11mapToParentERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem11mapToParentERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 5:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK9QPolygonF
     // invoke: QPolygonF mapToParent(const class QPolygonF &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem11mapToParentERK9QPolygonF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem11mapToParentERK9QPolygonF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapToParent", args)
   }
@@ -4814,17 +5166,17 @@ func (this *QGraphicsItem) Settransformoriginpoint(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem23setTransformOriginPointERK7QPointF
     // invoke: void setTransformOriginPoint(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem23setTransformOriginPointERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem23setTransformOriginPointERK7QPointF(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN13QGraphicsItem23setTransformOriginPointEdd
     // invoke: void setTransformOriginPoint(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN13QGraphicsItem23setTransformOriginPointEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsItem23setTransformOriginPointEdd(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setTransformOriginPoint", args)
   }
@@ -4846,13 +5198,17 @@ func (this *QGraphicsItem) Devicetransform(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK13QGraphicsItem15deviceTransformERK10QTransform
     // invoke: QTransform deviceTransform(const class QTransform &)
-    var arg0 = args[0].(QTransform).qclsinst
+    var arg0 = args[0].(*QTransform).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem15deviceTransformERK10QTransform(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem15deviceTransformERK10QTransform(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "deviceTransform", args)
   }
@@ -4873,11 +5229,15 @@ func (this *QGraphicsItem) Rotation(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem8rotationEv
     // invoke: qreal rotation()
-    var ret0 = C.C_ZNK13QGraphicsItem8rotationEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem8rotationEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "rotation", args)
   }
@@ -4898,11 +5258,15 @@ func (this *QGraphicsItem) Effectiveopacity(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK13QGraphicsItem16effectiveOpacityEv
     // invoke: qreal effectiveOpacity()
-    var ret0 = C.C_ZNK13QGraphicsItem16effectiveOpacityEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem16effectiveOpacityEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "effectiveOpacity", args)
   }
@@ -4923,7 +5287,7 @@ func (this *QGraphicsItem) Focusscopeitem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem14focusScopeItemEv
     // invoke: QGraphicsItem * focusScopeItem()
-    C.C_ZNK13QGraphicsItem14focusScopeItemEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem14focusScopeItemEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "focusScopeItem", args)
   }
@@ -4944,7 +5308,7 @@ func (this *QGraphicsItem) Inputmethodhints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem16inputMethodHintsEv
     // invoke: Qt::InputMethodHints inputMethodHints()
-    C.C_ZNK13QGraphicsItem16inputMethodHintsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem16inputMethodHintsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "inputMethodHints", args)
   }
@@ -4965,7 +5329,7 @@ func (this *QGraphicsItem) Panelmodality(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem13panelModalityEv
     // invoke: QGraphicsItem::PanelModality panelModality()
-    C.C_ZNK13QGraphicsItem13panelModalityEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem13panelModalityEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "panelModality", args)
   }
@@ -4986,7 +5350,7 @@ func (this *QGraphicsItem) Toplevelwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem14topLevelWidgetEv
     // invoke: QGraphicsWidget * topLevelWidget()
-    C.C_ZNK13QGraphicsItem14topLevelWidgetEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem14topLevelWidgetEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "topLevelWidget", args)
   }
@@ -5008,13 +5372,17 @@ func (this *QGraphicsItem) Isvisibleto(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem11isVisibleToEPKS_
     // invoke: bool isVisibleTo(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem11isVisibleToEPKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem11isVisibleToEPKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isVisibleTo", args)
   }
@@ -5038,7 +5406,7 @@ func (this *QGraphicsItem) Setacceptdrops(args ...interface{}) () {
     // invoke: void setAcceptDrops(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem14setAcceptDropsEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem14setAcceptDropsEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setAcceptDrops", args)
   }
@@ -5059,7 +5427,7 @@ func (this *QGraphicsItem) Clearfocus(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem10clearFocusEv
     // invoke: void clearFocus()
-    C.C_ZN13QGraphicsItem10clearFocusEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem10clearFocusEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "clearFocus", args)
   }
@@ -5080,11 +5448,15 @@ func (this *QGraphicsItem) Filterschildevents(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK13QGraphicsItem18filtersChildEventsEv
     // invoke: bool filtersChildEvents()
-    var ret0 = C.C_ZNK13QGraphicsItem18filtersChildEventsEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem18filtersChildEventsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "filtersChildEvents", args)
   }
@@ -5105,7 +5477,7 @@ func (this *QGraphicsItem) X(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem1xEv
     // invoke: qreal x()
-    C.C_ZNK13QGraphicsItem1xEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem1xEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "x", args)
   }
@@ -5128,11 +5500,11 @@ func (this *QGraphicsItem) Settransform(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem12setTransformERK10QTransformb
     // invoke: void setTransform(const class QTransform &, _Bool)
-    var arg0 = args[0].(QTransform).qclsinst
+    var arg0 = args[0].(*QTransform).Qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C.C_ZN13QGraphicsItem12setTransformERK10QTransformb(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsItem12setTransformERK10QTransformb(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setTransform", args)
   }
@@ -5154,9 +5526,9 @@ func (this *QGraphicsItem) Stackbefore(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem11stackBeforeEPKS_
     // invoke: void stackBefore(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem11stackBeforeEPKS_(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem11stackBeforeEPKS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "stackBefore", args)
   }
@@ -5180,7 +5552,7 @@ func (this *QGraphicsItem) Setaccepthoverevents(args ...interface{}) () {
     // invoke: void setAcceptHoverEvents(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem20setAcceptHoverEventsEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem20setAcceptHoverEventsEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setAcceptHoverEvents", args)
   }
@@ -5201,7 +5573,7 @@ func (this *QGraphicsItem) Focusproxy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem10focusProxyEv
     // invoke: QGraphicsItem * focusProxy()
-    C.C_ZNK13QGraphicsItem10focusProxyEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem10focusProxyEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "focusProxy", args)
   }
@@ -5242,71 +5614,95 @@ func (this *QGraphicsItem) Mapfromparent(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK12QPainterPath
     // invoke: QPainterPath mapFromParent(const class QPainterPath &)
-    var arg0 = args[0].(QPainterPath).qclsinst
+    var arg0 = args[0].(*QPainterPath).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem13mapFromParentERK12QPainterPath(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem13mapFromParentERK12QPainterPath(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK6QRectF
     // invoke: QPolygonF mapFromParent(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem13mapFromParentERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem13mapFromParentERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK13QGraphicsItem13mapFromParentEdddd
     // invoke: QPolygonF mapFromParent(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK13QGraphicsItem13mapFromParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZNK13QGraphicsItem13mapFromParentEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZNK13QGraphicsItem13mapFromParentEdd
     // invoke: QPointF mapFromParent(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem13mapFromParentEdd(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem13mapFromParentEdd(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 4:
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK7QPointF
     // invoke: QPointF mapFromParent(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem13mapFromParentERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem13mapFromParentERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 5:
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK9QPolygonF
     // invoke: QPolygonF mapFromParent(const class QPolygonF &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem13mapFromParentERK9QPolygonF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem13mapFromParentERK9QPolygonF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapFromParent", args)
   }
@@ -5327,11 +5723,15 @@ func (this *QGraphicsItem) Scenepos(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem8scenePosEv
     // invoke: QPointF scenePos()
-    var ret0 = C.C_ZNK13QGraphicsItem8scenePosEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem8scenePosEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scenePos", args)
   }
@@ -5357,17 +5757,17 @@ func (this *QGraphicsItem) Setpos(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem6setPosEdd
     // invoke: void setPos(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN13QGraphicsItem6setPosEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsItem6setPosEdd(this.Qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN13QGraphicsItem6setPosERK7QPointF
     // invoke: void setPos(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem6setPosERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem6setPosERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setPos", args)
   }
@@ -5388,11 +5788,15 @@ func (this *QGraphicsItem) Scale(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem5scaleEv
     // invoke: qreal scale()
-    var ret0 = C.C_ZNK13QGraphicsItem5scaleEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem5scaleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scale", args)
   }
@@ -5413,7 +5817,7 @@ func (this *QGraphicsItem) Hide(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem4hideEv
     // invoke: void hide()
-    C.C_ZN13QGraphicsItem4hideEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem4hideEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "hide", args)
   }
@@ -5434,11 +5838,15 @@ func (this *QGraphicsItem) Matrix(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem6matrixEv
     // invoke: QMatrix matrix()
-    var ret0 = C.C_ZNK13QGraphicsItem6matrixEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem6matrixEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMatrix{}) // "QMatrix"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "matrix", args)
   }
@@ -5459,11 +5867,15 @@ func (this *QGraphicsItem) Isselected(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem10isSelectedEv
     // invoke: bool isSelected()
-    var ret0 = C.C_ZNK13QGraphicsItem10isSelectedEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem10isSelectedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isSelected", args)
   }
@@ -5486,11 +5898,11 @@ func (this *QGraphicsItem) Moveby(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem6moveByEdd
     // invoke: void moveBy(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN13QGraphicsItem6moveByEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsItem6moveByEdd(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "moveBy", args)
   }
@@ -5512,9 +5924,9 @@ func (this *QGraphicsItem) Setfocusproxy(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem13setFocusProxyEPS_
     // invoke: void setFocusProxy(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem13setFocusProxyEPS_(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem13setFocusProxyEPS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setFocusProxy", args)
   }
@@ -5537,15 +5949,19 @@ func (this *QGraphicsItem) Itemtransform(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK13QGraphicsItem13itemTransformEPKS_Pb
     // invoke: QTransform itemTransform(const class QGraphicsItem *, _Bool *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = (unsafe.Pointer)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem13itemTransformEPKS_Pb(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem13itemTransformEPKS_Pb(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "itemTransform", args)
   }
@@ -5573,29 +5989,37 @@ func (this *QGraphicsItem) Maprecttoparent(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK13QGraphicsItem15mapRectToParentERK6QRectF
     // invoke: QRectF mapRectToParent(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem15mapRectToParentERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem15mapRectToParentERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem15mapRectToParentEdddd
     // invoke: QRectF mapRectToParent(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK13QGraphicsItem15mapRectToParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZNK13QGraphicsItem15mapRectToParentEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectToParent", args)
   }
@@ -5617,13 +6041,17 @@ func (this *QGraphicsItem) Isblockedbymodalpanel(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK13QGraphicsItem21isBlockedByModalPanelEPPS_
     // invoke: bool isBlockedByModalPanel(class QGraphicsItem **)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem21isBlockedByModalPanelEPPS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem21isBlockedByModalPanelEPPS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isBlockedByModalPanel", args)
   }
@@ -5644,7 +6072,7 @@ func (this *QGraphicsItem) Graphicseffect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem14graphicsEffectEv
     // invoke: QGraphicsEffect * graphicsEffect()
-    C.C_ZNK13QGraphicsItem14graphicsEffectEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem14graphicsEffectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "graphicsEffect", args)
   }
@@ -5665,7 +6093,7 @@ func (this *QGraphicsItem) Childitems(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem10childItemsEv
     // invoke: QList<QGraphicsItem *> childItems()
-    C.C_ZNK13QGraphicsItem10childItemsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem10childItemsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "childItems", args)
   }
@@ -5686,11 +6114,15 @@ func (this *QGraphicsItem) Isclipped(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem9isClippedEv
     // invoke: bool isClipped()
-    var ret0 = C.C_ZNK13QGraphicsItem9isClippedEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem9isClippedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isClipped", args)
   }
@@ -5711,11 +6143,15 @@ func (this *QGraphicsItem) Tooltip(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem7toolTipEv
     // invoke: QString toolTip()
-    var ret0 = C.C_ZNK13QGraphicsItem7toolTipEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem7toolTipEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "toolTip", args)
   }
@@ -5736,7 +6172,7 @@ func (this *QGraphicsItem) Freeqgraphicsitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItemD0Ev
     // invoke: void ~QGraphicsItem()
-    C.C_ZN13QGraphicsItemD2Ev(this.qclsinst)
+    C.C_ZN13QGraphicsItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "~QGraphicsItem", args)
   }
@@ -5757,11 +6193,15 @@ func (this *QGraphicsItem) Isactive(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem8isActiveEv
     // invoke: bool isActive()
-    var ret0 = C.C_ZNK13QGraphicsItem8isActiveEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem8isActiveEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isActive", args)
   }
@@ -5785,7 +6225,7 @@ func (this *QGraphicsItem) Setfilterschildevents(args ...interface{}) () {
     // invoke: void setFiltersChildEvents(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem21setFiltersChildEventsEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem21setFiltersChildEventsEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setFiltersChildEvents", args)
   }
@@ -5806,11 +6246,15 @@ func (this *QGraphicsItem) Opaquearea(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    var ret0 = C.C_ZNK13QGraphicsItem10opaqueAreaEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem10opaqueAreaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "opaqueArea", args)
   }
@@ -5832,9 +6276,9 @@ func (this *QGraphicsItem) Advance(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem7advanceEi
     // invoke: void advance(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem7advanceEi(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem7advanceEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "advance", args)
   }
@@ -5856,9 +6300,9 @@ func (this *QGraphicsItem) Settooltip(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem10setToolTipERK7QString
     // invoke: void setToolTip(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem10setToolTipERK7QString(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem10setToolTipERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setToolTip", args)
   }
@@ -5899,71 +6343,95 @@ func (this *QGraphicsItem) Maptoscene(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem10mapToSceneERK9QPolygonF
     // invoke: QPolygonF mapToScene(const class QPolygonF &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem10mapToSceneERK9QPolygonF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem10mapToSceneERK9QPolygonF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem10mapToSceneERK6QRectF
     // invoke: QPolygonF mapToScene(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem10mapToSceneERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem10mapToSceneERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK13QGraphicsItem10mapToSceneERK7QPointF
     // invoke: QPointF mapToScene(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem10mapToSceneERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem10mapToSceneERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZNK13QGraphicsItem10mapToSceneERK12QPainterPath
     // invoke: QPainterPath mapToScene(const class QPainterPath &)
-    var arg0 = args[0].(QPainterPath).qclsinst
+    var arg0 = args[0].(*QPainterPath).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem10mapToSceneERK12QPainterPath(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem10mapToSceneERK12QPainterPath(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 4:
     // invoke: _ZNK13QGraphicsItem10mapToSceneEdddd
     // invoke: QPolygonF mapToScene(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK13QGraphicsItem10mapToSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZNK13QGraphicsItem10mapToSceneEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 5:
     // invoke: _ZNK13QGraphicsItem10mapToSceneEdd
     // invoke: QPointF mapToScene(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem10mapToSceneEdd(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem10mapToSceneEdd(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapToScene", args)
   }
@@ -5987,7 +6455,7 @@ func (this *QGraphicsItem) Sethandleschildevents(args ...interface{}) () {
     // invoke: void setHandlesChildEvents(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem21setHandlesChildEventsEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem21setHandlesChildEventsEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setHandlesChildEvents", args)
   }
@@ -6008,11 +6476,15 @@ func (this *QGraphicsItem) Transformoriginpoint(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK13QGraphicsItem20transformOriginPointEv
     // invoke: QPointF transformOriginPoint()
-    var ret0 = C.C_ZNK13QGraphicsItem20transformOriginPointEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem20transformOriginPointEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "transformOriginPoint", args)
   }
@@ -6033,11 +6505,15 @@ func (this *QGraphicsItem) Pos(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem3posEv
     // invoke: QPointF pos()
-    var ret0 = C.C_ZNK13QGraphicsItem3posEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem3posEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "pos", args)
   }
@@ -6065,29 +6541,37 @@ func (this *QGraphicsItem) Maprecttoscene(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK13QGraphicsItem14mapRectToSceneERK6QRectF
     // invoke: QRectF mapRectToScene(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem14mapRectToSceneERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem14mapRectToSceneERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem14mapRectToSceneEdddd
     // invoke: QRectF mapRectToScene(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK13QGraphicsItem14mapRectToSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZNK13QGraphicsItem14mapRectToSceneEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectToScene", args)
   }
@@ -6108,7 +6592,7 @@ func (this *QGraphicsItem) Ungrabmouse(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem11ungrabMouseEv
     // invoke: void ungrabMouse()
-    C.C_ZN13QGraphicsItem11ungrabMouseEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem11ungrabMouseEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "ungrabMouse", args)
   }
@@ -6136,29 +6620,37 @@ func (this *QGraphicsItem) Isobscured(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem10isObscuredEdddd
     // invoke: bool isObscured(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK13QGraphicsItem10isObscuredEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZNK13QGraphicsItem10isObscuredEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem10isObscuredERK6QRectF
     // invoke: bool isObscured(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem10isObscuredERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem10isObscuredERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isObscured", args)
   }
@@ -6182,7 +6674,7 @@ func (this *QGraphicsItem) Setselected(args ...interface{}) () {
     // invoke: void setSelected(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem11setSelectedEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem11setSelectedEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setSelected", args)
   }
@@ -6223,71 +6715,95 @@ func (this *QGraphicsItem) Mapfromscene(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF
     // invoke: QPolygonF mapFromScene(const class QPolygonF &)
-    var arg0 = args[0].(QPolygonF).qclsinst
+    var arg0 = args[0].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK6QRectF
     // invoke: QPolygonF mapFromScene(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem12mapFromSceneERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem12mapFromSceneERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneEdddd
     // invoke: QPolygonF mapFromScene(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK13QGraphicsItem12mapFromSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZNK13QGraphicsItem12mapFromSceneEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneEdd
     // invoke: QPointF mapFromScene(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem12mapFromSceneEdd(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem12mapFromSceneEdd(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 4:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath
     // invoke: QPainterPath mapFromScene(const class QPainterPath &)
-    var arg0 = args[0].(QPainterPath).qclsinst
+    var arg0 = args[0].(*QPainterPath).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 5:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK7QPointF
     // invoke: QPointF mapFromScene(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem12mapFromSceneERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem12mapFromSceneERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapFromScene", args)
   }
@@ -6308,7 +6824,7 @@ func (this *QGraphicsItem) Scene(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem5sceneEv
     // invoke: QGraphicsScene * scene()
-    C.C_ZNK13QGraphicsItem5sceneEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem5sceneEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scene", args)
   }
@@ -6330,13 +6846,17 @@ func (this *QGraphicsItem) Isancestorof(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem12isAncestorOfEPKS_
     // invoke: bool isAncestorOf(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem12isAncestorOfEPKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem12isAncestorOfEPKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isAncestorOf", args)
   }
@@ -6357,7 +6877,7 @@ func (this *QGraphicsItem) Toplevelitem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem12topLevelItemEv
     // invoke: QGraphicsItem * topLevelItem()
-    C.C_ZNK13QGraphicsItem12topLevelItemEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem12topLevelItemEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "topLevelItem", args)
   }
@@ -6378,7 +6898,7 @@ func (this *QGraphicsItem) Panel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem5panelEv
     // invoke: QGraphicsItem * panel()
-    C.C_ZNK13QGraphicsItem5panelEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem5panelEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "panel", args)
   }
@@ -6399,7 +6919,7 @@ func (this *QGraphicsItem) Unsetcursor(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem11unsetCursorEv
     // invoke: void unsetCursor()
-    C.C_ZN13QGraphicsItem11unsetCursorEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem11unsetCursorEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "unsetCursor", args)
   }
@@ -6420,7 +6940,7 @@ func (this *QGraphicsItem) Transformations(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem15transformationsEv
     // invoke: QList<QGraphicsTransform *> transformations()
-    C.C_ZNK13QGraphicsItem15transformationsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem15transformationsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "transformations", args)
   }
@@ -6448,29 +6968,37 @@ func (this *QGraphicsItem) Maprectfromscene(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK13QGraphicsItem16mapRectFromSceneERK6QRectF
     // invoke: QRectF mapRectFromScene(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem16mapRectFromSceneERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem16mapRectFromSceneERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem16mapRectFromSceneEdddd
     // invoke: QRectF mapRectFromScene(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK13QGraphicsItem16mapRectFromSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZNK13QGraphicsItem16mapRectFromSceneEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectFromScene", args)
   }
@@ -6492,13 +7020,17 @@ func (this *QGraphicsItem) Contains(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem8containsERK7QPointF
     // invoke: bool contains(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem8containsERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem8containsERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "contains", args)
   }
@@ -6519,11 +7051,15 @@ func (this *QGraphicsItem) Transform(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem9transformEv
     // invoke: QTransform transform()
-    var ret0 = C.C_ZNK13QGraphicsItem9transformEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem9transformEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "transform", args)
   }
@@ -6544,7 +7080,7 @@ func (this *QGraphicsItem) Ungrabkeyboard(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem14ungrabKeyboardEv
     // invoke: void ungrabKeyboard()
-    C.C_ZN13QGraphicsItem14ungrabKeyboardEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem14ungrabKeyboardEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "ungrabKeyboard", args)
   }
@@ -6566,9 +7102,9 @@ func (this *QGraphicsItem) Installsceneeventfilter(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem23installSceneEventFilterEPS_
     // invoke: void installSceneEventFilter(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem23installSceneEventFilterEPS_(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem23installSceneEventFilterEPS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "installSceneEventFilter", args)
   }
@@ -6589,11 +7125,15 @@ func (this *QGraphicsItem) Accepthoverevents(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK13QGraphicsItem17acceptHoverEventsEv
     // invoke: bool acceptHoverEvents()
-    var ret0 = C.C_ZNK13QGraphicsItem17acceptHoverEventsEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem17acceptHoverEventsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptHoverEvents", args)
   }
@@ -6623,33 +7163,41 @@ func (this *QGraphicsItem) Maprecttoitem(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK13QGraphicsItem13mapRectToItemEPKS_dddd
     // invoke: QRectF mapRectToItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = C.double(args[4].(float64))
+    var arg4 = C.double(qtrt.PrimConv(args[4], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg4)}
-    var ret0 = C.C_ZNK13QGraphicsItem13mapRectToItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    var ret0 = C.C_ZNK13QGraphicsItem13mapRectToItemEPKS_dddd(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF
     // invoke: QRectF mapRectToItem(const class QGraphicsItem *, const class QRectF &)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QRectF).qclsinst
+    var arg1 = args[1].(*QRectF).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectToItem", args)
   }
@@ -6696,83 +7244,107 @@ func (this *QGraphicsItem) Mapfromitem(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_dd
     // invoke: QPointF mapFromItem(const class QGraphicsItem *, qreal, qreal)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZNK13QGraphicsItem11mapFromItemEPKS_dd(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZNK13QGraphicsItem11mapFromItemEPKS_dd(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF
     // invoke: QPointF mapFromItem(const class QGraphicsItem *, const class QPointF &)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPointF).qclsinst
+    var arg1 = args[1].(*QPointF).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_dddd
     // invoke: QPolygonF mapFromItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = C.double(args[4].(float64))
+    var arg4 = C.double(qtrt.PrimConv(args[4], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg4)}
-    var ret0 = C.C_ZNK13QGraphicsItem11mapFromItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    var ret0 = C.C_ZNK13QGraphicsItem11mapFromItemEPKS_dddd(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 3:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF
     // invoke: QPolygonF mapFromItem(const class QGraphicsItem *, const class QRectF &)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QRectF).qclsinst
+    var arg1 = args[1].(*QRectF).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 4:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF
     // invoke: QPolygonF mapFromItem(const class QGraphicsItem *, const class QPolygonF &)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPolygonF).qclsinst
+    var arg1 = args[1].(*QPolygonF).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPolygonF{}) // "QPolygonF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 5:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath
     // invoke: QPainterPath mapFromItem(const class QGraphicsItem *, const class QPainterPath &)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPainterPath).qclsinst
+    var arg1 = args[1].(*QPainterPath).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapFromItem", args)
   }
@@ -6794,17 +7366,17 @@ func NewQGraphicsItem(args ...interface{}) *QGraphicsItem {
   case 0:
     // invoke: _ZN13QGraphicsItemC1EPS_
     // invoke: void QGraphicsItem(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QGraphicsItemC2EPS_(arg0)
-    return &QGraphicsItem{qclsinst:qthis}
+    return &QGraphicsItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsItem", "QGraphicsItem", args)
   }
 
-  return nil // QGraphicsItem{qclsinst:qthis}
+  return nil // QGraphicsItem{Qclsinst:qthis}
 }
 
 // type()
@@ -6820,11 +7392,15 @@ func (this *QGraphicsItem) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK13QGraphicsItem4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "type", args)
   }
@@ -6848,7 +7424,7 @@ func (this *QGraphicsItem) Setenabled(args ...interface{}) () {
     // invoke: void setEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem10setEnabledEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem10setEnabledEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setEnabled", args)
   }
@@ -6869,7 +7445,7 @@ func (this *QGraphicsItem) Grabmouse(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem9grabMouseEv
     // invoke: void grabMouse()
-    C.C_ZN13QGraphicsItem9grabMouseEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem9grabMouseEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "grabMouse", args)
   }
@@ -6893,7 +7469,7 @@ func (this *QGraphicsItem) Setactive(args ...interface{}) () {
     // invoke: void setActive(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem9setActiveEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem9setActiveEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setActive", args)
   }
@@ -6915,13 +7491,17 @@ func (this *QGraphicsItem) Isobscuredby(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem12isObscuredByEPKS_
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem12isObscuredByEPKS_(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem12isObscuredByEPKS_(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isObscuredBy", args)
   }
@@ -6942,11 +7522,15 @@ func (this *QGraphicsItem) Acceptdrops(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem11acceptDropsEv
     // invoke: bool acceptDrops()
-    var ret0 = C.C_ZNK13QGraphicsItem11acceptDropsEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem11acceptDropsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptDrops", args)
   }
@@ -6968,9 +7552,9 @@ func (this *QGraphicsItem) Setparentitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem13setParentItemEPS_
     // invoke: void setParentItem(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem13setParentItemEPS_(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem13setParentItemEPS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setParentItem", args)
   }
@@ -7002,29 +7586,29 @@ func (this *QGraphicsItem) Ensurevisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem13ensureVisibleEddddii
     // invoke: void ensureVisible(qreal, qreal, qreal, qreal, int, int)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(args[4].(int32))
+    var arg4 = C.int32_t(qtrt.PrimConv(args[4], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg4)}
-    var arg5 = C.int32_t(args[5].(int32))
+    var arg5 = C.int32_t(qtrt.PrimConv(args[5], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg5)}
-    C.C_ZN13QGraphicsItem13ensureVisibleEddddii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
+    C.C_ZN13QGraphicsItem13ensureVisibleEddddii(this.Qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
   case 1:
     // invoke: _ZN13QGraphicsItem13ensureVisibleERK6QRectFii
     // invoke: void ensureVisible(const class QRectF &, int, int)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN13QGraphicsItem13ensureVisibleERK6QRectFii(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QGraphicsItem13ensureVisibleERK6QRectFii(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "ensureVisible", args)
   }
@@ -7045,7 +7629,7 @@ func (this *QGraphicsItem) Grabkeyboard(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem12grabKeyboardEv
     // invoke: void grabKeyboard()
-    C.C_ZN13QGraphicsItem12grabKeyboardEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem12grabKeyboardEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "grabKeyboard", args)
   }
@@ -7066,7 +7650,7 @@ func (this *QGraphicsItem) Parentobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem12parentObjectEv
     // invoke: QGraphicsObject * parentObject()
-    C.C_ZNK13QGraphicsItem12parentObjectEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem12parentObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "parentObject", args)
   }
@@ -7087,11 +7671,15 @@ func (this *QGraphicsItem) Isundermouse(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem12isUnderMouseEv
     // invoke: bool isUnderMouse()
-    var ret0 = C.C_ZNK13QGraphicsItem12isUnderMouseEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem12isUnderMouseEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isUnderMouse", args)
   }
@@ -7112,7 +7700,7 @@ func (this *QGraphicsItem) Parentwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem12parentWidgetEv
     // invoke: QGraphicsWidget * parentWidget()
-    C.C_ZNK13QGraphicsItem12parentWidgetEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem12parentWidgetEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "parentWidget", args)
   }
@@ -7134,9 +7722,9 @@ func (this *QGraphicsItem) Setzvalue(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem9setZValueEd
     // invoke: void setZValue(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem9setZValueEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem9setZValueEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setZValue", args)
   }
@@ -7159,11 +7747,11 @@ func (this *QGraphicsItem) Setmatrix(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem9setMatrixERK7QMatrixb
     // invoke: void setMatrix(const class QMatrix &, _Bool)
-    var arg0 = args[0].(QMatrix).qclsinst
+    var arg0 = args[0].(*QMatrix).Qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C.C_ZN13QGraphicsItem9setMatrixERK7QMatrixb(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsItem9setMatrixERK7QMatrixb(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setMatrix", args)
   }
@@ -7184,11 +7772,15 @@ func (this *QGraphicsItem) Cursor(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem6cursorEv
     // invoke: QCursor cursor()
-    var ret0 = C.C_ZNK13QGraphicsItem6cursorEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem6cursorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QCursor{}) // "QCursor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "cursor", args)
   }
@@ -7209,11 +7801,15 @@ func (this *QGraphicsItem) Zvalue(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem6zValueEv
     // invoke: qreal zValue()
-    var ret0 = C.C_ZNK13QGraphicsItem6zValueEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem6zValueEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "zValue", args)
   }
@@ -7237,7 +7833,7 @@ func (this *QGraphicsItem) Setvisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem10setVisibleEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setVisible", args)
   }
@@ -7258,7 +7854,7 @@ func (this *QGraphicsItem) Resetmatrix(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem11resetMatrixEv
     // invoke: void resetMatrix()
-    C.C_ZN13QGraphicsItem11resetMatrixEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem11resetMatrixEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "resetMatrix", args)
   }
@@ -7279,11 +7875,15 @@ func (this *QGraphicsItem) Scenetransform(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK13QGraphicsItem14sceneTransformEv
     // invoke: QTransform sceneTransform()
-    var ret0 = C.C_ZNK13QGraphicsItem14sceneTransformEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem14sceneTransformEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTransform{}) // "QTransform"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "sceneTransform", args)
   }
@@ -7304,11 +7904,15 @@ func (this *QGraphicsItem) Iswindow(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem8isWindowEv
     // invoke: bool isWindow()
-    var ret0 = C.C_ZNK13QGraphicsItem8isWindowEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem8isWindowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isWindow", args)
   }
@@ -7336,29 +7940,37 @@ func (this *QGraphicsItem) Maprectfromparent(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK13QGraphicsItem17mapRectFromParentERK6QRectF
     // invoke: QRectF mapRectFromParent(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem17mapRectFromParentERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem17mapRectFromParentERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem17mapRectFromParentEdddd
     // invoke: QRectF mapRectFromParent(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZNK13QGraphicsItem17mapRectFromParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZNK13QGraphicsItem17mapRectFromParentEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectFromParent", args)
   }
@@ -7380,9 +7992,9 @@ func (this *QGraphicsItem) Setscale(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem8setScaleEd
     // invoke: void setScale(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem8setScaleEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem8setScaleEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setScale", args)
   }
@@ -7403,11 +8015,15 @@ func (this *QGraphicsItem) Iswidget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem8isWidgetEv
     // invoke: bool isWidget()
-    var ret0 = C.C_ZNK13QGraphicsItem8isWidgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem8isWidgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isWidget", args)
   }
@@ -7428,7 +8044,7 @@ func (this *QGraphicsItem) Resettransform(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem14resetTransformEv
     // invoke: void resetTransform()
-    C.C_ZN13QGraphicsItem14resetTransformEv(this.qclsinst)
+    C.C_ZN13QGraphicsItem14resetTransformEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "resetTransform", args)
   }
@@ -7449,11 +8065,15 @@ func (this *QGraphicsItem) Sceneboundingrect(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK13QGraphicsItem17sceneBoundingRectEv
     // invoke: QRectF sceneBoundingRect()
-    var ret0 = C.C_ZNK13QGraphicsItem17sceneBoundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem17sceneBoundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "sceneBoundingRect", args)
   }
@@ -7475,9 +8095,9 @@ func (this *QGraphicsItem) Setopacity(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem10setOpacityEd
     // invoke: void setOpacity(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem10setOpacityEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem10setOpacityEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setOpacity", args)
   }
@@ -7498,7 +8118,7 @@ func (this *QGraphicsItem) Focusitem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem9focusItemEv
     // invoke: QGraphicsItem * focusItem()
-    C.C_ZNK13QGraphicsItem9focusItemEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem9focusItemEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "focusItem", args)
   }
@@ -7519,11 +8139,15 @@ func (this *QGraphicsItem) Hascursor(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem9hasCursorEv
     // invoke: bool hasCursor()
-    var ret0 = C.C_ZNK13QGraphicsItem9hasCursorEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem9hasCursorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "hasCursor", args)
   }
@@ -7547,7 +8171,7 @@ func (this *QGraphicsItem) Setaccepttouchevents(args ...interface{}) () {
     // invoke: void setAcceptTouchEvents(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem20setAcceptTouchEventsEb(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem20setAcceptTouchEventsEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setAcceptTouchEvents", args)
   }
@@ -7570,11 +8194,11 @@ func (this *QGraphicsItem) Setdata(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem7setDataEiRK8QVariant
     // invoke: void setData(int, const class QVariant &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QVariant).qclsinst
+    var arg1 = args[1].(*QVariant).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN13QGraphicsItem7setDataEiRK8QVariant(this.qclsinst, arg0, arg1)
+    C.C_ZN13QGraphicsItem7setDataEiRK8QVariant(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setData", args)
   }
@@ -7595,11 +8219,15 @@ func (this *QGraphicsItem) Opacity(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem7opacityEv
     // invoke: qreal opacity()
-    var ret0 = C.C_ZNK13QGraphicsItem7opacityEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem7opacityEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "opacity", args)
   }
@@ -7620,11 +8248,15 @@ func (this *QGraphicsItem) Isvisible(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem9isVisibleEv
     // invoke: bool isVisible()
-    var ret0 = C.C_ZNK13QGraphicsItem9isVisibleEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem9isVisibleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isVisible", args)
   }
@@ -7652,21 +8284,21 @@ func (this *QGraphicsItem) Update(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem6updateEdddd
     // invoke: void update(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    C.C_ZN13QGraphicsItem6updateEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN13QGraphicsItem6updateEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN13QGraphicsItem6updateERK6QRectF
     // invoke: void update(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem6updateERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem6updateERK6QRectF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "update", args)
   }
@@ -7696,33 +8328,41 @@ func (this *QGraphicsItem) Maprectfromitem(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK13QGraphicsItem15mapRectFromItemEPKS_RK6QRectF
     // invoke: QRectF mapRectFromItem(const class QGraphicsItem *, const class QRectF &)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QRectF).qclsinst
+    var arg1 = args[1].(*QRectF).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QGraphicsItem15mapRectFromItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QGraphicsItem15mapRectFromItemEPKS_RK6QRectF(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QGraphicsItem15mapRectFromItemEPKS_dddd
     // invoke: QRectF mapRectFromItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    var arg4 = C.double(args[4].(float64))
+    var arg4 = C.double(qtrt.PrimConv(args[4], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg4)}
-    var ret0 = C.C_ZNK13QGraphicsItem15mapRectFromItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    var ret0 = C.C_ZNK13QGraphicsItem15mapRectFromItemEPKS_dddd(this.Qclsinst, arg0, arg1, arg2, arg3, arg4)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectFromItem", args)
   }
@@ -7744,9 +8384,9 @@ func (this *QGraphicsItem) Setx(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem4setXEd
     // invoke: void setX(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem4setXEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem4setXEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setX", args)
   }
@@ -7768,9 +8408,9 @@ func (this *QGraphicsItem) Sety(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem4setYEd
     // invoke: void setY(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem4setYEd(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem4setYEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setY", args)
   }
@@ -7792,9 +8432,9 @@ func (this *QGraphicsItem) Setcursor(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem9setCursorERK7QCursor
     // invoke: void setCursor(const class QCursor &)
-    var arg0 = args[0].(QCursor).qclsinst
+    var arg0 = args[0].(*QCursor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem9setCursorERK7QCursor(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem9setCursorERK7QCursor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setCursor", args)
   }
@@ -7815,11 +8455,15 @@ func (this *QGraphicsItem) Boundingregiongranularity(args ...interface{}) (ret i
   case 0:
     // invoke: _ZNK13QGraphicsItem25boundingRegionGranularityEv
     // invoke: qreal boundingRegionGranularity()
-    var ret0 = C.C_ZNK13QGraphicsItem25boundingRegionGranularityEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem25boundingRegionGranularityEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "boundingRegionGranularity", args)
   }
@@ -7841,9 +8485,9 @@ func (this *QGraphicsItem) Removesceneeventfilter(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem22removeSceneEventFilterEPS_
     // invoke: void removeSceneEventFilter(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QGraphicsItem22removeSceneEventFilterEPS_(this.qclsinst, arg0)
+    C.C_ZN13QGraphicsItem22removeSceneEventFilterEPS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "removeSceneEventFilter", args)
   }
@@ -7864,11 +8508,15 @@ func (this *QGraphicsItem) Accepttouchevents(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK13QGraphicsItem17acceptTouchEventsEv
     // invoke: bool acceptTouchEvents()
-    var ret0 = C.C_ZNK13QGraphicsItem17acceptTouchEventsEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem17acceptTouchEventsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptTouchEvents", args)
   }
@@ -7889,11 +8537,15 @@ func (this *QGraphicsItem) Scenematrix(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem11sceneMatrixEv
     // invoke: QMatrix sceneMatrix()
-    var ret0 = C.C_ZNK13QGraphicsItem11sceneMatrixEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem11sceneMatrixEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMatrix{}) // "QMatrix"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "sceneMatrix", args)
   }
@@ -7914,7 +8566,7 @@ func (this *QGraphicsItem) Cachemode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem9cacheModeEv
     // invoke: QGraphicsItem::CacheMode cacheMode()
-    C.C_ZNK13QGraphicsItem9cacheModeEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem9cacheModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "cacheMode", args)
   }
@@ -7935,7 +8587,7 @@ func (this *QGraphicsItem) Flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem5flagsEv
     // invoke: GraphicsItemFlags flags()
-    C.C_ZNK13QGraphicsItem5flagsEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem5flagsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "flags", args)
   }
@@ -7956,11 +8608,15 @@ func (this *QGraphicsItem) Clippath(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK13QGraphicsItem8clipPathEv
     // invoke: QPainterPath clipPath()
-    var ret0 = C.C_ZNK13QGraphicsItem8clipPathEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QGraphicsItem8clipPathEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "clipPath", args)
   }
@@ -7981,7 +8637,7 @@ func (this *QGraphicsItem) Y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QGraphicsItem1yEv
     // invoke: qreal y()
-    C.C_ZNK13QGraphicsItem1yEv(this.qclsinst)
+    C.C_ZNK13QGraphicsItem1yEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "y", args)
   }
@@ -8005,13 +8661,13 @@ func (this *QGraphicsItem) Scroll(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItem6scrollEddRK6QRectF
     // invoke: void scroll(qreal, qreal, const class QRectF &)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QRectF).qclsinst
+    var arg2 = args[2].(*QRectF).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN13QGraphicsItem6scrollEddRK6QRectF(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN13QGraphicsItem6scrollEddRK6QRectF(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scroll", args)
   }
@@ -8033,13 +8689,17 @@ func (this *QGraphicsItem) Boundingregion(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK13QGraphicsItem14boundingRegionERK10QTransform
     // invoke: QRegion boundingRegion(const class QTransform &)
-    var arg0 = args[0].(QTransform).qclsinst
+    var arg0 = args[0].(*QTransform).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QGraphicsItem14boundingRegionERK10QTransform(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QGraphicsItem14boundingRegionERK10QTransform(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "boundingRegion", args)
   }
@@ -8060,7 +8720,7 @@ func (this *QGraphicsObject) Freeqgraphicsobject(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsObjectD0Ev
     // invoke: void ~QGraphicsObject()
-    C.C_ZN15QGraphicsObjectD2Ev(this.qclsinst)
+    C.C_ZN15QGraphicsObjectD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsObject", "~QGraphicsObject", args)
   }
@@ -8082,17 +8742,17 @@ func NewQGraphicsObject(args ...interface{}) *QGraphicsObject {
   case 0:
     // invoke: _ZN15QGraphicsObjectC1EP13QGraphicsItem
     // invoke: void QGraphicsObject(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QGraphicsObjectC2EP13QGraphicsItem(arg0)
-    return &QGraphicsObject{qclsinst:qthis}
+    return &QGraphicsObject{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsObject", "QGraphicsObject", args)
   }
 
-  return nil // QGraphicsObject{qclsinst:qthis}
+  return nil // QGraphicsObject{Qclsinst:qthis}
 }
 
 // metaObject()
@@ -8108,7 +8768,7 @@ func (this *QGraphicsObject) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsObject10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QGraphicsObject10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QGraphicsObject10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsObject", "metaObject", args)
   }
@@ -8129,11 +8789,15 @@ func (this *QGraphicsSimpleTextItem) Opaquearea(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem10opaqueAreaEv
     // invoke: QPainterPath opaqueArea()
-    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem10opaqueAreaEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem10opaqueAreaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "opaqueArea", args)
   }
@@ -8154,7 +8818,7 @@ func (this *QGraphicsSimpleTextItem) Freeqgraphicssimpletextitem(args ...interfa
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItemD0Ev
     // invoke: void ~QGraphicsSimpleTextItem()
-    C.C_ZN23QGraphicsSimpleTextItemD2Ev(this.qclsinst)
+    C.C_ZN23QGraphicsSimpleTextItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "~QGraphicsSimpleTextItem", args)
   }
@@ -8175,11 +8839,15 @@ func (this *QGraphicsSimpleTextItem) Boundingrect(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "boundingRect", args)
   }
@@ -8200,11 +8868,15 @@ func (this *QGraphicsSimpleTextItem) Text(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem4textEv
     // invoke: QString text()
-    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem4textEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem4textEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "text", args)
   }
@@ -8226,9 +8898,9 @@ func (this *QGraphicsSimpleTextItem) Settext(args ...interface{}) () {
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItem7setTextERK7QString
     // invoke: void setText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN23QGraphicsSimpleTextItem7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsSimpleTextItem7setTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "setText", args)
   }
@@ -8250,13 +8922,17 @@ func (this *QGraphicsSimpleTextItem) Contains(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem8containsERK7QPointF
     // invoke: bool contains(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem8containsERK7QPointF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem8containsERK7QPointF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "contains", args)
   }
@@ -8278,13 +8954,17 @@ func (this *QGraphicsSimpleTextItem) Isobscuredby(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem
     // invoke: bool isObscuredBy(const class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "isObscuredBy", args)
   }
@@ -8308,13 +8988,13 @@ func (this *QGraphicsSimpleTextItem) Paint(args ...interface{}) () {
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
     // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-    var arg0 = args[0].(QPainter).qclsinst
+    var arg0 = args[0].(*QPainter).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
+    var arg1 = args[1].(*QStyleOptionGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "paint", args)
   }
@@ -8335,11 +9015,15 @@ func (this *QGraphicsSimpleTextItem) Shape(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem5shapeEv
     // invoke: QPainterPath shape()
-    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem5shapeEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem5shapeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "shape", args)
   }
@@ -8365,28 +9049,28 @@ func NewQGraphicsSimpleTextItem(args ...interface{}) *QGraphicsSimpleTextItem {
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItemC1EP13QGraphicsItem
     // invoke: void QGraphicsSimpleTextItem(class QGraphicsItem *)
-    var arg0 = args[0].(QGraphicsItem).qclsinst
+    var arg0 = args[0].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QGraphicsSimpleTextItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsSimpleTextItem{qclsinst:qthis}
+    return &QGraphicsSimpleTextItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN23QGraphicsSimpleTextItemC1ERK7QStringP13QGraphicsItem
     // invoke: void QGraphicsSimpleTextItem(const class QString &, class QGraphicsItem *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QGraphicsItem).qclsinst
+    var arg1 = args[1].(*QGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QGraphicsSimpleTextItemC2ERK7QStringP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsSimpleTextItem{qclsinst:qthis}
+    return &QGraphicsSimpleTextItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "QGraphicsSimpleTextItem", args)
   }
 
-  return nil // QGraphicsSimpleTextItem{qclsinst:qthis}
+  return nil // QGraphicsSimpleTextItem{Qclsinst:qthis}
 }
 
 // setFont(const class QFont &)
@@ -8403,9 +9087,9 @@ func (this *QGraphicsSimpleTextItem) Setfont(args ...interface{}) () {
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItem7setFontERK5QFont
     // invoke: void setFont(const class QFont &)
-    var arg0 = args[0].(QFont).qclsinst
+    var arg0 = args[0].(*QFont).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN23QGraphicsSimpleTextItem7setFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsSimpleTextItem7setFontERK5QFont(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "setFont", args)
   }
@@ -8426,11 +9110,15 @@ func (this *QGraphicsSimpleTextItem) Font(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem4fontEv
     // invoke: QFont font()
-    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem4fontEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem4fontEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFont{}) // "QFont"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "font", args)
   }
@@ -8451,11 +9139,15 @@ func (this *QGraphicsSimpleTextItem) Type_(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QGraphicsSimpleTextItem4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "type", args)
   }

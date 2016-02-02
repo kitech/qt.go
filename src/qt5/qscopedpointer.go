@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qscopedpointer.h
 // dst-file: /src/core/qscopedpointer.go
 //
@@ -45,7 +45,7 @@ func init() {
 // class sizeof(QScopedPointerPodDeleter)=1
 type QScopedPointerPodDeleter struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // cleanup(void *)

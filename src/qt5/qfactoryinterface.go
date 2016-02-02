@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qfactoryinterface.h
 // dst-file: /src/core/qfactoryinterface.go
 //
@@ -43,7 +43,7 @@ func init() {
 // class sizeof(QFactoryInterface)=8
 type QFactoryInterface struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // <= body block end

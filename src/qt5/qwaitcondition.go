@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.go
 //
@@ -55,7 +55,7 @@ func init() {
 // class sizeof(QWaitCondition)=8
 type QWaitCondition struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QWaitCondition()
@@ -74,12 +74,12 @@ func NewQWaitCondition(args ...interface{}) *QWaitCondition {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QWaitConditionC2Ev()
-    return &QWaitCondition{qclsinst:qthis}
+    return &QWaitCondition{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QWaitCondition", "QWaitCondition", args)
   }
 
-  return nil // QWaitCondition{qclsinst:qthis}
+  return nil // QWaitCondition{Qclsinst:qthis}
 }
 
 // wakeAll()
@@ -95,7 +95,7 @@ func (this *QWaitCondition) Wakeall(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QWaitCondition7wakeAllEv
     // invoke: void wakeAll()
-    C.C_ZN14QWaitCondition7wakeAllEv(this.qclsinst)
+    C.C_ZN14QWaitCondition7wakeAllEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWaitCondition", "wakeAll", args)
   }
@@ -116,7 +116,7 @@ func (this *QWaitCondition) Wakeone(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QWaitCondition7wakeOneEv
     // invoke: void wakeOne()
-    C.C_ZN14QWaitCondition7wakeOneEv(this.qclsinst)
+    C.C_ZN14QWaitCondition7wakeOneEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWaitCondition", "wakeOne", args)
   }
@@ -137,7 +137,7 @@ func (this *QWaitCondition) Freeqwaitcondition(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QWaitConditionD0Ev
     // invoke: void ~QWaitCondition()
-    C.C_ZN14QWaitConditionD2Ev(this.qclsinst)
+    C.C_ZN14QWaitConditionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWaitCondition", "~QWaitCondition", args)
   }
@@ -164,27 +164,35 @@ func (this *QWaitCondition) Wait(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN14QWaitCondition4waitEP14QReadWriteLockm
     // invoke: bool wait(class QReadWriteLock *, unsigned long)
-    var arg0 = args[0].(QReadWriteLock).qclsinst
+    var arg0 = args[0].(*QReadWriteLock).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN14QWaitCondition4waitEP14QReadWriteLockm(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN14QWaitCondition4waitEP14QReadWriteLockm(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN14QWaitCondition4waitEP6QMutexm
     // invoke: bool wait(class QMutex *, unsigned long)
-    var arg0 = args[0].(QMutex).qclsinst
+    var arg0 = args[0].(*QMutex).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN14QWaitCondition4waitEP6QMutexm(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN14QWaitCondition4waitEP6QMutexm(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWaitCondition", "wait", args)
   }

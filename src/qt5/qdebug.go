@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qdebug.h
 // dst-file: /src/core/qdebug.go
 //
@@ -89,19 +89,19 @@ func init() {
 // class sizeof(QNoDebug)=1
 type QNoDebug struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QDebugStateSaver)=1
 type QDebugStateSaver struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QDebug)=8
 type QDebug struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // maybeSpace()
@@ -117,11 +117,15 @@ func (this *QNoDebug) Maybespace(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QNoDebug10maybeSpaceEv
     // invoke: QNoDebug & maybeSpace()
-    var ret0 = C.C_ZN8QNoDebug10maybeSpaceEv(this.qclsinst)
+    var ret0 = C.C_ZN8QNoDebug10maybeSpaceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QNoDebug{}) // "QNoDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QNoDebug", "maybeSpace", args)
   }
@@ -142,11 +146,15 @@ func (this *QNoDebug) Space(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QNoDebug5spaceEv
     // invoke: QNoDebug & space()
-    var ret0 = C.C_ZN8QNoDebug5spaceEv(this.qclsinst)
+    var ret0 = C.C_ZN8QNoDebug5spaceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QNoDebug{}) // "QNoDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QNoDebug", "space", args)
   }
@@ -167,11 +175,15 @@ func (this *QNoDebug) Quote(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QNoDebug5quoteEv
     // invoke: QNoDebug & quote()
-    var ret0 = C.C_ZN8QNoDebug5quoteEv(this.qclsinst)
+    var ret0 = C.C_ZN8QNoDebug5quoteEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QNoDebug{}) // "QNoDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QNoDebug", "quote", args)
   }
@@ -192,11 +204,15 @@ func (this *QNoDebug) Nospace(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QNoDebug7nospaceEv
     // invoke: QNoDebug & nospace()
-    var ret0 = C.C_ZN8QNoDebug7nospaceEv(this.qclsinst)
+    var ret0 = C.C_ZN8QNoDebug7nospaceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QNoDebug{}) // "QNoDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QNoDebug", "nospace", args)
   }
@@ -217,11 +233,15 @@ func (this *QNoDebug) Noquote(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QNoDebug7noquoteEv
     // invoke: QNoDebug & noquote()
-    var ret0 = C.C_ZN8QNoDebug7noquoteEv(this.qclsinst)
+    var ret0 = C.C_ZN8QNoDebug7noquoteEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QNoDebug{}) // "QNoDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QNoDebug", "noquote", args)
   }
@@ -245,11 +265,15 @@ func (this *QNoDebug) Maybequote(args ...interface{}) (ret interface{}) {
     // invoke: QNoDebug & maybeQuote(const char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QNoDebug10maybeQuoteEc(this.qclsinst, arg0)
+    var ret0 = C.C_ZN8QNoDebug10maybeQuoteEc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QNoDebug{}) // "QNoDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QNoDebug", "maybeQuote", args)
   }
@@ -271,17 +295,17 @@ func NewQDebugStateSaver(args ...interface{}) *QDebugStateSaver {
   case 0:
     // invoke: _ZN16QDebugStateSaverC1ER6QDebug
     // invoke: void QDebugStateSaver(class QDebug &)
-    var arg0 = args[0].(QDebug).qclsinst
+    var arg0 = args[0].(*QDebug).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QDebugStateSaverC2ER6QDebug(arg0)
-    return &QDebugStateSaver{qclsinst:qthis}
+    return &QDebugStateSaver{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDebugStateSaver", "QDebugStateSaver", args)
   }
 
-  return nil // QDebugStateSaver{qclsinst:qthis}
+  return nil // QDebugStateSaver{Qclsinst:qthis}
 }
 
 // ~QDebugStateSaver()
@@ -297,7 +321,7 @@ func (this *QDebugStateSaver) Freeqdebugstatesaver(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QDebugStateSaverD0Ev
     // invoke: void ~QDebugStateSaver()
-    C.C_ZN16QDebugStateSaverD2Ev(this.qclsinst)
+    C.C_ZN16QDebugStateSaverD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDebugStateSaver", "~QDebugStateSaver", args)
   }
@@ -318,7 +342,7 @@ func (this *QDebug) Freeqdebug(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebugD0Ev
     // invoke: void ~QDebug()
-    C.C_ZN6QDebugD2Ev(this.qclsinst)
+    C.C_ZN6QDebugD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QDebug", "~QDebug", args)
   }
@@ -339,11 +363,15 @@ func (this *QDebug) Space(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN6QDebug5spaceEv
     // invoke: QDebug & space()
-    var ret0 = C.C_ZN6QDebug5spaceEv(this.qclsinst)
+    var ret0 = C.C_ZN6QDebug5spaceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDebug{}) // "QDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDebug", "space", args)
   }
@@ -367,7 +395,7 @@ func (this *QDebug) Setautoinsertspaces(args ...interface{}) () {
     // invoke: void setAutoInsertSpaces(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN6QDebug19setAutoInsertSpacesEb(this.qclsinst, arg0)
+    C.C_ZN6QDebug19setAutoInsertSpacesEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDebug", "setAutoInsertSpaces", args)
   }
@@ -388,11 +416,15 @@ func (this *QDebug) Autoinsertspaces(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QDebug16autoInsertSpacesEv
     // invoke: bool autoInsertSpaces()
-    var ret0 = C.C_ZNK6QDebug16autoInsertSpacesEv(this.qclsinst)
+    var ret0 = C.C_ZNK6QDebug16autoInsertSpacesEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDebug", "autoInsertSpaces", args)
   }
@@ -413,11 +445,15 @@ func (this *QDebug) Nospace(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN6QDebug7nospaceEv
     // invoke: QDebug & nospace()
-    var ret0 = C.C_ZN6QDebug7nospaceEv(this.qclsinst)
+    var ret0 = C.C_ZN6QDebug7nospaceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDebug{}) // "QDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDebug", "nospace", args)
   }
@@ -438,11 +474,15 @@ func (this *QDebug) Resetformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN6QDebug11resetFormatEv
     // invoke: QDebug & resetFormat()
-    var ret0 = C.C_ZN6QDebug11resetFormatEv(this.qclsinst)
+    var ret0 = C.C_ZN6QDebug11resetFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDebug{}) // "QDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDebug", "resetFormat", args)
   }
@@ -463,11 +503,15 @@ func (this *QDebug) Noquote(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN6QDebug7noquoteEv
     // invoke: QDebug & noquote()
-    var ret0 = C.C_ZN6QDebug7noquoteEv(this.qclsinst)
+    var ret0 = C.C_ZN6QDebug7noquoteEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDebug{}) // "QDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDebug", "noquote", args)
   }
@@ -489,9 +533,9 @@ func (this *QDebug) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebug4swapERS_
     // invoke: void swap(class QDebug &)
-    var arg0 = args[0].(QDebug).qclsinst
+    var arg0 = args[0].(*QDebug).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN6QDebug4swapERS_(this.qclsinst, arg0)
+    C.C_ZN6QDebug4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDebug", "swap", args)
   }
@@ -512,11 +556,15 @@ func (this *QDebug) Quote(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN6QDebug5quoteEv
     // invoke: QDebug & quote()
-    var ret0 = C.C_ZN6QDebug5quoteEv(this.qclsinst)
+    var ret0 = C.C_ZN6QDebug5quoteEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDebug{}) // "QDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDebug", "quote", args)
   }
@@ -547,44 +595,44 @@ func NewQDebug(args ...interface{}) *QDebug {
   case 0:
     // invoke: _ZN6QDebugC1ERKS_
     // invoke: void QDebug(const class QDebug &)
-    var arg0 = args[0].(QDebug).qclsinst
+    var arg0 = args[0].(*QDebug).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QDebugC2ERKS_(arg0)
-    return &QDebug{qclsinst:qthis}
+    return &QDebug{Qclsinst:qthis}
   case 1:
     // invoke: _ZN6QDebugC1E9QtMsgType
     // invoke: void QDebug(enum QtMsgType)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QDebugC2E9QtMsgType(arg0)
-    return &QDebug{qclsinst:qthis}
+    return &QDebug{Qclsinst:qthis}
   case 2:
     // invoke: _ZN6QDebugC1EP7QString
     // invoke: void QDebug(class QString *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QDebugC2EP7QString(arg0)
-    return &QDebug{qclsinst:qthis}
+    return &QDebug{Qclsinst:qthis}
   case 3:
     // invoke: _ZN6QDebugC1EP9QIODevice
     // invoke: void QDebug(class QIODevice *)
-    var arg0 = args[0].(QIODevice).qclsinst
+    var arg0 = args[0].(*QIODevice).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QDebugC2EP9QIODevice(arg0)
-    return &QDebug{qclsinst:qthis}
+    return &QDebug{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDebug", "QDebug", args)
   }
 
-  return nil // QDebug{qclsinst:qthis}
+  return nil // QDebug{Qclsinst:qthis}
 }
 
 // maybeSpace()
@@ -600,11 +648,15 @@ func (this *QDebug) Maybespace(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN6QDebug10maybeSpaceEv
     // invoke: QDebug & maybeSpace()
-    var ret0 = C.C_ZN6QDebug10maybeSpaceEv(this.qclsinst)
+    var ret0 = C.C_ZN6QDebug10maybeSpaceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDebug{}) // "QDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDebug", "maybeSpace", args)
   }
@@ -628,11 +680,15 @@ func (this *QDebug) Maybequote(args ...interface{}) (ret interface{}) {
     // invoke: QDebug & maybeQuote(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN6QDebug10maybeQuoteEc(this.qclsinst, arg0)
+    var ret0 = C.C_ZN6QDebug10maybeQuoteEc(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QDebug{}) // "QDebug &"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDebug", "maybeQuote", args)
   }

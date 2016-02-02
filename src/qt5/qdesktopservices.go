@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qdesktopservices.h
 // dst-file: /src/gui/qdesktopservices.go
 //
@@ -49,7 +49,7 @@ func init() {
 // class sizeof(QDesktopServices)=1
 type QDesktopServices struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // setUrlHandler(const class QString &, class QObject *, const char *)
@@ -68,9 +68,9 @@ func (this *QDesktopServices) Seturlhandler_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc
     // invoke: void setUrlHandler(const class QString &, class QObject *, const char *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
     argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[0][2])
     var arg2 = argif2.(unsafe.Pointer)
@@ -98,7 +98,7 @@ func (this *QDesktopServices) Unseturlhandler_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QDesktopServices15unsetUrlHandlerERK7QString
     // invoke: void unsetUrlHandler(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN16QDesktopServices15unsetUrlHandlerERK7QString(arg0)
   default:
@@ -122,13 +122,17 @@ func (this *QDesktopServices) Openurl_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN16QDesktopServices7openUrlERK4QUrl
     // invoke: bool openUrl(const class QUrl &)
-    var arg0 = args[0].(QUrl).qclsinst
+    var arg0 = args[0].(*QUrl).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN16QDesktopServices7openUrlERK4QUrl(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QDesktopServices", "openUrl", args)
   }

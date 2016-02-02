@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qpixmapcache.h
 // dst-file: /src/gui/qpixmapcache.go
 //
@@ -61,7 +61,7 @@ func init() {
 // class sizeof(QPixmapCache)=1
 type QPixmapCache struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // insert(const class QString &, const class QPixmap &)
@@ -82,19 +82,23 @@ func (this *QPixmapCache) Insert_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QPixmapCache6insertERK7QStringRK7QPixmap
     // invoke: bool insert(const class QString &, const class QPixmap &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPixmap).qclsinst
+    var arg1 = args[1].(*QPixmap).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN12QPixmapCache6insertERK7QPixmap
     // invoke: QPixmapCache::Key insert(const class QPixmap &)
-    var arg0 = args[0].(QPixmap).qclsinst
+    var arg0 = args[0].(*QPixmap).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN12QPixmapCache6insertERK7QPixmap(arg0)
   default:
@@ -121,7 +125,11 @@ func (this *QPixmapCache) Cachelimit_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixmapCache", "cacheLimit", args)
   }
@@ -164,7 +172,7 @@ func (this *QPixmapCache) Remove_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPixmapCache6removeERK7QString
     // invoke: void remove(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN12QPixmapCache6removeERK7QString(arg0)
   default:
@@ -188,7 +196,7 @@ func (this *QPixmapCache) Setcachelimit_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPixmapCache13setCacheLimitEi
     // invoke: void setCacheLimit(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     C.C_ZN12QPixmapCache13setCacheLimitEi(arg0)
   default:
@@ -220,37 +228,49 @@ func (this *QPixmapCache) Find_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QPixmapCache4findERK7QString
     // invoke: QPixmap * find(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN12QPixmapCache4findERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPixmap{}) // "QPixmap *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN12QPixmapCache4findERK7QStringR7QPixmap
     // invoke: bool find(const class QString &, class QPixmap &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPixmap).qclsinst
+    var arg1 = args[1].(*QPixmap).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN12QPixmapCache4findERK7QStringP7QPixmap
     // invoke: bool find(const class QString &, class QPixmap *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPixmap).qclsinst
+    var arg1 = args[1].(*QPixmap).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN12QPixmapCache4findERK7QStringP7QPixmap(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPixmapCache", "find", args)
   }

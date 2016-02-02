@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.go
 //
@@ -75,7 +75,7 @@ func init() {
 // class sizeof(QActionGroup)=1
 type QActionGroup struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _triggered QActionGroup_triggered_signal;
 //  _hovered QActionGroup_hovered_signal;
 }
@@ -101,35 +101,47 @@ func (this *QActionGroup) Addaction(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QActionGroup9addActionEP7QAction
     // invoke: QAction * addAction(class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QActionGroup9addActionEP7QAction(this.qclsinst, arg0)
+    var ret0 = C.C_ZN12QActionGroup9addActionEP7QAction(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN12QActionGroup9addActionERK5QIconRK7QString
     // invoke: QAction * addAction(const class QIcon &, const class QString &)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN12QActionGroup9addActionERK5QIconRK7QString(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN12QActionGroup9addActionERK5QIconRK7QString(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN12QActionGroup9addActionERK7QString
     // invoke: QAction * addAction(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QActionGroup9addActionERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN12QActionGroup9addActionERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QActionGroup", "addAction", args)
   }
@@ -150,7 +162,7 @@ func (this *QActionGroup) Actions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionGroup7actionsEv
     // invoke: QList<QAction *> actions()
-    C.C_ZNK12QActionGroup7actionsEv(this.qclsinst)
+    C.C_ZNK12QActionGroup7actionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QActionGroup", "actions", args)
   }
@@ -171,11 +183,15 @@ func (this *QActionGroup) Checkedaction(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QActionGroup13checkedActionEv
     // invoke: QAction * checkedAction()
-    var ret0 = C.C_ZNK12QActionGroup13checkedActionEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QActionGroup13checkedActionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QActionGroup", "checkedAction", args)
   }
@@ -199,7 +215,7 @@ func (this *QActionGroup) Setdisabled(args ...interface{}) () {
     // invoke: void setDisabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QActionGroup11setDisabledEb(this.qclsinst, arg0)
+    C.C_ZN12QActionGroup11setDisabledEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QActionGroup", "setDisabled", args)
   }
@@ -221,17 +237,17 @@ func NewQActionGroup(args ...interface{}) *QActionGroup {
   case 0:
     // invoke: _ZN12QActionGroupC1EP7QObject
     // invoke: void QActionGroup(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QActionGroupC2EP7QObject(arg0)
-    return &QActionGroup{qclsinst:qthis}
+    return &QActionGroup{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QActionGroup", "QActionGroup", args)
   }
 
-  return nil // QActionGroup{qclsinst:qthis}
+  return nil // QActionGroup{Qclsinst:qthis}
 }
 
 // setEnabled(_Bool)
@@ -250,7 +266,7 @@ func (this *QActionGroup) Setenabled(args ...interface{}) () {
     // invoke: void setEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QActionGroup10setEnabledEb(this.qclsinst, arg0)
+    C.C_ZN12QActionGroup10setEnabledEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QActionGroup", "setEnabled", args)
   }
@@ -274,7 +290,7 @@ func (this *QActionGroup) Setexclusive(args ...interface{}) () {
     // invoke: void setExclusive(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QActionGroup12setExclusiveEb(this.qclsinst, arg0)
+    C.C_ZN12QActionGroup12setExclusiveEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QActionGroup", "setExclusive", args)
   }
@@ -296,9 +312,9 @@ func (this *QActionGroup) Removeaction(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QActionGroup12removeActionEP7QAction
     // invoke: void removeAction(class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QActionGroup12removeActionEP7QAction(this.qclsinst, arg0)
+    C.C_ZN12QActionGroup12removeActionEP7QAction(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QActionGroup", "removeAction", args)
   }
@@ -319,11 +335,15 @@ func (this *QActionGroup) Isexclusive(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QActionGroup11isExclusiveEv
     // invoke: bool isExclusive()
-    var ret0 = C.C_ZNK12QActionGroup11isExclusiveEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QActionGroup11isExclusiveEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QActionGroup", "isExclusive", args)
   }
@@ -344,7 +364,7 @@ func (this *QActionGroup) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionGroup10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK12QActionGroup10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QActionGroup10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QActionGroup", "metaObject", args)
   }
@@ -365,7 +385,7 @@ func (this *QActionGroup) Freeqactiongroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QActionGroupD0Ev
     // invoke: void ~QActionGroup()
-    C.C_ZN12QActionGroupD2Ev(this.qclsinst)
+    C.C_ZN12QActionGroupD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QActionGroup", "~QActionGroup", args)
   }
@@ -386,11 +406,15 @@ func (this *QActionGroup) Isvisible(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QActionGroup9isVisibleEv
     // invoke: bool isVisible()
-    var ret0 = C.C_ZNK12QActionGroup9isVisibleEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QActionGroup9isVisibleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QActionGroup", "isVisible", args)
   }
@@ -414,7 +438,7 @@ func (this *QActionGroup) Setvisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QActionGroup10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN12QActionGroup10setVisibleEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QActionGroup", "setVisible", args)
   }
@@ -435,11 +459,15 @@ func (this *QActionGroup) Isenabled(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QActionGroup9isEnabledEv
     // invoke: bool isEnabled()
-    var ret0 = C.C_ZNK12QActionGroup9isEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QActionGroup9isEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QActionGroup", "isEnabled", args)
   }

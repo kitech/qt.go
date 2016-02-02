@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.go
 //
@@ -71,7 +71,7 @@ func init() {
 // class sizeof(QState)=1
 type QState struct {
   /*qbase*/ QAbstractState;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _childModeChanged QState_childModeChanged_signal;
 //  _errorStateChanged QState_errorStateChanged_signal;
 //  _finished QState_finished_signal;
@@ -93,17 +93,17 @@ func NewQState(args ...interface{}) *QState {
   case 0:
     // invoke: _ZN6QStateC1EPS_
     // invoke: void QState(class QState *)
-    var arg0 = args[0].(QState).qclsinst
+    var arg0 = args[0].(*QState).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QStateC2EPS_(arg0)
-    return &QState{qclsinst:qthis}
+    return &QState{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QState", "QState", args)
   }
 
-  return nil // QState{qclsinst:qthis}
+  return nil // QState{Qclsinst:qthis}
 }
 
 // transitions()
@@ -119,7 +119,7 @@ func (this *QState) Transitions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QState11transitionsEv
     // invoke: QList<QAbstractTransition *> transitions()
-    C.C_ZNK6QState11transitionsEv(this.qclsinst)
+    C.C_ZNK6QState11transitionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QState", "transitions", args)
   }
@@ -140,7 +140,7 @@ func (this *QState) Errorstate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QState10errorStateEv
     // invoke: QAbstractState * errorState()
-    C.C_ZNK6QState10errorStateEv(this.qclsinst)
+    C.C_ZNK6QState10errorStateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QState", "errorState", args)
   }
@@ -162,9 +162,9 @@ func (this *QState) Removetransition(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QState16removeTransitionEP19QAbstractTransition
     // invoke: void removeTransition(class QAbstractTransition *)
-    var arg0 = args[0].(QAbstractTransition).qclsinst
+    var arg0 = args[0].(*QAbstractTransition).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN6QState16removeTransitionEP19QAbstractTransition(this.qclsinst, arg0)
+    C.C_ZN6QState16removeTransitionEP19QAbstractTransition(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QState", "removeTransition", args)
   }
@@ -194,27 +194,27 @@ func (this *QState) Addtransition(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QState13addTransitionEP14QAbstractState
     // invoke: QAbstractTransition * addTransition(class QAbstractState *)
-    var arg0 = args[0].(QAbstractState).qclsinst
+    var arg0 = args[0].(*QAbstractState).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN6QState13addTransitionEP14QAbstractState(this.qclsinst, arg0)
+    C.C_ZN6QState13addTransitionEP14QAbstractState(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN6QState13addTransitionEP19QAbstractTransition
     // invoke: void addTransition(class QAbstractTransition *)
-    var arg0 = args[0].(QAbstractTransition).qclsinst
+    var arg0 = args[0].(*QAbstractTransition).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN6QState13addTransitionEP19QAbstractTransition(this.qclsinst, arg0)
+    C.C_ZN6QState13addTransitionEP19QAbstractTransition(this.Qclsinst, arg0)
   case 2:
     // invoke: _ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState
     // invoke: QSignalTransition * addTransition(const class QObject *, const char *, class QAbstractState *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[2][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    var arg2 = args[2].(QAbstractState).qclsinst
+    var arg2 = args[2].(*QAbstractState).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
   default:
     qtrt.ErrorResolve("QState", "addTransition", args)
@@ -237,9 +237,9 @@ func (this *QState) Seterrorstate(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QState13setErrorStateEP14QAbstractState
     // invoke: void setErrorState(class QAbstractState *)
-    var arg0 = args[0].(QAbstractState).qclsinst
+    var arg0 = args[0].(*QAbstractState).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN6QState13setErrorStateEP14QAbstractState(this.qclsinst, arg0)
+    C.C_ZN6QState13setErrorStateEP14QAbstractState(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QState", "setErrorState", args)
   }
@@ -260,7 +260,7 @@ func (this *QState) Initialstate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QState12initialStateEv
     // invoke: QAbstractState * initialState()
-    C.C_ZNK6QState12initialStateEv(this.qclsinst)
+    C.C_ZNK6QState12initialStateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QState", "initialState", args)
   }
@@ -281,7 +281,7 @@ func (this *QState) Childmode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QState9childModeEv
     // invoke: QState::ChildMode childMode()
-    C.C_ZNK6QState9childModeEv(this.qclsinst)
+    C.C_ZNK6QState9childModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QState", "childMode", args)
   }
@@ -305,15 +305,15 @@ func (this *QState) Assignproperty(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant
     // invoke: void assignProperty(class QObject *, const char *, const class QVariant &)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[0][1])
     var arg1 = argif1.(unsafe.Pointer)
     if false {fmt.Println(argif1, arg1)}
     if free1 {defer C.free(arg1)}
-    var arg2 = args[2].(QVariant).qclsinst
+    var arg2 = args[2].(*QVariant).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QState", "assignProperty", args)
   }
@@ -334,7 +334,7 @@ func (this *QState) Freeqstate(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QStateD0Ev
     // invoke: void ~QState()
-    C.C_ZN6QStateD2Ev(this.qclsinst)
+    C.C_ZN6QStateD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QState", "~QState", args)
   }
@@ -355,7 +355,7 @@ func (this *QState) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QState10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK6QState10metaObjectEv(this.qclsinst)
+    C.C_ZNK6QState10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QState", "metaObject", args)
   }
@@ -377,9 +377,9 @@ func (this *QState) Setinitialstate(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QState15setInitialStateEP14QAbstractState
     // invoke: void setInitialState(class QAbstractState *)
-    var arg0 = args[0].(QAbstractState).qclsinst
+    var arg0 = args[0].(*QAbstractState).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN6QState15setInitialStateEP14QAbstractState(this.qclsinst, arg0)
+    C.C_ZN6QState15setInitialStateEP14QAbstractState(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QState", "setInitialState", args)
   }

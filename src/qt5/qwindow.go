@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qwindow.h
 // dst-file: /src/gui/qwindow.go
 //
@@ -241,7 +241,7 @@ func init() {
 // class sizeof(QWindow)=1
 type QWindow struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _modalityChanged QWindow_modalityChanged_signal;
 //  _activeChanged QWindow_activeChanged_signal;
 //  _heightChanged QWindow_heightChanged_signal;
@@ -275,7 +275,7 @@ func (this *QWindow) Freeqwindow(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindowD0Ev
     // invoke: void ~QWindow()
-    C.C_ZN7QWindowD2Ev(this.qclsinst)
+    C.C_ZN7QWindowD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "~QWindow", args)
   }
@@ -296,11 +296,15 @@ func (this *QWindow) Transientparent(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow15transientParentEv
     // invoke: QWindow * transientParent()
-    var ret0 = C.C_ZNK7QWindow15transientParentEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow15transientParentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWindow{}) // "QWindow *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "transientParent", args)
   }
@@ -321,7 +325,7 @@ func (this *QWindow) Show(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow4showEv
     // invoke: void show()
-    C.C_ZN7QWindow4showEv(this.qclsinst)
+    C.C_ZN7QWindow4showEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "show", args)
   }
@@ -342,11 +346,15 @@ func (this *QWindow) Focusobject(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow11focusObjectEv
     // invoke: QObject * focusObject()
-    var ret0 = C.C_ZNK7QWindow11focusObjectEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow11focusObjectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QObject{}) // "QObject *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "focusObject", args)
   }
@@ -368,9 +376,9 @@ func (this *QWindow) Setscreen(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow9setScreenEP7QScreen
     // invoke: void setScreen(class QScreen *)
-    var arg0 = args[0].(QScreen).qclsinst
+    var arg0 = args[0].(*QScreen).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow9setScreenEP7QScreen(this.qclsinst, arg0)
+    C.C_ZN7QWindow9setScreenEP7QScreen(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setScreen", args)
   }
@@ -391,11 +399,15 @@ func (this *QWindow) Title(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow5titleEv
     // invoke: QString title()
-    var ret0 = C.C_ZNK7QWindow5titleEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow5titleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "title", args)
   }
@@ -421,17 +433,17 @@ func (this *QWindow) Resize(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow6resizeERK5QSize
     // invoke: void resize(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow6resizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN7QWindow6resizeERK5QSize(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN7QWindow6resizeEii
     // invoke: void resize(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN7QWindow6resizeEii(this.qclsinst, arg0, arg1)
+    C.C_ZN7QWindow6resizeEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QWindow", "resize", args)
   }
@@ -453,9 +465,9 @@ func (this *QWindow) Seticon(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow7setIconERK5QIcon
     // invoke: void setIcon(const class QIcon &)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow7setIconERK5QIcon(this.qclsinst, arg0)
+    C.C_ZN7QWindow7setIconERK5QIcon(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setIcon", args)
   }
@@ -476,7 +488,7 @@ func (this *QWindow) Handle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWindow6handleEv
     // invoke: QPlatformWindow * handle()
-    C.C_ZNK7QWindow6handleEv(this.qclsinst)
+    C.C_ZNK7QWindow6handleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "handle", args)
   }
@@ -497,11 +509,15 @@ func (this *QWindow) Format(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow6formatEv
     // invoke: QSurfaceFormat format()
-    var ret0 = C.C_ZNK7QWindow6formatEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow6formatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSurfaceFormat{}) // "QSurfaceFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "format", args)
   }
@@ -529,21 +545,21 @@ func (this *QWindow) Setgeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow11setGeometryEiiii
     // invoke: void setGeometry(int, int, int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    C.C_ZN7QWindow11setGeometryEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN7QWindow11setGeometryEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN7QWindow11setGeometryERK5QRect
     // invoke: void setGeometry(const class QRect &)
-    var arg0 = args[0].(QRect).qclsinst
+    var arg0 = args[0].(*QRect).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow11setGeometryERK5QRect(this.qclsinst, arg0)
+    C.C_ZN7QWindow11setGeometryERK5QRect(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setGeometry", args)
   }
@@ -565,13 +581,17 @@ func (this *QWindow) Mapfromglobal(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow13mapFromGlobalERK6QPoint
     // invoke: QPoint mapFromGlobal(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QWindow13mapFromGlobalERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QWindow13mapFromGlobalERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "mapFromGlobal", args)
   }
@@ -592,11 +612,15 @@ func (this *QWindow) Framegeometry(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow13frameGeometryEv
     // invoke: QRect frameGeometry()
-    var ret0 = C.C_ZNK7QWindow13frameGeometryEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow13frameGeometryEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "frameGeometry", args)
   }
@@ -617,7 +641,7 @@ func (this *QWindow) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWindow10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK7QWindow10metaObjectEv(this.qclsinst)
+    C.C_ZNK7QWindow10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "metaObject", args)
   }
@@ -638,11 +662,15 @@ func (this *QWindow) Requestedformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow15requestedFormatEv
     // invoke: QSurfaceFormat requestedFormat()
-    var ret0 = C.C_ZNK7QWindow15requestedFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow15requestedFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSurfaceFormat{}) // "QSurfaceFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "requestedFormat", args)
   }
@@ -663,11 +691,15 @@ func (this *QWindow) Minimumsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow11minimumSizeEv
     // invoke: QSize minimumSize()
-    var ret0 = C.C_ZNK7QWindow11minimumSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow11minimumSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "minimumSize", args)
   }
@@ -688,7 +720,7 @@ func (this *QWindow) Windowstate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWindow11windowStateEv
     // invoke: Qt::WindowState windowState()
-    C.C_ZNK7QWindow11windowStateEv(this.qclsinst)
+    C.C_ZNK7QWindow11windowStateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "windowState", args)
   }
@@ -710,9 +742,9 @@ func (this *QWindow) Setmaximumheight(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow16setMaximumHeightEi
     // invoke: void setMaximumHeight(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow16setMaximumHeightEi(this.qclsinst, arg0)
+    C.C_ZN7QWindow16setMaximumHeightEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setMaximumHeight", args)
   }
@@ -733,7 +765,7 @@ func (this *QWindow) X(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWindow1xEv
     // invoke: int x()
-    C.C_ZNK7QWindow1xEv(this.qclsinst)
+    C.C_ZNK7QWindow1xEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "x", args)
   }
@@ -754,11 +786,15 @@ func (this *QWindow) Maximumsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow11maximumSizeEv
     // invoke: QSize maximumSize()
-    var ret0 = C.C_ZNK7QWindow11maximumSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow11maximumSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "maximumSize", args)
   }
@@ -779,11 +815,15 @@ func (this *QWindow) Minimumheight(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow13minimumHeightEv
     // invoke: int minimumHeight()
-    var ret0 = C.C_ZNK7QWindow13minimumHeightEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow13minimumHeightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "minimumHeight", args)
   }
@@ -804,11 +844,15 @@ func (this *QWindow) Close(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QWindow5closeEv
     // invoke: bool close()
-    var ret0 = C.C_ZN7QWindow5closeEv(this.qclsinst)
+    var ret0 = C.C_ZN7QWindow5closeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "close", args)
   }
@@ -829,7 +873,7 @@ func (this *QWindow) Requestactivate(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow15requestActivateEv
     // invoke: void requestActivate()
-    C.C_ZN7QWindow15requestActivateEv(this.qclsinst)
+    C.C_ZN7QWindow15requestActivateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "requestActivate", args)
   }
@@ -851,9 +895,9 @@ func (this *QWindow) Setmaximumsize(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow14setMaximumSizeERK5QSize
     // invoke: void setMaximumSize(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow14setMaximumSizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN7QWindow14setMaximumSizeERK5QSize(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setMaximumSize", args)
   }
@@ -874,7 +918,7 @@ func (this *QWindow) Hide(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow4hideEv
     // invoke: void hide()
-    C.C_ZN7QWindow4hideEv(this.qclsinst)
+    C.C_ZN7QWindow4hideEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "hide", args)
   }
@@ -896,9 +940,9 @@ func (this *QWindow) Setparent(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow9setParentEPS_
     // invoke: void setParent(class QWindow *)
-    var arg0 = args[0].(QWindow).qclsinst
+    var arg0 = args[0].(*QWindow).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow9setParentEPS_(this.qclsinst, arg0)
+    C.C_ZN7QWindow9setParentEPS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setParent", args)
   }
@@ -919,7 +963,7 @@ func (this *QWindow) Requestupdate(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow13requestUpdateEv
     // invoke: void requestUpdate()
-    C.C_ZN7QWindow13requestUpdateEv(this.qclsinst)
+    C.C_ZN7QWindow13requestUpdateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "requestUpdate", args)
   }
@@ -941,9 +985,9 @@ func (this *QWindow) Settransientparent(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow18setTransientParentEPS_
     // invoke: void setTransientParent(class QWindow *)
-    var arg0 = args[0].(QWindow).qclsinst
+    var arg0 = args[0].(*QWindow).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow18setTransientParentEPS_(this.qclsinst, arg0)
+    C.C_ZN7QWindow18setTransientParentEPS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setTransientParent", args)
   }
@@ -964,11 +1008,15 @@ func (this *QWindow) Parent(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow6parentEv
     // invoke: QWindow * parent()
-    var ret0 = C.C_ZNK7QWindow6parentEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow6parentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWindow{}) // "QWindow *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "parent", args)
   }
@@ -989,11 +1037,15 @@ func (this *QWindow) Screen(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow6screenEv
     // invoke: QScreen * screen()
-    var ret0 = C.C_ZNK7QWindow6screenEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow6screenEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QScreen{}) // "QScreen *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "screen", args)
   }
@@ -1014,11 +1066,15 @@ func (this *QWindow) Accessibleroot(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow14accessibleRootEv
     // invoke: QAccessibleInterface * accessibleRoot()
-    var ret0 = C.C_ZNK7QWindow14accessibleRootEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow14accessibleRootEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAccessibleInterface{}) // "QAccessibleInterface *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "accessibleRoot", args)
   }
@@ -1044,17 +1100,17 @@ func (this *QWindow) Setposition(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow11setPositionEii
     // invoke: void setPosition(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN7QWindow11setPositionEii(this.qclsinst, arg0, arg1)
+    C.C_ZN7QWindow11setPositionEii(this.Qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN7QWindow11setPositionERK6QPoint
     // invoke: void setPosition(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow11setPositionERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN7QWindow11setPositionERK6QPoint(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setPosition", args)
   }
@@ -1075,11 +1131,15 @@ func (this *QWindow) Isactive(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow8isActiveEv
     // invoke: bool isActive()
-    var ret0 = C.C_ZNK7QWindow8isActiveEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow8isActiveEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "isActive", args)
   }
@@ -1100,11 +1160,15 @@ func (this *QWindow) Geometry(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow8geometryEv
     // invoke: QRect geometry()
-    var ret0 = C.C_ZNK7QWindow8geometryEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow8geometryEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "geometry", args)
   }
@@ -1125,11 +1189,15 @@ func (this *QWindow) Isvisible(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow9isVisibleEv
     // invoke: bool isVisible()
-    var ret0 = C.C_ZNK7QWindow9isVisibleEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow9isVisibleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "isVisible", args)
   }
@@ -1151,13 +1219,17 @@ func (this *QWindow) Maptoglobal(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow11mapToGlobalERK6QPoint
     // invoke: QPoint mapToGlobal(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QWindow11mapToGlobalERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QWindow11mapToGlobalERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "mapToGlobal", args)
   }
@@ -1179,9 +1251,9 @@ func (this *QWindow) Setmaximumwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow15setMaximumWidthEi
     // invoke: void setMaximumWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow15setMaximumWidthEi(this.qclsinst, arg0)
+    C.C_ZN7QWindow15setMaximumWidthEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setMaximumWidth", args)
   }
@@ -1203,9 +1275,9 @@ func (this *QWindow) Setminimumsize(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow14setMinimumSizeERK5QSize
     // invoke: void setMinimumSize(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow14setMinimumSizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN7QWindow14setMinimumSizeERK5QSize(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setMinimumSize", args)
   }
@@ -1226,11 +1298,15 @@ func (this *QWindow) Height(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow6heightEv
     // invoke: int height()
-    var ret0 = C.C_ZNK7QWindow6heightEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow6heightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "height", args)
   }
@@ -1251,11 +1327,15 @@ func (this *QWindow) Devicepixelratio(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow16devicePixelRatioEv
     // invoke: qreal devicePixelRatio()
-    var ret0 = C.C_ZNK7QWindow16devicePixelRatioEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow16devicePixelRatioEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "devicePixelRatio", args)
   }
@@ -1277,9 +1357,9 @@ func (this *QWindow) Setwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow8setWidthEi
     // invoke: void setWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow8setWidthEi(this.qclsinst, arg0)
+    C.C_ZN7QWindow8setWidthEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setWidth", args)
   }
@@ -1300,11 +1380,15 @@ func (this *QWindow) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow4sizeEv
     // invoke: QSize size()
-    var ret0 = C.C_ZNK7QWindow4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "size", args)
   }
@@ -1325,7 +1409,7 @@ func (this *QWindow) Unsetcursor(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow11unsetCursorEv
     // invoke: void unsetCursor()
-    C.C_ZN7QWindow11unsetCursorEv(this.qclsinst)
+    C.C_ZN7QWindow11unsetCursorEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "unsetCursor", args)
   }
@@ -1346,7 +1430,7 @@ func (this *QWindow) Winid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWindow5winIdEv
     // invoke: WId winId()
-    C.C_ZNK7QWindow5winIdEv(this.qclsinst)
+    C.C_ZNK7QWindow5winIdEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "winId", args)
   }
@@ -1367,7 +1451,7 @@ func (this *QWindow) Raise(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow5raiseEv
     // invoke: void raise()
-    C.C_ZN7QWindow5raiseEv(this.qclsinst)
+    C.C_ZN7QWindow5raiseEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "raise", args)
   }
@@ -1389,9 +1473,9 @@ func (this *QWindow) Setformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow9setFormatERK14QSurfaceFormat
     // invoke: void setFormat(const class QSurfaceFormat &)
-    var arg0 = args[0].(QSurfaceFormat).qclsinst
+    var arg0 = args[0].(*QSurfaceFormat).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow9setFormatERK14QSurfaceFormat(this.qclsinst, arg0)
+    C.C_ZN7QWindow9setFormatERK14QSurfaceFormat(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setFormat", args)
   }
@@ -1412,7 +1496,7 @@ func (this *QWindow) Create(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow6createEv
     // invoke: void create()
-    C.C_ZN7QWindow6createEv(this.qclsinst)
+    C.C_ZN7QWindow6createEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "create", args)
   }
@@ -1433,11 +1517,15 @@ func (this *QWindow) Sizeincrement(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow13sizeIncrementEv
     // invoke: QSize sizeIncrement()
-    var ret0 = C.C_ZNK7QWindow13sizeIncrementEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow13sizeIncrementEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "sizeIncrement", args)
   }
@@ -1458,11 +1546,15 @@ func (this *QWindow) Width(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow5widthEv
     // invoke: int width()
-    var ret0 = C.C_ZNK7QWindow5widthEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow5widthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "width", args)
   }
@@ -1483,7 +1575,7 @@ func (this *QWindow) Type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWindow4typeEv
     // invoke: Qt::WindowType type()
-    C.C_ZNK7QWindow4typeEv(this.qclsinst)
+    C.C_ZNK7QWindow4typeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "type", args)
   }
@@ -1504,7 +1596,7 @@ func (this *QWindow) Surfacetype(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWindow11surfaceTypeEv
     // invoke: QSurface::SurfaceType surfaceType()
-    C.C_ZNK7QWindow11surfaceTypeEv(this.qclsinst)
+    C.C_ZNK7QWindow11surfaceTypeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "surfaceType", args)
   }
@@ -1525,7 +1617,7 @@ func (this *QWindow) Showmaximized(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow13showMaximizedEv
     // invoke: void showMaximized()
-    C.C_ZN7QWindow13showMaximizedEv(this.qclsinst)
+    C.C_ZN7QWindow13showMaximizedEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "showMaximized", args)
   }
@@ -1546,11 +1638,15 @@ func (this *QWindow) Maximumwidth(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow12maximumWidthEv
     // invoke: int maximumWidth()
-    var ret0 = C.C_ZNK7QWindow12maximumWidthEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow12maximumWidthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "maximumWidth", args)
   }
@@ -1571,7 +1667,7 @@ func (this *QWindow) Visibility(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWindow10visibilityEv
     // invoke: QWindow::Visibility visibility()
-    C.C_ZNK7QWindow10visibilityEv(this.qclsinst)
+    C.C_ZNK7QWindow10visibilityEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "visibility", args)
   }
@@ -1593,9 +1689,9 @@ func (this *QWindow) Setmask(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow7setMaskERK7QRegion
     // invoke: void setMask(const class QRegion &)
-    var arg0 = args[0].(QRegion).qclsinst
+    var arg0 = args[0].(*QRegion).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow7setMaskERK7QRegion(this.qclsinst, arg0)
+    C.C_ZN7QWindow7setMaskERK7QRegion(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setMask", args)
   }
@@ -1617,9 +1713,9 @@ func (this *QWindow) Setsizeincrement(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow16setSizeIncrementERK5QSize
     // invoke: void setSizeIncrement(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow16setSizeIncrementERK5QSize(this.qclsinst, arg0)
+    C.C_ZN7QWindow16setSizeIncrementERK5QSize(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setSizeIncrement", args)
   }
@@ -1644,26 +1740,26 @@ func NewQWindow(args ...interface{}) *QWindow {
   case 0:
     // invoke: _ZN7QWindowC1EPS_
     // invoke: void QWindow(class QWindow *)
-    var arg0 = args[0].(QWindow).qclsinst
+    var arg0 = args[0].(*QWindow).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QWindowC2EPS_(arg0)
-    return &QWindow{qclsinst:qthis}
+    return &QWindow{Qclsinst:qthis}
   case 1:
     // invoke: _ZN7QWindowC1EP7QScreen
     // invoke: void QWindow(class QScreen *)
-    var arg0 = args[0].(QScreen).qclsinst
+    var arg0 = args[0].(*QScreen).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QWindowC2EP7QScreen(arg0)
-    return &QWindow{qclsinst:qthis}
+    return &QWindow{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QWindow", "QWindow", args)
   }
 
-  return nil // QWindow{qclsinst:qthis}
+  return nil // QWindow{Qclsinst:qthis}
 }
 
 // setKeyboardGrabEnabled(_Bool)
@@ -1682,11 +1778,15 @@ func (this *QWindow) Setkeyboardgrabenabled(args ...interface{}) (ret interface{
     // invoke: bool setKeyboardGrabEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN7QWindow22setKeyboardGrabEnabledEb(this.qclsinst, arg0)
+    var ret0 = C.C_ZN7QWindow22setKeyboardGrabEnabledEb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "setKeyboardGrabEnabled", args)
   }
@@ -1707,11 +1807,15 @@ func (this *QWindow) Istoplevel(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow10isTopLevelEv
     // invoke: bool isTopLevel()
-    var ret0 = C.C_ZNK7QWindow10isTopLevelEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow10isTopLevelEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "isTopLevel", args)
   }
@@ -1732,11 +1836,15 @@ func (this *QWindow) Ismodal(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow7isModalEv
     // invoke: bool isModal()
-    var ret0 = C.C_ZNK7QWindow7isModalEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow7isModalEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "isModal", args)
   }
@@ -1758,9 +1866,9 @@ func (this *QWindow) Setminimumwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow15setMinimumWidthEi
     // invoke: void setMinimumWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow15setMinimumWidthEi(this.qclsinst, arg0)
+    C.C_ZN7QWindow15setMinimumWidthEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setMinimumWidth", args)
   }
@@ -1781,11 +1889,15 @@ func (this *QWindow) Framemargins(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow12frameMarginsEv
     // invoke: QMargins frameMargins()
-    var ret0 = C.C_ZNK7QWindow12frameMarginsEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow12frameMarginsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMargins{}) // "QMargins"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "frameMargins", args)
   }
@@ -1806,11 +1918,15 @@ func (this *QWindow) Cursor(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow6cursorEv
     // invoke: QCursor cursor()
-    var ret0 = C.C_ZNK7QWindow6cursorEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow6cursorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QCursor{}) // "QCursor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "cursor", args)
   }
@@ -1834,7 +1950,7 @@ func (this *QWindow) Setvisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN7QWindow10setVisibleEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setVisible", args)
   }
@@ -1855,11 +1971,15 @@ func (this *QWindow) Icon(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow4iconEv
     // invoke: QIcon icon()
-    var ret0 = C.C_ZNK7QWindow4iconEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow4iconEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIcon{}) // "QIcon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "icon", args)
   }
@@ -1880,7 +2000,7 @@ func (this *QWindow) Contentorientation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWindow18contentOrientationEv
     // invoke: Qt::ScreenOrientation contentOrientation()
-    C.C_ZNK7QWindow18contentOrientationEv(this.qclsinst)
+    C.C_ZNK7QWindow18contentOrientationEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "contentOrientation", args)
   }
@@ -1902,9 +2022,9 @@ func (this *QWindow) Settitle(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow8setTitleERK7QString
     // invoke: void setTitle(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow8setTitleERK7QString(this.qclsinst, arg0)
+    C.C_ZN7QWindow8setTitleERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setTitle", args)
   }
@@ -1925,7 +2045,7 @@ func (this *QWindow) Showminimized(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow13showMinimizedEv
     // invoke: void showMinimized()
-    C.C_ZN7QWindow13showMinimizedEv(this.qclsinst)
+    C.C_ZN7QWindow13showMinimizedEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "showMinimized", args)
   }
@@ -1946,11 +2066,15 @@ func (this *QWindow) Basesize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow8baseSizeEv
     // invoke: QSize baseSize()
-    var ret0 = C.C_ZNK7QWindow8baseSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow8baseSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "baseSize", args)
   }
@@ -1971,7 +2095,7 @@ func (this *QWindow) Modality(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWindow8modalityEv
     // invoke: Qt::WindowModality modality()
-    C.C_ZNK7QWindow8modalityEv(this.qclsinst)
+    C.C_ZNK7QWindow8modalityEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "modality", args)
   }
@@ -1992,7 +2116,7 @@ func (this *QWindow) Showfullscreen(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow14showFullScreenEv
     // invoke: void showFullScreen()
-    C.C_ZN7QWindow14showFullScreenEv(this.qclsinst)
+    C.C_ZN7QWindow14showFullScreenEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "showFullScreen", args)
   }
@@ -2014,9 +2138,9 @@ func (this *QWindow) Setminimumheight(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow16setMinimumHeightEi
     // invoke: void setMinimumHeight(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow16setMinimumHeightEi(this.qclsinst, arg0)
+    C.C_ZN7QWindow16setMinimumHeightEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setMinimumHeight", args)
   }
@@ -2037,11 +2161,15 @@ func (this *QWindow) Filepath(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow8filePathEv
     // invoke: QString filePath()
-    var ret0 = C.C_ZNK7QWindow8filePathEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow8filePathEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "filePath", args)
   }
@@ -2063,9 +2191,9 @@ func (this *QWindow) Setopacity(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow10setOpacityEd
     // invoke: void setOpacity(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow10setOpacityEd(this.qclsinst, arg0)
+    C.C_ZN7QWindow10setOpacityEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setOpacity", args)
   }
@@ -2086,7 +2214,7 @@ func (this *QWindow) Shownormal(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow10showNormalEv
     // invoke: void showNormal()
-    C.C_ZN7QWindow10showNormalEv(this.qclsinst)
+    C.C_ZN7QWindow10showNormalEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "showNormal", args)
   }
@@ -2107,7 +2235,7 @@ func (this *QWindow) Destroy(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow7destroyEv
     // invoke: void destroy()
-    C.C_ZN7QWindow7destroyEv(this.qclsinst)
+    C.C_ZN7QWindow7destroyEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "destroy", args)
   }
@@ -2129,9 +2257,9 @@ func (this *QWindow) Setbasesize(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow11setBaseSizeERK5QSize
     // invoke: void setBaseSize(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow11setBaseSizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN7QWindow11setBaseSizeERK5QSize(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setBaseSize", args)
   }
@@ -2152,11 +2280,15 @@ func (this *QWindow) Opacity(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow7opacityEv
     // invoke: qreal opacity()
-    var ret0 = C.C_ZNK7QWindow7opacityEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow7opacityEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "opacity", args)
   }
@@ -2177,11 +2309,15 @@ func (this *QWindow) Minimumwidth(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow12minimumWidthEv
     // invoke: int minimumWidth()
-    var ret0 = C.C_ZNK7QWindow12minimumWidthEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow12minimumWidthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "minimumWidth", args)
   }
@@ -2202,11 +2338,15 @@ func (this *QWindow) Maximumheight(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow13maximumHeightEv
     // invoke: int maximumHeight()
-    var ret0 = C.C_ZNK7QWindow13maximumHeightEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow13maximumHeightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "maximumHeight", args)
   }
@@ -2227,11 +2367,15 @@ func (this *QWindow) Frameposition(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow13framePositionEv
     // invoke: QPoint framePosition()
-    var ret0 = C.C_ZNK7QWindow13framePositionEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow13framePositionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "framePosition", args)
   }
@@ -2255,11 +2399,15 @@ func (this *QWindow) Setmousegrabenabled(args ...interface{}) (ret interface{}) 
     // invoke: bool setMouseGrabEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN7QWindow19setMouseGrabEnabledEb(this.qclsinst, arg0)
+    var ret0 = C.C_ZN7QWindow19setMouseGrabEnabledEb(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "setMouseGrabEnabled", args)
   }
@@ -2281,9 +2429,9 @@ func (this *QWindow) Alert(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow5alertEi
     // invoke: void alert(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow5alertEi(this.qclsinst, arg0)
+    C.C_ZN7QWindow5alertEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "alert", args)
   }
@@ -2305,9 +2453,9 @@ func (this *QWindow) Setx(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow4setXEi
     // invoke: void setX(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow4setXEi(this.qclsinst, arg0)
+    C.C_ZN7QWindow4setXEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setX", args)
   }
@@ -2329,9 +2477,9 @@ func (this *QWindow) Sety(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow4setYEi
     // invoke: void setY(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow4setYEi(this.qclsinst, arg0)
+    C.C_ZN7QWindow4setYEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setY", args)
   }
@@ -2353,9 +2501,9 @@ func (this *QWindow) Setcursor(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow9setCursorERK7QCursor
     // invoke: void setCursor(const class QCursor &)
-    var arg0 = args[0].(QCursor).qclsinst
+    var arg0 = args[0].(*QCursor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow9setCursorERK7QCursor(this.qclsinst, arg0)
+    C.C_ZN7QWindow9setCursorERK7QCursor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setCursor", args)
   }
@@ -2377,9 +2525,9 @@ func (this *QWindow) Setheight(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow9setHeightEi
     // invoke: void setHeight(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow9setHeightEi(this.qclsinst, arg0)
+    C.C_ZN7QWindow9setHeightEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setHeight", args)
   }
@@ -2400,7 +2548,7 @@ func (this *QWindow) Lower(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow5lowerEv
     // invoke: void lower()
-    C.C_ZN7QWindow5lowerEv(this.qclsinst)
+    C.C_ZN7QWindow5lowerEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "lower", args)
   }
@@ -2422,9 +2570,9 @@ func (this *QWindow) Setfilepath(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow11setFilePathERK7QString
     // invoke: void setFilePath(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow11setFilePathERK7QString(this.qclsinst, arg0)
+    C.C_ZN7QWindow11setFilePathERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setFilePath", args)
   }
@@ -2445,11 +2593,15 @@ func (this *QWindow) Isexposed(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow9isExposedEv
     // invoke: bool isExposed()
-    var ret0 = C.C_ZNK7QWindow9isExposedEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow9isExposedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "isExposed", args)
   }
@@ -2470,11 +2622,15 @@ func (this *QWindow) Mask(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow4maskEv
     // invoke: QRegion mask()
-    var ret0 = C.C_ZNK7QWindow4maskEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow4maskEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRegion{}) // "QRegion"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "mask", args)
   }
@@ -2495,7 +2651,7 @@ func (this *QWindow) Flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWindow5flagsEv
     // invoke: Qt::WindowFlags flags()
-    C.C_ZNK7QWindow5flagsEv(this.qclsinst)
+    C.C_ZNK7QWindow5flagsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "flags", args)
   }
@@ -2517,9 +2673,9 @@ func (this *QWindow) Setframeposition(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow16setFramePositionERK6QPoint
     // invoke: void setFramePosition(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWindow16setFramePositionERK6QPoint(this.qclsinst, arg0)
+    C.C_ZN7QWindow16setFramePositionERK6QPoint(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWindow", "setFramePosition", args)
   }
@@ -2540,7 +2696,7 @@ func (this *QWindow) Y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWindow1yEv
     // invoke: int y()
-    C.C_ZNK7QWindow1yEv(this.qclsinst)
+    C.C_ZNK7QWindow1yEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWindow", "y", args)
   }
@@ -2561,11 +2717,15 @@ func (this *QWindow) Position(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QWindow8positionEv
     // invoke: QPoint position()
-    var ret0 = C.C_ZNK7QWindow8positionEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QWindow8positionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWindow", "position", args)
   }

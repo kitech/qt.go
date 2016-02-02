@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qmimedatabase.h
 // dst-file: /src/core/qmimedatabase.go
 //
@@ -65,7 +65,7 @@ func init() {
 // class sizeof(QMimeDatabase)=8
 type QMimeDatabase struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // mimeTypeForName(const class QString &)
@@ -82,13 +82,17 @@ func (this *QMimeDatabase) Mimetypeforname(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK13QMimeDatabase15mimeTypeForNameERK7QString
     // invoke: QMimeType mimeTypeForName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QMimeDatabase15mimeTypeForNameERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QMimeDatabase15mimeTypeForNameERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMimeType{}) // "QMimeType"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypeForName", args)
   }
@@ -112,12 +116,12 @@ func NewQMimeDatabase(args ...interface{}) *QMimeDatabase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QMimeDatabaseC2Ev()
-    return &QMimeDatabase{qclsinst:qthis}
+    return &QMimeDatabase{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMimeDatabase", "QMimeDatabase", args)
   }
 
-  return nil // QMimeDatabase{qclsinst:qthis}
+  return nil // QMimeDatabase{Qclsinst:qthis}
 }
 
 // ~QMimeDatabase()
@@ -133,7 +137,7 @@ func (this *QMimeDatabase) Freeqmimedatabase(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QMimeDatabaseD0Ev
     // invoke: void ~QMimeDatabase()
-    C.C_ZN13QMimeDatabaseD2Ev(this.qclsinst)
+    C.C_ZN13QMimeDatabaseD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "~QMimeDatabase", args)
   }
@@ -154,7 +158,7 @@ func (this *QMimeDatabase) Allmimetypes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMimeDatabase12allMimeTypesEv
     // invoke: QList<QMimeType> allMimeTypes()
-    C.C_ZNK13QMimeDatabase12allMimeTypesEv(this.qclsinst)
+    C.C_ZNK13QMimeDatabase12allMimeTypesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "allMimeTypes", args)
   }
@@ -179,23 +183,31 @@ func (this *QMimeDatabase) Mimetypefordata(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice
     // invoke: QMimeType mimeTypeForData(class QIODevice *)
-    var arg0 = args[0].(QIODevice).qclsinst
+    var arg0 = args[0].(*QIODevice).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMimeType{}) // "QMimeType"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray
     // invoke: QMimeType mimeTypeForData(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMimeType{}) // "QMimeType"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypeForData", args)
   }
@@ -217,13 +229,17 @@ func (this *QMimeDatabase) Mimetypeforurl(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl
     // invoke: QMimeType mimeTypeForUrl(const class QUrl &)
-    var arg0 = args[0].(QUrl).qclsinst
+    var arg0 = args[0].(*QUrl).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMimeType{}) // "QMimeType"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypeForUrl", args)
   }
@@ -250,27 +266,35 @@ func (this *QMimeDatabase) Mimetypeforfilenameanddata(args ...interface{}) (ret 
   case 0:
     // invoke: _ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray
     // invoke: QMimeType mimeTypeForFileNameAndData(const class QString &, const class QByteArray &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
+    var arg1 = args[1].(*QByteArray).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMimeType{}) // "QMimeType"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice
     // invoke: QMimeType mimeTypeForFileNameAndData(const class QString &, class QIODevice *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QIODevice).qclsinst
+    var arg1 = args[1].(*QIODevice).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMimeType{}) // "QMimeType"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypeForFileNameAndData", args)
   }
@@ -292,9 +316,9 @@ func (this *QMimeDatabase) Mimetypesforfilename(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString
     // invoke: QList<QMimeType> mimeTypesForFileName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(this.qclsinst, arg0)
+    C.C_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypesForFileName", args)
   }
@@ -316,13 +340,17 @@ func (this *QMimeDatabase) Suffixforfilename(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK13QMimeDatabase17suffixForFileNameERK7QString
     // invoke: QString suffixForFileName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK13QMimeDatabase17suffixForFileNameERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK13QMimeDatabase17suffixForFileNameERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMimeDatabase", "suffixForFileName", args)
   }

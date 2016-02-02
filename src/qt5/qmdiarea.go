@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.go
 //
@@ -97,7 +97,7 @@ func init() {
 // class sizeof(QMdiArea)=1
 type QMdiArea struct {
   /*qbase*/ QAbstractScrollArea;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _subWindowActivated QMdiArea_subWindowActivated_signal;
 }
 
@@ -114,7 +114,7 @@ func (this *QMdiArea) Tilesubwindows(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMdiArea14tileSubWindowsEv
     // invoke: void tileSubWindows()
-    C.C_ZN8QMdiArea14tileSubWindowsEv(this.qclsinst)
+    C.C_ZN8QMdiArea14tileSubWindowsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "tileSubWindows", args)
   }
@@ -135,7 +135,7 @@ func (this *QMdiArea) Closeallsubwindows(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMdiArea18closeAllSubWindowsEv
     // invoke: void closeAllSubWindows()
-    C.C_ZN8QMdiArea18closeAllSubWindowsEv(this.qclsinst)
+    C.C_ZN8QMdiArea18closeAllSubWindowsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "closeAllSubWindows", args)
   }
@@ -156,7 +156,7 @@ func (this *QMdiArea) Cascadesubwindows(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMdiArea17cascadeSubWindowsEv
     // invoke: void cascadeSubWindows()
-    C.C_ZN8QMdiArea17cascadeSubWindowsEv(this.qclsinst)
+    C.C_ZN8QMdiArea17cascadeSubWindowsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "cascadeSubWindows", args)
   }
@@ -177,7 +177,7 @@ func (this *QMdiArea) Tabposition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea11tabPositionEv
     // invoke: QTabWidget::TabPosition tabPosition()
-    C.C_ZNK8QMdiArea11tabPositionEv(this.qclsinst)
+    C.C_ZNK8QMdiArea11tabPositionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "tabPosition", args)
   }
@@ -198,7 +198,7 @@ func (this *QMdiArea) Activationorder(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea15activationOrderEv
     // invoke: QMdiArea::WindowOrder activationOrder()
-    C.C_ZNK8QMdiArea15activationOrderEv(this.qclsinst)
+    C.C_ZNK8QMdiArea15activationOrderEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "activationOrder", args)
   }
@@ -222,7 +222,7 @@ func (this *QMdiArea) Settabsmovable(args ...interface{}) () {
     // invoke: void setTabsMovable(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QMdiArea14setTabsMovableEb(this.qclsinst, arg0)
+    C.C_ZN8QMdiArea14setTabsMovableEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiArea", "setTabsMovable", args)
   }
@@ -243,11 +243,15 @@ func (this *QMdiArea) Tabsclosable(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMdiArea12tabsClosableEv
     // invoke: bool tabsClosable()
-    var ret0 = C.C_ZNK8QMdiArea12tabsClosableEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMdiArea12tabsClosableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiArea", "tabsClosable", args)
   }
@@ -268,7 +272,7 @@ func (this *QMdiArea) Closeactivesubwindow(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMdiArea20closeActiveSubWindowEv
     // invoke: void closeActiveSubWindow()
-    C.C_ZN8QMdiArea20closeActiveSubWindowEv(this.qclsinst)
+    C.C_ZN8QMdiArea20closeActiveSubWindowEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "closeActiveSubWindow", args)
   }
@@ -292,7 +296,7 @@ func (this *QMdiArea) Setdocumentmode(args ...interface{}) () {
     // invoke: void setDocumentMode(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QMdiArea15setDocumentModeEb(this.qclsinst, arg0)
+    C.C_ZN8QMdiArea15setDocumentModeEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiArea", "setDocumentMode", args)
   }
@@ -313,7 +317,7 @@ func (this *QMdiArea) Tabshape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea8tabShapeEv
     // invoke: QTabWidget::TabShape tabShape()
-    C.C_ZNK8QMdiArea8tabShapeEv(this.qclsinst)
+    C.C_ZNK8QMdiArea8tabShapeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "tabShape", args)
   }
@@ -335,9 +339,9 @@ func (this *QMdiArea) Setbackground(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMdiArea13setBackgroundERK6QBrush
     // invoke: void setBackground(const class QBrush &)
-    var arg0 = args[0].(QBrush).qclsinst
+    var arg0 = args[0].(*QBrush).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QMdiArea13setBackgroundERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN8QMdiArea13setBackgroundERK6QBrush(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiArea", "setBackground", args)
   }
@@ -358,7 +362,7 @@ func (this *QMdiArea) Freeqmdiarea(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMdiAreaD0Ev
     // invoke: void ~QMdiArea()
-    C.C_ZN8QMdiAreaD2Ev(this.qclsinst)
+    C.C_ZN8QMdiAreaD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "~QMdiArea", args)
   }
@@ -379,11 +383,15 @@ func (this *QMdiArea) Documentmode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMdiArea12documentModeEv
     // invoke: bool documentMode()
-    var ret0 = C.C_ZNK8QMdiArea12documentModeEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMdiArea12documentModeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiArea", "documentMode", args)
   }
@@ -404,11 +412,15 @@ func (this *QMdiArea) Tabsmovable(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMdiArea11tabsMovableEv
     // invoke: bool tabsMovable()
-    var ret0 = C.C_ZNK8QMdiArea11tabsMovableEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMdiArea11tabsMovableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiArea", "tabsMovable", args)
   }
@@ -432,7 +444,7 @@ func (this *QMdiArea) Settabsclosable(args ...interface{}) () {
     // invoke: void setTabsClosable(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QMdiArea15setTabsClosableEb(this.qclsinst, arg0)
+    C.C_ZN8QMdiArea15setTabsClosableEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiArea", "setTabsClosable", args)
   }
@@ -454,17 +466,17 @@ func NewQMdiArea(args ...interface{}) *QMdiArea {
   case 0:
     // invoke: _ZN8QMdiAreaC1EP7QWidget
     // invoke: void QMdiArea(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QMdiAreaC2EP7QWidget(arg0)
-    return &QMdiArea{qclsinst:qthis}
+    return &QMdiArea{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMdiArea", "QMdiArea", args)
   }
 
-  return nil // QMdiArea{qclsinst:qthis}
+  return nil // QMdiArea{Qclsinst:qthis}
 }
 
 // background()
@@ -480,11 +492,15 @@ func (this *QMdiArea) Background(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMdiArea10backgroundEv
     // invoke: QBrush background()
-    var ret0 = C.C_ZNK8QMdiArea10backgroundEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMdiArea10backgroundEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "QBrush"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiArea", "background", args)
   }
@@ -505,11 +521,15 @@ func (this *QMdiArea) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMdiArea8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK8QMdiArea8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMdiArea8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiArea", "sizeHint", args)
   }
@@ -531,9 +551,9 @@ func (this *QMdiArea) Removesubwindow(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMdiArea15removeSubWindowEP7QWidget
     // invoke: void removeSubWindow(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QMdiArea15removeSubWindowEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN8QMdiArea15removeSubWindowEP7QWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiArea", "removeSubWindow", args)
   }
@@ -555,9 +575,9 @@ func (this *QMdiArea) Setactivesubwindow(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMdiArea18setActiveSubWindowEP13QMdiSubWindow
     // invoke: void setActiveSubWindow(class QMdiSubWindow *)
-    var arg0 = args[0].(QMdiSubWindow).qclsinst
+    var arg0 = args[0].(*QMdiSubWindow).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QMdiArea18setActiveSubWindowEP13QMdiSubWindow(this.qclsinst, arg0)
+    C.C_ZN8QMdiArea18setActiveSubWindowEP13QMdiSubWindow(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiArea", "setActiveSubWindow", args)
   }
@@ -578,11 +598,15 @@ func (this *QMdiArea) Currentsubwindow(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMdiArea16currentSubWindowEv
     // invoke: QMdiSubWindow * currentSubWindow()
-    var ret0 = C.C_ZNK8QMdiArea16currentSubWindowEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMdiArea16currentSubWindowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMdiSubWindow{}) // "QMdiSubWindow *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiArea", "currentSubWindow", args)
   }
@@ -603,11 +627,15 @@ func (this *QMdiArea) Activesubwindow(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMdiArea15activeSubWindowEv
     // invoke: QMdiSubWindow * activeSubWindow()
-    var ret0 = C.C_ZNK8QMdiArea15activeSubWindowEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMdiArea15activeSubWindowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMdiSubWindow{}) // "QMdiSubWindow *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiArea", "activeSubWindow", args)
   }
@@ -628,7 +656,7 @@ func (this *QMdiArea) Activatenextsubwindow(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMdiArea21activateNextSubWindowEv
     // invoke: void activateNextSubWindow()
-    C.C_ZN8QMdiArea21activateNextSubWindowEv(this.qclsinst)
+    C.C_ZN8QMdiArea21activateNextSubWindowEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "activateNextSubWindow", args)
   }
@@ -649,7 +677,7 @@ func (this *QMdiArea) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK8QMdiArea10metaObjectEv(this.qclsinst)
+    C.C_ZNK8QMdiArea10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "metaObject", args)
   }
@@ -670,11 +698,15 @@ func (this *QMdiArea) Minimumsizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMdiArea15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK8QMdiArea15minimumSizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMdiArea15minimumSizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMdiArea", "minimumSizeHint", args)
   }
@@ -695,7 +727,7 @@ func (this *QMdiArea) Viewmode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea8viewModeEv
     // invoke: QMdiArea::ViewMode viewMode()
-    C.C_ZNK8QMdiArea8viewModeEv(this.qclsinst)
+    C.C_ZNK8QMdiArea8viewModeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "viewMode", args)
   }
@@ -716,7 +748,7 @@ func (this *QMdiArea) Activateprevioussubwindow(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMdiArea25activatePreviousSubWindowEv
     // invoke: void activatePreviousSubWindow()
-    C.C_ZN8QMdiArea25activatePreviousSubWindowEv(this.qclsinst)
+    C.C_ZN8QMdiArea25activatePreviousSubWindowEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "activatePreviousSubWindow", args)
   }

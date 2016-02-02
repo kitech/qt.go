@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.go
 //
@@ -53,7 +53,7 @@ func init() {
 // class sizeof(QPictureFormatPlugin)=1
 type QPictureFormatPlugin struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // savePicture(const class QString &, const class QString &, const class QPicture &)
@@ -72,17 +72,21 @@ func (this *QPictureFormatPlugin) Savepicture(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture
     // invoke: bool savePicture(const class QString &, const class QString &, const class QPicture &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QPicture).qclsinst
+    var arg2 = args[2].(*QPicture).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "savePicture", args)
   }
@@ -103,7 +107,7 @@ func (this *QPictureFormatPlugin) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QPictureFormatPlugin10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK20QPictureFormatPlugin10metaObjectEv(this.qclsinst)
+    C.C_ZNK20QPictureFormatPlugin10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "metaObject", args)
   }
@@ -127,17 +131,21 @@ func (this *QPictureFormatPlugin) Loadpicture(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture
     // invoke: bool loadPicture(const class QString &, const class QString &, class QPicture *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QPicture).qclsinst
+    var arg2 = args[2].(*QPicture).Qclsinst
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "loadPicture", args)
   }
@@ -159,17 +167,17 @@ func NewQPictureFormatPlugin(args ...interface{}) *QPictureFormatPlugin {
   case 0:
     // invoke: _ZN20QPictureFormatPluginC1EP7QObject
     // invoke: void QPictureFormatPlugin(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QPictureFormatPluginC2EP7QObject(arg0)
-    return &QPictureFormatPlugin{qclsinst:qthis}
+    return &QPictureFormatPlugin{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "QPictureFormatPlugin", args)
   }
 
-  return nil // QPictureFormatPlugin{qclsinst:qthis}
+  return nil // QPictureFormatPlugin{Qclsinst:qthis}
 }
 
 // ~QPictureFormatPlugin()
@@ -185,7 +193,7 @@ func (this *QPictureFormatPlugin) Freeqpictureformatplugin(args ...interface{}) 
   case 0:
     // invoke: _ZN20QPictureFormatPluginD0Ev
     // invoke: void ~QPictureFormatPlugin()
-    C.C_ZN20QPictureFormatPluginD2Ev(this.qclsinst)
+    C.C_ZN20QPictureFormatPluginD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "~QPictureFormatPlugin", args)
   }

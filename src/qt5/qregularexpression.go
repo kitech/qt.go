@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qregularexpression.h
 // dst-file: /src/core/qregularexpression.go
 //
@@ -137,19 +137,19 @@ func init() {
 // class sizeof(QRegularExpressionMatchIterator)=1
 type QRegularExpressionMatchIterator struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QRegularExpression)=1
 type QRegularExpression struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QRegularExpressionMatch)=1
 type QRegularExpressionMatch struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // peekNext()
@@ -165,11 +165,15 @@ func (this *QRegularExpressionMatchIterator) Peeknext(args ...interface{}) (ret 
   case 0:
     // invoke: _ZNK31QRegularExpressionMatchIterator8peekNextEv
     // invoke: QRegularExpressionMatch peekNext()
-    var ret0 = C.C_ZNK31QRegularExpressionMatchIterator8peekNextEv(this.qclsinst)
+    var ret0 = C.C_ZNK31QRegularExpressionMatchIterator8peekNextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRegularExpressionMatch{}) // "QRegularExpressionMatch"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "peekNext", args)
   }
@@ -190,11 +194,15 @@ func (this *QRegularExpressionMatchIterator) Hasnext(args ...interface{}) (ret i
   case 0:
     // invoke: _ZNK31QRegularExpressionMatchIterator7hasNextEv
     // invoke: bool hasNext()
-    var ret0 = C.C_ZNK31QRegularExpressionMatchIterator7hasNextEv(this.qclsinst)
+    var ret0 = C.C_ZNK31QRegularExpressionMatchIterator7hasNextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "hasNext", args)
   }
@@ -215,11 +223,15 @@ func (this *QRegularExpressionMatchIterator) Isvalid(args ...interface{}) (ret i
   case 0:
     // invoke: _ZNK31QRegularExpressionMatchIterator7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK31QRegularExpressionMatchIterator7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK31QRegularExpressionMatchIterator7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "isValid", args)
   }
@@ -240,11 +252,15 @@ func (this *QRegularExpressionMatchIterator) Regularexpression(args ...interface
   case 0:
     // invoke: _ZNK31QRegularExpressionMatchIterator17regularExpressionEv
     // invoke: QRegularExpression regularExpression()
-    var ret0 = C.C_ZNK31QRegularExpressionMatchIterator17regularExpressionEv(this.qclsinst)
+    var ret0 = C.C_ZNK31QRegularExpressionMatchIterator17regularExpressionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRegularExpression{}) // "QRegularExpression"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "regularExpression", args)
   }
@@ -265,11 +281,15 @@ func (this *QRegularExpressionMatchIterator) Next(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZN31QRegularExpressionMatchIterator4nextEv
     // invoke: QRegularExpressionMatch next()
-    var ret0 = C.C_ZN31QRegularExpressionMatchIterator4nextEv(this.qclsinst)
+    var ret0 = C.C_ZN31QRegularExpressionMatchIterator4nextEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRegularExpressionMatch{}) // "QRegularExpressionMatch"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "next", args)
   }
@@ -291,9 +311,9 @@ func (this *QRegularExpressionMatchIterator) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN31QRegularExpressionMatchIterator4swapERS_
     // invoke: void swap(class QRegularExpressionMatchIterator &)
-    var arg0 = args[0].(QRegularExpressionMatchIterator).qclsinst
+    var arg0 = args[0].(*QRegularExpressionMatchIterator).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN31QRegularExpressionMatchIterator4swapERS_(this.qclsinst, arg0)
+    C.C_ZN31QRegularExpressionMatchIterator4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "swap", args)
   }
@@ -314,7 +334,7 @@ func (this *QRegularExpressionMatchIterator) Matchtype(args ...interface{}) () {
   case 0:
     // invoke: _ZNK31QRegularExpressionMatchIterator9matchTypeEv
     // invoke: QRegularExpression::MatchType matchType()
-    C.C_ZNK31QRegularExpressionMatchIterator9matchTypeEv(this.qclsinst)
+    C.C_ZNK31QRegularExpressionMatchIterator9matchTypeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "matchType", args)
   }
@@ -335,7 +355,7 @@ func (this *QRegularExpressionMatchIterator) Matchoptions(args ...interface{}) (
   case 0:
     // invoke: _ZNK31QRegularExpressionMatchIterator12matchOptionsEv
     // invoke: QRegularExpression::MatchOptions matchOptions()
-    C.C_ZNK31QRegularExpressionMatchIterator12matchOptionsEv(this.qclsinst)
+    C.C_ZNK31QRegularExpressionMatchIterator12matchOptionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "matchOptions", args)
   }
@@ -356,7 +376,7 @@ func (this *QRegularExpressionMatchIterator) Freeqregularexpressionmatchiterator
   case 0:
     // invoke: _ZN31QRegularExpressionMatchIteratorD0Ev
     // invoke: void ~QRegularExpressionMatchIterator()
-    C.C_ZN31QRegularExpressionMatchIteratorD2Ev(this.qclsinst)
+    C.C_ZN31QRegularExpressionMatchIteratorD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "~QRegularExpressionMatchIterator", args)
   }
@@ -380,24 +400,24 @@ func NewQRegularExpressionMatchIterator(args ...interface{}) *QRegularExpression
   case 0:
     // invoke: _ZN31QRegularExpressionMatchIteratorC1ERKS_
     // invoke: void QRegularExpressionMatchIterator(const class QRegularExpressionMatchIterator &)
-    var arg0 = args[0].(QRegularExpressionMatchIterator).qclsinst
+    var arg0 = args[0].(*QRegularExpressionMatchIterator).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN31QRegularExpressionMatchIteratorC2ERKS_(arg0)
-    return &QRegularExpressionMatchIterator{qclsinst:qthis}
+    return &QRegularExpressionMatchIterator{Qclsinst:qthis}
   case 1:
     // invoke: _ZN31QRegularExpressionMatchIteratorC1Ev
     // invoke: void QRegularExpressionMatchIterator()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN31QRegularExpressionMatchIteratorC2Ev()
-    return &QRegularExpressionMatchIterator{qclsinst:qthis}
+    return &QRegularExpressionMatchIterator{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "QRegularExpressionMatchIterator", args)
   }
 
-  return nil // QRegularExpressionMatchIterator{qclsinst:qthis}
+  return nil // QRegularExpressionMatchIterator{Qclsinst:qthis}
 }
 
 // isValid()
@@ -413,11 +433,15 @@ func (this *QRegularExpression) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK18QRegularExpression7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK18QRegularExpression7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QRegularExpression7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpression", "isValid", args)
   }
@@ -438,11 +462,15 @@ func (this *QRegularExpression) Errorstring(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK18QRegularExpression11errorStringEv
     // invoke: QString errorString()
-    var ret0 = C.C_ZNK18QRegularExpression11errorStringEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QRegularExpression11errorStringEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpression", "errorString", args)
   }
@@ -463,11 +491,15 @@ func (this *QRegularExpression) Pattern(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK18QRegularExpression7patternEv
     // invoke: QString pattern()
-    var ret0 = C.C_ZNK18QRegularExpression7patternEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QRegularExpression7patternEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpression", "pattern", args)
   }
@@ -491,24 +523,24 @@ func NewQRegularExpression(args ...interface{}) *QRegularExpression {
   case 0:
     // invoke: _ZN18QRegularExpressionC1ERKS_
     // invoke: void QRegularExpression(const class QRegularExpression &)
-    var arg0 = args[0].(QRegularExpression).qclsinst
+    var arg0 = args[0].(*QRegularExpression).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QRegularExpressionC2ERKS_(arg0)
-    return &QRegularExpression{qclsinst:qthis}
+    return &QRegularExpression{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QRegularExpressionC1Ev
     // invoke: void QRegularExpression()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QRegularExpressionC2Ev()
-    return &QRegularExpression{qclsinst:qthis}
+    return &QRegularExpression{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegularExpression", "QRegularExpression", args)
   }
 
-  return nil // QRegularExpression{qclsinst:qthis}
+  return nil // QRegularExpression{Qclsinst:qthis}
 }
 
 // ~QRegularExpression()
@@ -524,7 +556,7 @@ func (this *QRegularExpression) Freeqregularexpression(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QRegularExpressionD0Ev
     // invoke: void ~QRegularExpression()
-    C.C_ZN18QRegularExpressionD2Ev(this.qclsinst)
+    C.C_ZN18QRegularExpressionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpression", "~QRegularExpression", args)
   }
@@ -546,9 +578,9 @@ func (this *QRegularExpression) Setpattern(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QRegularExpression10setPatternERK7QString
     // invoke: void setPattern(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QRegularExpression10setPatternERK7QString(this.qclsinst, arg0)
+    C.C_ZN18QRegularExpression10setPatternERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegularExpression", "setPattern", args)
   }
@@ -569,11 +601,15 @@ func (this *QRegularExpression) Patternerroroffset(args ...interface{}) (ret int
   case 0:
     // invoke: _ZNK18QRegularExpression18patternErrorOffsetEv
     // invoke: int patternErrorOffset()
-    var ret0 = C.C_ZNK18QRegularExpression18patternErrorOffsetEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QRegularExpression18patternErrorOffsetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpression", "patternErrorOffset", args)
   }
@@ -594,7 +630,7 @@ func (this *QRegularExpression) Patternoptions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QRegularExpression14patternOptionsEv
     // invoke: PatternOptions patternOptions()
-    C.C_ZNK18QRegularExpression14patternOptionsEv(this.qclsinst)
+    C.C_ZNK18QRegularExpression14patternOptionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpression", "patternOptions", args)
   }
@@ -616,9 +652,9 @@ func (this *QRegularExpression) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QRegularExpression4swapERS_
     // invoke: void swap(class QRegularExpression &)
-    var arg0 = args[0].(QRegularExpression).qclsinst
+    var arg0 = args[0].(*QRegularExpression).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QRegularExpression4swapERS_(this.qclsinst, arg0)
+    C.C_ZN18QRegularExpression4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegularExpression", "swap", args)
   }
@@ -640,13 +676,17 @@ func (this *QRegularExpression) Escape_S(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZN18QRegularExpression6escapeERK7QString
     // invoke: QString escape(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN18QRegularExpression6escapeERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpression", "escape", args)
   }
@@ -667,7 +707,7 @@ func (this *QRegularExpression) Namedcapturegroups(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QRegularExpression18namedCaptureGroupsEv
     // invoke: QStringList namedCaptureGroups()
-    C.C_ZNK18QRegularExpression18namedCaptureGroupsEv(this.qclsinst)
+    C.C_ZNK18QRegularExpression18namedCaptureGroupsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpression", "namedCaptureGroups", args)
   }
@@ -688,7 +728,7 @@ func (this *QRegularExpression) Optimize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QRegularExpression8optimizeEv
     // invoke: void optimize()
-    C.C_ZNK18QRegularExpression8optimizeEv(this.qclsinst)
+    C.C_ZNK18QRegularExpression8optimizeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpression", "optimize", args)
   }
@@ -709,11 +749,15 @@ func (this *QRegularExpression) Capturecount(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK18QRegularExpression12captureCountEv
     // invoke: int captureCount()
-    var ret0 = C.C_ZNK18QRegularExpression12captureCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QRegularExpression12captureCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpression", "captureCount", args)
   }
@@ -734,11 +778,15 @@ func (this *QRegularExpressionMatch) Haspartialmatch(args ...interface{}) (ret i
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch15hasPartialMatchEv
     // invoke: bool hasPartialMatch()
-    var ret0 = C.C_ZNK23QRegularExpressionMatch15hasPartialMatchEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch15hasPartialMatchEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "hasPartialMatch", args)
   }
@@ -759,11 +807,15 @@ func (this *QRegularExpressionMatch) Regularexpression(args ...interface{}) (ret
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch17regularExpressionEv
     // invoke: QRegularExpression regularExpression()
-    var ret0 = C.C_ZNK23QRegularExpressionMatch17regularExpressionEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch17regularExpressionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRegularExpression{}) // "QRegularExpression"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "regularExpression", args)
   }
@@ -787,24 +839,24 @@ func NewQRegularExpressionMatch(args ...interface{}) *QRegularExpressionMatch {
   case 0:
     // invoke: _ZN23QRegularExpressionMatchC1ERKS_
     // invoke: void QRegularExpressionMatch(const class QRegularExpressionMatch &)
-    var arg0 = args[0].(QRegularExpressionMatch).qclsinst
+    var arg0 = args[0].(*QRegularExpressionMatch).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QRegularExpressionMatchC2ERKS_(arg0)
-    return &QRegularExpressionMatch{qclsinst:qthis}
+    return &QRegularExpressionMatch{Qclsinst:qthis}
   case 1:
     // invoke: _ZN23QRegularExpressionMatchC1Ev
     // invoke: void QRegularExpressionMatch()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QRegularExpressionMatchC2Ev()
-    return &QRegularExpressionMatch{qclsinst:qthis}
+    return &QRegularExpressionMatch{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "QRegularExpressionMatch", args)
   }
 
-  return nil // QRegularExpressionMatch{qclsinst:qthis}
+  return nil // QRegularExpressionMatch{Qclsinst:qthis}
 }
 
 // capturedTexts()
@@ -820,7 +872,7 @@ func (this *QRegularExpressionMatch) Capturedtexts(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch13capturedTextsEv
     // invoke: QStringList capturedTexts()
-    C.C_ZNK23QRegularExpressionMatch13capturedTextsEv(this.qclsinst)
+    C.C_ZNK23QRegularExpressionMatch13capturedTextsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "capturedTexts", args)
   }
@@ -841,11 +893,15 @@ func (this *QRegularExpressionMatch) Isvalid(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK23QRegularExpressionMatch7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "isValid", args)
   }
@@ -866,11 +922,15 @@ func (this *QRegularExpressionMatch) Hasmatch(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch8hasMatchEv
     // invoke: bool hasMatch()
-    var ret0 = C.C_ZNK23QRegularExpressionMatch8hasMatchEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch8hasMatchEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "hasMatch", args)
   }
@@ -891,7 +951,7 @@ func (this *QRegularExpressionMatch) Freeqregularexpressionmatch(args ...interfa
   case 0:
     // invoke: _ZN23QRegularExpressionMatchD0Ev
     // invoke: void ~QRegularExpressionMatch()
-    C.C_ZN23QRegularExpressionMatchD2Ev(this.qclsinst)
+    C.C_ZN23QRegularExpressionMatchD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "~QRegularExpressionMatch", args)
   }
@@ -912,7 +972,7 @@ func (this *QRegularExpressionMatch) Matchoptions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch12matchOptionsEv
     // invoke: QRegularExpression::MatchOptions matchOptions()
-    C.C_ZNK23QRegularExpressionMatch12matchOptionsEv(this.qclsinst)
+    C.C_ZNK23QRegularExpressionMatch12matchOptionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "matchOptions", args)
   }
@@ -937,23 +997,31 @@ func (this *QRegularExpressionMatch) Capturedstart(args ...interface{}) (ret int
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch13capturedStartERK7QString
     // invoke: int capturedStart(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK23QRegularExpressionMatch13capturedStartERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch13capturedStartERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK23QRegularExpressionMatch13capturedStartEi
     // invoke: int capturedStart(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK23QRegularExpressionMatch13capturedStartEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch13capturedStartEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "capturedStart", args)
   }
@@ -978,15 +1046,15 @@ func (this *QRegularExpressionMatch) Capturedref(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch11capturedRefEi
     // invoke: QStringRef capturedRef(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK23QRegularExpressionMatch11capturedRefEi(this.qclsinst, arg0)
+    C.C_ZNK23QRegularExpressionMatch11capturedRefEi(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZNK23QRegularExpressionMatch11capturedRefERK7QString
     // invoke: QStringRef capturedRef(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK23QRegularExpressionMatch11capturedRefERK7QString(this.qclsinst, arg0)
+    C.C_ZNK23QRegularExpressionMatch11capturedRefERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "capturedRef", args)
   }
@@ -1007,11 +1075,15 @@ func (this *QRegularExpressionMatch) Lastcapturedindex(args ...interface{}) (ret
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch17lastCapturedIndexEv
     // invoke: int lastCapturedIndex()
-    var ret0 = C.C_ZNK23QRegularExpressionMatch17lastCapturedIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch17lastCapturedIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "lastCapturedIndex", args)
   }
@@ -1036,23 +1108,31 @@ func (this *QRegularExpressionMatch) Captured(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch8capturedEi
     // invoke: QString captured(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK23QRegularExpressionMatch8capturedEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch8capturedEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK23QRegularExpressionMatch8capturedERK7QString
     // invoke: QString captured(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK23QRegularExpressionMatch8capturedERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch8capturedERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "captured", args)
   }
@@ -1073,7 +1153,7 @@ func (this *QRegularExpressionMatch) Matchtype(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch9matchTypeEv
     // invoke: QRegularExpression::MatchType matchType()
-    C.C_ZNK23QRegularExpressionMatch9matchTypeEv(this.qclsinst)
+    C.C_ZNK23QRegularExpressionMatch9matchTypeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "matchType", args)
   }
@@ -1098,23 +1178,31 @@ func (this *QRegularExpressionMatch) Capturedlength(args ...interface{}) (ret in
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch14capturedLengthEi
     // invoke: int capturedLength(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK23QRegularExpressionMatch14capturedLengthEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch14capturedLengthEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK23QRegularExpressionMatch14capturedLengthERK7QString
     // invoke: int capturedLength(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK23QRegularExpressionMatch14capturedLengthERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch14capturedLengthERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "capturedLength", args)
   }
@@ -1139,23 +1227,31 @@ func (this *QRegularExpressionMatch) Capturedend(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch11capturedEndERK7QString
     // invoke: int capturedEnd(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK23QRegularExpressionMatch11capturedEndERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch11capturedEndERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK23QRegularExpressionMatch11capturedEndEi
     // invoke: int capturedEnd(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK23QRegularExpressionMatch11capturedEndEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK23QRegularExpressionMatch11capturedEndEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "capturedEnd", args)
   }
@@ -1177,9 +1273,9 @@ func (this *QRegularExpressionMatch) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN23QRegularExpressionMatch4swapERS_
     // invoke: void swap(class QRegularExpressionMatch &)
-    var arg0 = args[0].(QRegularExpressionMatch).qclsinst
+    var arg0 = args[0].(*QRegularExpressionMatch).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN23QRegularExpressionMatch4swapERS_(this.qclsinst, arg0)
+    C.C_ZN23QRegularExpressionMatch4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "swap", args)
   }

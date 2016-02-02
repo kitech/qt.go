@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qtexttable.h
 // dst-file: /src/gui/qtexttable.go
 //
@@ -119,13 +119,13 @@ func init() {
 // class sizeof(QTextTableCell)=16
 type QTextTableCell struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextTable)=1
 type QTextTable struct {
   /*qbase*/ QTextFrame;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QTextTableCell(const class QTextTableCell &)
@@ -144,24 +144,24 @@ func NewQTextTableCell(args ...interface{}) *QTextTableCell {
   case 0:
     // invoke: _ZN14QTextTableCellC1ERKS_
     // invoke: void QTextTableCell(const class QTextTableCell &)
-    var arg0 = args[0].(QTextTableCell).qclsinst
+    var arg0 = args[0].(*QTextTableCell).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QTextTableCellC2ERKS_(arg0)
-    return &QTextTableCell{qclsinst:qthis}
+    return &QTextTableCell{Qclsinst:qthis}
   case 1:
     // invoke: _ZN14QTextTableCellC1Ev
     // invoke: void QTextTableCell()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QTextTableCellC2Ev()
-    return &QTextTableCell{qclsinst:qthis}
+    return &QTextTableCell{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextTableCell", "QTextTableCell", args)
   }
 
-  return nil // QTextTableCell{qclsinst:qthis}
+  return nil // QTextTableCell{Qclsinst:qthis}
 }
 
 // rowSpan()
@@ -177,11 +177,15 @@ func (this *QTextTableCell) Rowspan(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QTextTableCell7rowSpanEv
     // invoke: int rowSpan()
-    var ret0 = C.C_ZNK14QTextTableCell7rowSpanEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QTextTableCell7rowSpanEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCell", "rowSpan", args)
   }
@@ -202,11 +206,15 @@ func (this *QTextTableCell) Firstcursorposition(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK14QTextTableCell19firstCursorPositionEv
     // invoke: QTextCursor firstCursorPosition()
-    var ret0 = C.C_ZNK14QTextTableCell19firstCursorPositionEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QTextTableCell19firstCursorPositionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCursor{}) // "QTextCursor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCell", "firstCursorPosition", args)
   }
@@ -227,11 +235,15 @@ func (this *QTextTableCell) Format(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QTextTableCell6formatEv
     // invoke: QTextCharFormat format()
-    var ret0 = C.C_ZNK14QTextTableCell6formatEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QTextTableCell6formatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCharFormat{}) // "QTextCharFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCell", "format", args)
   }
@@ -253,9 +265,9 @@ func (this *QTextTableCell) Setformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QTextTableCell9setFormatERK15QTextCharFormat
     // invoke: void setFormat(const class QTextCharFormat &)
-    var arg0 = args[0].(QTextCharFormat).qclsinst
+    var arg0 = args[0].(*QTextCharFormat).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN14QTextTableCell9setFormatERK15QTextCharFormat(this.qclsinst, arg0)
+    C.C_ZN14QTextTableCell9setFormatERK15QTextCharFormat(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableCell", "setFormat", args)
   }
@@ -276,11 +288,15 @@ func (this *QTextTableCell) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QTextTableCell7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK14QTextTableCell7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QTextTableCell7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCell", "isValid", args)
   }
@@ -301,7 +317,7 @@ func (this *QTextTableCell) Begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QTextTableCell5beginEv
     // invoke: QTextFrame::iterator begin()
-    C.C_ZNK14QTextTableCell5beginEv(this.qclsinst)
+    C.C_ZNK14QTextTableCell5beginEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableCell", "begin", args)
   }
@@ -322,11 +338,15 @@ func (this *QTextTableCell) Lastcursorposition(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK14QTextTableCell18lastCursorPositionEv
     // invoke: QTextCursor lastCursorPosition()
-    var ret0 = C.C_ZNK14QTextTableCell18lastCursorPositionEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QTextTableCell18lastCursorPositionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCursor{}) // "QTextCursor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCell", "lastCursorPosition", args)
   }
@@ -347,11 +367,15 @@ func (this *QTextTableCell) Tablecellformatindex(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK14QTextTableCell20tableCellFormatIndexEv
     // invoke: int tableCellFormatIndex()
-    var ret0 = C.C_ZNK14QTextTableCell20tableCellFormatIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QTextTableCell20tableCellFormatIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCell", "tableCellFormatIndex", args)
   }
@@ -372,11 +396,15 @@ func (this *QTextTableCell) Column(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QTextTableCell6columnEv
     // invoke: int column()
-    var ret0 = C.C_ZNK14QTextTableCell6columnEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QTextTableCell6columnEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCell", "column", args)
   }
@@ -397,11 +425,15 @@ func (this *QTextTableCell) Columnspan(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QTextTableCell10columnSpanEv
     // invoke: int columnSpan()
-    var ret0 = C.C_ZNK14QTextTableCell10columnSpanEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QTextTableCell10columnSpanEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCell", "columnSpan", args)
   }
@@ -422,7 +454,7 @@ func (this *QTextTableCell) End(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QTextTableCell3endEv
     // invoke: QTextFrame::iterator end()
-    C.C_ZNK14QTextTableCell3endEv(this.qclsinst)
+    C.C_ZNK14QTextTableCell3endEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableCell", "end", args)
   }
@@ -443,11 +475,15 @@ func (this *QTextTableCell) Lastposition(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK14QTextTableCell12lastPositionEv
     // invoke: int lastPosition()
-    var ret0 = C.C_ZNK14QTextTableCell12lastPositionEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QTextTableCell12lastPositionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCell", "lastPosition", args)
   }
@@ -468,11 +504,15 @@ func (this *QTextTableCell) Firstposition(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK14QTextTableCell13firstPositionEv
     // invoke: int firstPosition()
-    var ret0 = C.C_ZNK14QTextTableCell13firstPositionEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QTextTableCell13firstPositionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCell", "firstPosition", args)
   }
@@ -493,11 +533,15 @@ func (this *QTextTableCell) Row(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK14QTextTableCell3rowEv
     // invoke: int row()
-    var ret0 = C.C_ZNK14QTextTableCell3rowEv(this.qclsinst)
+    var ret0 = C.C_ZNK14QTextTableCell3rowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCell", "row", args)
   }
@@ -519,9 +563,9 @@ func (this *QTextTable) Appendrows(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextTable10appendRowsEi
     // invoke: void appendRows(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QTextTable10appendRowsEi(this.qclsinst, arg0)
+    C.C_ZN10QTextTable10appendRowsEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTable", "appendRows", args)
   }
@@ -542,7 +586,7 @@ func (this *QTextTable) Freeqtexttable(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextTableD0Ev
     // invoke: void ~QTextTable()
-    C.C_ZN10QTextTableD2Ev(this.qclsinst)
+    C.C_ZN10QTextTableD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextTable", "~QTextTable", args)
   }
@@ -567,15 +611,15 @@ func (this *QTextTable) Splitcell(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextTable9splitCellEiiii
     // invoke: void splitCell(int, int, int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    C.C_ZN10QTextTable9splitCellEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN10QTextTable9splitCellEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QTextTable", "splitCell", args)
   }
@@ -596,11 +640,15 @@ func (this *QTextTable) Rows(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextTable4rowsEv
     // invoke: int rows()
-    var ret0 = C.C_ZNK10QTextTable4rowsEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextTable4rowsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTable", "rows", args)
   }
@@ -629,35 +677,47 @@ func (this *QTextTable) Cellat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextTable6cellAtERK11QTextCursor
     // invoke: QTextTableCell cellAt(const class QTextCursor &)
-    var arg0 = args[0].(QTextCursor).qclsinst
+    var arg0 = args[0].(*QTextCursor).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTextTable6cellAtERK11QTextCursor(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTextTable6cellAtERK11QTextCursor(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextTableCell{}) // "QTextTableCell"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK10QTextTable6cellAtEii
     // invoke: QTextTableCell cellAt(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK10QTextTable6cellAtEii(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK10QTextTable6cellAtEii(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextTableCell{}) // "QTextTableCell"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZNK10QTextTable6cellAtEi
     // invoke: QTextTableCell cellAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTextTable6cellAtEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTextTable6cellAtEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextTableCell{}) // "QTextTableCell"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTable", "cellAt", args)
   }
@@ -679,9 +739,9 @@ func (this *QTextTable) Setformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextTable9setFormatERK16QTextTableFormat
     // invoke: void setFormat(const class QTextTableFormat &)
-    var arg0 = args[0].(QTextTableFormat).qclsinst
+    var arg0 = args[0].(*QTextTableFormat).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QTextTable9setFormatERK16QTextTableFormat(this.qclsinst, arg0)
+    C.C_ZN10QTextTable9setFormatERK16QTextTableFormat(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTable", "setFormat", args)
   }
@@ -702,11 +762,15 @@ func (this *QTextTable) Format(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextTable6formatEv
     // invoke: QTextTableFormat format()
-    var ret0 = C.C_ZNK10QTextTable6formatEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextTable6formatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextTableFormat{}) // "QTextTableFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTable", "format", args)
   }
@@ -729,11 +793,11 @@ func (this *QTextTable) Removerows(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextTable10removeRowsEii
     // invoke: void removeRows(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QTextTable10removeRowsEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QTextTable10removeRowsEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextTable", "removeRows", args)
   }
@@ -754,11 +818,15 @@ func (this *QTextTable) Columns(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextTable7columnsEv
     // invoke: int columns()
-    var ret0 = C.C_ZNK10QTextTable7columnsEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QTextTable7columnsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTable", "columns", args)
   }
@@ -780,9 +848,9 @@ func (this *QTextTable) Appendcolumns(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextTable13appendColumnsEi
     // invoke: void appendColumns(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QTextTable13appendColumnsEi(this.qclsinst, arg0)
+    C.C_ZN10QTextTable13appendColumnsEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTable", "appendColumns", args)
   }
@@ -805,11 +873,11 @@ func (this *QTextTable) Insertrows(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextTable10insertRowsEii
     // invoke: void insertRows(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QTextTable10insertRowsEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QTextTable10insertRowsEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextTable", "insertRows", args)
   }
@@ -837,21 +905,21 @@ func (this *QTextTable) Mergecells(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextTable10mergeCellsEiiii
     // invoke: void mergeCells(int, int, int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
-    C.C_ZN10QTextTable10mergeCellsEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN10QTextTable10mergeCellsEiiii(this.Qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN10QTextTable10mergeCellsERK11QTextCursor
     // invoke: void mergeCells(const class QTextCursor &)
-    var arg0 = args[0].(QTextCursor).qclsinst
+    var arg0 = args[0].(*QTextCursor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QTextTable10mergeCellsERK11QTextCursor(this.qclsinst, arg0)
+    C.C_ZN10QTextTable10mergeCellsERK11QTextCursor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTable", "mergeCells", args)
   }
@@ -874,11 +942,11 @@ func (this *QTextTable) Resize(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextTable6resizeEii
     // invoke: void resize(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QTextTable6resizeEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QTextTable6resizeEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextTable", "resize", args)
   }
@@ -900,13 +968,17 @@ func (this *QTextTable) Rowstart(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextTable8rowStartERK11QTextCursor
     // invoke: QTextCursor rowStart(const class QTextCursor &)
-    var arg0 = args[0].(QTextCursor).qclsinst
+    var arg0 = args[0].(*QTextCursor).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTextTable8rowStartERK11QTextCursor(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTextTable8rowStartERK11QTextCursor(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCursor{}) // "QTextCursor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTable", "rowStart", args)
   }
@@ -927,7 +999,7 @@ func (this *QTextTable) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextTable10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QTextTable10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QTextTable10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextTable", "metaObject", args)
   }
@@ -949,17 +1021,17 @@ func NewQTextTable(args ...interface{}) *QTextTable {
   case 0:
     // invoke: _ZN10QTextTableC1EP13QTextDocument
     // invoke: void QTextTable(class QTextDocument *)
-    var arg0 = args[0].(QTextDocument).qclsinst
+    var arg0 = args[0].(*QTextDocument).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTextTableC2EP13QTextDocument(arg0)
-    return &QTextTable{qclsinst:qthis}
+    return &QTextTable{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextTable", "QTextTable", args)
   }
 
-  return nil // QTextTable{qclsinst:qthis}
+  return nil // QTextTable{Qclsinst:qthis}
 }
 
 // rowEnd(const class QTextCursor &)
@@ -976,13 +1048,17 @@ func (this *QTextTable) Rowend(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QTextTable6rowEndERK11QTextCursor
     // invoke: QTextCursor rowEnd(const class QTextCursor &)
-    var arg0 = args[0].(QTextCursor).qclsinst
+    var arg0 = args[0].(*QTextCursor).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK10QTextTable6rowEndERK11QTextCursor(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK10QTextTable6rowEndERK11QTextCursor(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCursor{}) // "QTextCursor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTable", "rowEnd", args)
   }
@@ -1005,11 +1081,11 @@ func (this *QTextTable) Insertcolumns(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextTable13insertColumnsEii
     // invoke: void insertColumns(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QTextTable13insertColumnsEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QTextTable13insertColumnsEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextTable", "insertColumns", args)
   }
@@ -1032,11 +1108,11 @@ func (this *QTextTable) Removecolumns(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextTable13removeColumnsEii
     // invoke: void removeColumns(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QTextTable13removeColumnsEii(this.qclsinst, arg0, arg1)
+    C.C_ZN10QTextTable13removeColumnsEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextTable", "removeColumns", args)
   }

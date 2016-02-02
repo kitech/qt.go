@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.go
 //
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QGroupBox)=1
 type QGroupBox struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _clicked QGroupBox_clicked_signal;
 //  _toggled QGroupBox_toggled_signal;
 }
@@ -91,7 +91,7 @@ func (this *QGroupBox) Freeqgroupbox(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGroupBoxD0Ev
     // invoke: void ~QGroupBox()
-    C.C_ZN9QGroupBoxD2Ev(this.qclsinst)
+    C.C_ZN9QGroupBoxD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGroupBox", "~QGroupBox", args)
   }
@@ -113,9 +113,9 @@ func (this *QGroupBox) Settitle(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGroupBox8setTitleERK7QString
     // invoke: void setTitle(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QGroupBox8setTitleERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QGroupBox8setTitleERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGroupBox", "setTitle", args)
   }
@@ -136,11 +136,15 @@ func (this *QGroupBox) Ischeckable(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QGroupBox11isCheckableEv
     // invoke: bool isCheckable()
-    var ret0 = C.C_ZNK9QGroupBox11isCheckableEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QGroupBox11isCheckableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGroupBox", "isCheckable", args)
   }
@@ -161,7 +165,7 @@ func (this *QGroupBox) Alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C.C_ZNK9QGroupBox9alignmentEv(this.qclsinst)
+    C.C_ZNK9QGroupBox9alignmentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGroupBox", "alignment", args)
   }
@@ -185,7 +189,7 @@ func (this *QGroupBox) Setflat(args ...interface{}) () {
     // invoke: void setFlat(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QGroupBox7setFlatEb(this.qclsinst, arg0)
+    C.C_ZN9QGroupBox7setFlatEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGroupBox", "setFlat", args)
   }
@@ -211,28 +215,28 @@ func NewQGroupBox(args ...interface{}) *QGroupBox {
   case 0:
     // invoke: _ZN9QGroupBoxC1EP7QWidget
     // invoke: void QGroupBox(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QGroupBoxC2EP7QWidget(arg0)
-    return &QGroupBox{qclsinst:qthis}
+    return &QGroupBox{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QGroupBoxC1ERK7QStringP7QWidget
     // invoke: void QGroupBox(const class QString &, class QWidget *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QGroupBoxC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QGroupBox{qclsinst:qthis}
+    return &QGroupBox{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGroupBox", "QGroupBox", args)
   }
 
-  return nil // QGroupBox{qclsinst:qthis}
+  return nil // QGroupBox{Qclsinst:qthis}
 }
 
 // title()
@@ -248,11 +252,15 @@ func (this *QGroupBox) Title(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QGroupBox5titleEv
     // invoke: QString title()
-    var ret0 = C.C_ZNK9QGroupBox5titleEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QGroupBox5titleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGroupBox", "title", args)
   }
@@ -273,11 +281,15 @@ func (this *QGroupBox) Ischecked(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QGroupBox9isCheckedEv
     // invoke: bool isChecked()
-    var ret0 = C.C_ZNK9QGroupBox9isCheckedEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QGroupBox9isCheckedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGroupBox", "isChecked", args)
   }
@@ -299,9 +311,9 @@ func (this *QGroupBox) Setalignment(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGroupBox12setAlignmentEi
     // invoke: void setAlignment(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QGroupBox12setAlignmentEi(this.qclsinst, arg0)
+    C.C_ZN9QGroupBox12setAlignmentEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGroupBox", "setAlignment", args)
   }
@@ -325,7 +337,7 @@ func (this *QGroupBox) Setchecked(args ...interface{}) () {
     // invoke: void setChecked(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QGroupBox10setCheckedEb(this.qclsinst, arg0)
+    C.C_ZN9QGroupBox10setCheckedEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGroupBox", "setChecked", args)
   }
@@ -349,7 +361,7 @@ func (this *QGroupBox) Setcheckable(args ...interface{}) () {
     // invoke: void setCheckable(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QGroupBox12setCheckableEb(this.qclsinst, arg0)
+    C.C_ZN9QGroupBox12setCheckableEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGroupBox", "setCheckable", args)
   }
@@ -370,11 +382,15 @@ func (this *QGroupBox) Isflat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QGroupBox6isFlatEv
     // invoke: bool isFlat()
-    var ret0 = C.C_ZNK9QGroupBox6isFlatEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QGroupBox6isFlatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGroupBox", "isFlat", args)
   }
@@ -395,7 +411,7 @@ func (this *QGroupBox) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QGroupBox10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QGroupBox10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGroupBox", "metaObject", args)
   }
@@ -416,11 +432,15 @@ func (this *QGroupBox) Minimumsizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QGroupBox15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK9QGroupBox15minimumSizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QGroupBox15minimumSizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGroupBox", "minimumSizeHint", args)
   }

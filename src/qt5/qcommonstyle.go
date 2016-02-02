@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.go
 //
@@ -59,7 +59,7 @@ func init() {
 // class sizeof(QCommonStyle)=1
 type QCommonStyle struct {
   /*qbase*/ QStyle;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // polish(class QWidget *)
@@ -82,21 +82,21 @@ func (this *QCommonStyle) Polish(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QCommonStyle6polishEP7QWidget
     // invoke: void polish(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QCommonStyle6polishEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN12QCommonStyle6polishEP7QWidget(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN12QCommonStyle6polishER8QPalette
     // invoke: void polish(class QPalette &)
-    var arg0 = args[0].(QPalette).qclsinst
+    var arg0 = args[0].(*QPalette).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QCommonStyle6polishER8QPalette(this.qclsinst, arg0)
+    C.C_ZN12QCommonStyle6polishER8QPalette(this.Qclsinst, arg0)
   case 2:
     // invoke: _ZN12QCommonStyle6polishEP12QApplication
     // invoke: void polish(class QApplication *)
-    var arg0 = args[0].(QApplication).qclsinst
+    var arg0 = args[0].(*QApplication).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QCommonStyle6polishEP12QApplication(this.qclsinst, arg0)
+    C.C_ZN12QCommonStyle6polishEP12QApplication(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommonStyle", "polish", args)
   }
@@ -120,12 +120,12 @@ func NewQCommonStyle(args ...interface{}) *QCommonStyle {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QCommonStyleC2Ev()
-    return &QCommonStyle{qclsinst:qthis}
+    return &QCommonStyle{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCommonStyle", "QCommonStyle", args)
   }
 
-  return nil // QCommonStyle{qclsinst:qthis}
+  return nil // QCommonStyle{Qclsinst:qthis}
 }
 
 // ~QCommonStyle()
@@ -141,7 +141,7 @@ func (this *QCommonStyle) Freeqcommonstyle(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QCommonStyleD0Ev
     // invoke: void ~QCommonStyle()
-    C.C_ZN12QCommonStyleD2Ev(this.qclsinst)
+    C.C_ZN12QCommonStyleD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCommonStyle", "~QCommonStyle", args)
   }
@@ -162,7 +162,7 @@ func (this *QCommonStyle) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QCommonStyle10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK12QCommonStyle10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QCommonStyle10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QCommonStyle", "metaObject", args)
   }
@@ -187,15 +187,15 @@ func (this *QCommonStyle) Unpolish(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QCommonStyle8unpolishEP7QWidget
     // invoke: void unpolish(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QCommonStyle8unpolishEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN12QCommonStyle8unpolishEP7QWidget(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN12QCommonStyle8unpolishEP12QApplication
     // invoke: void unpolish(class QApplication *)
-    var arg0 = args[0].(QApplication).qclsinst
+    var arg0 = args[0].(*QApplication).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QCommonStyle8unpolishEP12QApplication(this.qclsinst, arg0)
+    C.C_ZN12QCommonStyle8unpolishEP12QApplication(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommonStyle", "unpolish", args)
   }

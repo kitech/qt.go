@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.go
 //
@@ -57,7 +57,7 @@ func init() {
 // class sizeof(QMessageAuthenticationCode)=8
 type QMessageAuthenticationCode struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // reset()
@@ -73,7 +73,7 @@ func (this *QMessageAuthenticationCode) Reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN26QMessageAuthenticationCode5resetEv
     // invoke: void reset()
-    C.C_ZN26QMessageAuthenticationCode5resetEv(this.qclsinst)
+    C.C_ZN26QMessageAuthenticationCode5resetEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "reset", args)
   }
@@ -94,7 +94,7 @@ func (this *QMessageAuthenticationCode) Freeqmessageauthenticationcode(args ...i
   case 0:
     // invoke: _ZN26QMessageAuthenticationCodeD0Ev
     // invoke: void ~QMessageAuthenticationCode()
-    C.C_ZN26QMessageAuthenticationCodeD2Ev(this.qclsinst)
+    C.C_ZN26QMessageAuthenticationCodeD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "~QMessageAuthenticationCode", args)
   }
@@ -123,9 +123,9 @@ func (this *QMessageAuthenticationCode) Adddata(args ...interface{}) () {
   case 0:
     // invoke: _ZN26QMessageAuthenticationCode7addDataERK10QByteArray
     // invoke: void addData(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN26QMessageAuthenticationCode7addDataERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN26QMessageAuthenticationCode7addDataERK10QByteArray(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN26QMessageAuthenticationCode7addDataEPKci
     // invoke: void addData(const char *, int)
@@ -133,15 +133,15 @@ func (this *QMessageAuthenticationCode) Adddata(args ...interface{}) () {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN26QMessageAuthenticationCode7addDataEPKci(this.qclsinst, arg0, arg1)
+    C.C_ZN26QMessageAuthenticationCode7addDataEPKci(this.Qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN26QMessageAuthenticationCode7addDataEP9QIODevice
     // invoke: bool addData(class QIODevice *)
-    var arg0 = args[0].(QIODevice).qclsinst
+    var arg0 = args[0].(*QIODevice).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN26QMessageAuthenticationCode7addDataEP9QIODevice(this.qclsinst, arg0)
+    var ret0 = C.C_ZN26QMessageAuthenticationCode7addDataEP9QIODevice(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "addData", args)
@@ -164,9 +164,9 @@ func (this *QMessageAuthenticationCode) Setkey(args ...interface{}) () {
   case 0:
     // invoke: _ZN26QMessageAuthenticationCode6setKeyERK10QByteArray
     // invoke: void setKey(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "setKey", args)
   }
@@ -187,11 +187,15 @@ func (this *QMessageAuthenticationCode) Result(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK26QMessageAuthenticationCode6resultEv
     // invoke: QByteArray result()
-    var ret0 = C.C_ZNK26QMessageAuthenticationCode6resultEv(this.qclsinst)
+    var ret0 = C.C_ZNK26QMessageAuthenticationCode6resultEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "result", args)
   }

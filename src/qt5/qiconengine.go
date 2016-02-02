@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.go
 //
@@ -55,7 +55,7 @@ func init() {
 // class sizeof(QIconEngine)=8
 type QIconEngine struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // iconName()
@@ -71,11 +71,15 @@ func (this *QIconEngine) Iconname(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QIconEngine8iconNameEv
     // invoke: QString iconName()
-    var ret0 = C.C_ZNK11QIconEngine8iconNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QIconEngine8iconNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIconEngine", "iconName", args)
   }
@@ -97,13 +101,17 @@ func (this *QIconEngine) Write(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QIconEngine5writeER11QDataStream
     // invoke: bool write(class QDataStream &)
-    var arg0 = args[0].(QDataStream).qclsinst
+    var arg0 = args[0].(*QDataStream).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QIconEngine5writeER11QDataStream(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QIconEngine5writeER11QDataStream(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIconEngine", "write", args)
   }
@@ -125,13 +133,17 @@ func (this *QIconEngine) Read(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN11QIconEngine4readER11QDataStream
     // invoke: bool read(class QDataStream &)
-    var arg0 = args[0].(QDataStream).qclsinst
+    var arg0 = args[0].(*QDataStream).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN11QIconEngine4readER11QDataStream(this.qclsinst, arg0)
+    var ret0 = C.C_ZN11QIconEngine4readER11QDataStream(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIconEngine", "read", args)
   }
@@ -154,11 +166,11 @@ func (this *QIconEngine) Virtual_Hook(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QIconEngine12virtual_hookEiPv
     // invoke: void virtual_hook(int, void *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
-    C.C_ZN11QIconEngine12virtual_hookEiPv(this.qclsinst, arg0, arg1)
+    C.C_ZN11QIconEngine12virtual_hookEiPv(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QIconEngine", "virtual_hook", args)
   }
@@ -179,11 +191,15 @@ func (this *QIconEngine) Key(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QIconEngine3keyEv
     // invoke: QString key()
-    var ret0 = C.C_ZNK11QIconEngine3keyEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QIconEngine3keyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QIconEngine", "key", args)
   }
@@ -204,7 +220,7 @@ func (this *QIconEngine) Freeqiconengine(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QIconEngineD0Ev
     // invoke: void ~QIconEngine()
-    C.C_ZN11QIconEngineD2Ev(this.qclsinst)
+    C.C_ZN11QIconEngineD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QIconEngine", "~QIconEngine", args)
   }

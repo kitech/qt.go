@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qtablewidget.h
 // dst-file: /src/widgets/qtablewidget.go
 //
@@ -251,13 +251,13 @@ func init() {
 // class sizeof(QTableWidgetSelectionRange)=16
 type QTableWidgetSelectionRange struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTableWidget)=1
 type QTableWidget struct {
   /*qbase*/ QTableView;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _itemDoubleClicked QTableWidget_itemDoubleClicked_signal;
 //  _cellEntered QTableWidget_cellEntered_signal;
 //  _itemClicked QTableWidget_itemClicked_signal;
@@ -278,7 +278,7 @@ type QTableWidget struct {
 // class sizeof(QTableWidgetItem)=1
 type QTableWidgetItem struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // columnCount()
@@ -294,11 +294,15 @@ func (this *QTableWidgetSelectionRange) Columncount(args ...interface{}) (ret in
   case 0:
     // invoke: _ZNK26QTableWidgetSelectionRange11columnCountEv
     // invoke: int columnCount()
-    var ret0 = C.C_ZNK26QTableWidgetSelectionRange11columnCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK26QTableWidgetSelectionRange11columnCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "columnCount", args)
   }
@@ -319,11 +323,15 @@ func (this *QTableWidgetSelectionRange) Leftcolumn(args ...interface{}) (ret int
   case 0:
     // invoke: _ZNK26QTableWidgetSelectionRange10leftColumnEv
     // invoke: int leftColumn()
-    var ret0 = C.C_ZNK26QTableWidgetSelectionRange10leftColumnEv(this.qclsinst)
+    var ret0 = C.C_ZNK26QTableWidgetSelectionRange10leftColumnEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "leftColumn", args)
   }
@@ -344,7 +352,7 @@ func (this *QTableWidgetSelectionRange) Freeqtablewidgetselectionrange(args ...i
   case 0:
     // invoke: _ZN26QTableWidgetSelectionRangeD0Ev
     // invoke: void ~QTableWidgetSelectionRange()
-    C.C_ZN26QTableWidgetSelectionRangeD2Ev(this.qclsinst)
+    C.C_ZN26QTableWidgetSelectionRangeD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "~QTableWidgetSelectionRange", args)
   }
@@ -365,11 +373,15 @@ func (this *QTableWidgetSelectionRange) Bottomrow(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK26QTableWidgetSelectionRange9bottomRowEv
     // invoke: int bottomRow()
-    var ret0 = C.C_ZNK26QTableWidgetSelectionRange9bottomRowEv(this.qclsinst)
+    var ret0 = C.C_ZNK26QTableWidgetSelectionRange9bottomRowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "bottomRow", args)
   }
@@ -390,11 +402,15 @@ func (this *QTableWidgetSelectionRange) Rightcolumn(args ...interface{}) (ret in
   case 0:
     // invoke: _ZNK26QTableWidgetSelectionRange11rightColumnEv
     // invoke: int rightColumn()
-    var ret0 = C.C_ZNK26QTableWidgetSelectionRange11rightColumnEv(this.qclsinst)
+    var ret0 = C.C_ZNK26QTableWidgetSelectionRange11rightColumnEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "rightColumn", args)
   }
@@ -415,11 +431,15 @@ func (this *QTableWidgetSelectionRange) Toprow(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK26QTableWidgetSelectionRange6topRowEv
     // invoke: int topRow()
-    var ret0 = C.C_ZNK26QTableWidgetSelectionRange6topRowEv(this.qclsinst)
+    var ret0 = C.C_ZNK26QTableWidgetSelectionRange6topRowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "topRow", args)
   }
@@ -440,11 +460,15 @@ func (this *QTableWidgetSelectionRange) Rowcount(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK26QTableWidgetSelectionRange8rowCountEv
     // invoke: int rowCount()
-    var ret0 = C.C_ZNK26QTableWidgetSelectionRange8rowCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK26QTableWidgetSelectionRange8rowCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "rowCount", args)
   }
@@ -474,39 +498,39 @@ func NewQTableWidgetSelectionRange(args ...interface{}) *QTableWidgetSelectionRa
   case 0:
     // invoke: _ZN26QTableWidgetSelectionRangeC1Eiiii
     // invoke: void QTableWidgetSelectionRange(int, int, int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
+    var arg3 = C.int32_t(qtrt.PrimConv(args[3], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QTableWidgetSelectionRangeC2Eiiii(arg0, arg1, arg2, arg3)
-    return &QTableWidgetSelectionRange{qclsinst:qthis}
+    return &QTableWidgetSelectionRange{Qclsinst:qthis}
   case 1:
     // invoke: _ZN26QTableWidgetSelectionRangeC1ERKS_
     // invoke: void QTableWidgetSelectionRange(const class QTableWidgetSelectionRange &)
-    var arg0 = args[0].(QTableWidgetSelectionRange).qclsinst
+    var arg0 = args[0].(*QTableWidgetSelectionRange).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QTableWidgetSelectionRangeC2ERKS_(arg0)
-    return &QTableWidgetSelectionRange{qclsinst:qthis}
+    return &QTableWidgetSelectionRange{Qclsinst:qthis}
   case 2:
     // invoke: _ZN26QTableWidgetSelectionRangeC1Ev
     // invoke: void QTableWidgetSelectionRange()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QTableWidgetSelectionRangeC2Ev()
-    return &QTableWidgetSelectionRange{qclsinst:qthis}
+    return &QTableWidgetSelectionRange{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTableWidgetSelectionRange", "QTableWidgetSelectionRange", args)
   }
 
-  return nil // QTableWidgetSelectionRange{qclsinst:qthis}
+  return nil // QTableWidgetSelectionRange{Qclsinst:qthis}
 }
 
 // columnCount()
@@ -522,11 +546,15 @@ func (this *QTableWidget) Columncount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget11columnCountEv
     // invoke: int columnCount()
-    var ret0 = C.C_ZNK12QTableWidget11columnCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QTableWidget11columnCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "columnCount", args)
   }
@@ -549,11 +577,11 @@ func (this *QTableWidget) Removecellwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget16removeCellWidgetEii
     // invoke: void removeCellWidget(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN12QTableWidget16removeCellWidgetEii(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget16removeCellWidgetEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "removeCellWidget", args)
   }
@@ -577,13 +605,13 @@ func (this *QTableWidget) Setcellwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget13setCellWidgetEiiP7QWidget
     // invoke: void setCellWidget(int, int, class QWidget *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN12QTableWidget13setCellWidgetEiiP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN12QTableWidget13setCellWidgetEiiP7QWidget(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTableWidget", "setCellWidget", args)
   }
@@ -605,13 +633,17 @@ func (this *QTableWidget) Verticalheaderitem(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK12QTableWidget18verticalHeaderItemEi
     // invoke: QTableWidgetItem * verticalHeaderItem(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK12QTableWidget18verticalHeaderItemEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK12QTableWidget18verticalHeaderItemEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTableWidgetItem{}) // "QTableWidgetItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "verticalHeaderItem", args)
   }
@@ -633,9 +665,9 @@ func (this *QTableWidget) Setitemprototype(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem
     // invoke: void setItemPrototype(const class QTableWidgetItem *)
-    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    var arg0 = args[0].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setItemPrototype", args)
   }
@@ -656,7 +688,7 @@ func (this *QTableWidget) Freeqtablewidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidgetD0Ev
     // invoke: void ~QTableWidget()
-    C.C_ZN12QTableWidgetD2Ev(this.qclsinst)
+    C.C_ZN12QTableWidgetD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "~QTableWidget", args)
   }
@@ -679,11 +711,11 @@ func (this *QTableWidget) Setitemselected(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb
     // invoke: void setItemSelected(const class QTableWidgetItem *, _Bool)
-    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    var arg0 = args[0].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C.C_ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "setItemSelected", args)
   }
@@ -705,9 +737,9 @@ func (this *QTableWidget) Openpersistenteditor(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem
     // invoke: void openPersistentEditor(class QTableWidgetItem *)
-    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    var arg0 = args[0].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "openPersistentEditor", args)
   }
@@ -729,13 +761,17 @@ func (this *QTableWidget) Row(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget3rowEPK16QTableWidgetItem
     // invoke: int row(const class QTableWidgetItem *)
-    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    var arg0 = args[0].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK12QTableWidget3rowEPK16QTableWidgetItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK12QTableWidget3rowEPK16QTableWidgetItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "row", args)
   }
@@ -757,9 +793,9 @@ func (this *QTableWidget) Setcolumncount(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget14setColumnCountEi
     // invoke: void setColumnCount(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget14setColumnCountEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget14setColumnCountEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setColumnCount", args)
   }
@@ -782,11 +818,11 @@ func (this *QTableWidget) Setcurrentcell(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget14setCurrentCellEii
     // invoke: void setCurrentCell(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN12QTableWidget14setCurrentCellEii(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget14setCurrentCellEii(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "setCurrentCell", args)
   }
@@ -813,30 +849,30 @@ func NewQTableWidget(args ...interface{}) *QTableWidget {
   case 0:
     // invoke: _ZN12QTableWidgetC1EiiP7QWidget
     // invoke: void QTableWidget(int, int, class QWidget *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QTableWidgetC2EiiP7QWidget(arg0, arg1, arg2)
-    return &QTableWidget{qclsinst:qthis}
+    return &QTableWidget{Qclsinst:qthis}
   case 1:
     // invoke: _ZN12QTableWidgetC1EP7QWidget
     // invoke: void QTableWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QTableWidgetC2EP7QWidget(arg0)
-    return &QTableWidget{qclsinst:qthis}
+    return &QTableWidget{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTableWidget", "QTableWidget", args)
   }
 
-  return nil // QTableWidget{qclsinst:qthis}
+  return nil // QTableWidget{Qclsinst:qthis}
 }
 
 // setRowCount(int)
@@ -853,9 +889,9 @@ func (this *QTableWidget) Setrowcount(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget11setRowCountEi
     // invoke: void setRowCount(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget11setRowCountEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget11setRowCountEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setRowCount", args)
   }
@@ -877,9 +913,9 @@ func (this *QTableWidget) Edititem(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget8editItemEP16QTableWidgetItem
     // invoke: void editItem(class QTableWidgetItem *)
-    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    var arg0 = args[0].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget8editItemEP16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget8editItemEP16QTableWidgetItem(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "editItem", args)
   }
@@ -902,11 +938,11 @@ func (this *QTableWidget) Sethorizontalheaderitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem
     // invoke: void setHorizontalHeaderItem(int, class QTableWidgetItem *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QTableWidgetItem).qclsinst
+    var arg1 = args[1].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "setHorizontalHeaderItem", args)
   }
@@ -927,11 +963,15 @@ func (this *QTableWidget) Currentitem(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget11currentItemEv
     // invoke: QTableWidgetItem * currentItem()
-    var ret0 = C.C_ZNK12QTableWidget11currentItemEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QTableWidget11currentItemEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTableWidgetItem{}) // "QTableWidgetItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "currentItem", args)
   }
@@ -953,9 +993,9 @@ func (this *QTableWidget) Insertcolumn(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget12insertColumnEi
     // invoke: void insertColumn(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget12insertColumnEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget12insertColumnEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "insertColumn", args)
   }
@@ -977,13 +1017,17 @@ func (this *QTableWidget) Isitemselected(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem
     // invoke: bool isItemSelected(const class QTableWidgetItem *)
-    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    var arg0 = args[0].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "isItemSelected", args)
   }
@@ -1004,7 +1048,7 @@ func (this *QTableWidget) Clearcontents(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget13clearContentsEv
     // invoke: void clearContents()
-    C.C_ZN12QTableWidget13clearContentsEv(this.qclsinst)
+    C.C_ZN12QTableWidget13clearContentsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "clearContents", args)
   }
@@ -1025,11 +1069,15 @@ func (this *QTableWidget) Currentcolumn(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget13currentColumnEv
     // invoke: int currentColumn()
-    var ret0 = C.C_ZNK12QTableWidget13currentColumnEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QTableWidget13currentColumnEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "currentColumn", args)
   }
@@ -1055,25 +1103,33 @@ func (this *QTableWidget) Itemat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget6itemAtERK6QPoint
     // invoke: QTableWidgetItem * itemAt(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK12QTableWidget6itemAtERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK12QTableWidget6itemAtERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTableWidgetItem{}) // "QTableWidgetItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK12QTableWidget6itemAtEii
     // invoke: QTableWidgetItem * itemAt(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK12QTableWidget6itemAtEii(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK12QTableWidget6itemAtEii(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTableWidgetItem{}) // "QTableWidgetItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "itemAt", args)
   }
@@ -1096,15 +1152,19 @@ func (this *QTableWidget) Takeitem(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QTableWidget8takeItemEii
     // invoke: QTableWidgetItem * takeItem(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN12QTableWidget8takeItemEii(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN12QTableWidget8takeItemEii(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTableWidgetItem{}) // "QTableWidgetItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "takeItem", args)
   }
@@ -1126,13 +1186,17 @@ func (this *QTableWidget) Takehorizontalheaderitem(args ...interface{}) (ret int
   case 0:
     // invoke: _ZN12QTableWidget24takeHorizontalHeaderItemEi
     // invoke: QTableWidgetItem * takeHorizontalHeaderItem(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QTableWidget24takeHorizontalHeaderItemEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN12QTableWidget24takeHorizontalHeaderItemEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTableWidgetItem{}) // "QTableWidgetItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "takeHorizontalHeaderItem", args)
   }
@@ -1153,11 +1217,15 @@ func (this *QTableWidget) Issortingenabled(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK12QTableWidget16isSortingEnabledEv
     // invoke: bool isSortingEnabled()
-    var ret0 = C.C_ZNK12QTableWidget16isSortingEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QTableWidget16isSortingEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "isSortingEnabled", args)
   }
@@ -1178,7 +1246,7 @@ func (this *QTableWidget) Selectedranges(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget14selectedRangesEv
     // invoke: QList<QTableWidgetSelectionRange> selectedRanges()
-    C.C_ZNK12QTableWidget14selectedRangesEv(this.qclsinst)
+    C.C_ZNK12QTableWidget14selectedRangesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "selectedRanges", args)
   }
@@ -1199,7 +1267,7 @@ func (this *QTableWidget) Selecteditems(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget13selectedItemsEv
     // invoke: QList<QTableWidgetItem *> selectedItems()
-    C.C_ZNK12QTableWidget13selectedItemsEv(this.qclsinst)
+    C.C_ZNK12QTableWidget13selectedItemsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "selectedItems", args)
   }
@@ -1221,9 +1289,9 @@ func (this *QTableWidget) Removerow(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget9removeRowEi
     // invoke: void removeRow(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget9removeRowEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget9removeRowEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "removeRow", args)
   }
@@ -1244,11 +1312,15 @@ func (this *QTableWidget) Rowcount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget8rowCountEv
     // invoke: int rowCount()
-    var ret0 = C.C_ZNK12QTableWidget8rowCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QTableWidget8rowCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "rowCount", args)
   }
@@ -1272,13 +1344,13 @@ func (this *QTableWidget) Setitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget7setItemEiiP16QTableWidgetItem
     // invoke: void setItem(int, int, class QTableWidgetItem *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QTableWidgetItem).qclsinst
+    var arg2 = args[2].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN12QTableWidget7setItemEiiP16QTableWidgetItem(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN12QTableWidget7setItemEiiP16QTableWidgetItem(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTableWidget", "setItem", args)
   }
@@ -1300,13 +1372,17 @@ func (this *QTableWidget) Takeverticalheaderitem(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZN12QTableWidget22takeVerticalHeaderItemEi
     // invoke: QTableWidgetItem * takeVerticalHeaderItem(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN12QTableWidget22takeVerticalHeaderItemEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZN12QTableWidget22takeVerticalHeaderItemEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTableWidgetItem{}) // "QTableWidgetItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "takeVerticalHeaderItem", args)
   }
@@ -1328,13 +1404,17 @@ func (this *QTableWidget) Horizontalheaderitem(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK12QTableWidget20horizontalHeaderItemEi
     // invoke: QTableWidgetItem * horizontalHeaderItem(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK12QTableWidget20horizontalHeaderItemEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK12QTableWidget20horizontalHeaderItemEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTableWidgetItem{}) // "QTableWidgetItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "horizontalHeaderItem", args)
   }
@@ -1356,9 +1436,9 @@ func (this *QTableWidget) Sethorizontalheaderlabels(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList
     // invoke: void setHorizontalHeaderLabels(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setHorizontalHeaderLabels", args)
   }
@@ -1380,13 +1460,17 @@ func (this *QTableWidget) Visualitemrect(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem
     // invoke: QRect visualItemRect(const class QTableWidgetItem *)
-    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    var arg0 = args[0].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "visualItemRect", args)
   }
@@ -1408,9 +1492,9 @@ func (this *QTableWidget) Removecolumn(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget12removeColumnEi
     // invoke: void removeColumn(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget12removeColumnEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget12removeColumnEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "removeColumn", args)
   }
@@ -1432,9 +1516,9 @@ func (this *QTableWidget) Setcurrentitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem
     // invoke: void setCurrentItem(class QTableWidgetItem *)
-    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    var arg0 = args[0].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setCurrentItem", args)
   }
@@ -1455,11 +1539,15 @@ func (this *QTableWidget) Currentrow(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget10currentRowEv
     // invoke: int currentRow()
-    var ret0 = C.C_ZNK12QTableWidget10currentRowEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QTableWidget10currentRowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "currentRow", args)
   }
@@ -1480,7 +1568,7 @@ func (this *QTableWidget) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTableWidget10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK12QTableWidget10metaObjectEv(this.qclsinst)
+    C.C_ZNK12QTableWidget10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "metaObject", args)
   }
@@ -1501,11 +1589,15 @@ func (this *QTableWidget) Itemprototype(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget13itemPrototypeEv
     // invoke: const QTableWidgetItem * itemPrototype()
-    var ret0 = C.C_ZNK12QTableWidget13itemPrototypeEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QTableWidget13itemPrototypeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTableWidgetItem{}) // "const QTableWidgetItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "itemPrototype", args)
   }
@@ -1527,13 +1619,17 @@ func (this *QTableWidget) Visualrow(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget9visualRowEi
     // invoke: int visualRow(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK12QTableWidget9visualRowEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK12QTableWidget9visualRowEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "visualRow", args)
   }
@@ -1555,13 +1651,17 @@ func (this *QTableWidget) Column(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget6columnEPK16QTableWidgetItem
     // invoke: int column(const class QTableWidgetItem *)
-    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    var arg0 = args[0].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK12QTableWidget6columnEPK16QTableWidgetItem(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK12QTableWidget6columnEPK16QTableWidgetItem(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "column", args)
   }
@@ -1584,15 +1684,19 @@ func (this *QTableWidget) Cellwidget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget10cellWidgetEii
     // invoke: QWidget * cellWidget(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK12QTableWidget10cellWidgetEii(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK12QTableWidget10cellWidgetEii(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "cellWidget", args)
   }
@@ -1615,11 +1719,11 @@ func (this *QTableWidget) Setrangeselected(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb
     // invoke: void setRangeSelected(const class QTableWidgetSelectionRange &, _Bool)
-    var arg0 = args[0].(QTableWidgetSelectionRange).qclsinst
+    var arg0 = args[0].(*QTableWidgetSelectionRange).Qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C.C_ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "setRangeSelected", args)
   }
@@ -1643,7 +1747,7 @@ func (this *QTableWidget) Setsortingenabled(args ...interface{}) () {
     // invoke: void setSortingEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget17setSortingEnabledEb(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget17setSortingEnabledEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setSortingEnabled", args)
   }
@@ -1665,9 +1769,9 @@ func (this *QTableWidget) Insertrow(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget9insertRowEi
     // invoke: void insertRow(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget9insertRowEi(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget9insertRowEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "insertRow", args)
   }
@@ -1690,15 +1794,19 @@ func (this *QTableWidget) Item(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget4itemEii
     // invoke: QTableWidgetItem * item(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK12QTableWidget4itemEii(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK12QTableWidget4itemEii(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTableWidgetItem{}) // "QTableWidgetItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "item", args)
   }
@@ -1720,13 +1828,17 @@ func (this *QTableWidget) Visualcolumn(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QTableWidget12visualColumnEi
     // invoke: int visualColumn(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK12QTableWidget12visualColumnEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK12QTableWidget12visualColumnEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidget", "visualColumn", args)
   }
@@ -1749,11 +1861,11 @@ func (this *QTableWidget) Setverticalheaderitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem
     // invoke: void setVerticalHeaderItem(int, class QTableWidgetItem *)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QTableWidgetItem).qclsinst
+    var arg1 = args[1].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem(this.qclsinst, arg0, arg1)
+    C.C_ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidget", "setVerticalHeaderItem", args)
   }
@@ -1775,9 +1887,9 @@ func (this *QTableWidget) Closepersistenteditor(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem
     // invoke: void closePersistentEditor(class QTableWidgetItem *)
-    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    var arg0 = args[0].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "closePersistentEditor", args)
   }
@@ -1798,7 +1910,7 @@ func (this *QTableWidget) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget5clearEv
     // invoke: void clear()
-    C.C_ZN12QTableWidget5clearEv(this.qclsinst)
+    C.C_ZN12QTableWidget5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidget", "clear", args)
   }
@@ -1820,9 +1932,9 @@ func (this *QTableWidget) Setverticalheaderlabels(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList
     // invoke: void setVerticalHeaderLabels(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidget", "setVerticalHeaderLabels", args)
   }
@@ -1844,9 +1956,9 @@ func (this *QTableWidgetItem) Settextalignment(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem16setTextAlignmentEi
     // invoke: void setTextAlignment(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem16setTextAlignmentEi(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem16setTextAlignmentEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setTextAlignment", args)
   }
@@ -1868,9 +1980,9 @@ func (this *QTableWidgetItem) Setsizehint(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem11setSizeHintERK5QSize
     // invoke: void setSizeHint(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem11setSizeHintERK5QSize(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem11setSizeHintERK5QSize(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setSizeHint", args)
   }
@@ -1894,7 +2006,7 @@ func (this *QTableWidgetItem) Setselected(args ...interface{}) () {
     // invoke: void setSelected(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem11setSelectedEb(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem11setSelectedEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setSelected", args)
   }
@@ -1915,11 +2027,15 @@ func (this *QTableWidgetItem) Text(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem4textEv
     // invoke: QString text()
-    var ret0 = C.C_ZNK16QTableWidgetItem4textEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem4textEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "text", args)
   }
@@ -1953,50 +2069,50 @@ func NewQTableWidgetItem(args ...interface{}) *QTableWidgetItem {
   case 0:
     // invoke: _ZN16QTableWidgetItemC1ERKS_
     // invoke: void QTableWidgetItem(const class QTableWidgetItem &)
-    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    var arg0 = args[0].(*QTableWidgetItem).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QTableWidgetItemC2ERKS_(arg0)
-    return &QTableWidgetItem{qclsinst:qthis}
+    return &QTableWidgetItem{Qclsinst:qthis}
   case 1:
     // invoke: _ZN16QTableWidgetItemC1Ei
     // invoke: void QTableWidgetItem(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QTableWidgetItemC2Ei(arg0)
-    return &QTableWidgetItem{qclsinst:qthis}
+    return &QTableWidgetItem{Qclsinst:qthis}
   case 2:
     // invoke: _ZN16QTableWidgetItemC1ERK5QIconRK7QStringi
     // invoke: void QTableWidgetItem(const class QIcon &, const class QString &, int)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi(arg0, arg1, arg2)
-    return &QTableWidgetItem{qclsinst:qthis}
+    return &QTableWidgetItem{Qclsinst:qthis}
   case 3:
     // invoke: _ZN16QTableWidgetItemC1ERK7QStringi
     // invoke: void QTableWidgetItem(const class QString &, int)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QTableWidgetItemC2ERK7QStringi(arg0, arg1)
-    return &QTableWidgetItem{qclsinst:qthis}
+    return &QTableWidgetItem{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "QTableWidgetItem", args)
   }
 
-  return nil // QTableWidgetItem{qclsinst:qthis}
+  return nil // QTableWidgetItem{Qclsinst:qthis}
 }
 
 // font()
@@ -2012,11 +2128,15 @@ func (this *QTableWidgetItem) Font(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem4fontEv
     // invoke: QFont font()
-    var ret0 = C.C_ZNK16QTableWidgetItem4fontEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem4fontEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFont{}) // "QFont"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "font", args)
   }
@@ -2037,11 +2157,15 @@ func (this *QTableWidgetItem) Row(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem3rowEv
     // invoke: int row()
-    var ret0 = C.C_ZNK16QTableWidgetItem3rowEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem3rowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "row", args)
   }
@@ -2062,11 +2186,15 @@ func (this *QTableWidgetItem) Whatsthis(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem9whatsThisEv
     // invoke: QString whatsThis()
-    var ret0 = C.C_ZNK16QTableWidgetItem9whatsThisEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem9whatsThisEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "whatsThis", args)
   }
@@ -2088,9 +2216,9 @@ func (this *QTableWidgetItem) Setforeground(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem13setForegroundERK6QBrush
     // invoke: void setForeground(const class QBrush &)
-    var arg0 = args[0].(QBrush).qclsinst
+    var arg0 = args[0].(*QBrush).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem13setForegroundERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem13setForegroundERK6QBrush(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setForeground", args)
   }
@@ -2111,11 +2239,15 @@ func (this *QTableWidgetItem) Isselected(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK16QTableWidgetItem10isSelectedEv
     // invoke: bool isSelected()
-    var ret0 = C.C_ZNK16QTableWidgetItem10isSelectedEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem10isSelectedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "isSelected", args)
   }
@@ -2137,9 +2269,9 @@ func (this *QTableWidgetItem) Write(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem5writeER11QDataStream
     // invoke: void write(class QDataStream &)
-    var arg0 = args[0].(QDataStream).qclsinst
+    var arg0 = args[0].(*QDataStream).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK16QTableWidgetItem5writeER11QDataStream(this.qclsinst, arg0)
+    C.C_ZNK16QTableWidgetItem5writeER11QDataStream(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "write", args)
   }
@@ -2161,9 +2293,9 @@ func (this *QTableWidgetItem) Read(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem4readER11QDataStream
     // invoke: void read(class QDataStream &)
-    var arg0 = args[0].(QDataStream).qclsinst
+    var arg0 = args[0].(*QDataStream).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem4readER11QDataStream(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem4readER11QDataStream(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "read", args)
   }
@@ -2184,11 +2316,15 @@ func (this *QTableWidgetItem) Backgroundcolor(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK16QTableWidgetItem15backgroundColorEv
     // invoke: QColor backgroundColor()
-    var ret0 = C.C_ZNK16QTableWidgetItem15backgroundColorEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem15backgroundColorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "backgroundColor", args)
   }
@@ -2210,9 +2346,9 @@ func (this *QTableWidgetItem) Setbackground(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem13setBackgroundERK6QBrush
     // invoke: void setBackground(const class QBrush &)
-    var arg0 = args[0].(QBrush).qclsinst
+    var arg0 = args[0].(*QBrush).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem13setBackgroundERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem13setBackgroundERK6QBrush(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setBackground", args)
   }
@@ -2233,11 +2369,15 @@ func (this *QTableWidgetItem) Textcolor(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem9textColorEv
     // invoke: QColor textColor()
-    var ret0 = C.C_ZNK16QTableWidgetItem9textColorEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem9textColorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "textColor", args)
   }
@@ -2258,11 +2398,15 @@ func (this *QTableWidgetItem) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK16QTableWidgetItem4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "type", args)
   }
@@ -2285,11 +2429,11 @@ func (this *QTableWidgetItem) Setdata(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem7setDataEiRK8QVariant
     // invoke: void setData(int, const class QVariant &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QVariant).qclsinst
+    var arg1 = args[1].(*QVariant).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN16QTableWidgetItem7setDataEiRK8QVariant(this.qclsinst, arg0, arg1)
+    C.C_ZN16QTableWidgetItem7setDataEiRK8QVariant(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setData", args)
   }
@@ -2310,11 +2454,15 @@ func (this *QTableWidgetItem) Foreground(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK16QTableWidgetItem10foregroundEv
     // invoke: QBrush foreground()
-    var ret0 = C.C_ZNK16QTableWidgetItem10foregroundEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem10foregroundEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "QBrush"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "foreground", args)
   }
@@ -2335,11 +2483,15 @@ func (this *QTableWidgetItem) Statustip(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem9statusTipEv
     // invoke: QString statusTip()
-    var ret0 = C.C_ZNK16QTableWidgetItem9statusTipEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem9statusTipEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "statusTip", args)
   }
@@ -2360,11 +2512,15 @@ func (this *QTableWidgetItem) Clone(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem5cloneEv
     // invoke: QTableWidgetItem * clone()
-    var ret0 = C.C_ZNK16QTableWidgetItem5cloneEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem5cloneEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTableWidgetItem{}) // "QTableWidgetItem *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "clone", args)
   }
@@ -2386,9 +2542,9 @@ func (this *QTableWidgetItem) Setbackgroundcolor(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem18setBackgroundColorERK6QColor
     // invoke: void setBackgroundColor(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem18setBackgroundColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem18setBackgroundColorERK6QColor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setBackgroundColor", args)
   }
@@ -2409,11 +2565,15 @@ func (this *QTableWidgetItem) Tooltip(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem7toolTipEv
     // invoke: QString toolTip()
-    var ret0 = C.C_ZNK16QTableWidgetItem7toolTipEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem7toolTipEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "toolTip", args)
   }
@@ -2434,11 +2594,15 @@ func (this *QTableWidgetItem) Tablewidget(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK16QTableWidgetItem11tableWidgetEv
     // invoke: QTableWidget * tableWidget()
-    var ret0 = C.C_ZNK16QTableWidgetItem11tableWidgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem11tableWidgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTableWidget{}) // "QTableWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "tableWidget", args)
   }
@@ -2460,9 +2624,9 @@ func (this *QTableWidgetItem) Setwhatsthis(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem12setWhatsThisERK7QString
     // invoke: void setWhatsThis(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem12setWhatsThisERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem12setWhatsThisERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setWhatsThis", args)
   }
@@ -2483,11 +2647,15 @@ func (this *QTableWidgetItem) Background(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK16QTableWidgetItem10backgroundEv
     // invoke: QBrush background()
-    var ret0 = C.C_ZNK16QTableWidgetItem10backgroundEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem10backgroundEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "QBrush"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "background", args)
   }
@@ -2509,13 +2677,17 @@ func (this *QTableWidgetItem) Data(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem4dataEi
     // invoke: QVariant data(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QTableWidgetItem4dataEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QTableWidgetItem4dataEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "data", args)
   }
@@ -2537,9 +2709,9 @@ func (this *QTableWidgetItem) Settextcolor(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem12setTextColorERK6QColor
     // invoke: void setTextColor(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem12setTextColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem12setTextColorERK6QColor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setTextColor", args)
   }
@@ -2560,11 +2732,15 @@ func (this *QTableWidgetItem) Icon(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem4iconEv
     // invoke: QIcon icon()
-    var ret0 = C.C_ZNK16QTableWidgetItem4iconEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem4iconEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIcon{}) // "QIcon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "icon", args)
   }
@@ -2586,9 +2762,9 @@ func (this *QTableWidgetItem) Settooltip(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem10setToolTipERK7QString
     // invoke: void setToolTip(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem10setToolTipERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem10setToolTipERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setToolTip", args)
   }
@@ -2609,11 +2785,15 @@ func (this *QTableWidgetItem) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK16QTableWidgetItem8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "sizeHint", args)
   }
@@ -2634,7 +2814,7 @@ func (this *QTableWidgetItem) Freeqtablewidgetitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItemD0Ev
     // invoke: void ~QTableWidgetItem()
-    C.C_ZN16QTableWidgetItemD2Ev(this.qclsinst)
+    C.C_ZN16QTableWidgetItemD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "~QTableWidgetItem", args)
   }
@@ -2655,11 +2835,15 @@ func (this *QTableWidgetItem) Column(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTableWidgetItem6columnEv
     // invoke: int column()
-    var ret0 = C.C_ZNK16QTableWidgetItem6columnEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem6columnEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "column", args)
   }
@@ -2681,9 +2865,9 @@ func (this *QTableWidgetItem) Seticon(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem7setIconERK5QIcon
     // invoke: void setIcon(const class QIcon &)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem7setIconERK5QIcon(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem7setIconERK5QIcon(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setIcon", args)
   }
@@ -2705,9 +2889,9 @@ func (this *QTableWidgetItem) Settext(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem7setTextERK7QString
     // invoke: void setText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem7setTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setText", args)
   }
@@ -2729,9 +2913,9 @@ func (this *QTableWidgetItem) Setstatustip(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem12setStatusTipERK7QString
     // invoke: void setStatusTip(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem12setStatusTipERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem12setStatusTipERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setStatusTip", args)
   }
@@ -2752,7 +2936,7 @@ func (this *QTableWidgetItem) Flags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem5flagsEv
     // invoke: Qt::ItemFlags flags()
-    C.C_ZNK16QTableWidgetItem5flagsEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem5flagsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "flags", args)
   }
@@ -2773,7 +2957,7 @@ func (this *QTableWidgetItem) Checkstate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTableWidgetItem10checkStateEv
     // invoke: Qt::CheckState checkState()
-    C.C_ZNK16QTableWidgetItem10checkStateEv(this.qclsinst)
+    C.C_ZNK16QTableWidgetItem10checkStateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "checkState", args)
   }
@@ -2795,9 +2979,9 @@ func (this *QTableWidgetItem) Setfont(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTableWidgetItem7setFontERK5QFont
     // invoke: void setFont(const class QFont &)
-    var arg0 = args[0].(QFont).qclsinst
+    var arg0 = args[0].(*QFont).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTableWidgetItem7setFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN16QTableWidgetItem7setFontERK5QFont(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setFont", args)
   }
@@ -2818,11 +3002,15 @@ func (this *QTableWidgetItem) Textalignment(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK16QTableWidgetItem13textAlignmentEv
     // invoke: int textAlignment()
-    var ret0 = C.C_ZNK16QTableWidgetItem13textAlignmentEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTableWidgetItem13textAlignmentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "textAlignment", args)
   }

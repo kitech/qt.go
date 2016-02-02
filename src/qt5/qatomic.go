@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qatomic.h
 // dst-file: /src/core/qatomic.go
 //
@@ -45,7 +45,7 @@ func init() {
 // class sizeof(QAtomicInt)=1
 type QAtomicInt struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QAtomicInt(int)
@@ -62,17 +62,17 @@ func NewQAtomicInt(args ...interface{}) *QAtomicInt {
   case 0:
     // invoke: _ZN10QAtomicIntC1Ei
     // invoke: void QAtomicInt(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QAtomicIntC2Ei(arg0)
-    return &QAtomicInt{qclsinst:qthis}
+    return &QAtomicInt{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAtomicInt", "QAtomicInt", args)
   }
 
-  return nil // QAtomicInt{qclsinst:qthis}
+  return nil // QAtomicInt{Qclsinst:qthis}
 }
 
 // <= body block end

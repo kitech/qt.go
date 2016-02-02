@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qwidgetaction.h
 // dst-file: /src/widgets/qwidgetaction.go
 //
@@ -57,7 +57,7 @@ func init() {
 // class sizeof(QWidgetAction)=1
 type QWidgetAction struct {
   /*qbase*/ QAction;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // releaseWidget(class QWidget *)
@@ -74,9 +74,9 @@ func (this *QWidgetAction) Releasewidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QWidgetAction13releaseWidgetEP7QWidget
     // invoke: void releaseWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QWidgetAction13releaseWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN13QWidgetAction13releaseWidgetEP7QWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWidgetAction", "releaseWidget", args)
   }
@@ -97,7 +97,7 @@ func (this *QWidgetAction) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QWidgetAction10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK13QWidgetAction10metaObjectEv(this.qclsinst)
+    C.C_ZNK13QWidgetAction10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetAction", "metaObject", args)
   }
@@ -119,17 +119,17 @@ func NewQWidgetAction(args ...interface{}) *QWidgetAction {
   case 0:
     // invoke: _ZN13QWidgetActionC1EP7QObject
     // invoke: void QWidgetAction(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QWidgetActionC2EP7QObject(arg0)
-    return &QWidgetAction{qclsinst:qthis}
+    return &QWidgetAction{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QWidgetAction", "QWidgetAction", args)
   }
 
-  return nil // QWidgetAction{qclsinst:qthis}
+  return nil // QWidgetAction{Qclsinst:qthis}
 }
 
 // defaultWidget()
@@ -145,11 +145,15 @@ func (this *QWidgetAction) Defaultwidget(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK13QWidgetAction13defaultWidgetEv
     // invoke: QWidget * defaultWidget()
-    var ret0 = C.C_ZNK13QWidgetAction13defaultWidgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK13QWidgetAction13defaultWidgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetAction", "defaultWidget", args)
   }
@@ -171,13 +175,17 @@ func (this *QWidgetAction) Requestwidget(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZN13QWidgetAction13requestWidgetEP7QWidget
     // invoke: QWidget * requestWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN13QWidgetAction13requestWidgetEP7QWidget(this.qclsinst, arg0)
+    var ret0 = C.C_ZN13QWidgetAction13requestWidgetEP7QWidget(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QWidgetAction", "requestWidget", args)
   }
@@ -198,7 +206,7 @@ func (this *QWidgetAction) Freeqwidgetaction(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QWidgetActionD0Ev
     // invoke: void ~QWidgetAction()
-    C.C_ZN13QWidgetActionD2Ev(this.qclsinst)
+    C.C_ZN13QWidgetActionD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetAction", "~QWidgetAction", args)
   }
@@ -220,9 +228,9 @@ func (this *QWidgetAction) Setdefaultwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QWidgetAction16setDefaultWidgetEP7QWidget
     // invoke: void setDefaultWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QWidgetAction16setDefaultWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN13QWidgetAction16setDefaultWidgetEP7QWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWidgetAction", "setDefaultWidget", args)
   }

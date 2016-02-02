@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qpoint.h
 // dst-file: /src/core/qpoint.go
 //
@@ -91,13 +91,13 @@ func init() {
 // class sizeof(QPoint)=8
 type QPoint struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QPointF)=16
 type QPointF struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // isNull()
@@ -113,11 +113,15 @@ func (this *QPoint) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QPoint6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK6QPoint6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK6QPoint6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPoint", "isNull", args)
   }
@@ -138,7 +142,7 @@ func (this *QPoint) Rx(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QPoint2rxEv
     // invoke: int & rx()
-    C.C_ZN6QPoint2rxEv(this.qclsinst)
+    C.C_ZN6QPoint2rxEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "rx", args)
   }
@@ -159,7 +163,7 @@ func (this *QPoint) Ry(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QPoint2ryEv
     // invoke: int & ry()
-    C.C_ZN6QPoint2ryEv(this.qclsinst)
+    C.C_ZN6QPoint2ryEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "ry", args)
   }
@@ -187,23 +191,23 @@ func NewQPoint(args ...interface{}) *QPoint {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QPointC2Ev()
-    return &QPoint{qclsinst:qthis}
+    return &QPoint{Qclsinst:qthis}
   case 1:
     // invoke: _ZN6QPointC1Eii
     // invoke: void QPoint(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QPointC2Eii(arg0, arg1)
-    return &QPoint{qclsinst:qthis}
+    return &QPoint{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPoint", "QPoint", args)
   }
 
-  return nil // QPoint{qclsinst:qthis}
+  return nil // QPoint{Qclsinst:qthis}
 }
 
 // y()
@@ -219,7 +223,7 @@ func (this *QPoint) Y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QPoint1yEv
     // invoke: int y()
-    C.C_ZNK6QPoint1yEv(this.qclsinst)
+    C.C_ZNK6QPoint1yEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "y", args)
   }
@@ -242,15 +246,19 @@ func (this *QPoint) Dotproduct_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN6QPoint10dotProductERKS_S1_
     // invoke: int dotProduct(const class QPoint &, const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPoint).qclsinst
+    var arg1 = args[1].(*QPoint).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN6QPoint10dotProductERKS_S1_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPoint", "dotProduct", args)
   }
@@ -271,7 +279,7 @@ func (this *QPoint) X(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QPoint1xEv
     // invoke: int x()
-    C.C_ZNK6QPoint1xEv(this.qclsinst)
+    C.C_ZNK6QPoint1xEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "x", args)
   }
@@ -293,9 +301,9 @@ func (this *QPoint) Setx(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QPoint4setXEi
     // invoke: void setX(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN6QPoint4setXEi(this.qclsinst, arg0)
+    C.C_ZN6QPoint4setXEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPoint", "setX", args)
   }
@@ -317,9 +325,9 @@ func (this *QPoint) Sety(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QPoint4setYEi
     // invoke: void setY(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN6QPoint4setYEi(this.qclsinst, arg0)
+    C.C_ZN6QPoint4setYEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPoint", "setY", args)
   }
@@ -340,11 +348,15 @@ func (this *QPoint) Manhattanlength(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK6QPoint15manhattanLengthEv
     // invoke: int manhattanLength()
-    var ret0 = C.C_ZNK6QPoint15manhattanLengthEv(this.qclsinst)
+    var ret0 = C.C_ZNK6QPoint15manhattanLengthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPoint", "manhattanLength", args)
   }
@@ -365,11 +377,15 @@ func (this *QPointF) Topoint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QPointF7toPointEv
     // invoke: QPoint toPoint()
-    var ret0 = C.C_ZNK7QPointF7toPointEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QPointF7toPointEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPoint{}) // "QPoint"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPointF", "toPoint", args)
   }
@@ -392,15 +408,19 @@ func (this *QPointF) Dotproduct_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN7QPointF10dotProductERKS_S1_
     // invoke: qreal dotProduct(const class QPointF &, const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPointF).qclsinst
+    var arg1 = args[1].(*QPointF).Qclsinst
     if false {fmt.Println(arg1)}
     var ret0 = C.C_ZN7QPointF10dotProductERKS_S1_(arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPointF", "dotProduct", args)
   }
@@ -421,7 +441,7 @@ func (this *QPointF) Rx(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QPointF2rxEv
     // invoke: qreal & rx()
-    C.C_ZN7QPointF2rxEv(this.qclsinst)
+    C.C_ZN7QPointF2rxEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "rx", args)
   }
@@ -442,7 +462,7 @@ func (this *QPointF) Ry(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QPointF2ryEv
     // invoke: qreal & ry()
-    C.C_ZN7QPointF2ryEv(this.qclsinst)
+    C.C_ZN7QPointF2ryEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "ry", args)
   }
@@ -463,11 +483,15 @@ func (this *QPointF) Isnull(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QPointF6isNullEv
     // invoke: bool isNull()
-    var ret0 = C.C_ZNK7QPointF6isNullEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QPointF6isNullEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPointF", "isNull", args)
   }
@@ -488,7 +512,7 @@ func (this *QPointF) X(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPointF1xEv
     // invoke: qreal x()
-    C.C_ZNK7QPointF1xEv(this.qclsinst)
+    C.C_ZNK7QPointF1xEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "x", args)
   }
@@ -509,7 +533,7 @@ func (this *QPointF) Y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPointF1yEv
     // invoke: qreal y()
-    C.C_ZNK7QPointF1yEv(this.qclsinst)
+    C.C_ZNK7QPointF1yEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "y", args)
   }
@@ -537,35 +561,35 @@ func NewQPointF(args ...interface{}) *QPointF {
   case 0:
     // invoke: _ZN7QPointFC1Edd
     // invoke: void QPointF(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPointFC2Edd(arg0, arg1)
-    return &QPointF{qclsinst:qthis}
+    return &QPointF{Qclsinst:qthis}
   case 1:
     // invoke: _ZN7QPointFC1Ev
     // invoke: void QPointF()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPointFC2Ev()
-    return &QPointF{qclsinst:qthis}
+    return &QPointF{Qclsinst:qthis}
   case 2:
     // invoke: _ZN7QPointFC1ERK6QPoint
     // invoke: void QPointF(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPointFC2ERK6QPoint(arg0)
-    return &QPointF{qclsinst:qthis}
+    return &QPointF{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPointF", "QPointF", args)
   }
 
-  return nil // QPointF{qclsinst:qthis}
+  return nil // QPointF{Qclsinst:qthis}
 }
 
 // setX(qreal)
@@ -582,9 +606,9 @@ func (this *QPointF) Setx(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QPointF4setXEd
     // invoke: void setX(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QPointF4setXEd(this.qclsinst, arg0)
+    C.C_ZN7QPointF4setXEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPointF", "setX", args)
   }
@@ -606,9 +630,9 @@ func (this *QPointF) Sety(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QPointF4setYEd
     // invoke: void setY(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QPointF4setYEd(this.qclsinst, arg0)
+    C.C_ZN7QPointF4setYEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPointF", "setY", args)
   }
@@ -629,11 +653,15 @@ func (this *QPointF) Manhattanlength(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QPointF15manhattanLengthEv
     // invoke: qreal manhattanLength()
-    var ret0 = C.C_ZNK7QPointF15manhattanLengthEv(this.qclsinst)
+    var ret0 = C.C_ZNK7QPointF15manhattanLengthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPointF", "manhattanLength", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qglobal.h
 // dst-file: /src/core/qglobal.go
 //
@@ -43,25 +43,25 @@ func init() {
 // class sizeof(QIntegerForSize<4>)=1
 type QIntegerForSizeL4G struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QIntegerForSize<8>)=1
 type QIntegerForSizeL8G struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QIntegerForSize<2>)=1
 type QIntegerForSizeL2G struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QIntegerForSize<1>)=1
 type QIntegerForSizeL1G struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // <= body block end

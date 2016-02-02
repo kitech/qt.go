@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qloggingcategory.h
 // dst-file: /src/core/qloggingcategory.go
 //
@@ -67,7 +67,7 @@ func init() {
 // class sizeof(QLoggingCategory)=24
 type QLoggingCategory struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // setEnabled(enum QtMsgType, _Bool)
@@ -85,11 +85,11 @@ func (this *QLoggingCategory) Setenabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QLoggingCategory10setEnabledE9QtMsgTypeb
     // invoke: void setEnabled(enum QtMsgType, _Bool)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C.C_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb(this.qclsinst, arg0, arg1)
+    C.C_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "setEnabled", args)
   }
@@ -110,11 +110,15 @@ func (this *QLoggingCategory) Categoryname(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK16QLoggingCategory12categoryNameEv
     // invoke: const char * categoryName()
-    var ret0 = C.C_ZNK16QLoggingCategory12categoryNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QLoggingCategory12categoryNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.ByteTy(true) // "const char *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLoggingCategory", "categoryName", args)
   }
@@ -135,11 +139,15 @@ func (this *QLoggingCategory) Iscriticalenabled(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK16QLoggingCategory17isCriticalEnabledEv
     // invoke: bool isCriticalEnabled()
-    var ret0 = C.C_ZNK16QLoggingCategory17isCriticalEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QLoggingCategory17isCriticalEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isCriticalEnabled", args)
   }
@@ -161,13 +169,17 @@ func (this *QLoggingCategory) Isenabled(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QLoggingCategory9isEnabledE9QtMsgType
     // invoke: bool isEnabled(enum QtMsgType)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK16QLoggingCategory9isEnabledE9QtMsgType(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK16QLoggingCategory9isEnabledE9QtMsgType(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isEnabled", args)
   }
@@ -200,7 +212,7 @@ func NewQLoggingCategory(args ...interface{}) *QLoggingCategory {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QLoggingCategoryC2EPKc(arg0)
-    return &QLoggingCategory{qclsinst:qthis}
+    return &QLoggingCategory{Qclsinst:qthis}
   case 1:
     // invoke: _ZN16QLoggingCategoryC1EPKc9QtMsgType
     // invoke: void QLoggingCategory(const char *, enum QtMsgType)
@@ -208,17 +220,17 @@ func NewQLoggingCategory(args ...interface{}) *QLoggingCategory {
     var arg0 = argif0.(unsafe.Pointer)
     if false {fmt.Println(argif0, arg0)}
     if free0 {defer C.free(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QLoggingCategoryC2EPKc9QtMsgType(arg0, arg1)
-    return &QLoggingCategory{qclsinst:qthis}
+    return &QLoggingCategory{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QLoggingCategory", "QLoggingCategory", args)
   }
 
-  return nil // QLoggingCategory{qclsinst:qthis}
+  return nil // QLoggingCategory{Qclsinst:qthis}
 }
 
 // ~QLoggingCategory()
@@ -234,7 +246,7 @@ func (this *QLoggingCategory) Freeqloggingcategory(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QLoggingCategoryD0Ev
     // invoke: void ~QLoggingCategory()
-    C.C_ZN16QLoggingCategoryD2Ev(this.qclsinst)
+    C.C_ZN16QLoggingCategoryD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "~QLoggingCategory", args)
   }
@@ -255,11 +267,15 @@ func (this *QLoggingCategory) Isdebugenabled(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK16QLoggingCategory14isDebugEnabledEv
     // invoke: bool isDebugEnabled()
-    var ret0 = C.C_ZNK16QLoggingCategory14isDebugEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QLoggingCategory14isDebugEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isDebugEnabled", args)
   }
@@ -280,11 +296,15 @@ func (this *QLoggingCategory) Iswarningenabled(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK16QLoggingCategory16isWarningEnabledEv
     // invoke: bool isWarningEnabled()
-    var ret0 = C.C_ZNK16QLoggingCategory16isWarningEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QLoggingCategory16isWarningEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isWarningEnabled", args)
   }
@@ -306,7 +326,7 @@ func (this *QLoggingCategory) Setfilterrules_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QLoggingCategory14setFilterRulesERK7QString
     // invoke: void setFilterRules(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN16QLoggingCategory14setFilterRulesERK7QString(arg0)
   default:
@@ -333,7 +353,11 @@ func (this *QLoggingCategory) Defaultcategory_S(args ...interface{}) (ret interf
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QLoggingCategory{}) // "QLoggingCategory *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLoggingCategory", "defaultCategory", args)
   }
@@ -354,11 +378,15 @@ func (this *QLoggingCategory) Isinfoenabled(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK16QLoggingCategory13isInfoEnabledEv
     // invoke: bool isInfoEnabled()
-    var ret0 = C.C_ZNK16QLoggingCategory13isInfoEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QLoggingCategory13isInfoEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isInfoEnabled", args)
   }

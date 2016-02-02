@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qbitmap.h
 // dst-file: /src/gui/qbitmap.go
 //
@@ -63,7 +63,7 @@ func init() {
 // class sizeof(QBitmap)=1
 type QBitmap struct {
   /*qbase*/ QPixmap;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // clear()
@@ -79,7 +79,7 @@ func (this *QBitmap) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QBitmap5clearEv
     // invoke: void clear()
-    C.C_ZN7QBitmap5clearEv(this.qclsinst)
+    C.C_ZN7QBitmap5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBitmap", "clear", args)
   }
@@ -100,7 +100,7 @@ func (this *QBitmap) Freeqbitmap(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QBitmapD0Ev
     // invoke: void ~QBitmap()
-    C.C_ZN7QBitmapD2Ev(this.qclsinst)
+    C.C_ZN7QBitmapD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QBitmap", "~QBitmap", args)
   }
@@ -138,20 +138,20 @@ func NewQBitmap(args ...interface{}) *QBitmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBitmapC2Ev()
-    return &QBitmap{qclsinst:qthis}
+    return &QBitmap{Qclsinst:qthis}
   case 1:
     // invoke: _ZN7QBitmapC1ERK7QPixmap
     // invoke: void QBitmap(const class QPixmap &)
-    var arg0 = args[0].(QPixmap).qclsinst
+    var arg0 = args[0].(*QPixmap).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBitmapC2ERK7QPixmap(arg0)
-    return &QBitmap{qclsinst:qthis}
+    return &QBitmap{Qclsinst:qthis}
   case 2:
     // invoke: _ZN7QBitmapC1ERK7QStringPKc
     // invoke: void QBitmap(const class QString &, const char *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     argif1, free1 := qtrt.HandyConvert2c(args[1], vtys[2][1])
     var arg1 = argif1.(unsafe.Pointer)
@@ -160,32 +160,32 @@ func NewQBitmap(args ...interface{}) *QBitmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBitmapC2ERK7QStringPKc(arg0, arg1)
-    return &QBitmap{qclsinst:qthis}
+    return &QBitmap{Qclsinst:qthis}
   case 3:
     // invoke: _ZN7QBitmapC1ERK5QSize
     // invoke: void QBitmap(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBitmapC2ERK5QSize(arg0)
-    return &QBitmap{qclsinst:qthis}
+    return &QBitmap{Qclsinst:qthis}
   case 4:
     // invoke: _ZN7QBitmapC1Eii
     // invoke: void QBitmap(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBitmapC2Eii(arg0, arg1)
-    return &QBitmap{qclsinst:qthis}
+    return &QBitmap{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QBitmap", "QBitmap", args)
   }
 
-  return nil // QBitmap{qclsinst:qthis}
+  return nil // QBitmap{Qclsinst:qthis}
 }
 
 // transformed(const class QTransform &)
@@ -205,23 +205,31 @@ func (this *QBitmap) Transformed(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK7QBitmap11transformedERK10QTransform
     // invoke: QBitmap transformed(const class QTransform &)
-    var arg0 = args[0].(QTransform).qclsinst
+    var arg0 = args[0].(*QTransform).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QBitmap11transformedERK10QTransform(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QBitmap11transformedERK10QTransform(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBitmap{}) // "QBitmap"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK7QBitmap11transformedERK7QMatrix
     // invoke: QBitmap transformed(const class QMatrix &)
-    var arg0 = args[0].(QMatrix).qclsinst
+    var arg0 = args[0].(*QMatrix).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK7QBitmap11transformedERK7QMatrix(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK7QBitmap11transformedERK7QMatrix(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBitmap{}) // "QBitmap"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QBitmap", "transformed", args)
   }
@@ -243,9 +251,9 @@ func (this *QBitmap) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QBitmap4swapERS_
     // invoke: void swap(class QBitmap &)
-    var arg0 = args[0].(QBitmap).qclsinst
+    var arg0 = args[0].(*QBitmap).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QBitmap4swapERS_(this.qclsinst, arg0)
+    C.C_ZN7QBitmap4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBitmap", "swap", args)
   }

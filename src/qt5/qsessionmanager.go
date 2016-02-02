@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.go
 //
@@ -75,7 +75,7 @@ func init() {
 // class sizeof(QSessionManager)=1
 type QSessionManager struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // cancel()
@@ -91,7 +91,7 @@ func (this *QSessionManager) Cancel(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager6cancelEv
     // invoke: void cancel()
-    C.C_ZN15QSessionManager6cancelEv(this.qclsinst)
+    C.C_ZN15QSessionManager6cancelEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "cancel", args)
   }
@@ -112,7 +112,7 @@ func (this *QSessionManager) Restartcommand(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager14restartCommandEv
     // invoke: QStringList restartCommand()
-    C.C_ZNK15QSessionManager14restartCommandEv(this.qclsinst)
+    C.C_ZNK15QSessionManager14restartCommandEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "restartCommand", args)
   }
@@ -139,19 +139,19 @@ func (this *QSessionManager) Setmanagerproperty(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList
     // invoke: void setManagerProperty(const class QString &, const class QStringList &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStringList).qclsinst
+    var arg1 = args[1].(*QStringList).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList(this.qclsinst, arg0, arg1)
+    C.C_ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList(this.Qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN15QSessionManager18setManagerPropertyERK7QStringS2_
     // invoke: void setManagerProperty(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN15QSessionManager18setManagerPropertyERK7QStringS2_(this.qclsinst, arg0, arg1)
+    C.C_ZN15QSessionManager18setManagerPropertyERK7QStringS2_(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QSessionManager", "setManagerProperty", args)
   }
@@ -172,7 +172,7 @@ func (this *QSessionManager) Requestphase2(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager13requestPhase2Ev
     // invoke: void requestPhase2()
-    C.C_ZN15QSessionManager13requestPhase2Ev(this.qclsinst)
+    C.C_ZN15QSessionManager13requestPhase2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "requestPhase2", args)
   }
@@ -194,9 +194,9 @@ func (this *QSessionManager) Setrestartcommand(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager17setRestartCommandERK11QStringList
     // invoke: void setRestartCommand(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QSessionManager17setRestartCommandERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN15QSessionManager17setRestartCommandERK11QStringList(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSessionManager", "setRestartCommand", args)
   }
@@ -217,7 +217,7 @@ func (this *QSessionManager) Discardcommand(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager14discardCommandEv
     // invoke: QStringList discardCommand()
-    C.C_ZNK15QSessionManager14discardCommandEv(this.qclsinst)
+    C.C_ZNK15QSessionManager14discardCommandEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "discardCommand", args)
   }
@@ -238,11 +238,15 @@ func (this *QSessionManager) Sessionkey(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QSessionManager10sessionKeyEv
     // invoke: QString sessionKey()
-    var ret0 = C.C_ZNK15QSessionManager10sessionKeyEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QSessionManager10sessionKeyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSessionManager", "sessionKey", args)
   }
@@ -263,11 +267,15 @@ func (this *QSessionManager) Isphase2(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QSessionManager8isPhase2Ev
     // invoke: bool isPhase2()
-    var ret0 = C.C_ZNK15QSessionManager8isPhase2Ev(this.qclsinst)
+    var ret0 = C.C_ZNK15QSessionManager8isPhase2Ev(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSessionManager", "isPhase2", args)
   }
@@ -289,9 +297,9 @@ func (this *QSessionManager) Setdiscardcommand(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager17setDiscardCommandERK11QStringList
     // invoke: void setDiscardCommand(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QSessionManager17setDiscardCommandERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN15QSessionManager17setDiscardCommandERK11QStringList(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSessionManager", "setDiscardCommand", args)
   }
@@ -312,11 +320,15 @@ func (this *QSessionManager) Allowsinteraction(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZN15QSessionManager17allowsInteractionEv
     // invoke: bool allowsInteraction()
-    var ret0 = C.C_ZN15QSessionManager17allowsInteractionEv(this.qclsinst)
+    var ret0 = C.C_ZN15QSessionManager17allowsInteractionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSessionManager", "allowsInteraction", args)
   }
@@ -337,7 +349,7 @@ func (this *QSessionManager) Restarthint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager11restartHintEv
     // invoke: QSessionManager::RestartHint restartHint()
-    C.C_ZNK15QSessionManager11restartHintEv(this.qclsinst)
+    C.C_ZNK15QSessionManager11restartHintEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "restartHint", args)
   }
@@ -358,7 +370,7 @@ func (this *QSessionManager) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QSessionManager10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QSessionManager10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "metaObject", args)
   }
@@ -379,11 +391,15 @@ func (this *QSessionManager) Allowserrorinteraction(args ...interface{}) (ret in
   case 0:
     // invoke: _ZN15QSessionManager22allowsErrorInteractionEv
     // invoke: bool allowsErrorInteraction()
-    var ret0 = C.C_ZN15QSessionManager22allowsErrorInteractionEv(this.qclsinst)
+    var ret0 = C.C_ZN15QSessionManager22allowsErrorInteractionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSessionManager", "allowsErrorInteraction", args)
   }
@@ -404,11 +420,15 @@ func (this *QSessionManager) Sessionid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QSessionManager9sessionIdEv
     // invoke: QString sessionId()
-    var ret0 = C.C_ZNK15QSessionManager9sessionIdEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QSessionManager9sessionIdEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSessionManager", "sessionId", args)
   }
@@ -429,7 +449,7 @@ func (this *QSessionManager) Release(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager7releaseEv
     // invoke: void release()
-    C.C_ZN15QSessionManager7releaseEv(this.qclsinst)
+    C.C_ZN15QSessionManager7releaseEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "release", args)
   }

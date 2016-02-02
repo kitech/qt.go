@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qgraphicseffect.h
 // dst-file: /src/widgets/qgraphicseffect.go
 //
@@ -135,7 +135,7 @@ func init() {
 // class sizeof(QGraphicsColorizeEffect)=1
 type QGraphicsColorizeEffect struct {
   /*qbase*/ QGraphicsEffect;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _strengthChanged QGraphicsColorizeEffect_strengthChanged_signal;
 //  _colorChanged QGraphicsColorizeEffect_colorChanged_signal;
 }
@@ -143,14 +143,14 @@ type QGraphicsColorizeEffect struct {
 // class sizeof(QGraphicsEffect)=1
 type QGraphicsEffect struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _enabledChanged QGraphicsEffect_enabledChanged_signal;
 }
 
 // class sizeof(QGraphicsDropShadowEffect)=1
 type QGraphicsDropShadowEffect struct {
   /*qbase*/ QGraphicsEffect;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _colorChanged QGraphicsDropShadowEffect_colorChanged_signal;
 //  _offsetChanged QGraphicsDropShadowEffect_offsetChanged_signal;
 //  _blurRadiusChanged QGraphicsDropShadowEffect_blurRadiusChanged_signal;
@@ -159,7 +159,7 @@ type QGraphicsDropShadowEffect struct {
 // class sizeof(QGraphicsOpacityEffect)=1
 type QGraphicsOpacityEffect struct {
   /*qbase*/ QGraphicsEffect;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _opacityMaskChanged QGraphicsOpacityEffect_opacityMaskChanged_signal;
 //  _opacityChanged QGraphicsOpacityEffect_opacityChanged_signal;
 }
@@ -167,7 +167,7 @@ type QGraphicsOpacityEffect struct {
 // class sizeof(QGraphicsBlurEffect)=1
 type QGraphicsBlurEffect struct {
   /*qbase*/ QGraphicsEffect;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _blurHintsChanged QGraphicsBlurEffect_blurHintsChanged_signal;
 //  _blurRadiusChanged QGraphicsBlurEffect_blurRadiusChanged_signal;
 }
@@ -186,9 +186,9 @@ func (this *QGraphicsColorizeEffect) Setstrength(args ...interface{}) () {
   case 0:
     // invoke: _ZN23QGraphicsColorizeEffect11setStrengthEd
     // invoke: void setStrength(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN23QGraphicsColorizeEffect11setStrengthEd(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsColorizeEffect11setStrengthEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsColorizeEffect", "setStrength", args)
   }
@@ -209,11 +209,15 @@ func (this *QGraphicsColorizeEffect) Strength(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK23QGraphicsColorizeEffect8strengthEv
     // invoke: qreal strength()
-    var ret0 = C.C_ZNK23QGraphicsColorizeEffect8strengthEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QGraphicsColorizeEffect8strengthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsColorizeEffect", "strength", args)
   }
@@ -234,7 +238,7 @@ func (this *QGraphicsColorizeEffect) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QGraphicsColorizeEffect10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK23QGraphicsColorizeEffect10metaObjectEv(this.qclsinst)
+    C.C_ZNK23QGraphicsColorizeEffect10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsColorizeEffect", "metaObject", args)
   }
@@ -256,9 +260,9 @@ func (this *QGraphicsColorizeEffect) Setcolor(args ...interface{}) () {
   case 0:
     // invoke: _ZN23QGraphicsColorizeEffect8setColorERK6QColor
     // invoke: void setColor(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN23QGraphicsColorizeEffect8setColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN23QGraphicsColorizeEffect8setColorERK6QColor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsColorizeEffect", "setColor", args)
   }
@@ -279,11 +283,15 @@ func (this *QGraphicsColorizeEffect) Color(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK23QGraphicsColorizeEffect5colorEv
     // invoke: QColor color()
-    var ret0 = C.C_ZNK23QGraphicsColorizeEffect5colorEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QGraphicsColorizeEffect5colorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsColorizeEffect", "color", args)
   }
@@ -305,17 +313,17 @@ func NewQGraphicsColorizeEffect(args ...interface{}) *QGraphicsColorizeEffect {
   case 0:
     // invoke: _ZN23QGraphicsColorizeEffectC1EP7QObject
     // invoke: void QGraphicsColorizeEffect(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QGraphicsColorizeEffectC2EP7QObject(arg0)
-    return &QGraphicsColorizeEffect{qclsinst:qthis}
+    return &QGraphicsColorizeEffect{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsColorizeEffect", "QGraphicsColorizeEffect", args)
   }
 
-  return nil // QGraphicsColorizeEffect{qclsinst:qthis}
+  return nil // QGraphicsColorizeEffect{Qclsinst:qthis}
 }
 
 // ~QGraphicsColorizeEffect()
@@ -331,7 +339,7 @@ func (this *QGraphicsColorizeEffect) Freeqgraphicscolorizeeffect(args ...interfa
   case 0:
     // invoke: _ZN23QGraphicsColorizeEffectD0Ev
     // invoke: void ~QGraphicsColorizeEffect()
-    C.C_ZN23QGraphicsColorizeEffectD2Ev(this.qclsinst)
+    C.C_ZN23QGraphicsColorizeEffectD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsColorizeEffect", "~QGraphicsColorizeEffect", args)
   }
@@ -352,11 +360,15 @@ func (this *QGraphicsEffect) Boundingrect(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK15QGraphicsEffect12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK15QGraphicsEffect12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsEffect12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEffect", "boundingRect", args)
   }
@@ -378,13 +390,17 @@ func (this *QGraphicsEffect) Boundingrectfor(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK15QGraphicsEffect15boundingRectForERK6QRectF
     // invoke: QRectF boundingRectFor(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK15QGraphicsEffect15boundingRectForERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK15QGraphicsEffect15boundingRectForERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEffect", "boundingRectFor", args)
   }
@@ -405,7 +421,7 @@ func (this *QGraphicsEffect) Freeqgraphicseffect(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsEffectD0Ev
     // invoke: void ~QGraphicsEffect()
-    C.C_ZN15QGraphicsEffectD2Ev(this.qclsinst)
+    C.C_ZN15QGraphicsEffectD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEffect", "~QGraphicsEffect", args)
   }
@@ -426,11 +442,15 @@ func (this *QGraphicsEffect) Isenabled(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QGraphicsEffect9isEnabledEv
     // invoke: bool isEnabled()
-    var ret0 = C.C_ZNK15QGraphicsEffect9isEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsEffect9isEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEffect", "isEnabled", args)
   }
@@ -451,7 +471,7 @@ func (this *QGraphicsEffect) Source(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsEffect6sourceEv
     // invoke: QGraphicsEffectSource * source()
-    C.C_ZNK15QGraphicsEffect6sourceEv(this.qclsinst)
+    C.C_ZNK15QGraphicsEffect6sourceEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEffect", "source", args)
   }
@@ -475,7 +495,7 @@ func (this *QGraphicsEffect) Setenabled(args ...interface{}) () {
     // invoke: void setEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsEffect10setEnabledEb(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsEffect10setEnabledEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsEffect", "setEnabled", args)
   }
@@ -496,7 +516,7 @@ func (this *QGraphicsEffect) Update(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsEffect6updateEv
     // invoke: void update()
-    C.C_ZN15QGraphicsEffect6updateEv(this.qclsinst)
+    C.C_ZN15QGraphicsEffect6updateEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEffect", "update", args)
   }
@@ -517,7 +537,7 @@ func (this *QGraphicsEffect) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsEffect10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QGraphicsEffect10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QGraphicsEffect10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEffect", "metaObject", args)
   }
@@ -539,17 +559,17 @@ func NewQGraphicsEffect(args ...interface{}) *QGraphicsEffect {
   case 0:
     // invoke: _ZN15QGraphicsEffectC1EP7QObject
     // invoke: void QGraphicsEffect(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QGraphicsEffectC2EP7QObject(arg0)
-    return &QGraphicsEffect{qclsinst:qthis}
+    return &QGraphicsEffect{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsEffect", "QGraphicsEffect", args)
   }
 
-  return nil // QGraphicsEffect{qclsinst:qthis}
+  return nil // QGraphicsEffect{Qclsinst:qthis}
 }
 
 // setYOffset(qreal)
@@ -566,9 +586,9 @@ func (this *QGraphicsDropShadowEffect) Setyoffset(args ...interface{}) () {
   case 0:
     // invoke: _ZN25QGraphicsDropShadowEffect10setYOffsetEd
     // invoke: void setYOffset(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN25QGraphicsDropShadowEffect10setYOffsetEd(this.qclsinst, arg0)
+    C.C_ZN25QGraphicsDropShadowEffect10setYOffsetEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setYOffset", args)
   }
@@ -590,13 +610,17 @@ func (this *QGraphicsDropShadowEffect) Boundingrectfor(args ...interface{}) (ret
   case 0:
     // invoke: _ZNK25QGraphicsDropShadowEffect15boundingRectForERK6QRectF
     // invoke: QRectF boundingRectFor(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK25QGraphicsDropShadowEffect15boundingRectForERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK25QGraphicsDropShadowEffect15boundingRectForERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "boundingRectFor", args)
   }
@@ -618,9 +642,9 @@ func (this *QGraphicsDropShadowEffect) Setxoffset(args ...interface{}) () {
   case 0:
     // invoke: _ZN25QGraphicsDropShadowEffect10setXOffsetEd
     // invoke: void setXOffset(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN25QGraphicsDropShadowEffect10setXOffsetEd(this.qclsinst, arg0)
+    C.C_ZN25QGraphicsDropShadowEffect10setXOffsetEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setXOffset", args)
   }
@@ -641,11 +665,15 @@ func (this *QGraphicsDropShadowEffect) Blurradius(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK25QGraphicsDropShadowEffect10blurRadiusEv
     // invoke: qreal blurRadius()
-    var ret0 = C.C_ZNK25QGraphicsDropShadowEffect10blurRadiusEv(this.qclsinst)
+    var ret0 = C.C_ZNK25QGraphicsDropShadowEffect10blurRadiusEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "blurRadius", args)
   }
@@ -667,9 +695,9 @@ func (this *QGraphicsDropShadowEffect) Setblurradius(args ...interface{}) () {
   case 0:
     // invoke: _ZN25QGraphicsDropShadowEffect13setBlurRadiusEd
     // invoke: void setBlurRadius(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN25QGraphicsDropShadowEffect13setBlurRadiusEd(this.qclsinst, arg0)
+    C.C_ZN25QGraphicsDropShadowEffect13setBlurRadiusEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setBlurRadius", args)
   }
@@ -690,11 +718,15 @@ func (this *QGraphicsDropShadowEffect) Color(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK25QGraphicsDropShadowEffect5colorEv
     // invoke: QColor color()
-    var ret0 = C.C_ZNK25QGraphicsDropShadowEffect5colorEv(this.qclsinst)
+    var ret0 = C.C_ZNK25QGraphicsDropShadowEffect5colorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "color", args)
   }
@@ -723,23 +755,23 @@ func (this *QGraphicsDropShadowEffect) Setoffset(args ...interface{}) () {
   case 0:
     // invoke: _ZN25QGraphicsDropShadowEffect9setOffsetEdd
     // invoke: void setOffset(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN25QGraphicsDropShadowEffect9setOffsetEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN25QGraphicsDropShadowEffect9setOffsetEdd(this.Qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN25QGraphicsDropShadowEffect9setOffsetEd
     // invoke: void setOffset(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN25QGraphicsDropShadowEffect9setOffsetEd(this.qclsinst, arg0)
+    C.C_ZN25QGraphicsDropShadowEffect9setOffsetEd(this.Qclsinst, arg0)
   case 2:
     // invoke: _ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF
     // invoke: void setOffset(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
+    var arg0 = args[0].(*QPointF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF(this.qclsinst, arg0)
+    C.C_ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setOffset", args)
   }
@@ -760,7 +792,7 @@ func (this *QGraphicsDropShadowEffect) Freeqgraphicsdropshadoweffect(args ...int
   case 0:
     // invoke: _ZN25QGraphicsDropShadowEffectD0Ev
     // invoke: void ~QGraphicsDropShadowEffect()
-    C.C_ZN25QGraphicsDropShadowEffectD2Ev(this.qclsinst)
+    C.C_ZN25QGraphicsDropShadowEffectD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "~QGraphicsDropShadowEffect", args)
   }
@@ -782,17 +814,17 @@ func NewQGraphicsDropShadowEffect(args ...interface{}) *QGraphicsDropShadowEffec
   case 0:
     // invoke: _ZN25QGraphicsDropShadowEffectC1EP7QObject
     // invoke: void QGraphicsDropShadowEffect(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN25QGraphicsDropShadowEffectC2EP7QObject(arg0)
-    return &QGraphicsDropShadowEffect{qclsinst:qthis}
+    return &QGraphicsDropShadowEffect{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "QGraphicsDropShadowEffect", args)
   }
 
-  return nil // QGraphicsDropShadowEffect{qclsinst:qthis}
+  return nil // QGraphicsDropShadowEffect{Qclsinst:qthis}
 }
 
 // offset()
@@ -808,11 +840,15 @@ func (this *QGraphicsDropShadowEffect) Offset(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK25QGraphicsDropShadowEffect6offsetEv
     // invoke: QPointF offset()
-    var ret0 = C.C_ZNK25QGraphicsDropShadowEffect6offsetEv(this.qclsinst)
+    var ret0 = C.C_ZNK25QGraphicsDropShadowEffect6offsetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPointF{}) // "QPointF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "offset", args)
   }
@@ -833,7 +869,7 @@ func (this *QGraphicsDropShadowEffect) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK25QGraphicsDropShadowEffect10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK25QGraphicsDropShadowEffect10metaObjectEv(this.qclsinst)
+    C.C_ZNK25QGraphicsDropShadowEffect10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "metaObject", args)
   }
@@ -855,9 +891,9 @@ func (this *QGraphicsDropShadowEffect) Setcolor(args ...interface{}) () {
   case 0:
     // invoke: _ZN25QGraphicsDropShadowEffect8setColorERK6QColor
     // invoke: void setColor(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN25QGraphicsDropShadowEffect8setColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN25QGraphicsDropShadowEffect8setColorERK6QColor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setColor", args)
   }
@@ -878,11 +914,15 @@ func (this *QGraphicsDropShadowEffect) Yoffset(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK25QGraphicsDropShadowEffect7yOffsetEv
     // invoke: qreal yOffset()
-    var ret0 = C.C_ZNK25QGraphicsDropShadowEffect7yOffsetEv(this.qclsinst)
+    var ret0 = C.C_ZNK25QGraphicsDropShadowEffect7yOffsetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "yOffset", args)
   }
@@ -903,11 +943,15 @@ func (this *QGraphicsDropShadowEffect) Xoffset(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK25QGraphicsDropShadowEffect7xOffsetEv
     // invoke: qreal xOffset()
-    var ret0 = C.C_ZNK25QGraphicsDropShadowEffect7xOffsetEv(this.qclsinst)
+    var ret0 = C.C_ZNK25QGraphicsDropShadowEffect7xOffsetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "xOffset", args)
   }
@@ -928,11 +972,15 @@ func (this *QGraphicsOpacityEffect) Opacity(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK22QGraphicsOpacityEffect7opacityEv
     // invoke: qreal opacity()
-    var ret0 = C.C_ZNK22QGraphicsOpacityEffect7opacityEv(this.qclsinst)
+    var ret0 = C.C_ZNK22QGraphicsOpacityEffect7opacityEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsOpacityEffect", "opacity", args)
   }
@@ -953,7 +1001,7 @@ func (this *QGraphicsOpacityEffect) Freeqgraphicsopacityeffect(args ...interface
   case 0:
     // invoke: _ZN22QGraphicsOpacityEffectD0Ev
     // invoke: void ~QGraphicsOpacityEffect()
-    C.C_ZN22QGraphicsOpacityEffectD2Ev(this.qclsinst)
+    C.C_ZN22QGraphicsOpacityEffectD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsOpacityEffect", "~QGraphicsOpacityEffect", args)
   }
@@ -975,9 +1023,9 @@ func (this *QGraphicsOpacityEffect) Setopacity(args ...interface{}) () {
   case 0:
     // invoke: _ZN22QGraphicsOpacityEffect10setOpacityEd
     // invoke: void setOpacity(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN22QGraphicsOpacityEffect10setOpacityEd(this.qclsinst, arg0)
+    C.C_ZN22QGraphicsOpacityEffect10setOpacityEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsOpacityEffect", "setOpacity", args)
   }
@@ -998,11 +1046,15 @@ func (this *QGraphicsOpacityEffect) Opacitymask(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK22QGraphicsOpacityEffect11opacityMaskEv
     // invoke: QBrush opacityMask()
-    var ret0 = C.C_ZNK22QGraphicsOpacityEffect11opacityMaskEv(this.qclsinst)
+    var ret0 = C.C_ZNK22QGraphicsOpacityEffect11opacityMaskEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "QBrush"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsOpacityEffect", "opacityMask", args)
   }
@@ -1024,17 +1076,17 @@ func NewQGraphicsOpacityEffect(args ...interface{}) *QGraphicsOpacityEffect {
   case 0:
     // invoke: _ZN22QGraphicsOpacityEffectC1EP7QObject
     // invoke: void QGraphicsOpacityEffect(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QGraphicsOpacityEffectC2EP7QObject(arg0)
-    return &QGraphicsOpacityEffect{qclsinst:qthis}
+    return &QGraphicsOpacityEffect{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsOpacityEffect", "QGraphicsOpacityEffect", args)
   }
 
-  return nil // QGraphicsOpacityEffect{qclsinst:qthis}
+  return nil // QGraphicsOpacityEffect{Qclsinst:qthis}
 }
 
 // metaObject()
@@ -1050,7 +1102,7 @@ func (this *QGraphicsOpacityEffect) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK22QGraphicsOpacityEffect10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK22QGraphicsOpacityEffect10metaObjectEv(this.qclsinst)
+    C.C_ZNK22QGraphicsOpacityEffect10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsOpacityEffect", "metaObject", args)
   }
@@ -1072,9 +1124,9 @@ func (this *QGraphicsOpacityEffect) Setopacitymask(args ...interface{}) () {
   case 0:
     // invoke: _ZN22QGraphicsOpacityEffect14setOpacityMaskERK6QBrush
     // invoke: void setOpacityMask(const class QBrush &)
-    var arg0 = args[0].(QBrush).qclsinst
+    var arg0 = args[0].(*QBrush).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN22QGraphicsOpacityEffect14setOpacityMaskERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN22QGraphicsOpacityEffect14setOpacityMaskERK6QBrush(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsOpacityEffect", "setOpacityMask", args)
   }
@@ -1096,17 +1148,17 @@ func NewQGraphicsBlurEffect(args ...interface{}) *QGraphicsBlurEffect {
   case 0:
     // invoke: _ZN19QGraphicsBlurEffectC1EP7QObject
     // invoke: void QGraphicsBlurEffect(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QGraphicsBlurEffectC2EP7QObject(arg0)
-    return &QGraphicsBlurEffect{qclsinst:qthis}
+    return &QGraphicsBlurEffect{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsBlurEffect", "QGraphicsBlurEffect", args)
   }
 
-  return nil // QGraphicsBlurEffect{qclsinst:qthis}
+  return nil // QGraphicsBlurEffect{Qclsinst:qthis}
 }
 
 // blurHints()
@@ -1122,7 +1174,7 @@ func (this *QGraphicsBlurEffect) Blurhints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsBlurEffect9blurHintsEv
     // invoke: BlurHints blurHints()
-    C.C_ZNK19QGraphicsBlurEffect9blurHintsEv(this.qclsinst)
+    C.C_ZNK19QGraphicsBlurEffect9blurHintsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsBlurEffect", "blurHints", args)
   }
@@ -1144,13 +1196,17 @@ func (this *QGraphicsBlurEffect) Boundingrectfor(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF
     // invoke: QRectF boundingRectFor(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsBlurEffect", "boundingRectFor", args)
   }
@@ -1172,9 +1228,9 @@ func (this *QGraphicsBlurEffect) Setblurradius(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QGraphicsBlurEffect13setBlurRadiusEd
     // invoke: void setBlurRadius(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN19QGraphicsBlurEffect13setBlurRadiusEd(this.qclsinst, arg0)
+    C.C_ZN19QGraphicsBlurEffect13setBlurRadiusEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsBlurEffect", "setBlurRadius", args)
   }
@@ -1195,11 +1251,15 @@ func (this *QGraphicsBlurEffect) Blurradius(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK19QGraphicsBlurEffect10blurRadiusEv
     // invoke: qreal blurRadius()
-    var ret0 = C.C_ZNK19QGraphicsBlurEffect10blurRadiusEv(this.qclsinst)
+    var ret0 = C.C_ZNK19QGraphicsBlurEffect10blurRadiusEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsBlurEffect", "blurRadius", args)
   }
@@ -1220,7 +1280,7 @@ func (this *QGraphicsBlurEffect) Freeqgraphicsblureffect(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QGraphicsBlurEffectD0Ev
     // invoke: void ~QGraphicsBlurEffect()
-    C.C_ZN19QGraphicsBlurEffectD2Ev(this.qclsinst)
+    C.C_ZN19QGraphicsBlurEffectD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsBlurEffect", "~QGraphicsBlurEffect", args)
   }
@@ -1241,7 +1301,7 @@ func (this *QGraphicsBlurEffect) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QGraphicsBlurEffect10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK19QGraphicsBlurEffect10metaObjectEv(this.qclsinst)
+    C.C_ZNK19QGraphicsBlurEffect10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsBlurEffect", "metaObject", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qshortcut.h
 // dst-file: /src/widgets/qshortcut.go
 //
@@ -71,7 +71,7 @@ func init() {
 // class sizeof(QShortcut)=1
 type QShortcut struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _activated QShortcut_activated_signal;
 //  _activatedAmbiguously QShortcut_activatedAmbiguously_signal;
 }
@@ -89,7 +89,7 @@ func (this *QShortcut) Freeqshortcut(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QShortcutD0Ev
     // invoke: void ~QShortcut()
-    C.C_ZN9QShortcutD2Ev(this.qclsinst)
+    C.C_ZN9QShortcutD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "~QShortcut", args)
   }
@@ -110,11 +110,15 @@ func (this *QShortcut) Id(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QShortcut2idEv
     // invoke: int id()
-    var ret0 = C.C_ZNK9QShortcut2idEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QShortcut2idEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QShortcut", "id", args)
   }
@@ -135,11 +139,15 @@ func (this *QShortcut) Isenabled(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QShortcut9isEnabledEv
     // invoke: bool isEnabled()
-    var ret0 = C.C_ZNK9QShortcut9isEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QShortcut9isEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QShortcut", "isEnabled", args)
   }
@@ -160,11 +168,15 @@ func (this *QShortcut) Whatsthis(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QShortcut9whatsThisEv
     // invoke: QString whatsThis()
-    var ret0 = C.C_ZNK9QShortcut9whatsThisEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QShortcut9whatsThisEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QShortcut", "whatsThis", args)
   }
@@ -186,9 +198,9 @@ func (this *QShortcut) Setkey(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QShortcut6setKeyERK12QKeySequence
     // invoke: void setKey(const class QKeySequence &)
-    var arg0 = args[0].(QKeySequence).qclsinst
+    var arg0 = args[0].(*QKeySequence).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QShortcut6setKeyERK12QKeySequence(this.qclsinst, arg0)
+    C.C_ZN9QShortcut6setKeyERK12QKeySequence(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "setKey", args)
   }
@@ -212,7 +224,7 @@ func (this *QShortcut) Setenabled(args ...interface{}) () {
     // invoke: void setEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QShortcut10setEnabledEb(this.qclsinst, arg0)
+    C.C_ZN9QShortcut10setEnabledEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "setEnabled", args)
   }
@@ -236,7 +248,7 @@ func (this *QShortcut) Setautorepeat(args ...interface{}) () {
     // invoke: void setAutoRepeat(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QShortcut13setAutoRepeatEb(this.qclsinst, arg0)
+    C.C_ZN9QShortcut13setAutoRepeatEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "setAutoRepeat", args)
   }
@@ -258,17 +270,17 @@ func NewQShortcut(args ...interface{}) *QShortcut {
   case 0:
     // invoke: _ZN9QShortcutC1EP7QWidget
     // invoke: void QShortcut(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QShortcutC2EP7QWidget(arg0)
-    return &QShortcut{qclsinst:qthis}
+    return &QShortcut{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QShortcut", "QShortcut", args)
   }
 
-  return nil // QShortcut{qclsinst:qthis}
+  return nil // QShortcut{Qclsinst:qthis}
 }
 
 // setWhatsThis(const class QString &)
@@ -285,9 +297,9 @@ func (this *QShortcut) Setwhatsthis(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QShortcut12setWhatsThisERK7QString
     // invoke: void setWhatsThis(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QShortcut12setWhatsThisERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QShortcut12setWhatsThisERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "setWhatsThis", args)
   }
@@ -308,11 +320,15 @@ func (this *QShortcut) Key(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QShortcut3keyEv
     // invoke: QKeySequence key()
-    var ret0 = C.C_ZNK9QShortcut3keyEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QShortcut3keyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QKeySequence{}) // "QKeySequence"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QShortcut", "key", args)
   }
@@ -333,7 +349,7 @@ func (this *QShortcut) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QShortcut10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QShortcut10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "metaObject", args)
   }
@@ -354,11 +370,15 @@ func (this *QShortcut) Parentwidget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QShortcut12parentWidgetEv
     // invoke: QWidget * parentWidget()
-    var ret0 = C.C_ZNK9QShortcut12parentWidgetEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QShortcut12parentWidgetEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QWidget{}) // "QWidget *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QShortcut", "parentWidget", args)
   }
@@ -379,7 +399,7 @@ func (this *QShortcut) Context(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QShortcut7contextEv
     // invoke: Qt::ShortcutContext context()
-    C.C_ZNK9QShortcut7contextEv(this.qclsinst)
+    C.C_ZNK9QShortcut7contextEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "context", args)
   }
@@ -400,11 +420,15 @@ func (this *QShortcut) Autorepeat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QShortcut10autoRepeatEv
     // invoke: bool autoRepeat()
-    var ret0 = C.C_ZNK9QShortcut10autoRepeatEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QShortcut10autoRepeatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QShortcut", "autoRepeat", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qparallelanimationgroup.h
 // dst-file: /src/core/qparallelanimationgroup.go
 //
@@ -51,7 +51,7 @@ func init() {
 // class sizeof(QParallelAnimationGroup)=1
 type QParallelAnimationGroup struct {
   /*qbase*/ QAnimationGroup;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QParallelAnimationGroup(class QObject *)
@@ -68,17 +68,17 @@ func NewQParallelAnimationGroup(args ...interface{}) *QParallelAnimationGroup {
   case 0:
     // invoke: _ZN23QParallelAnimationGroupC1EP7QObject
     // invoke: void QParallelAnimationGroup(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QParallelAnimationGroupC2EP7QObject(arg0)
-    return &QParallelAnimationGroup{qclsinst:qthis}
+    return &QParallelAnimationGroup{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QParallelAnimationGroup", "QParallelAnimationGroup", args)
   }
 
-  return nil // QParallelAnimationGroup{qclsinst:qthis}
+  return nil // QParallelAnimationGroup{Qclsinst:qthis}
 }
 
 // ~QParallelAnimationGroup()
@@ -94,7 +94,7 @@ func (this *QParallelAnimationGroup) Freeqparallelanimationgroup(args ...interfa
   case 0:
     // invoke: _ZN23QParallelAnimationGroupD0Ev
     // invoke: void ~QParallelAnimationGroup()
-    C.C_ZN23QParallelAnimationGroupD2Ev(this.qclsinst)
+    C.C_ZN23QParallelAnimationGroupD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QParallelAnimationGroup", "~QParallelAnimationGroup", args)
   }
@@ -115,11 +115,15 @@ func (this *QParallelAnimationGroup) Duration(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK23QParallelAnimationGroup8durationEv
     // invoke: int duration()
-    var ret0 = C.C_ZNK23QParallelAnimationGroup8durationEv(this.qclsinst)
+    var ret0 = C.C_ZNK23QParallelAnimationGroup8durationEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QParallelAnimationGroup", "duration", args)
   }
@@ -140,7 +144,7 @@ func (this *QParallelAnimationGroup) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QParallelAnimationGroup10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK23QParallelAnimationGroup10metaObjectEv(this.qclsinst)
+    C.C_ZNK23QParallelAnimationGroup10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QParallelAnimationGroup", "metaObject", args)
   }

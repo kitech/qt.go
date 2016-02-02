@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qpropertyanimation.h
 // dst-file: /src/core/qpropertyanimation.go
 //
@@ -59,7 +59,7 @@ func init() {
 // class sizeof(QPropertyAnimation)=1
 type QPropertyAnimation struct {
   /*qbase*/ QVariantAnimation;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // ~QPropertyAnimation()
@@ -75,7 +75,7 @@ func (this *QPropertyAnimation) Freeqpropertyanimation(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QPropertyAnimationD0Ev
     // invoke: void ~QPropertyAnimation()
-    C.C_ZN18QPropertyAnimationD2Ev(this.qclsinst)
+    C.C_ZN18QPropertyAnimationD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "~QPropertyAnimation", args)
   }
@@ -96,11 +96,15 @@ func (this *QPropertyAnimation) Propertyname(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK18QPropertyAnimation12propertyNameEv
     // invoke: QByteArray propertyName()
-    var ret0 = C.C_ZNK18QPropertyAnimation12propertyNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QPropertyAnimation12propertyNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QByteArray{}) // "QByteArray"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "propertyName", args)
   }
@@ -127,30 +131,30 @@ func NewQPropertyAnimation(args ...interface{}) *QPropertyAnimation {
   case 0:
     // invoke: _ZN18QPropertyAnimationC1EP7QObject
     // invoke: void QPropertyAnimation(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QPropertyAnimationC2EP7QObject(arg0)
-    return &QPropertyAnimation{qclsinst:qthis}
+    return &QPropertyAnimation{Qclsinst:qthis}
   case 1:
     // invoke: _ZN18QPropertyAnimationC1EP7QObjectRK10QByteArrayS1_
     // invoke: void QPropertyAnimation(class QObject *, const class QByteArray &, class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
+    var arg1 = args[1].(*QByteArray).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QObject).qclsinst
+    var arg2 = args[2].(*QObject).Qclsinst
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_(arg0, arg1, arg2)
-    return &QPropertyAnimation{qclsinst:qthis}
+    return &QPropertyAnimation{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "QPropertyAnimation", args)
   }
 
-  return nil // QPropertyAnimation{qclsinst:qthis}
+  return nil // QPropertyAnimation{Qclsinst:qthis}
 }
 
 // setTargetObject(class QObject *)
@@ -167,9 +171,9 @@ func (this *QPropertyAnimation) Settargetobject(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QPropertyAnimation15setTargetObjectEP7QObject
     // invoke: void setTargetObject(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QPropertyAnimation15setTargetObjectEP7QObject(this.qclsinst, arg0)
+    C.C_ZN18QPropertyAnimation15setTargetObjectEP7QObject(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "setTargetObject", args)
   }
@@ -190,7 +194,7 @@ func (this *QPropertyAnimation) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QPropertyAnimation10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK18QPropertyAnimation10metaObjectEv(this.qclsinst)
+    C.C_ZNK18QPropertyAnimation10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "metaObject", args)
   }
@@ -212,9 +216,9 @@ func (this *QPropertyAnimation) Setpropertyname(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QPropertyAnimation15setPropertyNameERK10QByteArray
     // invoke: void setPropertyName(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
+    var arg0 = args[0].(*QByteArray).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QPropertyAnimation15setPropertyNameERK10QByteArray(this.qclsinst, arg0)
+    C.C_ZN18QPropertyAnimation15setPropertyNameERK10QByteArray(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "setPropertyName", args)
   }
@@ -235,11 +239,15 @@ func (this *QPropertyAnimation) Targetobject(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK18QPropertyAnimation12targetObjectEv
     // invoke: QObject * targetObject()
-    var ret0 = C.C_ZNK18QPropertyAnimation12targetObjectEv(this.qclsinst)
+    var ret0 = C.C_ZNK18QPropertyAnimation12targetObjectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QObject{}) // "QObject *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "targetObject", args)
   }

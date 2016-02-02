@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.go
 //
@@ -87,7 +87,7 @@ func init() {
 // class sizeof(QStyleHints)=1
 type QStyleHints struct {
   /*qbase*/ QObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _startDragDistanceChanged QStyleHints_startDragDistanceChanged_signal;
 //  _startDragTimeChanged QStyleHints_startDragTimeChanged_signal;
 //  _mouseDoubleClickIntervalChanged QStyleHints_mouseDoubleClickIntervalChanged_signal;
@@ -108,11 +108,15 @@ func (this *QStyleHints) Setfocusontouchrelease(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK11QStyleHints22setFocusOnTouchReleaseEv
     // invoke: bool setFocusOnTouchRelease()
-    var ret0 = C.C_ZNK11QStyleHints22setFocusOnTouchReleaseEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints22setFocusOnTouchReleaseEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "setFocusOnTouchRelease", args)
   }
@@ -133,11 +137,15 @@ func (this *QStyleHints) Startdragdistance(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK11QStyleHints17startDragDistanceEv
     // invoke: int startDragDistance()
-    var ret0 = C.C_ZNK11QStyleHints17startDragDistanceEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints17startDragDistanceEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "startDragDistance", args)
   }
@@ -158,11 +166,15 @@ func (this *QStyleHints) Keyboardautorepeatrate(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK11QStyleHints22keyboardAutoRepeatRateEv
     // invoke: int keyboardAutoRepeatRate()
-    var ret0 = C.C_ZNK11QStyleHints22keyboardAutoRepeatRateEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints22keyboardAutoRepeatRateEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "keyboardAutoRepeatRate", args)
   }
@@ -183,11 +195,15 @@ func (this *QStyleHints) Passwordmaskdelay(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK11QStyleHints17passwordMaskDelayEv
     // invoke: int passwordMaskDelay()
-    var ret0 = C.C_ZNK11QStyleHints17passwordMaskDelayEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints17passwordMaskDelayEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "passwordMaskDelay", args)
   }
@@ -209,9 +225,9 @@ func (this *QStyleHints) Setmousedoubleclickinterval(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStyleHints27setMouseDoubleClickIntervalEi
     // invoke: void setMouseDoubleClickInterval(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QStyleHints27setMouseDoubleClickIntervalEi(this.qclsinst, arg0)
+    C.C_ZN11QStyleHints27setMouseDoubleClickIntervalEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyleHints", "setMouseDoubleClickInterval", args)
   }
@@ -232,11 +248,15 @@ func (this *QStyleHints) Cursorflashtime(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK11QStyleHints15cursorFlashTimeEv
     // invoke: int cursorFlashTime()
-    var ret0 = C.C_ZNK11QStyleHints15cursorFlashTimeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints15cursorFlashTimeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "cursorFlashTime", args)
   }
@@ -257,11 +277,15 @@ func (this *QStyleHints) Mousepressandholdinterval(args ...interface{}) (ret int
   case 0:
     // invoke: _ZNK11QStyleHints25mousePressAndHoldIntervalEv
     // invoke: int mousePressAndHoldInterval()
-    var ret0 = C.C_ZNK11QStyleHints25mousePressAndHoldIntervalEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints25mousePressAndHoldIntervalEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "mousePressAndHoldInterval", args)
   }
@@ -282,11 +306,15 @@ func (this *QStyleHints) Startdragvelocity(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK11QStyleHints17startDragVelocityEv
     // invoke: int startDragVelocity()
-    var ret0 = C.C_ZNK11QStyleHints17startDragVelocityEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints17startDragVelocityEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "startDragVelocity", args)
   }
@@ -307,11 +335,15 @@ func (this *QStyleHints) Usertlextensions(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK11QStyleHints16useRtlExtensionsEv
     // invoke: bool useRtlExtensions()
-    var ret0 = C.C_ZNK11QStyleHints16useRtlExtensionsEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints16useRtlExtensionsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "useRtlExtensions", args)
   }
@@ -333,9 +365,9 @@ func (this *QStyleHints) Setkeyboardinputinterval(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStyleHints24setKeyboardInputIntervalEi
     // invoke: void setKeyboardInputInterval(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QStyleHints24setKeyboardInputIntervalEi(this.qclsinst, arg0)
+    C.C_ZN11QStyleHints24setKeyboardInputIntervalEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyleHints", "setKeyboardInputInterval", args)
   }
@@ -356,7 +388,7 @@ func (this *QStyleHints) Tabfocusbehavior(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints16tabFocusBehaviorEv
     // invoke: Qt::TabFocusBehavior tabFocusBehavior()
-    C.C_ZNK11QStyleHints16tabFocusBehaviorEv(this.qclsinst)
+    C.C_ZNK11QStyleHints16tabFocusBehaviorEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "tabFocusBehavior", args)
   }
@@ -378,9 +410,9 @@ func (this *QStyleHints) Setstartdragtime(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStyleHints16setStartDragTimeEi
     // invoke: void setStartDragTime(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QStyleHints16setStartDragTimeEi(this.qclsinst, arg0)
+    C.C_ZN11QStyleHints16setStartDragTimeEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyleHints", "setStartDragTime", args)
   }
@@ -402,9 +434,9 @@ func (this *QStyleHints) Setcursorflashtime(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStyleHints18setCursorFlashTimeEi
     // invoke: void setCursorFlashTime(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QStyleHints18setCursorFlashTimeEi(this.qclsinst, arg0)
+    C.C_ZN11QStyleHints18setCursorFlashTimeEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyleHints", "setCursorFlashTime", args)
   }
@@ -425,11 +457,15 @@ func (this *QStyleHints) Fontsmoothinggamma(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK11QStyleHints18fontSmoothingGammaEv
     // invoke: qreal fontSmoothingGamma()
-    var ret0 = C.C_ZNK11QStyleHints18fontSmoothingGammaEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints18fontSmoothingGammaEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "fontSmoothingGamma", args)
   }
@@ -451,9 +487,9 @@ func (this *QStyleHints) Setstartdragdistance(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStyleHints20setStartDragDistanceEi
     // invoke: void setStartDragDistance(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QStyleHints20setStartDragDistanceEi(this.qclsinst, arg0)
+    C.C_ZN11QStyleHints20setStartDragDistanceEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyleHints", "setStartDragDistance", args)
   }
@@ -474,7 +510,7 @@ func (this *QStyleHints) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK11QStyleHints10metaObjectEv(this.qclsinst)
+    C.C_ZNK11QStyleHints10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHints", "metaObject", args)
   }
@@ -495,11 +531,15 @@ func (this *QStyleHints) Keyboardinputinterval(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK11QStyleHints21keyboardInputIntervalEv
     // invoke: int keyboardInputInterval()
-    var ret0 = C.C_ZNK11QStyleHints21keyboardInputIntervalEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints21keyboardInputIntervalEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "keyboardInputInterval", args)
   }
@@ -520,11 +560,15 @@ func (this *QStyleHints) Showisfullscreen(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK11QStyleHints16showIsFullScreenEv
     // invoke: bool showIsFullScreen()
-    var ret0 = C.C_ZNK11QStyleHints16showIsFullScreenEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints16showIsFullScreenEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "showIsFullScreen", args)
   }
@@ -545,11 +589,15 @@ func (this *QStyleHints) Startdragtime(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QStyleHints13startDragTimeEv
     // invoke: int startDragTime()
-    var ret0 = C.C_ZNK11QStyleHints13startDragTimeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints13startDragTimeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "startDragTime", args)
   }
@@ -570,11 +618,15 @@ func (this *QStyleHints) Singleclickactivation(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK11QStyleHints21singleClickActivationEv
     // invoke: bool singleClickActivation()
-    var ret0 = C.C_ZNK11QStyleHints21singleClickActivationEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints21singleClickActivationEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "singleClickActivation", args)
   }
@@ -595,11 +647,15 @@ func (this *QStyleHints) Passwordmaskcharacter(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK11QStyleHints21passwordMaskCharacterEv
     // invoke: QChar passwordMaskCharacter()
-    var ret0 = C.C_ZNK11QStyleHints21passwordMaskCharacterEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints21passwordMaskCharacterEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QChar{}) // "QChar"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "passwordMaskCharacter", args)
   }
@@ -620,11 +676,15 @@ func (this *QStyleHints) Mousedoubleclickinterval(args ...interface{}) (ret inte
   case 0:
     // invoke: _ZNK11QStyleHints24mouseDoubleClickIntervalEv
     // invoke: int mouseDoubleClickInterval()
-    var ret0 = C.C_ZNK11QStyleHints24mouseDoubleClickIntervalEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QStyleHints24mouseDoubleClickIntervalEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleHints", "mouseDoubleClickInterval", args)
   }

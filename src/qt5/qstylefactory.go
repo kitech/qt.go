@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qstylefactory.h
 // dst-file: /src/widgets/qstylefactory.go
 //
@@ -47,7 +47,7 @@ func init() {
 // class sizeof(QStyleFactory)=1
 type QStyleFactory struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // keys()
@@ -85,13 +85,17 @@ func (this *QStyleFactory) Create_S(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN13QStyleFactory6createERK7QString
     // invoke: QStyle * create(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var ret0 = C.C_ZN13QStyleFactory6createERK7QString(arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QStyle{}) // "QStyle *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStyleFactory", "create", args)
   }

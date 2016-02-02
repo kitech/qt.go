@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qabstractbutton.h
 // dst-file: /src/widgets/qabstractbutton.go
 //
@@ -101,7 +101,7 @@ func init() {
 // class sizeof(QAbstractButton)=1
 type QAbstractButton struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _released QAbstractButton_released_signal;
 //  _clicked QAbstractButton_clicked_signal;
 //  _pressed QAbstractButton_pressed_signal;
@@ -122,17 +122,17 @@ func NewQAbstractButton(args ...interface{}) *QAbstractButton {
   case 0:
     // invoke: _ZN15QAbstractButtonC1EP7QWidget
     // invoke: void QAbstractButton(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QAbstractButtonC2EP7QWidget(arg0)
-    return &QAbstractButton{qclsinst:qthis}
+    return &QAbstractButton{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractButton", "QAbstractButton", args)
   }
 
-  return nil // QAbstractButton{qclsinst:qthis}
+  return nil // QAbstractButton{Qclsinst:qthis}
 }
 
 // icon()
@@ -148,11 +148,15 @@ func (this *QAbstractButton) Icon(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractButton4iconEv
     // invoke: QIcon icon()
-    var ret0 = C.C_ZNK15QAbstractButton4iconEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractButton4iconEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QIcon{}) // "QIcon"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "icon", args)
   }
@@ -176,7 +180,7 @@ func (this *QAbstractButton) Setautoexclusive(args ...interface{}) () {
     // invoke: void setAutoExclusive(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractButton16setAutoExclusiveEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton16setAutoExclusiveEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoExclusive", args)
   }
@@ -200,7 +204,7 @@ func (this *QAbstractButton) Setchecked(args ...interface{}) () {
     // invoke: void setChecked(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractButton10setCheckedEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton10setCheckedEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setChecked", args)
   }
@@ -222,9 +226,9 @@ func (this *QAbstractButton) Setshortcut(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton11setShortcutERK12QKeySequence
     // invoke: void setShortcut(const class QKeySequence &)
-    var arg0 = args[0].(QKeySequence).qclsinst
+    var arg0 = args[0].(*QKeySequence).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractButton11setShortcutERK12QKeySequence(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton11setShortcutERK12QKeySequence(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setShortcut", args)
   }
@@ -245,11 +249,15 @@ func (this *QAbstractButton) Ischeckable(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK15QAbstractButton11isCheckableEv
     // invoke: bool isCheckable()
-    var ret0 = C.C_ZNK15QAbstractButton11isCheckableEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractButton11isCheckableEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "isCheckable", args)
   }
@@ -271,9 +279,9 @@ func (this *QAbstractButton) Setautorepeatinterval(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton21setAutoRepeatIntervalEi
     // invoke: void setAutoRepeatInterval(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractButton21setAutoRepeatIntervalEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton21setAutoRepeatIntervalEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoRepeatInterval", args)
   }
@@ -295,9 +303,9 @@ func (this *QAbstractButton) Animateclick(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton12animateClickEi
     // invoke: void animateClick(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractButton12animateClickEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton12animateClickEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "animateClick", args)
   }
@@ -318,11 +326,15 @@ func (this *QAbstractButton) Group(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractButton5groupEv
     // invoke: QButtonGroup * group()
-    var ret0 = C.C_ZNK15QAbstractButton5groupEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractButton5groupEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QButtonGroup{}) // "QButtonGroup *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "group", args)
   }
@@ -344,9 +356,9 @@ func (this *QAbstractButton) Setautorepeatdelay(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton18setAutoRepeatDelayEi
     // invoke: void setAutoRepeatDelay(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractButton18setAutoRepeatDelayEi(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton18setAutoRepeatDelayEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoRepeatDelay", args)
   }
@@ -367,11 +379,15 @@ func (this *QAbstractButton) Shortcut(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractButton8shortcutEv
     // invoke: QKeySequence shortcut()
-    var ret0 = C.C_ZNK15QAbstractButton8shortcutEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractButton8shortcutEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QKeySequence{}) // "QKeySequence"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "shortcut", args)
   }
@@ -392,7 +408,7 @@ func (this *QAbstractButton) Click(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton5clickEv
     // invoke: void click()
-    C.C_ZN15QAbstractButton5clickEv(this.qclsinst)
+    C.C_ZN15QAbstractButton5clickEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "click", args)
   }
@@ -413,11 +429,15 @@ func (this *QAbstractButton) Autorepeatinterval(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK15QAbstractButton18autoRepeatIntervalEv
     // invoke: int autoRepeatInterval()
-    var ret0 = C.C_ZNK15QAbstractButton18autoRepeatIntervalEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractButton18autoRepeatIntervalEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoRepeatInterval", args)
   }
@@ -438,11 +458,15 @@ func (this *QAbstractButton) Ischecked(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractButton9isCheckedEv
     // invoke: bool isChecked()
-    var ret0 = C.C_ZNK15QAbstractButton9isCheckedEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractButton9isCheckedEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "isChecked", args)
   }
@@ -463,11 +487,15 @@ func (this *QAbstractButton) Text(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractButton4textEv
     // invoke: QString text()
-    var ret0 = C.C_ZNK15QAbstractButton4textEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractButton4textEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "text", args)
   }
@@ -491,7 +519,7 @@ func (this *QAbstractButton) Setcheckable(args ...interface{}) () {
     // invoke: void setCheckable(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractButton12setCheckableEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton12setCheckableEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setCheckable", args)
   }
@@ -512,11 +540,15 @@ func (this *QAbstractButton) Isdown(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractButton6isDownEv
     // invoke: bool isDown()
-    var ret0 = C.C_ZNK15QAbstractButton6isDownEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractButton6isDownEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "isDown", args)
   }
@@ -538,9 +570,9 @@ func (this *QAbstractButton) Seticon(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton7setIconERK5QIcon
     // invoke: void setIcon(const class QIcon &)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractButton7setIconERK5QIcon(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton7setIconERK5QIcon(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setIcon", args)
   }
@@ -561,7 +593,7 @@ func (this *QAbstractButton) Freeqabstractbutton(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButtonD0Ev
     // invoke: void ~QAbstractButton()
-    C.C_ZN15QAbstractButtonD2Ev(this.qclsinst)
+    C.C_ZN15QAbstractButtonD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "~QAbstractButton", args)
   }
@@ -582,11 +614,15 @@ func (this *QAbstractButton) Iconsize(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractButton8iconSizeEv
     // invoke: QSize iconSize()
-    var ret0 = C.C_ZNK15QAbstractButton8iconSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractButton8iconSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "iconSize", args)
   }
@@ -610,7 +646,7 @@ func (this *QAbstractButton) Setautorepeat(args ...interface{}) () {
     // invoke: void setAutoRepeat(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractButton13setAutoRepeatEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton13setAutoRepeatEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoRepeat", args)
   }
@@ -631,11 +667,15 @@ func (this *QAbstractButton) Autoexclusive(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK15QAbstractButton13autoExclusiveEv
     // invoke: bool autoExclusive()
-    var ret0 = C.C_ZNK15QAbstractButton13autoExclusiveEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractButton13autoExclusiveEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoExclusive", args)
   }
@@ -656,7 +696,7 @@ func (this *QAbstractButton) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QAbstractButton10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QAbstractButton10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QAbstractButton10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "metaObject", args)
   }
@@ -678,9 +718,9 @@ func (this *QAbstractButton) Settext(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton7setTextERK7QString
     // invoke: void setText(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractButton7setTextERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton7setTextERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setText", args)
   }
@@ -702,9 +742,9 @@ func (this *QAbstractButton) Seticonsize(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton11setIconSizeERK5QSize
     // invoke: void setIconSize(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    var arg0 = args[0].(*QSize).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractButton11setIconSizeERK5QSize(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton11setIconSizeERK5QSize(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setIconSize", args)
   }
@@ -725,7 +765,7 @@ func (this *QAbstractButton) Toggle(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton6toggleEv
     // invoke: void toggle()
-    C.C_ZN15QAbstractButton6toggleEv(this.qclsinst)
+    C.C_ZN15QAbstractButton6toggleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "toggle", args)
   }
@@ -749,7 +789,7 @@ func (this *QAbstractButton) Setdown(args ...interface{}) () {
     // invoke: void setDown(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QAbstractButton7setDownEb(this.qclsinst, arg0)
+    C.C_ZN15QAbstractButton7setDownEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setDown", args)
   }
@@ -770,11 +810,15 @@ func (this *QAbstractButton) Autorepeatdelay(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK15QAbstractButton15autoRepeatDelayEv
     // invoke: int autoRepeatDelay()
-    var ret0 = C.C_ZNK15QAbstractButton15autoRepeatDelayEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractButton15autoRepeatDelayEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoRepeatDelay", args)
   }
@@ -795,11 +839,15 @@ func (this *QAbstractButton) Autorepeat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QAbstractButton10autoRepeatEv
     // invoke: bool autoRepeat()
-    var ret0 = C.C_ZNK15QAbstractButton10autoRepeatEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QAbstractButton10autoRepeatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoRepeat", args)
   }

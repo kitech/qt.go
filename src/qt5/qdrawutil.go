@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qdrawutil.h
 // dst-file: /src/widgets/qdrawutil.go
 //
@@ -43,7 +43,7 @@ func init() {
 // class sizeof(QTileRules)=8
 type QTileRules struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // <= body block end

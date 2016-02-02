@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qsavefile.h
 // dst-file: /src/core/qsavefile.go
 //
@@ -65,7 +65,7 @@ func init() {
 // class sizeof(QSaveFile)=1
 type QSaveFile struct {
   /*qbase*/ QFileDevice;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // metaObject()
@@ -81,7 +81,7 @@ func (this *QSaveFile) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSaveFile10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK9QSaveFile10metaObjectEv(this.qclsinst)
+    C.C_ZNK9QSaveFile10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "metaObject", args)
   }
@@ -105,7 +105,7 @@ func (this *QSaveFile) Setdirectwritefallback(args ...interface{}) () {
     // invoke: void setDirectWriteFallback(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QSaveFile22setDirectWriteFallbackEb(this.qclsinst, arg0)
+    C.C_ZN9QSaveFile22setDirectWriteFallbackEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSaveFile", "setDirectWriteFallback", args)
   }
@@ -126,7 +126,7 @@ func (this *QSaveFile) Freeqsavefile(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSaveFileD0Ev
     // invoke: void ~QSaveFile()
-    C.C_ZN9QSaveFileD2Ev(this.qclsinst)
+    C.C_ZN9QSaveFileD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "~QSaveFile", args)
   }
@@ -147,7 +147,7 @@ func (this *QSaveFile) Cancelwriting(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSaveFile13cancelWritingEv
     // invoke: void cancelWriting()
-    C.C_ZN9QSaveFile13cancelWritingEv(this.qclsinst)
+    C.C_ZN9QSaveFile13cancelWritingEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "cancelWriting", args)
   }
@@ -169,9 +169,9 @@ func (this *QSaveFile) Setfilename(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSaveFile11setFileNameERK7QString
     // invoke: void setFileName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QSaveFile11setFileNameERK7QString(this.qclsinst, arg0)
+    C.C_ZN9QSaveFile11setFileNameERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSaveFile", "setFileName", args)
   }
@@ -192,11 +192,15 @@ func (this *QSaveFile) Filename(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK9QSaveFile8fileNameEv
     // invoke: QString fileName()
-    var ret0 = C.C_ZNK9QSaveFile8fileNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QSaveFile8fileNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSaveFile", "fileName", args)
   }
@@ -225,37 +229,37 @@ func NewQSaveFile(args ...interface{}) *QSaveFile {
   case 0:
     // invoke: _ZN9QSaveFileC1ERK7QString
     // invoke: void QSaveFile(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QSaveFileC2ERK7QString(arg0)
-    return &QSaveFile{qclsinst:qthis}
+    return &QSaveFile{Qclsinst:qthis}
   case 1:
     // invoke: _ZN9QSaveFileC1ERK7QStringP7QObject
     // invoke: void QSaveFile(const class QString &, class QObject *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QSaveFileC2ERK7QStringP7QObject(arg0, arg1)
-    return &QSaveFile{qclsinst:qthis}
+    return &QSaveFile{Qclsinst:qthis}
   case 2:
     // invoke: _ZN9QSaveFileC1EP7QObject
     // invoke: void QSaveFile(class QObject *)
-    var arg0 = args[0].(QObject).qclsinst
+    var arg0 = args[0].(*QObject).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QSaveFileC2EP7QObject(arg0)
-    return &QSaveFile{qclsinst:qthis}
+    return &QSaveFile{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSaveFile", "QSaveFile", args)
   }
 
-  return nil // QSaveFile{qclsinst:qthis}
+  return nil // QSaveFile{Qclsinst:qthis}
 }
 
 // directWriteFallback()
@@ -271,11 +275,15 @@ func (this *QSaveFile) Directwritefallback(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK9QSaveFile19directWriteFallbackEv
     // invoke: bool directWriteFallback()
-    var ret0 = C.C_ZNK9QSaveFile19directWriteFallbackEv(this.qclsinst)
+    var ret0 = C.C_ZNK9QSaveFile19directWriteFallbackEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSaveFile", "directWriteFallback", args)
   }
@@ -296,11 +304,15 @@ func (this *QSaveFile) Commit(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN9QSaveFile6commitEv
     // invoke: bool commit()
-    var ret0 = C.C_ZN9QSaveFile6commitEv(this.qclsinst)
+    var ret0 = C.C_ZN9QSaveFile6commitEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QSaveFile", "commit", args)
   }

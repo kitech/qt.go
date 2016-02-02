@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qthreadstorage.h
 // dst-file: /src/core/qthreadstorage.go
 //
@@ -51,7 +51,7 @@ func init() {
 // class sizeof(QThreadStorageData)=4
 type QThreadStorageData struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // ~QThreadStorageData()
@@ -67,7 +67,7 @@ func (this *QThreadStorageData) Freeqthreadstoragedata(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QThreadStorageDataD0Ev
     // invoke: void ~QThreadStorageData()
-    C.C_ZN18QThreadStorageDataD2Ev(this.qclsinst)
+    C.C_ZN18QThreadStorageDataD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThreadStorageData", "~QThreadStorageData", args)
   }
@@ -91,7 +91,7 @@ func (this *QThreadStorageData) Set(args ...interface{}) () {
     // invoke: void ** set(void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
-    C.C_ZN18QThreadStorageData3setEPv(this.qclsinst, arg0)
+    C.C_ZN18QThreadStorageData3setEPv(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QThreadStorageData", "set", args)
   }
@@ -136,7 +136,7 @@ func (this *QThreadStorageData) Get(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QThreadStorageData3getEv
     // invoke: void ** get()
-    C.C_ZNK18QThreadStorageData3getEv(this.qclsinst)
+    C.C_ZNK18QThreadStorageData3getEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QThreadStorageData", "get", args)
   }

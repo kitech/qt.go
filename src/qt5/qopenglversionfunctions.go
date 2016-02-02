@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qopenglversionfunctions.h
 // dst-file: /src/gui/qopenglversionfunctions.go
 //
@@ -53,19 +53,19 @@ func init() {
 // class sizeof(QOpenGLVersionFunctionsBackend)=1
 type QOpenGLVersionFunctionsBackend struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QAbstractOpenGLFunctions)=16
 type QAbstractOpenGLFunctions struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLVersionStatus)=1
 type QOpenGLVersionStatus struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // QOpenGLVersionFunctionsBackend(class QOpenGLContext *)
@@ -82,17 +82,17 @@ func NewQOpenGLVersionFunctionsBackend(args ...interface{}) *QOpenGLVersionFunct
   case 0:
     // invoke: _ZN30QOpenGLVersionFunctionsBackendC1EP14QOpenGLContext
     // invoke: void QOpenGLVersionFunctionsBackend(class QOpenGLContext *)
-    var arg0 = args[0].(QOpenGLContext).qclsinst
+    var arg0 = args[0].(*QOpenGLContext).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN30QOpenGLVersionFunctionsBackendC2EP14QOpenGLContext(arg0)
-    return &QOpenGLVersionFunctionsBackend{qclsinst:qthis}
+    return &QOpenGLVersionFunctionsBackend{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOpenGLVersionFunctionsBackend", "QOpenGLVersionFunctionsBackend", args)
   }
 
-  return nil // QOpenGLVersionFunctionsBackend{qclsinst:qthis}
+  return nil // QOpenGLVersionFunctionsBackend{Qclsinst:qthis}
 }
 
 // d_func()
@@ -108,7 +108,7 @@ func (this *QAbstractOpenGLFunctions) D_Func(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QAbstractOpenGLFunctions6d_funcEv
     // invoke: QAbstractOpenGLFunctionsPrivate * d_func()
-    C.C_ZN24QAbstractOpenGLFunctions6d_funcEv(this.qclsinst)
+    C.C_ZN24QAbstractOpenGLFunctions6d_funcEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractOpenGLFunctions", "d_func", args)
   }
@@ -129,7 +129,7 @@ func (this *QAbstractOpenGLFunctions) Freeqabstractopenglfunctions(args ...inter
   case 0:
     // invoke: _ZN24QAbstractOpenGLFunctionsD0Ev
     // invoke: void ~QAbstractOpenGLFunctions()
-    C.C_ZN24QAbstractOpenGLFunctionsD2Ev(this.qclsinst)
+    C.C_ZN24QAbstractOpenGLFunctionsD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractOpenGLFunctions", "~QAbstractOpenGLFunctions", args)
   }
@@ -150,11 +150,15 @@ func (this *QAbstractOpenGLFunctions) Initializeopenglfunctions(args ...interfac
   case 0:
     // invoke: _ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv
     // invoke: bool initializeOpenGLFunctions()
-    var ret0 = C.C_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv(this.qclsinst)
+    var ret0 = C.C_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QAbstractOpenGLFunctions", "initializeOpenGLFunctions", args)
   }
@@ -178,12 +182,12 @@ func NewQOpenGLVersionStatus(args ...interface{}) *QOpenGLVersionStatus {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QOpenGLVersionStatusC2Ev()
-    return &QOpenGLVersionStatus{qclsinst:qthis}
+    return &QOpenGLVersionStatus{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOpenGLVersionStatus", "QOpenGLVersionStatus", args)
   }
 
-  return nil // QOpenGLVersionStatus{qclsinst:qthis}
+  return nil // QOpenGLVersionStatus{Qclsinst:qthis}
 }
 
 // <= body block end

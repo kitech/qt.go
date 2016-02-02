@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtCore/qmap.h
 // dst-file: /src/core/qmap.go
 //
@@ -71,13 +71,13 @@ func init() {
 // class sizeof(QMapDataBase)=1
 type QMapDataBase struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QMapNodeBase)=24
 type QMapNodeBase struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // freeData(struct QMapDataBase *)
@@ -94,7 +94,7 @@ func (this *QMapDataBase) Freedata_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapDataBase8freeDataEPS_
     // invoke: void freeData(struct QMapDataBase *)
-    var arg0 = args[0].(QMapDataBase).qclsinst
+    var arg0 = args[0].(*QMapDataBase).Qclsinst
     if false {fmt.Println(arg0)}
     C.C_ZN12QMapDataBase8freeDataEPS_(arg0)
   default:
@@ -121,19 +121,23 @@ func (this *QMapDataBase) Createnode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb
     // invoke: QMapNodeBase * createNode(int, int, struct QMapNodeBase *, _Bool)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QMapNodeBase).qclsinst
+    var arg2 = args[2].(*QMapNodeBase).Qclsinst
     if false {fmt.Println(arg2)}
     var arg3 = C.bool(args[3].(bool))
     if false {fmt.Println(arg3)}
-    var ret0 = C.C_ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret0 = C.C_ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(this.Qclsinst, arg0, arg1, arg2, arg3)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMapNodeBase{}) // "QMapNodeBase *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMapDataBase", "createNode", args)
   }
@@ -155,9 +159,9 @@ func (this *QMapDataBase) Rotateright(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapDataBase11rotateRightEP12QMapNodeBase
     // invoke: void rotateRight(struct QMapNodeBase *)
-    var arg0 = args[0].(QMapNodeBase).qclsinst
+    var arg0 = args[0].(*QMapNodeBase).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QMapDataBase11rotateRightEP12QMapNodeBase(this.qclsinst, arg0)
+    C.C_ZN12QMapDataBase11rotateRightEP12QMapNodeBase(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMapDataBase", "rotateRight", args)
   }
@@ -180,11 +184,11 @@ func (this *QMapDataBase) Freetree(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapDataBase8freeTreeEP12QMapNodeBasei
     // invoke: void freeTree(struct QMapNodeBase *, int)
-    var arg0 = args[0].(QMapNodeBase).qclsinst
+    var arg0 = args[0].(*QMapNodeBase).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN12QMapDataBase8freeTreeEP12QMapNodeBasei(this.qclsinst, arg0, arg1)
+    C.C_ZN12QMapDataBase8freeTreeEP12QMapNodeBasei(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMapDataBase", "freeTree", args)
   }
@@ -205,7 +209,7 @@ func (this *QMapDataBase) Recalcmostleftnode(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapDataBase18recalcMostLeftNodeEv
     // invoke: void recalcMostLeftNode()
-    C.C_ZN12QMapDataBase18recalcMostLeftNodeEv(this.qclsinst)
+    C.C_ZN12QMapDataBase18recalcMostLeftNodeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMapDataBase", "recalcMostLeftNode", args)
   }
@@ -230,7 +234,11 @@ func (this *QMapDataBase) Createdata_S(args ...interface{}) (ret interface{}) {
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMapDataBase{}) // "QMapDataBase *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMapDataBase", "createData", args)
   }
@@ -252,9 +260,9 @@ func (this *QMapDataBase) Rotateleft(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapDataBase10rotateLeftEP12QMapNodeBase
     // invoke: void rotateLeft(struct QMapNodeBase *)
-    var arg0 = args[0].(QMapNodeBase).qclsinst
+    var arg0 = args[0].(*QMapNodeBase).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QMapDataBase10rotateLeftEP12QMapNodeBase(this.qclsinst, arg0)
+    C.C_ZN12QMapDataBase10rotateLeftEP12QMapNodeBase(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMapDataBase", "rotateLeft", args)
   }
@@ -276,9 +284,9 @@ func (this *QMapDataBase) Rebalance(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapDataBase9rebalanceEP12QMapNodeBase
     // invoke: void rebalance(struct QMapNodeBase *)
-    var arg0 = args[0].(QMapNodeBase).qclsinst
+    var arg0 = args[0].(*QMapNodeBase).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QMapDataBase9rebalanceEP12QMapNodeBase(this.qclsinst, arg0)
+    C.C_ZN12QMapDataBase9rebalanceEP12QMapNodeBase(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMapDataBase", "rebalance", args)
   }
@@ -300,9 +308,9 @@ func (this *QMapDataBase) Freenodeandrebalance(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase
     // invoke: void freeNodeAndRebalance(struct QMapNodeBase *)
-    var arg0 = args[0].(QMapNodeBase).qclsinst
+    var arg0 = args[0].(*QMapNodeBase).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase(this.qclsinst, arg0)
+    C.C_ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMapDataBase", "freeNodeAndRebalance", args)
   }
@@ -323,11 +331,15 @@ func (this *QMapNodeBase) Previousnode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QMapNodeBase12previousNodeEv
     // invoke: QMapNodeBase * previousNode()
-    var ret0 = C.C_ZN12QMapNodeBase12previousNodeEv(this.qclsinst)
+    var ret0 = C.C_ZN12QMapNodeBase12previousNodeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMapNodeBase{}) // "QMapNodeBase *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMapNodeBase", "previousNode", args)
   }
@@ -348,11 +360,15 @@ func (this *QMapNodeBase) Parent(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK12QMapNodeBase6parentEv
     // invoke: QMapNodeBase * parent()
-    var ret0 = C.C_ZNK12QMapNodeBase6parentEv(this.qclsinst)
+    var ret0 = C.C_ZNK12QMapNodeBase6parentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMapNodeBase{}) // "QMapNodeBase *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMapNodeBase", "parent", args)
   }
@@ -373,7 +389,7 @@ func (this *QMapNodeBase) Color(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QMapNodeBase5colorEv
     // invoke: QMapNodeBase::Color color()
-    C.C_ZNK12QMapNodeBase5colorEv(this.qclsinst)
+    C.C_ZNK12QMapNodeBase5colorEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMapNodeBase", "color", args)
   }
@@ -395,9 +411,9 @@ func (this *QMapNodeBase) Setparent(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapNodeBase9setParentEPS_
     // invoke: void setParent(struct QMapNodeBase *)
-    var arg0 = args[0].(QMapNodeBase).qclsinst
+    var arg0 = args[0].(*QMapNodeBase).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QMapNodeBase9setParentEPS_(this.qclsinst, arg0)
+    C.C_ZN12QMapNodeBase9setParentEPS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMapNodeBase", "setParent", args)
   }
@@ -418,11 +434,15 @@ func (this *QMapNodeBase) Nextnode(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN12QMapNodeBase8nextNodeEv
     // invoke: QMapNodeBase * nextNode()
-    var ret0 = C.C_ZN12QMapNodeBase8nextNodeEv(this.qclsinst)
+    var ret0 = C.C_ZN12QMapNodeBase8nextNodeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMapNodeBase{}) // "QMapNodeBase *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMapNodeBase", "nextNode", args)
   }

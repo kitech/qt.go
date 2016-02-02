@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.go
 //
@@ -141,7 +141,7 @@ func init() {
 // class sizeof(QGraphicsWidget)=1
 type QGraphicsWidget struct {
   /*qbase*/ QGraphicsObject;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _layoutChanged QGraphicsWidget_layoutChanged_signal;
 //  _geometryChanged QGraphicsWidget_geometryChanged_signal;
 }
@@ -159,11 +159,15 @@ func (this *QGraphicsWidget) Boundingrect(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK15QGraphicsWidget12boundingRectEv
     // invoke: QRectF boundingRect()
-    var ret0 = C.C_ZNK15QGraphicsWidget12boundingRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget12boundingRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "boundingRect", args)
   }
@@ -185,9 +189,9 @@ func (this *QGraphicsWidget) Setlayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget9setLayoutEP15QGraphicsLayout
     // invoke: void setLayout(class QGraphicsLayout *)
-    var arg0 = args[0].(QGraphicsLayout).qclsinst
+    var arg0 = args[0].(*QGraphicsLayout).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsWidget9setLayoutEP15QGraphicsLayout(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget9setLayoutEP15QGraphicsLayout(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setLayout", args)
   }
@@ -208,7 +212,7 @@ func (this *QGraphicsWidget) Actions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget7actionsEv
     // invoke: QList<QAction *> actions()
-    C.C_ZNK15QGraphicsWidget7actionsEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget7actionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "actions", args)
   }
@@ -230,9 +234,9 @@ func (this *QGraphicsWidget) Setstyle(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget8setStyleEP6QStyle
     // invoke: void setStyle(class QStyle *)
-    var arg0 = args[0].(QStyle).qclsinst
+    var arg0 = args[0].(*QStyle).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsWidget8setStyleEP6QStyle(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget8setStyleEP6QStyle(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setStyle", args)
   }
@@ -253,11 +257,15 @@ func (this *QGraphicsWidget) Shape(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QGraphicsWidget5shapeEv
     // invoke: QPainterPath shape()
-    var ret0 = C.C_ZNK15QGraphicsWidget5shapeEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget5shapeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPainterPath{}) // "QPainterPath"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "shape", args)
   }
@@ -278,11 +286,15 @@ func (this *QGraphicsWidget) Windowframegeometry(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK15QGraphicsWidget19windowFrameGeometryEv
     // invoke: QRectF windowFrameGeometry()
-    var ret0 = C.C_ZNK15QGraphicsWidget19windowFrameGeometryEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget19windowFrameGeometryEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowFrameGeometry", args)
   }
@@ -303,7 +315,7 @@ func (this *QGraphicsWidget) Focuswidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget11focusWidgetEv
     // invoke: QGraphicsWidget * focusWidget()
-    C.C_ZNK15QGraphicsWidget11focusWidgetEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget11focusWidgetEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "focusWidget", args)
   }
@@ -324,11 +336,15 @@ func (this *QGraphicsWidget) Font(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4fontEv
     // invoke: QFont font()
-    var ret0 = C.C_ZNK15QGraphicsWidget4fontEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget4fontEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFont{}) // "QFont"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "font", args)
   }
@@ -349,11 +365,15 @@ func (this *QGraphicsWidget) Style(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QGraphicsWidget5styleEv
     // invoke: QStyle * style()
-    var ret0 = C.C_ZNK15QGraphicsWidget5styleEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget5styleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QStyle{}) // "QStyle *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "style", args)
   }
@@ -374,7 +394,7 @@ func (this *QGraphicsWidget) Layout(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget6layoutEv
     // invoke: QGraphicsLayout * layout()
-    C.C_ZNK15QGraphicsWidget6layoutEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget6layoutEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "layout", args)
   }
@@ -395,7 +415,7 @@ func (this *QGraphicsWidget) Unsetlayoutdirection(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget20unsetLayoutDirectionEv
     // invoke: void unsetLayoutDirection()
-    C.C_ZN15QGraphicsWidget20unsetLayoutDirectionEv(this.qclsinst)
+    C.C_ZN15QGraphicsWidget20unsetLayoutDirectionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "unsetLayoutDirection", args)
   }
@@ -418,11 +438,11 @@ func (this *QGraphicsWidget) Insertaction(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget12insertActionEP7QActionS1_
     // invoke: void insertAction(class QAction *, class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QAction).qclsinst
+    var arg1 = args[1].(*QAction).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN15QGraphicsWidget12insertActionEP7QActionS1_(this.qclsinst, arg0, arg1)
+    C.C_ZN15QGraphicsWidget12insertActionEP7QActionS1_(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "insertAction", args)
   }
@@ -443,7 +463,7 @@ func (this *QGraphicsWidget) Unsetwindowframemargins(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget23unsetWindowFrameMarginsEv
     // invoke: void unsetWindowFrameMargins()
-    C.C_ZN15QGraphicsWidget23unsetWindowFrameMarginsEv(this.qclsinst)
+    C.C_ZN15QGraphicsWidget23unsetWindowFrameMarginsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "unsetWindowFrameMargins", args)
   }
@@ -466,11 +486,11 @@ func (this *QGraphicsWidget) Setshortcutautorepeat(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget21setShortcutAutoRepeatEib
     // invoke: void setShortcutAutoRepeat(int, _Bool)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C.C_ZN15QGraphicsWidget21setShortcutAutoRepeatEib(this.qclsinst, arg0, arg1)
+    C.C_ZN15QGraphicsWidget21setShortcutAutoRepeatEib(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setShortcutAutoRepeat", args)
   }
@@ -498,21 +518,21 @@ func (this *QGraphicsWidget) Setgeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget11setGeometryERK6QRectF
     // invoke: void setGeometry(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
+    var arg0 = args[0].(*QRectF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsWidget11setGeometryERK6QRectF(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget11setGeometryERK6QRectF(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN15QGraphicsWidget11setGeometryEdddd
     // invoke: void setGeometry(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    C.C_ZN15QGraphicsWidget11setGeometryEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN15QGraphicsWidget11setGeometryEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setGeometry", args)
   }
@@ -533,7 +553,7 @@ func (this *QGraphicsWidget) Windowtype(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget10windowTypeEv
     // invoke: Qt::WindowType windowType()
-    C.C_ZNK15QGraphicsWidget10windowTypeEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget10windowTypeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowType", args)
   }
@@ -555,9 +575,9 @@ func (this *QGraphicsWidget) Removeaction(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget12removeActionEP7QAction
     // invoke: void removeAction(class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsWidget12removeActionEP7QAction(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget12removeActionEP7QAction(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "removeAction", args)
   }
@@ -578,7 +598,7 @@ func (this *QGraphicsWidget) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK15QGraphicsWidget10metaObjectEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "metaObject", args)
   }
@@ -599,7 +619,7 @@ func (this *QGraphicsWidget) Focuspolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget11focusPolicyEv
     // invoke: Qt::FocusPolicy focusPolicy()
-    C.C_ZNK15QGraphicsWidget11focusPolicyEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget11focusPolicyEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "focusPolicy", args)
   }
@@ -623,13 +643,13 @@ func (this *QGraphicsWidget) Paintwindowframe(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget16paintWindowFrameEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
     // invoke: void paintWindowFrame(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-    var arg0 = args[0].(QPainter).qclsinst
+    var arg0 = args[0].(*QPainter).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
+    var arg1 = args[1].(*QStyleOptionGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN15QGraphicsWidget16paintWindowFrameEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN15QGraphicsWidget16paintWindowFrameEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "paintWindowFrame", args)
   }
@@ -650,11 +670,15 @@ func (this *QGraphicsWidget) Close(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN15QGraphicsWidget5closeEv
     // invoke: bool close()
-    var ret0 = C.C_ZN15QGraphicsWidget5closeEv(this.qclsinst)
+    var ret0 = C.C_ZN15QGraphicsWidget5closeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "close", args)
   }
@@ -675,11 +699,15 @@ func (this *QGraphicsWidget) Palette(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QGraphicsWidget7paletteEv
     // invoke: QPalette palette()
-    var ret0 = C.C_ZNK15QGraphicsWidget7paletteEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget7paletteEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPalette{}) // "QPalette"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "palette", args)
   }
@@ -700,11 +728,15 @@ func (this *QGraphicsWidget) Windowtitle(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK15QGraphicsWidget11windowTitleEv
     // invoke: QString windowTitle()
-    var ret0 = C.C_ZNK15QGraphicsWidget11windowTitleEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget11windowTitleEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowTitle", args)
   }
@@ -725,7 +757,7 @@ func (this *QGraphicsWidget) Windowflags(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget11windowFlagsEv
     // invoke: Qt::WindowFlags windowFlags()
-    C.C_ZNK15QGraphicsWidget11windowFlagsEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget11windowFlagsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowFlags", args)
   }
@@ -750,15 +782,15 @@ func (this *QGraphicsWidget) Setcontentsmargins(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget18setContentsMarginsEdddd
     // invoke: void setContentsMargins(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    C.C_ZN15QGraphicsWidget18setContentsMarginsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN15QGraphicsWidget18setContentsMarginsEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setContentsMargins", args)
   }
@@ -779,7 +811,7 @@ func (this *QGraphicsWidget) Adjustsize(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget10adjustSizeEv
     // invoke: void adjustSize()
-    C.C_ZN15QGraphicsWidget10adjustSizeEv(this.qclsinst)
+    C.C_ZN15QGraphicsWidget10adjustSizeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "adjustSize", args)
   }
@@ -800,11 +832,15 @@ func (this *QGraphicsWidget) Windowframerect(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK15QGraphicsWidget15windowFrameRectEv
     // invoke: QRectF windowFrameRect()
-    var ret0 = C.C_ZNK15QGraphicsWidget15windowFrameRectEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget15windowFrameRectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowFrameRect", args)
   }
@@ -837,7 +873,7 @@ func (this *QGraphicsWidget) Getwindowframemargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (unsafe.Pointer)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C.C_ZNK15QGraphicsWidget21getWindowFrameMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK15QGraphicsWidget21getWindowFrameMarginsEPdS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "getWindowFrameMargins", args)
   }
@@ -859,9 +895,9 @@ func (this *QGraphicsWidget) Addaction(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget9addActionEP7QAction
     // invoke: void addAction(class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsWidget9addActionEP7QAction(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget9addActionEP7QAction(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "addAction", args)
   }
@@ -885,7 +921,7 @@ func (this *QGraphicsWidget) Setautofillbackground(args ...interface{}) () {
     // invoke: void setAutoFillBackground(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsWidget21setAutoFillBackgroundEb(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget21setAutoFillBackgroundEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setAutoFillBackground", args)
   }
@@ -907,9 +943,9 @@ func (this *QGraphicsWidget) Setpalette(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget10setPaletteERK8QPalette
     // invoke: void setPalette(const class QPalette &)
-    var arg0 = args[0].(QPalette).qclsinst
+    var arg0 = args[0].(*QPalette).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsWidget10setPaletteERK8QPalette(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget10setPaletteERK8QPalette(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setPalette", args)
   }
@@ -930,7 +966,7 @@ func (this *QGraphicsWidget) Freeqgraphicswidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidgetD0Ev
     // invoke: void ~QGraphicsWidget()
-    C.C_ZN15QGraphicsWidgetD2Ev(this.qclsinst)
+    C.C_ZN15QGraphicsWidgetD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "~QGraphicsWidget", args)
   }
@@ -951,11 +987,15 @@ func (this *QGraphicsWidget) Isactivewindow(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK15QGraphicsWidget14isActiveWindowEv
     // invoke: bool isActiveWindow()
-    var ret0 = C.C_ZNK15QGraphicsWidget14isActiveWindowEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget14isActiveWindowEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "isActiveWindow", args)
   }
@@ -976,11 +1016,15 @@ func (this *QGraphicsWidget) Size(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4sizeEv
     // invoke: QSizeF size()
-    var ret0 = C.C_ZNK15QGraphicsWidget4sizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget4sizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSizeF{}) // "QSizeF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "size", args)
   }
@@ -1001,11 +1045,15 @@ func (this *QGraphicsWidget) Autofillbackground(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK15QGraphicsWidget18autoFillBackgroundEv
     // invoke: bool autoFillBackground()
-    var ret0 = C.C_ZNK15QGraphicsWidget18autoFillBackgroundEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget18autoFillBackgroundEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "autoFillBackground", args)
   }
@@ -1026,7 +1074,7 @@ func (this *QGraphicsWidget) Layoutdirection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget15layoutDirectionEv
     // invoke: Qt::LayoutDirection layoutDirection()
-    C.C_ZNK15QGraphicsWidget15layoutDirectionEv(this.qclsinst)
+    C.C_ZNK15QGraphicsWidget15layoutDirectionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "layoutDirection", args)
   }
@@ -1049,11 +1097,11 @@ func (this *QGraphicsWidget) Setshortcutenabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget18setShortcutEnabledEib
     // invoke: void setShortcutEnabled(int, _Bool)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C.C_ZN15QGraphicsWidget18setShortcutEnabledEib(this.qclsinst, arg0, arg1)
+    C.C_ZN15QGraphicsWidget18setShortcutEnabledEib(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setShortcutEnabled", args)
   }
@@ -1077,13 +1125,13 @@ func (this *QGraphicsWidget) Paint(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
     // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-    var arg0 = args[0].(QPainter).qclsinst
+    var arg0 = args[0].(*QPainter).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
+    var arg1 = args[1].(*QStyleOptionGraphicsItem).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QWidget).qclsinst
+    var arg2 = args[2].(*QWidget).Qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN15QGraphicsWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
+    C.C_ZN15QGraphicsWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.Qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "paint", args)
   }
@@ -1104,11 +1152,15 @@ func (this *QGraphicsWidget) Rect(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4rectEv
     // invoke: QRectF rect()
-    var ret0 = C.C_ZNK15QGraphicsWidget4rectEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget4rectEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRectF{}) // "QRectF"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "rect", args)
   }
@@ -1129,11 +1181,15 @@ func (this *QGraphicsWidget) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK15QGraphicsWidget4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QGraphicsWidget4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "type", args)
   }
@@ -1159,17 +1215,17 @@ func (this *QGraphicsWidget) Resize(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget6resizeEdd
     // invoke: void resize(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN15QGraphicsWidget6resizeEdd(this.qclsinst, arg0, arg1)
+    C.C_ZN15QGraphicsWidget6resizeEdd(this.Qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN15QGraphicsWidget6resizeERK6QSizeF
     // invoke: void resize(const class QSizeF &)
-    var arg0 = args[0].(QSizeF).qclsinst
+    var arg0 = args[0].(*QSizeF).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsWidget6resizeERK6QSizeF(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget6resizeERK6QSizeF(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "resize", args)
   }
@@ -1191,9 +1247,9 @@ func (this *QGraphicsWidget) Releaseshortcut(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget15releaseShortcutEi
     // invoke: void releaseShortcut(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsWidget15releaseShortcutEi(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget15releaseShortcutEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "releaseShortcut", args)
   }
@@ -1216,9 +1272,9 @@ func (this *QGraphicsWidget) Settaborder_S(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget11setTabOrderEPS_S0_
     // invoke: void setTabOrder(class QGraphicsWidget *, class QGraphicsWidget *)
-    var arg0 = args[0].(QGraphicsWidget).qclsinst
+    var arg0 = args[0].(*QGraphicsWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QGraphicsWidget).qclsinst
+    var arg1 = args[1].(*QGraphicsWidget).Qclsinst
     if false {fmt.Println(arg1)}
     C.C_ZN15QGraphicsWidget11setTabOrderEPS_S0_(arg0, arg1)
   default:
@@ -1242,9 +1298,9 @@ func (this *QGraphicsWidget) Setwindowtitle(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget14setWindowTitleERK7QString
     // invoke: void setWindowTitle(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsWidget14setWindowTitleERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget14setWindowTitleERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setWindowTitle", args)
   }
@@ -1269,15 +1325,15 @@ func (this *QGraphicsWidget) Setwindowframemargins(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget21setWindowFrameMarginsEdddd
     // invoke: void setWindowFrameMargins(qreal, qreal, qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var arg2 = C.double(args[2].(float64))
+    var arg2 = C.double(qtrt.PrimConv(args[2], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg2)}
-    var arg3 = C.double(args[3].(float64))
+    var arg3 = C.double(qtrt.PrimConv(args[3], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg3)}
-    C.C_ZN15QGraphicsWidget21setWindowFrameMarginsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZN15QGraphicsWidget21setWindowFrameMarginsEdddd(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setWindowFrameMargins", args)
   }
@@ -1310,7 +1366,7 @@ func (this *QGraphicsWidget) Getcontentsmargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (unsafe.Pointer)(args[3].(*float64))
     if false {fmt.Println(arg3)}
-    C.C_ZNK15QGraphicsWidget18getContentsMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
+    C.C_ZNK15QGraphicsWidget18getContentsMarginsEPdS0_S0_S0_(this.Qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "getContentsMargins", args)
   }
@@ -1332,9 +1388,9 @@ func (this *QGraphicsWidget) Setfont(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget7setFontERK5QFont
     // invoke: void setFont(const class QFont &)
-    var arg0 = args[0].(QFont).qclsinst
+    var arg0 = args[0].(*QFont).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QGraphicsWidget7setFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN15QGraphicsWidget7setFontERK5QFont(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setFont", args)
   }

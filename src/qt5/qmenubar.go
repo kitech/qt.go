@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qmenubar.h
 // dst-file: /src/widgets/qmenubar.go
 //
@@ -93,7 +93,7 @@ func init() {
 // class sizeof(QMenuBar)=1
 type QMenuBar struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _hovered QMenuBar_hovered_signal;
 //  _triggered QMenuBar_triggered_signal;
 }
@@ -117,29 +117,37 @@ func (this *QMenuBar) Addaction(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QMenuBar9addActionERK7QString
     // invoke: QAction * addAction(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QMenuBar9addActionERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN8QMenuBar9addActionERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc
     // invoke: QAction * addAction(const class QString &, const class QObject *, const char *)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
+    var arg1 = args[1].(*QObject).Qclsinst
     if false {fmt.Println(arg1)}
     argif2, free2 := qtrt.HandyConvert2c(args[2], vtys[1][2])
     var arg2 = argif2.(unsafe.Pointer)
     if false {fmt.Println(argif2, arg2)}
     if free2 {defer C.free(arg2)}
-    var ret0 = C.C_ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "addAction", args)
   }
@@ -160,11 +168,15 @@ func (this *QMenuBar) Isdefaultup(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMenuBar11isDefaultUpEv
     // invoke: bool isDefaultUp()
-    var ret0 = C.C_ZNK8QMenuBar11isDefaultUpEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMenuBar11isDefaultUpEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "isDefaultUp", args)
   }
@@ -193,35 +205,47 @@ func (this *QMenuBar) Addmenu(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QMenuBar7addMenuERK5QIconRK7QString
     // invoke: QMenu * addMenu(const class QIcon &, const class QString &)
-    var arg0 = args[0].(QIcon).qclsinst
+    var arg0 = args[0].(*QIcon).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
+    var arg1 = args[1].(*QString).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN8QMenuBar7addMenuERK5QIconRK7QString(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN8QMenuBar7addMenuERK5QIconRK7QString(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZN8QMenuBar7addMenuERK7QString
     // invoke: QMenu * addMenu(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QMenuBar7addMenuERK7QString(this.qclsinst, arg0)
+    var ret0 = C.C_ZN8QMenuBar7addMenuERK7QString(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QMenu{}) // "QMenu *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 2:
     // invoke: _ZN8QMenuBar7addMenuEP5QMenu
     // invoke: QAction * addMenu(class QMenu *)
-    var arg0 = args[0].(QMenu).qclsinst
+    var arg0 = args[0].(*QMenu).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QMenuBar7addMenuEP5QMenu(this.qclsinst, arg0)
+    var ret0 = C.C_ZN8QMenuBar7addMenuEP5QMenu(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "addMenu", args)
   }
@@ -242,7 +266,7 @@ func (this *QMenuBar) Platformmenubar(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMenuBar15platformMenuBarEv
     // invoke: QPlatformMenuBar * platformMenuBar()
-    C.C_ZN8QMenuBar15platformMenuBarEv(this.qclsinst)
+    C.C_ZN8QMenuBar15platformMenuBarEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "platformMenuBar", args)
   }
@@ -264,13 +288,17 @@ func (this *QMenuBar) Actionat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMenuBar8actionAtERK6QPoint
     // invoke: QAction * actionAt(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
+    var arg0 = args[0].(*QPoint).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QMenuBar8actionAtERK6QPoint(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QMenuBar8actionAtERK6QPoint(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "actionAt", args)
   }
@@ -292,13 +320,17 @@ func (this *QMenuBar) Actiongeometry(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMenuBar14actionGeometryEP7QAction
     // invoke: QRect actionGeometry(class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QMenuBar14actionGeometryEP7QAction(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QMenuBar14actionGeometryEP7QAction(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QRect{}) // "QRect"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "actionGeometry", args)
   }
@@ -319,11 +351,15 @@ func (this *QMenuBar) Activeaction(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMenuBar12activeActionEv
     // invoke: QAction * activeAction()
-    var ret0 = C.C_ZNK8QMenuBar12activeActionEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMenuBar12activeActionEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "activeAction", args)
   }
@@ -344,11 +380,15 @@ func (this *QMenuBar) Addseparator(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QMenuBar12addSeparatorEv
     // invoke: QAction * addSeparator()
-    var ret0 = C.C_ZN8QMenuBar12addSeparatorEv(this.qclsinst)
+    var ret0 = C.C_ZN8QMenuBar12addSeparatorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "addSeparator", args)
   }
@@ -370,9 +410,9 @@ func (this *QMenuBar) Setactiveaction(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMenuBar15setActiveActionEP7QAction
     // invoke: void setActiveAction(class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QMenuBar15setActiveActionEP7QAction(this.qclsinst, arg0)
+    C.C_ZN8QMenuBar15setActiveActionEP7QAction(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "setActiveAction", args)
   }
@@ -393,11 +433,15 @@ func (this *QMenuBar) Isnativemenubar(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMenuBar15isNativeMenuBarEv
     // invoke: bool isNativeMenuBar()
-    var ret0 = C.C_ZNK8QMenuBar15isNativeMenuBarEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMenuBar15isNativeMenuBarEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "isNativeMenuBar", args)
   }
@@ -421,7 +465,7 @@ func (this *QMenuBar) Setnativemenubar(args ...interface{}) () {
     // invoke: void setNativeMenuBar(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QMenuBar16setNativeMenuBarEb(this.qclsinst, arg0)
+    C.C_ZN8QMenuBar16setNativeMenuBarEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "setNativeMenuBar", args)
   }
@@ -442,7 +486,7 @@ func (this *QMenuBar) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMenuBar10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK8QMenuBar10metaObjectEv(this.qclsinst)
+    C.C_ZNK8QMenuBar10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "metaObject", args)
   }
@@ -464,17 +508,17 @@ func NewQMenuBar(args ...interface{}) *QMenuBar {
   case 0:
     // invoke: _ZN8QMenuBarC1EP7QWidget
     // invoke: void QMenuBar(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QMenuBarC2EP7QWidget(arg0)
-    return &QMenuBar{qclsinst:qthis}
+    return &QMenuBar{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMenuBar", "QMenuBar", args)
   }
 
-  return nil // QMenuBar{qclsinst:qthis}
+  return nil // QMenuBar{Qclsinst:qthis}
 }
 
 // sizeHint()
@@ -490,11 +534,15 @@ func (this *QMenuBar) Sizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMenuBar8sizeHintEv
     // invoke: QSize sizeHint()
-    var ret0 = C.C_ZNK8QMenuBar8sizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMenuBar8sizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "sizeHint", args)
   }
@@ -515,11 +563,15 @@ func (this *QMenuBar) Minimumsizehint(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMenuBar15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    var ret0 = C.C_ZNK8QMenuBar15minimumSizeHintEv(this.qclsinst)
+    var ret0 = C.C_ZNK8QMenuBar15minimumSizeHintEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QSize{}) // "QSize"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "minimumSizeHint", args)
   }
@@ -540,7 +592,7 @@ func (this *QMenuBar) Clear(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMenuBar5clearEv
     // invoke: void clear()
-    C.C_ZN8QMenuBar5clearEv(this.qclsinst)
+    C.C_ZN8QMenuBar5clearEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "clear", args)
   }
@@ -562,13 +614,17 @@ func (this *QMenuBar) Insertseparator(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QMenuBar15insertSeparatorEP7QAction
     // invoke: QAction * insertSeparator(class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZN8QMenuBar15insertSeparatorEP7QAction(this.qclsinst, arg0)
+    var ret0 = C.C_ZN8QMenuBar15insertSeparatorEP7QAction(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "insertSeparator", args)
   }
@@ -590,13 +646,17 @@ func (this *QMenuBar) Heightforwidth(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK8QMenuBar14heightForWidthEi
     // invoke: int heightForWidth(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK8QMenuBar14heightForWidthEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK8QMenuBar14heightForWidthEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "heightForWidth", args)
   }
@@ -620,7 +680,7 @@ func (this *QMenuBar) Setdefaultup(args ...interface{}) () {
     // invoke: void setDefaultUp(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QMenuBar12setDefaultUpEb(this.qclsinst, arg0)
+    C.C_ZN8QMenuBar12setDefaultUpEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "setDefaultUp", args)
   }
@@ -641,7 +701,7 @@ func (this *QMenuBar) Freeqmenubar(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMenuBarD0Ev
     // invoke: void ~QMenuBar()
-    C.C_ZN8QMenuBarD2Ev(this.qclsinst)
+    C.C_ZN8QMenuBarD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "~QMenuBar", args)
   }
@@ -665,7 +725,7 @@ func (this *QMenuBar) Setvisible(args ...interface{}) () {
     // invoke: void setVisible(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QMenuBar10setVisibleEb(this.qclsinst, arg0)
+    C.C_ZN8QMenuBar10setVisibleEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "setVisible", args)
   }
@@ -688,15 +748,19 @@ func (this *QMenuBar) Insertmenu(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN8QMenuBar10insertMenuEP7QActionP5QMenu
     // invoke: QAction * insertMenu(class QAction *, class QMenu *)
-    var arg0 = args[0].(QAction).qclsinst
+    var arg0 = args[0].(*QAction).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QMenu).qclsinst
+    var arg1 = args[1].(*QMenu).Qclsinst
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZN8QMenuBar10insertMenuEP7QActionP5QMenu(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZN8QMenuBar10insertMenuEP7QActionP5QMenu(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QAction{}) // "QAction *"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "insertMenu", args)
   }

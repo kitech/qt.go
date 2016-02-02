@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.go
 //
@@ -69,7 +69,7 @@ func init() {
 // class sizeof(QStatusBar)=1
 type QStatusBar struct {
   /*qbase*/ QWidget;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 //  _messageChanged QStatusBar_messageChanged_signal;
 }
 
@@ -86,7 +86,7 @@ func (this *QStatusBar) Freeqstatusbar(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QStatusBarD0Ev
     // invoke: void ~QStatusBar()
-    C.C_ZN10QStatusBarD2Ev(this.qclsinst)
+    C.C_ZN10QStatusBarD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStatusBar", "~QStatusBar", args)
   }
@@ -108,9 +108,9 @@ func (this *QStatusBar) Removewidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QStatusBar12removeWidgetEP7QWidget
     // invoke: void removeWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QStatusBar12removeWidgetEP7QWidget(this.qclsinst, arg0)
+    C.C_ZN10QStatusBar12removeWidgetEP7QWidget(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStatusBar", "removeWidget", args)
   }
@@ -132,17 +132,17 @@ func NewQStatusBar(args ...interface{}) *QStatusBar {
   case 0:
     // invoke: _ZN10QStatusBarC1EP7QWidget
     // invoke: void QStatusBar(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QStatusBarC2EP7QWidget(arg0)
-    return &QStatusBar{qclsinst:qthis}
+    return &QStatusBar{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStatusBar", "QStatusBar", args)
   }
 
-  return nil // QStatusBar{qclsinst:qthis}
+  return nil // QStatusBar{Qclsinst:qthis}
 }
 
 // clearMessage()
@@ -158,7 +158,7 @@ func (this *QStatusBar) Clearmessage(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QStatusBar12clearMessageEv
     // invoke: void clearMessage()
-    C.C_ZN10QStatusBar12clearMessageEv(this.qclsinst)
+    C.C_ZN10QStatusBar12clearMessageEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStatusBar", "clearMessage", args)
   }
@@ -182,17 +182,21 @@ func (this *QStatusBar) Insertwidget(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZN10QStatusBar12insertWidgetEiP7QWidgeti
     // invoke: int insertWidget(int, class QWidget *, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN10QStatusBar12insertWidgetEiP7QWidgeti(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN10QStatusBar12insertWidgetEiP7QWidgeti(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStatusBar", "insertWidget", args)
   }
@@ -215,11 +219,11 @@ func (this *QStatusBar) Addpermanentwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QStatusBar18addPermanentWidgetEP7QWidgeti
     // invoke: void addPermanentWidget(class QWidget *, int)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti(this.qclsinst, arg0, arg1)
+    C.C_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStatusBar", "addPermanentWidget", args)
   }
@@ -240,11 +244,15 @@ func (this *QStatusBar) Currentmessage(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK10QStatusBar14currentMessageEv
     // invoke: QString currentMessage()
-    var ret0 = C.C_ZNK10QStatusBar14currentMessageEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QStatusBar14currentMessageEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStatusBar", "currentMessage", args)
   }
@@ -267,11 +275,11 @@ func (this *QStatusBar) Addwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QStatusBar9addWidgetEP7QWidgeti
     // invoke: void addWidget(class QWidget *, int)
-    var arg0 = args[0].(QWidget).qclsinst
+    var arg0 = args[0].(*QWidget).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QStatusBar9addWidgetEP7QWidgeti(this.qclsinst, arg0, arg1)
+    C.C_ZN10QStatusBar9addWidgetEP7QWidgeti(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStatusBar", "addWidget", args)
   }
@@ -295,7 +303,7 @@ func (this *QStatusBar) Setsizegripenabled(args ...interface{}) () {
     // invoke: void setSizeGripEnabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QStatusBar18setSizeGripEnabledEb(this.qclsinst, arg0)
+    C.C_ZN10QStatusBar18setSizeGripEnabledEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStatusBar", "setSizeGripEnabled", args)
   }
@@ -319,17 +327,21 @@ func (this *QStatusBar) Insertpermanentwidget(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti
     // invoke: int insertPermanentWidget(int, class QWidget *, int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QWidget).qclsinst
+    var arg1 = args[1].(*QWidget).Qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
+    var arg2 = C.int32_t(qtrt.PrimConv(args[2], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg2)}
-    var ret0 = C.C_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(this.qclsinst, arg0, arg1, arg2)
+    var ret0 = C.C_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(this.Qclsinst, arg0, arg1, arg2)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStatusBar", "insertPermanentWidget", args)
   }
@@ -350,7 +362,7 @@ func (this *QStatusBar) Metaobject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QStatusBar10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C.C_ZNK10QStatusBar10metaObjectEv(this.qclsinst)
+    C.C_ZNK10QStatusBar10metaObjectEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QStatusBar", "metaObject", args)
   }
@@ -371,11 +383,15 @@ func (this *QStatusBar) Issizegripenabled(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK10QStatusBar17isSizeGripEnabledEv
     // invoke: bool isSizeGripEnabled()
-    var ret0 = C.C_ZNK10QStatusBar17isSizeGripEnabledEv(this.qclsinst)
+    var ret0 = C.C_ZNK10QStatusBar17isSizeGripEnabledEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QStatusBar", "isSizeGripEnabled", args)
   }
@@ -398,11 +414,11 @@ func (this *QStatusBar) Showmessage(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QStatusBar11showMessageERK7QStringi
     // invoke: void showMessage(const class QString &, int)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QStatusBar11showMessageERK7QStringi(this.qclsinst, arg0, arg1)
+    C.C_ZN10QStatusBar11showMessageERK7QStringi(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStatusBar", "showMessage", args)
   }

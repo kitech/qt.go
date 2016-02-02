@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 23:40:52 2016
+// created: Mon Feb  1 16:24:50 2016
 // src-file: /QtGui/qtextformat.h
 // dst-file: /src/gui/qtextformat.go
 //
@@ -437,55 +437,55 @@ func init() {
 // class sizeof(QTextLength)=16
 type QTextLength struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextImageFormat)=1
 type QTextImageFormat struct {
   /*qbase*/ QTextCharFormat;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextFormat)=1
 type QTextFormat struct {
   // qbase: None;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextBlockFormat)=1
 type QTextBlockFormat struct {
   /*qbase*/ QTextFormat;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextCharFormat)=1
 type QTextCharFormat struct {
   /*qbase*/ QTextFormat;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextTableFormat)=1
 type QTextTableFormat struct {
   /*qbase*/ QTextFrameFormat;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextTableCellFormat)=1
 type QTextTableCellFormat struct {
   /*qbase*/ QTextCharFormat;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextListFormat)=1
 type QTextListFormat struct {
   /*qbase*/ QTextFormat;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextFrameFormat)=1
 type QTextFrameFormat struct {
   /*qbase*/ QTextFormat;
-  qclsinst unsafe.Pointer /* *C.void */;
+  Qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // rawValue()
@@ -501,11 +501,15 @@ func (this *QTextLength) Rawvalue(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextLength8rawValueEv
     // invoke: qreal rawValue()
-    var ret0 = C.C_ZNK11QTextLength8rawValueEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextLength8rawValueEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextLength", "rawValue", args)
   }
@@ -527,13 +531,17 @@ func (this *QTextLength) Value(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextLength5valueEd
     // invoke: qreal value(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QTextLength5valueEd(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QTextLength5valueEd(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextLength", "value", args)
   }
@@ -557,12 +565,12 @@ func NewQTextLength(args ...interface{}) *QTextLength {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextLengthC2Ev()
-    return &QTextLength{qclsinst:qthis}
+    return &QTextLength{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextLength", "QTextLength", args)
   }
 
-  return nil // QTextLength{qclsinst:qthis}
+  return nil // QTextLength{Qclsinst:qthis}
 }
 
 // type()
@@ -578,7 +586,7 @@ func (this *QTextLength) Type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLength4typeEv
     // invoke: QTextLength::Type type()
-    C.C_ZNK11QTextLength4typeEv(this.qclsinst)
+    C.C_ZNK11QTextLength4typeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextLength", "type", args)
   }
@@ -600,9 +608,9 @@ func (this *QTextImageFormat) Setheight(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextImageFormat9setHeightEd
     // invoke: void setHeight(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextImageFormat9setHeightEd(this.qclsinst, arg0)
+    C.C_ZN16QTextImageFormat9setHeightEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextImageFormat", "setHeight", args)
   }
@@ -623,11 +631,15 @@ func (this *QTextImageFormat) Name(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextImageFormat4nameEv
     // invoke: QString name()
-    var ret0 = C.C_ZNK16QTextImageFormat4nameEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextImageFormat4nameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextImageFormat", "name", args)
   }
@@ -649,9 +661,9 @@ func (this *QTextImageFormat) Setname(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextImageFormat7setNameERK7QString
     // invoke: void setName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextImageFormat7setNameERK7QString(this.qclsinst, arg0)
+    C.C_ZN16QTextImageFormat7setNameERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextImageFormat", "setName", args)
   }
@@ -672,11 +684,15 @@ func (this *QTextImageFormat) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextImageFormat7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK16QTextImageFormat7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextImageFormat7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextImageFormat", "isValid", args)
   }
@@ -697,11 +713,15 @@ func (this *QTextImageFormat) Height(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextImageFormat6heightEv
     // invoke: qreal height()
-    var ret0 = C.C_ZNK16QTextImageFormat6heightEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextImageFormat6heightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextImageFormat", "height", args)
   }
@@ -722,11 +742,15 @@ func (this *QTextImageFormat) Width(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextImageFormat5widthEv
     // invoke: qreal width()
-    var ret0 = C.C_ZNK16QTextImageFormat5widthEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextImageFormat5widthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextImageFormat", "width", args)
   }
@@ -750,12 +774,12 @@ func NewQTextImageFormat(args ...interface{}) *QTextImageFormat {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QTextImageFormatC2Ev()
-    return &QTextImageFormat{qclsinst:qthis}
+    return &QTextImageFormat{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextImageFormat", "QTextImageFormat", args)
   }
 
-  return nil // QTextImageFormat{qclsinst:qthis}
+  return nil // QTextImageFormat{Qclsinst:qthis}
 }
 
 // setWidth(qreal)
@@ -772,9 +796,9 @@ func (this *QTextImageFormat) Setwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextImageFormat8setWidthEd
     // invoke: void setWidth(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextImageFormat8setWidthEd(this.qclsinst, arg0)
+    C.C_ZN16QTextImageFormat8setWidthEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextImageFormat", "setWidth", args)
   }
@@ -795,11 +819,15 @@ func (this *QTextFormat) Toblockformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat13toBlockFormatEv
     // invoke: QTextBlockFormat toBlockFormat()
-    var ret0 = C.C_ZNK11QTextFormat13toBlockFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat13toBlockFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextBlockFormat{}) // "QTextBlockFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "toBlockFormat", args)
   }
@@ -821,13 +849,17 @@ func (this *QTextFormat) Intproperty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat11intPropertyEi
     // invoke: int intProperty(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QTextFormat11intPropertyEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QTextFormat11intPropertyEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "intProperty", args)
   }
@@ -848,11 +880,15 @@ func (this *QTextFormat) Isframeformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat13isFrameFormatEv
     // invoke: bool isFrameFormat()
-    var ret0 = C.C_ZNK11QTextFormat13isFrameFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat13isFrameFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "isFrameFormat", args)
   }
@@ -873,11 +909,15 @@ func (this *QTextFormat) Toimageformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat13toImageFormatEv
     // invoke: QTextImageFormat toImageFormat()
-    var ret0 = C.C_ZNK11QTextFormat13toImageFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat13toImageFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextImageFormat{}) // "QTextImageFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "toImageFormat", args)
   }
@@ -899,13 +939,17 @@ func (this *QTextFormat) Colorproperty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat13colorPropertyEi
     // invoke: QColor colorProperty(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QTextFormat13colorPropertyEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QTextFormat13colorPropertyEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "colorProperty", args)
   }
@@ -927,13 +971,17 @@ func (this *QTextFormat) Stringproperty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat14stringPropertyEi
     // invoke: QString stringProperty(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QTextFormat14stringPropertyEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QTextFormat14stringPropertyEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "stringProperty", args)
   }
@@ -955,13 +1003,17 @@ func (this *QTextFormat) Doubleproperty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat14doublePropertyEi
     // invoke: qreal doubleProperty(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QTextFormat14doublePropertyEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QTextFormat14doublePropertyEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "doubleProperty", args)
   }
@@ -982,7 +1034,7 @@ func (this *QTextFormat) Clearforeground(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormat15clearForegroundEv
     // invoke: void clearForeground()
-    C.C_ZN11QTextFormat15clearForegroundEv(this.qclsinst)
+    C.C_ZN11QTextFormat15clearForegroundEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "clearForeground", args)
   }
@@ -1003,11 +1055,15 @@ func (this *QTextFormat) Objectindex(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat11objectIndexEv
     // invoke: int objectIndex()
-    var ret0 = C.C_ZNK11QTextFormat11objectIndexEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat11objectIndexEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "objectIndex", args)
   }
@@ -1028,11 +1084,15 @@ func (this *QTextFormat) Isimageformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat13isImageFormatEv
     // invoke: bool isImageFormat()
-    var ret0 = C.C_ZNK11QTextFormat13isImageFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat13isImageFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "isImageFormat", args)
   }
@@ -1053,11 +1113,15 @@ func (this *QTextFormat) Objecttype(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat10objectTypeEv
     // invoke: int objectType()
-    var ret0 = C.C_ZNK11QTextFormat10objectTypeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat10objectTypeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "objectType", args)
   }
@@ -1079,13 +1143,17 @@ func (this *QTextFormat) Hasproperty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat11hasPropertyEi
     // invoke: bool hasProperty(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QTextFormat11hasPropertyEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QTextFormat11hasPropertyEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "hasProperty", args)
   }
@@ -1107,9 +1175,9 @@ func (this *QTextFormat) Setforeground(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormat13setForegroundERK6QBrush
     // invoke: void setForeground(const class QBrush &)
-    var arg0 = args[0].(QBrush).qclsinst
+    var arg0 = args[0].(*QBrush).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QTextFormat13setForegroundERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat13setForegroundERK6QBrush(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "setForeground", args)
   }
@@ -1130,11 +1198,15 @@ func (this *QTextFormat) Ischarformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat12isCharFormatEv
     // invoke: bool isCharFormat()
-    var ret0 = C.C_ZNK11QTextFormat12isCharFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat12isCharFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "isCharFormat", args)
   }
@@ -1155,11 +1227,15 @@ func (this *QTextFormat) Totablecellformat(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK11QTextFormat17toTableCellFormatEv
     // invoke: QTextTableCellFormat toTableCellFormat()
-    var ret0 = C.C_ZNK11QTextFormat17toTableCellFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat17toTableCellFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextTableCellFormat{}) // "QTextTableCellFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "toTableCellFormat", args)
   }
@@ -1181,9 +1257,9 @@ func (this *QTextFormat) Setbackground(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormat13setBackgroundERK6QBrush
     // invoke: void setBackground(const class QBrush &)
-    var arg0 = args[0].(QBrush).qclsinst
+    var arg0 = args[0].(*QBrush).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QTextFormat13setBackgroundERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat13setBackgroundERK6QBrush(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "setBackground", args)
   }
@@ -1204,11 +1280,15 @@ func (this *QTextFormat) Isempty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat7isEmptyEv
     // invoke: bool isEmpty()
-    var ret0 = C.C_ZNK11QTextFormat7isEmptyEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat7isEmptyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "isEmpty", args)
   }
@@ -1230,9 +1310,9 @@ func (this *QTextFormat) Swap(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormat4swapERS_
     // invoke: void swap(class QTextFormat &)
-    var arg0 = args[0].(QTextFormat).qclsinst
+    var arg0 = args[0].(*QTextFormat).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QTextFormat4swapERS_(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat4swapERS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "swap", args)
   }
@@ -1262,30 +1342,30 @@ func NewQTextFormat(args ...interface{}) *QTextFormat {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextFormatC2Ev()
-    return &QTextFormat{qclsinst:qthis}
+    return &QTextFormat{Qclsinst:qthis}
   case 1:
     // invoke: _ZN11QTextFormatC1Ei
     // invoke: void QTextFormat(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextFormatC2Ei(arg0)
-    return &QTextFormat{qclsinst:qthis}
+    return &QTextFormat{Qclsinst:qthis}
   case 2:
     // invoke: _ZN11QTextFormatC1ERKS_
     // invoke: void QTextFormat(const class QTextFormat &)
-    var arg0 = args[0].(QTextFormat).qclsinst
+    var arg0 = args[0].(*QTextFormat).Qclsinst
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextFormatC2ERKS_(arg0)
-    return &QTextFormat{qclsinst:qthis}
+    return &QTextFormat{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextFormat", "QTextFormat", args)
   }
 
-  return nil // QTextFormat{qclsinst:qthis}
+  return nil // QTextFormat{Qclsinst:qthis}
 }
 
 // isBlockFormat()
@@ -1301,11 +1381,15 @@ func (this *QTextFormat) Isblockformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat13isBlockFormatEv
     // invoke: bool isBlockFormat()
-    var ret0 = C.C_ZNK11QTextFormat13isBlockFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat13isBlockFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "isBlockFormat", args)
   }
@@ -1326,7 +1410,7 @@ func (this *QTextFormat) Clearbackground(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormat15clearBackgroundEv
     // invoke: void clearBackground()
-    C.C_ZN11QTextFormat15clearBackgroundEv(this.qclsinst)
+    C.C_ZN11QTextFormat15clearBackgroundEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "clearBackground", args)
   }
@@ -1347,11 +1431,15 @@ func (this *QTextFormat) Type_(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat4typeEv
     // invoke: int type()
-    var ret0 = C.C_ZNK11QTextFormat4typeEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat4typeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "type", args)
   }
@@ -1372,11 +1460,15 @@ func (this *QTextFormat) Foreground(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat10foregroundEv
     // invoke: QBrush foreground()
-    var ret0 = C.C_ZNK11QTextFormat10foregroundEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat10foregroundEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "QBrush"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "foreground", args)
   }
@@ -1397,11 +1489,15 @@ func (this *QTextFormat) Tocharformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat12toCharFormatEv
     // invoke: QTextCharFormat toCharFormat()
-    var ret0 = C.C_ZNK11QTextFormat12toCharFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat12toCharFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextCharFormat{}) // "QTextCharFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "toCharFormat", args)
   }
@@ -1422,7 +1518,7 @@ func (this *QTextFormat) Freeqtextformat(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormatD0Ev
     // invoke: void ~QTextFormat()
-    C.C_ZN11QTextFormatD2Ev(this.qclsinst)
+    C.C_ZN11QTextFormatD2Ev(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "~QTextFormat", args)
   }
@@ -1443,11 +1539,15 @@ func (this *QTextFormat) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK11QTextFormat7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "isValid", args)
   }
@@ -1469,13 +1569,17 @@ func (this *QTextFormat) Boolproperty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat12boolPropertyEi
     // invoke: bool boolProperty(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QTextFormat12boolPropertyEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QTextFormat12boolPropertyEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "boolProperty", args)
   }
@@ -1497,13 +1601,17 @@ func (this *QTextFormat) Lengthproperty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat14lengthPropertyEi
     // invoke: QTextLength lengthProperty(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QTextFormat14lengthPropertyEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QTextFormat14lengthPropertyEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextLength{}) // "QTextLength"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "lengthProperty", args)
   }
@@ -1524,11 +1632,15 @@ func (this *QTextFormat) Background(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat10backgroundEv
     // invoke: QBrush background()
-    var ret0 = C.C_ZNK11QTextFormat10backgroundEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat10backgroundEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "QBrush"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "background", args)
   }
@@ -1551,11 +1663,11 @@ func (this *QTextFormat) Setproperty(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormat11setPropertyEiRK8QVariant
     // invoke: void setProperty(int, const class QVariant &)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QVariant).qclsinst
+    var arg1 = args[1].(*QVariant).Qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN11QTextFormat11setPropertyEiRK8QVariant(this.qclsinst, arg0, arg1)
+    C.C_ZN11QTextFormat11setPropertyEiRK8QVariant(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextFormat", "setProperty", args)
   }
@@ -1576,11 +1688,15 @@ func (this *QTextFormat) Tolistformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat12toListFormatEv
     // invoke: QTextListFormat toListFormat()
-    var ret0 = C.C_ZNK11QTextFormat12toListFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat12toListFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextListFormat{}) // "QTextListFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "toListFormat", args)
   }
@@ -1601,7 +1717,7 @@ func (this *QTextFormat) Properties(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat10propertiesEv
     // invoke: QMap<int, QVariant> properties()
-    C.C_ZNK11QTextFormat10propertiesEv(this.qclsinst)
+    C.C_ZNK11QTextFormat10propertiesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "properties", args)
   }
@@ -1622,11 +1738,15 @@ func (this *QTextFormat) Toframeformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat13toFrameFormatEv
     // invoke: QTextFrameFormat toFrameFormat()
-    var ret0 = C.C_ZNK11QTextFormat13toFrameFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat13toFrameFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextFrameFormat{}) // "QTextFrameFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "toFrameFormat", args)
   }
@@ -1648,13 +1768,17 @@ func (this *QTextFormat) Penproperty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat11penPropertyEi
     // invoke: QPen penProperty(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QTextFormat11penPropertyEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QTextFormat11penPropertyEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPen{}) // "QPen"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "penProperty", args)
   }
@@ -1675,11 +1799,15 @@ func (this *QTextFormat) Istablecellformat(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK11QTextFormat17isTableCellFormatEv
     // invoke: bool isTableCellFormat()
-    var ret0 = C.C_ZNK11QTextFormat17isTableCellFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat17isTableCellFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "isTableCellFormat", args)
   }
@@ -1701,9 +1829,9 @@ func (this *QTextFormat) Setobjectindex(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormat14setObjectIndexEi
     // invoke: void setObjectIndex(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QTextFormat14setObjectIndexEi(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat14setObjectIndexEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "setObjectIndex", args)
   }
@@ -1724,7 +1852,7 @@ func (this *QTextFormat) Layoutdirection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat15layoutDirectionEv
     // invoke: Qt::LayoutDirection layoutDirection()
-    C.C_ZNK11QTextFormat15layoutDirectionEv(this.qclsinst)
+    C.C_ZNK11QTextFormat15layoutDirectionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFormat", "layoutDirection", args)
   }
@@ -1746,9 +1874,9 @@ func (this *QTextFormat) Clearproperty(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormat13clearPropertyEi
     // invoke: void clearProperty(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QTextFormat13clearPropertyEi(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat13clearPropertyEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "clearProperty", args)
   }
@@ -1770,13 +1898,17 @@ func (this *QTextFormat) Brushproperty(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat13brushPropertyEi
     // invoke: QBrush brushProperty(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QTextFormat13brushPropertyEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QTextFormat13brushPropertyEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "QBrush"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "brushProperty", args)
   }
@@ -1797,11 +1929,15 @@ func (this *QTextFormat) Propertycount(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat13propertyCountEv
     // invoke: int propertyCount()
-    var ret0 = C.C_ZNK11QTextFormat13propertyCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat13propertyCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "propertyCount", args)
   }
@@ -1823,9 +1959,9 @@ func (this *QTextFormat) Merge(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormat5mergeERKS_
     // invoke: void merge(const class QTextFormat &)
-    var arg0 = args[0].(QTextFormat).qclsinst
+    var arg0 = args[0].(*QTextFormat).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QTextFormat5mergeERKS_(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat5mergeERKS_(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "merge", args)
   }
@@ -1847,9 +1983,9 @@ func (this *QTextFormat) Lengthvectorproperty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextFormat20lengthVectorPropertyEi
     // invoke: QVector<QTextLength> lengthVectorProperty(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QTextFormat20lengthVectorPropertyEi(this.qclsinst, arg0)
+    C.C_ZNK11QTextFormat20lengthVectorPropertyEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "lengthVectorProperty", args)
   }
@@ -1870,11 +2006,15 @@ func (this *QTextFormat) Istableformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat13isTableFormatEv
     // invoke: bool isTableFormat()
-    var ret0 = C.C_ZNK11QTextFormat13isTableFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat13isTableFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "isTableFormat", args)
   }
@@ -1895,11 +2035,15 @@ func (this *QTextFormat) Totableformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat13toTableFormatEv
     // invoke: QTextTableFormat toTableFormat()
-    var ret0 = C.C_ZNK11QTextFormat13toTableFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat13toTableFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextTableFormat{}) // "QTextTableFormat"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "toTableFormat", args)
   }
@@ -1921,13 +2065,17 @@ func (this *QTextFormat) Property(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat8propertyEi
     // invoke: QVariant property(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    var ret0 = C.C_ZNK11QTextFormat8propertyEi(this.qclsinst, arg0)
+    var ret0 = C.C_ZNK11QTextFormat8propertyEi(this.Qclsinst, arg0)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QVariant{}) // "QVariant"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "property", args)
   }
@@ -1948,11 +2096,15 @@ func (this *QTextFormat) Islistformat(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK11QTextFormat12isListFormatEv
     // invoke: bool isListFormat()
-    var ret0 = C.C_ZNK11QTextFormat12isListFormatEv(this.qclsinst)
+    var ret0 = C.C_ZNK11QTextFormat12isListFormatEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFormat", "isListFormat", args)
   }
@@ -1974,9 +2126,9 @@ func (this *QTextFormat) Setobjecttype(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextFormat13setObjectTypeEi
     // invoke: void setObjectType(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QTextFormat13setObjectTypeEi(this.qclsinst, arg0)
+    C.C_ZN11QTextFormat13setObjectTypeEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "setObjectType", args)
   }
@@ -1998,9 +2150,9 @@ func (this *QTextBlockFormat) Settextindent(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextBlockFormat13setTextIndentEd
     // invoke: void setTextIndent(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextBlockFormat13setTextIndentEd(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat13setTextIndentEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setTextIndent", args)
   }
@@ -2021,11 +2173,15 @@ func (this *QTextBlockFormat) Lineheighttype(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK16QTextBlockFormat14lineHeightTypeEv
     // invoke: int lineHeightType()
-    var ret0 = C.C_ZNK16QTextBlockFormat14lineHeightTypeEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextBlockFormat14lineHeightTypeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "lineHeightType", args)
   }
@@ -2046,7 +2202,7 @@ func (this *QTextBlockFormat) Alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C.C_ZNK16QTextBlockFormat9alignmentEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat9alignmentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "alignment", args)
   }
@@ -2067,11 +2223,15 @@ func (this *QTextBlockFormat) Leftmargin(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK16QTextBlockFormat10leftMarginEv
     // invoke: qreal leftMargin()
-    var ret0 = C.C_ZNK16QTextBlockFormat10leftMarginEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextBlockFormat10leftMarginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "leftMargin", args)
   }
@@ -2092,11 +2252,15 @@ func (this *QTextBlockFormat) Topmargin(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextBlockFormat9topMarginEv
     // invoke: qreal topMargin()
-    var ret0 = C.C_ZNK16QTextBlockFormat9topMarginEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextBlockFormat9topMarginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "topMargin", args)
   }
@@ -2118,9 +2282,9 @@ func (this *QTextBlockFormat) Setleftmargin(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextBlockFormat13setLeftMarginEd
     // invoke: void setLeftMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextBlockFormat13setLeftMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat13setLeftMarginEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setLeftMargin", args)
   }
@@ -2145,23 +2309,31 @@ func (this *QTextBlockFormat) Lineheight(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK16QTextBlockFormat10lineHeightEv
     // invoke: qreal lineHeight()
-    var ret0 = C.C_ZNK16QTextBlockFormat10lineHeightEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextBlockFormat10lineHeightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   case 1:
     // invoke: _ZNK16QTextBlockFormat10lineHeightEdd
     // invoke: qreal lineHeight(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
+    var arg1 = C.double(qtrt.PrimConv(args[1], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg1)}
-    var ret0 = C.C_ZNK16QTextBlockFormat10lineHeightEdd(this.qclsinst, arg0, arg1)
+    var ret0 = C.C_ZNK16QTextBlockFormat10lineHeightEdd(this.Qclsinst, arg0, arg1)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "lineHeight", args)
   }
@@ -2183,9 +2355,9 @@ func (this *QTextBlockFormat) Settopmargin(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextBlockFormat12setTopMarginEd
     // invoke: void setTopMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextBlockFormat12setTopMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat12setTopMarginEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setTopMargin", args)
   }
@@ -2206,11 +2378,15 @@ func (this *QTextBlockFormat) Rightmargin(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK16QTextBlockFormat11rightMarginEv
     // invoke: qreal rightMargin()
-    var ret0 = C.C_ZNK16QTextBlockFormat11rightMarginEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextBlockFormat11rightMarginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "rightMargin", args)
   }
@@ -2231,11 +2407,15 @@ func (this *QTextBlockFormat) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextBlockFormat7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK16QTextBlockFormat7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextBlockFormat7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "isValid", args)
   }
@@ -2257,9 +2437,9 @@ func (this *QTextBlockFormat) Setindent(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextBlockFormat9setIndentEi
     // invoke: void setIndent(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextBlockFormat9setIndentEi(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat9setIndentEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setIndent", args)
   }
@@ -2280,7 +2460,7 @@ func (this *QTextBlockFormat) Pagebreakpolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat15pageBreakPolicyEv
     // invoke: PageBreakFlags pageBreakPolicy()
-    C.C_ZNK16QTextBlockFormat15pageBreakPolicyEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat15pageBreakPolicyEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "pageBreakPolicy", args)
   }
@@ -2301,11 +2481,15 @@ func (this *QTextBlockFormat) Bottommargin(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK16QTextBlockFormat12bottomMarginEv
     // invoke: qreal bottomMargin()
-    var ret0 = C.C_ZNK16QTextBlockFormat12bottomMarginEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextBlockFormat12bottomMarginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "bottomMargin", args)
   }
@@ -2328,11 +2512,11 @@ func (this *QTextBlockFormat) Setlineheight(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextBlockFormat13setLineHeightEdi
     // invoke: void setLineHeight(qreal, int)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = C.int32_t(qtrt.PrimConv(args[1], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN16QTextBlockFormat13setLineHeightEdi(this.qclsinst, arg0, arg1)
+    C.C_ZN16QTextBlockFormat13setLineHeightEdi(this.Qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setLineHeight", args)
   }
@@ -2356,7 +2540,7 @@ func (this *QTextBlockFormat) Setnonbreakablelines(args ...interface{}) () {
     // invoke: void setNonBreakableLines(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextBlockFormat20setNonBreakableLinesEb(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat20setNonBreakableLinesEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setNonBreakableLines", args)
   }
@@ -2378,9 +2562,9 @@ func (this *QTextBlockFormat) Setrightmargin(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextBlockFormat14setRightMarginEd
     // invoke: void setRightMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextBlockFormat14setRightMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat14setRightMarginEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setRightMargin", args)
   }
@@ -2401,11 +2585,15 @@ func (this *QTextBlockFormat) Indent(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextBlockFormat6indentEv
     // invoke: int indent()
-    var ret0 = C.C_ZNK16QTextBlockFormat6indentEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextBlockFormat6indentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "indent", args)
   }
@@ -2426,7 +2614,7 @@ func (this *QTextBlockFormat) Tabpositions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextBlockFormat12tabPositionsEv
     // invoke: QList<QTextOption::Tab> tabPositions()
-    C.C_ZNK16QTextBlockFormat12tabPositionsEv(this.qclsinst)
+    C.C_ZNK16QTextBlockFormat12tabPositionsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "tabPositions", args)
   }
@@ -2447,11 +2635,15 @@ func (this *QTextBlockFormat) Textindent(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK16QTextBlockFormat10textIndentEv
     // invoke: qreal textIndent()
-    var ret0 = C.C_ZNK16QTextBlockFormat10textIndentEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextBlockFormat10textIndentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "textIndent", args)
   }
@@ -2473,9 +2665,9 @@ func (this *QTextBlockFormat) Setbottommargin(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextBlockFormat15setBottomMarginEd
     // invoke: void setBottomMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextBlockFormat15setBottomMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextBlockFormat15setBottomMarginEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setBottomMargin", args)
   }
@@ -2496,11 +2688,15 @@ func (this *QTextBlockFormat) Nonbreakablelines(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK16QTextBlockFormat17nonBreakableLinesEv
     // invoke: bool nonBreakableLines()
-    var ret0 = C.C_ZNK16QTextBlockFormat17nonBreakableLinesEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextBlockFormat17nonBreakableLinesEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "nonBreakableLines", args)
   }
@@ -2524,12 +2720,12 @@ func NewQTextBlockFormat(args ...interface{}) *QTextBlockFormat {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QTextBlockFormatC2Ev()
-    return &QTextBlockFormat{qclsinst:qthis}
+    return &QTextBlockFormat{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "QTextBlockFormat", args)
   }
 
-  return nil // QTextBlockFormat{qclsinst:qthis}
+  return nil // QTextBlockFormat{Qclsinst:qthis}
 }
 
 // setTableCellColumnSpan(int)
@@ -2546,9 +2742,9 @@ func (this *QTextCharFormat) Settablecellcolumnspan(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat22setTableCellColumnSpanEi
     // invoke: void setTableCellColumnSpan(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat22setTableCellColumnSpanEi(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat22setTableCellColumnSpanEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setTableCellColumnSpan", args)
   }
@@ -2570,9 +2766,9 @@ func (this *QTextCharFormat) Setanchorhref(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat13setAnchorHrefERK7QString
     // invoke: void setAnchorHref(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat13setAnchorHrefERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat13setAnchorHrefERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setAnchorHref", args)
   }
@@ -2596,7 +2792,7 @@ func (this *QTextCharFormat) Setfontoverline(args ...interface{}) () {
     // invoke: void setFontOverline(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat15setFontOverlineEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat15setFontOverlineEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontOverline", args)
   }
@@ -2618,9 +2814,9 @@ func (this *QTextCharFormat) Settextoutline(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat14setTextOutlineERK4QPen
     // invoke: void setTextOutline(const class QPen &)
-    var arg0 = args[0].(QPen).qclsinst
+    var arg0 = args[0].(*QPen).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat14setTextOutlineERK4QPen(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat14setTextOutlineERK4QPen(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setTextOutline", args)
   }
@@ -2641,11 +2837,15 @@ func (this *QTextCharFormat) Fontfamily(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QTextCharFormat10fontFamilyEv
     // invoke: QString fontFamily()
-    var ret0 = C.C_ZNK15QTextCharFormat10fontFamilyEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat10fontFamilyEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontFamily", args)
   }
@@ -2666,7 +2866,7 @@ func (this *QTextCharFormat) Anchornames(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat11anchorNamesEv
     // invoke: QStringList anchorNames()
-    C.C_ZNK15QTextCharFormat11anchorNamesEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat11anchorNamesEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "anchorNames", args)
   }
@@ -2687,7 +2887,7 @@ func (this *QTextCharFormat) Fontstylehint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat13fontStyleHintEv
     // invoke: QFont::StyleHint fontStyleHint()
-    C.C_ZNK15QTextCharFormat13fontStyleHintEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat13fontStyleHintEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontStyleHint", args)
   }
@@ -2709,9 +2909,9 @@ func (this *QTextCharFormat) Setfontstretch(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat14setFontStretchEi
     // invoke: void setFontStretch(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat14setFontStretchEi(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat14setFontStretchEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontStretch", args)
   }
@@ -2732,11 +2932,15 @@ func (this *QTextCharFormat) Font(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QTextCharFormat4fontEv
     // invoke: QFont font()
-    var ret0 = C.C_ZNK15QTextCharFormat4fontEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat4fontEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QFont{}) // "QFont"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "font", args)
   }
@@ -2757,11 +2961,15 @@ func (this *QTextCharFormat) Fontitalic(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QTextCharFormat10fontItalicEv
     // invoke: bool fontItalic()
-    var ret0 = C.C_ZNK15QTextCharFormat10fontItalicEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat10fontItalicEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontItalic", args)
   }
@@ -2782,11 +2990,15 @@ func (this *QTextCharFormat) Fontkerning(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK15QTextCharFormat11fontKerningEv
     // invoke: bool fontKerning()
-    var ret0 = C.C_ZNK15QTextCharFormat11fontKerningEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat11fontKerningEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontKerning", args)
   }
@@ -2807,11 +3019,15 @@ func (this *QTextCharFormat) Fontwordspacing(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK15QTextCharFormat15fontWordSpacingEv
     // invoke: qreal fontWordSpacing()
-    var ret0 = C.C_ZNK15QTextCharFormat15fontWordSpacingEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat15fontWordSpacingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontWordSpacing", args)
   }
@@ -2832,11 +3048,15 @@ func (this *QTextCharFormat) Fontoverline(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK15QTextCharFormat12fontOverlineEv
     // invoke: bool fontOverline()
-    var ret0 = C.C_ZNK15QTextCharFormat12fontOverlineEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat12fontOverlineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontOverline", args)
   }
@@ -2860,7 +3080,7 @@ func (this *QTextCharFormat) Setfontunderline(args ...interface{}) () {
     // invoke: void setFontUnderline(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat16setFontUnderlineEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat16setFontUnderlineEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontUnderline", args)
   }
@@ -2881,7 +3101,7 @@ func (this *QTextCharFormat) Underlinestyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat14underlineStyleEv
     // invoke: QTextCharFormat::UnderlineStyle underlineStyle()
-    C.C_ZNK15QTextCharFormat14underlineStyleEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat14underlineStyleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "underlineStyle", args)
   }
@@ -2902,7 +3122,7 @@ func (this *QTextCharFormat) Fontstylestrategy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat17fontStyleStrategyEv
     // invoke: QFont::StyleStrategy fontStyleStrategy()
-    C.C_ZNK15QTextCharFormat17fontStyleStrategyEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat17fontStyleStrategyEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontStyleStrategy", args)
   }
@@ -2924,9 +3144,9 @@ func (this *QTextCharFormat) Setfontwordspacing(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat18setFontWordSpacingEd
     // invoke: void setFontWordSpacing(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat18setFontWordSpacingEd(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat18setFontWordSpacingEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontWordSpacing", args)
   }
@@ -2948,9 +3168,9 @@ func (this *QTextCharFormat) Setfontweight(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat13setFontWeightEi
     // invoke: void setFontWeight(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat13setFontWeightEi(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat13setFontWeightEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontWeight", args)
   }
@@ -2971,7 +3191,7 @@ func (this *QTextCharFormat) Verticalalignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat17verticalAlignmentEv
     // invoke: QTextCharFormat::VerticalAlignment verticalAlignment()
-    C.C_ZNK15QTextCharFormat17verticalAlignmentEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat17verticalAlignmentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "verticalAlignment", args)
   }
@@ -2993,9 +3213,9 @@ func (this *QTextCharFormat) Setfontfamily(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat13setFontFamilyERK7QString
     // invoke: void setFontFamily(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat13setFontFamilyERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat13setFontFamilyERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontFamily", args)
   }
@@ -3017,9 +3237,9 @@ func (this *QTextCharFormat) Setanchornames(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat14setAnchorNamesERK11QStringList
     // invoke: void setAnchorNames(const class QStringList &)
-    var arg0 = args[0].(QStringList).qclsinst
+    var arg0 = args[0].(*QStringList).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat14setAnchorNamesERK11QStringList(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat14setAnchorNamesERK11QStringList(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setAnchorNames", args)
   }
@@ -3041,9 +3261,9 @@ func (this *QTextCharFormat) Settablecellrowspan(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat19setTableCellRowSpanEi
     // invoke: void setTableCellRowSpan(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat19setTableCellRowSpanEi(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat19setTableCellRowSpanEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setTableCellRowSpan", args)
   }
@@ -3067,7 +3287,7 @@ func (this *QTextCharFormat) Setfontkerning(args ...interface{}) () {
     // invoke: void setFontKerning(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat14setFontKerningEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat14setFontKerningEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontKerning", args)
   }
@@ -3089,9 +3309,9 @@ func (this *QTextCharFormat) Setfontletterspacing(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat20setFontLetterSpacingEd
     // invoke: void setFontLetterSpacing(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat20setFontLetterSpacingEd(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat20setFontLetterSpacingEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontLetterSpacing", args)
   }
@@ -3112,7 +3332,7 @@ func (this *QTextCharFormat) Fontletterspacingtype(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat21fontLetterSpacingTypeEv
     // invoke: QFont::SpacingType fontLetterSpacingType()
-    C.C_ZNK15QTextCharFormat21fontLetterSpacingTypeEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat21fontLetterSpacingTypeEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontLetterSpacingType", args)
   }
@@ -3133,11 +3353,15 @@ func (this *QTextCharFormat) Fontunderline(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK15QTextCharFormat13fontUnderlineEv
     // invoke: bool fontUnderline()
-    var ret0 = C.C_ZNK15QTextCharFormat13fontUnderlineEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat13fontUnderlineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontUnderline", args)
   }
@@ -3158,7 +3382,7 @@ func (this *QTextCharFormat) Fonthintingpreference(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat21fontHintingPreferenceEv
     // invoke: QFont::HintingPreference fontHintingPreference()
-    C.C_ZNK15QTextCharFormat21fontHintingPreferenceEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat21fontHintingPreferenceEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontHintingPreference", args)
   }
@@ -3182,7 +3406,7 @@ func (this *QTextCharFormat) Setfontstrikeout(args ...interface{}) () {
     // invoke: void setFontStrikeOut(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat16setFontStrikeOutEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat16setFontStrikeOutEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontStrikeOut", args)
   }
@@ -3203,11 +3427,15 @@ func (this *QTextCharFormat) Anchorname(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QTextCharFormat10anchorNameEv
     // invoke: QString anchorName()
-    var ret0 = C.C_ZNK15QTextCharFormat10anchorNameEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat10anchorNameEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "anchorName", args)
   }
@@ -3228,11 +3456,15 @@ func (this *QTextCharFormat) Fontpointsize(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK15QTextCharFormat13fontPointSizeEv
     // invoke: qreal fontPointSize()
-    var ret0 = C.C_ZNK15QTextCharFormat13fontPointSizeEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat13fontPointSizeEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontPointSize", args)
   }
@@ -3253,11 +3485,15 @@ func (this *QTextCharFormat) Fontfixedpitch(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK15QTextCharFormat14fontFixedPitchEv
     // invoke: bool fontFixedPitch()
-    var ret0 = C.C_ZNK15QTextCharFormat14fontFixedPitchEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat14fontFixedPitchEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontFixedPitch", args)
   }
@@ -3278,11 +3514,15 @@ func (this *QTextCharFormat) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QTextCharFormat7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK15QTextCharFormat7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "isValid", args)
   }
@@ -3303,11 +3543,15 @@ func (this *QTextCharFormat) Tooltip(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QTextCharFormat7toolTipEv
     // invoke: QString toolTip()
-    var ret0 = C.C_ZNK15QTextCharFormat7toolTipEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat7toolTipEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "toolTip", args)
   }
@@ -3329,9 +3573,9 @@ func (this *QTextCharFormat) Setfontpointsize(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat16setFontPointSizeEd
     // invoke: void setFontPointSize(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat16setFontPointSizeEd(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat16setFontPointSizeEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontPointSize", args)
   }
@@ -3355,7 +3599,7 @@ func (this *QTextCharFormat) Setanchor(args ...interface{}) () {
     // invoke: void setAnchor(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat9setAnchorEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat9setAnchorEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setAnchor", args)
   }
@@ -3377,9 +3621,9 @@ func (this *QTextCharFormat) Setanchorname(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat13setAnchorNameERK7QString
     // invoke: void setAnchorName(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat13setAnchorNameERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat13setAnchorNameERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setAnchorName", args)
   }
@@ -3400,11 +3644,15 @@ func (this *QTextCharFormat) Fontletterspacing(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK15QTextCharFormat17fontLetterSpacingEv
     // invoke: qreal fontLetterSpacing()
-    var ret0 = C.C_ZNK15QTextCharFormat17fontLetterSpacingEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat17fontLetterSpacingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontLetterSpacing", args)
   }
@@ -3425,11 +3673,15 @@ func (this *QTextCharFormat) Isanchor(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QTextCharFormat8isAnchorEv
     // invoke: bool isAnchor()
-    var ret0 = C.C_ZNK15QTextCharFormat8isAnchorEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat8isAnchorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "isAnchor", args)
   }
@@ -3453,7 +3705,7 @@ func (this *QTextCharFormat) Setfontitalic(args ...interface{}) () {
     // invoke: void setFontItalic(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat13setFontItalicEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat13setFontItalicEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontItalic", args)
   }
@@ -3477,12 +3729,12 @@ func NewQTextCharFormat(args ...interface{}) *QTextCharFormat {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QTextCharFormatC2Ev()
-    return &QTextCharFormat{qclsinst:qthis}
+    return &QTextCharFormat{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextCharFormat", "QTextCharFormat", args)
   }
 
-  return nil // QTextCharFormat{qclsinst:qthis}
+  return nil // QTextCharFormat{Qclsinst:qthis}
 }
 
 // underlineColor()
@@ -3498,11 +3750,15 @@ func (this *QTextCharFormat) Underlinecolor(args ...interface{}) (ret interface{
   case 0:
     // invoke: _ZNK15QTextCharFormat14underlineColorEv
     // invoke: QColor underlineColor()
-    var ret0 = C.C_ZNK15QTextCharFormat14underlineColorEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat14underlineColorEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QColor{}) // "QColor"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "underlineColor", args)
   }
@@ -3524,9 +3780,9 @@ func (this *QTextCharFormat) Setunderlinecolor(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat17setUnderlineColorERK6QColor
     // invoke: void setUnderlineColor(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
+    var arg0 = args[0].(*QColor).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat17setUnderlineColorERK6QColor(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat17setUnderlineColorERK6QColor(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setUnderlineColor", args)
   }
@@ -3547,11 +3803,15 @@ func (this *QTextCharFormat) Fontweight(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QTextCharFormat10fontWeightEv
     // invoke: int fontWeight()
-    var ret0 = C.C_ZNK15QTextCharFormat10fontWeightEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat10fontWeightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontWeight", args)
   }
@@ -3573,9 +3833,9 @@ func (this *QTextCharFormat) Settooltip(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat10setToolTipERK7QString
     // invoke: void setToolTip(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat10setToolTipERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat10setToolTipERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setToolTip", args)
   }
@@ -3596,11 +3856,15 @@ func (this *QTextCharFormat) Tablecellcolumnspan(args ...interface{}) (ret inter
   case 0:
     // invoke: _ZNK15QTextCharFormat19tableCellColumnSpanEv
     // invoke: int tableCellColumnSpan()
-    var ret0 = C.C_ZNK15QTextCharFormat19tableCellColumnSpanEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat19tableCellColumnSpanEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "tableCellColumnSpan", args)
   }
@@ -3621,11 +3885,15 @@ func (this *QTextCharFormat) Anchorhref(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QTextCharFormat10anchorHrefEv
     // invoke: QString anchorHref()
-    var ret0 = C.C_ZNK15QTextCharFormat10anchorHrefEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat10anchorHrefEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "anchorHref", args)
   }
@@ -3646,7 +3914,7 @@ func (this *QTextCharFormat) Fontcapitalization(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat18fontCapitalizationEv
     // invoke: QFont::Capitalization fontCapitalization()
-    C.C_ZNK15QTextCharFormat18fontCapitalizationEv(this.qclsinst)
+    C.C_ZNK15QTextCharFormat18fontCapitalizationEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontCapitalization", args)
   }
@@ -3667,11 +3935,15 @@ func (this *QTextCharFormat) Textoutline(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK15QTextCharFormat11textOutlineEv
     // invoke: QPen textOutline()
-    var ret0 = C.C_ZNK15QTextCharFormat11textOutlineEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat11textOutlineEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QPen{}) // "QPen"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "textOutline", args)
   }
@@ -3692,11 +3964,15 @@ func (this *QTextCharFormat) Tablecellrowspan(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK15QTextCharFormat16tableCellRowSpanEv
     // invoke: int tableCellRowSpan()
-    var ret0 = C.C_ZNK15QTextCharFormat16tableCellRowSpanEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat16tableCellRowSpanEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "tableCellRowSpan", args)
   }
@@ -3720,7 +3996,7 @@ func (this *QTextCharFormat) Setfontfixedpitch(args ...interface{}) () {
     // invoke: void setFontFixedPitch(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat17setFontFixedPitchEb(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat17setFontFixedPitchEb(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontFixedPitch", args)
   }
@@ -3742,9 +4018,9 @@ func (this *QTextCharFormat) Setfont(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat7setFontERK5QFont
     // invoke: void setFont(const class QFont &)
-    var arg0 = args[0].(QFont).qclsinst
+    var arg0 = args[0].(*QFont).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextCharFormat7setFontERK5QFont(this.qclsinst, arg0)
+    C.C_ZN15QTextCharFormat7setFontERK5QFont(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFont", args)
   }
@@ -3765,11 +4041,15 @@ func (this *QTextCharFormat) Fontstretch(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK15QTextCharFormat11fontStretchEv
     // invoke: int fontStretch()
-    var ret0 = C.C_ZNK15QTextCharFormat11fontStretchEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat11fontStretchEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontStretch", args)
   }
@@ -3790,11 +4070,15 @@ func (this *QTextCharFormat) Fontstrikeout(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK15QTextCharFormat13fontStrikeOutEv
     // invoke: bool fontStrikeOut()
-    var ret0 = C.C_ZNK15QTextCharFormat13fontStrikeOutEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextCharFormat13fontStrikeOutEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontStrikeOut", args)
   }
@@ -3815,7 +4099,7 @@ func (this *QTextTableFormat) Clearcolumnwidthconstraints(args ...interface{}) (
   case 0:
     // invoke: _ZN16QTextTableFormat27clearColumnWidthConstraintsEv
     // invoke: void clearColumnWidthConstraints()
-    C.C_ZN16QTextTableFormat27clearColumnWidthConstraintsEv(this.qclsinst)
+    C.C_ZN16QTextTableFormat27clearColumnWidthConstraintsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "clearColumnWidthConstraints", args)
   }
@@ -3836,7 +4120,7 @@ func (this *QTextTableFormat) Columnwidthconstraints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextTableFormat22columnWidthConstraintsEv
     // invoke: QVector<QTextLength> columnWidthConstraints()
-    C.C_ZNK16QTextTableFormat22columnWidthConstraintsEv(this.qclsinst)
+    C.C_ZNK16QTextTableFormat22columnWidthConstraintsEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "columnWidthConstraints", args)
   }
@@ -3860,12 +4144,12 @@ func NewQTextTableFormat(args ...interface{}) *QTextTableFormat {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QTextTableFormatC2Ev()
-    return &QTextTableFormat{qclsinst:qthis}
+    return &QTextTableFormat{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextTableFormat", "QTextTableFormat", args)
   }
 
-  return nil // QTextTableFormat{qclsinst:qthis}
+  return nil // QTextTableFormat{Qclsinst:qthis}
 }
 
 // setHeaderRowCount(int)
@@ -3882,9 +4166,9 @@ func (this *QTextTableFormat) Setheaderrowcount(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextTableFormat17setHeaderRowCountEi
     // invoke: void setHeaderRowCount(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextTableFormat17setHeaderRowCountEi(this.qclsinst, arg0)
+    C.C_ZN16QTextTableFormat17setHeaderRowCountEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "setHeaderRowCount", args)
   }
@@ -3905,11 +4189,15 @@ func (this *QTextTableFormat) Headerrowcount(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK16QTextTableFormat14headerRowCountEv
     // invoke: int headerRowCount()
-    var ret0 = C.C_ZNK16QTextTableFormat14headerRowCountEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextTableFormat14headerRowCountEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableFormat", "headerRowCount", args)
   }
@@ -3931,9 +4219,9 @@ func (this *QTextTableFormat) Setcolumns(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextTableFormat10setColumnsEi
     // invoke: void setColumns(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextTableFormat10setColumnsEi(this.qclsinst, arg0)
+    C.C_ZN16QTextTableFormat10setColumnsEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "setColumns", args)
   }
@@ -3954,7 +4242,7 @@ func (this *QTextTableFormat) Alignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextTableFormat9alignmentEv
     // invoke: Qt::Alignment alignment()
-    C.C_ZNK16QTextTableFormat9alignmentEv(this.qclsinst)
+    C.C_ZNK16QTextTableFormat9alignmentEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "alignment", args)
   }
@@ -3975,11 +4263,15 @@ func (this *QTextTableFormat) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextTableFormat7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK16QTextTableFormat7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextTableFormat7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableFormat", "isValid", args)
   }
@@ -4000,11 +4292,15 @@ func (this *QTextTableFormat) Cellpadding(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK16QTextTableFormat11cellPaddingEv
     // invoke: qreal cellPadding()
-    var ret0 = C.C_ZNK16QTextTableFormat11cellPaddingEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextTableFormat11cellPaddingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableFormat", "cellPadding", args)
   }
@@ -4026,9 +4322,9 @@ func (this *QTextTableFormat) Setcellspacing(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextTableFormat14setCellSpacingEd
     // invoke: void setCellSpacing(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextTableFormat14setCellSpacingEd(this.qclsinst, arg0)
+    C.C_ZN16QTextTableFormat14setCellSpacingEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "setCellSpacing", args)
   }
@@ -4049,11 +4345,15 @@ func (this *QTextTableFormat) Cellspacing(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK16QTextTableFormat11cellSpacingEv
     // invoke: qreal cellSpacing()
-    var ret0 = C.C_ZNK16QTextTableFormat11cellSpacingEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextTableFormat11cellSpacingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableFormat", "cellSpacing", args)
   }
@@ -4075,9 +4375,9 @@ func (this *QTextTableFormat) Setcellpadding(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextTableFormat14setCellPaddingEd
     // invoke: void setCellPadding(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextTableFormat14setCellPaddingEd(this.qclsinst, arg0)
+    C.C_ZN16QTextTableFormat14setCellPaddingEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableFormat", "setCellPadding", args)
   }
@@ -4098,11 +4398,15 @@ func (this *QTextTableFormat) Columns(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextTableFormat7columnsEv
     // invoke: int columns()
-    var ret0 = C.C_ZNK16QTextTableFormat7columnsEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextTableFormat7columnsEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableFormat", "columns", args)
   }
@@ -4124,9 +4428,9 @@ func (this *QTextTableCellFormat) Setleftpadding(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QTextTableCellFormat14setLeftPaddingEd
     // invoke: void setLeftPadding(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN20QTextTableCellFormat14setLeftPaddingEd(this.qclsinst, arg0)
+    C.C_ZN20QTextTableCellFormat14setLeftPaddingEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setLeftPadding", args)
   }
@@ -4147,11 +4451,15 @@ func (this *QTextTableCellFormat) Leftpadding(args ...interface{}) (ret interfac
   case 0:
     // invoke: _ZNK20QTextTableCellFormat11leftPaddingEv
     // invoke: qreal leftPadding()
-    var ret0 = C.C_ZNK20QTextTableCellFormat11leftPaddingEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QTextTableCellFormat11leftPaddingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "leftPadding", args)
   }
@@ -4173,9 +4481,9 @@ func (this *QTextTableCellFormat) Setbottompadding(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QTextTableCellFormat16setBottomPaddingEd
     // invoke: void setBottomPadding(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN20QTextTableCellFormat16setBottomPaddingEd(this.qclsinst, arg0)
+    C.C_ZN20QTextTableCellFormat16setBottomPaddingEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setBottomPadding", args)
   }
@@ -4199,12 +4507,12 @@ func NewQTextTableCellFormat(args ...interface{}) *QTextTableCellFormat {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QTextTableCellFormatC2Ev()
-    return &QTextTableCellFormat{qclsinst:qthis}
+    return &QTextTableCellFormat{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "QTextTableCellFormat", args)
   }
 
-  return nil // QTextTableCellFormat{qclsinst:qthis}
+  return nil // QTextTableCellFormat{Qclsinst:qthis}
 }
 
 // setTopPadding(qreal)
@@ -4221,9 +4529,9 @@ func (this *QTextTableCellFormat) Settoppadding(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QTextTableCellFormat13setTopPaddingEd
     // invoke: void setTopPadding(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN20QTextTableCellFormat13setTopPaddingEd(this.qclsinst, arg0)
+    C.C_ZN20QTextTableCellFormat13setTopPaddingEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setTopPadding", args)
   }
@@ -4244,11 +4552,15 @@ func (this *QTextTableCellFormat) Rightpadding(args ...interface{}) (ret interfa
   case 0:
     // invoke: _ZNK20QTextTableCellFormat12rightPaddingEv
     // invoke: qreal rightPadding()
-    var ret0 = C.C_ZNK20QTextTableCellFormat12rightPaddingEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QTextTableCellFormat12rightPaddingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "rightPadding", args)
   }
@@ -4270,9 +4582,9 @@ func (this *QTextTableCellFormat) Setrightpadding(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QTextTableCellFormat15setRightPaddingEd
     // invoke: void setRightPadding(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN20QTextTableCellFormat15setRightPaddingEd(this.qclsinst, arg0)
+    C.C_ZN20QTextTableCellFormat15setRightPaddingEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setRightPadding", args)
   }
@@ -4293,11 +4605,15 @@ func (this *QTextTableCellFormat) Isvalid(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK20QTextTableCellFormat7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK20QTextTableCellFormat7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QTextTableCellFormat7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "isValid", args)
   }
@@ -4318,11 +4634,15 @@ func (this *QTextTableCellFormat) Toppadding(args ...interface{}) (ret interface
   case 0:
     // invoke: _ZNK20QTextTableCellFormat10topPaddingEv
     // invoke: qreal topPadding()
-    var ret0 = C.C_ZNK20QTextTableCellFormat10topPaddingEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QTextTableCellFormat10topPaddingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "topPadding", args)
   }
@@ -4344,9 +4664,9 @@ func (this *QTextTableCellFormat) Setpadding(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QTextTableCellFormat10setPaddingEd
     // invoke: void setPadding(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN20QTextTableCellFormat10setPaddingEd(this.qclsinst, arg0)
+    C.C_ZN20QTextTableCellFormat10setPaddingEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setPadding", args)
   }
@@ -4367,11 +4687,15 @@ func (this *QTextTableCellFormat) Bottompadding(args ...interface{}) (ret interf
   case 0:
     // invoke: _ZNK20QTextTableCellFormat13bottomPaddingEv
     // invoke: qreal bottomPadding()
-    var ret0 = C.C_ZNK20QTextTableCellFormat13bottomPaddingEv(this.qclsinst)
+    var ret0 = C.C_ZNK20QTextTableCellFormat13bottomPaddingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "bottomPadding", args)
   }
@@ -4392,7 +4716,7 @@ func (this *QTextListFormat) Style(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextListFormat5styleEv
     // invoke: QTextListFormat::Style style()
-    C.C_ZNK15QTextListFormat5styleEv(this.qclsinst)
+    C.C_ZNK15QTextListFormat5styleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextListFormat", "style", args)
   }
@@ -4413,11 +4737,15 @@ func (this *QTextListFormat) Numberprefix(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK15QTextListFormat12numberPrefixEv
     // invoke: QString numberPrefix()
-    var ret0 = C.C_ZNK15QTextListFormat12numberPrefixEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextListFormat12numberPrefixEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextListFormat", "numberPrefix", args)
   }
@@ -4438,11 +4766,15 @@ func (this *QTextListFormat) Indent(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QTextListFormat6indentEv
     // invoke: int indent()
-    var ret0 = C.C_ZNK15QTextListFormat6indentEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextListFormat6indentEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.Int32Ty(false) // "int"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextListFormat", "indent", args)
   }
@@ -4464,9 +4796,9 @@ func (this *QTextListFormat) Setnumberprefix(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextListFormat15setNumberPrefixERK7QString
     // invoke: void setNumberPrefix(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextListFormat15setNumberPrefixERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QTextListFormat15setNumberPrefixERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextListFormat", "setNumberPrefix", args)
   }
@@ -4487,11 +4819,15 @@ func (this *QTextListFormat) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK15QTextListFormat7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK15QTextListFormat7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextListFormat7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextListFormat", "isValid", args)
   }
@@ -4515,12 +4851,12 @@ func NewQTextListFormat(args ...interface{}) *QTextListFormat {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QTextListFormatC2Ev()
-    return &QTextListFormat{qclsinst:qthis}
+    return &QTextListFormat{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextListFormat", "QTextListFormat", args)
   }
 
-  return nil // QTextListFormat{qclsinst:qthis}
+  return nil // QTextListFormat{Qclsinst:qthis}
 }
 
 // setIndent(int)
@@ -4537,9 +4873,9 @@ func (this *QTextListFormat) Setindent(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextListFormat9setIndentEi
     // invoke: void setIndent(int)
-    var arg0 = C.int32_t(args[0].(int32))
+    var arg0 = C.int32_t(qtrt.PrimConv(args[0], qtrt.Int32Ty(false)).(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextListFormat9setIndentEi(this.qclsinst, arg0)
+    C.C_ZN15QTextListFormat9setIndentEi(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextListFormat", "setIndent", args)
   }
@@ -4560,11 +4896,15 @@ func (this *QTextListFormat) Numbersuffix(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK15QTextListFormat12numberSuffixEv
     // invoke: QString numberSuffix()
-    var ret0 = C.C_ZNK15QTextListFormat12numberSuffixEv(this.qclsinst)
+    var ret0 = C.C_ZNK15QTextListFormat12numberSuffixEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QString{}) // "QString"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextListFormat", "numberSuffix", args)
   }
@@ -4586,9 +4926,9 @@ func (this *QTextListFormat) Setnumbersuffix(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextListFormat15setNumberSuffixERK7QString
     // invoke: void setNumberSuffix(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
+    var arg0 = args[0].(*QString).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN15QTextListFormat15setNumberSuffixERK7QString(this.qclsinst, arg0)
+    C.C_ZN15QTextListFormat15setNumberSuffixERK7QString(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextListFormat", "setNumberSuffix", args)
   }
@@ -4610,9 +4950,9 @@ func (this *QTextFrameFormat) Setborderbrush(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextFrameFormat14setBorderBrushERK6QBrush
     // invoke: void setBorderBrush(const class QBrush &)
-    var arg0 = args[0].(QBrush).qclsinst
+    var arg0 = args[0].(*QBrush).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextFrameFormat14setBorderBrushERK6QBrush(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat14setBorderBrushERK6QBrush(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setBorderBrush", args)
   }
@@ -4633,11 +4973,15 @@ func (this *QTextFrameFormat) Height(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextFrameFormat6heightEv
     // invoke: QTextLength height()
-    var ret0 = C.C_ZNK16QTextFrameFormat6heightEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextFrameFormat6heightEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextLength{}) // "QTextLength"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "height", args)
   }
@@ -4662,15 +5006,15 @@ func (this *QTextFrameFormat) Setwidth(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextFrameFormat8setWidthEd
     // invoke: void setWidth(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextFrameFormat8setWidthEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat8setWidthEd(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN16QTextFrameFormat8setWidthERK11QTextLength
     // invoke: void setWidth(const class QTextLength &)
-    var arg0 = args[0].(QTextLength).qclsinst
+    var arg0 = args[0].(*QTextLength).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextFrameFormat8setWidthERK11QTextLength(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat8setWidthERK11QTextLength(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setWidth", args)
   }
@@ -4691,11 +5035,15 @@ func (this *QTextFrameFormat) Topmargin(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextFrameFormat9topMarginEv
     // invoke: qreal topMargin()
-    var ret0 = C.C_ZNK16QTextFrameFormat9topMarginEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextFrameFormat9topMarginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "topMargin", args)
   }
@@ -4716,11 +5064,15 @@ func (this *QTextFrameFormat) Border(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextFrameFormat6borderEv
     // invoke: qreal border()
-    var ret0 = C.C_ZNK16QTextFrameFormat6borderEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextFrameFormat6borderEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "border", args)
   }
@@ -4741,11 +5093,15 @@ func (this *QTextFrameFormat) Width(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextFrameFormat5widthEv
     // invoke: QTextLength width()
-    var ret0 = C.C_ZNK16QTextFrameFormat5widthEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextFrameFormat5widthEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QTextLength{}) // "QTextLength"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "width", args)
   }
@@ -4767,9 +5123,9 @@ func (this *QTextFrameFormat) Setleftmargin(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextFrameFormat13setLeftMarginEd
     // invoke: void setLeftMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextFrameFormat13setLeftMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat13setLeftMarginEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setLeftMargin", args)
   }
@@ -4790,11 +5146,15 @@ func (this *QTextFrameFormat) Leftmargin(args ...interface{}) (ret interface{}) 
   case 0:
     // invoke: _ZNK16QTextFrameFormat10leftMarginEv
     // invoke: qreal leftMargin()
-    var ret0 = C.C_ZNK16QTextFrameFormat10leftMarginEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextFrameFormat10leftMarginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "leftMargin", args)
   }
@@ -4816,9 +5176,9 @@ func (this *QTextFrameFormat) Setpadding(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextFrameFormat10setPaddingEd
     // invoke: void setPadding(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextFrameFormat10setPaddingEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat10setPaddingEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setPadding", args)
   }
@@ -4840,9 +5200,9 @@ func (this *QTextFrameFormat) Settopmargin(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextFrameFormat12setTopMarginEd
     // invoke: void setTopMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextFrameFormat12setTopMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat12setTopMarginEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setTopMargin", args)
   }
@@ -4863,11 +5223,15 @@ func (this *QTextFrameFormat) Rightmargin(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK16QTextFrameFormat11rightMarginEv
     // invoke: qreal rightMargin()
-    var ret0 = C.C_ZNK16QTextFrameFormat11rightMarginEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextFrameFormat11rightMarginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "rightMargin", args)
   }
@@ -4888,11 +5252,15 @@ func (this *QTextFrameFormat) Isvalid(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextFrameFormat7isValidEv
     // invoke: bool isValid()
-    var ret0 = C.C_ZNK16QTextFrameFormat7isValidEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextFrameFormat7isValidEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.BoolTy(false) // "bool"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "isValid", args)
   }
@@ -4913,7 +5281,7 @@ func (this *QTextFrameFormat) Pagebreakpolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat15pageBreakPolicyEv
     // invoke: PageBreakFlags pageBreakPolicy()
-    C.C_ZNK16QTextFrameFormat15pageBreakPolicyEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat15pageBreakPolicyEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "pageBreakPolicy", args)
   }
@@ -4934,11 +5302,15 @@ func (this *QTextFrameFormat) Padding(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextFrameFormat7paddingEv
     // invoke: qreal padding()
-    var ret0 = C.C_ZNK16QTextFrameFormat7paddingEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextFrameFormat7paddingEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "padding", args)
   }
@@ -4960,9 +5332,9 @@ func (this *QTextFrameFormat) Setmargin(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextFrameFormat9setMarginEd
     // invoke: void setMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextFrameFormat9setMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat9setMarginEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setMargin", args)
   }
@@ -4983,11 +5355,15 @@ func (this *QTextFrameFormat) Bottommargin(args ...interface{}) (ret interface{}
   case 0:
     // invoke: _ZNK16QTextFrameFormat12bottomMarginEv
     // invoke: qreal bottomMargin()
-    var ret0 = C.C_ZNK16QTextFrameFormat12bottomMarginEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextFrameFormat12bottomMarginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "bottomMargin", args)
   }
@@ -5011,12 +5387,12 @@ func NewQTextFrameFormat(args ...interface{}) *QTextFrameFormat {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QTextFrameFormatC2Ev()
-    return &QTextFrameFormat{qclsinst:qthis}
+    return &QTextFrameFormat{Qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "QTextFrameFormat", args)
   }
 
-  return nil // QTextFrameFormat{qclsinst:qthis}
+  return nil // QTextFrameFormat{Qclsinst:qthis}
 }
 
 // setHeight(qreal)
@@ -5036,15 +5412,15 @@ func (this *QTextFrameFormat) Setheight(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextFrameFormat9setHeightEd
     // invoke: void setHeight(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextFrameFormat9setHeightEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat9setHeightEd(this.Qclsinst, arg0)
   case 1:
     // invoke: _ZN16QTextFrameFormat9setHeightERK11QTextLength
     // invoke: void setHeight(const class QTextLength &)
-    var arg0 = args[0].(QTextLength).qclsinst
+    var arg0 = args[0].(*QTextLength).Qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextFrameFormat9setHeightERK11QTextLength(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat9setHeightERK11QTextLength(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setHeight", args)
   }
@@ -5065,11 +5441,15 @@ func (this *QTextFrameFormat) Borderbrush(args ...interface{}) (ret interface{})
   case 0:
     // invoke: _ZNK16QTextFrameFormat11borderBrushEv
     // invoke: QBrush borderBrush()
-    var ret0 = C.C_ZNK16QTextFrameFormat11borderBrushEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextFrameFormat11borderBrushEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = reflect.TypeOf(QBrush{}) // "QBrush"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "borderBrush", args)
   }
@@ -5091,9 +5471,9 @@ func (this *QTextFrameFormat) Setrightmargin(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextFrameFormat14setRightMarginEd
     // invoke: void setRightMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextFrameFormat14setRightMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat14setRightMarginEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setRightMargin", args)
   }
@@ -5115,9 +5495,9 @@ func (this *QTextFrameFormat) Setborder(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextFrameFormat9setBorderEd
     // invoke: void setBorder(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextFrameFormat9setBorderEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat9setBorderEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setBorder", args)
   }
@@ -5139,9 +5519,9 @@ func (this *QTextFrameFormat) Setbottommargin(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextFrameFormat15setBottomMarginEd
     // invoke: void setBottomMargin(qreal)
-    var arg0 = C.double(args[0].(float64))
+    var arg0 = C.double(qtrt.PrimConv(args[0], qtrt.DoubleTy(false)).(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QTextFrameFormat15setBottomMarginEd(this.qclsinst, arg0)
+    C.C_ZN16QTextFrameFormat15setBottomMarginEd(this.Qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setBottomMargin", args)
   }
@@ -5162,7 +5542,7 @@ func (this *QTextFrameFormat) Position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat8positionEv
     // invoke: QTextFrameFormat::Position position()
-    C.C_ZNK16QTextFrameFormat8positionEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat8positionEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "position", args)
   }
@@ -5183,7 +5563,7 @@ func (this *QTextFrameFormat) Borderstyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat11borderStyleEv
     // invoke: QTextFrameFormat::BorderStyle borderStyle()
-    C.C_ZNK16QTextFrameFormat11borderStyleEv(this.qclsinst)
+    C.C_ZNK16QTextFrameFormat11borderStyleEv(this.Qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "borderStyle", args)
   }
@@ -5204,11 +5584,15 @@ func (this *QTextFrameFormat) Margin(args ...interface{}) (ret interface{}) {
   case 0:
     // invoke: _ZNK16QTextFrameFormat6marginEv
     // invoke: qreal margin()
-    var ret0 = C.C_ZNK16QTextFrameFormat6marginEv(this.qclsinst)
+    var ret0 = C.C_ZNK16QTextFrameFormat6marginEv(this.Qclsinst)
     if false {reflect.TypeOf(ret0)}
     ret = ret0
     var rety = qtrt.DoubleTy(false) // "qreal"
-    ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    if reflect.TypeOf(ret0).ConvertibleTo(rety) {
+        ret = reflect.ValueOf(ret0).Convert(rety).Interface()
+    } else {
+        ret = qtrt.HandyConvert2go(ret0, rety)
+    }
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "margin", args)
   }
