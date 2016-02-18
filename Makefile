@@ -11,6 +11,15 @@ all:
 qtrt:
 	CC=clang CXX=clang++ go install -v -x qtrt
 
+qtcore:
+	CC=clang CXX=clang++ go install -v -x qtcore
+
+qtgui:
+	CC=clang CXX=clang++ go install -v -x qtgui
+
+qtwidgets:
+	CC=clang CXX=clang++ go install -v -x qtwidgets
+
 eg:
 	CC=clang CXX=clang++ go build -v -x src/eg/eg00.go
 	# CC=clang CXX=clang++ go build -v -x src/eg/eg10.go
