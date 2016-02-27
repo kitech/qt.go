@@ -3,7 +3,7 @@ GOPATH := $(PWD):$(GOPATH)
 
 all:
 	@echo ${GOPATH}
-	CC=clang CXX=clang++ go install -v -x qt5
+	# CC=clang CXX=clang++ go install -v -x qt5
 	# go build -v -x core
 	# go build -v -x gui
 	# go build -v -x widgets
@@ -11,13 +11,13 @@ all:
 qtrt:
 	CC=clang CXX=clang++ go install -v -x qtrt
 
-qtcore:
+core:
 	CC=clang CXX=clang++ go install -v -x qtcore
 
-qtgui:
+gui:
 	CC=clang CXX=clang++ go install -v -x qtgui
 
-qtwidgets:
+widgets:
 	CC=clang CXX=clang++ go install -v -x qtwidgets
 
 eg:

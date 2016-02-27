@@ -7,6 +7,7 @@ import "C"
 
 import (
 	"fmt"
+	"log"
 	"reflect"
 	"runtime"
 	"strings"
@@ -134,6 +135,23 @@ func ErrorResolve(class, method string, args []interface{}) {
 	rtf := runtime.FuncForPC(pcs[2])
 	file, line := rtf.FileLine(pcs[2])
 	fmt.Println(rtf.Name(), file, line, "Unresolved VT", class, method, args)
+}
+
+/////////
+// runtime.SetFinalizer(x, UniverseFree)
+func UniverseFree(this interface{}) {
+	oty := reflect.TypeOf(this)
+	oval := reflect.ValueOf(this)
+
+	_, ok := oty.MethodByName("Free")
+	if ok {
+		// in := []reflect.Value{oval}
+		// mth.Func.Call(in)
+		oval.MethodByName("Free").Call([]reflect.Value{})
+		// log.Println(this, "freed", oty.Elem().Name())
+	} else {
+		log.Println(this, "has no Free method.", oty.Elem().Name())
+	}
 }
 
 /////////
