@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qbytearray.h
 // dst-file: /src/core/qbytearray.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -296,6 +297,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QByteRef)=16
@@ -362,7 +364,7 @@ func (this *QByteArray) Swap(args ...interface{}) () {
 }
 
 // rightJustified(int, char, _Bool)
-func (this *QByteArray) Rightjustified(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) RightJustified(args ...interface{}) (ret interface{}) {
   // rightJustified(int, char, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -586,7 +588,7 @@ func (this *QByteArray) Trimmed(args ...interface{}) (ret interface{}) {
 }
 
 // constEnd()
-func (this *QByteArray) Constend(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ConstEnd(args ...interface{}) (ret interface{}) {
   // constEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -615,7 +617,7 @@ func (this *QByteArray) Constend(args ...interface{}) (ret interface{}) {
 }
 
 // isSharedWith(const class QByteArray &)
-func (this *QByteArray) Issharedwith(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) IsSharedWith(args ...interface{}) (ret interface{}) {
   // isSharedWith(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -679,7 +681,7 @@ func (this *QByteArray) Right(args ...interface{}) (ret interface{}) {
 }
 
 // toUInt(_Bool *, int)
-func (this *QByteArray) Touint(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToUInt(args ...interface{}) (ret interface{}) {
   // toUInt(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -821,7 +823,7 @@ func (this *QByteArray) Append(args ...interface{}) (ret interface{}) {
 }
 
 // startsWith(const char *)
-func (this *QByteArray) Startswith(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) StartsWith(args ...interface{}) (ret interface{}) {
   // startsWith(const char *)
   // startsWith(const class QByteArray &)
   // startsWith(char)
@@ -918,7 +920,7 @@ func (this *QByteArray) Capacity(args ...interface{}) (ret interface{}) {
 }
 
 // toLower()
-func (this *QByteArray) Tolower(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToLower(args ...interface{}) (ret interface{}) {
   // toLower()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -947,7 +949,7 @@ func (this *QByteArray) Tolower(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QByteArray) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -976,7 +978,7 @@ func (this *QByteArray) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // toStdString()
-func (this *QByteArray) Tostdstring(args ...interface{}) () {
+func (this *QByteArray) ToStdString(args ...interface{}) () {
   // toStdString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -997,7 +999,7 @@ func (this *QByteArray) Tostdstring(args ...interface{}) () {
 }
 
 // toHex()
-func (this *QByteArray) Tohex(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToHex(args ...interface{}) (ret interface{}) {
   // toHex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1026,7 +1028,7 @@ func (this *QByteArray) Tohex(args ...interface{}) (ret interface{}) {
 }
 
 // indexOf(const char *, int)
-func (this *QByteArray) Indexof(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) IndexOf(args ...interface{}) (ret interface{}) {
   // indexOf(const char *, int)
   // indexOf(char, int)
   // indexOf(const class QByteArray &, int)
@@ -1152,6 +1154,9 @@ func (this *QByteArray) Cbegin(args ...interface{}) (ret interface{}) {
 }
 
 // QByteArray()
+func GcfreeQByteArray(this *QByteArray) {
+  qtrt.UniverseFree(this)
+}
 func NewQByteArray(args ...interface{}) *QByteArray {
   // QByteArray()
   // QByteArray(const class QByteArray &)
@@ -1178,7 +1183,9 @@ func NewQByteArray(args ...interface{}) *QByteArray {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QByteArrayC2Ev()
-    return &QByteArray{Qclsinst:qthis}
+    this := &QByteArray{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQByteArray)
+    return this
   case 1:
     // invoke: _ZN10QByteArrayC1ERKS_
     // invoke: void QByteArray(const class QByteArray &)
@@ -1187,7 +1194,9 @@ func NewQByteArray(args ...interface{}) *QByteArray {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QByteArrayC2ERKS_(arg0)
-    return &QByteArray{Qclsinst:qthis}
+    this := &QByteArray{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQByteArray)
+    return this
   case 2:
     // invoke: _ZN10QByteArrayC1EPKci
     // invoke: void QByteArray(const char *, int)
@@ -1200,7 +1209,9 @@ func NewQByteArray(args ...interface{}) *QByteArray {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QByteArrayC2EPKci(arg0, arg1)
-    return &QByteArray{Qclsinst:qthis}
+    this := &QByteArray{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQByteArray)
+    return this
   case 3:
     // invoke: _ZN10QByteArrayC1Eic
     // invoke: void QByteArray(int, char)
@@ -1211,7 +1222,9 @@ func NewQByteArray(args ...interface{}) *QByteArray {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QByteArrayC2Eic(arg0, arg1)
-    return &QByteArray{Qclsinst:qthis}
+    this := &QByteArray{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQByteArray)
+    return this
   default:
     qtrt.ErrorResolve("QByteArray", "QByteArray", args)
   }
@@ -1220,7 +1233,7 @@ func NewQByteArray(args ...interface{}) *QByteArray {
 }
 
 // fromBase64(const class QByteArray &)
-func (this *QByteArray) Frombase64_S(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) FromBase64_s(args ...interface{}) (ret interface{}) {
   // fromBase64(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1252,7 +1265,7 @@ func (this *QByteArray) Frombase64_S(args ...interface{}) (ret interface{}) {
 }
 
 // fromHex(const class QByteArray &)
-func (this *QByteArray) Fromhex_S(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) FromHex_s(args ...interface{}) (ret interface{}) {
   // fromHex(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1337,7 +1350,7 @@ func (this *QByteArray) Length(args ...interface{}) (ret interface{}) {
 }
 
 // toDouble(_Bool *)
-func (this *QByteArray) Todouble(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToDouble(args ...interface{}) (ret interface{}) {
   // toDouble(_Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1369,7 +1382,7 @@ func (this *QByteArray) Todouble(args ...interface{}) (ret interface{}) {
 }
 
 // toLong(_Bool *, int)
-func (this *QByteArray) Tolong(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToLong(args ...interface{}) (ret interface{}) {
   // toLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1404,7 +1417,7 @@ func (this *QByteArray) Tolong(args ...interface{}) (ret interface{}) {
 }
 
 // toPercentEncoding(const class QByteArray &, const class QByteArray &, char)
-func (this *QByteArray) Topercentencoding(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToPercentEncoding(args ...interface{}) (ret interface{}) {
   // toPercentEncoding(const class QByteArray &, const class QByteArray &, char)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1442,7 +1455,7 @@ func (this *QByteArray) Topercentencoding(args ...interface{}) (ret interface{})
 }
 
 // toUShort(_Bool *, int)
-func (this *QByteArray) Toushort(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToUShort(args ...interface{}) (ret interface{}) {
   // toUShort(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1477,7 +1490,7 @@ func (this *QByteArray) Toushort(args ...interface{}) (ret interface{}) {
 }
 
 // constBegin()
-func (this *QByteArray) Constbegin(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ConstBegin(args ...interface{}) (ret interface{}) {
   // constBegin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1506,7 +1519,7 @@ func (this *QByteArray) Constbegin(args ...interface{}) (ret interface{}) {
 }
 
 // toShort(_Bool *, int)
-func (this *QByteArray) Toshort(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToShort(args ...interface{}) (ret interface{}) {
   // toShort(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1541,7 +1554,7 @@ func (this *QByteArray) Toshort(args ...interface{}) (ret interface{}) {
 }
 
 // number(qlonglong, int)
-func (this *QByteArray) Number_S(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) Number_s(args ...interface{}) (ret interface{}) {
   // number(qlonglong, int)
   // number(qulonglong, int)
   // number(int, int)
@@ -1992,7 +2005,7 @@ func (this *QByteArray) Replace(args ...interface{}) (ret interface{}) {
 }
 
 // push_back(const class QByteArray &)
-func (this *QByteArray) Push_Back(args ...interface{}) () {
+func (this *QByteArray) Push_back(args ...interface{}) () {
   // push_back(const class QByteArray &)
   // push_back(const char *)
   // push_back(char)
@@ -2162,7 +2175,7 @@ func (this *QByteArray) Contains(args ...interface{}) (ret interface{}) {
 }
 
 // fromPercentEncoding(const class QByteArray &, char)
-func (this *QByteArray) Frompercentencoding_S(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) FromPercentEncoding_s(args ...interface{}) (ret interface{}) {
   // fromPercentEncoding(const class QByteArray &, char)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2226,7 +2239,7 @@ func (this *QByteArray) Cend(args ...interface{}) (ret interface{}) {
 }
 
 // leftJustified(int, char, _Bool)
-func (this *QByteArray) Leftjustified(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) LeftJustified(args ...interface{}) (ret interface{}) {
   // leftJustified(int, char, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2296,7 +2309,7 @@ func (this *QByteArray) Repeated(args ...interface{}) (ret interface{}) {
 }
 
 // fromRawData(const char *, int)
-func (this *QByteArray) Fromrawdata_S(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) FromRawData_s(args ...interface{}) (ret interface{}) {
   // fromRawData(const char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2378,7 +2391,7 @@ func (this *QByteArray) Resize(args ...interface{}) () {
 }
 
 // toULongLong(_Bool *, int)
-func (this *QByteArray) Toulonglong(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToULongLong(args ...interface{}) (ret interface{}) {
   // toULongLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2495,7 +2508,7 @@ func (this *QByteArray) Count(args ...interface{}) (ret interface{}) {
 }
 
 // ~QByteArray()
-func (this *QByteArray) Freeqbytearray(args ...interface{}) () {
+func (this *QByteArray) Free(args ...interface{}) () {
   // ~QByteArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2507,7 +2520,10 @@ func (this *QByteArray) Freeqbytearray(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArrayD0Ev
     // invoke: void ~QByteArray()
-    C.C_ZN10QByteArrayD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QByteArrayD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QByteArray", "~QByteArray", args)
   }
@@ -2516,7 +2532,7 @@ func (this *QByteArray) Freeqbytearray(args ...interface{}) () {
 }
 
 // toFloat(_Bool *)
-func (this *QByteArray) Tofloat(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToFloat(args ...interface{}) (ret interface{}) {
   // toFloat(_Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2615,7 +2631,7 @@ func (this *QByteArray) Fill(args ...interface{}) (ret interface{}) {
 }
 
 // toULong(_Bool *, int)
-func (this *QByteArray) Toulong(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToULong(args ...interface{}) (ret interface{}) {
   // toULong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2804,7 +2820,7 @@ func (this *QByteArray) Prepend(args ...interface{}) (ret interface{}) {
 }
 
 // constData()
-func (this *QByteArray) Constdata(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ConstData(args ...interface{}) (ret interface{}) {
   // constData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2833,7 +2849,7 @@ func (this *QByteArray) Constdata(args ...interface{}) (ret interface{}) {
 }
 
 // toLongLong(_Bool *, int)
-func (this *QByteArray) Tolonglong(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToLongLong(args ...interface{}) (ret interface{}) {
   // toLongLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2868,7 +2884,7 @@ func (this *QByteArray) Tolonglong(args ...interface{}) (ret interface{}) {
 }
 
 // isEmpty()
-func (this *QByteArray) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2921,7 +2937,7 @@ func (this *QByteArray) Split(args ...interface{}) () {
 }
 
 // setRawData(const char *, uint)
-func (this *QByteArray) Setrawdata(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) SetRawData(args ...interface{}) (ret interface{}) {
   // setRawData(const char *, uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2958,7 +2974,7 @@ func (this *QByteArray) Setrawdata(args ...interface{}) (ret interface{}) {
 }
 
 // isDetached()
-func (this *QByteArray) Isdetached(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) IsDetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3016,7 +3032,7 @@ func (this *QByteArray) Begin(args ...interface{}) (ret interface{}) {
 }
 
 // lastIndexOf(const char *, int)
-func (this *QByteArray) Lastindexof(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) LastIndexOf(args ...interface{}) (ret interface{}) {
   // lastIndexOf(const char *, int)
   // lastIndexOf(const class QString &, int)
   // lastIndexOf(const class QByteArray &, int)
@@ -3113,7 +3129,7 @@ func (this *QByteArray) Lastindexof(args ...interface{}) (ret interface{}) {
 }
 
 // toUpper()
-func (this *QByteArray) Toupper(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToUpper(args ...interface{}) (ret interface{}) {
   // toUpper()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3166,7 +3182,7 @@ func (this *QByteArray) Truncate(args ...interface{}) () {
 }
 
 // toBase64()
-func (this *QByteArray) Tobase64(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToBase64(args ...interface{}) (ret interface{}) {
   // toBase64()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3245,7 +3261,7 @@ func (this *QByteArray) Clear(args ...interface{}) () {
 }
 
 // toInt(_Bool *, int)
-func (this *QByteArray) Toint(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) ToInt(args ...interface{}) (ret interface{}) {
   // toInt(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3280,7 +3296,7 @@ func (this *QByteArray) Toint(args ...interface{}) (ret interface{}) {
 }
 
 // endsWith(const class QByteArray &)
-func (this *QByteArray) Endswith(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) EndsWith(args ...interface{}) (ret interface{}) {
   // endsWith(const class QByteArray &)
   // endsWith(const char *)
   // endsWith(char)
@@ -3348,7 +3364,7 @@ func (this *QByteArray) Endswith(args ...interface{}) (ret interface{}) {
 }
 
 // setNum(uint, int)
-func (this *QByteArray) Setnum(args ...interface{}) (ret interface{}) {
+func (this *QByteArray) SetNum(args ...interface{}) (ret interface{}) {
   // setNum(uint, int)
   // setNum(int, int)
   // setNum(short, int)
@@ -3553,7 +3569,7 @@ func (this *QByteArray) Reserve(args ...interface{}) () {
 }
 
 // push_front(char)
-func (this *QByteArray) Push_Front(args ...interface{}) () {
+func (this *QByteArray) Push_front(args ...interface{}) () {
   // push_front(char)
   // push_front(const class QByteArray &)
   // push_front(const char *)

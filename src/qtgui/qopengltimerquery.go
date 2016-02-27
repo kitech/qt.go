@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qopengltimerquery.h
 // dst-file: /src/gui/qopengltimerquery.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -94,6 +95,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QOpenGLTimerQuery)=1
@@ -151,7 +153,7 @@ func (this *QOpenGLTimerQuery) End(args ...interface{}) () {
 }
 
 // objectId()
-func (this *QOpenGLTimerQuery) Objectid(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLTimerQuery) ObjectId(args ...interface{}) (ret interface{}) {
   // objectId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -180,7 +182,7 @@ func (this *QOpenGLTimerQuery) Objectid(args ...interface{}) (ret interface{}) {
 }
 
 // waitForTimestamp()
-func (this *QOpenGLTimerQuery) Waitfortimestamp(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLTimerQuery) WaitForTimestamp(args ...interface{}) (ret interface{}) {
   // waitForTimestamp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -238,7 +240,7 @@ func (this *QOpenGLTimerQuery) Create(args ...interface{}) (ret interface{}) {
 }
 
 // ~QOpenGLTimerQuery()
-func (this *QOpenGLTimerQuery) Freeqopengltimerquery(args ...interface{}) () {
+func (this *QOpenGLTimerQuery) Free(args ...interface{}) () {
   // ~QOpenGLTimerQuery()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -250,7 +252,10 @@ func (this *QOpenGLTimerQuery) Freeqopengltimerquery(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOpenGLTimerQueryD0Ev
     // invoke: void ~QOpenGLTimerQuery()
-    C.C_ZN17QOpenGLTimerQueryD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN17QOpenGLTimerQueryD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "~QOpenGLTimerQuery", args)
   }
@@ -259,7 +264,7 @@ func (this *QOpenGLTimerQuery) Freeqopengltimerquery(args ...interface{}) () {
 }
 
 // isCreated()
-func (this *QOpenGLTimerQuery) Iscreated(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLTimerQuery) IsCreated(args ...interface{}) (ret interface{}) {
   // isCreated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -288,7 +293,7 @@ func (this *QOpenGLTimerQuery) Iscreated(args ...interface{}) (ret interface{}) 
 }
 
 // waitForResult()
-func (this *QOpenGLTimerQuery) Waitforresult(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLTimerQuery) WaitForResult(args ...interface{}) (ret interface{}) {
   // waitForResult()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -317,7 +322,7 @@ func (this *QOpenGLTimerQuery) Waitforresult(args ...interface{}) (ret interface
 }
 
 // recordTimestamp()
-func (this *QOpenGLTimerQuery) Recordtimestamp(args ...interface{}) () {
+func (this *QOpenGLTimerQuery) RecordTimestamp(args ...interface{}) () {
   // recordTimestamp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -338,7 +343,7 @@ func (this *QOpenGLTimerQuery) Recordtimestamp(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QOpenGLTimerQuery) Metaobject(args ...interface{}) () {
+func (this *QOpenGLTimerQuery) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -380,6 +385,9 @@ func (this *QOpenGLTimerQuery) Destroy(args ...interface{}) () {
 }
 
 // QOpenGLTimerQuery(class QObject *)
+func GcfreeQOpenGLTimerQuery(this *QOpenGLTimerQuery) {
+  qtrt.UniverseFree(this)
+}
 func NewQOpenGLTimerQuery(args ...interface{}) *QOpenGLTimerQuery {
   // QOpenGLTimerQuery(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -398,7 +406,9 @@ func NewQOpenGLTimerQuery(args ...interface{}) *QOpenGLTimerQuery {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QOpenGLTimerQueryC2EP7QObject(arg0)
-    return &QOpenGLTimerQuery{Qclsinst:qthis}
+    this := &QOpenGLTimerQuery{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLTimerQuery)
+    return this
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "QOpenGLTimerQuery", args)
   }
@@ -407,7 +417,7 @@ func NewQOpenGLTimerQuery(args ...interface{}) *QOpenGLTimerQuery {
 }
 
 // isResultAvailable()
-func (this *QOpenGLTimerQuery) Isresultavailable(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLTimerQuery) IsResultAvailable(args ...interface{}) (ret interface{}) {
   // isResultAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -457,7 +467,7 @@ func (this *QOpenGLTimeMonitor) Reset(args ...interface{}) () {
 }
 
 // recordSample()
-func (this *QOpenGLTimeMonitor) Recordsample(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLTimeMonitor) RecordSample(args ...interface{}) (ret interface{}) {
   // recordSample()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -486,7 +496,7 @@ func (this *QOpenGLTimeMonitor) Recordsample(args ...interface{}) (ret interface
 }
 
 // metaObject()
-func (this *QOpenGLTimeMonitor) Metaobject(args ...interface{}) () {
+func (this *QOpenGLTimeMonitor) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -507,7 +517,7 @@ func (this *QOpenGLTimeMonitor) Metaobject(args ...interface{}) () {
 }
 
 // ~QOpenGLTimeMonitor()
-func (this *QOpenGLTimeMonitor) Freeqopengltimemonitor(args ...interface{}) () {
+func (this *QOpenGLTimeMonitor) Free(args ...interface{}) () {
   // ~QOpenGLTimeMonitor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -519,7 +529,10 @@ func (this *QOpenGLTimeMonitor) Freeqopengltimemonitor(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitorD0Ev
     // invoke: void ~QOpenGLTimeMonitor()
-    C.C_ZN18QOpenGLTimeMonitorD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN18QOpenGLTimeMonitorD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "~QOpenGLTimeMonitor", args)
   }
@@ -528,7 +541,7 @@ func (this *QOpenGLTimeMonitor) Freeqopengltimemonitor(args ...interface{}) () {
 }
 
 // sampleCount()
-func (this *QOpenGLTimeMonitor) Samplecount(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLTimeMonitor) SampleCount(args ...interface{}) (ret interface{}) {
   // sampleCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -586,7 +599,7 @@ func (this *QOpenGLTimeMonitor) Create(args ...interface{}) (ret interface{}) {
 }
 
 // setSampleCount(int)
-func (this *QOpenGLTimeMonitor) Setsamplecount(args ...interface{}) () {
+func (this *QOpenGLTimeMonitor) SetSampleCount(args ...interface{}) () {
   // setSampleCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -610,7 +623,7 @@ func (this *QOpenGLTimeMonitor) Setsamplecount(args ...interface{}) () {
 }
 
 // objectIds()
-func (this *QOpenGLTimeMonitor) Objectids(args ...interface{}) () {
+func (this *QOpenGLTimeMonitor) ObjectIds(args ...interface{}) () {
   // objectIds()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -631,7 +644,7 @@ func (this *QOpenGLTimeMonitor) Objectids(args ...interface{}) () {
 }
 
 // isCreated()
-func (this *QOpenGLTimeMonitor) Iscreated(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLTimeMonitor) IsCreated(args ...interface{}) (ret interface{}) {
   // isCreated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -660,7 +673,7 @@ func (this *QOpenGLTimeMonitor) Iscreated(args ...interface{}) (ret interface{})
 }
 
 // waitForSamples()
-func (this *QOpenGLTimeMonitor) Waitforsamples(args ...interface{}) () {
+func (this *QOpenGLTimeMonitor) WaitForSamples(args ...interface{}) () {
   // waitForSamples()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -681,7 +694,7 @@ func (this *QOpenGLTimeMonitor) Waitforsamples(args ...interface{}) () {
 }
 
 // isResultAvailable()
-func (this *QOpenGLTimeMonitor) Isresultavailable(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLTimeMonitor) IsResultAvailable(args ...interface{}) (ret interface{}) {
   // isResultAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -710,7 +723,7 @@ func (this *QOpenGLTimeMonitor) Isresultavailable(args ...interface{}) (ret inte
 }
 
 // waitForIntervals()
-func (this *QOpenGLTimeMonitor) Waitforintervals(args ...interface{}) () {
+func (this *QOpenGLTimeMonitor) WaitForIntervals(args ...interface{}) () {
   // waitForIntervals()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -731,6 +744,9 @@ func (this *QOpenGLTimeMonitor) Waitforintervals(args ...interface{}) () {
 }
 
 // QOpenGLTimeMonitor(class QObject *)
+func GcfreeQOpenGLTimeMonitor(this *QOpenGLTimeMonitor) {
+  qtrt.UniverseFree(this)
+}
 func NewQOpenGLTimeMonitor(args ...interface{}) *QOpenGLTimeMonitor {
   // QOpenGLTimeMonitor(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -749,7 +765,9 @@ func NewQOpenGLTimeMonitor(args ...interface{}) *QOpenGLTimeMonitor {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QOpenGLTimeMonitorC2EP7QObject(arg0)
-    return &QOpenGLTimeMonitor{Qclsinst:qthis}
+    this := &QOpenGLTimeMonitor{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLTimeMonitor)
+    return this
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "QOpenGLTimeMonitor", args)
   }

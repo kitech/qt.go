@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -108,6 +109,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractSpinBox)=1
@@ -118,7 +120,7 @@ type QAbstractSpinBox struct {
 }
 
 // selectAll()
-func (this *QAbstractSpinBox) Selectall(args ...interface{}) () {
+func (this *QAbstractSpinBox) SelectAll(args ...interface{}) () {
   // selectAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -168,7 +170,7 @@ func (this *QAbstractSpinBox) Text(args ...interface{}) (ret interface{}) {
 }
 
 // setAccelerated(_Bool)
-func (this *QAbstractSpinBox) Setaccelerated(args ...interface{}) () {
+func (this *QAbstractSpinBox) SetAccelerated(args ...interface{}) () {
   // setAccelerated(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -192,7 +194,7 @@ func (this *QAbstractSpinBox) Setaccelerated(args ...interface{}) () {
 }
 
 // keyboardTracking()
-func (this *QAbstractSpinBox) Keyboardtracking(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) KeyboardTracking(args ...interface{}) (ret interface{}) {
   // keyboardTracking()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -221,7 +223,7 @@ func (this *QAbstractSpinBox) Keyboardtracking(args ...interface{}) (ret interfa
 }
 
 // hasAcceptableInput()
-func (this *QAbstractSpinBox) Hasacceptableinput(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) HasAcceptableInput(args ...interface{}) (ret interface{}) {
   // hasAcceptableInput()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -250,7 +252,7 @@ func (this *QAbstractSpinBox) Hasacceptableinput(args ...interface{}) (ret inter
 }
 
 // buttonSymbols()
-func (this *QAbstractSpinBox) Buttonsymbols(args ...interface{}) () {
+func (this *QAbstractSpinBox) ButtonSymbols(args ...interface{}) () {
   // buttonSymbols()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -271,7 +273,7 @@ func (this *QAbstractSpinBox) Buttonsymbols(args ...interface{}) () {
 }
 
 // hasFrame()
-func (this *QAbstractSpinBox) Hasframe(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) HasFrame(args ...interface{}) (ret interface{}) {
   // hasFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -300,7 +302,7 @@ func (this *QAbstractSpinBox) Hasframe(args ...interface{}) (ret interface{}) {
 }
 
 // setWrapping(_Bool)
-func (this *QAbstractSpinBox) Setwrapping(args ...interface{}) () {
+func (this *QAbstractSpinBox) SetWrapping(args ...interface{}) () {
   // setWrapping(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -401,7 +403,7 @@ func (this *QAbstractSpinBox) Fixup(args ...interface{}) () {
 }
 
 // setSpecialValueText(const class QString &)
-func (this *QAbstractSpinBox) Setspecialvaluetext(args ...interface{}) () {
+func (this *QAbstractSpinBox) SetSpecialValueText(args ...interface{}) () {
   // setSpecialValueText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -425,7 +427,7 @@ func (this *QAbstractSpinBox) Setspecialvaluetext(args ...interface{}) () {
 }
 
 // isReadOnly()
-func (this *QAbstractSpinBox) Isreadonly(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) IsReadOnly(args ...interface{}) (ret interface{}) {
   // isReadOnly()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -454,7 +456,7 @@ func (this *QAbstractSpinBox) Isreadonly(args ...interface{}) (ret interface{}) 
 }
 
 // setGroupSeparatorShown(_Bool)
-func (this *QAbstractSpinBox) Setgroupseparatorshown(args ...interface{}) () {
+func (this *QAbstractSpinBox) SetGroupSeparatorShown(args ...interface{}) () {
   // setGroupSeparatorShown(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -478,7 +480,7 @@ func (this *QAbstractSpinBox) Setgroupseparatorshown(args ...interface{}) () {
 }
 
 // ~QAbstractSpinBox()
-func (this *QAbstractSpinBox) Freeqabstractspinbox(args ...interface{}) () {
+func (this *QAbstractSpinBox) Free(args ...interface{}) () {
   // ~QAbstractSpinBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -490,7 +492,10 @@ func (this *QAbstractSpinBox) Freeqabstractspinbox(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBoxD0Ev
     // invoke: void ~QAbstractSpinBox()
-    C.C_ZN16QAbstractSpinBoxD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN16QAbstractSpinBoxD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "~QAbstractSpinBox", args)
   }
@@ -499,7 +504,7 @@ func (this *QAbstractSpinBox) Freeqabstractspinbox(args ...interface{}) () {
 }
 
 // stepUp()
-func (this *QAbstractSpinBox) Stepup(args ...interface{}) () {
+func (this *QAbstractSpinBox) StepUp(args ...interface{}) () {
   // stepUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -520,7 +525,7 @@ func (this *QAbstractSpinBox) Stepup(args ...interface{}) () {
 }
 
 // stepBy(int)
-func (this *QAbstractSpinBox) Stepby(args ...interface{}) () {
+func (this *QAbstractSpinBox) StepBy(args ...interface{}) () {
   // stepBy(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -544,7 +549,7 @@ func (this *QAbstractSpinBox) Stepby(args ...interface{}) () {
 }
 
 // specialValueText()
-func (this *QAbstractSpinBox) Specialvaluetext(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) SpecialValueText(args ...interface{}) (ret interface{}) {
   // specialValueText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -573,7 +578,7 @@ func (this *QAbstractSpinBox) Specialvaluetext(args ...interface{}) (ret interfa
 }
 
 // isAccelerated()
-func (this *QAbstractSpinBox) Isaccelerated(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) IsAccelerated(args ...interface{}) (ret interface{}) {
   // isAccelerated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -631,7 +636,7 @@ func (this *QAbstractSpinBox) Wrapping(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QAbstractSpinBox) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -660,7 +665,7 @@ func (this *QAbstractSpinBox) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // interpretText()
-func (this *QAbstractSpinBox) Interprettext(args ...interface{}) () {
+func (this *QAbstractSpinBox) InterpretText(args ...interface{}) () {
   // interpretText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -708,7 +713,7 @@ func (this *QAbstractSpinBox) Validate(args ...interface{}) () {
 }
 
 // isGroupSeparatorShown()
-func (this *QAbstractSpinBox) Isgroupseparatorshown(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) IsGroupSeparatorShown(args ...interface{}) (ret interface{}) {
   // isGroupSeparatorShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -737,7 +742,7 @@ func (this *QAbstractSpinBox) Isgroupseparatorshown(args ...interface{}) (ret in
 }
 
 // correctionMode()
-func (this *QAbstractSpinBox) Correctionmode(args ...interface{}) () {
+func (this *QAbstractSpinBox) CorrectionMode(args ...interface{}) () {
   // correctionMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -758,7 +763,7 @@ func (this *QAbstractSpinBox) Correctionmode(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QAbstractSpinBox) Metaobject(args ...interface{}) () {
+func (this *QAbstractSpinBox) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -779,6 +784,9 @@ func (this *QAbstractSpinBox) Metaobject(args ...interface{}) () {
 }
 
 // QAbstractSpinBox(class QWidget *)
+func GcfreeQAbstractSpinBox(this *QAbstractSpinBox) {
+  qtrt.UniverseFree(this)
+}
 func NewQAbstractSpinBox(args ...interface{}) *QAbstractSpinBox {
   // QAbstractSpinBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -797,7 +805,9 @@ func NewQAbstractSpinBox(args ...interface{}) *QAbstractSpinBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QAbstractSpinBoxC2EP7QWidget(arg0)
-    return &QAbstractSpinBox{Qclsinst:qthis}
+    this := &QAbstractSpinBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAbstractSpinBox)
+    return this
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "QAbstractSpinBox", args)
   }
@@ -806,7 +816,7 @@ func NewQAbstractSpinBox(args ...interface{}) *QAbstractSpinBox {
 }
 
 // stepDown()
-func (this *QAbstractSpinBox) Stepdown(args ...interface{}) () {
+func (this *QAbstractSpinBox) StepDown(args ...interface{}) () {
   // stepDown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -827,7 +837,7 @@ func (this *QAbstractSpinBox) Stepdown(args ...interface{}) () {
 }
 
 // setFrame(_Bool)
-func (this *QAbstractSpinBox) Setframe(args ...interface{}) () {
+func (this *QAbstractSpinBox) SetFrame(args ...interface{}) () {
   // setFrame(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -872,7 +882,7 @@ func (this *QAbstractSpinBox) Clear(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QAbstractSpinBox) Minimumsizehint(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSpinBox) MinimumSizeHint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -901,7 +911,7 @@ func (this *QAbstractSpinBox) Minimumsizehint(args ...interface{}) (ret interfac
 }
 
 // setKeyboardTracking(_Bool)
-func (this *QAbstractSpinBox) Setkeyboardtracking(args ...interface{}) () {
+func (this *QAbstractSpinBox) SetKeyboardTracking(args ...interface{}) () {
   // setKeyboardTracking(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -925,7 +935,7 @@ func (this *QAbstractSpinBox) Setkeyboardtracking(args ...interface{}) () {
 }
 
 // setReadOnly(_Bool)
-func (this *QAbstractSpinBox) Setreadonly(args ...interface{}) () {
+func (this *QAbstractSpinBox) SetReadOnly(args ...interface{}) () {
   // setReadOnly(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

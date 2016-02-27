@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -58,6 +59,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCommonStyle)=1
@@ -109,6 +111,9 @@ func (this *QCommonStyle) Polish(args ...interface{}) () {
 }
 
 // QCommonStyle()
+func GcfreeQCommonStyle(this *QCommonStyle) {
+  qtrt.UniverseFree(this)
+}
 func NewQCommonStyle(args ...interface{}) *QCommonStyle {
   // QCommonStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -124,7 +129,9 @@ func NewQCommonStyle(args ...interface{}) *QCommonStyle {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QCommonStyleC2Ev()
-    return &QCommonStyle{Qclsinst:qthis}
+    this := &QCommonStyle{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCommonStyle)
+    return this
   default:
     qtrt.ErrorResolve("QCommonStyle", "QCommonStyle", args)
   }
@@ -133,7 +140,7 @@ func NewQCommonStyle(args ...interface{}) *QCommonStyle {
 }
 
 // ~QCommonStyle()
-func (this *QCommonStyle) Freeqcommonstyle(args ...interface{}) () {
+func (this *QCommonStyle) Free(args ...interface{}) () {
   // ~QCommonStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -145,7 +152,10 @@ func (this *QCommonStyle) Freeqcommonstyle(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QCommonStyleD0Ev
     // invoke: void ~QCommonStyle()
-    C.C_ZN12QCommonStyleD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QCommonStyleD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QCommonStyle", "~QCommonStyle", args)
   }
@@ -154,7 +164,7 @@ func (this *QCommonStyle) Freeqcommonstyle(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QCommonStyle) Metaobject(args ...interface{}) () {
+func (this *QCommonStyle) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

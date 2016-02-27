@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -68,6 +69,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStringList)=1
@@ -83,7 +85,7 @@ type QListSpecialMethodsLQStringG struct {
 }
 
 // indexOf(const class QRegExp &, int)
-func (this *QStringList) Indexof(args ...interface{}) (ret interface{}) {
+func (this *QStringList) IndexOf(args ...interface{}) (ret interface{}) {
   // indexOf(const class QRegExp &, int)
   // indexOf(const class QRegularExpression &, int)
   // indexOf(class QRegExp &, int)
@@ -158,6 +160,9 @@ func (this *QStringList) Indexof(args ...interface{}) (ret interface{}) {
 }
 
 // QStringList()
+func GcfreeQStringList(this *QStringList) {
+  qtrt.UniverseFree(this)
+}
 func NewQStringList(args ...interface{}) *QStringList {
   // QStringList()
   // QStringList(const class QString &)
@@ -176,7 +181,9 @@ func NewQStringList(args ...interface{}) *QStringList {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QStringListC2Ev()
-    return &QStringList{Qclsinst:qthis}
+    this := &QStringList{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStringList)
+    return this
   case 1:
     // invoke: _ZN11QStringListC1ERK7QString
     // invoke: void QStringList(const class QString &)
@@ -185,7 +192,9 @@ func NewQStringList(args ...interface{}) *QStringList {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QStringListC2ERK7QString(arg0)
-    return &QStringList{Qclsinst:qthis}
+    this := &QStringList{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStringList)
+    return this
   default:
     qtrt.ErrorResolve("QStringList", "QStringList", args)
   }
@@ -194,7 +203,7 @@ func NewQStringList(args ...interface{}) *QStringList {
 }
 
 // lastIndexOf(const class QRegExp &, int)
-func (this *QStringList) Lastindexof(args ...interface{}) (ret interface{}) {
+func (this *QStringList) LastIndexOf(args ...interface{}) (ret interface{}) {
   // lastIndexOf(const class QRegExp &, int)
   // lastIndexOf(const class QRegularExpression &, int)
   // lastIndexOf(class QRegExp &, int)
@@ -269,7 +278,7 @@ func (this *QStringList) Lastindexof(args ...interface{}) (ret interface{}) {
 }
 
 // replaceInStrings(const class QRegularExpression &, const class QString &)
-func (this *QListSpecialMethodsLQStringG) Replaceinstrings(args ...interface{}) () {
+func (this *QListSpecialMethodsLQStringG) ReplaceInStrings(args ...interface{}) () {
   // replaceInStrings(const class QRegularExpression &, const class QString &)
   // replaceInStrings(const class QRegExp &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -390,7 +399,7 @@ func (this *QListSpecialMethodsLQStringG) Filter(args ...interface{}) () {
 }
 
 // removeDuplicates()
-func (this *QListSpecialMethodsLQStringG) Removeduplicates(args ...interface{}) (ret interface{}) {
+func (this *QListSpecialMethodsLQStringG) RemoveDuplicates(args ...interface{}) (ret interface{}) {
   // removeDuplicates()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

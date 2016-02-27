@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -54,6 +55,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTranslator)=1
@@ -158,7 +160,7 @@ func (this *QTranslator) Load(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QTranslator) Metaobject(args ...interface{}) () {
+func (this *QTranslator) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,7 +181,7 @@ func (this *QTranslator) Metaobject(args ...interface{}) () {
 }
 
 // ~QTranslator()
-func (this *QTranslator) Freeqtranslator(args ...interface{}) () {
+func (this *QTranslator) Free(args ...interface{}) () {
   // ~QTranslator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -191,7 +193,10 @@ func (this *QTranslator) Freeqtranslator(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTranslatorD0Ev
     // invoke: void ~QTranslator()
-    C.C_ZN11QTranslatorD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QTranslatorD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTranslator", "~QTranslator", args)
   }
@@ -200,7 +205,7 @@ func (this *QTranslator) Freeqtranslator(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QTranslator) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QTranslator) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -229,6 +234,9 @@ func (this *QTranslator) Isempty(args ...interface{}) (ret interface{}) {
 }
 
 // QTranslator(class QObject *)
+func GcfreeQTranslator(this *QTranslator) {
+  qtrt.UniverseFree(this)
+}
 func NewQTranslator(args ...interface{}) *QTranslator {
   // QTranslator(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -247,7 +255,9 @@ func NewQTranslator(args ...interface{}) *QTranslator {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTranslatorC2EP7QObject(arg0)
-    return &QTranslator{Qclsinst:qthis}
+    this := &QTranslator{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTranslator)
+    return this
   default:
     qtrt.ErrorResolve("QTranslator", "QTranslator", args)
   }

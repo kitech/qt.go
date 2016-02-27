@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qheaderview.h
 // dst-file: /src/widgets/qheaderview.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -166,6 +167,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QHeaderView)=1
@@ -185,7 +187,7 @@ type QHeaderView struct {
 }
 
 // cascadingSectionResizes()
-func (this *QHeaderView) Cascadingsectionresizes(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) CascadingSectionResizes(args ...interface{}) (ret interface{}) {
   // cascadingSectionResizes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -214,7 +216,7 @@ func (this *QHeaderView) Cascadingsectionresizes(args ...interface{}) (ret inter
 }
 
 // setResizeContentsPrecision(int)
-func (this *QHeaderView) Setresizecontentsprecision(args ...interface{}) () {
+func (this *QHeaderView) SetResizeContentsPrecision(args ...interface{}) () {
   // setResizeContentsPrecision(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -238,7 +240,7 @@ func (this *QHeaderView) Setresizecontentsprecision(args ...interface{}) () {
 }
 
 // sectionsHidden()
-func (this *QHeaderView) Sectionshidden(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) SectionsHidden(args ...interface{}) (ret interface{}) {
   // sectionsHidden()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -267,7 +269,7 @@ func (this *QHeaderView) Sectionshidden(args ...interface{}) (ret interface{}) {
 }
 
 // sectionSizeHint(int)
-func (this *QHeaderView) Sectionsizehint(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) SectionSizeHint(args ...interface{}) (ret interface{}) {
   // sectionSizeHint(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -299,7 +301,7 @@ func (this *QHeaderView) Sectionsizehint(args ...interface{}) (ret interface{}) 
 }
 
 // sortIndicatorOrder()
-func (this *QHeaderView) Sortindicatororder(args ...interface{}) () {
+func (this *QHeaderView) SortIndicatorOrder(args ...interface{}) () {
   // sortIndicatorOrder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -320,7 +322,7 @@ func (this *QHeaderView) Sortindicatororder(args ...interface{}) () {
 }
 
 // resetDefaultSectionSize()
-func (this *QHeaderView) Resetdefaultsectionsize(args ...interface{}) () {
+func (this *QHeaderView) ResetDefaultSectionSize(args ...interface{}) () {
   // resetDefaultSectionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -341,7 +343,7 @@ func (this *QHeaderView) Resetdefaultsectionsize(args ...interface{}) () {
 }
 
 // setOffset(int)
-func (this *QHeaderView) Setoffset(args ...interface{}) () {
+func (this *QHeaderView) SetOffset(args ...interface{}) () {
   // setOffset(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -386,7 +388,7 @@ func (this *QHeaderView) Reset(args ...interface{}) () {
 }
 
 // sectionPosition(int)
-func (this *QHeaderView) Sectionposition(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) SectionPosition(args ...interface{}) (ret interface{}) {
   // sectionPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -418,7 +420,7 @@ func (this *QHeaderView) Sectionposition(args ...interface{}) (ret interface{}) 
 }
 
 // logicalIndex(int)
-func (this *QHeaderView) Logicalindex(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) LogicalIndex(args ...interface{}) (ret interface{}) {
   // logicalIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -450,7 +452,7 @@ func (this *QHeaderView) Logicalindex(args ...interface{}) (ret interface{}) {
 }
 
 // sectionSize(int)
-func (this *QHeaderView) Sectionsize(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) SectionSize(args ...interface{}) (ret interface{}) {
   // sectionSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -482,7 +484,7 @@ func (this *QHeaderView) Sectionsize(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QHeaderView) Metaobject(args ...interface{}) () {
+func (this *QHeaderView) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -503,7 +505,7 @@ func (this *QHeaderView) Metaobject(args ...interface{}) () {
 }
 
 // hideSection(int)
-func (this *QHeaderView) Hidesection(args ...interface{}) () {
+func (this *QHeaderView) HideSection(args ...interface{}) () {
   // hideSection(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -527,7 +529,7 @@ func (this *QHeaderView) Hidesection(args ...interface{}) () {
 }
 
 // setMaximumSectionSize(int)
-func (this *QHeaderView) Setmaximumsectionsize(args ...interface{}) () {
+func (this *QHeaderView) SetMaximumSectionSize(args ...interface{}) () {
   // setMaximumSectionSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -551,7 +553,7 @@ func (this *QHeaderView) Setmaximumsectionsize(args ...interface{}) () {
 }
 
 // sectionResizeMode(int)
-func (this *QHeaderView) Sectionresizemode(args ...interface{}) () {
+func (this *QHeaderView) SectionResizeMode(args ...interface{}) () {
   // sectionResizeMode(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -575,7 +577,7 @@ func (this *QHeaderView) Sectionresizemode(args ...interface{}) () {
 }
 
 // ~QHeaderView()
-func (this *QHeaderView) Freeqheaderview(args ...interface{}) () {
+func (this *QHeaderView) Free(args ...interface{}) () {
   // ~QHeaderView()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -587,7 +589,10 @@ func (this *QHeaderView) Freeqheaderview(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHeaderViewD0Ev
     // invoke: void ~QHeaderView()
-    C.C_ZN11QHeaderViewD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QHeaderViewD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QHeaderView", "~QHeaderView", args)
   }
@@ -596,7 +601,7 @@ func (this *QHeaderView) Freeqheaderview(args ...interface{}) () {
 }
 
 // restoreState(const class QByteArray &)
-func (this *QHeaderView) Restorestate(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) RestoreState(args ...interface{}) (ret interface{}) {
   // restoreState(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -628,7 +633,7 @@ func (this *QHeaderView) Restorestate(args ...interface{}) (ret interface{}) {
 }
 
 // setOffsetToSectionPosition(int)
-func (this *QHeaderView) Setoffsettosectionposition(args ...interface{}) () {
+func (this *QHeaderView) SetOffsetToSectionPosition(args ...interface{}) () {
   // setOffsetToSectionPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -652,7 +657,7 @@ func (this *QHeaderView) Setoffsettosectionposition(args ...interface{}) () {
 }
 
 // doItemsLayout()
-func (this *QHeaderView) Doitemslayout(args ...interface{}) () {
+func (this *QHeaderView) DoItemsLayout(args ...interface{}) () {
   // doItemsLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -673,7 +678,7 @@ func (this *QHeaderView) Doitemslayout(args ...interface{}) () {
 }
 
 // setHighlightSections(_Bool)
-func (this *QHeaderView) Sethighlightsections(args ...interface{}) () {
+func (this *QHeaderView) SetHighlightSections(args ...interface{}) () {
   // setHighlightSections(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -697,7 +702,7 @@ func (this *QHeaderView) Sethighlightsections(args ...interface{}) () {
 }
 
 // resizeContentsPrecision()
-func (this *QHeaderView) Resizecontentsprecision(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) ResizeContentsPrecision(args ...interface{}) (ret interface{}) {
   // resizeContentsPrecision()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -726,7 +731,7 @@ func (this *QHeaderView) Resizecontentsprecision(args ...interface{}) (ret inter
 }
 
 // sectionsClickable()
-func (this *QHeaderView) Sectionsclickable(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) SectionsClickable(args ...interface{}) (ret interface{}) {
   // sectionsClickable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -755,7 +760,7 @@ func (this *QHeaderView) Sectionsclickable(args ...interface{}) (ret interface{}
 }
 
 // logicalIndexAt(const class QPoint &)
-func (this *QHeaderView) Logicalindexat(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) LogicalIndexAt(args ...interface{}) (ret interface{}) {
   // logicalIndexAt(const class QPoint &)
   // logicalIndexAt(int)
   // logicalIndexAt(int, int)
@@ -853,7 +858,7 @@ func (this *QHeaderView) Offset(args ...interface{}) (ret interface{}) {
 }
 
 // setMinimumSectionSize(int)
-func (this *QHeaderView) Setminimumsectionsize(args ...interface{}) () {
+func (this *QHeaderView) SetMinimumSectionSize(args ...interface{}) () {
   // setMinimumSectionSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -877,7 +882,7 @@ func (this *QHeaderView) Setminimumsectionsize(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QHeaderView) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -906,7 +911,7 @@ func (this *QHeaderView) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // setVisible(_Bool)
-func (this *QHeaderView) Setvisible(args ...interface{}) () {
+func (this *QHeaderView) SetVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -930,7 +935,7 @@ func (this *QHeaderView) Setvisible(args ...interface{}) () {
 }
 
 // setCascadingSectionResizes(_Bool)
-func (this *QHeaderView) Setcascadingsectionresizes(args ...interface{}) () {
+func (this *QHeaderView) SetCascadingSectionResizes(args ...interface{}) () {
   // setCascadingSectionResizes(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -954,7 +959,7 @@ func (this *QHeaderView) Setcascadingsectionresizes(args ...interface{}) () {
 }
 
 // sectionsMovable()
-func (this *QHeaderView) Sectionsmovable(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) SectionsMovable(args ...interface{}) (ret interface{}) {
   // sectionsMovable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1012,7 +1017,7 @@ func (this *QHeaderView) Length(args ...interface{}) (ret interface{}) {
 }
 
 // sortIndicatorSection()
-func (this *QHeaderView) Sortindicatorsection(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) SortIndicatorSection(args ...interface{}) (ret interface{}) {
   // sortIndicatorSection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1041,7 +1046,7 @@ func (this *QHeaderView) Sortindicatorsection(args ...interface{}) (ret interfac
 }
 
 // resizeSection(int, int)
-func (this *QHeaderView) Resizesection(args ...interface{}) () {
+func (this *QHeaderView) ResizeSection(args ...interface{}) () {
   // resizeSection(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1068,7 +1073,7 @@ func (this *QHeaderView) Resizesection(args ...interface{}) () {
 }
 
 // setSectionsMovable(_Bool)
-func (this *QHeaderView) Setsectionsmovable(args ...interface{}) () {
+func (this *QHeaderView) SetSectionsMovable(args ...interface{}) () {
   // setSectionsMovable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1092,7 +1097,7 @@ func (this *QHeaderView) Setsectionsmovable(args ...interface{}) () {
 }
 
 // maximumSectionSize()
-func (this *QHeaderView) Maximumsectionsize(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) MaximumSectionSize(args ...interface{}) (ret interface{}) {
   // maximumSectionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1121,7 +1126,7 @@ func (this *QHeaderView) Maximumsectionsize(args ...interface{}) (ret interface{
 }
 
 // moveSection(int, int)
-func (this *QHeaderView) Movesection(args ...interface{}) () {
+func (this *QHeaderView) MoveSection(args ...interface{}) () {
   // moveSection(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1148,7 +1153,7 @@ func (this *QHeaderView) Movesection(args ...interface{}) () {
 }
 
 // isSectionHidden(int)
-func (this *QHeaderView) Issectionhidden(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) IsSectionHidden(args ...interface{}) (ret interface{}) {
   // isSectionHidden(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1180,7 +1185,7 @@ func (this *QHeaderView) Issectionhidden(args ...interface{}) (ret interface{}) 
 }
 
 // visualIndexAt(int)
-func (this *QHeaderView) Visualindexat(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) VisualIndexAt(args ...interface{}) (ret interface{}) {
   // visualIndexAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1212,7 +1217,7 @@ func (this *QHeaderView) Visualindexat(args ...interface{}) (ret interface{}) {
 }
 
 // setSortIndicatorShown(_Bool)
-func (this *QHeaderView) Setsortindicatorshown(args ...interface{}) () {
+func (this *QHeaderView) SetSortIndicatorShown(args ...interface{}) () {
   // setSortIndicatorShown(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1236,7 +1241,7 @@ func (this *QHeaderView) Setsortindicatorshown(args ...interface{}) () {
 }
 
 // defaultAlignment()
-func (this *QHeaderView) Defaultalignment(args ...interface{}) () {
+func (this *QHeaderView) DefaultAlignment(args ...interface{}) () {
   // defaultAlignment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1257,7 +1262,7 @@ func (this *QHeaderView) Defaultalignment(args ...interface{}) () {
 }
 
 // hiddenSectionCount()
-func (this *QHeaderView) Hiddensectioncount(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) HiddenSectionCount(args ...interface{}) (ret interface{}) {
   // hiddenSectionCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1286,7 +1291,7 @@ func (this *QHeaderView) Hiddensectioncount(args ...interface{}) (ret interface{
 }
 
 // setStretchLastSection(_Bool)
-func (this *QHeaderView) Setstretchlastsection(args ...interface{}) () {
+func (this *QHeaderView) SetStretchLastSection(args ...interface{}) () {
   // setStretchLastSection(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1339,7 +1344,7 @@ func (this *QHeaderView) Count(args ...interface{}) (ret interface{}) {
 }
 
 // minimumSectionSize()
-func (this *QHeaderView) Minimumsectionsize(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) MinimumSectionSize(args ...interface{}) (ret interface{}) {
   // minimumSectionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1368,7 +1373,7 @@ func (this *QHeaderView) Minimumsectionsize(args ...interface{}) (ret interface{
 }
 
 // saveState()
-func (this *QHeaderView) Savestate(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) SaveState(args ...interface{}) (ret interface{}) {
   // saveState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1418,7 +1423,7 @@ func (this *QHeaderView) Orientation(args ...interface{}) () {
 }
 
 // setSectionHidden(int, _Bool)
-func (this *QHeaderView) Setsectionhidden(args ...interface{}) () {
+func (this *QHeaderView) SetSectionHidden(args ...interface{}) () {
   // setSectionHidden(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1445,7 +1450,7 @@ func (this *QHeaderView) Setsectionhidden(args ...interface{}) () {
 }
 
 // setOffsetToLastSection()
-func (this *QHeaderView) Setoffsettolastsection(args ...interface{}) () {
+func (this *QHeaderView) SetOffsetToLastSection(args ...interface{}) () {
   // setOffsetToLastSection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1466,7 +1471,7 @@ func (this *QHeaderView) Setoffsettolastsection(args ...interface{}) () {
 }
 
 // stretchLastSection()
-func (this *QHeaderView) Stretchlastsection(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) StretchLastSection(args ...interface{}) (ret interface{}) {
   // stretchLastSection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1495,7 +1500,7 @@ func (this *QHeaderView) Stretchlastsection(args ...interface{}) (ret interface{
 }
 
 // isSortIndicatorShown()
-func (this *QHeaderView) Issortindicatorshown(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) IsSortIndicatorShown(args ...interface{}) (ret interface{}) {
   // isSortIndicatorShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1524,7 +1529,7 @@ func (this *QHeaderView) Issortindicatorshown(args ...interface{}) (ret interfac
 }
 
 // showSection(int)
-func (this *QHeaderView) Showsection(args ...interface{}) () {
+func (this *QHeaderView) ShowSection(args ...interface{}) () {
   // showSection(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1548,7 +1553,7 @@ func (this *QHeaderView) Showsection(args ...interface{}) () {
 }
 
 // swapSections(int, int)
-func (this *QHeaderView) Swapsections(args ...interface{}) () {
+func (this *QHeaderView) SwapSections(args ...interface{}) () {
   // swapSections(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1575,7 +1580,7 @@ func (this *QHeaderView) Swapsections(args ...interface{}) () {
 }
 
 // setSectionsClickable(_Bool)
-func (this *QHeaderView) Setsectionsclickable(args ...interface{}) () {
+func (this *QHeaderView) SetSectionsClickable(args ...interface{}) () {
   // setSectionsClickable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1599,7 +1604,7 @@ func (this *QHeaderView) Setsectionsclickable(args ...interface{}) () {
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QHeaderView) Setmodel(args ...interface{}) () {
+func (this *QHeaderView) SetModel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1623,7 +1628,7 @@ func (this *QHeaderView) Setmodel(args ...interface{}) () {
 }
 
 // setDefaultSectionSize(int)
-func (this *QHeaderView) Setdefaultsectionsize(args ...interface{}) () {
+func (this *QHeaderView) SetDefaultSectionSize(args ...interface{}) () {
   // setDefaultSectionSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1647,7 +1652,7 @@ func (this *QHeaderView) Setdefaultsectionsize(args ...interface{}) () {
 }
 
 // sectionsMoved()
-func (this *QHeaderView) Sectionsmoved(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) SectionsMoved(args ...interface{}) (ret interface{}) {
   // sectionsMoved()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1676,7 +1681,7 @@ func (this *QHeaderView) Sectionsmoved(args ...interface{}) (ret interface{}) {
 }
 
 // sectionViewportPosition(int)
-func (this *QHeaderView) Sectionviewportposition(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) SectionViewportPosition(args ...interface{}) (ret interface{}) {
   // sectionViewportPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1708,7 +1713,7 @@ func (this *QHeaderView) Sectionviewportposition(args ...interface{}) (ret inter
 }
 
 // stretchSectionCount()
-func (this *QHeaderView) Stretchsectioncount(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) StretchSectionCount(args ...interface{}) (ret interface{}) {
   // stretchSectionCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1737,7 +1742,7 @@ func (this *QHeaderView) Stretchsectioncount(args ...interface{}) (ret interface
 }
 
 // visualIndex(int)
-func (this *QHeaderView) Visualindex(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) VisualIndex(args ...interface{}) (ret interface{}) {
   // visualIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1769,7 +1774,7 @@ func (this *QHeaderView) Visualindex(args ...interface{}) (ret interface{}) {
 }
 
 // highlightSections()
-func (this *QHeaderView) Highlightsections(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) HighlightSections(args ...interface{}) (ret interface{}) {
   // highlightSections()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1798,7 +1803,7 @@ func (this *QHeaderView) Highlightsections(args ...interface{}) (ret interface{}
 }
 
 // defaultSectionSize()
-func (this *QHeaderView) Defaultsectionsize(args ...interface{}) (ret interface{}) {
+func (this *QHeaderView) DefaultSectionSize(args ...interface{}) (ret interface{}) {
   // defaultSectionSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

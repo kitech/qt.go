@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qevent.h
 // dst-file: /src/gui/qevent.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -462,6 +463,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QWhatsThisClickedEvent)=32
@@ -687,6 +689,9 @@ type QInputMethodQueryEvent struct {
 }
 
 // QWhatsThisClickedEvent(const class QString &)
+func GcfreeQWhatsThisClickedEvent(this *QWhatsThisClickedEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQWhatsThisClickedEvent(args ...interface{}) *QWhatsThisClickedEvent {
   // QWhatsThisClickedEvent(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -705,7 +710,9 @@ func NewQWhatsThisClickedEvent(args ...interface{}) *QWhatsThisClickedEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QWhatsThisClickedEventC2ERK7QString(arg0)
-    return &QWhatsThisClickedEvent{Qclsinst:qthis}
+    this := &QWhatsThisClickedEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQWhatsThisClickedEvent)
+    return this
   default:
     qtrt.ErrorResolve("QWhatsThisClickedEvent", "QWhatsThisClickedEvent", args)
   }
@@ -714,7 +721,7 @@ func NewQWhatsThisClickedEvent(args ...interface{}) *QWhatsThisClickedEvent {
 }
 
 // ~QWhatsThisClickedEvent()
-func (this *QWhatsThisClickedEvent) Freeqwhatsthisclickedevent(args ...interface{}) () {
+func (this *QWhatsThisClickedEvent) Free(args ...interface{}) () {
   // ~QWhatsThisClickedEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -726,7 +733,10 @@ func (this *QWhatsThisClickedEvent) Freeqwhatsthisclickedevent(args ...interface
   case 0:
     // invoke: _ZN22QWhatsThisClickedEventD0Ev
     // invoke: void ~QWhatsThisClickedEvent()
-    C.C_ZN22QWhatsThisClickedEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN22QWhatsThisClickedEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QWhatsThisClickedEvent", "~QWhatsThisClickedEvent", args)
   }
@@ -793,7 +803,7 @@ func (this *QExposeEvent) Region(args ...interface{}) (ret interface{}) {
 }
 
 // ~QExposeEvent()
-func (this *QExposeEvent) Freeqexposeevent(args ...interface{}) () {
+func (this *QExposeEvent) Free(args ...interface{}) () {
   // ~QExposeEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -805,7 +815,10 @@ func (this *QExposeEvent) Freeqexposeevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QExposeEventD0Ev
     // invoke: void ~QExposeEvent()
-    C.C_ZN12QExposeEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QExposeEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QExposeEvent", "~QExposeEvent", args)
   }
@@ -814,6 +827,9 @@ func (this *QExposeEvent) Freeqexposeevent(args ...interface{}) () {
 }
 
 // QExposeEvent(const class QRegion &)
+func GcfreeQExposeEvent(this *QExposeEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQExposeEvent(args ...interface{}) *QExposeEvent {
   // QExposeEvent(const class QRegion &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -832,7 +848,9 @@ func NewQExposeEvent(args ...interface{}) *QExposeEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QExposeEventC2ERK7QRegion(arg0)
-    return &QExposeEvent{Qclsinst:qthis}
+    this := &QExposeEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQExposeEvent)
+    return this
   default:
     qtrt.ErrorResolve("QExposeEvent", "QExposeEvent", args)
   }
@@ -841,7 +859,7 @@ func NewQExposeEvent(args ...interface{}) *QExposeEvent {
 }
 
 // replacementStart()
-func (this *QInputMethodEvent) Replacementstart(args ...interface{}) (ret interface{}) {
+func (this *QInputMethodEvent) ReplacementStart(args ...interface{}) (ret interface{}) {
   // replacementStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -870,7 +888,7 @@ func (this *QInputMethodEvent) Replacementstart(args ...interface{}) (ret interf
 }
 
 // replacementLength()
-func (this *QInputMethodEvent) Replacementlength(args ...interface{}) (ret interface{}) {
+func (this *QInputMethodEvent) ReplacementLength(args ...interface{}) (ret interface{}) {
   // replacementLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -899,6 +917,9 @@ func (this *QInputMethodEvent) Replacementlength(args ...interface{}) (ret inter
 }
 
 // QInputMethodEvent(const class QInputMethodEvent &)
+func GcfreeQInputMethodEvent(this *QInputMethodEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQInputMethodEvent(args ...interface{}) *QInputMethodEvent {
   // QInputMethodEvent(const class QInputMethodEvent &)
   // QInputMethodEvent()
@@ -919,14 +940,18 @@ func NewQInputMethodEvent(args ...interface{}) *QInputMethodEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QInputMethodEventC2ERKS_(arg0)
-    return &QInputMethodEvent{Qclsinst:qthis}
+    this := &QInputMethodEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQInputMethodEvent)
+    return this
   case 1:
     // invoke: _ZN17QInputMethodEventC1Ev
     // invoke: void QInputMethodEvent()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QInputMethodEventC2Ev()
-    return &QInputMethodEvent{Qclsinst:qthis}
+    this := &QInputMethodEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQInputMethodEvent)
+    return this
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "QInputMethodEvent", args)
   }
@@ -935,7 +960,7 @@ func NewQInputMethodEvent(args ...interface{}) *QInputMethodEvent {
 }
 
 // preeditString()
-func (this *QInputMethodEvent) Preeditstring(args ...interface{}) (ret interface{}) {
+func (this *QInputMethodEvent) PreeditString(args ...interface{}) (ret interface{}) {
   // preeditString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -985,7 +1010,7 @@ func (this *QInputMethodEvent) Attributes(args ...interface{}) () {
 }
 
 // commitString()
-func (this *QInputMethodEvent) Commitstring(args ...interface{}) (ret interface{}) {
+func (this *QInputMethodEvent) CommitString(args ...interface{}) (ret interface{}) {
   // commitString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1014,7 +1039,7 @@ func (this *QInputMethodEvent) Commitstring(args ...interface{}) (ret interface{
 }
 
 // setCommitString(const class QString &, int, int)
-func (this *QInputMethodEvent) Setcommitstring(args ...interface{}) () {
+func (this *QInputMethodEvent) SetCommitString(args ...interface{}) () {
   // setCommitString(const class QString &, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1044,7 +1069,7 @@ func (this *QInputMethodEvent) Setcommitstring(args ...interface{}) () {
 }
 
 // globalPos()
-func (this *QHelpEvent) Globalpos(args ...interface{}) (ret interface{}) {
+func (this *QHelpEvent) GlobalPos(args ...interface{}) (ret interface{}) {
   // globalPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1144,7 +1169,7 @@ func (this *QHelpEvent) X(args ...interface{}) () {
 }
 
 // globalX()
-func (this *QHelpEvent) Globalx(args ...interface{}) (ret interface{}) {
+func (this *QHelpEvent) GlobalX(args ...interface{}) (ret interface{}) {
   // globalX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1173,7 +1198,7 @@ func (this *QHelpEvent) Globalx(args ...interface{}) (ret interface{}) {
 }
 
 // globalY()
-func (this *QHelpEvent) Globaly(args ...interface{}) (ret interface{}) {
+func (this *QHelpEvent) GlobalY(args ...interface{}) (ret interface{}) {
   // globalY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1202,7 +1227,7 @@ func (this *QHelpEvent) Globaly(args ...interface{}) (ret interface{}) {
 }
 
 // ~QHelpEvent()
-func (this *QHelpEvent) Freeqhelpevent(args ...interface{}) () {
+func (this *QHelpEvent) Free(args ...interface{}) () {
   // ~QHelpEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1214,7 +1239,10 @@ func (this *QHelpEvent) Freeqhelpevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QHelpEventD0Ev
     // invoke: void ~QHelpEvent()
-    C.C_ZN10QHelpEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QHelpEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QHelpEvent", "~QHelpEvent", args)
   }
@@ -1223,7 +1251,7 @@ func (this *QHelpEvent) Freeqhelpevent(args ...interface{}) () {
 }
 
 // localPos()
-func (this *QMouseEvent) Localpos(args ...interface{}) (ret interface{}) {
+func (this *QMouseEvent) LocalPos(args ...interface{}) (ret interface{}) {
   // localPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1252,7 +1280,7 @@ func (this *QMouseEvent) Localpos(args ...interface{}) (ret interface{}) {
 }
 
 // screenPos()
-func (this *QMouseEvent) Screenpos(args ...interface{}) (ret interface{}) {
+func (this *QMouseEvent) ScreenPos(args ...interface{}) (ret interface{}) {
   // screenPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1281,7 +1309,7 @@ func (this *QMouseEvent) Screenpos(args ...interface{}) (ret interface{}) {
 }
 
 // globalPos()
-func (this *QMouseEvent) Globalpos(args ...interface{}) (ret interface{}) {
+func (this *QMouseEvent) GlobalPos(args ...interface{}) (ret interface{}) {
   // globalPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1331,7 +1359,7 @@ func (this *QMouseEvent) Button(args ...interface{}) () {
 }
 
 // ~QMouseEvent()
-func (this *QMouseEvent) Freeqmouseevent(args ...interface{}) () {
+func (this *QMouseEvent) Free(args ...interface{}) () {
   // ~QMouseEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1343,7 +1371,10 @@ func (this *QMouseEvent) Freeqmouseevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMouseEventD0Ev
     // invoke: void ~QMouseEvent()
-    C.C_ZN11QMouseEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QMouseEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMouseEvent", "~QMouseEvent", args)
   }
@@ -1444,7 +1475,7 @@ func (this *QMouseEvent) Flags(args ...interface{}) () {
 }
 
 // globalY()
-func (this *QMouseEvent) Globaly(args ...interface{}) (ret interface{}) {
+func (this *QMouseEvent) GlobalY(args ...interface{}) (ret interface{}) {
   // globalY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1515,7 +1546,7 @@ func (this *QMouseEvent) X(args ...interface{}) () {
 }
 
 // windowPos()
-func (this *QMouseEvent) Windowpos(args ...interface{}) (ret interface{}) {
+func (this *QMouseEvent) WindowPos(args ...interface{}) (ret interface{}) {
   // windowPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1544,7 +1575,7 @@ func (this *QMouseEvent) Windowpos(args ...interface{}) (ret interface{}) {
 }
 
 // globalX()
-func (this *QMouseEvent) Globalx(args ...interface{}) (ret interface{}) {
+func (this *QMouseEvent) GlobalX(args ...interface{}) (ret interface{}) {
   // globalX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1602,7 +1633,7 @@ func (this *QFileOpenEvent) Url(args ...interface{}) (ret interface{}) {
 }
 
 // ~QFileOpenEvent()
-func (this *QFileOpenEvent) Freeqfileopenevent(args ...interface{}) () {
+func (this *QFileOpenEvent) Free(args ...interface{}) () {
   // ~QFileOpenEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1614,7 +1645,10 @@ func (this *QFileOpenEvent) Freeqfileopenevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QFileOpenEventD0Ev
     // invoke: void ~QFileOpenEvent()
-    C.C_ZN14QFileOpenEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QFileOpenEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFileOpenEvent", "~QFileOpenEvent", args)
   }
@@ -1652,6 +1686,9 @@ func (this *QFileOpenEvent) File(args ...interface{}) (ret interface{}) {
 }
 
 // QFileOpenEvent(const class QString &)
+func GcfreeQFileOpenEvent(this *QFileOpenEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQFileOpenEvent(args ...interface{}) *QFileOpenEvent {
   // QFileOpenEvent(const class QString &)
   // QFileOpenEvent(const class QUrl &)
@@ -1673,7 +1710,9 @@ func NewQFileOpenEvent(args ...interface{}) *QFileOpenEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QFileOpenEventC2ERK7QString(arg0)
-    return &QFileOpenEvent{Qclsinst:qthis}
+    this := &QFileOpenEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFileOpenEvent)
+    return this
   case 1:
     // invoke: _ZN14QFileOpenEventC1ERK4QUrl
     // invoke: void QFileOpenEvent(const class QUrl &)
@@ -1682,7 +1721,9 @@ func NewQFileOpenEvent(args ...interface{}) *QFileOpenEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QFileOpenEventC2ERK4QUrl(arg0)
-    return &QFileOpenEvent{Qclsinst:qthis}
+    this := &QFileOpenEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFileOpenEvent)
+    return this
   default:
     qtrt.ErrorResolve("QFileOpenEvent", "QFileOpenEvent", args)
   }
@@ -1691,7 +1732,7 @@ func NewQFileOpenEvent(args ...interface{}) *QFileOpenEvent {
 }
 
 // ~QToolBarChangeEvent()
-func (this *QToolBarChangeEvent) Freeqtoolbarchangeevent(args ...interface{}) () {
+func (this *QToolBarChangeEvent) Free(args ...interface{}) () {
   // ~QToolBarChangeEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1703,7 +1744,10 @@ func (this *QToolBarChangeEvent) Freeqtoolbarchangeevent(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QToolBarChangeEventD0Ev
     // invoke: void ~QToolBarChangeEvent()
-    C.C_ZN19QToolBarChangeEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QToolBarChangeEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QToolBarChangeEvent", "~QToolBarChangeEvent", args)
   }
@@ -1741,6 +1785,9 @@ func (this *QToolBarChangeEvent) Toggle(args ...interface{}) (ret interface{}) {
 }
 
 // QToolBarChangeEvent(_Bool)
+func GcfreeQToolBarChangeEvent(this *QToolBarChangeEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQToolBarChangeEvent(args ...interface{}) *QToolBarChangeEvent {
   // QToolBarChangeEvent(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1759,7 +1806,9 @@ func NewQToolBarChangeEvent(args ...interface{}) *QToolBarChangeEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QToolBarChangeEventC2Eb(arg0)
-    return &QToolBarChangeEvent{Qclsinst:qthis}
+    this := &QToolBarChangeEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQToolBarChangeEvent)
+    return this
   default:
     qtrt.ErrorResolve("QToolBarChangeEvent", "QToolBarChangeEvent", args)
   }
@@ -1768,7 +1817,7 @@ func NewQToolBarChangeEvent(args ...interface{}) *QToolBarChangeEvent {
 }
 
 // xTilt()
-func (this *QTabletEvent) Xtilt(args ...interface{}) (ret interface{}) {
+func (this *QTabletEvent) XTilt(args ...interface{}) (ret interface{}) {
   // xTilt()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1826,7 +1875,7 @@ func (this *QTabletEvent) Pos(args ...interface{}) (ret interface{}) {
 }
 
 // pointerType()
-func (this *QTabletEvent) Pointertype(args ...interface{}) () {
+func (this *QTabletEvent) PointerType(args ...interface{}) () {
   // pointerType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1868,7 +1917,7 @@ func (this *QTabletEvent) Buttons(args ...interface{}) () {
 }
 
 // hiResGlobalX()
-func (this *QTabletEvent) Hiresglobalx(args ...interface{}) (ret interface{}) {
+func (this *QTabletEvent) HiResGlobalX(args ...interface{}) (ret interface{}) {
   // hiResGlobalX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1897,7 +1946,7 @@ func (this *QTabletEvent) Hiresglobalx(args ...interface{}) (ret interface{}) {
 }
 
 // hiResGlobalY()
-func (this *QTabletEvent) Hiresglobaly(args ...interface{}) (ret interface{}) {
+func (this *QTabletEvent) HiResGlobalY(args ...interface{}) (ret interface{}) {
   // hiResGlobalY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1926,7 +1975,7 @@ func (this *QTabletEvent) Hiresglobaly(args ...interface{}) (ret interface{}) {
 }
 
 // ~QTabletEvent()
-func (this *QTabletEvent) Freeqtabletevent(args ...interface{}) () {
+func (this *QTabletEvent) Free(args ...interface{}) () {
   // ~QTabletEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1938,7 +1987,10 @@ func (this *QTabletEvent) Freeqtabletevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTabletEventD0Ev
     // invoke: void ~QTabletEvent()
-    C.C_ZN12QTabletEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QTabletEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTabletEvent", "~QTabletEvent", args)
   }
@@ -1947,7 +1999,7 @@ func (this *QTabletEvent) Freeqtabletevent(args ...interface{}) () {
 }
 
 // uniqueId()
-func (this *QTabletEvent) Uniqueid(args ...interface{}) (ret interface{}) {
+func (this *QTabletEvent) UniqueId(args ...interface{}) (ret interface{}) {
   // uniqueId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1976,7 +2028,7 @@ func (this *QTabletEvent) Uniqueid(args ...interface{}) (ret interface{}) {
 }
 
 // globalX()
-func (this *QTabletEvent) Globalx(args ...interface{}) (ret interface{}) {
+func (this *QTabletEvent) GlobalX(args ...interface{}) (ret interface{}) {
   // globalX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2005,7 +2057,7 @@ func (this *QTabletEvent) Globalx(args ...interface{}) (ret interface{}) {
 }
 
 // globalY()
-func (this *QTabletEvent) Globaly(args ...interface{}) (ret interface{}) {
+func (this *QTabletEvent) GlobalY(args ...interface{}) (ret interface{}) {
   // globalY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2034,7 +2086,7 @@ func (this *QTabletEvent) Globaly(args ...interface{}) (ret interface{}) {
 }
 
 // yTilt()
-func (this *QTabletEvent) Ytilt(args ...interface{}) (ret interface{}) {
+func (this *QTabletEvent) YTilt(args ...interface{}) (ret interface{}) {
   // yTilt()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2063,7 +2115,7 @@ func (this *QTabletEvent) Ytilt(args ...interface{}) (ret interface{}) {
 }
 
 // globalPosF()
-func (this *QTabletEvent) Globalposf(args ...interface{}) (ret interface{}) {
+func (this *QTabletEvent) GlobalPosF(args ...interface{}) (ret interface{}) {
   // globalPosF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2171,7 +2223,7 @@ func (this *QTabletEvent) Rotation(args ...interface{}) (ret interface{}) {
 }
 
 // globalPos()
-func (this *QTabletEvent) Globalpos(args ...interface{}) (ret interface{}) {
+func (this *QTabletEvent) GlobalPos(args ...interface{}) (ret interface{}) {
   // globalPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2200,7 +2252,7 @@ func (this *QTabletEvent) Globalpos(args ...interface{}) (ret interface{}) {
 }
 
 // posF()
-func (this *QTabletEvent) Posf(args ...interface{}) (ret interface{}) {
+func (this *QTabletEvent) PosF(args ...interface{}) (ret interface{}) {
   // posF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2321,7 +2373,7 @@ func (this *QTabletEvent) Z(args ...interface{}) (ret interface{}) {
 }
 
 // tangentialPressure()
-func (this *QTabletEvent) Tangentialpressure(args ...interface{}) (ret interface{}) {
+func (this *QTabletEvent) TangentialPressure(args ...interface{}) (ret interface{}) {
   // tangentialPressure()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2350,7 +2402,7 @@ func (this *QTabletEvent) Tangentialpressure(args ...interface{}) (ret interface
 }
 
 // touchPointStates()
-func (this *QTouchEvent) Touchpointstates(args ...interface{}) () {
+func (this *QTouchEvent) TouchPointStates(args ...interface{}) () {
   // touchPointStates()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2400,7 +2452,7 @@ func (this *QTouchEvent) Target(args ...interface{}) (ret interface{}) {
 }
 
 // setTarget(class QObject *)
-func (this *QTouchEvent) Settarget(args ...interface{}) () {
+func (this *QTouchEvent) SetTarget(args ...interface{}) () {
   // setTarget(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2424,7 +2476,7 @@ func (this *QTouchEvent) Settarget(args ...interface{}) () {
 }
 
 // touchPoints()
-func (this *QTouchEvent) Touchpoints(args ...interface{}) () {
+func (this *QTouchEvent) TouchPoints(args ...interface{}) () {
   // touchPoints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2445,7 +2497,7 @@ func (this *QTouchEvent) Touchpoints(args ...interface{}) () {
 }
 
 // ~QTouchEvent()
-func (this *QTouchEvent) Freeqtouchevent(args ...interface{}) () {
+func (this *QTouchEvent) Free(args ...interface{}) () {
   // ~QTouchEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2457,7 +2509,10 @@ func (this *QTouchEvent) Freeqtouchevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTouchEventD0Ev
     // invoke: void ~QTouchEvent()
-    C.C_ZN11QTouchEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QTouchEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTouchEvent", "~QTouchEvent", args)
   }
@@ -2495,7 +2550,7 @@ func (this *QTouchEvent) Window(args ...interface{}) (ret interface{}) {
 }
 
 // setDevice(class QTouchDevice *)
-func (this *QTouchEvent) Setdevice(args ...interface{}) () {
+func (this *QTouchEvent) SetDevice(args ...interface{}) () {
   // setDevice(class QTouchDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2548,7 +2603,7 @@ func (this *QTouchEvent) Device(args ...interface{}) (ret interface{}) {
 }
 
 // setWindow(class QWindow *)
-func (this *QTouchEvent) Setwindow(args ...interface{}) () {
+func (this *QTouchEvent) SetWindow(args ...interface{}) () {
   // setWindow(class QWindow *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2622,7 +2677,7 @@ func (this *QScreenOrientationChangeEvent) Orientation(args ...interface{}) () {
 }
 
 // ~QScreenOrientationChangeEvent()
-func (this *QScreenOrientationChangeEvent) Freeqscreenorientationchangeevent(args ...interface{}) () {
+func (this *QScreenOrientationChangeEvent) Free(args ...interface{}) () {
   // ~QScreenOrientationChangeEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2634,7 +2689,10 @@ func (this *QScreenOrientationChangeEvent) Freeqscreenorientationchangeevent(arg
   case 0:
     // invoke: _ZN29QScreenOrientationChangeEventD0Ev
     // invoke: void ~QScreenOrientationChangeEvent()
-    C.C_ZN29QScreenOrientationChangeEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN29QScreenOrientationChangeEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QScreenOrientationChangeEvent", "~QScreenOrientationChangeEvent", args)
   }
@@ -2643,7 +2701,7 @@ func (this *QScreenOrientationChangeEvent) Freeqscreenorientationchangeevent(arg
 }
 
 // ~QIconDragEvent()
-func (this *QIconDragEvent) Freeqicondragevent(args ...interface{}) () {
+func (this *QIconDragEvent) Free(args ...interface{}) () {
   // ~QIconDragEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2655,7 +2713,10 @@ func (this *QIconDragEvent) Freeqicondragevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QIconDragEventD0Ev
     // invoke: void ~QIconDragEvent()
-    C.C_ZN14QIconDragEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QIconDragEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QIconDragEvent", "~QIconDragEvent", args)
   }
@@ -2664,6 +2725,9 @@ func (this *QIconDragEvent) Freeqicondragevent(args ...interface{}) () {
 }
 
 // QIconDragEvent()
+func GcfreeQIconDragEvent(this *QIconDragEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQIconDragEvent(args ...interface{}) *QIconDragEvent {
   // QIconDragEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2679,7 +2743,9 @@ func NewQIconDragEvent(args ...interface{}) *QIconDragEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QIconDragEventC2Ev()
-    return &QIconDragEvent{Qclsinst:qthis}
+    this := &QIconDragEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQIconDragEvent)
+    return this
   default:
     qtrt.ErrorResolve("QIconDragEvent", "QIconDragEvent", args)
   }
@@ -2688,6 +2754,9 @@ func NewQIconDragEvent(args ...interface{}) *QIconDragEvent {
 }
 
 // QCloseEvent()
+func GcfreeQCloseEvent(this *QCloseEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQCloseEvent(args ...interface{}) *QCloseEvent {
   // QCloseEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2703,7 +2772,9 @@ func NewQCloseEvent(args ...interface{}) *QCloseEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QCloseEventC2Ev()
-    return &QCloseEvent{Qclsinst:qthis}
+    this := &QCloseEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCloseEvent)
+    return this
   default:
     qtrt.ErrorResolve("QCloseEvent", "QCloseEvent", args)
   }
@@ -2712,7 +2783,7 @@ func NewQCloseEvent(args ...interface{}) *QCloseEvent {
 }
 
 // ~QCloseEvent()
-func (this *QCloseEvent) Freeqcloseevent(args ...interface{}) () {
+func (this *QCloseEvent) Free(args ...interface{}) () {
   // ~QCloseEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2724,7 +2795,10 @@ func (this *QCloseEvent) Freeqcloseevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QCloseEventD0Ev
     // invoke: void ~QCloseEvent()
-    C.C_ZN11QCloseEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QCloseEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QCloseEvent", "~QCloseEvent", args)
   }
@@ -2733,7 +2807,7 @@ func (this *QCloseEvent) Freeqcloseevent(args ...interface{}) () {
 }
 
 // ~QDragEnterEvent()
-func (this *QDragEnterEvent) Freeqdragenterevent(args ...interface{}) () {
+func (this *QDragEnterEvent) Free(args ...interface{}) () {
   // ~QDragEnterEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2745,7 +2819,10 @@ func (this *QDragEnterEvent) Freeqdragenterevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QDragEnterEventD0Ev
     // invoke: void ~QDragEnterEvent()
-    C.C_ZN15QDragEnterEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QDragEnterEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDragEnterEvent", "~QDragEnterEvent", args)
   }
@@ -2754,7 +2831,7 @@ func (this *QDragEnterEvent) Freeqdragenterevent(args ...interface{}) () {
 }
 
 // pixelDelta()
-func (this *QWheelEvent) Pixeldelta(args ...interface{}) (ret interface{}) {
+func (this *QWheelEvent) PixelDelta(args ...interface{}) (ret interface{}) {
   // pixelDelta()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2783,7 +2860,7 @@ func (this *QWheelEvent) Pixeldelta(args ...interface{}) (ret interface{}) {
 }
 
 // globalPosF()
-func (this *QWheelEvent) Globalposf(args ...interface{}) (ret interface{}) {
+func (this *QWheelEvent) GlobalPosF(args ...interface{}) (ret interface{}) {
   // globalPosF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2812,7 +2889,7 @@ func (this *QWheelEvent) Globalposf(args ...interface{}) (ret interface{}) {
 }
 
 // ~QWheelEvent()
-func (this *QWheelEvent) Freeqwheelevent(args ...interface{}) () {
+func (this *QWheelEvent) Free(args ...interface{}) () {
   // ~QWheelEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2824,7 +2901,10 @@ func (this *QWheelEvent) Freeqwheelevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QWheelEventD0Ev
     // invoke: void ~QWheelEvent()
-    C.C_ZN11QWheelEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QWheelEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QWheelEvent", "~QWheelEvent", args)
   }
@@ -2854,7 +2934,7 @@ func (this *QWheelEvent) Orientation(args ...interface{}) () {
 }
 
 // posF()
-func (this *QWheelEvent) Posf(args ...interface{}) (ret interface{}) {
+func (this *QWheelEvent) PosF(args ...interface{}) (ret interface{}) {
   // posF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2883,7 +2963,7 @@ func (this *QWheelEvent) Posf(args ...interface{}) (ret interface{}) {
 }
 
 // angleDelta()
-func (this *QWheelEvent) Angledelta(args ...interface{}) (ret interface{}) {
+func (this *QWheelEvent) AngleDelta(args ...interface{}) (ret interface{}) {
   // angleDelta()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3054,7 +3134,7 @@ func (this *QWheelEvent) Phase(args ...interface{}) () {
 }
 
 // globalY()
-func (this *QWheelEvent) Globaly(args ...interface{}) (ret interface{}) {
+func (this *QWheelEvent) GlobalY(args ...interface{}) (ret interface{}) {
   // globalY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3083,7 +3163,7 @@ func (this *QWheelEvent) Globaly(args ...interface{}) (ret interface{}) {
 }
 
 // globalX()
-func (this *QWheelEvent) Globalx(args ...interface{}) (ret interface{}) {
+func (this *QWheelEvent) GlobalX(args ...interface{}) (ret interface{}) {
   // globalX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3133,7 +3213,7 @@ func (this *QWheelEvent) X(args ...interface{}) () {
 }
 
 // globalPos()
-func (this *QWheelEvent) Globalpos(args ...interface{}) (ret interface{}) {
+func (this *QWheelEvent) GlobalPos(args ...interface{}) (ret interface{}) {
   // globalPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3162,7 +3242,7 @@ func (this *QWheelEvent) Globalpos(args ...interface{}) (ret interface{}) {
 }
 
 // contentPos()
-func (this *QScrollEvent) Contentpos(args ...interface{}) (ret interface{}) {
+func (this *QScrollEvent) ContentPos(args ...interface{}) (ret interface{}) {
   // contentPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3191,7 +3271,7 @@ func (this *QScrollEvent) Contentpos(args ...interface{}) (ret interface{}) {
 }
 
 // overshootDistance()
-func (this *QScrollEvent) Overshootdistance(args ...interface{}) (ret interface{}) {
+func (this *QScrollEvent) OvershootDistance(args ...interface{}) (ret interface{}) {
   // overshootDistance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3220,7 +3300,7 @@ func (this *QScrollEvent) Overshootdistance(args ...interface{}) (ret interface{
 }
 
 // ~QScrollEvent()
-func (this *QScrollEvent) Freeqscrollevent(args ...interface{}) () {
+func (this *QScrollEvent) Free(args ...interface{}) () {
   // ~QScrollEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3232,7 +3312,10 @@ func (this *QScrollEvent) Freeqscrollevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QScrollEventD0Ev
     // invoke: void ~QScrollEvent()
-    C.C_ZN12QScrollEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QScrollEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QScrollEvent", "~QScrollEvent", args)
   }
@@ -3241,7 +3324,7 @@ func (this *QScrollEvent) Freeqscrollevent(args ...interface{}) () {
 }
 
 // scrollState()
-func (this *QScrollEvent) Scrollstate(args ...interface{}) () {
+func (this *QScrollEvent) ScrollState(args ...interface{}) () {
   // scrollState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3262,7 +3345,7 @@ func (this *QScrollEvent) Scrollstate(args ...interface{}) () {
 }
 
 // posF()
-func (this *QHoverEvent) Posf(args ...interface{}) (ret interface{}) {
+func (this *QHoverEvent) PosF(args ...interface{}) (ret interface{}) {
   // posF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3320,7 +3403,7 @@ func (this *QHoverEvent) Pos(args ...interface{}) (ret interface{}) {
 }
 
 // oldPos()
-func (this *QHoverEvent) Oldpos(args ...interface{}) (ret interface{}) {
+func (this *QHoverEvent) OldPos(args ...interface{}) (ret interface{}) {
   // oldPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3349,7 +3432,7 @@ func (this *QHoverEvent) Oldpos(args ...interface{}) (ret interface{}) {
 }
 
 // oldPosF()
-func (this *QHoverEvent) Oldposf(args ...interface{}) (ret interface{}) {
+func (this *QHoverEvent) OldPosF(args ...interface{}) (ret interface{}) {
   // oldPosF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3378,7 +3461,7 @@ func (this *QHoverEvent) Oldposf(args ...interface{}) (ret interface{}) {
 }
 
 // ~QHoverEvent()
-func (this *QHoverEvent) Freeqhoverevent(args ...interface{}) () {
+func (this *QHoverEvent) Free(args ...interface{}) () {
   // ~QHoverEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3390,7 +3473,10 @@ func (this *QHoverEvent) Freeqhoverevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHoverEventD0Ev
     // invoke: void ~QHoverEvent()
-    C.C_ZN11QHoverEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QHoverEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QHoverEvent", "~QHoverEvent", args)
   }
@@ -3429,7 +3515,7 @@ func (this *QDragMoveEvent) Ignore(args ...interface{}) () {
 }
 
 // ~QDragMoveEvent()
-func (this *QDragMoveEvent) Freeqdragmoveevent(args ...interface{}) () {
+func (this *QDragMoveEvent) Free(args ...interface{}) () {
   // ~QDragMoveEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3441,7 +3527,10 @@ func (this *QDragMoveEvent) Freeqdragmoveevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QDragMoveEventD0Ev
     // invoke: void ~QDragMoveEvent()
-    C.C_ZN14QDragMoveEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QDragMoveEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDragMoveEvent", "~QDragMoveEvent", args)
   }
@@ -3450,7 +3539,7 @@ func (this *QDragMoveEvent) Freeqdragmoveevent(args ...interface{}) () {
 }
 
 // answerRect()
-func (this *QDragMoveEvent) Answerrect(args ...interface{}) (ret interface{}) {
+func (this *QDragMoveEvent) AnswerRect(args ...interface{}) (ret interface{}) {
   // answerRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3509,7 +3598,7 @@ func (this *QDragMoveEvent) Accept(args ...interface{}) () {
 }
 
 // ~QShowEvent()
-func (this *QShowEvent) Freeqshowevent(args ...interface{}) () {
+func (this *QShowEvent) Free(args ...interface{}) () {
   // ~QShowEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3521,7 +3610,10 @@ func (this *QShowEvent) Freeqshowevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QShowEventD0Ev
     // invoke: void ~QShowEvent()
-    C.C_ZN10QShowEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QShowEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QShowEvent", "~QShowEvent", args)
   }
@@ -3530,6 +3622,9 @@ func (this *QShowEvent) Freeqshowevent(args ...interface{}) () {
 }
 
 // QShowEvent()
+func GcfreeQShowEvent(this *QShowEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQShowEvent(args ...interface{}) *QShowEvent {
   // QShowEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3545,7 +3640,9 @@ func NewQShowEvent(args ...interface{}) *QShowEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QShowEventC2Ev()
-    return &QShowEvent{Qclsinst:qthis}
+    this := &QShowEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQShowEvent)
+    return this
   default:
     qtrt.ErrorResolve("QShowEvent", "QShowEvent", args)
   }
@@ -3554,7 +3651,7 @@ func NewQShowEvent(args ...interface{}) *QShowEvent {
 }
 
 // surfaceEventType()
-func (this *QPlatformSurfaceEvent) Surfaceeventtype(args ...interface{}) () {
+func (this *QPlatformSurfaceEvent) SurfaceEventType(args ...interface{}) () {
   // surfaceEventType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3575,7 +3672,7 @@ func (this *QPlatformSurfaceEvent) Surfaceeventtype(args ...interface{}) () {
 }
 
 // ~QPlatformSurfaceEvent()
-func (this *QPlatformSurfaceEvent) Freeqplatformsurfaceevent(args ...interface{}) () {
+func (this *QPlatformSurfaceEvent) Free(args ...interface{}) () {
   // ~QPlatformSurfaceEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3587,7 +3684,10 @@ func (this *QPlatformSurfaceEvent) Freeqplatformsurfaceevent(args ...interface{}
   case 0:
     // invoke: _ZN21QPlatformSurfaceEventD0Ev
     // invoke: void ~QPlatformSurfaceEvent()
-    C.C_ZN21QPlatformSurfaceEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN21QPlatformSurfaceEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPlatformSurfaceEvent", "~QPlatformSurfaceEvent", args)
   }
@@ -3596,6 +3696,9 @@ func (this *QPlatformSurfaceEvent) Freeqplatformsurfaceevent(args ...interface{}
 }
 
 // QPaintEvent(const class QRect &)
+func GcfreeQPaintEvent(this *QPaintEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQPaintEvent(args ...interface{}) *QPaintEvent {
   // QPaintEvent(const class QRect &)
   // QPaintEvent(const class QRegion &)
@@ -3617,7 +3720,9 @@ func NewQPaintEvent(args ...interface{}) *QPaintEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QPaintEventC2ERK5QRect(arg0)
-    return &QPaintEvent{Qclsinst:qthis}
+    this := &QPaintEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPaintEvent)
+    return this
   case 1:
     // invoke: _ZN11QPaintEventC1ERK7QRegion
     // invoke: void QPaintEvent(const class QRegion &)
@@ -3626,7 +3731,9 @@ func NewQPaintEvent(args ...interface{}) *QPaintEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QPaintEventC2ERK7QRegion(arg0)
-    return &QPaintEvent{Qclsinst:qthis}
+    this := &QPaintEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPaintEvent)
+    return this
   default:
     qtrt.ErrorResolve("QPaintEvent", "QPaintEvent", args)
   }
@@ -3635,7 +3742,7 @@ func NewQPaintEvent(args ...interface{}) *QPaintEvent {
 }
 
 // ~QPaintEvent()
-func (this *QPaintEvent) Freeqpaintevent(args ...interface{}) () {
+func (this *QPaintEvent) Free(args ...interface{}) () {
   // ~QPaintEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3647,7 +3754,10 @@ func (this *QPaintEvent) Freeqpaintevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPaintEventD0Ev
     // invoke: void ~QPaintEvent()
-    C.C_ZN11QPaintEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QPaintEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPaintEvent", "~QPaintEvent", args)
   }
@@ -3735,7 +3845,7 @@ func (this *QFocusEvent) Reason(args ...interface{}) () {
 }
 
 // ~QFocusEvent()
-func (this *QFocusEvent) Freeqfocusevent(args ...interface{}) () {
+func (this *QFocusEvent) Free(args ...interface{}) () {
   // ~QFocusEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3747,7 +3857,10 @@ func (this *QFocusEvent) Freeqfocusevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFocusEventD0Ev
     // invoke: void ~QFocusEvent()
-    C.C_ZN11QFocusEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QFocusEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFocusEvent", "~QFocusEvent", args)
   }
@@ -3756,7 +3869,7 @@ func (this *QFocusEvent) Freeqfocusevent(args ...interface{}) () {
 }
 
 // gotFocus()
-func (this *QFocusEvent) Gotfocus(args ...interface{}) (ret interface{}) {
+func (this *QFocusEvent) GotFocus(args ...interface{}) (ret interface{}) {
   // gotFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3785,7 +3898,7 @@ func (this *QFocusEvent) Gotfocus(args ...interface{}) (ret interface{}) {
 }
 
 // lostFocus()
-func (this *QFocusEvent) Lostfocus(args ...interface{}) (ret interface{}) {
+func (this *QFocusEvent) LostFocus(args ...interface{}) (ret interface{}) {
   // lostFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3814,7 +3927,7 @@ func (this *QFocusEvent) Lostfocus(args ...interface{}) (ret interface{}) {
 }
 
 // localPos()
-func (this *QNativeGestureEvent) Localpos(args ...interface{}) (ret interface{}) {
+func (this *QNativeGestureEvent) LocalPos(args ...interface{}) (ret interface{}) {
   // localPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3843,7 +3956,7 @@ func (this *QNativeGestureEvent) Localpos(args ...interface{}) (ret interface{})
 }
 
 // screenPos()
-func (this *QNativeGestureEvent) Screenpos(args ...interface{}) (ret interface{}) {
+func (this *QNativeGestureEvent) ScreenPos(args ...interface{}) (ret interface{}) {
   // screenPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3872,7 +3985,7 @@ func (this *QNativeGestureEvent) Screenpos(args ...interface{}) (ret interface{}
 }
 
 // globalPos()
-func (this *QNativeGestureEvent) Globalpos(args ...interface{}) (ret interface{}) {
+func (this *QNativeGestureEvent) GlobalPos(args ...interface{}) (ret interface{}) {
   // globalPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3959,7 +4072,7 @@ func (this *QNativeGestureEvent) Value(args ...interface{}) (ret interface{}) {
 }
 
 // gestureType()
-func (this *QNativeGestureEvent) Gesturetype(args ...interface{}) () {
+func (this *QNativeGestureEvent) GestureType(args ...interface{}) () {
   // gestureType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3980,7 +4093,7 @@ func (this *QNativeGestureEvent) Gesturetype(args ...interface{}) () {
 }
 
 // windowPos()
-func (this *QNativeGestureEvent) Windowpos(args ...interface{}) (ret interface{}) {
+func (this *QNativeGestureEvent) WindowPos(args ...interface{}) (ret interface{}) {
   // windowPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4009,7 +4122,7 @@ func (this *QNativeGestureEvent) Windowpos(args ...interface{}) (ret interface{}
 }
 
 // ~QResizeEvent()
-func (this *QResizeEvent) Freeqresizeevent(args ...interface{}) () {
+func (this *QResizeEvent) Free(args ...interface{}) () {
   // ~QResizeEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4021,7 +4134,10 @@ func (this *QResizeEvent) Freeqresizeevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QResizeEventD0Ev
     // invoke: void ~QResizeEvent()
-    C.C_ZN12QResizeEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QResizeEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QResizeEvent", "~QResizeEvent", args)
   }
@@ -4030,7 +4146,7 @@ func (this *QResizeEvent) Freeqresizeevent(args ...interface{}) () {
 }
 
 // oldSize()
-func (this *QResizeEvent) Oldsize(args ...interface{}) (ret interface{}) {
+func (this *QResizeEvent) OldSize(args ...interface{}) (ret interface{}) {
   // oldSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4059,6 +4175,9 @@ func (this *QResizeEvent) Oldsize(args ...interface{}) (ret interface{}) {
 }
 
 // QResizeEvent(const class QSize &, const class QSize &)
+func GcfreeQResizeEvent(this *QResizeEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQResizeEvent(args ...interface{}) *QResizeEvent {
   // QResizeEvent(const class QSize &, const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -4080,7 +4199,9 @@ func NewQResizeEvent(args ...interface{}) *QResizeEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QResizeEventC2ERK5QSizeS2_(arg0, arg1)
-    return &QResizeEvent{Qclsinst:qthis}
+    this := &QResizeEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQResizeEvent)
+    return this
   default:
     qtrt.ErrorResolve("QResizeEvent", "QResizeEvent", args)
   }
@@ -4147,7 +4268,7 @@ func (this *QStatusTipEvent) Tip(args ...interface{}) (ret interface{}) {
 }
 
 // ~QStatusTipEvent()
-func (this *QStatusTipEvent) Freeqstatustipevent(args ...interface{}) () {
+func (this *QStatusTipEvent) Free(args ...interface{}) () {
   // ~QStatusTipEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4159,7 +4280,10 @@ func (this *QStatusTipEvent) Freeqstatustipevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QStatusTipEventD0Ev
     // invoke: void ~QStatusTipEvent()
-    C.C_ZN15QStatusTipEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QStatusTipEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStatusTipEvent", "~QStatusTipEvent", args)
   }
@@ -4168,6 +4292,9 @@ func (this *QStatusTipEvent) Freeqstatustipevent(args ...interface{}) () {
 }
 
 // QStatusTipEvent(const class QString &)
+func GcfreeQStatusTipEvent(this *QStatusTipEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQStatusTipEvent(args ...interface{}) *QStatusTipEvent {
   // QStatusTipEvent(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -4186,7 +4313,9 @@ func NewQStatusTipEvent(args ...interface{}) *QStatusTipEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QStatusTipEventC2ERK7QString(arg0)
-    return &QStatusTipEvent{Qclsinst:qthis}
+    this := &QStatusTipEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStatusTipEvent)
+    return this
   default:
     qtrt.ErrorResolve("QStatusTipEvent", "QStatusTipEvent", args)
   }
@@ -4195,7 +4324,7 @@ func NewQStatusTipEvent(args ...interface{}) *QStatusTipEvent {
 }
 
 // localPos()
-func (this *QEnterEvent) Localpos(args ...interface{}) (ret interface{}) {
+func (this *QEnterEvent) LocalPos(args ...interface{}) (ret interface{}) {
   // localPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4224,7 +4353,7 @@ func (this *QEnterEvent) Localpos(args ...interface{}) (ret interface{}) {
 }
 
 // screenPos()
-func (this *QEnterEvent) Screenpos(args ...interface{}) (ret interface{}) {
+func (this *QEnterEvent) ScreenPos(args ...interface{}) (ret interface{}) {
   // screenPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4253,7 +4382,7 @@ func (this *QEnterEvent) Screenpos(args ...interface{}) (ret interface{}) {
 }
 
 // globalPos()
-func (this *QEnterEvent) Globalpos(args ...interface{}) (ret interface{}) {
+func (this *QEnterEvent) GlobalPos(args ...interface{}) (ret interface{}) {
   // globalPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4282,6 +4411,9 @@ func (this *QEnterEvent) Globalpos(args ...interface{}) (ret interface{}) {
 }
 
 // QEnterEvent(const class QPointF &, const class QPointF &, const class QPointF &)
+func GcfreeQEnterEvent(this *QEnterEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQEnterEvent(args ...interface{}) *QEnterEvent {
   // QEnterEvent(const class QPointF &, const class QPointF &, const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -4306,7 +4438,9 @@ func NewQEnterEvent(args ...interface{}) *QEnterEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QEnterEventC2ERK7QPointFS2_S2_(arg0, arg1, arg2)
-    return &QEnterEvent{Qclsinst:qthis}
+    this := &QEnterEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQEnterEvent)
+    return this
   default:
     qtrt.ErrorResolve("QEnterEvent", "QEnterEvent", args)
   }
@@ -4344,7 +4478,7 @@ func (this *QEnterEvent) Pos(args ...interface{}) (ret interface{}) {
 }
 
 // globalX()
-func (this *QEnterEvent) Globalx(args ...interface{}) (ret interface{}) {
+func (this *QEnterEvent) GlobalX(args ...interface{}) (ret interface{}) {
   // globalX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4373,7 +4507,7 @@ func (this *QEnterEvent) Globalx(args ...interface{}) (ret interface{}) {
 }
 
 // ~QEnterEvent()
-func (this *QEnterEvent) Freeqenterevent(args ...interface{}) () {
+func (this *QEnterEvent) Free(args ...interface{}) () {
   // ~QEnterEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4385,7 +4519,10 @@ func (this *QEnterEvent) Freeqenterevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QEnterEventD0Ev
     // invoke: void ~QEnterEvent()
-    C.C_ZN11QEnterEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QEnterEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QEnterEvent", "~QEnterEvent", args)
   }
@@ -4394,7 +4531,7 @@ func (this *QEnterEvent) Freeqenterevent(args ...interface{}) () {
 }
 
 // globalY()
-func (this *QEnterEvent) Globaly(args ...interface{}) (ret interface{}) {
+func (this *QEnterEvent) GlobalY(args ...interface{}) (ret interface{}) {
   // globalY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4465,7 +4602,7 @@ func (this *QEnterEvent) X(args ...interface{}) () {
 }
 
 // windowPos()
-func (this *QEnterEvent) Windowpos(args ...interface{}) (ret interface{}) {
+func (this *QEnterEvent) WindowPos(args ...interface{}) (ret interface{}) {
   // windowPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4494,6 +4631,9 @@ func (this *QEnterEvent) Windowpos(args ...interface{}) (ret interface{}) {
 }
 
 // QMoveEvent(const class QPoint &, const class QPoint &)
+func GcfreeQMoveEvent(this *QMoveEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQMoveEvent(args ...interface{}) *QMoveEvent {
   // QMoveEvent(const class QPoint &, const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -4515,7 +4655,9 @@ func NewQMoveEvent(args ...interface{}) *QMoveEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QMoveEventC2ERK6QPointS2_(arg0, arg1)
-    return &QMoveEvent{Qclsinst:qthis}
+    this := &QMoveEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMoveEvent)
+    return this
   default:
     qtrt.ErrorResolve("QMoveEvent", "QMoveEvent", args)
   }
@@ -4524,7 +4666,7 @@ func NewQMoveEvent(args ...interface{}) *QMoveEvent {
 }
 
 // ~QMoveEvent()
-func (this *QMoveEvent) Freeqmoveevent(args ...interface{}) () {
+func (this *QMoveEvent) Free(args ...interface{}) () {
   // ~QMoveEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4536,7 +4678,10 @@ func (this *QMoveEvent) Freeqmoveevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QMoveEventD0Ev
     // invoke: void ~QMoveEvent()
-    C.C_ZN10QMoveEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QMoveEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMoveEvent", "~QMoveEvent", args)
   }
@@ -4545,7 +4690,7 @@ func (this *QMoveEvent) Freeqmoveevent(args ...interface{}) () {
 }
 
 // oldPos()
-func (this *QMoveEvent) Oldpos(args ...interface{}) (ret interface{}) {
+func (this *QMoveEvent) OldPos(args ...interface{}) (ret interface{}) {
   // oldPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4603,6 +4748,9 @@ func (this *QMoveEvent) Pos(args ...interface{}) (ret interface{}) {
 }
 
 // QHideEvent()
+func GcfreeQHideEvent(this *QHideEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQHideEvent(args ...interface{}) *QHideEvent {
   // QHideEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -4618,7 +4766,9 @@ func NewQHideEvent(args ...interface{}) *QHideEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QHideEventC2Ev()
-    return &QHideEvent{Qclsinst:qthis}
+    this := &QHideEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQHideEvent)
+    return this
   default:
     qtrt.ErrorResolve("QHideEvent", "QHideEvent", args)
   }
@@ -4627,7 +4777,7 @@ func NewQHideEvent(args ...interface{}) *QHideEvent {
 }
 
 // ~QHideEvent()
-func (this *QHideEvent) Freeqhideevent(args ...interface{}) () {
+func (this *QHideEvent) Free(args ...interface{}) () {
   // ~QHideEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4639,7 +4789,10 @@ func (this *QHideEvent) Freeqhideevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QHideEventD0Ev
     // invoke: void ~QHideEvent()
-    C.C_ZN10QHideEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QHideEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QHideEvent", "~QHideEvent", args)
   }
@@ -4648,7 +4801,7 @@ func (this *QHideEvent) Freeqhideevent(args ...interface{}) () {
 }
 
 // ~QDragLeaveEvent()
-func (this *QDragLeaveEvent) Freeqdragleaveevent(args ...interface{}) () {
+func (this *QDragLeaveEvent) Free(args ...interface{}) () {
   // ~QDragLeaveEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4660,7 +4813,10 @@ func (this *QDragLeaveEvent) Freeqdragleaveevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QDragLeaveEventD0Ev
     // invoke: void ~QDragLeaveEvent()
-    C.C_ZN15QDragLeaveEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QDragLeaveEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDragLeaveEvent", "~QDragLeaveEvent", args)
   }
@@ -4669,6 +4825,9 @@ func (this *QDragLeaveEvent) Freeqdragleaveevent(args ...interface{}) () {
 }
 
 // QDragLeaveEvent()
+func GcfreeQDragLeaveEvent(this *QDragLeaveEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQDragLeaveEvent(args ...interface{}) *QDragLeaveEvent {
   // QDragLeaveEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -4684,7 +4843,9 @@ func NewQDragLeaveEvent(args ...interface{}) *QDragLeaveEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QDragLeaveEventC2Ev()
-    return &QDragLeaveEvent{Qclsinst:qthis}
+    this := &QDragLeaveEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDragLeaveEvent)
+    return this
   default:
     qtrt.ErrorResolve("QDragLeaveEvent", "QDragLeaveEvent", args)
   }
@@ -4693,7 +4854,7 @@ func NewQDragLeaveEvent(args ...interface{}) *QDragLeaveEvent {
 }
 
 // mimeData()
-func (this *QDropEvent) Mimedata(args ...interface{}) (ret interface{}) {
+func (this *QDropEvent) MimeData(args ...interface{}) (ret interface{}) {
   // mimeData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4722,7 +4883,7 @@ func (this *QDropEvent) Mimedata(args ...interface{}) (ret interface{}) {
 }
 
 // acceptProposedAction()
-func (this *QDropEvent) Acceptproposedaction(args ...interface{}) () {
+func (this *QDropEvent) AcceptProposedAction(args ...interface{}) () {
   // acceptProposedAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4743,7 +4904,7 @@ func (this *QDropEvent) Acceptproposedaction(args ...interface{}) () {
 }
 
 // possibleActions()
-func (this *QDropEvent) Possibleactions(args ...interface{}) () {
+func (this *QDropEvent) PossibleActions(args ...interface{}) () {
   // possibleActions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4764,7 +4925,7 @@ func (this *QDropEvent) Possibleactions(args ...interface{}) () {
 }
 
 // posF()
-func (this *QDropEvent) Posf(args ...interface{}) (ret interface{}) {
+func (this *QDropEvent) PosF(args ...interface{}) (ret interface{}) {
   // posF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4851,7 +5012,7 @@ func (this *QDropEvent) Source(args ...interface{}) (ret interface{}) {
 }
 
 // proposedAction()
-func (this *QDropEvent) Proposedaction(args ...interface{}) () {
+func (this *QDropEvent) ProposedAction(args ...interface{}) () {
   // proposedAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4872,7 +5033,7 @@ func (this *QDropEvent) Proposedaction(args ...interface{}) () {
 }
 
 // dropAction()
-func (this *QDropEvent) Dropaction(args ...interface{}) () {
+func (this *QDropEvent) DropAction(args ...interface{}) () {
   // dropAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4893,7 +5054,7 @@ func (this *QDropEvent) Dropaction(args ...interface{}) () {
 }
 
 // keyboardModifiers()
-func (this *QDropEvent) Keyboardmodifiers(args ...interface{}) () {
+func (this *QDropEvent) KeyboardModifiers(args ...interface{}) () {
   // keyboardModifiers()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4914,7 +5075,7 @@ func (this *QDropEvent) Keyboardmodifiers(args ...interface{}) () {
 }
 
 // ~QDropEvent()
-func (this *QDropEvent) Freeqdropevent(args ...interface{}) () {
+func (this *QDropEvent) Free(args ...interface{}) () {
   // ~QDropEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4926,7 +5087,10 @@ func (this *QDropEvent) Freeqdropevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QDropEventD0Ev
     // invoke: void ~QDropEvent()
-    C.C_ZN10QDropEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QDropEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDropEvent", "~QDropEvent", args)
   }
@@ -4935,7 +5099,7 @@ func (this *QDropEvent) Freeqdropevent(args ...interface{}) () {
 }
 
 // mouseButtons()
-func (this *QDropEvent) Mousebuttons(args ...interface{}) () {
+func (this *QDropEvent) MouseButtons(args ...interface{}) () {
   // mouseButtons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5006,7 +5170,7 @@ func (this *QInputEvent) Timestamp(args ...interface{}) (ret interface{}) {
 }
 
 // setTimestamp(ulong)
-func (this *QInputEvent) Settimestamp(args ...interface{}) () {
+func (this *QInputEvent) SetTimestamp(args ...interface{}) () {
   // setTimestamp(ulong)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5030,7 +5194,7 @@ func (this *QInputEvent) Settimestamp(args ...interface{}) () {
 }
 
 // ~QInputEvent()
-func (this *QInputEvent) Freeqinputevent(args ...interface{}) () {
+func (this *QInputEvent) Free(args ...interface{}) () {
   // ~QInputEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5042,7 +5206,10 @@ func (this *QInputEvent) Freeqinputevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QInputEventD0Ev
     // invoke: void ~QInputEvent()
-    C.C_ZN11QInputEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QInputEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QInputEvent", "~QInputEvent", args)
   }
@@ -5051,7 +5218,7 @@ func (this *QInputEvent) Freeqinputevent(args ...interface{}) () {
 }
 
 // applicationState()
-func (this *QApplicationStateChangeEvent) Applicationstate(args ...interface{}) () {
+func (this *QApplicationStateChangeEvent) ApplicationState(args ...interface{}) () {
   // applicationState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5122,7 +5289,7 @@ func (this *QKeyEvent) Modifiers(args ...interface{}) () {
 }
 
 // nativeModifiers()
-func (this *QKeyEvent) Nativemodifiers(args ...interface{}) (ret interface{}) {
+func (this *QKeyEvent) NativeModifiers(args ...interface{}) (ret interface{}) {
   // nativeModifiers()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5180,7 +5347,7 @@ func (this *QKeyEvent) Text(args ...interface{}) (ret interface{}) {
 }
 
 // ~QKeyEvent()
-func (this *QKeyEvent) Freeqkeyevent(args ...interface{}) () {
+func (this *QKeyEvent) Free(args ...interface{}) () {
   // ~QKeyEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5192,7 +5359,10 @@ func (this *QKeyEvent) Freeqkeyevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QKeyEventD0Ev
     // invoke: void ~QKeyEvent()
-    C.C_ZN9QKeyEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QKeyEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QKeyEvent", "~QKeyEvent", args)
   }
@@ -5201,7 +5371,7 @@ func (this *QKeyEvent) Freeqkeyevent(args ...interface{}) () {
 }
 
 // nativeScanCode()
-func (this *QKeyEvent) Nativescancode(args ...interface{}) (ret interface{}) {
+func (this *QKeyEvent) NativeScanCode(args ...interface{}) (ret interface{}) {
   // nativeScanCode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5230,7 +5400,7 @@ func (this *QKeyEvent) Nativescancode(args ...interface{}) (ret interface{}) {
 }
 
 // isAutoRepeat()
-func (this *QKeyEvent) Isautorepeat(args ...interface{}) (ret interface{}) {
+func (this *QKeyEvent) IsAutoRepeat(args ...interface{}) (ret interface{}) {
   // isAutoRepeat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5288,7 +5458,7 @@ func (this *QKeyEvent) Key(args ...interface{}) (ret interface{}) {
 }
 
 // nativeVirtualKey()
-func (this *QKeyEvent) Nativevirtualkey(args ...interface{}) (ret interface{}) {
+func (this *QKeyEvent) NativeVirtualKey(args ...interface{}) (ret interface{}) {
   // nativeVirtualKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5317,7 +5487,7 @@ func (this *QKeyEvent) Nativevirtualkey(args ...interface{}) (ret interface{}) {
 }
 
 // globalPos()
-func (this *QContextMenuEvent) Globalpos(args ...interface{}) (ret interface{}) {
+func (this *QContextMenuEvent) GlobalPos(args ...interface{}) (ret interface{}) {
   // globalPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5438,7 +5608,7 @@ func (this *QContextMenuEvent) X(args ...interface{}) () {
 }
 
 // globalX()
-func (this *QContextMenuEvent) Globalx(args ...interface{}) (ret interface{}) {
+func (this *QContextMenuEvent) GlobalX(args ...interface{}) (ret interface{}) {
   // globalX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5467,7 +5637,7 @@ func (this *QContextMenuEvent) Globalx(args ...interface{}) (ret interface{}) {
 }
 
 // globalY()
-func (this *QContextMenuEvent) Globaly(args ...interface{}) (ret interface{}) {
+func (this *QContextMenuEvent) GlobalY(args ...interface{}) (ret interface{}) {
   // globalY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5496,7 +5666,7 @@ func (this *QContextMenuEvent) Globaly(args ...interface{}) (ret interface{}) {
 }
 
 // ~QContextMenuEvent()
-func (this *QContextMenuEvent) Freeqcontextmenuevent(args ...interface{}) () {
+func (this *QContextMenuEvent) Free(args ...interface{}) () {
   // ~QContextMenuEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5508,7 +5678,10 @@ func (this *QContextMenuEvent) Freeqcontextmenuevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QContextMenuEventD0Ev
     // invoke: void ~QContextMenuEvent()
-    C.C_ZN17QContextMenuEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN17QContextMenuEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "~QContextMenuEvent", args)
   }
@@ -5517,7 +5690,7 @@ func (this *QContextMenuEvent) Freeqcontextmenuevent(args ...interface{}) () {
 }
 
 // setContentPosRange(const class QRectF &)
-func (this *QScrollPrepareEvent) Setcontentposrange(args ...interface{}) () {
+func (this *QScrollPrepareEvent) SetContentPosRange(args ...interface{}) () {
   // setContentPosRange(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5541,7 +5714,7 @@ func (this *QScrollPrepareEvent) Setcontentposrange(args ...interface{}) () {
 }
 
 // contentPos()
-func (this *QScrollPrepareEvent) Contentpos(args ...interface{}) (ret interface{}) {
+func (this *QScrollPrepareEvent) ContentPos(args ...interface{}) (ret interface{}) {
   // contentPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5570,7 +5743,7 @@ func (this *QScrollPrepareEvent) Contentpos(args ...interface{}) (ret interface{
 }
 
 // setContentPos(const class QPointF &)
-func (this *QScrollPrepareEvent) Setcontentpos(args ...interface{}) () {
+func (this *QScrollPrepareEvent) SetContentPos(args ...interface{}) () {
   // setContentPos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5594,7 +5767,7 @@ func (this *QScrollPrepareEvent) Setcontentpos(args ...interface{}) () {
 }
 
 // ~QScrollPrepareEvent()
-func (this *QScrollPrepareEvent) Freeqscrollprepareevent(args ...interface{}) () {
+func (this *QScrollPrepareEvent) Free(args ...interface{}) () {
   // ~QScrollPrepareEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5606,7 +5779,10 @@ func (this *QScrollPrepareEvent) Freeqscrollprepareevent(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QScrollPrepareEventD0Ev
     // invoke: void ~QScrollPrepareEvent()
-    C.C_ZN19QScrollPrepareEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QScrollPrepareEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "~QScrollPrepareEvent", args)
   }
@@ -5615,7 +5791,7 @@ func (this *QScrollPrepareEvent) Freeqscrollprepareevent(args ...interface{}) ()
 }
 
 // viewportSize()
-func (this *QScrollPrepareEvent) Viewportsize(args ...interface{}) (ret interface{}) {
+func (this *QScrollPrepareEvent) ViewportSize(args ...interface{}) (ret interface{}) {
   // viewportSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5644,7 +5820,7 @@ func (this *QScrollPrepareEvent) Viewportsize(args ...interface{}) (ret interfac
 }
 
 // setViewportSize(const class QSizeF &)
-func (this *QScrollPrepareEvent) Setviewportsize(args ...interface{}) () {
+func (this *QScrollPrepareEvent) SetViewportSize(args ...interface{}) () {
   // setViewportSize(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5668,6 +5844,9 @@ func (this *QScrollPrepareEvent) Setviewportsize(args ...interface{}) () {
 }
 
 // QScrollPrepareEvent(const class QPointF &)
+func GcfreeQScrollPrepareEvent(this *QScrollPrepareEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQScrollPrepareEvent(args ...interface{}) *QScrollPrepareEvent {
   // QScrollPrepareEvent(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -5686,7 +5865,9 @@ func NewQScrollPrepareEvent(args ...interface{}) *QScrollPrepareEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QScrollPrepareEventC2ERK7QPointF(arg0)
-    return &QScrollPrepareEvent{Qclsinst:qthis}
+    this := &QScrollPrepareEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQScrollPrepareEvent)
+    return this
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "QScrollPrepareEvent", args)
   }
@@ -5695,7 +5876,7 @@ func NewQScrollPrepareEvent(args ...interface{}) *QScrollPrepareEvent {
 }
 
 // contentPosRange()
-func (this *QScrollPrepareEvent) Contentposrange(args ...interface{}) (ret interface{}) {
+func (this *QScrollPrepareEvent) ContentPosRange(args ...interface{}) (ret interface{}) {
   // contentPosRange()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5724,7 +5905,7 @@ func (this *QScrollPrepareEvent) Contentposrange(args ...interface{}) (ret inter
 }
 
 // startPos()
-func (this *QScrollPrepareEvent) Startpos(args ...interface{}) (ret interface{}) {
+func (this *QScrollPrepareEvent) StartPos(args ...interface{}) (ret interface{}) {
   // startPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5753,7 +5934,7 @@ func (this *QScrollPrepareEvent) Startpos(args ...interface{}) (ret interface{})
 }
 
 // ~QShortcutEvent()
-func (this *QShortcutEvent) Freeqshortcutevent(args ...interface{}) () {
+func (this *QShortcutEvent) Free(args ...interface{}) () {
   // ~QShortcutEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5765,7 +5946,10 @@ func (this *QShortcutEvent) Freeqshortcutevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QShortcutEventD0Ev
     // invoke: void ~QShortcutEvent()
-    C.C_ZN14QShortcutEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QShortcutEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QShortcutEvent", "~QShortcutEvent", args)
   }
@@ -5774,7 +5958,7 @@ func (this *QShortcutEvent) Freeqshortcutevent(args ...interface{}) () {
 }
 
 // isAmbiguous()
-func (this *QShortcutEvent) Isambiguous(args ...interface{}) (ret interface{}) {
+func (this *QShortcutEvent) IsAmbiguous(args ...interface{}) (ret interface{}) {
   // isAmbiguous()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5803,7 +5987,7 @@ func (this *QShortcutEvent) Isambiguous(args ...interface{}) (ret interface{}) {
 }
 
 // shortcutId()
-func (this *QShortcutEvent) Shortcutid(args ...interface{}) (ret interface{}) {
+func (this *QShortcutEvent) ShortcutId(args ...interface{}) (ret interface{}) {
   // shortcutId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5861,6 +6045,9 @@ func (this *QShortcutEvent) Key(args ...interface{}) (ret interface{}) {
 }
 
 // QShortcutEvent(const class QKeySequence &, int, _Bool)
+func GcfreeQShortcutEvent(this *QShortcutEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQShortcutEvent(args ...interface{}) *QShortcutEvent {
   // QShortcutEvent(const class QKeySequence &, int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -5885,7 +6072,9 @@ func NewQShortcutEvent(args ...interface{}) *QShortcutEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QShortcutEventC2ERK12QKeySequenceib(arg0, arg1, arg2)
-    return &QShortcutEvent{Qclsinst:qthis}
+    this := &QShortcutEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQShortcutEvent)
+    return this
   default:
     qtrt.ErrorResolve("QShortcutEvent", "QShortcutEvent", args)
   }
@@ -5894,7 +6083,7 @@ func NewQShortcutEvent(args ...interface{}) *QShortcutEvent {
 }
 
 // isOverride()
-func (this *QWindowStateChangeEvent) Isoverride(args ...interface{}) (ret interface{}) {
+func (this *QWindowStateChangeEvent) IsOverride(args ...interface{}) (ret interface{}) {
   // isOverride()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5923,7 +6112,7 @@ func (this *QWindowStateChangeEvent) Isoverride(args ...interface{}) (ret interf
 }
 
 // oldState()
-func (this *QWindowStateChangeEvent) Oldstate(args ...interface{}) () {
+func (this *QWindowStateChangeEvent) OldState(args ...interface{}) () {
   // oldState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5944,7 +6133,7 @@ func (this *QWindowStateChangeEvent) Oldstate(args ...interface{}) () {
 }
 
 // ~QWindowStateChangeEvent()
-func (this *QWindowStateChangeEvent) Freeqwindowstatechangeevent(args ...interface{}) () {
+func (this *QWindowStateChangeEvent) Free(args ...interface{}) () {
   // ~QWindowStateChangeEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5956,7 +6145,10 @@ func (this *QWindowStateChangeEvent) Freeqwindowstatechangeevent(args ...interfa
   case 0:
     // invoke: _ZN23QWindowStateChangeEventD0Ev
     // invoke: void ~QWindowStateChangeEvent()
-    C.C_ZN23QWindowStateChangeEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN23QWindowStateChangeEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QWindowStateChangeEvent", "~QWindowStateChangeEvent", args)
   }
@@ -5965,7 +6157,7 @@ func (this *QWindowStateChangeEvent) Freeqwindowstatechangeevent(args ...interfa
 }
 
 // ~QInputMethodQueryEvent()
-func (this *QInputMethodQueryEvent) Freeqinputmethodqueryevent(args ...interface{}) () {
+func (this *QInputMethodQueryEvent) Free(args ...interface{}) () {
   // ~QInputMethodQueryEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5977,7 +6169,10 @@ func (this *QInputMethodQueryEvent) Freeqinputmethodqueryevent(args ...interface
   case 0:
     // invoke: _ZN22QInputMethodQueryEventD0Ev
     // invoke: void ~QInputMethodQueryEvent()
-    C.C_ZN22QInputMethodQueryEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN22QInputMethodQueryEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QInputMethodQueryEvent", "~QInputMethodQueryEvent", args)
   }

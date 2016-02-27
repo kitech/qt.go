@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -126,6 +127,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSpinBox)=1
@@ -172,6 +174,9 @@ func (this *QSpinBox) Suffix(args ...interface{}) (ret interface{}) {
 }
 
 // QSpinBox(class QWidget *)
+func GcfreeQSpinBox(this *QSpinBox) {
+  qtrt.UniverseFree(this)
+}
 func NewQSpinBox(args ...interface{}) *QSpinBox {
   // QSpinBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -190,7 +195,9 @@ func NewQSpinBox(args ...interface{}) *QSpinBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QSpinBoxC2EP7QWidget(arg0)
-    return &QSpinBox{Qclsinst:qthis}
+    this := &QSpinBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSpinBox)
+    return this
   default:
     qtrt.ErrorResolve("QSpinBox", "QSpinBox", args)
   }
@@ -199,7 +206,7 @@ func NewQSpinBox(args ...interface{}) *QSpinBox {
 }
 
 // singleStep()
-func (this *QSpinBox) Singlestep(args ...interface{}) (ret interface{}) {
+func (this *QSpinBox) SingleStep(args ...interface{}) (ret interface{}) {
   // singleStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -286,7 +293,7 @@ func (this *QSpinBox) Minimum(args ...interface{}) (ret interface{}) {
 }
 
 // cleanText()
-func (this *QSpinBox) Cleantext(args ...interface{}) (ret interface{}) {
+func (this *QSpinBox) CleanText(args ...interface{}) (ret interface{}) {
   // cleanText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -315,7 +322,7 @@ func (this *QSpinBox) Cleantext(args ...interface{}) (ret interface{}) {
 }
 
 // setSingleStep(int)
-func (this *QSpinBox) Setsinglestep(args ...interface{}) () {
+func (this *QSpinBox) SetSingleStep(args ...interface{}) () {
   // setSingleStep(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -339,7 +346,7 @@ func (this *QSpinBox) Setsinglestep(args ...interface{}) () {
 }
 
 // setDisplayIntegerBase(int)
-func (this *QSpinBox) Setdisplayintegerbase(args ...interface{}) () {
+func (this *QSpinBox) SetDisplayIntegerBase(args ...interface{}) () {
   // setDisplayIntegerBase(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -363,7 +370,7 @@ func (this *QSpinBox) Setdisplayintegerbase(args ...interface{}) () {
 }
 
 // setMaximum(int)
-func (this *QSpinBox) Setmaximum(args ...interface{}) () {
+func (this *QSpinBox) SetMaximum(args ...interface{}) () {
   // setMaximum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -387,7 +394,7 @@ func (this *QSpinBox) Setmaximum(args ...interface{}) () {
 }
 
 // setValue(int)
-func (this *QSpinBox) Setvalue(args ...interface{}) () {
+func (this *QSpinBox) SetValue(args ...interface{}) () {
   // setValue(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -411,7 +418,7 @@ func (this *QSpinBox) Setvalue(args ...interface{}) () {
 }
 
 // displayIntegerBase()
-func (this *QSpinBox) Displayintegerbase(args ...interface{}) (ret interface{}) {
+func (this *QSpinBox) DisplayIntegerBase(args ...interface{}) (ret interface{}) {
   // displayIntegerBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -440,7 +447,7 @@ func (this *QSpinBox) Displayintegerbase(args ...interface{}) (ret interface{}) 
 }
 
 // setRange(int, int)
-func (this *QSpinBox) Setrange(args ...interface{}) () {
+func (this *QSpinBox) SetRange(args ...interface{}) () {
   // setRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -467,7 +474,7 @@ func (this *QSpinBox) Setrange(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QSpinBox) Metaobject(args ...interface{}) () {
+func (this *QSpinBox) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -488,7 +495,7 @@ func (this *QSpinBox) Metaobject(args ...interface{}) () {
 }
 
 // ~QSpinBox()
-func (this *QSpinBox) Freeqspinbox(args ...interface{}) () {
+func (this *QSpinBox) Free(args ...interface{}) () {
   // ~QSpinBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -500,7 +507,10 @@ func (this *QSpinBox) Freeqspinbox(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSpinBoxD0Ev
     // invoke: void ~QSpinBox()
-    C.C_ZN8QSpinBoxD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN8QSpinBoxD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QSpinBox", "~QSpinBox", args)
   }
@@ -509,7 +519,7 @@ func (this *QSpinBox) Freeqspinbox(args ...interface{}) () {
 }
 
 // setSuffix(const class QString &)
-func (this *QSpinBox) Setsuffix(args ...interface{}) () {
+func (this *QSpinBox) SetSuffix(args ...interface{}) () {
   // setSuffix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -591,7 +601,7 @@ func (this *QSpinBox) Value(args ...interface{}) (ret interface{}) {
 }
 
 // setPrefix(const class QString &)
-func (this *QSpinBox) Setprefix(args ...interface{}) () {
+func (this *QSpinBox) SetPrefix(args ...interface{}) () {
   // setPrefix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -615,7 +625,7 @@ func (this *QSpinBox) Setprefix(args ...interface{}) () {
 }
 
 // setMinimum(int)
-func (this *QSpinBox) Setminimum(args ...interface{}) () {
+func (this *QSpinBox) SetMinimum(args ...interface{}) () {
   // setMinimum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -668,7 +678,7 @@ func (this *QDoubleSpinBox) Suffix(args ...interface{}) (ret interface{}) {
 }
 
 // singleStep()
-func (this *QDoubleSpinBox) Singlestep(args ...interface{}) (ret interface{}) {
+func (this *QDoubleSpinBox) SingleStep(args ...interface{}) (ret interface{}) {
   // singleStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -755,7 +765,7 @@ func (this *QDoubleSpinBox) Minimum(args ...interface{}) (ret interface{}) {
 }
 
 // textFromValue(double)
-func (this *QDoubleSpinBox) Textfromvalue(args ...interface{}) (ret interface{}) {
+func (this *QDoubleSpinBox) TextFromValue(args ...interface{}) (ret interface{}) {
   // textFromValue(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -811,6 +821,9 @@ func (this *QDoubleSpinBox) Fixup(args ...interface{}) () {
 }
 
 // QDoubleSpinBox(class QWidget *)
+func GcfreeQDoubleSpinBox(this *QDoubleSpinBox) {
+  qtrt.UniverseFree(this)
+}
 func NewQDoubleSpinBox(args ...interface{}) *QDoubleSpinBox {
   // QDoubleSpinBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -829,7 +842,9 @@ func NewQDoubleSpinBox(args ...interface{}) *QDoubleSpinBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QDoubleSpinBoxC2EP7QWidget(arg0)
-    return &QDoubleSpinBox{Qclsinst:qthis}
+    this := &QDoubleSpinBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDoubleSpinBox)
+    return this
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "QDoubleSpinBox", args)
   }
@@ -838,7 +853,7 @@ func NewQDoubleSpinBox(args ...interface{}) *QDoubleSpinBox {
 }
 
 // setSingleStep(double)
-func (this *QDoubleSpinBox) Setsinglestep(args ...interface{}) () {
+func (this *QDoubleSpinBox) SetSingleStep(args ...interface{}) () {
   // setSingleStep(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -862,7 +877,7 @@ func (this *QDoubleSpinBox) Setsinglestep(args ...interface{}) () {
 }
 
 // setRange(double, double)
-func (this *QDoubleSpinBox) Setrange(args ...interface{}) () {
+func (this *QDoubleSpinBox) SetRange(args ...interface{}) () {
   // setRange(double, double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -889,7 +904,7 @@ func (this *QDoubleSpinBox) Setrange(args ...interface{}) () {
 }
 
 // setMaximum(double)
-func (this *QDoubleSpinBox) Setmaximum(args ...interface{}) () {
+func (this *QDoubleSpinBox) SetMaximum(args ...interface{}) () {
   // setMaximum(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -913,7 +928,7 @@ func (this *QDoubleSpinBox) Setmaximum(args ...interface{}) () {
 }
 
 // setValue(double)
-func (this *QDoubleSpinBox) Setvalue(args ...interface{}) () {
+func (this *QDoubleSpinBox) SetValue(args ...interface{}) () {
   // setValue(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -937,7 +952,7 @@ func (this *QDoubleSpinBox) Setvalue(args ...interface{}) () {
 }
 
 // valueFromText(const class QString &)
-func (this *QDoubleSpinBox) Valuefromtext(args ...interface{}) (ret interface{}) {
+func (this *QDoubleSpinBox) ValueFromText(args ...interface{}) (ret interface{}) {
   // valueFromText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -996,7 +1011,7 @@ func (this *QDoubleSpinBox) Validate(args ...interface{}) () {
 }
 
 // cleanText()
-func (this *QDoubleSpinBox) Cleantext(args ...interface{}) (ret interface{}) {
+func (this *QDoubleSpinBox) CleanText(args ...interface{}) (ret interface{}) {
   // cleanText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1025,7 +1040,7 @@ func (this *QDoubleSpinBox) Cleantext(args ...interface{}) (ret interface{}) {
 }
 
 // setDecimals(int)
-func (this *QDoubleSpinBox) Setdecimals(args ...interface{}) () {
+func (this *QDoubleSpinBox) SetDecimals(args ...interface{}) () {
   // setDecimals(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1049,7 +1064,7 @@ func (this *QDoubleSpinBox) Setdecimals(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QDoubleSpinBox) Metaobject(args ...interface{}) () {
+func (this *QDoubleSpinBox) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1070,7 +1085,7 @@ func (this *QDoubleSpinBox) Metaobject(args ...interface{}) () {
 }
 
 // ~QDoubleSpinBox()
-func (this *QDoubleSpinBox) Freeqdoublespinbox(args ...interface{}) () {
+func (this *QDoubleSpinBox) Free(args ...interface{}) () {
   // ~QDoubleSpinBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1082,7 +1097,10 @@ func (this *QDoubleSpinBox) Freeqdoublespinbox(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QDoubleSpinBoxD0Ev
     // invoke: void ~QDoubleSpinBox()
-    C.C_ZN14QDoubleSpinBoxD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QDoubleSpinBoxD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "~QDoubleSpinBox", args)
   }
@@ -1091,7 +1109,7 @@ func (this *QDoubleSpinBox) Freeqdoublespinbox(args ...interface{}) () {
 }
 
 // setSuffix(const class QString &)
-func (this *QDoubleSpinBox) Setsuffix(args ...interface{}) () {
+func (this *QDoubleSpinBox) SetSuffix(args ...interface{}) () {
   // setSuffix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1202,7 +1220,7 @@ func (this *QDoubleSpinBox) Decimals(args ...interface{}) (ret interface{}) {
 }
 
 // setPrefix(const class QString &)
-func (this *QDoubleSpinBox) Setprefix(args ...interface{}) () {
+func (this *QDoubleSpinBox) SetPrefix(args ...interface{}) () {
   // setPrefix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1226,7 +1244,7 @@ func (this *QDoubleSpinBox) Setprefix(args ...interface{}) () {
 }
 
 // setMinimum(double)
-func (this *QDoubleSpinBox) Setminimum(args ...interface{}) () {
+func (this *QDoubleSpinBox) SetMinimum(args ...interface{}) () {
   // setMinimum(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

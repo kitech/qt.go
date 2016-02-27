@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qfinalstate.h
 // dst-file: /src/core/qfinalstate.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -44,6 +45,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFinalState)=1
@@ -53,6 +55,9 @@ type QFinalState struct {
 }
 
 // QFinalState(class QState *)
+func GcfreeQFinalState(this *QFinalState) {
+  qtrt.UniverseFree(this)
+}
 func NewQFinalState(args ...interface{}) *QFinalState {
   // QFinalState(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -71,7 +76,9 @@ func NewQFinalState(args ...interface{}) *QFinalState {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QFinalStateC2EP6QState(arg0)
-    return &QFinalState{Qclsinst:qthis}
+    this := &QFinalState{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFinalState)
+    return this
   default:
     qtrt.ErrorResolve("QFinalState", "QFinalState", args)
   }
@@ -80,7 +87,7 @@ func NewQFinalState(args ...interface{}) *QFinalState {
 }
 
 // ~QFinalState()
-func (this *QFinalState) Freeqfinalstate(args ...interface{}) () {
+func (this *QFinalState) Free(args ...interface{}) () {
   // ~QFinalState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -92,7 +99,10 @@ func (this *QFinalState) Freeqfinalstate(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFinalStateD0Ev
     // invoke: void ~QFinalState()
-    C.C_ZN11QFinalStateD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QFinalStateD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFinalState", "~QFinalState", args)
   }
@@ -101,7 +111,7 @@ func (this *QFinalState) Freeqfinalstate(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QFinalState) Metaobject(args ...interface{}) () {
+func (this *QFinalState) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

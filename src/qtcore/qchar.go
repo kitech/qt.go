@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qchar.h
 // dst-file: /src/core/qchar.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -216,6 +217,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QLatin1Char)=1
@@ -231,6 +233,9 @@ type QChar struct {
 }
 
 // QLatin1Char(char)
+func GcfreeQLatin1Char(this *QLatin1Char) {
+  qtrt.UniverseFree(this)
+}
 func NewQLatin1Char(args ...interface{}) *QLatin1Char {
   // QLatin1Char(char)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -249,7 +254,9 @@ func NewQLatin1Char(args ...interface{}) *QLatin1Char {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QLatin1CharC2Ec(arg0)
-    return &QLatin1Char{Qclsinst:qthis}
+    this := &QLatin1Char{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLatin1Char)
+    return this
   default:
     qtrt.ErrorResolve("QLatin1Char", "QLatin1Char", args)
   }
@@ -258,7 +265,7 @@ func NewQLatin1Char(args ...interface{}) *QLatin1Char {
 }
 
 // toLatin1()
-func (this *QLatin1Char) Tolatin1(args ...interface{}) (ret interface{}) {
+func (this *QLatin1Char) ToLatin1(args ...interface{}) (ret interface{}) {
   // toLatin1()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -316,7 +323,7 @@ func (this *QLatin1Char) Unicode(args ...interface{}) (ret interface{}) {
 }
 
 // isLetterOrNumber(uint)
-func (this *QChar) Isletterornumber_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsLetterOrNumber_s(args ...interface{}) (ret interface{}) {
   // isLetterOrNumber(uint)
   // isLetterOrNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -362,7 +369,7 @@ func (this *QChar) Isletterornumber_S(args ...interface{}) (ret interface{}) {
 }
 
 // unicodeVersion()
-func (this *QChar) Unicodeversion(args ...interface{}) () {
+func (this *QChar) UnicodeVersion(args ...interface{}) () {
   // unicodeVersion()
   // unicodeVersion(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -392,7 +399,7 @@ func (this *QChar) Unicodeversion(args ...interface{}) () {
 }
 
 // hasMirrored(uint)
-func (this *QChar) Hasmirrored_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) HasMirrored_s(args ...interface{}) (ret interface{}) {
   // hasMirrored(uint)
   // hasMirrored()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -438,7 +445,7 @@ func (this *QChar) Hasmirrored_S(args ...interface{}) (ret interface{}) {
 }
 
 // toLatin1()
-func (this *QChar) Tolatin1(args ...interface{}) (ret interface{}) {
+func (this *QChar) ToLatin1(args ...interface{}) (ret interface{}) {
   // toLatin1()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -467,7 +474,7 @@ func (this *QChar) Tolatin1(args ...interface{}) (ret interface{}) {
 }
 
 // isTitleCase()
-func (this *QChar) Istitlecase(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsTitleCase(args ...interface{}) (ret interface{}) {
   // isTitleCase()
   // isTitleCase(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -513,7 +520,7 @@ func (this *QChar) Istitlecase(args ...interface{}) (ret interface{}) {
 }
 
 // currentUnicodeVersion()
-func (this *QChar) Currentunicodeversion_S(args ...interface{}) () {
+func (this *QChar) CurrentUnicodeVersion_s(args ...interface{}) () {
   // currentUnicodeVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -534,7 +541,7 @@ func (this *QChar) Currentunicodeversion_S(args ...interface{}) () {
 }
 
 // setCell(uchar)
-func (this *QChar) Setcell(args ...interface{}) () {
+func (this *QChar) SetCell(args ...interface{}) () {
   // setCell(uchar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -579,7 +586,7 @@ func (this *QChar) Unicode(args ...interface{}) () {
 }
 
 // lowSurrogate(uint)
-func (this *QChar) Lowsurrogate_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) LowSurrogate_s(args ...interface{}) (ret interface{}) {
   // lowSurrogate(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -611,7 +618,7 @@ func (this *QChar) Lowsurrogate_S(args ...interface{}) (ret interface{}) {
 }
 
 // isSpace(uint)
-func (this *QChar) Isspace_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsSpace_s(args ...interface{}) (ret interface{}) {
   // isSpace(uint)
   // isSpace()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -716,7 +723,7 @@ func (this *QChar) Category(args ...interface{}) () {
 }
 
 // decompositionTag()
-func (this *QChar) Decompositiontag(args ...interface{}) () {
+func (this *QChar) DecompositionTag(args ...interface{}) () {
   // decompositionTag()
   // decompositionTag(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -746,7 +753,7 @@ func (this *QChar) Decompositiontag(args ...interface{}) () {
 }
 
 // isHighSurrogate()
-func (this *QChar) Ishighsurrogate(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsHighSurrogate(args ...interface{}) (ret interface{}) {
   // isHighSurrogate()
   // isHighSurrogate(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -792,7 +799,7 @@ func (this *QChar) Ishighsurrogate(args ...interface{}) (ret interface{}) {
 }
 
 // script(uint)
-func (this *QChar) Script_S(args ...interface{}) () {
+func (this *QChar) Script_s(args ...interface{}) () {
   // script(uint)
   // script()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -822,7 +829,7 @@ func (this *QChar) Script_S(args ...interface{}) () {
 }
 
 // fromLatin1(char)
-func (this *QChar) Fromlatin1_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) FromLatin1_s(args ...interface{}) (ret interface{}) {
   // fromLatin1(char)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -854,7 +861,7 @@ func (this *QChar) Fromlatin1_S(args ...interface{}) (ret interface{}) {
 }
 
 // joiningType(uint)
-func (this *QChar) Joiningtype_S(args ...interface{}) () {
+func (this *QChar) JoiningType_s(args ...interface{}) () {
   // joiningType(uint)
   // joiningType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -913,7 +920,7 @@ func (this *QChar) Cell(args ...interface{}) (ret interface{}) {
 }
 
 // digitValue()
-func (this *QChar) Digitvalue(args ...interface{}) (ret interface{}) {
+func (this *QChar) DigitValue(args ...interface{}) (ret interface{}) {
   // digitValue()
   // digitValue(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -959,7 +966,7 @@ func (this *QChar) Digitvalue(args ...interface{}) (ret interface{}) {
 }
 
 // requiresSurrogates(uint)
-func (this *QChar) Requiressurrogates_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) RequiresSurrogates_s(args ...interface{}) (ret interface{}) {
   // requiresSurrogates(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1037,7 +1044,7 @@ func (this *QChar) Decomposition(args ...interface{}) (ret interface{}) {
 }
 
 // highSurrogate(uint)
-func (this *QChar) Highsurrogate_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) HighSurrogate_s(args ...interface{}) (ret interface{}) {
   // highSurrogate(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1069,7 +1076,7 @@ func (this *QChar) Highsurrogate_S(args ...interface{}) (ret interface{}) {
 }
 
 // isSurrogate()
-func (this *QChar) Issurrogate(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsSurrogate(args ...interface{}) (ret interface{}) {
   // isSurrogate()
   // isSurrogate(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1115,7 +1122,7 @@ func (this *QChar) Issurrogate(args ...interface{}) (ret interface{}) {
 }
 
 // direction(uint)
-func (this *QChar) Direction_S(args ...interface{}) () {
+func (this *QChar) Direction_s(args ...interface{}) () {
   // direction(uint)
   // direction()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1145,7 +1152,7 @@ func (this *QChar) Direction_S(args ...interface{}) () {
 }
 
 // mirroredChar(uint)
-func (this *QChar) Mirroredchar_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) MirroredChar_s(args ...interface{}) (ret interface{}) {
   // mirroredChar(uint)
   // mirroredChar()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1191,7 +1198,7 @@ func (this *QChar) Mirroredchar_S(args ...interface{}) (ret interface{}) {
 }
 
 // combiningClass()
-func (this *QChar) Combiningclass(args ...interface{}) (ret interface{}) {
+func (this *QChar) CombiningClass(args ...interface{}) (ret interface{}) {
   // combiningClass()
   // combiningClass(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1237,7 +1244,7 @@ func (this *QChar) Combiningclass(args ...interface{}) (ret interface{}) {
 }
 
 // isMark(uint)
-func (this *QChar) Ismark_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsMark_s(args ...interface{}) (ret interface{}) {
   // isMark(uint)
   // isMark()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1283,7 +1290,7 @@ func (this *QChar) Ismark_S(args ...interface{}) (ret interface{}) {
 }
 
 // isLower(uint)
-func (this *QChar) Islower_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsLower_s(args ...interface{}) (ret interface{}) {
   // isLower(uint)
   // isLower()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1329,7 +1336,7 @@ func (this *QChar) Islower_S(args ...interface{}) (ret interface{}) {
 }
 
 // isNumber(uint)
-func (this *QChar) Isnumber_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsNumber_s(args ...interface{}) (ret interface{}) {
   // isNumber(uint)
   // isNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1375,7 +1382,7 @@ func (this *QChar) Isnumber_S(args ...interface{}) (ret interface{}) {
 }
 
 // toLower(uint)
-func (this *QChar) Tolower_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) ToLower_s(args ...interface{}) (ret interface{}) {
   // toLower(uint)
   // toLower()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1421,7 +1428,7 @@ func (this *QChar) Tolower_S(args ...interface{}) (ret interface{}) {
 }
 
 // toTitleCase()
-func (this *QChar) Totitlecase(args ...interface{}) (ret interface{}) {
+func (this *QChar) ToTitleCase(args ...interface{}) (ret interface{}) {
   // toTitleCase()
   // toTitleCase(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1467,7 +1474,7 @@ func (this *QChar) Totitlecase(args ...interface{}) (ret interface{}) {
 }
 
 // isLowSurrogate(uint)
-func (this *QChar) Islowsurrogate_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsLowSurrogate_s(args ...interface{}) (ret interface{}) {
   // isLowSurrogate(uint)
   // isLowSurrogate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1513,7 +1520,7 @@ func (this *QChar) Islowsurrogate_S(args ...interface{}) (ret interface{}) {
 }
 
 // isUpper()
-func (this *QChar) Isupper(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsUpper(args ...interface{}) (ret interface{}) {
   // isUpper()
   // isUpper(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1559,6 +1566,9 @@ func (this *QChar) Isupper(args ...interface{}) (ret interface{}) {
 }
 
 // QChar(char)
+func GcfreeQChar(this *QChar) {
+  qtrt.UniverseFree(this)
+}
 func NewQChar(args ...interface{}) *QChar {
   // QChar(char)
   // QChar(uint)
@@ -1598,7 +1608,9 @@ func NewQChar(args ...interface{}) *QChar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QCharC2Ec(arg0)
-    return &QChar{Qclsinst:qthis}
+    this := &QChar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQChar)
+    return this
   case 1:
     // invoke: _ZN5QCharC1Ej
     // invoke: void QChar(uint)
@@ -1607,7 +1619,9 @@ func NewQChar(args ...interface{}) *QChar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QCharC2Ej(arg0)
-    return &QChar{Qclsinst:qthis}
+    this := &QChar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQChar)
+    return this
   case 2:
     // invoke: _ZN5QCharC1Ei
     // invoke: void QChar(int)
@@ -1616,7 +1630,9 @@ func NewQChar(args ...interface{}) *QChar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QCharC2Ei(arg0)
-    return &QChar{Qclsinst:qthis}
+    this := &QChar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQChar)
+    return this
   case 3:
     // invoke: _ZN5QCharC1Eh
     // invoke: void QChar(uchar)
@@ -1625,7 +1641,9 @@ func NewQChar(args ...interface{}) *QChar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QCharC2Eh(arg0)
-    return &QChar{Qclsinst:qthis}
+    this := &QChar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQChar)
+    return this
   case 4:
     // invoke: _ZN5QCharC1Es
     // invoke: void QChar(short)
@@ -1634,7 +1652,9 @@ func NewQChar(args ...interface{}) *QChar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QCharC2Es(arg0)
-    return &QChar{Qclsinst:qthis}
+    this := &QChar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQChar)
+    return this
   case 5:
     // invoke: _ZN5QCharC1Ehh
     // invoke: void QChar(uchar, uchar)
@@ -1645,14 +1665,18 @@ func NewQChar(args ...interface{}) *QChar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QCharC2Ehh(arg0, arg1)
-    return &QChar{Qclsinst:qthis}
+    this := &QChar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQChar)
+    return this
   case 6:
     // invoke: _ZN5QCharC1Ev
     // invoke: void QChar()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QCharC2Ev()
-    return &QChar{Qclsinst:qthis}
+    this := &QChar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQChar)
+    return this
   case 7:
     // invoke: _ZN5QCharC1Et
     // invoke: void QChar(ushort)
@@ -1661,7 +1685,9 @@ func NewQChar(args ...interface{}) *QChar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QCharC2Et(arg0)
-    return &QChar{Qclsinst:qthis}
+    this := &QChar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQChar)
+    return this
   default:
     qtrt.ErrorResolve("QChar", "QChar", args)
   }
@@ -1670,7 +1696,7 @@ func NewQChar(args ...interface{}) *QChar {
 }
 
 // toCaseFolded(uint)
-func (this *QChar) Tocasefolded_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) ToCaseFolded_s(args ...interface{}) (ret interface{}) {
   // toCaseFolded(uint)
   // toCaseFolded()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1716,7 +1742,7 @@ func (this *QChar) Tocasefolded_S(args ...interface{}) (ret interface{}) {
 }
 
 // isLetter()
-func (this *QChar) Isletter(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsLetter(args ...interface{}) (ret interface{}) {
   // isLetter()
   // isLetter(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1762,7 +1788,7 @@ func (this *QChar) Isletter(args ...interface{}) (ret interface{}) {
 }
 
 // isNonCharacter(uint)
-func (this *QChar) Isnoncharacter_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsNonCharacter_s(args ...interface{}) (ret interface{}) {
   // isNonCharacter(uint)
   // isNonCharacter()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1808,7 +1834,7 @@ func (this *QChar) Isnoncharacter_S(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QChar) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1837,7 +1863,7 @@ func (this *QChar) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // isPrint()
-func (this *QChar) Isprint(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsPrint(args ...interface{}) (ret interface{}) {
   // isPrint()
   // isPrint(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1883,7 +1909,7 @@ func (this *QChar) Isprint(args ...interface{}) (ret interface{}) {
 }
 
 // toUpper()
-func (this *QChar) Toupper(args ...interface{}) (ret interface{}) {
+func (this *QChar) ToUpper(args ...interface{}) (ret interface{}) {
   // toUpper()
   // toUpper(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1929,7 +1955,7 @@ func (this *QChar) Toupper(args ...interface{}) (ret interface{}) {
 }
 
 // surrogateToUcs4(ushort, ushort)
-func (this *QChar) Surrogatetoucs4_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) SurrogateToUcs4_s(args ...interface{}) (ret interface{}) {
   // surrogateToUcs4(ushort, ushort)
   // surrogateToUcs4(class QChar, class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1984,7 +2010,7 @@ func (this *QChar) Surrogatetoucs4_S(args ...interface{}) (ret interface{}) {
 }
 
 // isDigit(uint)
-func (this *QChar) Isdigit_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsDigit_s(args ...interface{}) (ret interface{}) {
   // isDigit(uint)
   // isDigit()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2030,7 +2056,7 @@ func (this *QChar) Isdigit_S(args ...interface{}) (ret interface{}) {
 }
 
 // setRow(uchar)
-func (this *QChar) Setrow(args ...interface{}) () {
+func (this *QChar) SetRow(args ...interface{}) () {
   // setRow(uchar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2054,7 +2080,7 @@ func (this *QChar) Setrow(args ...interface{}) () {
 }
 
 // isPunct()
-func (this *QChar) Ispunct(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsPunct(args ...interface{}) (ret interface{}) {
   // isPunct()
   // isPunct(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2100,7 +2126,7 @@ func (this *QChar) Ispunct(args ...interface{}) (ret interface{}) {
 }
 
 // isSymbol(uint)
-func (this *QChar) Issymbol_S(args ...interface{}) (ret interface{}) {
+func (this *QChar) IsSymbol_s(args ...interface{}) (ret interface{}) {
   // isSymbol(uint)
   // isSymbol()
   var vtys = make(map[int32]map[int32]reflect.Type)

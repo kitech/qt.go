@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qdesktopwidget.h
 // dst-file: /src/widgets/qdesktopwidget.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -74,6 +75,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDesktopWidget)=1
@@ -86,7 +88,7 @@ type QDesktopWidget struct {
 }
 
 // screenNumber(const class QWidget *)
-func (this *QDesktopWidget) Screennumber(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) ScreenNumber(args ...interface{}) (ret interface{}) {
   // screenNumber(const class QWidget *)
   // screenNumber(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -135,7 +137,7 @@ func (this *QDesktopWidget) Screennumber(args ...interface{}) (ret interface{}) 
 }
 
 // screenCount()
-func (this *QDesktopWidget) Screencount(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) ScreenCount(args ...interface{}) (ret interface{}) {
   // screenCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -164,7 +166,7 @@ func (this *QDesktopWidget) Screencount(args ...interface{}) (ret interface{}) {
 }
 
 // availableGeometry(int)
-func (this *QDesktopWidget) Availablegeometry(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) AvailableGeometry(args ...interface{}) (ret interface{}) {
   // availableGeometry(int)
   // availableGeometry(const class QWidget *)
   // availableGeometry(const class QPoint &)
@@ -230,7 +232,7 @@ func (this *QDesktopWidget) Availablegeometry(args ...interface{}) (ret interfac
 }
 
 // screenGeometry(const class QPoint &)
-func (this *QDesktopWidget) Screengeometry(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) ScreenGeometry(args ...interface{}) (ret interface{}) {
   // screenGeometry(const class QPoint &)
   // screenGeometry(int)
   // screenGeometry(const class QWidget *)
@@ -296,7 +298,7 @@ func (this *QDesktopWidget) Screengeometry(args ...interface{}) (ret interface{}
 }
 
 // isVirtualDesktop()
-func (this *QDesktopWidget) Isvirtualdesktop(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) IsVirtualDesktop(args ...interface{}) (ret interface{}) {
   // isVirtualDesktop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -357,7 +359,7 @@ func (this *QDesktopWidget) Screen(args ...interface{}) (ret interface{}) {
 }
 
 // primaryScreen()
-func (this *QDesktopWidget) Primaryscreen(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) PrimaryScreen(args ...interface{}) (ret interface{}) {
   // primaryScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -386,7 +388,7 @@ func (this *QDesktopWidget) Primaryscreen(args ...interface{}) (ret interface{})
 }
 
 // numScreens()
-func (this *QDesktopWidget) Numscreens(args ...interface{}) (ret interface{}) {
+func (this *QDesktopWidget) NumScreens(args ...interface{}) (ret interface{}) {
   // numScreens()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -415,6 +417,9 @@ func (this *QDesktopWidget) Numscreens(args ...interface{}) (ret interface{}) {
 }
 
 // QDesktopWidget()
+func GcfreeQDesktopWidget(this *QDesktopWidget) {
+  qtrt.UniverseFree(this)
+}
 func NewQDesktopWidget(args ...interface{}) *QDesktopWidget {
   // QDesktopWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -430,7 +435,9 @@ func NewQDesktopWidget(args ...interface{}) *QDesktopWidget {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QDesktopWidgetC2Ev()
-    return &QDesktopWidget{Qclsinst:qthis}
+    this := &QDesktopWidget{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDesktopWidget)
+    return this
   default:
     qtrt.ErrorResolve("QDesktopWidget", "QDesktopWidget", args)
   }
@@ -439,7 +446,7 @@ func NewQDesktopWidget(args ...interface{}) *QDesktopWidget {
 }
 
 // metaObject()
-func (this *QDesktopWidget) Metaobject(args ...interface{}) () {
+func (this *QDesktopWidget) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -460,7 +467,7 @@ func (this *QDesktopWidget) Metaobject(args ...interface{}) () {
 }
 
 // ~QDesktopWidget()
-func (this *QDesktopWidget) Freeqdesktopwidget(args ...interface{}) () {
+func (this *QDesktopWidget) Free(args ...interface{}) () {
   // ~QDesktopWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -472,7 +479,10 @@ func (this *QDesktopWidget) Freeqdesktopwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QDesktopWidgetD0Ev
     // invoke: void ~QDesktopWidget()
-    C.C_ZN14QDesktopWidgetD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QDesktopWidgetD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDesktopWidget", "~QDesktopWidget", args)
   }

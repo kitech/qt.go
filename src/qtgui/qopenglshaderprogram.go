@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qopenglshaderprogram.h
 // dst-file: /src/gui/qopenglshaderprogram.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -292,6 +293,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QOpenGLShader)=1
@@ -307,7 +309,7 @@ type QOpenGLShaderProgram struct {
 }
 
 // isCompiled()
-func (this *QOpenGLShader) Iscompiled(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShader) IsCompiled(args ...interface{}) (ret interface{}) {
   // isCompiled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -365,7 +367,7 @@ func (this *QOpenGLShader) Log(args ...interface{}) (ret interface{}) {
 }
 
 // compileSourceFile(const class QString &)
-func (this *QOpenGLShader) Compilesourcefile(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShader) CompileSourceFile(args ...interface{}) (ret interface{}) {
   // compileSourceFile(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -397,7 +399,7 @@ func (this *QOpenGLShader) Compilesourcefile(args ...interface{}) (ret interface
 }
 
 // shaderId()
-func (this *QOpenGLShader) Shaderid(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShader) ShaderId(args ...interface{}) (ret interface{}) {
   // shaderId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -426,7 +428,7 @@ func (this *QOpenGLShader) Shaderid(args ...interface{}) (ret interface{}) {
 }
 
 // compileSourceCode(const class QString &)
-func (this *QOpenGLShader) Compilesourcecode(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShader) CompileSourceCode(args ...interface{}) (ret interface{}) {
   // compileSourceCode(const class QString &)
   // compileSourceCode(const char *)
   // compileSourceCode(const class QByteArray &)
@@ -494,7 +496,7 @@ func (this *QOpenGLShader) Compilesourcecode(args ...interface{}) (ret interface
 }
 
 // sourceCode()
-func (this *QOpenGLShader) Sourcecode(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShader) SourceCode(args ...interface{}) (ret interface{}) {
   // sourceCode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -523,7 +525,7 @@ func (this *QOpenGLShader) Sourcecode(args ...interface{}) (ret interface{}) {
 }
 
 // shaderType()
-func (this *QOpenGLShader) Shadertype(args ...interface{}) () {
+func (this *QOpenGLShader) ShaderType(args ...interface{}) () {
   // shaderType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -544,7 +546,7 @@ func (this *QOpenGLShader) Shadertype(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QOpenGLShader) Metaobject(args ...interface{}) () {
+func (this *QOpenGLShader) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -565,7 +567,7 @@ func (this *QOpenGLShader) Metaobject(args ...interface{}) () {
 }
 
 // ~QOpenGLShader()
-func (this *QOpenGLShader) Freeqopenglshader(args ...interface{}) () {
+func (this *QOpenGLShader) Free(args ...interface{}) () {
   // ~QOpenGLShader()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -577,7 +579,10 @@ func (this *QOpenGLShader) Freeqopenglshader(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLShaderD0Ev
     // invoke: void ~QOpenGLShader()
-    C.C_ZN13QOpenGLShaderD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QOpenGLShaderD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QOpenGLShader", "~QOpenGLShader", args)
   }
@@ -586,7 +591,7 @@ func (this *QOpenGLShader) Freeqopenglshader(args ...interface{}) () {
 }
 
 // setPatchVertexCount(int)
-func (this *QOpenGLShaderProgram) Setpatchvertexcount(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) SetPatchVertexCount(args ...interface{}) () {
   // setPatchVertexCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -610,7 +615,7 @@ func (this *QOpenGLShaderProgram) Setpatchvertexcount(args ...interface{}) () {
 }
 
 // addShader(class QOpenGLShader *)
-func (this *QOpenGLShaderProgram) Addshader(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShaderProgram) AddShader(args ...interface{}) (ret interface{}) {
   // addShader(class QOpenGLShader *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -642,7 +647,7 @@ func (this *QOpenGLShaderProgram) Addshader(args ...interface{}) (ret interface{
 }
 
 // defaultOuterTessellationLevels()
-func (this *QOpenGLShaderProgram) Defaultoutertessellationlevels(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) DefaultOuterTessellationLevels(args ...interface{}) () {
   // defaultOuterTessellationLevels()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -663,7 +668,7 @@ func (this *QOpenGLShaderProgram) Defaultoutertessellationlevels(args ...interfa
 }
 
 // attributeLocation(const char *)
-func (this *QOpenGLShaderProgram) Attributelocation(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShaderProgram) AttributeLocation(args ...interface{}) (ret interface{}) {
   // attributeLocation(const char *)
   // attributeLocation(const class QByteArray &)
   // attributeLocation(const class QString &)
@@ -731,7 +736,7 @@ func (this *QOpenGLShaderProgram) Attributelocation(args ...interface{}) (ret in
 }
 
 // setAttributeArray(const char *, const class QVector3D *, int)
-func (this *QOpenGLShaderProgram) Setattributearray(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) SetAttributeArray(args ...interface{}) () {
   // setAttributeArray(const char *, const class QVector3D *, int)
   // setAttributeArray(int, GLenum, const void *, int, int)
   // setAttributeArray(int, const class QVector3D *, int)
@@ -924,7 +929,7 @@ func (this *QOpenGLShaderProgram) Setattributearray(args ...interface{}) () {
 }
 
 // removeShader(class QOpenGLShader *)
-func (this *QOpenGLShaderProgram) Removeshader(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) RemoveShader(args ...interface{}) () {
   // removeShader(class QOpenGLShader *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -948,7 +953,7 @@ func (this *QOpenGLShaderProgram) Removeshader(args ...interface{}) () {
 }
 
 // removeAllShaders()
-func (this *QOpenGLShaderProgram) Removeallshaders(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) RemoveAllShaders(args ...interface{}) () {
   // removeAllShaders()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -969,7 +974,7 @@ func (this *QOpenGLShaderProgram) Removeallshaders(args ...interface{}) () {
 }
 
 // patchVertexCount()
-func (this *QOpenGLShaderProgram) Patchvertexcount(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShaderProgram) PatchVertexCount(args ...interface{}) (ret interface{}) {
   // patchVertexCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1027,7 +1032,7 @@ func (this *QOpenGLShaderProgram) Log(args ...interface{}) (ret interface{}) {
 }
 
 // setUniformValue(const char *, const class QSize &)
-func (this *QOpenGLShaderProgram) Setuniformvalue(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) SetUniformValue(args ...interface{}) () {
   // setUniformValue(const char *, const class QSize &)
   // setUniformValue(int, const class QColor &)
   // setUniformValue(int, const GLfloat (*)[3])
@@ -1572,7 +1577,7 @@ func (this *QOpenGLShaderProgram) Setuniformvalue(args ...interface{}) () {
 }
 
 // isLinked()
-func (this *QOpenGLShaderProgram) Islinked(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShaderProgram) IsLinked(args ...interface{}) (ret interface{}) {
   // isLinked()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1601,7 +1606,7 @@ func (this *QOpenGLShaderProgram) Islinked(args ...interface{}) (ret interface{}
 }
 
 // disableAttributeArray(int)
-func (this *QOpenGLShaderProgram) Disableattributearray(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) DisableAttributeArray(args ...interface{}) () {
   // disableAttributeArray(int)
   // disableAttributeArray(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1636,7 +1641,7 @@ func (this *QOpenGLShaderProgram) Disableattributearray(args ...interface{}) () 
 }
 
 // hasOpenGLShaderPrograms(class QOpenGLContext *)
-func (this *QOpenGLShaderProgram) Hasopenglshaderprograms_S(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShaderProgram) HasOpenGLShaderPrograms_s(args ...interface{}) (ret interface{}) {
   // hasOpenGLShaderPrograms(class QOpenGLContext *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1668,7 +1673,7 @@ func (this *QOpenGLShaderProgram) Hasopenglshaderprograms_S(args ...interface{})
 }
 
 // bindAttributeLocation(const char *, int)
-func (this *QOpenGLShaderProgram) Bindattributelocation(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) BindAttributeLocation(args ...interface{}) () {
   // bindAttributeLocation(const char *, int)
   // bindAttributeLocation(const class QString &, int)
   // bindAttributeLocation(const class QByteArray &, int)
@@ -1721,7 +1726,7 @@ func (this *QOpenGLShaderProgram) Bindattributelocation(args ...interface{}) () 
 }
 
 // programId()
-func (this *QOpenGLShaderProgram) Programid(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShaderProgram) ProgramId(args ...interface{}) (ret interface{}) {
   // programId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1779,7 +1784,7 @@ func (this *QOpenGLShaderProgram) Link(args ...interface{}) (ret interface{}) {
 }
 
 // enableAttributeArray(int)
-func (this *QOpenGLShaderProgram) Enableattributearray(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) EnableAttributeArray(args ...interface{}) () {
   // enableAttributeArray(int)
   // enableAttributeArray(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1814,7 +1819,7 @@ func (this *QOpenGLShaderProgram) Enableattributearray(args ...interface{}) () {
 }
 
 // setAttributeBuffer(const char *, GLenum, int, int, int)
-func (this *QOpenGLShaderProgram) Setattributebuffer(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) SetAttributeBuffer(args ...interface{}) () {
   // setAttributeBuffer(const char *, GLenum, int, int, int)
   // setAttributeBuffer(int, GLenum, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1873,7 +1878,7 @@ func (this *QOpenGLShaderProgram) Setattributebuffer(args ...interface{}) () {
 }
 
 // uniformLocation(const class QString &)
-func (this *QOpenGLShaderProgram) Uniformlocation(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShaderProgram) UniformLocation(args ...interface{}) (ret interface{}) {
   // uniformLocation(const class QString &)
   // uniformLocation(const char *)
   // uniformLocation(const class QByteArray &)
@@ -1941,7 +1946,7 @@ func (this *QOpenGLShaderProgram) Uniformlocation(args ...interface{}) (ret inte
 }
 
 // ~QOpenGLShaderProgram()
-func (this *QOpenGLShaderProgram) Freeqopenglshaderprogram(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) Free(args ...interface{}) () {
   // ~QOpenGLShaderProgram()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1953,7 +1958,10 @@ func (this *QOpenGLShaderProgram) Freeqopenglshaderprogram(args ...interface{}) 
   case 0:
     // invoke: _ZN20QOpenGLShaderProgramD0Ev
     // invoke: void ~QOpenGLShaderProgram()
-    C.C_ZN20QOpenGLShaderProgramD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN20QOpenGLShaderProgramD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "~QOpenGLShaderProgram", args)
   }
@@ -1962,6 +1970,9 @@ func (this *QOpenGLShaderProgram) Freeqopenglshaderprogram(args ...interface{}) 
 }
 
 // QOpenGLShaderProgram(class QObject *)
+func GcfreeQOpenGLShaderProgram(this *QOpenGLShaderProgram) {
+  qtrt.UniverseFree(this)
+}
 func NewQOpenGLShaderProgram(args ...interface{}) *QOpenGLShaderProgram {
   // QOpenGLShaderProgram(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1980,7 +1991,9 @@ func NewQOpenGLShaderProgram(args ...interface{}) *QOpenGLShaderProgram {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QOpenGLShaderProgramC2EP7QObject(arg0)
-    return &QOpenGLShaderProgram{Qclsinst:qthis}
+    this := &QOpenGLShaderProgram{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLShaderProgram)
+    return this
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "QOpenGLShaderProgram", args)
   }
@@ -1989,7 +2002,7 @@ func NewQOpenGLShaderProgram(args ...interface{}) *QOpenGLShaderProgram {
 }
 
 // metaObject()
-func (this *QOpenGLShaderProgram) Metaobject(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2039,7 +2052,7 @@ func (this *QOpenGLShaderProgram) Bind(args ...interface{}) (ret interface{}) {
 }
 
 // setUniformValueArray(int, const class QVector4D *, int)
-func (this *QOpenGLShaderProgram) Setuniformvaluearray(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) SetUniformValueArray(args ...interface{}) () {
   // setUniformValueArray(int, const class QVector4D *, int)
   // setUniformValueArray(const char *, const GLfloat *, int, int)
   // setUniformValueArray(int, const GLuint *, int)
@@ -2284,7 +2297,7 @@ func (this *QOpenGLShaderProgram) Setuniformvaluearray(args ...interface{}) () {
 }
 
 // maxGeometryOutputVertices()
-func (this *QOpenGLShaderProgram) Maxgeometryoutputvertices(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLShaderProgram) MaxGeometryOutputVertices(args ...interface{}) (ret interface{}) {
   // maxGeometryOutputVertices()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2334,7 +2347,7 @@ func (this *QOpenGLShaderProgram) Shaders(args ...interface{}) () {
 }
 
 // defaultInnerTessellationLevels()
-func (this *QOpenGLShaderProgram) Defaultinnertessellationlevels(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) DefaultInnerTessellationLevels(args ...interface{}) () {
   // defaultInnerTessellationLevels()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2376,7 +2389,7 @@ func (this *QOpenGLShaderProgram) Release(args ...interface{}) () {
 }
 
 // setAttributeValue(int, GLfloat, GLfloat)
-func (this *QOpenGLShaderProgram) Setattributevalue(args ...interface{}) () {
+func (this *QOpenGLShaderProgram) SetAttributeValue(args ...interface{}) () {
   // setAttributeValue(int, GLfloat, GLfloat)
   // setAttributeValue(const char *, const class QVector2D &)
   // setAttributeValue(int, const class QColor &)

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qshareddata.h
 // dst-file: /src/core/qshareddata.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -42,6 +43,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSharedData)=1
@@ -51,6 +53,9 @@ type QSharedData struct {
 }
 
 // QSharedData()
+func GcfreeQSharedData(this *QSharedData) {
+  qtrt.UniverseFree(this)
+}
 func NewQSharedData(args ...interface{}) *QSharedData {
   // QSharedData()
   // QSharedData(const class QSharedData &)
@@ -69,7 +74,9 @@ func NewQSharedData(args ...interface{}) *QSharedData {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QSharedDataC2Ev()
-    return &QSharedData{Qclsinst:qthis}
+    this := &QSharedData{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSharedData)
+    return this
   case 1:
     // invoke: _ZN11QSharedDataC1ERKS_
     // invoke: void QSharedData(const class QSharedData &)
@@ -78,7 +85,9 @@ func NewQSharedData(args ...interface{}) *QSharedData {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QSharedDataC2ERKS_(arg0)
-    return &QSharedData{Qclsinst:qthis}
+    this := &QSharedData{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSharedData)
+    return this
   default:
     qtrt.ErrorResolve("QSharedData", "QSharedData", args)
   }

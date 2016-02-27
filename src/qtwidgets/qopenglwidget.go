@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -64,6 +65,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QOpenGLWidget)=1
@@ -77,7 +79,7 @@ type QOpenGLWidget struct {
 }
 
 // updateBehavior()
-func (this *QOpenGLWidget) Updatebehavior(args ...interface{}) () {
+func (this *QOpenGLWidget) UpdateBehavior(args ...interface{}) () {
   // updateBehavior()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -98,7 +100,7 @@ func (this *QOpenGLWidget) Updatebehavior(args ...interface{}) () {
 }
 
 // doneCurrent()
-func (this *QOpenGLWidget) Donecurrent(args ...interface{}) () {
+func (this *QOpenGLWidget) DoneCurrent(args ...interface{}) () {
   // doneCurrent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -119,7 +121,7 @@ func (this *QOpenGLWidget) Donecurrent(args ...interface{}) () {
 }
 
 // setFormat(const class QSurfaceFormat &)
-func (this *QOpenGLWidget) Setformat(args ...interface{}) () {
+func (this *QOpenGLWidget) SetFormat(args ...interface{}) () {
   // setFormat(const class QSurfaceFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -172,7 +174,7 @@ func (this *QOpenGLWidget) Format(args ...interface{}) (ret interface{}) {
 }
 
 // ~QOpenGLWidget()
-func (this *QOpenGLWidget) Freeqopenglwidget(args ...interface{}) () {
+func (this *QOpenGLWidget) Free(args ...interface{}) () {
   // ~QOpenGLWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -184,7 +186,10 @@ func (this *QOpenGLWidget) Freeqopenglwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWidgetD0Ev
     // invoke: void ~QOpenGLWidget()
-    C.C_ZN13QOpenGLWidgetD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QOpenGLWidgetD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "~QOpenGLWidget", args)
   }
@@ -193,7 +198,7 @@ func (this *QOpenGLWidget) Freeqopenglwidget(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QOpenGLWidget) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLWidget) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -222,7 +227,7 @@ func (this *QOpenGLWidget) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // defaultFramebufferObject()
-func (this *QOpenGLWidget) Defaultframebufferobject(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLWidget) DefaultFramebufferObject(args ...interface{}) (ret interface{}) {
   // defaultFramebufferObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -251,7 +256,7 @@ func (this *QOpenGLWidget) Defaultframebufferobject(args ...interface{}) (ret in
 }
 
 // metaObject()
-func (this *QOpenGLWidget) Metaobject(args ...interface{}) () {
+func (this *QOpenGLWidget) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -272,7 +277,7 @@ func (this *QOpenGLWidget) Metaobject(args ...interface{}) () {
 }
 
 // makeCurrent()
-func (this *QOpenGLWidget) Makecurrent(args ...interface{}) () {
+func (this *QOpenGLWidget) MakeCurrent(args ...interface{}) () {
   // makeCurrent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,7 +298,7 @@ func (this *QOpenGLWidget) Makecurrent(args ...interface{}) () {
 }
 
 // grabFramebuffer()
-func (this *QOpenGLWidget) Grabframebuffer(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLWidget) GrabFramebuffer(args ...interface{}) (ret interface{}) {
   // grabFramebuffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

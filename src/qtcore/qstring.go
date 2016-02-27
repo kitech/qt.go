@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qstring.h
 // dst-file: /src/core/qstring.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -522,6 +523,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStringDataPtr)=8
@@ -555,7 +557,7 @@ type QStringRef struct {
 }
 
 // toUcs4()
-func (this *QString) Toucs4(args ...interface{}) () {
+func (this *QString) ToUcs4(args ...interface{}) () {
   // toUcs4()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -576,7 +578,7 @@ func (this *QString) Toucs4(args ...interface{}) () {
 }
 
 // toWCharArray(wchar_t *)
-func (this *QString) Towchararray(args ...interface{}) (ret interface{}) {
+func (this *QString) ToWCharArray(args ...interface{}) (ret interface{}) {
   // toWCharArray(wchar_t *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -639,7 +641,7 @@ func (this *QString) Unicode(args ...interface{}) (ret interface{}) {
 }
 
 // fromLatin1(const class QByteArray &)
-func (this *QString) Fromlatin1_S(args ...interface{}) (ret interface{}) {
+func (this *QString) FromLatin1_s(args ...interface{}) (ret interface{}) {
   // fromLatin1(const class QByteArray &)
   // fromLatin1(const char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -741,7 +743,7 @@ func (this *QString) Swap(args ...interface{}) () {
 }
 
 // rightRef(int)
-func (this *QString) Rightref(args ...interface{}) () {
+func (this *QString) RightRef(args ...interface{}) () {
   // rightRef(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -765,7 +767,7 @@ func (this *QString) Rightref(args ...interface{}) () {
 }
 
 // leftRef(int)
-func (this *QString) Leftref(args ...interface{}) () {
+func (this *QString) LeftRef(args ...interface{}) () {
   // leftRef(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -789,7 +791,7 @@ func (this *QString) Leftref(args ...interface{}) () {
 }
 
 // rightJustified(int, class QChar, _Bool)
-func (this *QString) Rightjustified(args ...interface{}) (ret interface{}) {
+func (this *QString) RightJustified(args ...interface{}) (ret interface{}) {
   // rightJustified(int, class QChar, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -926,7 +928,7 @@ func (this *QString) Insert(args ...interface{}) (ret interface{}) {
 }
 
 // midRef(int, int)
-func (this *QString) Midref(args ...interface{}) () {
+func (this *QString) MidRef(args ...interface{}) () {
   // midRef(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1051,7 +1053,7 @@ func (this *QString) Trimmed(args ...interface{}) (ret interface{}) {
 }
 
 // toStdWString()
-func (this *QString) Tostdwstring(args ...interface{}) () {
+func (this *QString) ToStdWString(args ...interface{}) () {
   // toStdWString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1072,7 +1074,7 @@ func (this *QString) Tostdwstring(args ...interface{}) () {
 }
 
 // constEnd()
-func (this *QString) Constend(args ...interface{}) (ret interface{}) {
+func (this *QString) ConstEnd(args ...interface{}) (ret interface{}) {
   // constEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1154,7 +1156,7 @@ func (this *QString) Right(args ...interface{}) (ret interface{}) {
 }
 
 // toLocal8Bit()
-func (this *QString) Tolocal8Bit(args ...interface{}) (ret interface{}) {
+func (this *QString) ToLocal8Bit(args ...interface{}) (ret interface{}) {
   // toLocal8Bit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1183,7 +1185,7 @@ func (this *QString) Tolocal8Bit(args ...interface{}) (ret interface{}) {
 }
 
 // toUInt(_Bool *, int)
-func (this *QString) Touint(args ...interface{}) (ret interface{}) {
+func (this *QString) ToUInt(args ...interface{}) (ret interface{}) {
   // toUInt(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1218,6 +1220,9 @@ func (this *QString) Touint(args ...interface{}) (ret interface{}) {
 }
 
 // QString()
+func GcfreeQString(this *QString) {
+  qtrt.UniverseFree(this)
+}
 func NewQString(args ...interface{}) *QString {
   // QString()
   // QString(const class QString &)
@@ -1253,7 +1258,9 @@ func NewQString(args ...interface{}) *QString {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QStringC2Ev()
-    return &QString{Qclsinst:qthis}
+    this := &QString{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQString)
+    return this
   case 1:
     // invoke: _ZN7QStringC1ERKS_
     // invoke: void QString(const class QString &)
@@ -1262,7 +1269,9 @@ func NewQString(args ...interface{}) *QString {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QStringC2ERKS_(arg0)
-    return &QString{Qclsinst:qthis}
+    this := &QString{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQString)
+    return this
   case 2:
     // invoke: _ZN7QStringC1Ei5QChar
     // invoke: void QString(int, class QChar)
@@ -1273,7 +1282,9 @@ func NewQString(args ...interface{}) *QString {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QStringC2Ei5QChar(arg0, arg1)
-    return &QString{Qclsinst:qthis}
+    this := &QString{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQString)
+    return this
   case 3:
     // invoke: _ZN7QStringC1EPKc
     // invoke: void QString(const char *)
@@ -1284,7 +1295,9 @@ func NewQString(args ...interface{}) *QString {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QStringC2EPKc(arg0)
-    return &QString{Qclsinst:qthis}
+    this := &QString{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQString)
+    return this
   case 4:
     // invoke: _ZN7QStringC1EPK5QChari
     // invoke: void QString(const class QChar *, int)
@@ -1295,7 +1308,9 @@ func NewQString(args ...interface{}) *QString {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QStringC2EPK5QChari(arg0, arg1)
-    return &QString{Qclsinst:qthis}
+    this := &QString{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQString)
+    return this
   case 5:
     // invoke: _ZN7QStringC1E5QChar
     // invoke: void QString(class QChar)
@@ -1304,7 +1319,9 @@ func NewQString(args ...interface{}) *QString {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QStringC2E5QChar(arg0)
-    return &QString{Qclsinst:qthis}
+    this := &QString{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQString)
+    return this
   case 6:
     // invoke: _ZN7QStringC1ERK10QByteArray
     // invoke: void QString(const class QByteArray &)
@@ -1313,7 +1330,9 @@ func NewQString(args ...interface{}) *QString {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QStringC2ERK10QByteArray(arg0)
-    return &QString{Qclsinst:qthis}
+    this := &QString{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQString)
+    return this
   default:
     qtrt.ErrorResolve("QString", "QString", args)
   }
@@ -2021,7 +2040,7 @@ func (this *QString) Capacity(args ...interface{}) (ret interface{}) {
 }
 
 // toLower()
-func (this *QString) Tolower(args ...interface{}) (ret interface{}) {
+func (this *QString) ToLower(args ...interface{}) (ret interface{}) {
   // toLower()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2050,7 +2069,7 @@ func (this *QString) Tolower(args ...interface{}) (ret interface{}) {
 }
 
 // toHtmlEscaped()
-func (this *QString) Tohtmlescaped(args ...interface{}) (ret interface{}) {
+func (this *QString) ToHtmlEscaped(args ...interface{}) (ret interface{}) {
   // toHtmlEscaped()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2079,7 +2098,7 @@ func (this *QString) Tohtmlescaped(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QString) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QString) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2108,7 +2127,7 @@ func (this *QString) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // localeAwareCompare(const class QString &, const class QString &)
-func (this *QString) Localeawarecompare_S(args ...interface{}) (ret interface{}) {
+func (this *QString) LocaleAwareCompare_s(args ...interface{}) (ret interface{}) {
   // localeAwareCompare(const class QString &, const class QString &)
   // localeAwareCompare(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2160,7 +2179,7 @@ func (this *QString) Localeawarecompare_S(args ...interface{}) (ret interface{})
 }
 
 // fromLocal8Bit(const class QByteArray &)
-func (this *QString) Fromlocal8Bit_S(args ...interface{}) (ret interface{}) {
+func (this *QString) FromLocal8Bit_s(args ...interface{}) (ret interface{}) {
   // fromLocal8Bit(const class QByteArray &)
   // fromLocal8Bit(const char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2214,7 +2233,7 @@ func (this *QString) Fromlocal8Bit_S(args ...interface{}) (ret interface{}) {
 }
 
 // fromWCharArray(const wchar_t *, int)
-func (this *QString) Fromwchararray_S(args ...interface{}) (ret interface{}) {
+func (this *QString) FromWCharArray_s(args ...interface{}) (ret interface{}) {
   // fromWCharArray(const wchar_t *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2251,7 +2270,7 @@ func (this *QString) Fromwchararray_S(args ...interface{}) (ret interface{}) {
 }
 
 // toStdString()
-func (this *QString) Tostdstring(args ...interface{}) () {
+func (this *QString) ToStdString(args ...interface{}) () {
   // toStdString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2272,7 +2291,7 @@ func (this *QString) Tostdstring(args ...interface{}) () {
 }
 
 // indexOf(const class QRegularExpression &, int, class QRegularExpressionMatch *)
-func (this *QString) Indexof(args ...interface{}) (ret interface{}) {
+func (this *QString) IndexOf(args ...interface{}) (ret interface{}) {
   // indexOf(const class QRegularExpression &, int, class QRegularExpressionMatch *)
   // indexOf(const class QRegularExpression &, int)
   // indexOf(class QRegExp &, int)
@@ -2399,7 +2418,7 @@ func (this *QString) Cbegin(args ...interface{}) (ret interface{}) {
 }
 
 // toLatin1()
-func (this *QString) Tolatin1(args ...interface{}) (ret interface{}) {
+func (this *QString) ToLatin1(args ...interface{}) (ret interface{}) {
   // toLatin1()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2452,7 +2471,7 @@ func (this *QString) Chop(args ...interface{}) () {
 }
 
 // toStdU32String()
-func (this *QString) Tostdu32String(args ...interface{}) () {
+func (this *QString) ToStdU32String(args ...interface{}) () {
   // toStdU32String()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2502,7 +2521,7 @@ func (this *QString) Length(args ...interface{}) (ret interface{}) {
 }
 
 // toDouble(_Bool *)
-func (this *QString) Todouble(args ...interface{}) (ret interface{}) {
+func (this *QString) ToDouble(args ...interface{}) (ret interface{}) {
   // toDouble(_Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2534,7 +2553,7 @@ func (this *QString) Todouble(args ...interface{}) (ret interface{}) {
 }
 
 // isSharedWith(const class QString &)
-func (this *QString) Issharedwith(args ...interface{}) (ret interface{}) {
+func (this *QString) IsSharedWith(args ...interface{}) (ret interface{}) {
   // isSharedWith(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2566,7 +2585,7 @@ func (this *QString) Issharedwith(args ...interface{}) (ret interface{}) {
 }
 
 // toUShort(_Bool *, int)
-func (this *QString) Toushort(args ...interface{}) (ret interface{}) {
+func (this *QString) ToUShort(args ...interface{}) (ret interface{}) {
   // toUShort(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2601,7 +2620,7 @@ func (this *QString) Toushort(args ...interface{}) (ret interface{}) {
 }
 
 // constBegin()
-func (this *QString) Constbegin(args ...interface{}) (ret interface{}) {
+func (this *QString) ConstBegin(args ...interface{}) (ret interface{}) {
   // constBegin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2630,7 +2649,7 @@ func (this *QString) Constbegin(args ...interface{}) (ret interface{}) {
 }
 
 // toShort(_Bool *, int)
-func (this *QString) Toshort(args ...interface{}) (ret interface{}) {
+func (this *QString) ToShort(args ...interface{}) (ret interface{}) {
   // toShort(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2665,7 +2684,7 @@ func (this *QString) Toshort(args ...interface{}) (ret interface{}) {
 }
 
 // number(uint, int)
-func (this *QString) Number_S(args ...interface{}) (ret interface{}) {
+func (this *QString) Number_s(args ...interface{}) (ret interface{}) {
   // number(uint, int)
   // number(double, char, int)
   // number(qulonglong, int)
@@ -2950,7 +2969,7 @@ func (this *QString) Replace(args ...interface{}) (ret interface{}) {
 }
 
 // push_back(class QChar)
-func (this *QString) Push_Back(args ...interface{}) () {
+func (this *QString) Push_back(args ...interface{}) () {
   // push_back(class QChar)
   // push_back(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3151,7 +3170,7 @@ func (this *QString) Contains(args ...interface{}) (ret interface{}) {
 }
 
 // isSimpleText()
-func (this *QString) Issimpletext(args ...interface{}) (ret interface{}) {
+func (this *QString) IsSimpleText(args ...interface{}) (ret interface{}) {
   // isSimpleText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3209,7 +3228,7 @@ func (this *QString) Cend(args ...interface{}) (ret interface{}) {
 }
 
 // leftJustified(int, class QChar, _Bool)
-func (this *QString) Leftjustified(args ...interface{}) (ret interface{}) {
+func (this *QString) LeftJustified(args ...interface{}) (ret interface{}) {
   // leftJustified(int, class QChar, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3279,7 +3298,7 @@ func (this *QString) Repeated(args ...interface{}) (ret interface{}) {
 }
 
 // fromRawData(const class QChar *, int)
-func (this *QString) Fromrawdata_S(args ...interface{}) (ret interface{}) {
+func (this *QString) FromRawData_s(args ...interface{}) (ret interface{}) {
   // fromRawData(const class QChar *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3359,7 +3378,7 @@ func (this *QString) Resize(args ...interface{}) () {
 }
 
 // toULongLong(_Bool *, int)
-func (this *QString) Toulonglong(args ...interface{}) (ret interface{}) {
+func (this *QString) ToULongLong(args ...interface{}) (ret interface{}) {
   // toULongLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3457,7 +3476,7 @@ func (this *QString) Count(args ...interface{}) (ret interface{}) {
 }
 
 // isRightToLeft()
-func (this *QString) Isrighttoleft(args ...interface{}) (ret interface{}) {
+func (this *QString) IsRightToLeft(args ...interface{}) (ret interface{}) {
   // isRightToLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3486,7 +3505,7 @@ func (this *QString) Isrighttoleft(args ...interface{}) (ret interface{}) {
 }
 
 // toUtf8()
-func (this *QString) Toutf8(args ...interface{}) (ret interface{}) {
+func (this *QString) ToUtf8(args ...interface{}) (ret interface{}) {
   // toUtf8()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3515,7 +3534,7 @@ func (this *QString) Toutf8(args ...interface{}) (ret interface{}) {
 }
 
 // fromUtf8(const char *, int)
-func (this *QString) Fromutf8_S(args ...interface{}) (ret interface{}) {
+func (this *QString) FromUtf8_s(args ...interface{}) (ret interface{}) {
   // fromUtf8(const char *, int)
   // fromUtf8(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3569,7 +3588,7 @@ func (this *QString) Fromutf8_S(args ...interface{}) (ret interface{}) {
 }
 
 // toStdU16String()
-func (this *QString) Tostdu16String(args ...interface{}) () {
+func (this *QString) ToStdU16String(args ...interface{}) () {
   // toStdU16String()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3590,7 +3609,7 @@ func (this *QString) Tostdu16String(args ...interface{}) () {
 }
 
 // toFloat(_Bool *)
-func (this *QString) Tofloat(args ...interface{}) (ret interface{}) {
+func (this *QString) ToFloat(args ...interface{}) (ret interface{}) {
   // toFloat(_Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3689,7 +3708,7 @@ func (this *QString) Fill(args ...interface{}) (ret interface{}) {
 }
 
 // toULong(_Bool *, int)
-func (this *QString) Toulong(args ...interface{}) (ret interface{}) {
+func (this *QString) ToULong(args ...interface{}) (ret interface{}) {
   // toULong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3753,7 +3772,7 @@ func (this *QString) End(args ...interface{}) (ret interface{}) {
 }
 
 // fromUcs4(const uint *, int)
-func (this *QString) Fromucs4_S(args ...interface{}) (ret interface{}) {
+func (this *QString) FromUcs4_s(args ...interface{}) (ret interface{}) {
   // fromUcs4(const uint *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3908,7 +3927,7 @@ func (this *QString) Prepend(args ...interface{}) (ret interface{}) {
 }
 
 // constData()
-func (this *QString) Constdata(args ...interface{}) (ret interface{}) {
+func (this *QString) ConstData(args ...interface{}) (ret interface{}) {
   // constData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3937,7 +3956,7 @@ func (this *QString) Constdata(args ...interface{}) (ret interface{}) {
 }
 
 // toLongLong(_Bool *, int)
-func (this *QString) Tolonglong(args ...interface{}) (ret interface{}) {
+func (this *QString) ToLongLong(args ...interface{}) (ret interface{}) {
   // toLongLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3972,7 +3991,7 @@ func (this *QString) Tolonglong(args ...interface{}) (ret interface{}) {
 }
 
 // setUnicode(const class QChar *, int)
-func (this *QString) Setunicode(args ...interface{}) (ret interface{}) {
+func (this *QString) SetUnicode(args ...interface{}) (ret interface{}) {
   // setUnicode(const class QChar *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4007,7 +4026,7 @@ func (this *QString) Setunicode(args ...interface{}) (ret interface{}) {
 }
 
 // fromUtf16(const ushort *, int)
-func (this *QString) Fromutf16_S(args ...interface{}) (ret interface{}) {
+func (this *QString) FromUtf16_s(args ...interface{}) (ret interface{}) {
   // fromUtf16(const ushort *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4042,7 +4061,7 @@ func (this *QString) Fromutf16_S(args ...interface{}) (ret interface{}) {
 }
 
 // isEmpty()
-func (this *QString) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QString) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4071,7 +4090,7 @@ func (this *QString) Isempty(args ...interface{}) (ret interface{}) {
 }
 
 // setRawData(const class QChar *, int)
-func (this *QString) Setrawdata(args ...interface{}) (ret interface{}) {
+func (this *QString) SetRawData(args ...interface{}) (ret interface{}) {
   // setRawData(const class QChar *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4106,7 +4125,7 @@ func (this *QString) Setrawdata(args ...interface{}) (ret interface{}) {
 }
 
 // isDetached()
-func (this *QString) Isdetached(args ...interface{}) (ret interface{}) {
+func (this *QString) IsDetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4164,7 +4183,7 @@ func (this *QString) Begin(args ...interface{}) (ret interface{}) {
 }
 
 // lastIndexOf(class QRegExp &, int)
-func (this *QString) Lastindexof(args ...interface{}) (ret interface{}) {
+func (this *QString) LastIndexOf(args ...interface{}) (ret interface{}) {
   // lastIndexOf(class QRegExp &, int)
   // lastIndexOf(const class QRegExp &, int)
   // lastIndexOf(const class QRegularExpression &, int)
@@ -4262,7 +4281,7 @@ func (this *QString) Lastindexof(args ...interface{}) (ret interface{}) {
 }
 
 // setNum(ushort, int)
-func (this *QString) Setnum(args ...interface{}) (ret interface{}) {
+func (this *QString) SetNum(args ...interface{}) (ret interface{}) {
   // setNum(ushort, int)
   // setNum(qulonglong, int)
   // setNum(qlonglong, int)
@@ -4483,7 +4502,7 @@ func (this *QString) Setnum(args ...interface{}) (ret interface{}) {
 }
 
 // setUtf16(const ushort *, int)
-func (this *QString) Setutf16(args ...interface{}) (ret interface{}) {
+func (this *QString) SetUtf16(args ...interface{}) (ret interface{}) {
   // setUtf16(const ushort *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4547,7 +4566,7 @@ func (this *QString) Data(args ...interface{}) (ret interface{}) {
 }
 
 // toLong(_Bool *, int)
-func (this *QString) Tolong(args ...interface{}) (ret interface{}) {
+func (this *QString) ToLong(args ...interface{}) (ret interface{}) {
   // toLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4582,7 +4601,7 @@ func (this *QString) Tolong(args ...interface{}) (ret interface{}) {
 }
 
 // ~QString()
-func (this *QString) Freeqstring(args ...interface{}) () {
+func (this *QString) Free(args ...interface{}) () {
   // ~QString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4594,7 +4613,10 @@ func (this *QString) Freeqstring(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QStringD0Ev
     // invoke: void ~QString()
-    C.C_ZN7QStringD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QStringD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QString", "~QString", args)
   }
@@ -4624,7 +4646,7 @@ func (this *QString) Clear(args ...interface{}) () {
 }
 
 // toInt(_Bool *, int)
-func (this *QString) Toint(args ...interface{}) (ret interface{}) {
+func (this *QString) ToInt(args ...interface{}) (ret interface{}) {
   // toInt(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4659,7 +4681,7 @@ func (this *QString) Toint(args ...interface{}) (ret interface{}) {
 }
 
 // toCaseFolded()
-func (this *QString) Tocasefolded(args ...interface{}) (ret interface{}) {
+func (this *QString) ToCaseFolded(args ...interface{}) (ret interface{}) {
   // toCaseFolded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4688,7 +4710,7 @@ func (this *QString) Tocasefolded(args ...interface{}) (ret interface{}) {
 }
 
 // toUpper()
-func (this *QString) Toupper(args ...interface{}) (ret interface{}) {
+func (this *QString) ToUpper(args ...interface{}) (ret interface{}) {
   // toUpper()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4717,7 +4739,7 @@ func (this *QString) Toupper(args ...interface{}) (ret interface{}) {
 }
 
 // push_front(class QChar)
-func (this *QString) Push_Front(args ...interface{}) () {
+func (this *QString) Push_front(args ...interface{}) () {
   // push_front(class QChar)
   // push_front(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -4782,6 +4804,9 @@ func (this *QString) Left(args ...interface{}) (ret interface{}) {
 }
 
 // QLatin1String(const class QByteArray &)
+func GcfreeQLatin1String(this *QLatin1String) {
+  qtrt.UniverseFree(this)
+}
 func NewQLatin1String(args ...interface{}) *QLatin1String {
   // QLatin1String(const class QByteArray &)
   // QLatin1String(const char *)
@@ -4807,7 +4832,9 @@ func NewQLatin1String(args ...interface{}) *QLatin1String {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QLatin1StringC2ERK10QByteArray(arg0)
-    return &QLatin1String{Qclsinst:qthis}
+    this := &QLatin1String{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLatin1String)
+    return this
   case 1:
     // invoke: _ZN13QLatin1StringC1EPKc
     // invoke: void QLatin1String(const char *)
@@ -4818,7 +4845,9 @@ func NewQLatin1String(args ...interface{}) *QLatin1String {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QLatin1StringC2EPKc(arg0)
-    return &QLatin1String{Qclsinst:qthis}
+    this := &QLatin1String{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLatin1String)
+    return this
   case 2:
     // invoke: _ZN13QLatin1StringC1EPKci
     // invoke: void QLatin1String(const char *, int)
@@ -4831,7 +4860,9 @@ func NewQLatin1String(args ...interface{}) *QLatin1String {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QLatin1StringC2EPKci(arg0, arg1)
-    return &QLatin1String{Qclsinst:qthis}
+    this := &QLatin1String{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLatin1String)
+    return this
   default:
     qtrt.ErrorResolve("QLatin1String", "QLatin1String", args)
   }
@@ -4927,7 +4958,7 @@ func (this *QLatin1String) Size(args ...interface{}) (ret interface{}) {
 }
 
 // isLetterOrNumber()
-func (this *QCharRef) Isletterornumber(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) IsLetterOrNumber(args ...interface{}) (ret interface{}) {
   // isLetterOrNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4956,7 +4987,7 @@ func (this *QCharRef) Isletterornumber(args ...interface{}) (ret interface{}) {
 }
 
 // isLetter()
-func (this *QCharRef) Isletter(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) IsLetter(args ...interface{}) (ret interface{}) {
   // isLetter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4985,7 +5016,7 @@ func (this *QCharRef) Isletter(args ...interface{}) (ret interface{}) {
 }
 
 // hasMirrored()
-func (this *QCharRef) Hasmirrored(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) HasMirrored(args ...interface{}) (ret interface{}) {
   // hasMirrored()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5014,7 +5045,7 @@ func (this *QCharRef) Hasmirrored(args ...interface{}) (ret interface{}) {
 }
 
 // unicodeVersion()
-func (this *QCharRef) Unicodeversion(args ...interface{}) () {
+func (this *QCharRef) UnicodeVersion(args ...interface{}) () {
   // unicodeVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5035,7 +5066,7 @@ func (this *QCharRef) Unicodeversion(args ...interface{}) () {
 }
 
 // isTitleCase()
-func (this *QCharRef) Istitlecase(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) IsTitleCase(args ...interface{}) (ret interface{}) {
   // isTitleCase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5064,7 +5095,7 @@ func (this *QCharRef) Istitlecase(args ...interface{}) (ret interface{}) {
 }
 
 // setCell(uchar)
-func (this *QCharRef) Setcell(args ...interface{}) () {
+func (this *QCharRef) SetCell(args ...interface{}) () {
   // setCell(uchar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5117,7 +5148,7 @@ func (this *QCharRef) Unicode(args ...interface{}) (ret interface{}) {
 }
 
 // isSpace()
-func (this *QCharRef) Isspace(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) IsSpace(args ...interface{}) (ret interface{}) {
   // isSpace()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5196,7 +5227,7 @@ func (this *QCharRef) Category(args ...interface{}) () {
 }
 
 // isUpper()
-func (this *QCharRef) Isupper(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) IsUpper(args ...interface{}) (ret interface{}) {
   // isUpper()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5225,7 +5256,7 @@ func (this *QCharRef) Isupper(args ...interface{}) (ret interface{}) {
 }
 
 // toLower()
-func (this *QCharRef) Tolower(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) ToLower(args ...interface{}) (ret interface{}) {
   // toLower()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5275,7 +5306,7 @@ func (this *QCharRef) Script(args ...interface{}) () {
 }
 
 // joiningType()
-func (this *QCharRef) Joiningtype(args ...interface{}) () {
+func (this *QCharRef) JoiningType(args ...interface{}) () {
   // joiningType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5325,7 +5356,7 @@ func (this *QCharRef) Cell(args ...interface{}) (ret interface{}) {
 }
 
 // digitValue()
-func (this *QCharRef) Digitvalue(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) DigitValue(args ...interface{}) (ret interface{}) {
   // digitValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5404,7 +5435,7 @@ func (this *QCharRef) Direction(args ...interface{}) () {
 }
 
 // mirroredChar()
-func (this *QCharRef) Mirroredchar(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) MirroredChar(args ...interface{}) (ret interface{}) {
   // mirroredChar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5433,7 +5464,7 @@ func (this *QCharRef) Mirroredchar(args ...interface{}) (ret interface{}) {
 }
 
 // combiningClass()
-func (this *QCharRef) Combiningclass(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) CombiningClass(args ...interface{}) (ret interface{}) {
   // combiningClass()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5462,7 +5493,7 @@ func (this *QCharRef) Combiningclass(args ...interface{}) (ret interface{}) {
 }
 
 // decompositionTag()
-func (this *QCharRef) Decompositiontag(args ...interface{}) () {
+func (this *QCharRef) DecompositionTag(args ...interface{}) () {
   // decompositionTag()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5483,7 +5514,7 @@ func (this *QCharRef) Decompositiontag(args ...interface{}) () {
 }
 
 // isMark()
-func (this *QCharRef) Ismark(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) IsMark(args ...interface{}) (ret interface{}) {
   // isMark()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5512,7 +5543,7 @@ func (this *QCharRef) Ismark(args ...interface{}) (ret interface{}) {
 }
 
 // isLower()
-func (this *QCharRef) Islower(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) IsLower(args ...interface{}) (ret interface{}) {
   // isLower()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5541,7 +5572,7 @@ func (this *QCharRef) Islower(args ...interface{}) (ret interface{}) {
 }
 
 // isNumber()
-func (this *QCharRef) Isnumber(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) IsNumber(args ...interface{}) (ret interface{}) {
   // isNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5570,7 +5601,7 @@ func (this *QCharRef) Isnumber(args ...interface{}) (ret interface{}) {
 }
 
 // toTitleCase()
-func (this *QCharRef) Totitlecase(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) ToTitleCase(args ...interface{}) (ret interface{}) {
   // toTitleCase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5599,7 +5630,7 @@ func (this *QCharRef) Totitlecase(args ...interface{}) (ret interface{}) {
 }
 
 // toLatin1()
-func (this *QCharRef) Tolatin1(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) ToLatin1(args ...interface{}) (ret interface{}) {
   // toLatin1()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5628,7 +5659,7 @@ func (this *QCharRef) Tolatin1(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QCharRef) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5657,7 +5688,7 @@ func (this *QCharRef) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // isPrint()
-func (this *QCharRef) Isprint(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) IsPrint(args ...interface{}) (ret interface{}) {
   // isPrint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5686,7 +5717,7 @@ func (this *QCharRef) Isprint(args ...interface{}) (ret interface{}) {
 }
 
 // toUpper()
-func (this *QCharRef) Toupper(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) ToUpper(args ...interface{}) (ret interface{}) {
   // toUpper()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5715,7 +5746,7 @@ func (this *QCharRef) Toupper(args ...interface{}) (ret interface{}) {
 }
 
 // isDigit()
-func (this *QCharRef) Isdigit(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) IsDigit(args ...interface{}) (ret interface{}) {
   // isDigit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5744,7 +5775,7 @@ func (this *QCharRef) Isdigit(args ...interface{}) (ret interface{}) {
 }
 
 // setRow(uchar)
-func (this *QCharRef) Setrow(args ...interface{}) () {
+func (this *QCharRef) SetRow(args ...interface{}) () {
   // setRow(uchar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5768,7 +5799,7 @@ func (this *QCharRef) Setrow(args ...interface{}) () {
 }
 
 // isPunct()
-func (this *QCharRef) Ispunct(args ...interface{}) (ret interface{}) {
+func (this *QCharRef) IsPunct(args ...interface{}) (ret interface{}) {
   // isPunct()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5818,7 +5849,7 @@ func (this *QCharRef) Joining(args ...interface{}) () {
 }
 
 // toUcs4()
-func (this *QStringRef) Toucs4(args ...interface{}) () {
+func (this *QStringRef) ToUcs4(args ...interface{}) () {
   // toUcs4()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5839,7 +5870,7 @@ func (this *QStringRef) Toucs4(args ...interface{}) () {
 }
 
 // localeAwareCompare(const class QString &)
-func (this *QStringRef) Localeawarecompare(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) LocaleAwareCompare(args ...interface{}) (ret interface{}) {
   // localeAwareCompare(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5871,7 +5902,7 @@ func (this *QStringRef) Localeawarecompare(args ...interface{}) (ret interface{}
 }
 
 // toLocal8Bit()
-func (this *QStringRef) Tolocal8Bit(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToLocal8Bit(args ...interface{}) (ret interface{}) {
   // toLocal8Bit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5900,7 +5931,7 @@ func (this *QStringRef) Tolocal8Bit(args ...interface{}) (ret interface{}) {
 }
 
 // toUInt(_Bool *, int)
-func (this *QStringRef) Touint(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToUInt(args ...interface{}) (ret interface{}) {
   // toUInt(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5935,7 +5966,7 @@ func (this *QStringRef) Touint(args ...interface{}) (ret interface{}) {
 }
 
 // toShort(_Bool *, int)
-func (this *QStringRef) Toshort(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToShort(args ...interface{}) (ret interface{}) {
   // toShort(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5970,7 +6001,7 @@ func (this *QStringRef) Toshort(args ...interface{}) (ret interface{}) {
 }
 
 // toUShort(_Bool *, int)
-func (this *QStringRef) Toushort(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToUShort(args ...interface{}) (ret interface{}) {
   // toUShort(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6196,7 +6227,7 @@ func (this *QStringRef) Mid(args ...interface{}) () {
 }
 
 // constData()
-func (this *QStringRef) Constdata(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ConstData(args ...interface{}) (ret interface{}) {
   // constData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6225,7 +6256,7 @@ func (this *QStringRef) Constdata(args ...interface{}) (ret interface{}) {
 }
 
 // toLongLong(_Bool *, int)
-func (this *QStringRef) Tolonglong(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToLongLong(args ...interface{}) (ret interface{}) {
   // toLongLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6260,7 +6291,7 @@ func (this *QStringRef) Tolonglong(args ...interface{}) (ret interface{}) {
 }
 
 // appendTo(class QString *)
-func (this *QStringRef) Appendto(args ...interface{}) () {
+func (this *QStringRef) AppendTo(args ...interface{}) () {
   // appendTo(class QString *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6284,7 +6315,7 @@ func (this *QStringRef) Appendto(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QStringRef) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6313,7 +6344,7 @@ func (this *QStringRef) Isempty(args ...interface{}) (ret interface{}) {
 }
 
 // toString()
-func (this *QStringRef) Tostring(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToString(args ...interface{}) (ret interface{}) {
   // toString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6371,7 +6402,7 @@ func (this *QStringRef) Cend(args ...interface{}) (ret interface{}) {
 }
 
 // ~QStringRef()
-func (this *QStringRef) Freeqstringref(args ...interface{}) () {
+func (this *QStringRef) Free(args ...interface{}) () {
   // ~QStringRef()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6383,7 +6414,10 @@ func (this *QStringRef) Freeqstringref(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QStringRefD0Ev
     // invoke: void ~QStringRef()
-    C.C_ZN10QStringRefD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QStringRefD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStringRef", "~QStringRef", args)
   }
@@ -6450,7 +6484,7 @@ func (this *QStringRef) String(args ...interface{}) (ret interface{}) {
 }
 
 // toULong(_Bool *, int)
-func (this *QStringRef) Toulong(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToULong(args ...interface{}) (ret interface{}) {
   // toULong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6485,7 +6519,7 @@ func (this *QStringRef) Toulong(args ...interface{}) (ret interface{}) {
 }
 
 // toFloat(_Bool *)
-func (this *QStringRef) Tofloat(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToFloat(args ...interface{}) (ret interface{}) {
   // toFloat(_Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6604,7 +6638,7 @@ func (this *QStringRef) Data(args ...interface{}) (ret interface{}) {
 }
 
 // toULongLong(_Bool *, int)
-func (this *QStringRef) Toulonglong(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToULongLong(args ...interface{}) (ret interface{}) {
   // toULongLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6689,7 +6723,7 @@ func (this *QStringRef) Clear(args ...interface{}) () {
 }
 
 // toInt(_Bool *, int)
-func (this *QStringRef) Toint(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToInt(args ...interface{}) (ret interface{}) {
   // toInt(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6724,7 +6758,7 @@ func (this *QStringRef) Toint(args ...interface{}) (ret interface{}) {
 }
 
 // toLatin1()
-func (this *QStringRef) Tolatin1(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToLatin1(args ...interface{}) (ret interface{}) {
   // toLatin1()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6753,7 +6787,7 @@ func (this *QStringRef) Tolatin1(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QStringRef) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6782,7 +6816,7 @@ func (this *QStringRef) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // toDouble(_Bool *)
-func (this *QStringRef) Todouble(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToDouble(args ...interface{}) (ret interface{}) {
   // toDouble(_Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6814,6 +6848,9 @@ func (this *QStringRef) Todouble(args ...interface{}) (ret interface{}) {
 }
 
 // QStringRef(const class QString *)
+func GcfreeQStringRef(this *QStringRef) {
+  qtrt.UniverseFree(this)
+}
 func NewQStringRef(args ...interface{}) *QStringRef {
   // QStringRef(const class QString *)
   // QStringRef()
@@ -6839,14 +6876,18 @@ func NewQStringRef(args ...interface{}) *QStringRef {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QStringRefC2EPK7QString(arg0)
-    return &QStringRef{Qclsinst:qthis}
+    this := &QStringRef{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStringRef)
+    return this
   case 1:
     // invoke: _ZN10QStringRefC1Ev
     // invoke: void QStringRef()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QStringRefC2Ev()
-    return &QStringRef{Qclsinst:qthis}
+    this := &QStringRef{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStringRef)
+    return this
   case 2:
     // invoke: _ZN10QStringRefC1EPK7QStringii
     // invoke: void QStringRef(const class QString *, int, int)
@@ -6859,7 +6900,9 @@ func NewQStringRef(args ...interface{}) *QStringRef {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QStringRefC2EPK7QStringii(arg0, arg1, arg2)
-    return &QStringRef{Qclsinst:qthis}
+    this := &QStringRef{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStringRef)
+    return this
   default:
     qtrt.ErrorResolve("QStringRef", "QStringRef", args)
   }
@@ -6897,7 +6940,7 @@ func (this *QStringRef) Position(args ...interface{}) (ret interface{}) {
 }
 
 // toLong(_Bool *, int)
-func (this *QStringRef) Tolong(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToLong(args ...interface{}) (ret interface{}) {
   // toLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6932,7 +6975,7 @@ func (this *QStringRef) Tolong(args ...interface{}) (ret interface{}) {
 }
 
 // toUtf8()
-func (this *QStringRef) Toutf8(args ...interface{}) (ret interface{}) {
+func (this *QStringRef) ToUtf8(args ...interface{}) (ret interface{}) {
   // toUtf8()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

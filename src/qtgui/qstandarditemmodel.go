@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qstandarditemmodel.h
 // dst-file: /src/gui/qstandarditemmodel.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -284,6 +285,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStandardItemModel)=1
@@ -300,7 +302,7 @@ type QStandardItem struct {
 }
 
 // columnCount(const class QModelIndex &)
-func (this *QStandardItemModel) Columncount(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) ColumnCount(args ...interface{}) (ret interface{}) {
   // columnCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -332,6 +334,9 @@ func (this *QStandardItemModel) Columncount(args ...interface{}) (ret interface{
 }
 
 // QStandardItemModel(int, int, class QObject *)
+func GcfreeQStandardItemModel(this *QStandardItemModel) {
+  qtrt.UniverseFree(this)
+}
 func NewQStandardItemModel(args ...interface{}) *QStandardItemModel {
   // QStandardItemModel(int, int, class QObject *)
   // QStandardItemModel(class QObject *)
@@ -359,7 +364,9 @@ func NewQStandardItemModel(args ...interface{}) *QStandardItemModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStandardItemModelC2EiiP7QObject(arg0, arg1, arg2)
-    return &QStandardItemModel{Qclsinst:qthis}
+    this := &QStandardItemModel{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStandardItemModel)
+    return this
   case 1:
     // invoke: _ZN18QStandardItemModelC1EP7QObject
     // invoke: void QStandardItemModel(class QObject *)
@@ -368,7 +375,9 @@ func NewQStandardItemModel(args ...interface{}) *QStandardItemModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStandardItemModelC2EP7QObject(arg0)
-    return &QStandardItemModel{Qclsinst:qthis}
+    this := &QStandardItemModel{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStandardItemModel)
+    return this
   default:
     qtrt.ErrorResolve("QStandardItemModel", "QStandardItemModel", args)
   }
@@ -377,7 +386,7 @@ func NewQStandardItemModel(args ...interface{}) *QStandardItemModel {
 }
 
 // setSortRole(int)
-func (this *QStandardItemModel) Setsortrole(args ...interface{}) () {
+func (this *QStandardItemModel) SetSortRole(args ...interface{}) () {
   // setSortRole(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -401,7 +410,7 @@ func (this *QStandardItemModel) Setsortrole(args ...interface{}) () {
 }
 
 // verticalHeaderItem(int)
-func (this *QStandardItemModel) Verticalheaderitem(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) VerticalHeaderItem(args ...interface{}) (ret interface{}) {
   // verticalHeaderItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -433,7 +442,7 @@ func (this *QStandardItemModel) Verticalheaderitem(args ...interface{}) (ret int
 }
 
 // insertColumn(int, const class QModelIndex &)
-func (this *QStandardItemModel) Insertcolumn(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) InsertColumn(args ...interface{}) (ret interface{}) {
   // insertColumn(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -468,7 +477,7 @@ func (this *QStandardItemModel) Insertcolumn(args ...interface{}) (ret interface
 }
 
 // insertColumns(int, int, const class QModelIndex &)
-func (this *QStandardItemModel) Insertcolumns(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) InsertColumns(args ...interface{}) (ret interface{}) {
   // insertColumns(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -544,7 +553,7 @@ func (this *QStandardItemModel) Index(args ...interface{}) (ret interface{}) {
 }
 
 // setColumnCount(int)
-func (this *QStandardItemModel) Setcolumncount(args ...interface{}) () {
+func (this *QStandardItemModel) SetColumnCount(args ...interface{}) () {
   // setColumnCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -568,7 +577,7 @@ func (this *QStandardItemModel) Setcolumncount(args ...interface{}) () {
 }
 
 // removeRows(int, int, const class QModelIndex &)
-func (this *QStandardItemModel) Removerows(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) RemoveRows(args ...interface{}) (ret interface{}) {
   // removeRows(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -606,7 +615,7 @@ func (this *QStandardItemModel) Removerows(args ...interface{}) (ret interface{}
 }
 
 // sortRole()
-func (this *QStandardItemModel) Sortrole(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) SortRole(args ...interface{}) (ret interface{}) {
   // sortRole()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -635,7 +644,7 @@ func (this *QStandardItemModel) Sortrole(args ...interface{}) (ret interface{}) 
 }
 
 // setHorizontalHeaderItem(int, class QStandardItem *)
-func (this *QStandardItemModel) Sethorizontalheaderitem(args ...interface{}) () {
+func (this *QStandardItemModel) SetHorizontalHeaderItem(args ...interface{}) () {
   // setHorizontalHeaderItem(int, class QStandardItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -662,7 +671,7 @@ func (this *QStandardItemModel) Sethorizontalheaderitem(args ...interface{}) () 
 }
 
 // takeRow(int)
-func (this *QStandardItemModel) Takerow(args ...interface{}) () {
+func (this *QStandardItemModel) TakeRow(args ...interface{}) () {
   // takeRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -686,7 +695,7 @@ func (this *QStandardItemModel) Takerow(args ...interface{}) () {
 }
 
 // setData(const class QModelIndex &, const class QVariant &, int)
-func (this *QStandardItemModel) Setdata(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) SetData(args ...interface{}) (ret interface{}) {
   // setData(const class QModelIndex &, const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -724,7 +733,7 @@ func (this *QStandardItemModel) Setdata(args ...interface{}) (ret interface{}) {
 }
 
 // takeItem(int, int)
-func (this *QStandardItemModel) Takeitem(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) TakeItem(args ...interface{}) (ret interface{}) {
   // takeItem(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -759,7 +768,7 @@ func (this *QStandardItemModel) Takeitem(args ...interface{}) (ret interface{}) 
 }
 
 // itemData(const class QModelIndex &)
-func (this *QStandardItemModel) Itemdata(args ...interface{}) () {
+func (this *QStandardItemModel) ItemData(args ...interface{}) () {
   // itemData(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -853,7 +862,7 @@ func (this *QStandardItemModel) Sibling(args ...interface{}) (ret interface{}) {
 }
 
 // invisibleRootItem()
-func (this *QStandardItemModel) Invisiblerootitem(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) InvisibleRootItem(args ...interface{}) (ret interface{}) {
   // invisibleRootItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -882,7 +891,7 @@ func (this *QStandardItemModel) Invisiblerootitem(args ...interface{}) (ret inte
 }
 
 // rowCount(const class QModelIndex &)
-func (this *QStandardItemModel) Rowcount(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) RowCount(args ...interface{}) (ret interface{}) {
   // rowCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -914,7 +923,7 @@ func (this *QStandardItemModel) Rowcount(args ...interface{}) (ret interface{}) 
 }
 
 // setItem(int, int, class QStandardItem *)
-func (this *QStandardItemModel) Setitem(args ...interface{}) () {
+func (this *QStandardItemModel) SetItem(args ...interface{}) () {
   // setItem(int, int, class QStandardItem *)
   // setItem(int, class QStandardItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -956,7 +965,7 @@ func (this *QStandardItemModel) Setitem(args ...interface{}) () {
 }
 
 // takeHorizontalHeaderItem(int)
-func (this *QStandardItemModel) Takehorizontalheaderitem(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) TakeHorizontalHeaderItem(args ...interface{}) (ret interface{}) {
   // takeHorizontalHeaderItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -988,7 +997,7 @@ func (this *QStandardItemModel) Takehorizontalheaderitem(args ...interface{}) (r
 }
 
 // indexFromItem(const class QStandardItem *)
-func (this *QStandardItemModel) Indexfromitem(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) IndexFromItem(args ...interface{}) (ret interface{}) {
   // indexFromItem(const class QStandardItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1020,7 +1029,7 @@ func (this *QStandardItemModel) Indexfromitem(args ...interface{}) (ret interfac
 }
 
 // horizontalHeaderItem(int)
-func (this *QStandardItemModel) Horizontalheaderitem(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) HorizontalHeaderItem(args ...interface{}) (ret interface{}) {
   // horizontalHeaderItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1052,7 +1061,7 @@ func (this *QStandardItemModel) Horizontalheaderitem(args ...interface{}) (ret i
 }
 
 // setHorizontalHeaderLabels(const class QStringList &)
-func (this *QStandardItemModel) Sethorizontalheaderlabels(args ...interface{}) () {
+func (this *QStandardItemModel) SetHorizontalHeaderLabels(args ...interface{}) () {
   // setHorizontalHeaderLabels(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1111,7 +1120,7 @@ func (this *QStandardItemModel) Data(args ...interface{}) (ret interface{}) {
 }
 
 // appendRow(class QStandardItem *)
-func (this *QStandardItemModel) Appendrow(args ...interface{}) () {
+func (this *QStandardItemModel) AppendRow(args ...interface{}) () {
   // appendRow(class QStandardItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1135,7 +1144,7 @@ func (this *QStandardItemModel) Appendrow(args ...interface{}) () {
 }
 
 // mimeTypes()
-func (this *QStandardItemModel) Mimetypes(args ...interface{}) () {
+func (this *QStandardItemModel) MimeTypes(args ...interface{}) () {
   // mimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1156,7 +1165,7 @@ func (this *QStandardItemModel) Mimetypes(args ...interface{}) () {
 }
 
 // takeVerticalHeaderItem(int)
-func (this *QStandardItemModel) Takeverticalheaderitem(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) TakeVerticalHeaderItem(args ...interface{}) (ret interface{}) {
   // takeVerticalHeaderItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1188,7 +1197,7 @@ func (this *QStandardItemModel) Takeverticalheaderitem(args ...interface{}) (ret
 }
 
 // metaObject()
-func (this *QStandardItemModel) Metaobject(args ...interface{}) () {
+func (this *QStandardItemModel) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1209,7 +1218,7 @@ func (this *QStandardItemModel) Metaobject(args ...interface{}) () {
 }
 
 // hasChildren(const class QModelIndex &)
-func (this *QStandardItemModel) Haschildren(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) HasChildren(args ...interface{}) (ret interface{}) {
   // hasChildren(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1241,7 +1250,7 @@ func (this *QStandardItemModel) Haschildren(args ...interface{}) (ret interface{
 }
 
 // setItemPrototype(const class QStandardItem *)
-func (this *QStandardItemModel) Setitemprototype(args ...interface{}) () {
+func (this *QStandardItemModel) SetItemPrototype(args ...interface{}) () {
   // setItemPrototype(const class QStandardItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1265,7 +1274,7 @@ func (this *QStandardItemModel) Setitemprototype(args ...interface{}) () {
 }
 
 // setVerticalHeaderItem(int, class QStandardItem *)
-func (this *QStandardItemModel) Setverticalheaderitem(args ...interface{}) () {
+func (this *QStandardItemModel) SetVerticalHeaderItem(args ...interface{}) () {
   // setVerticalHeaderItem(int, class QStandardItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1313,7 +1322,7 @@ func (this *QStandardItemModel) Clear(args ...interface{}) () {
 }
 
 // itemPrototype()
-func (this *QStandardItemModel) Itemprototype(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) ItemPrototype(args ...interface{}) (ret interface{}) {
   // itemPrototype()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1342,7 +1351,7 @@ func (this *QStandardItemModel) Itemprototype(args ...interface{}) (ret interfac
 }
 
 // insertRows(int, int, const class QModelIndex &)
-func (this *QStandardItemModel) Insertrows(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) InsertRows(args ...interface{}) (ret interface{}) {
   // insertRows(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1380,7 +1389,7 @@ func (this *QStandardItemModel) Insertrows(args ...interface{}) (ret interface{}
 }
 
 // insertRow(int, const class QModelIndex &)
-func (this *QStandardItemModel) Insertrow(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) InsertRow(args ...interface{}) (ret interface{}) {
   // insertRow(int, const class QModelIndex &)
   // insertRow(int, class QStandardItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1462,7 +1471,7 @@ func (this *QStandardItemModel) Item(args ...interface{}) (ret interface{}) {
 }
 
 // setRowCount(int)
-func (this *QStandardItemModel) Setrowcount(args ...interface{}) () {
+func (this *QStandardItemModel) SetRowCount(args ...interface{}) () {
   // setRowCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1510,7 +1519,7 @@ func (this *QStandardItemModel) Flags(args ...interface{}) () {
 }
 
 // supportedDropActions()
-func (this *QStandardItemModel) Supporteddropactions(args ...interface{}) () {
+func (this *QStandardItemModel) SupportedDropActions(args ...interface{}) () {
   // supportedDropActions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1531,7 +1540,7 @@ func (this *QStandardItemModel) Supporteddropactions(args ...interface{}) () {
 }
 
 // takeColumn(int)
-func (this *QStandardItemModel) Takecolumn(args ...interface{}) () {
+func (this *QStandardItemModel) TakeColumn(args ...interface{}) () {
   // takeColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1555,7 +1564,7 @@ func (this *QStandardItemModel) Takecolumn(args ...interface{}) () {
 }
 
 // ~QStandardItemModel()
-func (this *QStandardItemModel) Freeqstandarditemmodel(args ...interface{}) () {
+func (this *QStandardItemModel) Free(args ...interface{}) () {
   // ~QStandardItemModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1567,7 +1576,10 @@ func (this *QStandardItemModel) Freeqstandarditemmodel(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QStandardItemModelD0Ev
     // invoke: void ~QStandardItemModel()
-    C.C_ZN18QStandardItemModelD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN18QStandardItemModelD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStandardItemModel", "~QStandardItemModel", args)
   }
@@ -1576,7 +1588,7 @@ func (this *QStandardItemModel) Freeqstandarditemmodel(args ...interface{}) () {
 }
 
 // removeColumns(int, int, const class QModelIndex &)
-func (this *QStandardItemModel) Removecolumns(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) RemoveColumns(args ...interface{}) (ret interface{}) {
   // removeColumns(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1614,7 +1626,7 @@ func (this *QStandardItemModel) Removecolumns(args ...interface{}) (ret interfac
 }
 
 // itemFromIndex(const class QModelIndex &)
-func (this *QStandardItemModel) Itemfromindex(args ...interface{}) (ret interface{}) {
+func (this *QStandardItemModel) ItemFromIndex(args ...interface{}) (ret interface{}) {
   // itemFromIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1646,7 +1658,7 @@ func (this *QStandardItemModel) Itemfromindex(args ...interface{}) (ret interfac
 }
 
 // setVerticalHeaderLabels(const class QStringList &)
-func (this *QStandardItemModel) Setverticalheaderlabels(args ...interface{}) () {
+func (this *QStandardItemModel) SetVerticalHeaderLabels(args ...interface{}) () {
   // setVerticalHeaderLabels(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1670,7 +1682,7 @@ func (this *QStandardItemModel) Setverticalheaderlabels(args ...interface{}) () 
 }
 
 // takeChild(int, int)
-func (this *QStandardItem) Takechild(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) TakeChild(args ...interface{}) (ret interface{}) {
   // takeChild(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1705,7 +1717,7 @@ func (this *QStandardItem) Takechild(args ...interface{}) (ret interface{}) {
 }
 
 // columnCount()
-func (this *QStandardItem) Columncount(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) ColumnCount(args ...interface{}) (ret interface{}) {
   // columnCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1734,7 +1746,7 @@ func (this *QStandardItem) Columncount(args ...interface{}) (ret interface{}) {
 }
 
 // setText(const class QString &)
-func (this *QStandardItem) Settext(args ...interface{}) () {
+func (this *QStandardItem) SetText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1758,7 +1770,7 @@ func (this *QStandardItem) Settext(args ...interface{}) () {
 }
 
 // isEditable()
-func (this *QStandardItem) Iseditable(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) IsEditable(args ...interface{}) (ret interface{}) {
   // isEditable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1787,7 +1799,7 @@ func (this *QStandardItem) Iseditable(args ...interface{}) (ret interface{}) {
 }
 
 // setEnabled(_Bool)
-func (this *QStandardItem) Setenabled(args ...interface{}) () {
+func (this *QStandardItem) SetEnabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1840,7 +1852,7 @@ func (this *QStandardItem) Text(args ...interface{}) (ret interface{}) {
 }
 
 // setDragEnabled(_Bool)
-func (this *QStandardItem) Setdragenabled(args ...interface{}) () {
+func (this *QStandardItem) SetDragEnabled(args ...interface{}) () {
   // setDragEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1864,7 +1876,7 @@ func (this *QStandardItem) Setdragenabled(args ...interface{}) () {
 }
 
 // isTristate()
-func (this *QStandardItem) Istristate(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) IsTristate(args ...interface{}) (ret interface{}) {
   // isTristate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1893,7 +1905,7 @@ func (this *QStandardItem) Istristate(args ...interface{}) (ret interface{}) {
 }
 
 // insertRow(int, class QStandardItem *)
-func (this *QStandardItem) Insertrow(args ...interface{}) () {
+func (this *QStandardItem) InsertRow(args ...interface{}) () {
   // insertRow(int, class QStandardItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1920,7 +1932,7 @@ func (this *QStandardItem) Insertrow(args ...interface{}) () {
 }
 
 // isCheckable()
-func (this *QStandardItem) Ischeckable(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) IsCheckable(args ...interface{}) (ret interface{}) {
   // isCheckable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1949,7 +1961,7 @@ func (this *QStandardItem) Ischeckable(args ...interface{}) (ret interface{}) {
 }
 
 // isSelectable()
-func (this *QStandardItem) Isselectable(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) IsSelectable(args ...interface{}) (ret interface{}) {
   // isSelectable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1978,7 +1990,7 @@ func (this *QStandardItem) Isselectable(args ...interface{}) (ret interface{}) {
 }
 
 // setAccessibleDescription(const class QString &)
-func (this *QStandardItem) Setaccessibledescription(args ...interface{}) () {
+func (this *QStandardItem) SetAccessibleDescription(args ...interface{}) () {
   // setAccessibleDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2031,7 +2043,7 @@ func (this *QStandardItem) Font(args ...interface{}) (ret interface{}) {
 }
 
 // accessibleText()
-func (this *QStandardItem) Accessibletext(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) AccessibleText(args ...interface{}) (ret interface{}) {
   // accessibleText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2060,6 +2072,9 @@ func (this *QStandardItem) Accessibletext(args ...interface{}) (ret interface{})
 }
 
 // QStandardItem(int, int)
+func GcfreeQStandardItem(this *QStandardItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQStandardItem(args ...interface{}) *QStandardItem {
   // QStandardItem(int, int)
   // QStandardItem(const class QIcon &, const class QString &)
@@ -2090,7 +2105,9 @@ func NewQStandardItem(args ...interface{}) *QStandardItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QStandardItemC2Eii(arg0, arg1)
-    return &QStandardItem{Qclsinst:qthis}
+    this := &QStandardItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStandardItem)
+    return this
   case 1:
     // invoke: _ZN13QStandardItemC1ERK5QIconRK7QString
     // invoke: void QStandardItem(const class QIcon &, const class QString &)
@@ -2101,7 +2118,9 @@ func NewQStandardItem(args ...interface{}) *QStandardItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QStandardItemC2ERK5QIconRK7QString(arg0, arg1)
-    return &QStandardItem{Qclsinst:qthis}
+    this := &QStandardItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStandardItem)
+    return this
   case 2:
     // invoke: _ZN13QStandardItemC1ERK7QString
     // invoke: void QStandardItem(const class QString &)
@@ -2110,14 +2129,18 @@ func NewQStandardItem(args ...interface{}) *QStandardItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QStandardItemC2ERK7QString(arg0)
-    return &QStandardItem{Qclsinst:qthis}
+    this := &QStandardItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStandardItem)
+    return this
   case 3:
     // invoke: _ZN13QStandardItemC1Ev
     // invoke: void QStandardItem()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QStandardItemC2Ev()
-    return &QStandardItem{Qclsinst:qthis}
+    this := &QStandardItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStandardItem)
+    return this
   default:
     qtrt.ErrorResolve("QStandardItem", "QStandardItem", args)
   }
@@ -2184,7 +2207,7 @@ func (this *QStandardItem) Index(args ...interface{}) (ret interface{}) {
 }
 
 // setColumnCount(int)
-func (this *QStandardItem) Setcolumncount(args ...interface{}) () {
+func (this *QStandardItem) SetColumnCount(args ...interface{}) () {
   // setColumnCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2208,7 +2231,7 @@ func (this *QStandardItem) Setcolumncount(args ...interface{}) () {
 }
 
 // setForeground(const class QBrush &)
-func (this *QStandardItem) Setforeground(args ...interface{}) () {
+func (this *QStandardItem) SetForeground(args ...interface{}) () {
   // setForeground(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2232,7 +2255,7 @@ func (this *QStandardItem) Setforeground(args ...interface{}) () {
 }
 
 // ~QStandardItem()
-func (this *QStandardItem) Freeqstandarditem(args ...interface{}) () {
+func (this *QStandardItem) Free(args ...interface{}) () {
   // ~QStandardItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2244,7 +2267,10 @@ func (this *QStandardItem) Freeqstandarditem(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStandardItemD0Ev
     // invoke: void ~QStandardItem()
-    C.C_ZN13QStandardItemD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QStandardItemD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStandardItem", "~QStandardItem", args)
   }
@@ -2253,7 +2279,7 @@ func (this *QStandardItem) Freeqstandarditem(args ...interface{}) () {
 }
 
 // isEnabled()
-func (this *QStandardItem) Isenabled(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) IsEnabled(args ...interface{}) (ret interface{}) {
   // isEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2282,7 +2308,7 @@ func (this *QStandardItem) Isenabled(args ...interface{}) (ret interface{}) {
 }
 
 // setEditable(_Bool)
-func (this *QStandardItem) Seteditable(args ...interface{}) () {
+func (this *QStandardItem) SetEditable(args ...interface{}) () {
   // setEditable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2306,7 +2332,7 @@ func (this *QStandardItem) Seteditable(args ...interface{}) () {
 }
 
 // whatsThis()
-func (this *QStandardItem) Whatsthis(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) WhatsThis(args ...interface{}) (ret interface{}) {
   // whatsThis()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2359,7 +2385,7 @@ func (this *QStandardItem) Read(args ...interface{}) () {
 }
 
 // removeRows(int, int)
-func (this *QStandardItem) Removerows(args ...interface{}) () {
+func (this *QStandardItem) RemoveRows(args ...interface{}) () {
   // removeRows(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2386,7 +2412,7 @@ func (this *QStandardItem) Removerows(args ...interface{}) () {
 }
 
 // setCheckable(_Bool)
-func (this *QStandardItem) Setcheckable(args ...interface{}) () {
+func (this *QStandardItem) SetCheckable(args ...interface{}) () {
   // setCheckable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2410,7 +2436,7 @@ func (this *QStandardItem) Setcheckable(args ...interface{}) () {
 }
 
 // takeRow(int)
-func (this *QStandardItem) Takerow(args ...interface{}) () {
+func (this *QStandardItem) TakeRow(args ...interface{}) () {
   // takeRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2434,7 +2460,7 @@ func (this *QStandardItem) Takerow(args ...interface{}) () {
 }
 
 // setChild(int, class QStandardItem *)
-func (this *QStandardItem) Setchild(args ...interface{}) () {
+func (this *QStandardItem) SetChild(args ...interface{}) () {
   // setChild(int, class QStandardItem *)
   // setChild(int, int, class QStandardItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2505,7 +2531,7 @@ func (this *QStandardItem) Type_(args ...interface{}) (ret interface{}) {
 }
 
 // setSelectable(_Bool)
-func (this *QStandardItem) Setselectable(args ...interface{}) () {
+func (this *QStandardItem) SetSelectable(args ...interface{}) () {
   // setSelectable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2529,7 +2555,7 @@ func (this *QStandardItem) Setselectable(args ...interface{}) () {
 }
 
 // setBackground(const class QBrush &)
-func (this *QStandardItem) Setbackground(args ...interface{}) () {
+func (this *QStandardItem) SetBackground(args ...interface{}) () {
   // setBackground(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2553,7 +2579,7 @@ func (this *QStandardItem) Setbackground(args ...interface{}) () {
 }
 
 // setIcon(const class QIcon &)
-func (this *QStandardItem) Seticon(args ...interface{}) () {
+func (this *QStandardItem) SetIcon(args ...interface{}) () {
   // setIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2635,7 +2661,7 @@ func (this *QStandardItem) Parent(args ...interface{}) (ret interface{}) {
 }
 
 // isDropEnabled()
-func (this *QStandardItem) Isdropenabled(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) IsDropEnabled(args ...interface{}) (ret interface{}) {
   // isDropEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2664,7 +2690,7 @@ func (this *QStandardItem) Isdropenabled(args ...interface{}) (ret interface{}) 
 }
 
 // statusTip()
-func (this *QStandardItem) Statustip(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) StatusTip(args ...interface{}) (ret interface{}) {
   // statusTip()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2722,7 +2748,7 @@ func (this *QStandardItem) Clone(args ...interface{}) (ret interface{}) {
 }
 
 // removeRow(int)
-func (this *QStandardItem) Removerow(args ...interface{}) () {
+func (this *QStandardItem) RemoveRow(args ...interface{}) () {
   // removeRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2746,7 +2772,7 @@ func (this *QStandardItem) Removerow(args ...interface{}) () {
 }
 
 // toolTip()
-func (this *QStandardItem) Tooltip(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) ToolTip(args ...interface{}) (ret interface{}) {
   // toolTip()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2775,7 +2801,7 @@ func (this *QStandardItem) Tooltip(args ...interface{}) (ret interface{}) {
 }
 
 // rowCount()
-func (this *QStandardItem) Rowcount(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) RowCount(args ...interface{}) (ret interface{}) {
   // rowCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2804,7 +2830,7 @@ func (this *QStandardItem) Rowcount(args ...interface{}) (ret interface{}) {
 }
 
 // insertRows(int, int)
-func (this *QStandardItem) Insertrows(args ...interface{}) () {
+func (this *QStandardItem) InsertRows(args ...interface{}) () {
   // insertRows(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2831,7 +2857,7 @@ func (this *QStandardItem) Insertrows(args ...interface{}) () {
 }
 
 // setWhatsThis(const class QString &)
-func (this *QStandardItem) Setwhatsthis(args ...interface{}) () {
+func (this *QStandardItem) SetWhatsThis(args ...interface{}) () {
   // setWhatsThis(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2919,7 +2945,7 @@ func (this *QStandardItem) Child(args ...interface{}) (ret interface{}) {
 }
 
 // setTristate(_Bool)
-func (this *QStandardItem) Settristate(args ...interface{}) () {
+func (this *QStandardItem) SetTristate(args ...interface{}) () {
   // setTristate(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2943,7 +2969,7 @@ func (this *QStandardItem) Settristate(args ...interface{}) () {
 }
 
 // removeColumn(int)
-func (this *QStandardItem) Removecolumn(args ...interface{}) () {
+func (this *QStandardItem) RemoveColumn(args ...interface{}) () {
   // removeColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2967,7 +2993,7 @@ func (this *QStandardItem) Removecolumn(args ...interface{}) () {
 }
 
 // accessibleDescription()
-func (this *QStandardItem) Accessibledescription(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) AccessibleDescription(args ...interface{}) (ret interface{}) {
   // accessibleDescription()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3028,7 +3054,7 @@ func (this *QStandardItem) Data(args ...interface{}) (ret interface{}) {
 }
 
 // appendRow(class QStandardItem *)
-func (this *QStandardItem) Appendrow(args ...interface{}) () {
+func (this *QStandardItem) AppendRow(args ...interface{}) () {
   // appendRow(class QStandardItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3052,7 +3078,7 @@ func (this *QStandardItem) Appendrow(args ...interface{}) () {
 }
 
 // setAccessibleText(const class QString &)
-func (this *QStandardItem) Setaccessibletext(args ...interface{}) () {
+func (this *QStandardItem) SetAccessibleText(args ...interface{}) () {
   // setAccessibleText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3105,7 +3131,7 @@ func (this *QStandardItem) Icon(args ...interface{}) (ret interface{}) {
 }
 
 // setSizeHint(const class QSize &)
-func (this *QStandardItem) Setsizehint(args ...interface{}) () {
+func (this *QStandardItem) SetSizeHint(args ...interface{}) () {
   // setSizeHint(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3129,7 +3155,7 @@ func (this *QStandardItem) Setsizehint(args ...interface{}) () {
 }
 
 // setToolTip(const class QString &)
-func (this *QStandardItem) Settooltip(args ...interface{}) () {
+func (this *QStandardItem) SetToolTip(args ...interface{}) () {
   // setToolTip(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3153,7 +3179,7 @@ func (this *QStandardItem) Settooltip(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QStandardItem) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3182,7 +3208,7 @@ func (this *QStandardItem) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // hasChildren()
-func (this *QStandardItem) Haschildren(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) HasChildren(args ...interface{}) (ret interface{}) {
   // hasChildren()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3240,7 +3266,7 @@ func (this *QStandardItem) Column(args ...interface{}) (ret interface{}) {
 }
 
 // insertColumns(int, int)
-func (this *QStandardItem) Insertcolumns(args ...interface{}) () {
+func (this *QStandardItem) InsertColumns(args ...interface{}) () {
   // insertColumns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3267,7 +3293,7 @@ func (this *QStandardItem) Insertcolumns(args ...interface{}) () {
 }
 
 // setStatusTip(const class QString &)
-func (this *QStandardItem) Setstatustip(args ...interface{}) () {
+func (this *QStandardItem) SetStatusTip(args ...interface{}) () {
   // setStatusTip(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3291,7 +3317,7 @@ func (this *QStandardItem) Setstatustip(args ...interface{}) () {
 }
 
 // setDropEnabled(_Bool)
-func (this *QStandardItem) Setdropenabled(args ...interface{}) () {
+func (this *QStandardItem) SetDropEnabled(args ...interface{}) () {
   // setDropEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3315,7 +3341,7 @@ func (this *QStandardItem) Setdropenabled(args ...interface{}) () {
 }
 
 // isDragEnabled()
-func (this *QStandardItem) Isdragenabled(args ...interface{}) (ret interface{}) {
+func (this *QStandardItem) IsDragEnabled(args ...interface{}) (ret interface{}) {
   // isDragEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3344,7 +3370,7 @@ func (this *QStandardItem) Isdragenabled(args ...interface{}) (ret interface{}) 
 }
 
 // setRowCount(int)
-func (this *QStandardItem) Setrowcount(args ...interface{}) () {
+func (this *QStandardItem) SetRowCount(args ...interface{}) () {
   // setRowCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3413,7 +3439,7 @@ func (this *QStandardItem) Flags(args ...interface{}) () {
 }
 
 // checkState()
-func (this *QStandardItem) Checkstate(args ...interface{}) () {
+func (this *QStandardItem) CheckState(args ...interface{}) () {
   // checkState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3434,7 +3460,7 @@ func (this *QStandardItem) Checkstate(args ...interface{}) () {
 }
 
 // setFont(const class QFont &)
-func (this *QStandardItem) Setfont(args ...interface{}) () {
+func (this *QStandardItem) SetFont(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3458,7 +3484,7 @@ func (this *QStandardItem) Setfont(args ...interface{}) () {
 }
 
 // takeColumn(int)
-func (this *QStandardItem) Takecolumn(args ...interface{}) () {
+func (this *QStandardItem) TakeColumn(args ...interface{}) () {
   // takeColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3511,7 +3537,7 @@ func (this *QStandardItem) Model(args ...interface{}) (ret interface{}) {
 }
 
 // setData(const class QVariant &, int)
-func (this *QStandardItem) Setdata(args ...interface{}) () {
+func (this *QStandardItem) SetData(args ...interface{}) () {
   // setData(const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3538,7 +3564,7 @@ func (this *QStandardItem) Setdata(args ...interface{}) () {
 }
 
 // removeColumns(int, int)
-func (this *QStandardItem) Removecolumns(args ...interface{}) () {
+func (this *QStandardItem) RemoveColumns(args ...interface{}) () {
   // removeColumns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3565,7 +3591,7 @@ func (this *QStandardItem) Removecolumns(args ...interface{}) () {
 }
 
 // textAlignment()
-func (this *QStandardItem) Textalignment(args ...interface{}) () {
+func (this *QStandardItem) TextAlignment(args ...interface{}) () {
   // textAlignment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

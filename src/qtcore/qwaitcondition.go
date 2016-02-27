@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -50,6 +51,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QWaitCondition)=8
@@ -59,6 +61,9 @@ type QWaitCondition struct {
 }
 
 // QWaitCondition()
+func GcfreeQWaitCondition(this *QWaitCondition) {
+  qtrt.UniverseFree(this)
+}
 func NewQWaitCondition(args ...interface{}) *QWaitCondition {
   // QWaitCondition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -74,7 +79,9 @@ func NewQWaitCondition(args ...interface{}) *QWaitCondition {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QWaitConditionC2Ev()
-    return &QWaitCondition{Qclsinst:qthis}
+    this := &QWaitCondition{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQWaitCondition)
+    return this
   default:
     qtrt.ErrorResolve("QWaitCondition", "QWaitCondition", args)
   }
@@ -83,7 +90,7 @@ func NewQWaitCondition(args ...interface{}) *QWaitCondition {
 }
 
 // wakeAll()
-func (this *QWaitCondition) Wakeall(args ...interface{}) () {
+func (this *QWaitCondition) WakeAll(args ...interface{}) () {
   // wakeAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -104,7 +111,7 @@ func (this *QWaitCondition) Wakeall(args ...interface{}) () {
 }
 
 // wakeOne()
-func (this *QWaitCondition) Wakeone(args ...interface{}) () {
+func (this *QWaitCondition) WakeOne(args ...interface{}) () {
   // wakeOne()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -125,7 +132,7 @@ func (this *QWaitCondition) Wakeone(args ...interface{}) () {
 }
 
 // ~QWaitCondition()
-func (this *QWaitCondition) Freeqwaitcondition(args ...interface{}) () {
+func (this *QWaitCondition) Free(args ...interface{}) () {
   // ~QWaitCondition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -137,7 +144,10 @@ func (this *QWaitCondition) Freeqwaitcondition(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QWaitConditionD0Ev
     // invoke: void ~QWaitCondition()
-    C.C_ZN14QWaitConditionD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QWaitConditionD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QWaitCondition", "~QWaitCondition", args)
   }

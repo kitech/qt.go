@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qfutureinterface.h
 // dst-file: /src/core/qfutureinterface.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -122,6 +123,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFutureInterfaceBase)=16
@@ -137,7 +139,7 @@ type QFutureInterfaceLvoidG struct {
 }
 
 // waitForResume()
-func (this *QFutureInterfaceBase) Waitforresume(args ...interface{}) () {
+func (this *QFutureInterfaceBase) WaitForResume(args ...interface{}) () {
   // waitForResume()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -158,7 +160,7 @@ func (this *QFutureInterfaceBase) Waitforresume(args ...interface{}) () {
 }
 
 // progressText()
-func (this *QFutureInterfaceBase) Progresstext(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) ProgressText(args ...interface{}) (ret interface{}) {
   // progressText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -187,7 +189,7 @@ func (this *QFutureInterfaceBase) Progresstext(args ...interface{}) (ret interfa
 }
 
 // setThrottled(_Bool)
-func (this *QFutureInterfaceBase) Setthrottled(args ...interface{}) () {
+func (this *QFutureInterfaceBase) SetThrottled(args ...interface{}) () {
   // setThrottled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -211,7 +213,7 @@ func (this *QFutureInterfaceBase) Setthrottled(args ...interface{}) () {
 }
 
 // reportCanceled()
-func (this *QFutureInterfaceBase) Reportcanceled(args ...interface{}) () {
+func (this *QFutureInterfaceBase) ReportCanceled(args ...interface{}) () {
   // reportCanceled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -232,7 +234,7 @@ func (this *QFutureInterfaceBase) Reportcanceled(args ...interface{}) () {
 }
 
 // setFilterMode(_Bool)
-func (this *QFutureInterfaceBase) Setfiltermode(args ...interface{}) () {
+func (this *QFutureInterfaceBase) SetFilterMode(args ...interface{}) () {
   // setFilterMode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -256,7 +258,7 @@ func (this *QFutureInterfaceBase) Setfiltermode(args ...interface{}) () {
 }
 
 // progressMaximum()
-func (this *QFutureInterfaceBase) Progressmaximum(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) ProgressMaximum(args ...interface{}) (ret interface{}) {
   // progressMaximum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,7 +308,7 @@ func (this *QFutureInterfaceBase) Cancel(args ...interface{}) () {
 }
 
 // reportStarted()
-func (this *QFutureInterfaceBase) Reportstarted(args ...interface{}) () {
+func (this *QFutureInterfaceBase) ReportStarted(args ...interface{}) () {
   // reportStarted()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -327,7 +329,7 @@ func (this *QFutureInterfaceBase) Reportstarted(args ...interface{}) () {
 }
 
 // togglePaused()
-func (this *QFutureInterfaceBase) Togglepaused(args ...interface{}) () {
+func (this *QFutureInterfaceBase) TogglePaused(args ...interface{}) () {
   // togglePaused()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -348,7 +350,7 @@ func (this *QFutureInterfaceBase) Togglepaused(args ...interface{}) () {
 }
 
 // isProgressUpdateNeeded()
-func (this *QFutureInterfaceBase) Isprogressupdateneeded(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) IsProgressUpdateNeeded(args ...interface{}) (ret interface{}) {
   // isProgressUpdateNeeded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -377,7 +379,7 @@ func (this *QFutureInterfaceBase) Isprogressupdateneeded(args ...interface{}) (r
 }
 
 // progressMinimum()
-func (this *QFutureInterfaceBase) Progressminimum(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) ProgressMinimum(args ...interface{}) (ret interface{}) {
   // progressMinimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -406,7 +408,7 @@ func (this *QFutureInterfaceBase) Progressminimum(args ...interface{}) (ret inte
 }
 
 // waitForFinished()
-func (this *QFutureInterfaceBase) Waitforfinished(args ...interface{}) () {
+func (this *QFutureInterfaceBase) WaitForFinished(args ...interface{}) () {
   // waitForFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -427,6 +429,9 @@ func (this *QFutureInterfaceBase) Waitforfinished(args ...interface{}) () {
 }
 
 // QFutureInterfaceBase(const class QFutureInterfaceBase &)
+func GcfreeQFutureInterfaceBase(this *QFutureInterfaceBase) {
+  qtrt.UniverseFree(this)
+}
 func NewQFutureInterfaceBase(args ...interface{}) *QFutureInterfaceBase {
   // QFutureInterfaceBase(const class QFutureInterfaceBase &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -445,7 +450,9 @@ func NewQFutureInterfaceBase(args ...interface{}) *QFutureInterfaceBase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QFutureInterfaceBaseC2ERKS_(arg0)
-    return &QFutureInterfaceBase{Qclsinst:qthis}
+    this := &QFutureInterfaceBase{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFutureInterfaceBase)
+    return this
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "QFutureInterfaceBase", args)
   }
@@ -454,7 +461,7 @@ func NewQFutureInterfaceBase(args ...interface{}) *QFutureInterfaceBase {
 }
 
 // isStarted()
-func (this *QFutureInterfaceBase) Isstarted(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) IsStarted(args ...interface{}) (ret interface{}) {
   // isStarted()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -483,7 +490,7 @@ func (this *QFutureInterfaceBase) Isstarted(args ...interface{}) (ret interface{
 }
 
 // exceptionStore()
-func (this *QFutureInterfaceBase) Exceptionstore(args ...interface{}) () {
+func (this *QFutureInterfaceBase) ExceptionStore(args ...interface{}) () {
   // exceptionStore()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -533,7 +540,7 @@ func (this *QFutureInterfaceBase) Mutex(args ...interface{}) (ret interface{}) {
 }
 
 // setExpectedResultCount(int)
-func (this *QFutureInterfaceBase) Setexpectedresultcount(args ...interface{}) () {
+func (this *QFutureInterfaceBase) SetExpectedResultCount(args ...interface{}) () {
   // setExpectedResultCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -557,7 +564,7 @@ func (this *QFutureInterfaceBase) Setexpectedresultcount(args ...interface{}) ()
 }
 
 // setRunnable(class QRunnable *)
-func (this *QFutureInterfaceBase) Setrunnable(args ...interface{}) () {
+func (this *QFutureInterfaceBase) SetRunnable(args ...interface{}) () {
   // setRunnable(class QRunnable *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -581,7 +588,7 @@ func (this *QFutureInterfaceBase) Setrunnable(args ...interface{}) () {
 }
 
 // isThrottled()
-func (this *QFutureInterfaceBase) Isthrottled(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) IsThrottled(args ...interface{}) (ret interface{}) {
   // isThrottled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -610,7 +617,7 @@ func (this *QFutureInterfaceBase) Isthrottled(args ...interface{}) (ret interfac
 }
 
 // waitForNextResult()
-func (this *QFutureInterfaceBase) Waitfornextresult(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) WaitForNextResult(args ...interface{}) (ret interface{}) {
   // waitForNextResult()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -639,7 +646,7 @@ func (this *QFutureInterfaceBase) Waitfornextresult(args ...interface{}) (ret in
 }
 
 // isFinished()
-func (this *QFutureInterfaceBase) Isfinished(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) IsFinished(args ...interface{}) (ret interface{}) {
   // isFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -668,7 +675,7 @@ func (this *QFutureInterfaceBase) Isfinished(args ...interface{}) (ret interface
 }
 
 // reportFinished()
-func (this *QFutureInterfaceBase) Reportfinished(args ...interface{}) () {
+func (this *QFutureInterfaceBase) ReportFinished(args ...interface{}) () {
   // reportFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -689,7 +696,7 @@ func (this *QFutureInterfaceBase) Reportfinished(args ...interface{}) () {
 }
 
 // waitForResult(int)
-func (this *QFutureInterfaceBase) Waitforresult(args ...interface{}) () {
+func (this *QFutureInterfaceBase) WaitForResult(args ...interface{}) () {
   // waitForResult(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -713,7 +720,7 @@ func (this *QFutureInterfaceBase) Waitforresult(args ...interface{}) () {
 }
 
 // expectedResultCount()
-func (this *QFutureInterfaceBase) Expectedresultcount(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) ExpectedResultCount(args ...interface{}) (ret interface{}) {
   // expectedResultCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -742,7 +749,7 @@ func (this *QFutureInterfaceBase) Expectedresultcount(args ...interface{}) (ret 
 }
 
 // setProgressValueAndText(int, const class QString &)
-func (this *QFutureInterfaceBase) Setprogressvalueandtext(args ...interface{}) () {
+func (this *QFutureInterfaceBase) SetProgressValueAndText(args ...interface{}) () {
   // setProgressValueAndText(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -769,7 +776,7 @@ func (this *QFutureInterfaceBase) Setprogressvalueandtext(args ...interface{}) (
 }
 
 // resultCount()
-func (this *QFutureInterfaceBase) Resultcount(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) ResultCount(args ...interface{}) (ret interface{}) {
   // resultCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -798,7 +805,7 @@ func (this *QFutureInterfaceBase) Resultcount(args ...interface{}) (ret interfac
 }
 
 // setProgressValue(int)
-func (this *QFutureInterfaceBase) Setprogressvalue(args ...interface{}) () {
+func (this *QFutureInterfaceBase) SetProgressValue(args ...interface{}) () {
   // setProgressValue(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -822,7 +829,7 @@ func (this *QFutureInterfaceBase) Setprogressvalue(args ...interface{}) () {
 }
 
 // ~QFutureInterfaceBase()
-func (this *QFutureInterfaceBase) Freeqfutureinterfacebase(args ...interface{}) () {
+func (this *QFutureInterfaceBase) Free(args ...interface{}) () {
   // ~QFutureInterfaceBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -834,7 +841,10 @@ func (this *QFutureInterfaceBase) Freeqfutureinterfacebase(args ...interface{}) 
   case 0:
     // invoke: _ZN20QFutureInterfaceBaseD0Ev
     // invoke: void ~QFutureInterfaceBase()
-    C.C_ZN20QFutureInterfaceBaseD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN20QFutureInterfaceBaseD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "~QFutureInterfaceBase", args)
   }
@@ -843,7 +853,7 @@ func (this *QFutureInterfaceBase) Freeqfutureinterfacebase(args ...interface{}) 
 }
 
 // isRunning()
-func (this *QFutureInterfaceBase) Isrunning(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) IsRunning(args ...interface{}) (ret interface{}) {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -872,7 +882,7 @@ func (this *QFutureInterfaceBase) Isrunning(args ...interface{}) (ret interface{
 }
 
 // setProgressRange(int, int)
-func (this *QFutureInterfaceBase) Setprogressrange(args ...interface{}) () {
+func (this *QFutureInterfaceBase) SetProgressRange(args ...interface{}) () {
   // setProgressRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -899,7 +909,7 @@ func (this *QFutureInterfaceBase) Setprogressrange(args ...interface{}) () {
 }
 
 // resultStoreBase()
-func (this *QFutureInterfaceBase) Resultstorebase(args ...interface{}) () {
+func (this *QFutureInterfaceBase) ResultStoreBase(args ...interface{}) () {
   // resultStoreBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -920,7 +930,7 @@ func (this *QFutureInterfaceBase) Resultstorebase(args ...interface{}) () {
 }
 
 // isCanceled()
-func (this *QFutureInterfaceBase) Iscanceled(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) IsCanceled(args ...interface{}) (ret interface{}) {
   // isCanceled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -949,7 +959,7 @@ func (this *QFutureInterfaceBase) Iscanceled(args ...interface{}) (ret interface
 }
 
 // isResultReadyAt(int)
-func (this *QFutureInterfaceBase) Isresultreadyat(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) IsResultReadyAt(args ...interface{}) (ret interface{}) {
   // isResultReadyAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -981,7 +991,7 @@ func (this *QFutureInterfaceBase) Isresultreadyat(args ...interface{}) (ret inte
 }
 
 // isPaused()
-func (this *QFutureInterfaceBase) Ispaused(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) IsPaused(args ...interface{}) (ret interface{}) {
   // isPaused()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1010,7 +1020,7 @@ func (this *QFutureInterfaceBase) Ispaused(args ...interface{}) (ret interface{}
 }
 
 // setThreadPool(class QThreadPool *)
-func (this *QFutureInterfaceBase) Setthreadpool(args ...interface{}) () {
+func (this *QFutureInterfaceBase) SetThreadPool(args ...interface{}) () {
   // setThreadPool(class QThreadPool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1034,7 +1044,7 @@ func (this *QFutureInterfaceBase) Setthreadpool(args ...interface{}) () {
 }
 
 // setPaused(_Bool)
-func (this *QFutureInterfaceBase) Setpaused(args ...interface{}) () {
+func (this *QFutureInterfaceBase) SetPaused(args ...interface{}) () {
   // setPaused(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1058,7 +1068,7 @@ func (this *QFutureInterfaceBase) Setpaused(args ...interface{}) () {
 }
 
 // progressValue()
-func (this *QFutureInterfaceBase) Progressvalue(args ...interface{}) (ret interface{}) {
+func (this *QFutureInterfaceBase) ProgressValue(args ...interface{}) (ret interface{}) {
   // progressValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1087,7 +1097,7 @@ func (this *QFutureInterfaceBase) Progressvalue(args ...interface{}) (ret interf
 }
 
 // reportResultsReady(int, int)
-func (this *QFutureInterfaceBase) Reportresultsready(args ...interface{}) () {
+func (this *QFutureInterfaceBase) ReportResultsReady(args ...interface{}) () {
   // reportResultsReady(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1114,7 +1124,7 @@ func (this *QFutureInterfaceBase) Reportresultsready(args ...interface{}) () {
 }
 
 // reportFinished(const void *)
-func (this *QFutureInterfaceLvoidG) Reportfinished(args ...interface{}) () {
+func (this *QFutureInterfaceLvoidG) ReportFinished(args ...interface{}) () {
   // reportFinished(const void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1138,7 +1148,7 @@ func (this *QFutureInterfaceLvoidG) Reportfinished(args ...interface{}) () {
 }
 
 // reportResult(const void *, int)
-func (this *QFutureInterfaceLvoidG) Reportresult(args ...interface{}) () {
+func (this *QFutureInterfaceLvoidG) ReportResult(args ...interface{}) () {
   // reportResult(const void *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1186,7 +1196,7 @@ func (this *QFutureInterfaceLvoidG) Future(args ...interface{}) () {
 }
 
 // canceledResult()
-func (this *QFutureInterfaceLvoidG) Canceledresult_S(args ...interface{}) () {
+func (this *QFutureInterfaceLvoidG) CanceledResult_s(args ...interface{}) () {
   // canceledResult()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

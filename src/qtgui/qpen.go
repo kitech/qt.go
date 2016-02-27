@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -90,6 +91,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPen)=8
@@ -157,7 +159,7 @@ func (this *QPen) Brush(args ...interface{}) (ret interface{}) {
 }
 
 // setWidth(int)
-func (this *QPen) Setwidth(args ...interface{}) () {
+func (this *QPen) SetWidth(args ...interface{}) () {
   // setWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -202,7 +204,7 @@ func (this *QPen) Style(args ...interface{}) () {
 }
 
 // isCosmetic()
-func (this *QPen) Iscosmetic(args ...interface{}) (ret interface{}) {
+func (this *QPen) IsCosmetic(args ...interface{}) (ret interface{}) {
   // isCosmetic()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -231,7 +233,7 @@ func (this *QPen) Iscosmetic(args ...interface{}) (ret interface{}) {
 }
 
 // ~QPen()
-func (this *QPen) Freeqpen(args ...interface{}) () {
+func (this *QPen) Free(args ...interface{}) () {
   // ~QPen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -243,7 +245,10 @@ func (this *QPen) Freeqpen(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QPenD0Ev
     // invoke: void ~QPen()
-    C.C_ZN4QPenD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN4QPenD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPen", "~QPen", args)
   }
@@ -252,7 +257,7 @@ func (this *QPen) Freeqpen(args ...interface{}) () {
 }
 
 // joinStyle()
-func (this *QPen) Joinstyle(args ...interface{}) () {
+func (this *QPen) JoinStyle(args ...interface{}) () {
   // joinStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -326,7 +331,7 @@ func (this *QPen) Swap(args ...interface{}) () {
 }
 
 // dashOffset()
-func (this *QPen) Dashoffset(args ...interface{}) (ret interface{}) {
+func (this *QPen) DashOffset(args ...interface{}) (ret interface{}) {
   // dashOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -355,7 +360,7 @@ func (this *QPen) Dashoffset(args ...interface{}) (ret interface{}) {
 }
 
 // isDetached()
-func (this *QPen) Isdetached(args ...interface{}) (ret interface{}) {
+func (this *QPen) IsDetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -384,7 +389,7 @@ func (this *QPen) Isdetached(args ...interface{}) (ret interface{}) {
 }
 
 // miterLimit()
-func (this *QPen) Miterlimit(args ...interface{}) (ret interface{}) {
+func (this *QPen) MiterLimit(args ...interface{}) (ret interface{}) {
   // miterLimit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -413,7 +418,7 @@ func (this *QPen) Miterlimit(args ...interface{}) (ret interface{}) {
 }
 
 // isSolid()
-func (this *QPen) Issolid(args ...interface{}) (ret interface{}) {
+func (this *QPen) IsSolid(args ...interface{}) (ret interface{}) {
   // isSolid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -442,6 +447,9 @@ func (this *QPen) Issolid(args ...interface{}) (ret interface{}) {
 }
 
 // QPen(const class QPen &)
+func GcfreeQPen(this *QPen) {
+  qtrt.UniverseFree(this)
+}
 func NewQPen(args ...interface{}) *QPen {
   // QPen(const class QPen &)
   // QPen(const class QColor &)
@@ -465,7 +473,9 @@ func NewQPen(args ...interface{}) *QPen {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QPenC2ERKS_(arg0)
-    return &QPen{Qclsinst:qthis}
+    this := &QPen{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPen)
+    return this
   case 1:
     // invoke: _ZN4QPenC1ERK6QColor
     // invoke: void QPen(const class QColor &)
@@ -474,14 +484,18 @@ func NewQPen(args ...interface{}) *QPen {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QPenC2ERK6QColor(arg0)
-    return &QPen{Qclsinst:qthis}
+    this := &QPen{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPen)
+    return this
   case 2:
     // invoke: _ZN4QPenC1Ev
     // invoke: void QPen()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QPenC2Ev()
-    return &QPen{Qclsinst:qthis}
+    this := &QPen{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPen)
+    return this
   default:
     qtrt.ErrorResolve("QPen", "QPen", args)
   }
@@ -490,7 +504,7 @@ func NewQPen(args ...interface{}) *QPen {
 }
 
 // widthF()
-func (this *QPen) Widthf(args ...interface{}) (ret interface{}) {
+func (this *QPen) WidthF(args ...interface{}) (ret interface{}) {
   // widthF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -519,7 +533,7 @@ func (this *QPen) Widthf(args ...interface{}) (ret interface{}) {
 }
 
 // dashPattern()
-func (this *QPen) Dashpattern(args ...interface{}) () {
+func (this *QPen) DashPattern(args ...interface{}) () {
   // dashPattern()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -540,7 +554,7 @@ func (this *QPen) Dashpattern(args ...interface{}) () {
 }
 
 // setColor(const class QColor &)
-func (this *QPen) Setcolor(args ...interface{}) () {
+func (this *QPen) SetColor(args ...interface{}) () {
   // setColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -564,7 +578,7 @@ func (this *QPen) Setcolor(args ...interface{}) () {
 }
 
 // setMiterLimit(qreal)
-func (this *QPen) Setmiterlimit(args ...interface{}) () {
+func (this *QPen) SetMiterLimit(args ...interface{}) () {
   // setMiterLimit(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -588,7 +602,7 @@ func (this *QPen) Setmiterlimit(args ...interface{}) () {
 }
 
 // setCosmetic(_Bool)
-func (this *QPen) Setcosmetic(args ...interface{}) () {
+func (this *QPen) SetCosmetic(args ...interface{}) () {
   // setCosmetic(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -612,7 +626,7 @@ func (this *QPen) Setcosmetic(args ...interface{}) () {
 }
 
 // setWidthF(qreal)
-func (this *QPen) Setwidthf(args ...interface{}) () {
+func (this *QPen) SetWidthF(args ...interface{}) () {
   // setWidthF(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -636,7 +650,7 @@ func (this *QPen) Setwidthf(args ...interface{}) () {
 }
 
 // capStyle()
-func (this *QPen) Capstyle(args ...interface{}) () {
+func (this *QPen) CapStyle(args ...interface{}) () {
   // capStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -657,7 +671,7 @@ func (this *QPen) Capstyle(args ...interface{}) () {
 }
 
 // setBrush(const class QBrush &)
-func (this *QPen) Setbrush(args ...interface{}) () {
+func (this *QPen) SetBrush(args ...interface{}) () {
   // setBrush(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -681,7 +695,7 @@ func (this *QPen) Setbrush(args ...interface{}) () {
 }
 
 // setDashOffset(qreal)
-func (this *QPen) Setdashoffset(args ...interface{}) () {
+func (this *QPen) SetDashOffset(args ...interface{}) () {
   // setDashOffset(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

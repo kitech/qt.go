@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -82,6 +83,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFutureWatcherBase)=1
@@ -107,7 +109,7 @@ type QFutureWatcherLvoidG struct {
 }
 
 // isStarted()
-func (this *QFutureWatcherBase) Isstarted(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) IsStarted(args ...interface{}) (ret interface{}) {
   // isStarted()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -189,7 +191,7 @@ func (this *QFutureWatcherBase) Event(args ...interface{}) (ret interface{}) {
 }
 
 // togglePaused()
-func (this *QFutureWatcherBase) Togglepaused(args ...interface{}) () {
+func (this *QFutureWatcherBase) TogglePaused(args ...interface{}) () {
   // togglePaused()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -210,7 +212,7 @@ func (this *QFutureWatcherBase) Togglepaused(args ...interface{}) () {
 }
 
 // progressMinimum()
-func (this *QFutureWatcherBase) Progressminimum(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) ProgressMinimum(args ...interface{}) (ret interface{}) {
   // progressMinimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,7 +241,7 @@ func (this *QFutureWatcherBase) Progressminimum(args ...interface{}) (ret interf
 }
 
 // waitForFinished()
-func (this *QFutureWatcherBase) Waitforfinished(args ...interface{}) () {
+func (this *QFutureWatcherBase) WaitForFinished(args ...interface{}) () {
   // waitForFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -281,7 +283,7 @@ func (this *QFutureWatcherBase) Resume(args ...interface{}) () {
 }
 
 // progressMaximum()
-func (this *QFutureWatcherBase) Progressmaximum(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) ProgressMaximum(args ...interface{}) (ret interface{}) {
   // progressMaximum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -310,7 +312,7 @@ func (this *QFutureWatcherBase) Progressmaximum(args ...interface{}) (ret interf
 }
 
 // isFinished()
-func (this *QFutureWatcherBase) Isfinished(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) IsFinished(args ...interface{}) (ret interface{}) {
   // isFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -339,7 +341,7 @@ func (this *QFutureWatcherBase) Isfinished(args ...interface{}) (ret interface{}
 }
 
 // progressText()
-func (this *QFutureWatcherBase) Progresstext(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) ProgressText(args ...interface{}) (ret interface{}) {
   // progressText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -368,7 +370,7 @@ func (this *QFutureWatcherBase) Progresstext(args ...interface{}) (ret interface
 }
 
 // setPendingResultsLimit(int)
-func (this *QFutureWatcherBase) Setpendingresultslimit(args ...interface{}) () {
+func (this *QFutureWatcherBase) SetPendingResultsLimit(args ...interface{}) () {
   // setPendingResultsLimit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -413,7 +415,7 @@ func (this *QFutureWatcherBase) Pause(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QFutureWatcherBase) Metaobject(args ...interface{}) () {
+func (this *QFutureWatcherBase) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -434,6 +436,9 @@ func (this *QFutureWatcherBase) Metaobject(args ...interface{}) () {
 }
 
 // QFutureWatcherBase(class QObject *)
+func GcfreeQFutureWatcherBase(this *QFutureWatcherBase) {
+  qtrt.UniverseFree(this)
+}
 func NewQFutureWatcherBase(args ...interface{}) *QFutureWatcherBase {
   // QFutureWatcherBase(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -452,7 +457,9 @@ func NewQFutureWatcherBase(args ...interface{}) *QFutureWatcherBase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QFutureWatcherBaseC2EP7QObject(arg0)
-    return &QFutureWatcherBase{Qclsinst:qthis}
+    this := &QFutureWatcherBase{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFutureWatcherBase)
+    return this
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "QFutureWatcherBase", args)
   }
@@ -461,7 +468,7 @@ func NewQFutureWatcherBase(args ...interface{}) *QFutureWatcherBase {
 }
 
 // isRunning()
-func (this *QFutureWatcherBase) Isrunning(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) IsRunning(args ...interface{}) (ret interface{}) {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -490,7 +497,7 @@ func (this *QFutureWatcherBase) Isrunning(args ...interface{}) (ret interface{})
 }
 
 // isCanceled()
-func (this *QFutureWatcherBase) Iscanceled(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) IsCanceled(args ...interface{}) (ret interface{}) {
   // isCanceled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -519,7 +526,7 @@ func (this *QFutureWatcherBase) Iscanceled(args ...interface{}) (ret interface{}
 }
 
 // isPaused()
-func (this *QFutureWatcherBase) Ispaused(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) IsPaused(args ...interface{}) (ret interface{}) {
   // isPaused()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -548,7 +555,7 @@ func (this *QFutureWatcherBase) Ispaused(args ...interface{}) (ret interface{}) 
 }
 
 // progressValue()
-func (this *QFutureWatcherBase) Progressvalue(args ...interface{}) (ret interface{}) {
+func (this *QFutureWatcherBase) ProgressValue(args ...interface{}) (ret interface{}) {
   // progressValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -577,7 +584,7 @@ func (this *QFutureWatcherBase) Progressvalue(args ...interface{}) (ret interfac
 }
 
 // setPaused(_Bool)
-func (this *QFutureWatcherBase) Setpaused(args ...interface{}) () {
+func (this *QFutureWatcherBase) SetPaused(args ...interface{}) () {
   // setPaused(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -601,7 +608,7 @@ func (this *QFutureWatcherBase) Setpaused(args ...interface{}) () {
 }
 
 // ~QFutureWatcher()
-func (this *QFutureWatcherLvoidG) Freeqfuturewatcherlvoidg(args ...interface{}) () {
+func (this *QFutureWatcherLvoidG) Free(args ...interface{}) () {
   // ~QFutureWatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -613,7 +620,10 @@ func (this *QFutureWatcherLvoidG) Freeqfuturewatcherlvoidg(args ...interface{}) 
   case 0:
     // invoke: _ZN14QFutureWatcherIvED0Ev
     // invoke: void ~QFutureWatcher()
-    C.C_ZN14QFutureWatcherIvED2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QFutureWatcherIvED2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFutureWatcher<void>", "~QFutureWatcher", args)
   }
@@ -622,6 +632,9 @@ func (this *QFutureWatcherLvoidG) Freeqfuturewatcherlvoidg(args ...interface{}) 
 }
 
 // QFutureWatcher(class QObject *)
+func GcfreeQFutureWatcherLvoidG(this *QFutureWatcherLvoidG) {
+  qtrt.UniverseFree(this)
+}
 func NewQFutureWatcherLvoidG(args ...interface{}) *QFutureWatcherLvoidG {
   // QFutureWatcher(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -640,7 +653,9 @@ func NewQFutureWatcherLvoidG(args ...interface{}) *QFutureWatcherLvoidG {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QFutureWatcherIvEC2EP7QObject(arg0)
-    return &QFutureWatcherLvoidG{Qclsinst:qthis}
+    this := &QFutureWatcherLvoidG{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFutureWatcherLvoidG)
+    return this
   default:
     qtrt.ErrorResolve("QFutureWatcher<void>", "QFutureWatcher", args)
   }

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -68,6 +69,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStatusBar)=1
@@ -78,7 +80,7 @@ type QStatusBar struct {
 }
 
 // ~QStatusBar()
-func (this *QStatusBar) Freeqstatusbar(args ...interface{}) () {
+func (this *QStatusBar) Free(args ...interface{}) () {
   // ~QStatusBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -90,7 +92,10 @@ func (this *QStatusBar) Freeqstatusbar(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QStatusBarD0Ev
     // invoke: void ~QStatusBar()
-    C.C_ZN10QStatusBarD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QStatusBarD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStatusBar", "~QStatusBar", args)
   }
@@ -99,7 +104,7 @@ func (this *QStatusBar) Freeqstatusbar(args ...interface{}) () {
 }
 
 // removeWidget(class QWidget *)
-func (this *QStatusBar) Removewidget(args ...interface{}) () {
+func (this *QStatusBar) RemoveWidget(args ...interface{}) () {
   // removeWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -123,6 +128,9 @@ func (this *QStatusBar) Removewidget(args ...interface{}) () {
 }
 
 // QStatusBar(class QWidget *)
+func GcfreeQStatusBar(this *QStatusBar) {
+  qtrt.UniverseFree(this)
+}
 func NewQStatusBar(args ...interface{}) *QStatusBar {
   // QStatusBar(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -141,7 +149,9 @@ func NewQStatusBar(args ...interface{}) *QStatusBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QStatusBarC2EP7QWidget(arg0)
-    return &QStatusBar{Qclsinst:qthis}
+    this := &QStatusBar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStatusBar)
+    return this
   default:
     qtrt.ErrorResolve("QStatusBar", "QStatusBar", args)
   }
@@ -150,7 +160,7 @@ func NewQStatusBar(args ...interface{}) *QStatusBar {
 }
 
 // clearMessage()
-func (this *QStatusBar) Clearmessage(args ...interface{}) () {
+func (this *QStatusBar) ClearMessage(args ...interface{}) () {
   // clearMessage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -171,7 +181,7 @@ func (this *QStatusBar) Clearmessage(args ...interface{}) () {
 }
 
 // insertWidget(int, class QWidget *, int)
-func (this *QStatusBar) Insertwidget(args ...interface{}) (ret interface{}) {
+func (this *QStatusBar) InsertWidget(args ...interface{}) (ret interface{}) {
   // insertWidget(int, class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -209,7 +219,7 @@ func (this *QStatusBar) Insertwidget(args ...interface{}) (ret interface{}) {
 }
 
 // addPermanentWidget(class QWidget *, int)
-func (this *QStatusBar) Addpermanentwidget(args ...interface{}) () {
+func (this *QStatusBar) AddPermanentWidget(args ...interface{}) () {
   // addPermanentWidget(class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -236,7 +246,7 @@ func (this *QStatusBar) Addpermanentwidget(args ...interface{}) () {
 }
 
 // currentMessage()
-func (this *QStatusBar) Currentmessage(args ...interface{}) (ret interface{}) {
+func (this *QStatusBar) CurrentMessage(args ...interface{}) (ret interface{}) {
   // currentMessage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -265,7 +275,7 @@ func (this *QStatusBar) Currentmessage(args ...interface{}) (ret interface{}) {
 }
 
 // addWidget(class QWidget *, int)
-func (this *QStatusBar) Addwidget(args ...interface{}) () {
+func (this *QStatusBar) AddWidget(args ...interface{}) () {
   // addWidget(class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -292,7 +302,7 @@ func (this *QStatusBar) Addwidget(args ...interface{}) () {
 }
 
 // setSizeGripEnabled(_Bool)
-func (this *QStatusBar) Setsizegripenabled(args ...interface{}) () {
+func (this *QStatusBar) SetSizeGripEnabled(args ...interface{}) () {
   // setSizeGripEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -316,7 +326,7 @@ func (this *QStatusBar) Setsizegripenabled(args ...interface{}) () {
 }
 
 // insertPermanentWidget(int, class QWidget *, int)
-func (this *QStatusBar) Insertpermanentwidget(args ...interface{}) (ret interface{}) {
+func (this *QStatusBar) InsertPermanentWidget(args ...interface{}) (ret interface{}) {
   // insertPermanentWidget(int, class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -354,7 +364,7 @@ func (this *QStatusBar) Insertpermanentwidget(args ...interface{}) (ret interfac
 }
 
 // metaObject()
-func (this *QStatusBar) Metaobject(args ...interface{}) () {
+func (this *QStatusBar) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -375,7 +385,7 @@ func (this *QStatusBar) Metaobject(args ...interface{}) () {
 }
 
 // isSizeGripEnabled()
-func (this *QStatusBar) Issizegripenabled(args ...interface{}) (ret interface{}) {
+func (this *QStatusBar) IsSizeGripEnabled(args ...interface{}) (ret interface{}) {
   // isSizeGripEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -404,7 +414,7 @@ func (this *QStatusBar) Issizegripenabled(args ...interface{}) (ret interface{})
 }
 
 // showMessage(const class QString &, int)
-func (this *QStatusBar) Showmessage(args ...interface{}) () {
+func (this *QStatusBar) ShowMessage(args ...interface{}) () {
   // showMessage(const class QString &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

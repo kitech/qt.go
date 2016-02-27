@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qpixmap.h
 // dst-file: /src/gui/qpixmap.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -122,6 +123,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPixmap)=1
@@ -160,7 +162,7 @@ func (this *QPixmap) Height(args ...interface{}) (ret interface{}) {
 }
 
 // grabWidget(class QObject *, int, int, int, int)
-func (this *QPixmap) Grabwidget_S(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) GrabWidget_s(args ...interface{}) (ret interface{}) {
   // grabWidget(class QObject *, int, int, int, int)
   // grabWidget(class QObject *, const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -224,7 +226,7 @@ func (this *QPixmap) Grabwidget_S(args ...interface{}) (ret interface{}) {
 }
 
 // paintEngine()
-func (this *QPixmap) Paintengine(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) PaintEngine(args ...interface{}) (ret interface{}) {
   // paintEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -274,7 +276,7 @@ func (this *QPixmap) Handle(args ...interface{}) () {
 }
 
 // ~QPixmap()
-func (this *QPixmap) Freeqpixmap(args ...interface{}) () {
+func (this *QPixmap) Free(args ...interface{}) () {
   // ~QPixmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -286,7 +288,10 @@ func (this *QPixmap) Freeqpixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QPixmapD0Ev
     // invoke: void ~QPixmap()
-    C.C_ZN7QPixmapD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QPixmapD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPixmap", "~QPixmap", args)
   }
@@ -375,7 +380,7 @@ func (this *QPixmap) Rect(args ...interface{}) (ret interface{}) {
 }
 
 // trueMatrix(const class QMatrix &, int, int)
-func (this *QPixmap) Truematrix_S(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) TrueMatrix_s(args ...interface{}) (ret interface{}) {
   // trueMatrix(const class QMatrix &, int, int)
   // trueMatrix(const class QTransform &, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -568,7 +573,7 @@ func (this *QPixmap) Swap(args ...interface{}) () {
 }
 
 // isDetached()
-func (this *QPixmap) Isdetached(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) IsDetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -597,7 +602,7 @@ func (this *QPixmap) Isdetached(args ...interface{}) (ret interface{}) {
 }
 
 // cacheKey()
-func (this *QPixmap) Cachekey(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) CacheKey(args ...interface{}) (ret interface{}) {
   // cacheKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -626,7 +631,7 @@ func (this *QPixmap) Cachekey(args ...interface{}) (ret interface{}) {
 }
 
 // setDevicePixelRatio(qreal)
-func (this *QPixmap) Setdevicepixelratio(args ...interface{}) () {
+func (this *QPixmap) SetDevicePixelRatio(args ...interface{}) () {
   // setDevicePixelRatio(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -650,7 +655,7 @@ func (this *QPixmap) Setdevicepixelratio(args ...interface{}) () {
 }
 
 // hasAlphaChannel()
-func (this *QPixmap) Hasalphachannel(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) HasAlphaChannel(args ...interface{}) (ret interface{}) {
   // hasAlphaChannel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -679,7 +684,7 @@ func (this *QPixmap) Hasalphachannel(args ...interface{}) (ret interface{}) {
 }
 
 // hasAlpha()
-func (this *QPixmap) Hasalpha(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) HasAlpha(args ...interface{}) (ret interface{}) {
   // hasAlpha()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -708,7 +713,7 @@ func (this *QPixmap) Hasalpha(args ...interface{}) (ret interface{}) {
 }
 
 // setMask(const class QBitmap &)
-func (this *QPixmap) Setmask(args ...interface{}) () {
+func (this *QPixmap) SetMask(args ...interface{}) () {
   // setMask(const class QBitmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -732,7 +737,7 @@ func (this *QPixmap) Setmask(args ...interface{}) () {
 }
 
 // createHeuristicMask(_Bool)
-func (this *QPixmap) Createheuristicmask(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) CreateHeuristicMask(args ...interface{}) (ret interface{}) {
   // createHeuristicMask(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -764,7 +769,7 @@ func (this *QPixmap) Createheuristicmask(args ...interface{}) (ret interface{}) 
 }
 
 // defaultDepth()
-func (this *QPixmap) Defaultdepth_S(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) DefaultDepth_s(args ...interface{}) (ret interface{}) {
   // defaultDepth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -916,7 +921,7 @@ func (this *QPixmap) Save(args ...interface{}) (ret interface{}) {
 }
 
 // devicePixelRatio()
-func (this *QPixmap) Devicepixelratio(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) DevicePixelRatio(args ...interface{}) (ret interface{}) {
   // devicePixelRatio()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -945,7 +950,7 @@ func (this *QPixmap) Devicepixelratio(args ...interface{}) (ret interface{}) {
 }
 
 // isQBitmap()
-func (this *QPixmap) Isqbitmap(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) IsQBitmap(args ...interface{}) (ret interface{}) {
   // isQBitmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1003,7 +1008,7 @@ func (this *QPixmap) Mask(args ...interface{}) (ret interface{}) {
 }
 
 // toImage()
-func (this *QPixmap) Toimage(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) ToImage(args ...interface{}) (ret interface{}) {
   // toImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1032,6 +1037,9 @@ func (this *QPixmap) Toimage(args ...interface{}) (ret interface{}) {
 }
 
 // QPixmap()
+func GcfreeQPixmap(this *QPixmap) {
+  qtrt.UniverseFree(this)
+}
 func NewQPixmap(args ...interface{}) *QPixmap {
   // QPixmap()
   // QPixmap(int, int)
@@ -1057,7 +1065,9 @@ func NewQPixmap(args ...interface{}) *QPixmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPixmapC2Ev()
-    return &QPixmap{Qclsinst:qthis}
+    this := &QPixmap{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPixmap)
+    return this
   case 1:
     // invoke: _ZN7QPixmapC1Eii
     // invoke: void QPixmap(int, int)
@@ -1068,7 +1078,9 @@ func NewQPixmap(args ...interface{}) *QPixmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPixmapC2Eii(arg0, arg1)
-    return &QPixmap{Qclsinst:qthis}
+    this := &QPixmap{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPixmap)
+    return this
   case 2:
     // invoke: _ZN7QPixmapC1ERKS_
     // invoke: void QPixmap(const class QPixmap &)
@@ -1077,7 +1089,9 @@ func NewQPixmap(args ...interface{}) *QPixmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPixmapC2ERKS_(arg0)
-    return &QPixmap{Qclsinst:qthis}
+    this := &QPixmap{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPixmap)
+    return this
   case 3:
     // invoke: _ZN7QPixmapC1ERK5QSize
     // invoke: void QPixmap(const class QSize &)
@@ -1086,7 +1100,9 @@ func NewQPixmap(args ...interface{}) *QPixmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPixmapC2ERK5QSize(arg0)
-    return &QPixmap{Qclsinst:qthis}
+    this := &QPixmap{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPixmap)
+    return this
   default:
     qtrt.ErrorResolve("QPixmap", "QPixmap", args)
   }
@@ -1095,7 +1111,7 @@ func NewQPixmap(args ...interface{}) *QPixmap {
 }
 
 // isNull()
-func (this *QPixmap) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1124,7 +1140,7 @@ func (this *QPixmap) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // devType()
-func (this *QPixmap) Devtype(args ...interface{}) (ret interface{}) {
+func (this *QPixmap) DevType(args ...interface{}) (ret interface{}) {
   // devType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qtextlayout.h
 // dst-file: /src/gui/qtextlayout.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -196,6 +197,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextLine)=16
@@ -217,7 +219,7 @@ type QTextInlineObject struct {
 }
 
 // horizontalAdvance()
-func (this *QTextLine) Horizontaladvance(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) HorizontalAdvance(args ...interface{}) (ret interface{}) {
   // horizontalAdvance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -275,7 +277,7 @@ func (this *QTextLine) Height(args ...interface{}) (ret interface{}) {
 }
 
 // textStart()
-func (this *QTextLine) Textstart(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) TextStart(args ...interface{}) (ret interface{}) {
   // textStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -304,6 +306,9 @@ func (this *QTextLine) Textstart(args ...interface{}) (ret interface{}) {
 }
 
 // QTextLine()
+func GcfreeQTextLine(this *QTextLine) {
+  qtrt.UniverseFree(this)
+}
 func NewQTextLine(args ...interface{}) *QTextLine {
   // QTextLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -319,7 +324,9 @@ func NewQTextLine(args ...interface{}) *QTextLine {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTextLineC2Ev()
-    return &QTextLine{Qclsinst:qthis}
+    this := &QTextLine{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextLine)
+    return this
   default:
     qtrt.ErrorResolve("QTextLine", "QTextLine", args)
   }
@@ -328,7 +335,7 @@ func NewQTextLine(args ...interface{}) *QTextLine {
 }
 
 // setLeadingIncluded(_Bool)
-func (this *QTextLine) Setleadingincluded(args ...interface{}) () {
+func (this *QTextLine) SetLeadingIncluded(args ...interface{}) () {
   // setLeadingIncluded(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -402,7 +409,7 @@ func (this *QTextLine) X(args ...interface{}) () {
 }
 
 // naturalTextWidth()
-func (this *QTextLine) Naturaltextwidth(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) NaturalTextWidth(args ...interface{}) (ret interface{}) {
   // naturalTextWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -431,7 +438,7 @@ func (this *QTextLine) Naturaltextwidth(args ...interface{}) (ret interface{}) {
 }
 
 // setNumColumns(int)
-func (this *QTextLine) Setnumcolumns(args ...interface{}) () {
+func (this *QTextLine) SetNumColumns(args ...interface{}) () {
   // setNumColumns(int)
   // setNumColumns(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -525,7 +532,7 @@ func (this *QTextLine) Leading(args ...interface{}) (ret interface{}) {
 }
 
 // naturalTextRect()
-func (this *QTextLine) Naturaltextrect(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) NaturalTextRect(args ...interface{}) (ret interface{}) {
   // naturalTextRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -583,7 +590,7 @@ func (this *QTextLine) Width(args ...interface{}) (ret interface{}) {
 }
 
 // setLineWidth(qreal)
-func (this *QTextLine) Setlinewidth(args ...interface{}) () {
+func (this *QTextLine) SetLineWidth(args ...interface{}) () {
   // setLineWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -607,7 +614,7 @@ func (this *QTextLine) Setlinewidth(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QTextLine) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -636,7 +643,7 @@ func (this *QTextLine) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // lineNumber()
-func (this *QTextLine) Linenumber(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) LineNumber(args ...interface{}) (ret interface{}) {
   // lineNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -665,7 +672,7 @@ func (this *QTextLine) Linenumber(args ...interface{}) (ret interface{}) {
 }
 
 // setPosition(const class QPointF &)
-func (this *QTextLine) Setposition(args ...interface{}) () {
+func (this *QTextLine) SetPosition(args ...interface{}) () {
   // setPosition(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -689,7 +696,7 @@ func (this *QTextLine) Setposition(args ...interface{}) () {
 }
 
 // glyphRuns(int, int)
-func (this *QTextLine) Glyphruns(args ...interface{}) () {
+func (this *QTextLine) GlyphRuns(args ...interface{}) () {
   // glyphRuns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -745,7 +752,7 @@ func (this *QTextLine) Rect(args ...interface{}) (ret interface{}) {
 }
 
 // leadingIncluded()
-func (this *QTextLine) Leadingincluded(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) LeadingIncluded(args ...interface{}) (ret interface{}) {
   // leadingIncluded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -774,7 +781,7 @@ func (this *QTextLine) Leadingincluded(args ...interface{}) (ret interface{}) {
 }
 
 // textLength()
-func (this *QTextLine) Textlength(args ...interface{}) (ret interface{}) {
+func (this *QTextLine) TextLength(args ...interface{}) (ret interface{}) {
   // textLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -853,7 +860,7 @@ func (this *QTextLine) Position(args ...interface{}) (ret interface{}) {
 }
 
 // setCacheEnabled(_Bool)
-func (this *QTextLayout) Setcacheenabled(args ...interface{}) () {
+func (this *QTextLayout) SetCacheEnabled(args ...interface{}) () {
   // setCacheEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -877,7 +884,7 @@ func (this *QTextLayout) Setcacheenabled(args ...interface{}) () {
 }
 
 // boundingRect()
-func (this *QTextLayout) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -935,7 +942,7 @@ func (this *QTextLayout) Text(args ...interface{}) (ret interface{}) {
 }
 
 // clearAdditionalFormats()
-func (this *QTextLayout) Clearadditionalformats(args ...interface{}) () {
+func (this *QTextLayout) ClearAdditionalFormats(args ...interface{}) () {
   // clearAdditionalFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -956,7 +963,7 @@ func (this *QTextLayout) Clearadditionalformats(args ...interface{}) () {
 }
 
 // lineCount()
-func (this *QTextLayout) Linecount(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) LineCount(args ...interface{}) (ret interface{}) {
   // lineCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -985,7 +992,7 @@ func (this *QTextLayout) Linecount(args ...interface{}) (ret interface{}) {
 }
 
 // clearLayout()
-func (this *QTextLayout) Clearlayout(args ...interface{}) () {
+func (this *QTextLayout) ClearLayout(args ...interface{}) () {
   // clearLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1006,7 +1013,7 @@ func (this *QTextLayout) Clearlayout(args ...interface{}) () {
 }
 
 // createLine()
-func (this *QTextLayout) Createline(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) CreateLine(args ...interface{}) (ret interface{}) {
   // createLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1064,7 +1071,7 @@ func (this *QTextLayout) Font(args ...interface{}) (ret interface{}) {
 }
 
 // textOption()
-func (this *QTextLayout) Textoption(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) TextOption(args ...interface{}) (ret interface{}) {
   // textOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1093,7 +1100,7 @@ func (this *QTextLayout) Textoption(args ...interface{}) (ret interface{}) {
 }
 
 // lineAt(int)
-func (this *QTextLayout) Lineat(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) LineAt(args ...interface{}) (ret interface{}) {
   // lineAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1125,7 +1132,7 @@ func (this *QTextLayout) Lineat(args ...interface{}) (ret interface{}) {
 }
 
 // setRawFont(const class QRawFont &)
-func (this *QTextLayout) Setrawfont(args ...interface{}) () {
+func (this *QTextLayout) SetRawFont(args ...interface{}) () {
   // setRawFont(const class QRawFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1149,7 +1156,7 @@ func (this *QTextLayout) Setrawfont(args ...interface{}) () {
 }
 
 // beginLayout()
-func (this *QTextLayout) Beginlayout(args ...interface{}) () {
+func (this *QTextLayout) BeginLayout(args ...interface{}) () {
   // beginLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1170,7 +1177,7 @@ func (this *QTextLayout) Beginlayout(args ...interface{}) () {
 }
 
 // glyphRuns(int, int)
-func (this *QTextLayout) Glyphruns(args ...interface{}) () {
+func (this *QTextLayout) GlyphRuns(args ...interface{}) () {
   // glyphRuns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1197,7 +1204,7 @@ func (this *QTextLayout) Glyphruns(args ...interface{}) () {
 }
 
 // rightCursorPosition(int)
-func (this *QTextLayout) Rightcursorposition(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) RightCursorPosition(args ...interface{}) (ret interface{}) {
   // rightCursorPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1229,7 +1236,7 @@ func (this *QTextLayout) Rightcursorposition(args ...interface{}) (ret interface
 }
 
 // ~QTextLayout()
-func (this *QTextLayout) Freeqtextlayout(args ...interface{}) () {
+func (this *QTextLayout) Free(args ...interface{}) () {
   // ~QTextLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1241,7 +1248,10 @@ func (this *QTextLayout) Freeqtextlayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextLayoutD0Ev
     // invoke: void ~QTextLayout()
-    C.C_ZN11QTextLayoutD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QTextLayoutD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTextLayout", "~QTextLayout", args)
   }
@@ -1250,7 +1260,7 @@ func (this *QTextLayout) Freeqtextlayout(args ...interface{}) () {
 }
 
 // setTextOption(const class QTextOption &)
-func (this *QTextLayout) Settextoption(args ...interface{}) () {
+func (this *QTextLayout) SetTextOption(args ...interface{}) () {
   // setTextOption(const class QTextOption &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1274,7 +1284,7 @@ func (this *QTextLayout) Settextoption(args ...interface{}) () {
 }
 
 // isValidCursorPosition(int)
-func (this *QTextLayout) Isvalidcursorposition(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) IsValidCursorPosition(args ...interface{}) (ret interface{}) {
   // isValidCursorPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1306,7 +1316,7 @@ func (this *QTextLayout) Isvalidcursorposition(args ...interface{}) (ret interfa
 }
 
 // setPreeditArea(int, const class QString &)
-func (this *QTextLayout) Setpreeditarea(args ...interface{}) () {
+func (this *QTextLayout) SetPreeditArea(args ...interface{}) () {
   // setPreeditArea(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1354,7 +1364,7 @@ func (this *QTextLayout) Engine(args ...interface{}) () {
 }
 
 // minimumWidth()
-func (this *QTextLayout) Minimumwidth(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) MinimumWidth(args ...interface{}) (ret interface{}) {
   // minimumWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1383,6 +1393,9 @@ func (this *QTextLayout) Minimumwidth(args ...interface{}) (ret interface{}) {
 }
 
 // QTextLayout(const class QString &, const class QFont &, class QPaintDevice *)
+func GcfreeQTextLayout(this *QTextLayout) {
+  qtrt.UniverseFree(this)
+}
 func NewQTextLayout(args ...interface{}) *QTextLayout {
   // QTextLayout(const class QString &, const class QFont &, class QPaintDevice *)
   // QTextLayout(const class QTextBlock &)
@@ -1415,7 +1428,9 @@ func NewQTextLayout(args ...interface{}) *QTextLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice(arg0, arg1, arg2)
-    return &QTextLayout{Qclsinst:qthis}
+    this := &QTextLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextLayout)
+    return this
   case 1:
     // invoke: _ZN11QTextLayoutC1ERK10QTextBlock
     // invoke: void QTextLayout(const class QTextBlock &)
@@ -1424,14 +1439,18 @@ func NewQTextLayout(args ...interface{}) *QTextLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextLayoutC2ERK10QTextBlock(arg0)
-    return &QTextLayout{Qclsinst:qthis}
+    this := &QTextLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextLayout)
+    return this
   case 2:
     // invoke: _ZN11QTextLayoutC1Ev
     // invoke: void QTextLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextLayoutC2Ev()
-    return &QTextLayout{Qclsinst:qthis}
+    this := &QTextLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextLayout)
+    return this
   case 3:
     // invoke: _ZN11QTextLayoutC1ERK7QString
     // invoke: void QTextLayout(const class QString &)
@@ -1440,7 +1459,9 @@ func NewQTextLayout(args ...interface{}) *QTextLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextLayoutC2ERK7QString(arg0)
-    return &QTextLayout{Qclsinst:qthis}
+    this := &QTextLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextLayout)
+    return this
   default:
     qtrt.ErrorResolve("QTextLayout", "QTextLayout", args)
   }
@@ -1449,7 +1470,7 @@ func NewQTextLayout(args ...interface{}) *QTextLayout {
 }
 
 // leftCursorPosition(int)
-func (this *QTextLayout) Leftcursorposition(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) LeftCursorPosition(args ...interface{}) (ret interface{}) {
   // leftCursorPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1481,7 +1502,7 @@ func (this *QTextLayout) Leftcursorposition(args ...interface{}) (ret interface{
 }
 
 // endLayout()
-func (this *QTextLayout) Endlayout(args ...interface{}) () {
+func (this *QTextLayout) EndLayout(args ...interface{}) () {
   // endLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1502,7 +1523,7 @@ func (this *QTextLayout) Endlayout(args ...interface{}) () {
 }
 
 // maximumWidth()
-func (this *QTextLayout) Maximumwidth(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) MaximumWidth(args ...interface{}) (ret interface{}) {
   // maximumWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1531,7 +1552,7 @@ func (this *QTextLayout) Maximumwidth(args ...interface{}) (ret interface{}) {
 }
 
 // setFont(const class QFont &)
-func (this *QTextLayout) Setfont(args ...interface{}) () {
+func (this *QTextLayout) SetFont(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1555,7 +1576,7 @@ func (this *QTextLayout) Setfont(args ...interface{}) () {
 }
 
 // lineForTextPosition(int)
-func (this *QTextLayout) Linefortextposition(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) LineForTextPosition(args ...interface{}) (ret interface{}) {
   // lineForTextPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1587,7 +1608,7 @@ func (this *QTextLayout) Linefortextposition(args ...interface{}) (ret interface
 }
 
 // preeditAreaPosition()
-func (this *QTextLayout) Preeditareaposition(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) PreeditAreaPosition(args ...interface{}) (ret interface{}) {
   // preeditAreaPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1616,7 +1637,7 @@ func (this *QTextLayout) Preeditareaposition(args ...interface{}) (ret interface
 }
 
 // setFlags(int)
-func (this *QTextLayout) Setflags(args ...interface{}) () {
+func (this *QTextLayout) SetFlags(args ...interface{}) () {
   // setFlags(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1640,7 +1661,7 @@ func (this *QTextLayout) Setflags(args ...interface{}) () {
 }
 
 // setPosition(const class QPointF &)
-func (this *QTextLayout) Setposition(args ...interface{}) () {
+func (this *QTextLayout) SetPosition(args ...interface{}) () {
   // setPosition(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1664,7 +1685,7 @@ func (this *QTextLayout) Setposition(args ...interface{}) () {
 }
 
 // drawCursor(class QPainter *, const class QPointF &, int)
-func (this *QTextLayout) Drawcursor(args ...interface{}) () {
+func (this *QTextLayout) DrawCursor(args ...interface{}) () {
   // drawCursor(class QPainter *, const class QPointF &, int)
   // drawCursor(class QPainter *, const class QPointF &, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1712,7 +1733,7 @@ func (this *QTextLayout) Drawcursor(args ...interface{}) () {
 }
 
 // cacheEnabled()
-func (this *QTextLayout) Cacheenabled(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) CacheEnabled(args ...interface{}) (ret interface{}) {
   // cacheEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1741,7 +1762,7 @@ func (this *QTextLayout) Cacheenabled(args ...interface{}) (ret interface{}) {
 }
 
 // setText(const class QString &)
-func (this *QTextLayout) Settext(args ...interface{}) () {
+func (this *QTextLayout) SetText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1765,7 +1786,7 @@ func (this *QTextLayout) Settext(args ...interface{}) () {
 }
 
 // cursorMoveStyle()
-func (this *QTextLayout) Cursormovestyle(args ...interface{}) () {
+func (this *QTextLayout) CursorMoveStyle(args ...interface{}) () {
   // cursorMoveStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1786,7 +1807,7 @@ func (this *QTextLayout) Cursormovestyle(args ...interface{}) () {
 }
 
 // preeditAreaText()
-func (this *QTextLayout) Preeditareatext(args ...interface{}) (ret interface{}) {
+func (this *QTextLayout) PreeditAreaText(args ...interface{}) (ret interface{}) {
   // preeditAreaText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1815,7 +1836,7 @@ func (this *QTextLayout) Preeditareatext(args ...interface{}) (ret interface{}) 
 }
 
 // additionalFormats()
-func (this *QTextLayout) Additionalformats(args ...interface{}) () {
+func (this *QTextLayout) AdditionalFormats(args ...interface{}) () {
   // additionalFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1865,7 +1886,7 @@ func (this *QTextLayout) Position(args ...interface{}) (ret interface{}) {
 }
 
 // textPosition()
-func (this *QTextInlineObject) Textposition(args ...interface{}) (ret interface{}) {
+func (this *QTextInlineObject) TextPosition(args ...interface{}) (ret interface{}) {
   // textPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1923,7 +1944,7 @@ func (this *QTextInlineObject) Descent(args ...interface{}) (ret interface{}) {
 }
 
 // setWidth(qreal)
-func (this *QTextInlineObject) Setwidth(args ...interface{}) () {
+func (this *QTextInlineObject) SetWidth(args ...interface{}) () {
   // setWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1976,7 +1997,7 @@ func (this *QTextInlineObject) Format(args ...interface{}) (ret interface{}) {
 }
 
 // setDescent(qreal)
-func (this *QTextInlineObject) Setdescent(args ...interface{}) () {
+func (this *QTextInlineObject) SetDescent(args ...interface{}) () {
   // setDescent(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2000,7 +2021,7 @@ func (this *QTextInlineObject) Setdescent(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QTextInlineObject) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QTextInlineObject) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2029,7 +2050,7 @@ func (this *QTextInlineObject) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // textDirection()
-func (this *QTextInlineObject) Textdirection(args ...interface{}) () {
+func (this *QTextInlineObject) TextDirection(args ...interface{}) () {
   // textDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2108,7 +2129,7 @@ func (this *QTextInlineObject) Width(args ...interface{}) (ret interface{}) {
 }
 
 // setAscent(qreal)
-func (this *QTextInlineObject) Setascent(args ...interface{}) () {
+func (this *QTextInlineObject) SetAscent(args ...interface{}) () {
   // setAscent(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2132,7 +2153,7 @@ func (this *QTextInlineObject) Setascent(args ...interface{}) () {
 }
 
 // formatIndex()
-func (this *QTextInlineObject) Formatindex(args ...interface{}) (ret interface{}) {
+func (this *QTextInlineObject) FormatIndex(args ...interface{}) (ret interface{}) {
   // formatIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2161,6 +2182,9 @@ func (this *QTextInlineObject) Formatindex(args ...interface{}) (ret interface{}
 }
 
 // QTextInlineObject()
+func GcfreeQTextInlineObject(this *QTextInlineObject) {
+  qtrt.UniverseFree(this)
+}
 func NewQTextInlineObject(args ...interface{}) *QTextInlineObject {
   // QTextInlineObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2176,7 +2200,9 @@ func NewQTextInlineObject(args ...interface{}) *QTextInlineObject {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QTextInlineObjectC2Ev()
-    return &QTextInlineObject{Qclsinst:qthis}
+    this := &QTextInlineObject{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextInlineObject)
+    return this
   default:
     qtrt.ErrorResolve("QTextInlineObject", "QTextInlineObject", args)
   }

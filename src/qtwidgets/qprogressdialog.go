@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qprogressdialog.h
 // dst-file: /src/widgets/qprogressdialog.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -94,6 +95,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QProgressDialog)=1
@@ -104,7 +106,7 @@ type QProgressDialog struct {
 }
 
 // setLabel(class QLabel *)
-func (this *QProgressDialog) Setlabel(args ...interface{}) () {
+func (this *QProgressDialog) SetLabel(args ...interface{}) () {
   // setLabel(class QLabel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -128,7 +130,7 @@ func (this *QProgressDialog) Setlabel(args ...interface{}) () {
 }
 
 // minimumDuration()
-func (this *QProgressDialog) Minimumduration(args ...interface{}) (ret interface{}) {
+func (this *QProgressDialog) MinimumDuration(args ...interface{}) (ret interface{}) {
   // minimumDuration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -157,7 +159,7 @@ func (this *QProgressDialog) Minimumduration(args ...interface{}) (ret interface
 }
 
 // labelText()
-func (this *QProgressDialog) Labeltext(args ...interface{}) (ret interface{}) {
+func (this *QProgressDialog) LabelText(args ...interface{}) (ret interface{}) {
   // labelText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -265,7 +267,7 @@ func (this *QProgressDialog) Open(args ...interface{}) () {
 }
 
 // setLabelText(const class QString &)
-func (this *QProgressDialog) Setlabeltext(args ...interface{}) () {
+func (this *QProgressDialog) SetLabelText(args ...interface{}) () {
   // setLabelText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -289,7 +291,7 @@ func (this *QProgressDialog) Setlabeltext(args ...interface{}) () {
 }
 
 // autoReset()
-func (this *QProgressDialog) Autoreset(args ...interface{}) (ret interface{}) {
+func (this *QProgressDialog) AutoReset(args ...interface{}) (ret interface{}) {
   // autoReset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -318,7 +320,7 @@ func (this *QProgressDialog) Autoreset(args ...interface{}) (ret interface{}) {
 }
 
 // wasCanceled()
-func (this *QProgressDialog) Wascanceled(args ...interface{}) (ret interface{}) {
+func (this *QProgressDialog) WasCanceled(args ...interface{}) (ret interface{}) {
   // wasCanceled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -347,7 +349,7 @@ func (this *QProgressDialog) Wascanceled(args ...interface{}) (ret interface{}) 
 }
 
 // setCancelButtonText(const class QString &)
-func (this *QProgressDialog) Setcancelbuttontext(args ...interface{}) () {
+func (this *QProgressDialog) SetCancelButtonText(args ...interface{}) () {
   // setCancelButtonText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -371,7 +373,7 @@ func (this *QProgressDialog) Setcancelbuttontext(args ...interface{}) () {
 }
 
 // setMinimumDuration(int)
-func (this *QProgressDialog) Setminimumduration(args ...interface{}) () {
+func (this *QProgressDialog) SetMinimumDuration(args ...interface{}) () {
   // setMinimumDuration(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -395,7 +397,7 @@ func (this *QProgressDialog) Setminimumduration(args ...interface{}) () {
 }
 
 // setMaximum(int)
-func (this *QProgressDialog) Setmaximum(args ...interface{}) () {
+func (this *QProgressDialog) SetMaximum(args ...interface{}) () {
   // setMaximum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -419,7 +421,7 @@ func (this *QProgressDialog) Setmaximum(args ...interface{}) () {
 }
 
 // setBar(class QProgressBar *)
-func (this *QProgressDialog) Setbar(args ...interface{}) () {
+func (this *QProgressDialog) SetBar(args ...interface{}) () {
   // setBar(class QProgressBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -443,7 +445,7 @@ func (this *QProgressDialog) Setbar(args ...interface{}) () {
 }
 
 // setValue(int)
-func (this *QProgressDialog) Setvalue(args ...interface{}) () {
+func (this *QProgressDialog) SetValue(args ...interface{}) () {
   // setValue(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -467,7 +469,7 @@ func (this *QProgressDialog) Setvalue(args ...interface{}) () {
 }
 
 // setCancelButton(class QPushButton *)
-func (this *QProgressDialog) Setcancelbutton(args ...interface{}) () {
+func (this *QProgressDialog) SetCancelButton(args ...interface{}) () {
   // setCancelButton(class QPushButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -491,7 +493,7 @@ func (this *QProgressDialog) Setcancelbutton(args ...interface{}) () {
 }
 
 // autoClose()
-func (this *QProgressDialog) Autoclose(args ...interface{}) (ret interface{}) {
+func (this *QProgressDialog) AutoClose(args ...interface{}) (ret interface{}) {
   // autoClose()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -520,7 +522,7 @@ func (this *QProgressDialog) Autoclose(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QProgressDialog) Metaobject(args ...interface{}) () {
+func (this *QProgressDialog) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -541,7 +543,7 @@ func (this *QProgressDialog) Metaobject(args ...interface{}) () {
 }
 
 // setRange(int, int)
-func (this *QProgressDialog) Setrange(args ...interface{}) () {
+func (this *QProgressDialog) SetRange(args ...interface{}) () {
   // setRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -589,7 +591,7 @@ func (this *QProgressDialog) Reset(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QProgressDialog) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QProgressDialog) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -618,7 +620,7 @@ func (this *QProgressDialog) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // setAutoReset(_Bool)
-func (this *QProgressDialog) Setautoreset(args ...interface{}) () {
+func (this *QProgressDialog) SetAutoReset(args ...interface{}) () {
   // setAutoReset(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -700,7 +702,7 @@ func (this *QProgressDialog) Value(args ...interface{}) (ret interface{}) {
 }
 
 // setAutoClose(_Bool)
-func (this *QProgressDialog) Setautoclose(args ...interface{}) () {
+func (this *QProgressDialog) SetAutoClose(args ...interface{}) () {
   // setAutoClose(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -724,7 +726,7 @@ func (this *QProgressDialog) Setautoclose(args ...interface{}) () {
 }
 
 // ~QProgressDialog()
-func (this *QProgressDialog) Freeqprogressdialog(args ...interface{}) () {
+func (this *QProgressDialog) Free(args ...interface{}) () {
   // ~QProgressDialog()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -736,7 +738,10 @@ func (this *QProgressDialog) Freeqprogressdialog(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QProgressDialogD0Ev
     // invoke: void ~QProgressDialog()
-    C.C_ZN15QProgressDialogD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QProgressDialogD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QProgressDialog", "~QProgressDialog", args)
   }
@@ -745,7 +750,7 @@ func (this *QProgressDialog) Freeqprogressdialog(args ...interface{}) () {
 }
 
 // setMinimum(int)
-func (this *QProgressDialog) Setminimum(args ...interface{}) () {
+func (this *QProgressDialog) SetMinimum(args ...interface{}) () {
   // setMinimum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

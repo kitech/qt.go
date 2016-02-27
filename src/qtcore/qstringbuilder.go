@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qstringbuilder.h
 // dst-file: /src/core/qstringbuilder.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -72,6 +73,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QConcatenable<QLatin1String>)=1
@@ -153,7 +155,7 @@ type QStringBuilderLQString_EQStringG struct {
 }
 
 // appendTo(class QCharRef, class QChar *&)
-func (this *QConcatenableLQCharRefG) Appendto_S(args ...interface{}) () {
+func (this *QConcatenableLQCharRefG) AppendTo_s(args ...interface{}) () {
   // appendTo(class QCharRef, class QChar *&)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -180,7 +182,7 @@ func (this *QConcatenableLQCharRefG) Appendto_S(args ...interface{}) () {
 }
 
 // size(class QCharRef)
-func (this *QConcatenableLQCharRefG) Size_S(args ...interface{}) (ret interface{}) {
+func (this *QConcatenableLQCharRefG) Size_s(args ...interface{}) (ret interface{}) {
   // size(class QCharRef)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -212,7 +214,7 @@ func (this *QConcatenableLQCharRefG) Size_S(args ...interface{}) (ret interface{
 }
 
 // appendTo(const class QString &, class QChar *&)
-func (this *QConcatenableLQStringG) Appendto_S(args ...interface{}) () {
+func (this *QConcatenableLQStringG) AppendTo_s(args ...interface{}) () {
   // appendTo(const class QString &, class QChar *&)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,7 +241,7 @@ func (this *QConcatenableLQStringG) Appendto_S(args ...interface{}) () {
 }
 
 // size(const class QString &)
-func (this *QConcatenableLQStringG) Size_S(args ...interface{}) (ret interface{}) {
+func (this *QConcatenableLQStringG) Size_s(args ...interface{}) (ret interface{}) {
   // size(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -271,7 +273,7 @@ func (this *QConcatenableLQStringG) Size_S(args ...interface{}) (ret interface{}
 }
 
 // appendTo(const char, class QChar *&)
-func (this *QConcatenableLcharG) Appendto_S(args ...interface{}) () {
+func (this *QConcatenableLcharG) AppendTo_s(args ...interface{}) () {
   // appendTo(const char, class QChar *&)
   // appendTo(const char, char *&)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -312,7 +314,7 @@ func (this *QConcatenableLcharG) Appendto_S(args ...interface{}) () {
 }
 
 // size(const char)
-func (this *QConcatenableLcharG) Size_S(args ...interface{}) (ret interface{}) {
+func (this *QConcatenableLcharG) Size_s(args ...interface{}) (ret interface{}) {
   // size(const char)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -344,7 +346,7 @@ func (this *QConcatenableLcharG) Size_S(args ...interface{}) (ret interface{}) {
 }
 
 // appendTo(const class QByteArray &, char *&)
-func (this *QConcatenableLQByteArrayG) Appendto_S(args ...interface{}) () {
+func (this *QConcatenableLQByteArrayG) AppendTo_s(args ...interface{}) () {
   // appendTo(const class QByteArray &, char *&)
   // appendTo(const class QByteArray &, class QChar *&)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -385,7 +387,7 @@ func (this *QConcatenableLQByteArrayG) Appendto_S(args ...interface{}) () {
 }
 
 // size(const class QByteArray &)
-func (this *QConcatenableLQByteArrayG) Size_S(args ...interface{}) (ret interface{}) {
+func (this *QConcatenableLQByteArrayG) Size_s(args ...interface{}) (ret interface{}) {
   // size(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -417,7 +419,7 @@ func (this *QConcatenableLQByteArrayG) Size_S(args ...interface{}) (ret interfac
 }
 
 // appendTo(const class QChar, class QChar *&)
-func (this *QConcatenableLQCharG) Appendto_S(args ...interface{}) () {
+func (this *QConcatenableLQCharG) AppendTo_s(args ...interface{}) () {
   // appendTo(const class QChar, class QChar *&)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -444,7 +446,7 @@ func (this *QConcatenableLQCharG) Appendto_S(args ...interface{}) () {
 }
 
 // size(const class QChar)
-func (this *QConcatenableLQCharG) Size_S(args ...interface{}) (ret interface{}) {
+func (this *QConcatenableLQCharG) Size_s(args ...interface{}) (ret interface{}) {
   // size(const class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -476,6 +478,9 @@ func (this *QConcatenableLQCharG) Size_S(args ...interface{}) (ret interface{}) 
 }
 
 // QStringBuilder(const class QByteArray &, const class QByteArray &)
+func GcfreeQStringBuilderLQByteArray_EQByteArrayG(this *QStringBuilderLQByteArray_EQByteArrayG) {
+  qtrt.UniverseFree(this)
+}
 func NewQStringBuilderLQByteArray_EQByteArrayG(args ...interface{}) *QStringBuilderLQByteArray_EQByteArrayG {
   // QStringBuilder(const class QByteArray &, const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -497,7 +502,9 @@ func NewQStringBuilderLQByteArray_EQByteArrayG(args ...interface{}) *QStringBuil
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QStringBuilderI10QByteArrayS0_EC2ERKS0_S3_(arg0, arg1)
-    return &QStringBuilderLQByteArray_EQByteArrayG{Qclsinst:qthis}
+    this := &QStringBuilderLQByteArray_EQByteArrayG{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStringBuilderLQByteArray_EQByteArrayG)
+    return this
   default:
     qtrt.ErrorResolve("QStringBuilder<QByteArray, QByteArray>", "QStringBuilder", args)
   }
@@ -506,7 +513,7 @@ func NewQStringBuilderLQByteArray_EQByteArrayG(args ...interface{}) *QStringBuil
 }
 
 // appendTo(const char *, class QChar *&)
-func (this *QConcatenableLconstEcharEPG) Appendto_S(args ...interface{}) () {
+func (this *QConcatenableLconstEcharEPG) AppendTo_s(args ...interface{}) () {
   // appendTo(const char *, class QChar *&)
   // appendTo(const char *, char *&)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -551,7 +558,7 @@ func (this *QConcatenableLconstEcharEPG) Appendto_S(args ...interface{}) () {
 }
 
 // size(const char *)
-func (this *QConcatenableLconstEcharEPG) Size_S(args ...interface{}) (ret interface{}) {
+func (this *QConcatenableLconstEcharEPG) Size_s(args ...interface{}) (ret interface{}) {
   // size(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -585,6 +592,9 @@ func (this *QConcatenableLconstEcharEPG) Size_S(args ...interface{}) (ret interf
 }
 
 // QStringBuilder(const class QString &, const class QString &)
+func GcfreeQStringBuilderLQString_EQStringG(this *QStringBuilderLQString_EQStringG) {
+  qtrt.UniverseFree(this)
+}
 func NewQStringBuilderLQString_EQStringG(args ...interface{}) *QStringBuilderLQString_EQStringG {
   // QStringBuilder(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -606,7 +616,9 @@ func NewQStringBuilderLQString_EQStringG(args ...interface{}) *QStringBuilderLQS
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QStringBuilderI7QStringS0_EC2ERKS0_S3_(arg0, arg1)
-    return &QStringBuilderLQString_EQStringG{Qclsinst:qthis}
+    this := &QStringBuilderLQString_EQStringG{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStringBuilderLQString_EQStringG)
+    return this
   default:
     qtrt.ErrorResolve("QStringBuilder<QString, QString>", "QStringBuilder", args)
   }

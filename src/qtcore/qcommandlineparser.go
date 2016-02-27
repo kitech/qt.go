@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qcommandlineparser.h
 // dst-file: /src/core/qcommandlineparser.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -88,6 +89,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCommandLineParser)=8
@@ -97,7 +99,7 @@ type QCommandLineParser struct {
 }
 
 // addOption(const class QCommandLineOption &)
-func (this *QCommandLineParser) Addoption(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) AddOption(args ...interface{}) (ret interface{}) {
   // addOption(const class QCommandLineOption &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,7 +164,7 @@ func (this *QCommandLineParser) Process(args ...interface{}) () {
 }
 
 // errorText()
-func (this *QCommandLineParser) Errortext(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) ErrorText(args ...interface{}) (ret interface{}) {
   // errorText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -191,7 +193,7 @@ func (this *QCommandLineParser) Errortext(args ...interface{}) (ret interface{})
 }
 
 // addPositionalArgument(const class QString &, const class QString &, const class QString &)
-func (this *QCommandLineParser) Addpositionalargument(args ...interface{}) () {
+func (this *QCommandLineParser) AddPositionalArgument(args ...interface{}) () {
   // addPositionalArgument(const class QString &, const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -253,7 +255,7 @@ func (this *QCommandLineParser) Parse(args ...interface{}) (ret interface{}) {
 }
 
 // ~QCommandLineParser()
-func (this *QCommandLineParser) Freeqcommandlineparser(args ...interface{}) () {
+func (this *QCommandLineParser) Free(args ...interface{}) () {
   // ~QCommandLineParser()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -265,7 +267,10 @@ func (this *QCommandLineParser) Freeqcommandlineparser(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineParserD0Ev
     // invoke: void ~QCommandLineParser()
-    C.C_ZN18QCommandLineParserD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN18QCommandLineParserD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QCommandLineParser", "~QCommandLineParser", args)
   }
@@ -274,7 +279,7 @@ func (this *QCommandLineParser) Freeqcommandlineparser(args ...interface{}) () {
 }
 
 // showHelp(int)
-func (this *QCommandLineParser) Showhelp(args ...interface{}) () {
+func (this *QCommandLineParser) ShowHelp(args ...interface{}) () {
   // showHelp(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -298,7 +303,7 @@ func (this *QCommandLineParser) Showhelp(args ...interface{}) () {
 }
 
 // applicationDescription()
-func (this *QCommandLineParser) Applicationdescription(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) ApplicationDescription(args ...interface{}) (ret interface{}) {
   // applicationDescription()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -327,7 +332,7 @@ func (this *QCommandLineParser) Applicationdescription(args ...interface{}) (ret
 }
 
 // addVersionOption()
-func (this *QCommandLineParser) Addversionoption(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) AddVersionOption(args ...interface{}) (ret interface{}) {
   // addVersionOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -356,7 +361,7 @@ func (this *QCommandLineParser) Addversionoption(args ...interface{}) (ret inter
 }
 
 // helpText()
-func (this *QCommandLineParser) Helptext(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) HelpText(args ...interface{}) (ret interface{}) {
   // helpText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -385,7 +390,7 @@ func (this *QCommandLineParser) Helptext(args ...interface{}) (ret interface{}) 
 }
 
 // showVersion()
-func (this *QCommandLineParser) Showversion(args ...interface{}) () {
+func (this *QCommandLineParser) ShowVersion(args ...interface{}) () {
   // showVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -406,6 +411,9 @@ func (this *QCommandLineParser) Showversion(args ...interface{}) () {
 }
 
 // QCommandLineParser()
+func GcfreeQCommandLineParser(this *QCommandLineParser) {
+  qtrt.UniverseFree(this)
+}
 func NewQCommandLineParser(args ...interface{}) *QCommandLineParser {
   // QCommandLineParser()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -421,7 +429,9 @@ func NewQCommandLineParser(args ...interface{}) *QCommandLineParser {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineParserC2Ev()
-    return &QCommandLineParser{Qclsinst:qthis}
+    this := &QCommandLineParser{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCommandLineParser)
+    return this
   default:
     qtrt.ErrorResolve("QCommandLineParser", "QCommandLineParser", args)
   }
@@ -430,7 +440,7 @@ func NewQCommandLineParser(args ...interface{}) *QCommandLineParser {
 }
 
 // setApplicationDescription(const class QString &)
-func (this *QCommandLineParser) Setapplicationdescription(args ...interface{}) () {
+func (this *QCommandLineParser) SetApplicationDescription(args ...interface{}) () {
   // setApplicationDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -454,7 +464,7 @@ func (this *QCommandLineParser) Setapplicationdescription(args ...interface{}) (
 }
 
 // clearPositionalArguments()
-func (this *QCommandLineParser) Clearpositionalarguments(args ...interface{}) () {
+func (this *QCommandLineParser) ClearPositionalArguments(args ...interface{}) () {
   // clearPositionalArguments()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -475,7 +485,7 @@ func (this *QCommandLineParser) Clearpositionalarguments(args ...interface{}) ()
 }
 
 // addHelpOption()
-func (this *QCommandLineParser) Addhelpoption(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) AddHelpOption(args ...interface{}) (ret interface{}) {
   // addHelpOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -504,7 +514,7 @@ func (this *QCommandLineParser) Addhelpoption(args ...interface{}) (ret interfac
 }
 
 // optionNames()
-func (this *QCommandLineParser) Optionnames(args ...interface{}) () {
+func (this *QCommandLineParser) OptionNames(args ...interface{}) () {
   // optionNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -525,7 +535,7 @@ func (this *QCommandLineParser) Optionnames(args ...interface{}) () {
 }
 
 // unknownOptionNames()
-func (this *QCommandLineParser) Unknownoptionnames(args ...interface{}) () {
+func (this *QCommandLineParser) UnknownOptionNames(args ...interface{}) () {
   // unknownOptionNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -595,7 +605,7 @@ func (this *QCommandLineParser) Value(args ...interface{}) (ret interface{}) {
 }
 
 // isSet(const class QString &)
-func (this *QCommandLineParser) Isset(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineParser) IsSet(args ...interface{}) (ret interface{}) {
   // isSet(const class QString &)
   // isSet(const class QCommandLineOption &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -677,7 +687,7 @@ func (this *QCommandLineParser) Values(args ...interface{}) () {
 }
 
 // positionalArguments()
-func (this *QCommandLineParser) Positionalarguments(args ...interface{}) () {
+func (this *QCommandLineParser) PositionalArguments(args ...interface{}) () {
   // positionalArguments()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

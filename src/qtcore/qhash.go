@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -50,6 +51,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QHashDummyValue)=1
@@ -89,7 +91,7 @@ func (this *QHashData) Rehash(args ...interface{}) () {
 }
 
 // willGrow()
-func (this *QHashData) Willgrow(args ...interface{}) (ret interface{}) {
+func (this *QHashData) WillGrow(args ...interface{}) (ret interface{}) {
   // willGrow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -118,7 +120,7 @@ func (this *QHashData) Willgrow(args ...interface{}) (ret interface{}) {
 }
 
 // allocateNode(int)
-func (this *QHashData) Allocatenode(args ...interface{}) (ret interface{}) {
+func (this *QHashData) AllocateNode(args ...interface{}) (ret interface{}) {
   // allocateNode(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -150,7 +152,7 @@ func (this *QHashData) Allocatenode(args ...interface{}) (ret interface{}) {
 }
 
 // freeNode(void *)
-func (this *QHashData) Freenode(args ...interface{}) () {
+func (this *QHashData) FreeNode(args ...interface{}) () {
   // freeNode(void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -174,7 +176,7 @@ func (this *QHashData) Freenode(args ...interface{}) () {
 }
 
 // firstNode()
-func (this *QHashData) Firstnode(args ...interface{}) () {
+func (this *QHashData) FirstNode(args ...interface{}) () {
   // firstNode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -195,7 +197,7 @@ func (this *QHashData) Firstnode(args ...interface{}) () {
 }
 
 // hasShrunk()
-func (this *QHashData) Hasshrunk(args ...interface{}) () {
+func (this *QHashData) HasShrunk(args ...interface{}) () {
   // hasShrunk()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

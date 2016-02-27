@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qjsonobject.h
 // dst-file: /src/core/qjsonobject.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -78,6 +79,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QJsonObject)=16
@@ -87,7 +89,7 @@ type QJsonObject struct {
 }
 
 // constBegin()
-func (this *QJsonObject) Constbegin(args ...interface{}) () {
+func (this *QJsonObject) ConstBegin(args ...interface{}) () {
   // constBegin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -132,7 +134,7 @@ func (this *QJsonObject) Value(args ...interface{}) () {
 }
 
 // constFind(const class QString &)
-func (this *QJsonObject) Constfind(args ...interface{}) () {
+func (this *QJsonObject) ConstFind(args ...interface{}) () {
   // constFind(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -262,7 +264,7 @@ func (this *QJsonObject) Contains(args ...interface{}) (ret interface{}) {
 }
 
 // isEmpty()
-func (this *QJsonObject) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QJsonObject) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -365,7 +367,7 @@ func (this *QJsonObject) Begin(args ...interface{}) () {
 }
 
 // toVariantHash()
-func (this *QJsonObject) Tovarianthash(args ...interface{}) () {
+func (this *QJsonObject) ToVariantHash(args ...interface{}) () {
   // toVariantHash()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -407,7 +409,7 @@ func (this *QJsonObject) Keys(args ...interface{}) () {
 }
 
 // ~QJsonObject()
-func (this *QJsonObject) Freeqjsonobject(args ...interface{}) () {
+func (this *QJsonObject) Free(args ...interface{}) () {
   // ~QJsonObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -419,7 +421,10 @@ func (this *QJsonObject) Freeqjsonobject(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QJsonObjectD0Ev
     // invoke: void ~QJsonObject()
-    C.C_ZN11QJsonObjectD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QJsonObjectD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QJsonObject", "~QJsonObject", args)
   }
@@ -428,7 +433,7 @@ func (this *QJsonObject) Freeqjsonobject(args ...interface{}) () {
 }
 
 // toVariantMap()
-func (this *QJsonObject) Tovariantmap(args ...interface{}) () {
+func (this *QJsonObject) ToVariantMap(args ...interface{}) () {
   // toVariantMap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -478,6 +483,9 @@ func (this *QJsonObject) Count(args ...interface{}) (ret interface{}) {
 }
 
 // QJsonObject()
+func GcfreeQJsonObject(this *QJsonObject) {
+  qtrt.UniverseFree(this)
+}
 func NewQJsonObject(args ...interface{}) *QJsonObject {
   // QJsonObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -493,7 +501,9 @@ func NewQJsonObject(args ...interface{}) *QJsonObject {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QJsonObjectC2Ev()
-    return &QJsonObject{Qclsinst:qthis}
+    this := &QJsonObject{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQJsonObject)
+    return this
   default:
     qtrt.ErrorResolve("QJsonObject", "QJsonObject", args)
   }
@@ -555,7 +565,7 @@ func (this *QJsonObject) Length(args ...interface{}) (ret interface{}) {
 }
 
 // constEnd()
-func (this *QJsonObject) Constend(args ...interface{}) () {
+func (this *QJsonObject) ConstEnd(args ...interface{}) () {
   // constEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

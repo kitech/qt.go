@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -46,6 +47,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSurface)=24
@@ -55,7 +57,7 @@ type QSurface struct {
 }
 
 // ~QSurface()
-func (this *QSurface) Freeqsurface(args ...interface{}) () {
+func (this *QSurface) Free(args ...interface{}) () {
   // ~QSurface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -67,7 +69,10 @@ func (this *QSurface) Freeqsurface(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSurfaceD0Ev
     // invoke: void ~QSurface()
-    C.C_ZN8QSurfaceD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN8QSurfaceD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QSurface", "~QSurface", args)
   }
@@ -76,7 +81,7 @@ func (this *QSurface) Freeqsurface(args ...interface{}) () {
 }
 
 // surfaceClass()
-func (this *QSurface) Surfaceclass(args ...interface{}) () {
+func (this *QSurface) SurfaceClass(args ...interface{}) () {
   // surfaceClass()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,7 +102,7 @@ func (this *QSurface) Surfaceclass(args ...interface{}) () {
 }
 
 // supportsOpenGL()
-func (this *QSurface) Supportsopengl(args ...interface{}) (ret interface{}) {
+func (this *QSurface) SupportsOpenGL(args ...interface{}) (ret interface{}) {
   // supportsOpenGL()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

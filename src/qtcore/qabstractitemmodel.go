@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qabstractitemmodel.h
 // dst-file: /src/core/qabstractitemmodel.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -180,6 +181,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QModelIndex)=24
@@ -260,7 +262,7 @@ func (this *QModelIndex) Parent(args ...interface{}) (ret interface{}) {
 }
 
 // internalPointer()
-func (this *QModelIndex) Internalpointer(args ...interface{}) () {
+func (this *QModelIndex) InternalPointer(args ...interface{}) () {
   // internalPointer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -281,7 +283,7 @@ func (this *QModelIndex) Internalpointer(args ...interface{}) () {
 }
 
 // internalId()
-func (this *QModelIndex) Internalid(args ...interface{}) (ret interface{}) {
+func (this *QModelIndex) InternalId(args ...interface{}) (ret interface{}) {
   // internalId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -339,7 +341,7 @@ func (this *QModelIndex) Column(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QModelIndex) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QModelIndex) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -541,6 +543,9 @@ func (this *QModelIndex) Data(args ...interface{}) (ret interface{}) {
 }
 
 // QModelIndex()
+func GcfreeQModelIndex(this *QModelIndex) {
+  qtrt.UniverseFree(this)
+}
 func NewQModelIndex(args ...interface{}) *QModelIndex {
   // QModelIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -556,7 +561,9 @@ func NewQModelIndex(args ...interface{}) *QModelIndex {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QModelIndexC2Ev()
-    return &QModelIndex{Qclsinst:qthis}
+    this := &QModelIndex{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQModelIndex)
+    return this
   default:
     qtrt.ErrorResolve("QModelIndex", "QModelIndex", args)
   }
@@ -565,7 +572,7 @@ func NewQModelIndex(args ...interface{}) *QModelIndex {
 }
 
 // internalPointer()
-func (this *QPersistentModelIndex) Internalpointer(args ...interface{}) () {
+func (this *QPersistentModelIndex) InternalPointer(args ...interface{}) () {
   // internalPointer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -644,7 +651,7 @@ func (this *QPersistentModelIndex) Column(args ...interface{}) (ret interface{})
 }
 
 // isValid()
-func (this *QPersistentModelIndex) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QPersistentModelIndex) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -673,7 +680,7 @@ func (this *QPersistentModelIndex) Isvalid(args ...interface{}) (ret interface{}
 }
 
 // ~QPersistentModelIndex()
-func (this *QPersistentModelIndex) Freeqpersistentmodelindex(args ...interface{}) () {
+func (this *QPersistentModelIndex) Free(args ...interface{}) () {
   // ~QPersistentModelIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -685,7 +692,10 @@ func (this *QPersistentModelIndex) Freeqpersistentmodelindex(args ...interface{}
   case 0:
     // invoke: _ZN21QPersistentModelIndexD0Ev
     // invoke: void ~QPersistentModelIndex()
-    C.C_ZN21QPersistentModelIndexD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN21QPersistentModelIndexD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "~QPersistentModelIndex", args)
   }
@@ -694,6 +704,9 @@ func (this *QPersistentModelIndex) Freeqpersistentmodelindex(args ...interface{}
 }
 
 // QPersistentModelIndex()
+func GcfreeQPersistentModelIndex(this *QPersistentModelIndex) {
+  qtrt.UniverseFree(this)
+}
 func NewQPersistentModelIndex(args ...interface{}) *QPersistentModelIndex {
   // QPersistentModelIndex()
   // QPersistentModelIndex(const class QPersistentModelIndex &)
@@ -715,7 +728,9 @@ func NewQPersistentModelIndex(args ...interface{}) *QPersistentModelIndex {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QPersistentModelIndexC2Ev()
-    return &QPersistentModelIndex{Qclsinst:qthis}
+    this := &QPersistentModelIndex{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPersistentModelIndex)
+    return this
   case 1:
     // invoke: _ZN21QPersistentModelIndexC1ERKS_
     // invoke: void QPersistentModelIndex(const class QPersistentModelIndex &)
@@ -724,7 +739,9 @@ func NewQPersistentModelIndex(args ...interface{}) *QPersistentModelIndex {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QPersistentModelIndexC2ERKS_(arg0)
-    return &QPersistentModelIndex{Qclsinst:qthis}
+    this := &QPersistentModelIndex{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPersistentModelIndex)
+    return this
   case 2:
     // invoke: _ZN21QPersistentModelIndexC1ERK11QModelIndex
     // invoke: void QPersistentModelIndex(const class QModelIndex &)
@@ -733,7 +750,9 @@ func NewQPersistentModelIndex(args ...interface{}) *QPersistentModelIndex {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QPersistentModelIndexC2ERK11QModelIndex(arg0)
-    return &QPersistentModelIndex{Qclsinst:qthis}
+    this := &QPersistentModelIndex{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPersistentModelIndex)
+    return this
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "QPersistentModelIndex", args)
   }
@@ -742,7 +761,7 @@ func NewQPersistentModelIndex(args ...interface{}) *QPersistentModelIndex {
 }
 
 // internalId()
-func (this *QPersistentModelIndex) Internalid(args ...interface{}) (ret interface{}) {
+func (this *QPersistentModelIndex) InternalId(args ...interface{}) (ret interface{}) {
   // internalId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1044,6 +1063,9 @@ func (this *QAbstractTableModel) Sibling(args ...interface{}) (ret interface{}) 
 }
 
 // QAbstractTableModel(class QObject *)
+func GcfreeQAbstractTableModel(this *QAbstractTableModel) {
+  qtrt.UniverseFree(this)
+}
 func NewQAbstractTableModel(args ...interface{}) *QAbstractTableModel {
   // QAbstractTableModel(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1062,7 +1084,9 @@ func NewQAbstractTableModel(args ...interface{}) *QAbstractTableModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QAbstractTableModelC2EP7QObject(arg0)
-    return &QAbstractTableModel{Qclsinst:qthis}
+    this := &QAbstractTableModel{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAbstractTableModel)
+    return this
   default:
     qtrt.ErrorResolve("QAbstractTableModel", "QAbstractTableModel", args)
   }
@@ -1095,7 +1119,7 @@ func (this *QAbstractTableModel) Flags(args ...interface{}) () {
 }
 
 // ~QAbstractTableModel()
-func (this *QAbstractTableModel) Freeqabstracttablemodel(args ...interface{}) () {
+func (this *QAbstractTableModel) Free(args ...interface{}) () {
   // ~QAbstractTableModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1107,7 +1131,10 @@ func (this *QAbstractTableModel) Freeqabstracttablemodel(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QAbstractTableModelD0Ev
     // invoke: void ~QAbstractTableModel()
-    C.C_ZN19QAbstractTableModelD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QAbstractTableModelD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractTableModel", "~QAbstractTableModel", args)
   }
@@ -1116,7 +1143,7 @@ func (this *QAbstractTableModel) Freeqabstracttablemodel(args ...interface{}) ()
 }
 
 // metaObject()
-func (this *QAbstractTableModel) Metaobject(args ...interface{}) () {
+func (this *QAbstractTableModel) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1137,7 +1164,7 @@ func (this *QAbstractTableModel) Metaobject(args ...interface{}) () {
 }
 
 // supportedDragActions()
-func (this *QAbstractItemModel) Supporteddragactions(args ...interface{}) () {
+func (this *QAbstractItemModel) SupportedDragActions(args ...interface{}) () {
   // supportedDragActions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1190,7 +1217,7 @@ func (this *QAbstractItemModel) Buddy(args ...interface{}) (ret interface{}) {
 }
 
 // moveRow(const class QModelIndex &, int, const class QModelIndex &, int)
-func (this *QAbstractItemModel) Moverow(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) MoveRow(args ...interface{}) (ret interface{}) {
   // moveRow(const class QModelIndex &, int, const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1231,7 +1258,7 @@ func (this *QAbstractItemModel) Moverow(args ...interface{}) (ret interface{}) {
 }
 
 // removeColumn(int, const class QModelIndex &)
-func (this *QAbstractItemModel) Removecolumn(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) RemoveColumn(args ...interface{}) (ret interface{}) {
   // removeColumn(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1266,7 +1293,7 @@ func (this *QAbstractItemModel) Removecolumn(args ...interface{}) (ret interface
 }
 
 // metaObject()
-func (this *QAbstractItemModel) Metaobject(args ...interface{}) () {
+func (this *QAbstractItemModel) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1287,7 +1314,7 @@ func (this *QAbstractItemModel) Metaobject(args ...interface{}) () {
 }
 
 // insertColumns(int, int, const class QModelIndex &)
-func (this *QAbstractItemModel) Insertcolumns(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) InsertColumns(args ...interface{}) (ret interface{}) {
   // insertColumns(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1346,7 +1373,7 @@ func (this *QAbstractItemModel) Revert(args ...interface{}) () {
 }
 
 // insertRow(int, const class QModelIndex &)
-func (this *QAbstractItemModel) Insertrow(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) InsertRow(args ...interface{}) (ret interface{}) {
   // insertRow(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1381,7 +1408,7 @@ func (this *QAbstractItemModel) Insertrow(args ...interface{}) (ret interface{})
 }
 
 // fetchMore(const class QModelIndex &)
-func (this *QAbstractItemModel) Fetchmore(args ...interface{}) () {
+func (this *QAbstractItemModel) FetchMore(args ...interface{}) () {
   // fetchMore(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1405,7 +1432,7 @@ func (this *QAbstractItemModel) Fetchmore(args ...interface{}) () {
 }
 
 // supportedDropActions()
-func (this *QAbstractItemModel) Supporteddropactions(args ...interface{}) () {
+func (this *QAbstractItemModel) SupportedDropActions(args ...interface{}) () {
   // supportedDropActions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1426,7 +1453,7 @@ func (this *QAbstractItemModel) Supporteddropactions(args ...interface{}) () {
 }
 
 // moveColumn(const class QModelIndex &, int, const class QModelIndex &, int)
-func (this *QAbstractItemModel) Movecolumn(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) MoveColumn(args ...interface{}) (ret interface{}) {
   // moveColumn(const class QModelIndex &, int, const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1467,7 +1494,7 @@ func (this *QAbstractItemModel) Movecolumn(args ...interface{}) (ret interface{}
 }
 
 // itemData(const class QModelIndex &)
-func (this *QAbstractItemModel) Itemdata(args ...interface{}) () {
+func (this *QAbstractItemModel) ItemData(args ...interface{}) () {
   // itemData(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1491,7 +1518,7 @@ func (this *QAbstractItemModel) Itemdata(args ...interface{}) () {
 }
 
 // removeRow(int, const class QModelIndex &)
-func (this *QAbstractItemModel) Removerow(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) RemoveRow(args ...interface{}) (ret interface{}) {
   // removeRow(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1526,7 +1553,7 @@ func (this *QAbstractItemModel) Removerow(args ...interface{}) (ret interface{})
 }
 
 // mimeTypes()
-func (this *QAbstractItemModel) Mimetypes(args ...interface{}) () {
+func (this *QAbstractItemModel) MimeTypes(args ...interface{}) () {
   // mimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1547,7 +1574,7 @@ func (this *QAbstractItemModel) Mimetypes(args ...interface{}) () {
 }
 
 // ~QAbstractItemModel()
-func (this *QAbstractItemModel) Freeqabstractitemmodel(args ...interface{}) () {
+func (this *QAbstractItemModel) Free(args ...interface{}) () {
   // ~QAbstractItemModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1559,7 +1586,10 @@ func (this *QAbstractItemModel) Freeqabstractitemmodel(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QAbstractItemModelD0Ev
     // invoke: void ~QAbstractItemModel()
-    C.C_ZN18QAbstractItemModelD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN18QAbstractItemModelD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "~QAbstractItemModel", args)
   }
@@ -1568,7 +1598,7 @@ func (this *QAbstractItemModel) Freeqabstractitemmodel(args ...interface{}) () {
 }
 
 // roleNames()
-func (this *QAbstractItemModel) Rolenames(args ...interface{}) () {
+func (this *QAbstractItemModel) RoleNames(args ...interface{}) () {
   // roleNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1589,7 +1619,7 @@ func (this *QAbstractItemModel) Rolenames(args ...interface{}) () {
 }
 
 // removeColumns(int, int, const class QModelIndex &)
-func (this *QAbstractItemModel) Removecolumns(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) RemoveColumns(args ...interface{}) (ret interface{}) {
   // removeColumns(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1627,6 +1657,9 @@ func (this *QAbstractItemModel) Removecolumns(args ...interface{}) (ret interfac
 }
 
 // QAbstractItemModel(class QObject *)
+func GcfreeQAbstractItemModel(this *QAbstractItemModel) {
+  qtrt.UniverseFree(this)
+}
 func NewQAbstractItemModel(args ...interface{}) *QAbstractItemModel {
   // QAbstractItemModel(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1645,7 +1678,9 @@ func NewQAbstractItemModel(args ...interface{}) *QAbstractItemModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QAbstractItemModelC2EP7QObject(arg0)
-    return &QAbstractItemModel{Qclsinst:qthis}
+    this := &QAbstractItemModel{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAbstractItemModel)
+    return this
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "QAbstractItemModel", args)
   }
@@ -1715,7 +1750,7 @@ func (this *QAbstractItemModel) Submit(args ...interface{}) (ret interface{}) {
 }
 
 // removeRows(int, int, const class QModelIndex &)
-func (this *QAbstractItemModel) Removerows(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) RemoveRows(args ...interface{}) (ret interface{}) {
   // removeRows(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1753,7 +1788,7 @@ func (this *QAbstractItemModel) Removerows(args ...interface{}) (ret interface{}
 }
 
 // canFetchMore(const class QModelIndex &)
-func (this *QAbstractItemModel) Canfetchmore(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) CanFetchMore(args ...interface{}) (ret interface{}) {
   // canFetchMore(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1785,7 +1820,7 @@ func (this *QAbstractItemModel) Canfetchmore(args ...interface{}) (ret interface
 }
 
 // moveColumns(const class QModelIndex &, int, int, const class QModelIndex &, int)
-func (this *QAbstractItemModel) Movecolumns(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) MoveColumns(args ...interface{}) (ret interface{}) {
   // moveColumns(const class QModelIndex &, int, int, const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1867,7 +1902,7 @@ func (this *QAbstractItemModel) Sibling(args ...interface{}) (ret interface{}) {
 }
 
 // moveRows(const class QModelIndex &, int, int, const class QModelIndex &, int)
-func (this *QAbstractItemModel) Moverows(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) MoveRows(args ...interface{}) (ret interface{}) {
   // moveRows(const class QModelIndex &, int, int, const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1911,7 +1946,7 @@ func (this *QAbstractItemModel) Moverows(args ...interface{}) (ret interface{}) 
 }
 
 // insertColumn(int, const class QModelIndex &)
-func (this *QAbstractItemModel) Insertcolumn(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) InsertColumn(args ...interface{}) (ret interface{}) {
   // insertColumn(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1946,7 +1981,7 @@ func (this *QAbstractItemModel) Insertcolumn(args ...interface{}) (ret interface
 }
 
 // hasChildren(const class QModelIndex &)
-func (this *QAbstractItemModel) Haschildren(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) HasChildren(args ...interface{}) (ret interface{}) {
   // hasChildren(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1978,7 +2013,7 @@ func (this *QAbstractItemModel) Haschildren(args ...interface{}) (ret interface{
 }
 
 // hasIndex(int, int, const class QModelIndex &)
-func (this *QAbstractItemModel) Hasindex(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) HasIndex(args ...interface{}) (ret interface{}) {
   // hasIndex(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2016,7 +2051,7 @@ func (this *QAbstractItemModel) Hasindex(args ...interface{}) (ret interface{}) 
 }
 
 // setData(const class QModelIndex &, const class QVariant &, int)
-func (this *QAbstractItemModel) Setdata(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) SetData(args ...interface{}) (ret interface{}) {
   // setData(const class QModelIndex &, const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2054,7 +2089,7 @@ func (this *QAbstractItemModel) Setdata(args ...interface{}) (ret interface{}) {
 }
 
 // insertRows(int, int, const class QModelIndex &)
-func (this *QAbstractItemModel) Insertrows(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemModel) InsertRows(args ...interface{}) (ret interface{}) {
   // insertRows(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2154,7 +2189,7 @@ func (this *QAbstractListModel) Index(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QAbstractListModel) Metaobject(args ...interface{}) () {
+func (this *QAbstractListModel) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2175,6 +2210,9 @@ func (this *QAbstractListModel) Metaobject(args ...interface{}) () {
 }
 
 // QAbstractListModel(class QObject *)
+func GcfreeQAbstractListModel(this *QAbstractListModel) {
+  qtrt.UniverseFree(this)
+}
 func NewQAbstractListModel(args ...interface{}) *QAbstractListModel {
   // QAbstractListModel(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2193,7 +2231,9 @@ func NewQAbstractListModel(args ...interface{}) *QAbstractListModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QAbstractListModelC2EP7QObject(arg0)
-    return &QAbstractListModel{Qclsinst:qthis}
+    this := &QAbstractListModel{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAbstractListModel)
+    return this
   default:
     qtrt.ErrorResolve("QAbstractListModel", "QAbstractListModel", args)
   }
@@ -2264,7 +2304,7 @@ func (this *QAbstractListModel) Flags(args ...interface{}) () {
 }
 
 // ~QAbstractListModel()
-func (this *QAbstractListModel) Freeqabstractlistmodel(args ...interface{}) () {
+func (this *QAbstractListModel) Free(args ...interface{}) () {
   // ~QAbstractListModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2276,7 +2316,10 @@ func (this *QAbstractListModel) Freeqabstractlistmodel(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QAbstractListModelD0Ev
     // invoke: void ~QAbstractListModel()
-    C.C_ZN18QAbstractListModelD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN18QAbstractListModelD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractListModel", "~QAbstractListModel", args)
   }

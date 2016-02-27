@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -62,6 +63,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractTransition)=1
@@ -74,7 +76,7 @@ type QAbstractTransition struct {
 }
 
 // transitionType()
-func (this *QAbstractTransition) Transitiontype(args ...interface{}) () {
+func (this *QAbstractTransition) TransitionType(args ...interface{}) () {
   // transitionType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -95,7 +97,7 @@ func (this *QAbstractTransition) Transitiontype(args ...interface{}) () {
 }
 
 // targetStates()
-func (this *QAbstractTransition) Targetstates(args ...interface{}) () {
+func (this *QAbstractTransition) TargetStates(args ...interface{}) () {
   // targetStates()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -116,7 +118,7 @@ func (this *QAbstractTransition) Targetstates(args ...interface{}) () {
 }
 
 // removeAnimation(class QAbstractAnimation *)
-func (this *QAbstractTransition) Removeanimation(args ...interface{}) () {
+func (this *QAbstractTransition) RemoveAnimation(args ...interface{}) () {
   // removeAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -169,7 +171,7 @@ func (this *QAbstractTransition) Machine(args ...interface{}) (ret interface{}) 
 }
 
 // targetState()
-func (this *QAbstractTransition) Targetstate(args ...interface{}) () {
+func (this *QAbstractTransition) TargetState(args ...interface{}) () {
   // targetState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -211,7 +213,7 @@ func (this *QAbstractTransition) Animations(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QAbstractTransition) Metaobject(args ...interface{}) () {
+func (this *QAbstractTransition) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -232,7 +234,7 @@ func (this *QAbstractTransition) Metaobject(args ...interface{}) () {
 }
 
 // setTargetState(class QAbstractState *)
-func (this *QAbstractTransition) Settargetstate(args ...interface{}) () {
+func (this *QAbstractTransition) SetTargetState(args ...interface{}) () {
   // setTargetState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -256,7 +258,7 @@ func (this *QAbstractTransition) Settargetstate(args ...interface{}) () {
 }
 
 // ~QAbstractTransition()
-func (this *QAbstractTransition) Freeqabstracttransition(args ...interface{}) () {
+func (this *QAbstractTransition) Free(args ...interface{}) () {
   // ~QAbstractTransition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -268,7 +270,10 @@ func (this *QAbstractTransition) Freeqabstracttransition(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QAbstractTransitionD0Ev
     // invoke: void ~QAbstractTransition()
-    C.C_ZN19QAbstractTransitionD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QAbstractTransitionD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractTransition", "~QAbstractTransition", args)
   }
@@ -277,7 +282,7 @@ func (this *QAbstractTransition) Freeqabstracttransition(args ...interface{}) ()
 }
 
 // addAnimation(class QAbstractAnimation *)
-func (this *QAbstractTransition) Addanimation(args ...interface{}) () {
+func (this *QAbstractTransition) AddAnimation(args ...interface{}) () {
   // addAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -301,6 +306,9 @@ func (this *QAbstractTransition) Addanimation(args ...interface{}) () {
 }
 
 // QAbstractTransition(class QState *)
+func GcfreeQAbstractTransition(this *QAbstractTransition) {
+  qtrt.UniverseFree(this)
+}
 func NewQAbstractTransition(args ...interface{}) *QAbstractTransition {
   // QAbstractTransition(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -319,7 +327,9 @@ func NewQAbstractTransition(args ...interface{}) *QAbstractTransition {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QAbstractTransitionC2EP6QState(arg0)
-    return &QAbstractTransition{Qclsinst:qthis}
+    this := &QAbstractTransition{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAbstractTransition)
+    return this
   default:
     qtrt.ErrorResolve("QAbstractTransition", "QAbstractTransition", args)
   }
@@ -328,7 +338,7 @@ func NewQAbstractTransition(args ...interface{}) *QAbstractTransition {
 }
 
 // sourceState()
-func (this *QAbstractTransition) Sourcestate(args ...interface{}) (ret interface{}) {
+func (this *QAbstractTransition) SourceState(args ...interface{}) (ret interface{}) {
   // sourceState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

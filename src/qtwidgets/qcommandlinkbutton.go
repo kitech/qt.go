@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -56,6 +57,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCommandLinkButton)=1
@@ -65,7 +67,7 @@ type QCommandLinkButton struct {
 }
 
 // setDescription(const class QString &)
-func (this *QCommandLinkButton) Setdescription(args ...interface{}) () {
+func (this *QCommandLinkButton) SetDescription(args ...interface{}) () {
   // setDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -89,7 +91,7 @@ func (this *QCommandLinkButton) Setdescription(args ...interface{}) () {
 }
 
 // ~QCommandLinkButton()
-func (this *QCommandLinkButton) Freeqcommandlinkbutton(args ...interface{}) () {
+func (this *QCommandLinkButton) Free(args ...interface{}) () {
   // ~QCommandLinkButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -101,7 +103,10 @@ func (this *QCommandLinkButton) Freeqcommandlinkbutton(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLinkButtonD0Ev
     // invoke: void ~QCommandLinkButton()
-    C.C_ZN18QCommandLinkButtonD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN18QCommandLinkButtonD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "~QCommandLinkButton", args)
   }
@@ -139,6 +144,9 @@ func (this *QCommandLinkButton) Description(args ...interface{}) (ret interface{
 }
 
 // QCommandLinkButton(class QWidget *)
+func GcfreeQCommandLinkButton(this *QCommandLinkButton) {
+  qtrt.UniverseFree(this)
+}
 func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
   // QCommandLinkButton(class QWidget *)
   // QCommandLinkButton(const class QString &, const class QString &, class QWidget *)
@@ -166,7 +174,9 @@ func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLinkButtonC2EP7QWidget(arg0)
-    return &QCommandLinkButton{Qclsinst:qthis}
+    this := &QCommandLinkButton{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCommandLinkButton)
+    return this
   case 1:
     // invoke: _ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget
     // invoke: void QCommandLinkButton(const class QString &, const class QString &, class QWidget *)
@@ -179,7 +189,9 @@ func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLinkButtonC2ERK7QStringS2_P7QWidget(arg0, arg1, arg2)
-    return &QCommandLinkButton{Qclsinst:qthis}
+    this := &QCommandLinkButton{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCommandLinkButton)
+    return this
   case 2:
     // invoke: _ZN18QCommandLinkButtonC1ERK7QStringP7QWidget
     // invoke: void QCommandLinkButton(const class QString &, class QWidget *)
@@ -190,7 +202,9 @@ func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLinkButtonC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QCommandLinkButton{Qclsinst:qthis}
+    this := &QCommandLinkButton{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCommandLinkButton)
+    return this
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "QCommandLinkButton", args)
   }
@@ -199,7 +213,7 @@ func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
 }
 
 // metaObject()
-func (this *QCommandLinkButton) Metaobject(args ...interface{}) () {
+func (this *QCommandLinkButton) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

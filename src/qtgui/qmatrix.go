@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -104,6 +105,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMatrix)=48
@@ -113,6 +115,9 @@ type QMatrix struct {
 }
 
 // QMatrix(const class QMatrix &)
+func GcfreeQMatrix(this *QMatrix) {
+  qtrt.UniverseFree(this)
+}
 func NewQMatrix(args ...interface{}) *QMatrix {
   // QMatrix(const class QMatrix &)
   // QMatrix(qreal, qreal, qreal, qreal, qreal, qreal)
@@ -141,7 +146,9 @@ func NewQMatrix(args ...interface{}) *QMatrix {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QMatrixC2ERKS_(arg0)
-    return &QMatrix{Qclsinst:qthis}
+    this := &QMatrix{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMatrix)
+    return this
   case 1:
     // invoke: _ZN7QMatrixC1Edddddd
     // invoke: void QMatrix(qreal, qreal, qreal, qreal, qreal, qreal)
@@ -160,14 +167,18 @@ func NewQMatrix(args ...interface{}) *QMatrix {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QMatrixC2Edddddd(arg0, arg1, arg2, arg3, arg4, arg5)
-    return &QMatrix{Qclsinst:qthis}
+    this := &QMatrix{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMatrix)
+    return this
   case 2:
     // invoke: _ZN7QMatrixC1Ev
     // invoke: void QMatrix()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QMatrixC2Ev()
-    return &QMatrix{Qclsinst:qthis}
+    this := &QMatrix{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMatrix)
+    return this
   default:
     qtrt.ErrorResolve("QMatrix", "QMatrix", args)
   }
@@ -176,7 +187,7 @@ func NewQMatrix(args ...interface{}) *QMatrix {
 }
 
 // setMatrix(qreal, qreal, qreal, qreal, qreal, qreal)
-func (this *QMatrix) Setmatrix(args ...interface{}) () {
+func (this *QMatrix) SetMatrix(args ...interface{}) () {
   // setMatrix(qreal, qreal, qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -215,7 +226,7 @@ func (this *QMatrix) Setmatrix(args ...interface{}) () {
 }
 
 // mapRect(const class QRect &)
-func (this *QMatrix) Maprect(args ...interface{}) (ret interface{}) {
+func (this *QMatrix) MapRect(args ...interface{}) (ret interface{}) {
   // mapRect(const class QRect &)
   // mapRect(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -325,7 +336,7 @@ func (this *QMatrix) M11(args ...interface{}) (ret interface{}) {
 }
 
 // isInvertible()
-func (this *QMatrix) Isinvertible(args ...interface{}) (ret interface{}) {
+func (this *QMatrix) IsInvertible(args ...interface{}) (ret interface{}) {
   // isInvertible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -389,7 +400,7 @@ func (this *QMatrix) Scale(args ...interface{}) (ret interface{}) {
 }
 
 // mapToPolygon(const class QRect &)
-func (this *QMatrix) Maptopolygon(args ...interface{}) (ret interface{}) {
+func (this *QMatrix) MapToPolygon(args ...interface{}) (ret interface{}) {
   // mapToPolygon(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -905,7 +916,7 @@ func (this *QMatrix) M12(args ...interface{}) (ret interface{}) {
 }
 
 // isIdentity()
-func (this *QMatrix) Isidentity(args ...interface{}) (ret interface{}) {
+func (this *QMatrix) IsIdentity(args ...interface{}) (ret interface{}) {
   // isIdentity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

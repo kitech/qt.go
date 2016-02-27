@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qaccessiblewidget.h
 // dst-file: /src/widgets/qaccessiblewidget.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -72,6 +73,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAccessibleWidget)=32
@@ -81,7 +83,7 @@ type QAccessibleWidget struct {
 }
 
 // foregroundColor()
-func (this *QAccessibleWidget) Foregroundcolor(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleWidget) ForegroundColor(args ...interface{}) (ret interface{}) {
   // foregroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -110,7 +112,7 @@ func (this *QAccessibleWidget) Foregroundcolor(args ...interface{}) (ret interfa
 }
 
 // indexOfChild(const class QAccessibleInterface *)
-func (this *QAccessibleWidget) Indexofchild(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleWidget) IndexOfChild(args ...interface{}) (ret interface{}) {
   // indexOfChild(const class QAccessibleInterface *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -213,7 +215,7 @@ func (this *QAccessibleWidget) Role(args ...interface{}) () {
 }
 
 // backgroundColor()
-func (this *QAccessibleWidget) Backgroundcolor(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleWidget) BackgroundColor(args ...interface{}) (ret interface{}) {
   // backgroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -242,7 +244,7 @@ func (this *QAccessibleWidget) Backgroundcolor(args ...interface{}) (ret interfa
 }
 
 // childCount()
-func (this *QAccessibleWidget) Childcount(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleWidget) ChildCount(args ...interface{}) (ret interface{}) {
   // childCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -271,7 +273,7 @@ func (this *QAccessibleWidget) Childcount(args ...interface{}) (ret interface{})
 }
 
 // keyBindingsForAction(const class QString &)
-func (this *QAccessibleWidget) Keybindingsforaction(args ...interface{}) () {
+func (this *QAccessibleWidget) KeyBindingsForAction(args ...interface{}) () {
   // keyBindingsForAction(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -324,7 +326,7 @@ func (this *QAccessibleWidget) Parent(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QAccessibleWidget) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleWidget) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -353,7 +355,7 @@ func (this *QAccessibleWidget) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // focusChild()
-func (this *QAccessibleWidget) Focuschild(args ...interface{}) (ret interface{}) {
+func (this *QAccessibleWidget) FocusChild(args ...interface{}) (ret interface{}) {
   // focusChild()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -443,7 +445,7 @@ func (this *QAccessibleWidget) Rect(args ...interface{}) (ret interface{}) {
 }
 
 // doAction(const class QString &)
-func (this *QAccessibleWidget) Doaction(args ...interface{}) () {
+func (this *QAccessibleWidget) DoAction(args ...interface{}) () {
   // doAction(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -467,7 +469,7 @@ func (this *QAccessibleWidget) Doaction(args ...interface{}) () {
 }
 
 // actionNames()
-func (this *QAccessibleWidget) Actionnames(args ...interface{}) () {
+func (this *QAccessibleWidget) ActionNames(args ...interface{}) () {
   // actionNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

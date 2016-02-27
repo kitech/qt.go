@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qsystemsemaphore.h
 // dst-file: /src/core/qsystemsemaphore.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -50,6 +51,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSystemSemaphore)=1
@@ -59,7 +61,7 @@ type QSystemSemaphore struct {
 }
 
 // errorString()
-func (this *QSystemSemaphore) Errorstring(args ...interface{}) (ret interface{}) {
+func (this *QSystemSemaphore) ErrorString(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,7 +119,7 @@ func (this *QSystemSemaphore) Acquire(args ...interface{}) (ret interface{}) {
 }
 
 // ~QSystemSemaphore()
-func (this *QSystemSemaphore) Freeqsystemsemaphore(args ...interface{}) () {
+func (this *QSystemSemaphore) Free(args ...interface{}) () {
   // ~QSystemSemaphore()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -129,7 +131,10 @@ func (this *QSystemSemaphore) Freeqsystemsemaphore(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QSystemSemaphoreD0Ev
     // invoke: void ~QSystemSemaphore()
-    C.C_ZN16QSystemSemaphoreD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN16QSystemSemaphoreD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "~QSystemSemaphore", args)
   }

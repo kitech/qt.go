@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -72,6 +73,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QProxyStyle)=1
@@ -81,6 +83,9 @@ type QProxyStyle struct {
 }
 
 // QProxyStyle(class QStyle *)
+func GcfreeQProxyStyle(this *QProxyStyle) {
+  qtrt.UniverseFree(this)
+}
 func NewQProxyStyle(args ...interface{}) *QProxyStyle {
   // QProxyStyle(class QStyle *)
   // QProxyStyle(const class QString &)
@@ -102,7 +107,9 @@ func NewQProxyStyle(args ...interface{}) *QProxyStyle {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QProxyStyleC2EP6QStyle(arg0)
-    return &QProxyStyle{Qclsinst:qthis}
+    this := &QProxyStyle{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQProxyStyle)
+    return this
   case 1:
     // invoke: _ZN11QProxyStyleC1ERK7QString
     // invoke: void QProxyStyle(const class QString &)
@@ -111,7 +118,9 @@ func NewQProxyStyle(args ...interface{}) *QProxyStyle {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QProxyStyleC2ERK7QString(arg0)
-    return &QProxyStyle{Qclsinst:qthis}
+    this := &QProxyStyle{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQProxyStyle)
+    return this
   default:
     qtrt.ErrorResolve("QProxyStyle", "QProxyStyle", args)
   }
@@ -162,7 +171,7 @@ func (this *QProxyStyle) Polish(args ...interface{}) () {
 }
 
 // baseStyle()
-func (this *QProxyStyle) Basestyle(args ...interface{}) (ret interface{}) {
+func (this *QProxyStyle) BaseStyle(args ...interface{}) (ret interface{}) {
   // baseStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -191,7 +200,7 @@ func (this *QProxyStyle) Basestyle(args ...interface{}) (ret interface{}) {
 }
 
 // standardPalette()
-func (this *QProxyStyle) Standardpalette(args ...interface{}) (ret interface{}) {
+func (this *QProxyStyle) StandardPalette(args ...interface{}) (ret interface{}) {
   // standardPalette()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -220,7 +229,7 @@ func (this *QProxyStyle) Standardpalette(args ...interface{}) (ret interface{}) 
 }
 
 // setBaseStyle(class QStyle *)
-func (this *QProxyStyle) Setbasestyle(args ...interface{}) () {
+func (this *QProxyStyle) SetBaseStyle(args ...interface{}) () {
   // setBaseStyle(class QStyle *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -244,7 +253,7 @@ func (this *QProxyStyle) Setbasestyle(args ...interface{}) () {
 }
 
 // drawItemPixmap(class QPainter *, const class QRect &, int, const class QPixmap &)
-func (this *QProxyStyle) Drawitempixmap(args ...interface{}) () {
+func (this *QProxyStyle) DrawItemPixmap(args ...interface{}) () {
   // drawItemPixmap(class QPainter *, const class QRect &, int, const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -277,7 +286,7 @@ func (this *QProxyStyle) Drawitempixmap(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QProxyStyle) Metaobject(args ...interface{}) () {
+func (this *QProxyStyle) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -298,7 +307,7 @@ func (this *QProxyStyle) Metaobject(args ...interface{}) () {
 }
 
 // ~QProxyStyle()
-func (this *QProxyStyle) Freeqproxystyle(args ...interface{}) () {
+func (this *QProxyStyle) Free(args ...interface{}) () {
   // ~QProxyStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -310,7 +319,10 @@ func (this *QProxyStyle) Freeqproxystyle(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QProxyStyleD0Ev
     // invoke: void ~QProxyStyle()
-    C.C_ZN11QProxyStyleD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QProxyStyleD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QProxyStyle", "~QProxyStyle", args)
   }
@@ -319,7 +331,7 @@ func (this *QProxyStyle) Freeqproxystyle(args ...interface{}) () {
 }
 
 // itemTextRect(const class QFontMetrics &, const class QRect &, int, _Bool, const class QString &)
-func (this *QProxyStyle) Itemtextrect(args ...interface{}) (ret interface{}) {
+func (this *QProxyStyle) ItemTextRect(args ...interface{}) (ret interface{}) {
   // itemTextRect(const class QFontMetrics &, const class QRect &, int, _Bool, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -363,7 +375,7 @@ func (this *QProxyStyle) Itemtextrect(args ...interface{}) (ret interface{}) {
 }
 
 // itemPixmapRect(const class QRect &, int, const class QPixmap &)
-func (this *QProxyStyle) Itempixmaprect(args ...interface{}) (ret interface{}) {
+func (this *QProxyStyle) ItemPixmapRect(args ...interface{}) (ret interface{}) {
   // itemPixmapRect(const class QRect &, int, const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

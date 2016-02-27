@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -66,6 +67,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDrag)=1
@@ -77,7 +79,7 @@ type QDrag struct {
 }
 
 // setMimeData(class QMimeData *)
-func (this *QDrag) Setmimedata(args ...interface{}) () {
+func (this *QDrag) SetMimeData(args ...interface{}) () {
   // setMimeData(class QMimeData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -101,6 +103,9 @@ func (this *QDrag) Setmimedata(args ...interface{}) () {
 }
 
 // QDrag(class QObject *)
+func GcfreeQDrag(this *QDrag) {
+  qtrt.UniverseFree(this)
+}
 func NewQDrag(args ...interface{}) *QDrag {
   // QDrag(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -119,7 +124,9 @@ func NewQDrag(args ...interface{}) *QDrag {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QDragC2EP7QObject(arg0)
-    return &QDrag{Qclsinst:qthis}
+    this := &QDrag{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDrag)
+    return this
   default:
     qtrt.ErrorResolve("QDrag", "QDrag", args)
   }
@@ -157,7 +164,7 @@ func (this *QDrag) Pixmap(args ...interface{}) (ret interface{}) {
 }
 
 // ~QDrag()
-func (this *QDrag) Freeqdrag(args ...interface{}) () {
+func (this *QDrag) Free(args ...interface{}) () {
   // ~QDrag()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -169,7 +176,10 @@ func (this *QDrag) Freeqdrag(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QDragD0Ev
     // invoke: void ~QDrag()
-    C.C_ZN5QDragD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN5QDragD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDrag", "~QDrag", args)
   }
@@ -178,7 +188,7 @@ func (this *QDrag) Freeqdrag(args ...interface{}) () {
 }
 
 // defaultAction()
-func (this *QDrag) Defaultaction(args ...interface{}) () {
+func (this *QDrag) DefaultAction(args ...interface{}) () {
   // defaultAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -228,7 +238,7 @@ func (this *QDrag) Source(args ...interface{}) (ret interface{}) {
 }
 
 // supportedActions()
-func (this *QDrag) Supportedactions(args ...interface{}) () {
+func (this *QDrag) SupportedActions(args ...interface{}) () {
   // supportedActions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -249,7 +259,7 @@ func (this *QDrag) Supportedactions(args ...interface{}) () {
 }
 
 // setHotSpot(const class QPoint &)
-func (this *QDrag) Sethotspot(args ...interface{}) () {
+func (this *QDrag) SetHotSpot(args ...interface{}) () {
   // setHotSpot(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -273,7 +283,7 @@ func (this *QDrag) Sethotspot(args ...interface{}) () {
 }
 
 // setPixmap(const class QPixmap &)
-func (this *QDrag) Setpixmap(args ...interface{}) () {
+func (this *QDrag) SetPixmap(args ...interface{}) () {
   // setPixmap(const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -297,7 +307,7 @@ func (this *QDrag) Setpixmap(args ...interface{}) () {
 }
 
 // hotSpot()
-func (this *QDrag) Hotspot(args ...interface{}) (ret interface{}) {
+func (this *QDrag) HotSpot(args ...interface{}) (ret interface{}) {
   // hotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -326,7 +336,7 @@ func (this *QDrag) Hotspot(args ...interface{}) (ret interface{}) {
 }
 
 // mimeData()
-func (this *QDrag) Mimedata(args ...interface{}) (ret interface{}) {
+func (this *QDrag) MimeData(args ...interface{}) (ret interface{}) {
   // mimeData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -355,7 +365,7 @@ func (this *QDrag) Mimedata(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QDrag) Metaobject(args ...interface{}) () {
+func (this *QDrag) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qrect.h
 // dst-file: /src/core/qrect.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -302,6 +303,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QRect)=16
@@ -317,7 +319,7 @@ type QRectF struct {
 }
 
 // marginsRemoved(const class QMargins &)
-func (this *QRect) Marginsremoved(args ...interface{}) (ret interface{}) {
+func (this *QRect) MarginsRemoved(args ...interface{}) (ret interface{}) {
   // marginsRemoved(const class QMargins &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -349,7 +351,7 @@ func (this *QRect) Marginsremoved(args ...interface{}) (ret interface{}) {
 }
 
 // moveTo(int, int)
-func (this *QRect) Moveto(args ...interface{}) () {
+func (this *QRect) MoveTo(args ...interface{}) () {
   // moveTo(int, int)
   // moveTo(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -446,7 +448,7 @@ func (this *QRect) Intersects(args ...interface{}) (ret interface{}) {
 }
 
 // topLeft()
-func (this *QRect) Topleft(args ...interface{}) (ret interface{}) {
+func (this *QRect) TopLeft(args ...interface{}) (ret interface{}) {
   // topLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -475,7 +477,7 @@ func (this *QRect) Topleft(args ...interface{}) (ret interface{}) {
 }
 
 // setBottom(int)
-func (this *QRect) Setbottom(args ...interface{}) () {
+func (this *QRect) SetBottom(args ...interface{}) () {
   // setBottom(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -499,7 +501,7 @@ func (this *QRect) Setbottom(args ...interface{}) () {
 }
 
 // setTopLeft(const class QPoint &)
-func (this *QRect) Settopleft(args ...interface{}) () {
+func (this *QRect) SetTopLeft(args ...interface{}) () {
   // setTopLeft(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -593,7 +595,7 @@ func (this *QRect) Height(args ...interface{}) (ret interface{}) {
 }
 
 // setBottomLeft(const class QPoint &)
-func (this *QRect) Setbottomleft(args ...interface{}) () {
+func (this *QRect) SetBottomLeft(args ...interface{}) () {
   // setBottomLeft(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -617,7 +619,7 @@ func (this *QRect) Setbottomleft(args ...interface{}) () {
 }
 
 // moveRight(int)
-func (this *QRect) Moveright(args ...interface{}) () {
+func (this *QRect) MoveRight(args ...interface{}) () {
   // moveRight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -641,7 +643,7 @@ func (this *QRect) Moveright(args ...interface{}) () {
 }
 
 // moveBottomLeft(const class QPoint &)
-func (this *QRect) Movebottomleft(args ...interface{}) () {
+func (this *QRect) MoveBottomLeft(args ...interface{}) () {
   // moveBottomLeft(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -665,7 +667,7 @@ func (this *QRect) Movebottomleft(args ...interface{}) () {
 }
 
 // setWidth(int)
-func (this *QRect) Setwidth(args ...interface{}) () {
+func (this *QRect) SetWidth(args ...interface{}) () {
   // setWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -689,7 +691,7 @@ func (this *QRect) Setwidth(args ...interface{}) () {
 }
 
 // marginsAdded(const class QMargins &)
-func (this *QRect) Marginsadded(args ...interface{}) (ret interface{}) {
+func (this *QRect) MarginsAdded(args ...interface{}) (ret interface{}) {
   // marginsAdded(const class QMargins &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -750,7 +752,7 @@ func (this *QRect) Size(args ...interface{}) (ret interface{}) {
 }
 
 // moveBottom(int)
-func (this *QRect) Movebottom(args ...interface{}) () {
+func (this *QRect) MoveBottom(args ...interface{}) () {
   // moveBottom(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -806,7 +808,7 @@ func (this *QRect) United(args ...interface{}) (ret interface{}) {
 }
 
 // bottomRight()
-func (this *QRect) Bottomright(args ...interface{}) (ret interface{}) {
+func (this *QRect) BottomRight(args ...interface{}) (ret interface{}) {
   // bottomRight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -867,7 +869,7 @@ func (this *QRect) Intersected(args ...interface{}) (ret interface{}) {
 }
 
 // getRect(int *, int *, int *, int *)
-func (this *QRect) Getrect(args ...interface{}) () {
+func (this *QRect) GetRect(args ...interface{}) () {
   // getRect(int *, int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1027,7 +1029,7 @@ func (this *QRect) Contains(args ...interface{}) (ret interface{}) {
 }
 
 // setTop(int)
-func (this *QRect) Settop(args ...interface{}) () {
+func (this *QRect) SetTop(args ...interface{}) () {
   // setTop(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1051,7 +1053,7 @@ func (this *QRect) Settop(args ...interface{}) () {
 }
 
 // topRight()
-func (this *QRect) Topright(args ...interface{}) (ret interface{}) {
+func (this *QRect) TopRight(args ...interface{}) (ret interface{}) {
   // topRight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1080,7 +1082,7 @@ func (this *QRect) Topright(args ...interface{}) (ret interface{}) {
 }
 
 // moveCenter(const class QPoint &)
-func (this *QRect) Movecenter(args ...interface{}) () {
+func (this *QRect) MoveCenter(args ...interface{}) () {
   // moveCenter(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1133,7 +1135,7 @@ func (this *QRect) Width(args ...interface{}) (ret interface{}) {
 }
 
 // isEmpty()
-func (this *QRect) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QRect) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1162,7 +1164,7 @@ func (this *QRect) Isempty(args ...interface{}) (ret interface{}) {
 }
 
 // setX(int)
-func (this *QRect) Setx(args ...interface{}) () {
+func (this *QRect) SetX(args ...interface{}) () {
   // setX(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1186,7 +1188,7 @@ func (this *QRect) Setx(args ...interface{}) () {
 }
 
 // setRect(int, int, int, int)
-func (this *QRect) Setrect(args ...interface{}) () {
+func (this *QRect) SetRect(args ...interface{}) () {
   // setRect(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1219,7 +1221,7 @@ func (this *QRect) Setrect(args ...interface{}) () {
 }
 
 // setBottomRight(const class QPoint &)
-func (this *QRect) Setbottomright(args ...interface{}) () {
+func (this *QRect) SetBottomRight(args ...interface{}) () {
   // setBottomRight(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1243,7 +1245,7 @@ func (this *QRect) Setbottomright(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QRect) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QRect) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1272,7 +1274,7 @@ func (this *QRect) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // moveLeft(int)
-func (this *QRect) Moveleft(args ...interface{}) () {
+func (this *QRect) MoveLeft(args ...interface{}) () {
   // moveLeft(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1296,7 +1298,7 @@ func (this *QRect) Moveleft(args ...interface{}) () {
 }
 
 // setTopRight(const class QPoint &)
-func (this *QRect) Settopright(args ...interface{}) () {
+func (this *QRect) SetTopRight(args ...interface{}) () {
   // setTopRight(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1320,7 +1322,7 @@ func (this *QRect) Settopright(args ...interface{}) () {
 }
 
 // moveTop(int)
-func (this *QRect) Movetop(args ...interface{}) () {
+func (this *QRect) MoveTop(args ...interface{}) () {
   // moveTop(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1425,7 +1427,7 @@ func (this *QRect) Normalized(args ...interface{}) (ret interface{}) {
 }
 
 // setCoords(int, int, int, int)
-func (this *QRect) Setcoords(args ...interface{}) () {
+func (this *QRect) SetCoords(args ...interface{}) () {
   // setCoords(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1458,7 +1460,7 @@ func (this *QRect) Setcoords(args ...interface{}) () {
 }
 
 // setLeft(int)
-func (this *QRect) Setleft(args ...interface{}) () {
+func (this *QRect) SetLeft(args ...interface{}) () {
   // setLeft(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1482,7 +1484,7 @@ func (this *QRect) Setleft(args ...interface{}) () {
 }
 
 // setY(int)
-func (this *QRect) Sety(args ...interface{}) () {
+func (this *QRect) SetY(args ...interface{}) () {
   // setY(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1506,7 +1508,7 @@ func (this *QRect) Sety(args ...interface{}) () {
 }
 
 // setHeight(int)
-func (this *QRect) Setheight(args ...interface{}) () {
+func (this *QRect) SetHeight(args ...interface{}) () {
   // setHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1530,6 +1532,9 @@ func (this *QRect) Setheight(args ...interface{}) () {
 }
 
 // QRect(const class QPoint &, const class QSize &)
+func GcfreeQRect(this *QRect) {
+  qtrt.UniverseFree(this)
+}
 func NewQRect(args ...interface{}) *QRect {
   // QRect(const class QPoint &, const class QSize &)
   // QRect()
@@ -1563,14 +1568,18 @@ func NewQRect(args ...interface{}) *QRect {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QRectC2ERK6QPointRK5QSize(arg0, arg1)
-    return &QRect{Qclsinst:qthis}
+    this := &QRect{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRect)
+    return this
   case 1:
     // invoke: _ZN5QRectC1Ev
     // invoke: void QRect()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QRectC2Ev()
-    return &QRect{Qclsinst:qthis}
+    this := &QRect{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRect)
+    return this
   case 2:
     // invoke: _ZN5QRectC1Eiiii
     // invoke: void QRect(int, int, int, int)
@@ -1585,7 +1594,9 @@ func NewQRect(args ...interface{}) *QRect {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QRectC2Eiiii(arg0, arg1, arg2, arg3)
-    return &QRect{Qclsinst:qthis}
+    this := &QRect{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRect)
+    return this
   case 3:
     // invoke: _ZN5QRectC1ERK6QPointS2_
     // invoke: void QRect(const class QPoint &, const class QPoint &)
@@ -1596,7 +1607,9 @@ func NewQRect(args ...interface{}) *QRect {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QRectC2ERK6QPointS2_(arg0, arg1)
-    return &QRect{Qclsinst:qthis}
+    this := &QRect{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRect)
+    return this
   default:
     qtrt.ErrorResolve("QRect", "QRect", args)
   }
@@ -1641,7 +1654,7 @@ func (this *QRect) Translate(args ...interface{}) () {
 }
 
 // bottomLeft()
-func (this *QRect) Bottomleft(args ...interface{}) (ret interface{}) {
+func (this *QRect) BottomLeft(args ...interface{}) (ret interface{}) {
   // bottomLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1699,7 +1712,7 @@ func (this *QRect) Center(args ...interface{}) (ret interface{}) {
 }
 
 // moveTopRight(const class QPoint &)
-func (this *QRect) Movetopright(args ...interface{}) () {
+func (this *QRect) MoveTopRight(args ...interface{}) () {
   // moveTopRight(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1723,7 +1736,7 @@ func (this *QRect) Movetopright(args ...interface{}) () {
 }
 
 // moveTopLeft(const class QPoint &)
-func (this *QRect) Movetopleft(args ...interface{}) () {
+func (this *QRect) MoveTopLeft(args ...interface{}) () {
   // moveTopLeft(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1776,7 +1789,7 @@ func (this *QRect) Bottom(args ...interface{}) (ret interface{}) {
 }
 
 // getCoords(int *, int *, int *, int *)
-func (this *QRect) Getcoords(args ...interface{}) () {
+func (this *QRect) GetCoords(args ...interface{}) () {
   // getCoords(int *, int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1809,7 +1822,7 @@ func (this *QRect) Getcoords(args ...interface{}) () {
 }
 
 // setRight(int)
-func (this *QRect) Setright(args ...interface{}) () {
+func (this *QRect) SetRight(args ...interface{}) () {
   // setRight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1833,7 +1846,7 @@ func (this *QRect) Setright(args ...interface{}) () {
 }
 
 // isNull()
-func (this *QRect) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QRect) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1937,7 +1950,7 @@ func (this *QRect) X(args ...interface{}) () {
 }
 
 // moveBottomRight(const class QPoint &)
-func (this *QRect) Movebottomright(args ...interface{}) () {
+func (this *QRect) MoveBottomRight(args ...interface{}) () {
   // moveBottomRight(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1961,7 +1974,7 @@ func (this *QRect) Movebottomright(args ...interface{}) () {
 }
 
 // setSize(const class QSize &)
-func (this *QRect) Setsize(args ...interface{}) () {
+func (this *QRect) SetSize(args ...interface{}) () {
   // setSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2014,7 +2027,7 @@ func (this *QRect) Left(args ...interface{}) (ret interface{}) {
 }
 
 // marginsRemoved(const class QMarginsF &)
-func (this *QRectF) Marginsremoved(args ...interface{}) (ret interface{}) {
+func (this *QRectF) MarginsRemoved(args ...interface{}) (ret interface{}) {
   // marginsRemoved(const class QMarginsF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2046,7 +2059,7 @@ func (this *QRectF) Marginsremoved(args ...interface{}) (ret interface{}) {
 }
 
 // moveTo(const class QPointF &)
-func (this *QRectF) Moveto(args ...interface{}) () {
+func (this *QRectF) MoveTo(args ...interface{}) () {
   // moveTo(const class QPointF &)
   // moveTo(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2082,7 +2095,7 @@ func (this *QRectF) Moveto(args ...interface{}) () {
 }
 
 // setBottomLeft(const class QPointF &)
-func (this *QRectF) Setbottomleft(args ...interface{}) () {
+func (this *QRectF) SetBottomLeft(args ...interface{}) () {
   // setBottomLeft(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2138,7 +2151,7 @@ func (this *QRectF) Intersects(args ...interface{}) (ret interface{}) {
 }
 
 // topLeft()
-func (this *QRectF) Topleft(args ...interface{}) (ret interface{}) {
+func (this *QRectF) TopLeft(args ...interface{}) (ret interface{}) {
   // topLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2167,7 +2180,7 @@ func (this *QRectF) Topleft(args ...interface{}) (ret interface{}) {
 }
 
 // setBottom(qreal)
-func (this *QRectF) Setbottom(args ...interface{}) () {
+func (this *QRectF) SetBottom(args ...interface{}) () {
   // setBottom(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2191,7 +2204,7 @@ func (this *QRectF) Setbottom(args ...interface{}) () {
 }
 
 // setTopLeft(const class QPointF &)
-func (this *QRectF) Settopleft(args ...interface{}) () {
+func (this *QRectF) SetTopLeft(args ...interface{}) () {
   // setTopLeft(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2314,7 +2327,7 @@ func (this *QRectF) Right(args ...interface{}) (ret interface{}) {
 }
 
 // setLeft(qreal)
-func (this *QRectF) Setleft(args ...interface{}) () {
+func (this *QRectF) SetLeft(args ...interface{}) () {
   // setLeft(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2338,7 +2351,7 @@ func (this *QRectF) Setleft(args ...interface{}) () {
 }
 
 // moveRight(qreal)
-func (this *QRectF) Moveright(args ...interface{}) () {
+func (this *QRectF) MoveRight(args ...interface{}) () {
   // moveRight(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2362,7 +2375,7 @@ func (this *QRectF) Moveright(args ...interface{}) () {
 }
 
 // moveBottomLeft(const class QPointF &)
-func (this *QRectF) Movebottomleft(args ...interface{}) () {
+func (this *QRectF) MoveBottomLeft(args ...interface{}) () {
   // moveBottomLeft(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2386,7 +2399,7 @@ func (this *QRectF) Movebottomleft(args ...interface{}) () {
 }
 
 // setWidth(qreal)
-func (this *QRectF) Setwidth(args ...interface{}) () {
+func (this *QRectF) SetWidth(args ...interface{}) () {
   // setWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2410,7 +2423,7 @@ func (this *QRectF) Setwidth(args ...interface{}) () {
 }
 
 // marginsAdded(const class QMarginsF &)
-func (this *QRectF) Marginsadded(args ...interface{}) (ret interface{}) {
+func (this *QRectF) MarginsAdded(args ...interface{}) (ret interface{}) {
   // marginsAdded(const class QMarginsF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2442,7 +2455,7 @@ func (this *QRectF) Marginsadded(args ...interface{}) (ret interface{}) {
 }
 
 // moveTop(qreal)
-func (this *QRectF) Movetop(args ...interface{}) () {
+func (this *QRectF) MoveTop(args ...interface{}) () {
   // moveTop(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2466,7 +2479,7 @@ func (this *QRectF) Movetop(args ...interface{}) () {
 }
 
 // bottomRight()
-func (this *QRectF) Bottomright(args ...interface{}) (ret interface{}) {
+func (this *QRectF) BottomRight(args ...interface{}) (ret interface{}) {
   // bottomRight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2524,7 +2537,7 @@ func (this *QRectF) Bottom(args ...interface{}) (ret interface{}) {
 }
 
 // getRect(qreal *, qreal *, qreal *, qreal *)
-func (this *QRectF) Getrect(args ...interface{}) () {
+func (this *QRectF) GetRect(args ...interface{}) () {
   // getRect(qreal *, qreal *, qreal *, qreal *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2655,7 +2668,7 @@ func (this *QRectF) Contains(args ...interface{}) (ret interface{}) {
 }
 
 // toRect()
-func (this *QRectF) Torect(args ...interface{}) (ret interface{}) {
+func (this *QRectF) ToRect(args ...interface{}) (ret interface{}) {
   // toRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2684,7 +2697,7 @@ func (this *QRectF) Torect(args ...interface{}) (ret interface{}) {
 }
 
 // topRight()
-func (this *QRectF) Topright(args ...interface{}) (ret interface{}) {
+func (this *QRectF) TopRight(args ...interface{}) (ret interface{}) {
   // topRight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2713,7 +2726,7 @@ func (this *QRectF) Topright(args ...interface{}) (ret interface{}) {
 }
 
 // moveCenter(const class QPointF &)
-func (this *QRectF) Movecenter(args ...interface{}) () {
+func (this *QRectF) MoveCenter(args ...interface{}) () {
   // moveCenter(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2766,7 +2779,7 @@ func (this *QRectF) Width(args ...interface{}) (ret interface{}) {
 }
 
 // isEmpty()
-func (this *QRectF) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QRectF) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2795,6 +2808,9 @@ func (this *QRectF) Isempty(args ...interface{}) (ret interface{}) {
 }
 
 // QRectF(const class QPointF &, const class QPointF &)
+func GcfreeQRectF(this *QRectF) {
+  qtrt.UniverseFree(this)
+}
 func NewQRectF(args ...interface{}) *QRectF {
   // QRectF(const class QPointF &, const class QPointF &)
   // QRectF(qreal, qreal, qreal, qreal)
@@ -2831,7 +2847,9 @@ func NewQRectF(args ...interface{}) *QRectF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QRectFC2ERK7QPointFS2_(arg0, arg1)
-    return &QRectF{Qclsinst:qthis}
+    this := &QRectF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRectF)
+    return this
   case 1:
     // invoke: _ZN6QRectFC1Edddd
     // invoke: void QRectF(qreal, qreal, qreal, qreal)
@@ -2846,14 +2864,18 @@ func NewQRectF(args ...interface{}) *QRectF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QRectFC2Edddd(arg0, arg1, arg2, arg3)
-    return &QRectF{Qclsinst:qthis}
+    this := &QRectF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRectF)
+    return this
   case 2:
     // invoke: _ZN6QRectFC1Ev
     // invoke: void QRectF()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QRectFC2Ev()
-    return &QRectF{Qclsinst:qthis}
+    this := &QRectF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRectF)
+    return this
   case 3:
     // invoke: _ZN6QRectFC1ERK7QPointFRK6QSizeF
     // invoke: void QRectF(const class QPointF &, const class QSizeF &)
@@ -2864,7 +2886,9 @@ func NewQRectF(args ...interface{}) *QRectF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QRectFC2ERK7QPointFRK6QSizeF(arg0, arg1)
-    return &QRectF{Qclsinst:qthis}
+    this := &QRectF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRectF)
+    return this
   case 4:
     // invoke: _ZN6QRectFC1ERK5QRect
     // invoke: void QRectF(const class QRect &)
@@ -2873,7 +2897,9 @@ func NewQRectF(args ...interface{}) *QRectF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QRectFC2ERK5QRect(arg0)
-    return &QRectF{Qclsinst:qthis}
+    this := &QRectF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRectF)
+    return this
   default:
     qtrt.ErrorResolve("QRectF", "QRectF", args)
   }
@@ -2911,7 +2937,7 @@ func (this *QRectF) Size(args ...interface{}) (ret interface{}) {
 }
 
 // setX(qreal)
-func (this *QRectF) Setx(args ...interface{}) () {
+func (this *QRectF) SetX(args ...interface{}) () {
   // setX(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2935,7 +2961,7 @@ func (this *QRectF) Setx(args ...interface{}) () {
 }
 
 // setRect(qreal, qreal, qreal, qreal)
-func (this *QRectF) Setrect(args ...interface{}) () {
+func (this *QRectF) SetRect(args ...interface{}) () {
   // setRect(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2968,7 +2994,7 @@ func (this *QRectF) Setrect(args ...interface{}) () {
 }
 
 // moveLeft(qreal)
-func (this *QRectF) Moveleft(args ...interface{}) () {
+func (this *QRectF) MoveLeft(args ...interface{}) () {
   // moveLeft(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2992,7 +3018,7 @@ func (this *QRectF) Moveleft(args ...interface{}) () {
 }
 
 // setBottomRight(const class QPointF &)
-func (this *QRectF) Setbottomright(args ...interface{}) () {
+func (this *QRectF) SetBottomRight(args ...interface{}) () {
   // setBottomRight(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3016,7 +3042,7 @@ func (this *QRectF) Setbottomright(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QRectF) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QRectF) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3045,7 +3071,7 @@ func (this *QRectF) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // getCoords(qreal *, qreal *, qreal *, qreal *)
-func (this *QRectF) Getcoords(args ...interface{}) () {
+func (this *QRectF) GetCoords(args ...interface{}) () {
   // getCoords(qreal *, qreal *, qreal *, qreal *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3078,7 +3104,7 @@ func (this *QRectF) Getcoords(args ...interface{}) () {
 }
 
 // setTopRight(const class QPointF &)
-func (this *QRectF) Settopright(args ...interface{}) () {
+func (this *QRectF) SetTopRight(args ...interface{}) () {
   // setTopRight(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3183,7 +3209,7 @@ func (this *QRectF) Normalized(args ...interface{}) (ret interface{}) {
 }
 
 // setTop(qreal)
-func (this *QRectF) Settop(args ...interface{}) () {
+func (this *QRectF) SetTop(args ...interface{}) () {
   // setTop(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3207,7 +3233,7 @@ func (this *QRectF) Settop(args ...interface{}) () {
 }
 
 // moveBottom(qreal)
-func (this *QRectF) Movebottom(args ...interface{}) () {
+func (this *QRectF) MoveBottom(args ...interface{}) () {
   // moveBottom(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3231,7 +3257,7 @@ func (this *QRectF) Movebottom(args ...interface{}) () {
 }
 
 // setY(qreal)
-func (this *QRectF) Sety(args ...interface{}) () {
+func (this *QRectF) SetY(args ...interface{}) () {
   // setY(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3255,7 +3281,7 @@ func (this *QRectF) Sety(args ...interface{}) () {
 }
 
 // setCoords(qreal, qreal, qreal, qreal)
-func (this *QRectF) Setcoords(args ...interface{}) () {
+func (this *QRectF) SetCoords(args ...interface{}) () {
   // setCoords(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3288,7 +3314,7 @@ func (this *QRectF) Setcoords(args ...interface{}) () {
 }
 
 // setHeight(qreal)
-func (this *QRectF) Setheight(args ...interface{}) () {
+func (this *QRectF) SetHeight(args ...interface{}) () {
   // setHeight(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3348,7 +3374,7 @@ func (this *QRectF) Translate(args ...interface{}) () {
 }
 
 // bottomLeft()
-func (this *QRectF) Bottomleft(args ...interface{}) (ret interface{}) {
+func (this *QRectF) BottomLeft(args ...interface{}) (ret interface{}) {
   // bottomLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3406,7 +3432,7 @@ func (this *QRectF) Center(args ...interface{}) (ret interface{}) {
 }
 
 // moveTopRight(const class QPointF &)
-func (this *QRectF) Movetopright(args ...interface{}) () {
+func (this *QRectF) MoveTopRight(args ...interface{}) () {
   // moveTopRight(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3430,7 +3456,7 @@ func (this *QRectF) Movetopright(args ...interface{}) () {
 }
 
 // moveTopLeft(const class QPointF &)
-func (this *QRectF) Movetopleft(args ...interface{}) () {
+func (this *QRectF) MoveTopLeft(args ...interface{}) () {
   // moveTopLeft(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3454,7 +3480,7 @@ func (this *QRectF) Movetopleft(args ...interface{}) () {
 }
 
 // toAlignedRect()
-func (this *QRectF) Toalignedrect(args ...interface{}) (ret interface{}) {
+func (this *QRectF) ToAlignedRect(args ...interface{}) (ret interface{}) {
   // toAlignedRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3547,7 +3573,7 @@ func (this *QRectF) United(args ...interface{}) (ret interface{}) {
 }
 
 // setRight(qreal)
-func (this *QRectF) Setright(args ...interface{}) () {
+func (this *QRectF) SetRight(args ...interface{}) () {
   // setRight(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3571,7 +3597,7 @@ func (this *QRectF) Setright(args ...interface{}) () {
 }
 
 // isNull()
-func (this *QRectF) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QRectF) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3704,7 +3730,7 @@ func (this *QRectF) Left(args ...interface{}) (ret interface{}) {
 }
 
 // setSize(const class QSizeF &)
-func (this *QRectF) Setsize(args ...interface{}) () {
+func (this *QRectF) SetSize(args ...interface{}) () {
   // setSize(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3728,7 +3754,7 @@ func (this *QRectF) Setsize(args ...interface{}) () {
 }
 
 // moveBottomRight(const class QPointF &)
-func (this *QRectF) Movebottomright(args ...interface{}) () {
+func (this *QRectF) MoveBottomRight(args ...interface{}) () {
   // moveBottomRight(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

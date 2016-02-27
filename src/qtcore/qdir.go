@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qdir.h
 // dst-file: /src/core/qdir.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -152,6 +153,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDir)=1
@@ -196,7 +198,7 @@ func (this *QDir) Rename(args ...interface{}) (ret interface{}) {
 }
 
 // setNameFilters(const class QStringList &)
-func (this *QDir) Setnamefilters(args ...interface{}) () {
+func (this *QDir) SetNameFilters(args ...interface{}) () {
   // setNameFilters(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -220,7 +222,7 @@ func (this *QDir) Setnamefilters(args ...interface{}) () {
 }
 
 // ~QDir()
-func (this *QDir) Freeqdir(args ...interface{}) () {
+func (this *QDir) Free(args ...interface{}) () {
   // ~QDir()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -232,7 +234,10 @@ func (this *QDir) Freeqdir(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDirD0Ev
     // invoke: void ~QDir()
-    C.C_ZN4QDirD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN4QDirD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDir", "~QDir", args)
   }
@@ -287,7 +292,7 @@ func (this *QDir) Exists(args ...interface{}) (ret interface{}) {
 }
 
 // relativeFilePath(const class QString &)
-func (this *QDir) Relativefilepath(args ...interface{}) (ret interface{}) {
+func (this *QDir) RelativeFilePath(args ...interface{}) (ret interface{}) {
   // relativeFilePath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -319,7 +324,7 @@ func (this *QDir) Relativefilepath(args ...interface{}) (ret interface{}) {
 }
 
 // currentPath()
-func (this *QDir) Currentpath_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) CurrentPath_s(args ...interface{}) (ret interface{}) {
   // currentPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -348,7 +353,7 @@ func (this *QDir) Currentpath_S(args ...interface{}) (ret interface{}) {
 }
 
 // isRelative()
-func (this *QDir) Isrelative(args ...interface{}) (ret interface{}) {
+func (this *QDir) IsRelative(args ...interface{}) (ret interface{}) {
   // isRelative()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -409,6 +414,9 @@ func (this *QDir) Cd(args ...interface{}) (ret interface{}) {
 }
 
 // QDir(const class QDir &)
+func GcfreeQDir(this *QDir) {
+  qtrt.UniverseFree(this)
+}
 func NewQDir(args ...interface{}) *QDir {
   // QDir(const class QDir &)
   // QDir(const class QString &)
@@ -430,7 +438,9 @@ func NewQDir(args ...interface{}) *QDir {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QDirC2ERKS_(arg0)
-    return &QDir{Qclsinst:qthis}
+    this := &QDir{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDir)
+    return this
   case 1:
     // invoke: _ZN4QDirC1ERK7QString
     // invoke: void QDir(const class QString &)
@@ -439,7 +449,9 @@ func NewQDir(args ...interface{}) *QDir {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QDirC2ERK7QString(arg0)
-    return &QDir{Qclsinst:qthis}
+    this := &QDir{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDir)
+    return this
   default:
     qtrt.ErrorResolve("QDir", "QDir", args)
   }
@@ -448,7 +460,7 @@ func NewQDir(args ...interface{}) *QDir {
 }
 
 // isAbsolutePath(const class QString &)
-func (this *QDir) Isabsolutepath_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) IsAbsolutePath_s(args ...interface{}) (ret interface{}) {
   // isAbsolutePath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -512,7 +524,7 @@ func (this *QDir) Remove(args ...interface{}) (ret interface{}) {
 }
 
 // tempPath()
-func (this *QDir) Temppath_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) TempPath_s(args ...interface{}) (ret interface{}) {
   // tempPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -541,7 +553,7 @@ func (this *QDir) Temppath_S(args ...interface{}) (ret interface{}) {
 }
 
 // homePath()
-func (this *QDir) Homepath_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) HomePath_s(args ...interface{}) (ret interface{}) {
   // homePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -570,7 +582,7 @@ func (this *QDir) Homepath_S(args ...interface{}) (ret interface{}) {
 }
 
 // home()
-func (this *QDir) Home_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) Home_s(args ...interface{}) (ret interface{}) {
   // home()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -599,7 +611,7 @@ func (this *QDir) Home_S(args ...interface{}) (ret interface{}) {
 }
 
 // cleanPath(const class QString &)
-func (this *QDir) Cleanpath_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) CleanPath_s(args ...interface{}) (ret interface{}) {
   // cleanPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -631,7 +643,7 @@ func (this *QDir) Cleanpath_S(args ...interface{}) (ret interface{}) {
 }
 
 // setCurrent(const class QString &)
-func (this *QDir) Setcurrent_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) SetCurrent_s(args ...interface{}) (ret interface{}) {
   // setCurrent(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -663,7 +675,7 @@ func (this *QDir) Setcurrent_S(args ...interface{}) (ret interface{}) {
 }
 
 // toNativeSeparators(const class QString &)
-func (this *QDir) Tonativeseparators_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) ToNativeSeparators_s(args ...interface{}) (ret interface{}) {
   // toNativeSeparators(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -716,7 +728,7 @@ func (this *QDir) Filter(args ...interface{}) () {
 }
 
 // searchPaths(const class QString &)
-func (this *QDir) Searchpaths_S(args ...interface{}) () {
+func (this *QDir) SearchPaths_s(args ...interface{}) () {
   // searchPaths(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -740,7 +752,7 @@ func (this *QDir) Searchpaths_S(args ...interface{}) () {
 }
 
 // isRoot()
-func (this *QDir) Isroot(args ...interface{}) (ret interface{}) {
+func (this *QDir) IsRoot(args ...interface{}) (ret interface{}) {
   // isRoot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -769,7 +781,7 @@ func (this *QDir) Isroot(args ...interface{}) (ret interface{}) {
 }
 
 // filePath(const class QString &)
-func (this *QDir) Filepath(args ...interface{}) (ret interface{}) {
+func (this *QDir) FilePath(args ...interface{}) (ret interface{}) {
   // filePath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -833,7 +845,7 @@ func (this *QDir) Mkdir(args ...interface{}) (ret interface{}) {
 }
 
 // absolutePath()
-func (this *QDir) Absolutepath(args ...interface{}) (ret interface{}) {
+func (this *QDir) AbsolutePath(args ...interface{}) (ret interface{}) {
   // absolutePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -862,7 +874,7 @@ func (this *QDir) Absolutepath(args ...interface{}) (ret interface{}) {
 }
 
 // addResourceSearchPath(const class QString &)
-func (this *QDir) Addresourcesearchpath_S(args ...interface{}) () {
+func (this *QDir) AddResourceSearchPath_s(args ...interface{}) () {
   // addResourceSearchPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -886,7 +898,7 @@ func (this *QDir) Addresourcesearchpath_S(args ...interface{}) () {
 }
 
 // current()
-func (this *QDir) Current_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) Current_s(args ...interface{}) (ret interface{}) {
   // current()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -915,7 +927,7 @@ func (this *QDir) Current_S(args ...interface{}) (ret interface{}) {
 }
 
 // fromNativeSeparators(const class QString &)
-func (this *QDir) Fromnativeseparators_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) FromNativeSeparators_s(args ...interface{}) (ret interface{}) {
   // fromNativeSeparators(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -947,7 +959,7 @@ func (this *QDir) Fromnativeseparators_S(args ...interface{}) (ret interface{}) 
 }
 
 // isRelativePath(const class QString &)
-func (this *QDir) Isrelativepath_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) IsRelativePath_s(args ...interface{}) (ret interface{}) {
   // isRelativePath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1011,7 +1023,7 @@ func (this *QDir) Rmdir(args ...interface{}) (ret interface{}) {
 }
 
 // canonicalPath()
-func (this *QDir) Canonicalpath(args ...interface{}) (ret interface{}) {
+func (this *QDir) CanonicalPath(args ...interface{}) (ret interface{}) {
   // canonicalPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1040,7 +1052,7 @@ func (this *QDir) Canonicalpath(args ...interface{}) (ret interface{}) {
 }
 
 // removeRecursively()
-func (this *QDir) Removerecursively(args ...interface{}) (ret interface{}) {
+func (this *QDir) RemoveRecursively(args ...interface{}) (ret interface{}) {
   // removeRecursively()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1069,7 +1081,7 @@ func (this *QDir) Removerecursively(args ...interface{}) (ret interface{}) {
 }
 
 // setPath(const class QString &)
-func (this *QDir) Setpath(args ...interface{}) () {
+func (this *QDir) SetPath(args ...interface{}) () {
   // setPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1093,7 +1105,7 @@ func (this *QDir) Setpath(args ...interface{}) () {
 }
 
 // dirName()
-func (this *QDir) Dirname(args ...interface{}) (ret interface{}) {
+func (this *QDir) DirName(args ...interface{}) (ret interface{}) {
   // dirName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1122,7 +1134,7 @@ func (this *QDir) Dirname(args ...interface{}) (ret interface{}) {
 }
 
 // match(const class QStringList &, const class QString &)
-func (this *QDir) Match_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) Match_s(args ...interface{}) (ret interface{}) {
   // match(const class QStringList &, const class QString &)
   // match(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1201,7 +1213,7 @@ func (this *QDir) Swap(args ...interface{}) () {
 }
 
 // setSearchPaths(const class QString &, const class QStringList &)
-func (this *QDir) Setsearchpaths_S(args ...interface{}) () {
+func (this *QDir) SetSearchPaths_s(args ...interface{}) () {
   // setSearchPaths(const class QString &, const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1228,7 +1240,7 @@ func (this *QDir) Setsearchpaths_S(args ...interface{}) () {
 }
 
 // absoluteFilePath(const class QString &)
-func (this *QDir) Absolutefilepath(args ...interface{}) (ret interface{}) {
+func (this *QDir) AbsoluteFilePath(args ...interface{}) (ret interface{}) {
   // absoluteFilePath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1260,7 +1272,7 @@ func (this *QDir) Absolutefilepath(args ...interface{}) (ret interface{}) {
 }
 
 // drives()
-func (this *QDir) Drives_S(args ...interface{}) () {
+func (this *QDir) Drives_s(args ...interface{}) () {
   // drives()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1342,7 +1354,7 @@ func (this *QDir) Path(args ...interface{}) (ret interface{}) {
 }
 
 // addSearchPath(const class QString &, const class QString &)
-func (this *QDir) Addsearchpath_S(args ...interface{}) () {
+func (this *QDir) AddSearchPath_s(args ...interface{}) () {
   // addSearchPath(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1398,7 +1410,7 @@ func (this *QDir) Count(args ...interface{}) (ret interface{}) {
 }
 
 // cdUp()
-func (this *QDir) Cdup(args ...interface{}) (ret interface{}) {
+func (this *QDir) CdUp(args ...interface{}) (ret interface{}) {
   // cdUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1448,7 +1460,7 @@ func (this *QDir) Sorting(args ...interface{}) () {
 }
 
 // nameFilters()
-func (this *QDir) Namefilters(args ...interface{}) () {
+func (this *QDir) NameFilters(args ...interface{}) () {
   // nameFilters()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1469,7 +1481,7 @@ func (this *QDir) Namefilters(args ...interface{}) () {
 }
 
 // temp()
-func (this *QDir) Temp_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) Temp_s(args ...interface{}) (ret interface{}) {
   // temp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1530,7 +1542,7 @@ func (this *QDir) Mkpath(args ...interface{}) (ret interface{}) {
 }
 
 // rootPath()
-func (this *QDir) Rootpath_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) RootPath_s(args ...interface{}) (ret interface{}) {
   // rootPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1580,7 +1592,7 @@ func (this *QDir) Refresh(args ...interface{}) () {
 }
 
 // makeAbsolute()
-func (this *QDir) Makeabsolute(args ...interface{}) (ret interface{}) {
+func (this *QDir) MakeAbsolute(args ...interface{}) (ret interface{}) {
   // makeAbsolute()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1609,7 +1621,7 @@ func (this *QDir) Makeabsolute(args ...interface{}) (ret interface{}) {
 }
 
 // nameFiltersFromString(const class QString &)
-func (this *QDir) Namefiltersfromstring_S(args ...interface{}) () {
+func (this *QDir) NameFiltersFromString_s(args ...interface{}) () {
   // nameFiltersFromString(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1633,7 +1645,7 @@ func (this *QDir) Namefiltersfromstring_S(args ...interface{}) () {
 }
 
 // separator()
-func (this *QDir) Separator_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) Separator_s(args ...interface{}) (ret interface{}) {
   // separator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1662,7 +1674,7 @@ func (this *QDir) Separator_S(args ...interface{}) (ret interface{}) {
 }
 
 // isReadable()
-func (this *QDir) Isreadable(args ...interface{}) (ret interface{}) {
+func (this *QDir) IsReadable(args ...interface{}) (ret interface{}) {
   // isReadable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1691,7 +1703,7 @@ func (this *QDir) Isreadable(args ...interface{}) (ret interface{}) {
 }
 
 // root()
-func (this *QDir) Root_S(args ...interface{}) (ret interface{}) {
+func (this *QDir) Root_s(args ...interface{}) (ret interface{}) {
   // root()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1720,7 +1732,7 @@ func (this *QDir) Root_S(args ...interface{}) (ret interface{}) {
 }
 
 // isAbsolute()
-func (this *QDir) Isabsolute(args ...interface{}) (ret interface{}) {
+func (this *QDir) IsAbsolute(args ...interface{}) (ret interface{}) {
   // isAbsolute()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

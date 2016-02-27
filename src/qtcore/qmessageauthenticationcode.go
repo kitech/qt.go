@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -52,6 +53,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMessageAuthenticationCode)=8
@@ -82,7 +84,7 @@ func (this *QMessageAuthenticationCode) Reset(args ...interface{}) () {
 }
 
 // ~QMessageAuthenticationCode()
-func (this *QMessageAuthenticationCode) Freeqmessageauthenticationcode(args ...interface{}) () {
+func (this *QMessageAuthenticationCode) Free(args ...interface{}) () {
   // ~QMessageAuthenticationCode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -94,7 +96,10 @@ func (this *QMessageAuthenticationCode) Freeqmessageauthenticationcode(args ...i
   case 0:
     // invoke: _ZN26QMessageAuthenticationCodeD0Ev
     // invoke: void ~QMessageAuthenticationCode()
-    C.C_ZN26QMessageAuthenticationCodeD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN26QMessageAuthenticationCodeD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "~QMessageAuthenticationCode", args)
   }
@@ -103,7 +108,7 @@ func (this *QMessageAuthenticationCode) Freeqmessageauthenticationcode(args ...i
 }
 
 // addData(const class QByteArray &)
-func (this *QMessageAuthenticationCode) Adddata(args ...interface{}) () {
+func (this *QMessageAuthenticationCode) AddData(args ...interface{}) () {
   // addData(const class QByteArray &)
   // addData(const char *, int)
   // addData(class QIODevice *)
@@ -151,7 +156,7 @@ func (this *QMessageAuthenticationCode) Adddata(args ...interface{}) () {
 }
 
 // setKey(const class QByteArray &)
-func (this *QMessageAuthenticationCode) Setkey(args ...interface{}) () {
+func (this *QMessageAuthenticationCode) SetKey(args ...interface{}) () {
   // setKey(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

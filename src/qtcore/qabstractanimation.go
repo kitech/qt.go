@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qabstractanimation.h
 // dst-file: /src/core/qabstractanimation.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -92,6 +93,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractAnimation)=1
@@ -113,7 +115,7 @@ type QAnimationDriver struct {
 }
 
 // currentLoop()
-func (this *QAbstractAnimation) Currentloop(args ...interface{}) (ret interface{}) {
+func (this *QAbstractAnimation) CurrentLoop(args ...interface{}) (ret interface{}) {
   // currentLoop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -142,7 +144,7 @@ func (this *QAbstractAnimation) Currentloop(args ...interface{}) (ret interface{
 }
 
 // currentLoopTime()
-func (this *QAbstractAnimation) Currentlooptime(args ...interface{}) (ret interface{}) {
+func (this *QAbstractAnimation) CurrentLoopTime(args ...interface{}) (ret interface{}) {
   // currentLoopTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -171,7 +173,7 @@ func (this *QAbstractAnimation) Currentlooptime(args ...interface{}) (ret interf
 }
 
 // setCurrentTime(int)
-func (this *QAbstractAnimation) Setcurrenttime(args ...interface{}) () {
+func (this *QAbstractAnimation) SetCurrentTime(args ...interface{}) () {
   // setCurrentTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -195,7 +197,7 @@ func (this *QAbstractAnimation) Setcurrenttime(args ...interface{}) () {
 }
 
 // ~QAbstractAnimation()
-func (this *QAbstractAnimation) Freeqabstractanimation(args ...interface{}) () {
+func (this *QAbstractAnimation) Free(args ...interface{}) () {
   // ~QAbstractAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -207,7 +209,10 @@ func (this *QAbstractAnimation) Freeqabstractanimation(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QAbstractAnimationD0Ev
     // invoke: void ~QAbstractAnimation()
-    C.C_ZN18QAbstractAnimationD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN18QAbstractAnimationD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "~QAbstractAnimation", args)
   }
@@ -266,7 +271,7 @@ func (this *QAbstractAnimation) Group(args ...interface{}) (ret interface{}) {
 }
 
 // loopCount()
-func (this *QAbstractAnimation) Loopcount(args ...interface{}) (ret interface{}) {
+func (this *QAbstractAnimation) LoopCount(args ...interface{}) (ret interface{}) {
   // loopCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -295,6 +300,9 @@ func (this *QAbstractAnimation) Loopcount(args ...interface{}) (ret interface{})
 }
 
 // QAbstractAnimation(class QObject *)
+func GcfreeQAbstractAnimation(this *QAbstractAnimation) {
+  qtrt.UniverseFree(this)
+}
 func NewQAbstractAnimation(args ...interface{}) *QAbstractAnimation {
   // QAbstractAnimation(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -313,7 +321,9 @@ func NewQAbstractAnimation(args ...interface{}) *QAbstractAnimation {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QAbstractAnimationC2EP7QObject(arg0)
-    return &QAbstractAnimation{Qclsinst:qthis}
+    this := &QAbstractAnimation{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAbstractAnimation)
+    return this
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "QAbstractAnimation", args)
   }
@@ -364,7 +374,7 @@ func (this *QAbstractAnimation) Direction(args ...interface{}) () {
 }
 
 // setLoopCount(int)
-func (this *QAbstractAnimation) Setloopcount(args ...interface{}) () {
+func (this *QAbstractAnimation) SetLoopCount(args ...interface{}) () {
   // setLoopCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -430,7 +440,7 @@ func (this *QAbstractAnimation) Stop(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QAbstractAnimation) Metaobject(args ...interface{}) () {
+func (this *QAbstractAnimation) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -451,7 +461,7 @@ func (this *QAbstractAnimation) Metaobject(args ...interface{}) () {
 }
 
 // currentTime()
-func (this *QAbstractAnimation) Currenttime(args ...interface{}) (ret interface{}) {
+func (this *QAbstractAnimation) CurrentTime(args ...interface{}) (ret interface{}) {
   // currentTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -480,7 +490,7 @@ func (this *QAbstractAnimation) Currenttime(args ...interface{}) (ret interface{
 }
 
 // totalDuration()
-func (this *QAbstractAnimation) Totalduration(args ...interface{}) (ret interface{}) {
+func (this *QAbstractAnimation) TotalDuration(args ...interface{}) (ret interface{}) {
   // totalDuration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -509,7 +519,7 @@ func (this *QAbstractAnimation) Totalduration(args ...interface{}) (ret interfac
 }
 
 // setPaused(_Bool)
-func (this *QAbstractAnimation) Setpaused(args ...interface{}) () {
+func (this *QAbstractAnimation) SetPaused(args ...interface{}) () {
   // setPaused(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -554,6 +564,9 @@ func (this *QAnimationDriver) Advance(args ...interface{}) () {
 }
 
 // QAnimationDriver(class QObject *)
+func GcfreeQAnimationDriver(this *QAnimationDriver) {
+  qtrt.UniverseFree(this)
+}
 func NewQAnimationDriver(args ...interface{}) *QAnimationDriver {
   // QAnimationDriver(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -572,7 +585,9 @@ func NewQAnimationDriver(args ...interface{}) *QAnimationDriver {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QAnimationDriverC2EP7QObject(arg0)
-    return &QAnimationDriver{Qclsinst:qthis}
+    this := &QAnimationDriver{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAnimationDriver)
+    return this
   default:
     qtrt.ErrorResolve("QAnimationDriver", "QAnimationDriver", args)
   }
@@ -581,7 +596,7 @@ func NewQAnimationDriver(args ...interface{}) *QAnimationDriver {
 }
 
 // metaObject()
-func (this *QAnimationDriver) Metaobject(args ...interface{}) () {
+func (this *QAnimationDriver) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -602,7 +617,7 @@ func (this *QAnimationDriver) Metaobject(args ...interface{}) () {
 }
 
 // startTime()
-func (this *QAnimationDriver) Starttime(args ...interface{}) (ret interface{}) {
+func (this *QAnimationDriver) StartTime(args ...interface{}) (ret interface{}) {
   // startTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -660,7 +675,7 @@ func (this *QAnimationDriver) Elapsed(args ...interface{}) (ret interface{}) {
 }
 
 // setStartTime(qint64)
-func (this *QAnimationDriver) Setstarttime(args ...interface{}) () {
+func (this *QAnimationDriver) SetStartTime(args ...interface{}) () {
   // setStartTime(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -705,7 +720,7 @@ func (this *QAnimationDriver) Install(args ...interface{}) () {
 }
 
 // ~QAnimationDriver()
-func (this *QAnimationDriver) Freeqanimationdriver(args ...interface{}) () {
+func (this *QAnimationDriver) Free(args ...interface{}) () {
   // ~QAnimationDriver()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -717,7 +732,10 @@ func (this *QAnimationDriver) Freeqanimationdriver(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAnimationDriverD0Ev
     // invoke: void ~QAnimationDriver()
-    C.C_ZN16QAnimationDriverD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN16QAnimationDriverD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAnimationDriver", "~QAnimationDriver", args)
   }
@@ -726,7 +744,7 @@ func (this *QAnimationDriver) Freeqanimationdriver(args ...interface{}) () {
 }
 
 // isRunning()
-func (this *QAnimationDriver) Isrunning(args ...interface{}) (ret interface{}) {
+func (this *QAnimationDriver) IsRunning(args ...interface{}) (ret interface{}) {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

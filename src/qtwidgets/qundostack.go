@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qundostack.h
 // dst-file: /src/widgets/qundostack.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -120,6 +121,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QUndoStack)=1
@@ -141,7 +143,7 @@ type QUndoCommand struct {
 }
 
 // createUndoAction(class QObject *, const class QString &)
-func (this *QUndoStack) Createundoaction(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) CreateUndoAction(args ...interface{}) (ret interface{}) {
   // createUndoAction(class QObject *, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -176,7 +178,7 @@ func (this *QUndoStack) Createundoaction(args ...interface{}) (ret interface{}) 
 }
 
 // setActive(_Bool)
-func (this *QUndoStack) Setactive(args ...interface{}) () {
+func (this *QUndoStack) SetActive(args ...interface{}) () {
   // setActive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -200,7 +202,7 @@ func (this *QUndoStack) Setactive(args ...interface{}) () {
 }
 
 // setIndex(int)
-func (this *QUndoStack) Setindex(args ...interface{}) () {
+func (this *QUndoStack) SetIndex(args ...interface{}) () {
   // setIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -245,7 +247,7 @@ func (this *QUndoStack) Redo(args ...interface{}) () {
 }
 
 // canUndo()
-func (this *QUndoStack) Canundo(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) CanUndo(args ...interface{}) (ret interface{}) {
   // canUndo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -274,7 +276,7 @@ func (this *QUndoStack) Canundo(args ...interface{}) (ret interface{}) {
 }
 
 // isClean()
-func (this *QUndoStack) Isclean(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) IsClean(args ...interface{}) (ret interface{}) {
   // isClean()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -303,7 +305,7 @@ func (this *QUndoStack) Isclean(args ...interface{}) (ret interface{}) {
 }
 
 // cleanIndex()
-func (this *QUndoStack) Cleanindex(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) CleanIndex(args ...interface{}) (ret interface{}) {
   // cleanIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -332,6 +334,9 @@ func (this *QUndoStack) Cleanindex(args ...interface{}) (ret interface{}) {
 }
 
 // QUndoStack(class QObject *)
+func GcfreeQUndoStack(this *QUndoStack) {
+  qtrt.UniverseFree(this)
+}
 func NewQUndoStack(args ...interface{}) *QUndoStack {
   // QUndoStack(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -350,7 +355,9 @@ func NewQUndoStack(args ...interface{}) *QUndoStack {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QUndoStackC2EP7QObject(arg0)
-    return &QUndoStack{Qclsinst:qthis}
+    this := &QUndoStack{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQUndoStack)
+    return this
   default:
     qtrt.ErrorResolve("QUndoStack", "QUndoStack", args)
   }
@@ -359,7 +366,7 @@ func NewQUndoStack(args ...interface{}) *QUndoStack {
 }
 
 // ~QUndoStack()
-func (this *QUndoStack) Freequndostack(args ...interface{}) () {
+func (this *QUndoStack) Free(args ...interface{}) () {
   // ~QUndoStack()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -371,7 +378,10 @@ func (this *QUndoStack) Freequndostack(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStackD0Ev
     // invoke: void ~QUndoStack()
-    C.C_ZN10QUndoStackD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QUndoStackD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QUndoStack", "~QUndoStack", args)
   }
@@ -412,7 +422,7 @@ func (this *QUndoStack) Text(args ...interface{}) (ret interface{}) {
 }
 
 // redoText()
-func (this *QUndoStack) Redotext(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) RedoText(args ...interface{}) (ret interface{}) {
   // redoText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -499,7 +509,7 @@ func (this *QUndoStack) Index(args ...interface{}) (ret interface{}) {
 }
 
 // beginMacro(const class QString &)
-func (this *QUndoStack) Beginmacro(args ...interface{}) () {
+func (this *QUndoStack) BeginMacro(args ...interface{}) () {
   // beginMacro(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -544,7 +554,7 @@ func (this *QUndoStack) Undo(args ...interface{}) () {
 }
 
 // undoLimit()
-func (this *QUndoStack) Undolimit(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) UndoLimit(args ...interface{}) (ret interface{}) {
   // undoLimit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -573,7 +583,7 @@ func (this *QUndoStack) Undolimit(args ...interface{}) (ret interface{}) {
 }
 
 // canRedo()
-func (this *QUndoStack) Canredo(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) CanRedo(args ...interface{}) (ret interface{}) {
   // canRedo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -602,7 +612,7 @@ func (this *QUndoStack) Canredo(args ...interface{}) (ret interface{}) {
 }
 
 // setClean()
-func (this *QUndoStack) Setclean(args ...interface{}) () {
+func (this *QUndoStack) SetClean(args ...interface{}) () {
   // setClean()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -623,7 +633,7 @@ func (this *QUndoStack) Setclean(args ...interface{}) () {
 }
 
 // isActive()
-func (this *QUndoStack) Isactive(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) IsActive(args ...interface{}) (ret interface{}) {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -652,7 +662,7 @@ func (this *QUndoStack) Isactive(args ...interface{}) (ret interface{}) {
 }
 
 // createRedoAction(class QObject *, const class QString &)
-func (this *QUndoStack) Createredoaction(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) CreateRedoAction(args ...interface{}) (ret interface{}) {
   // createRedoAction(class QObject *, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -687,7 +697,7 @@ func (this *QUndoStack) Createredoaction(args ...interface{}) (ret interface{}) 
 }
 
 // metaObject()
-func (this *QUndoStack) Metaobject(args ...interface{}) () {
+func (this *QUndoStack) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -708,7 +718,7 @@ func (this *QUndoStack) Metaobject(args ...interface{}) () {
 }
 
 // undoText()
-func (this *QUndoStack) Undotext(args ...interface{}) (ret interface{}) {
+func (this *QUndoStack) UndoText(args ...interface{}) (ret interface{}) {
   // undoText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -758,7 +768,7 @@ func (this *QUndoStack) Clear(args ...interface{}) () {
 }
 
 // setUndoLimit(int)
-func (this *QUndoStack) Setundolimit(args ...interface{}) () {
+func (this *QUndoStack) SetUndoLimit(args ...interface{}) () {
   // setUndoLimit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -814,7 +824,7 @@ func (this *QUndoStack) Command(args ...interface{}) (ret interface{}) {
 }
 
 // endMacro()
-func (this *QUndoStack) Endmacro(args ...interface{}) () {
+func (this *QUndoStack) EndMacro(args ...interface{}) () {
   // endMacro()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -859,7 +869,7 @@ func (this *QUndoStack) Push(args ...interface{}) () {
 }
 
 // actionText()
-func (this *QUndoCommand) Actiontext(args ...interface{}) (ret interface{}) {
+func (this *QUndoCommand) ActionText(args ...interface{}) (ret interface{}) {
   // actionText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -888,7 +898,7 @@ func (this *QUndoCommand) Actiontext(args ...interface{}) (ret interface{}) {
 }
 
 // mergeWith(const class QUndoCommand *)
-func (this *QUndoCommand) Mergewith(args ...interface{}) (ret interface{}) {
+func (this *QUndoCommand) MergeWith(args ...interface{}) (ret interface{}) {
   // mergeWith(const class QUndoCommand *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -949,7 +959,7 @@ func (this *QUndoCommand) Text(args ...interface{}) (ret interface{}) {
 }
 
 // setText(const class QString &)
-func (this *QUndoCommand) Settext(args ...interface{}) () {
+func (this *QUndoCommand) SetText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -994,7 +1004,7 @@ func (this *QUndoCommand) Undo(args ...interface{}) () {
 }
 
 // childCount()
-func (this *QUndoCommand) Childcount(args ...interface{}) (ret interface{}) {
+func (this *QUndoCommand) ChildCount(args ...interface{}) (ret interface{}) {
   // childCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1023,6 +1033,9 @@ func (this *QUndoCommand) Childcount(args ...interface{}) (ret interface{}) {
 }
 
 // QUndoCommand(const class QString &, class QUndoCommand *)
+func GcfreeQUndoCommand(this *QUndoCommand) {
+  qtrt.UniverseFree(this)
+}
 func NewQUndoCommand(args ...interface{}) *QUndoCommand {
   // QUndoCommand(const class QString &, class QUndoCommand *)
   // QUndoCommand(class QUndoCommand *)
@@ -1047,7 +1060,9 @@ func NewQUndoCommand(args ...interface{}) *QUndoCommand {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QUndoCommandC2ERK7QStringPS_(arg0, arg1)
-    return &QUndoCommand{Qclsinst:qthis}
+    this := &QUndoCommand{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQUndoCommand)
+    return this
   case 1:
     // invoke: _ZN12QUndoCommandC1EPS_
     // invoke: void QUndoCommand(class QUndoCommand *)
@@ -1056,7 +1071,9 @@ func NewQUndoCommand(args ...interface{}) *QUndoCommand {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QUndoCommandC2EPS_(arg0)
-    return &QUndoCommand{Qclsinst:qthis}
+    this := &QUndoCommand{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQUndoCommand)
+    return this
   default:
     qtrt.ErrorResolve("QUndoCommand", "QUndoCommand", args)
   }
@@ -1065,7 +1082,7 @@ func NewQUndoCommand(args ...interface{}) *QUndoCommand {
 }
 
 // ~QUndoCommand()
-func (this *QUndoCommand) Freequndocommand(args ...interface{}) () {
+func (this *QUndoCommand) Free(args ...interface{}) () {
   // ~QUndoCommand()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1077,7 +1094,10 @@ func (this *QUndoCommand) Freequndocommand(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QUndoCommandD0Ev
     // invoke: void ~QUndoCommand()
-    C.C_ZN12QUndoCommandD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QUndoCommandD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QUndoCommand", "~QUndoCommand", args)
   }

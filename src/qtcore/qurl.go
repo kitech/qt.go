@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qurl.h
 // dst-file: /src/core/qurl.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -98,6 +99,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QUrl)=8
@@ -107,7 +109,7 @@ type QUrl struct {
 }
 
 // isDetached()
-func (this *QUrl) Isdetached(args ...interface{}) (ret interface{}) {
+func (this *QUrl) IsDetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -136,7 +138,7 @@ func (this *QUrl) Isdetached(args ...interface{}) (ret interface{}) {
 }
 
 // ~QUrl()
-func (this *QUrl) Freequrl(args ...interface{}) () {
+func (this *QUrl) Free(args ...interface{}) () {
   // ~QUrl()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -148,7 +150,10 @@ func (this *QUrl) Freequrl(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QUrlD0Ev
     // invoke: void ~QUrl()
-    C.C_ZN4QUrlD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN4QUrlD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QUrl", "~QUrl", args)
   }
@@ -157,7 +162,7 @@ func (this *QUrl) Freequrl(args ...interface{}) () {
 }
 
 // isRelative()
-func (this *QUrl) Isrelative(args ...interface{}) (ret interface{}) {
+func (this *QUrl) IsRelative(args ...interface{}) (ret interface{}) {
   // isRelative()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -186,7 +191,7 @@ func (this *QUrl) Isrelative(args ...interface{}) (ret interface{}) {
 }
 
 // hasFragment()
-func (this *QUrl) Hasfragment(args ...interface{}) (ret interface{}) {
+func (this *QUrl) HasFragment(args ...interface{}) (ret interface{}) {
   // hasFragment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -215,7 +220,7 @@ func (this *QUrl) Hasfragment(args ...interface{}) (ret interface{}) {
 }
 
 // setScheme(const class QString &)
-func (this *QUrl) Setscheme(args ...interface{}) () {
+func (this *QUrl) SetScheme(args ...interface{}) () {
   // setScheme(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,7 +244,7 @@ func (this *QUrl) Setscheme(args ...interface{}) () {
 }
 
 // fromUserInput(const class QString &)
-func (this *QUrl) Fromuserinput_S(args ...interface{}) (ret interface{}) {
+func (this *QUrl) FromUserInput_s(args ...interface{}) (ret interface{}) {
   // fromUserInput(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -271,7 +276,7 @@ func (this *QUrl) Fromuserinput_S(args ...interface{}) (ret interface{}) {
 }
 
 // fromLocalFile(const class QString &)
-func (this *QUrl) Fromlocalfile_S(args ...interface{}) (ret interface{}) {
+func (this *QUrl) FromLocalFile_s(args ...interface{}) (ret interface{}) {
   // fromLocalFile(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -335,7 +340,7 @@ func (this *QUrl) Port(args ...interface{}) (ret interface{}) {
 }
 
 // toAce(const class QString &)
-func (this *QUrl) Toace_S(args ...interface{}) (ret interface{}) {
+func (this *QUrl) ToAce_s(args ...interface{}) (ret interface{}) {
   // toAce(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -367,7 +372,7 @@ func (this *QUrl) Toace_S(args ...interface{}) (ret interface{}) {
 }
 
 // fromAce(const class QByteArray &)
-func (this *QUrl) Fromace_S(args ...interface{}) (ret interface{}) {
+func (this *QUrl) FromAce_s(args ...interface{}) (ret interface{}) {
   // fromAce(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -420,6 +425,9 @@ func (this *QUrl) Detach(args ...interface{}) () {
 }
 
 // QUrl()
+func GcfreeQUrl(this *QUrl) {
+  qtrt.UniverseFree(this)
+}
 func NewQUrl(args ...interface{}) *QUrl {
   // QUrl()
   // QUrl(const class QUrl &)
@@ -438,7 +446,9 @@ func NewQUrl(args ...interface{}) *QUrl {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QUrlC2Ev()
-    return &QUrl{Qclsinst:qthis}
+    this := &QUrl{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQUrl)
+    return this
   case 1:
     // invoke: _ZN4QUrlC1ERKS_
     // invoke: void QUrl(const class QUrl &)
@@ -447,7 +457,9 @@ func NewQUrl(args ...interface{}) *QUrl {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN4QUrlC2ERKS_(arg0)
-    return &QUrl{Qclsinst:qthis}
+    this := &QUrl{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQUrl)
+    return this
   default:
     qtrt.ErrorResolve("QUrl", "QUrl", args)
   }
@@ -456,7 +468,7 @@ func NewQUrl(args ...interface{}) *QUrl {
 }
 
 // isEmpty()
-func (this *QUrl) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QUrl) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -509,7 +521,7 @@ func (this *QUrl) Swap(args ...interface{}) () {
 }
 
 // fromPercentEncoding(const class QByteArray &)
-func (this *QUrl) Frompercentencoding_S(args ...interface{}) (ret interface{}) {
+func (this *QUrl) FromPercentEncoding_s(args ...interface{}) (ret interface{}) {
   // fromPercentEncoding(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -541,7 +553,7 @@ func (this *QUrl) Frompercentencoding_S(args ...interface{}) (ret interface{}) {
 }
 
 // isParentOf(const class QUrl &)
-func (this *QUrl) Isparentof(args ...interface{}) (ret interface{}) {
+func (this *QUrl) IsParentOf(args ...interface{}) (ret interface{}) {
   // isParentOf(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -573,7 +585,7 @@ func (this *QUrl) Isparentof(args ...interface{}) (ret interface{}) {
 }
 
 // idnWhitelist()
-func (this *QUrl) Idnwhitelist_S(args ...interface{}) () {
+func (this *QUrl) IdnWhitelist_s(args ...interface{}) () {
   // idnWhitelist()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -626,7 +638,7 @@ func (this *QUrl) Resolved(args ...interface{}) (ret interface{}) {
 }
 
 // errorString()
-func (this *QUrl) Errorstring(args ...interface{}) (ret interface{}) {
+func (this *QUrl) ErrorString(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -655,7 +667,7 @@ func (this *QUrl) Errorstring(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QUrl) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QUrl) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -684,7 +696,7 @@ func (this *QUrl) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // hasQuery()
-func (this *QUrl) Hasquery(args ...interface{}) (ret interface{}) {
+func (this *QUrl) HasQuery(args ...interface{}) (ret interface{}) {
   // hasQuery()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -713,7 +725,7 @@ func (this *QUrl) Hasquery(args ...interface{}) (ret interface{}) {
 }
 
 // setIdnWhitelist(const class QStringList &)
-func (this *QUrl) Setidnwhitelist_S(args ...interface{}) () {
+func (this *QUrl) SetIdnWhitelist_s(args ...interface{}) () {
   // setIdnWhitelist(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -766,7 +778,7 @@ func (this *QUrl) Scheme(args ...interface{}) (ret interface{}) {
 }
 
 // setQuery(const class QUrlQuery &)
-func (this *QUrl) Setquery(args ...interface{}) () {
+func (this *QUrl) SetQuery(args ...interface{}) () {
   // setQuery(const class QUrlQuery &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -790,7 +802,7 @@ func (this *QUrl) Setquery(args ...interface{}) () {
 }
 
 // isLocalFile()
-func (this *QUrl) Islocalfile(args ...interface{}) (ret interface{}) {
+func (this *QUrl) IsLocalFile(args ...interface{}) (ret interface{}) {
   // isLocalFile()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -819,7 +831,7 @@ func (this *QUrl) Islocalfile(args ...interface{}) (ret interface{}) {
 }
 
 // toPercentEncoding(const class QString &, const class QByteArray &, const class QByteArray &)
-func (this *QUrl) Topercentencoding_S(args ...interface{}) (ret interface{}) {
+func (this *QUrl) ToPercentEncoding_s(args ...interface{}) (ret interface{}) {
   // toPercentEncoding(const class QString &, const class QByteArray &, const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -878,7 +890,7 @@ func (this *QUrl) Clear(args ...interface{}) () {
 }
 
 // setPort(int)
-func (this *QUrl) Setport(args ...interface{}) () {
+func (this *QUrl) SetPort(args ...interface{}) () {
   // setPort(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -902,7 +914,7 @@ func (this *QUrl) Setport(args ...interface{}) () {
 }
 
 // toLocalFile()
-func (this *QUrl) Tolocalfile(args ...interface{}) (ret interface{}) {
+func (this *QUrl) ToLocalFile(args ...interface{}) (ret interface{}) {
   // toLocalFile()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

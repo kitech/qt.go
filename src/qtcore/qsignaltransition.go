@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qsignaltransition.h
 // dst-file: /src/core/qsignaltransition.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -54,6 +55,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSignalTransition)=1
@@ -94,7 +96,7 @@ func (this *QSignalTransition) Signal(args ...interface{}) (ret interface{}) {
 }
 
 // ~QSignalTransition()
-func (this *QSignalTransition) Freeqsignaltransition(args ...interface{}) () {
+func (this *QSignalTransition) Free(args ...interface{}) () {
   // ~QSignalTransition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -106,7 +108,10 @@ func (this *QSignalTransition) Freeqsignaltransition(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QSignalTransitionD0Ev
     // invoke: void ~QSignalTransition()
-    C.C_ZN17QSignalTransitionD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN17QSignalTransitionD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QSignalTransition", "~QSignalTransition", args)
   }
@@ -115,6 +120,9 @@ func (this *QSignalTransition) Freeqsignaltransition(args ...interface{}) () {
 }
 
 // QSignalTransition(class QState *)
+func GcfreeQSignalTransition(this *QSignalTransition) {
+  qtrt.UniverseFree(this)
+}
 func NewQSignalTransition(args ...interface{}) *QSignalTransition {
   // QSignalTransition(class QState *)
   // QSignalTransition(const class QObject *, const char *, class QState *)
@@ -138,7 +146,9 @@ func NewQSignalTransition(args ...interface{}) *QSignalTransition {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QSignalTransitionC2EP6QState(arg0)
-    return &QSignalTransition{Qclsinst:qthis}
+    this := &QSignalTransition{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSignalTransition)
+    return this
   case 1:
     // invoke: _ZN17QSignalTransitionC1EPK7QObjectPKcP6QState
     // invoke: void QSignalTransition(const class QObject *, const char *, class QState *)
@@ -153,7 +163,9 @@ func NewQSignalTransition(args ...interface{}) *QSignalTransition {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QSignalTransitionC2EPK7QObjectPKcP6QState(arg0, arg1, arg2)
-    return &QSignalTransition{Qclsinst:qthis}
+    this := &QSignalTransition{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSignalTransition)
+    return this
   default:
     qtrt.ErrorResolve("QSignalTransition", "QSignalTransition", args)
   }
@@ -162,7 +174,7 @@ func NewQSignalTransition(args ...interface{}) *QSignalTransition {
 }
 
 // metaObject()
-func (this *QSignalTransition) Metaobject(args ...interface{}) () {
+func (this *QSignalTransition) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,7 +195,7 @@ func (this *QSignalTransition) Metaobject(args ...interface{}) () {
 }
 
 // setSenderObject(const class QObject *)
-func (this *QSignalTransition) Setsenderobject(args ...interface{}) () {
+func (this *QSignalTransition) SetSenderObject(args ...interface{}) () {
   // setSenderObject(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -207,7 +219,7 @@ func (this *QSignalTransition) Setsenderobject(args ...interface{}) () {
 }
 
 // senderObject()
-func (this *QSignalTransition) Senderobject(args ...interface{}) (ret interface{}) {
+func (this *QSignalTransition) SenderObject(args ...interface{}) (ret interface{}) {
   // senderObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -236,7 +248,7 @@ func (this *QSignalTransition) Senderobject(args ...interface{}) (ret interface{
 }
 
 // setSignal(const class QByteArray &)
-func (this *QSignalTransition) Setsignal(args ...interface{}) () {
+func (this *QSignalTransition) SetSignal(args ...interface{}) () {
   // setSignal(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

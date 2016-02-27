@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qlineedit.h
 // dst-file: /src/widgets/qlineedit.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -172,6 +173,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QLineEdit)=1
@@ -187,7 +189,7 @@ type QLineEdit struct {
 }
 
 // echoMode()
-func (this *QLineEdit) Echomode(args ...interface{}) () {
+func (this *QLineEdit) EchoMode(args ...interface{}) () {
   // echoMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -237,7 +239,7 @@ func (this *QLineEdit) Text(args ...interface{}) (ret interface{}) {
 }
 
 // setDragEnabled(_Bool)
-func (this *QLineEdit) Setdragenabled(args ...interface{}) () {
+func (this *QLineEdit) SetDragEnabled(args ...interface{}) () {
   // setDragEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -261,7 +263,7 @@ func (this *QLineEdit) Setdragenabled(args ...interface{}) () {
 }
 
 // hasFrame()
-func (this *QLineEdit) Hasframe(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) HasFrame(args ...interface{}) (ret interface{}) {
   // hasFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -290,7 +292,7 @@ func (this *QLineEdit) Hasframe(args ...interface{}) (ret interface{}) {
 }
 
 // hasSelectedText()
-func (this *QLineEdit) Hasselectedtext(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) HasSelectedText(args ...interface{}) (ret interface{}) {
   // hasSelectedText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -361,7 +363,7 @@ func (this *QLineEdit) Cut(args ...interface{}) () {
 }
 
 // createStandardContextMenu()
-func (this *QLineEdit) Createstandardcontextmenu(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) CreateStandardContextMenu(args ...interface{}) (ret interface{}) {
   // createStandardContextMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -390,7 +392,7 @@ func (this *QLineEdit) Createstandardcontextmenu(args ...interface{}) (ret inter
 }
 
 // displayText()
-func (this *QLineEdit) Displaytext(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) DisplayText(args ...interface{}) (ret interface{}) {
   // displayText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -419,6 +421,9 @@ func (this *QLineEdit) Displaytext(args ...interface{}) (ret interface{}) {
 }
 
 // QLineEdit(const class QString &, class QWidget *)
+func GcfreeQLineEdit(this *QLineEdit) {
+  qtrt.UniverseFree(this)
+}
 func NewQLineEdit(args ...interface{}) *QLineEdit {
   // QLineEdit(const class QString &, class QWidget *)
   // QLineEdit(class QWidget *)
@@ -443,7 +448,9 @@ func NewQLineEdit(args ...interface{}) *QLineEdit {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QLineEditC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QLineEdit{Qclsinst:qthis}
+    this := &QLineEdit{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLineEdit)
+    return this
   case 1:
     // invoke: _ZN9QLineEditC1EP7QWidget
     // invoke: void QLineEdit(class QWidget *)
@@ -452,7 +459,9 @@ func NewQLineEdit(args ...interface{}) *QLineEdit {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QLineEditC2EP7QWidget(arg0)
-    return &QLineEdit{Qclsinst:qthis}
+    this := &QLineEdit{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLineEdit)
+    return this
   default:
     qtrt.ErrorResolve("QLineEdit", "QLineEdit", args)
   }
@@ -461,7 +470,7 @@ func NewQLineEdit(args ...interface{}) *QLineEdit {
 }
 
 // cursorBackward(_Bool, int)
-func (this *QLineEdit) Cursorbackward(args ...interface{}) () {
+func (this *QLineEdit) CursorBackward(args ...interface{}) () {
   // cursorBackward(_Bool, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -488,7 +497,7 @@ func (this *QLineEdit) Cursorbackward(args ...interface{}) () {
 }
 
 // cursorPositionAt(const class QPoint &)
-func (this *QLineEdit) Cursorpositionat(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) CursorPositionAt(args ...interface{}) (ret interface{}) {
   // cursorPositionAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -520,7 +529,7 @@ func (this *QLineEdit) Cursorpositionat(args ...interface{}) (ret interface{}) {
 }
 
 // getTextMargins(int *, int *, int *, int *)
-func (this *QLineEdit) Gettextmargins(args ...interface{}) () {
+func (this *QLineEdit) GetTextMargins(args ...interface{}) () {
   // getTextMargins(int *, int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -553,7 +562,7 @@ func (this *QLineEdit) Gettextmargins(args ...interface{}) () {
 }
 
 // maxLength()
-func (this *QLineEdit) Maxlength(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) MaxLength(args ...interface{}) (ret interface{}) {
   // maxLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -606,7 +615,7 @@ func (this *QLineEdit) Insert(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QLineEdit) Metaobject(args ...interface{}) () {
+func (this *QLineEdit) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -627,7 +636,7 @@ func (this *QLineEdit) Metaobject(args ...interface{}) () {
 }
 
 // hasAcceptableInput()
-func (this *QLineEdit) Hasacceptableinput(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) HasAcceptableInput(args ...interface{}) (ret interface{}) {
   // hasAcceptableInput()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -656,7 +665,7 @@ func (this *QLineEdit) Hasacceptableinput(args ...interface{}) (ret interface{})
 }
 
 // isClearButtonEnabled()
-func (this *QLineEdit) Isclearbuttonenabled(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) IsClearButtonEnabled(args ...interface{}) (ret interface{}) {
   // isClearButtonEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -685,7 +694,7 @@ func (this *QLineEdit) Isclearbuttonenabled(args ...interface{}) (ret interface{
 }
 
 // isUndoAvailable()
-func (this *QLineEdit) Isundoavailable(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) IsUndoAvailable(args ...interface{}) (ret interface{}) {
   // isUndoAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -714,7 +723,7 @@ func (this *QLineEdit) Isundoavailable(args ...interface{}) (ret interface{}) {
 }
 
 // selectionStart()
-func (this *QLineEdit) Selectionstart(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) SelectionStart(args ...interface{}) (ret interface{}) {
   // selectionStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -743,7 +752,7 @@ func (this *QLineEdit) Selectionstart(args ...interface{}) (ret interface{}) {
 }
 
 // cursorWordForward(_Bool)
-func (this *QLineEdit) Cursorwordforward(args ...interface{}) () {
+func (this *QLineEdit) CursorWordForward(args ...interface{}) () {
   // cursorWordForward(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -844,7 +853,7 @@ func (this *QLineEdit) Deselect(args ...interface{}) () {
 }
 
 // inputMask()
-func (this *QLineEdit) Inputmask(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) InputMask(args ...interface{}) (ret interface{}) {
   // inputMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -894,7 +903,7 @@ func (this *QLineEdit) Backspace(args ...interface{}) () {
 }
 
 // setModified(_Bool)
-func (this *QLineEdit) Setmodified(args ...interface{}) () {
+func (this *QLineEdit) SetModified(args ...interface{}) () {
   // setModified(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -918,7 +927,7 @@ func (this *QLineEdit) Setmodified(args ...interface{}) () {
 }
 
 // selectedText()
-func (this *QLineEdit) Selectedtext(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) SelectedText(args ...interface{}) (ret interface{}) {
   // selectedText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -989,7 +998,7 @@ func (this *QLineEdit) Paste(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QLineEdit) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1018,7 +1027,7 @@ func (this *QLineEdit) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // ~QLineEdit()
-func (this *QLineEdit) Freeqlineedit(args ...interface{}) () {
+func (this *QLineEdit) Free(args ...interface{}) () {
   // ~QLineEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1030,7 +1039,10 @@ func (this *QLineEdit) Freeqlineedit(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLineEditD0Ev
     // invoke: void ~QLineEdit()
-    C.C_ZN9QLineEditD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QLineEditD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QLineEdit", "~QLineEdit", args)
   }
@@ -1039,7 +1051,7 @@ func (this *QLineEdit) Freeqlineedit(args ...interface{}) () {
 }
 
 // isRedoAvailable()
-func (this *QLineEdit) Isredoavailable(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) IsRedoAvailable(args ...interface{}) (ret interface{}) {
   // isRedoAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1068,7 +1080,7 @@ func (this *QLineEdit) Isredoavailable(args ...interface{}) (ret interface{}) {
 }
 
 // selectAll()
-func (this *QLineEdit) Selectall(args ...interface{}) () {
+func (this *QLineEdit) SelectAll(args ...interface{}) () {
   // selectAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1089,7 +1101,7 @@ func (this *QLineEdit) Selectall(args ...interface{}) () {
 }
 
 // setClearButtonEnabled(_Bool)
-func (this *QLineEdit) Setclearbuttonenabled(args ...interface{}) () {
+func (this *QLineEdit) SetClearButtonEnabled(args ...interface{}) () {
   // setClearButtonEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1134,7 +1146,7 @@ func (this *QLineEdit) Redo(args ...interface{}) () {
 }
 
 // cursorPosition()
-func (this *QLineEdit) Cursorposition(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) CursorPosition(args ...interface{}) (ret interface{}) {
   // cursorPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1163,7 +1175,7 @@ func (this *QLineEdit) Cursorposition(args ...interface{}) (ret interface{}) {
 }
 
 // isModified()
-func (this *QLineEdit) Ismodified(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) IsModified(args ...interface{}) (ret interface{}) {
   // isModified()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1192,7 +1204,7 @@ func (this *QLineEdit) Ismodified(args ...interface{}) (ret interface{}) {
 }
 
 // isReadOnly()
-func (this *QLineEdit) Isreadonly(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) IsReadOnly(args ...interface{}) (ret interface{}) {
   // isReadOnly()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1221,7 +1233,7 @@ func (this *QLineEdit) Isreadonly(args ...interface{}) (ret interface{}) {
 }
 
 // setCompleter(class QCompleter *)
-func (this *QLineEdit) Setcompleter(args ...interface{}) () {
+func (this *QLineEdit) SetCompleter(args ...interface{}) () {
   // setCompleter(class QCompleter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1245,7 +1257,7 @@ func (this *QLineEdit) Setcompleter(args ...interface{}) () {
 }
 
 // setInputMask(const class QString &)
-func (this *QLineEdit) Setinputmask(args ...interface{}) () {
+func (this *QLineEdit) SetInputMask(args ...interface{}) () {
   // setInputMask(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1269,7 +1281,7 @@ func (this *QLineEdit) Setinputmask(args ...interface{}) () {
 }
 
 // setValidator(const class QValidator *)
-func (this *QLineEdit) Setvalidator(args ...interface{}) () {
+func (this *QLineEdit) SetValidator(args ...interface{}) () {
   // setValidator(const class QValidator *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1343,7 +1355,7 @@ func (this *QLineEdit) Completer(args ...interface{}) (ret interface{}) {
 }
 
 // setCursorPosition(int)
-func (this *QLineEdit) Setcursorposition(args ...interface{}) () {
+func (this *QLineEdit) SetCursorPosition(args ...interface{}) () {
   // setCursorPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1367,7 +1379,7 @@ func (this *QLineEdit) Setcursorposition(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QLineEdit) Minimumsizehint(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) MinimumSizeHint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1396,7 +1408,7 @@ func (this *QLineEdit) Minimumsizehint(args ...interface{}) (ret interface{}) {
 }
 
 // setPlaceholderText(const class QString &)
-func (this *QLineEdit) Setplaceholdertext(args ...interface{}) () {
+func (this *QLineEdit) SetPlaceholderText(args ...interface{}) () {
   // setPlaceholderText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1420,7 +1432,7 @@ func (this *QLineEdit) Setplaceholdertext(args ...interface{}) () {
 }
 
 // dragEnabled()
-func (this *QLineEdit) Dragenabled(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) DragEnabled(args ...interface{}) (ret interface{}) {
   // dragEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1449,7 +1461,7 @@ func (this *QLineEdit) Dragenabled(args ...interface{}) (ret interface{}) {
 }
 
 // setMaxLength(int)
-func (this *QLineEdit) Setmaxlength(args ...interface{}) () {
+func (this *QLineEdit) SetMaxLength(args ...interface{}) () {
   // setMaxLength(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1515,7 +1527,7 @@ func (this *QLineEdit) Clear(args ...interface{}) () {
 }
 
 // cursorWordBackward(_Bool)
-func (this *QLineEdit) Cursorwordbackward(args ...interface{}) () {
+func (this *QLineEdit) CursorWordBackward(args ...interface{}) () {
   // cursorWordBackward(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1563,7 +1575,7 @@ func (this *QLineEdit) End(args ...interface{}) () {
 }
 
 // textMargins()
-func (this *QLineEdit) Textmargins(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) TextMargins(args ...interface{}) (ret interface{}) {
   // textMargins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1592,7 +1604,7 @@ func (this *QLineEdit) Textmargins(args ...interface{}) (ret interface{}) {
 }
 
 // placeholderText()
-func (this *QLineEdit) Placeholdertext(args ...interface{}) (ret interface{}) {
+func (this *QLineEdit) PlaceholderText(args ...interface{}) (ret interface{}) {
   // placeholderText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1621,7 +1633,7 @@ func (this *QLineEdit) Placeholdertext(args ...interface{}) (ret interface{}) {
 }
 
 // setTextMargins(const class QMargins &)
-func (this *QLineEdit) Settextmargins(args ...interface{}) () {
+func (this *QLineEdit) SetTextMargins(args ...interface{}) () {
   // setTextMargins(const class QMargins &)
   // setTextMargins(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1663,7 +1675,7 @@ func (this *QLineEdit) Settextmargins(args ...interface{}) () {
 }
 
 // setSelection(int, int)
-func (this *QLineEdit) Setselection(args ...interface{}) () {
+func (this *QLineEdit) SetSelection(args ...interface{}) () {
   // setSelection(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1690,7 +1702,7 @@ func (this *QLineEdit) Setselection(args ...interface{}) () {
 }
 
 // setFrame(_Bool)
-func (this *QLineEdit) Setframe(args ...interface{}) () {
+func (this *QLineEdit) SetFrame(args ...interface{}) () {
   // setFrame(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1714,7 +1726,7 @@ func (this *QLineEdit) Setframe(args ...interface{}) () {
 }
 
 // cursorForward(_Bool, int)
-func (this *QLineEdit) Cursorforward(args ...interface{}) () {
+func (this *QLineEdit) CursorForward(args ...interface{}) () {
   // cursorForward(_Bool, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1741,7 +1753,7 @@ func (this *QLineEdit) Cursorforward(args ...interface{}) () {
 }
 
 // setText(const class QString &)
-func (this *QLineEdit) Settext(args ...interface{}) () {
+func (this *QLineEdit) SetText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1765,7 +1777,7 @@ func (this *QLineEdit) Settext(args ...interface{}) () {
 }
 
 // cursorMoveStyle()
-func (this *QLineEdit) Cursormovestyle(args ...interface{}) () {
+func (this *QLineEdit) CursorMoveStyle(args ...interface{}) () {
   // cursorMoveStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1786,7 +1798,7 @@ func (this *QLineEdit) Cursormovestyle(args ...interface{}) () {
 }
 
 // setReadOnly(_Bool)
-func (this *QLineEdit) Setreadonly(args ...interface{}) () {
+func (this *QLineEdit) SetReadOnly(args ...interface{}) () {
   // setReadOnly(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

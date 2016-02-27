@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qstylefactory.h
 // dst-file: /src/widgets/qstylefactory.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -46,6 +47,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStyleFactory)=1
@@ -55,7 +57,7 @@ type QStyleFactory struct {
 }
 
 // keys()
-func (this *QStyleFactory) Keys_S(args ...interface{}) () {
+func (this *QStyleFactory) Keys_s(args ...interface{}) () {
   // keys()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -76,7 +78,7 @@ func (this *QStyleFactory) Keys_S(args ...interface{}) () {
 }
 
 // create(const class QString &)
-func (this *QStyleFactory) Create_S(args ...interface{}) (ret interface{}) {
+func (this *QStyleFactory) Create_s(args ...interface{}) (ret interface{}) {
   // create(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

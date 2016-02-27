@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qinputdialog.h
 // dst-file: /src/widgets/qinputdialog.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -122,6 +123,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QInputDialog)=1
@@ -137,7 +139,7 @@ type QInputDialog struct {
 }
 
 // inputMode()
-func (this *QInputDialog) Inputmode(args ...interface{}) () {
+func (this *QInputDialog) InputMode(args ...interface{}) () {
   // inputMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -158,7 +160,7 @@ func (this *QInputDialog) Inputmode(args ...interface{}) () {
 }
 
 // setDoubleDecimals(int)
-func (this *QInputDialog) Setdoubledecimals(args ...interface{}) () {
+func (this *QInputDialog) SetDoubleDecimals(args ...interface{}) () {
   // setDoubleDecimals(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,7 +184,7 @@ func (this *QInputDialog) Setdoubledecimals(args ...interface{}) () {
 }
 
 // doubleMinimum()
-func (this *QInputDialog) Doubleminimum(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) DoubleMinimum(args ...interface{}) (ret interface{}) {
   // doubleMinimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -211,7 +213,7 @@ func (this *QInputDialog) Doubleminimum(args ...interface{}) (ret interface{}) {
 }
 
 // setIntMinimum(int)
-func (this *QInputDialog) Setintminimum(args ...interface{}) () {
+func (this *QInputDialog) SetIntMinimum(args ...interface{}) () {
   // setIntMinimum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -235,7 +237,7 @@ func (this *QInputDialog) Setintminimum(args ...interface{}) () {
 }
 
 // intMinimum()
-func (this *QInputDialog) Intminimum(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) IntMinimum(args ...interface{}) (ret interface{}) {
   // intMinimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -264,7 +266,7 @@ func (this *QInputDialog) Intminimum(args ...interface{}) (ret interface{}) {
 }
 
 // intMaximum()
-func (this *QInputDialog) Intmaximum(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) IntMaximum(args ...interface{}) (ret interface{}) {
   // intMaximum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,7 +295,7 @@ func (this *QInputDialog) Intmaximum(args ...interface{}) (ret interface{}) {
 }
 
 // doubleMaximum()
-func (this *QInputDialog) Doublemaximum(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) DoubleMaximum(args ...interface{}) (ret interface{}) {
   // doubleMaximum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -322,7 +324,7 @@ func (this *QInputDialog) Doublemaximum(args ...interface{}) (ret interface{}) {
 }
 
 // setIntStep(int)
-func (this *QInputDialog) Setintstep(args ...interface{}) () {
+func (this *QInputDialog) SetIntStep(args ...interface{}) () {
   // setIntStep(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -370,7 +372,7 @@ func (this *QInputDialog) Done(args ...interface{}) () {
 }
 
 // setTextValue(const class QString &)
-func (this *QInputDialog) Settextvalue(args ...interface{}) () {
+func (this *QInputDialog) SetTextValue(args ...interface{}) () {
   // setTextValue(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -394,7 +396,7 @@ func (this *QInputDialog) Settextvalue(args ...interface{}) () {
 }
 
 // setComboBoxEditable(_Bool)
-func (this *QInputDialog) Setcomboboxeditable(args ...interface{}) () {
+func (this *QInputDialog) SetComboBoxEditable(args ...interface{}) () {
   // setComboBoxEditable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -447,7 +449,7 @@ func (this *QInputDialog) Open(args ...interface{}) () {
 }
 
 // setDoubleRange(double, double)
-func (this *QInputDialog) Setdoublerange(args ...interface{}) () {
+func (this *QInputDialog) SetDoubleRange(args ...interface{}) () {
   // setDoubleRange(double, double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -474,7 +476,7 @@ func (this *QInputDialog) Setdoublerange(args ...interface{}) () {
 }
 
 // setLabelText(const class QString &)
-func (this *QInputDialog) Setlabeltext(args ...interface{}) () {
+func (this *QInputDialog) SetLabelText(args ...interface{}) () {
   // setLabelText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -498,7 +500,7 @@ func (this *QInputDialog) Setlabeltext(args ...interface{}) () {
 }
 
 // labelText()
-func (this *QInputDialog) Labeltext(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) LabelText(args ...interface{}) (ret interface{}) {
   // labelText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -527,7 +529,7 @@ func (this *QInputDialog) Labeltext(args ...interface{}) (ret interface{}) {
 }
 
 // setIntMaximum(int)
-func (this *QInputDialog) Setintmaximum(args ...interface{}) () {
+func (this *QInputDialog) SetIntMaximum(args ...interface{}) () {
   // setIntMaximum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -551,7 +553,7 @@ func (this *QInputDialog) Setintmaximum(args ...interface{}) () {
 }
 
 // setDoubleMaximum(double)
-func (this *QInputDialog) Setdoublemaximum(args ...interface{}) () {
+func (this *QInputDialog) SetDoubleMaximum(args ...interface{}) () {
   // setDoubleMaximum(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -575,7 +577,7 @@ func (this *QInputDialog) Setdoublemaximum(args ...interface{}) () {
 }
 
 // doubleValue()
-func (this *QInputDialog) Doublevalue(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) DoubleValue(args ...interface{}) (ret interface{}) {
   // doubleValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -604,7 +606,7 @@ func (this *QInputDialog) Doublevalue(args ...interface{}) (ret interface{}) {
 }
 
 // setCancelButtonText(const class QString &)
-func (this *QInputDialog) Setcancelbuttontext(args ...interface{}) () {
+func (this *QInputDialog) SetCancelButtonText(args ...interface{}) () {
   // setCancelButtonText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -649,7 +651,7 @@ func (this *QInputDialog) Options(args ...interface{}) () {
 }
 
 // setDoubleMinimum(double)
-func (this *QInputDialog) Setdoubleminimum(args ...interface{}) () {
+func (this *QInputDialog) SetDoubleMinimum(args ...interface{}) () {
   // setDoubleMinimum(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -673,7 +675,7 @@ func (this *QInputDialog) Setdoubleminimum(args ...interface{}) () {
 }
 
 // setComboBoxItems(const class QStringList &)
-func (this *QInputDialog) Setcomboboxitems(args ...interface{}) () {
+func (this *QInputDialog) SetComboBoxItems(args ...interface{}) () {
   // setComboBoxItems(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -697,7 +699,7 @@ func (this *QInputDialog) Setcomboboxitems(args ...interface{}) () {
 }
 
 // setDoubleValue(double)
-func (this *QInputDialog) Setdoublevalue(args ...interface{}) () {
+func (this *QInputDialog) SetDoubleValue(args ...interface{}) () {
   // setDoubleValue(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -721,7 +723,7 @@ func (this *QInputDialog) Setdoublevalue(args ...interface{}) () {
 }
 
 // comboBoxItems()
-func (this *QInputDialog) Comboboxitems(args ...interface{}) () {
+func (this *QInputDialog) ComboBoxItems(args ...interface{}) () {
   // comboBoxItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -742,7 +744,7 @@ func (this *QInputDialog) Comboboxitems(args ...interface{}) () {
 }
 
 // setIntRange(int, int)
-func (this *QInputDialog) Setintrange(args ...interface{}) () {
+func (this *QInputDialog) SetIntRange(args ...interface{}) () {
   // setIntRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -769,7 +771,7 @@ func (this *QInputDialog) Setintrange(args ...interface{}) () {
 }
 
 // intValue()
-func (this *QInputDialog) Intvalue(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) IntValue(args ...interface{}) (ret interface{}) {
   // intValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -798,7 +800,7 @@ func (this *QInputDialog) Intvalue(args ...interface{}) (ret interface{}) {
 }
 
 // cancelButtonText()
-func (this *QInputDialog) Cancelbuttontext(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) CancelButtonText(args ...interface{}) (ret interface{}) {
   // cancelButtonText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -827,7 +829,7 @@ func (this *QInputDialog) Cancelbuttontext(args ...interface{}) (ret interface{}
 }
 
 // setOkButtonText(const class QString &)
-func (this *QInputDialog) Setokbuttontext(args ...interface{}) () {
+func (this *QInputDialog) SetOkButtonText(args ...interface{}) () {
   // setOkButtonText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -851,7 +853,7 @@ func (this *QInputDialog) Setokbuttontext(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QInputDialog) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -880,7 +882,7 @@ func (this *QInputDialog) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // textValue()
-func (this *QInputDialog) Textvalue(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) TextValue(args ...interface{}) (ret interface{}) {
   // textValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -909,7 +911,7 @@ func (this *QInputDialog) Textvalue(args ...interface{}) (ret interface{}) {
 }
 
 // ~QInputDialog()
-func (this *QInputDialog) Freeqinputdialog(args ...interface{}) () {
+func (this *QInputDialog) Free(args ...interface{}) () {
   // ~QInputDialog()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -921,7 +923,10 @@ func (this *QInputDialog) Freeqinputdialog(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputDialogD0Ev
     // invoke: void ~QInputDialog()
-    C.C_ZN12QInputDialogD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QInputDialogD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QInputDialog", "~QInputDialog", args)
   }
@@ -930,7 +935,7 @@ func (this *QInputDialog) Freeqinputdialog(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QInputDialog) Metaobject(args ...interface{}) () {
+func (this *QInputDialog) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -951,7 +956,7 @@ func (this *QInputDialog) Metaobject(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QInputDialog) Minimumsizehint(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) MinimumSizeHint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -980,7 +985,7 @@ func (this *QInputDialog) Minimumsizehint(args ...interface{}) (ret interface{})
 }
 
 // textEchoMode()
-func (this *QInputDialog) Textechomode(args ...interface{}) () {
+func (this *QInputDialog) TextEchoMode(args ...interface{}) () {
   // textEchoMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1001,7 +1006,7 @@ func (this *QInputDialog) Textechomode(args ...interface{}) () {
 }
 
 // setIntValue(int)
-func (this *QInputDialog) Setintvalue(args ...interface{}) () {
+func (this *QInputDialog) SetIntValue(args ...interface{}) () {
   // setIntValue(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1025,7 +1030,7 @@ func (this *QInputDialog) Setintvalue(args ...interface{}) () {
 }
 
 // isComboBoxEditable()
-func (this *QInputDialog) Iscomboboxeditable(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) IsComboBoxEditable(args ...interface{}) (ret interface{}) {
   // isComboBoxEditable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1054,7 +1059,7 @@ func (this *QInputDialog) Iscomboboxeditable(args ...interface{}) (ret interface
 }
 
 // okButtonText()
-func (this *QInputDialog) Okbuttontext(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) OkButtonText(args ...interface{}) (ret interface{}) {
   // okButtonText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1083,7 +1088,7 @@ func (this *QInputDialog) Okbuttontext(args ...interface{}) (ret interface{}) {
 }
 
 // doubleDecimals()
-func (this *QInputDialog) Doubledecimals(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) DoubleDecimals(args ...interface{}) (ret interface{}) {
   // doubleDecimals()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1112,7 +1117,7 @@ func (this *QInputDialog) Doubledecimals(args ...interface{}) (ret interface{}) 
 }
 
 // setVisible(_Bool)
-func (this *QInputDialog) Setvisible(args ...interface{}) () {
+func (this *QInputDialog) SetVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1136,7 +1141,7 @@ func (this *QInputDialog) Setvisible(args ...interface{}) () {
 }
 
 // intStep()
-func (this *QInputDialog) Intstep(args ...interface{}) (ret interface{}) {
+func (this *QInputDialog) IntStep(args ...interface{}) (ret interface{}) {
   // intStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

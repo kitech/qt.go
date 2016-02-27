@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qmimetype.h
 // dst-file: /src/core/qmimetype.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -74,6 +75,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMimeType)=1
@@ -144,7 +146,7 @@ func (this *QMimeType) Inherits(args ...interface{}) (ret interface{}) {
 }
 
 // parentMimeTypes()
-func (this *QMimeType) Parentmimetypes(args ...interface{}) () {
+func (this *QMimeType) ParentMimeTypes(args ...interface{}) () {
   // parentMimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -165,7 +167,7 @@ func (this *QMimeType) Parentmimetypes(args ...interface{}) () {
 }
 
 // filterString()
-func (this *QMimeType) Filterstring(args ...interface{}) (ret interface{}) {
+func (this *QMimeType) FilterString(args ...interface{}) (ret interface{}) {
   // filterString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -194,7 +196,7 @@ func (this *QMimeType) Filterstring(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QMimeType) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QMimeType) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -223,7 +225,7 @@ func (this *QMimeType) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // preferredSuffix()
-func (this *QMimeType) Preferredsuffix(args ...interface{}) (ret interface{}) {
+func (this *QMimeType) PreferredSuffix(args ...interface{}) (ret interface{}) {
   // preferredSuffix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -252,7 +254,7 @@ func (this *QMimeType) Preferredsuffix(args ...interface{}) (ret interface{}) {
 }
 
 // globPatterns()
-func (this *QMimeType) Globpatterns(args ...interface{}) () {
+func (this *QMimeType) GlobPatterns(args ...interface{}) () {
   // globPatterns()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -273,7 +275,7 @@ func (this *QMimeType) Globpatterns(args ...interface{}) () {
 }
 
 // genericIconName()
-func (this *QMimeType) Genericiconname(args ...interface{}) (ret interface{}) {
+func (this *QMimeType) GenericIconName(args ...interface{}) (ret interface{}) {
   // genericIconName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -302,7 +304,7 @@ func (this *QMimeType) Genericiconname(args ...interface{}) (ret interface{}) {
 }
 
 // iconName()
-func (this *QMimeType) Iconname(args ...interface{}) (ret interface{}) {
+func (this *QMimeType) IconName(args ...interface{}) (ret interface{}) {
   // iconName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -355,6 +357,9 @@ func (this *QMimeType) Swap(args ...interface{}) () {
 }
 
 // QMimeType(const class QMimeType &)
+func GcfreeQMimeType(this *QMimeType) {
+  qtrt.UniverseFree(this)
+}
 func NewQMimeType(args ...interface{}) *QMimeType {
   // QMimeType(const class QMimeType &)
   // QMimeType()
@@ -375,14 +380,18 @@ func NewQMimeType(args ...interface{}) *QMimeType {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMimeTypeC2ERKS_(arg0)
-    return &QMimeType{Qclsinst:qthis}
+    this := &QMimeType{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMimeType)
+    return this
   case 1:
     // invoke: _ZN9QMimeTypeC1Ev
     // invoke: void QMimeType()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMimeTypeC2Ev()
-    return &QMimeType{Qclsinst:qthis}
+    this := &QMimeType{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMimeType)
+    return this
   default:
     qtrt.ErrorResolve("QMimeType", "QMimeType", args)
   }
@@ -391,7 +400,7 @@ func NewQMimeType(args ...interface{}) *QMimeType {
 }
 
 // ~QMimeType()
-func (this *QMimeType) Freeqmimetype(args ...interface{}) () {
+func (this *QMimeType) Free(args ...interface{}) () {
   // ~QMimeType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -403,7 +412,10 @@ func (this *QMimeType) Freeqmimetype(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeTypeD0Ev
     // invoke: void ~QMimeType()
-    C.C_ZN9QMimeTypeD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QMimeTypeD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMimeType", "~QMimeType", args)
   }
@@ -412,7 +424,7 @@ func (this *QMimeType) Freeqmimetype(args ...interface{}) () {
 }
 
 // allAncestors()
-func (this *QMimeType) Allancestors(args ...interface{}) () {
+func (this *QMimeType) AllAncestors(args ...interface{}) () {
   // allAncestors()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -483,7 +495,7 @@ func (this *QMimeType) Name(args ...interface{}) (ret interface{}) {
 }
 
 // isDefault()
-func (this *QMimeType) Isdefault(args ...interface{}) (ret interface{}) {
+func (this *QMimeType) IsDefault(args ...interface{}) (ret interface{}) {
   // isDefault()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

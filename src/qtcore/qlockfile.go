@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qlockfile.h
 // dst-file: /src/core/qlockfile.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -60,6 +61,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QLockFile)=1
@@ -69,7 +71,7 @@ type QLockFile struct {
 }
 
 // getLockInfo(qint64 *, class QString *, class QString *)
-func (this *QLockFile) Getlockinfo(args ...interface{}) (ret interface{}) {
+func (this *QLockFile) GetLockInfo(args ...interface{}) (ret interface{}) {
   // getLockInfo(qint64 *, class QString *, class QString *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -107,7 +109,7 @@ func (this *QLockFile) Getlockinfo(args ...interface{}) (ret interface{}) {
 }
 
 // setStaleLockTime(int)
-func (this *QLockFile) Setstalelocktime(args ...interface{}) () {
+func (this *QLockFile) SetStaleLockTime(args ...interface{}) () {
   // setStaleLockTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -131,6 +133,9 @@ func (this *QLockFile) Setstalelocktime(args ...interface{}) () {
 }
 
 // QLockFile(const class QString &)
+func GcfreeQLockFile(this *QLockFile) {
+  qtrt.UniverseFree(this)
+}
 func NewQLockFile(args ...interface{}) *QLockFile {
   // QLockFile(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -149,7 +154,9 @@ func NewQLockFile(args ...interface{}) *QLockFile {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QLockFileC2ERK7QString(arg0)
-    return &QLockFile{Qclsinst:qthis}
+    this := &QLockFile{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLockFile)
+    return this
   default:
     qtrt.ErrorResolve("QLockFile", "QLockFile", args)
   }
@@ -187,7 +194,7 @@ func (this *QLockFile) Lock(args ...interface{}) (ret interface{}) {
 }
 
 // ~QLockFile()
-func (this *QLockFile) Freeqlockfile(args ...interface{}) () {
+func (this *QLockFile) Free(args ...interface{}) () {
   // ~QLockFile()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -199,7 +206,10 @@ func (this *QLockFile) Freeqlockfile(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLockFileD0Ev
     // invoke: void ~QLockFile()
-    C.C_ZN9QLockFileD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QLockFileD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QLockFile", "~QLockFile", args)
   }
@@ -208,7 +218,7 @@ func (this *QLockFile) Freeqlockfile(args ...interface{}) () {
 }
 
 // removeStaleLockFile()
-func (this *QLockFile) Removestalelockfile(args ...interface{}) (ret interface{}) {
+func (this *QLockFile) RemoveStaleLockFile(args ...interface{}) (ret interface{}) {
   // removeStaleLockFile()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -237,7 +247,7 @@ func (this *QLockFile) Removestalelockfile(args ...interface{}) (ret interface{}
 }
 
 // isLocked()
-func (this *QLockFile) Islocked(args ...interface{}) (ret interface{}) {
+func (this *QLockFile) IsLocked(args ...interface{}) (ret interface{}) {
   // isLocked()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -266,7 +276,7 @@ func (this *QLockFile) Islocked(args ...interface{}) (ret interface{}) {
 }
 
 // staleLockTime()
-func (this *QLockFile) Stalelocktime(args ...interface{}) (ret interface{}) {
+func (this *QLockFile) StaleLockTime(args ...interface{}) (ret interface{}) {
   // staleLockTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -295,7 +305,7 @@ func (this *QLockFile) Stalelocktime(args ...interface{}) (ret interface{}) {
 }
 
 // tryLock(int)
-func (this *QLockFile) Trylock(args ...interface{}) (ret interface{}) {
+func (this *QLockFile) TryLock(args ...interface{}) (ret interface{}) {
   // tryLock(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

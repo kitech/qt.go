@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qatomic.h
 // dst-file: /src/core/qatomic.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -40,6 +41,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAtomicInt)=1
@@ -49,6 +51,9 @@ type QAtomicInt struct {
 }
 
 // QAtomicInt(int)
+func GcfreeQAtomicInt(this *QAtomicInt) {
+  qtrt.UniverseFree(this)
+}
 func NewQAtomicInt(args ...interface{}) *QAtomicInt {
   // QAtomicInt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -67,7 +72,9 @@ func NewQAtomicInt(args ...interface{}) *QAtomicInt {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QAtomicIntC2Ei(arg0)
-    return &QAtomicInt{Qclsinst:qthis}
+    this := &QAtomicInt{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAtomicInt)
+    return this
   default:
     qtrt.ErrorResolve("QAtomicInt", "QAtomicInt", args)
   }

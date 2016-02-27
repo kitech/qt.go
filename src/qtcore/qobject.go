@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -118,6 +119,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSignalBlocker)=16
@@ -147,7 +149,7 @@ type QObject struct {
 }
 
 // ~QSignalBlocker()
-func (this *QSignalBlocker) Freeqsignalblocker(args ...interface{}) () {
+func (this *QSignalBlocker) Free(args ...interface{}) () {
   // ~QSignalBlocker()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -159,7 +161,10 @@ func (this *QSignalBlocker) Freeqsignalblocker(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QSignalBlockerD0Ev
     // invoke: void ~QSignalBlocker()
-    C.C_ZN14QSignalBlockerD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QSignalBlockerD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QSignalBlocker", "~QSignalBlocker", args)
   }
@@ -210,6 +215,9 @@ func (this *QSignalBlocker) Reblock(args ...interface{}) () {
 }
 
 // QSignalBlocker(class QObject &)
+func GcfreeQSignalBlocker(this *QSignalBlocker) {
+  qtrt.UniverseFree(this)
+}
 func NewQSignalBlocker(args ...interface{}) *QSignalBlocker {
   // QSignalBlocker(class QObject &)
   // QSignalBlocker(class QObject *)
@@ -231,7 +239,9 @@ func NewQSignalBlocker(args ...interface{}) *QSignalBlocker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QSignalBlockerC2ER7QObject(arg0)
-    return &QSignalBlocker{Qclsinst:qthis}
+    this := &QSignalBlocker{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSignalBlocker)
+    return this
   case 1:
     // invoke: _ZN14QSignalBlockerC1EP7QObject
     // invoke: void QSignalBlocker(class QObject *)
@@ -240,7 +250,9 @@ func NewQSignalBlocker(args ...interface{}) *QSignalBlocker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QSignalBlockerC2EP7QObject(arg0)
-    return &QSignalBlocker{Qclsinst:qthis}
+    this := &QSignalBlocker{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSignalBlocker)
+    return this
   default:
     qtrt.ErrorResolve("QSignalBlocker", "QSignalBlocker", args)
   }
@@ -249,7 +261,7 @@ func NewQSignalBlocker(args ...interface{}) *QSignalBlocker {
 }
 
 // dynamicMetaObject()
-func (this *QObjectData) Dynamicmetaobject(args ...interface{}) () {
+func (this *QObjectData) DynamicMetaObject(args ...interface{}) () {
   // dynamicMetaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -270,7 +282,7 @@ func (this *QObjectData) Dynamicmetaobject(args ...interface{}) () {
 }
 
 // ~QObjectUserData()
-func (this *QObjectUserData) Freeqobjectuserdata(args ...interface{}) () {
+func (this *QObjectUserData) Free(args ...interface{}) () {
   // ~QObjectUserData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -282,7 +294,10 @@ func (this *QObjectUserData) Freeqobjectuserdata(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QObjectUserDataD0Ev
     // invoke: void ~QObjectUserData()
-    C.C_ZN15QObjectUserDataD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QObjectUserDataD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QObjectUserData", "~QObjectUserData", args)
   }
@@ -325,7 +340,7 @@ func (this *QObject) Inherits(args ...interface{}) (ret interface{}) {
 }
 
 // dynamicPropertyNames()
-func (this *QObject) Dynamicpropertynames(args ...interface{}) () {
+func (this *QObject) DynamicPropertyNames(args ...interface{}) () {
   // dynamicPropertyNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -346,7 +361,7 @@ func (this *QObject) Dynamicpropertynames(args ...interface{}) () {
 }
 
 // installEventFilter(class QObject *)
-func (this *QObject) Installeventfilter(args ...interface{}) () {
+func (this *QObject) InstallEventFilter(args ...interface{}) () {
   // installEventFilter(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -370,7 +385,7 @@ func (this *QObject) Installeventfilter(args ...interface{}) () {
 }
 
 // dumpObjectTree()
-func (this *QObject) Dumpobjecttree(args ...interface{}) () {
+func (this *QObject) DumpObjectTree(args ...interface{}) () {
   // dumpObjectTree()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -391,7 +406,7 @@ func (this *QObject) Dumpobjecttree(args ...interface{}) () {
 }
 
 // deleteLater()
-func (this *QObject) Deletelater(args ...interface{}) () {
+func (this *QObject) DeleteLater(args ...interface{}) () {
   // deleteLater()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -412,7 +427,7 @@ func (this *QObject) Deletelater(args ...interface{}) () {
 }
 
 // ~QObject()
-func (this *QObject) Freeqobject(args ...interface{}) () {
+func (this *QObject) Free(args ...interface{}) () {
   // ~QObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -424,7 +439,10 @@ func (this *QObject) Freeqobject(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QObjectD0Ev
     // invoke: void ~QObject()
-    C.C_ZN7QObjectD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QObjectD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QObject", "~QObject", args)
   }
@@ -494,7 +512,7 @@ func (this *QObject) Event(args ...interface{}) (ret interface{}) {
 }
 
 // moveToThread(class QThread *)
-func (this *QObject) Movetothread(args ...interface{}) () {
+func (this *QObject) MoveToThread(args ...interface{}) () {
   // moveToThread(class QThread *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -518,7 +536,7 @@ func (this *QObject) Movetothread(args ...interface{}) () {
 }
 
 // disconnect(const class QObject *, const char *, const class QObject *, const char *)
-func (this *QObject) Disconnect_S(args ...interface{}) (ret interface{}) {
+func (this *QObject) Disconnect_s(args ...interface{}) (ret interface{}) {
   // disconnect(const class QObject *, const char *, const class QObject *, const char *)
   // disconnect(const char *, const class QObject *, const char *)
   // disconnect(const class QObject *, const char *)
@@ -638,7 +656,7 @@ func (this *QObject) Disconnect_S(args ...interface{}) (ret interface{}) {
 }
 
 // eventFilter(class QObject *, class QEvent *)
-func (this *QObject) Eventfilter(args ...interface{}) (ret interface{}) {
+func (this *QObject) EventFilter(args ...interface{}) (ret interface{}) {
   // eventFilter(class QObject *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -673,7 +691,7 @@ func (this *QObject) Eventfilter(args ...interface{}) (ret interface{}) {
 }
 
 // setParent(class QObject *)
-func (this *QObject) Setparent(args ...interface{}) () {
+func (this *QObject) SetParent(args ...interface{}) () {
   // setParent(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -697,6 +715,9 @@ func (this *QObject) Setparent(args ...interface{}) () {
 }
 
 // QObject(class QObject *)
+func GcfreeQObject(this *QObject) {
+  qtrt.UniverseFree(this)
+}
 func NewQObject(args ...interface{}) *QObject {
   // QObject(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -715,7 +736,9 @@ func NewQObject(args ...interface{}) *QObject {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QObjectC2EPS_(arg0)
-    return &QObject{Qclsinst:qthis}
+    this := &QObject{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQObject)
+    return this
   default:
     qtrt.ErrorResolve("QObject", "QObject", args)
   }
@@ -724,7 +747,7 @@ func NewQObject(args ...interface{}) *QObject {
 }
 
 // isWidgetType()
-func (this *QObject) Iswidgettype(args ...interface{}) (ret interface{}) {
+func (this *QObject) IsWidgetType(args ...interface{}) (ret interface{}) {
   // isWidgetType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -753,7 +776,7 @@ func (this *QObject) Iswidgettype(args ...interface{}) (ret interface{}) {
 }
 
 // userData(uint)
-func (this *QObject) Userdata(args ...interface{}) (ret interface{}) {
+func (this *QObject) UserData(args ...interface{}) (ret interface{}) {
   // userData(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -785,7 +808,7 @@ func (this *QObject) Userdata(args ...interface{}) (ret interface{}) {
 }
 
 // blockSignals(_Bool)
-func (this *QObject) Blocksignals(args ...interface{}) (ret interface{}) {
+func (this *QObject) BlockSignals(args ...interface{}) (ret interface{}) {
   // blockSignals(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -817,7 +840,7 @@ func (this *QObject) Blocksignals(args ...interface{}) (ret interface{}) {
 }
 
 // objectName()
-func (this *QObject) Objectname(args ...interface{}) (ret interface{}) {
+func (this *QObject) ObjectName(args ...interface{}) (ret interface{}) {
   // objectName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -846,7 +869,7 @@ func (this *QObject) Objectname(args ...interface{}) (ret interface{}) {
 }
 
 // isWindowType()
-func (this *QObject) Iswindowtype(args ...interface{}) (ret interface{}) {
+func (this *QObject) IsWindowType(args ...interface{}) (ret interface{}) {
   // isWindowType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -875,7 +898,7 @@ func (this *QObject) Iswindowtype(args ...interface{}) (ret interface{}) {
 }
 
 // signalsBlocked()
-func (this *QObject) Signalsblocked(args ...interface{}) (ret interface{}) {
+func (this *QObject) SignalsBlocked(args ...interface{}) (ret interface{}) {
   // signalsBlocked()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -904,7 +927,7 @@ func (this *QObject) Signalsblocked(args ...interface{}) (ret interface{}) {
 }
 
 // registerUserData()
-func (this *QObject) Registeruserdata_S(args ...interface{}) (ret interface{}) {
+func (this *QObject) RegisterUserData_s(args ...interface{}) (ret interface{}) {
   // registerUserData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -933,7 +956,7 @@ func (this *QObject) Registeruserdata_S(args ...interface{}) (ret interface{}) {
 }
 
 // setProperty(const char *, const class QVariant &)
-func (this *QObject) Setproperty(args ...interface{}) (ret interface{}) {
+func (this *QObject) SetProperty(args ...interface{}) (ret interface{}) {
   // setProperty(const char *, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -970,7 +993,7 @@ func (this *QObject) Setproperty(args ...interface{}) (ret interface{}) {
 }
 
 // setObjectName(const class QString &)
-func (this *QObject) Setobjectname(args ...interface{}) () {
+func (this *QObject) SetObjectName(args ...interface{}) () {
   // setObjectName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -994,7 +1017,7 @@ func (this *QObject) Setobjectname(args ...interface{}) () {
 }
 
 // setUserData(uint, class QObjectUserData *)
-func (this *QObject) Setuserdata(args ...interface{}) () {
+func (this *QObject) SetUserData(args ...interface{}) () {
   // setUserData(uint, class QObjectUserData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1021,7 +1044,7 @@ func (this *QObject) Setuserdata(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QObject) Metaobject(args ...interface{}) () {
+func (this *QObject) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1071,7 +1094,7 @@ func (this *QObject) Thread(args ...interface{}) (ret interface{}) {
 }
 
 // removeEventFilter(class QObject *)
-func (this *QObject) Removeeventfilter(args ...interface{}) () {
+func (this *QObject) RemoveEventFilter(args ...interface{}) () {
   // removeEventFilter(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1116,7 +1139,7 @@ func (this *QObject) Children(args ...interface{}) () {
 }
 
 // killTimer(int)
-func (this *QObject) Killtimer(args ...interface{}) () {
+func (this *QObject) KillTimer(args ...interface{}) () {
   // killTimer(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1140,7 +1163,7 @@ func (this *QObject) Killtimer(args ...interface{}) () {
 }
 
 // dumpObjectInfo()
-func (this *QObject) Dumpobjectinfo(args ...interface{}) () {
+func (this *QObject) DumpObjectInfo(args ...interface{}) () {
   // dumpObjectInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

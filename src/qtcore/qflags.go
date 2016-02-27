@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qflags.h
 // dst-file: /src/core/qflags.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -48,6 +49,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QIncompatibleFlag)=4
@@ -63,6 +65,9 @@ type QFlag struct {
 }
 
 // QIncompatibleFlag(int)
+func GcfreeQIncompatibleFlag(this *QIncompatibleFlag) {
+  qtrt.UniverseFree(this)
+}
 func NewQIncompatibleFlag(args ...interface{}) *QIncompatibleFlag {
   // QIncompatibleFlag(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -81,7 +86,9 @@ func NewQIncompatibleFlag(args ...interface{}) *QIncompatibleFlag {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QIncompatibleFlagC2Ei(arg0)
-    return &QIncompatibleFlag{Qclsinst:qthis}
+    this := &QIncompatibleFlag{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQIncompatibleFlag)
+    return this
   default:
     qtrt.ErrorResolve("QIncompatibleFlag", "QIncompatibleFlag", args)
   }
@@ -90,6 +97,9 @@ func NewQIncompatibleFlag(args ...interface{}) *QIncompatibleFlag {
 }
 
 // QFlag(ushort)
+func GcfreeQFlag(this *QFlag) {
+  qtrt.UniverseFree(this)
+}
 func NewQFlag(args ...interface{}) *QFlag {
   // QFlag(ushort)
   // QFlag(int)
@@ -117,7 +127,9 @@ func NewQFlag(args ...interface{}) *QFlag {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFlagC2Et(arg0)
-    return &QFlag{Qclsinst:qthis}
+    this := &QFlag{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFlag)
+    return this
   case 1:
     // invoke: _ZN5QFlagC1Ei
     // invoke: void QFlag(int)
@@ -126,7 +138,9 @@ func NewQFlag(args ...interface{}) *QFlag {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFlagC2Ei(arg0)
-    return &QFlag{Qclsinst:qthis}
+    this := &QFlag{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFlag)
+    return this
   case 2:
     // invoke: _ZN5QFlagC1Es
     // invoke: void QFlag(short)
@@ -135,7 +149,9 @@ func NewQFlag(args ...interface{}) *QFlag {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFlagC2Es(arg0)
-    return &QFlag{Qclsinst:qthis}
+    this := &QFlag{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFlag)
+    return this
   case 3:
     // invoke: _ZN5QFlagC1Ej
     // invoke: void QFlag(uint)
@@ -144,7 +160,9 @@ func NewQFlag(args ...interface{}) *QFlag {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFlagC2Ej(arg0)
-    return &QFlag{Qclsinst:qthis}
+    this := &QFlag{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFlag)
+    return this
   default:
     qtrt.ErrorResolve("QFlag", "QFlag", args)
   }

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qgraphicsproxywidget.h
 // dst-file: /src/widgets/qgraphicsproxywidget.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -60,6 +61,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsProxyWidget)=1
@@ -99,7 +101,7 @@ func (this *QGraphicsProxyWidget) Paint(args ...interface{}) () {
 }
 
 // setWidget(class QWidget *)
-func (this *QGraphicsProxyWidget) Setwidget(args ...interface{}) () {
+func (this *QGraphicsProxyWidget) SetWidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -123,7 +125,7 @@ func (this *QGraphicsProxyWidget) Setwidget(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QGraphicsProxyWidget) Metaobject(args ...interface{}) () {
+func (this *QGraphicsProxyWidget) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -202,7 +204,7 @@ func (this *QGraphicsProxyWidget) Widget(args ...interface{}) (ret interface{}) 
 }
 
 // setGeometry(const class QRectF &)
-func (this *QGraphicsProxyWidget) Setgeometry(args ...interface{}) () {
+func (this *QGraphicsProxyWidget) SetGeometry(args ...interface{}) () {
   // setGeometry(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -226,7 +228,7 @@ func (this *QGraphicsProxyWidget) Setgeometry(args ...interface{}) () {
 }
 
 // ~QGraphicsProxyWidget()
-func (this *QGraphicsProxyWidget) Freeqgraphicsproxywidget(args ...interface{}) () {
+func (this *QGraphicsProxyWidget) Free(args ...interface{}) () {
   // ~QGraphicsProxyWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -238,7 +240,10 @@ func (this *QGraphicsProxyWidget) Freeqgraphicsproxywidget(args ...interface{}) 
   case 0:
     // invoke: _ZN20QGraphicsProxyWidgetD0Ev
     // invoke: void ~QGraphicsProxyWidget()
-    C.C_ZN20QGraphicsProxyWidgetD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN20QGraphicsProxyWidgetD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "~QGraphicsProxyWidget", args)
   }
@@ -247,7 +252,7 @@ func (this *QGraphicsProxyWidget) Freeqgraphicsproxywidget(args ...interface{}) 
 }
 
 // subWidgetRect(const class QWidget *)
-func (this *QGraphicsProxyWidget) Subwidgetrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsProxyWidget) SubWidgetRect(args ...interface{}) (ret interface{}) {
   // subWidgetRect(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -279,7 +284,7 @@ func (this *QGraphicsProxyWidget) Subwidgetrect(args ...interface{}) (ret interf
 }
 
 // createProxyForChildWidget(class QWidget *)
-func (this *QGraphicsProxyWidget) Createproxyforchildwidget(args ...interface{}) () {
+func (this *QGraphicsProxyWidget) CreateProxyForChildWidget(args ...interface{}) () {
   // createProxyForChildWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

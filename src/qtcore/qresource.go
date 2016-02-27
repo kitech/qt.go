@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -72,6 +73,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QResource)=1
@@ -81,7 +83,7 @@ type QResource struct {
 }
 
 // searchPaths()
-func (this *QResource) Searchpaths_S(args ...interface{}) () {
+func (this *QResource) SearchPaths_s(args ...interface{}) () {
   // searchPaths()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -102,7 +104,7 @@ func (this *QResource) Searchpaths_S(args ...interface{}) () {
 }
 
 // isCompressed()
-func (this *QResource) Iscompressed(args ...interface{}) (ret interface{}) {
+func (this *QResource) IsCompressed(args ...interface{}) (ret interface{}) {
   // isCompressed()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -131,7 +133,7 @@ func (this *QResource) Iscompressed(args ...interface{}) (ret interface{}) {
 }
 
 // setLocale(const class QLocale &)
-func (this *QResource) Setlocale(args ...interface{}) () {
+func (this *QResource) SetLocale(args ...interface{}) () {
   // setLocale(const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -184,7 +186,7 @@ func (this *QResource) Locale(args ...interface{}) (ret interface{}) {
 }
 
 // absoluteFilePath()
-func (this *QResource) Absolutefilepath(args ...interface{}) (ret interface{}) {
+func (this *QResource) AbsoluteFilePath(args ...interface{}) (ret interface{}) {
   // absoluteFilePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -213,7 +215,7 @@ func (this *QResource) Absolutefilepath(args ...interface{}) (ret interface{}) {
 }
 
 // ~QResource()
-func (this *QResource) Freeqresource(args ...interface{}) () {
+func (this *QResource) Free(args ...interface{}) () {
   // ~QResource()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -225,7 +227,10 @@ func (this *QResource) Freeqresource(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QResourceD0Ev
     // invoke: void ~QResource()
-    C.C_ZN9QResourceD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QResourceD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QResource", "~QResource", args)
   }
@@ -234,6 +239,9 @@ func (this *QResource) Freeqresource(args ...interface{}) () {
 }
 
 // QResource(const class QString &, const class QLocale &)
+func GcfreeQResource(this *QResource) {
+  qtrt.UniverseFree(this)
+}
 func NewQResource(args ...interface{}) *QResource {
   // QResource(const class QString &, const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -255,7 +263,9 @@ func NewQResource(args ...interface{}) *QResource {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QResourceC2ERK7QStringRK7QLocale(arg0, arg1)
-    return &QResource{Qclsinst:qthis}
+    this := &QResource{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQResource)
+    return this
   default:
     qtrt.ErrorResolve("QResource", "QResource", args)
   }
@@ -264,7 +274,7 @@ func NewQResource(args ...interface{}) *QResource {
 }
 
 // setFileName(const class QString &)
-func (this *QResource) Setfilename(args ...interface{}) () {
+func (this *QResource) SetFileName(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -288,7 +298,7 @@ func (this *QResource) Setfilename(args ...interface{}) () {
 }
 
 // fileName()
-func (this *QResource) Filename(args ...interface{}) (ret interface{}) {
+func (this *QResource) FileName(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -317,7 +327,7 @@ func (this *QResource) Filename(args ...interface{}) (ret interface{}) {
 }
 
 // unregisterResource(const class QString &, const class QString &)
-func (this *QResource) Unregisterresource_S(args ...interface{}) (ret interface{}) {
+func (this *QResource) UnregisterResource_s(args ...interface{}) (ret interface{}) {
   // unregisterResource(const class QString &, const class QString &)
   // unregisterResource(const uchar *, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -374,7 +384,7 @@ func (this *QResource) Unregisterresource_S(args ...interface{}) (ret interface{
 }
 
 // registerResource(const uchar *, const class QString &)
-func (this *QResource) Registerresource_S(args ...interface{}) (ret interface{}) {
+func (this *QResource) RegisterResource_s(args ...interface{}) (ret interface{}) {
   // registerResource(const uchar *, const class QString &)
   // registerResource(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -431,7 +441,7 @@ func (this *QResource) Registerresource_S(args ...interface{}) (ret interface{})
 }
 
 // isValid()
-func (this *QResource) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QResource) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -460,7 +470,7 @@ func (this *QResource) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // addSearchPath(const class QString &)
-func (this *QResource) Addsearchpath_S(args ...interface{}) () {
+func (this *QResource) AddSearchPath_s(args ...interface{}) () {
   // addSearchPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

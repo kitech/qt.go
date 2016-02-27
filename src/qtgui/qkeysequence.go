@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qkeysequence.h
 // dst-file: /src/gui/qkeysequence.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -60,6 +61,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QKeySequence)=8
@@ -69,7 +71,7 @@ type QKeySequence struct {
 }
 
 // mnemonic(const class QString &)
-func (this *QKeySequence) Mnemonic_S(args ...interface{}) (ret interface{}) {
+func (this *QKeySequence) Mnemonic_s(args ...interface{}) (ret interface{}) {
   // mnemonic(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -101,7 +103,7 @@ func (this *QKeySequence) Mnemonic_S(args ...interface{}) (ret interface{}) {
 }
 
 // ~QKeySequence()
-func (this *QKeySequence) Freeqkeysequence(args ...interface{}) () {
+func (this *QKeySequence) Free(args ...interface{}) () {
   // ~QKeySequence()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -113,7 +115,10 @@ func (this *QKeySequence) Freeqkeysequence(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QKeySequenceD0Ev
     // invoke: void ~QKeySequence()
-    C.C_ZN12QKeySequenceD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QKeySequenceD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QKeySequence", "~QKeySequence", args)
   }
@@ -122,7 +127,7 @@ func (this *QKeySequence) Freeqkeysequence(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QKeySequence) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QKeySequence) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -175,7 +180,7 @@ func (this *QKeySequence) Swap(args ...interface{}) () {
 }
 
 // isDetached()
-func (this *QKeySequence) Isdetached(args ...interface{}) (ret interface{}) {
+func (this *QKeySequence) IsDetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -228,6 +233,9 @@ func (this *QKeySequence) Matches(args ...interface{}) () {
 }
 
 // QKeySequence()
+func GcfreeQKeySequence(this *QKeySequence) {
+  qtrt.UniverseFree(this)
+}
 func NewQKeySequence(args ...interface{}) *QKeySequence {
   // QKeySequence()
   // QKeySequence(const class QKeySequence &)
@@ -252,7 +260,9 @@ func NewQKeySequence(args ...interface{}) *QKeySequence {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QKeySequenceC2Ev()
-    return &QKeySequence{Qclsinst:qthis}
+    this := &QKeySequence{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQKeySequence)
+    return this
   case 1:
     // invoke: _ZN12QKeySequenceC1ERKS_
     // invoke: void QKeySequence(const class QKeySequence &)
@@ -261,7 +271,9 @@ func NewQKeySequence(args ...interface{}) *QKeySequence {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QKeySequenceC2ERKS_(arg0)
-    return &QKeySequence{Qclsinst:qthis}
+    this := &QKeySequence{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQKeySequence)
+    return this
   case 2:
     // invoke: _ZN12QKeySequenceC1Eiiii
     // invoke: void QKeySequence(int, int, int, int)
@@ -276,7 +288,9 @@ func NewQKeySequence(args ...interface{}) *QKeySequence {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QKeySequenceC2Eiiii(arg0, arg1, arg2, arg3)
-    return &QKeySequence{Qclsinst:qthis}
+    this := &QKeySequence{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQKeySequence)
+    return this
   default:
     qtrt.ErrorResolve("QKeySequence", "QKeySequence", args)
   }

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qbuffer.h
 // dst-file: /src/core/qbuffer.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -68,6 +69,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QBuffer)=1
@@ -156,7 +158,7 @@ func (this *QBuffer) Size(args ...interface{}) (ret interface{}) {
 }
 
 // canReadLine()
-func (this *QBuffer) Canreadline(args ...interface{}) (ret interface{}) {
+func (this *QBuffer) CanReadLine(args ...interface{}) (ret interface{}) {
   // canReadLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -185,7 +187,7 @@ func (this *QBuffer) Canreadline(args ...interface{}) (ret interface{}) {
 }
 
 // setBuffer(class QByteArray *)
-func (this *QBuffer) Setbuffer(args ...interface{}) () {
+func (this *QBuffer) SetBuffer(args ...interface{}) () {
   // setBuffer(class QByteArray *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -209,6 +211,9 @@ func (this *QBuffer) Setbuffer(args ...interface{}) () {
 }
 
 // QBuffer(class QByteArray *, class QObject *)
+func GcfreeQBuffer(this *QBuffer) {
+  qtrt.UniverseFree(this)
+}
 func NewQBuffer(args ...interface{}) *QBuffer {
   // QBuffer(class QByteArray *, class QObject *)
   // QBuffer(class QObject *)
@@ -233,7 +238,9 @@ func NewQBuffer(args ...interface{}) *QBuffer {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBufferC2EP10QByteArrayP7QObject(arg0, arg1)
-    return &QBuffer{Qclsinst:qthis}
+    this := &QBuffer{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBuffer)
+    return this
   case 1:
     // invoke: _ZN7QBufferC1EP7QObject
     // invoke: void QBuffer(class QObject *)
@@ -242,7 +249,9 @@ func NewQBuffer(args ...interface{}) *QBuffer {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBufferC2EP7QObject(arg0)
-    return &QBuffer{Qclsinst:qthis}
+    this := &QBuffer{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBuffer)
+    return this
   default:
     qtrt.ErrorResolve("QBuffer", "QBuffer", args)
   }
@@ -251,7 +260,7 @@ func NewQBuffer(args ...interface{}) *QBuffer {
 }
 
 // setData(const char *, int)
-func (this *QBuffer) Setdata(args ...interface{}) () {
+func (this *QBuffer) SetData(args ...interface{}) () {
   // setData(const char *, int)
   // setData(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -289,7 +298,7 @@ func (this *QBuffer) Setdata(args ...interface{}) () {
 }
 
 // ~QBuffer()
-func (this *QBuffer) Freeqbuffer(args ...interface{}) () {
+func (this *QBuffer) Free(args ...interface{}) () {
   // ~QBuffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -301,7 +310,10 @@ func (this *QBuffer) Freeqbuffer(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QBufferD0Ev
     // invoke: void ~QBuffer()
-    C.C_ZN7QBufferD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QBufferD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QBuffer", "~QBuffer", args)
   }
@@ -368,7 +380,7 @@ func (this *QBuffer) Data(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QBuffer) Metaobject(args ...interface{}) () {
+func (this *QBuffer) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -421,7 +433,7 @@ func (this *QBuffer) Seek(args ...interface{}) (ret interface{}) {
 }
 
 // atEnd()
-func (this *QBuffer) Atend(args ...interface{}) (ret interface{}) {
+func (this *QBuffer) AtEnd(args ...interface{}) (ret interface{}) {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

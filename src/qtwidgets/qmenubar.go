@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qmenubar.h
 // dst-file: /src/widgets/qmenubar.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -92,6 +93,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMenuBar)=1
@@ -103,7 +105,7 @@ type QMenuBar struct {
 }
 
 // addAction(const class QString &)
-func (this *QMenuBar) Addaction(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) AddAction(args ...interface{}) (ret interface{}) {
   // addAction(const class QString &)
   // addAction(const class QString &, const class QObject *, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -160,7 +162,7 @@ func (this *QMenuBar) Addaction(args ...interface{}) (ret interface{}) {
 }
 
 // isDefaultUp()
-func (this *QMenuBar) Isdefaultup(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) IsDefaultUp(args ...interface{}) (ret interface{}) {
   // isDefaultUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -189,7 +191,7 @@ func (this *QMenuBar) Isdefaultup(args ...interface{}) (ret interface{}) {
 }
 
 // addMenu(const class QIcon &, const class QString &)
-func (this *QMenuBar) Addmenu(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) AddMenu(args ...interface{}) (ret interface{}) {
   // addMenu(const class QIcon &, const class QString &)
   // addMenu(const class QString &)
   // addMenu(class QMenu *)
@@ -258,7 +260,7 @@ func (this *QMenuBar) Addmenu(args ...interface{}) (ret interface{}) {
 }
 
 // platformMenuBar()
-func (this *QMenuBar) Platformmenubar(args ...interface{}) () {
+func (this *QMenuBar) PlatformMenuBar(args ...interface{}) () {
   // platformMenuBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -279,7 +281,7 @@ func (this *QMenuBar) Platformmenubar(args ...interface{}) () {
 }
 
 // actionAt(const class QPoint &)
-func (this *QMenuBar) Actionat(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) ActionAt(args ...interface{}) (ret interface{}) {
   // actionAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -311,7 +313,7 @@ func (this *QMenuBar) Actionat(args ...interface{}) (ret interface{}) {
 }
 
 // actionGeometry(class QAction *)
-func (this *QMenuBar) Actiongeometry(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) ActionGeometry(args ...interface{}) (ret interface{}) {
   // actionGeometry(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -343,7 +345,7 @@ func (this *QMenuBar) Actiongeometry(args ...interface{}) (ret interface{}) {
 }
 
 // activeAction()
-func (this *QMenuBar) Activeaction(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) ActiveAction(args ...interface{}) (ret interface{}) {
   // activeAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -372,7 +374,7 @@ func (this *QMenuBar) Activeaction(args ...interface{}) (ret interface{}) {
 }
 
 // addSeparator()
-func (this *QMenuBar) Addseparator(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) AddSeparator(args ...interface{}) (ret interface{}) {
   // addSeparator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -401,7 +403,7 @@ func (this *QMenuBar) Addseparator(args ...interface{}) (ret interface{}) {
 }
 
 // setActiveAction(class QAction *)
-func (this *QMenuBar) Setactiveaction(args ...interface{}) () {
+func (this *QMenuBar) SetActiveAction(args ...interface{}) () {
   // setActiveAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -425,7 +427,7 @@ func (this *QMenuBar) Setactiveaction(args ...interface{}) () {
 }
 
 // isNativeMenuBar()
-func (this *QMenuBar) Isnativemenubar(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) IsNativeMenuBar(args ...interface{}) (ret interface{}) {
   // isNativeMenuBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -454,7 +456,7 @@ func (this *QMenuBar) Isnativemenubar(args ...interface{}) (ret interface{}) {
 }
 
 // setNativeMenuBar(_Bool)
-func (this *QMenuBar) Setnativemenubar(args ...interface{}) () {
+func (this *QMenuBar) SetNativeMenuBar(args ...interface{}) () {
   // setNativeMenuBar(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -478,7 +480,7 @@ func (this *QMenuBar) Setnativemenubar(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QMenuBar) Metaobject(args ...interface{}) () {
+func (this *QMenuBar) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -499,6 +501,9 @@ func (this *QMenuBar) Metaobject(args ...interface{}) () {
 }
 
 // QMenuBar(class QWidget *)
+func GcfreeQMenuBar(this *QMenuBar) {
+  qtrt.UniverseFree(this)
+}
 func NewQMenuBar(args ...interface{}) *QMenuBar {
   // QMenuBar(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -517,7 +522,9 @@ func NewQMenuBar(args ...interface{}) *QMenuBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QMenuBarC2EP7QWidget(arg0)
-    return &QMenuBar{Qclsinst:qthis}
+    this := &QMenuBar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMenuBar)
+    return this
   default:
     qtrt.ErrorResolve("QMenuBar", "QMenuBar", args)
   }
@@ -526,7 +533,7 @@ func NewQMenuBar(args ...interface{}) *QMenuBar {
 }
 
 // sizeHint()
-func (this *QMenuBar) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -555,7 +562,7 @@ func (this *QMenuBar) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // minimumSizeHint()
-func (this *QMenuBar) Minimumsizehint(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) MinimumSizeHint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -605,7 +612,7 @@ func (this *QMenuBar) Clear(args ...interface{}) () {
 }
 
 // insertSeparator(class QAction *)
-func (this *QMenuBar) Insertseparator(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) InsertSeparator(args ...interface{}) (ret interface{}) {
   // insertSeparator(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -637,7 +644,7 @@ func (this *QMenuBar) Insertseparator(args ...interface{}) (ret interface{}) {
 }
 
 // heightForWidth(int)
-func (this *QMenuBar) Heightforwidth(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) HeightForWidth(args ...interface{}) (ret interface{}) {
   // heightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -669,7 +676,7 @@ func (this *QMenuBar) Heightforwidth(args ...interface{}) (ret interface{}) {
 }
 
 // setDefaultUp(_Bool)
-func (this *QMenuBar) Setdefaultup(args ...interface{}) () {
+func (this *QMenuBar) SetDefaultUp(args ...interface{}) () {
   // setDefaultUp(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -693,7 +700,7 @@ func (this *QMenuBar) Setdefaultup(args ...interface{}) () {
 }
 
 // ~QMenuBar()
-func (this *QMenuBar) Freeqmenubar(args ...interface{}) () {
+func (this *QMenuBar) Free(args ...interface{}) () {
   // ~QMenuBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -705,7 +712,10 @@ func (this *QMenuBar) Freeqmenubar(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMenuBarD0Ev
     // invoke: void ~QMenuBar()
-    C.C_ZN8QMenuBarD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN8QMenuBarD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMenuBar", "~QMenuBar", args)
   }
@@ -714,7 +724,7 @@ func (this *QMenuBar) Freeqmenubar(args ...interface{}) () {
 }
 
 // setVisible(_Bool)
-func (this *QMenuBar) Setvisible(args ...interface{}) () {
+func (this *QMenuBar) SetVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -738,7 +748,7 @@ func (this *QMenuBar) Setvisible(args ...interface{}) () {
 }
 
 // insertMenu(class QAction *, class QMenu *)
-func (this *QMenuBar) Insertmenu(args ...interface{}) (ret interface{}) {
+func (this *QMenuBar) InsertMenu(args ...interface{}) (ret interface{}) {
   // insertMenu(class QAction *, class QMenu *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

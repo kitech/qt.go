@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qdirmodel.h
 // dst-file: /src/widgets/qdirmodel.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -112,6 +113,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDirModel)=1
@@ -121,7 +123,7 @@ type QDirModel struct {
 }
 
 // columnCount(const class QModelIndex &)
-func (this *QDirModel) Columncount(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) ColumnCount(args ...interface{}) (ret interface{}) {
   // columnCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -153,7 +155,7 @@ func (this *QDirModel) Columncount(args ...interface{}) (ret interface{}) {
 }
 
 // setNameFilters(const class QStringList &)
-func (this *QDirModel) Setnamefilters(args ...interface{}) () {
+func (this *QDirModel) SetNameFilters(args ...interface{}) () {
   // setNameFilters(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -177,7 +179,7 @@ func (this *QDirModel) Setnamefilters(args ...interface{}) () {
 }
 
 // setIconProvider(class QFileIconProvider *)
-func (this *QDirModel) Seticonprovider(args ...interface{}) () {
+func (this *QDirModel) SetIconProvider(args ...interface{}) () {
   // setIconProvider(class QFileIconProvider *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -201,7 +203,7 @@ func (this *QDirModel) Seticonprovider(args ...interface{}) () {
 }
 
 // setLazyChildCount(_Bool)
-func (this *QDirModel) Setlazychildcount(args ...interface{}) () {
+func (this *QDirModel) SetLazyChildCount(args ...interface{}) () {
   // setLazyChildCount(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -225,7 +227,7 @@ func (this *QDirModel) Setlazychildcount(args ...interface{}) () {
 }
 
 // isDir(const class QModelIndex &)
-func (this *QDirModel) Isdir(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) IsDir(args ...interface{}) (ret interface{}) {
   // isDir(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -257,7 +259,7 @@ func (this *QDirModel) Isdir(args ...interface{}) (ret interface{}) {
 }
 
 // lazyChildCount()
-func (this *QDirModel) Lazychildcount(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) LazyChildCount(args ...interface{}) (ret interface{}) {
   // lazyChildCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -310,7 +312,7 @@ func (this *QDirModel) Refresh(args ...interface{}) () {
 }
 
 // resolveSymlinks()
-func (this *QDirModel) Resolvesymlinks(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) ResolveSymlinks(args ...interface{}) (ret interface{}) {
   // resolveSymlinks()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -397,7 +399,7 @@ func (this *QDirModel) Index(args ...interface{}) (ret interface{}) {
 }
 
 // hasChildren(const class QModelIndex &)
-func (this *QDirModel) Haschildren(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) HasChildren(args ...interface{}) (ret interface{}) {
   // hasChildren(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -429,7 +431,7 @@ func (this *QDirModel) Haschildren(args ...interface{}) (ret interface{}) {
 }
 
 // isReadOnly()
-func (this *QDirModel) Isreadonly(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) IsReadOnly(args ...interface{}) (ret interface{}) {
   // isReadOnly()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -458,7 +460,7 @@ func (this *QDirModel) Isreadonly(args ...interface{}) (ret interface{}) {
 }
 
 // filePath(const class QModelIndex &)
-func (this *QDirModel) Filepath(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) FilePath(args ...interface{}) (ret interface{}) {
   // filePath(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -557,7 +559,7 @@ func (this *QDirModel) Rmdir(args ...interface{}) (ret interface{}) {
 }
 
 // setResolveSymlinks(_Bool)
-func (this *QDirModel) Setresolvesymlinks(args ...interface{}) () {
+func (this *QDirModel) SetResolveSymlinks(args ...interface{}) () {
   // setResolveSymlinks(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -581,7 +583,7 @@ func (this *QDirModel) Setresolvesymlinks(args ...interface{}) () {
 }
 
 // fileInfo(const class QModelIndex &)
-func (this *QDirModel) Fileinfo(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) FileInfo(args ...interface{}) (ret interface{}) {
   // fileInfo(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -613,7 +615,7 @@ func (this *QDirModel) Fileinfo(args ...interface{}) (ret interface{}) {
 }
 
 // setData(const class QModelIndex &, const class QVariant &, int)
-func (this *QDirModel) Setdata(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) SetData(args ...interface{}) (ret interface{}) {
   // setData(const class QModelIndex &, const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -683,7 +685,7 @@ func (this *QDirModel) Parent(args ...interface{}) (ret interface{}) {
 }
 
 // fileName(const class QModelIndex &)
-func (this *QDirModel) Filename(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) FileName(args ...interface{}) (ret interface{}) {
   // fileName(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -715,7 +717,7 @@ func (this *QDirModel) Filename(args ...interface{}) (ret interface{}) {
 }
 
 // rowCount(const class QModelIndex &)
-func (this *QDirModel) Rowcount(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) RowCount(args ...interface{}) (ret interface{}) {
   // rowCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -747,7 +749,7 @@ func (this *QDirModel) Rowcount(args ...interface{}) (ret interface{}) {
 }
 
 // ~QDirModel()
-func (this *QDirModel) Freeqdirmodel(args ...interface{}) () {
+func (this *QDirModel) Free(args ...interface{}) () {
   // ~QDirModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -759,7 +761,10 @@ func (this *QDirModel) Freeqdirmodel(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDirModelD0Ev
     // invoke: void ~QDirModel()
-    C.C_ZN9QDirModelD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QDirModelD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDirModel", "~QDirModel", args)
   }
@@ -768,7 +773,7 @@ func (this *QDirModel) Freeqdirmodel(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QDirModel) Metaobject(args ...interface{}) () {
+func (this *QDirModel) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -824,7 +829,7 @@ func (this *QDirModel) Data(args ...interface{}) (ret interface{}) {
 }
 
 // mimeTypes()
-func (this *QDirModel) Mimetypes(args ...interface{}) () {
+func (this *QDirModel) MimeTypes(args ...interface{}) () {
   // mimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -866,7 +871,7 @@ func (this *QDirModel) Sorting(args ...interface{}) () {
 }
 
 // iconProvider()
-func (this *QDirModel) Iconprovider(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) IconProvider(args ...interface{}) (ret interface{}) {
   // iconProvider()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -895,7 +900,7 @@ func (this *QDirModel) Iconprovider(args ...interface{}) (ret interface{}) {
 }
 
 // nameFilters()
-func (this *QDirModel) Namefilters(args ...interface{}) () {
+func (this *QDirModel) NameFilters(args ...interface{}) () {
   // nameFilters()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -916,6 +921,9 @@ func (this *QDirModel) Namefilters(args ...interface{}) () {
 }
 
 // QDirModel(class QObject *)
+func GcfreeQDirModel(this *QDirModel) {
+  qtrt.UniverseFree(this)
+}
 func NewQDirModel(args ...interface{}) *QDirModel {
   // QDirModel(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -934,7 +942,9 @@ func NewQDirModel(args ...interface{}) *QDirModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDirModelC2EP7QObject(arg0)
-    return &QDirModel{Qclsinst:qthis}
+    this := &QDirModel{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDirModel)
+    return this
   default:
     qtrt.ErrorResolve("QDirModel", "QDirModel", args)
   }
@@ -996,7 +1006,7 @@ func (this *QDirModel) Filter(args ...interface{}) () {
 }
 
 // setReadOnly(_Bool)
-func (this *QDirModel) Setreadonly(args ...interface{}) () {
+func (this *QDirModel) SetReadOnly(args ...interface{}) () {
   // setReadOnly(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1044,7 +1054,7 @@ func (this *QDirModel) Flags(args ...interface{}) () {
 }
 
 // fileIcon(const class QModelIndex &)
-func (this *QDirModel) Fileicon(args ...interface{}) (ret interface{}) {
+func (this *QDirModel) FileIcon(args ...interface{}) (ret interface{}) {
   // fileIcon(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1076,7 +1086,7 @@ func (this *QDirModel) Fileicon(args ...interface{}) (ret interface{}) {
 }
 
 // supportedDropActions()
-func (this *QDirModel) Supporteddropactions(args ...interface{}) () {
+func (this *QDirModel) SupportedDropActions(args ...interface{}) () {
   // supportedDropActions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

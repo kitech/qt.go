@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qlibraryinfo.h
 // dst-file: /src/core/qlibraryinfo.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -50,6 +51,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QLibraryInfo)=1
@@ -59,7 +61,7 @@ type QLibraryInfo struct {
 }
 
 // buildDate()
-func (this *QLibraryInfo) Builddate_S(args ...interface{}) (ret interface{}) {
+func (this *QLibraryInfo) BuildDate_s(args ...interface{}) (ret interface{}) {
   // buildDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -88,7 +90,7 @@ func (this *QLibraryInfo) Builddate_S(args ...interface{}) (ret interface{}) {
 }
 
 // isDebugBuild()
-func (this *QLibraryInfo) Isdebugbuild_S(args ...interface{}) (ret interface{}) {
+func (this *QLibraryInfo) IsDebugBuild_s(args ...interface{}) (ret interface{}) {
   // isDebugBuild()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,7 +119,7 @@ func (this *QLibraryInfo) Isdebugbuild_S(args ...interface{}) (ret interface{}) 
 }
 
 // licensee()
-func (this *QLibraryInfo) Licensee_S(args ...interface{}) (ret interface{}) {
+func (this *QLibraryInfo) Licensee_s(args ...interface{}) (ret interface{}) {
   // licensee()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -146,7 +148,7 @@ func (this *QLibraryInfo) Licensee_S(args ...interface{}) (ret interface{}) {
 }
 
 // licensedProducts()
-func (this *QLibraryInfo) Licensedproducts_S(args ...interface{}) (ret interface{}) {
+func (this *QLibraryInfo) LicensedProducts_s(args ...interface{}) (ret interface{}) {
   // licensedProducts()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -175,7 +177,7 @@ func (this *QLibraryInfo) Licensedproducts_S(args ...interface{}) (ret interface
 }
 
 // build()
-func (this *QLibraryInfo) Build_S(args ...interface{}) (ret interface{}) {
+func (this *QLibraryInfo) Build_s(args ...interface{}) (ret interface{}) {
   // build()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -204,7 +206,7 @@ func (this *QLibraryInfo) Build_S(args ...interface{}) (ret interface{}) {
 }
 
 // platformPluginArguments(const class QString &)
-func (this *QLibraryInfo) Platformpluginarguments_S(args ...interface{}) () {
+func (this *QLibraryInfo) PlatformPluginArguments_s(args ...interface{}) () {
   // platformPluginArguments(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

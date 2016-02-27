@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qpaintdevice.h
 // dst-file: /src/gui/qpaintdevice.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -68,6 +69,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPaintDevice)=24
@@ -77,7 +79,7 @@ type QPaintDevice struct {
 }
 
 // physicalDpiX()
-func (this *QPaintDevice) Physicaldpix(args ...interface{}) (ret interface{}) {
+func (this *QPaintDevice) PhysicalDpiX(args ...interface{}) (ret interface{}) {
   // physicalDpiX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -106,7 +108,7 @@ func (this *QPaintDevice) Physicaldpix(args ...interface{}) (ret interface{}) {
 }
 
 // physicalDpiY()
-func (this *QPaintDevice) Physicaldpiy(args ...interface{}) (ret interface{}) {
+func (this *QPaintDevice) PhysicalDpiY(args ...interface{}) (ret interface{}) {
   // physicalDpiY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -135,7 +137,7 @@ func (this *QPaintDevice) Physicaldpiy(args ...interface{}) (ret interface{}) {
 }
 
 // heightMM()
-func (this *QPaintDevice) Heightmm(args ...interface{}) (ret interface{}) {
+func (this *QPaintDevice) HeightMM(args ...interface{}) (ret interface{}) {
   // heightMM()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -164,7 +166,7 @@ func (this *QPaintDevice) Heightmm(args ...interface{}) (ret interface{}) {
 }
 
 // devicePixelRatio()
-func (this *QPaintDevice) Devicepixelratio(args ...interface{}) (ret interface{}) {
+func (this *QPaintDevice) DevicePixelRatio(args ...interface{}) (ret interface{}) {
   // devicePixelRatio()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -193,7 +195,7 @@ func (this *QPaintDevice) Devicepixelratio(args ...interface{}) (ret interface{}
 }
 
 // logicalDpiX()
-func (this *QPaintDevice) Logicaldpix(args ...interface{}) (ret interface{}) {
+func (this *QPaintDevice) LogicalDpiX(args ...interface{}) (ret interface{}) {
   // logicalDpiX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -280,7 +282,7 @@ func (this *QPaintDevice) Height(args ...interface{}) (ret interface{}) {
 }
 
 // colorCount()
-func (this *QPaintDevice) Colorcount(args ...interface{}) (ret interface{}) {
+func (this *QPaintDevice) ColorCount(args ...interface{}) (ret interface{}) {
   // colorCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -338,7 +340,7 @@ func (this *QPaintDevice) Width(args ...interface{}) (ret interface{}) {
 }
 
 // devType()
-func (this *QPaintDevice) Devtype(args ...interface{}) (ret interface{}) {
+func (this *QPaintDevice) DevType(args ...interface{}) (ret interface{}) {
   // devType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -367,7 +369,7 @@ func (this *QPaintDevice) Devtype(args ...interface{}) (ret interface{}) {
 }
 
 // widthMM()
-func (this *QPaintDevice) Widthmm(args ...interface{}) (ret interface{}) {
+func (this *QPaintDevice) WidthMM(args ...interface{}) (ret interface{}) {
   // widthMM()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -396,7 +398,7 @@ func (this *QPaintDevice) Widthmm(args ...interface{}) (ret interface{}) {
 }
 
 // logicalDpiY()
-func (this *QPaintDevice) Logicaldpiy(args ...interface{}) (ret interface{}) {
+func (this *QPaintDevice) LogicalDpiY(args ...interface{}) (ret interface{}) {
   // logicalDpiY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -425,7 +427,7 @@ func (this *QPaintDevice) Logicaldpiy(args ...interface{}) (ret interface{}) {
 }
 
 // ~QPaintDevice()
-func (this *QPaintDevice) Freeqpaintdevice(args ...interface{}) () {
+func (this *QPaintDevice) Free(args ...interface{}) () {
   // ~QPaintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -437,7 +439,10 @@ func (this *QPaintDevice) Freeqpaintdevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPaintDeviceD0Ev
     // invoke: void ~QPaintDevice()
-    C.C_ZN12QPaintDeviceD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QPaintDeviceD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPaintDevice", "~QPaintDevice", args)
   }
@@ -446,7 +451,7 @@ func (this *QPaintDevice) Freeqpaintdevice(args ...interface{}) () {
 }
 
 // paintingActive()
-func (this *QPaintDevice) Paintingactive(args ...interface{}) (ret interface{}) {
+func (this *QPaintDevice) PaintingActive(args ...interface{}) (ret interface{}) {
   // paintingActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

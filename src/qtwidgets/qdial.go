@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qdial.h
 // dst-file: /src/widgets/qdial.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -66,6 +67,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDial)=1
@@ -75,7 +77,7 @@ type QDial struct {
 }
 
 // setNotchTarget(double)
-func (this *QDial) Setnotchtarget(args ...interface{}) () {
+func (this *QDial) SetNotchTarget(args ...interface{}) () {
   // setNotchTarget(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -99,7 +101,7 @@ func (this *QDial) Setnotchtarget(args ...interface{}) () {
 }
 
 // notchesVisible()
-func (this *QDial) Notchesvisible(args ...interface{}) (ret interface{}) {
+func (this *QDial) NotchesVisible(args ...interface{}) (ret interface{}) {
   // notchesVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -128,7 +130,7 @@ func (this *QDial) Notchesvisible(args ...interface{}) (ret interface{}) {
 }
 
 // ~QDial()
-func (this *QDial) Freeqdial(args ...interface{}) () {
+func (this *QDial) Free(args ...interface{}) () {
   // ~QDial()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -140,7 +142,10 @@ func (this *QDial) Freeqdial(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QDialD0Ev
     // invoke: void ~QDial()
-    C.C_ZN5QDialD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN5QDialD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDial", "~QDial", args)
   }
@@ -149,6 +154,9 @@ func (this *QDial) Freeqdial(args ...interface{}) () {
 }
 
 // QDial(class QWidget *)
+func GcfreeQDial(this *QDial) {
+  qtrt.UniverseFree(this)
+}
 func NewQDial(args ...interface{}) *QDial {
   // QDial(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -167,7 +175,9 @@ func NewQDial(args ...interface{}) *QDial {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QDialC2EP7QWidget(arg0)
-    return &QDial{Qclsinst:qthis}
+    this := &QDial{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDial)
+    return this
   default:
     qtrt.ErrorResolve("QDial", "QDial", args)
   }
@@ -176,7 +186,7 @@ func NewQDial(args ...interface{}) *QDial {
 }
 
 // setWrapping(_Bool)
-func (this *QDial) Setwrapping(args ...interface{}) () {
+func (this *QDial) SetWrapping(args ...interface{}) () {
   // setWrapping(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -200,7 +210,7 @@ func (this *QDial) Setwrapping(args ...interface{}) () {
 }
 
 // setNotchesVisible(_Bool)
-func (this *QDial) Setnotchesvisible(args ...interface{}) () {
+func (this *QDial) SetNotchesVisible(args ...interface{}) () {
   // setNotchesVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -224,7 +234,7 @@ func (this *QDial) Setnotchesvisible(args ...interface{}) () {
 }
 
 // notchSize()
-func (this *QDial) Notchsize(args ...interface{}) (ret interface{}) {
+func (this *QDial) NotchSize(args ...interface{}) (ret interface{}) {
   // notchSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -282,7 +292,7 @@ func (this *QDial) Wrapping(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QDial) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QDial) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -311,7 +321,7 @@ func (this *QDial) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // notchTarget()
-func (this *QDial) Notchtarget(args ...interface{}) (ret interface{}) {
+func (this *QDial) NotchTarget(args ...interface{}) (ret interface{}) {
   // notchTarget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -340,7 +350,7 @@ func (this *QDial) Notchtarget(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QDial) Metaobject(args ...interface{}) () {
+func (this *QDial) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -361,7 +371,7 @@ func (this *QDial) Metaobject(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QDial) Minimumsizehint(args ...interface{}) (ret interface{}) {
+func (this *QDial) MinimumSizeHint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

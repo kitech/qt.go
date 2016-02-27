@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -68,6 +69,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QEasingCurve)=8
@@ -135,7 +137,7 @@ func (this *QEasingCurve) Period(args ...interface{}) (ret interface{}) {
 }
 
 // valueForProgress(qreal)
-func (this *QEasingCurve) Valueforprogress(args ...interface{}) (ret interface{}) {
+func (this *QEasingCurve) ValueForProgress(args ...interface{}) (ret interface{}) {
   // valueForProgress(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -167,7 +169,7 @@ func (this *QEasingCurve) Valueforprogress(args ...interface{}) (ret interface{}
 }
 
 // toCubicSpline()
-func (this *QEasingCurve) Tocubicspline(args ...interface{}) () {
+func (this *QEasingCurve) ToCubicSpline(args ...interface{}) () {
   // toCubicSpline()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -188,7 +190,7 @@ func (this *QEasingCurve) Tocubicspline(args ...interface{}) () {
 }
 
 // addCubicBezierSegment(const class QPointF &, const class QPointF &, const class QPointF &)
-func (this *QEasingCurve) Addcubicbeziersegment(args ...interface{}) () {
+func (this *QEasingCurve) AddCubicBezierSegment(args ...interface{}) () {
   // addCubicBezierSegment(const class QPointF &, const class QPointF &, const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -218,6 +220,9 @@ func (this *QEasingCurve) Addcubicbeziersegment(args ...interface{}) () {
 }
 
 // QEasingCurve(const class QEasingCurve &)
+func GcfreeQEasingCurve(this *QEasingCurve) {
+  qtrt.UniverseFree(this)
+}
 func NewQEasingCurve(args ...interface{}) *QEasingCurve {
   // QEasingCurve(const class QEasingCurve &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -236,7 +241,9 @@ func NewQEasingCurve(args ...interface{}) *QEasingCurve {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QEasingCurveC2ERKS_(arg0)
-    return &QEasingCurve{Qclsinst:qthis}
+    this := &QEasingCurve{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQEasingCurve)
+    return this
   default:
     qtrt.ErrorResolve("QEasingCurve", "QEasingCurve", args)
   }
@@ -290,7 +297,7 @@ func (this *QEasingCurve) Swap(args ...interface{}) () {
 }
 
 // addTCBSegment(const class QPointF &, qreal, qreal, qreal)
-func (this *QEasingCurve) Addtcbsegment(args ...interface{}) () {
+func (this *QEasingCurve) AddTCBSegment(args ...interface{}) () {
   // addTCBSegment(const class QPointF &, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -323,7 +330,7 @@ func (this *QEasingCurve) Addtcbsegment(args ...interface{}) () {
 }
 
 // setAmplitude(qreal)
-func (this *QEasingCurve) Setamplitude(args ...interface{}) () {
+func (this *QEasingCurve) SetAmplitude(args ...interface{}) () {
   // setAmplitude(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -347,7 +354,7 @@ func (this *QEasingCurve) Setamplitude(args ...interface{}) () {
 }
 
 // ~QEasingCurve()
-func (this *QEasingCurve) Freeqeasingcurve(args ...interface{}) () {
+func (this *QEasingCurve) Free(args ...interface{}) () {
   // ~QEasingCurve()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -359,7 +366,10 @@ func (this *QEasingCurve) Freeqeasingcurve(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QEasingCurveD0Ev
     // invoke: void ~QEasingCurve()
-    C.C_ZN12QEasingCurveD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QEasingCurveD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QEasingCurve", "~QEasingCurve", args)
   }
@@ -368,7 +378,7 @@ func (this *QEasingCurve) Freeqeasingcurve(args ...interface{}) () {
 }
 
 // setPeriod(qreal)
-func (this *QEasingCurve) Setperiod(args ...interface{}) () {
+func (this *QEasingCurve) SetPeriod(args ...interface{}) () {
   // setPeriod(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -392,7 +402,7 @@ func (this *QEasingCurve) Setperiod(args ...interface{}) () {
 }
 
 // customType()
-func (this *QEasingCurve) Customtype(args ...interface{}) () {
+func (this *QEasingCurve) CustomType(args ...interface{}) () {
   // customType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -413,7 +423,7 @@ func (this *QEasingCurve) Customtype(args ...interface{}) () {
 }
 
 // setOvershoot(qreal)
-func (this *QEasingCurve) Setovershoot(args ...interface{}) () {
+func (this *QEasingCurve) SetOvershoot(args ...interface{}) () {
   // setOvershoot(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

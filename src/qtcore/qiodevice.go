@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -110,6 +111,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QIODevice)=1
@@ -123,7 +125,7 @@ type QIODevice struct {
 }
 
 // bytesAvailable()
-func (this *QIODevice) Bytesavailable(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) BytesAvailable(args ...interface{}) (ret interface{}) {
   // bytesAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -181,7 +183,7 @@ func (this *QIODevice) Pos(args ...interface{}) (ret interface{}) {
 }
 
 // bytesToWrite()
-func (this *QIODevice) Bytestowrite(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) BytesToWrite(args ...interface{}) (ret interface{}) {
   // bytesToWrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -263,7 +265,7 @@ func (this *QIODevice) Seek(args ...interface{}) (ret interface{}) {
 }
 
 // isSequential()
-func (this *QIODevice) Issequential(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) IsSequential(args ...interface{}) (ret interface{}) {
   // isSequential()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -292,7 +294,7 @@ func (this *QIODevice) Issequential(args ...interface{}) (ret interface{}) {
 }
 
 // ungetChar(char)
-func (this *QIODevice) Ungetchar(args ...interface{}) () {
+func (this *QIODevice) UngetChar(args ...interface{}) () {
   // ungetChar(char)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -418,7 +420,7 @@ func (this *QIODevice) Write(args ...interface{}) (ret interface{}) {
 }
 
 // canReadLine()
-func (this *QIODevice) Canreadline(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) CanReadLine(args ...interface{}) (ret interface{}) {
   // canReadLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -447,7 +449,7 @@ func (this *QIODevice) Canreadline(args ...interface{}) (ret interface{}) {
 }
 
 // waitForBytesWritten(int)
-func (this *QIODevice) Waitforbyteswritten(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) WaitForBytesWritten(args ...interface{}) (ret interface{}) {
   // waitForBytesWritten(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -587,7 +589,7 @@ func (this *QIODevice) Peek(args ...interface{}) (ret interface{}) {
 }
 
 // putChar(char)
-func (this *QIODevice) Putchar(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) PutChar(args ...interface{}) (ret interface{}) {
   // putChar(char)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -619,7 +621,7 @@ func (this *QIODevice) Putchar(args ...interface{}) (ret interface{}) {
 }
 
 // errorString()
-func (this *QIODevice) Errorstring(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) ErrorString(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -648,7 +650,7 @@ func (this *QIODevice) Errorstring(args ...interface{}) (ret interface{}) {
 }
 
 // ~QIODevice()
-func (this *QIODevice) Freeqiodevice(args ...interface{}) () {
+func (this *QIODevice) Free(args ...interface{}) () {
   // ~QIODevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -660,7 +662,10 @@ func (this *QIODevice) Freeqiodevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QIODeviceD0Ev
     // invoke: void ~QIODevice()
-    C.C_ZN9QIODeviceD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QIODeviceD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QIODevice", "~QIODevice", args)
   }
@@ -669,7 +674,7 @@ func (this *QIODevice) Freeqiodevice(args ...interface{}) () {
 }
 
 // readAll()
-func (this *QIODevice) Readall(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) ReadAll(args ...interface{}) (ret interface{}) {
   // readAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -698,7 +703,7 @@ func (this *QIODevice) Readall(args ...interface{}) (ret interface{}) {
 }
 
 // setTextModeEnabled(_Bool)
-func (this *QIODevice) Settextmodeenabled(args ...interface{}) () {
+func (this *QIODevice) SetTextModeEnabled(args ...interface{}) () {
   // setTextModeEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -722,6 +727,9 @@ func (this *QIODevice) Settextmodeenabled(args ...interface{}) () {
 }
 
 // QIODevice(class QObject *)
+func GcfreeQIODevice(this *QIODevice) {
+  qtrt.UniverseFree(this)
+}
 func NewQIODevice(args ...interface{}) *QIODevice {
   // QIODevice(class QObject *)
   // QIODevice()
@@ -742,14 +750,18 @@ func NewQIODevice(args ...interface{}) *QIODevice {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QIODeviceC2EP7QObject(arg0)
-    return &QIODevice{Qclsinst:qthis}
+    this := &QIODevice{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQIODevice)
+    return this
   case 1:
     // invoke: _ZN9QIODeviceC1Ev
     // invoke: void QIODevice()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QIODeviceC2Ev()
-    return &QIODevice{Qclsinst:qthis}
+    this := &QIODevice{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQIODevice)
+    return this
   default:
     qtrt.ErrorResolve("QIODevice", "QIODevice", args)
   }
@@ -787,7 +799,7 @@ func (this *QIODevice) Reset(args ...interface{}) (ret interface{}) {
 }
 
 // openMode()
-func (this *QIODevice) Openmode(args ...interface{}) () {
+func (this *QIODevice) OpenMode(args ...interface{}) () {
   // openMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -808,7 +820,7 @@ func (this *QIODevice) Openmode(args ...interface{}) () {
 }
 
 // isTextModeEnabled()
-func (this *QIODevice) Istextmodeenabled(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) IsTextModeEnabled(args ...interface{}) (ret interface{}) {
   // isTextModeEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -837,7 +849,7 @@ func (this *QIODevice) Istextmodeenabled(args ...interface{}) (ret interface{}) 
 }
 
 // metaObject()
-func (this *QIODevice) Metaobject(args ...interface{}) () {
+func (this *QIODevice) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -858,7 +870,7 @@ func (this *QIODevice) Metaobject(args ...interface{}) () {
 }
 
 // isOpen()
-func (this *QIODevice) Isopen(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) IsOpen(args ...interface{}) (ret interface{}) {
   // isOpen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -887,7 +899,7 @@ func (this *QIODevice) Isopen(args ...interface{}) (ret interface{}) {
 }
 
 // atEnd()
-func (this *QIODevice) Atend(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) AtEnd(args ...interface{}) (ret interface{}) {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -916,7 +928,7 @@ func (this *QIODevice) Atend(args ...interface{}) (ret interface{}) {
 }
 
 // waitForReadyRead(int)
-func (this *QIODevice) Waitforreadyread(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) WaitForReadyRead(args ...interface{}) (ret interface{}) {
   // waitForReadyRead(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -948,7 +960,7 @@ func (this *QIODevice) Waitforreadyread(args ...interface{}) (ret interface{}) {
 }
 
 // isReadable()
-func (this *QIODevice) Isreadable(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) IsReadable(args ...interface{}) (ret interface{}) {
   // isReadable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -977,7 +989,7 @@ func (this *QIODevice) Isreadable(args ...interface{}) (ret interface{}) {
 }
 
 // readLine(qint64)
-func (this *QIODevice) Readline(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) ReadLine(args ...interface{}) (ret interface{}) {
   // readLine(qint64)
   // readLine(char *, qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1031,7 +1043,7 @@ func (this *QIODevice) Readline(args ...interface{}) (ret interface{}) {
 }
 
 // isWritable()
-func (this *QIODevice) Iswritable(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) IsWritable(args ...interface{}) (ret interface{}) {
   // isWritable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1060,7 +1072,7 @@ func (this *QIODevice) Iswritable(args ...interface{}) (ret interface{}) {
 }
 
 // getChar(char *)
-func (this *QIODevice) Getchar(args ...interface{}) (ret interface{}) {
+func (this *QIODevice) GetChar(args ...interface{}) (ret interface{}) {
   // getChar(char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

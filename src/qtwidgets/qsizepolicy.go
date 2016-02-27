@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qsizepolicy.h
 // dst-file: /src/widgets/qsizepolicy.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -74,6 +75,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSizePolicy)=4
@@ -83,6 +85,9 @@ type QSizePolicy struct {
 }
 
 // QSizePolicy()
+func GcfreeQSizePolicy(this *QSizePolicy) {
+  qtrt.UniverseFree(this)
+}
 func NewQSizePolicy(args ...interface{}) *QSizePolicy {
   // QSizePolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -98,7 +103,9 @@ func NewQSizePolicy(args ...interface{}) *QSizePolicy {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QSizePolicyC2Ev()
-    return &QSizePolicy{Qclsinst:qthis}
+    this := &QSizePolicy{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSizePolicy)
+    return this
   default:
     qtrt.ErrorResolve("QSizePolicy", "QSizePolicy", args)
   }
@@ -107,7 +114,7 @@ func NewQSizePolicy(args ...interface{}) *QSizePolicy {
 }
 
 // setHorizontalStretch(int)
-func (this *QSizePolicy) Sethorizontalstretch(args ...interface{}) () {
+func (this *QSizePolicy) SetHorizontalStretch(args ...interface{}) () {
   // setHorizontalStretch(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -131,7 +138,7 @@ func (this *QSizePolicy) Sethorizontalstretch(args ...interface{}) () {
 }
 
 // expandingDirections()
-func (this *QSizePolicy) Expandingdirections(args ...interface{}) () {
+func (this *QSizePolicy) ExpandingDirections(args ...interface{}) () {
   // expandingDirections()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -152,7 +159,7 @@ func (this *QSizePolicy) Expandingdirections(args ...interface{}) () {
 }
 
 // setWidthForHeight(_Bool)
-func (this *QSizePolicy) Setwidthforheight(args ...interface{}) () {
+func (this *QSizePolicy) SetWidthForHeight(args ...interface{}) () {
   // setWidthForHeight(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -176,7 +183,7 @@ func (this *QSizePolicy) Setwidthforheight(args ...interface{}) () {
 }
 
 // hasWidthForHeight()
-func (this *QSizePolicy) Haswidthforheight(args ...interface{}) (ret interface{}) {
+func (this *QSizePolicy) HasWidthForHeight(args ...interface{}) (ret interface{}) {
   // hasWidthForHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -205,7 +212,7 @@ func (this *QSizePolicy) Haswidthforheight(args ...interface{}) (ret interface{}
 }
 
 // verticalStretch()
-func (this *QSizePolicy) Verticalstretch(args ...interface{}) (ret interface{}) {
+func (this *QSizePolicy) VerticalStretch(args ...interface{}) (ret interface{}) {
   // verticalStretch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -255,7 +262,7 @@ func (this *QSizePolicy) Transpose(args ...interface{}) () {
 }
 
 // retainSizeWhenHidden()
-func (this *QSizePolicy) Retainsizewhenhidden(args ...interface{}) (ret interface{}) {
+func (this *QSizePolicy) RetainSizeWhenHidden(args ...interface{}) (ret interface{}) {
   // retainSizeWhenHidden()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -284,7 +291,7 @@ func (this *QSizePolicy) Retainsizewhenhidden(args ...interface{}) (ret interfac
 }
 
 // setVerticalStretch(int)
-func (this *QSizePolicy) Setverticalstretch(args ...interface{}) () {
+func (this *QSizePolicy) SetVerticalStretch(args ...interface{}) () {
   // setVerticalStretch(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -308,7 +315,7 @@ func (this *QSizePolicy) Setverticalstretch(args ...interface{}) () {
 }
 
 // verticalPolicy()
-func (this *QSizePolicy) Verticalpolicy(args ...interface{}) () {
+func (this *QSizePolicy) VerticalPolicy(args ...interface{}) () {
   // verticalPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -329,7 +336,7 @@ func (this *QSizePolicy) Verticalpolicy(args ...interface{}) () {
 }
 
 // setHeightForWidth(_Bool)
-func (this *QSizePolicy) Setheightforwidth(args ...interface{}) () {
+func (this *QSizePolicy) SetHeightForWidth(args ...interface{}) () {
   // setHeightForWidth(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -353,7 +360,7 @@ func (this *QSizePolicy) Setheightforwidth(args ...interface{}) () {
 }
 
 // hasHeightForWidth()
-func (this *QSizePolicy) Hasheightforwidth(args ...interface{}) (ret interface{}) {
+func (this *QSizePolicy) HasHeightForWidth(args ...interface{}) (ret interface{}) {
   // hasHeightForWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -382,7 +389,7 @@ func (this *QSizePolicy) Hasheightforwidth(args ...interface{}) (ret interface{}
 }
 
 // horizontalStretch()
-func (this *QSizePolicy) Horizontalstretch(args ...interface{}) (ret interface{}) {
+func (this *QSizePolicy) HorizontalStretch(args ...interface{}) (ret interface{}) {
   // horizontalStretch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -411,7 +418,7 @@ func (this *QSizePolicy) Horizontalstretch(args ...interface{}) (ret interface{}
 }
 
 // setRetainSizeWhenHidden(_Bool)
-func (this *QSizePolicy) Setretainsizewhenhidden(args ...interface{}) () {
+func (this *QSizePolicy) SetRetainSizeWhenHidden(args ...interface{}) () {
   // setRetainSizeWhenHidden(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -435,7 +442,7 @@ func (this *QSizePolicy) Setretainsizewhenhidden(args ...interface{}) () {
 }
 
 // controlType()
-func (this *QSizePolicy) Controltype(args ...interface{}) () {
+func (this *QSizePolicy) ControlType(args ...interface{}) () {
   // controlType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -456,7 +463,7 @@ func (this *QSizePolicy) Controltype(args ...interface{}) () {
 }
 
 // horizontalPolicy()
-func (this *QSizePolicy) Horizontalpolicy(args ...interface{}) () {
+func (this *QSizePolicy) HorizontalPolicy(args ...interface{}) () {
   // horizontalPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

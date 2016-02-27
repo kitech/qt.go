@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qgraphicsgridlayout.h
 // dst-file: /src/widgets/qgraphicsgridlayout.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -124,6 +125,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsGridLayout)=1
@@ -133,7 +135,7 @@ type QGraphicsGridLayout struct {
 }
 
 // columnCount()
-func (this *QGraphicsGridLayout) Columncount(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) ColumnCount(args ...interface{}) (ret interface{}) {
   // columnCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,7 +185,7 @@ func (this *QGraphicsGridLayout) Invalidate(args ...interface{}) () {
 }
 
 // rowSpacing(int)
-func (this *QGraphicsGridLayout) Rowspacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) RowSpacing(args ...interface{}) (ret interface{}) {
   // rowSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -215,7 +217,7 @@ func (this *QGraphicsGridLayout) Rowspacing(args ...interface{}) (ret interface{
 }
 
 // setRowFixedHeight(int, qreal)
-func (this *QGraphicsGridLayout) Setrowfixedheight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetRowFixedHeight(args ...interface{}) () {
   // setRowFixedHeight(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -242,7 +244,7 @@ func (this *QGraphicsGridLayout) Setrowfixedheight(args ...interface{}) () {
 }
 
 // columnAlignment(int)
-func (this *QGraphicsGridLayout) Columnalignment(args ...interface{}) () {
+func (this *QGraphicsGridLayout) ColumnAlignment(args ...interface{}) () {
   // columnAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -266,7 +268,7 @@ func (this *QGraphicsGridLayout) Columnalignment(args ...interface{}) () {
 }
 
 // removeAt(int)
-func (this *QGraphicsGridLayout) Removeat(args ...interface{}) () {
+func (this *QGraphicsGridLayout) RemoveAt(args ...interface{}) () {
   // removeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -290,7 +292,7 @@ func (this *QGraphicsGridLayout) Removeat(args ...interface{}) () {
 }
 
 // setColumnSpacing(int, qreal)
-func (this *QGraphicsGridLayout) Setcolumnspacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetColumnSpacing(args ...interface{}) () {
   // setColumnSpacing(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -317,7 +319,7 @@ func (this *QGraphicsGridLayout) Setcolumnspacing(args ...interface{}) () {
 }
 
 // verticalSpacing()
-func (this *QGraphicsGridLayout) Verticalspacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) VerticalSpacing(args ...interface{}) (ret interface{}) {
   // verticalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -346,7 +348,7 @@ func (this *QGraphicsGridLayout) Verticalspacing(args ...interface{}) (ret inter
 }
 
 // rowMaximumHeight(int)
-func (this *QGraphicsGridLayout) Rowmaximumheight(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) RowMaximumHeight(args ...interface{}) (ret interface{}) {
   // rowMaximumHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,7 +380,7 @@ func (this *QGraphicsGridLayout) Rowmaximumheight(args ...interface{}) (ret inte
 }
 
 // rowPreferredHeight(int)
-func (this *QGraphicsGridLayout) Rowpreferredheight(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) RowPreferredHeight(args ...interface{}) (ret interface{}) {
   // rowPreferredHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -410,7 +412,7 @@ func (this *QGraphicsGridLayout) Rowpreferredheight(args ...interface{}) (ret in
 }
 
 // columnMaximumWidth(int)
-func (this *QGraphicsGridLayout) Columnmaximumwidth(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) ColumnMaximumWidth(args ...interface{}) (ret interface{}) {
   // columnMaximumWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -442,6 +444,9 @@ func (this *QGraphicsGridLayout) Columnmaximumwidth(args ...interface{}) (ret in
 }
 
 // QGraphicsGridLayout(class QGraphicsLayoutItem *)
+func GcfreeQGraphicsGridLayout(this *QGraphicsGridLayout) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsGridLayout(args ...interface{}) *QGraphicsGridLayout {
   // QGraphicsGridLayout(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -460,7 +465,9 @@ func NewQGraphicsGridLayout(args ...interface{}) *QGraphicsGridLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QGraphicsGridLayoutC2EP19QGraphicsLayoutItem(arg0)
-    return &QGraphicsGridLayout{Qclsinst:qthis}
+    this := &QGraphicsGridLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsGridLayout)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "QGraphicsGridLayout", args)
   }
@@ -469,7 +476,7 @@ func NewQGraphicsGridLayout(args ...interface{}) *QGraphicsGridLayout {
 }
 
 // setRowStretchFactor(int, int)
-func (this *QGraphicsGridLayout) Setrowstretchfactor(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetRowStretchFactor(args ...interface{}) () {
   // setRowStretchFactor(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -520,7 +527,7 @@ func (this *QGraphicsGridLayout) Alignment(args ...interface{}) () {
 }
 
 // rowAlignment(int)
-func (this *QGraphicsGridLayout) Rowalignment(args ...interface{}) () {
+func (this *QGraphicsGridLayout) RowAlignment(args ...interface{}) () {
   // rowAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -544,7 +551,7 @@ func (this *QGraphicsGridLayout) Rowalignment(args ...interface{}) () {
 }
 
 // setSpacing(qreal)
-func (this *QGraphicsGridLayout) Setspacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetSpacing(args ...interface{}) () {
   // setSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -568,7 +575,7 @@ func (this *QGraphicsGridLayout) Setspacing(args ...interface{}) () {
 }
 
 // setGeometry(const class QRectF &)
-func (this *QGraphicsGridLayout) Setgeometry(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetGeometry(args ...interface{}) () {
   // setGeometry(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -592,7 +599,7 @@ func (this *QGraphicsGridLayout) Setgeometry(args ...interface{}) () {
 }
 
 // setColumnStretchFactor(int, int)
-func (this *QGraphicsGridLayout) Setcolumnstretchfactor(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetColumnStretchFactor(args ...interface{}) () {
   // setColumnStretchFactor(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -619,7 +626,7 @@ func (this *QGraphicsGridLayout) Setcolumnstretchfactor(args ...interface{}) () 
 }
 
 // setVerticalSpacing(qreal)
-func (this *QGraphicsGridLayout) Setverticalspacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetVerticalSpacing(args ...interface{}) () {
   // setVerticalSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -643,7 +650,7 @@ func (this *QGraphicsGridLayout) Setverticalspacing(args ...interface{}) () {
 }
 
 // rowMinimumHeight(int)
-func (this *QGraphicsGridLayout) Rowminimumheight(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) RowMinimumHeight(args ...interface{}) (ret interface{}) {
   // rowMinimumHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -675,7 +682,7 @@ func (this *QGraphicsGridLayout) Rowminimumheight(args ...interface{}) (ret inte
 }
 
 // horizontalSpacing()
-func (this *QGraphicsGridLayout) Horizontalspacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) HorizontalSpacing(args ...interface{}) (ret interface{}) {
   // horizontalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -704,7 +711,7 @@ func (this *QGraphicsGridLayout) Horizontalspacing(args ...interface{}) (ret int
 }
 
 // rowStretchFactor(int)
-func (this *QGraphicsGridLayout) Rowstretchfactor(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) RowStretchFactor(args ...interface{}) (ret interface{}) {
   // rowStretchFactor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -736,7 +743,7 @@ func (this *QGraphicsGridLayout) Rowstretchfactor(args ...interface{}) (ret inte
 }
 
 // setColumnPreferredWidth(int, qreal)
-func (this *QGraphicsGridLayout) Setcolumnpreferredwidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetColumnPreferredWidth(args ...interface{}) () {
   // setColumnPreferredWidth(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -763,7 +770,7 @@ func (this *QGraphicsGridLayout) Setcolumnpreferredwidth(args ...interface{}) ()
 }
 
 // columnSpacing(int)
-func (this *QGraphicsGridLayout) Columnspacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) ColumnSpacing(args ...interface{}) (ret interface{}) {
   // columnSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -795,7 +802,7 @@ func (this *QGraphicsGridLayout) Columnspacing(args ...interface{}) (ret interfa
 }
 
 // setColumnMinimumWidth(int, qreal)
-func (this *QGraphicsGridLayout) Setcolumnminimumwidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetColumnMinimumWidth(args ...interface{}) () {
   // setColumnMinimumWidth(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -822,7 +829,7 @@ func (this *QGraphicsGridLayout) Setcolumnminimumwidth(args ...interface{}) () {
 }
 
 // columnStretchFactor(int)
-func (this *QGraphicsGridLayout) Columnstretchfactor(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) ColumnStretchFactor(args ...interface{}) (ret interface{}) {
   // columnStretchFactor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -854,7 +861,7 @@ func (this *QGraphicsGridLayout) Columnstretchfactor(args ...interface{}) (ret i
 }
 
 // setRowSpacing(int, qreal)
-func (this *QGraphicsGridLayout) Setrowspacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetRowSpacing(args ...interface{}) () {
   // setRowSpacing(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -881,7 +888,7 @@ func (this *QGraphicsGridLayout) Setrowspacing(args ...interface{}) () {
 }
 
 // rowCount()
-func (this *QGraphicsGridLayout) Rowcount(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) RowCount(args ...interface{}) (ret interface{}) {
   // rowCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -910,7 +917,7 @@ func (this *QGraphicsGridLayout) Rowcount(args ...interface{}) (ret interface{})
 }
 
 // removeItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsGridLayout) Removeitem(args ...interface{}) () {
+func (this *QGraphicsGridLayout) RemoveItem(args ...interface{}) () {
   // removeItem(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -963,7 +970,7 @@ func (this *QGraphicsGridLayout) Count(args ...interface{}) (ret interface{}) {
 }
 
 // ~QGraphicsGridLayout()
-func (this *QGraphicsGridLayout) Freeqgraphicsgridlayout(args ...interface{}) () {
+func (this *QGraphicsGridLayout) Free(args ...interface{}) () {
   // ~QGraphicsGridLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -975,7 +982,10 @@ func (this *QGraphicsGridLayout) Freeqgraphicsgridlayout(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QGraphicsGridLayoutD0Ev
     // invoke: void ~QGraphicsGridLayout()
-    C.C_ZN19QGraphicsGridLayoutD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QGraphicsGridLayoutD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "~QGraphicsGridLayout", args)
   }
@@ -984,7 +994,7 @@ func (this *QGraphicsGridLayout) Freeqgraphicsgridlayout(args ...interface{}) ()
 }
 
 // setColumnFixedWidth(int, qreal)
-func (this *QGraphicsGridLayout) Setcolumnfixedwidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetColumnFixedWidth(args ...interface{}) () {
   // setColumnFixedWidth(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1011,7 +1021,7 @@ func (this *QGraphicsGridLayout) Setcolumnfixedwidth(args ...interface{}) () {
 }
 
 // itemAt(int, int)
-func (this *QGraphicsGridLayout) Itemat(args ...interface{}) () {
+func (this *QGraphicsGridLayout) ItemAt(args ...interface{}) () {
   // itemAt(int, int)
   // itemAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1047,7 +1057,7 @@ func (this *QGraphicsGridLayout) Itemat(args ...interface{}) () {
 }
 
 // columnMinimumWidth(int)
-func (this *QGraphicsGridLayout) Columnminimumwidth(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) ColumnMinimumWidth(args ...interface{}) (ret interface{}) {
   // columnMinimumWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1079,7 +1089,7 @@ func (this *QGraphicsGridLayout) Columnminimumwidth(args ...interface{}) (ret in
 }
 
 // setHorizontalSpacing(qreal)
-func (this *QGraphicsGridLayout) Sethorizontalspacing(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetHorizontalSpacing(args ...interface{}) () {
   // setHorizontalSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1103,7 +1113,7 @@ func (this *QGraphicsGridLayout) Sethorizontalspacing(args ...interface{}) () {
 }
 
 // setRowMaximumHeight(int, qreal)
-func (this *QGraphicsGridLayout) Setrowmaximumheight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetRowMaximumHeight(args ...interface{}) () {
   // setRowMaximumHeight(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1130,7 +1140,7 @@ func (this *QGraphicsGridLayout) Setrowmaximumheight(args ...interface{}) () {
 }
 
 // columnPreferredWidth(int)
-func (this *QGraphicsGridLayout) Columnpreferredwidth(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsGridLayout) ColumnPreferredWidth(args ...interface{}) (ret interface{}) {
   // columnPreferredWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1162,7 +1172,7 @@ func (this *QGraphicsGridLayout) Columnpreferredwidth(args ...interface{}) (ret 
 }
 
 // setColumnMaximumWidth(int, qreal)
-func (this *QGraphicsGridLayout) Setcolumnmaximumwidth(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetColumnMaximumWidth(args ...interface{}) () {
   // setColumnMaximumWidth(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1189,7 +1199,7 @@ func (this *QGraphicsGridLayout) Setcolumnmaximumwidth(args ...interface{}) () {
 }
 
 // setRowMinimumHeight(int, qreal)
-func (this *QGraphicsGridLayout) Setrowminimumheight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetRowMinimumHeight(args ...interface{}) () {
   // setRowMinimumHeight(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1216,7 +1226,7 @@ func (this *QGraphicsGridLayout) Setrowminimumheight(args ...interface{}) () {
 }
 
 // setRowPreferredHeight(int, qreal)
-func (this *QGraphicsGridLayout) Setrowpreferredheight(args ...interface{}) () {
+func (this *QGraphicsGridLayout) SetRowPreferredHeight(args ...interface{}) () {
   // setRowPreferredHeight(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

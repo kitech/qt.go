@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -82,6 +83,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QBitRef)=16
@@ -126,7 +128,7 @@ func (this *QBitArray) Size(args ...interface{}) (ret interface{}) {
 }
 
 // testBit(int)
-func (this *QBitArray) Testbit(args ...interface{}) (ret interface{}) {
+func (this *QBitArray) TestBit(args ...interface{}) (ret interface{}) {
   // testBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -190,7 +192,7 @@ func (this *QBitArray) At(args ...interface{}) (ret interface{}) {
 }
 
 // toggleBit(int)
-func (this *QBitArray) Togglebit(args ...interface{}) (ret interface{}) {
+func (this *QBitArray) ToggleBit(args ...interface{}) (ret interface{}) {
   // toggleBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -265,7 +267,7 @@ func (this *QBitArray) Fill(args ...interface{}) () {
 }
 
 // clearBit(int)
-func (this *QBitArray) Clearbit(args ...interface{}) () {
+func (this *QBitArray) ClearBit(args ...interface{}) () {
   // clearBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -289,6 +291,9 @@ func (this *QBitArray) Clearbit(args ...interface{}) () {
 }
 
 // QBitArray()
+func GcfreeQBitArray(this *QBitArray) {
+  qtrt.UniverseFree(this)
+}
 func NewQBitArray(args ...interface{}) *QBitArray {
   // QBitArray()
   // QBitArray(int, _Bool)
@@ -311,7 +316,9 @@ func NewQBitArray(args ...interface{}) *QBitArray {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QBitArrayC2Ev()
-    return &QBitArray{Qclsinst:qthis}
+    this := &QBitArray{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBitArray)
+    return this
   case 1:
     // invoke: _ZN9QBitArrayC1Eib
     // invoke: void QBitArray(int, _Bool)
@@ -322,7 +329,9 @@ func NewQBitArray(args ...interface{}) *QBitArray {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QBitArrayC2Eib(arg0, arg1)
-    return &QBitArray{Qclsinst:qthis}
+    this := &QBitArray{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBitArray)
+    return this
   case 2:
     // invoke: _ZN9QBitArrayC1ERKS_
     // invoke: void QBitArray(const class QBitArray &)
@@ -331,7 +340,9 @@ func NewQBitArray(args ...interface{}) *QBitArray {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QBitArrayC2ERKS_(arg0)
-    return &QBitArray{Qclsinst:qthis}
+    this := &QBitArray{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBitArray)
+    return this
   default:
     qtrt.ErrorResolve("QBitArray", "QBitArray", args)
   }
@@ -364,7 +375,7 @@ func (this *QBitArray) Swap(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QBitArray) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QBitArray) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -393,7 +404,7 @@ func (this *QBitArray) Isempty(args ...interface{}) (ret interface{}) {
 }
 
 // setBit(int, _Bool)
-func (this *QBitArray) Setbit(args ...interface{}) () {
+func (this *QBitArray) SetBit(args ...interface{}) () {
   // setBit(int, _Bool)
   // setBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -429,7 +440,7 @@ func (this *QBitArray) Setbit(args ...interface{}) () {
 }
 
 // isDetached()
-func (this *QBitArray) Isdetached(args ...interface{}) (ret interface{}) {
+func (this *QBitArray) IsDetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -594,7 +605,7 @@ func (this *QBitArray) Clear(args ...interface{}) () {
 }
 
 // isNull()
-func (this *QBitArray) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QBitArray) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

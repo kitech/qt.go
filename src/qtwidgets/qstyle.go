@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -72,6 +73,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStyle)=1
@@ -81,7 +83,7 @@ type QStyle struct {
 }
 
 // drawItemPixmap(class QPainter *, const class QRect &, int, const class QPixmap &)
-func (this *QStyle) Drawitempixmap(args ...interface{}) () {
+func (this *QStyle) DrawItemPixmap(args ...interface{}) () {
   // drawItemPixmap(class QPainter *, const class QRect &, int, const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -114,7 +116,7 @@ func (this *QStyle) Drawitempixmap(args ...interface{}) () {
 }
 
 // ~QStyle()
-func (this *QStyle) Freeqstyle(args ...interface{}) () {
+func (this *QStyle) Free(args ...interface{}) () {
   // ~QStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -126,7 +128,10 @@ func (this *QStyle) Freeqstyle(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QStyleD0Ev
     // invoke: void ~QStyle()
-    C.C_ZN6QStyleD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN6QStyleD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStyle", "~QStyle", args)
   }
@@ -177,7 +182,7 @@ func (this *QStyle) Polish(args ...interface{}) () {
 }
 
 // standardPalette()
-func (this *QStyle) Standardpalette(args ...interface{}) (ret interface{}) {
+func (this *QStyle) StandardPalette(args ...interface{}) (ret interface{}) {
   // standardPalette()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -206,6 +211,9 @@ func (this *QStyle) Standardpalette(args ...interface{}) (ret interface{}) {
 }
 
 // QStyle()
+func GcfreeQStyle(this *QStyle) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyle(args ...interface{}) *QStyle {
   // QStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -221,7 +229,9 @@ func NewQStyle(args ...interface{}) *QStyle {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QStyleC2Ev()
-    return &QStyle{Qclsinst:qthis}
+    this := &QStyle{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyle)
+    return this
   default:
     qtrt.ErrorResolve("QStyle", "QStyle", args)
   }
@@ -230,7 +240,7 @@ func NewQStyle(args ...interface{}) *QStyle {
 }
 
 // sliderValueFromPosition(int, int, int, int, _Bool)
-func (this *QStyle) Slidervaluefromposition_S(args ...interface{}) (ret interface{}) {
+func (this *QStyle) SliderValueFromPosition_s(args ...interface{}) (ret interface{}) {
   // sliderValueFromPosition(int, int, int, int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -303,7 +313,7 @@ func (this *QStyle) Proxy(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QStyle) Metaobject(args ...interface{}) () {
+func (this *QStyle) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -324,7 +334,7 @@ func (this *QStyle) Metaobject(args ...interface{}) () {
 }
 
 // itemTextRect(const class QFontMetrics &, const class QRect &, int, _Bool, const class QString &)
-func (this *QStyle) Itemtextrect(args ...interface{}) (ret interface{}) {
+func (this *QStyle) ItemTextRect(args ...interface{}) (ret interface{}) {
   // itemTextRect(const class QFontMetrics &, const class QRect &, int, _Bool, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -401,7 +411,7 @@ func (this *QStyle) Unpolish(args ...interface{}) () {
 }
 
 // sliderPositionFromValue(int, int, int, int, _Bool)
-func (this *QStyle) Sliderpositionfromvalue_S(args ...interface{}) (ret interface{}) {
+func (this *QStyle) SliderPositionFromValue_s(args ...interface{}) (ret interface{}) {
   // sliderPositionFromValue(int, int, int, int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -445,7 +455,7 @@ func (this *QStyle) Sliderpositionfromvalue_S(args ...interface{}) (ret interfac
 }
 
 // itemPixmapRect(const class QRect &, int, const class QPixmap &)
-func (this *QStyle) Itempixmaprect(args ...interface{}) (ret interface{}) {
+func (this *QStyle) ItemPixmapRect(args ...interface{}) (ret interface{}) {
   // itemPixmapRect(const class QRect &, int, const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

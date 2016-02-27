@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qbitmap.h
 // dst-file: /src/gui/qbitmap.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -60,6 +61,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QBitmap)=1
@@ -90,7 +92,7 @@ func (this *QBitmap) Clear(args ...interface{}) () {
 }
 
 // ~QBitmap()
-func (this *QBitmap) Freeqbitmap(args ...interface{}) () {
+func (this *QBitmap) Free(args ...interface{}) () {
   // ~QBitmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -102,7 +104,10 @@ func (this *QBitmap) Freeqbitmap(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QBitmapD0Ev
     // invoke: void ~QBitmap()
-    C.C_ZN7QBitmapD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QBitmapD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QBitmap", "~QBitmap", args)
   }
@@ -111,6 +116,9 @@ func (this *QBitmap) Freeqbitmap(args ...interface{}) () {
 }
 
 // QBitmap()
+func GcfreeQBitmap(this *QBitmap) {
+  qtrt.UniverseFree(this)
+}
 func NewQBitmap(args ...interface{}) *QBitmap {
   // QBitmap()
   // QBitmap(const class QPixmap &)
@@ -140,7 +148,9 @@ func NewQBitmap(args ...interface{}) *QBitmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBitmapC2Ev()
-    return &QBitmap{Qclsinst:qthis}
+    this := &QBitmap{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBitmap)
+    return this
   case 1:
     // invoke: _ZN7QBitmapC1ERK7QPixmap
     // invoke: void QBitmap(const class QPixmap &)
@@ -149,7 +159,9 @@ func NewQBitmap(args ...interface{}) *QBitmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBitmapC2ERK7QPixmap(arg0)
-    return &QBitmap{Qclsinst:qthis}
+    this := &QBitmap{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBitmap)
+    return this
   case 2:
     // invoke: _ZN7QBitmapC1ERK7QStringPKc
     // invoke: void QBitmap(const class QString &, const char *)
@@ -162,7 +174,9 @@ func NewQBitmap(args ...interface{}) *QBitmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBitmapC2ERK7QStringPKc(arg0, arg1)
-    return &QBitmap{Qclsinst:qthis}
+    this := &QBitmap{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBitmap)
+    return this
   case 3:
     // invoke: _ZN7QBitmapC1ERK5QSize
     // invoke: void QBitmap(const class QSize &)
@@ -171,7 +185,9 @@ func NewQBitmap(args ...interface{}) *QBitmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBitmapC2ERK5QSize(arg0)
-    return &QBitmap{Qclsinst:qthis}
+    this := &QBitmap{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBitmap)
+    return this
   case 4:
     // invoke: _ZN7QBitmapC1Eii
     // invoke: void QBitmap(int, int)
@@ -182,7 +198,9 @@ func NewQBitmap(args ...interface{}) *QBitmap {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QBitmapC2Eii(arg0, arg1)
-    return &QBitmap{Qclsinst:qthis}
+    this := &QBitmap{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBitmap)
+    return this
   default:
     qtrt.ErrorResolve("QBitmap", "QBitmap", args)
   }

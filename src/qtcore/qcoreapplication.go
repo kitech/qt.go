@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -124,6 +125,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCoreApplication)=1
@@ -138,7 +140,7 @@ type QCoreApplication struct {
 }
 
 // setLibraryPaths(const class QStringList &)
-func (this *QCoreApplication) Setlibrarypaths_S(args ...interface{}) () {
+func (this *QCoreApplication) SetLibraryPaths_s(args ...interface{}) () {
   // setLibraryPaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,7 +164,7 @@ func (this *QCoreApplication) Setlibrarypaths_S(args ...interface{}) () {
 }
 
 // eventDispatcher()
-func (this *QCoreApplication) Eventdispatcher_S(args ...interface{}) () {
+func (this *QCoreApplication) EventDispatcher_s(args ...interface{}) () {
   // eventDispatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,7 +185,7 @@ func (this *QCoreApplication) Eventdispatcher_S(args ...interface{}) () {
 }
 
 // setOrganizationName(const class QString &)
-func (this *QCoreApplication) Setorganizationname_S(args ...interface{}) () {
+func (this *QCoreApplication) SetOrganizationName_s(args ...interface{}) () {
   // setOrganizationName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -207,7 +209,7 @@ func (this *QCoreApplication) Setorganizationname_S(args ...interface{}) () {
 }
 
 // setEventDispatcher(class QAbstractEventDispatcher *)
-func (this *QCoreApplication) Seteventdispatcher_S(args ...interface{}) () {
+func (this *QCoreApplication) SetEventDispatcher_s(args ...interface{}) () {
   // setEventDispatcher(class QAbstractEventDispatcher *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -231,7 +233,7 @@ func (this *QCoreApplication) Seteventdispatcher_S(args ...interface{}) () {
 }
 
 // applicationDirPath()
-func (this *QCoreApplication) Applicationdirpath_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) ApplicationDirPath_s(args ...interface{}) (ret interface{}) {
   // applicationDirPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -260,7 +262,7 @@ func (this *QCoreApplication) Applicationdirpath_S(args ...interface{}) (ret int
 }
 
 // applicationPid()
-func (this *QCoreApplication) Applicationpid_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) ApplicationPid_s(args ...interface{}) (ret interface{}) {
   // applicationPid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -324,7 +326,7 @@ func (this *QCoreApplication) Notify(args ...interface{}) (ret interface{}) {
 }
 
 // installNativeEventFilter(class QAbstractNativeEventFilter *)
-func (this *QCoreApplication) Installnativeeventfilter(args ...interface{}) () {
+func (this *QCoreApplication) InstallNativeEventFilter(args ...interface{}) () {
   // installNativeEventFilter(class QAbstractNativeEventFilter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -348,7 +350,7 @@ func (this *QCoreApplication) Installnativeeventfilter(args ...interface{}) () {
 }
 
 // flush()
-func (this *QCoreApplication) Flush_S(args ...interface{}) () {
+func (this *QCoreApplication) Flush_s(args ...interface{}) () {
   // flush()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -369,7 +371,7 @@ func (this *QCoreApplication) Flush_S(args ...interface{}) () {
 }
 
 // isQuitLockEnabled()
-func (this *QCoreApplication) Isquitlockenabled_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) IsQuitLockEnabled_s(args ...interface{}) (ret interface{}) {
   // isQuitLockEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -398,7 +400,7 @@ func (this *QCoreApplication) Isquitlockenabled_S(args ...interface{}) (ret inte
 }
 
 // closingDown()
-func (this *QCoreApplication) Closingdown_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) ClosingDown_s(args ...interface{}) (ret interface{}) {
   // closingDown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -427,7 +429,7 @@ func (this *QCoreApplication) Closingdown_S(args ...interface{}) (ret interface{
 }
 
 // applicationName()
-func (this *QCoreApplication) Applicationname_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) ApplicationName_s(args ...interface{}) (ret interface{}) {
   // applicationName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -456,7 +458,7 @@ func (this *QCoreApplication) Applicationname_S(args ...interface{}) (ret interf
 }
 
 // quit()
-func (this *QCoreApplication) Quit_S(args ...interface{}) () {
+func (this *QCoreApplication) Quit_s(args ...interface{}) () {
   // quit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -477,7 +479,7 @@ func (this *QCoreApplication) Quit_S(args ...interface{}) () {
 }
 
 // applicationVersion()
-func (this *QCoreApplication) Applicationversion_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) ApplicationVersion_s(args ...interface{}) (ret interface{}) {
   // applicationVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -506,7 +508,7 @@ func (this *QCoreApplication) Applicationversion_S(args ...interface{}) (ret int
 }
 
 // exec()
-func (this *QCoreApplication) Exec_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) Exec_s(args ...interface{}) (ret interface{}) {
   // exec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -535,7 +537,7 @@ func (this *QCoreApplication) Exec_S(args ...interface{}) (ret interface{}) {
 }
 
 // instance()
-func (this *QCoreApplication) Instance_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) Instance_s(args ...interface{}) (ret interface{}) {
   // instance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -564,7 +566,7 @@ func (this *QCoreApplication) Instance_S(args ...interface{}) (ret interface{}) 
 }
 
 // organizationDomain()
-func (this *QCoreApplication) Organizationdomain_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) OrganizationDomain_s(args ...interface{}) (ret interface{}) {
   // organizationDomain()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -593,7 +595,7 @@ func (this *QCoreApplication) Organizationdomain_S(args ...interface{}) (ret int
 }
 
 // exit(int)
-func (this *QCoreApplication) Exit_S(args ...interface{}) () {
+func (this *QCoreApplication) Exit_s(args ...interface{}) () {
   // exit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -617,7 +619,7 @@ func (this *QCoreApplication) Exit_S(args ...interface{}) () {
 }
 
 // arguments()
-func (this *QCoreApplication) Arguments_S(args ...interface{}) () {
+func (this *QCoreApplication) Arguments_s(args ...interface{}) () {
   // arguments()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -638,7 +640,7 @@ func (this *QCoreApplication) Arguments_S(args ...interface{}) () {
 }
 
 // applicationFilePath()
-func (this *QCoreApplication) Applicationfilepath_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) ApplicationFilePath_s(args ...interface{}) (ret interface{}) {
   // applicationFilePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -667,7 +669,7 @@ func (this *QCoreApplication) Applicationfilepath_S(args ...interface{}) (ret in
 }
 
 // setSetuidAllowed(_Bool)
-func (this *QCoreApplication) Setsetuidallowed_S(args ...interface{}) () {
+func (this *QCoreApplication) SetSetuidAllowed_s(args ...interface{}) () {
   // setSetuidAllowed(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -691,7 +693,7 @@ func (this *QCoreApplication) Setsetuidallowed_S(args ...interface{}) () {
 }
 
 // translate(const char *, const char *, const char *, int)
-func (this *QCoreApplication) Translate_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) Translate_s(args ...interface{}) (ret interface{}) {
   // translate(const char *, const char *, const char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -738,7 +740,7 @@ func (this *QCoreApplication) Translate_S(args ...interface{}) (ret interface{})
 }
 
 // setQuitLockEnabled(_Bool)
-func (this *QCoreApplication) Setquitlockenabled_S(args ...interface{}) () {
+func (this *QCoreApplication) SetQuitLockEnabled_s(args ...interface{}) () {
   // setQuitLockEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -762,7 +764,7 @@ func (this *QCoreApplication) Setquitlockenabled_S(args ...interface{}) () {
 }
 
 // setApplicationVersion(const class QString &)
-func (this *QCoreApplication) Setapplicationversion_S(args ...interface{}) () {
+func (this *QCoreApplication) SetApplicationVersion_s(args ...interface{}) () {
   // setApplicationVersion(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -786,7 +788,7 @@ func (this *QCoreApplication) Setapplicationversion_S(args ...interface{}) () {
 }
 
 // removeNativeEventFilter(class QAbstractNativeEventFilter *)
-func (this *QCoreApplication) Removenativeeventfilter(args ...interface{}) () {
+func (this *QCoreApplication) RemoveNativeEventFilter(args ...interface{}) () {
   // removeNativeEventFilter(class QAbstractNativeEventFilter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -810,7 +812,7 @@ func (this *QCoreApplication) Removenativeeventfilter(args ...interface{}) () {
 }
 
 // installTranslator(class QTranslator *)
-func (this *QCoreApplication) Installtranslator_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) InstallTranslator_s(args ...interface{}) (ret interface{}) {
   // installTranslator(class QTranslator *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -842,6 +844,9 @@ func (this *QCoreApplication) Installtranslator_S(args ...interface{}) (ret inte
 }
 
 // QCoreApplication(int &, char **, int)
+func GcfreeQCoreApplication(this *QCoreApplication) {
+  qtrt.UniverseFree(this)
+}
 func NewQCoreApplication(args ...interface{}) *QCoreApplication {
   // QCoreApplication(int &, char **, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -868,7 +873,9 @@ func NewQCoreApplication(args ...interface{}) *QCoreApplication {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QCoreApplicationC2ERiPPci(arg0, arg1, arg2)
-    return &QCoreApplication{Qclsinst:qthis}
+    this := &QCoreApplication{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCoreApplication)
+    return this
   default:
     qtrt.ErrorResolve("QCoreApplication", "QCoreApplication", args)
   }
@@ -877,7 +884,7 @@ func NewQCoreApplication(args ...interface{}) *QCoreApplication {
 }
 
 // setOrganizationDomain(const class QString &)
-func (this *QCoreApplication) Setorganizationdomain_S(args ...interface{}) () {
+func (this *QCoreApplication) SetOrganizationDomain_s(args ...interface{}) () {
   // setOrganizationDomain(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -901,7 +908,7 @@ func (this *QCoreApplication) Setorganizationdomain_S(args ...interface{}) () {
 }
 
 // removePostedEvents(class QObject *, int)
-func (this *QCoreApplication) Removepostedevents_S(args ...interface{}) () {
+func (this *QCoreApplication) RemovePostedEvents_s(args ...interface{}) () {
   // removePostedEvents(class QObject *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -928,7 +935,7 @@ func (this *QCoreApplication) Removepostedevents_S(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QCoreApplication) Metaobject(args ...interface{}) () {
+func (this *QCoreApplication) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -949,7 +956,7 @@ func (this *QCoreApplication) Metaobject(args ...interface{}) () {
 }
 
 // setApplicationName(const class QString &)
-func (this *QCoreApplication) Setapplicationname_S(args ...interface{}) () {
+func (this *QCoreApplication) SetApplicationName_s(args ...interface{}) () {
   // setApplicationName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -973,7 +980,7 @@ func (this *QCoreApplication) Setapplicationname_S(args ...interface{}) () {
 }
 
 // addLibraryPath(const class QString &)
-func (this *QCoreApplication) Addlibrarypath_S(args ...interface{}) () {
+func (this *QCoreApplication) AddLibraryPath_s(args ...interface{}) () {
   // addLibraryPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -997,7 +1004,7 @@ func (this *QCoreApplication) Addlibrarypath_S(args ...interface{}) () {
 }
 
 // removeTranslator(class QTranslator *)
-func (this *QCoreApplication) Removetranslator_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) RemoveTranslator_s(args ...interface{}) (ret interface{}) {
   // removeTranslator(class QTranslator *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1029,7 +1036,7 @@ func (this *QCoreApplication) Removetranslator_S(args ...interface{}) (ret inter
 }
 
 // libraryPaths()
-func (this *QCoreApplication) Librarypaths_S(args ...interface{}) () {
+func (this *QCoreApplication) LibraryPaths_s(args ...interface{}) () {
   // libraryPaths()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1050,7 +1057,7 @@ func (this *QCoreApplication) Librarypaths_S(args ...interface{}) () {
 }
 
 // organizationName()
-func (this *QCoreApplication) Organizationname_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) OrganizationName_s(args ...interface{}) (ret interface{}) {
   // organizationName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1079,7 +1086,7 @@ func (this *QCoreApplication) Organizationname_S(args ...interface{}) (ret inter
 }
 
 // sendPostedEvents(class QObject *, int)
-func (this *QCoreApplication) Sendpostedevents_S(args ...interface{}) () {
+func (this *QCoreApplication) SendPostedEvents_s(args ...interface{}) () {
   // sendPostedEvents(class QObject *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1106,7 +1113,7 @@ func (this *QCoreApplication) Sendpostedevents_S(args ...interface{}) () {
 }
 
 // ~QCoreApplication()
-func (this *QCoreApplication) Freeqcoreapplication(args ...interface{}) () {
+func (this *QCoreApplication) Free(args ...interface{}) () {
   // ~QCoreApplication()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1118,7 +1125,10 @@ func (this *QCoreApplication) Freeqcoreapplication(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplicationD0Ev
     // invoke: void ~QCoreApplication()
-    C.C_ZN16QCoreApplicationD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN16QCoreApplicationD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QCoreApplication", "~QCoreApplication", args)
   }
@@ -1127,7 +1137,7 @@ func (this *QCoreApplication) Freeqcoreapplication(args ...interface{}) () {
 }
 
 // isSetuidAllowed()
-func (this *QCoreApplication) Issetuidallowed_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) IsSetuidAllowed_s(args ...interface{}) (ret interface{}) {
   // isSetuidAllowed()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1156,7 +1166,7 @@ func (this *QCoreApplication) Issetuidallowed_S(args ...interface{}) (ret interf
 }
 
 // sendEvent(class QObject *, class QEvent *)
-func (this *QCoreApplication) Sendevent_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) SendEvent_s(args ...interface{}) (ret interface{}) {
   // sendEvent(class QObject *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1191,7 +1201,7 @@ func (this *QCoreApplication) Sendevent_S(args ...interface{}) (ret interface{})
 }
 
 // startingUp()
-func (this *QCoreApplication) Startingup_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) StartingUp_s(args ...interface{}) (ret interface{}) {
   // startingUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1220,7 +1230,7 @@ func (this *QCoreApplication) Startingup_S(args ...interface{}) (ret interface{}
 }
 
 // hasPendingEvents()
-func (this *QCoreApplication) Haspendingevents_S(args ...interface{}) (ret interface{}) {
+func (this *QCoreApplication) HasPendingEvents_s(args ...interface{}) (ret interface{}) {
   // hasPendingEvents()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1249,7 +1259,7 @@ func (this *QCoreApplication) Haspendingevents_S(args ...interface{}) (ret inter
 }
 
 // postEvent(class QObject *, class QEvent *, int)
-func (this *QCoreApplication) Postevent_S(args ...interface{}) () {
+func (this *QCoreApplication) PostEvent_s(args ...interface{}) () {
   // postEvent(class QObject *, class QEvent *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1279,7 +1289,7 @@ func (this *QCoreApplication) Postevent_S(args ...interface{}) () {
 }
 
 // removeLibraryPath(const class QString &)
-func (this *QCoreApplication) Removelibrarypath_S(args ...interface{}) () {
+func (this *QCoreApplication) RemoveLibraryPath_s(args ...interface{}) () {
   // removeLibraryPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

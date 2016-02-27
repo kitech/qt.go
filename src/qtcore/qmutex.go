@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -64,6 +65,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMutexLocker)=4
@@ -85,7 +87,7 @@ type QMutex struct {
 }
 
 // ~QMutexLocker()
-func (this *QMutexLocker) Freeqmutexlocker(args ...interface{}) () {
+func (this *QMutexLocker) Free(args ...interface{}) () {
   // ~QMutexLocker()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,7 +99,10 @@ func (this *QMutexLocker) Freeqmutexlocker(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMutexLockerD0Ev
     // invoke: void ~QMutexLocker()
-    C.C_ZN12QMutexLockerD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QMutexLockerD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMutexLocker", "~QMutexLocker", args)
   }
@@ -127,6 +132,9 @@ func (this *QMutexLocker) Unlock(args ...interface{}) () {
 }
 
 // QMutexLocker(class QBasicMutex *)
+func GcfreeQMutexLocker(this *QMutexLocker) {
+  qtrt.UniverseFree(this)
+}
 func NewQMutexLocker(args ...interface{}) *QMutexLocker {
   // QMutexLocker(class QBasicMutex *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -145,7 +153,9 @@ func NewQMutexLocker(args ...interface{}) *QMutexLocker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QMutexLockerC2EP11QBasicMutex(arg0)
-    return &QMutexLocker{Qclsinst:qthis}
+    this := &QMutexLocker{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMutexLocker)
+    return this
   default:
     qtrt.ErrorResolve("QMutexLocker", "QMutexLocker", args)
   }
@@ -246,7 +256,7 @@ func (this *QBasicMutex) Unlock(args ...interface{}) () {
 }
 
 // tryLock()
-func (this *QBasicMutex) Trylock(args ...interface{}) (ret interface{}) {
+func (this *QBasicMutex) TryLock(args ...interface{}) (ret interface{}) {
   // tryLock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -275,7 +285,7 @@ func (this *QBasicMutex) Trylock(args ...interface{}) (ret interface{}) {
 }
 
 // isRecursive()
-func (this *QBasicMutex) Isrecursive(args ...interface{}) (ret interface{}) {
+func (this *QBasicMutex) IsRecursive(args ...interface{}) (ret interface{}) {
   // isRecursive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -325,7 +335,7 @@ func (this *QMutex) Lock(args ...interface{}) () {
 }
 
 // ~QMutex()
-func (this *QMutex) Freeqmutex(args ...interface{}) () {
+func (this *QMutex) Free(args ...interface{}) () {
   // ~QMutex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -337,7 +347,10 @@ func (this *QMutex) Freeqmutex(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMutexD0Ev
     // invoke: void ~QMutex()
-    C.C_ZN6QMutexD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN6QMutexD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMutex", "~QMutex", args)
   }
@@ -367,7 +380,7 @@ func (this *QMutex) Unlock(args ...interface{}) () {
 }
 
 // tryLock(int)
-func (this *QMutex) Trylock(args ...interface{}) (ret interface{}) {
+func (this *QMutex) TryLock(args ...interface{}) (ret interface{}) {
   // tryLock(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

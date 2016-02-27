@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qopenglcontext.h
 // dst-file: /src/gui/qopenglcontext.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -134,6 +135,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QOpenGLVersionProfile)=8
@@ -177,6 +179,9 @@ func (this *QOpenGLVersionProfile) Profile(args ...interface{}) () {
 }
 
 // QOpenGLVersionProfile(const class QSurfaceFormat &)
+func GcfreeQOpenGLVersionProfile(this *QOpenGLVersionProfile) {
+  qtrt.UniverseFree(this)
+}
 func NewQOpenGLVersionProfile(args ...interface{}) *QOpenGLVersionProfile {
   // QOpenGLVersionProfile(const class QSurfaceFormat &)
   // QOpenGLVersionProfile()
@@ -200,14 +205,18 @@ func NewQOpenGLVersionProfile(args ...interface{}) *QOpenGLVersionProfile {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QOpenGLVersionProfileC2ERK14QSurfaceFormat(arg0)
-    return &QOpenGLVersionProfile{Qclsinst:qthis}
+    this := &QOpenGLVersionProfile{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLVersionProfile)
+    return this
   case 1:
     // invoke: _ZN21QOpenGLVersionProfileC1Ev
     // invoke: void QOpenGLVersionProfile()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QOpenGLVersionProfileC2Ev()
-    return &QOpenGLVersionProfile{Qclsinst:qthis}
+    this := &QOpenGLVersionProfile{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLVersionProfile)
+    return this
   case 2:
     // invoke: _ZN21QOpenGLVersionProfileC1ERKS_
     // invoke: void QOpenGLVersionProfile(const class QOpenGLVersionProfile &)
@@ -216,7 +225,9 @@ func NewQOpenGLVersionProfile(args ...interface{}) *QOpenGLVersionProfile {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QOpenGLVersionProfileC2ERKS_(arg0)
-    return &QOpenGLVersionProfile{Qclsinst:qthis}
+    this := &QOpenGLVersionProfile{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLVersionProfile)
+    return this
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "QOpenGLVersionProfile", args)
   }
@@ -225,7 +236,7 @@ func NewQOpenGLVersionProfile(args ...interface{}) *QOpenGLVersionProfile {
 }
 
 // hasProfiles()
-func (this *QOpenGLVersionProfile) Hasprofiles(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLVersionProfile) HasProfiles(args ...interface{}) (ret interface{}) {
   // hasProfiles()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -254,7 +265,7 @@ func (this *QOpenGLVersionProfile) Hasprofiles(args ...interface{}) (ret interfa
 }
 
 // isValid()
-func (this *QOpenGLVersionProfile) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLVersionProfile) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -283,7 +294,7 @@ func (this *QOpenGLVersionProfile) Isvalid(args ...interface{}) (ret interface{}
 }
 
 // ~QOpenGLVersionProfile()
-func (this *QOpenGLVersionProfile) Freeqopenglversionprofile(args ...interface{}) () {
+func (this *QOpenGLVersionProfile) Free(args ...interface{}) () {
   // ~QOpenGLVersionProfile()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -295,7 +306,10 @@ func (this *QOpenGLVersionProfile) Freeqopenglversionprofile(args ...interface{}
   case 0:
     // invoke: _ZN21QOpenGLVersionProfileD0Ev
     // invoke: void ~QOpenGLVersionProfile()
-    C.C_ZN21QOpenGLVersionProfileD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN21QOpenGLVersionProfileD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "~QOpenGLVersionProfile", args)
   }
@@ -325,7 +339,7 @@ func (this *QOpenGLVersionProfile) Version(args ...interface{}) () {
 }
 
 // isLegacyVersion()
-func (this *QOpenGLVersionProfile) Islegacyversion(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLVersionProfile) IsLegacyVersion(args ...interface{}) (ret interface{}) {
   // isLegacyVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -354,7 +368,7 @@ func (this *QOpenGLVersionProfile) Islegacyversion(args ...interface{}) (ret int
 }
 
 // setVersion(int, int)
-func (this *QOpenGLVersionProfile) Setversion(args ...interface{}) () {
+func (this *QOpenGLVersionProfile) SetVersion(args ...interface{}) () {
   // setVersion(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -381,7 +395,7 @@ func (this *QOpenGLVersionProfile) Setversion(args ...interface{}) () {
 }
 
 // ~QOpenGLContext()
-func (this *QOpenGLContext) Freeqopenglcontext(args ...interface{}) () {
+func (this *QOpenGLContext) Free(args ...interface{}) () {
   // ~QOpenGLContext()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -393,7 +407,10 @@ func (this *QOpenGLContext) Freeqopenglcontext(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLContextD0Ev
     // invoke: void ~QOpenGLContext()
-    C.C_ZN14QOpenGLContextD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QOpenGLContextD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContext", "~QOpenGLContext", args)
   }
@@ -402,7 +419,7 @@ func (this *QOpenGLContext) Freeqopenglcontext(args ...interface{}) () {
 }
 
 // openGLModuleHandle()
-func (this *QOpenGLContext) Openglmodulehandle_S(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLContext) OpenGLModuleHandle_s(args ...interface{}) (ret interface{}) {
   // openGLModuleHandle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -431,7 +448,7 @@ func (this *QOpenGLContext) Openglmodulehandle_S(args ...interface{}) (ret inter
 }
 
 // shareContext()
-func (this *QOpenGLContext) Sharecontext(args ...interface{}) () {
+func (this *QOpenGLContext) ShareContext(args ...interface{}) () {
   // shareContext()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -452,7 +469,7 @@ func (this *QOpenGLContext) Sharecontext(args ...interface{}) () {
 }
 
 // doneCurrent()
-func (this *QOpenGLContext) Donecurrent(args ...interface{}) () {
+func (this *QOpenGLContext) DoneCurrent(args ...interface{}) () {
   // doneCurrent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -502,7 +519,7 @@ func (this *QOpenGLContext) Surface(args ...interface{}) (ret interface{}) {
 }
 
 // setNativeHandle(const class QVariant &)
-func (this *QOpenGLContext) Setnativehandle(args ...interface{}) () {
+func (this *QOpenGLContext) SetNativeHandle(args ...interface{}) () {
   // setNativeHandle(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -526,7 +543,7 @@ func (this *QOpenGLContext) Setnativehandle(args ...interface{}) () {
 }
 
 // supportsThreadedOpenGL()
-func (this *QOpenGLContext) Supportsthreadedopengl_S(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLContext) SupportsThreadedOpenGL_s(args ...interface{}) (ret interface{}) {
   // supportsThreadedOpenGL()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -576,7 +593,7 @@ func (this *QOpenGLContext) Functions(args ...interface{}) () {
 }
 
 // areSharing(class QOpenGLContext *, class QOpenGLContext *)
-func (this *QOpenGLContext) Aresharing_S(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLContext) AreSharing_s(args ...interface{}) (ret interface{}) {
   // areSharing(class QOpenGLContext *, class QOpenGLContext *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -611,7 +628,7 @@ func (this *QOpenGLContext) Aresharing_S(args ...interface{}) (ret interface{}) 
 }
 
 // setScreen(class QScreen *)
-func (this *QOpenGLContext) Setscreen(args ...interface{}) () {
+func (this *QOpenGLContext) SetScreen(args ...interface{}) () {
   // setScreen(class QScreen *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -635,7 +652,7 @@ func (this *QOpenGLContext) Setscreen(args ...interface{}) () {
 }
 
 // currentContext()
-func (this *QOpenGLContext) Currentcontext_S(args ...interface{}) () {
+func (this *QOpenGLContext) CurrentContext_s(args ...interface{}) () {
   // currentContext()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -656,7 +673,7 @@ func (this *QOpenGLContext) Currentcontext_S(args ...interface{}) () {
 }
 
 // setShareContext(class QOpenGLContext *)
-func (this *QOpenGLContext) Setsharecontext(args ...interface{}) () {
+func (this *QOpenGLContext) SetShareContext(args ...interface{}) () {
   // setShareContext(class QOpenGLContext *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -680,7 +697,7 @@ func (this *QOpenGLContext) Setsharecontext(args ...interface{}) () {
 }
 
 // openGLModuleType()
-func (this *QOpenGLContext) Openglmoduletype_S(args ...interface{}) () {
+func (this *QOpenGLContext) OpenGLModuleType_s(args ...interface{}) () {
   // openGLModuleType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -701,7 +718,7 @@ func (this *QOpenGLContext) Openglmoduletype_S(args ...interface{}) () {
 }
 
 // globalShareContext()
-func (this *QOpenGLContext) Globalsharecontext_S(args ...interface{}) () {
+func (this *QOpenGLContext) GlobalShareContext_s(args ...interface{}) () {
   // globalShareContext()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -722,7 +739,7 @@ func (this *QOpenGLContext) Globalsharecontext_S(args ...interface{}) () {
 }
 
 // isOpenGLES()
-func (this *QOpenGLContext) Isopengles(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLContext) IsOpenGLES(args ...interface{}) (ret interface{}) {
   // isOpenGLES()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -751,7 +768,7 @@ func (this *QOpenGLContext) Isopengles(args ...interface{}) (ret interface{}) {
 }
 
 // versionFunctions(const class QOpenGLVersionProfile &)
-func (this *QOpenGLContext) Versionfunctions(args ...interface{}) () {
+func (this *QOpenGLContext) VersionFunctions(args ...interface{}) () {
   // versionFunctions(const class QOpenGLVersionProfile &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -804,7 +821,7 @@ func (this *QOpenGLContext) Screen(args ...interface{}) (ret interface{}) {
 }
 
 // swapBuffers(class QSurface *)
-func (this *QOpenGLContext) Swapbuffers(args ...interface{}) () {
+func (this *QOpenGLContext) SwapBuffers(args ...interface{}) () {
   // swapBuffers(class QSurface *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -849,7 +866,7 @@ func (this *QOpenGLContext) Handle(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QOpenGLContext) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLContext) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -878,7 +895,7 @@ func (this *QOpenGLContext) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // hasExtension(const class QByteArray &)
-func (this *QOpenGLContext) Hasextension(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLContext) HasExtension(args ...interface{}) (ret interface{}) {
   // hasExtension(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -910,7 +927,7 @@ func (this *QOpenGLContext) Hasextension(args ...interface{}) (ret interface{}) 
 }
 
 // defaultFramebufferObject()
-func (this *QOpenGLContext) Defaultframebufferobject(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLContext) DefaultFramebufferObject(args ...interface{}) (ret interface{}) {
   // defaultFramebufferObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -939,7 +956,7 @@ func (this *QOpenGLContext) Defaultframebufferobject(args ...interface{}) (ret i
 }
 
 // getProcAddress(const class QByteArray &)
-func (this *QOpenGLContext) Getprocaddress(args ...interface{}) () {
+func (this *QOpenGLContext) GetProcAddress(args ...interface{}) () {
   // getProcAddress(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -963,7 +980,7 @@ func (this *QOpenGLContext) Getprocaddress(args ...interface{}) () {
 }
 
 // shareGroup()
-func (this *QOpenGLContext) Sharegroup(args ...interface{}) () {
+func (this *QOpenGLContext) ShareGroup(args ...interface{}) () {
   // shareGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -984,7 +1001,7 @@ func (this *QOpenGLContext) Sharegroup(args ...interface{}) () {
 }
 
 // shareHandle()
-func (this *QOpenGLContext) Sharehandle(args ...interface{}) () {
+func (this *QOpenGLContext) ShareHandle(args ...interface{}) () {
   // shareHandle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1005,7 +1022,7 @@ func (this *QOpenGLContext) Sharehandle(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QOpenGLContext) Metaobject(args ...interface{}) () {
+func (this *QOpenGLContext) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1026,6 +1043,9 @@ func (this *QOpenGLContext) Metaobject(args ...interface{}) () {
 }
 
 // QOpenGLContext(class QObject *)
+func GcfreeQOpenGLContext(this *QOpenGLContext) {
+  qtrt.UniverseFree(this)
+}
 func NewQOpenGLContext(args ...interface{}) *QOpenGLContext {
   // QOpenGLContext(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1044,7 +1064,9 @@ func NewQOpenGLContext(args ...interface{}) *QOpenGLContext {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QOpenGLContextC2EP7QObject(arg0)
-    return &QOpenGLContext{Qclsinst:qthis}
+    this := &QOpenGLContext{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLContext)
+    return this
   default:
     qtrt.ErrorResolve("QOpenGLContext", "QOpenGLContext", args)
   }
@@ -1053,7 +1075,7 @@ func NewQOpenGLContext(args ...interface{}) *QOpenGLContext {
 }
 
 // setFormat(const class QSurfaceFormat &)
-func (this *QOpenGLContext) Setformat(args ...interface{}) () {
+func (this *QOpenGLContext) SetFormat(args ...interface{}) () {
   // setFormat(const class QSurfaceFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1077,7 +1099,7 @@ func (this *QOpenGLContext) Setformat(args ...interface{}) () {
 }
 
 // makeCurrent(class QSurface *)
-func (this *QOpenGLContext) Makecurrent(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLContext) MakeCurrent(args ...interface{}) (ret interface{}) {
   // makeCurrent(class QSurface *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1109,7 +1131,7 @@ func (this *QOpenGLContext) Makecurrent(args ...interface{}) (ret interface{}) {
 }
 
 // nativeHandle()
-func (this *QOpenGLContext) Nativehandle(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLContext) NativeHandle(args ...interface{}) (ret interface{}) {
   // nativeHandle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1217,7 +1239,7 @@ func (this *QOpenGLContext) Create(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QOpenGLContextGroup) Metaobject(args ...interface{}) () {
+func (this *QOpenGLContextGroup) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1238,7 +1260,7 @@ func (this *QOpenGLContextGroup) Metaobject(args ...interface{}) () {
 }
 
 // currentContextGroup()
-func (this *QOpenGLContextGroup) Currentcontextgroup_S(args ...interface{}) () {
+func (this *QOpenGLContextGroup) CurrentContextGroup_s(args ...interface{}) () {
   // currentContextGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1280,7 +1302,7 @@ func (this *QOpenGLContextGroup) Shares(args ...interface{}) () {
 }
 
 // ~QOpenGLContextGroup()
-func (this *QOpenGLContextGroup) Freeqopenglcontextgroup(args ...interface{}) () {
+func (this *QOpenGLContextGroup) Free(args ...interface{}) () {
   // ~QOpenGLContextGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1292,7 +1314,10 @@ func (this *QOpenGLContextGroup) Freeqopenglcontextgroup(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QOpenGLContextGroupD0Ev
     // invoke: void ~QOpenGLContextGroup()
-    C.C_ZN19QOpenGLContextGroupD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QOpenGLContextGroupD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QOpenGLContextGroup", "~QOpenGLContextGroup", args)
   }

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qtemporarydir.h
 // dst-file: /src/core/qtemporarydir.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -54,6 +55,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTemporaryDir)=1
@@ -63,7 +65,7 @@ type QTemporaryDir struct {
 }
 
 // ~QTemporaryDir()
-func (this *QTemporaryDir) Freeqtemporarydir(args ...interface{}) () {
+func (this *QTemporaryDir) Free(args ...interface{}) () {
   // ~QTemporaryDir()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -75,7 +77,10 @@ func (this *QTemporaryDir) Freeqtemporarydir(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QTemporaryDirD0Ev
     // invoke: void ~QTemporaryDir()
-    C.C_ZN13QTemporaryDirD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QTemporaryDirD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTemporaryDir", "~QTemporaryDir", args)
   }
@@ -84,7 +89,7 @@ func (this *QTemporaryDir) Freeqtemporarydir(args ...interface{}) () {
 }
 
 // setAutoRemove(_Bool)
-func (this *QTemporaryDir) Setautoremove(args ...interface{}) () {
+func (this *QTemporaryDir) SetAutoRemove(args ...interface{}) () {
   // setAutoRemove(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -108,6 +113,9 @@ func (this *QTemporaryDir) Setautoremove(args ...interface{}) () {
 }
 
 // QTemporaryDir()
+func GcfreeQTemporaryDir(this *QTemporaryDir) {
+  qtrt.UniverseFree(this)
+}
 func NewQTemporaryDir(args ...interface{}) *QTemporaryDir {
   // QTemporaryDir()
   // QTemporaryDir(const class QString &)
@@ -126,7 +134,9 @@ func NewQTemporaryDir(args ...interface{}) *QTemporaryDir {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QTemporaryDirC2Ev()
-    return &QTemporaryDir{Qclsinst:qthis}
+    this := &QTemporaryDir{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTemporaryDir)
+    return this
   case 1:
     // invoke: _ZN13QTemporaryDirC1ERK7QString
     // invoke: void QTemporaryDir(const class QString &)
@@ -135,7 +145,9 @@ func NewQTemporaryDir(args ...interface{}) *QTemporaryDir {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QTemporaryDirC2ERK7QString(arg0)
-    return &QTemporaryDir{Qclsinst:qthis}
+    this := &QTemporaryDir{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTemporaryDir)
+    return this
   default:
     qtrt.ErrorResolve("QTemporaryDir", "QTemporaryDir", args)
   }
@@ -144,7 +156,7 @@ func NewQTemporaryDir(args ...interface{}) *QTemporaryDir {
 }
 
 // isValid()
-func (this *QTemporaryDir) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QTemporaryDir) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -202,7 +214,7 @@ func (this *QTemporaryDir) Remove(args ...interface{}) (ret interface{}) {
 }
 
 // autoRemove()
-func (this *QTemporaryDir) Autoremove(args ...interface{}) (ret interface{}) {
+func (this *QTemporaryDir) AutoRemove(args ...interface{}) (ret interface{}) {
   // autoRemove()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

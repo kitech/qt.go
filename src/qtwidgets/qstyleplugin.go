@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qstyleplugin.h
 // dst-file: /src/widgets/qstyleplugin.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -48,6 +49,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStylePlugin)=1
@@ -57,7 +59,7 @@ type QStylePlugin struct {
 }
 
 // ~QStylePlugin()
-func (this *QStylePlugin) Freeqstyleplugin(args ...interface{}) () {
+func (this *QStylePlugin) Free(args ...interface{}) () {
   // ~QStylePlugin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -69,7 +71,10 @@ func (this *QStylePlugin) Freeqstyleplugin(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStylePluginD0Ev
     // invoke: void ~QStylePlugin()
-    C.C_ZN12QStylePluginD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QStylePluginD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStylePlugin", "~QStylePlugin", args)
   }
@@ -78,7 +83,7 @@ func (this *QStylePlugin) Freeqstyleplugin(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QStylePlugin) Metaobject(args ...interface{}) () {
+func (this *QStylePlugin) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -99,6 +104,9 @@ func (this *QStylePlugin) Metaobject(args ...interface{}) () {
 }
 
 // QStylePlugin(class QObject *)
+func GcfreeQStylePlugin(this *QStylePlugin) {
+  qtrt.UniverseFree(this)
+}
 func NewQStylePlugin(args ...interface{}) *QStylePlugin {
   // QStylePlugin(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -117,7 +125,9 @@ func NewQStylePlugin(args ...interface{}) *QStylePlugin {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStylePluginC2EP7QObject(arg0)
-    return &QStylePlugin{Qclsinst:qthis}
+    this := &QStylePlugin{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStylePlugin)
+    return this
   default:
     qtrt.ErrorResolve("QStylePlugin", "QStylePlugin", args)
   }

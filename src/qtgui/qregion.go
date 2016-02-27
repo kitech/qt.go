@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qregion.h
 // dst-file: /src/gui/qregion.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -90,6 +91,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QRegion)=8
@@ -99,7 +101,7 @@ type QRegion struct {
 }
 
 // boundingRect()
-func (this *QRegion) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QRegion) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -128,6 +130,9 @@ func (this *QRegion) Boundingrect(args ...interface{}) (ret interface{}) {
 }
 
 // QRegion(const class QBitmap &)
+func GcfreeQRegion(this *QRegion) {
+  qtrt.UniverseFree(this)
+}
 func NewQRegion(args ...interface{}) *QRegion {
   // QRegion(const class QBitmap &)
   // QRegion(const class QRegion &)
@@ -151,7 +156,9 @@ func NewQRegion(args ...interface{}) *QRegion {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QRegionC2ERK7QBitmap(arg0)
-    return &QRegion{Qclsinst:qthis}
+    this := &QRegion{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRegion)
+    return this
   case 1:
     // invoke: _ZN7QRegionC1ERKS_
     // invoke: void QRegion(const class QRegion &)
@@ -160,14 +167,18 @@ func NewQRegion(args ...interface{}) *QRegion {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QRegionC2ERKS_(arg0)
-    return &QRegion{Qclsinst:qthis}
+    this := &QRegion{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRegion)
+    return this
   case 2:
     // invoke: _ZN7QRegionC1Ev
     // invoke: void QRegion()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QRegionC2Ev()
-    return &QRegion{Qclsinst:qthis}
+    this := &QRegion{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRegion)
+    return this
   default:
     qtrt.ErrorResolve("QRegion", "QRegion", args)
   }
@@ -404,7 +415,7 @@ func (this *QRegion) Contains(args ...interface{}) (ret interface{}) {
 }
 
 // isEmpty()
-func (this *QRegion) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QRegion) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -493,7 +504,7 @@ func (this *QRegion) Translate(args ...interface{}) () {
 }
 
 // ~QRegion()
-func (this *QRegion) Freeqregion(args ...interface{}) () {
+func (this *QRegion) Free(args ...interface{}) () {
   // ~QRegion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -505,7 +516,10 @@ func (this *QRegion) Freeqregion(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QRegionD0Ev
     // invoke: void ~QRegion()
-    C.C_ZN7QRegionD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QRegionD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QRegion", "~QRegion", args)
   }
@@ -514,7 +528,7 @@ func (this *QRegion) Freeqregion(args ...interface{}) () {
 }
 
 // rectCount()
-func (this *QRegion) Rectcount(args ...interface{}) (ret interface{}) {
+func (this *QRegion) RectCount(args ...interface{}) (ret interface{}) {
   // rectCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -564,7 +578,7 @@ func (this *QRegion) Rects(args ...interface{}) () {
 }
 
 // setRects(const class QRect *, int)
-func (this *QRegion) Setrects(args ...interface{}) () {
+func (this *QRegion) SetRects(args ...interface{}) () {
   // setRects(const class QRect *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -623,7 +637,7 @@ func (this *QRegion) Subtracted(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QRegion) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QRegion) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

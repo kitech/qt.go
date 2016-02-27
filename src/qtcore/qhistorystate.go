@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qhistorystate.h
 // dst-file: /src/core/qhistorystate.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -50,6 +51,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QHistoryState)=1
@@ -61,7 +63,7 @@ type QHistoryState struct {
 }
 
 // historyType()
-func (this *QHistoryState) Historytype(args ...interface{}) () {
+func (this *QHistoryState) HistoryType(args ...interface{}) () {
   // historyType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -82,7 +84,7 @@ func (this *QHistoryState) Historytype(args ...interface{}) () {
 }
 
 // ~QHistoryState()
-func (this *QHistoryState) Freeqhistorystate(args ...interface{}) () {
+func (this *QHistoryState) Free(args ...interface{}) () {
   // ~QHistoryState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -94,7 +96,10 @@ func (this *QHistoryState) Freeqhistorystate(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QHistoryStateD0Ev
     // invoke: void ~QHistoryState()
-    C.C_ZN13QHistoryStateD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QHistoryStateD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QHistoryState", "~QHistoryState", args)
   }
@@ -103,7 +108,7 @@ func (this *QHistoryState) Freeqhistorystate(args ...interface{}) () {
 }
 
 // defaultState()
-func (this *QHistoryState) Defaultstate(args ...interface{}) () {
+func (this *QHistoryState) DefaultState(args ...interface{}) () {
   // defaultState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -124,6 +129,9 @@ func (this *QHistoryState) Defaultstate(args ...interface{}) () {
 }
 
 // QHistoryState(class QState *)
+func GcfreeQHistoryState(this *QHistoryState) {
+  qtrt.UniverseFree(this)
+}
 func NewQHistoryState(args ...interface{}) *QHistoryState {
   // QHistoryState(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -142,7 +150,9 @@ func NewQHistoryState(args ...interface{}) *QHistoryState {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QHistoryStateC2EP6QState(arg0)
-    return &QHistoryState{Qclsinst:qthis}
+    this := &QHistoryState{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQHistoryState)
+    return this
   default:
     qtrt.ErrorResolve("QHistoryState", "QHistoryState", args)
   }
@@ -151,7 +161,7 @@ func NewQHistoryState(args ...interface{}) *QHistoryState {
 }
 
 // metaObject()
-func (this *QHistoryState) Metaobject(args ...interface{}) () {
+func (this *QHistoryState) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -172,7 +182,7 @@ func (this *QHistoryState) Metaobject(args ...interface{}) () {
 }
 
 // setDefaultState(class QAbstractState *)
-func (this *QHistoryState) Setdefaultstate(args ...interface{}) () {
+func (this *QHistoryState) SetDefaultState(args ...interface{}) () {
   // setDefaultState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

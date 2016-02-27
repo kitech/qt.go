@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -98,6 +99,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QToolBar)=1
@@ -115,7 +117,7 @@ type QToolBar struct {
 }
 
 // addAction(const class QIcon &, const class QString &, const class QObject *, const char *)
-func (this *QToolBar) Addaction(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) AddAction(args ...interface{}) (ret interface{}) {
   // addAction(const class QIcon &, const class QString &, const class QObject *, const char *)
   // addAction(const class QString &, const class QObject *, const char *)
   // addAction(const class QIcon &, const class QString &)
@@ -241,7 +243,7 @@ func (this *QToolBar) Orientation(args ...interface{}) () {
 }
 
 // actionAt(int, int)
-func (this *QToolBar) Actionat(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) ActionAt(args ...interface{}) (ret interface{}) {
   // actionAt(int, int)
   // actionAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -293,7 +295,7 @@ func (this *QToolBar) Actionat(args ...interface{}) (ret interface{}) {
 }
 
 // isFloating()
-func (this *QToolBar) Isfloating(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) IsFloating(args ...interface{}) (ret interface{}) {
   // isFloating()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -322,7 +324,7 @@ func (this *QToolBar) Isfloating(args ...interface{}) (ret interface{}) {
 }
 
 // actionGeometry(class QAction *)
-func (this *QToolBar) Actiongeometry(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) ActionGeometry(args ...interface{}) (ret interface{}) {
   // actionGeometry(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -354,7 +356,7 @@ func (this *QToolBar) Actiongeometry(args ...interface{}) (ret interface{}) {
 }
 
 // isFloatable()
-func (this *QToolBar) Isfloatable(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) IsFloatable(args ...interface{}) (ret interface{}) {
   // isFloatable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -383,7 +385,7 @@ func (this *QToolBar) Isfloatable(args ...interface{}) (ret interface{}) {
 }
 
 // insertSeparator(class QAction *)
-func (this *QToolBar) Insertseparator(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) InsertSeparator(args ...interface{}) (ret interface{}) {
   // insertSeparator(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -415,7 +417,7 @@ func (this *QToolBar) Insertseparator(args ...interface{}) (ret interface{}) {
 }
 
 // toggleViewAction()
-func (this *QToolBar) Toggleviewaction(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) ToggleViewAction(args ...interface{}) (ret interface{}) {
   // toggleViewAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -444,7 +446,7 @@ func (this *QToolBar) Toggleviewaction(args ...interface{}) (ret interface{}) {
 }
 
 // setMovable(_Bool)
-func (this *QToolBar) Setmovable(args ...interface{}) () {
+func (this *QToolBar) SetMovable(args ...interface{}) () {
   // setMovable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -468,7 +470,7 @@ func (this *QToolBar) Setmovable(args ...interface{}) () {
 }
 
 // isMovable()
-func (this *QToolBar) Ismovable(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) IsMovable(args ...interface{}) (ret interface{}) {
   // isMovable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -497,6 +499,9 @@ func (this *QToolBar) Ismovable(args ...interface{}) (ret interface{}) {
 }
 
 // QToolBar(class QWidget *)
+func GcfreeQToolBar(this *QToolBar) {
+  qtrt.UniverseFree(this)
+}
 func NewQToolBar(args ...interface{}) *QToolBar {
   // QToolBar(class QWidget *)
   // QToolBar(const class QString &, class QWidget *)
@@ -519,7 +524,9 @@ func NewQToolBar(args ...interface{}) *QToolBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QToolBarC2EP7QWidget(arg0)
-    return &QToolBar{Qclsinst:qthis}
+    this := &QToolBar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQToolBar)
+    return this
   case 1:
     // invoke: _ZN8QToolBarC1ERK7QStringP7QWidget
     // invoke: void QToolBar(const class QString &, class QWidget *)
@@ -530,7 +537,9 @@ func NewQToolBar(args ...interface{}) *QToolBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QToolBarC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QToolBar{Qclsinst:qthis}
+    this := &QToolBar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQToolBar)
+    return this
   default:
     qtrt.ErrorResolve("QToolBar", "QToolBar", args)
   }
@@ -539,7 +548,7 @@ func NewQToolBar(args ...interface{}) *QToolBar {
 }
 
 // addSeparator()
-func (this *QToolBar) Addseparator(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) AddSeparator(args ...interface{}) (ret interface{}) {
   // addSeparator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -568,7 +577,7 @@ func (this *QToolBar) Addseparator(args ...interface{}) (ret interface{}) {
 }
 
 // iconSize()
-func (this *QToolBar) Iconsize(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) IconSize(args ...interface{}) (ret interface{}) {
   // iconSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -597,7 +606,7 @@ func (this *QToolBar) Iconsize(args ...interface{}) (ret interface{}) {
 }
 
 // insertWidget(class QAction *, class QWidget *)
-func (this *QToolBar) Insertwidget(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) InsertWidget(args ...interface{}) (ret interface{}) {
   // insertWidget(class QAction *, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -632,7 +641,7 @@ func (this *QToolBar) Insertwidget(args ...interface{}) (ret interface{}) {
 }
 
 // ~QToolBar()
-func (this *QToolBar) Freeqtoolbar(args ...interface{}) () {
+func (this *QToolBar) Free(args ...interface{}) () {
   // ~QToolBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -644,7 +653,10 @@ func (this *QToolBar) Freeqtoolbar(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolBarD0Ev
     // invoke: void ~QToolBar()
-    C.C_ZN8QToolBarD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN8QToolBarD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QToolBar", "~QToolBar", args)
   }
@@ -653,7 +665,7 @@ func (this *QToolBar) Freeqtoolbar(args ...interface{}) () {
 }
 
 // widgetForAction(class QAction *)
-func (this *QToolBar) Widgetforaction(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) WidgetForAction(args ...interface{}) (ret interface{}) {
   // widgetForAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -685,7 +697,7 @@ func (this *QToolBar) Widgetforaction(args ...interface{}) (ret interface{}) {
 }
 
 // addWidget(class QWidget *)
-func (this *QToolBar) Addwidget(args ...interface{}) (ret interface{}) {
+func (this *QToolBar) AddWidget(args ...interface{}) (ret interface{}) {
   // addWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -717,7 +729,7 @@ func (this *QToolBar) Addwidget(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QToolBar) Metaobject(args ...interface{}) () {
+func (this *QToolBar) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -738,7 +750,7 @@ func (this *QToolBar) Metaobject(args ...interface{}) () {
 }
 
 // setFloatable(_Bool)
-func (this *QToolBar) Setfloatable(args ...interface{}) () {
+func (this *QToolBar) SetFloatable(args ...interface{}) () {
   // setFloatable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -762,7 +774,7 @@ func (this *QToolBar) Setfloatable(args ...interface{}) () {
 }
 
 // allowedAreas()
-func (this *QToolBar) Allowedareas(args ...interface{}) () {
+func (this *QToolBar) AllowedAreas(args ...interface{}) () {
   // allowedAreas()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -804,7 +816,7 @@ func (this *QToolBar) Clear(args ...interface{}) () {
 }
 
 // setIconSize(const class QSize &)
-func (this *QToolBar) Seticonsize(args ...interface{}) () {
+func (this *QToolBar) SetIconSize(args ...interface{}) () {
   // setIconSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -828,7 +840,7 @@ func (this *QToolBar) Seticonsize(args ...interface{}) () {
 }
 
 // toolButtonStyle()
-func (this *QToolBar) Toolbuttonstyle(args ...interface{}) () {
+func (this *QToolBar) ToolButtonStyle(args ...interface{}) () {
   // toolButtonStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

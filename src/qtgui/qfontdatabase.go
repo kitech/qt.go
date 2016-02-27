@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qfontdatabase.h
 // dst-file: /src/gui/qfontdatabase.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -90,6 +91,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFontDatabase)=8
@@ -99,7 +101,7 @@ type QFontDatabase struct {
 }
 
 // addApplicationFontFromData(const class QByteArray &)
-func (this *QFontDatabase) Addapplicationfontfromdata_S(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) AddApplicationFontFromData_s(args ...interface{}) (ret interface{}) {
   // addApplicationFontFromData(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -166,7 +168,7 @@ func (this *QFontDatabase) Weight(args ...interface{}) (ret interface{}) {
 }
 
 // isFixedPitch(const class QString &, const class QString &)
-func (this *QFontDatabase) Isfixedpitch(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) IsFixedPitch(args ...interface{}) (ret interface{}) {
   // isFixedPitch(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,7 +241,7 @@ func (this *QFontDatabase) Font(args ...interface{}) (ret interface{}) {
 }
 
 // pointSizes(const class QString &, const class QString &)
-func (this *QFontDatabase) Pointsizes(args ...interface{}) () {
+func (this *QFontDatabase) PointSizes(args ...interface{}) () {
   // pointSizes(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -266,7 +268,7 @@ func (this *QFontDatabase) Pointsizes(args ...interface{}) () {
 }
 
 // writingSystems()
-func (this *QFontDatabase) Writingsystems(args ...interface{}) () {
+func (this *QFontDatabase) WritingSystems(args ...interface{}) () {
   // writingSystems()
   // writingSystems(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -296,7 +298,7 @@ func (this *QFontDatabase) Writingsystems(args ...interface{}) () {
 }
 
 // isPrivateFamily(const class QString &)
-func (this *QFontDatabase) Isprivatefamily(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) IsPrivateFamily(args ...interface{}) (ret interface{}) {
   // isPrivateFamily(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -328,6 +330,9 @@ func (this *QFontDatabase) Isprivatefamily(args ...interface{}) (ret interface{}
 }
 
 // QFontDatabase()
+func GcfreeQFontDatabase(this *QFontDatabase) {
+  qtrt.UniverseFree(this)
+}
 func NewQFontDatabase(args ...interface{}) *QFontDatabase {
   // QFontDatabase()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -343,7 +348,9 @@ func NewQFontDatabase(args ...interface{}) *QFontDatabase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QFontDatabaseC2Ev()
-    return &QFontDatabase{Qclsinst:qthis}
+    this := &QFontDatabase{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFontDatabase)
+    return this
   default:
     qtrt.ErrorResolve("QFontDatabase", "QFontDatabase", args)
   }
@@ -352,7 +359,7 @@ func NewQFontDatabase(args ...interface{}) *QFontDatabase {
 }
 
 // styleString(const class QFontInfo &)
-func (this *QFontDatabase) Stylestring(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) StyleString(args ...interface{}) (ret interface{}) {
   // styleString(const class QFontInfo &)
   // styleString(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -460,7 +467,7 @@ func (this *QFontDatabase) Styles(args ...interface{}) () {
 }
 
 // isSmoothlyScalable(const class QString &, const class QString &)
-func (this *QFontDatabase) Issmoothlyscalable(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) IsSmoothlyScalable(args ...interface{}) (ret interface{}) {
   // isSmoothlyScalable(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -530,7 +537,7 @@ func (this *QFontDatabase) Bold(args ...interface{}) (ret interface{}) {
 }
 
 // isScalable(const class QString &, const class QString &)
-func (this *QFontDatabase) Isscalable(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) IsScalable(args ...interface{}) (ret interface{}) {
   // isScalable(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -565,7 +572,7 @@ func (this *QFontDatabase) Isscalable(args ...interface{}) (ret interface{}) {
 }
 
 // addApplicationFont(const class QString &)
-func (this *QFontDatabase) Addapplicationfont_S(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) AddApplicationFont_s(args ...interface{}) (ret interface{}) {
   // addApplicationFont(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -597,7 +604,7 @@ func (this *QFontDatabase) Addapplicationfont_S(args ...interface{}) (ret interf
 }
 
 // isBitmapScalable(const class QString &, const class QString &)
-func (this *QFontDatabase) Isbitmapscalable(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) IsBitmapScalable(args ...interface{}) (ret interface{}) {
   // isBitmapScalable(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -632,7 +639,7 @@ func (this *QFontDatabase) Isbitmapscalable(args ...interface{}) (ret interface{
 }
 
 // applicationFontFamilies(int)
-func (this *QFontDatabase) Applicationfontfamilies_S(args ...interface{}) () {
+func (this *QFontDatabase) ApplicationFontFamilies_s(args ...interface{}) () {
   // applicationFontFamilies(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -656,7 +663,7 @@ func (this *QFontDatabase) Applicationfontfamilies_S(args ...interface{}) () {
 }
 
 // supportsThreadedFontRendering()
-func (this *QFontDatabase) Supportsthreadedfontrendering_S(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) SupportsThreadedFontRendering_s(args ...interface{}) (ret interface{}) {
   // supportsThreadedFontRendering()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -685,7 +692,7 @@ func (this *QFontDatabase) Supportsthreadedfontrendering_S(args ...interface{}) 
 }
 
 // smoothSizes(const class QString &, const class QString &)
-func (this *QFontDatabase) Smoothsizes(args ...interface{}) () {
+func (this *QFontDatabase) SmoothSizes(args ...interface{}) () {
   // smoothSizes(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -712,7 +719,7 @@ func (this *QFontDatabase) Smoothsizes(args ...interface{}) () {
 }
 
 // removeApplicationFont(int)
-func (this *QFontDatabase) Removeapplicationfont_S(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) RemoveApplicationFont_s(args ...interface{}) (ret interface{}) {
   // removeApplicationFont(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -744,7 +751,7 @@ func (this *QFontDatabase) Removeapplicationfont_S(args ...interface{}) (ret int
 }
 
 // hasFamily(const class QString &)
-func (this *QFontDatabase) Hasfamily(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) HasFamily(args ...interface{}) (ret interface{}) {
   // hasFamily(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -776,7 +783,7 @@ func (this *QFontDatabase) Hasfamily(args ...interface{}) (ret interface{}) {
 }
 
 // standardSizes()
-func (this *QFontDatabase) Standardsizes_S(args ...interface{}) () {
+func (this *QFontDatabase) StandardSizes_s(args ...interface{}) () {
   // standardSizes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -797,7 +804,7 @@ func (this *QFontDatabase) Standardsizes_S(args ...interface{}) () {
 }
 
 // removeAllApplicationFonts()
-func (this *QFontDatabase) Removeallapplicationfonts_S(args ...interface{}) (ret interface{}) {
+func (this *QFontDatabase) RemoveAllApplicationFonts_s(args ...interface{}) (ret interface{}) {
   // removeAllApplicationFonts()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

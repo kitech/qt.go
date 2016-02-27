@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qgraphicseffect.h
 // dst-file: /src/widgets/qgraphicseffect.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -134,6 +135,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsColorizeEffect)=1
@@ -177,7 +179,7 @@ type QGraphicsBlurEffect struct {
 }
 
 // setStrength(qreal)
-func (this *QGraphicsColorizeEffect) Setstrength(args ...interface{}) () {
+func (this *QGraphicsColorizeEffect) SetStrength(args ...interface{}) () {
   // setStrength(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -230,7 +232,7 @@ func (this *QGraphicsColorizeEffect) Strength(args ...interface{}) (ret interfac
 }
 
 // metaObject()
-func (this *QGraphicsColorizeEffect) Metaobject(args ...interface{}) () {
+func (this *QGraphicsColorizeEffect) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -251,7 +253,7 @@ func (this *QGraphicsColorizeEffect) Metaobject(args ...interface{}) () {
 }
 
 // setColor(const class QColor &)
-func (this *QGraphicsColorizeEffect) Setcolor(args ...interface{}) () {
+func (this *QGraphicsColorizeEffect) SetColor(args ...interface{}) () {
   // setColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -304,6 +306,9 @@ func (this *QGraphicsColorizeEffect) Color(args ...interface{}) (ret interface{}
 }
 
 // QGraphicsColorizeEffect(class QObject *)
+func GcfreeQGraphicsColorizeEffect(this *QGraphicsColorizeEffect) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsColorizeEffect(args ...interface{}) *QGraphicsColorizeEffect {
   // QGraphicsColorizeEffect(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -322,7 +327,9 @@ func NewQGraphicsColorizeEffect(args ...interface{}) *QGraphicsColorizeEffect {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QGraphicsColorizeEffectC2EP7QObject(arg0)
-    return &QGraphicsColorizeEffect{Qclsinst:qthis}
+    this := &QGraphicsColorizeEffect{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsColorizeEffect)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsColorizeEffect", "QGraphicsColorizeEffect", args)
   }
@@ -331,7 +338,7 @@ func NewQGraphicsColorizeEffect(args ...interface{}) *QGraphicsColorizeEffect {
 }
 
 // ~QGraphicsColorizeEffect()
-func (this *QGraphicsColorizeEffect) Freeqgraphicscolorizeeffect(args ...interface{}) () {
+func (this *QGraphicsColorizeEffect) Free(args ...interface{}) () {
   // ~QGraphicsColorizeEffect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -343,7 +350,10 @@ func (this *QGraphicsColorizeEffect) Freeqgraphicscolorizeeffect(args ...interfa
   case 0:
     // invoke: _ZN23QGraphicsColorizeEffectD0Ev
     // invoke: void ~QGraphicsColorizeEffect()
-    C.C_ZN23QGraphicsColorizeEffectD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN23QGraphicsColorizeEffectD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsColorizeEffect", "~QGraphicsColorizeEffect", args)
   }
@@ -352,7 +362,7 @@ func (this *QGraphicsColorizeEffect) Freeqgraphicscolorizeeffect(args ...interfa
 }
 
 // boundingRect()
-func (this *QGraphicsEffect) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsEffect) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -381,7 +391,7 @@ func (this *QGraphicsEffect) Boundingrect(args ...interface{}) (ret interface{})
 }
 
 // boundingRectFor(const class QRectF &)
-func (this *QGraphicsEffect) Boundingrectfor(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsEffect) BoundingRectFor(args ...interface{}) (ret interface{}) {
   // boundingRectFor(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -413,7 +423,7 @@ func (this *QGraphicsEffect) Boundingrectfor(args ...interface{}) (ret interface
 }
 
 // ~QGraphicsEffect()
-func (this *QGraphicsEffect) Freeqgraphicseffect(args ...interface{}) () {
+func (this *QGraphicsEffect) Free(args ...interface{}) () {
   // ~QGraphicsEffect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -425,7 +435,10 @@ func (this *QGraphicsEffect) Freeqgraphicseffect(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsEffectD0Ev
     // invoke: void ~QGraphicsEffect()
-    C.C_ZN15QGraphicsEffectD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QGraphicsEffectD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEffect", "~QGraphicsEffect", args)
   }
@@ -434,7 +447,7 @@ func (this *QGraphicsEffect) Freeqgraphicseffect(args ...interface{}) () {
 }
 
 // isEnabled()
-func (this *QGraphicsEffect) Isenabled(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsEffect) IsEnabled(args ...interface{}) (ret interface{}) {
   // isEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -484,7 +497,7 @@ func (this *QGraphicsEffect) Source(args ...interface{}) () {
 }
 
 // setEnabled(_Bool)
-func (this *QGraphicsEffect) Setenabled(args ...interface{}) () {
+func (this *QGraphicsEffect) SetEnabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -529,7 +542,7 @@ func (this *QGraphicsEffect) Update(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QGraphicsEffect) Metaobject(args ...interface{}) () {
+func (this *QGraphicsEffect) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -550,6 +563,9 @@ func (this *QGraphicsEffect) Metaobject(args ...interface{}) () {
 }
 
 // QGraphicsEffect(class QObject *)
+func GcfreeQGraphicsEffect(this *QGraphicsEffect) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsEffect(args ...interface{}) *QGraphicsEffect {
   // QGraphicsEffect(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -568,7 +584,9 @@ func NewQGraphicsEffect(args ...interface{}) *QGraphicsEffect {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QGraphicsEffectC2EP7QObject(arg0)
-    return &QGraphicsEffect{Qclsinst:qthis}
+    this := &QGraphicsEffect{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsEffect)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsEffect", "QGraphicsEffect", args)
   }
@@ -577,7 +595,7 @@ func NewQGraphicsEffect(args ...interface{}) *QGraphicsEffect {
 }
 
 // setYOffset(qreal)
-func (this *QGraphicsDropShadowEffect) Setyoffset(args ...interface{}) () {
+func (this *QGraphicsDropShadowEffect) SetYOffset(args ...interface{}) () {
   // setYOffset(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -601,7 +619,7 @@ func (this *QGraphicsDropShadowEffect) Setyoffset(args ...interface{}) () {
 }
 
 // boundingRectFor(const class QRectF &)
-func (this *QGraphicsDropShadowEffect) Boundingrectfor(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsDropShadowEffect) BoundingRectFor(args ...interface{}) (ret interface{}) {
   // boundingRectFor(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -633,7 +651,7 @@ func (this *QGraphicsDropShadowEffect) Boundingrectfor(args ...interface{}) (ret
 }
 
 // setXOffset(qreal)
-func (this *QGraphicsDropShadowEffect) Setxoffset(args ...interface{}) () {
+func (this *QGraphicsDropShadowEffect) SetXOffset(args ...interface{}) () {
   // setXOffset(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -657,7 +675,7 @@ func (this *QGraphicsDropShadowEffect) Setxoffset(args ...interface{}) () {
 }
 
 // blurRadius()
-func (this *QGraphicsDropShadowEffect) Blurradius(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsDropShadowEffect) BlurRadius(args ...interface{}) (ret interface{}) {
   // blurRadius()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -686,7 +704,7 @@ func (this *QGraphicsDropShadowEffect) Blurradius(args ...interface{}) (ret inte
 }
 
 // setBlurRadius(qreal)
-func (this *QGraphicsDropShadowEffect) Setblurradius(args ...interface{}) () {
+func (this *QGraphicsDropShadowEffect) SetBlurRadius(args ...interface{}) () {
   // setBlurRadius(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -739,7 +757,7 @@ func (this *QGraphicsDropShadowEffect) Color(args ...interface{}) (ret interface
 }
 
 // setOffset(qreal, qreal)
-func (this *QGraphicsDropShadowEffect) Setoffset(args ...interface{}) () {
+func (this *QGraphicsDropShadowEffect) SetOffset(args ...interface{}) () {
   // setOffset(qreal, qreal)
   // setOffset(qreal)
   // setOffset(const class QPointF &)
@@ -784,7 +802,7 @@ func (this *QGraphicsDropShadowEffect) Setoffset(args ...interface{}) () {
 }
 
 // ~QGraphicsDropShadowEffect()
-func (this *QGraphicsDropShadowEffect) Freeqgraphicsdropshadoweffect(args ...interface{}) () {
+func (this *QGraphicsDropShadowEffect) Free(args ...interface{}) () {
   // ~QGraphicsDropShadowEffect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -796,7 +814,10 @@ func (this *QGraphicsDropShadowEffect) Freeqgraphicsdropshadoweffect(args ...int
   case 0:
     // invoke: _ZN25QGraphicsDropShadowEffectD0Ev
     // invoke: void ~QGraphicsDropShadowEffect()
-    C.C_ZN25QGraphicsDropShadowEffectD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN25QGraphicsDropShadowEffectD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "~QGraphicsDropShadowEffect", args)
   }
@@ -805,6 +826,9 @@ func (this *QGraphicsDropShadowEffect) Freeqgraphicsdropshadoweffect(args ...int
 }
 
 // QGraphicsDropShadowEffect(class QObject *)
+func GcfreeQGraphicsDropShadowEffect(this *QGraphicsDropShadowEffect) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsDropShadowEffect(args ...interface{}) *QGraphicsDropShadowEffect {
   // QGraphicsDropShadowEffect(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -823,7 +847,9 @@ func NewQGraphicsDropShadowEffect(args ...interface{}) *QGraphicsDropShadowEffec
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN25QGraphicsDropShadowEffectC2EP7QObject(arg0)
-    return &QGraphicsDropShadowEffect{Qclsinst:qthis}
+    this := &QGraphicsDropShadowEffect{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsDropShadowEffect)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "QGraphicsDropShadowEffect", args)
   }
@@ -861,7 +887,7 @@ func (this *QGraphicsDropShadowEffect) Offset(args ...interface{}) (ret interfac
 }
 
 // metaObject()
-func (this *QGraphicsDropShadowEffect) Metaobject(args ...interface{}) () {
+func (this *QGraphicsDropShadowEffect) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -882,7 +908,7 @@ func (this *QGraphicsDropShadowEffect) Metaobject(args ...interface{}) () {
 }
 
 // setColor(const class QColor &)
-func (this *QGraphicsDropShadowEffect) Setcolor(args ...interface{}) () {
+func (this *QGraphicsDropShadowEffect) SetColor(args ...interface{}) () {
   // setColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -906,7 +932,7 @@ func (this *QGraphicsDropShadowEffect) Setcolor(args ...interface{}) () {
 }
 
 // yOffset()
-func (this *QGraphicsDropShadowEffect) Yoffset(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsDropShadowEffect) YOffset(args ...interface{}) (ret interface{}) {
   // yOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -935,7 +961,7 @@ func (this *QGraphicsDropShadowEffect) Yoffset(args ...interface{}) (ret interfa
 }
 
 // xOffset()
-func (this *QGraphicsDropShadowEffect) Xoffset(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsDropShadowEffect) XOffset(args ...interface{}) (ret interface{}) {
   // xOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -993,7 +1019,7 @@ func (this *QGraphicsOpacityEffect) Opacity(args ...interface{}) (ret interface{
 }
 
 // ~QGraphicsOpacityEffect()
-func (this *QGraphicsOpacityEffect) Freeqgraphicsopacityeffect(args ...interface{}) () {
+func (this *QGraphicsOpacityEffect) Free(args ...interface{}) () {
   // ~QGraphicsOpacityEffect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1005,7 +1031,10 @@ func (this *QGraphicsOpacityEffect) Freeqgraphicsopacityeffect(args ...interface
   case 0:
     // invoke: _ZN22QGraphicsOpacityEffectD0Ev
     // invoke: void ~QGraphicsOpacityEffect()
-    C.C_ZN22QGraphicsOpacityEffectD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN22QGraphicsOpacityEffectD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsOpacityEffect", "~QGraphicsOpacityEffect", args)
   }
@@ -1014,7 +1043,7 @@ func (this *QGraphicsOpacityEffect) Freeqgraphicsopacityeffect(args ...interface
 }
 
 // setOpacity(qreal)
-func (this *QGraphicsOpacityEffect) Setopacity(args ...interface{}) () {
+func (this *QGraphicsOpacityEffect) SetOpacity(args ...interface{}) () {
   // setOpacity(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1038,7 +1067,7 @@ func (this *QGraphicsOpacityEffect) Setopacity(args ...interface{}) () {
 }
 
 // opacityMask()
-func (this *QGraphicsOpacityEffect) Opacitymask(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsOpacityEffect) OpacityMask(args ...interface{}) (ret interface{}) {
   // opacityMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1067,6 +1096,9 @@ func (this *QGraphicsOpacityEffect) Opacitymask(args ...interface{}) (ret interf
 }
 
 // QGraphicsOpacityEffect(class QObject *)
+func GcfreeQGraphicsOpacityEffect(this *QGraphicsOpacityEffect) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsOpacityEffect(args ...interface{}) *QGraphicsOpacityEffect {
   // QGraphicsOpacityEffect(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1085,7 +1117,9 @@ func NewQGraphicsOpacityEffect(args ...interface{}) *QGraphicsOpacityEffect {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QGraphicsOpacityEffectC2EP7QObject(arg0)
-    return &QGraphicsOpacityEffect{Qclsinst:qthis}
+    this := &QGraphicsOpacityEffect{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsOpacityEffect)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsOpacityEffect", "QGraphicsOpacityEffect", args)
   }
@@ -1094,7 +1128,7 @@ func NewQGraphicsOpacityEffect(args ...interface{}) *QGraphicsOpacityEffect {
 }
 
 // metaObject()
-func (this *QGraphicsOpacityEffect) Metaobject(args ...interface{}) () {
+func (this *QGraphicsOpacityEffect) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1115,7 +1149,7 @@ func (this *QGraphicsOpacityEffect) Metaobject(args ...interface{}) () {
 }
 
 // setOpacityMask(const class QBrush &)
-func (this *QGraphicsOpacityEffect) Setopacitymask(args ...interface{}) () {
+func (this *QGraphicsOpacityEffect) SetOpacityMask(args ...interface{}) () {
   // setOpacityMask(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1139,6 +1173,9 @@ func (this *QGraphicsOpacityEffect) Setopacitymask(args ...interface{}) () {
 }
 
 // QGraphicsBlurEffect(class QObject *)
+func GcfreeQGraphicsBlurEffect(this *QGraphicsBlurEffect) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsBlurEffect(args ...interface{}) *QGraphicsBlurEffect {
   // QGraphicsBlurEffect(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1157,7 +1194,9 @@ func NewQGraphicsBlurEffect(args ...interface{}) *QGraphicsBlurEffect {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QGraphicsBlurEffectC2EP7QObject(arg0)
-    return &QGraphicsBlurEffect{Qclsinst:qthis}
+    this := &QGraphicsBlurEffect{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsBlurEffect)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsBlurEffect", "QGraphicsBlurEffect", args)
   }
@@ -1166,7 +1205,7 @@ func NewQGraphicsBlurEffect(args ...interface{}) *QGraphicsBlurEffect {
 }
 
 // blurHints()
-func (this *QGraphicsBlurEffect) Blurhints(args ...interface{}) () {
+func (this *QGraphicsBlurEffect) BlurHints(args ...interface{}) () {
   // blurHints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1187,7 +1226,7 @@ func (this *QGraphicsBlurEffect) Blurhints(args ...interface{}) () {
 }
 
 // boundingRectFor(const class QRectF &)
-func (this *QGraphicsBlurEffect) Boundingrectfor(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsBlurEffect) BoundingRectFor(args ...interface{}) (ret interface{}) {
   // boundingRectFor(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1219,7 +1258,7 @@ func (this *QGraphicsBlurEffect) Boundingrectfor(args ...interface{}) (ret inter
 }
 
 // setBlurRadius(qreal)
-func (this *QGraphicsBlurEffect) Setblurradius(args ...interface{}) () {
+func (this *QGraphicsBlurEffect) SetBlurRadius(args ...interface{}) () {
   // setBlurRadius(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1243,7 +1282,7 @@ func (this *QGraphicsBlurEffect) Setblurradius(args ...interface{}) () {
 }
 
 // blurRadius()
-func (this *QGraphicsBlurEffect) Blurradius(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsBlurEffect) BlurRadius(args ...interface{}) (ret interface{}) {
   // blurRadius()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1272,7 +1311,7 @@ func (this *QGraphicsBlurEffect) Blurradius(args ...interface{}) (ret interface{
 }
 
 // ~QGraphicsBlurEffect()
-func (this *QGraphicsBlurEffect) Freeqgraphicsblureffect(args ...interface{}) () {
+func (this *QGraphicsBlurEffect) Free(args ...interface{}) () {
   // ~QGraphicsBlurEffect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1284,7 +1323,10 @@ func (this *QGraphicsBlurEffect) Freeqgraphicsblureffect(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QGraphicsBlurEffectD0Ev
     // invoke: void ~QGraphicsBlurEffect()
-    C.C_ZN19QGraphicsBlurEffectD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QGraphicsBlurEffectD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsBlurEffect", "~QGraphicsBlurEffect", args)
   }
@@ -1293,7 +1335,7 @@ func (this *QGraphicsBlurEffect) Freeqgraphicsblureffect(args ...interface{}) ()
 }
 
 // metaObject()
-func (this *QGraphicsBlurEffect) Metaobject(args ...interface{}) () {
+func (this *QGraphicsBlurEffect) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

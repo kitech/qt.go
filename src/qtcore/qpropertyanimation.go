@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qpropertyanimation.h
 // dst-file: /src/core/qpropertyanimation.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -54,6 +55,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPropertyAnimation)=1
@@ -63,7 +65,7 @@ type QPropertyAnimation struct {
 }
 
 // ~QPropertyAnimation()
-func (this *QPropertyAnimation) Freeqpropertyanimation(args ...interface{}) () {
+func (this *QPropertyAnimation) Free(args ...interface{}) () {
   // ~QPropertyAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -75,7 +77,10 @@ func (this *QPropertyAnimation) Freeqpropertyanimation(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QPropertyAnimationD0Ev
     // invoke: void ~QPropertyAnimation()
-    C.C_ZN18QPropertyAnimationD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN18QPropertyAnimationD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "~QPropertyAnimation", args)
   }
@@ -84,7 +89,7 @@ func (this *QPropertyAnimation) Freeqpropertyanimation(args ...interface{}) () {
 }
 
 // propertyName()
-func (this *QPropertyAnimation) Propertyname(args ...interface{}) (ret interface{}) {
+func (this *QPropertyAnimation) PropertyName(args ...interface{}) (ret interface{}) {
   // propertyName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -113,6 +118,9 @@ func (this *QPropertyAnimation) Propertyname(args ...interface{}) (ret interface
 }
 
 // QPropertyAnimation(class QObject *)
+func GcfreeQPropertyAnimation(this *QPropertyAnimation) {
+  qtrt.UniverseFree(this)
+}
 func NewQPropertyAnimation(args ...interface{}) *QPropertyAnimation {
   // QPropertyAnimation(class QObject *)
   // QPropertyAnimation(class QObject *, const class QByteArray &, class QObject *)
@@ -136,7 +144,9 @@ func NewQPropertyAnimation(args ...interface{}) *QPropertyAnimation {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QPropertyAnimationC2EP7QObject(arg0)
-    return &QPropertyAnimation{Qclsinst:qthis}
+    this := &QPropertyAnimation{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPropertyAnimation)
+    return this
   case 1:
     // invoke: _ZN18QPropertyAnimationC1EP7QObjectRK10QByteArrayS1_
     // invoke: void QPropertyAnimation(class QObject *, const class QByteArray &, class QObject *)
@@ -149,7 +159,9 @@ func NewQPropertyAnimation(args ...interface{}) *QPropertyAnimation {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_(arg0, arg1, arg2)
-    return &QPropertyAnimation{Qclsinst:qthis}
+    this := &QPropertyAnimation{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPropertyAnimation)
+    return this
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "QPropertyAnimation", args)
   }
@@ -158,7 +170,7 @@ func NewQPropertyAnimation(args ...interface{}) *QPropertyAnimation {
 }
 
 // setTargetObject(class QObject *)
-func (this *QPropertyAnimation) Settargetobject(args ...interface{}) () {
+func (this *QPropertyAnimation) SetTargetObject(args ...interface{}) () {
   // setTargetObject(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,7 +194,7 @@ func (this *QPropertyAnimation) Settargetobject(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QPropertyAnimation) Metaobject(args ...interface{}) () {
+func (this *QPropertyAnimation) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -203,7 +215,7 @@ func (this *QPropertyAnimation) Metaobject(args ...interface{}) () {
 }
 
 // setPropertyName(const class QByteArray &)
-func (this *QPropertyAnimation) Setpropertyname(args ...interface{}) () {
+func (this *QPropertyAnimation) SetPropertyName(args ...interface{}) () {
   // setPropertyName(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -227,7 +239,7 @@ func (this *QPropertyAnimation) Setpropertyname(args ...interface{}) () {
 }
 
 // targetObject()
-func (this *QPropertyAnimation) Targetobject(args ...interface{}) (ret interface{}) {
+func (this *QPropertyAnimation) TargetObject(args ...interface{}) (ret interface{}) {
   // targetObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

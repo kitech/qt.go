@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -80,6 +81,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFontInfo)=1
@@ -89,7 +91,7 @@ type QFontInfo struct {
 }
 
 // styleHint()
-func (this *QFontInfo) Stylehint(args ...interface{}) () {
+func (this *QFontInfo) StyleHint(args ...interface{}) () {
   // styleHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -131,7 +133,7 @@ func (this *QFontInfo) Style(args ...interface{}) () {
 }
 
 // strikeOut()
-func (this *QFontInfo) Strikeout(args ...interface{}) (ret interface{}) {
+func (this *QFontInfo) StrikeOut(args ...interface{}) (ret interface{}) {
   // strikeOut()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -160,7 +162,7 @@ func (this *QFontInfo) Strikeout(args ...interface{}) (ret interface{}) {
 }
 
 // pointSize()
-func (this *QFontInfo) Pointsize(args ...interface{}) (ret interface{}) {
+func (this *QFontInfo) PointSize(args ...interface{}) (ret interface{}) {
   // pointSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -276,7 +278,7 @@ func (this *QFontInfo) Weight(args ...interface{}) (ret interface{}) {
 }
 
 // pointSizeF()
-func (this *QFontInfo) Pointsizef(args ...interface{}) (ret interface{}) {
+func (this *QFontInfo) PointSizeF(args ...interface{}) (ret interface{}) {
   // pointSizeF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -305,7 +307,7 @@ func (this *QFontInfo) Pointsizef(args ...interface{}) (ret interface{}) {
 }
 
 // exactMatch()
-func (this *QFontInfo) Exactmatch(args ...interface{}) (ret interface{}) {
+func (this *QFontInfo) ExactMatch(args ...interface{}) (ret interface{}) {
   // exactMatch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -392,7 +394,7 @@ func (this *QFontInfo) Overline(args ...interface{}) (ret interface{}) {
 }
 
 // fixedPitch()
-func (this *QFontInfo) Fixedpitch(args ...interface{}) (ret interface{}) {
+func (this *QFontInfo) FixedPitch(args ...interface{}) (ret interface{}) {
   // fixedPitch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -474,7 +476,7 @@ func (this *QFontInfo) Italic(args ...interface{}) (ret interface{}) {
 }
 
 // rawMode()
-func (this *QFontInfo) Rawmode(args ...interface{}) (ret interface{}) {
+func (this *QFontInfo) RawMode(args ...interface{}) (ret interface{}) {
   // rawMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -503,7 +505,7 @@ func (this *QFontInfo) Rawmode(args ...interface{}) (ret interface{}) {
 }
 
 // pixelSize()
-func (this *QFontInfo) Pixelsize(args ...interface{}) (ret interface{}) {
+func (this *QFontInfo) PixelSize(args ...interface{}) (ret interface{}) {
   // pixelSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -532,7 +534,7 @@ func (this *QFontInfo) Pixelsize(args ...interface{}) (ret interface{}) {
 }
 
 // styleName()
-func (this *QFontInfo) Stylename(args ...interface{}) (ret interface{}) {
+func (this *QFontInfo) StyleName(args ...interface{}) (ret interface{}) {
   // styleName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -561,7 +563,7 @@ func (this *QFontInfo) Stylename(args ...interface{}) (ret interface{}) {
 }
 
 // ~QFontInfo()
-func (this *QFontInfo) Freeqfontinfo(args ...interface{}) () {
+func (this *QFontInfo) Free(args ...interface{}) () {
   // ~QFontInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -573,7 +575,10 @@ func (this *QFontInfo) Freeqfontinfo(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QFontInfoD0Ev
     // invoke: void ~QFontInfo()
-    C.C_ZN9QFontInfoD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QFontInfoD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFontInfo", "~QFontInfo", args)
   }
@@ -582,6 +587,9 @@ func (this *QFontInfo) Freeqfontinfo(args ...interface{}) () {
 }
 
 // QFontInfo(const class QFontInfo &)
+func GcfreeQFontInfo(this *QFontInfo) {
+  qtrt.UniverseFree(this)
+}
 func NewQFontInfo(args ...interface{}) *QFontInfo {
   // QFontInfo(const class QFontInfo &)
   // QFontInfo(const class QFont &)
@@ -603,7 +611,9 @@ func NewQFontInfo(args ...interface{}) *QFontInfo {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QFontInfoC2ERKS_(arg0)
-    return &QFontInfo{Qclsinst:qthis}
+    this := &QFontInfo{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFontInfo)
+    return this
   case 1:
     // invoke: _ZN9QFontInfoC1ERK5QFont
     // invoke: void QFontInfo(const class QFont &)
@@ -612,7 +622,9 @@ func NewQFontInfo(args ...interface{}) *QFontInfo {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QFontInfoC2ERK5QFont(arg0)
-    return &QFontInfo{Qclsinst:qthis}
+    this := &QFontInfo{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFontInfo)
+    return this
   default:
     qtrt.ErrorResolve("QFontInfo", "QFontInfo", args)
   }

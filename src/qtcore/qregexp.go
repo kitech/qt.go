@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -78,6 +79,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QRegExp)=8
@@ -119,7 +121,7 @@ func (this *QRegExp) Pos(args ...interface{}) (ret interface{}) {
 }
 
 // matchedLength()
-func (this *QRegExp) Matchedlength(args ...interface{}) (ret interface{}) {
+func (this *QRegExp) MatchedLength(args ...interface{}) (ret interface{}) {
   // matchedLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -148,7 +150,7 @@ func (this *QRegExp) Matchedlength(args ...interface{}) (ret interface{}) {
 }
 
 // setMinimal(_Bool)
-func (this *QRegExp) Setminimal(args ...interface{}) () {
+func (this *QRegExp) SetMinimal(args ...interface{}) () {
   // setMinimal(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -172,6 +174,9 @@ func (this *QRegExp) Setminimal(args ...interface{}) () {
 }
 
 // QRegExp()
+func GcfreeQRegExp(this *QRegExp) {
+  qtrt.UniverseFree(this)
+}
 func NewQRegExp(args ...interface{}) *QRegExp {
   // QRegExp()
   // QRegExp(const class QRegExp &)
@@ -190,7 +195,9 @@ func NewQRegExp(args ...interface{}) *QRegExp {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QRegExpC2Ev()
-    return &QRegExp{Qclsinst:qthis}
+    this := &QRegExp{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRegExp)
+    return this
   case 1:
     // invoke: _ZN7QRegExpC1ERKS_
     // invoke: void QRegExp(const class QRegExp &)
@@ -199,7 +206,9 @@ func NewQRegExp(args ...interface{}) *QRegExp {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QRegExpC2ERKS_(arg0)
-    return &QRegExp{Qclsinst:qthis}
+    this := &QRegExp{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRegExp)
+    return this
   default:
     qtrt.ErrorResolve("QRegExp", "QRegExp", args)
   }
@@ -208,7 +217,7 @@ func NewQRegExp(args ...interface{}) *QRegExp {
 }
 
 // escape(const class QString &)
-func (this *QRegExp) Escape_S(args ...interface{}) (ret interface{}) {
+func (this *QRegExp) Escape_s(args ...interface{}) (ret interface{}) {
   // escape(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -240,7 +249,7 @@ func (this *QRegExp) Escape_S(args ...interface{}) (ret interface{}) {
 }
 
 // setPattern(const class QString &)
-func (this *QRegExp) Setpattern(args ...interface{}) () {
+func (this *QRegExp) SetPattern(args ...interface{}) () {
   // setPattern(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,7 +302,7 @@ func (this *QRegExp) Pattern(args ...interface{}) (ret interface{}) {
 }
 
 // patternSyntax()
-func (this *QRegExp) Patternsyntax(args ...interface{}) () {
+func (this *QRegExp) PatternSyntax(args ...interface{}) () {
   // patternSyntax()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -314,7 +323,7 @@ func (this *QRegExp) Patternsyntax(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QRegExp) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QRegExp) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -367,7 +376,7 @@ func (this *QRegExp) Swap(args ...interface{}) () {
 }
 
 // caseSensitivity()
-func (this *QRegExp) Casesensitivity(args ...interface{}) () {
+func (this *QRegExp) CaseSensitivity(args ...interface{}) () {
   // caseSensitivity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -388,7 +397,7 @@ func (this *QRegExp) Casesensitivity(args ...interface{}) () {
 }
 
 // errorString()
-func (this *QRegExp) Errorstring(args ...interface{}) (ret interface{}) {
+func (this *QRegExp) ErrorString(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -417,7 +426,7 @@ func (this *QRegExp) Errorstring(args ...interface{}) (ret interface{}) {
 }
 
 // capturedTexts()
-func (this *QRegExp) Capturedtexts(args ...interface{}) () {
+func (this *QRegExp) CapturedTexts(args ...interface{}) () {
   // capturedTexts()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -438,7 +447,7 @@ func (this *QRegExp) Capturedtexts(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QRegExp) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QRegExp) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -467,7 +476,7 @@ func (this *QRegExp) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // exactMatch(const class QString &)
-func (this *QRegExp) Exactmatch(args ...interface{}) (ret interface{}) {
+func (this *QRegExp) ExactMatch(args ...interface{}) (ret interface{}) {
   // exactMatch(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -531,7 +540,7 @@ func (this *QRegExp) Cap(args ...interface{}) (ret interface{}) {
 }
 
 // isMinimal()
-func (this *QRegExp) Isminimal(args ...interface{}) (ret interface{}) {
+func (this *QRegExp) IsMinimal(args ...interface{}) (ret interface{}) {
   // isMinimal()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -560,7 +569,7 @@ func (this *QRegExp) Isminimal(args ...interface{}) (ret interface{}) {
 }
 
 // ~QRegExp()
-func (this *QRegExp) Freeqregexp(args ...interface{}) () {
+func (this *QRegExp) Free(args ...interface{}) () {
   // ~QRegExp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -572,7 +581,10 @@ func (this *QRegExp) Freeqregexp(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QRegExpD0Ev
     // invoke: void ~QRegExp()
-    C.C_ZN7QRegExpD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QRegExpD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QRegExp", "~QRegExp", args)
   }
@@ -581,7 +593,7 @@ func (this *QRegExp) Freeqregexp(args ...interface{}) () {
 }
 
 // captureCount()
-func (this *QRegExp) Capturecount(args ...interface{}) (ret interface{}) {
+func (this *QRegExp) CaptureCount(args ...interface{}) (ret interface{}) {
   // captureCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

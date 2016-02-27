@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qpagedpaintdevice.h
 // dst-file: /src/gui/qpagedpaintdevice.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -60,6 +61,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPagedPaintDevice)=32
@@ -69,7 +71,7 @@ type QPagedPaintDevice struct {
 }
 
 // setPageMargins(const class QMarginsF &)
-func (this *QPagedPaintDevice) Setpagemargins(args ...interface{}) (ret interface{}) {
+func (this *QPagedPaintDevice) SetPageMargins(args ...interface{}) (ret interface{}) {
   // setPageMargins(const class QMarginsF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -101,7 +103,7 @@ func (this *QPagedPaintDevice) Setpagemargins(args ...interface{}) (ret interfac
 }
 
 // pageLayout()
-func (this *QPagedPaintDevice) Pagelayout(args ...interface{}) (ret interface{}) {
+func (this *QPagedPaintDevice) PageLayout(args ...interface{}) (ret interface{}) {
   // pageLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -130,7 +132,7 @@ func (this *QPagedPaintDevice) Pagelayout(args ...interface{}) (ret interface{})
 }
 
 // setPageSize(const class QPageSize &)
-func (this *QPagedPaintDevice) Setpagesize(args ...interface{}) (ret interface{}) {
+func (this *QPagedPaintDevice) SetPageSize(args ...interface{}) (ret interface{}) {
   // setPageSize(const class QPageSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,7 +164,7 @@ func (this *QPagedPaintDevice) Setpagesize(args ...interface{}) (ret interface{}
 }
 
 // setPageLayout(const class QPageLayout &)
-func (this *QPagedPaintDevice) Setpagelayout(args ...interface{}) (ret interface{}) {
+func (this *QPagedPaintDevice) SetPageLayout(args ...interface{}) (ret interface{}) {
   // setPageLayout(const class QPageLayout &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -194,6 +196,9 @@ func (this *QPagedPaintDevice) Setpagelayout(args ...interface{}) (ret interface
 }
 
 // QPagedPaintDevice()
+func GcfreeQPagedPaintDevice(this *QPagedPaintDevice) {
+  qtrt.UniverseFree(this)
+}
 func NewQPagedPaintDevice(args ...interface{}) *QPagedPaintDevice {
   // QPagedPaintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,7 +214,9 @@ func NewQPagedPaintDevice(args ...interface{}) *QPagedPaintDevice {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QPagedPaintDeviceC2Ev()
-    return &QPagedPaintDevice{Qclsinst:qthis}
+    this := &QPagedPaintDevice{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPagedPaintDevice)
+    return this
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "QPagedPaintDevice", args)
   }
@@ -218,7 +225,7 @@ func NewQPagedPaintDevice(args ...interface{}) *QPagedPaintDevice {
 }
 
 // ~QPagedPaintDevice()
-func (this *QPagedPaintDevice) Freeqpagedpaintdevice(args ...interface{}) () {
+func (this *QPagedPaintDevice) Free(args ...interface{}) () {
   // ~QPagedPaintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -230,7 +237,10 @@ func (this *QPagedPaintDevice) Freeqpagedpaintdevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QPagedPaintDeviceD0Ev
     // invoke: void ~QPagedPaintDevice()
-    C.C_ZN17QPagedPaintDeviceD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN17QPagedPaintDeviceD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "~QPagedPaintDevice", args)
   }
@@ -239,7 +249,7 @@ func (this *QPagedPaintDevice) Freeqpagedpaintdevice(args ...interface{}) () {
 }
 
 // pageSizeMM()
-func (this *QPagedPaintDevice) Pagesizemm(args ...interface{}) (ret interface{}) {
+func (this *QPagedPaintDevice) PageSizeMM(args ...interface{}) (ret interface{}) {
   // pageSizeMM()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -268,7 +278,7 @@ func (this *QPagedPaintDevice) Pagesizemm(args ...interface{}) (ret interface{})
 }
 
 // setPageSizeMM(const class QSizeF &)
-func (this *QPagedPaintDevice) Setpagesizemm(args ...interface{}) () {
+func (this *QPagedPaintDevice) SetPageSizeMM(args ...interface{}) () {
   // setPageSizeMM(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -313,7 +323,7 @@ func (this *QPagedPaintDevice) Margins(args ...interface{}) () {
 }
 
 // pageSize()
-func (this *QPagedPaintDevice) Pagesize(args ...interface{}) () {
+func (this *QPagedPaintDevice) PageSize(args ...interface{}) () {
   // pageSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qstyleoption.h
 // dst-file: /src/widgets/qstyleoption.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -158,6 +159,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStyleOptionComboBox)=1
@@ -323,6 +325,9 @@ type QStyleOptionTabWidgetFrame struct {
 }
 
 // QStyleOptionComboBox(const class QStyleOptionComboBox &)
+func GcfreeQStyleOptionComboBox(this *QStyleOptionComboBox) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionComboBox(args ...interface{}) *QStyleOptionComboBox {
   // QStyleOptionComboBox(const class QStyleOptionComboBox &)
   // QStyleOptionComboBox()
@@ -343,14 +348,18 @@ func NewQStyleOptionComboBox(args ...interface{}) *QStyleOptionComboBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionComboBoxC2ERKS_(arg0)
-    return &QStyleOptionComboBox{Qclsinst:qthis}
+    this := &QStyleOptionComboBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionComboBox)
+    return this
   case 1:
     // invoke: _ZN20QStyleOptionComboBoxC1Ev
     // invoke: void QStyleOptionComboBox()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionComboBoxC2Ev()
-    return &QStyleOptionComboBox{Qclsinst:qthis}
+    this := &QStyleOptionComboBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionComboBox)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionComboBox", "QStyleOptionComboBox", args)
   }
@@ -359,6 +368,9 @@ func NewQStyleOptionComboBox(args ...interface{}) *QStyleOptionComboBox {
 }
 
 // QStyleOptionMenuItem(const class QStyleOptionMenuItem &)
+func GcfreeQStyleOptionMenuItem(this *QStyleOptionMenuItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionMenuItem(args ...interface{}) *QStyleOptionMenuItem {
   // QStyleOptionMenuItem(const class QStyleOptionMenuItem &)
   // QStyleOptionMenuItem()
@@ -379,14 +391,18 @@ func NewQStyleOptionMenuItem(args ...interface{}) *QStyleOptionMenuItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionMenuItemC2ERKS_(arg0)
-    return &QStyleOptionMenuItem{Qclsinst:qthis}
+    this := &QStyleOptionMenuItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionMenuItem)
+    return this
   case 1:
     // invoke: _ZN20QStyleOptionMenuItemC1Ev
     // invoke: void QStyleOptionMenuItem()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionMenuItemC2Ev()
-    return &QStyleOptionMenuItem{Qclsinst:qthis}
+    this := &QStyleOptionMenuItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionMenuItem)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionMenuItem", "QStyleOptionMenuItem", args)
   }
@@ -395,7 +411,7 @@ func NewQStyleOptionMenuItem(args ...interface{}) *QStyleOptionMenuItem {
 }
 
 // ~QStyleHintReturnVariant()
-func (this *QStyleHintReturnVariant) Freeqstylehintreturnvariant(args ...interface{}) () {
+func (this *QStyleHintReturnVariant) Free(args ...interface{}) () {
   // ~QStyleHintReturnVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -407,7 +423,10 @@ func (this *QStyleHintReturnVariant) Freeqstylehintreturnvariant(args ...interfa
   case 0:
     // invoke: _ZN23QStyleHintReturnVariantD0Ev
     // invoke: void ~QStyleHintReturnVariant()
-    C.C_ZN23QStyleHintReturnVariantD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN23QStyleHintReturnVariantD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStyleHintReturnVariant", "~QStyleHintReturnVariant", args)
   }
@@ -416,6 +435,9 @@ func (this *QStyleHintReturnVariant) Freeqstylehintreturnvariant(args ...interfa
 }
 
 // QStyleHintReturnVariant()
+func GcfreeQStyleHintReturnVariant(this *QStyleHintReturnVariant) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleHintReturnVariant(args ...interface{}) *QStyleHintReturnVariant {
   // QStyleHintReturnVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -431,7 +453,9 @@ func NewQStyleHintReturnVariant(args ...interface{}) *QStyleHintReturnVariant {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QStyleHintReturnVariantC2Ev()
-    return &QStyleHintReturnVariant{Qclsinst:qthis}
+    this := &QStyleHintReturnVariant{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleHintReturnVariant)
+    return this
   default:
     qtrt.ErrorResolve("QStyleHintReturnVariant", "QStyleHintReturnVariant", args)
   }
@@ -440,6 +464,9 @@ func NewQStyleHintReturnVariant(args ...interface{}) *QStyleHintReturnVariant {
 }
 
 // QStyleOptionTitleBar()
+func GcfreeQStyleOptionTitleBar(this *QStyleOptionTitleBar) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionTitleBar(args ...interface{}) *QStyleOptionTitleBar {
   // QStyleOptionTitleBar()
   // QStyleOptionTitleBar(const class QStyleOptionTitleBar &)
@@ -458,7 +485,9 @@ func NewQStyleOptionTitleBar(args ...interface{}) *QStyleOptionTitleBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionTitleBarC2Ev()
-    return &QStyleOptionTitleBar{Qclsinst:qthis}
+    this := &QStyleOptionTitleBar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionTitleBar)
+    return this
   case 1:
     // invoke: _ZN20QStyleOptionTitleBarC1ERKS_
     // invoke: void QStyleOptionTitleBar(const class QStyleOptionTitleBar &)
@@ -467,7 +496,9 @@ func NewQStyleOptionTitleBar(args ...interface{}) *QStyleOptionTitleBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionTitleBarC2ERKS_(arg0)
-    return &QStyleOptionTitleBar{Qclsinst:qthis}
+    this := &QStyleOptionTitleBar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionTitleBar)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionTitleBar", "QStyleOptionTitleBar", args)
   }
@@ -476,7 +507,7 @@ func NewQStyleOptionTitleBar(args ...interface{}) *QStyleOptionTitleBar {
 }
 
 // levelOfDetailFromTransform(const class QTransform &)
-func (this *QStyleOptionGraphicsItem) Levelofdetailfromtransform_S(args ...interface{}) (ret interface{}) {
+func (this *QStyleOptionGraphicsItem) LevelOfDetailFromTransform_s(args ...interface{}) (ret interface{}) {
   // levelOfDetailFromTransform(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -508,6 +539,9 @@ func (this *QStyleOptionGraphicsItem) Levelofdetailfromtransform_S(args ...inter
 }
 
 // QStyleOptionGraphicsItem()
+func GcfreeQStyleOptionGraphicsItem(this *QStyleOptionGraphicsItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionGraphicsItem(args ...interface{}) *QStyleOptionGraphicsItem {
   // QStyleOptionGraphicsItem()
   // QStyleOptionGraphicsItem(const class QStyleOptionGraphicsItem &)
@@ -526,7 +560,9 @@ func NewQStyleOptionGraphicsItem(args ...interface{}) *QStyleOptionGraphicsItem 
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN24QStyleOptionGraphicsItemC2Ev()
-    return &QStyleOptionGraphicsItem{Qclsinst:qthis}
+    this := &QStyleOptionGraphicsItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionGraphicsItem)
+    return this
   case 1:
     // invoke: _ZN24QStyleOptionGraphicsItemC1ERKS_
     // invoke: void QStyleOptionGraphicsItem(const class QStyleOptionGraphicsItem &)
@@ -535,7 +571,9 @@ func NewQStyleOptionGraphicsItem(args ...interface{}) *QStyleOptionGraphicsItem 
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN24QStyleOptionGraphicsItemC2ERKS_(arg0)
-    return &QStyleOptionGraphicsItem{Qclsinst:qthis}
+    this := &QStyleOptionGraphicsItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionGraphicsItem)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionGraphicsItem", "QStyleOptionGraphicsItem", args)
   }
@@ -544,7 +582,7 @@ func NewQStyleOptionGraphicsItem(args ...interface{}) *QStyleOptionGraphicsItem 
 }
 
 // ~QStyleOption()
-func (this *QStyleOption) Freeqstyleoption(args ...interface{}) () {
+func (this *QStyleOption) Free(args ...interface{}) () {
   // ~QStyleOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -556,7 +594,10 @@ func (this *QStyleOption) Freeqstyleoption(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStyleOptionD0Ev
     // invoke: void ~QStyleOption()
-    C.C_ZN12QStyleOptionD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QStyleOptionD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStyleOption", "~QStyleOption", args)
   }
@@ -589,6 +630,9 @@ func (this *QStyleOption) Init(args ...interface{}) () {
 }
 
 // QStyleOption(const class QStyleOption &)
+func GcfreeQStyleOption(this *QStyleOption) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOption(args ...interface{}) *QStyleOption {
   // QStyleOption(const class QStyleOption &)
   // QStyleOption(int, int)
@@ -611,7 +655,9 @@ func NewQStyleOption(args ...interface{}) *QStyleOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStyleOptionC2ERKS_(arg0)
-    return &QStyleOption{Qclsinst:qthis}
+    this := &QStyleOption{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOption)
+    return this
   case 1:
     // invoke: _ZN12QStyleOptionC1Eii
     // invoke: void QStyleOption(int, int)
@@ -622,7 +668,9 @@ func NewQStyleOption(args ...interface{}) *QStyleOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStyleOptionC2Eii(arg0, arg1)
-    return &QStyleOption{Qclsinst:qthis}
+    this := &QStyleOption{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOption)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOption", "QStyleOption", args)
   }
@@ -631,7 +679,7 @@ func NewQStyleOption(args ...interface{}) *QStyleOption {
 }
 
 // initFrom(const class QWidget *)
-func (this *QStyleOption) Initfrom(args ...interface{}) () {
+func (this *QStyleOption) InitFrom(args ...interface{}) () {
   // initFrom(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -655,6 +703,9 @@ func (this *QStyleOption) Initfrom(args ...interface{}) () {
 }
 
 // QStyleOptionDockWidget()
+func GcfreeQStyleOptionDockWidget(this *QStyleOptionDockWidget) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionDockWidget(args ...interface{}) *QStyleOptionDockWidget {
   // QStyleOptionDockWidget()
   // QStyleOptionDockWidget(const class QStyleOptionDockWidget &)
@@ -673,7 +724,9 @@ func NewQStyleOptionDockWidget(args ...interface{}) *QStyleOptionDockWidget {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionDockWidgetC2Ev()
-    return &QStyleOptionDockWidget{Qclsinst:qthis}
+    this := &QStyleOptionDockWidget{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionDockWidget)
+    return this
   case 1:
     // invoke: _ZN22QStyleOptionDockWidgetC1ERKS_
     // invoke: void QStyleOptionDockWidget(const class QStyleOptionDockWidget &)
@@ -682,7 +735,9 @@ func NewQStyleOptionDockWidget(args ...interface{}) *QStyleOptionDockWidget {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionDockWidgetC2ERKS_(arg0)
-    return &QStyleOptionDockWidget{Qclsinst:qthis}
+    this := &QStyleOptionDockWidget{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionDockWidget)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionDockWidget", "QStyleOptionDockWidget", args)
   }
@@ -691,6 +746,9 @@ func NewQStyleOptionDockWidget(args ...interface{}) *QStyleOptionDockWidget {
 }
 
 // QStyleOptionProgressBar(const class QStyleOptionProgressBar &)
+func GcfreeQStyleOptionProgressBar(this *QStyleOptionProgressBar) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionProgressBar(args ...interface{}) *QStyleOptionProgressBar {
   // QStyleOptionProgressBar(const class QStyleOptionProgressBar &)
   // QStyleOptionProgressBar()
@@ -711,14 +769,18 @@ func NewQStyleOptionProgressBar(args ...interface{}) *QStyleOptionProgressBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QStyleOptionProgressBarC2ERKS_(arg0)
-    return &QStyleOptionProgressBar{Qclsinst:qthis}
+    this := &QStyleOptionProgressBar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionProgressBar)
+    return this
   case 1:
     // invoke: _ZN23QStyleOptionProgressBarC1Ev
     // invoke: void QStyleOptionProgressBar()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QStyleOptionProgressBarC2Ev()
-    return &QStyleOptionProgressBar{Qclsinst:qthis}
+    this := &QStyleOptionProgressBar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionProgressBar)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionProgressBar", "QStyleOptionProgressBar", args)
   }
@@ -727,6 +789,9 @@ func NewQStyleOptionProgressBar(args ...interface{}) *QStyleOptionProgressBar {
 }
 
 // QStyleOptionSlider(const class QStyleOptionSlider &)
+func GcfreeQStyleOptionSlider(this *QStyleOptionSlider) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionSlider(args ...interface{}) *QStyleOptionSlider {
   // QStyleOptionSlider(const class QStyleOptionSlider &)
   // QStyleOptionSlider()
@@ -747,14 +812,18 @@ func NewQStyleOptionSlider(args ...interface{}) *QStyleOptionSlider {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStyleOptionSliderC2ERKS_(arg0)
-    return &QStyleOptionSlider{Qclsinst:qthis}
+    this := &QStyleOptionSlider{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionSlider)
+    return this
   case 1:
     // invoke: _ZN18QStyleOptionSliderC1Ev
     // invoke: void QStyleOptionSlider()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStyleOptionSliderC2Ev()
-    return &QStyleOptionSlider{Qclsinst:qthis}
+    this := &QStyleOptionSlider{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionSlider)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionSlider", "QStyleOptionSlider", args)
   }
@@ -763,6 +832,9 @@ func NewQStyleOptionSlider(args ...interface{}) *QStyleOptionSlider {
 }
 
 // QStyleOptionFrame()
+func GcfreeQStyleOptionFrame(this *QStyleOptionFrame) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionFrame(args ...interface{}) *QStyleOptionFrame {
   // QStyleOptionFrame()
   // QStyleOptionFrame(const class QStyleOptionFrame &)
@@ -781,7 +853,9 @@ func NewQStyleOptionFrame(args ...interface{}) *QStyleOptionFrame {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QStyleOptionFrameC2Ev()
-    return &QStyleOptionFrame{Qclsinst:qthis}
+    this := &QStyleOptionFrame{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionFrame)
+    return this
   case 1:
     // invoke: _ZN17QStyleOptionFrameC1ERKS_
     // invoke: void QStyleOptionFrame(const class QStyleOptionFrame &)
@@ -790,7 +864,9 @@ func NewQStyleOptionFrame(args ...interface{}) *QStyleOptionFrame {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QStyleOptionFrameC2ERKS_(arg0)
-    return &QStyleOptionFrame{Qclsinst:qthis}
+    this := &QStyleOptionFrame{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionFrame)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionFrame", "QStyleOptionFrame", args)
   }
@@ -799,6 +875,9 @@ func NewQStyleOptionFrame(args ...interface{}) *QStyleOptionFrame {
 }
 
 // QStyleOptionComplex(int, int)
+func GcfreeQStyleOptionComplex(this *QStyleOptionComplex) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionComplex(args ...interface{}) *QStyleOptionComplex {
   // QStyleOptionComplex(int, int)
   // QStyleOptionComplex(const class QStyleOptionComplex &)
@@ -823,7 +902,9 @@ func NewQStyleOptionComplex(args ...interface{}) *QStyleOptionComplex {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionComplexC2Eii(arg0, arg1)
-    return &QStyleOptionComplex{Qclsinst:qthis}
+    this := &QStyleOptionComplex{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionComplex)
+    return this
   case 1:
     // invoke: _ZN19QStyleOptionComplexC1ERKS_
     // invoke: void QStyleOptionComplex(const class QStyleOptionComplex &)
@@ -832,7 +913,9 @@ func NewQStyleOptionComplex(args ...interface{}) *QStyleOptionComplex {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionComplexC2ERKS_(arg0)
-    return &QStyleOptionComplex{Qclsinst:qthis}
+    this := &QStyleOptionComplex{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionComplex)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionComplex", "QStyleOptionComplex", args)
   }
@@ -841,6 +924,9 @@ func NewQStyleOptionComplex(args ...interface{}) *QStyleOptionComplex {
 }
 
 // QStyleHintReturn(int, int)
+func GcfreeQStyleHintReturn(this *QStyleHintReturn) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleHintReturn(args ...interface{}) *QStyleHintReturn {
   // QStyleHintReturn(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -862,7 +948,9 @@ func NewQStyleHintReturn(args ...interface{}) *QStyleHintReturn {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QStyleHintReturnC2Eii(arg0, arg1)
-    return &QStyleHintReturn{Qclsinst:qthis}
+    this := &QStyleHintReturn{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleHintReturn)
+    return this
   default:
     qtrt.ErrorResolve("QStyleHintReturn", "QStyleHintReturn", args)
   }
@@ -871,7 +959,7 @@ func NewQStyleHintReturn(args ...interface{}) *QStyleHintReturn {
 }
 
 // ~QStyleHintReturn()
-func (this *QStyleHintReturn) Freeqstylehintreturn(args ...interface{}) () {
+func (this *QStyleHintReturn) Free(args ...interface{}) () {
   // ~QStyleHintReturn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -883,7 +971,10 @@ func (this *QStyleHintReturn) Freeqstylehintreturn(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QStyleHintReturnD0Ev
     // invoke: void ~QStyleHintReturn()
-    C.C_ZN16QStyleHintReturnD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN16QStyleHintReturnD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStyleHintReturn", "~QStyleHintReturn", args)
   }
@@ -892,6 +983,9 @@ func (this *QStyleHintReturn) Freeqstylehintreturn(args ...interface{}) () {
 }
 
 // QStyleOptionHeader()
+func GcfreeQStyleOptionHeader(this *QStyleOptionHeader) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionHeader(args ...interface{}) *QStyleOptionHeader {
   // QStyleOptionHeader()
   // QStyleOptionHeader(const class QStyleOptionHeader &)
@@ -910,7 +1004,9 @@ func NewQStyleOptionHeader(args ...interface{}) *QStyleOptionHeader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStyleOptionHeaderC2Ev()
-    return &QStyleOptionHeader{Qclsinst:qthis}
+    this := &QStyleOptionHeader{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionHeader)
+    return this
   case 1:
     // invoke: _ZN18QStyleOptionHeaderC1ERKS_
     // invoke: void QStyleOptionHeader(const class QStyleOptionHeader &)
@@ -919,7 +1015,9 @@ func NewQStyleOptionHeader(args ...interface{}) *QStyleOptionHeader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStyleOptionHeaderC2ERKS_(arg0)
-    return &QStyleOptionHeader{Qclsinst:qthis}
+    this := &QStyleOptionHeader{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionHeader)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionHeader", "QStyleOptionHeader", args)
   }
@@ -928,6 +1026,9 @@ func NewQStyleOptionHeader(args ...interface{}) *QStyleOptionHeader {
 }
 
 // QStyleOptionToolBox()
+func GcfreeQStyleOptionToolBox(this *QStyleOptionToolBox) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionToolBox(args ...interface{}) *QStyleOptionToolBox {
   // QStyleOptionToolBox()
   // QStyleOptionToolBox(const class QStyleOptionToolBox &)
@@ -946,7 +1047,9 @@ func NewQStyleOptionToolBox(args ...interface{}) *QStyleOptionToolBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionToolBoxC2Ev()
-    return &QStyleOptionToolBox{Qclsinst:qthis}
+    this := &QStyleOptionToolBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionToolBox)
+    return this
   case 1:
     // invoke: _ZN19QStyleOptionToolBoxC1ERKS_
     // invoke: void QStyleOptionToolBox(const class QStyleOptionToolBox &)
@@ -955,7 +1058,9 @@ func NewQStyleOptionToolBox(args ...interface{}) *QStyleOptionToolBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionToolBoxC2ERKS_(arg0)
-    return &QStyleOptionToolBox{Qclsinst:qthis}
+    this := &QStyleOptionToolBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionToolBox)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionToolBox", "QStyleOptionToolBox", args)
   }
@@ -964,6 +1069,9 @@ func NewQStyleOptionToolBox(args ...interface{}) *QStyleOptionToolBox {
 }
 
 // QStyleOptionFocusRect()
+func GcfreeQStyleOptionFocusRect(this *QStyleOptionFocusRect) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionFocusRect(args ...interface{}) *QStyleOptionFocusRect {
   // QStyleOptionFocusRect()
   // QStyleOptionFocusRect(const class QStyleOptionFocusRect &)
@@ -982,7 +1090,9 @@ func NewQStyleOptionFocusRect(args ...interface{}) *QStyleOptionFocusRect {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QStyleOptionFocusRectC2Ev()
-    return &QStyleOptionFocusRect{Qclsinst:qthis}
+    this := &QStyleOptionFocusRect{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionFocusRect)
+    return this
   case 1:
     // invoke: _ZN21QStyleOptionFocusRectC1ERKS_
     // invoke: void QStyleOptionFocusRect(const class QStyleOptionFocusRect &)
@@ -991,7 +1101,9 @@ func NewQStyleOptionFocusRect(args ...interface{}) *QStyleOptionFocusRect {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QStyleOptionFocusRectC2ERKS_(arg0)
-    return &QStyleOptionFocusRect{Qclsinst:qthis}
+    this := &QStyleOptionFocusRect{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionFocusRect)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionFocusRect", "QStyleOptionFocusRect", args)
   }
@@ -1000,6 +1112,9 @@ func NewQStyleOptionFocusRect(args ...interface{}) *QStyleOptionFocusRect {
 }
 
 // QStyleOptionGroupBox(const class QStyleOptionGroupBox &)
+func GcfreeQStyleOptionGroupBox(this *QStyleOptionGroupBox) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionGroupBox(args ...interface{}) *QStyleOptionGroupBox {
   // QStyleOptionGroupBox(const class QStyleOptionGroupBox &)
   // QStyleOptionGroupBox()
@@ -1020,14 +1135,18 @@ func NewQStyleOptionGroupBox(args ...interface{}) *QStyleOptionGroupBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionGroupBoxC2ERKS_(arg0)
-    return &QStyleOptionGroupBox{Qclsinst:qthis}
+    this := &QStyleOptionGroupBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionGroupBox)
+    return this
   case 1:
     // invoke: _ZN20QStyleOptionGroupBoxC1Ev
     // invoke: void QStyleOptionGroupBox()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionGroupBoxC2Ev()
-    return &QStyleOptionGroupBox{Qclsinst:qthis}
+    this := &QStyleOptionGroupBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionGroupBox)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionGroupBox", "QStyleOptionGroupBox", args)
   }
@@ -1036,6 +1155,9 @@ func NewQStyleOptionGroupBox(args ...interface{}) *QStyleOptionGroupBox {
 }
 
 // QStyleOptionTab(const class QStyleOptionTab &)
+func GcfreeQStyleOptionTab(this *QStyleOptionTab) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionTab(args ...interface{}) *QStyleOptionTab {
   // QStyleOptionTab(const class QStyleOptionTab &)
   // QStyleOptionTab()
@@ -1056,14 +1178,18 @@ func NewQStyleOptionTab(args ...interface{}) *QStyleOptionTab {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QStyleOptionTabC2ERKS_(arg0)
-    return &QStyleOptionTab{Qclsinst:qthis}
+    this := &QStyleOptionTab{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionTab)
+    return this
   case 1:
     // invoke: _ZN15QStyleOptionTabC1Ev
     // invoke: void QStyleOptionTab()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QStyleOptionTabC2Ev()
-    return &QStyleOptionTab{Qclsinst:qthis}
+    this := &QStyleOptionTab{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionTab)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionTab", "QStyleOptionTab", args)
   }
@@ -1072,6 +1198,9 @@ func NewQStyleOptionTab(args ...interface{}) *QStyleOptionTab {
 }
 
 // QStyleOptionTabBarBase()
+func GcfreeQStyleOptionTabBarBase(this *QStyleOptionTabBarBase) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionTabBarBase(args ...interface{}) *QStyleOptionTabBarBase {
   // QStyleOptionTabBarBase()
   // QStyleOptionTabBarBase(const class QStyleOptionTabBarBase &)
@@ -1090,7 +1219,9 @@ func NewQStyleOptionTabBarBase(args ...interface{}) *QStyleOptionTabBarBase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionTabBarBaseC2Ev()
-    return &QStyleOptionTabBarBase{Qclsinst:qthis}
+    this := &QStyleOptionTabBarBase{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionTabBarBase)
+    return this
   case 1:
     // invoke: _ZN22QStyleOptionTabBarBaseC1ERKS_
     // invoke: void QStyleOptionTabBarBase(const class QStyleOptionTabBarBase &)
@@ -1099,7 +1230,9 @@ func NewQStyleOptionTabBarBase(args ...interface{}) *QStyleOptionTabBarBase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionTabBarBaseC2ERKS_(arg0)
-    return &QStyleOptionTabBarBase{Qclsinst:qthis}
+    this := &QStyleOptionTabBarBase{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionTabBarBase)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionTabBarBase", "QStyleOptionTabBarBase", args)
   }
@@ -1108,6 +1241,9 @@ func NewQStyleOptionTabBarBase(args ...interface{}) *QStyleOptionTabBarBase {
 }
 
 // QStyleOptionRubberBand()
+func GcfreeQStyleOptionRubberBand(this *QStyleOptionRubberBand) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionRubberBand(args ...interface{}) *QStyleOptionRubberBand {
   // QStyleOptionRubberBand()
   // QStyleOptionRubberBand(const class QStyleOptionRubberBand &)
@@ -1126,7 +1262,9 @@ func NewQStyleOptionRubberBand(args ...interface{}) *QStyleOptionRubberBand {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionRubberBandC2Ev()
-    return &QStyleOptionRubberBand{Qclsinst:qthis}
+    this := &QStyleOptionRubberBand{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionRubberBand)
+    return this
   case 1:
     // invoke: _ZN22QStyleOptionRubberBandC1ERKS_
     // invoke: void QStyleOptionRubberBand(const class QStyleOptionRubberBand &)
@@ -1135,7 +1273,9 @@ func NewQStyleOptionRubberBand(args ...interface{}) *QStyleOptionRubberBand {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionRubberBandC2ERKS_(arg0)
-    return &QStyleOptionRubberBand{Qclsinst:qthis}
+    this := &QStyleOptionRubberBand{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionRubberBand)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionRubberBand", "QStyleOptionRubberBand", args)
   }
@@ -1144,6 +1284,9 @@ func NewQStyleOptionRubberBand(args ...interface{}) *QStyleOptionRubberBand {
 }
 
 // QStyleOptionButton()
+func GcfreeQStyleOptionButton(this *QStyleOptionButton) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionButton(args ...interface{}) *QStyleOptionButton {
   // QStyleOptionButton()
   // QStyleOptionButton(const class QStyleOptionButton &)
@@ -1162,7 +1305,9 @@ func NewQStyleOptionButton(args ...interface{}) *QStyleOptionButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStyleOptionButtonC2Ev()
-    return &QStyleOptionButton{Qclsinst:qthis}
+    this := &QStyleOptionButton{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionButton)
+    return this
   case 1:
     // invoke: _ZN18QStyleOptionButtonC1ERKS_
     // invoke: void QStyleOptionButton(const class QStyleOptionButton &)
@@ -1171,7 +1316,9 @@ func NewQStyleOptionButton(args ...interface{}) *QStyleOptionButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QStyleOptionButtonC2ERKS_(arg0)
-    return &QStyleOptionButton{Qclsinst:qthis}
+    this := &QStyleOptionButton{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionButton)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionButton", "QStyleOptionButton", args)
   }
@@ -1180,6 +1327,9 @@ func NewQStyleOptionButton(args ...interface{}) *QStyleOptionButton {
 }
 
 // QStyleHintReturnMask()
+func GcfreeQStyleHintReturnMask(this *QStyleHintReturnMask) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleHintReturnMask(args ...interface{}) *QStyleHintReturnMask {
   // QStyleHintReturnMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1195,7 +1345,9 @@ func NewQStyleHintReturnMask(args ...interface{}) *QStyleHintReturnMask {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleHintReturnMaskC2Ev()
-    return &QStyleHintReturnMask{Qclsinst:qthis}
+    this := &QStyleHintReturnMask{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleHintReturnMask)
+    return this
   default:
     qtrt.ErrorResolve("QStyleHintReturnMask", "QStyleHintReturnMask", args)
   }
@@ -1204,7 +1356,7 @@ func NewQStyleHintReturnMask(args ...interface{}) *QStyleHintReturnMask {
 }
 
 // ~QStyleHintReturnMask()
-func (this *QStyleHintReturnMask) Freeqstylehintreturnmask(args ...interface{}) () {
+func (this *QStyleHintReturnMask) Free(args ...interface{}) () {
   // ~QStyleHintReturnMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1216,7 +1368,10 @@ func (this *QStyleHintReturnMask) Freeqstylehintreturnmask(args ...interface{}) 
   case 0:
     // invoke: _ZN20QStyleHintReturnMaskD0Ev
     // invoke: void ~QStyleHintReturnMask()
-    C.C_ZN20QStyleHintReturnMaskD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN20QStyleHintReturnMaskD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStyleHintReturnMask", "~QStyleHintReturnMask", args)
   }
@@ -1225,6 +1380,9 @@ func (this *QStyleHintReturnMask) Freeqstylehintreturnmask(args ...interface{}) 
 }
 
 // QStyleOptionToolButton()
+func GcfreeQStyleOptionToolButton(this *QStyleOptionToolButton) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionToolButton(args ...interface{}) *QStyleOptionToolButton {
   // QStyleOptionToolButton()
   // QStyleOptionToolButton(const class QStyleOptionToolButton &)
@@ -1243,7 +1401,9 @@ func NewQStyleOptionToolButton(args ...interface{}) *QStyleOptionToolButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionToolButtonC2Ev()
-    return &QStyleOptionToolButton{Qclsinst:qthis}
+    this := &QStyleOptionToolButton{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionToolButton)
+    return this
   case 1:
     // invoke: _ZN22QStyleOptionToolButtonC1ERKS_
     // invoke: void QStyleOptionToolButton(const class QStyleOptionToolButton &)
@@ -1252,7 +1412,9 @@ func NewQStyleOptionToolButton(args ...interface{}) *QStyleOptionToolButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QStyleOptionToolButtonC2ERKS_(arg0)
-    return &QStyleOptionToolButton{Qclsinst:qthis}
+    this := &QStyleOptionToolButton{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionToolButton)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionToolButton", "QStyleOptionToolButton", args)
   }
@@ -1261,6 +1423,9 @@ func NewQStyleOptionToolButton(args ...interface{}) *QStyleOptionToolButton {
 }
 
 // QStyleOptionSizeGrip()
+func GcfreeQStyleOptionSizeGrip(this *QStyleOptionSizeGrip) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionSizeGrip(args ...interface{}) *QStyleOptionSizeGrip {
   // QStyleOptionSizeGrip()
   // QStyleOptionSizeGrip(const class QStyleOptionSizeGrip &)
@@ -1279,7 +1444,9 @@ func NewQStyleOptionSizeGrip(args ...interface{}) *QStyleOptionSizeGrip {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionSizeGripC2Ev()
-    return &QStyleOptionSizeGrip{Qclsinst:qthis}
+    this := &QStyleOptionSizeGrip{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionSizeGrip)
+    return this
   case 1:
     // invoke: _ZN20QStyleOptionSizeGripC1ERKS_
     // invoke: void QStyleOptionSizeGrip(const class QStyleOptionSizeGrip &)
@@ -1288,7 +1455,9 @@ func NewQStyleOptionSizeGrip(args ...interface{}) *QStyleOptionSizeGrip {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionSizeGripC2ERKS_(arg0)
-    return &QStyleOptionSizeGrip{Qclsinst:qthis}
+    this := &QStyleOptionSizeGrip{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionSizeGrip)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionSizeGrip", "QStyleOptionSizeGrip", args)
   }
@@ -1297,6 +1466,9 @@ func NewQStyleOptionSizeGrip(args ...interface{}) *QStyleOptionSizeGrip {
 }
 
 // QStyleOptionViewItem(const class QStyleOptionViewItem &)
+func GcfreeQStyleOptionViewItem(this *QStyleOptionViewItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionViewItem(args ...interface{}) *QStyleOptionViewItem {
   // QStyleOptionViewItem(const class QStyleOptionViewItem &)
   // QStyleOptionViewItem()
@@ -1317,14 +1489,18 @@ func NewQStyleOptionViewItem(args ...interface{}) *QStyleOptionViewItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionViewItemC2ERKS_(arg0)
-    return &QStyleOptionViewItem{Qclsinst:qthis}
+    this := &QStyleOptionViewItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionViewItem)
+    return this
   case 1:
     // invoke: _ZN20QStyleOptionViewItemC1Ev
     // invoke: void QStyleOptionViewItem()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QStyleOptionViewItemC2Ev()
-    return &QStyleOptionViewItem{Qclsinst:qthis}
+    this := &QStyleOptionViewItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionViewItem)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionViewItem", "QStyleOptionViewItem", args)
   }
@@ -1333,6 +1509,9 @@ func NewQStyleOptionViewItem(args ...interface{}) *QStyleOptionViewItem {
 }
 
 // QStyleOptionSpinBox()
+func GcfreeQStyleOptionSpinBox(this *QStyleOptionSpinBox) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionSpinBox(args ...interface{}) *QStyleOptionSpinBox {
   // QStyleOptionSpinBox()
   // QStyleOptionSpinBox(const class QStyleOptionSpinBox &)
@@ -1351,7 +1530,9 @@ func NewQStyleOptionSpinBox(args ...interface{}) *QStyleOptionSpinBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionSpinBoxC2Ev()
-    return &QStyleOptionSpinBox{Qclsinst:qthis}
+    this := &QStyleOptionSpinBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionSpinBox)
+    return this
   case 1:
     // invoke: _ZN19QStyleOptionSpinBoxC1ERKS_
     // invoke: void QStyleOptionSpinBox(const class QStyleOptionSpinBox &)
@@ -1360,7 +1541,9 @@ func NewQStyleOptionSpinBox(args ...interface{}) *QStyleOptionSpinBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionSpinBoxC2ERKS_(arg0)
-    return &QStyleOptionSpinBox{Qclsinst:qthis}
+    this := &QStyleOptionSpinBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionSpinBox)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionSpinBox", "QStyleOptionSpinBox", args)
   }
@@ -1369,6 +1552,9 @@ func NewQStyleOptionSpinBox(args ...interface{}) *QStyleOptionSpinBox {
 }
 
 // QStyleOptionToolBar(const class QStyleOptionToolBar &)
+func GcfreeQStyleOptionToolBar(this *QStyleOptionToolBar) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionToolBar(args ...interface{}) *QStyleOptionToolBar {
   // QStyleOptionToolBar(const class QStyleOptionToolBar &)
   // QStyleOptionToolBar()
@@ -1389,14 +1575,18 @@ func NewQStyleOptionToolBar(args ...interface{}) *QStyleOptionToolBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionToolBarC2ERKS_(arg0)
-    return &QStyleOptionToolBar{Qclsinst:qthis}
+    this := &QStyleOptionToolBar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionToolBar)
+    return this
   case 1:
     // invoke: _ZN19QStyleOptionToolBarC1Ev
     // invoke: void QStyleOptionToolBar()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyleOptionToolBarC2Ev()
-    return &QStyleOptionToolBar{Qclsinst:qthis}
+    this := &QStyleOptionToolBar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionToolBar)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionToolBar", "QStyleOptionToolBar", args)
   }
@@ -1405,6 +1595,9 @@ func NewQStyleOptionToolBar(args ...interface{}) *QStyleOptionToolBar {
 }
 
 // QStyleOptionTabWidgetFrame(const class QStyleOptionTabWidgetFrame &)
+func GcfreeQStyleOptionTabWidgetFrame(this *QStyleOptionTabWidgetFrame) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyleOptionTabWidgetFrame(args ...interface{}) *QStyleOptionTabWidgetFrame {
   // QStyleOptionTabWidgetFrame(const class QStyleOptionTabWidgetFrame &)
   // QStyleOptionTabWidgetFrame()
@@ -1425,14 +1618,18 @@ func NewQStyleOptionTabWidgetFrame(args ...interface{}) *QStyleOptionTabWidgetFr
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QStyleOptionTabWidgetFrameC2ERKS_(arg0)
-    return &QStyleOptionTabWidgetFrame{Qclsinst:qthis}
+    this := &QStyleOptionTabWidgetFrame{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionTabWidgetFrame)
+    return this
   case 1:
     // invoke: _ZN26QStyleOptionTabWidgetFrameC1Ev
     // invoke: void QStyleOptionTabWidgetFrame()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QStyleOptionTabWidgetFrameC2Ev()
-    return &QStyleOptionTabWidgetFrame{Qclsinst:qthis}
+    this := &QStyleOptionTabWidgetFrame{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyleOptionTabWidgetFrame)
+    return this
   default:
     qtrt.ErrorResolve("QStyleOptionTabWidgetFrame", "QStyleOptionTabWidgetFrame", args)
   }

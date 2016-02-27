@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qpoint.h
 // dst-file: /src/core/qpoint.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -86,6 +87,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPoint)=8
@@ -101,7 +103,7 @@ type QPointF struct {
 }
 
 // isNull()
-func (this *QPoint) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QPoint) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -172,6 +174,9 @@ func (this *QPoint) Ry(args ...interface{}) () {
 }
 
 // QPoint()
+func GcfreeQPoint(this *QPoint) {
+  qtrt.UniverseFree(this)
+}
 func NewQPoint(args ...interface{}) *QPoint {
   // QPoint()
   // QPoint(int, int)
@@ -191,7 +196,9 @@ func NewQPoint(args ...interface{}) *QPoint {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QPointC2Ev()
-    return &QPoint{Qclsinst:qthis}
+    this := &QPoint{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPoint)
+    return this
   case 1:
     // invoke: _ZN6QPointC1Eii
     // invoke: void QPoint(int, int)
@@ -202,7 +209,9 @@ func NewQPoint(args ...interface{}) *QPoint {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QPointC2Eii(arg0, arg1)
-    return &QPoint{Qclsinst:qthis}
+    this := &QPoint{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPoint)
+    return this
   default:
     qtrt.ErrorResolve("QPoint", "QPoint", args)
   }
@@ -232,7 +241,7 @@ func (this *QPoint) Y(args ...interface{}) () {
 }
 
 // dotProduct(const class QPoint &, const class QPoint &)
-func (this *QPoint) Dotproduct_S(args ...interface{}) (ret interface{}) {
+func (this *QPoint) DotProduct_s(args ...interface{}) (ret interface{}) {
   // dotProduct(const class QPoint &, const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -288,7 +297,7 @@ func (this *QPoint) X(args ...interface{}) () {
 }
 
 // setX(int)
-func (this *QPoint) Setx(args ...interface{}) () {
+func (this *QPoint) SetX(args ...interface{}) () {
   // setX(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -312,7 +321,7 @@ func (this *QPoint) Setx(args ...interface{}) () {
 }
 
 // setY(int)
-func (this *QPoint) Sety(args ...interface{}) () {
+func (this *QPoint) SetY(args ...interface{}) () {
   // setY(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -336,7 +345,7 @@ func (this *QPoint) Sety(args ...interface{}) () {
 }
 
 // manhattanLength()
-func (this *QPoint) Manhattanlength(args ...interface{}) (ret interface{}) {
+func (this *QPoint) ManhattanLength(args ...interface{}) (ret interface{}) {
   // manhattanLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -365,7 +374,7 @@ func (this *QPoint) Manhattanlength(args ...interface{}) (ret interface{}) {
 }
 
 // toPoint()
-func (this *QPointF) Topoint(args ...interface{}) (ret interface{}) {
+func (this *QPointF) ToPoint(args ...interface{}) (ret interface{}) {
   // toPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -394,7 +403,7 @@ func (this *QPointF) Topoint(args ...interface{}) (ret interface{}) {
 }
 
 // dotProduct(const class QPointF &, const class QPointF &)
-func (this *QPointF) Dotproduct_S(args ...interface{}) (ret interface{}) {
+func (this *QPointF) DotProduct_s(args ...interface{}) (ret interface{}) {
   // dotProduct(const class QPointF &, const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -471,7 +480,7 @@ func (this *QPointF) Ry(args ...interface{}) () {
 }
 
 // isNull()
-func (this *QPointF) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QPointF) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -542,6 +551,9 @@ func (this *QPointF) Y(args ...interface{}) () {
 }
 
 // QPointF(qreal, qreal)
+func GcfreeQPointF(this *QPointF) {
+  qtrt.UniverseFree(this)
+}
 func NewQPointF(args ...interface{}) *QPointF {
   // QPointF(qreal, qreal)
   // QPointF()
@@ -568,14 +580,18 @@ func NewQPointF(args ...interface{}) *QPointF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPointFC2Edd(arg0, arg1)
-    return &QPointF{Qclsinst:qthis}
+    this := &QPointF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPointF)
+    return this
   case 1:
     // invoke: _ZN7QPointFC1Ev
     // invoke: void QPointF()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPointFC2Ev()
-    return &QPointF{Qclsinst:qthis}
+    this := &QPointF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPointF)
+    return this
   case 2:
     // invoke: _ZN7QPointFC1ERK6QPoint
     // invoke: void QPointF(const class QPoint &)
@@ -584,7 +600,9 @@ func NewQPointF(args ...interface{}) *QPointF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QPointFC2ERK6QPoint(arg0)
-    return &QPointF{Qclsinst:qthis}
+    this := &QPointF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPointF)
+    return this
   default:
     qtrt.ErrorResolve("QPointF", "QPointF", args)
   }
@@ -593,7 +611,7 @@ func NewQPointF(args ...interface{}) *QPointF {
 }
 
 // setX(qreal)
-func (this *QPointF) Setx(args ...interface{}) () {
+func (this *QPointF) SetX(args ...interface{}) () {
   // setX(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -617,7 +635,7 @@ func (this *QPointF) Setx(args ...interface{}) () {
 }
 
 // setY(qreal)
-func (this *QPointF) Sety(args ...interface{}) () {
+func (this *QPointF) SetY(args ...interface{}) () {
   // setY(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -641,7 +659,7 @@ func (this *QPointF) Sety(args ...interface{}) () {
 }
 
 // manhattanLength()
-func (this *QPointF) Manhattanlength(args ...interface{}) (ret interface{}) {
+func (this *QPointF) ManhattanLength(args ...interface{}) (ret interface{}) {
   // manhattanLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

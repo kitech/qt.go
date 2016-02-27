@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -68,6 +69,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTimer)=1
@@ -78,7 +80,7 @@ type QTimer struct {
 }
 
 // timerType()
-func (this *QTimer) Timertype(args ...interface{}) () {
+func (this *QTimer) TimerType(args ...interface{}) () {
   // timerType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -99,7 +101,7 @@ func (this *QTimer) Timertype(args ...interface{}) () {
 }
 
 // ~QTimer()
-func (this *QTimer) Freeqtimer(args ...interface{}) () {
+func (this *QTimer) Free(args ...interface{}) () {
   // ~QTimer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -111,7 +113,10 @@ func (this *QTimer) Freeqtimer(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QTimerD0Ev
     // invoke: void ~QTimer()
-    C.C_ZN6QTimerD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN6QTimerD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTimer", "~QTimer", args)
   }
@@ -120,7 +125,7 @@ func (this *QTimer) Freeqtimer(args ...interface{}) () {
 }
 
 // setSingleShot(_Bool)
-func (this *QTimer) Setsingleshot(args ...interface{}) () {
+func (this *QTimer) SetSingleShot(args ...interface{}) () {
   // setSingleShot(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -144,7 +149,7 @@ func (this *QTimer) Setsingleshot(args ...interface{}) () {
 }
 
 // isSingleShot()
-func (this *QTimer) Issingleshot(args ...interface{}) (ret interface{}) {
+func (this *QTimer) IsSingleShot(args ...interface{}) (ret interface{}) {
   // isSingleShot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -203,6 +208,9 @@ func (this *QTimer) Start(args ...interface{}) () {
 }
 
 // QTimer(class QObject *)
+func GcfreeQTimer(this *QTimer) {
+  qtrt.UniverseFree(this)
+}
 func NewQTimer(args ...interface{}) *QTimer {
   // QTimer(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -221,7 +229,9 @@ func NewQTimer(args ...interface{}) *QTimer {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QTimerC2EP7QObject(arg0)
-    return &QTimer{Qclsinst:qthis}
+    this := &QTimer{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTimer)
+    return this
   default:
     qtrt.ErrorResolve("QTimer", "QTimer", args)
   }
@@ -230,7 +240,7 @@ func NewQTimer(args ...interface{}) *QTimer {
 }
 
 // timerId()
-func (this *QTimer) Timerid(args ...interface{}) (ret interface{}) {
+func (this *QTimer) TimerId(args ...interface{}) (ret interface{}) {
   // timerId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -259,7 +269,7 @@ func (this *QTimer) Timerid(args ...interface{}) (ret interface{}) {
 }
 
 // setInterval(int)
-func (this *QTimer) Setinterval(args ...interface{}) () {
+func (this *QTimer) SetInterval(args ...interface{}) () {
   // setInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -304,7 +314,7 @@ func (this *QTimer) Stop(args ...interface{}) () {
 }
 
 // remainingTime()
-func (this *QTimer) Remainingtime(args ...interface{}) (ret interface{}) {
+func (this *QTimer) RemainingTime(args ...interface{}) (ret interface{}) {
   // remainingTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -333,7 +343,7 @@ func (this *QTimer) Remainingtime(args ...interface{}) (ret interface{}) {
 }
 
 // isActive()
-func (this *QTimer) Isactive(args ...interface{}) (ret interface{}) {
+func (this *QTimer) IsActive(args ...interface{}) (ret interface{}) {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -362,7 +372,7 @@ func (this *QTimer) Isactive(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QTimer) Metaobject(args ...interface{}) () {
+func (this *QTimer) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -412,7 +422,7 @@ func (this *QTimer) Interval(args ...interface{}) (ret interface{}) {
 }
 
 // singleShot(int, const class QObject *, const char *)
-func (this *QTimer) Singleshot_S(args ...interface{}) () {
+func (this *QTimer) SingleShot_s(args ...interface{}) () {
   // singleShot(int, const class QObject *, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

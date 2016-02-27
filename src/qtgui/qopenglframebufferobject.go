@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qopenglframebufferobject.h
 // dst-file: /src/gui/qopenglframebufferobject.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -112,6 +113,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QOpenGLFramebufferObjectFormat)=8
@@ -127,7 +129,7 @@ type QOpenGLFramebufferObject struct {
 }
 
 // setMipmap(_Bool)
-func (this *QOpenGLFramebufferObjectFormat) Setmipmap(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) SetMipmap(args ...interface{}) () {
   // setMipmap(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -151,7 +153,7 @@ func (this *QOpenGLFramebufferObjectFormat) Setmipmap(args ...interface{}) () {
 }
 
 // setSamples(int)
-func (this *QOpenGLFramebufferObjectFormat) Setsamples(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) SetSamples(args ...interface{}) () {
   // setSamples(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -175,7 +177,7 @@ func (this *QOpenGLFramebufferObjectFormat) Setsamples(args ...interface{}) () {
 }
 
 // textureTarget()
-func (this *QOpenGLFramebufferObjectFormat) Texturetarget(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLFramebufferObjectFormat) TextureTarget(args ...interface{}) (ret interface{}) {
   // textureTarget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -204,7 +206,7 @@ func (this *QOpenGLFramebufferObjectFormat) Texturetarget(args ...interface{}) (
 }
 
 // setInternalTextureFormat(GLenum)
-func (this *QOpenGLFramebufferObjectFormat) Setinternaltextureformat(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) SetInternalTextureFormat(args ...interface{}) () {
   // setInternalTextureFormat(GLenum)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -307,7 +309,7 @@ func (this *QOpenGLFramebufferObjectFormat) Samples(args ...interface{}) (ret in
 }
 
 // ~QOpenGLFramebufferObjectFormat()
-func (this *QOpenGLFramebufferObjectFormat) Freeqopenglframebufferobjectformat(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) Free(args ...interface{}) () {
   // ~QOpenGLFramebufferObjectFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -319,7 +321,10 @@ func (this *QOpenGLFramebufferObjectFormat) Freeqopenglframebufferobjectformat(a
   case 0:
     // invoke: _ZN30QOpenGLFramebufferObjectFormatD0Ev
     // invoke: void ~QOpenGLFramebufferObjectFormat()
-    C.C_ZN30QOpenGLFramebufferObjectFormatD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN30QOpenGLFramebufferObjectFormatD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "~QOpenGLFramebufferObjectFormat", args)
   }
@@ -328,7 +333,7 @@ func (this *QOpenGLFramebufferObjectFormat) Freeqopenglframebufferobjectformat(a
 }
 
 // setTextureTarget(GLenum)
-func (this *QOpenGLFramebufferObjectFormat) Settexturetarget(args ...interface{}) () {
+func (this *QOpenGLFramebufferObjectFormat) SetTextureTarget(args ...interface{}) () {
   // setTextureTarget(GLenum)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -352,6 +357,9 @@ func (this *QOpenGLFramebufferObjectFormat) Settexturetarget(args ...interface{}
 }
 
 // QOpenGLFramebufferObjectFormat(const class QOpenGLFramebufferObjectFormat &)
+func GcfreeQOpenGLFramebufferObjectFormat(this *QOpenGLFramebufferObjectFormat) {
+  qtrt.UniverseFree(this)
+}
 func NewQOpenGLFramebufferObjectFormat(args ...interface{}) *QOpenGLFramebufferObjectFormat {
   // QOpenGLFramebufferObjectFormat(const class QOpenGLFramebufferObjectFormat &)
   // QOpenGLFramebufferObjectFormat()
@@ -372,14 +380,18 @@ func NewQOpenGLFramebufferObjectFormat(args ...interface{}) *QOpenGLFramebufferO
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN30QOpenGLFramebufferObjectFormatC2ERKS_(arg0)
-    return &QOpenGLFramebufferObjectFormat{Qclsinst:qthis}
+    this := &QOpenGLFramebufferObjectFormat{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLFramebufferObjectFormat)
+    return this
   case 1:
     // invoke: _ZN30QOpenGLFramebufferObjectFormatC1Ev
     // invoke: void QOpenGLFramebufferObjectFormat()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN30QOpenGLFramebufferObjectFormatC2Ev()
-    return &QOpenGLFramebufferObjectFormat{Qclsinst:qthis}
+    this := &QOpenGLFramebufferObjectFormat{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLFramebufferObjectFormat)
+    return this
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "QOpenGLFramebufferObjectFormat", args)
   }
@@ -388,7 +400,7 @@ func NewQOpenGLFramebufferObjectFormat(args ...interface{}) *QOpenGLFramebufferO
 }
 
 // internalTextureFormat()
-func (this *QOpenGLFramebufferObjectFormat) Internaltextureformat(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLFramebufferObjectFormat) InternalTextureFormat(args ...interface{}) (ret interface{}) {
   // internalTextureFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -417,7 +429,7 @@ func (this *QOpenGLFramebufferObjectFormat) Internaltextureformat(args ...interf
 }
 
 // hasOpenGLFramebufferObjects()
-func (this *QOpenGLFramebufferObject) Hasopenglframebufferobjects_S(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLFramebufferObject) HasOpenGLFramebufferObjects_s(args ...interface{}) (ret interface{}) {
   // hasOpenGLFramebufferObjects()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -504,7 +516,7 @@ func (this *QOpenGLFramebufferObject) Size(args ...interface{}) (ret interface{}
 }
 
 // hasOpenGLFramebufferBlit()
-func (this *QOpenGLFramebufferObject) Hasopenglframebufferblit_S(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLFramebufferObject) HasOpenGLFramebufferBlit_s(args ...interface{}) (ret interface{}) {
   // hasOpenGLFramebufferBlit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -533,7 +545,7 @@ func (this *QOpenGLFramebufferObject) Hasopenglframebufferblit_S(args ...interfa
 }
 
 // blitFramebuffer(class QOpenGLFramebufferObject *, const class QRect &, class QOpenGLFramebufferObject *, const class QRect &, GLbitfield, GLenum)
-func (this *QOpenGLFramebufferObject) Blitframebuffer_S(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) BlitFramebuffer_s(args ...interface{}) () {
   // blitFramebuffer(class QOpenGLFramebufferObject *, const class QRect &, class QOpenGLFramebufferObject *, const class QRect &, GLbitfield, GLenum)
   // blitFramebuffer(class QOpenGLFramebufferObject *, class QOpenGLFramebufferObject *, GLbitfield, GLenum)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -611,7 +623,7 @@ func (this *QOpenGLFramebufferObject) Format(args ...interface{}) () {
 }
 
 // takeTexture()
-func (this *QOpenGLFramebufferObject) Taketexture(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLFramebufferObject) TakeTexture(args ...interface{}) (ret interface{}) {
   // takeTexture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -719,7 +731,7 @@ func (this *QOpenGLFramebufferObject) Attachment(args ...interface{}) () {
 }
 
 // ~QOpenGLFramebufferObject()
-func (this *QOpenGLFramebufferObject) Freeqopenglframebufferobject(args ...interface{}) () {
+func (this *QOpenGLFramebufferObject) Free(args ...interface{}) () {
   // ~QOpenGLFramebufferObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -731,7 +743,10 @@ func (this *QOpenGLFramebufferObject) Freeqopenglframebufferobject(args ...inter
   case 0:
     // invoke: _ZN24QOpenGLFramebufferObjectD0Ev
     // invoke: void ~QOpenGLFramebufferObject()
-    C.C_ZN24QOpenGLFramebufferObjectD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN24QOpenGLFramebufferObjectD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "~QOpenGLFramebufferObject", args)
   }
@@ -769,7 +784,7 @@ func (this *QOpenGLFramebufferObject) Handle(args ...interface{}) (ret interface
 }
 
 // isValid()
-func (this *QOpenGLFramebufferObject) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLFramebufferObject) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -798,6 +813,9 @@ func (this *QOpenGLFramebufferObject) Isvalid(args ...interface{}) (ret interfac
 }
 
 // QOpenGLFramebufferObject(int, int, GLenum)
+func GcfreeQOpenGLFramebufferObject(this *QOpenGLFramebufferObject) {
+  qtrt.UniverseFree(this)
+}
 func NewQOpenGLFramebufferObject(args ...interface{}) *QOpenGLFramebufferObject {
   // QOpenGLFramebufferObject(int, int, GLenum)
   // QOpenGLFramebufferObject(int, int, const class QOpenGLFramebufferObjectFormat &)
@@ -835,7 +853,9 @@ func NewQOpenGLFramebufferObject(args ...interface{}) *QOpenGLFramebufferObject 
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN24QOpenGLFramebufferObjectC2Eiij(arg0, arg1, arg2)
-    return &QOpenGLFramebufferObject{Qclsinst:qthis}
+    this := &QOpenGLFramebufferObject{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLFramebufferObject)
+    return this
   case 1:
     // invoke: _ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat
     // invoke: void QOpenGLFramebufferObject(int, int, const class QOpenGLFramebufferObjectFormat &)
@@ -848,7 +868,9 @@ func NewQOpenGLFramebufferObject(args ...interface{}) *QOpenGLFramebufferObject 
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN24QOpenGLFramebufferObjectC2EiiRK30QOpenGLFramebufferObjectFormat(arg0, arg1, arg2)
-    return &QOpenGLFramebufferObject{Qclsinst:qthis}
+    this := &QOpenGLFramebufferObject{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLFramebufferObject)
+    return this
   case 2:
     // invoke: _ZN24QOpenGLFramebufferObjectC1ERK5QSizeRK30QOpenGLFramebufferObjectFormat
     // invoke: void QOpenGLFramebufferObject(const class QSize &, const class QOpenGLFramebufferObjectFormat &)
@@ -859,7 +881,9 @@ func NewQOpenGLFramebufferObject(args ...interface{}) *QOpenGLFramebufferObject 
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN24QOpenGLFramebufferObjectC2ERK5QSizeRK30QOpenGLFramebufferObjectFormat(arg0, arg1)
-    return &QOpenGLFramebufferObject{Qclsinst:qthis}
+    this := &QOpenGLFramebufferObject{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLFramebufferObject)
+    return this
   case 3:
     // invoke: _ZN24QOpenGLFramebufferObjectC1ERK5QSizej
     // invoke: void QOpenGLFramebufferObject(const class QSize &, GLenum)
@@ -870,7 +894,9 @@ func NewQOpenGLFramebufferObject(args ...interface{}) *QOpenGLFramebufferObject 
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN24QOpenGLFramebufferObjectC2ERK5QSizej(arg0, arg1)
-    return &QOpenGLFramebufferObject{Qclsinst:qthis}
+    this := &QOpenGLFramebufferObject{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLFramebufferObject)
+    return this
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "QOpenGLFramebufferObject", args)
   }
@@ -879,7 +905,7 @@ func NewQOpenGLFramebufferObject(args ...interface{}) *QOpenGLFramebufferObject 
 }
 
 // bindDefault()
-func (this *QOpenGLFramebufferObject) Binddefault_S(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLFramebufferObject) BindDefault_s(args ...interface{}) (ret interface{}) {
   // bindDefault()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -908,7 +934,7 @@ func (this *QOpenGLFramebufferObject) Binddefault_S(args ...interface{}) (ret in
 }
 
 // isBound()
-func (this *QOpenGLFramebufferObject) Isbound(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLFramebufferObject) IsBound(args ...interface{}) (ret interface{}) {
   // isBound()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -966,7 +992,7 @@ func (this *QOpenGLFramebufferObject) Bind(args ...interface{}) (ret interface{}
 }
 
 // toImage(_Bool)
-func (this *QOpenGLFramebufferObject) Toimage(args ...interface{}) (ret interface{}) {
+func (this *QOpenGLFramebufferObject) ToImage(args ...interface{}) (ret interface{}) {
   // toImage(_Bool)
   // toImage()
   var vtys = make(map[int32]map[int32]reflect.Type)

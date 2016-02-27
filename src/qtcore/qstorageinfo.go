@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qstorageinfo.h
 // dst-file: /src/core/qstorageinfo.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -82,6 +83,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStorageInfo)=1
@@ -91,7 +93,7 @@ type QStorageInfo struct {
 }
 
 // isReady()
-func (this *QStorageInfo) Isready(args ...interface{}) (ret interface{}) {
+func (this *QStorageInfo) IsReady(args ...interface{}) (ret interface{}) {
   // isReady()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -120,7 +122,7 @@ func (this *QStorageInfo) Isready(args ...interface{}) (ret interface{}) {
 }
 
 // mountedVolumes()
-func (this *QStorageInfo) Mountedvolumes_S(args ...interface{}) () {
+func (this *QStorageInfo) MountedVolumes_s(args ...interface{}) () {
   // mountedVolumes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -170,7 +172,7 @@ func (this *QStorageInfo) Name(args ...interface{}) (ret interface{}) {
 }
 
 // isRoot()
-func (this *QStorageInfo) Isroot(args ...interface{}) (ret interface{}) {
+func (this *QStorageInfo) IsRoot(args ...interface{}) (ret interface{}) {
   // isRoot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -199,7 +201,7 @@ func (this *QStorageInfo) Isroot(args ...interface{}) (ret interface{}) {
 }
 
 // isReadOnly()
-func (this *QStorageInfo) Isreadonly(args ...interface{}) (ret interface{}) {
+func (this *QStorageInfo) IsReadOnly(args ...interface{}) (ret interface{}) {
   // isReadOnly()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -228,7 +230,7 @@ func (this *QStorageInfo) Isreadonly(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QStorageInfo) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QStorageInfo) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -257,7 +259,7 @@ func (this *QStorageInfo) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // fileSystemType()
-func (this *QStorageInfo) Filesystemtype(args ...interface{}) (ret interface{}) {
+func (this *QStorageInfo) FileSystemType(args ...interface{}) (ret interface{}) {
   // fileSystemType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -286,7 +288,7 @@ func (this *QStorageInfo) Filesystemtype(args ...interface{}) (ret interface{}) 
 }
 
 // rootPath()
-func (this *QStorageInfo) Rootpath(args ...interface{}) (ret interface{}) {
+func (this *QStorageInfo) RootPath(args ...interface{}) (ret interface{}) {
   // rootPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -336,7 +338,7 @@ func (this *QStorageInfo) Refresh(args ...interface{}) () {
 }
 
 // bytesAvailable()
-func (this *QStorageInfo) Bytesavailable(args ...interface{}) (ret interface{}) {
+func (this *QStorageInfo) BytesAvailable(args ...interface{}) (ret interface{}) {
   // bytesAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -365,7 +367,7 @@ func (this *QStorageInfo) Bytesavailable(args ...interface{}) (ret interface{}) 
 }
 
 // bytesFree()
-func (this *QStorageInfo) Bytesfree(args ...interface{}) (ret interface{}) {
+func (this *QStorageInfo) BytesFree(args ...interface{}) (ret interface{}) {
   // bytesFree()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -394,7 +396,7 @@ func (this *QStorageInfo) Bytesfree(args ...interface{}) (ret interface{}) {
 }
 
 // bytesTotal()
-func (this *QStorageInfo) Bytestotal(args ...interface{}) (ret interface{}) {
+func (this *QStorageInfo) BytesTotal(args ...interface{}) (ret interface{}) {
   // bytesTotal()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -476,6 +478,9 @@ func (this *QStorageInfo) Swap(args ...interface{}) () {
 }
 
 // QStorageInfo(const class QDir &)
+func GcfreeQStorageInfo(this *QStorageInfo) {
+  qtrt.UniverseFree(this)
+}
 func NewQStorageInfo(args ...interface{}) *QStorageInfo {
   // QStorageInfo(const class QDir &)
   // QStorageInfo(const class QStorageInfo &)
@@ -502,7 +507,9 @@ func NewQStorageInfo(args ...interface{}) *QStorageInfo {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStorageInfoC2ERK4QDir(arg0)
-    return &QStorageInfo{Qclsinst:qthis}
+    this := &QStorageInfo{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStorageInfo)
+    return this
   case 1:
     // invoke: _ZN12QStorageInfoC1ERKS_
     // invoke: void QStorageInfo(const class QStorageInfo &)
@@ -511,14 +518,18 @@ func NewQStorageInfo(args ...interface{}) *QStorageInfo {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStorageInfoC2ERKS_(arg0)
-    return &QStorageInfo{Qclsinst:qthis}
+    this := &QStorageInfo{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStorageInfo)
+    return this
   case 2:
     // invoke: _ZN12QStorageInfoC1Ev
     // invoke: void QStorageInfo()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStorageInfoC2Ev()
-    return &QStorageInfo{Qclsinst:qthis}
+    this := &QStorageInfo{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStorageInfo)
+    return this
   case 3:
     // invoke: _ZN12QStorageInfoC1ERK7QString
     // invoke: void QStorageInfo(const class QString &)
@@ -527,7 +538,9 @@ func NewQStorageInfo(args ...interface{}) *QStorageInfo {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QStorageInfoC2ERK7QString(arg0)
-    return &QStorageInfo{Qclsinst:qthis}
+    this := &QStorageInfo{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStorageInfo)
+    return this
   default:
     qtrt.ErrorResolve("QStorageInfo", "QStorageInfo", args)
   }
@@ -536,7 +549,7 @@ func NewQStorageInfo(args ...interface{}) *QStorageInfo {
 }
 
 // displayName()
-func (this *QStorageInfo) Displayname(args ...interface{}) (ret interface{}) {
+func (this *QStorageInfo) DisplayName(args ...interface{}) (ret interface{}) {
   // displayName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -565,7 +578,7 @@ func (this *QStorageInfo) Displayname(args ...interface{}) (ret interface{}) {
 }
 
 // setPath(const class QString &)
-func (this *QStorageInfo) Setpath(args ...interface{}) () {
+func (this *QStorageInfo) SetPath(args ...interface{}) () {
   // setPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -589,7 +602,7 @@ func (this *QStorageInfo) Setpath(args ...interface{}) () {
 }
 
 // root()
-func (this *QStorageInfo) Root_S(args ...interface{}) (ret interface{}) {
+func (this *QStorageInfo) Root_s(args ...interface{}) (ret interface{}) {
   // root()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -618,7 +631,7 @@ func (this *QStorageInfo) Root_S(args ...interface{}) (ret interface{}) {
 }
 
 // ~QStorageInfo()
-func (this *QStorageInfo) Freeqstorageinfo(args ...interface{}) () {
+func (this *QStorageInfo) Free(args ...interface{}) () {
   // ~QStorageInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -630,7 +643,10 @@ func (this *QStorageInfo) Freeqstorageinfo(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QStorageInfoD0Ev
     // invoke: void ~QStorageInfo()
-    C.C_ZN12QStorageInfoD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QStorageInfoD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStorageInfo", "~QStorageInfo", args)
   }

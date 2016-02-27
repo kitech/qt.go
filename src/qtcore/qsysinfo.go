@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qsysinfo.h
 // dst-file: /src/core/qsysinfo.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -58,6 +59,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSysInfo)=1
@@ -67,7 +69,7 @@ type QSysInfo struct {
 }
 
 // kernelVersion()
-func (this *QSysInfo) Kernelversion_S(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) KernelVersion_s(args ...interface{}) (ret interface{}) {
   // kernelVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -96,7 +98,7 @@ func (this *QSysInfo) Kernelversion_S(args ...interface{}) (ret interface{}) {
 }
 
 // buildCpuArchitecture()
-func (this *QSysInfo) Buildcpuarchitecture_S(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) BuildCpuArchitecture_s(args ...interface{}) (ret interface{}) {
   // buildCpuArchitecture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -125,7 +127,7 @@ func (this *QSysInfo) Buildcpuarchitecture_S(args ...interface{}) (ret interface
 }
 
 // prettyProductName()
-func (this *QSysInfo) Prettyproductname_S(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) PrettyProductName_s(args ...interface{}) (ret interface{}) {
   // prettyProductName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -154,7 +156,7 @@ func (this *QSysInfo) Prettyproductname_S(args ...interface{}) (ret interface{})
 }
 
 // productVersion()
-func (this *QSysInfo) Productversion_S(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) ProductVersion_s(args ...interface{}) (ret interface{}) {
   // productVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,7 +185,7 @@ func (this *QSysInfo) Productversion_S(args ...interface{}) (ret interface{}) {
 }
 
 // buildAbi()
-func (this *QSysInfo) Buildabi_S(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) BuildAbi_s(args ...interface{}) (ret interface{}) {
   // buildAbi()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -212,7 +214,7 @@ func (this *QSysInfo) Buildabi_S(args ...interface{}) (ret interface{}) {
 }
 
 // kernelType()
-func (this *QSysInfo) Kerneltype_S(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) KernelType_s(args ...interface{}) (ret interface{}) {
   // kernelType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -241,7 +243,7 @@ func (this *QSysInfo) Kerneltype_S(args ...interface{}) (ret interface{}) {
 }
 
 // productType()
-func (this *QSysInfo) Producttype_S(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) ProductType_s(args ...interface{}) (ret interface{}) {
   // productType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -270,7 +272,7 @@ func (this *QSysInfo) Producttype_S(args ...interface{}) (ret interface{}) {
 }
 
 // windowsVersion()
-func (this *QSysInfo) Windowsversion_S(args ...interface{}) () {
+func (this *QSysInfo) WindowsVersion_s(args ...interface{}) () {
   // windowsVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -291,7 +293,7 @@ func (this *QSysInfo) Windowsversion_S(args ...interface{}) () {
 }
 
 // currentCpuArchitecture()
-func (this *QSysInfo) Currentcpuarchitecture_S(args ...interface{}) (ret interface{}) {
+func (this *QSysInfo) CurrentCpuArchitecture_s(args ...interface{}) (ret interface{}) {
   // currentCpuArchitecture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -320,7 +322,7 @@ func (this *QSysInfo) Currentcpuarchitecture_S(args ...interface{}) (ret interfa
 }
 
 // macVersion()
-func (this *QSysInfo) Macversion_S(args ...interface{}) () {
+func (this *QSysInfo) MacVersion_s(args ...interface{}) () {
   // macVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qtextedit.h
 // dst-file: /src/widgets/qtextedit.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -204,6 +205,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextEdit)=1
@@ -220,7 +222,7 @@ type QTextEdit struct {
 }
 
 // autoFormatting()
-func (this *QTextEdit) Autoformatting(args ...interface{}) () {
+func (this *QTextEdit) AutoFormatting(args ...interface{}) () {
   // autoFormatting()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -241,7 +243,7 @@ func (this *QTextEdit) Autoformatting(args ...interface{}) () {
 }
 
 // setTabStopWidth(int)
-func (this *QTextEdit) Settabstopwidth(args ...interface{}) () {
+func (this *QTextEdit) SetTabStopWidth(args ...interface{}) () {
   // setTabStopWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -265,7 +267,7 @@ func (this *QTextEdit) Settabstopwidth(args ...interface{}) () {
 }
 
 // textBackgroundColor()
-func (this *QTextEdit) Textbackgroundcolor(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) TextBackgroundColor(args ...interface{}) (ret interface{}) {
   // textBackgroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -294,7 +296,7 @@ func (this *QTextEdit) Textbackgroundcolor(args ...interface{}) (ret interface{}
 }
 
 // ensureCursorVisible()
-func (this *QTextEdit) Ensurecursorvisible(args ...interface{}) () {
+func (this *QTextEdit) EnsureCursorVisible(args ...interface{}) () {
   // ensureCursorVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -315,7 +317,7 @@ func (this *QTextEdit) Ensurecursorvisible(args ...interface{}) () {
 }
 
 // setCurrentCharFormat(const class QTextCharFormat &)
-func (this *QTextEdit) Setcurrentcharformat(args ...interface{}) () {
+func (this *QTextEdit) SetCurrentCharFormat(args ...interface{}) () {
   // setCurrentCharFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -339,7 +341,7 @@ func (this *QTextEdit) Setcurrentcharformat(args ...interface{}) () {
 }
 
 // tabChangesFocus()
-func (this *QTextEdit) Tabchangesfocus(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) TabChangesFocus(args ...interface{}) (ret interface{}) {
   // tabChangesFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -389,7 +391,7 @@ func (this *QTextEdit) Alignment(args ...interface{}) () {
 }
 
 // isUndoRedoEnabled()
-func (this *QTextEdit) Isundoredoenabled(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) IsUndoRedoEnabled(args ...interface{}) (ret interface{}) {
   // isUndoRedoEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -439,7 +441,7 @@ func (this *QTextEdit) Cut(args ...interface{}) () {
 }
 
 // createStandardContextMenu(const class QPoint &)
-func (this *QTextEdit) Createstandardcontextmenu(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) CreateStandardContextMenu(args ...interface{}) (ret interface{}) {
   // createStandardContextMenu(const class QPoint &)
   // createStandardContextMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -485,7 +487,7 @@ func (this *QTextEdit) Createstandardcontextmenu(args ...interface{}) (ret inter
 }
 
 // setFontPointSize(qreal)
-func (this *QTextEdit) Setfontpointsize(args ...interface{}) () {
+func (this *QTextEdit) SetFontPointSize(args ...interface{}) () {
   // setFontPointSize(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -509,7 +511,7 @@ func (this *QTextEdit) Setfontpointsize(args ...interface{}) () {
 }
 
 // mergeCurrentCharFormat(const class QTextCharFormat &)
-func (this *QTextEdit) Mergecurrentcharformat(args ...interface{}) () {
+func (this *QTextEdit) MergeCurrentCharFormat(args ...interface{}) () {
   // mergeCurrentCharFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -533,7 +535,7 @@ func (this *QTextEdit) Mergecurrentcharformat(args ...interface{}) () {
 }
 
 // documentTitle()
-func (this *QTextEdit) Documenttitle(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) DocumentTitle(args ...interface{}) (ret interface{}) {
   // documentTitle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -562,7 +564,7 @@ func (this *QTextEdit) Documenttitle(args ...interface{}) (ret interface{}) {
 }
 
 // toHtml()
-func (this *QTextEdit) Tohtml(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) ToHtml(args ...interface{}) (ret interface{}) {
   // toHtml()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -591,7 +593,7 @@ func (this *QTextEdit) Tohtml(args ...interface{}) (ret interface{}) {
 }
 
 // insertPlainText(const class QString &)
-func (this *QTextEdit) Insertplaintext(args ...interface{}) () {
+func (this *QTextEdit) InsertPlainText(args ...interface{}) () {
   // insertPlainText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -615,7 +617,7 @@ func (this *QTextEdit) Insertplaintext(args ...interface{}) () {
 }
 
 // fontPointSize()
-func (this *QTextEdit) Fontpointsize(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) FontPointSize(args ...interface{}) (ret interface{}) {
   // fontPointSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -644,7 +646,7 @@ func (this *QTextEdit) Fontpointsize(args ...interface{}) (ret interface{}) {
 }
 
 // textColor()
-func (this *QTextEdit) Textcolor(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) TextColor(args ...interface{}) (ret interface{}) {
   // textColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -673,7 +675,7 @@ func (this *QTextEdit) Textcolor(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QTextEdit) Metaobject(args ...interface{}) () {
+func (this *QTextEdit) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -694,7 +696,7 @@ func (this *QTextEdit) Metaobject(args ...interface{}) () {
 }
 
 // setTextBackgroundColor(const class QColor &)
-func (this *QTextEdit) Settextbackgroundcolor(args ...interface{}) () {
+func (this *QTextEdit) SetTextBackgroundColor(args ...interface{}) () {
   // setTextBackgroundColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -718,7 +720,7 @@ func (this *QTextEdit) Settextbackgroundcolor(args ...interface{}) () {
 }
 
 // setTabChangesFocus(_Bool)
-func (this *QTextEdit) Settabchangesfocus(args ...interface{}) () {
+func (this *QTextEdit) SetTabChangesFocus(args ...interface{}) () {
   // setTabChangesFocus(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -742,7 +744,7 @@ func (this *QTextEdit) Settabchangesfocus(args ...interface{}) () {
 }
 
 // toPlainText()
-func (this *QTextEdit) Toplaintext(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) ToPlainText(args ...interface{}) (ret interface{}) {
   // toPlainText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -771,7 +773,7 @@ func (this *QTextEdit) Toplaintext(args ...interface{}) (ret interface{}) {
 }
 
 // zoomIn(int)
-func (this *QTextEdit) Zoomin(args ...interface{}) () {
+func (this *QTextEdit) ZoomIn(args ...interface{}) () {
   // zoomIn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -795,7 +797,7 @@ func (this *QTextEdit) Zoomin(args ...interface{}) () {
 }
 
 // zoomOut(int)
-func (this *QTextEdit) Zoomout(args ...interface{}) () {
+func (this *QTextEdit) ZoomOut(args ...interface{}) () {
   // zoomOut(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -819,7 +821,7 @@ func (this *QTextEdit) Zoomout(args ...interface{}) () {
 }
 
 // cursorRect(const class QTextCursor &)
-func (this *QTextEdit) Cursorrect(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) CursorRect(args ...interface{}) (ret interface{}) {
   // cursorRect(const class QTextCursor &)
   // cursorRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -865,7 +867,7 @@ func (this *QTextEdit) Cursorrect(args ...interface{}) (ret interface{}) {
 }
 
 // setUndoRedoEnabled(_Bool)
-func (this *QTextEdit) Setundoredoenabled(args ...interface{}) () {
+func (this *QTextEdit) SetUndoRedoEnabled(args ...interface{}) () {
   // setUndoRedoEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -889,7 +891,7 @@ func (this *QTextEdit) Setundoredoenabled(args ...interface{}) () {
 }
 
 // textCursor()
-func (this *QTextEdit) Textcursor(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) TextCursor(args ...interface{}) (ret interface{}) {
   // textCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -918,7 +920,7 @@ func (this *QTextEdit) Textcursor(args ...interface{}) (ret interface{}) {
 }
 
 // setAcceptRichText(_Bool)
-func (this *QTextEdit) Setacceptrichtext(args ...interface{}) () {
+func (this *QTextEdit) SetAcceptRichText(args ...interface{}) () {
   // setAcceptRichText(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -942,7 +944,7 @@ func (this *QTextEdit) Setacceptrichtext(args ...interface{}) () {
 }
 
 // anchorAt(const class QPoint &)
-func (this *QTextEdit) Anchorat(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) AnchorAt(args ...interface{}) (ret interface{}) {
   // anchorAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -974,7 +976,7 @@ func (this *QTextEdit) Anchorat(args ...interface{}) (ret interface{}) {
 }
 
 // setHtml(const class QString &)
-func (this *QTextEdit) Sethtml(args ...interface{}) () {
+func (this *QTextEdit) SetHtml(args ...interface{}) () {
   // setHtml(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -998,7 +1000,7 @@ func (this *QTextEdit) Sethtml(args ...interface{}) () {
 }
 
 // setDocument(class QTextDocument *)
-func (this *QTextEdit) Setdocument(args ...interface{}) () {
+func (this *QTextEdit) SetDocument(args ...interface{}) () {
   // setDocument(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1022,7 +1024,7 @@ func (this *QTextEdit) Setdocument(args ...interface{}) () {
 }
 
 // fontItalic()
-func (this *QTextEdit) Fontitalic(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) FontItalic(args ...interface{}) (ret interface{}) {
   // fontItalic()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1075,7 +1077,7 @@ func (this *QTextEdit) Append(args ...interface{}) () {
 }
 
 // setFontFamily(const class QString &)
-func (this *QTextEdit) Setfontfamily(args ...interface{}) () {
+func (this *QTextEdit) SetFontFamily(args ...interface{}) () {
   // setFontFamily(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1123,7 +1125,7 @@ func (this *QTextEdit) Print(args ...interface{}) () {
 }
 
 // loadResource(int, const class QUrl &)
-func (this *QTextEdit) Loadresource(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) LoadResource(args ...interface{}) (ret interface{}) {
   // loadResource(int, const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1179,7 +1181,7 @@ func (this *QTextEdit) Undo(args ...interface{}) () {
 }
 
 // lineWrapColumnOrWidth()
-func (this *QTextEdit) Linewrapcolumnorwidth(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) LineWrapColumnOrWidth(args ...interface{}) (ret interface{}) {
   // lineWrapColumnOrWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1229,7 +1231,7 @@ func (this *QTextEdit) Paste(args ...interface{}) () {
 }
 
 // setFontWeight(int)
-func (this *QTextEdit) Setfontweight(args ...interface{}) () {
+func (this *QTextEdit) SetFontWeight(args ...interface{}) () {
   // setFontWeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1253,7 +1255,7 @@ func (this *QTextEdit) Setfontweight(args ...interface{}) () {
 }
 
 // scrollToAnchor(const class QString &)
-func (this *QTextEdit) Scrolltoanchor(args ...interface{}) () {
+func (this *QTextEdit) ScrollToAnchor(args ...interface{}) () {
   // scrollToAnchor(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1277,7 +1279,7 @@ func (this *QTextEdit) Scrolltoanchor(args ...interface{}) () {
 }
 
 // selectAll()
-func (this *QTextEdit) Selectall(args ...interface{}) () {
+func (this *QTextEdit) SelectAll(args ...interface{}) () {
   // selectAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1298,7 +1300,7 @@ func (this *QTextEdit) Selectall(args ...interface{}) () {
 }
 
 // extraSelections()
-func (this *QTextEdit) Extraselections(args ...interface{}) () {
+func (this *QTextEdit) ExtraSelections(args ...interface{}) () {
   // extraSelections()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1319,7 +1321,7 @@ func (this *QTextEdit) Extraselections(args ...interface{}) () {
 }
 
 // ~QTextEdit()
-func (this *QTextEdit) Freeqtextedit(args ...interface{}) () {
+func (this *QTextEdit) Free(args ...interface{}) () {
   // ~QTextEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1331,7 +1333,10 @@ func (this *QTextEdit) Freeqtextedit(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEditD0Ev
     // invoke: void ~QTextEdit()
-    C.C_ZN9QTextEditD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QTextEditD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTextEdit", "~QTextEdit", args)
   }
@@ -1361,7 +1366,7 @@ func (this *QTextEdit) Redo(args ...interface{}) () {
 }
 
 // setFontUnderline(_Bool)
-func (this *QTextEdit) Setfontunderline(args ...interface{}) () {
+func (this *QTextEdit) SetFontUnderline(args ...interface{}) () {
   // setFontUnderline(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1385,7 +1390,7 @@ func (this *QTextEdit) Setfontunderline(args ...interface{}) () {
 }
 
 // isReadOnly()
-func (this *QTextEdit) Isreadonly(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) IsReadOnly(args ...interface{}) (ret interface{}) {
   // isReadOnly()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1414,7 +1419,7 @@ func (this *QTextEdit) Isreadonly(args ...interface{}) (ret interface{}) {
 }
 
 // setTextCursor(const class QTextCursor &)
-func (this *QTextEdit) Settextcursor(args ...interface{}) () {
+func (this *QTextEdit) SetTextCursor(args ...interface{}) () {
   // setTextCursor(const class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1438,7 +1443,7 @@ func (this *QTextEdit) Settextcursor(args ...interface{}) () {
 }
 
 // overwriteMode()
-func (this *QTextEdit) Overwritemode(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) OverwriteMode(args ...interface{}) (ret interface{}) {
   // overwriteMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1467,7 +1472,7 @@ func (this *QTextEdit) Overwritemode(args ...interface{}) (ret interface{}) {
 }
 
 // acceptRichText()
-func (this *QTextEdit) Acceptrichtext(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) AcceptRichText(args ...interface{}) (ret interface{}) {
   // acceptRichText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1496,7 +1501,7 @@ func (this *QTextEdit) Acceptrichtext(args ...interface{}) (ret interface{}) {
 }
 
 // setCursorWidth(int)
-func (this *QTextEdit) Setcursorwidth(args ...interface{}) () {
+func (this *QTextEdit) SetCursorWidth(args ...interface{}) () {
   // setCursorWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1520,7 +1525,7 @@ func (this *QTextEdit) Setcursorwidth(args ...interface{}) () {
 }
 
 // setLineWrapColumnOrWidth(int)
-func (this *QTextEdit) Setlinewrapcolumnorwidth(args ...interface{}) () {
+func (this *QTextEdit) SetLineWrapColumnOrWidth(args ...interface{}) () {
   // setLineWrapColumnOrWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1544,7 +1549,7 @@ func (this *QTextEdit) Setlinewrapcolumnorwidth(args ...interface{}) () {
 }
 
 // textInteractionFlags()
-func (this *QTextEdit) Textinteractionflags(args ...interface{}) () {
+func (this *QTextEdit) TextInteractionFlags(args ...interface{}) () {
   // textInteractionFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1565,7 +1570,7 @@ func (this *QTextEdit) Textinteractionflags(args ...interface{}) () {
 }
 
 // currentFont()
-func (this *QTextEdit) Currentfont(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) CurrentFont(args ...interface{}) (ret interface{}) {
   // currentFont()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1594,7 +1599,7 @@ func (this *QTextEdit) Currentfont(args ...interface{}) (ret interface{}) {
 }
 
 // setOverwriteMode(_Bool)
-func (this *QTextEdit) Setoverwritemode(args ...interface{}) () {
+func (this *QTextEdit) SetOverwriteMode(args ...interface{}) () {
   // setOverwriteMode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1639,7 +1644,7 @@ func (this *QTextEdit) Copy(args ...interface{}) () {
 }
 
 // fontUnderline()
-func (this *QTextEdit) Fontunderline(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) FontUnderline(args ...interface{}) (ret interface{}) {
   // fontUnderline()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1668,7 +1673,7 @@ func (this *QTextEdit) Fontunderline(args ...interface{}) (ret interface{}) {
 }
 
 // cursorWidth()
-func (this *QTextEdit) Cursorwidth(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) CursorWidth(args ...interface{}) (ret interface{}) {
   // cursorWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1697,7 +1702,7 @@ func (this *QTextEdit) Cursorwidth(args ...interface{}) (ret interface{}) {
 }
 
 // setPlaceholderText(const class QString &)
-func (this *QTextEdit) Setplaceholdertext(args ...interface{}) () {
+func (this *QTextEdit) SetPlaceholderText(args ...interface{}) () {
   // setPlaceholderText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1742,7 +1747,7 @@ func (this *QTextEdit) Clear(args ...interface{}) () {
 }
 
 // insertHtml(const class QString &)
-func (this *QTextEdit) Inserthtml(args ...interface{}) () {
+func (this *QTextEdit) InsertHtml(args ...interface{}) () {
   // insertHtml(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1766,7 +1771,7 @@ func (this *QTextEdit) Inserthtml(args ...interface{}) () {
 }
 
 // setPlainText(const class QString &)
-func (this *QTextEdit) Setplaintext(args ...interface{}) () {
+func (this *QTextEdit) SetPlainText(args ...interface{}) () {
   // setPlainText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1790,7 +1795,7 @@ func (this *QTextEdit) Setplaintext(args ...interface{}) () {
 }
 
 // canPaste()
-func (this *QTextEdit) Canpaste(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) CanPaste(args ...interface{}) (ret interface{}) {
   // canPaste()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1819,7 +1824,7 @@ func (this *QTextEdit) Canpaste(args ...interface{}) (ret interface{}) {
 }
 
 // fontFamily()
-func (this *QTextEdit) Fontfamily(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) FontFamily(args ...interface{}) (ret interface{}) {
   // fontFamily()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1848,6 +1853,9 @@ func (this *QTextEdit) Fontfamily(args ...interface{}) (ret interface{}) {
 }
 
 // QTextEdit(class QWidget *)
+func GcfreeQTextEdit(this *QTextEdit) {
+  qtrt.UniverseFree(this)
+}
 func NewQTextEdit(args ...interface{}) *QTextEdit {
   // QTextEdit(class QWidget *)
   // QTextEdit(const class QString &, class QWidget *)
@@ -1870,7 +1878,9 @@ func NewQTextEdit(args ...interface{}) *QTextEdit {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTextEditC2EP7QWidget(arg0)
-    return &QTextEdit{Qclsinst:qthis}
+    this := &QTextEdit{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextEdit)
+    return this
   case 1:
     // invoke: _ZN9QTextEditC1ERK7QStringP7QWidget
     // invoke: void QTextEdit(const class QString &, class QWidget *)
@@ -1881,7 +1891,9 @@ func NewQTextEdit(args ...interface{}) *QTextEdit {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTextEditC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QTextEdit{Qclsinst:qthis}
+    this := &QTextEdit{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextEdit)
+    return this
   default:
     qtrt.ErrorResolve("QTextEdit", "QTextEdit", args)
   }
@@ -1890,7 +1902,7 @@ func NewQTextEdit(args ...interface{}) *QTextEdit {
 }
 
 // tabStopWidth()
-func (this *QTextEdit) Tabstopwidth(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) TabStopWidth(args ...interface{}) (ret interface{}) {
   // tabStopWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1919,7 +1931,7 @@ func (this *QTextEdit) Tabstopwidth(args ...interface{}) (ret interface{}) {
 }
 
 // wordWrapMode()
-func (this *QTextEdit) Wordwrapmode(args ...interface{}) () {
+func (this *QTextEdit) WordWrapMode(args ...interface{}) () {
   // wordWrapMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1940,7 +1952,7 @@ func (this *QTextEdit) Wordwrapmode(args ...interface{}) () {
 }
 
 // cursorForPosition(const class QPoint &)
-func (this *QTextEdit) Cursorforposition(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) CursorForPosition(args ...interface{}) (ret interface{}) {
   // cursorForPosition(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1972,7 +1984,7 @@ func (this *QTextEdit) Cursorforposition(args ...interface{}) (ret interface{}) 
 }
 
 // setDocumentTitle(const class QString &)
-func (this *QTextEdit) Setdocumenttitle(args ...interface{}) () {
+func (this *QTextEdit) SetDocumentTitle(args ...interface{}) () {
   // setDocumentTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1996,7 +2008,7 @@ func (this *QTextEdit) Setdocumenttitle(args ...interface{}) () {
 }
 
 // setFontItalic(_Bool)
-func (this *QTextEdit) Setfontitalic(args ...interface{}) () {
+func (this *QTextEdit) SetFontItalic(args ...interface{}) () {
   // setFontItalic(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2049,7 +2061,7 @@ func (this *QTextEdit) Document(args ...interface{}) (ret interface{}) {
 }
 
 // currentCharFormat()
-func (this *QTextEdit) Currentcharformat(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) CurrentCharFormat(args ...interface{}) (ret interface{}) {
   // currentCharFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2078,7 +2090,7 @@ func (this *QTextEdit) Currentcharformat(args ...interface{}) (ret interface{}) 
 }
 
 // fontWeight()
-func (this *QTextEdit) Fontweight(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) FontWeight(args ...interface{}) (ret interface{}) {
   // fontWeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2107,7 +2119,7 @@ func (this *QTextEdit) Fontweight(args ...interface{}) (ret interface{}) {
 }
 
 // placeholderText()
-func (this *QTextEdit) Placeholdertext(args ...interface{}) (ret interface{}) {
+func (this *QTextEdit) PlaceholderText(args ...interface{}) (ret interface{}) {
   // placeholderText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2136,7 +2148,7 @@ func (this *QTextEdit) Placeholdertext(args ...interface{}) (ret interface{}) {
 }
 
 // setTextColor(const class QColor &)
-func (this *QTextEdit) Settextcolor(args ...interface{}) () {
+func (this *QTextEdit) SetTextColor(args ...interface{}) () {
   // setTextColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2160,7 +2172,7 @@ func (this *QTextEdit) Settextcolor(args ...interface{}) () {
 }
 
 // lineWrapMode()
-func (this *QTextEdit) Linewrapmode(args ...interface{}) () {
+func (this *QTextEdit) LineWrapMode(args ...interface{}) () {
   // lineWrapMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2181,7 +2193,7 @@ func (this *QTextEdit) Linewrapmode(args ...interface{}) () {
 }
 
 // setText(const class QString &)
-func (this *QTextEdit) Settext(args ...interface{}) () {
+func (this *QTextEdit) SetText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2205,7 +2217,7 @@ func (this *QTextEdit) Settext(args ...interface{}) () {
 }
 
 // setCurrentFont(const class QFont &)
-func (this *QTextEdit) Setcurrentfont(args ...interface{}) () {
+func (this *QTextEdit) SetCurrentFont(args ...interface{}) () {
   // setCurrentFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2229,7 +2241,7 @@ func (this *QTextEdit) Setcurrentfont(args ...interface{}) () {
 }
 
 // setReadOnly(_Bool)
-func (this *QTextEdit) Setreadonly(args ...interface{}) () {
+func (this *QTextEdit) SetReadOnly(args ...interface{}) () {
   // setReadOnly(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

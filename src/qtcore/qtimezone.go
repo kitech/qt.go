@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qtimezone.h
 // dst-file: /src/core/qtimezone.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -98,6 +99,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTimeZone)=1
@@ -136,7 +138,7 @@ func (this *QTimeZone) Comment(args ...interface{}) (ret interface{}) {
 }
 
 // systemTimeZoneId()
-func (this *QTimeZone) Systemtimezoneid_S(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) SystemTimeZoneId_s(args ...interface{}) (ret interface{}) {
   // systemTimeZoneId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -165,7 +167,7 @@ func (this *QTimeZone) Systemtimezoneid_S(args ...interface{}) (ret interface{})
 }
 
 // isTimeZoneIdAvailable(const class QByteArray &)
-func (this *QTimeZone) Istimezoneidavailable_S(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) IsTimeZoneIdAvailable_s(args ...interface{}) (ret interface{}) {
   // isTimeZoneIdAvailable(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -229,7 +231,7 @@ func (this *QTimeZone) Abbreviation(args ...interface{}) (ret interface{}) {
 }
 
 // windowsIdToDefaultIanaId(const class QByteArray &)
-func (this *QTimeZone) Windowsidtodefaultianaid_S(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) WindowsIdToDefaultIanaId_s(args ...interface{}) (ret interface{}) {
   // windowsIdToDefaultIanaId(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -261,6 +263,9 @@ func (this *QTimeZone) Windowsidtodefaultianaid_S(args ...interface{}) (ret inte
 }
 
 // QTimeZone(const class QTimeZone &)
+func GcfreeQTimeZone(this *QTimeZone) {
+  qtrt.UniverseFree(this)
+}
 func NewQTimeZone(args ...interface{}) *QTimeZone {
   // QTimeZone(const class QTimeZone &)
   // QTimeZone(int)
@@ -287,7 +292,9 @@ func NewQTimeZone(args ...interface{}) *QTimeZone {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTimeZoneC2ERKS_(arg0)
-    return &QTimeZone{Qclsinst:qthis}
+    this := &QTimeZone{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTimeZone)
+    return this
   case 1:
     // invoke: _ZN9QTimeZoneC1Ei
     // invoke: void QTimeZone(int)
@@ -296,14 +303,18 @@ func NewQTimeZone(args ...interface{}) *QTimeZone {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTimeZoneC2Ei(arg0)
-    return &QTimeZone{Qclsinst:qthis}
+    this := &QTimeZone{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTimeZone)
+    return this
   case 2:
     // invoke: _ZN9QTimeZoneC1Ev
     // invoke: void QTimeZone()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTimeZoneC2Ev()
-    return &QTimeZone{Qclsinst:qthis}
+    this := &QTimeZone{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTimeZone)
+    return this
   case 3:
     // invoke: _ZN9QTimeZoneC1ERK10QByteArray
     // invoke: void QTimeZone(const class QByteArray &)
@@ -312,7 +323,9 @@ func NewQTimeZone(args ...interface{}) *QTimeZone {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTimeZoneC2ERK10QByteArray(arg0)
-    return &QTimeZone{Qclsinst:qthis}
+    this := &QTimeZone{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTimeZone)
+    return this
   default:
     qtrt.ErrorResolve("QTimeZone", "QTimeZone", args)
   }
@@ -348,7 +361,7 @@ func (this *QTimeZone) Transitions(args ...interface{}) () {
 }
 
 // nextTransition(const class QDateTime &)
-func (this *QTimeZone) Nexttransition(args ...interface{}) () {
+func (this *QTimeZone) NextTransition(args ...interface{}) () {
   // nextTransition(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -401,7 +414,7 @@ func (this *QTimeZone) Id(args ...interface{}) (ret interface{}) {
 }
 
 // offsetFromUtc(const class QDateTime &)
-func (this *QTimeZone) Offsetfromutc(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) OffsetFromUtc(args ...interface{}) (ret interface{}) {
   // offsetFromUtc(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -433,7 +446,7 @@ func (this *QTimeZone) Offsetfromutc(args ...interface{}) (ret interface{}) {
 }
 
 // previousTransition(const class QDateTime &)
-func (this *QTimeZone) Previoustransition(args ...interface{}) () {
+func (this *QTimeZone) PreviousTransition(args ...interface{}) () {
   // previousTransition(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -457,7 +470,7 @@ func (this *QTimeZone) Previoustransition(args ...interface{}) () {
 }
 
 // availableTimeZoneIds()
-func (this *QTimeZone) Availabletimezoneids_S(args ...interface{}) () {
+func (this *QTimeZone) AvailableTimeZoneIds_s(args ...interface{}) () {
   // availableTimeZoneIds()
   // availableTimeZoneIds(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -487,7 +500,7 @@ func (this *QTimeZone) Availabletimezoneids_S(args ...interface{}) () {
 }
 
 // ~QTimeZone()
-func (this *QTimeZone) Freeqtimezone(args ...interface{}) () {
+func (this *QTimeZone) Free(args ...interface{}) () {
   // ~QTimeZone()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -499,7 +512,10 @@ func (this *QTimeZone) Freeqtimezone(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeZoneD0Ev
     // invoke: void ~QTimeZone()
-    C.C_ZN9QTimeZoneD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QTimeZoneD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTimeZone", "~QTimeZone", args)
   }
@@ -508,7 +524,7 @@ func (this *QTimeZone) Freeqtimezone(args ...interface{}) () {
 }
 
 // windowsIdToIanaIds(const class QByteArray &)
-func (this *QTimeZone) Windowsidtoianaids_S(args ...interface{}) () {
+func (this *QTimeZone) WindowsIdToIanaIds_s(args ...interface{}) () {
   // windowsIdToIanaIds(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -532,7 +548,7 @@ func (this *QTimeZone) Windowsidtoianaids_S(args ...interface{}) () {
 }
 
 // systemTimeZone()
-func (this *QTimeZone) Systemtimezone_S(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) SystemTimeZone_s(args ...interface{}) (ret interface{}) {
   // systemTimeZone()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -585,7 +601,7 @@ func (this *QTimeZone) Swap(args ...interface{}) () {
 }
 
 // offsetData(const class QDateTime &)
-func (this *QTimeZone) Offsetdata(args ...interface{}) () {
+func (this *QTimeZone) OffsetData(args ...interface{}) () {
   // offsetData(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -609,7 +625,7 @@ func (this *QTimeZone) Offsetdata(args ...interface{}) () {
 }
 
 // standardTimeOffset(const class QDateTime &)
-func (this *QTimeZone) Standardtimeoffset(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) StandardTimeOffset(args ...interface{}) (ret interface{}) {
   // standardTimeOffset(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -641,7 +657,7 @@ func (this *QTimeZone) Standardtimeoffset(args ...interface{}) (ret interface{})
 }
 
 // isValid()
-func (this *QTimeZone) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -670,7 +686,7 @@ func (this *QTimeZone) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // hasDaylightTime()
-func (this *QTimeZone) Hasdaylighttime(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) HasDaylightTime(args ...interface{}) (ret interface{}) {
   // hasDaylightTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -699,7 +715,7 @@ func (this *QTimeZone) Hasdaylighttime(args ...interface{}) (ret interface{}) {
 }
 
 // daylightTimeOffset(const class QDateTime &)
-func (this *QTimeZone) Daylighttimeoffset(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) DaylightTimeOffset(args ...interface{}) (ret interface{}) {
   // daylightTimeOffset(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -731,7 +747,7 @@ func (this *QTimeZone) Daylighttimeoffset(args ...interface{}) (ret interface{})
 }
 
 // utc()
-func (this *QTimeZone) Utc_S(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) Utc_s(args ...interface{}) (ret interface{}) {
   // utc()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -760,7 +776,7 @@ func (this *QTimeZone) Utc_S(args ...interface{}) (ret interface{}) {
 }
 
 // hasTransitions()
-func (this *QTimeZone) Hastransitions(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) HasTransitions(args ...interface{}) (ret interface{}) {
   // hasTransitions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -789,7 +805,7 @@ func (this *QTimeZone) Hastransitions(args ...interface{}) (ret interface{}) {
 }
 
 // ianaIdToWindowsId(const class QByteArray &)
-func (this *QTimeZone) Ianaidtowindowsid_S(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) IanaIdToWindowsId_s(args ...interface{}) (ret interface{}) {
   // ianaIdToWindowsId(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -842,7 +858,7 @@ func (this *QTimeZone) Country(args ...interface{}) () {
 }
 
 // isDaylightTime(const class QDateTime &)
-func (this *QTimeZone) Isdaylighttime(args ...interface{}) (ret interface{}) {
+func (this *QTimeZone) IsDaylightTime(args ...interface{}) (ret interface{}) {
   // isDaylightTime(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

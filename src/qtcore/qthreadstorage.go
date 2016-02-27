@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qthreadstorage.h
 // dst-file: /src/core/qthreadstorage.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -46,6 +47,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QThreadStorageData)=4
@@ -55,7 +57,7 @@ type QThreadStorageData struct {
 }
 
 // ~QThreadStorageData()
-func (this *QThreadStorageData) Freeqthreadstoragedata(args ...interface{}) () {
+func (this *QThreadStorageData) Free(args ...interface{}) () {
   // ~QThreadStorageData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -67,7 +69,10 @@ func (this *QThreadStorageData) Freeqthreadstoragedata(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QThreadStorageDataD0Ev
     // invoke: void ~QThreadStorageData()
-    C.C_ZN18QThreadStorageDataD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN18QThreadStorageDataD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QThreadStorageData", "~QThreadStorageData", args)
   }
@@ -100,7 +105,7 @@ func (this *QThreadStorageData) Set(args ...interface{}) () {
 }
 
 // finish(void **)
-func (this *QThreadStorageData) Finish_S(args ...interface{}) () {
+func (this *QThreadStorageData) Finish_s(args ...interface{}) () {
   // finish(void **)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

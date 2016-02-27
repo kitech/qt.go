@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qstatictext.h
 // dst-file: /src/gui/qstatictext.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -70,6 +71,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStaticText)=1
@@ -159,7 +161,7 @@ func (this *QStaticText) Text(args ...interface{}) (ret interface{}) {
 }
 
 // setText(const class QString &)
-func (this *QStaticText) Settext(args ...interface{}) () {
+func (this *QStaticText) SetText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,7 +185,7 @@ func (this *QStaticText) Settext(args ...interface{}) () {
 }
 
 // ~QStaticText()
-func (this *QStaticText) Freeqstatictext(args ...interface{}) () {
+func (this *QStaticText) Free(args ...interface{}) () {
   // ~QStaticText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -195,7 +197,10 @@ func (this *QStaticText) Freeqstatictext(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QStaticTextD0Ev
     // invoke: void ~QStaticText()
-    C.C_ZN11QStaticTextD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QStaticTextD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStaticText", "~QStaticText", args)
   }
@@ -204,7 +209,7 @@ func (this *QStaticText) Freeqstatictext(args ...interface{}) () {
 }
 
 // setTextWidth(qreal)
-func (this *QStaticText) Settextwidth(args ...interface{}) () {
+func (this *QStaticText) SetTextWidth(args ...interface{}) () {
   // setTextWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -228,7 +233,7 @@ func (this *QStaticText) Settextwidth(args ...interface{}) () {
 }
 
 // setTextOption(const class QTextOption &)
-func (this *QStaticText) Settextoption(args ...interface{}) () {
+func (this *QStaticText) SetTextOption(args ...interface{}) () {
   // setTextOption(const class QTextOption &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -252,6 +257,9 @@ func (this *QStaticText) Settextoption(args ...interface{}) () {
 }
 
 // QStaticText()
+func GcfreeQStaticText(this *QStaticText) {
+  qtrt.UniverseFree(this)
+}
 func NewQStaticText(args ...interface{}) *QStaticText {
   // QStaticText()
   // QStaticText(const class QString &)
@@ -273,7 +281,9 @@ func NewQStaticText(args ...interface{}) *QStaticText {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QStaticTextC2Ev()
-    return &QStaticText{Qclsinst:qthis}
+    this := &QStaticText{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStaticText)
+    return this
   case 1:
     // invoke: _ZN11QStaticTextC1ERK7QString
     // invoke: void QStaticText(const class QString &)
@@ -282,7 +292,9 @@ func NewQStaticText(args ...interface{}) *QStaticText {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QStaticTextC2ERK7QString(arg0)
-    return &QStaticText{Qclsinst:qthis}
+    this := &QStaticText{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStaticText)
+    return this
   case 2:
     // invoke: _ZN11QStaticTextC1ERKS_
     // invoke: void QStaticText(const class QStaticText &)
@@ -291,7 +303,9 @@ func NewQStaticText(args ...interface{}) *QStaticText {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QStaticTextC2ERKS_(arg0)
-    return &QStaticText{Qclsinst:qthis}
+    this := &QStaticText{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStaticText)
+    return this
   default:
     qtrt.ErrorResolve("QStaticText", "QStaticText", args)
   }
@@ -300,7 +314,7 @@ func NewQStaticText(args ...interface{}) *QStaticText {
 }
 
 // textWidth()
-func (this *QStaticText) Textwidth(args ...interface{}) (ret interface{}) {
+func (this *QStaticText) TextWidth(args ...interface{}) (ret interface{}) {
   // textWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -329,7 +343,7 @@ func (this *QStaticText) Textwidth(args ...interface{}) (ret interface{}) {
 }
 
 // textFormat()
-func (this *QStaticText) Textformat(args ...interface{}) () {
+func (this *QStaticText) TextFormat(args ...interface{}) () {
   // textFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -350,7 +364,7 @@ func (this *QStaticText) Textformat(args ...interface{}) () {
 }
 
 // textOption()
-func (this *QStaticText) Textoption(args ...interface{}) (ret interface{}) {
+func (this *QStaticText) TextOption(args ...interface{}) (ret interface{}) {
   // textOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -379,7 +393,7 @@ func (this *QStaticText) Textoption(args ...interface{}) (ret interface{}) {
 }
 
 // performanceHint()
-func (this *QStaticText) Performancehint(args ...interface{}) () {
+func (this *QStaticText) PerformanceHint(args ...interface{}) () {
   // performanceHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

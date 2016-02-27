@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qwizard.h
 // dst-file: /src/widgets/qwizard.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -132,6 +133,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QWizardPage)=1
@@ -153,7 +155,7 @@ type QWizard struct {
 }
 
 // setTitle(const class QString &)
-func (this *QWizardPage) Settitle(args ...interface{}) () {
+func (this *QWizardPage) SetTitle(args ...interface{}) () {
   // setTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -177,7 +179,7 @@ func (this *QWizardPage) Settitle(args ...interface{}) () {
 }
 
 // isCommitPage()
-func (this *QWizardPage) Iscommitpage(args ...interface{}) (ret interface{}) {
+func (this *QWizardPage) IsCommitPage(args ...interface{}) (ret interface{}) {
   // isCommitPage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -206,7 +208,7 @@ func (this *QWizardPage) Iscommitpage(args ...interface{}) (ret interface{}) {
 }
 
 // cleanupPage()
-func (this *QWizardPage) Cleanuppage(args ...interface{}) () {
+func (this *QWizardPage) CleanupPage(args ...interface{}) () {
   // cleanupPage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -227,7 +229,7 @@ func (this *QWizardPage) Cleanuppage(args ...interface{}) () {
 }
 
 // ~QWizardPage()
-func (this *QWizardPage) Freeqwizardpage(args ...interface{}) () {
+func (this *QWizardPage) Free(args ...interface{}) () {
   // ~QWizardPage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,7 +241,10 @@ func (this *QWizardPage) Freeqwizardpage(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QWizardPageD0Ev
     // invoke: void ~QWizardPage()
-    C.C_ZN11QWizardPageD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QWizardPageD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QWizardPage", "~QWizardPage", args)
   }
@@ -248,7 +253,7 @@ func (this *QWizardPage) Freeqwizardpage(args ...interface{}) () {
 }
 
 // subTitle()
-func (this *QWizardPage) Subtitle(args ...interface{}) (ret interface{}) {
+func (this *QWizardPage) SubTitle(args ...interface{}) (ret interface{}) {
   // subTitle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,7 +311,7 @@ func (this *QWizardPage) Title(args ...interface{}) (ret interface{}) {
 }
 
 // isComplete()
-func (this *QWizardPage) Iscomplete(args ...interface{}) (ret interface{}) {
+func (this *QWizardPage) IsComplete(args ...interface{}) (ret interface{}) {
   // isComplete()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -335,7 +340,7 @@ func (this *QWizardPage) Iscomplete(args ...interface{}) (ret interface{}) {
 }
 
 // isFinalPage()
-func (this *QWizardPage) Isfinalpage(args ...interface{}) (ret interface{}) {
+func (this *QWizardPage) IsFinalPage(args ...interface{}) (ret interface{}) {
   // isFinalPage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -364,7 +369,7 @@ func (this *QWizardPage) Isfinalpage(args ...interface{}) (ret interface{}) {
 }
 
 // validatePage()
-func (this *QWizardPage) Validatepage(args ...interface{}) (ret interface{}) {
+func (this *QWizardPage) ValidatePage(args ...interface{}) (ret interface{}) {
   // validatePage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -393,7 +398,7 @@ func (this *QWizardPage) Validatepage(args ...interface{}) (ret interface{}) {
 }
 
 // setSubTitle(const class QString &)
-func (this *QWizardPage) Setsubtitle(args ...interface{}) () {
+func (this *QWizardPage) SetSubTitle(args ...interface{}) () {
   // setSubTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -417,7 +422,7 @@ func (this *QWizardPage) Setsubtitle(args ...interface{}) () {
 }
 
 // initializePage()
-func (this *QWizardPage) Initializepage(args ...interface{}) () {
+func (this *QWizardPage) InitializePage(args ...interface{}) () {
   // initializePage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -438,7 +443,7 @@ func (this *QWizardPage) Initializepage(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QWizardPage) Metaobject(args ...interface{}) () {
+func (this *QWizardPage) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -459,6 +464,9 @@ func (this *QWizardPage) Metaobject(args ...interface{}) () {
 }
 
 // QWizardPage(class QWidget *)
+func GcfreeQWizardPage(this *QWizardPage) {
+  qtrt.UniverseFree(this)
+}
 func NewQWizardPage(args ...interface{}) *QWizardPage {
   // QWizardPage(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -477,7 +485,9 @@ func NewQWizardPage(args ...interface{}) *QWizardPage {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QWizardPageC2EP7QWidget(arg0)
-    return &QWizardPage{Qclsinst:qthis}
+    this := &QWizardPage{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQWizardPage)
+    return this
   default:
     qtrt.ErrorResolve("QWizardPage", "QWizardPage", args)
   }
@@ -486,7 +496,7 @@ func NewQWizardPage(args ...interface{}) *QWizardPage {
 }
 
 // setCommitPage(_Bool)
-func (this *QWizardPage) Setcommitpage(args ...interface{}) () {
+func (this *QWizardPage) SetCommitPage(args ...interface{}) () {
   // setCommitPage(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -510,7 +520,7 @@ func (this *QWizardPage) Setcommitpage(args ...interface{}) () {
 }
 
 // nextId()
-func (this *QWizardPage) Nextid(args ...interface{}) (ret interface{}) {
+func (this *QWizardPage) NextId(args ...interface{}) (ret interface{}) {
   // nextId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -539,7 +549,7 @@ func (this *QWizardPage) Nextid(args ...interface{}) (ret interface{}) {
 }
 
 // setFinalPage(_Bool)
-func (this *QWizardPage) Setfinalpage(args ...interface{}) () {
+func (this *QWizardPage) SetFinalPage(args ...interface{}) () {
   // setFinalPage(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -563,7 +573,7 @@ func (this *QWizardPage) Setfinalpage(args ...interface{}) () {
 }
 
 // validateCurrentPage()
-func (this *QWizard) Validatecurrentpage(args ...interface{}) (ret interface{}) {
+func (this *QWizard) ValidateCurrentPage(args ...interface{}) (ret interface{}) {
   // validateCurrentPage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -592,7 +602,7 @@ func (this *QWizard) Validatecurrentpage(args ...interface{}) (ret interface{}) 
 }
 
 // setSideWidget(class QWidget *)
-func (this *QWizard) Setsidewidget(args ...interface{}) () {
+func (this *QWizard) SetSideWidget(args ...interface{}) () {
   // setSideWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -637,7 +647,7 @@ func (this *QWizard) Back(args ...interface{}) () {
 }
 
 // setDefaultProperty(const char *, const char *, const char *)
-func (this *QWizard) Setdefaultproperty(args ...interface{}) () {
+func (this *QWizard) SetDefaultProperty(args ...interface{}) () {
   // setDefaultProperty(const char *, const char *, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -673,7 +683,7 @@ func (this *QWizard) Setdefaultproperty(args ...interface{}) () {
 }
 
 // setVisible(_Bool)
-func (this *QWizard) Setvisible(args ...interface{}) () {
+func (this *QWizard) SetVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -697,7 +707,7 @@ func (this *QWizard) Setvisible(args ...interface{}) () {
 }
 
 // setField(const class QString &, const class QVariant &)
-func (this *QWizard) Setfield(args ...interface{}) () {
+func (this *QWizard) SetField(args ...interface{}) () {
   // setField(const class QString &, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -724,7 +734,7 @@ func (this *QWizard) Setfield(args ...interface{}) () {
 }
 
 // visitedPages()
-func (this *QWizard) Visitedpages(args ...interface{}) () {
+func (this *QWizard) VisitedPages(args ...interface{}) () {
   // visitedPages()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -777,7 +787,7 @@ func (this *QWizard) Field(args ...interface{}) (ret interface{}) {
 }
 
 // titleFormat()
-func (this *QWizard) Titleformat(args ...interface{}) () {
+func (this *QWizard) TitleFormat(args ...interface{}) () {
   // titleFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -819,7 +829,7 @@ func (this *QWizard) Next(args ...interface{}) () {
 }
 
 // pageIds()
-func (this *QWizard) Pageids(args ...interface{}) () {
+func (this *QWizard) PageIds(args ...interface{}) () {
   // pageIds()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -840,7 +850,7 @@ func (this *QWizard) Pageids(args ...interface{}) () {
 }
 
 // subTitleFormat()
-func (this *QWizard) Subtitleformat(args ...interface{}) () {
+func (this *QWizard) SubTitleFormat(args ...interface{}) () {
   // subTitleFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -861,7 +871,7 @@ func (this *QWizard) Subtitleformat(args ...interface{}) () {
 }
 
 // setPage(int, class QWizardPage *)
-func (this *QWizard) Setpage(args ...interface{}) () {
+func (this *QWizard) SetPage(args ...interface{}) () {
   // setPage(int, class QWizardPage *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -888,7 +898,7 @@ func (this *QWizard) Setpage(args ...interface{}) () {
 }
 
 // currentPage()
-func (this *QWizard) Currentpage(args ...interface{}) (ret interface{}) {
+func (this *QWizard) CurrentPage(args ...interface{}) (ret interface{}) {
   // currentPage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -917,7 +927,7 @@ func (this *QWizard) Currentpage(args ...interface{}) (ret interface{}) {
 }
 
 // hasVisitedPage(int)
-func (this *QWizard) Hasvisitedpage(args ...interface{}) (ret interface{}) {
+func (this *QWizard) HasVisitedPage(args ...interface{}) (ret interface{}) {
   // hasVisitedPage(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -949,7 +959,7 @@ func (this *QWizard) Hasvisitedpage(args ...interface{}) (ret interface{}) {
 }
 
 // wizardStyle()
-func (this *QWizard) Wizardstyle(args ...interface{}) () {
+func (this *QWizard) WizardStyle(args ...interface{}) () {
   // wizardStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -970,7 +980,7 @@ func (this *QWizard) Wizardstyle(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QWizard) Metaobject(args ...interface{}) () {
+func (this *QWizard) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -991,7 +1001,7 @@ func (this *QWizard) Metaobject(args ...interface{}) () {
 }
 
 // ~QWizard()
-func (this *QWizard) Freeqwizard(args ...interface{}) () {
+func (this *QWizard) Free(args ...interface{}) () {
   // ~QWizard()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1003,7 +1013,10 @@ func (this *QWizard) Freeqwizard(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWizardD0Ev
     // invoke: void ~QWizard()
-    C.C_ZN7QWizardD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QWizardD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QWizard", "~QWizard", args)
   }
@@ -1012,7 +1025,7 @@ func (this *QWizard) Freeqwizard(args ...interface{}) () {
 }
 
 // startId()
-func (this *QWizard) Startid(args ...interface{}) (ret interface{}) {
+func (this *QWizard) StartId(args ...interface{}) (ret interface{}) {
   // startId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1062,7 +1075,7 @@ func (this *QWizard) Restart(args ...interface{}) () {
 }
 
 // sideWidget()
-func (this *QWizard) Sidewidget(args ...interface{}) (ret interface{}) {
+func (this *QWizard) SideWidget(args ...interface{}) (ret interface{}) {
   // sideWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1091,7 +1104,7 @@ func (this *QWizard) Sidewidget(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QWizard) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QWizard) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1120,7 +1133,7 @@ func (this *QWizard) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // currentId()
-func (this *QWizard) Currentid(args ...interface{}) (ret interface{}) {
+func (this *QWizard) CurrentId(args ...interface{}) (ret interface{}) {
   // currentId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1149,7 +1162,7 @@ func (this *QWizard) Currentid(args ...interface{}) (ret interface{}) {
 }
 
 // removePage(int)
-func (this *QWizard) Removepage(args ...interface{}) () {
+func (this *QWizard) RemovePage(args ...interface{}) () {
   // removePage(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1194,7 +1207,7 @@ func (this *QWizard) Options(args ...interface{}) () {
 }
 
 // setStartId(int)
-func (this *QWizard) Setstartid(args ...interface{}) () {
+func (this *QWizard) SetStartId(args ...interface{}) () {
   // setStartId(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1218,7 +1231,7 @@ func (this *QWizard) Setstartid(args ...interface{}) () {
 }
 
 // nextId()
-func (this *QWizard) Nextid(args ...interface{}) (ret interface{}) {
+func (this *QWizard) NextId(args ...interface{}) (ret interface{}) {
   // nextId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1279,7 +1292,7 @@ func (this *QWizard) Page(args ...interface{}) (ret interface{}) {
 }
 
 // addPage(class QWizardPage *)
-func (this *QWizard) Addpage(args ...interface{}) (ret interface{}) {
+func (this *QWizard) AddPage(args ...interface{}) (ret interface{}) {
   // addPage(class QWizardPage *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

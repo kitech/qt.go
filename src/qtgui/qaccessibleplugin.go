@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qaccessibleplugin.h
 // dst-file: /src/gui/qaccessibleplugin.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -46,6 +47,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAccessiblePlugin)=1
@@ -55,6 +57,9 @@ type QAccessiblePlugin struct {
 }
 
 // QAccessiblePlugin(class QObject *)
+func GcfreeQAccessiblePlugin(this *QAccessiblePlugin) {
+  qtrt.UniverseFree(this)
+}
 func NewQAccessiblePlugin(args ...interface{}) *QAccessiblePlugin {
   // QAccessiblePlugin(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -73,7 +78,9 @@ func NewQAccessiblePlugin(args ...interface{}) *QAccessiblePlugin {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QAccessiblePluginC2EP7QObject(arg0)
-    return &QAccessiblePlugin{Qclsinst:qthis}
+    this := &QAccessiblePlugin{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAccessiblePlugin)
+    return this
   default:
     qtrt.ErrorResolve("QAccessiblePlugin", "QAccessiblePlugin", args)
   }
@@ -82,7 +89,7 @@ func NewQAccessiblePlugin(args ...interface{}) *QAccessiblePlugin {
 }
 
 // metaObject()
-func (this *QAccessiblePlugin) Metaobject(args ...interface{}) () {
+func (this *QAccessiblePlugin) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -103,7 +110,7 @@ func (this *QAccessiblePlugin) Metaobject(args ...interface{}) () {
 }
 
 // ~QAccessiblePlugin()
-func (this *QAccessiblePlugin) Freeqaccessibleplugin(args ...interface{}) () {
+func (this *QAccessiblePlugin) Free(args ...interface{}) () {
   // ~QAccessiblePlugin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -115,7 +122,10 @@ func (this *QAccessiblePlugin) Freeqaccessibleplugin(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QAccessiblePluginD0Ev
     // invoke: void ~QAccessiblePlugin()
-    C.C_ZN17QAccessiblePluginD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN17QAccessiblePluginD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAccessiblePlugin", "~QAccessiblePlugin", args)
   }

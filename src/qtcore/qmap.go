@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qmap.h
 // dst-file: /src/core/qmap.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -66,6 +67,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMapDataBase)=1
@@ -81,7 +83,7 @@ type QMapNodeBase struct {
 }
 
 // freeData(struct QMapDataBase *)
-func (this *QMapDataBase) Freedata_S(args ...interface{}) () {
+func (this *QMapDataBase) FreeData_s(args ...interface{}) () {
   // freeData(struct QMapDataBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -105,7 +107,7 @@ func (this *QMapDataBase) Freedata_S(args ...interface{}) () {
 }
 
 // createNode(int, int, struct QMapNodeBase *, _Bool)
-func (this *QMapDataBase) Createnode(args ...interface{}) (ret interface{}) {
+func (this *QMapDataBase) CreateNode(args ...interface{}) (ret interface{}) {
   // createNode(int, int, struct QMapNodeBase *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -146,7 +148,7 @@ func (this *QMapDataBase) Createnode(args ...interface{}) (ret interface{}) {
 }
 
 // rotateRight(struct QMapNodeBase *)
-func (this *QMapDataBase) Rotateright(args ...interface{}) () {
+func (this *QMapDataBase) RotateRight(args ...interface{}) () {
   // rotateRight(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -170,7 +172,7 @@ func (this *QMapDataBase) Rotateright(args ...interface{}) () {
 }
 
 // freeTree(struct QMapNodeBase *, int)
-func (this *QMapDataBase) Freetree(args ...interface{}) () {
+func (this *QMapDataBase) FreeTree(args ...interface{}) () {
   // freeTree(struct QMapNodeBase *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -197,7 +199,7 @@ func (this *QMapDataBase) Freetree(args ...interface{}) () {
 }
 
 // recalcMostLeftNode()
-func (this *QMapDataBase) Recalcmostleftnode(args ...interface{}) () {
+func (this *QMapDataBase) RecalcMostLeftNode(args ...interface{}) () {
   // recalcMostLeftNode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -218,7 +220,7 @@ func (this *QMapDataBase) Recalcmostleftnode(args ...interface{}) () {
 }
 
 // createData()
-func (this *QMapDataBase) Createdata_S(args ...interface{}) (ret interface{}) {
+func (this *QMapDataBase) CreateData_s(args ...interface{}) (ret interface{}) {
   // createData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -247,7 +249,7 @@ func (this *QMapDataBase) Createdata_S(args ...interface{}) (ret interface{}) {
 }
 
 // rotateLeft(struct QMapNodeBase *)
-func (this *QMapDataBase) Rotateleft(args ...interface{}) () {
+func (this *QMapDataBase) RotateLeft(args ...interface{}) () {
   // rotateLeft(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -295,7 +297,7 @@ func (this *QMapDataBase) Rebalance(args ...interface{}) () {
 }
 
 // freeNodeAndRebalance(struct QMapNodeBase *)
-func (this *QMapDataBase) Freenodeandrebalance(args ...interface{}) () {
+func (this *QMapDataBase) FreeNodeAndRebalance(args ...interface{}) () {
   // freeNodeAndRebalance(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -319,7 +321,7 @@ func (this *QMapDataBase) Freenodeandrebalance(args ...interface{}) () {
 }
 
 // previousNode()
-func (this *QMapNodeBase) Previousnode(args ...interface{}) (ret interface{}) {
+func (this *QMapNodeBase) PreviousNode(args ...interface{}) (ret interface{}) {
   // previousNode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -398,7 +400,7 @@ func (this *QMapNodeBase) Color(args ...interface{}) () {
 }
 
 // setParent(struct QMapNodeBase *)
-func (this *QMapNodeBase) Setparent(args ...interface{}) () {
+func (this *QMapNodeBase) SetParent(args ...interface{}) () {
   // setParent(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -422,7 +424,7 @@ func (this *QMapNodeBase) Setparent(args ...interface{}) () {
 }
 
 // nextNode()
-func (this *QMapNodeBase) Nextnode(args ...interface{}) (ret interface{}) {
+func (this *QMapNodeBase) NextNode(args ...interface{}) (ret interface{}) {
   // nextNode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

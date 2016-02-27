@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qtransform.h
 // dst-file: /src/gui/qtransform.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -142,6 +143,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTransform)=88
@@ -180,7 +182,7 @@ func (this *QTransform) Dx(args ...interface{}) (ret interface{}) {
 }
 
 // setMatrix(qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal)
-func (this *QTransform) Setmatrix(args ...interface{}) () {
+func (this *QTransform) SetMatrix(args ...interface{}) () {
   // setMatrix(qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -228,7 +230,7 @@ func (this *QTransform) Setmatrix(args ...interface{}) () {
 }
 
 // mapRect(const class QRect &)
-func (this *QTransform) Maprect(args ...interface{}) (ret interface{}) {
+func (this *QTransform) MapRect(args ...interface{}) (ret interface{}) {
   // mapRect(const class QRect &)
   // mapRect(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -364,7 +366,7 @@ func (this *QTransform) M13(args ...interface{}) (ret interface{}) {
 }
 
 // isInvertible()
-func (this *QTransform) Isinvertible(args ...interface{}) (ret interface{}) {
+func (this *QTransform) IsInvertible(args ...interface{}) (ret interface{}) {
   // isInvertible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -457,7 +459,7 @@ func (this *QTransform) Scale(args ...interface{}) (ret interface{}) {
 }
 
 // mapToPolygon(const class QRect &)
-func (this *QTransform) Maptopolygon(args ...interface{}) (ret interface{}) {
+func (this *QTransform) MapToPolygon(args ...interface{}) (ret interface{}) {
   // mapToPolygon(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -941,7 +943,7 @@ func (this *QTransform) Dy(args ...interface{}) (ret interface{}) {
 }
 
 // toAffine()
-func (this *QTransform) Toaffine(args ...interface{}) (ret interface{}) {
+func (this *QTransform) ToAffine(args ...interface{}) (ret interface{}) {
   // toAffine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -970,7 +972,7 @@ func (this *QTransform) Toaffine(args ...interface{}) (ret interface{}) {
 }
 
 // isRotating()
-func (this *QTransform) Isrotating(args ...interface{}) (ret interface{}) {
+func (this *QTransform) IsRotating(args ...interface{}) (ret interface{}) {
   // isRotating()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1031,7 +1033,7 @@ func (this *QTransform) Inverted(args ...interface{}) (ret interface{}) {
 }
 
 // squareToQuad(const class QPolygonF &, class QTransform &)
-func (this *QTransform) Squaretoquad_S(args ...interface{}) (ret interface{}) {
+func (this *QTransform) SquareToQuad_s(args ...interface{}) (ret interface{}) {
   // squareToQuad(const class QPolygonF &, class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1145,6 +1147,9 @@ func (this *QTransform) Det(args ...interface{}) (ret interface{}) {
 }
 
 // QTransform()
+func GcfreeQTransform(this *QTransform) {
+  qtrt.UniverseFree(this)
+}
 func NewQTransform(args ...interface{}) *QTransform {
   // QTransform()
   // QTransform(const class QMatrix &)
@@ -1182,7 +1187,9 @@ func NewQTransform(args ...interface{}) *QTransform {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTransformC2Ev()
-    return &QTransform{Qclsinst:qthis}
+    this := &QTransform{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTransform)
+    return this
   case 1:
     // invoke: _ZN10QTransformC1ERK7QMatrix
     // invoke: void QTransform(const class QMatrix &)
@@ -1191,7 +1198,9 @@ func NewQTransform(args ...interface{}) *QTransform {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTransformC2ERK7QMatrix(arg0)
-    return &QTransform{Qclsinst:qthis}
+    this := &QTransform{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTransform)
+    return this
   case 2:
     // invoke: _ZN10QTransformC1Eddddddddd
     // invoke: void QTransform(qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal)
@@ -1216,7 +1225,9 @@ func NewQTransform(args ...interface{}) *QTransform {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTransformC2Eddddddddd(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-    return &QTransform{Qclsinst:qthis}
+    this := &QTransform{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTransform)
+    return this
   case 3:
     // invoke: _ZN10QTransformC1Edddddd
     // invoke: void QTransform(qreal, qreal, qreal, qreal, qreal, qreal)
@@ -1235,7 +1246,9 @@ func NewQTransform(args ...interface{}) *QTransform {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTransformC2Edddddd(arg0, arg1, arg2, arg3, arg4, arg5)
-    return &QTransform{Qclsinst:qthis}
+    this := &QTransform{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTransform)
+    return this
   default:
     qtrt.ErrorResolve("QTransform", "QTransform", args)
   }
@@ -1273,7 +1286,7 @@ func (this *QTransform) M22(args ...interface{}) (ret interface{}) {
 }
 
 // fromScale(qreal, qreal)
-func (this *QTransform) Fromscale_S(args ...interface{}) (ret interface{}) {
+func (this *QTransform) FromScale_s(args ...interface{}) (ret interface{}) {
   // fromScale(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1308,7 +1321,7 @@ func (this *QTransform) Fromscale_S(args ...interface{}) (ret interface{}) {
 }
 
 // quadToQuad(const class QPolygonF &, const class QPolygonF &, class QTransform &)
-func (this *QTransform) Quadtoquad_S(args ...interface{}) (ret interface{}) {
+func (this *QTransform) QuadToQuad_s(args ...interface{}) (ret interface{}) {
   // quadToQuad(const class QPolygonF &, const class QPolygonF &, class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1375,7 +1388,7 @@ func (this *QTransform) M12(args ...interface{}) (ret interface{}) {
 }
 
 // isIdentity()
-func (this *QTransform) Isidentity(args ...interface{}) (ret interface{}) {
+func (this *QTransform) IsIdentity(args ...interface{}) (ret interface{}) {
   // isIdentity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1404,7 +1417,7 @@ func (this *QTransform) Isidentity(args ...interface{}) (ret interface{}) {
 }
 
 // isScaling()
-func (this *QTransform) Isscaling(args ...interface{}) (ret interface{}) {
+func (this *QTransform) IsScaling(args ...interface{}) (ret interface{}) {
   // isScaling()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1433,7 +1446,7 @@ func (this *QTransform) Isscaling(args ...interface{}) (ret interface{}) {
 }
 
 // quadToSquare(const class QPolygonF &, class QTransform &)
-func (this *QTransform) Quadtosquare_S(args ...interface{}) (ret interface{}) {
+func (this *QTransform) QuadToSquare_s(args ...interface{}) (ret interface{}) {
   // quadToSquare(const class QPolygonF &, class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1468,7 +1481,7 @@ func (this *QTransform) Quadtosquare_S(args ...interface{}) (ret interface{}) {
 }
 
 // isAffine()
-func (this *QTransform) Isaffine(args ...interface{}) (ret interface{}) {
+func (this *QTransform) IsAffine(args ...interface{}) (ret interface{}) {
   // isAffine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1497,7 +1510,7 @@ func (this *QTransform) Isaffine(args ...interface{}) (ret interface{}) {
 }
 
 // isTranslating()
-func (this *QTransform) Istranslating(args ...interface{}) (ret interface{}) {
+func (this *QTransform) IsTranslating(args ...interface{}) (ret interface{}) {
   // isTranslating()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1526,7 +1539,7 @@ func (this *QTransform) Istranslating(args ...interface{}) (ret interface{}) {
 }
 
 // fromTranslate(qreal, qreal)
-func (this *QTransform) Fromtranslate_S(args ...interface{}) (ret interface{}) {
+func (this *QTransform) FromTranslate_s(args ...interface{}) (ret interface{}) {
   // fromTranslate(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

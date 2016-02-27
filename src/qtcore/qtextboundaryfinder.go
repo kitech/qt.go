@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qtextboundaryfinder.h
 // dst-file: /src/core/qtextboundaryfinder.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -66,6 +67,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextBoundaryFinder)=48
@@ -75,7 +77,7 @@ type QTextBoundaryFinder struct {
 }
 
 // toNextBoundary()
-func (this *QTextBoundaryFinder) Tonextboundary(args ...interface{}) (ret interface{}) {
+func (this *QTextBoundaryFinder) ToNextBoundary(args ...interface{}) (ret interface{}) {
   // toNextBoundary()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,7 +164,7 @@ func (this *QTextBoundaryFinder) String(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QTextBoundaryFinder) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QTextBoundaryFinder) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -191,7 +193,7 @@ func (this *QTextBoundaryFinder) Isvalid(args ...interface{}) (ret interface{}) 
 }
 
 // boundaryReasons()
-func (this *QTextBoundaryFinder) Boundaryreasons(args ...interface{}) () {
+func (this *QTextBoundaryFinder) BoundaryReasons(args ...interface{}) () {
   // boundaryReasons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -212,7 +214,7 @@ func (this *QTextBoundaryFinder) Boundaryreasons(args ...interface{}) () {
 }
 
 // toEnd()
-func (this *QTextBoundaryFinder) Toend(args ...interface{}) () {
+func (this *QTextBoundaryFinder) ToEnd(args ...interface{}) () {
   // toEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -233,7 +235,7 @@ func (this *QTextBoundaryFinder) Toend(args ...interface{}) () {
 }
 
 // ~QTextBoundaryFinder()
-func (this *QTextBoundaryFinder) Freeqtextboundaryfinder(args ...interface{}) () {
+func (this *QTextBoundaryFinder) Free(args ...interface{}) () {
   // ~QTextBoundaryFinder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -245,7 +247,10 @@ func (this *QTextBoundaryFinder) Freeqtextboundaryfinder(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QTextBoundaryFinderD0Ev
     // invoke: void ~QTextBoundaryFinder()
-    C.C_ZN19QTextBoundaryFinderD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QTextBoundaryFinderD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "~QTextBoundaryFinder", args)
   }
@@ -254,7 +259,7 @@ func (this *QTextBoundaryFinder) Freeqtextboundaryfinder(args ...interface{}) ()
 }
 
 // toPreviousBoundary()
-func (this *QTextBoundaryFinder) Topreviousboundary(args ...interface{}) (ret interface{}) {
+func (this *QTextBoundaryFinder) ToPreviousBoundary(args ...interface{}) (ret interface{}) {
   // toPreviousBoundary()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -283,6 +288,9 @@ func (this *QTextBoundaryFinder) Topreviousboundary(args ...interface{}) (ret in
 }
 
 // QTextBoundaryFinder()
+func GcfreeQTextBoundaryFinder(this *QTextBoundaryFinder) {
+  qtrt.UniverseFree(this)
+}
 func NewQTextBoundaryFinder(args ...interface{}) *QTextBoundaryFinder {
   // QTextBoundaryFinder()
   // QTextBoundaryFinder(const class QTextBoundaryFinder &)
@@ -301,7 +309,9 @@ func NewQTextBoundaryFinder(args ...interface{}) *QTextBoundaryFinder {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QTextBoundaryFinderC2Ev()
-    return &QTextBoundaryFinder{Qclsinst:qthis}
+    this := &QTextBoundaryFinder{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextBoundaryFinder)
+    return this
   case 1:
     // invoke: _ZN19QTextBoundaryFinderC1ERKS_
     // invoke: void QTextBoundaryFinder(const class QTextBoundaryFinder &)
@@ -310,7 +320,9 @@ func NewQTextBoundaryFinder(args ...interface{}) *QTextBoundaryFinder {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QTextBoundaryFinderC2ERKS_(arg0)
-    return &QTextBoundaryFinder{Qclsinst:qthis}
+    this := &QTextBoundaryFinder{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextBoundaryFinder)
+    return this
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "QTextBoundaryFinder", args)
   }
@@ -319,7 +331,7 @@ func NewQTextBoundaryFinder(args ...interface{}) *QTextBoundaryFinder {
 }
 
 // isAtBoundary()
-func (this *QTextBoundaryFinder) Isatboundary(args ...interface{}) (ret interface{}) {
+func (this *QTextBoundaryFinder) IsAtBoundary(args ...interface{}) (ret interface{}) {
   // isAtBoundary()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -348,7 +360,7 @@ func (this *QTextBoundaryFinder) Isatboundary(args ...interface{}) (ret interfac
 }
 
 // setPosition(int)
-func (this *QTextBoundaryFinder) Setposition(args ...interface{}) () {
+func (this *QTextBoundaryFinder) SetPosition(args ...interface{}) () {
   // setPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -393,7 +405,7 @@ func (this *QTextBoundaryFinder) Type_(args ...interface{}) () {
 }
 
 // toStart()
-func (this *QTextBoundaryFinder) Tostart(args ...interface{}) () {
+func (this *QTextBoundaryFinder) ToStart(args ...interface{}) () {
   // toStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

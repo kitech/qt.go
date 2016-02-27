@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qxmlstream.h
 // dst-file: /src/core/qxmlstream.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -328,6 +329,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QXmlStreamStringRef)=16
@@ -414,7 +416,7 @@ func (this *QXmlStreamStringRef) String(args ...interface{}) (ret interface{}) {
 }
 
 // ~QXmlStreamStringRef()
-func (this *QXmlStreamStringRef) Freeqxmlstreamstringref(args ...interface{}) () {
+func (this *QXmlStreamStringRef) Free(args ...interface{}) () {
   // ~QXmlStreamStringRef()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -426,7 +428,10 @@ func (this *QXmlStreamStringRef) Freeqxmlstreamstringref(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QXmlStreamStringRefD0Ev
     // invoke: void ~QXmlStreamStringRef()
-    C.C_ZN19QXmlStreamStringRefD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QXmlStreamStringRefD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "~QXmlStreamStringRef", args)
   }
@@ -456,6 +461,9 @@ func (this *QXmlStreamStringRef) Clear(args ...interface{}) () {
 }
 
 // QXmlStreamStringRef()
+func GcfreeQXmlStreamStringRef(this *QXmlStreamStringRef) {
+  qtrt.UniverseFree(this)
+}
 func NewQXmlStreamStringRef(args ...interface{}) *QXmlStreamStringRef {
   // QXmlStreamStringRef()
   // QXmlStreamStringRef(const class QString &)
@@ -474,7 +482,9 @@ func NewQXmlStreamStringRef(args ...interface{}) *QXmlStreamStringRef {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QXmlStreamStringRefC2Ev()
-    return &QXmlStreamStringRef{Qclsinst:qthis}
+    this := &QXmlStreamStringRef{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamStringRef)
+    return this
   case 1:
     // invoke: _ZN19QXmlStreamStringRefC1ERK7QString
     // invoke: void QXmlStreamStringRef(const class QString &)
@@ -483,7 +493,9 @@ func NewQXmlStreamStringRef(args ...interface{}) *QXmlStreamStringRef {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QXmlStreamStringRefC2ERK7QString(arg0)
-    return &QXmlStreamStringRef{Qclsinst:qthis}
+    this := &QXmlStreamStringRef{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamStringRef)
+    return this
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "QXmlStreamStringRef", args)
   }
@@ -550,7 +562,7 @@ func (this *QXmlStreamStringRef) Size(args ...interface{}) (ret interface{}) {
 }
 
 // isEntityReference()
-func (this *QXmlStreamReader) Isentityreference(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) IsEntityReference(args ...interface{}) (ret interface{}) {
   // isEntityReference()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -579,7 +591,7 @@ func (this *QXmlStreamReader) Isentityreference(args ...interface{}) (ret interf
 }
 
 // isDTD()
-func (this *QXmlStreamReader) Isdtd(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) IsDTD(args ...interface{}) (ret interface{}) {
   // isDTD()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -608,7 +620,7 @@ func (this *QXmlStreamReader) Isdtd(args ...interface{}) (ret interface{}) {
 }
 
 // qualifiedName()
-func (this *QXmlStreamReader) Qualifiedname(args ...interface{}) () {
+func (this *QXmlStreamReader) QualifiedName(args ...interface{}) () {
   // qualifiedName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -629,7 +641,7 @@ func (this *QXmlStreamReader) Qualifiedname(args ...interface{}) () {
 }
 
 // tokenType()
-func (this *QXmlStreamReader) Tokentype(args ...interface{}) () {
+func (this *QXmlStreamReader) TokenType(args ...interface{}) () {
   // tokenType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -650,7 +662,7 @@ func (this *QXmlStreamReader) Tokentype(args ...interface{}) () {
 }
 
 // readNext()
-func (this *QXmlStreamReader) Readnext(args ...interface{}) () {
+func (this *QXmlStreamReader) ReadNext(args ...interface{}) () {
   // readNext()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -692,7 +704,7 @@ func (this *QXmlStreamReader) Text(args ...interface{}) () {
 }
 
 // dtdPublicId()
-func (this *QXmlStreamReader) Dtdpublicid(args ...interface{}) () {
+func (this *QXmlStreamReader) DtdPublicId(args ...interface{}) () {
   // dtdPublicId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -713,7 +725,7 @@ func (this *QXmlStreamReader) Dtdpublicid(args ...interface{}) () {
 }
 
 // entityDeclarations()
-func (this *QXmlStreamReader) Entitydeclarations(args ...interface{}) () {
+func (this *QXmlStreamReader) EntityDeclarations(args ...interface{}) () {
   // entityDeclarations()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -734,7 +746,7 @@ func (this *QXmlStreamReader) Entitydeclarations(args ...interface{}) () {
 }
 
 // setNamespaceProcessing(_Bool)
-func (this *QXmlStreamReader) Setnamespaceprocessing(args ...interface{}) () {
+func (this *QXmlStreamReader) SetNamespaceProcessing(args ...interface{}) () {
   // setNamespaceProcessing(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -758,7 +770,7 @@ func (this *QXmlStreamReader) Setnamespaceprocessing(args ...interface{}) () {
 }
 
 // namespaceDeclarations()
-func (this *QXmlStreamReader) Namespacedeclarations(args ...interface{}) () {
+func (this *QXmlStreamReader) NamespaceDeclarations(args ...interface{}) () {
   // namespaceDeclarations()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -779,7 +791,7 @@ func (this *QXmlStreamReader) Namespacedeclarations(args ...interface{}) () {
 }
 
 // isCharacters()
-func (this *QXmlStreamReader) Ischaracters(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) IsCharacters(args ...interface{}) (ret interface{}) {
   // isCharacters()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -829,7 +841,7 @@ func (this *QXmlStreamReader) Prefix(args ...interface{}) () {
 }
 
 // addExtraNamespaceDeclaration(const class QXmlStreamNamespaceDeclaration &)
-func (this *QXmlStreamReader) Addextranamespacedeclaration(args ...interface{}) () {
+func (this *QXmlStreamReader) AddExtraNamespaceDeclaration(args ...interface{}) () {
   // addExtraNamespaceDeclaration(const class QXmlStreamNamespaceDeclaration &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -853,7 +865,7 @@ func (this *QXmlStreamReader) Addextranamespacedeclaration(args ...interface{}) 
 }
 
 // documentEncoding()
-func (this *QXmlStreamReader) Documentencoding(args ...interface{}) () {
+func (this *QXmlStreamReader) DocumentEncoding(args ...interface{}) () {
   // documentEncoding()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -874,7 +886,7 @@ func (this *QXmlStreamReader) Documentencoding(args ...interface{}) () {
 }
 
 // processingInstructionData()
-func (this *QXmlStreamReader) Processinginstructiondata(args ...interface{}) () {
+func (this *QXmlStreamReader) ProcessingInstructionData(args ...interface{}) () {
   // processingInstructionData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -895,7 +907,7 @@ func (this *QXmlStreamReader) Processinginstructiondata(args ...interface{}) () 
 }
 
 // processingInstructionTarget()
-func (this *QXmlStreamReader) Processinginstructiontarget(args ...interface{}) () {
+func (this *QXmlStreamReader) ProcessingInstructionTarget(args ...interface{}) () {
   // processingInstructionTarget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -916,7 +928,7 @@ func (this *QXmlStreamReader) Processinginstructiontarget(args ...interface{}) (
 }
 
 // setEntityResolver(class QXmlStreamEntityResolver *)
-func (this *QXmlStreamReader) Setentityresolver(args ...interface{}) () {
+func (this *QXmlStreamReader) SetEntityResolver(args ...interface{}) () {
   // setEntityResolver(class QXmlStreamEntityResolver *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -940,7 +952,7 @@ func (this *QXmlStreamReader) Setentityresolver(args ...interface{}) () {
 }
 
 // isProcessingInstruction()
-func (this *QXmlStreamReader) Isprocessinginstruction(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) IsProcessingInstruction(args ...interface{}) (ret interface{}) {
   // isProcessingInstruction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -969,7 +981,7 @@ func (this *QXmlStreamReader) Isprocessinginstruction(args ...interface{}) (ret 
 }
 
 // documentVersion()
-func (this *QXmlStreamReader) Documentversion(args ...interface{}) () {
+func (this *QXmlStreamReader) DocumentVersion(args ...interface{}) () {
   // documentVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -990,7 +1002,7 @@ func (this *QXmlStreamReader) Documentversion(args ...interface{}) () {
 }
 
 // notationDeclarations()
-func (this *QXmlStreamReader) Notationdeclarations(args ...interface{}) () {
+func (this *QXmlStreamReader) NotationDeclarations(args ...interface{}) () {
   // notationDeclarations()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1011,7 +1023,7 @@ func (this *QXmlStreamReader) Notationdeclarations(args ...interface{}) () {
 }
 
 // namespaceUri()
-func (this *QXmlStreamReader) Namespaceuri(args ...interface{}) () {
+func (this *QXmlStreamReader) NamespaceUri(args ...interface{}) () {
   // namespaceUri()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1032,7 +1044,7 @@ func (this *QXmlStreamReader) Namespaceuri(args ...interface{}) () {
 }
 
 // setDevice(class QIODevice *)
-func (this *QXmlStreamReader) Setdevice(args ...interface{}) () {
+func (this *QXmlStreamReader) SetDevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1056,7 +1068,7 @@ func (this *QXmlStreamReader) Setdevice(args ...interface{}) () {
 }
 
 // raiseError(const class QString &)
-func (this *QXmlStreamReader) Raiseerror(args ...interface{}) () {
+func (this *QXmlStreamReader) RaiseError(args ...interface{}) () {
   // raiseError(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1080,7 +1092,7 @@ func (this *QXmlStreamReader) Raiseerror(args ...interface{}) () {
 }
 
 // entityResolver()
-func (this *QXmlStreamReader) Entityresolver(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) EntityResolver(args ...interface{}) (ret interface{}) {
   // entityResolver()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1109,7 +1121,7 @@ func (this *QXmlStreamReader) Entityresolver(args ...interface{}) (ret interface
 }
 
 // isStartElement()
-func (this *QXmlStreamReader) Isstartelement(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) IsStartElement(args ...interface{}) (ret interface{}) {
   // isStartElement()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1138,7 +1150,7 @@ func (this *QXmlStreamReader) Isstartelement(args ...interface{}) (ret interface
 }
 
 // isWhitespace()
-func (this *QXmlStreamReader) Iswhitespace(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) IsWhitespace(args ...interface{}) (ret interface{}) {
   // isWhitespace()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1167,6 +1179,9 @@ func (this *QXmlStreamReader) Iswhitespace(args ...interface{}) (ret interface{}
 }
 
 // QXmlStreamReader()
+func GcfreeQXmlStreamReader(this *QXmlStreamReader) {
+  qtrt.UniverseFree(this)
+}
 func NewQXmlStreamReader(args ...interface{}) *QXmlStreamReader {
   // QXmlStreamReader()
   // QXmlStreamReader(const class QString &)
@@ -1194,7 +1209,9 @@ func NewQXmlStreamReader(args ...interface{}) *QXmlStreamReader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QXmlStreamReaderC2Ev()
-    return &QXmlStreamReader{Qclsinst:qthis}
+    this := &QXmlStreamReader{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamReader)
+    return this
   case 1:
     // invoke: _ZN16QXmlStreamReaderC1ERK7QString
     // invoke: void QXmlStreamReader(const class QString &)
@@ -1203,7 +1220,9 @@ func NewQXmlStreamReader(args ...interface{}) *QXmlStreamReader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QXmlStreamReaderC2ERK7QString(arg0)
-    return &QXmlStreamReader{Qclsinst:qthis}
+    this := &QXmlStreamReader{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamReader)
+    return this
   case 2:
     // invoke: _ZN16QXmlStreamReaderC1EPKc
     // invoke: void QXmlStreamReader(const char *)
@@ -1214,7 +1233,9 @@ func NewQXmlStreamReader(args ...interface{}) *QXmlStreamReader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QXmlStreamReaderC2EPKc(arg0)
-    return &QXmlStreamReader{Qclsinst:qthis}
+    this := &QXmlStreamReader{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamReader)
+    return this
   case 3:
     // invoke: _ZN16QXmlStreamReaderC1ERK10QByteArray
     // invoke: void QXmlStreamReader(const class QByteArray &)
@@ -1223,7 +1244,9 @@ func NewQXmlStreamReader(args ...interface{}) *QXmlStreamReader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QXmlStreamReaderC2ERK10QByteArray(arg0)
-    return &QXmlStreamReader{Qclsinst:qthis}
+    this := &QXmlStreamReader{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamReader)
+    return this
   case 4:
     // invoke: _ZN16QXmlStreamReaderC1EP9QIODevice
     // invoke: void QXmlStreamReader(class QIODevice *)
@@ -1232,7 +1255,9 @@ func NewQXmlStreamReader(args ...interface{}) *QXmlStreamReader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QXmlStreamReaderC2EP9QIODevice(arg0)
-    return &QXmlStreamReader{Qclsinst:qthis}
+    this := &QXmlStreamReader{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamReader)
+    return this
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "QXmlStreamReader", args)
   }
@@ -1241,7 +1266,7 @@ func NewQXmlStreamReader(args ...interface{}) *QXmlStreamReader {
 }
 
 // hasError()
-func (this *QXmlStreamReader) Haserror(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) HasError(args ...interface{}) (ret interface{}) {
   // hasError()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1270,7 +1295,7 @@ func (this *QXmlStreamReader) Haserror(args ...interface{}) (ret interface{}) {
 }
 
 // characterOffset()
-func (this *QXmlStreamReader) Characteroffset(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) CharacterOffset(args ...interface{}) (ret interface{}) {
   // characterOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1299,7 +1324,7 @@ func (this *QXmlStreamReader) Characteroffset(args ...interface{}) (ret interfac
 }
 
 // errorString()
-func (this *QXmlStreamReader) Errorstring(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) ErrorString(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1328,7 +1353,7 @@ func (this *QXmlStreamReader) Errorstring(args ...interface{}) (ret interface{})
 }
 
 // isEndElement()
-func (this *QXmlStreamReader) Isendelement(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) IsEndElement(args ...interface{}) (ret interface{}) {
   // isEndElement()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1357,7 +1382,7 @@ func (this *QXmlStreamReader) Isendelement(args ...interface{}) (ret interface{}
 }
 
 // isCDATA()
-func (this *QXmlStreamReader) Iscdata(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) IsCDATA(args ...interface{}) (ret interface{}) {
   // isCDATA()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1386,7 +1411,7 @@ func (this *QXmlStreamReader) Iscdata(args ...interface{}) (ret interface{}) {
 }
 
 // isStandaloneDocument()
-func (this *QXmlStreamReader) Isstandalonedocument(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) IsStandaloneDocument(args ...interface{}) (ret interface{}) {
   // isStandaloneDocument()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1415,7 +1440,7 @@ func (this *QXmlStreamReader) Isstandalonedocument(args ...interface{}) (ret int
 }
 
 // skipCurrentElement()
-func (this *QXmlStreamReader) Skipcurrentelement(args ...interface{}) () {
+func (this *QXmlStreamReader) SkipCurrentElement(args ...interface{}) () {
   // skipCurrentElement()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1436,7 +1461,7 @@ func (this *QXmlStreamReader) Skipcurrentelement(args ...interface{}) () {
 }
 
 // isComment()
-func (this *QXmlStreamReader) Iscomment(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) IsComment(args ...interface{}) (ret interface{}) {
   // isComment()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1465,7 +1490,7 @@ func (this *QXmlStreamReader) Iscomment(args ...interface{}) (ret interface{}) {
 }
 
 // lineNumber()
-func (this *QXmlStreamReader) Linenumber(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) LineNumber(args ...interface{}) (ret interface{}) {
   // lineNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1523,7 +1548,7 @@ func (this *QXmlStreamReader) Device(args ...interface{}) (ret interface{}) {
 }
 
 // isEndDocument()
-func (this *QXmlStreamReader) Isenddocument(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) IsEndDocument(args ...interface{}) (ret interface{}) {
   // isEndDocument()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1552,7 +1577,7 @@ func (this *QXmlStreamReader) Isenddocument(args ...interface{}) (ret interface{
 }
 
 // columnNumber()
-func (this *QXmlStreamReader) Columnnumber(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) ColumnNumber(args ...interface{}) (ret interface{}) {
   // columnNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1581,7 +1606,7 @@ func (this *QXmlStreamReader) Columnnumber(args ...interface{}) (ret interface{}
 }
 
 // tokenString()
-func (this *QXmlStreamReader) Tokenstring(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) TokenString(args ...interface{}) (ret interface{}) {
   // tokenString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1631,7 +1656,7 @@ func (this *QXmlStreamReader) Name(args ...interface{}) () {
 }
 
 // namespaceProcessing()
-func (this *QXmlStreamReader) Namespaceprocessing(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) NamespaceProcessing(args ...interface{}) (ret interface{}) {
   // namespaceProcessing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1660,7 +1685,7 @@ func (this *QXmlStreamReader) Namespaceprocessing(args ...interface{}) (ret inte
 }
 
 // isStartDocument()
-func (this *QXmlStreamReader) Isstartdocument(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) IsStartDocument(args ...interface{}) (ret interface{}) {
   // isStartDocument()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1710,7 +1735,7 @@ func (this *QXmlStreamReader) Clear(args ...interface{}) () {
 }
 
 // atEnd()
-func (this *QXmlStreamReader) Atend(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) AtEnd(args ...interface{}) (ret interface{}) {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1739,7 +1764,7 @@ func (this *QXmlStreamReader) Atend(args ...interface{}) (ret interface{}) {
 }
 
 // dtdName()
-func (this *QXmlStreamReader) Dtdname(args ...interface{}) () {
+func (this *QXmlStreamReader) DtdName(args ...interface{}) () {
   // dtdName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1760,7 +1785,7 @@ func (this *QXmlStreamReader) Dtdname(args ...interface{}) () {
 }
 
 // addData(const class QByteArray &)
-func (this *QXmlStreamReader) Adddata(args ...interface{}) () {
+func (this *QXmlStreamReader) AddData(args ...interface{}) () {
   // addData(const class QByteArray &)
   // addData(const class QString &)
   // addData(const char *)
@@ -1804,7 +1829,7 @@ func (this *QXmlStreamReader) Adddata(args ...interface{}) () {
 }
 
 // dtdSystemId()
-func (this *QXmlStreamReader) Dtdsystemid(args ...interface{}) () {
+func (this *QXmlStreamReader) DtdSystemId(args ...interface{}) () {
   // dtdSystemId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1825,7 +1850,7 @@ func (this *QXmlStreamReader) Dtdsystemid(args ...interface{}) () {
 }
 
 // readNextStartElement()
-func (this *QXmlStreamReader) Readnextstartelement(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamReader) ReadNextStartElement(args ...interface{}) (ret interface{}) {
   // readNextStartElement()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1904,7 +1929,7 @@ func (this *QXmlStreamReader) Attributes(args ...interface{}) (ret interface{}) 
 }
 
 // ~QXmlStreamReader()
-func (this *QXmlStreamReader) Freeqxmlstreamreader(args ...interface{}) () {
+func (this *QXmlStreamReader) Free(args ...interface{}) () {
   // ~QXmlStreamReader()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1916,7 +1941,10 @@ func (this *QXmlStreamReader) Freeqxmlstreamreader(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamReaderD0Ev
     // invoke: void ~QXmlStreamReader()
-    C.C_ZN16QXmlStreamReaderD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN16QXmlStreamReaderD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "~QXmlStreamReader", args)
   }
@@ -1925,7 +1953,7 @@ func (this *QXmlStreamReader) Freeqxmlstreamreader(args ...interface{}) () {
 }
 
 // resolveEntity(const class QString &, const class QString &)
-func (this *QXmlStreamEntityResolver) Resolveentity(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamEntityResolver) ResolveEntity(args ...interface{}) (ret interface{}) {
   // resolveEntity(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1960,7 +1988,7 @@ func (this *QXmlStreamEntityResolver) Resolveentity(args ...interface{}) (ret in
 }
 
 // resolveUndeclaredEntity(const class QString &)
-func (this *QXmlStreamEntityResolver) Resolveundeclaredentity(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamEntityResolver) ResolveUndeclaredEntity(args ...interface{}) (ret interface{}) {
   // resolveUndeclaredEntity(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1992,7 +2020,7 @@ func (this *QXmlStreamEntityResolver) Resolveundeclaredentity(args ...interface{
 }
 
 // ~QXmlStreamEntityResolver()
-func (this *QXmlStreamEntityResolver) Freeqxmlstreamentityresolver(args ...interface{}) () {
+func (this *QXmlStreamEntityResolver) Free(args ...interface{}) () {
   // ~QXmlStreamEntityResolver()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2004,7 +2032,10 @@ func (this *QXmlStreamEntityResolver) Freeqxmlstreamentityresolver(args ...inter
   case 0:
     // invoke: _ZN24QXmlStreamEntityResolverD0Ev
     // invoke: void ~QXmlStreamEntityResolver()
-    C.C_ZN24QXmlStreamEntityResolverD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN24QXmlStreamEntityResolverD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QXmlStreamEntityResolver", "~QXmlStreamEntityResolver", args)
   }
@@ -2013,6 +2044,9 @@ func (this *QXmlStreamEntityResolver) Freeqxmlstreamentityresolver(args ...inter
 }
 
 // QXmlStreamNamespaceDeclaration()
+func GcfreeQXmlStreamNamespaceDeclaration(this *QXmlStreamNamespaceDeclaration) {
+  qtrt.UniverseFree(this)
+}
 func NewQXmlStreamNamespaceDeclaration(args ...interface{}) *QXmlStreamNamespaceDeclaration {
   // QXmlStreamNamespaceDeclaration()
   // QXmlStreamNamespaceDeclaration(const class QString &, const class QString &)
@@ -2035,7 +2069,9 @@ func NewQXmlStreamNamespaceDeclaration(args ...interface{}) *QXmlStreamNamespace
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN30QXmlStreamNamespaceDeclarationC2Ev()
-    return &QXmlStreamNamespaceDeclaration{Qclsinst:qthis}
+    this := &QXmlStreamNamespaceDeclaration{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamNamespaceDeclaration)
+    return this
   case 1:
     // invoke: _ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_
     // invoke: void QXmlStreamNamespaceDeclaration(const class QString &, const class QString &)
@@ -2046,7 +2082,9 @@ func NewQXmlStreamNamespaceDeclaration(args ...interface{}) *QXmlStreamNamespace
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN30QXmlStreamNamespaceDeclarationC2ERK7QStringS2_(arg0, arg1)
-    return &QXmlStreamNamespaceDeclaration{Qclsinst:qthis}
+    this := &QXmlStreamNamespaceDeclaration{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamNamespaceDeclaration)
+    return this
   case 2:
     // invoke: _ZN30QXmlStreamNamespaceDeclarationC1ERKS_
     // invoke: void QXmlStreamNamespaceDeclaration(const class QXmlStreamNamespaceDeclaration &)
@@ -2055,7 +2093,9 @@ func NewQXmlStreamNamespaceDeclaration(args ...interface{}) *QXmlStreamNamespace
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN30QXmlStreamNamespaceDeclarationC2ERKS_(arg0)
-    return &QXmlStreamNamespaceDeclaration{Qclsinst:qthis}
+    this := &QXmlStreamNamespaceDeclaration{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamNamespaceDeclaration)
+    return this
   default:
     qtrt.ErrorResolve("QXmlStreamNamespaceDeclaration", "QXmlStreamNamespaceDeclaration", args)
   }
@@ -2064,7 +2104,7 @@ func NewQXmlStreamNamespaceDeclaration(args ...interface{}) *QXmlStreamNamespace
 }
 
 // ~QXmlStreamNamespaceDeclaration()
-func (this *QXmlStreamNamespaceDeclaration) Freeqxmlstreamnamespacedeclaration(args ...interface{}) () {
+func (this *QXmlStreamNamespaceDeclaration) Free(args ...interface{}) () {
   // ~QXmlStreamNamespaceDeclaration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2076,7 +2116,10 @@ func (this *QXmlStreamNamespaceDeclaration) Freeqxmlstreamnamespacedeclaration(a
   case 0:
     // invoke: _ZN30QXmlStreamNamespaceDeclarationD0Ev
     // invoke: void ~QXmlStreamNamespaceDeclaration()
-    C.C_ZN30QXmlStreamNamespaceDeclarationD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN30QXmlStreamNamespaceDeclarationD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QXmlStreamNamespaceDeclaration", "~QXmlStreamNamespaceDeclaration", args)
   }
@@ -2085,7 +2128,7 @@ func (this *QXmlStreamNamespaceDeclaration) Freeqxmlstreamnamespacedeclaration(a
 }
 
 // namespaceUri()
-func (this *QXmlStreamNamespaceDeclaration) Namespaceuri(args ...interface{}) () {
+func (this *QXmlStreamNamespaceDeclaration) NamespaceUri(args ...interface{}) () {
   // namespaceUri()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2127,7 +2170,7 @@ func (this *QXmlStreamNamespaceDeclaration) Prefix(args ...interface{}) () {
 }
 
 // ~QXmlStreamEntityDeclaration()
-func (this *QXmlStreamEntityDeclaration) Freeqxmlstreamentitydeclaration(args ...interface{}) () {
+func (this *QXmlStreamEntityDeclaration) Free(args ...interface{}) () {
   // ~QXmlStreamEntityDeclaration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2139,7 +2182,10 @@ func (this *QXmlStreamEntityDeclaration) Freeqxmlstreamentitydeclaration(args ..
   case 0:
     // invoke: _ZN27QXmlStreamEntityDeclarationD0Ev
     // invoke: void ~QXmlStreamEntityDeclaration()
-    C.C_ZN27QXmlStreamEntityDeclarationD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN27QXmlStreamEntityDeclarationD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "~QXmlStreamEntityDeclaration", args)
   }
@@ -2148,7 +2194,7 @@ func (this *QXmlStreamEntityDeclaration) Freeqxmlstreamentitydeclaration(args ..
 }
 
 // publicId()
-func (this *QXmlStreamEntityDeclaration) Publicid(args ...interface{}) () {
+func (this *QXmlStreamEntityDeclaration) PublicId(args ...interface{}) () {
   // publicId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2211,7 +2257,7 @@ func (this *QXmlStreamEntityDeclaration) Value(args ...interface{}) () {
 }
 
 // systemId()
-func (this *QXmlStreamEntityDeclaration) Systemid(args ...interface{}) () {
+func (this *QXmlStreamEntityDeclaration) SystemId(args ...interface{}) () {
   // systemId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2232,7 +2278,7 @@ func (this *QXmlStreamEntityDeclaration) Systemid(args ...interface{}) () {
 }
 
 // notationName()
-func (this *QXmlStreamEntityDeclaration) Notationname(args ...interface{}) () {
+func (this *QXmlStreamEntityDeclaration) NotationName(args ...interface{}) () {
   // notationName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2253,6 +2299,9 @@ func (this *QXmlStreamEntityDeclaration) Notationname(args ...interface{}) () {
 }
 
 // QXmlStreamEntityDeclaration(const class QXmlStreamEntityDeclaration &)
+func GcfreeQXmlStreamEntityDeclaration(this *QXmlStreamEntityDeclaration) {
+  qtrt.UniverseFree(this)
+}
 func NewQXmlStreamEntityDeclaration(args ...interface{}) *QXmlStreamEntityDeclaration {
   // QXmlStreamEntityDeclaration(const class QXmlStreamEntityDeclaration &)
   // QXmlStreamEntityDeclaration()
@@ -2273,14 +2322,18 @@ func NewQXmlStreamEntityDeclaration(args ...interface{}) *QXmlStreamEntityDeclar
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN27QXmlStreamEntityDeclarationC2ERKS_(arg0)
-    return &QXmlStreamEntityDeclaration{Qclsinst:qthis}
+    this := &QXmlStreamEntityDeclaration{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamEntityDeclaration)
+    return this
   case 1:
     // invoke: _ZN27QXmlStreamEntityDeclarationC1Ev
     // invoke: void QXmlStreamEntityDeclaration()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN27QXmlStreamEntityDeclarationC2Ev()
-    return &QXmlStreamEntityDeclaration{Qclsinst:qthis}
+    this := &QXmlStreamEntityDeclaration{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamEntityDeclaration)
+    return this
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "QXmlStreamEntityDeclaration", args)
   }
@@ -2289,7 +2342,7 @@ func NewQXmlStreamEntityDeclaration(args ...interface{}) *QXmlStreamEntityDeclar
 }
 
 // hasAttribute(const class QString &, const class QString &)
-func (this *QXmlStreamAttributes) Hasattribute(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamAttributes) HasAttribute(args ...interface{}) (ret interface{}) {
   // hasAttribute(const class QString &, const class QString &)
   // hasAttribute(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2419,6 +2472,9 @@ func (this *QXmlStreamAttributes) Value(args ...interface{}) () {
 }
 
 // QXmlStreamAttributes()
+func GcfreeQXmlStreamAttributes(this *QXmlStreamAttributes) {
+  qtrt.UniverseFree(this)
+}
 func NewQXmlStreamAttributes(args ...interface{}) *QXmlStreamAttributes {
   // QXmlStreamAttributes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2434,7 +2490,9 @@ func NewQXmlStreamAttributes(args ...interface{}) *QXmlStreamAttributes {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QXmlStreamAttributesC2Ev()
-    return &QXmlStreamAttributes{Qclsinst:qthis}
+    this := &QXmlStreamAttributes{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamAttributes)
+    return this
   default:
     qtrt.ErrorResolve("QXmlStreamAttributes", "QXmlStreamAttributes", args)
   }
@@ -2443,7 +2501,7 @@ func NewQXmlStreamAttributes(args ...interface{}) *QXmlStreamAttributes {
 }
 
 // writeTextElement(const class QString &, const class QString &, const class QString &)
-func (this *QXmlStreamWriter) Writetextelement(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteTextElement(args ...interface{}) () {
   // writeTextElement(const class QString &, const class QString &, const class QString &)
   // writeTextElement(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2485,7 +2543,7 @@ func (this *QXmlStreamWriter) Writetextelement(args ...interface{}) () {
 }
 
 // writeNamespace(const class QString &, const class QString &)
-func (this *QXmlStreamWriter) Writenamespace(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteNamespace(args ...interface{}) () {
   // writeNamespace(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2512,7 +2570,7 @@ func (this *QXmlStreamWriter) Writenamespace(args ...interface{}) () {
 }
 
 // autoFormatting()
-func (this *QXmlStreamWriter) Autoformatting(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamWriter) AutoFormatting(args ...interface{}) (ret interface{}) {
   // autoFormatting()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2570,7 +2628,7 @@ func (this *QXmlStreamWriter) Device(args ...interface{}) (ret interface{}) {
 }
 
 // writeEntityReference(const class QString &)
-func (this *QXmlStreamWriter) Writeentityreference(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteEntityReference(args ...interface{}) () {
   // writeEntityReference(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2594,7 +2652,7 @@ func (this *QXmlStreamWriter) Writeentityreference(args ...interface{}) () {
 }
 
 // writeProcessingInstruction(const class QString &, const class QString &)
-func (this *QXmlStreamWriter) Writeprocessinginstruction(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteProcessingInstruction(args ...interface{}) () {
   // writeProcessingInstruction(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2621,7 +2679,7 @@ func (this *QXmlStreamWriter) Writeprocessinginstruction(args ...interface{}) ()
 }
 
 // writeAttributes(const class QXmlStreamAttributes &)
-func (this *QXmlStreamWriter) Writeattributes(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteAttributes(args ...interface{}) () {
   // writeAttributes(const class QXmlStreamAttributes &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2645,7 +2703,7 @@ func (this *QXmlStreamWriter) Writeattributes(args ...interface{}) () {
 }
 
 // autoFormattingIndent()
-func (this *QXmlStreamWriter) Autoformattingindent(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamWriter) AutoFormattingIndent(args ...interface{}) (ret interface{}) {
   // autoFormattingIndent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2674,7 +2732,7 @@ func (this *QXmlStreamWriter) Autoformattingindent(args ...interface{}) (ret int
 }
 
 // setCodec(const char *)
-func (this *QXmlStreamWriter) Setcodec(args ...interface{}) () {
+func (this *QXmlStreamWriter) SetCodec(args ...interface{}) () {
   // setCodec(const char *)
   // setCodec(class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2738,7 +2796,7 @@ func (this *QXmlStreamWriter) Codec(args ...interface{}) (ret interface{}) {
 }
 
 // writeComment(const class QString &)
-func (this *QXmlStreamWriter) Writecomment(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteComment(args ...interface{}) () {
   // writeComment(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2762,7 +2820,7 @@ func (this *QXmlStreamWriter) Writecomment(args ...interface{}) () {
 }
 
 // writeCDATA(const class QString &)
-func (this *QXmlStreamWriter) Writecdata(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteCDATA(args ...interface{}) () {
   // writeCDATA(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2786,7 +2844,7 @@ func (this *QXmlStreamWriter) Writecdata(args ...interface{}) () {
 }
 
 // setDevice(class QIODevice *)
-func (this *QXmlStreamWriter) Setdevice(args ...interface{}) () {
+func (this *QXmlStreamWriter) SetDevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2810,7 +2868,7 @@ func (this *QXmlStreamWriter) Setdevice(args ...interface{}) () {
 }
 
 // writeAttribute(const class QString &, const class QString &, const class QString &)
-func (this *QXmlStreamWriter) Writeattribute(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteAttribute(args ...interface{}) () {
   // writeAttribute(const class QString &, const class QString &, const class QString &)
   // writeAttribute(const class QString &, const class QString &)
   // writeAttribute(const class QXmlStreamAttribute &)
@@ -2861,7 +2919,7 @@ func (this *QXmlStreamWriter) Writeattribute(args ...interface{}) () {
 }
 
 // setAutoFormatting(_Bool)
-func (this *QXmlStreamWriter) Setautoformatting(args ...interface{}) () {
+func (this *QXmlStreamWriter) SetAutoFormatting(args ...interface{}) () {
   // setAutoFormatting(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2885,7 +2943,7 @@ func (this *QXmlStreamWriter) Setautoformatting(args ...interface{}) () {
 }
 
 // hasError()
-func (this *QXmlStreamWriter) Haserror(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamWriter) HasError(args ...interface{}) (ret interface{}) {
   // hasError()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2914,7 +2972,7 @@ func (this *QXmlStreamWriter) Haserror(args ...interface{}) (ret interface{}) {
 }
 
 // writeDTD(const class QString &)
-func (this *QXmlStreamWriter) Writedtd(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteDTD(args ...interface{}) () {
   // writeDTD(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2938,6 +2996,9 @@ func (this *QXmlStreamWriter) Writedtd(args ...interface{}) () {
 }
 
 // QXmlStreamWriter(class QByteArray *)
+func GcfreeQXmlStreamWriter(this *QXmlStreamWriter) {
+  qtrt.UniverseFree(this)
+}
 func NewQXmlStreamWriter(args ...interface{}) *QXmlStreamWriter {
   // QXmlStreamWriter(class QByteArray *)
   // QXmlStreamWriter(class QString *)
@@ -2964,7 +3025,9 @@ func NewQXmlStreamWriter(args ...interface{}) *QXmlStreamWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QXmlStreamWriterC2EP10QByteArray(arg0)
-    return &QXmlStreamWriter{Qclsinst:qthis}
+    this := &QXmlStreamWriter{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamWriter)
+    return this
   case 1:
     // invoke: _ZN16QXmlStreamWriterC1EP7QString
     // invoke: void QXmlStreamWriter(class QString *)
@@ -2973,14 +3036,18 @@ func NewQXmlStreamWriter(args ...interface{}) *QXmlStreamWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QXmlStreamWriterC2EP7QString(arg0)
-    return &QXmlStreamWriter{Qclsinst:qthis}
+    this := &QXmlStreamWriter{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamWriter)
+    return this
   case 2:
     // invoke: _ZN16QXmlStreamWriterC1Ev
     // invoke: void QXmlStreamWriter()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QXmlStreamWriterC2Ev()
-    return &QXmlStreamWriter{Qclsinst:qthis}
+    this := &QXmlStreamWriter{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamWriter)
+    return this
   case 3:
     // invoke: _ZN16QXmlStreamWriterC1EP9QIODevice
     // invoke: void QXmlStreamWriter(class QIODevice *)
@@ -2989,7 +3056,9 @@ func NewQXmlStreamWriter(args ...interface{}) *QXmlStreamWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QXmlStreamWriterC2EP9QIODevice(arg0)
-    return &QXmlStreamWriter{Qclsinst:qthis}
+    this := &QXmlStreamWriter{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamWriter)
+    return this
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "QXmlStreamWriter", args)
   }
@@ -2998,7 +3067,7 @@ func NewQXmlStreamWriter(args ...interface{}) *QXmlStreamWriter {
 }
 
 // writeStartElement(const class QString &, const class QString &)
-func (this *QXmlStreamWriter) Writestartelement(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteStartElement(args ...interface{}) () {
   // writeStartElement(const class QString &, const class QString &)
   // writeStartElement(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3034,7 +3103,7 @@ func (this *QXmlStreamWriter) Writestartelement(args ...interface{}) () {
 }
 
 // writeDefaultNamespace(const class QString &)
-func (this *QXmlStreamWriter) Writedefaultnamespace(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteDefaultNamespace(args ...interface{}) () {
   // writeDefaultNamespace(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3058,7 +3127,7 @@ func (this *QXmlStreamWriter) Writedefaultnamespace(args ...interface{}) () {
 }
 
 // writeStartDocument()
-func (this *QXmlStreamWriter) Writestartdocument(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteStartDocument(args ...interface{}) () {
   // writeStartDocument()
   // writeStartDocument(const class QString &, _Bool)
   // writeStartDocument(const class QString &)
@@ -3100,7 +3169,7 @@ func (this *QXmlStreamWriter) Writestartdocument(args ...interface{}) () {
 }
 
 // writeEndDocument()
-func (this *QXmlStreamWriter) Writeenddocument(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteEndDocument(args ...interface{}) () {
   // writeEndDocument()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3121,7 +3190,7 @@ func (this *QXmlStreamWriter) Writeenddocument(args ...interface{}) () {
 }
 
 // ~QXmlStreamWriter()
-func (this *QXmlStreamWriter) Freeqxmlstreamwriter(args ...interface{}) () {
+func (this *QXmlStreamWriter) Free(args ...interface{}) () {
   // ~QXmlStreamWriter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3133,7 +3202,10 @@ func (this *QXmlStreamWriter) Freeqxmlstreamwriter(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamWriterD0Ev
     // invoke: void ~QXmlStreamWriter()
-    C.C_ZN16QXmlStreamWriterD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN16QXmlStreamWriterD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "~QXmlStreamWriter", args)
   }
@@ -3142,7 +3214,7 @@ func (this *QXmlStreamWriter) Freeqxmlstreamwriter(args ...interface{}) () {
 }
 
 // writeEndElement()
-func (this *QXmlStreamWriter) Writeendelement(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteEndElement(args ...interface{}) () {
   // writeEndElement()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3163,7 +3235,7 @@ func (this *QXmlStreamWriter) Writeendelement(args ...interface{}) () {
 }
 
 // writeCurrentToken(const class QXmlStreamReader &)
-func (this *QXmlStreamWriter) Writecurrenttoken(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteCurrentToken(args ...interface{}) () {
   // writeCurrentToken(const class QXmlStreamReader &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3187,7 +3259,7 @@ func (this *QXmlStreamWriter) Writecurrenttoken(args ...interface{}) () {
 }
 
 // setAutoFormattingIndent(int)
-func (this *QXmlStreamWriter) Setautoformattingindent(args ...interface{}) () {
+func (this *QXmlStreamWriter) SetAutoFormattingIndent(args ...interface{}) () {
   // setAutoFormattingIndent(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3211,7 +3283,7 @@ func (this *QXmlStreamWriter) Setautoformattingindent(args ...interface{}) () {
 }
 
 // writeCharacters(const class QString &)
-func (this *QXmlStreamWriter) Writecharacters(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteCharacters(args ...interface{}) () {
   // writeCharacters(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3235,7 +3307,7 @@ func (this *QXmlStreamWriter) Writecharacters(args ...interface{}) () {
 }
 
 // writeEmptyElement(const class QString &, const class QString &)
-func (this *QXmlStreamWriter) Writeemptyelement(args ...interface{}) () {
+func (this *QXmlStreamWriter) WriteEmptyElement(args ...interface{}) () {
   // writeEmptyElement(const class QString &, const class QString &)
   // writeEmptyElement(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3292,6 +3364,9 @@ func (this *QXmlStreamNotationDeclaration) Name(args ...interface{}) () {
 }
 
 // QXmlStreamNotationDeclaration(const class QXmlStreamNotationDeclaration &)
+func GcfreeQXmlStreamNotationDeclaration(this *QXmlStreamNotationDeclaration) {
+  qtrt.UniverseFree(this)
+}
 func NewQXmlStreamNotationDeclaration(args ...interface{}) *QXmlStreamNotationDeclaration {
   // QXmlStreamNotationDeclaration(const class QXmlStreamNotationDeclaration &)
   // QXmlStreamNotationDeclaration()
@@ -3312,14 +3387,18 @@ func NewQXmlStreamNotationDeclaration(args ...interface{}) *QXmlStreamNotationDe
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN29QXmlStreamNotationDeclarationC2ERKS_(arg0)
-    return &QXmlStreamNotationDeclaration{Qclsinst:qthis}
+    this := &QXmlStreamNotationDeclaration{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamNotationDeclaration)
+    return this
   case 1:
     // invoke: _ZN29QXmlStreamNotationDeclarationC1Ev
     // invoke: void QXmlStreamNotationDeclaration()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN29QXmlStreamNotationDeclarationC2Ev()
-    return &QXmlStreamNotationDeclaration{Qclsinst:qthis}
+    this := &QXmlStreamNotationDeclaration{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamNotationDeclaration)
+    return this
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "QXmlStreamNotationDeclaration", args)
   }
@@ -3328,7 +3407,7 @@ func NewQXmlStreamNotationDeclaration(args ...interface{}) *QXmlStreamNotationDe
 }
 
 // systemId()
-func (this *QXmlStreamNotationDeclaration) Systemid(args ...interface{}) () {
+func (this *QXmlStreamNotationDeclaration) SystemId(args ...interface{}) () {
   // systemId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3349,7 +3428,7 @@ func (this *QXmlStreamNotationDeclaration) Systemid(args ...interface{}) () {
 }
 
 // publicId()
-func (this *QXmlStreamNotationDeclaration) Publicid(args ...interface{}) () {
+func (this *QXmlStreamNotationDeclaration) PublicId(args ...interface{}) () {
   // publicId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3370,7 +3449,7 @@ func (this *QXmlStreamNotationDeclaration) Publicid(args ...interface{}) () {
 }
 
 // ~QXmlStreamNotationDeclaration()
-func (this *QXmlStreamNotationDeclaration) Freeqxmlstreamnotationdeclaration(args ...interface{}) () {
+func (this *QXmlStreamNotationDeclaration) Free(args ...interface{}) () {
   // ~QXmlStreamNotationDeclaration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3382,7 +3461,10 @@ func (this *QXmlStreamNotationDeclaration) Freeqxmlstreamnotationdeclaration(arg
   case 0:
     // invoke: _ZN29QXmlStreamNotationDeclarationD0Ev
     // invoke: void ~QXmlStreamNotationDeclaration()
-    C.C_ZN29QXmlStreamNotationDeclarationD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN29QXmlStreamNotationDeclarationD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "~QXmlStreamNotationDeclaration", args)
   }
@@ -3391,7 +3473,7 @@ func (this *QXmlStreamNotationDeclaration) Freeqxmlstreamnotationdeclaration(arg
 }
 
 // qualifiedName()
-func (this *QXmlStreamAttribute) Qualifiedname(args ...interface{}) () {
+func (this *QXmlStreamAttribute) QualifiedName(args ...interface{}) () {
   // qualifiedName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3433,6 +3515,9 @@ func (this *QXmlStreamAttribute) Name(args ...interface{}) () {
 }
 
 // QXmlStreamAttribute(const class QString &, const class QString &)
+func GcfreeQXmlStreamAttribute(this *QXmlStreamAttribute) {
+  qtrt.UniverseFree(this)
+}
 func NewQXmlStreamAttribute(args ...interface{}) *QXmlStreamAttribute {
   // QXmlStreamAttribute(const class QString &, const class QString &)
   // QXmlStreamAttribute()
@@ -3464,14 +3549,18 @@ func NewQXmlStreamAttribute(args ...interface{}) *QXmlStreamAttribute {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QXmlStreamAttributeC2ERK7QStringS2_(arg0, arg1)
-    return &QXmlStreamAttribute{Qclsinst:qthis}
+    this := &QXmlStreamAttribute{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamAttribute)
+    return this
   case 1:
     // invoke: _ZN19QXmlStreamAttributeC1Ev
     // invoke: void QXmlStreamAttribute()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QXmlStreamAttributeC2Ev()
-    return &QXmlStreamAttribute{Qclsinst:qthis}
+    this := &QXmlStreamAttribute{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamAttribute)
+    return this
   case 2:
     // invoke: _ZN19QXmlStreamAttributeC1ERKS_
     // invoke: void QXmlStreamAttribute(const class QXmlStreamAttribute &)
@@ -3480,7 +3569,9 @@ func NewQXmlStreamAttribute(args ...interface{}) *QXmlStreamAttribute {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QXmlStreamAttributeC2ERKS_(arg0)
-    return &QXmlStreamAttribute{Qclsinst:qthis}
+    this := &QXmlStreamAttribute{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamAttribute)
+    return this
   case 3:
     // invoke: _ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_
     // invoke: void QXmlStreamAttribute(const class QString &, const class QString &, const class QString &)
@@ -3493,7 +3584,9 @@ func NewQXmlStreamAttribute(args ...interface{}) *QXmlStreamAttribute {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QXmlStreamAttributeC2ERK7QStringS2_S2_(arg0, arg1, arg2)
-    return &QXmlStreamAttribute{Qclsinst:qthis}
+    this := &QXmlStreamAttribute{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQXmlStreamAttribute)
+    return this
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "QXmlStreamAttribute", args)
   }
@@ -3523,7 +3616,7 @@ func (this *QXmlStreamAttribute) Value(args ...interface{}) () {
 }
 
 // namespaceUri()
-func (this *QXmlStreamAttribute) Namespaceuri(args ...interface{}) () {
+func (this *QXmlStreamAttribute) NamespaceUri(args ...interface{}) () {
   // namespaceUri()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3565,7 +3658,7 @@ func (this *QXmlStreamAttribute) Prefix(args ...interface{}) () {
 }
 
 // ~QXmlStreamAttribute()
-func (this *QXmlStreamAttribute) Freeqxmlstreamattribute(args ...interface{}) () {
+func (this *QXmlStreamAttribute) Free(args ...interface{}) () {
   // ~QXmlStreamAttribute()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3577,7 +3670,10 @@ func (this *QXmlStreamAttribute) Freeqxmlstreamattribute(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QXmlStreamAttributeD0Ev
     // invoke: void ~QXmlStreamAttribute()
-    C.C_ZN19QXmlStreamAttributeD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QXmlStreamAttributeD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "~QXmlStreamAttribute", args)
   }
@@ -3586,7 +3682,7 @@ func (this *QXmlStreamAttribute) Freeqxmlstreamattribute(args ...interface{}) ()
 }
 
 // isDefault()
-func (this *QXmlStreamAttribute) Isdefault(args ...interface{}) (ret interface{}) {
+func (this *QXmlStreamAttribute) IsDefault(args ...interface{}) (ret interface{}) {
   // isDefault()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

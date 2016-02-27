@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qcolumnview.h
 // dst-file: /src/widgets/qcolumnview.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -72,6 +73,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QColumnView)=1
@@ -82,7 +84,7 @@ type QColumnView struct {
 }
 
 // selectAll()
-func (this *QColumnView) Selectall(args ...interface{}) () {
+func (this *QColumnView) SelectAll(args ...interface{}) () {
   // selectAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -103,7 +105,7 @@ func (this *QColumnView) Selectall(args ...interface{}) () {
 }
 
 // setResizeGripsVisible(_Bool)
-func (this *QColumnView) Setresizegripsvisible(args ...interface{}) () {
+func (this *QColumnView) SetResizeGripsVisible(args ...interface{}) () {
   // setResizeGripsVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -127,7 +129,7 @@ func (this *QColumnView) Setresizegripsvisible(args ...interface{}) () {
 }
 
 // ~QColumnView()
-func (this *QColumnView) Freeqcolumnview(args ...interface{}) () {
+func (this *QColumnView) Free(args ...interface{}) () {
   // ~QColumnView()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -139,7 +141,10 @@ func (this *QColumnView) Freeqcolumnview(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QColumnViewD0Ev
     // invoke: void ~QColumnView()
-    C.C_ZN11QColumnViewD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QColumnViewD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QColumnView", "~QColumnView", args)
   }
@@ -148,7 +153,7 @@ func (this *QColumnView) Freeqcolumnview(args ...interface{}) () {
 }
 
 // resizeGripsVisible()
-func (this *QColumnView) Resizegripsvisible(args ...interface{}) (ret interface{}) {
+func (this *QColumnView) ResizeGripsVisible(args ...interface{}) (ret interface{}) {
   // resizeGripsVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -177,7 +182,7 @@ func (this *QColumnView) Resizegripsvisible(args ...interface{}) (ret interface{
 }
 
 // indexAt(const class QPoint &)
-func (this *QColumnView) Indexat(args ...interface{}) (ret interface{}) {
+func (this *QColumnView) IndexAt(args ...interface{}) (ret interface{}) {
   // indexAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -209,7 +214,7 @@ func (this *QColumnView) Indexat(args ...interface{}) (ret interface{}) {
 }
 
 // previewWidget()
-func (this *QColumnView) Previewwidget(args ...interface{}) (ret interface{}) {
+func (this *QColumnView) PreviewWidget(args ...interface{}) (ret interface{}) {
   // previewWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -238,7 +243,7 @@ func (this *QColumnView) Previewwidget(args ...interface{}) (ret interface{}) {
 }
 
 // visualRect(const class QModelIndex &)
-func (this *QColumnView) Visualrect(args ...interface{}) (ret interface{}) {
+func (this *QColumnView) VisualRect(args ...interface{}) (ret interface{}) {
   // visualRect(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -270,7 +275,7 @@ func (this *QColumnView) Visualrect(args ...interface{}) (ret interface{}) {
 }
 
 // setPreviewWidget(class QWidget *)
-func (this *QColumnView) Setpreviewwidget(args ...interface{}) () {
+func (this *QColumnView) SetPreviewWidget(args ...interface{}) () {
   // setPreviewWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -294,7 +299,7 @@ func (this *QColumnView) Setpreviewwidget(args ...interface{}) () {
 }
 
 // setRootIndex(const class QModelIndex &)
-func (this *QColumnView) Setrootindex(args ...interface{}) () {
+func (this *QColumnView) SetRootIndex(args ...interface{}) () {
   // setRootIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -318,7 +323,7 @@ func (this *QColumnView) Setrootindex(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QColumnView) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QColumnView) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -347,7 +352,7 @@ func (this *QColumnView) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QColumnView) Setmodel(args ...interface{}) () {
+func (this *QColumnView) SetModel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -371,7 +376,7 @@ func (this *QColumnView) Setmodel(args ...interface{}) () {
 }
 
 // setSelectionModel(class QItemSelectionModel *)
-func (this *QColumnView) Setselectionmodel(args ...interface{}) () {
+func (this *QColumnView) SetSelectionModel(args ...interface{}) () {
   // setSelectionModel(class QItemSelectionModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -395,7 +400,7 @@ func (this *QColumnView) Setselectionmodel(args ...interface{}) () {
 }
 
 // columnWidths()
-func (this *QColumnView) Columnwidths(args ...interface{}) () {
+func (this *QColumnView) ColumnWidths(args ...interface{}) () {
   // columnWidths()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -416,7 +421,7 @@ func (this *QColumnView) Columnwidths(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QColumnView) Metaobject(args ...interface{}) () {
+func (this *QColumnView) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -437,6 +442,9 @@ func (this *QColumnView) Metaobject(args ...interface{}) () {
 }
 
 // QColumnView(class QWidget *)
+func GcfreeQColumnView(this *QColumnView) {
+  qtrt.UniverseFree(this)
+}
 func NewQColumnView(args ...interface{}) *QColumnView {
   // QColumnView(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -455,7 +463,9 @@ func NewQColumnView(args ...interface{}) *QColumnView {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QColumnViewC2EP7QWidget(arg0)
-    return &QColumnView{Qclsinst:qthis}
+    this := &QColumnView{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQColumnView)
+    return this
   default:
     qtrt.ErrorResolve("QColumnView", "QColumnView", args)
   }

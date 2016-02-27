@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -62,6 +63,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QToolTip)=1
@@ -71,7 +73,7 @@ type QToolTip struct {
 }
 
 // palette()
-func (this *QToolTip) Palette_S(args ...interface{}) (ret interface{}) {
+func (this *QToolTip) Palette_s(args ...interface{}) (ret interface{}) {
   // palette()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -100,7 +102,7 @@ func (this *QToolTip) Palette_S(args ...interface{}) (ret interface{}) {
 }
 
 // hideText()
-func (this *QToolTip) Hidetext_S(args ...interface{}) () {
+func (this *QToolTip) HideText_s(args ...interface{}) () {
   // hideText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -121,7 +123,7 @@ func (this *QToolTip) Hidetext_S(args ...interface{}) () {
 }
 
 // text()
-func (this *QToolTip) Text_S(args ...interface{}) (ret interface{}) {
+func (this *QToolTip) Text_s(args ...interface{}) (ret interface{}) {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -150,7 +152,7 @@ func (this *QToolTip) Text_S(args ...interface{}) (ret interface{}) {
 }
 
 // setPalette(const class QPalette &)
-func (this *QToolTip) Setpalette_S(args ...interface{}) () {
+func (this *QToolTip) SetPalette_s(args ...interface{}) () {
   // setPalette(const class QPalette &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -174,7 +176,7 @@ func (this *QToolTip) Setpalette_S(args ...interface{}) () {
 }
 
 // showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &)
-func (this *QToolTip) Showtext_S(args ...interface{}) () {
+func (this *QToolTip) ShowText_s(args ...interface{}) () {
   // showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &)
   // showText(const class QPoint &, const class QString &, class QWidget *, const class QRect &, int)
   // showText(const class QPoint &, const class QString &, class QWidget *)
@@ -243,7 +245,7 @@ func (this *QToolTip) Showtext_S(args ...interface{}) () {
 }
 
 // isVisible()
-func (this *QToolTip) Isvisible_S(args ...interface{}) (ret interface{}) {
+func (this *QToolTip) IsVisible_s(args ...interface{}) (ret interface{}) {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -272,7 +274,7 @@ func (this *QToolTip) Isvisible_S(args ...interface{}) (ret interface{}) {
 }
 
 // setFont(const class QFont &)
-func (this *QToolTip) Setfont_S(args ...interface{}) () {
+func (this *QToolTip) SetFont_s(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -296,7 +298,7 @@ func (this *QToolTip) Setfont_S(args ...interface{}) () {
 }
 
 // font()
-func (this *QToolTip) Font_S(args ...interface{}) (ret interface{}) {
+func (this *QToolTip) Font_s(args ...interface{}) (ret interface{}) {
   // font()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

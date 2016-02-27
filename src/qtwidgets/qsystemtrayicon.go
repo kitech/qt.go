@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -76,6 +77,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSystemTrayIcon)=1
@@ -108,6 +110,9 @@ func (this *QSystemTrayIcon) Show(args ...interface{}) () {
 }
 
 // QSystemTrayIcon(const class QIcon &, class QObject *)
+func GcfreeQSystemTrayIcon(this *QSystemTrayIcon) {
+  qtrt.UniverseFree(this)
+}
 func NewQSystemTrayIcon(args ...interface{}) *QSystemTrayIcon {
   // QSystemTrayIcon(const class QIcon &, class QObject *)
   // QSystemTrayIcon(class QObject *)
@@ -132,7 +137,9 @@ func NewQSystemTrayIcon(args ...interface{}) *QSystemTrayIcon {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QSystemTrayIconC2ERK5QIconP7QObject(arg0, arg1)
-    return &QSystemTrayIcon{Qclsinst:qthis}
+    this := &QSystemTrayIcon{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSystemTrayIcon)
+    return this
   case 1:
     // invoke: _ZN15QSystemTrayIconC1EP7QObject
     // invoke: void QSystemTrayIcon(class QObject *)
@@ -141,7 +148,9 @@ func NewQSystemTrayIcon(args ...interface{}) *QSystemTrayIcon {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QSystemTrayIconC2EP7QObject(arg0)
-    return &QSystemTrayIcon{Qclsinst:qthis}
+    this := &QSystemTrayIcon{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSystemTrayIcon)
+    return this
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "QSystemTrayIcon", args)
   }
@@ -171,7 +180,7 @@ func (this *QSystemTrayIcon) Hide(args ...interface{}) () {
 }
 
 // isSystemTrayAvailable()
-func (this *QSystemTrayIcon) Issystemtrayavailable_S(args ...interface{}) (ret interface{}) {
+func (this *QSystemTrayIcon) IsSystemTrayAvailable_s(args ...interface{}) (ret interface{}) {
   // isSystemTrayAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -200,7 +209,7 @@ func (this *QSystemTrayIcon) Issystemtrayavailable_S(args ...interface{}) (ret i
 }
 
 // contextMenu()
-func (this *QSystemTrayIcon) Contextmenu(args ...interface{}) (ret interface{}) {
+func (this *QSystemTrayIcon) ContextMenu(args ...interface{}) (ret interface{}) {
   // contextMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -229,7 +238,7 @@ func (this *QSystemTrayIcon) Contextmenu(args ...interface{}) (ret interface{}) 
 }
 
 // setIcon(const class QIcon &)
-func (this *QSystemTrayIcon) Seticon(args ...interface{}) () {
+func (this *QSystemTrayIcon) SetIcon(args ...interface{}) () {
   // setIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -253,7 +262,7 @@ func (this *QSystemTrayIcon) Seticon(args ...interface{}) () {
 }
 
 // toolTip()
-func (this *QSystemTrayIcon) Tooltip(args ...interface{}) (ret interface{}) {
+func (this *QSystemTrayIcon) ToolTip(args ...interface{}) (ret interface{}) {
   // toolTip()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -311,7 +320,7 @@ func (this *QSystemTrayIcon) Icon(args ...interface{}) (ret interface{}) {
 }
 
 // setContextMenu(class QMenu *)
-func (this *QSystemTrayIcon) Setcontextmenu(args ...interface{}) () {
+func (this *QSystemTrayIcon) SetContextMenu(args ...interface{}) () {
   // setContextMenu(class QMenu *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -335,7 +344,7 @@ func (this *QSystemTrayIcon) Setcontextmenu(args ...interface{}) () {
 }
 
 // setToolTip(const class QString &)
-func (this *QSystemTrayIcon) Settooltip(args ...interface{}) () {
+func (this *QSystemTrayIcon) SetToolTip(args ...interface{}) () {
   // setToolTip(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -359,7 +368,7 @@ func (this *QSystemTrayIcon) Settooltip(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QSystemTrayIcon) Metaobject(args ...interface{}) () {
+func (this *QSystemTrayIcon) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -409,7 +418,7 @@ func (this *QSystemTrayIcon) Geometry(args ...interface{}) (ret interface{}) {
 }
 
 // ~QSystemTrayIcon()
-func (this *QSystemTrayIcon) Freeqsystemtrayicon(args ...interface{}) () {
+func (this *QSystemTrayIcon) Free(args ...interface{}) () {
   // ~QSystemTrayIcon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -421,7 +430,10 @@ func (this *QSystemTrayIcon) Freeqsystemtrayicon(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSystemTrayIconD0Ev
     // invoke: void ~QSystemTrayIcon()
-    C.C_ZN15QSystemTrayIconD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QSystemTrayIconD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "~QSystemTrayIcon", args)
   }
@@ -430,7 +442,7 @@ func (this *QSystemTrayIcon) Freeqsystemtrayicon(args ...interface{}) () {
 }
 
 // isVisible()
-func (this *QSystemTrayIcon) Isvisible(args ...interface{}) (ret interface{}) {
+func (this *QSystemTrayIcon) IsVisible(args ...interface{}) (ret interface{}) {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -459,7 +471,7 @@ func (this *QSystemTrayIcon) Isvisible(args ...interface{}) (ret interface{}) {
 }
 
 // supportsMessages()
-func (this *QSystemTrayIcon) Supportsmessages_S(args ...interface{}) (ret interface{}) {
+func (this *QSystemTrayIcon) SupportsMessages_s(args ...interface{}) (ret interface{}) {
   // supportsMessages()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -488,7 +500,7 @@ func (this *QSystemTrayIcon) Supportsmessages_S(args ...interface{}) (ret interf
 }
 
 // setVisible(_Bool)
-func (this *QSystemTrayIcon) Setvisible(args ...interface{}) () {
+func (this *QSystemTrayIcon) SetVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qgraphicslinearlayout.h
 // dst-file: /src/widgets/qgraphicslinearlayout.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -84,6 +85,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsLinearLayout)=1
@@ -159,7 +161,7 @@ func (this *QGraphicsLinearLayout) Dump(args ...interface{}) () {
 }
 
 // ~QGraphicsLinearLayout()
-func (this *QGraphicsLinearLayout) Freeqgraphicslinearlayout(args ...interface{}) () {
+func (this *QGraphicsLinearLayout) Free(args ...interface{}) () {
   // ~QGraphicsLinearLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -171,7 +173,10 @@ func (this *QGraphicsLinearLayout) Freeqgraphicslinearlayout(args ...interface{}
   case 0:
     // invoke: _ZN21QGraphicsLinearLayoutD0Ev
     // invoke: void ~QGraphicsLinearLayout()
-    C.C_ZN21QGraphicsLinearLayoutD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN21QGraphicsLinearLayoutD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "~QGraphicsLinearLayout", args)
   }
@@ -180,7 +185,7 @@ func (this *QGraphicsLinearLayout) Freeqgraphicslinearlayout(args ...interface{}
 }
 
 // insertStretch(int, int)
-func (this *QGraphicsLinearLayout) Insertstretch(args ...interface{}) () {
+func (this *QGraphicsLinearLayout) InsertStretch(args ...interface{}) () {
   // insertStretch(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -207,7 +212,7 @@ func (this *QGraphicsLinearLayout) Insertstretch(args ...interface{}) () {
 }
 
 // stretchFactor(class QGraphicsLayoutItem *)
-func (this *QGraphicsLinearLayout) Stretchfactor(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLinearLayout) StretchFactor(args ...interface{}) (ret interface{}) {
   // stretchFactor(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,7 +244,7 @@ func (this *QGraphicsLinearLayout) Stretchfactor(args ...interface{}) (ret inter
 }
 
 // setItemSpacing(int, qreal)
-func (this *QGraphicsLinearLayout) Setitemspacing(args ...interface{}) () {
+func (this *QGraphicsLinearLayout) SetItemSpacing(args ...interface{}) () {
   // setItemSpacing(int, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -290,7 +295,7 @@ func (this *QGraphicsLinearLayout) Alignment(args ...interface{}) () {
 }
 
 // setSpacing(qreal)
-func (this *QGraphicsLinearLayout) Setspacing(args ...interface{}) () {
+func (this *QGraphicsLinearLayout) SetSpacing(args ...interface{}) () {
   // setSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -314,7 +319,7 @@ func (this *QGraphicsLinearLayout) Setspacing(args ...interface{}) () {
 }
 
 // setStretchFactor(class QGraphicsLayoutItem *, int)
-func (this *QGraphicsLinearLayout) Setstretchfactor(args ...interface{}) () {
+func (this *QGraphicsLinearLayout) SetStretchFactor(args ...interface{}) () {
   // setStretchFactor(class QGraphicsLayoutItem *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -341,6 +346,9 @@ func (this *QGraphicsLinearLayout) Setstretchfactor(args ...interface{}) () {
 }
 
 // QGraphicsLinearLayout(class QGraphicsLayoutItem *)
+func GcfreeQGraphicsLinearLayout(this *QGraphicsLinearLayout) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsLinearLayout(args ...interface{}) *QGraphicsLinearLayout {
   // QGraphicsLinearLayout(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -359,7 +367,9 @@ func NewQGraphicsLinearLayout(args ...interface{}) *QGraphicsLinearLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QGraphicsLinearLayoutC2EP19QGraphicsLayoutItem(arg0)
-    return &QGraphicsLinearLayout{Qclsinst:qthis}
+    this := &QGraphicsLinearLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsLinearLayout)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "QGraphicsLinearLayout", args)
   }
@@ -368,7 +378,7 @@ func NewQGraphicsLinearLayout(args ...interface{}) *QGraphicsLinearLayout {
 }
 
 // addStretch(int)
-func (this *QGraphicsLinearLayout) Addstretch(args ...interface{}) () {
+func (this *QGraphicsLinearLayout) AddStretch(args ...interface{}) () {
   // addStretch(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -392,7 +402,7 @@ func (this *QGraphicsLinearLayout) Addstretch(args ...interface{}) () {
 }
 
 // setGeometry(const class QRectF &)
-func (this *QGraphicsLinearLayout) Setgeometry(args ...interface{}) () {
+func (this *QGraphicsLinearLayout) SetGeometry(args ...interface{}) () {
   // setGeometry(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -416,7 +426,7 @@ func (this *QGraphicsLinearLayout) Setgeometry(args ...interface{}) () {
 }
 
 // insertItem(int, class QGraphicsLayoutItem *)
-func (this *QGraphicsLinearLayout) Insertitem(args ...interface{}) () {
+func (this *QGraphicsLinearLayout) InsertItem(args ...interface{}) () {
   // insertItem(int, class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -443,7 +453,7 @@ func (this *QGraphicsLinearLayout) Insertitem(args ...interface{}) () {
 }
 
 // addItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsLinearLayout) Additem(args ...interface{}) () {
+func (this *QGraphicsLinearLayout) AddItem(args ...interface{}) () {
   // addItem(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -496,7 +506,7 @@ func (this *QGraphicsLinearLayout) Spacing(args ...interface{}) (ret interface{}
 }
 
 // removeAt(int)
-func (this *QGraphicsLinearLayout) Removeat(args ...interface{}) () {
+func (this *QGraphicsLinearLayout) RemoveAt(args ...interface{}) () {
   // removeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -549,7 +559,7 @@ func (this *QGraphicsLinearLayout) Count(args ...interface{}) (ret interface{}) 
 }
 
 // itemAt(int)
-func (this *QGraphicsLinearLayout) Itemat(args ...interface{}) () {
+func (this *QGraphicsLinearLayout) ItemAt(args ...interface{}) () {
   // itemAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -573,7 +583,7 @@ func (this *QGraphicsLinearLayout) Itemat(args ...interface{}) () {
 }
 
 // removeItem(class QGraphicsLayoutItem *)
-func (this *QGraphicsLinearLayout) Removeitem(args ...interface{}) () {
+func (this *QGraphicsLinearLayout) RemoveItem(args ...interface{}) () {
   // removeItem(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -597,7 +607,7 @@ func (this *QGraphicsLinearLayout) Removeitem(args ...interface{}) () {
 }
 
 // itemSpacing(int)
-func (this *QGraphicsLinearLayout) Itemspacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLinearLayout) ItemSpacing(args ...interface{}) (ret interface{}) {
   // itemSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

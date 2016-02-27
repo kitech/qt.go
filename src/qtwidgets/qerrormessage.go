@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qerrormessage.h
 // dst-file: /src/widgets/qerrormessage.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -54,6 +55,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QErrorMessage)=1
@@ -63,7 +65,7 @@ type QErrorMessage struct {
 }
 
 // metaObject()
-func (this *QErrorMessage) Metaobject(args ...interface{}) () {
+func (this *QErrorMessage) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -84,6 +86,9 @@ func (this *QErrorMessage) Metaobject(args ...interface{}) () {
 }
 
 // QErrorMessage(class QWidget *)
+func GcfreeQErrorMessage(this *QErrorMessage) {
+  qtrt.UniverseFree(this)
+}
 func NewQErrorMessage(args ...interface{}) *QErrorMessage {
   // QErrorMessage(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -102,7 +107,9 @@ func NewQErrorMessage(args ...interface{}) *QErrorMessage {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QErrorMessageC2EP7QWidget(arg0)
-    return &QErrorMessage{Qclsinst:qthis}
+    this := &QErrorMessage{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQErrorMessage)
+    return this
   default:
     qtrt.ErrorResolve("QErrorMessage", "QErrorMessage", args)
   }
@@ -111,7 +118,7 @@ func NewQErrorMessage(args ...interface{}) *QErrorMessage {
 }
 
 // ~QErrorMessage()
-func (this *QErrorMessage) Freeqerrormessage(args ...interface{}) () {
+func (this *QErrorMessage) Free(args ...interface{}) () {
   // ~QErrorMessage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -123,7 +130,10 @@ func (this *QErrorMessage) Freeqerrormessage(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QErrorMessageD0Ev
     // invoke: void ~QErrorMessage()
-    C.C_ZN13QErrorMessageD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QErrorMessageD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QErrorMessage", "~QErrorMessage", args)
   }
@@ -132,7 +142,7 @@ func (this *QErrorMessage) Freeqerrormessage(args ...interface{}) () {
 }
 
 // qtHandler()
-func (this *QErrorMessage) Qthandler_S(args ...interface{}) (ret interface{}) {
+func (this *QErrorMessage) QtHandler_s(args ...interface{}) (ret interface{}) {
   // qtHandler()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -161,7 +171,7 @@ func (this *QErrorMessage) Qthandler_S(args ...interface{}) (ret interface{}) {
 }
 
 // showMessage(const class QString &, const class QString &)
-func (this *QErrorMessage) Showmessage(args ...interface{}) () {
+func (this *QErrorMessage) ShowMessage(args ...interface{}) () {
   // showMessage(const class QString &, const class QString &)
   // showMessage(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qsizegrip.h
 // dst-file: /src/widgets/qsizegrip.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -52,6 +53,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSizeGrip)=1
@@ -61,6 +63,9 @@ type QSizeGrip struct {
 }
 
 // QSizeGrip(class QWidget *)
+func GcfreeQSizeGrip(this *QSizeGrip) {
+  qtrt.UniverseFree(this)
+}
 func NewQSizeGrip(args ...interface{}) *QSizeGrip {
   // QSizeGrip(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,7 +84,9 @@ func NewQSizeGrip(args ...interface{}) *QSizeGrip {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QSizeGripC2EP7QWidget(arg0)
-    return &QSizeGrip{Qclsinst:qthis}
+    this := &QSizeGrip{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSizeGrip)
+    return this
   default:
     qtrt.ErrorResolve("QSizeGrip", "QSizeGrip", args)
   }
@@ -88,7 +95,7 @@ func NewQSizeGrip(args ...interface{}) *QSizeGrip {
 }
 
 // sizeHint()
-func (this *QSizeGrip) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QSizeGrip) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,7 +124,7 @@ func (this *QSizeGrip) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QSizeGrip) Metaobject(args ...interface{}) () {
+func (this *QSizeGrip) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -138,7 +145,7 @@ func (this *QSizeGrip) Metaobject(args ...interface{}) () {
 }
 
 // setVisible(_Bool)
-func (this *QSizeGrip) Setvisible(args ...interface{}) () {
+func (this *QSizeGrip) SetVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,7 +169,7 @@ func (this *QSizeGrip) Setvisible(args ...interface{}) () {
 }
 
 // ~QSizeGrip()
-func (this *QSizeGrip) Freeqsizegrip(args ...interface{}) () {
+func (this *QSizeGrip) Free(args ...interface{}) () {
   // ~QSizeGrip()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -174,7 +181,10 @@ func (this *QSizeGrip) Freeqsizegrip(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSizeGripD0Ev
     // invoke: void ~QSizeGrip()
-    C.C_ZN9QSizeGripD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QSizeGripD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QSizeGrip", "~QSizeGrip", args)
   }

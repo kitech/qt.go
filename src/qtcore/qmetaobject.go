@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qmetaobject.h
 // dst-file: /src/core/qmetaobject.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -172,6 +173,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMetaEnum)=16
@@ -228,7 +230,7 @@ func (this *QMetaEnum) Name(args ...interface{}) (ret interface{}) {
 }
 
 // isFlag()
-func (this *QMetaEnum) Isflag(args ...interface{}) (ret interface{}) {
+func (this *QMetaEnum) IsFlag(args ...interface{}) (ret interface{}) {
   // isFlag()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -257,7 +259,7 @@ func (this *QMetaEnum) Isflag(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QMetaEnum) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QMetaEnum) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -286,7 +288,7 @@ func (this *QMetaEnum) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // keyToValue(const char *, _Bool *)
-func (this *QMetaEnum) Keytovalue(args ...interface{}) (ret interface{}) {
+func (this *QMetaEnum) KeyToValue(args ...interface{}) (ret interface{}) {
   // keyToValue(const char *, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -323,6 +325,9 @@ func (this *QMetaEnum) Keytovalue(args ...interface{}) (ret interface{}) {
 }
 
 // QMetaEnum()
+func GcfreeQMetaEnum(this *QMetaEnum) {
+  qtrt.UniverseFree(this)
+}
 func NewQMetaEnum(args ...interface{}) *QMetaEnum {
   // QMetaEnum()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -338,7 +343,9 @@ func NewQMetaEnum(args ...interface{}) *QMetaEnum {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMetaEnumC2Ev()
-    return &QMetaEnum{Qclsinst:qthis}
+    this := &QMetaEnum{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMetaEnum)
+    return this
   default:
     qtrt.ErrorResolve("QMetaEnum", "QMetaEnum", args)
   }
@@ -379,7 +386,7 @@ func (this *QMetaEnum) Value(args ...interface{}) (ret interface{}) {
 }
 
 // valueToKey(int)
-func (this *QMetaEnum) Valuetokey(args ...interface{}) (ret interface{}) {
+func (this *QMetaEnum) ValueToKey(args ...interface{}) (ret interface{}) {
   // valueToKey(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -443,7 +450,7 @@ func (this *QMetaEnum) Key(args ...interface{}) (ret interface{}) {
 }
 
 // valueToKeys(int)
-func (this *QMetaEnum) Valuetokeys(args ...interface{}) (ret interface{}) {
+func (this *QMetaEnum) ValueToKeys(args ...interface{}) (ret interface{}) {
   // valueToKeys(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -504,7 +511,7 @@ func (this *QMetaEnum) Scope(args ...interface{}) (ret interface{}) {
 }
 
 // keyCount()
-func (this *QMetaEnum) Keycount(args ...interface{}) (ret interface{}) {
+func (this *QMetaEnum) KeyCount(args ...interface{}) (ret interface{}) {
   // keyCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -533,7 +540,7 @@ func (this *QMetaEnum) Keycount(args ...interface{}) (ret interface{}) {
 }
 
 // keysToValue(const char *, _Bool *)
-func (this *QMetaEnum) Keystovalue(args ...interface{}) (ret interface{}) {
+func (this *QMetaEnum) KeysToValue(args ...interface{}) (ret interface{}) {
   // keysToValue(const char *, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -570,7 +577,7 @@ func (this *QMetaEnum) Keystovalue(args ...interface{}) (ret interface{}) {
 }
 
 // enclosingMetaObject()
-func (this *QMetaEnum) Enclosingmetaobject(args ...interface{}) () {
+func (this *QMetaEnum) EnclosingMetaObject(args ...interface{}) () {
   // enclosingMetaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -591,6 +598,9 @@ func (this *QMetaEnum) Enclosingmetaobject(args ...interface{}) () {
 }
 
 // QMetaClassInfo()
+func GcfreeQMetaClassInfo(this *QMetaClassInfo) {
+  qtrt.UniverseFree(this)
+}
 func NewQMetaClassInfo(args ...interface{}) *QMetaClassInfo {
   // QMetaClassInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -606,7 +616,9 @@ func NewQMetaClassInfo(args ...interface{}) *QMetaClassInfo {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QMetaClassInfoC2Ev()
-    return &QMetaClassInfo{Qclsinst:qthis}
+    this := &QMetaClassInfo{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMetaClassInfo)
+    return this
   default:
     qtrt.ErrorResolve("QMetaClassInfo", "QMetaClassInfo", args)
   }
@@ -673,7 +685,7 @@ func (this *QMetaClassInfo) Value(args ...interface{}) (ret interface{}) {
 }
 
 // enclosingMetaObject()
-func (this *QMetaClassInfo) Enclosingmetaobject(args ...interface{}) () {
+func (this *QMetaClassInfo) EnclosingMetaObject(args ...interface{}) () {
   // enclosingMetaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -694,7 +706,7 @@ func (this *QMetaClassInfo) Enclosingmetaobject(args ...interface{}) () {
 }
 
 // parameterType(int)
-func (this *QMetaMethod) Parametertype(args ...interface{}) (ret interface{}) {
+func (this *QMetaMethod) ParameterType(args ...interface{}) (ret interface{}) {
   // parameterType(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -726,7 +738,7 @@ func (this *QMetaMethod) Parametertype(args ...interface{}) (ret interface{}) {
 }
 
 // parameterNames()
-func (this *QMetaMethod) Parameternames(args ...interface{}) () {
+func (this *QMetaMethod) ParameterNames(args ...interface{}) () {
   // parameterNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -747,7 +759,7 @@ func (this *QMetaMethod) Parameternames(args ...interface{}) () {
 }
 
 // methodIndex()
-func (this *QMetaMethod) Methodindex(args ...interface{}) (ret interface{}) {
+func (this *QMetaMethod) MethodIndex(args ...interface{}) (ret interface{}) {
   // methodIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -776,7 +788,7 @@ func (this *QMetaMethod) Methodindex(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QMetaMethod) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QMetaMethod) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -834,7 +846,7 @@ func (this *QMetaMethod) Name(args ...interface{}) (ret interface{}) {
 }
 
 // getParameterTypes(int *)
-func (this *QMetaMethod) Getparametertypes(args ...interface{}) () {
+func (this *QMetaMethod) GetParameterTypes(args ...interface{}) () {
   // getParameterTypes(int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -858,7 +870,7 @@ func (this *QMetaMethod) Getparametertypes(args ...interface{}) () {
 }
 
 // parameterCount()
-func (this *QMetaMethod) Parametercount(args ...interface{}) (ret interface{}) {
+func (this *QMetaMethod) ParameterCount(args ...interface{}) (ret interface{}) {
   // parameterCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -908,7 +920,7 @@ func (this *QMetaMethod) Access(args ...interface{}) () {
 }
 
 // typeName()
-func (this *QMetaMethod) Typename(args ...interface{}) (ret interface{}) {
+func (this *QMetaMethod) TypeName(args ...interface{}) (ret interface{}) {
   // typeName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -966,7 +978,7 @@ func (this *QMetaMethod) Tag(args ...interface{}) (ret interface{}) {
 }
 
 // methodType()
-func (this *QMetaMethod) Methodtype(args ...interface{}) () {
+func (this *QMetaMethod) MethodType(args ...interface{}) () {
   // methodType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -987,7 +999,7 @@ func (this *QMetaMethod) Methodtype(args ...interface{}) () {
 }
 
 // returnType()
-func (this *QMetaMethod) Returntype(args ...interface{}) (ret interface{}) {
+func (this *QMetaMethod) ReturnType(args ...interface{}) (ret interface{}) {
   // returnType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1045,7 +1057,7 @@ func (this *QMetaMethod) Attributes(args ...interface{}) (ret interface{}) {
 }
 
 // parameterTypes()
-func (this *QMetaMethod) Parametertypes(args ...interface{}) () {
+func (this *QMetaMethod) ParameterTypes(args ...interface{}) () {
   // parameterTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1095,7 +1107,7 @@ func (this *QMetaMethod) Revision(args ...interface{}) (ret interface{}) {
 }
 
 // methodSignature()
-func (this *QMetaMethod) Methodsignature(args ...interface{}) (ret interface{}) {
+func (this *QMetaMethod) MethodSignature(args ...interface{}) (ret interface{}) {
   // methodSignature()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1124,6 +1136,9 @@ func (this *QMetaMethod) Methodsignature(args ...interface{}) (ret interface{}) 
 }
 
 // QMetaMethod()
+func GcfreeQMetaMethod(this *QMetaMethod) {
+  qtrt.UniverseFree(this)
+}
 func NewQMetaMethod(args ...interface{}) *QMetaMethod {
   // QMetaMethod()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1139,7 +1154,9 @@ func NewQMetaMethod(args ...interface{}) *QMetaMethod {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QMetaMethodC2Ev()
-    return &QMetaMethod{Qclsinst:qthis}
+    this := &QMetaMethod{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMetaMethod)
+    return this
   default:
     qtrt.ErrorResolve("QMetaMethod", "QMetaMethod", args)
   }
@@ -1148,7 +1165,7 @@ func NewQMetaMethod(args ...interface{}) *QMetaMethod {
 }
 
 // enclosingMetaObject()
-func (this *QMetaMethod) Enclosingmetaobject(args ...interface{}) () {
+func (this *QMetaMethod) EnclosingMetaObject(args ...interface{}) () {
   // enclosingMetaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1169,7 +1186,7 @@ func (this *QMetaMethod) Enclosingmetaobject(args ...interface{}) () {
 }
 
 // isStored(const class QObject *)
-func (this *QMetaProperty) Isstored(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsStored(args ...interface{}) (ret interface{}) {
   // isStored(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1201,7 +1218,7 @@ func (this *QMetaProperty) Isstored(args ...interface{}) (ret interface{}) {
 }
 
 // isEditable(const class QObject *)
-func (this *QMetaProperty) Iseditable(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsEditable(args ...interface{}) (ret interface{}) {
   // isEditable(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1233,7 +1250,7 @@ func (this *QMetaProperty) Iseditable(args ...interface{}) (ret interface{}) {
 }
 
 // notifySignal()
-func (this *QMetaProperty) Notifysignal(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) NotifySignal(args ...interface{}) (ret interface{}) {
   // notifySignal()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1262,7 +1279,7 @@ func (this *QMetaProperty) Notifysignal(args ...interface{}) (ret interface{}) {
 }
 
 // isConstant()
-func (this *QMetaProperty) Isconstant(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsConstant(args ...interface{}) (ret interface{}) {
   // isConstant()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1291,7 +1308,7 @@ func (this *QMetaProperty) Isconstant(args ...interface{}) (ret interface{}) {
 }
 
 // typeName()
-func (this *QMetaProperty) Typename(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) TypeName(args ...interface{}) (ret interface{}) {
   // typeName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1320,6 +1337,9 @@ func (this *QMetaProperty) Typename(args ...interface{}) (ret interface{}) {
 }
 
 // QMetaProperty()
+func GcfreeQMetaProperty(this *QMetaProperty) {
+  qtrt.UniverseFree(this)
+}
 func NewQMetaProperty(args ...interface{}) *QMetaProperty {
   // QMetaProperty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1335,7 +1355,9 @@ func NewQMetaProperty(args ...interface{}) *QMetaProperty {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QMetaPropertyC2Ev()
-    return &QMetaProperty{Qclsinst:qthis}
+    this := &QMetaProperty{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMetaProperty)
+    return this
   default:
     qtrt.ErrorResolve("QMetaProperty", "QMetaProperty", args)
   }
@@ -1344,7 +1366,7 @@ func NewQMetaProperty(args ...interface{}) *QMetaProperty {
 }
 
 // notifySignalIndex()
-func (this *QMetaProperty) Notifysignalindex(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) NotifySignalIndex(args ...interface{}) (ret interface{}) {
   // notifySignalIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1373,7 +1395,7 @@ func (this *QMetaProperty) Notifysignalindex(args ...interface{}) (ret interface
 }
 
 // readOnGadget(const void *)
-func (this *QMetaProperty) Readongadget(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) ReadOnGadget(args ...interface{}) (ret interface{}) {
   // readOnGadget(const void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1405,7 +1427,7 @@ func (this *QMetaProperty) Readongadget(args ...interface{}) (ret interface{}) {
 }
 
 // hasStdCppSet()
-func (this *QMetaProperty) Hasstdcppset(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) HasStdCppSet(args ...interface{}) (ret interface{}) {
   // hasStdCppSet()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1434,7 +1456,7 @@ func (this *QMetaProperty) Hasstdcppset(args ...interface{}) (ret interface{}) {
 }
 
 // isFinal()
-func (this *QMetaProperty) Isfinal(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsFinal(args ...interface{}) (ret interface{}) {
   // isFinal()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1463,7 +1485,7 @@ func (this *QMetaProperty) Isfinal(args ...interface{}) (ret interface{}) {
 }
 
 // propertyIndex()
-func (this *QMetaProperty) Propertyindex(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) PropertyIndex(args ...interface{}) (ret interface{}) {
   // propertyIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1492,7 +1514,7 @@ func (this *QMetaProperty) Propertyindex(args ...interface{}) (ret interface{}) 
 }
 
 // isWritable()
-func (this *QMetaProperty) Iswritable(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsWritable(args ...interface{}) (ret interface{}) {
   // isWritable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1577,7 +1599,7 @@ func (this *QMetaProperty) Type_(args ...interface{}) () {
 }
 
 // enclosingMetaObject()
-func (this *QMetaProperty) Enclosingmetaobject(args ...interface{}) () {
+func (this *QMetaProperty) EnclosingMetaObject(args ...interface{}) () {
   // enclosingMetaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1659,7 +1681,7 @@ func (this *QMetaProperty) Enumerator(args ...interface{}) (ret interface{}) {
 }
 
 // isEnumType()
-func (this *QMetaProperty) Isenumtype(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsEnumType(args ...interface{}) (ret interface{}) {
   // isEnumType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1720,7 +1742,7 @@ func (this *QMetaProperty) Read(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QMetaProperty) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1749,7 +1771,7 @@ func (this *QMetaProperty) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // isDesignable(const class QObject *)
-func (this *QMetaProperty) Isdesignable(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsDesignable(args ...interface{}) (ret interface{}) {
   // isDesignable(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1781,7 +1803,7 @@ func (this *QMetaProperty) Isdesignable(args ...interface{}) (ret interface{}) {
 }
 
 // writeOnGadget(void *, const class QVariant &)
-func (this *QMetaProperty) Writeongadget(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) WriteOnGadget(args ...interface{}) (ret interface{}) {
   // writeOnGadget(void *, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1816,7 +1838,7 @@ func (this *QMetaProperty) Writeongadget(args ...interface{}) (ret interface{}) 
 }
 
 // userType()
-func (this *QMetaProperty) Usertype(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) UserType(args ...interface{}) (ret interface{}) {
   // userType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1845,7 +1867,7 @@ func (this *QMetaProperty) Usertype(args ...interface{}) (ret interface{}) {
 }
 
 // hasNotifySignal()
-func (this *QMetaProperty) Hasnotifysignal(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) HasNotifySignal(args ...interface{}) (ret interface{}) {
   // hasNotifySignal()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1874,7 +1896,7 @@ func (this *QMetaProperty) Hasnotifysignal(args ...interface{}) (ret interface{}
 }
 
 // isScriptable(const class QObject *)
-func (this *QMetaProperty) Isscriptable(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsScriptable(args ...interface{}) (ret interface{}) {
   // isScriptable(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1906,7 +1928,7 @@ func (this *QMetaProperty) Isscriptable(args ...interface{}) (ret interface{}) {
 }
 
 // isFlagType()
-func (this *QMetaProperty) Isflagtype(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsFlagType(args ...interface{}) (ret interface{}) {
   // isFlagType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1964,7 +1986,7 @@ func (this *QMetaProperty) Name(args ...interface{}) (ret interface{}) {
 }
 
 // resetOnGadget(void *)
-func (this *QMetaProperty) Resetongadget(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) ResetOnGadget(args ...interface{}) (ret interface{}) {
   // resetOnGadget(void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1996,7 +2018,7 @@ func (this *QMetaProperty) Resetongadget(args ...interface{}) (ret interface{}) 
 }
 
 // isResettable()
-func (this *QMetaProperty) Isresettable(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsResettable(args ...interface{}) (ret interface{}) {
   // isResettable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2025,7 +2047,7 @@ func (this *QMetaProperty) Isresettable(args ...interface{}) (ret interface{}) {
 }
 
 // isReadable()
-func (this *QMetaProperty) Isreadable(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsReadable(args ...interface{}) (ret interface{}) {
   // isReadable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2083,7 +2105,7 @@ func (this *QMetaProperty) Revision(args ...interface{}) (ret interface{}) {
 }
 
 // isUser(const class QObject *)
-func (this *QMetaProperty) Isuser(args ...interface{}) (ret interface{}) {
+func (this *QMetaProperty) IsUser(args ...interface{}) (ret interface{}) {
   // isUser(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

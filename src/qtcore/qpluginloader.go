@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qpluginloader.h
 // dst-file: /src/core/qpluginloader.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -68,6 +69,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPluginLoader)=1
@@ -106,7 +108,7 @@ func (this *QPluginLoader) Load(args ...interface{}) (ret interface{}) {
 }
 
 // errorString()
-func (this *QPluginLoader) Errorstring(args ...interface{}) (ret interface{}) {
+func (this *QPluginLoader) ErrorString(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -164,6 +166,9 @@ func (this *QPluginLoader) Unload(args ...interface{}) (ret interface{}) {
 }
 
 // QPluginLoader(class QObject *)
+func GcfreeQPluginLoader(this *QPluginLoader) {
+  qtrt.UniverseFree(this)
+}
 func NewQPluginLoader(args ...interface{}) *QPluginLoader {
   // QPluginLoader(class QObject *)
   // QPluginLoader(const class QString &, class QObject *)
@@ -186,7 +191,9 @@ func NewQPluginLoader(args ...interface{}) *QPluginLoader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QPluginLoaderC2EP7QObject(arg0)
-    return &QPluginLoader{Qclsinst:qthis}
+    this := &QPluginLoader{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPluginLoader)
+    return this
   case 1:
     // invoke: _ZN13QPluginLoaderC1ERK7QStringP7QObject
     // invoke: void QPluginLoader(const class QString &, class QObject *)
@@ -197,7 +204,9 @@ func NewQPluginLoader(args ...interface{}) *QPluginLoader {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QPluginLoaderC2ERK7QStringP7QObject(arg0, arg1)
-    return &QPluginLoader{Qclsinst:qthis}
+    this := &QPluginLoader{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPluginLoader)
+    return this
   default:
     qtrt.ErrorResolve("QPluginLoader", "QPluginLoader", args)
   }
@@ -206,7 +215,7 @@ func NewQPluginLoader(args ...interface{}) *QPluginLoader {
 }
 
 // ~QPluginLoader()
-func (this *QPluginLoader) Freeqpluginloader(args ...interface{}) () {
+func (this *QPluginLoader) Free(args ...interface{}) () {
   // ~QPluginLoader()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -218,7 +227,10 @@ func (this *QPluginLoader) Freeqpluginloader(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QPluginLoaderD0Ev
     // invoke: void ~QPluginLoader()
-    C.C_ZN13QPluginLoaderD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QPluginLoaderD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPluginLoader", "~QPluginLoader", args)
   }
@@ -227,7 +239,7 @@ func (this *QPluginLoader) Freeqpluginloader(args ...interface{}) () {
 }
 
 // setFileName(const class QString &)
-func (this *QPluginLoader) Setfilename(args ...interface{}) () {
+func (this *QPluginLoader) SetFileName(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -251,7 +263,7 @@ func (this *QPluginLoader) Setfilename(args ...interface{}) () {
 }
 
 // isLoaded()
-func (this *QPluginLoader) Isloaded(args ...interface{}) (ret interface{}) {
+func (this *QPluginLoader) IsLoaded(args ...interface{}) (ret interface{}) {
   // isLoaded()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -309,7 +321,7 @@ func (this *QPluginLoader) Instance(args ...interface{}) (ret interface{}) {
 }
 
 // fileName()
-func (this *QPluginLoader) Filename(args ...interface{}) (ret interface{}) {
+func (this *QPluginLoader) FileName(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -338,7 +350,7 @@ func (this *QPluginLoader) Filename(args ...interface{}) (ret interface{}) {
 }
 
 // loadHints()
-func (this *QPluginLoader) Loadhints(args ...interface{}) () {
+func (this *QPluginLoader) LoadHints(args ...interface{}) () {
   // loadHints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -359,7 +371,7 @@ func (this *QPluginLoader) Loadhints(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QPluginLoader) Metaobject(args ...interface{}) () {
+func (this *QPluginLoader) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -380,7 +392,7 @@ func (this *QPluginLoader) Metaobject(args ...interface{}) () {
 }
 
 // metaData()
-func (this *QPluginLoader) Metadata(args ...interface{}) () {
+func (this *QPluginLoader) MetaData(args ...interface{}) () {
   // metaData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -401,7 +413,7 @@ func (this *QPluginLoader) Metadata(args ...interface{}) () {
 }
 
 // staticInstances()
-func (this *QPluginLoader) Staticinstances_S(args ...interface{}) () {
+func (this *QPluginLoader) StaticInstances_s(args ...interface{}) () {
   // staticInstances()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -422,7 +434,7 @@ func (this *QPluginLoader) Staticinstances_S(args ...interface{}) () {
 }
 
 // staticPlugins()
-func (this *QPluginLoader) Staticplugins_S(args ...interface{}) () {
+func (this *QPluginLoader) StaticPlugins_s(args ...interface{}) () {
   // staticPlugins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

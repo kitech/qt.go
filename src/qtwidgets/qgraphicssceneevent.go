@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qgraphicssceneevent.h
 // dst-file: /src/widgets/qgraphicssceneevent.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -222,6 +223,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsSceneMoveEvent)=1
@@ -279,7 +281,7 @@ type QGraphicsSceneResizeEvent struct {
 }
 
 // setNewPos(const class QPointF &)
-func (this *QGraphicsSceneMoveEvent) Setnewpos(args ...interface{}) () {
+func (this *QGraphicsSceneMoveEvent) SetNewPos(args ...interface{}) () {
   // setNewPos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -303,7 +305,7 @@ func (this *QGraphicsSceneMoveEvent) Setnewpos(args ...interface{}) () {
 }
 
 // newPos()
-func (this *QGraphicsSceneMoveEvent) Newpos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneMoveEvent) NewPos(args ...interface{}) (ret interface{}) {
   // newPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -332,6 +334,9 @@ func (this *QGraphicsSceneMoveEvent) Newpos(args ...interface{}) (ret interface{
 }
 
 // QGraphicsSceneMoveEvent()
+func GcfreeQGraphicsSceneMoveEvent(this *QGraphicsSceneMoveEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsSceneMoveEvent(args ...interface{}) *QGraphicsSceneMoveEvent {
   // QGraphicsSceneMoveEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -347,7 +352,9 @@ func NewQGraphicsSceneMoveEvent(args ...interface{}) *QGraphicsSceneMoveEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QGraphicsSceneMoveEventC2Ev()
-    return &QGraphicsSceneMoveEvent{Qclsinst:qthis}
+    this := &QGraphicsSceneMoveEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsSceneMoveEvent)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "QGraphicsSceneMoveEvent", args)
   }
@@ -356,7 +363,7 @@ func NewQGraphicsSceneMoveEvent(args ...interface{}) *QGraphicsSceneMoveEvent {
 }
 
 // ~QGraphicsSceneMoveEvent()
-func (this *QGraphicsSceneMoveEvent) Freeqgraphicsscenemoveevent(args ...interface{}) () {
+func (this *QGraphicsSceneMoveEvent) Free(args ...interface{}) () {
   // ~QGraphicsSceneMoveEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -368,7 +375,10 @@ func (this *QGraphicsSceneMoveEvent) Freeqgraphicsscenemoveevent(args ...interfa
   case 0:
     // invoke: _ZN23QGraphicsSceneMoveEventD0Ev
     // invoke: void ~QGraphicsSceneMoveEvent()
-    C.C_ZN23QGraphicsSceneMoveEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN23QGraphicsSceneMoveEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "~QGraphicsSceneMoveEvent", args)
   }
@@ -377,7 +387,7 @@ func (this *QGraphicsSceneMoveEvent) Freeqgraphicsscenemoveevent(args ...interfa
 }
 
 // oldPos()
-func (this *QGraphicsSceneMoveEvent) Oldpos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneMoveEvent) OldPos(args ...interface{}) (ret interface{}) {
   // oldPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -406,7 +416,7 @@ func (this *QGraphicsSceneMoveEvent) Oldpos(args ...interface{}) (ret interface{
 }
 
 // setOldPos(const class QPointF &)
-func (this *QGraphicsSceneMoveEvent) Setoldpos(args ...interface{}) () {
+func (this *QGraphicsSceneMoveEvent) SetOldPos(args ...interface{}) () {
   // setOldPos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -451,7 +461,7 @@ func (this *QGraphicsSceneContextMenuEvent) Modifiers(args ...interface{}) () {
 }
 
 // setScreenPos(const class QPoint &)
-func (this *QGraphicsSceneContextMenuEvent) Setscreenpos(args ...interface{}) () {
+func (this *QGraphicsSceneContextMenuEvent) SetScreenPos(args ...interface{}) () {
   // setScreenPos(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -475,7 +485,7 @@ func (this *QGraphicsSceneContextMenuEvent) Setscreenpos(args ...interface{}) ()
 }
 
 // setPos(const class QPointF &)
-func (this *QGraphicsSceneContextMenuEvent) Setpos(args ...interface{}) () {
+func (this *QGraphicsSceneContextMenuEvent) SetPos(args ...interface{}) () {
   // setPos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -528,7 +538,7 @@ func (this *QGraphicsSceneContextMenuEvent) Pos(args ...interface{}) (ret interf
 }
 
 // setScenePos(const class QPointF &)
-func (this *QGraphicsSceneContextMenuEvent) Setscenepos(args ...interface{}) () {
+func (this *QGraphicsSceneContextMenuEvent) SetScenePos(args ...interface{}) () {
   // setScenePos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -573,7 +583,7 @@ func (this *QGraphicsSceneContextMenuEvent) Reason(args ...interface{}) () {
 }
 
 // screenPos()
-func (this *QGraphicsSceneContextMenuEvent) Screenpos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneContextMenuEvent) ScreenPos(args ...interface{}) (ret interface{}) {
   // screenPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -602,7 +612,7 @@ func (this *QGraphicsSceneContextMenuEvent) Screenpos(args ...interface{}) (ret 
 }
 
 // scenePos()
-func (this *QGraphicsSceneContextMenuEvent) Scenepos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneContextMenuEvent) ScenePos(args ...interface{}) (ret interface{}) {
   // scenePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -631,7 +641,7 @@ func (this *QGraphicsSceneContextMenuEvent) Scenepos(args ...interface{}) (ret i
 }
 
 // ~QGraphicsSceneContextMenuEvent()
-func (this *QGraphicsSceneContextMenuEvent) Freeqgraphicsscenecontextmenuevent(args ...interface{}) () {
+func (this *QGraphicsSceneContextMenuEvent) Free(args ...interface{}) () {
   // ~QGraphicsSceneContextMenuEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -643,7 +653,10 @@ func (this *QGraphicsSceneContextMenuEvent) Freeqgraphicsscenecontextmenuevent(a
   case 0:
     // invoke: _ZN30QGraphicsSceneContextMenuEventD0Ev
     // invoke: void ~QGraphicsSceneContextMenuEvent()
-    C.C_ZN30QGraphicsSceneContextMenuEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN30QGraphicsSceneContextMenuEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "~QGraphicsSceneContextMenuEvent", args)
   }
@@ -652,7 +665,7 @@ func (this *QGraphicsSceneContextMenuEvent) Freeqgraphicsscenecontextmenuevent(a
 }
 
 // setScreenPos(const class QPoint &)
-func (this *QGraphicsSceneMouseEvent) Setscreenpos(args ...interface{}) () {
+func (this *QGraphicsSceneMouseEvent) SetScreenPos(args ...interface{}) () {
   // setScreenPos(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -676,7 +689,7 @@ func (this *QGraphicsSceneMouseEvent) Setscreenpos(args ...interface{}) () {
 }
 
 // lastPos()
-func (this *QGraphicsSceneMouseEvent) Lastpos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneMouseEvent) LastPos(args ...interface{}) (ret interface{}) {
   // lastPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -734,7 +747,7 @@ func (this *QGraphicsSceneMouseEvent) Pos(args ...interface{}) (ret interface{})
 }
 
 // lastScenePos()
-func (this *QGraphicsSceneMouseEvent) Lastscenepos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneMouseEvent) LastScenePos(args ...interface{}) (ret interface{}) {
   // lastScenePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -784,7 +797,7 @@ func (this *QGraphicsSceneMouseEvent) Modifiers(args ...interface{}) () {
 }
 
 // setLastPos(const class QPointF &)
-func (this *QGraphicsSceneMouseEvent) Setlastpos(args ...interface{}) () {
+func (this *QGraphicsSceneMouseEvent) SetLastPos(args ...interface{}) () {
   // setLastPos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -808,7 +821,7 @@ func (this *QGraphicsSceneMouseEvent) Setlastpos(args ...interface{}) () {
 }
 
 // ~QGraphicsSceneMouseEvent()
-func (this *QGraphicsSceneMouseEvent) Freeqgraphicsscenemouseevent(args ...interface{}) () {
+func (this *QGraphicsSceneMouseEvent) Free(args ...interface{}) () {
   // ~QGraphicsSceneMouseEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -820,7 +833,10 @@ func (this *QGraphicsSceneMouseEvent) Freeqgraphicsscenemouseevent(args ...inter
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEventD0Ev
     // invoke: void ~QGraphicsSceneMouseEvent()
-    C.C_ZN24QGraphicsSceneMouseEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN24QGraphicsSceneMouseEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "~QGraphicsSceneMouseEvent", args)
   }
@@ -871,7 +887,7 @@ func (this *QGraphicsSceneMouseEvent) Source(args ...interface{}) () {
 }
 
 // scenePos()
-func (this *QGraphicsSceneMouseEvent) Scenepos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneMouseEvent) ScenePos(args ...interface{}) (ret interface{}) {
   // scenePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -900,7 +916,7 @@ func (this *QGraphicsSceneMouseEvent) Scenepos(args ...interface{}) (ret interfa
 }
 
 // setScenePos(const class QPointF &)
-func (this *QGraphicsSceneMouseEvent) Setscenepos(args ...interface{}) () {
+func (this *QGraphicsSceneMouseEvent) SetScenePos(args ...interface{}) () {
   // setScenePos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -924,7 +940,7 @@ func (this *QGraphicsSceneMouseEvent) Setscenepos(args ...interface{}) () {
 }
 
 // setLastScreenPos(const class QPoint &)
-func (this *QGraphicsSceneMouseEvent) Setlastscreenpos(args ...interface{}) () {
+func (this *QGraphicsSceneMouseEvent) SetLastScreenPos(args ...interface{}) () {
   // setLastScreenPos(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -948,7 +964,7 @@ func (this *QGraphicsSceneMouseEvent) Setlastscreenpos(args ...interface{}) () {
 }
 
 // screenPos()
-func (this *QGraphicsSceneMouseEvent) Screenpos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneMouseEvent) ScreenPos(args ...interface{}) (ret interface{}) {
   // screenPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -977,7 +993,7 @@ func (this *QGraphicsSceneMouseEvent) Screenpos(args ...interface{}) (ret interf
 }
 
 // lastScreenPos()
-func (this *QGraphicsSceneMouseEvent) Lastscreenpos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneMouseEvent) LastScreenPos(args ...interface{}) (ret interface{}) {
   // lastScreenPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1006,7 +1022,7 @@ func (this *QGraphicsSceneMouseEvent) Lastscreenpos(args ...interface{}) (ret in
 }
 
 // setPos(const class QPointF &)
-func (this *QGraphicsSceneMouseEvent) Setpos(args ...interface{}) () {
+func (this *QGraphicsSceneMouseEvent) SetPos(args ...interface{}) () {
   // setPos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1072,7 +1088,7 @@ func (this *QGraphicsSceneMouseEvent) Flags(args ...interface{}) () {
 }
 
 // setLastScenePos(const class QPointF &)
-func (this *QGraphicsSceneMouseEvent) Setlastscenepos(args ...interface{}) () {
+func (this *QGraphicsSceneMouseEvent) SetLastScenePos(args ...interface{}) () {
   // setLastScenePos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1096,7 +1112,7 @@ func (this *QGraphicsSceneMouseEvent) Setlastscenepos(args ...interface{}) () {
 }
 
 // screenPos()
-func (this *QGraphicsSceneHelpEvent) Screenpos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneHelpEvent) ScreenPos(args ...interface{}) (ret interface{}) {
   // screenPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1125,7 +1141,7 @@ func (this *QGraphicsSceneHelpEvent) Screenpos(args ...interface{}) (ret interfa
 }
 
 // setScreenPos(const class QPoint &)
-func (this *QGraphicsSceneHelpEvent) Setscreenpos(args ...interface{}) () {
+func (this *QGraphicsSceneHelpEvent) SetScreenPos(args ...interface{}) () {
   // setScreenPos(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1149,7 +1165,7 @@ func (this *QGraphicsSceneHelpEvent) Setscreenpos(args ...interface{}) () {
 }
 
 // ~QGraphicsSceneHelpEvent()
-func (this *QGraphicsSceneHelpEvent) Freeqgraphicsscenehelpevent(args ...interface{}) () {
+func (this *QGraphicsSceneHelpEvent) Free(args ...interface{}) () {
   // ~QGraphicsSceneHelpEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1161,7 +1177,10 @@ func (this *QGraphicsSceneHelpEvent) Freeqgraphicsscenehelpevent(args ...interfa
   case 0:
     // invoke: _ZN23QGraphicsSceneHelpEventD0Ev
     // invoke: void ~QGraphicsSceneHelpEvent()
-    C.C_ZN23QGraphicsSceneHelpEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN23QGraphicsSceneHelpEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "~QGraphicsSceneHelpEvent", args)
   }
@@ -1170,7 +1189,7 @@ func (this *QGraphicsSceneHelpEvent) Freeqgraphicsscenehelpevent(args ...interfa
 }
 
 // setScenePos(const class QPointF &)
-func (this *QGraphicsSceneHelpEvent) Setscenepos(args ...interface{}) () {
+func (this *QGraphicsSceneHelpEvent) SetScenePos(args ...interface{}) () {
   // setScenePos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1194,7 +1213,7 @@ func (this *QGraphicsSceneHelpEvent) Setscenepos(args ...interface{}) () {
 }
 
 // scenePos()
-func (this *QGraphicsSceneHelpEvent) Scenepos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneHelpEvent) ScenePos(args ...interface{}) (ret interface{}) {
   // scenePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1244,7 +1263,7 @@ func (this *QGraphicsSceneHoverEvent) Modifiers(args ...interface{}) () {
 }
 
 // setLastPos(const class QPointF &)
-func (this *QGraphicsSceneHoverEvent) Setlastpos(args ...interface{}) () {
+func (this *QGraphicsSceneHoverEvent) SetLastPos(args ...interface{}) () {
   // setLastPos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1268,7 +1287,7 @@ func (this *QGraphicsSceneHoverEvent) Setlastpos(args ...interface{}) () {
 }
 
 // setScreenPos(const class QPoint &)
-func (this *QGraphicsSceneHoverEvent) Setscreenpos(args ...interface{}) () {
+func (this *QGraphicsSceneHoverEvent) SetScreenPos(args ...interface{}) () {
   // setScreenPos(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1292,7 +1311,7 @@ func (this *QGraphicsSceneHoverEvent) Setscreenpos(args ...interface{}) () {
 }
 
 // lastPos()
-func (this *QGraphicsSceneHoverEvent) Lastpos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneHoverEvent) LastPos(args ...interface{}) (ret interface{}) {
   // lastPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1321,7 +1340,7 @@ func (this *QGraphicsSceneHoverEvent) Lastpos(args ...interface{}) (ret interfac
 }
 
 // lastScreenPos()
-func (this *QGraphicsSceneHoverEvent) Lastscreenpos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneHoverEvent) LastScreenPos(args ...interface{}) (ret interface{}) {
   // lastScreenPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1379,7 +1398,7 @@ func (this *QGraphicsSceneHoverEvent) Pos(args ...interface{}) (ret interface{})
 }
 
 // setScenePos(const class QPointF &)
-func (this *QGraphicsSceneHoverEvent) Setscenepos(args ...interface{}) () {
+func (this *QGraphicsSceneHoverEvent) SetScenePos(args ...interface{}) () {
   // setScenePos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1403,7 +1422,7 @@ func (this *QGraphicsSceneHoverEvent) Setscenepos(args ...interface{}) () {
 }
 
 // setPos(const class QPointF &)
-func (this *QGraphicsSceneHoverEvent) Setpos(args ...interface{}) () {
+func (this *QGraphicsSceneHoverEvent) SetPos(args ...interface{}) () {
   // setPos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1427,7 +1446,7 @@ func (this *QGraphicsSceneHoverEvent) Setpos(args ...interface{}) () {
 }
 
 // screenPos()
-func (this *QGraphicsSceneHoverEvent) Screenpos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneHoverEvent) ScreenPos(args ...interface{}) (ret interface{}) {
   // screenPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1456,7 +1475,7 @@ func (this *QGraphicsSceneHoverEvent) Screenpos(args ...interface{}) (ret interf
 }
 
 // setLastScenePos(const class QPointF &)
-func (this *QGraphicsSceneHoverEvent) Setlastscenepos(args ...interface{}) () {
+func (this *QGraphicsSceneHoverEvent) SetLastScenePos(args ...interface{}) () {
   // setLastScenePos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1480,7 +1499,7 @@ func (this *QGraphicsSceneHoverEvent) Setlastscenepos(args ...interface{}) () {
 }
 
 // lastScenePos()
-func (this *QGraphicsSceneHoverEvent) Lastscenepos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneHoverEvent) LastScenePos(args ...interface{}) (ret interface{}) {
   // lastScenePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1509,7 +1528,7 @@ func (this *QGraphicsSceneHoverEvent) Lastscenepos(args ...interface{}) (ret int
 }
 
 // ~QGraphicsSceneHoverEvent()
-func (this *QGraphicsSceneHoverEvent) Freeqgraphicsscenehoverevent(args ...interface{}) () {
+func (this *QGraphicsSceneHoverEvent) Free(args ...interface{}) () {
   // ~QGraphicsSceneHoverEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1521,7 +1540,10 @@ func (this *QGraphicsSceneHoverEvent) Freeqgraphicsscenehoverevent(args ...inter
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEventD0Ev
     // invoke: void ~QGraphicsSceneHoverEvent()
-    C.C_ZN24QGraphicsSceneHoverEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN24QGraphicsSceneHoverEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "~QGraphicsSceneHoverEvent", args)
   }
@@ -1530,7 +1552,7 @@ func (this *QGraphicsSceneHoverEvent) Freeqgraphicsscenehoverevent(args ...inter
 }
 
 // setLastScreenPos(const class QPoint &)
-func (this *QGraphicsSceneHoverEvent) Setlastscreenpos(args ...interface{}) () {
+func (this *QGraphicsSceneHoverEvent) SetLastScreenPos(args ...interface{}) () {
   // setLastScreenPos(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1554,7 +1576,7 @@ func (this *QGraphicsSceneHoverEvent) Setlastscreenpos(args ...interface{}) () {
 }
 
 // scenePos()
-func (this *QGraphicsSceneHoverEvent) Scenepos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneHoverEvent) ScenePos(args ...interface{}) (ret interface{}) {
   // scenePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1604,7 +1626,7 @@ func (this *QGraphicsSceneWheelEvent) Modifiers(args ...interface{}) () {
 }
 
 // setDelta(int)
-func (this *QGraphicsSceneWheelEvent) Setdelta(args ...interface{}) () {
+func (this *QGraphicsSceneWheelEvent) SetDelta(args ...interface{}) () {
   // setDelta(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1649,7 +1671,7 @@ func (this *QGraphicsSceneWheelEvent) Orientation(args ...interface{}) () {
 }
 
 // setScreenPos(const class QPoint &)
-func (this *QGraphicsSceneWheelEvent) Setscreenpos(args ...interface{}) () {
+func (this *QGraphicsSceneWheelEvent) SetScreenPos(args ...interface{}) () {
   // setScreenPos(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1673,7 +1695,7 @@ func (this *QGraphicsSceneWheelEvent) Setscreenpos(args ...interface{}) () {
 }
 
 // setPos(const class QPointF &)
-func (this *QGraphicsSceneWheelEvent) Setpos(args ...interface{}) () {
+func (this *QGraphicsSceneWheelEvent) SetPos(args ...interface{}) () {
   // setPos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1726,7 +1748,7 @@ func (this *QGraphicsSceneWheelEvent) Pos(args ...interface{}) (ret interface{})
 }
 
 // setScenePos(const class QPointF &)
-func (this *QGraphicsSceneWheelEvent) Setscenepos(args ...interface{}) () {
+func (this *QGraphicsSceneWheelEvent) SetScenePos(args ...interface{}) () {
   // setScenePos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1771,7 +1793,7 @@ func (this *QGraphicsSceneWheelEvent) Buttons(args ...interface{}) () {
 }
 
 // screenPos()
-func (this *QGraphicsSceneWheelEvent) Screenpos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneWheelEvent) ScreenPos(args ...interface{}) (ret interface{}) {
   // screenPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1829,7 +1851,7 @@ func (this *QGraphicsSceneWheelEvent) Delta(args ...interface{}) (ret interface{
 }
 
 // ~QGraphicsSceneWheelEvent()
-func (this *QGraphicsSceneWheelEvent) Freeqgraphicsscenewheelevent(args ...interface{}) () {
+func (this *QGraphicsSceneWheelEvent) Free(args ...interface{}) () {
   // ~QGraphicsSceneWheelEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1841,7 +1863,10 @@ func (this *QGraphicsSceneWheelEvent) Freeqgraphicsscenewheelevent(args ...inter
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEventD0Ev
     // invoke: void ~QGraphicsSceneWheelEvent()
-    C.C_ZN24QGraphicsSceneWheelEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN24QGraphicsSceneWheelEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "~QGraphicsSceneWheelEvent", args)
   }
@@ -1850,7 +1875,7 @@ func (this *QGraphicsSceneWheelEvent) Freeqgraphicsscenewheelevent(args ...inter
 }
 
 // scenePos()
-func (this *QGraphicsSceneWheelEvent) Scenepos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneWheelEvent) ScenePos(args ...interface{}) (ret interface{}) {
   // scenePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1879,7 +1904,7 @@ func (this *QGraphicsSceneWheelEvent) Scenepos(args ...interface{}) (ret interfa
 }
 
 // setMimeData(const class QMimeData *)
-func (this *QGraphicsSceneDragDropEvent) Setmimedata(args ...interface{}) () {
+func (this *QGraphicsSceneDragDropEvent) SetMimeData(args ...interface{}) () {
   // setMimeData(const class QMimeData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1903,7 +1928,7 @@ func (this *QGraphicsSceneDragDropEvent) Setmimedata(args ...interface{}) () {
 }
 
 // setScreenPos(const class QPoint &)
-func (this *QGraphicsSceneDragDropEvent) Setscreenpos(args ...interface{}) () {
+func (this *QGraphicsSceneDragDropEvent) SetScreenPos(args ...interface{}) () {
   // setScreenPos(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1956,7 +1981,7 @@ func (this *QGraphicsSceneDragDropEvent) Pos(args ...interface{}) (ret interface
 }
 
 // setSource(class QWidget *)
-func (this *QGraphicsSceneDragDropEvent) Setsource(args ...interface{}) () {
+func (this *QGraphicsSceneDragDropEvent) SetSource(args ...interface{}) () {
   // setSource(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1980,7 +2005,7 @@ func (this *QGraphicsSceneDragDropEvent) Setsource(args ...interface{}) () {
 }
 
 // acceptProposedAction()
-func (this *QGraphicsSceneDragDropEvent) Acceptproposedaction(args ...interface{}) () {
+func (this *QGraphicsSceneDragDropEvent) AcceptProposedAction(args ...interface{}) () {
   // acceptProposedAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2051,7 +2076,7 @@ func (this *QGraphicsSceneDragDropEvent) Source(args ...interface{}) (ret interf
 }
 
 // scenePos()
-func (this *QGraphicsSceneDragDropEvent) Scenepos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneDragDropEvent) ScenePos(args ...interface{}) (ret interface{}) {
   // scenePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2080,7 +2105,7 @@ func (this *QGraphicsSceneDragDropEvent) Scenepos(args ...interface{}) (ret inte
 }
 
 // proposedAction()
-func (this *QGraphicsSceneDragDropEvent) Proposedaction(args ...interface{}) () {
+func (this *QGraphicsSceneDragDropEvent) ProposedAction(args ...interface{}) () {
   // proposedAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2101,7 +2126,7 @@ func (this *QGraphicsSceneDragDropEvent) Proposedaction(args ...interface{}) () 
 }
 
 // setScenePos(const class QPointF &)
-func (this *QGraphicsSceneDragDropEvent) Setscenepos(args ...interface{}) () {
+func (this *QGraphicsSceneDragDropEvent) SetScenePos(args ...interface{}) () {
   // setScenePos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2125,7 +2150,7 @@ func (this *QGraphicsSceneDragDropEvent) Setscenepos(args ...interface{}) () {
 }
 
 // possibleActions()
-func (this *QGraphicsSceneDragDropEvent) Possibleactions(args ...interface{}) () {
+func (this *QGraphicsSceneDragDropEvent) PossibleActions(args ...interface{}) () {
   // possibleActions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2146,7 +2171,7 @@ func (this *QGraphicsSceneDragDropEvent) Possibleactions(args ...interface{}) ()
 }
 
 // dropAction()
-func (this *QGraphicsSceneDragDropEvent) Dropaction(args ...interface{}) () {
+func (this *QGraphicsSceneDragDropEvent) DropAction(args ...interface{}) () {
   // dropAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2167,7 +2192,7 @@ func (this *QGraphicsSceneDragDropEvent) Dropaction(args ...interface{}) () {
 }
 
 // ~QGraphicsSceneDragDropEvent()
-func (this *QGraphicsSceneDragDropEvent) Freeqgraphicsscenedragdropevent(args ...interface{}) () {
+func (this *QGraphicsSceneDragDropEvent) Free(args ...interface{}) () {
   // ~QGraphicsSceneDragDropEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2179,7 +2204,10 @@ func (this *QGraphicsSceneDragDropEvent) Freeqgraphicsscenedragdropevent(args ..
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEventD0Ev
     // invoke: void ~QGraphicsSceneDragDropEvent()
-    C.C_ZN27QGraphicsSceneDragDropEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN27QGraphicsSceneDragDropEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "~QGraphicsSceneDragDropEvent", args)
   }
@@ -2188,7 +2216,7 @@ func (this *QGraphicsSceneDragDropEvent) Freeqgraphicsscenedragdropevent(args ..
 }
 
 // screenPos()
-func (this *QGraphicsSceneDragDropEvent) Screenpos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneDragDropEvent) ScreenPos(args ...interface{}) (ret interface{}) {
   // screenPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2217,7 +2245,7 @@ func (this *QGraphicsSceneDragDropEvent) Screenpos(args ...interface{}) (ret int
 }
 
 // mimeData()
-func (this *QGraphicsSceneDragDropEvent) Mimedata(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneDragDropEvent) MimeData(args ...interface{}) (ret interface{}) {
   // mimeData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2267,7 +2295,7 @@ func (this *QGraphicsSceneDragDropEvent) Modifiers(args ...interface{}) () {
 }
 
 // setPos(const class QPointF &)
-func (this *QGraphicsSceneDragDropEvent) Setpos(args ...interface{}) () {
+func (this *QGraphicsSceneDragDropEvent) SetPos(args ...interface{}) () {
   // setPos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2291,7 +2319,7 @@ func (this *QGraphicsSceneDragDropEvent) Setpos(args ...interface{}) () {
 }
 
 // ~QGraphicsSceneEvent()
-func (this *QGraphicsSceneEvent) Freeqgraphicssceneevent(args ...interface{}) () {
+func (this *QGraphicsSceneEvent) Free(args ...interface{}) () {
   // ~QGraphicsSceneEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2303,7 +2331,10 @@ func (this *QGraphicsSceneEvent) Freeqgraphicssceneevent(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QGraphicsSceneEventD0Ev
     // invoke: void ~QGraphicsSceneEvent()
-    C.C_ZN19QGraphicsSceneEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QGraphicsSceneEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneEvent", "~QGraphicsSceneEvent", args)
   }
@@ -2341,7 +2372,7 @@ func (this *QGraphicsSceneEvent) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // setWidget(class QWidget *)
-func (this *QGraphicsSceneEvent) Setwidget(args ...interface{}) () {
+func (this *QGraphicsSceneEvent) SetWidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2365,7 +2396,7 @@ func (this *QGraphicsSceneEvent) Setwidget(args ...interface{}) () {
 }
 
 // newSize()
-func (this *QGraphicsSceneResizeEvent) Newsize(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneResizeEvent) NewSize(args ...interface{}) (ret interface{}) {
   // newSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2394,7 +2425,7 @@ func (this *QGraphicsSceneResizeEvent) Newsize(args ...interface{}) (ret interfa
 }
 
 // oldSize()
-func (this *QGraphicsSceneResizeEvent) Oldsize(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSceneResizeEvent) OldSize(args ...interface{}) (ret interface{}) {
   // oldSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2423,7 +2454,7 @@ func (this *QGraphicsSceneResizeEvent) Oldsize(args ...interface{}) (ret interfa
 }
 
 // setOldSize(const class QSizeF &)
-func (this *QGraphicsSceneResizeEvent) Setoldsize(args ...interface{}) () {
+func (this *QGraphicsSceneResizeEvent) SetOldSize(args ...interface{}) () {
   // setOldSize(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2447,7 +2478,7 @@ func (this *QGraphicsSceneResizeEvent) Setoldsize(args ...interface{}) () {
 }
 
 // setNewSize(const class QSizeF &)
-func (this *QGraphicsSceneResizeEvent) Setnewsize(args ...interface{}) () {
+func (this *QGraphicsSceneResizeEvent) SetNewSize(args ...interface{}) () {
   // setNewSize(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2471,7 +2502,7 @@ func (this *QGraphicsSceneResizeEvent) Setnewsize(args ...interface{}) () {
 }
 
 // ~QGraphicsSceneResizeEvent()
-func (this *QGraphicsSceneResizeEvent) Freeqgraphicssceneresizeevent(args ...interface{}) () {
+func (this *QGraphicsSceneResizeEvent) Free(args ...interface{}) () {
   // ~QGraphicsSceneResizeEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2483,7 +2514,10 @@ func (this *QGraphicsSceneResizeEvent) Freeqgraphicssceneresizeevent(args ...int
   case 0:
     // invoke: _ZN25QGraphicsSceneResizeEventD0Ev
     // invoke: void ~QGraphicsSceneResizeEvent()
-    C.C_ZN25QGraphicsSceneResizeEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN25QGraphicsSceneResizeEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "~QGraphicsSceneResizeEvent", args)
   }
@@ -2492,6 +2526,9 @@ func (this *QGraphicsSceneResizeEvent) Freeqgraphicssceneresizeevent(args ...int
 }
 
 // QGraphicsSceneResizeEvent()
+func GcfreeQGraphicsSceneResizeEvent(this *QGraphicsSceneResizeEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsSceneResizeEvent(args ...interface{}) *QGraphicsSceneResizeEvent {
   // QGraphicsSceneResizeEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2507,7 +2544,9 @@ func NewQGraphicsSceneResizeEvent(args ...interface{}) *QGraphicsSceneResizeEven
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN25QGraphicsSceneResizeEventC2Ev()
-    return &QGraphicsSceneResizeEvent{Qclsinst:qthis}
+    this := &QGraphicsSceneResizeEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsSceneResizeEvent)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "QGraphicsSceneResizeEvent", args)
   }

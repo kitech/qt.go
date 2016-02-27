@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -74,6 +75,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QActionGroup)=1
@@ -85,7 +87,7 @@ type QActionGroup struct {
 }
 
 // addAction(class QAction *)
-func (this *QActionGroup) Addaction(args ...interface{}) (ret interface{}) {
+func (this *QActionGroup) AddAction(args ...interface{}) (ret interface{}) {
   // addAction(class QAction *)
   // addAction(const class QIcon &, const class QString &)
   // addAction(const class QString &)
@@ -175,7 +177,7 @@ func (this *QActionGroup) Actions(args ...interface{}) () {
 }
 
 // checkedAction()
-func (this *QActionGroup) Checkedaction(args ...interface{}) (ret interface{}) {
+func (this *QActionGroup) CheckedAction(args ...interface{}) (ret interface{}) {
   // checkedAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -204,7 +206,7 @@ func (this *QActionGroup) Checkedaction(args ...interface{}) (ret interface{}) {
 }
 
 // setDisabled(_Bool)
-func (this *QActionGroup) Setdisabled(args ...interface{}) () {
+func (this *QActionGroup) SetDisabled(args ...interface{}) () {
   // setDisabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -228,6 +230,9 @@ func (this *QActionGroup) Setdisabled(args ...interface{}) () {
 }
 
 // QActionGroup(class QObject *)
+func GcfreeQActionGroup(this *QActionGroup) {
+  qtrt.UniverseFree(this)
+}
 func NewQActionGroup(args ...interface{}) *QActionGroup {
   // QActionGroup(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -246,7 +251,9 @@ func NewQActionGroup(args ...interface{}) *QActionGroup {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QActionGroupC2EP7QObject(arg0)
-    return &QActionGroup{Qclsinst:qthis}
+    this := &QActionGroup{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQActionGroup)
+    return this
   default:
     qtrt.ErrorResolve("QActionGroup", "QActionGroup", args)
   }
@@ -255,7 +262,7 @@ func NewQActionGroup(args ...interface{}) *QActionGroup {
 }
 
 // setEnabled(_Bool)
-func (this *QActionGroup) Setenabled(args ...interface{}) () {
+func (this *QActionGroup) SetEnabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -279,7 +286,7 @@ func (this *QActionGroup) Setenabled(args ...interface{}) () {
 }
 
 // setExclusive(_Bool)
-func (this *QActionGroup) Setexclusive(args ...interface{}) () {
+func (this *QActionGroup) SetExclusive(args ...interface{}) () {
   // setExclusive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -303,7 +310,7 @@ func (this *QActionGroup) Setexclusive(args ...interface{}) () {
 }
 
 // removeAction(class QAction *)
-func (this *QActionGroup) Removeaction(args ...interface{}) () {
+func (this *QActionGroup) RemoveAction(args ...interface{}) () {
   // removeAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -327,7 +334,7 @@ func (this *QActionGroup) Removeaction(args ...interface{}) () {
 }
 
 // isExclusive()
-func (this *QActionGroup) Isexclusive(args ...interface{}) (ret interface{}) {
+func (this *QActionGroup) IsExclusive(args ...interface{}) (ret interface{}) {
   // isExclusive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -356,7 +363,7 @@ func (this *QActionGroup) Isexclusive(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QActionGroup) Metaobject(args ...interface{}) () {
+func (this *QActionGroup) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -377,7 +384,7 @@ func (this *QActionGroup) Metaobject(args ...interface{}) () {
 }
 
 // ~QActionGroup()
-func (this *QActionGroup) Freeqactiongroup(args ...interface{}) () {
+func (this *QActionGroup) Free(args ...interface{}) () {
   // ~QActionGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -389,7 +396,10 @@ func (this *QActionGroup) Freeqactiongroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QActionGroupD0Ev
     // invoke: void ~QActionGroup()
-    C.C_ZN12QActionGroupD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QActionGroupD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QActionGroup", "~QActionGroup", args)
   }
@@ -398,7 +408,7 @@ func (this *QActionGroup) Freeqactiongroup(args ...interface{}) () {
 }
 
 // isVisible()
-func (this *QActionGroup) Isvisible(args ...interface{}) (ret interface{}) {
+func (this *QActionGroup) IsVisible(args ...interface{}) (ret interface{}) {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -427,7 +437,7 @@ func (this *QActionGroup) Isvisible(args ...interface{}) (ret interface{}) {
 }
 
 // setVisible(_Bool)
-func (this *QActionGroup) Setvisible(args ...interface{}) () {
+func (this *QActionGroup) SetVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -451,7 +461,7 @@ func (this *QActionGroup) Setvisible(args ...interface{}) () {
 }
 
 // isEnabled()
-func (this *QActionGroup) Isenabled(args ...interface{}) (ret interface{}) {
+func (this *QActionGroup) IsEnabled(args ...interface{}) (ret interface{}) {
   // isEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

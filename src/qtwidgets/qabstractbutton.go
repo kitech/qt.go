@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qabstractbutton.h
 // dst-file: /src/widgets/qabstractbutton.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -100,6 +101,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractButton)=1
@@ -113,6 +115,9 @@ type QAbstractButton struct {
 }
 
 // QAbstractButton(class QWidget *)
+func GcfreeQAbstractButton(this *QAbstractButton) {
+  qtrt.UniverseFree(this)
+}
 func NewQAbstractButton(args ...interface{}) *QAbstractButton {
   // QAbstractButton(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -131,7 +136,9 @@ func NewQAbstractButton(args ...interface{}) *QAbstractButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QAbstractButtonC2EP7QWidget(arg0)
-    return &QAbstractButton{Qclsinst:qthis}
+    this := &QAbstractButton{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAbstractButton)
+    return this
   default:
     qtrt.ErrorResolve("QAbstractButton", "QAbstractButton", args)
   }
@@ -169,7 +176,7 @@ func (this *QAbstractButton) Icon(args ...interface{}) (ret interface{}) {
 }
 
 // setAutoExclusive(_Bool)
-func (this *QAbstractButton) Setautoexclusive(args ...interface{}) () {
+func (this *QAbstractButton) SetAutoExclusive(args ...interface{}) () {
   // setAutoExclusive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -193,7 +200,7 @@ func (this *QAbstractButton) Setautoexclusive(args ...interface{}) () {
 }
 
 // setChecked(_Bool)
-func (this *QAbstractButton) Setchecked(args ...interface{}) () {
+func (this *QAbstractButton) SetChecked(args ...interface{}) () {
   // setChecked(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -217,7 +224,7 @@ func (this *QAbstractButton) Setchecked(args ...interface{}) () {
 }
 
 // setShortcut(const class QKeySequence &)
-func (this *QAbstractButton) Setshortcut(args ...interface{}) () {
+func (this *QAbstractButton) SetShortcut(args ...interface{}) () {
   // setShortcut(const class QKeySequence &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -241,7 +248,7 @@ func (this *QAbstractButton) Setshortcut(args ...interface{}) () {
 }
 
 // isCheckable()
-func (this *QAbstractButton) Ischeckable(args ...interface{}) (ret interface{}) {
+func (this *QAbstractButton) IsCheckable(args ...interface{}) (ret interface{}) {
   // isCheckable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -270,7 +277,7 @@ func (this *QAbstractButton) Ischeckable(args ...interface{}) (ret interface{}) 
 }
 
 // setAutoRepeatInterval(int)
-func (this *QAbstractButton) Setautorepeatinterval(args ...interface{}) () {
+func (this *QAbstractButton) SetAutoRepeatInterval(args ...interface{}) () {
   // setAutoRepeatInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -294,7 +301,7 @@ func (this *QAbstractButton) Setautorepeatinterval(args ...interface{}) () {
 }
 
 // animateClick(int)
-func (this *QAbstractButton) Animateclick(args ...interface{}) () {
+func (this *QAbstractButton) AnimateClick(args ...interface{}) () {
   // animateClick(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -347,7 +354,7 @@ func (this *QAbstractButton) Group(args ...interface{}) (ret interface{}) {
 }
 
 // setAutoRepeatDelay(int)
-func (this *QAbstractButton) Setautorepeatdelay(args ...interface{}) () {
+func (this *QAbstractButton) SetAutoRepeatDelay(args ...interface{}) () {
   // setAutoRepeatDelay(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -421,7 +428,7 @@ func (this *QAbstractButton) Click(args ...interface{}) () {
 }
 
 // autoRepeatInterval()
-func (this *QAbstractButton) Autorepeatinterval(args ...interface{}) (ret interface{}) {
+func (this *QAbstractButton) AutoRepeatInterval(args ...interface{}) (ret interface{}) {
   // autoRepeatInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -450,7 +457,7 @@ func (this *QAbstractButton) Autorepeatinterval(args ...interface{}) (ret interf
 }
 
 // isChecked()
-func (this *QAbstractButton) Ischecked(args ...interface{}) (ret interface{}) {
+func (this *QAbstractButton) IsChecked(args ...interface{}) (ret interface{}) {
   // isChecked()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -508,7 +515,7 @@ func (this *QAbstractButton) Text(args ...interface{}) (ret interface{}) {
 }
 
 // setCheckable(_Bool)
-func (this *QAbstractButton) Setcheckable(args ...interface{}) () {
+func (this *QAbstractButton) SetCheckable(args ...interface{}) () {
   // setCheckable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -532,7 +539,7 @@ func (this *QAbstractButton) Setcheckable(args ...interface{}) () {
 }
 
 // isDown()
-func (this *QAbstractButton) Isdown(args ...interface{}) (ret interface{}) {
+func (this *QAbstractButton) IsDown(args ...interface{}) (ret interface{}) {
   // isDown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -561,7 +568,7 @@ func (this *QAbstractButton) Isdown(args ...interface{}) (ret interface{}) {
 }
 
 // setIcon(const class QIcon &)
-func (this *QAbstractButton) Seticon(args ...interface{}) () {
+func (this *QAbstractButton) SetIcon(args ...interface{}) () {
   // setIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -585,7 +592,7 @@ func (this *QAbstractButton) Seticon(args ...interface{}) () {
 }
 
 // ~QAbstractButton()
-func (this *QAbstractButton) Freeqabstractbutton(args ...interface{}) () {
+func (this *QAbstractButton) Free(args ...interface{}) () {
   // ~QAbstractButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -597,7 +604,10 @@ func (this *QAbstractButton) Freeqabstractbutton(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButtonD0Ev
     // invoke: void ~QAbstractButton()
-    C.C_ZN15QAbstractButtonD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QAbstractButtonD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractButton", "~QAbstractButton", args)
   }
@@ -606,7 +616,7 @@ func (this *QAbstractButton) Freeqabstractbutton(args ...interface{}) () {
 }
 
 // iconSize()
-func (this *QAbstractButton) Iconsize(args ...interface{}) (ret interface{}) {
+func (this *QAbstractButton) IconSize(args ...interface{}) (ret interface{}) {
   // iconSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -635,7 +645,7 @@ func (this *QAbstractButton) Iconsize(args ...interface{}) (ret interface{}) {
 }
 
 // setAutoRepeat(_Bool)
-func (this *QAbstractButton) Setautorepeat(args ...interface{}) () {
+func (this *QAbstractButton) SetAutoRepeat(args ...interface{}) () {
   // setAutoRepeat(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -659,7 +669,7 @@ func (this *QAbstractButton) Setautorepeat(args ...interface{}) () {
 }
 
 // autoExclusive()
-func (this *QAbstractButton) Autoexclusive(args ...interface{}) (ret interface{}) {
+func (this *QAbstractButton) AutoExclusive(args ...interface{}) (ret interface{}) {
   // autoExclusive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -688,7 +698,7 @@ func (this *QAbstractButton) Autoexclusive(args ...interface{}) (ret interface{}
 }
 
 // metaObject()
-func (this *QAbstractButton) Metaobject(args ...interface{}) () {
+func (this *QAbstractButton) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -709,7 +719,7 @@ func (this *QAbstractButton) Metaobject(args ...interface{}) () {
 }
 
 // setText(const class QString &)
-func (this *QAbstractButton) Settext(args ...interface{}) () {
+func (this *QAbstractButton) SetText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -733,7 +743,7 @@ func (this *QAbstractButton) Settext(args ...interface{}) () {
 }
 
 // setIconSize(const class QSize &)
-func (this *QAbstractButton) Seticonsize(args ...interface{}) () {
+func (this *QAbstractButton) SetIconSize(args ...interface{}) () {
   // setIconSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -778,7 +788,7 @@ func (this *QAbstractButton) Toggle(args ...interface{}) () {
 }
 
 // setDown(_Bool)
-func (this *QAbstractButton) Setdown(args ...interface{}) () {
+func (this *QAbstractButton) SetDown(args ...interface{}) () {
   // setDown(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -802,7 +812,7 @@ func (this *QAbstractButton) Setdown(args ...interface{}) () {
 }
 
 // autoRepeatDelay()
-func (this *QAbstractButton) Autorepeatdelay(args ...interface{}) (ret interface{}) {
+func (this *QAbstractButton) AutoRepeatDelay(args ...interface{}) (ret interface{}) {
   // autoRepeatDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -831,7 +841,7 @@ func (this *QAbstractButton) Autorepeatdelay(args ...interface{}) (ret interface
 }
 
 // autoRepeat()
-func (this *QAbstractButton) Autorepeat(args ...interface{}) (ret interface{}) {
+func (this *QAbstractButton) AutoRepeat(args ...interface{}) (ret interface{}) {
   // autoRepeat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

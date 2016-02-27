@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qpainter.h
 // dst-file: /src/gui/qpainter.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -384,6 +385,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPainter)=1
@@ -414,7 +416,7 @@ func (this *QPainter) Restore(args ...interface{}) () {
 }
 
 // boundingRect(const class QRect &, int, const class QString &)
-func (this *QPainter) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QPainter) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect(const class QRect &, int, const class QString &)
   // boundingRect(const class QRectF &, int, const class QString &)
   // boundingRect(int, int, int, int, int, const class QString &)
@@ -530,7 +532,7 @@ func (this *QPainter) Boundingrect(args ...interface{}) (ret interface{}) {
 }
 
 // drawLine(int, int, int, int)
-func (this *QPainter) Drawline(args ...interface{}) () {
+func (this *QPainter) DrawLine(args ...interface{}) () {
   // drawLine(int, int, int, int)
   // drawLine(const class QPoint &, const class QPoint &)
   // drawLine(const class QLineF &)
@@ -605,7 +607,7 @@ func (this *QPainter) Drawline(args ...interface{}) () {
 }
 
 // drawRects(const class QRect *, int)
-func (this *QPainter) Drawrects(args ...interface{}) () {
+func (this *QPainter) DrawRects(args ...interface{}) () {
   // drawRects(const class QRect *, int)
   // drawRects(const class QRectF *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -644,7 +646,7 @@ func (this *QPainter) Drawrects(args ...interface{}) () {
 }
 
 // setPen(const class QColor &)
-func (this *QPainter) Setpen(args ...interface{}) () {
+func (this *QPainter) SetPen(args ...interface{}) () {
   // setPen(const class QColor &)
   // setPen(const class QPen &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -706,7 +708,7 @@ func (this *QPainter) Font(args ...interface{}) (ret interface{}) {
 }
 
 // brushOrigin()
-func (this *QPainter) Brushorigin(args ...interface{}) (ret interface{}) {
+func (this *QPainter) BrushOrigin(args ...interface{}) (ret interface{}) {
   // brushOrigin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -735,7 +737,7 @@ func (this *QPainter) Brushorigin(args ...interface{}) (ret interface{}) {
 }
 
 // drawPixmap(const class QRect &, const class QPixmap &)
-func (this *QPainter) Drawpixmap(args ...interface{}) () {
+func (this *QPainter) DrawPixmap(args ...interface{}) () {
   // drawPixmap(const class QRect &, const class QPixmap &)
   // drawPixmap(const class QPointF &, const class QPixmap &, const class QRectF &)
   // drawPixmap(int, int, const class QPixmap &, int, int, int, int)
@@ -942,7 +944,7 @@ func (this *QPainter) Drawpixmap(args ...interface{}) () {
 }
 
 // drawText(const class QRectF &, const class QString &, const class QTextOption &)
-func (this *QPainter) Drawtext(args ...interface{}) () {
+func (this *QPainter) DrawText(args ...interface{}) () {
   // drawText(const class QRectF &, const class QString &, const class QTextOption &)
   // drawText(const class QRectF &, int, const class QString &, class QRectF *)
   // drawText(int, int, const class QString &)
@@ -1092,7 +1094,7 @@ func (this *QPainter) Drawtext(args ...interface{}) () {
 }
 
 // compositionMode()
-func (this *QPainter) Compositionmode(args ...interface{}) () {
+func (this *QPainter) CompositionMode(args ...interface{}) () {
   // compositionMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1113,7 +1115,7 @@ func (this *QPainter) Compositionmode(args ...interface{}) () {
 }
 
 // beginNativePainting()
-func (this *QPainter) Beginnativepainting(args ...interface{}) () {
+func (this *QPainter) BeginNativePainting(args ...interface{}) () {
   // beginNativePainting()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1134,7 +1136,7 @@ func (this *QPainter) Beginnativepainting(args ...interface{}) () {
 }
 
 // renderHints()
-func (this *QPainter) Renderhints(args ...interface{}) () {
+func (this *QPainter) RenderHints(args ...interface{}) () {
   // renderHints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1184,7 +1186,7 @@ func (this *QPainter) Window(args ...interface{}) (ret interface{}) {
 }
 
 // strokePath(const class QPainterPath &, const class QPen &)
-func (this *QPainter) Strokepath(args ...interface{}) () {
+func (this *QPainter) StrokePath(args ...interface{}) () {
   // strokePath(const class QPainterPath &, const class QPen &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1211,7 +1213,7 @@ func (this *QPainter) Strokepath(args ...interface{}) () {
 }
 
 // setBrushOrigin(int, int)
-func (this *QPainter) Setbrushorigin(args ...interface{}) () {
+func (this *QPainter) SetBrushOrigin(args ...interface{}) () {
   // setBrushOrigin(int, int)
   // setBrushOrigin(const class QPoint &)
   // setBrushOrigin(const class QPointF &)
@@ -1277,7 +1279,7 @@ func (this *QPainter) Save(args ...interface{}) () {
 }
 
 // setViewport(const class QRect &)
-func (this *QPainter) Setviewport(args ...interface{}) () {
+func (this *QPainter) SetViewport(args ...interface{}) () {
   // setViewport(const class QRect &)
   // setViewport(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1346,7 +1348,7 @@ func (this *QPainter) Shear(args ...interface{}) () {
 }
 
 // clipBoundingRect()
-func (this *QPainter) Clipboundingrect(args ...interface{}) (ret interface{}) {
+func (this *QPainter) ClipBoundingRect(args ...interface{}) (ret interface{}) {
   // clipBoundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1375,7 +1377,7 @@ func (this *QPainter) Clipboundingrect(args ...interface{}) (ret interface{}) {
 }
 
 // fontMetrics()
-func (this *QPainter) Fontmetrics(args ...interface{}) (ret interface{}) {
+func (this *QPainter) FontMetrics(args ...interface{}) (ret interface{}) {
   // fontMetrics()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1404,7 +1406,7 @@ func (this *QPainter) Fontmetrics(args ...interface{}) (ret interface{}) {
 }
 
 // resetTransform()
-func (this *QPainter) Resettransform(args ...interface{}) () {
+func (this *QPainter) ResetTransform(args ...interface{}) () {
   // resetTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1425,7 +1427,7 @@ func (this *QPainter) Resettransform(args ...interface{}) () {
 }
 
 // hasClipping()
-func (this *QPainter) Hasclipping(args ...interface{}) (ret interface{}) {
+func (this *QPainter) HasClipping(args ...interface{}) (ret interface{}) {
   // hasClipping()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1483,7 +1485,7 @@ func (this *QPainter) Background(args ...interface{}) (ret interface{}) {
 }
 
 // deviceMatrix()
-func (this *QPainter) Devicematrix(args ...interface{}) (ret interface{}) {
+func (this *QPainter) DeviceMatrix(args ...interface{}) (ret interface{}) {
   // deviceMatrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1536,7 +1538,7 @@ func (this *QPainter) Rotate(args ...interface{}) () {
 }
 
 // backgroundMode()
-func (this *QPainter) Backgroundmode(args ...interface{}) () {
+func (this *QPainter) BackgroundMode(args ...interface{}) () {
   // backgroundMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1557,7 +1559,7 @@ func (this *QPainter) Backgroundmode(args ...interface{}) () {
 }
 
 // drawConvexPolygon(const class QPolygon &)
-func (this *QPainter) Drawconvexpolygon(args ...interface{}) () {
+func (this *QPainter) DrawConvexPolygon(args ...interface{}) () {
   // drawConvexPolygon(const class QPolygon &)
   // drawConvexPolygon(const class QPoint *, int)
   // drawConvexPolygon(const class QPolygonF &)
@@ -1614,7 +1616,7 @@ func (this *QPainter) Drawconvexpolygon(args ...interface{}) () {
 }
 
 // drawArc(const class QRect &, int, int)
-func (this *QPainter) Drawarc(args ...interface{}) () {
+func (this *QPainter) DrawArc(args ...interface{}) () {
   // drawArc(const class QRect &, int, int)
   // drawArc(int, int, int, int, int, int)
   // drawArc(const class QRectF &, int, int)
@@ -1683,7 +1685,7 @@ func (this *QPainter) Drawarc(args ...interface{}) () {
 }
 
 // setTransform(const class QTransform &, _Bool)
-func (this *QPainter) Settransform(args ...interface{}) () {
+func (this *QPainter) SetTransform(args ...interface{}) () {
   // setTransform(const class QTransform &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1710,7 +1712,7 @@ func (this *QPainter) Settransform(args ...interface{}) () {
 }
 
 // drawPoints(const class QPointF *, int)
-func (this *QPainter) Drawpoints(args ...interface{}) () {
+func (this *QPainter) DrawPoints(args ...interface{}) () {
   // drawPoints(const class QPointF *, int)
   // drawPoints(const class QPolygonF &)
   // drawPoints(const class QPoint *, int)
@@ -1767,7 +1769,7 @@ func (this *QPainter) Drawpoints(args ...interface{}) () {
 }
 
 // setMatrixEnabled(_Bool)
-func (this *QPainter) Setmatrixenabled(args ...interface{}) () {
+func (this *QPainter) SetMatrixEnabled(args ...interface{}) () {
   // setMatrixEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1791,7 +1793,7 @@ func (this *QPainter) Setmatrixenabled(args ...interface{}) () {
 }
 
 // paintEngine()
-func (this *QPainter) Paintengine(args ...interface{}) (ret interface{}) {
+func (this *QPainter) PaintEngine(args ...interface{}) (ret interface{}) {
   // paintEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1820,7 +1822,7 @@ func (this *QPainter) Paintengine(args ...interface{}) (ret interface{}) {
 }
 
 // clipRegion()
-func (this *QPainter) Clipregion(args ...interface{}) (ret interface{}) {
+func (this *QPainter) ClipRegion(args ...interface{}) (ret interface{}) {
   // clipRegion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1849,7 +1851,7 @@ func (this *QPainter) Clipregion(args ...interface{}) (ret interface{}) {
 }
 
 // setWindow(int, int, int, int)
-func (this *QPainter) Setwindow(args ...interface{}) () {
+func (this *QPainter) SetWindow(args ...interface{}) () {
   // setWindow(int, int, int, int)
   // setWindow(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1918,7 +1920,7 @@ func (this *QPainter) Scale(args ...interface{}) () {
 }
 
 // drawImage(const class QRect &, const class QImage &)
-func (this *QPainter) Drawimage(args ...interface{}) () {
+func (this *QPainter) DrawImage(args ...interface{}) () {
   // drawImage(const class QRect &, const class QImage &)
   // drawImage(const class QPoint &, const class QImage &)
   // drawImage(const class QRectF &, const class QImage &)
@@ -2039,7 +2041,7 @@ func (this *QPainter) Pen(args ...interface{}) (ret interface{}) {
 }
 
 // drawPicture(const class QPoint &, const class QPicture &)
-func (this *QPainter) Drawpicture(args ...interface{}) () {
+func (this *QPainter) DrawPicture(args ...interface{}) () {
   // drawPicture(const class QPoint &, const class QPicture &)
   // drawPicture(int, int, const class QPicture &)
   // drawPicture(const class QPointF &, const class QPicture &)
@@ -2093,7 +2095,7 @@ func (this *QPainter) Drawpicture(args ...interface{}) () {
 }
 
 // worldMatrix()
-func (this *QPainter) Worldmatrix(args ...interface{}) (ret interface{}) {
+func (this *QPainter) WorldMatrix(args ...interface{}) (ret interface{}) {
   // worldMatrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2122,7 +2124,7 @@ func (this *QPainter) Worldmatrix(args ...interface{}) (ret interface{}) {
 }
 
 // deviceTransform()
-func (this *QPainter) Devicetransform(args ...interface{}) (ret interface{}) {
+func (this *QPainter) DeviceTransform(args ...interface{}) (ret interface{}) {
   // deviceTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2151,7 +2153,7 @@ func (this *QPainter) Devicetransform(args ...interface{}) (ret interface{}) {
 }
 
 // drawPolyline(const class QPoint *, int)
-func (this *QPainter) Drawpolyline(args ...interface{}) () {
+func (this *QPainter) DrawPolyline(args ...interface{}) () {
   // drawPolyline(const class QPoint *, int)
   // drawPolyline(const class QPolygon &)
   // drawPolyline(const class QPolygonF &)
@@ -2208,7 +2210,7 @@ func (this *QPainter) Drawpolyline(args ...interface{}) () {
 }
 
 // drawRect(const class QRect &)
-func (this *QPainter) Drawrect(args ...interface{}) () {
+func (this *QPainter) DrawRect(args ...interface{}) () {
   // drawRect(const class QRect &)
   // drawRect(int, int, int, int)
   // drawRect(const class QRectF &)
@@ -2259,7 +2261,7 @@ func (this *QPainter) Drawrect(args ...interface{}) () {
 }
 
 // drawLines(const class QLineF *, int)
-func (this *QPainter) Drawlines(args ...interface{}) () {
+func (this *QPainter) DrawLines(args ...interface{}) () {
   // drawLines(const class QLineF *, int)
   // drawLines(const class QPointF *, int)
   // drawLines(const class QLine *, int)
@@ -2322,7 +2324,7 @@ func (this *QPainter) Drawlines(args ...interface{}) () {
 }
 
 // isActive()
-func (this *QPainter) Isactive(args ...interface{}) (ret interface{}) {
+func (this *QPainter) IsActive(args ...interface{}) (ret interface{}) {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2351,7 +2353,7 @@ func (this *QPainter) Isactive(args ...interface{}) (ret interface{}) {
 }
 
 // setWorldMatrix(const class QMatrix &, _Bool)
-func (this *QPainter) Setworldmatrix(args ...interface{}) () {
+func (this *QPainter) SetWorldMatrix(args ...interface{}) () {
   // setWorldMatrix(const class QMatrix &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2378,7 +2380,7 @@ func (this *QPainter) Setworldmatrix(args ...interface{}) () {
 }
 
 // setMatrix(const class QMatrix &, _Bool)
-func (this *QPainter) Setmatrix(args ...interface{}) () {
+func (this *QPainter) SetMatrix(args ...interface{}) () {
   // setMatrix(const class QMatrix &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2405,7 +2407,7 @@ func (this *QPainter) Setmatrix(args ...interface{}) () {
 }
 
 // endNativePainting()
-func (this *QPainter) Endnativepainting(args ...interface{}) () {
+func (this *QPainter) EndNativePainting(args ...interface{}) () {
   // endNativePainting()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2455,7 +2457,7 @@ func (this *QPainter) Brush(args ...interface{}) (ret interface{}) {
 }
 
 // fillPath(const class QPainterPath &, const class QBrush &)
-func (this *QPainter) Fillpath(args ...interface{}) () {
+func (this *QPainter) FillPath(args ...interface{}) () {
   // fillPath(const class QPainterPath &, const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2482,7 +2484,7 @@ func (this *QPainter) Fillpath(args ...interface{}) () {
 }
 
 // worldMatrixEnabled()
-func (this *QPainter) Worldmatrixenabled(args ...interface{}) (ret interface{}) {
+func (this *QPainter) WorldMatrixEnabled(args ...interface{}) (ret interface{}) {
   // worldMatrixEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2511,7 +2513,7 @@ func (this *QPainter) Worldmatrixenabled(args ...interface{}) (ret interface{}) 
 }
 
 // layoutDirection()
-func (this *QPainter) Layoutdirection(args ...interface{}) () {
+func (this *QPainter) LayoutDirection(args ...interface{}) () {
   // layoutDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2561,7 +2563,7 @@ func (this *QPainter) Transform(args ...interface{}) (ret interface{}) {
 }
 
 // viewTransformEnabled()
-func (this *QPainter) Viewtransformenabled(args ...interface{}) (ret interface{}) {
+func (this *QPainter) ViewTransformEnabled(args ...interface{}) (ret interface{}) {
   // viewTransformEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2590,7 +2592,7 @@ func (this *QPainter) Viewtransformenabled(args ...interface{}) (ret interface{}
 }
 
 // setBackground(const class QBrush &)
-func (this *QPainter) Setbackground(args ...interface{}) () {
+func (this *QPainter) SetBackground(args ...interface{}) () {
   // setBackground(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2614,7 +2616,7 @@ func (this *QPainter) Setbackground(args ...interface{}) () {
 }
 
 // drawTiledPixmap(const class QRect &, const class QPixmap &, const class QPoint &)
-func (this *QPainter) Drawtiledpixmap(args ...interface{}) () {
+func (this *QPainter) DrawTiledPixmap(args ...interface{}) () {
   // drawTiledPixmap(const class QRect &, const class QPixmap &, const class QPoint &)
   // drawTiledPixmap(int, int, int, int, const class QPixmap &, int, int)
   // drawTiledPixmap(const class QRectF &, const class QPixmap &, const class QPointF &)
@@ -2731,7 +2733,7 @@ func (this *QPainter) Translate(args ...interface{}) () {
 }
 
 // drawStaticText(const class QPointF &, const class QStaticText &)
-func (this *QPainter) Drawstatictext(args ...interface{}) () {
+func (this *QPainter) DrawStaticText(args ...interface{}) () {
   // drawStaticText(const class QPointF &, const class QStaticText &)
   // drawStaticText(const class QPoint &, const class QStaticText &)
   // drawStaticText(int, int, const class QStaticText &)
@@ -2785,7 +2787,7 @@ func (this *QPainter) Drawstatictext(args ...interface{}) () {
 }
 
 // setWorldTransform(const class QTransform &, _Bool)
-func (this *QPainter) Setworldtransform(args ...interface{}) () {
+func (this *QPainter) SetWorldTransform(args ...interface{}) () {
   // setWorldTransform(const class QTransform &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2841,7 +2843,7 @@ func (this *QPainter) Viewport(args ...interface{}) (ret interface{}) {
 }
 
 // drawEllipse(const class QRect &)
-func (this *QPainter) Drawellipse(args ...interface{}) () {
+func (this *QPainter) DrawEllipse(args ...interface{}) () {
   // drawEllipse(const class QRect &)
   // drawEllipse(const class QPoint &, int, int)
   // drawEllipse(const class QRectF &)
@@ -2922,7 +2924,7 @@ func (this *QPainter) Drawellipse(args ...interface{}) () {
 }
 
 // eraseRect(const class QRectF &)
-func (this *QPainter) Eraserect(args ...interface{}) () {
+func (this *QPainter) EraseRect(args ...interface{}) () {
   // eraseRect(const class QRectF &)
   // eraseRect(int, int, int, int)
   // eraseRect(const class QRect &)
@@ -2973,7 +2975,7 @@ func (this *QPainter) Eraserect(args ...interface{}) () {
 }
 
 // drawTextItem(const class QPoint &, const class QTextItem &)
-func (this *QPainter) Drawtextitem(args ...interface{}) () {
+func (this *QPainter) DrawTextItem(args ...interface{}) () {
   // drawTextItem(const class QPoint &, const class QTextItem &)
   // drawTextItem(int, int, const class QTextItem &)
   // drawTextItem(const class QPointF &, const class QTextItem &)
@@ -3027,7 +3029,7 @@ func (this *QPainter) Drawtextitem(args ...interface{}) () {
 }
 
 // drawPie(int, int, int, int, int, int)
-func (this *QPainter) Drawpie(args ...interface{}) () {
+func (this *QPainter) DrawPie(args ...interface{}) () {
   // drawPie(int, int, int, int, int, int)
   // drawPie(const class QRectF &, int, int)
   // drawPie(const class QRect &, int, int)
@@ -3096,7 +3098,7 @@ func (this *QPainter) Drawpie(args ...interface{}) () {
 }
 
 // combinedMatrix()
-func (this *QPainter) Combinedmatrix(args ...interface{}) (ret interface{}) {
+func (this *QPainter) CombinedMatrix(args ...interface{}) (ret interface{}) {
   // combinedMatrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3125,7 +3127,7 @@ func (this *QPainter) Combinedmatrix(args ...interface{}) (ret interface{}) {
 }
 
 // drawGlyphRun(const class QPointF &, const class QGlyphRun &)
-func (this *QPainter) Drawglyphrun(args ...interface{}) () {
+func (this *QPainter) DrawGlyphRun(args ...interface{}) () {
   // drawGlyphRun(const class QPointF &, const class QGlyphRun &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3152,7 +3154,7 @@ func (this *QPainter) Drawglyphrun(args ...interface{}) () {
 }
 
 // drawChord(int, int, int, int, int, int)
-func (this *QPainter) Drawchord(args ...interface{}) () {
+func (this *QPainter) DrawChord(args ...interface{}) () {
   // drawChord(int, int, int, int, int, int)
   // drawChord(const class QRectF &, int, int)
   // drawChord(const class QRect &, int, int)
@@ -3221,7 +3223,7 @@ func (this *QPainter) Drawchord(args ...interface{}) () {
 }
 
 // setBrush(const class QBrush &)
-func (this *QPainter) Setbrush(args ...interface{}) () {
+func (this *QPainter) SetBrush(args ...interface{}) () {
   // setBrush(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3245,7 +3247,7 @@ func (this *QPainter) Setbrush(args ...interface{}) () {
 }
 
 // resetMatrix()
-func (this *QPainter) Resetmatrix(args ...interface{}) () {
+func (this *QPainter) ResetMatrix(args ...interface{}) () {
   // resetMatrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3266,7 +3268,7 @@ func (this *QPainter) Resetmatrix(args ...interface{}) () {
 }
 
 // initFrom(const class QPaintDevice *)
-func (this *QPainter) Initfrom(args ...interface{}) () {
+func (this *QPainter) InitFrom(args ...interface{}) () {
   // initFrom(const class QPaintDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3290,7 +3292,7 @@ func (this *QPainter) Initfrom(args ...interface{}) () {
 }
 
 // setWorldMatrixEnabled(_Bool)
-func (this *QPainter) Setworldmatrixenabled(args ...interface{}) () {
+func (this *QPainter) SetWorldMatrixEnabled(args ...interface{}) () {
   // setWorldMatrixEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3314,7 +3316,7 @@ func (this *QPainter) Setworldmatrixenabled(args ...interface{}) () {
 }
 
 // drawRoundRect(const class QRectF &, int, int)
-func (this *QPainter) Drawroundrect(args ...interface{}) () {
+func (this *QPainter) DrawRoundRect(args ...interface{}) () {
   // drawRoundRect(const class QRectF &, int, int)
   // drawRoundRect(int, int, int, int, int, int)
   // drawRoundRect(const class QRect &, int, int)
@@ -3383,7 +3385,7 @@ func (this *QPainter) Drawroundrect(args ...interface{}) () {
 }
 
 // setViewTransformEnabled(_Bool)
-func (this *QPainter) Setviewtransformenabled(args ...interface{}) () {
+func (this *QPainter) SetViewTransformEnabled(args ...interface{}) () {
   // setViewTransformEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3407,7 +3409,7 @@ func (this *QPainter) Setviewtransformenabled(args ...interface{}) () {
 }
 
 // fontInfo()
-func (this *QPainter) Fontinfo(args ...interface{}) (ret interface{}) {
+func (this *QPainter) FontInfo(args ...interface{}) (ret interface{}) {
   // fontInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3436,7 +3438,7 @@ func (this *QPainter) Fontinfo(args ...interface{}) (ret interface{}) {
 }
 
 // ~QPainter()
-func (this *QPainter) Freeqpainter(args ...interface{}) () {
+func (this *QPainter) Free(args ...interface{}) () {
   // ~QPainter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3448,7 +3450,10 @@ func (this *QPainter) Freeqpainter(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPainterD0Ev
     // invoke: void ~QPainter()
-    C.C_ZN8QPainterD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN8QPainterD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPainter", "~QPainter", args)
   }
@@ -3457,7 +3462,7 @@ func (this *QPainter) Freeqpainter(args ...interface{}) () {
 }
 
 // drawPath(const class QPainterPath &)
-func (this *QPainter) Drawpath(args ...interface{}) () {
+func (this *QPainter) DrawPath(args ...interface{}) () {
   // drawPath(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3510,7 +3515,7 @@ func (this *QPainter) End(args ...interface{}) (ret interface{}) {
 }
 
 // setOpacity(qreal)
-func (this *QPainter) Setopacity(args ...interface{}) () {
+func (this *QPainter) SetOpacity(args ...interface{}) () {
   // setOpacity(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3534,7 +3539,7 @@ func (this *QPainter) Setopacity(args ...interface{}) () {
 }
 
 // worldTransform()
-func (this *QPainter) Worldtransform(args ...interface{}) (ret interface{}) {
+func (this *QPainter) WorldTransform(args ...interface{}) (ret interface{}) {
   // worldTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3563,7 +3568,7 @@ func (this *QPainter) Worldtransform(args ...interface{}) (ret interface{}) {
 }
 
 // fillRect(int, int, int, int, const class QBrush &)
-func (this *QPainter) Fillrect(args ...interface{}) () {
+func (this *QPainter) FillRect(args ...interface{}) () {
   // fillRect(int, int, int, int, const class QBrush &)
   // fillRect(const class QRectF &, const class QBrush &)
   // fillRect(const class QRectF &, const class QColor &)
@@ -3668,7 +3673,7 @@ func (this *QPainter) Fillrect(args ...interface{}) () {
 }
 
 // restoreRedirected(const class QPaintDevice *)
-func (this *QPainter) Restoreredirected_S(args ...interface{}) () {
+func (this *QPainter) RestoreRedirected_s(args ...interface{}) () {
   // restoreRedirected(const class QPaintDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3692,6 +3697,9 @@ func (this *QPainter) Restoreredirected_S(args ...interface{}) () {
 }
 
 // QPainter()
+func GcfreeQPainter(this *QPainter) {
+  qtrt.UniverseFree(this)
+}
 func NewQPainter(args ...interface{}) *QPainter {
   // QPainter()
   // QPainter(class QPaintDevice *)
@@ -3710,7 +3718,9 @@ func NewQPainter(args ...interface{}) *QPainter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPainterC2Ev()
-    return &QPainter{Qclsinst:qthis}
+    this := &QPainter{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPainter)
+    return this
   case 1:
     // invoke: _ZN8QPainterC1EP12QPaintDevice
     // invoke: void QPainter(class QPaintDevice *)
@@ -3719,7 +3729,9 @@ func NewQPainter(args ...interface{}) *QPainter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPainterC2EP12QPaintDevice(arg0)
-    return &QPainter{Qclsinst:qthis}
+    this := &QPainter{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPainter)
+    return this
   default:
     qtrt.ErrorResolve("QPainter", "QPainter", args)
   }
@@ -3789,7 +3801,7 @@ func (this *QPainter) Begin(args ...interface{}) (ret interface{}) {
 }
 
 // combinedTransform()
-func (this *QPainter) Combinedtransform(args ...interface{}) (ret interface{}) {
+func (this *QPainter) CombinedTransform(args ...interface{}) (ret interface{}) {
   // combinedTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3847,7 +3859,7 @@ func (this *QPainter) Device(args ...interface{}) (ret interface{}) {
 }
 
 // setRedirected(const class QPaintDevice *, class QPaintDevice *, const class QPoint &)
-func (this *QPainter) Setredirected_S(args ...interface{}) () {
+func (this *QPainter) SetRedirected_s(args ...interface{}) () {
   // setRedirected(const class QPaintDevice *, class QPaintDevice *, const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3877,7 +3889,7 @@ func (this *QPainter) Setredirected_S(args ...interface{}) () {
 }
 
 // setClipping(_Bool)
-func (this *QPainter) Setclipping(args ...interface{}) () {
+func (this *QPainter) SetClipping(args ...interface{}) () {
   // setClipping(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3901,7 +3913,7 @@ func (this *QPainter) Setclipping(args ...interface{}) () {
 }
 
 // matrixEnabled()
-func (this *QPainter) Matrixenabled(args ...interface{}) (ret interface{}) {
+func (this *QPainter) MatrixEnabled(args ...interface{}) (ret interface{}) {
   // matrixEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3930,7 +3942,7 @@ func (this *QPainter) Matrixenabled(args ...interface{}) (ret interface{}) {
 }
 
 // drawPoint(const class QPointF &)
-func (this *QPainter) Drawpoint(args ...interface{}) () {
+func (this *QPainter) DrawPoint(args ...interface{}) () {
   // drawPoint(const class QPointF &)
   // drawPoint(int, int)
   // drawPoint(const class QPoint &)
@@ -3975,7 +3987,7 @@ func (this *QPainter) Drawpoint(args ...interface{}) () {
 }
 
 // clipPath()
-func (this *QPainter) Clippath(args ...interface{}) (ret interface{}) {
+func (this *QPainter) ClipPath(args ...interface{}) (ret interface{}) {
   // clipPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4004,7 +4016,7 @@ func (this *QPainter) Clippath(args ...interface{}) (ret interface{}) {
 }
 
 // setFont(const class QFont &)
-func (this *QPainter) Setfont(args ...interface{}) () {
+func (this *QPainter) SetFont(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4028,7 +4040,7 @@ func (this *QPainter) Setfont(args ...interface{}) () {
 }
 
 // redirected(const class QPaintDevice *, class QPoint *)
-func (this *QPainter) Redirected_S(args ...interface{}) (ret interface{}) {
+func (this *QPainter) Redirected_s(args ...interface{}) (ret interface{}) {
   // redirected(const class QPaintDevice *, class QPoint *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

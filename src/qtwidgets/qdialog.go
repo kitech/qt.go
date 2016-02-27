@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qdialog.h
 // dst-file: /src/widgets/qdialog.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -80,6 +81,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDialog)=1
@@ -134,7 +136,7 @@ func (this *QDialog) Accept(args ...interface{}) () {
 }
 
 // showExtension(_Bool)
-func (this *QDialog) Showextension(args ...interface{}) () {
+func (this *QDialog) ShowExtension(args ...interface{}) () {
   // showExtension(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -232,7 +234,7 @@ func (this *QDialog) Open(args ...interface{}) () {
 }
 
 // setModal(_Bool)
-func (this *QDialog) Setmodal(args ...interface{}) () {
+func (this *QDialog) SetModal(args ...interface{}) () {
   // setModal(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,7 +308,7 @@ func (this *QDialog) Reject(args ...interface{}) () {
 }
 
 // setExtension(class QWidget *)
-func (this *QDialog) Setextension(args ...interface{}) () {
+func (this *QDialog) SetExtension(args ...interface{}) () {
   // setExtension(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -330,7 +332,7 @@ func (this *QDialog) Setextension(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QDialog) Metaobject(args ...interface{}) () {
+func (this *QDialog) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -351,7 +353,7 @@ func (this *QDialog) Metaobject(args ...interface{}) () {
 }
 
 // setSizeGripEnabled(_Bool)
-func (this *QDialog) Setsizegripenabled(args ...interface{}) () {
+func (this *QDialog) SetSizeGripEnabled(args ...interface{}) () {
   // setSizeGripEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -375,7 +377,7 @@ func (this *QDialog) Setsizegripenabled(args ...interface{}) () {
 }
 
 // ~QDialog()
-func (this *QDialog) Freeqdialog(args ...interface{}) () {
+func (this *QDialog) Free(args ...interface{}) () {
   // ~QDialog()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -387,7 +389,10 @@ func (this *QDialog) Freeqdialog(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QDialogD0Ev
     // invoke: void ~QDialog()
-    C.C_ZN7QDialogD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QDialogD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDialog", "~QDialog", args)
   }
@@ -396,7 +401,7 @@ func (this *QDialog) Freeqdialog(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QDialog) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QDialog) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -454,7 +459,7 @@ func (this *QDialog) Extension(args ...interface{}) (ret interface{}) {
 }
 
 // minimumSizeHint()
-func (this *QDialog) Minimumsizehint(args ...interface{}) (ret interface{}) {
+func (this *QDialog) MinimumSizeHint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -483,7 +488,7 @@ func (this *QDialog) Minimumsizehint(args ...interface{}) (ret interface{}) {
 }
 
 // isSizeGripEnabled()
-func (this *QDialog) Issizegripenabled(args ...interface{}) (ret interface{}) {
+func (this *QDialog) IsSizeGripEnabled(args ...interface{}) (ret interface{}) {
   // isSizeGripEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -512,7 +517,7 @@ func (this *QDialog) Issizegripenabled(args ...interface{}) (ret interface{}) {
 }
 
 // setResult(int)
-func (this *QDialog) Setresult(args ...interface{}) () {
+func (this *QDialog) SetResult(args ...interface{}) () {
   // setResult(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -536,7 +541,7 @@ func (this *QDialog) Setresult(args ...interface{}) () {
 }
 
 // setVisible(_Bool)
-func (this *QDialog) Setvisible(args ...interface{}) () {
+func (this *QDialog) SetVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

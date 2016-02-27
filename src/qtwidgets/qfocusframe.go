@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qfocusframe.h
 // dst-file: /src/widgets/qfocusframe.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -52,6 +53,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFocusFrame)=1
@@ -61,7 +63,7 @@ type QFocusFrame struct {
 }
 
 // ~QFocusFrame()
-func (this *QFocusFrame) Freeqfocusframe(args ...interface{}) () {
+func (this *QFocusFrame) Free(args ...interface{}) () {
   // ~QFocusFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -73,7 +75,10 @@ func (this *QFocusFrame) Freeqfocusframe(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFocusFrameD0Ev
     // invoke: void ~QFocusFrame()
-    C.C_ZN11QFocusFrameD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QFocusFrameD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFocusFrame", "~QFocusFrame", args)
   }
@@ -111,7 +116,7 @@ func (this *QFocusFrame) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // setWidget(class QWidget *)
-func (this *QFocusFrame) Setwidget(args ...interface{}) () {
+func (this *QFocusFrame) SetWidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -135,6 +140,9 @@ func (this *QFocusFrame) Setwidget(args ...interface{}) () {
 }
 
 // QFocusFrame(class QWidget *)
+func GcfreeQFocusFrame(this *QFocusFrame) {
+  qtrt.UniverseFree(this)
+}
 func NewQFocusFrame(args ...interface{}) *QFocusFrame {
   // QFocusFrame(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -153,7 +161,9 @@ func NewQFocusFrame(args ...interface{}) *QFocusFrame {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QFocusFrameC2EP7QWidget(arg0)
-    return &QFocusFrame{Qclsinst:qthis}
+    this := &QFocusFrame{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFocusFrame)
+    return this
   default:
     qtrt.ErrorResolve("QFocusFrame", "QFocusFrame", args)
   }
@@ -162,7 +172,7 @@ func NewQFocusFrame(args ...interface{}) *QFocusFrame {
 }
 
 // metaObject()
-func (this *QFocusFrame) Metaobject(args ...interface{}) () {
+func (this *QFocusFrame) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

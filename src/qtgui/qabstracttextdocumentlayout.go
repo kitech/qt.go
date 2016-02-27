@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -60,6 +61,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextObjectInterface)=8
@@ -79,7 +81,7 @@ type QAbstractTextDocumentLayout struct {
 }
 
 // unregisterHandler(int, class QObject *)
-func (this *QAbstractTextDocumentLayout) Unregisterhandler(args ...interface{}) () {
+func (this *QAbstractTextDocumentLayout) UnregisterHandler(args ...interface{}) () {
   // unregisterHandler(int, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -106,7 +108,7 @@ func (this *QAbstractTextDocumentLayout) Unregisterhandler(args ...interface{}) 
 }
 
 // setPaintDevice(class QPaintDevice *)
-func (this *QAbstractTextDocumentLayout) Setpaintdevice(args ...interface{}) () {
+func (this *QAbstractTextDocumentLayout) SetPaintDevice(args ...interface{}) () {
   // setPaintDevice(class QPaintDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -130,7 +132,7 @@ func (this *QAbstractTextDocumentLayout) Setpaintdevice(args ...interface{}) () 
 }
 
 // anchorAt(const class QPointF &)
-func (this *QAbstractTextDocumentLayout) Anchorat(args ...interface{}) (ret interface{}) {
+func (this *QAbstractTextDocumentLayout) AnchorAt(args ...interface{}) (ret interface{}) {
   // anchorAt(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,6 +164,9 @@ func (this *QAbstractTextDocumentLayout) Anchorat(args ...interface{}) (ret inte
 }
 
 // QAbstractTextDocumentLayout(class QTextDocument *)
+func GcfreeQAbstractTextDocumentLayout(this *QAbstractTextDocumentLayout) {
+  qtrt.UniverseFree(this)
+}
 func NewQAbstractTextDocumentLayout(args ...interface{}) *QAbstractTextDocumentLayout {
   // QAbstractTextDocumentLayout(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -180,7 +185,9 @@ func NewQAbstractTextDocumentLayout(args ...interface{}) *QAbstractTextDocumentL
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(arg0)
-    return &QAbstractTextDocumentLayout{Qclsinst:qthis}
+    this := &QAbstractTextDocumentLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAbstractTextDocumentLayout)
+    return this
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "QAbstractTextDocumentLayout", args)
   }
@@ -189,7 +196,7 @@ func NewQAbstractTextDocumentLayout(args ...interface{}) *QAbstractTextDocumentL
 }
 
 // paintDevice()
-func (this *QAbstractTextDocumentLayout) Paintdevice(args ...interface{}) (ret interface{}) {
+func (this *QAbstractTextDocumentLayout) PaintDevice(args ...interface{}) (ret interface{}) {
   // paintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -247,7 +254,7 @@ func (this *QAbstractTextDocumentLayout) Document(args ...interface{}) (ret inte
 }
 
 // registerHandler(int, class QObject *)
-func (this *QAbstractTextDocumentLayout) Registerhandler(args ...interface{}) () {
+func (this *QAbstractTextDocumentLayout) RegisterHandler(args ...interface{}) () {
   // registerHandler(int, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -274,7 +281,7 @@ func (this *QAbstractTextDocumentLayout) Registerhandler(args ...interface{}) ()
 }
 
 // metaObject()
-func (this *QAbstractTextDocumentLayout) Metaobject(args ...interface{}) () {
+func (this *QAbstractTextDocumentLayout) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -295,7 +302,7 @@ func (this *QAbstractTextDocumentLayout) Metaobject(args ...interface{}) () {
 }
 
 // ~QAbstractTextDocumentLayout()
-func (this *QAbstractTextDocumentLayout) Freeqabstracttextdocumentlayout(args ...interface{}) () {
+func (this *QAbstractTextDocumentLayout) Free(args ...interface{}) () {
   // ~QAbstractTextDocumentLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -307,7 +314,10 @@ func (this *QAbstractTextDocumentLayout) Freeqabstracttextdocumentlayout(args ..
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayoutD0Ev
     // invoke: void ~QAbstractTextDocumentLayout()
-    C.C_ZN27QAbstractTextDocumentLayoutD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN27QAbstractTextDocumentLayoutD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "~QAbstractTextDocumentLayout", args)
   }
@@ -316,7 +326,7 @@ func (this *QAbstractTextDocumentLayout) Freeqabstracttextdocumentlayout(args ..
 }
 
 // handlerForObject(int)
-func (this *QAbstractTextDocumentLayout) Handlerforobject(args ...interface{}) (ret interface{}) {
+func (this *QAbstractTextDocumentLayout) HandlerForObject(args ...interface{}) (ret interface{}) {
   // handlerForObject(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

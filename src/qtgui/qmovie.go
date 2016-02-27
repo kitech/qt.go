@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -106,6 +107,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMovie)=1
@@ -122,7 +124,7 @@ type QMovie struct {
 }
 
 // setScaledSize(const class QSize &)
-func (this *QMovie) Setscaledsize(args ...interface{}) () {
+func (this *QMovie) SetScaledSize(args ...interface{}) () {
   // setScaledSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -146,7 +148,7 @@ func (this *QMovie) Setscaledsize(args ...interface{}) () {
 }
 
 // nextFrameDelay()
-func (this *QMovie) Nextframedelay(args ...interface{}) (ret interface{}) {
+func (this *QMovie) NextFrameDelay(args ...interface{}) (ret interface{}) {
   // nextFrameDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -204,7 +206,7 @@ func (this *QMovie) Speed(args ...interface{}) (ret interface{}) {
 }
 
 // frameCount()
-func (this *QMovie) Framecount(args ...interface{}) (ret interface{}) {
+func (this *QMovie) FrameCount(args ...interface{}) (ret interface{}) {
   // frameCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -233,7 +235,7 @@ func (this *QMovie) Framecount(args ...interface{}) (ret interface{}) {
 }
 
 // currentFrameNumber()
-func (this *QMovie) Currentframenumber(args ...interface{}) (ret interface{}) {
+func (this *QMovie) CurrentFrameNumber(args ...interface{}) (ret interface{}) {
   // currentFrameNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -262,7 +264,7 @@ func (this *QMovie) Currentframenumber(args ...interface{}) (ret interface{}) {
 }
 
 // loopCount()
-func (this *QMovie) Loopcount(args ...interface{}) (ret interface{}) {
+func (this *QMovie) LoopCount(args ...interface{}) (ret interface{}) {
   // loopCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -291,7 +293,7 @@ func (this *QMovie) Loopcount(args ...interface{}) (ret interface{}) {
 }
 
 // setFormat(const class QByteArray &)
-func (this *QMovie) Setformat(args ...interface{}) () {
+func (this *QMovie) SetFormat(args ...interface{}) () {
   // setFormat(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -386,7 +388,7 @@ func (this *QMovie) State(args ...interface{}) () {
 }
 
 // backgroundColor()
-func (this *QMovie) Backgroundcolor(args ...interface{}) (ret interface{}) {
+func (this *QMovie) BackgroundColor(args ...interface{}) (ret interface{}) {
   // backgroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -415,7 +417,7 @@ func (this *QMovie) Backgroundcolor(args ...interface{}) (ret interface{}) {
 }
 
 // setDevice(class QIODevice *)
-func (this *QMovie) Setdevice(args ...interface{}) () {
+func (this *QMovie) SetDevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -439,7 +441,7 @@ func (this *QMovie) Setdevice(args ...interface{}) () {
 }
 
 // jumpToFrame(int)
-func (this *QMovie) Jumptoframe(args ...interface{}) (ret interface{}) {
+func (this *QMovie) JumpToFrame(args ...interface{}) (ret interface{}) {
   // jumpToFrame(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -471,7 +473,7 @@ func (this *QMovie) Jumptoframe(args ...interface{}) (ret interface{}) {
 }
 
 // frameRect()
-func (this *QMovie) Framerect(args ...interface{}) (ret interface{}) {
+func (this *QMovie) FrameRect(args ...interface{}) (ret interface{}) {
   // frameRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -500,7 +502,7 @@ func (this *QMovie) Framerect(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QMovie) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QMovie) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -529,7 +531,7 @@ func (this *QMovie) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // setBackgroundColor(const class QColor &)
-func (this *QMovie) Setbackgroundcolor(args ...interface{}) () {
+func (this *QMovie) SetBackgroundColor(args ...interface{}) () {
   // setBackgroundColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -574,7 +576,7 @@ func (this *QMovie) Stop(args ...interface{}) () {
 }
 
 // fileName()
-func (this *QMovie) Filename(args ...interface{}) (ret interface{}) {
+func (this *QMovie) FileName(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -603,7 +605,7 @@ func (this *QMovie) Filename(args ...interface{}) (ret interface{}) {
 }
 
 // currentImage()
-func (this *QMovie) Currentimage(args ...interface{}) (ret interface{}) {
+func (this *QMovie) CurrentImage(args ...interface{}) (ret interface{}) {
   // currentImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -661,7 +663,7 @@ func (this *QMovie) Device(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QMovie) Metaobject(args ...interface{}) () {
+func (this *QMovie) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -682,7 +684,7 @@ func (this *QMovie) Metaobject(args ...interface{}) () {
 }
 
 // currentPixmap()
-func (this *QMovie) Currentpixmap(args ...interface{}) (ret interface{}) {
+func (this *QMovie) CurrentPixmap(args ...interface{}) (ret interface{}) {
   // currentPixmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -711,7 +713,7 @@ func (this *QMovie) Currentpixmap(args ...interface{}) (ret interface{}) {
 }
 
 // ~QMovie()
-func (this *QMovie) Freeqmovie(args ...interface{}) () {
+func (this *QMovie) Free(args ...interface{}) () {
   // ~QMovie()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -723,7 +725,10 @@ func (this *QMovie) Freeqmovie(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMovieD0Ev
     // invoke: void ~QMovie()
-    C.C_ZN6QMovieD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN6QMovieD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMovie", "~QMovie", args)
   }
@@ -732,7 +737,7 @@ func (this *QMovie) Freeqmovie(args ...interface{}) () {
 }
 
 // setFileName(const class QString &)
-func (this *QMovie) Setfilename(args ...interface{}) () {
+func (this *QMovie) SetFileName(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -756,7 +761,7 @@ func (this *QMovie) Setfilename(args ...interface{}) () {
 }
 
 // setSpeed(int)
-func (this *QMovie) Setspeed(args ...interface{}) () {
+func (this *QMovie) SetSpeed(args ...interface{}) () {
   // setSpeed(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -780,7 +785,7 @@ func (this *QMovie) Setspeed(args ...interface{}) () {
 }
 
 // cacheMode()
-func (this *QMovie) Cachemode(args ...interface{}) () {
+func (this *QMovie) CacheMode(args ...interface{}) () {
   // cacheMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -801,7 +806,7 @@ func (this *QMovie) Cachemode(args ...interface{}) () {
 }
 
 // scaledSize()
-func (this *QMovie) Scaledsize(args ...interface{}) (ret interface{}) {
+func (this *QMovie) ScaledSize(args ...interface{}) (ret interface{}) {
   // scaledSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -830,6 +835,9 @@ func (this *QMovie) Scaledsize(args ...interface{}) (ret interface{}) {
 }
 
 // QMovie(class QObject *)
+func GcfreeQMovie(this *QMovie) {
+  qtrt.UniverseFree(this)
+}
 func NewQMovie(args ...interface{}) *QMovie {
   // QMovie(class QObject *)
   // QMovie(class QIODevice *, const class QByteArray &, class QObject *)
@@ -858,7 +866,9 @@ func NewQMovie(args ...interface{}) *QMovie {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QMovieC2EP7QObject(arg0)
-    return &QMovie{Qclsinst:qthis}
+    this := &QMovie{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMovie)
+    return this
   case 1:
     // invoke: _ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject
     // invoke: void QMovie(class QIODevice *, const class QByteArray &, class QObject *)
@@ -871,7 +881,9 @@ func NewQMovie(args ...interface{}) *QMovie {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QMovieC2EP9QIODeviceRK10QByteArrayP7QObject(arg0, arg1, arg2)
-    return &QMovie{Qclsinst:qthis}
+    this := &QMovie{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMovie)
+    return this
   case 2:
     // invoke: _ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject
     // invoke: void QMovie(const class QString &, const class QByteArray &, class QObject *)
@@ -884,7 +896,9 @@ func NewQMovie(args ...interface{}) *QMovie {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QMovieC2ERK7QStringRK10QByteArrayP7QObject(arg0, arg1, arg2)
-    return &QMovie{Qclsinst:qthis}
+    this := &QMovie{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMovie)
+    return this
   default:
     qtrt.ErrorResolve("QMovie", "QMovie", args)
   }
@@ -893,7 +907,7 @@ func NewQMovie(args ...interface{}) *QMovie {
 }
 
 // supportedFormats()
-func (this *QMovie) Supportedformats_S(args ...interface{}) () {
+func (this *QMovie) SupportedFormats_s(args ...interface{}) () {
   // supportedFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -914,7 +928,7 @@ func (this *QMovie) Supportedformats_S(args ...interface{}) () {
 }
 
 // jumpToNextFrame()
-func (this *QMovie) Jumptonextframe(args ...interface{}) (ret interface{}) {
+func (this *QMovie) JumpToNextFrame(args ...interface{}) (ret interface{}) {
   // jumpToNextFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -943,7 +957,7 @@ func (this *QMovie) Jumptonextframe(args ...interface{}) (ret interface{}) {
 }
 
 // setPaused(_Bool)
-func (this *QMovie) Setpaused(args ...interface{}) () {
+func (this *QMovie) SetPaused(args ...interface{}) () {
   // setPaused(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

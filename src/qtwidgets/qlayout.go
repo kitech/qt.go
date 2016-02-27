@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qlayout.h
 // dst-file: /src/widgets/qlayout.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -120,6 +121,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QLayout)=1
@@ -150,7 +152,7 @@ func (this *QLayout) Invalidate(args ...interface{}) () {
 }
 
 // totalHeightForWidth(int)
-func (this *QLayout) Totalheightforwidth(args ...interface{}) (ret interface{}) {
+func (this *QLayout) TotalHeightForWidth(args ...interface{}) (ret interface{}) {
   // totalHeightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,7 +184,7 @@ func (this *QLayout) Totalheightforwidth(args ...interface{}) (ret interface{}) 
 }
 
 // totalMinimumSize()
-func (this *QLayout) Totalminimumsize(args ...interface{}) (ret interface{}) {
+func (this *QLayout) TotalMinimumSize(args ...interface{}) (ret interface{}) {
   // totalMinimumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -211,7 +213,7 @@ func (this *QLayout) Totalminimumsize(args ...interface{}) (ret interface{}) {
 }
 
 // ~QLayout()
-func (this *QLayout) Freeqlayout(args ...interface{}) () {
+func (this *QLayout) Free(args ...interface{}) () {
   // ~QLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -223,7 +225,10 @@ func (this *QLayout) Freeqlayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QLayoutD0Ev
     // invoke: void ~QLayout()
-    C.C_ZN7QLayoutD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QLayoutD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QLayout", "~QLayout", args)
   }
@@ -232,7 +237,7 @@ func (this *QLayout) Freeqlayout(args ...interface{}) () {
 }
 
 // contentsMargins()
-func (this *QLayout) Contentsmargins(args ...interface{}) (ret interface{}) {
+func (this *QLayout) ContentsMargins(args ...interface{}) (ret interface{}) {
   // contentsMargins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -261,7 +266,7 @@ func (this *QLayout) Contentsmargins(args ...interface{}) (ret interface{}) {
 }
 
 // contentsRect()
-func (this *QLayout) Contentsrect(args ...interface{}) (ret interface{}) {
+func (this *QLayout) ContentsRect(args ...interface{}) (ret interface{}) {
   // contentsRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -290,7 +295,7 @@ func (this *QLayout) Contentsrect(args ...interface{}) (ret interface{}) {
 }
 
 // setMenuBar(class QWidget *)
-func (this *QLayout) Setmenubar(args ...interface{}) () {
+func (this *QLayout) SetMenuBar(args ...interface{}) () {
   // setMenuBar(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -314,7 +319,7 @@ func (this *QLayout) Setmenubar(args ...interface{}) () {
 }
 
 // sizeConstraint()
-func (this *QLayout) Sizeconstraint(args ...interface{}) () {
+func (this *QLayout) SizeConstraint(args ...interface{}) () {
   // sizeConstraint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -335,7 +340,7 @@ func (this *QLayout) Sizeconstraint(args ...interface{}) () {
 }
 
 // expandingDirections()
-func (this *QLayout) Expandingdirections(args ...interface{}) () {
+func (this *QLayout) ExpandingDirections(args ...interface{}) () {
   // expandingDirections()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -385,7 +390,7 @@ func (this *QLayout) Layout(args ...interface{}) (ret interface{}) {
 }
 
 // removeWidget(class QWidget *)
-func (this *QLayout) Removewidget(args ...interface{}) () {
+func (this *QLayout) RemoveWidget(args ...interface{}) () {
   // removeWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -409,7 +414,7 @@ func (this *QLayout) Removewidget(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QLayout) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QLayout) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -438,7 +443,7 @@ func (this *QLayout) Isempty(args ...interface{}) (ret interface{}) {
 }
 
 // setContentsMargins(int, int, int, int)
-func (this *QLayout) Setcontentsmargins(args ...interface{}) () {
+func (this *QLayout) SetContentsMargins(args ...interface{}) () {
   // setContentsMargins(int, int, int, int)
   // setContentsMargins(const class QMargins &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -480,7 +485,7 @@ func (this *QLayout) Setcontentsmargins(args ...interface{}) () {
 }
 
 // setEnabled(_Bool)
-func (this *QLayout) Setenabled(args ...interface{}) () {
+func (this *QLayout) SetEnabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -504,7 +509,7 @@ func (this *QLayout) Setenabled(args ...interface{}) () {
 }
 
 // controlTypes()
-func (this *QLayout) Controltypes(args ...interface{}) () {
+func (this *QLayout) ControlTypes(args ...interface{}) () {
   // controlTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -525,7 +530,7 @@ func (this *QLayout) Controltypes(args ...interface{}) () {
 }
 
 // setGeometry(const class QRect &)
-func (this *QLayout) Setgeometry(args ...interface{}) () {
+func (this *QLayout) SetGeometry(args ...interface{}) () {
   // setGeometry(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -549,7 +554,7 @@ func (this *QLayout) Setgeometry(args ...interface{}) () {
 }
 
 // indexOf(class QWidget *)
-func (this *QLayout) Indexof(args ...interface{}) (ret interface{}) {
+func (this *QLayout) IndexOf(args ...interface{}) (ret interface{}) {
   // indexOf(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -581,7 +586,7 @@ func (this *QLayout) Indexof(args ...interface{}) (ret interface{}) {
 }
 
 // setSpacing(int)
-func (this *QLayout) Setspacing(args ...interface{}) () {
+func (this *QLayout) SetSpacing(args ...interface{}) () {
   // setSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -655,7 +660,7 @@ func (this *QLayout) Update(args ...interface{}) () {
 }
 
 // setMargin(int)
-func (this *QLayout) Setmargin(args ...interface{}) () {
+func (this *QLayout) SetMargin(args ...interface{}) () {
   // setMargin(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -679,6 +684,9 @@ func (this *QLayout) Setmargin(args ...interface{}) () {
 }
 
 // QLayout(class QWidget *)
+func GcfreeQLayout(this *QLayout) {
+  qtrt.UniverseFree(this)
+}
 func NewQLayout(args ...interface{}) *QLayout {
   // QLayout(class QWidget *)
   // QLayout()
@@ -699,14 +707,18 @@ func NewQLayout(args ...interface{}) *QLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QLayoutC2EP7QWidget(arg0)
-    return &QLayout{Qclsinst:qthis}
+    this := &QLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLayout)
+    return this
   case 1:
     // invoke: _ZN7QLayoutC1Ev
     // invoke: void QLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QLayoutC2Ev()
-    return &QLayout{Qclsinst:qthis}
+    this := &QLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLayout)
+    return this
   default:
     qtrt.ErrorResolve("QLayout", "QLayout", args)
   }
@@ -715,7 +727,7 @@ func NewQLayout(args ...interface{}) *QLayout {
 }
 
 // removeItem(class QLayoutItem *)
-func (this *QLayout) Removeitem(args ...interface{}) () {
+func (this *QLayout) RemoveItem(args ...interface{}) () {
   // removeItem(class QLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -739,7 +751,7 @@ func (this *QLayout) Removeitem(args ...interface{}) () {
 }
 
 // addWidget(class QWidget *)
-func (this *QLayout) Addwidget(args ...interface{}) () {
+func (this *QLayout) AddWidget(args ...interface{}) () {
   // addWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -792,7 +804,7 @@ func (this *QLayout) Activate(args ...interface{}) (ret interface{}) {
 }
 
 // parentWidget()
-func (this *QLayout) Parentwidget(args ...interface{}) (ret interface{}) {
+func (this *QLayout) ParentWidget(args ...interface{}) (ret interface{}) {
   // parentWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -821,7 +833,7 @@ func (this *QLayout) Parentwidget(args ...interface{}) (ret interface{}) {
 }
 
 // totalSizeHint()
-func (this *QLayout) Totalsizehint(args ...interface{}) (ret interface{}) {
+func (this *QLayout) TotalSizeHint(args ...interface{}) (ret interface{}) {
   // totalSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -850,7 +862,7 @@ func (this *QLayout) Totalsizehint(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QLayout) Metaobject(args ...interface{}) () {
+func (this *QLayout) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -871,7 +883,7 @@ func (this *QLayout) Metaobject(args ...interface{}) () {
 }
 
 // totalMaximumSize()
-func (this *QLayout) Totalmaximumsize(args ...interface{}) (ret interface{}) {
+func (this *QLayout) TotalMaximumSize(args ...interface{}) (ret interface{}) {
   // totalMaximumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -929,7 +941,7 @@ func (this *QLayout) Geometry(args ...interface{}) (ret interface{}) {
 }
 
 // getContentsMargins(int *, int *, int *, int *)
-func (this *QLayout) Getcontentsmargins(args ...interface{}) () {
+func (this *QLayout) GetContentsMargins(args ...interface{}) () {
   // getContentsMargins(int *, int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -962,7 +974,7 @@ func (this *QLayout) Getcontentsmargins(args ...interface{}) () {
 }
 
 // minimumSize()
-func (this *QLayout) Minimumsize(args ...interface{}) (ret interface{}) {
+func (this *QLayout) MinimumSize(args ...interface{}) (ret interface{}) {
   // minimumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -991,7 +1003,7 @@ func (this *QLayout) Minimumsize(args ...interface{}) (ret interface{}) {
 }
 
 // closestAcceptableSize(const class QWidget *, const class QSize &)
-func (this *QLayout) Closestacceptablesize_S(args ...interface{}) (ret interface{}) {
+func (this *QLayout) ClosestAcceptableSize_s(args ...interface{}) (ret interface{}) {
   // closestAcceptableSize(const class QWidget *, const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1055,7 +1067,7 @@ func (this *QLayout) Margin(args ...interface{}) (ret interface{}) {
 }
 
 // isEnabled()
-func (this *QLayout) Isenabled(args ...interface{}) (ret interface{}) {
+func (this *QLayout) IsEnabled(args ...interface{}) (ret interface{}) {
   // isEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1084,7 +1096,7 @@ func (this *QLayout) Isenabled(args ...interface{}) (ret interface{}) {
 }
 
 // maximumSize()
-func (this *QLayout) Maximumsize(args ...interface{}) (ret interface{}) {
+func (this *QLayout) MaximumSize(args ...interface{}) (ret interface{}) {
   // maximumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1113,7 +1125,7 @@ func (this *QLayout) Maximumsize(args ...interface{}) (ret interface{}) {
 }
 
 // menuBar()
-func (this *QLayout) Menubar(args ...interface{}) (ret interface{}) {
+func (this *QLayout) MenuBar(args ...interface{}) (ret interface{}) {
   // menuBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qfileselector.h
 // dst-file: /src/core/qfileselector.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -54,6 +55,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFileSelector)=1
@@ -63,6 +65,9 @@ type QFileSelector struct {
 }
 
 // QFileSelector(class QObject *)
+func GcfreeQFileSelector(this *QFileSelector) {
+  qtrt.UniverseFree(this)
+}
 func NewQFileSelector(args ...interface{}) *QFileSelector {
   // QFileSelector(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -81,7 +86,9 @@ func NewQFileSelector(args ...interface{}) *QFileSelector {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QFileSelectorC2EP7QObject(arg0)
-    return &QFileSelector{Qclsinst:qthis}
+    this := &QFileSelector{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFileSelector)
+    return this
   default:
     qtrt.ErrorResolve("QFileSelector", "QFileSelector", args)
   }
@@ -90,7 +97,7 @@ func NewQFileSelector(args ...interface{}) *QFileSelector {
 }
 
 // metaObject()
-func (this *QFileSelector) Metaobject(args ...interface{}) () {
+func (this *QFileSelector) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -111,7 +118,7 @@ func (this *QFileSelector) Metaobject(args ...interface{}) () {
 }
 
 // allSelectors()
-func (this *QFileSelector) Allselectors(args ...interface{}) () {
+func (this *QFileSelector) AllSelectors(args ...interface{}) () {
   // allSelectors()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -132,7 +139,7 @@ func (this *QFileSelector) Allselectors(args ...interface{}) () {
 }
 
 // extraSelectors()
-func (this *QFileSelector) Extraselectors(args ...interface{}) () {
+func (this *QFileSelector) ExtraSelectors(args ...interface{}) () {
   // extraSelectors()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -153,7 +160,7 @@ func (this *QFileSelector) Extraselectors(args ...interface{}) () {
 }
 
 // setExtraSelectors(const class QStringList &)
-func (this *QFileSelector) Setextraselectors(args ...interface{}) () {
+func (this *QFileSelector) SetExtraSelectors(args ...interface{}) () {
   // setExtraSelectors(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -177,7 +184,7 @@ func (this *QFileSelector) Setextraselectors(args ...interface{}) () {
 }
 
 // ~QFileSelector()
-func (this *QFileSelector) Freeqfileselector(args ...interface{}) () {
+func (this *QFileSelector) Free(args ...interface{}) () {
   // ~QFileSelector()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -189,7 +196,10 @@ func (this *QFileSelector) Freeqfileselector(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QFileSelectorD0Ev
     // invoke: void ~QFileSelector()
-    C.C_ZN13QFileSelectorD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QFileSelectorD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFileSelector", "~QFileSelector", args)
   }

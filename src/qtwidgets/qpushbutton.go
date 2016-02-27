@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qpushbutton.h
 // dst-file: /src/widgets/qpushbutton.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -74,6 +75,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPushButton)=1
@@ -83,7 +85,7 @@ type QPushButton struct {
 }
 
 // showMenu()
-func (this *QPushButton) Showmenu(args ...interface{}) () {
+func (this *QPushButton) ShowMenu(args ...interface{}) () {
   // showMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -104,7 +106,7 @@ func (this *QPushButton) Showmenu(args ...interface{}) () {
 }
 
 // setMenu(class QMenu *)
-func (this *QPushButton) Setmenu(args ...interface{}) () {
+func (this *QPushButton) SetMenu(args ...interface{}) () {
   // setMenu(class QMenu *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -128,7 +130,7 @@ func (this *QPushButton) Setmenu(args ...interface{}) () {
 }
 
 // ~QPushButton()
-func (this *QPushButton) Freeqpushbutton(args ...interface{}) () {
+func (this *QPushButton) Free(args ...interface{}) () {
   // ~QPushButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -140,7 +142,10 @@ func (this *QPushButton) Freeqpushbutton(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPushButtonD0Ev
     // invoke: void ~QPushButton()
-    C.C_ZN11QPushButtonD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QPushButtonD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPushButton", "~QPushButton", args)
   }
@@ -149,7 +154,7 @@ func (this *QPushButton) Freeqpushbutton(args ...interface{}) () {
 }
 
 // setAutoDefault(_Bool)
-func (this *QPushButton) Setautodefault(args ...interface{}) () {
+func (this *QPushButton) SetAutoDefault(args ...interface{}) () {
   // setAutoDefault(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -173,7 +178,7 @@ func (this *QPushButton) Setautodefault(args ...interface{}) () {
 }
 
 // setFlat(_Bool)
-func (this *QPushButton) Setflat(args ...interface{}) () {
+func (this *QPushButton) SetFlat(args ...interface{}) () {
   // setFlat(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -226,6 +231,9 @@ func (this *QPushButton) Menu(args ...interface{}) (ret interface{}) {
 }
 
 // QPushButton(const class QString &, class QWidget *)
+func GcfreeQPushButton(this *QPushButton) {
+  qtrt.UniverseFree(this)
+}
 func NewQPushButton(args ...interface{}) *QPushButton {
   // QPushButton(const class QString &, class QWidget *)
   // QPushButton(const class QIcon &, const class QString &, class QWidget *)
@@ -255,7 +263,9 @@ func NewQPushButton(args ...interface{}) *QPushButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QPushButtonC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QPushButton{Qclsinst:qthis}
+    this := &QPushButton{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPushButton)
+    return this
   case 1:
     // invoke: _ZN11QPushButtonC1ERK5QIconRK7QStringP7QWidget
     // invoke: void QPushButton(const class QIcon &, const class QString &, class QWidget *)
@@ -268,7 +278,9 @@ func NewQPushButton(args ...interface{}) *QPushButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QPushButtonC2ERK5QIconRK7QStringP7QWidget(arg0, arg1, arg2)
-    return &QPushButton{Qclsinst:qthis}
+    this := &QPushButton{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPushButton)
+    return this
   case 2:
     // invoke: _ZN11QPushButtonC1EP7QWidget
     // invoke: void QPushButton(class QWidget *)
@@ -277,7 +289,9 @@ func NewQPushButton(args ...interface{}) *QPushButton {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QPushButtonC2EP7QWidget(arg0)
-    return &QPushButton{Qclsinst:qthis}
+    this := &QPushButton{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPushButton)
+    return this
   default:
     qtrt.ErrorResolve("QPushButton", "QPushButton", args)
   }
@@ -286,7 +300,7 @@ func NewQPushButton(args ...interface{}) *QPushButton {
 }
 
 // isFlat()
-func (this *QPushButton) Isflat(args ...interface{}) (ret interface{}) {
+func (this *QPushButton) IsFlat(args ...interface{}) (ret interface{}) {
   // isFlat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -315,7 +329,7 @@ func (this *QPushButton) Isflat(args ...interface{}) (ret interface{}) {
 }
 
 // isDefault()
-func (this *QPushButton) Isdefault(args ...interface{}) (ret interface{}) {
+func (this *QPushButton) IsDefault(args ...interface{}) (ret interface{}) {
   // isDefault()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -344,7 +358,7 @@ func (this *QPushButton) Isdefault(args ...interface{}) (ret interface{}) {
 }
 
 // setDefault(_Bool)
-func (this *QPushButton) Setdefault(args ...interface{}) () {
+func (this *QPushButton) SetDefault(args ...interface{}) () {
   // setDefault(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -368,7 +382,7 @@ func (this *QPushButton) Setdefault(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QPushButton) Metaobject(args ...interface{}) () {
+func (this *QPushButton) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -389,7 +403,7 @@ func (this *QPushButton) Metaobject(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QPushButton) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QPushButton) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -418,7 +432,7 @@ func (this *QPushButton) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // minimumSizeHint()
-func (this *QPushButton) Minimumsizehint(args ...interface{}) (ret interface{}) {
+func (this *QPushButton) MinimumSizeHint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -447,7 +461,7 @@ func (this *QPushButton) Minimumsizehint(args ...interface{}) (ret interface{}) 
 }
 
 // autoDefault()
-func (this *QPushButton) Autodefault(args ...interface{}) (ret interface{}) {
+func (this *QPushButton) AutoDefault(args ...interface{}) (ret interface{}) {
   // autoDefault()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -84,6 +85,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMimeData)=1
@@ -93,7 +95,7 @@ type QMimeData struct {
 }
 
 // ~QMimeData()
-func (this *QMimeData) Freeqmimedata(args ...interface{}) () {
+func (this *QMimeData) Free(args ...interface{}) () {
   // ~QMimeData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -105,7 +107,10 @@ func (this *QMimeData) Freeqmimedata(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMimeDataD0Ev
     // invoke: void ~QMimeData()
-    C.C_ZN9QMimeDataD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QMimeDataD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMimeData", "~QMimeData", args)
   }
@@ -114,7 +119,7 @@ func (this *QMimeData) Freeqmimedata(args ...interface{}) () {
 }
 
 // imageData()
-func (this *QMimeData) Imagedata(args ...interface{}) (ret interface{}) {
+func (this *QMimeData) ImageData(args ...interface{}) (ret interface{}) {
   // imageData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -172,7 +177,7 @@ func (this *QMimeData) Text(args ...interface{}) (ret interface{}) {
 }
 
 // setHtml(const class QString &)
-func (this *QMimeData) Sethtml(args ...interface{}) () {
+func (this *QMimeData) SetHtml(args ...interface{}) () {
   // setHtml(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -196,7 +201,7 @@ func (this *QMimeData) Sethtml(args ...interface{}) () {
 }
 
 // hasHtml()
-func (this *QMimeData) Hashtml(args ...interface{}) (ret interface{}) {
+func (this *QMimeData) HasHtml(args ...interface{}) (ret interface{}) {
   // hasHtml()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -225,7 +230,7 @@ func (this *QMimeData) Hashtml(args ...interface{}) (ret interface{}) {
 }
 
 // hasText()
-func (this *QMimeData) Hastext(args ...interface{}) (ret interface{}) {
+func (this *QMimeData) HasText(args ...interface{}) (ret interface{}) {
   // hasText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -254,6 +259,9 @@ func (this *QMimeData) Hastext(args ...interface{}) (ret interface{}) {
 }
 
 // QMimeData()
+func GcfreeQMimeData(this *QMimeData) {
+  qtrt.UniverseFree(this)
+}
 func NewQMimeData(args ...interface{}) *QMimeData {
   // QMimeData()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -269,7 +277,9 @@ func NewQMimeData(args ...interface{}) *QMimeData {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMimeDataC2Ev()
-    return &QMimeData{Qclsinst:qthis}
+    this := &QMimeData{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMimeData)
+    return this
   default:
     qtrt.ErrorResolve("QMimeData", "QMimeData", args)
   }
@@ -278,7 +288,7 @@ func NewQMimeData(args ...interface{}) *QMimeData {
 }
 
 // hasUrls()
-func (this *QMimeData) Hasurls(args ...interface{}) (ret interface{}) {
+func (this *QMimeData) HasUrls(args ...interface{}) (ret interface{}) {
   // hasUrls()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -307,7 +317,7 @@ func (this *QMimeData) Hasurls(args ...interface{}) (ret interface{}) {
 }
 
 // setImageData(const class QVariant &)
-func (this *QMimeData) Setimagedata(args ...interface{}) () {
+func (this *QMimeData) SetImageData(args ...interface{}) () {
   // setImageData(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -360,7 +370,7 @@ func (this *QMimeData) Html(args ...interface{}) (ret interface{}) {
 }
 
 // setColorData(const class QVariant &)
-func (this *QMimeData) Setcolordata(args ...interface{}) () {
+func (this *QMimeData) SetColorData(args ...interface{}) () {
   // setColorData(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -384,7 +394,7 @@ func (this *QMimeData) Setcolordata(args ...interface{}) () {
 }
 
 // setData(const class QString &, const class QByteArray &)
-func (this *QMimeData) Setdata(args ...interface{}) () {
+func (this *QMimeData) SetData(args ...interface{}) () {
   // setData(const class QString &, const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -411,7 +421,7 @@ func (this *QMimeData) Setdata(args ...interface{}) () {
 }
 
 // removeFormat(const class QString &)
-func (this *QMimeData) Removeformat(args ...interface{}) () {
+func (this *QMimeData) RemoveFormat(args ...interface{}) () {
   // removeFormat(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -435,7 +445,7 @@ func (this *QMimeData) Removeformat(args ...interface{}) () {
 }
 
 // hasFormat(const class QString &)
-func (this *QMimeData) Hasformat(args ...interface{}) (ret interface{}) {
+func (this *QMimeData) HasFormat(args ...interface{}) (ret interface{}) {
   // hasFormat(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -499,7 +509,7 @@ func (this *QMimeData) Data(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QMimeData) Metaobject(args ...interface{}) () {
+func (this *QMimeData) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -520,7 +530,7 @@ func (this *QMimeData) Metaobject(args ...interface{}) () {
 }
 
 // setText(const class QString &)
-func (this *QMimeData) Settext(args ...interface{}) () {
+func (this *QMimeData) SetText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -544,7 +554,7 @@ func (this *QMimeData) Settext(args ...interface{}) () {
 }
 
 // colorData()
-func (this *QMimeData) Colordata(args ...interface{}) (ret interface{}) {
+func (this *QMimeData) ColorData(args ...interface{}) (ret interface{}) {
   // colorData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -573,7 +583,7 @@ func (this *QMimeData) Colordata(args ...interface{}) (ret interface{}) {
 }
 
 // hasColor()
-func (this *QMimeData) Hascolor(args ...interface{}) (ret interface{}) {
+func (this *QMimeData) HasColor(args ...interface{}) (ret interface{}) {
   // hasColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -644,7 +654,7 @@ func (this *QMimeData) Formats(args ...interface{}) () {
 }
 
 // hasImage()
-func (this *QMimeData) Hasimage(args ...interface{}) (ret interface{}) {
+func (this *QMimeData) HasImage(args ...interface{}) (ret interface{}) {
   // hasImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

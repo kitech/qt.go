@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qcoreevent.h
 // dst-file: /src/core/qcoreevent.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -84,6 +85,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDeferredDeleteEvent)=24
@@ -117,6 +119,9 @@ type QEvent struct {
 }
 
 // QDeferredDeleteEvent()
+func GcfreeQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQDeferredDeleteEvent(args ...interface{}) *QDeferredDeleteEvent {
   // QDeferredDeleteEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -132,7 +137,9 @@ func NewQDeferredDeleteEvent(args ...interface{}) *QDeferredDeleteEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QDeferredDeleteEventC2Ev()
-    return &QDeferredDeleteEvent{Qclsinst:qthis}
+    this := &QDeferredDeleteEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDeferredDeleteEvent)
+    return this
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "QDeferredDeleteEvent", args)
   }
@@ -141,7 +148,7 @@ func NewQDeferredDeleteEvent(args ...interface{}) *QDeferredDeleteEvent {
 }
 
 // ~QDeferredDeleteEvent()
-func (this *QDeferredDeleteEvent) Freeqdeferreddeleteevent(args ...interface{}) () {
+func (this *QDeferredDeleteEvent) Free(args ...interface{}) () {
   // ~QDeferredDeleteEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -153,7 +160,10 @@ func (this *QDeferredDeleteEvent) Freeqdeferreddeleteevent(args ...interface{}) 
   case 0:
     // invoke: _ZN20QDeferredDeleteEventD0Ev
     // invoke: void ~QDeferredDeleteEvent()
-    C.C_ZN20QDeferredDeleteEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN20QDeferredDeleteEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "~QDeferredDeleteEvent", args)
   }
@@ -162,7 +172,7 @@ func (this *QDeferredDeleteEvent) Freeqdeferreddeleteevent(args ...interface{}) 
 }
 
 // loopLevel()
-func (this *QDeferredDeleteEvent) Looplevel(args ...interface{}) (ret interface{}) {
+func (this *QDeferredDeleteEvent) LoopLevel(args ...interface{}) (ret interface{}) {
   // loopLevel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -191,6 +201,9 @@ func (this *QDeferredDeleteEvent) Looplevel(args ...interface{}) (ret interface{
 }
 
 // QDynamicPropertyChangeEvent(const class QByteArray &)
+func GcfreeQDynamicPropertyChangeEvent(this *QDynamicPropertyChangeEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQDynamicPropertyChangeEvent(args ...interface{}) *QDynamicPropertyChangeEvent {
   // QDynamicPropertyChangeEvent(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,7 +222,9 @@ func NewQDynamicPropertyChangeEvent(args ...interface{}) *QDynamicPropertyChange
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray(arg0)
-    return &QDynamicPropertyChangeEvent{Qclsinst:qthis}
+    this := &QDynamicPropertyChangeEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDynamicPropertyChangeEvent)
+    return this
   default:
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "QDynamicPropertyChangeEvent", args)
   }
@@ -218,7 +233,7 @@ func NewQDynamicPropertyChangeEvent(args ...interface{}) *QDynamicPropertyChange
 }
 
 // propertyName()
-func (this *QDynamicPropertyChangeEvent) Propertyname(args ...interface{}) (ret interface{}) {
+func (this *QDynamicPropertyChangeEvent) PropertyName(args ...interface{}) (ret interface{}) {
   // propertyName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -247,7 +262,7 @@ func (this *QDynamicPropertyChangeEvent) Propertyname(args ...interface{}) (ret 
 }
 
 // ~QDynamicPropertyChangeEvent()
-func (this *QDynamicPropertyChangeEvent) Freeqdynamicpropertychangeevent(args ...interface{}) () {
+func (this *QDynamicPropertyChangeEvent) Free(args ...interface{}) () {
   // ~QDynamicPropertyChangeEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -259,7 +274,10 @@ func (this *QDynamicPropertyChangeEvent) Freeqdynamicpropertychangeevent(args ..
   case 0:
     // invoke: _ZN27QDynamicPropertyChangeEventD0Ev
     // invoke: void ~QDynamicPropertyChangeEvent()
-    C.C_ZN27QDynamicPropertyChangeEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN27QDynamicPropertyChangeEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "~QDynamicPropertyChangeEvent", args)
   }
@@ -268,7 +286,7 @@ func (this *QDynamicPropertyChangeEvent) Freeqdynamicpropertychangeevent(args ..
 }
 
 // timerId()
-func (this *QTimerEvent) Timerid(args ...interface{}) (ret interface{}) {
+func (this *QTimerEvent) TimerId(args ...interface{}) (ret interface{}) {
   // timerId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -297,7 +315,7 @@ func (this *QTimerEvent) Timerid(args ...interface{}) (ret interface{}) {
 }
 
 // ~QTimerEvent()
-func (this *QTimerEvent) Freeqtimerevent(args ...interface{}) () {
+func (this *QTimerEvent) Free(args ...interface{}) () {
   // ~QTimerEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -309,7 +327,10 @@ func (this *QTimerEvent) Freeqtimerevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTimerEventD0Ev
     // invoke: void ~QTimerEvent()
-    C.C_ZN11QTimerEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QTimerEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTimerEvent", "~QTimerEvent", args)
   }
@@ -318,6 +339,9 @@ func (this *QTimerEvent) Freeqtimerevent(args ...interface{}) () {
 }
 
 // QTimerEvent(int)
+func GcfreeQTimerEvent(this *QTimerEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQTimerEvent(args ...interface{}) *QTimerEvent {
   // QTimerEvent(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -336,7 +360,9 @@ func NewQTimerEvent(args ...interface{}) *QTimerEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTimerEventC2Ei(arg0)
-    return &QTimerEvent{Qclsinst:qthis}
+    this := &QTimerEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTimerEvent)
+    return this
   default:
     qtrt.ErrorResolve("QTimerEvent", "QTimerEvent", args)
   }
@@ -403,7 +429,7 @@ func (this *QChildEvent) Polished(args ...interface{}) (ret interface{}) {
 }
 
 // ~QChildEvent()
-func (this *QChildEvent) Freeqchildevent(args ...interface{}) () {
+func (this *QChildEvent) Free(args ...interface{}) () {
   // ~QChildEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -415,7 +441,10 @@ func (this *QChildEvent) Freeqchildevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QChildEventD0Ev
     // invoke: void ~QChildEvent()
-    C.C_ZN11QChildEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QChildEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QChildEvent", "~QChildEvent", args)
   }
@@ -482,7 +511,7 @@ func (this *QChildEvent) Removed(args ...interface{}) (ret interface{}) {
 }
 
 // registerEventType(int)
-func (this *QEvent) Registereventtype_S(args ...interface{}) (ret interface{}) {
+func (this *QEvent) RegisterEventType_s(args ...interface{}) (ret interface{}) {
   // registerEventType(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -585,7 +614,7 @@ func (this *QEvent) Ignore(args ...interface{}) () {
 }
 
 // isAccepted()
-func (this *QEvent) Isaccepted(args ...interface{}) (ret interface{}) {
+func (this *QEvent) IsAccepted(args ...interface{}) (ret interface{}) {
   // isAccepted()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -614,7 +643,7 @@ func (this *QEvent) Isaccepted(args ...interface{}) (ret interface{}) {
 }
 
 // setAccepted(_Bool)
-func (this *QEvent) Setaccepted(args ...interface{}) () {
+func (this *QEvent) SetAccepted(args ...interface{}) () {
   // setAccepted(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -659,6 +688,9 @@ func (this *QEvent) Type_(args ...interface{}) () {
 }
 
 // QEvent(const class QEvent &)
+func GcfreeQEvent(this *QEvent) {
+  qtrt.UniverseFree(this)
+}
 func NewQEvent(args ...interface{}) *QEvent {
   // QEvent(const class QEvent &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -677,7 +709,9 @@ func NewQEvent(args ...interface{}) *QEvent {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QEventC2ERKS_(arg0)
-    return &QEvent{Qclsinst:qthis}
+    this := &QEvent{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQEvent)
+    return this
   default:
     qtrt.ErrorResolve("QEvent", "QEvent", args)
   }
@@ -686,7 +720,7 @@ func NewQEvent(args ...interface{}) *QEvent {
 }
 
 // ~QEvent()
-func (this *QEvent) Freeqevent(args ...interface{}) () {
+func (this *QEvent) Free(args ...interface{}) () {
   // ~QEvent()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -698,7 +732,10 @@ func (this *QEvent) Freeqevent(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QEventD0Ev
     // invoke: void ~QEvent()
-    C.C_ZN6QEventD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN6QEventD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QEvent", "~QEvent", args)
   }

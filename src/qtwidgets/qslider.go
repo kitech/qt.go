@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qslider.h
 // dst-file: /src/widgets/qslider.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -60,6 +61,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSlider)=1
@@ -101,7 +103,7 @@ func (this *QSlider) Event(args ...interface{}) (ret interface{}) {
 }
 
 // ~QSlider()
-func (this *QSlider) Freeqslider(args ...interface{}) () {
+func (this *QSlider) Free(args ...interface{}) () {
   // ~QSlider()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -113,7 +115,10 @@ func (this *QSlider) Freeqslider(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QSliderD0Ev
     // invoke: void ~QSlider()
-    C.C_ZN7QSliderD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QSliderD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QSlider", "~QSlider", args)
   }
@@ -122,7 +127,7 @@ func (this *QSlider) Freeqslider(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QSlider) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QSlider) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -151,7 +156,7 @@ func (this *QSlider) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // tickInterval()
-func (this *QSlider) Tickinterval(args ...interface{}) (ret interface{}) {
+func (this *QSlider) TickInterval(args ...interface{}) (ret interface{}) {
   // tickInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -180,7 +185,7 @@ func (this *QSlider) Tickinterval(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QSlider) Metaobject(args ...interface{}) () {
+func (this *QSlider) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -201,7 +206,7 @@ func (this *QSlider) Metaobject(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QSlider) Minimumsizehint(args ...interface{}) (ret interface{}) {
+func (this *QSlider) MinimumSizeHint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -230,6 +235,9 @@ func (this *QSlider) Minimumsizehint(args ...interface{}) (ret interface{}) {
 }
 
 // QSlider(class QWidget *)
+func GcfreeQSlider(this *QSlider) {
+  qtrt.UniverseFree(this)
+}
 func NewQSlider(args ...interface{}) *QSlider {
   // QSlider(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -248,7 +256,9 @@ func NewQSlider(args ...interface{}) *QSlider {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QSliderC2EP7QWidget(arg0)
-    return &QSlider{Qclsinst:qthis}
+    this := &QSlider{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSlider)
+    return this
   default:
     qtrt.ErrorResolve("QSlider", "QSlider", args)
   }
@@ -257,7 +267,7 @@ func NewQSlider(args ...interface{}) *QSlider {
 }
 
 // tickPosition()
-func (this *QSlider) Tickposition(args ...interface{}) () {
+func (this *QSlider) TickPosition(args ...interface{}) () {
   // tickPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -278,7 +288,7 @@ func (this *QSlider) Tickposition(args ...interface{}) () {
 }
 
 // setTickInterval(int)
-func (this *QSlider) Settickinterval(args ...interface{}) () {
+func (this *QSlider) SetTickInterval(args ...interface{}) () {
   // setTickInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

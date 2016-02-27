@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -76,6 +77,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDataStream)=1
@@ -85,7 +87,7 @@ type QDataStream struct {
 }
 
 // ~QDataStream()
-func (this *QDataStream) Freeqdatastream(args ...interface{}) () {
+func (this *QDataStream) Free(args ...interface{}) () {
   // ~QDataStream()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,7 +99,10 @@ func (this *QDataStream) Freeqdatastream(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStreamD0Ev
     // invoke: void ~QDataStream()
-    C.C_ZN11QDataStreamD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QDataStreamD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDataStream", "~QDataStream", args)
   }
@@ -106,7 +111,7 @@ func (this *QDataStream) Freeqdatastream(args ...interface{}) () {
 }
 
 // skipRawData(int)
-func (this *QDataStream) Skiprawdata(args ...interface{}) (ret interface{}) {
+func (this *QDataStream) SkipRawData(args ...interface{}) (ret interface{}) {
   // skipRawData(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -138,7 +143,7 @@ func (this *QDataStream) Skiprawdata(args ...interface{}) (ret interface{}) {
 }
 
 // setVersion(int)
-func (this *QDataStream) Setversion(args ...interface{}) () {
+func (this *QDataStream) SetVersion(args ...interface{}) () {
   // setVersion(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,7 +167,7 @@ func (this *QDataStream) Setversion(args ...interface{}) () {
 }
 
 // writeBytes(const char *, uint)
-func (this *QDataStream) Writebytes(args ...interface{}) (ret interface{}) {
+func (this *QDataStream) WriteBytes(args ...interface{}) (ret interface{}) {
   // writeBytes(const char *, uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -199,7 +204,7 @@ func (this *QDataStream) Writebytes(args ...interface{}) (ret interface{}) {
 }
 
 // unsetDevice()
-func (this *QDataStream) Unsetdevice(args ...interface{}) () {
+func (this *QDataStream) UnsetDevice(args ...interface{}) () {
   // unsetDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -249,7 +254,7 @@ func (this *QDataStream) Version(args ...interface{}) (ret interface{}) {
 }
 
 // readBytes(char *&, uint &)
-func (this *QDataStream) Readbytes(args ...interface{}) (ret interface{}) {
+func (this *QDataStream) ReadBytes(args ...interface{}) (ret interface{}) {
   // readBytes(char *&, uint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -286,7 +291,7 @@ func (this *QDataStream) Readbytes(args ...interface{}) (ret interface{}) {
 }
 
 // setDevice(class QIODevice *)
-func (this *QDataStream) Setdevice(args ...interface{}) () {
+func (this *QDataStream) SetDevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -310,7 +315,7 @@ func (this *QDataStream) Setdevice(args ...interface{}) () {
 }
 
 // byteOrder()
-func (this *QDataStream) Byteorder(args ...interface{}) () {
+func (this *QDataStream) ByteOrder(args ...interface{}) () {
   // byteOrder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -352,7 +357,7 @@ func (this *QDataStream) Status(args ...interface{}) () {
 }
 
 // readRawData(char *, int)
-func (this *QDataStream) Readrawdata(args ...interface{}) (ret interface{}) {
+func (this *QDataStream) ReadRawData(args ...interface{}) (ret interface{}) {
   // readRawData(char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -389,7 +394,7 @@ func (this *QDataStream) Readrawdata(args ...interface{}) (ret interface{}) {
 }
 
 // floatingPointPrecision()
-func (this *QDataStream) Floatingpointprecision(args ...interface{}) () {
+func (this *QDataStream) FloatingPointPrecision(args ...interface{}) () {
   // floatingPointPrecision()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -410,7 +415,7 @@ func (this *QDataStream) Floatingpointprecision(args ...interface{}) () {
 }
 
 // writeRawData(const char *, int)
-func (this *QDataStream) Writerawdata(args ...interface{}) (ret interface{}) {
+func (this *QDataStream) WriteRawData(args ...interface{}) (ret interface{}) {
   // writeRawData(const char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -476,7 +481,7 @@ func (this *QDataStream) Device(args ...interface{}) (ret interface{}) {
 }
 
 // resetStatus()
-func (this *QDataStream) Resetstatus(args ...interface{}) () {
+func (this *QDataStream) ResetStatus(args ...interface{}) () {
   // resetStatus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -497,7 +502,7 @@ func (this *QDataStream) Resetstatus(args ...interface{}) () {
 }
 
 // atEnd()
-func (this *QDataStream) Atend(args ...interface{}) (ret interface{}) {
+func (this *QDataStream) AtEnd(args ...interface{}) (ret interface{}) {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -526,6 +531,9 @@ func (this *QDataStream) Atend(args ...interface{}) (ret interface{}) {
 }
 
 // QDataStream(const class QByteArray &)
+func GcfreeQDataStream(this *QDataStream) {
+  qtrt.UniverseFree(this)
+}
 func NewQDataStream(args ...interface{}) *QDataStream {
   // QDataStream(const class QByteArray &)
   // QDataStream()
@@ -549,14 +557,18 @@ func NewQDataStream(args ...interface{}) *QDataStream {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QDataStreamC2ERK10QByteArray(arg0)
-    return &QDataStream{Qclsinst:qthis}
+    this := &QDataStream{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDataStream)
+    return this
   case 1:
     // invoke: _ZN11QDataStreamC1Ev
     // invoke: void QDataStream()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QDataStreamC2Ev()
-    return &QDataStream{Qclsinst:qthis}
+    this := &QDataStream{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDataStream)
+    return this
   case 2:
     // invoke: _ZN11QDataStreamC1EP9QIODevice
     // invoke: void QDataStream(class QIODevice *)
@@ -565,7 +577,9 @@ func NewQDataStream(args ...interface{}) *QDataStream {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QDataStreamC2EP9QIODevice(arg0)
-    return &QDataStream{Qclsinst:qthis}
+    this := &QDataStream{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDataStream)
+    return this
   default:
     qtrt.ErrorResolve("QDataStream", "QDataStream", args)
   }

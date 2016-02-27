@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qmimedatabase.h
 // dst-file: /src/core/qmimedatabase.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -60,6 +61,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMimeDatabase)=8
@@ -69,7 +71,7 @@ type QMimeDatabase struct {
 }
 
 // mimeTypeForName(const class QString &)
-func (this *QMimeDatabase) Mimetypeforname(args ...interface{}) (ret interface{}) {
+func (this *QMimeDatabase) MimeTypeForName(args ...interface{}) (ret interface{}) {
   // mimeTypeForName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -101,6 +103,9 @@ func (this *QMimeDatabase) Mimetypeforname(args ...interface{}) (ret interface{}
 }
 
 // QMimeDatabase()
+func GcfreeQMimeDatabase(this *QMimeDatabase) {
+  qtrt.UniverseFree(this)
+}
 func NewQMimeDatabase(args ...interface{}) *QMimeDatabase {
   // QMimeDatabase()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -116,7 +121,9 @@ func NewQMimeDatabase(args ...interface{}) *QMimeDatabase {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QMimeDatabaseC2Ev()
-    return &QMimeDatabase{Qclsinst:qthis}
+    this := &QMimeDatabase{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMimeDatabase)
+    return this
   default:
     qtrt.ErrorResolve("QMimeDatabase", "QMimeDatabase", args)
   }
@@ -125,7 +132,7 @@ func NewQMimeDatabase(args ...interface{}) *QMimeDatabase {
 }
 
 // ~QMimeDatabase()
-func (this *QMimeDatabase) Freeqmimedatabase(args ...interface{}) () {
+func (this *QMimeDatabase) Free(args ...interface{}) () {
   // ~QMimeDatabase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -137,7 +144,10 @@ func (this *QMimeDatabase) Freeqmimedatabase(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QMimeDatabaseD0Ev
     // invoke: void ~QMimeDatabase()
-    C.C_ZN13QMimeDatabaseD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QMimeDatabaseD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMimeDatabase", "~QMimeDatabase", args)
   }
@@ -146,7 +156,7 @@ func (this *QMimeDatabase) Freeqmimedatabase(args ...interface{}) () {
 }
 
 // allMimeTypes()
-func (this *QMimeDatabase) Allmimetypes(args ...interface{}) () {
+func (this *QMimeDatabase) AllMimeTypes(args ...interface{}) () {
   // allMimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -167,7 +177,7 @@ func (this *QMimeDatabase) Allmimetypes(args ...interface{}) () {
 }
 
 // mimeTypeForData(class QIODevice *)
-func (this *QMimeDatabase) Mimetypefordata(args ...interface{}) (ret interface{}) {
+func (this *QMimeDatabase) MimeTypeForData(args ...interface{}) (ret interface{}) {
   // mimeTypeForData(class QIODevice *)
   // mimeTypeForData(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -216,7 +226,7 @@ func (this *QMimeDatabase) Mimetypefordata(args ...interface{}) (ret interface{}
 }
 
 // mimeTypeForUrl(const class QUrl &)
-func (this *QMimeDatabase) Mimetypeforurl(args ...interface{}) (ret interface{}) {
+func (this *QMimeDatabase) MimeTypeForUrl(args ...interface{}) (ret interface{}) {
   // mimeTypeForUrl(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -248,7 +258,7 @@ func (this *QMimeDatabase) Mimetypeforurl(args ...interface{}) (ret interface{})
 }
 
 // mimeTypeForFileNameAndData(const class QString &, const class QByteArray &)
-func (this *QMimeDatabase) Mimetypeforfilenameanddata(args ...interface{}) (ret interface{}) {
+func (this *QMimeDatabase) MimeTypeForFileNameAndData(args ...interface{}) (ret interface{}) {
   // mimeTypeForFileNameAndData(const class QString &, const class QByteArray &)
   // mimeTypeForFileNameAndData(const class QString &, class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -303,7 +313,7 @@ func (this *QMimeDatabase) Mimetypeforfilenameanddata(args ...interface{}) (ret 
 }
 
 // mimeTypesForFileName(const class QString &)
-func (this *QMimeDatabase) Mimetypesforfilename(args ...interface{}) () {
+func (this *QMimeDatabase) MimeTypesForFileName(args ...interface{}) () {
   // mimeTypesForFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -327,7 +337,7 @@ func (this *QMimeDatabase) Mimetypesforfilename(args ...interface{}) () {
 }
 
 // suffixForFileName(const class QString &)
-func (this *QMimeDatabase) Suffixforfilename(args ...interface{}) (ret interface{}) {
+func (this *QMimeDatabase) SuffixForFileName(args ...interface{}) (ret interface{}) {
   // suffixForFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

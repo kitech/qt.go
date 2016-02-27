@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -54,6 +55,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QKeyEventTransition)=1
@@ -63,7 +65,7 @@ type QKeyEventTransition struct {
 }
 
 // metaObject()
-func (this *QKeyEventTransition) Metaobject(args ...interface{}) () {
+func (this *QKeyEventTransition) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -113,7 +115,7 @@ func (this *QKeyEventTransition) Key(args ...interface{}) (ret interface{}) {
 }
 
 // modifierMask()
-func (this *QKeyEventTransition) Modifiermask(args ...interface{}) () {
+func (this *QKeyEventTransition) ModifierMask(args ...interface{}) () {
   // modifierMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -134,7 +136,7 @@ func (this *QKeyEventTransition) Modifiermask(args ...interface{}) () {
 }
 
 // setKey(int)
-func (this *QKeyEventTransition) Setkey(args ...interface{}) () {
+func (this *QKeyEventTransition) SetKey(args ...interface{}) () {
   // setKey(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -158,7 +160,7 @@ func (this *QKeyEventTransition) Setkey(args ...interface{}) () {
 }
 
 // ~QKeyEventTransition()
-func (this *QKeyEventTransition) Freeqkeyeventtransition(args ...interface{}) () {
+func (this *QKeyEventTransition) Free(args ...interface{}) () {
   // ~QKeyEventTransition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -170,7 +172,10 @@ func (this *QKeyEventTransition) Freeqkeyeventtransition(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QKeyEventTransitionD0Ev
     // invoke: void ~QKeyEventTransition()
-    C.C_ZN19QKeyEventTransitionD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QKeyEventTransitionD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "~QKeyEventTransition", args)
   }
@@ -179,6 +184,9 @@ func (this *QKeyEventTransition) Freeqkeyeventtransition(args ...interface{}) ()
 }
 
 // QKeyEventTransition(class QState *)
+func GcfreeQKeyEventTransition(this *QKeyEventTransition) {
+  qtrt.UniverseFree(this)
+}
 func NewQKeyEventTransition(args ...interface{}) *QKeyEventTransition {
   // QKeyEventTransition(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -197,7 +205,9 @@ func NewQKeyEventTransition(args ...interface{}) *QKeyEventTransition {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QKeyEventTransitionC2EP6QState(arg0)
-    return &QKeyEventTransition{Qclsinst:qthis}
+    this := &QKeyEventTransition{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQKeyEventTransition)
+    return this
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "QKeyEventTransition", args)
   }

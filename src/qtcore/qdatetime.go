@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qdatetime.h
 // dst-file: /src/core/qdatetime.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -224,6 +225,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTime)=4
@@ -245,7 +247,7 @@ type QDate struct {
 }
 
 // fromString(const class QString &, const class QString &)
-func (this *QTime) Fromstring_S(args ...interface{}) (ret interface{}) {
+func (this *QTime) FromString_s(args ...interface{}) (ret interface{}) {
   // fromString(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -280,6 +282,9 @@ func (this *QTime) Fromstring_S(args ...interface{}) (ret interface{}) {
 }
 
 // QTime(int, int, int, int)
+func GcfreeQTime(this *QTime) {
+  qtrt.UniverseFree(this)
+}
 func NewQTime(args ...interface{}) *QTime {
   // QTime(int, int, int, int)
   // QTime()
@@ -309,14 +314,18 @@ func NewQTime(args ...interface{}) *QTime {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QTimeC2Eiiii(arg0, arg1, arg2, arg3)
-    return &QTime{Qclsinst:qthis}
+    this := &QTime{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTime)
+    return this
   case 1:
     // invoke: _ZN5QTimeC1Ev
     // invoke: void QTime()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QTimeC2Ev()
-    return &QTime{Qclsinst:qthis}
+    this := &QTime{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTime)
+    return this
   default:
     qtrt.ErrorResolve("QTime", "QTime", args)
   }
@@ -383,7 +392,7 @@ func (this *QTime) Second(args ...interface{}) (ret interface{}) {
 }
 
 // msecsSinceStartOfDay()
-func (this *QTime) Msecssincestartofday(args ...interface{}) (ret interface{}) {
+func (this *QTime) MsecsSinceStartOfDay(args ...interface{}) (ret interface{}) {
   // msecsSinceStartOfDay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -412,7 +421,7 @@ func (this *QTime) Msecssincestartofday(args ...interface{}) (ret interface{}) {
 }
 
 // setHMS(int, int, int, int)
-func (this *QTime) Sethms(args ...interface{}) (ret interface{}) {
+func (this *QTime) SetHMS(args ...interface{}) (ret interface{}) {
   // setHMS(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -453,7 +462,7 @@ func (this *QTime) Sethms(args ...interface{}) (ret interface{}) {
 }
 
 // addMSecs(int)
-func (this *QTime) Addmsecs(args ...interface{}) (ret interface{}) {
+func (this *QTime) AddMSecs(args ...interface{}) (ret interface{}) {
   // addMSecs(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -506,7 +515,7 @@ func (this *QTime) Start(args ...interface{}) () {
 }
 
 // fromMSecsSinceStartOfDay(int)
-func (this *QTime) Frommsecssincestartofday_S(args ...interface{}) (ret interface{}) {
+func (this *QTime) FromMSecsSinceStartOfDay_s(args ...interface{}) (ret interface{}) {
   // fromMSecsSinceStartOfDay(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -567,7 +576,7 @@ func (this *QTime) Minute(args ...interface{}) (ret interface{}) {
 }
 
 // toString(const class QString &)
-func (this *QTime) Tostring(args ...interface{}) (ret interface{}) {
+func (this *QTime) ToString(args ...interface{}) (ret interface{}) {
   // toString(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -599,7 +608,7 @@ func (this *QTime) Tostring(args ...interface{}) (ret interface{}) {
 }
 
 // isValid(int, int, int, int)
-func (this *QTime) Isvalid_S(args ...interface{}) (ret interface{}) {
+func (this *QTime) IsValid_s(args ...interface{}) (ret interface{}) {
   // isValid(int, int, int, int)
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -654,7 +663,7 @@ func (this *QTime) Isvalid_S(args ...interface{}) (ret interface{}) {
 }
 
 // secsTo(const class QTime &)
-func (this *QTime) Secsto(args ...interface{}) (ret interface{}) {
+func (this *QTime) SecsTo(args ...interface{}) (ret interface{}) {
   // secsTo(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -715,7 +724,7 @@ func (this *QTime) Elapsed(args ...interface{}) (ret interface{}) {
 }
 
 // addSecs(int)
-func (this *QTime) Addsecs(args ...interface{}) (ret interface{}) {
+func (this *QTime) AddSecs(args ...interface{}) (ret interface{}) {
   // addSecs(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -747,7 +756,7 @@ func (this *QTime) Addsecs(args ...interface{}) (ret interface{}) {
 }
 
 // msecsTo(const class QTime &)
-func (this *QTime) Msecsto(args ...interface{}) (ret interface{}) {
+func (this *QTime) MsecsTo(args ...interface{}) (ret interface{}) {
   // msecsTo(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -837,7 +846,7 @@ func (this *QTime) Hour(args ...interface{}) (ret interface{}) {
 }
 
 // currentTime()
-func (this *QTime) Currenttime_S(args ...interface{}) (ret interface{}) {
+func (this *QTime) CurrentTime_s(args ...interface{}) (ret interface{}) {
   // currentTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -866,7 +875,7 @@ func (this *QTime) Currenttime_S(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QTime) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QTime) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -895,7 +904,7 @@ func (this *QTime) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // fromString(const class QString &, const class QString &)
-func (this *QDateTime) Fromstring_S(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) FromString_s(args ...interface{}) (ret interface{}) {
   // fromString(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -930,7 +939,7 @@ func (this *QDateTime) Fromstring_S(args ...interface{}) (ret interface{}) {
 }
 
 // setOffsetFromUtc(int)
-func (this *QDateTime) Setoffsetfromutc(args ...interface{}) () {
+func (this *QDateTime) SetOffsetFromUtc(args ...interface{}) () {
   // setOffsetFromUtc(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -954,7 +963,7 @@ func (this *QDateTime) Setoffsetfromutc(args ...interface{}) () {
 }
 
 // toTime_t()
-func (this *QDateTime) Totime_T(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) ToTime_t(args ...interface{}) (ret interface{}) {
   // toTime_t()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -983,7 +992,7 @@ func (this *QDateTime) Totime_T(args ...interface{}) (ret interface{}) {
 }
 
 // toTimeZone(const class QTimeZone &)
-func (this *QDateTime) Totimezone(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) ToTimeZone(args ...interface{}) (ret interface{}) {
   // toTimeZone(const class QTimeZone &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1015,7 +1024,7 @@ func (this *QDateTime) Totimezone(args ...interface{}) (ret interface{}) {
 }
 
 // toUTC()
-func (this *QDateTime) Toutc(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) ToUTC(args ...interface{}) (ret interface{}) {
   // toUTC()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1044,7 +1053,7 @@ func (this *QDateTime) Toutc(args ...interface{}) (ret interface{}) {
 }
 
 // setUtcOffset(int)
-func (this *QDateTime) Setutcoffset(args ...interface{}) () {
+func (this *QDateTime) SetUtcOffset(args ...interface{}) () {
   // setUtcOffset(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1068,7 +1077,7 @@ func (this *QDateTime) Setutcoffset(args ...interface{}) () {
 }
 
 // setTimeZone(const class QTimeZone &)
-func (this *QDateTime) Settimezone(args ...interface{}) () {
+func (this *QDateTime) SetTimeZone(args ...interface{}) () {
   // setTimeZone(const class QTimeZone &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1092,6 +1101,9 @@ func (this *QDateTime) Settimezone(args ...interface{}) () {
 }
 
 // QDateTime(const class QDateTime &)
+func GcfreeQDateTime(this *QDateTime) {
+  qtrt.UniverseFree(this)
+}
 func NewQDateTime(args ...interface{}) *QDateTime {
   // QDateTime(const class QDateTime &)
   // QDateTime(const class QDate &)
@@ -1120,7 +1132,9 @@ func NewQDateTime(args ...interface{}) *QDateTime {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateTimeC2ERKS_(arg0)
-    return &QDateTime{Qclsinst:qthis}
+    this := &QDateTime{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDateTime)
+    return this
   case 1:
     // invoke: _ZN9QDateTimeC1ERK5QDate
     // invoke: void QDateTime(const class QDate &)
@@ -1129,14 +1143,18 @@ func NewQDateTime(args ...interface{}) *QDateTime {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateTimeC2ERK5QDate(arg0)
-    return &QDateTime{Qclsinst:qthis}
+    this := &QDateTime{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDateTime)
+    return this
   case 2:
     // invoke: _ZN9QDateTimeC1Ev
     // invoke: void QDateTime()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateTimeC2Ev()
-    return &QDateTime{Qclsinst:qthis}
+    this := &QDateTime{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDateTime)
+    return this
   case 3:
     // invoke: _ZN9QDateTimeC1ERK5QDateRK5QTimeRK9QTimeZone
     // invoke: void QDateTime(const class QDate &, const class QTime &, const class QTimeZone &)
@@ -1149,7 +1167,9 @@ func NewQDateTime(args ...interface{}) *QDateTime {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QDateTimeC2ERK5QDateRK5QTimeRK9QTimeZone(arg0, arg1, arg2)
-    return &QDateTime{Qclsinst:qthis}
+    this := &QDateTime{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDateTime)
+    return this
   default:
     qtrt.ErrorResolve("QDateTime", "QDateTime", args)
   }
@@ -1158,7 +1178,7 @@ func NewQDateTime(args ...interface{}) *QDateTime {
 }
 
 // ~QDateTime()
-func (this *QDateTime) Freeqdatetime(args ...interface{}) () {
+func (this *QDateTime) Free(args ...interface{}) () {
   // ~QDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1170,7 +1190,10 @@ func (this *QDateTime) Freeqdatetime(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDateTimeD0Ev
     // invoke: void ~QDateTime()
-    C.C_ZN9QDateTimeD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QDateTimeD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDateTime", "~QDateTime", args)
   }
@@ -1179,7 +1202,7 @@ func (this *QDateTime) Freeqdatetime(args ...interface{}) () {
 }
 
 // toOffsetFromUtc(int)
-func (this *QDateTime) Tooffsetfromutc(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) ToOffsetFromUtc(args ...interface{}) (ret interface{}) {
   // toOffsetFromUtc(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1211,7 +1234,7 @@ func (this *QDateTime) Tooffsetfromutc(args ...interface{}) (ret interface{}) {
 }
 
 // addMSecs(qint64)
-func (this *QDateTime) Addmsecs(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) AddMSecs(args ...interface{}) (ret interface{}) {
   // addMSecs(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1243,7 +1266,7 @@ func (this *QDateTime) Addmsecs(args ...interface{}) (ret interface{}) {
 }
 
 // addMonths(int)
-func (this *QDateTime) Addmonths(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) AddMonths(args ...interface{}) (ret interface{}) {
   // addMonths(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1275,7 +1298,7 @@ func (this *QDateTime) Addmonths(args ...interface{}) (ret interface{}) {
 }
 
 // offsetFromUtc()
-func (this *QDateTime) Offsetfromutc(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) OffsetFromUtc(args ...interface{}) (ret interface{}) {
   // offsetFromUtc()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1304,7 +1327,7 @@ func (this *QDateTime) Offsetfromutc(args ...interface{}) (ret interface{}) {
 }
 
 // toString(const class QString &)
-func (this *QDateTime) Tostring(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) ToString(args ...interface{}) (ret interface{}) {
   // toString(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1360,7 +1383,7 @@ func (this *QDateTime) Swap(args ...interface{}) () {
 }
 
 // setDate(const class QDate &)
-func (this *QDateTime) Setdate(args ...interface{}) () {
+func (this *QDateTime) SetDate(args ...interface{}) () {
   // setDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1384,7 +1407,7 @@ func (this *QDateTime) Setdate(args ...interface{}) () {
 }
 
 // currentDateTime()
-func (this *QDateTime) Currentdatetime_S(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) CurrentDateTime_s(args ...interface{}) (ret interface{}) {
   // currentDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1413,7 +1436,7 @@ func (this *QDateTime) Currentdatetime_S(args ...interface{}) (ret interface{}) 
 }
 
 // currentDateTimeUtc()
-func (this *QDateTime) Currentdatetimeutc_S(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) CurrentDateTimeUtc_s(args ...interface{}) (ret interface{}) {
   // currentDateTimeUtc()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1442,7 +1465,7 @@ func (this *QDateTime) Currentdatetimeutc_S(args ...interface{}) (ret interface{
 }
 
 // currentMSecsSinceEpoch()
-func (this *QDateTime) Currentmsecssinceepoch_S(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) CurrentMSecsSinceEpoch_s(args ...interface{}) (ret interface{}) {
   // currentMSecsSinceEpoch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1471,7 +1494,7 @@ func (this *QDateTime) Currentmsecssinceepoch_S(args ...interface{}) (ret interf
 }
 
 // isValid()
-func (this *QDateTime) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1500,7 +1523,7 @@ func (this *QDateTime) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // secsTo(const class QDateTime &)
-func (this *QDateTime) Secsto(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) SecsTo(args ...interface{}) (ret interface{}) {
   // secsTo(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1532,7 +1555,7 @@ func (this *QDateTime) Secsto(args ...interface{}) (ret interface{}) {
 }
 
 // setMSecsSinceEpoch(qint64)
-func (this *QDateTime) Setmsecssinceepoch(args ...interface{}) () {
+func (this *QDateTime) SetMSecsSinceEpoch(args ...interface{}) () {
   // setMSecsSinceEpoch(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1556,7 +1579,7 @@ func (this *QDateTime) Setmsecssinceepoch(args ...interface{}) () {
 }
 
 // addDays(qint64)
-func (this *QDateTime) Adddays(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) AddDays(args ...interface{}) (ret interface{}) {
   // addDays(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1588,7 +1611,7 @@ func (this *QDateTime) Adddays(args ...interface{}) (ret interface{}) {
 }
 
 // setTime_t(uint)
-func (this *QDateTime) Settime_T(args ...interface{}) () {
+func (this *QDateTime) SetTime_t(args ...interface{}) () {
   // setTime_t(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1612,7 +1635,7 @@ func (this *QDateTime) Settime_T(args ...interface{}) () {
 }
 
 // addSecs(qint64)
-func (this *QDateTime) Addsecs(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) AddSecs(args ...interface{}) (ret interface{}) {
   // addSecs(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1644,7 +1667,7 @@ func (this *QDateTime) Addsecs(args ...interface{}) (ret interface{}) {
 }
 
 // timeZoneAbbreviation()
-func (this *QDateTime) Timezoneabbreviation(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) TimeZoneAbbreviation(args ...interface{}) (ret interface{}) {
   // timeZoneAbbreviation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1673,7 +1696,7 @@ func (this *QDateTime) Timezoneabbreviation(args ...interface{}) (ret interface{
 }
 
 // setTime(const class QTime &)
-func (this *QDateTime) Settime(args ...interface{}) () {
+func (this *QDateTime) SetTime(args ...interface{}) () {
   // setTime(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1697,7 +1720,7 @@ func (this *QDateTime) Settime(args ...interface{}) () {
 }
 
 // toMSecsSinceEpoch()
-func (this *QDateTime) Tomsecssinceepoch(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) ToMSecsSinceEpoch(args ...interface{}) (ret interface{}) {
   // toMSecsSinceEpoch()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1726,7 +1749,7 @@ func (this *QDateTime) Tomsecssinceepoch(args ...interface{}) (ret interface{}) 
 }
 
 // msecsTo(const class QDateTime &)
-func (this *QDateTime) Msecsto(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) MsecsTo(args ...interface{}) (ret interface{}) {
   // msecsTo(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1787,7 +1810,7 @@ func (this *QDateTime) Date(args ...interface{}) (ret interface{}) {
 }
 
 // daysTo(const class QDateTime &)
-func (this *QDateTime) Daysto(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) DaysTo(args ...interface{}) (ret interface{}) {
   // daysTo(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1819,7 +1842,7 @@ func (this *QDateTime) Daysto(args ...interface{}) (ret interface{}) {
 }
 
 // toLocalTime()
-func (this *QDateTime) Tolocaltime(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) ToLocalTime(args ...interface{}) (ret interface{}) {
   // toLocalTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1848,7 +1871,7 @@ func (this *QDateTime) Tolocaltime(args ...interface{}) (ret interface{}) {
 }
 
 // timeSpec()
-func (this *QDateTime) Timespec(args ...interface{}) () {
+func (this *QDateTime) TimeSpec(args ...interface{}) () {
   // timeSpec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1869,7 +1892,7 @@ func (this *QDateTime) Timespec(args ...interface{}) () {
 }
 
 // fromTime_t(uint, const class QTimeZone &)
-func (this *QDateTime) Fromtime_T_S(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) FromTime_t_s(args ...interface{}) (ret interface{}) {
   // fromTime_t(uint, const class QTimeZone &)
   // fromTime_t(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1921,7 +1944,7 @@ func (this *QDateTime) Fromtime_T_S(args ...interface{}) (ret interface{}) {
 }
 
 // fromMSecsSinceEpoch(qint64)
-func (this *QDateTime) Frommsecssinceepoch_S(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) FromMSecsSinceEpoch_s(args ...interface{}) (ret interface{}) {
   // fromMSecsSinceEpoch(qint64)
   // fromMSecsSinceEpoch(qint64, const class QTimeZone &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1973,7 +1996,7 @@ func (this *QDateTime) Frommsecssinceepoch_S(args ...interface{}) (ret interface
 }
 
 // isNull()
-func (this *QDateTime) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2002,7 +2025,7 @@ func (this *QDateTime) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // utcOffset()
-func (this *QDateTime) Utcoffset(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) UtcOffset(args ...interface{}) (ret interface{}) {
   // utcOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2060,7 +2083,7 @@ func (this *QDateTime) Time(args ...interface{}) (ret interface{}) {
 }
 
 // timeZone()
-func (this *QDateTime) Timezone(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) TimeZone(args ...interface{}) (ret interface{}) {
   // timeZone()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2089,7 +2112,7 @@ func (this *QDateTime) Timezone(args ...interface{}) (ret interface{}) {
 }
 
 // isDaylightTime()
-func (this *QDateTime) Isdaylighttime(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) IsDaylightTime(args ...interface{}) (ret interface{}) {
   // isDaylightTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2118,7 +2141,7 @@ func (this *QDateTime) Isdaylighttime(args ...interface{}) (ret interface{}) {
 }
 
 // addYears(int)
-func (this *QDateTime) Addyears(args ...interface{}) (ret interface{}) {
+func (this *QDateTime) AddYears(args ...interface{}) (ret interface{}) {
   // addYears(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2150,7 +2173,7 @@ func (this *QDateTime) Addyears(args ...interface{}) (ret interface{}) {
 }
 
 // fromString(const class QString &, const class QString &)
-func (this *QDate) Fromstring_S(args ...interface{}) (ret interface{}) {
+func (this *QDate) FromString_s(args ...interface{}) (ret interface{}) {
   // fromString(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2243,7 +2266,7 @@ func (this *QDate) Year(args ...interface{}) (ret interface{}) {
 }
 
 // daysInMonth()
-func (this *QDate) Daysinmonth(args ...interface{}) (ret interface{}) {
+func (this *QDate) DaysInMonth(args ...interface{}) (ret interface{}) {
   // daysInMonth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2272,7 +2295,7 @@ func (this *QDate) Daysinmonth(args ...interface{}) (ret interface{}) {
 }
 
 // daysTo(const class QDate &)
-func (this *QDate) Daysto(args ...interface{}) (ret interface{}) {
+func (this *QDate) DaysTo(args ...interface{}) (ret interface{}) {
   // daysTo(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2304,7 +2327,7 @@ func (this *QDate) Daysto(args ...interface{}) (ret interface{}) {
 }
 
 // weekNumber(int *)
-func (this *QDate) Weeknumber(args ...interface{}) (ret interface{}) {
+func (this *QDate) WeekNumber(args ...interface{}) (ret interface{}) {
   // weekNumber(int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2336,7 +2359,7 @@ func (this *QDate) Weeknumber(args ...interface{}) (ret interface{}) {
 }
 
 // daysInYear()
-func (this *QDate) Daysinyear(args ...interface{}) (ret interface{}) {
+func (this *QDate) DaysInYear(args ...interface{}) (ret interface{}) {
   // daysInYear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2365,7 +2388,7 @@ func (this *QDate) Daysinyear(args ...interface{}) (ret interface{}) {
 }
 
 // addMonths(int)
-func (this *QDate) Addmonths(args ...interface{}) (ret interface{}) {
+func (this *QDate) AddMonths(args ...interface{}) (ret interface{}) {
   // addMonths(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2397,7 +2420,7 @@ func (this *QDate) Addmonths(args ...interface{}) (ret interface{}) {
 }
 
 // toJulianDay()
-func (this *QDate) Tojulianday(args ...interface{}) (ret interface{}) {
+func (this *QDate) ToJulianDay(args ...interface{}) (ret interface{}) {
   // toJulianDay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2426,7 +2449,7 @@ func (this *QDate) Tojulianday(args ...interface{}) (ret interface{}) {
 }
 
 // toString(const class QString &)
-func (this *QDate) Tostring(args ...interface{}) (ret interface{}) {
+func (this *QDate) ToString(args ...interface{}) (ret interface{}) {
   // toString(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2458,7 +2481,7 @@ func (this *QDate) Tostring(args ...interface{}) (ret interface{}) {
 }
 
 // fromJulianDay(qint64)
-func (this *QDate) Fromjulianday_S(args ...interface{}) (ret interface{}) {
+func (this *QDate) FromJulianDay_s(args ...interface{}) (ret interface{}) {
   // fromJulianDay(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2490,7 +2513,7 @@ func (this *QDate) Fromjulianday_S(args ...interface{}) (ret interface{}) {
 }
 
 // setDate(int, int, int)
-func (this *QDate) Setdate(args ...interface{}) (ret interface{}) {
+func (this *QDate) SetDate(args ...interface{}) (ret interface{}) {
   // setDate(int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2528,7 +2551,7 @@ func (this *QDate) Setdate(args ...interface{}) (ret interface{}) {
 }
 
 // getDate(int *, int *, int *)
-func (this *QDate) Getdate(args ...interface{}) () {
+func (this *QDate) GetDate(args ...interface{}) () {
   // getDate(int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2558,7 +2581,7 @@ func (this *QDate) Getdate(args ...interface{}) () {
 }
 
 // dayOfWeek()
-func (this *QDate) Dayofweek(args ...interface{}) (ret interface{}) {
+func (this *QDate) DayOfWeek(args ...interface{}) (ret interface{}) {
   // dayOfWeek()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2587,7 +2610,7 @@ func (this *QDate) Dayofweek(args ...interface{}) (ret interface{}) {
 }
 
 // isLeapYear(int)
-func (this *QDate) Isleapyear_S(args ...interface{}) (ret interface{}) {
+func (this *QDate) IsLeapYear_s(args ...interface{}) (ret interface{}) {
   // isLeapYear(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2619,6 +2642,9 @@ func (this *QDate) Isleapyear_S(args ...interface{}) (ret interface{}) {
 }
 
 // QDate()
+func GcfreeQDate(this *QDate) {
+  qtrt.UniverseFree(this)
+}
 func NewQDate(args ...interface{}) *QDate {
   // QDate()
   // QDate(int, int, int)
@@ -2639,7 +2665,9 @@ func NewQDate(args ...interface{}) *QDate {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QDateC2Ev()
-    return &QDate{Qclsinst:qthis}
+    this := &QDate{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDate)
+    return this
   case 1:
     // invoke: _ZN5QDateC1Eiii
     // invoke: void QDate(int, int, int)
@@ -2652,7 +2680,9 @@ func NewQDate(args ...interface{}) *QDate {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QDateC2Eiii(arg0, arg1, arg2)
-    return &QDate{Qclsinst:qthis}
+    this := &QDate{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDate)
+    return this
   default:
     qtrt.ErrorResolve("QDate", "QDate", args)
   }
@@ -2661,7 +2691,7 @@ func NewQDate(args ...interface{}) *QDate {
 }
 
 // isValid()
-func (this *QDate) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QDate) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   // isValid(int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2713,7 +2743,7 @@ func (this *QDate) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // addDays(qint64)
-func (this *QDate) Adddays(args ...interface{}) (ret interface{}) {
+func (this *QDate) AddDays(args ...interface{}) (ret interface{}) {
   // addDays(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2774,7 +2804,7 @@ func (this *QDate) Day(args ...interface{}) (ret interface{}) {
 }
 
 // addYears(int)
-func (this *QDate) Addyears(args ...interface{}) (ret interface{}) {
+func (this *QDate) AddYears(args ...interface{}) (ret interface{}) {
   // addYears(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2806,7 +2836,7 @@ func (this *QDate) Addyears(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QDate) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QDate) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2835,7 +2865,7 @@ func (this *QDate) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // dayOfYear()
-func (this *QDate) Dayofyear(args ...interface{}) (ret interface{}) {
+func (this *QDate) DayOfYear(args ...interface{}) (ret interface{}) {
   // dayOfYear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2864,7 +2894,7 @@ func (this *QDate) Dayofyear(args ...interface{}) (ret interface{}) {
 }
 
 // currentDate()
-func (this *QDate) Currentdate_S(args ...interface{}) (ret interface{}) {
+func (this *QDate) CurrentDate_s(args ...interface{}) (ret interface{}) {
   // currentDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

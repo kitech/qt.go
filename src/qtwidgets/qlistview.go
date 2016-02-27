@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qlistview.h
 // dst-file: /src/widgets/qlistview.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -106,6 +107,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QListView)=1
@@ -116,7 +118,7 @@ type QListView struct {
 }
 
 // isWrapping()
-func (this *QListView) Iswrapping(args ...interface{}) (ret interface{}) {
+func (this *QListView) IsWrapping(args ...interface{}) (ret interface{}) {
   // isWrapping()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -145,7 +147,7 @@ func (this *QListView) Iswrapping(args ...interface{}) (ret interface{}) {
 }
 
 // batchSize()
-func (this *QListView) Batchsize(args ...interface{}) (ret interface{}) {
+func (this *QListView) BatchSize(args ...interface{}) (ret interface{}) {
   // batchSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -174,7 +176,7 @@ func (this *QListView) Batchsize(args ...interface{}) (ret interface{}) {
 }
 
 // setModelColumn(int)
-func (this *QListView) Setmodelcolumn(args ...interface{}) () {
+func (this *QListView) SetModelColumn(args ...interface{}) () {
   // setModelColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -198,7 +200,7 @@ func (this *QListView) Setmodelcolumn(args ...interface{}) () {
 }
 
 // doItemsLayout()
-func (this *QListView) Doitemslayout(args ...interface{}) () {
+func (this *QListView) DoItemsLayout(args ...interface{}) () {
   // doItemsLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -219,7 +221,7 @@ func (this *QListView) Doitemslayout(args ...interface{}) () {
 }
 
 // wordWrap()
-func (this *QListView) Wordwrap(args ...interface{}) (ret interface{}) {
+func (this *QListView) WordWrap(args ...interface{}) (ret interface{}) {
   // wordWrap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -248,7 +250,7 @@ func (this *QListView) Wordwrap(args ...interface{}) (ret interface{}) {
 }
 
 // viewMode()
-func (this *QListView) Viewmode(args ...interface{}) () {
+func (this *QListView) ViewMode(args ...interface{}) () {
   // viewMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -269,7 +271,7 @@ func (this *QListView) Viewmode(args ...interface{}) () {
 }
 
 // setSpacing(int)
-func (this *QListView) Setspacing(args ...interface{}) () {
+func (this *QListView) SetSpacing(args ...interface{}) () {
   // setSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,6 +295,9 @@ func (this *QListView) Setspacing(args ...interface{}) () {
 }
 
 // QListView(class QWidget *)
+func GcfreeQListView(this *QListView) {
+  qtrt.UniverseFree(this)
+}
 func NewQListView(args ...interface{}) *QListView {
   // QListView(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -311,7 +316,9 @@ func NewQListView(args ...interface{}) *QListView {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QListViewC2EP7QWidget(arg0)
-    return &QListView{Qclsinst:qthis}
+    this := &QListView{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQListView)
+    return this
   default:
     qtrt.ErrorResolve("QListView", "QListView", args)
   }
@@ -320,7 +327,7 @@ func NewQListView(args ...interface{}) *QListView {
 }
 
 // layoutMode()
-func (this *QListView) Layoutmode(args ...interface{}) () {
+func (this *QListView) LayoutMode(args ...interface{}) () {
   // layoutMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -341,7 +348,7 @@ func (this *QListView) Layoutmode(args ...interface{}) () {
 }
 
 // setWrapping(_Bool)
-func (this *QListView) Setwrapping(args ...interface{}) () {
+func (this *QListView) SetWrapping(args ...interface{}) () {
   // setWrapping(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -365,7 +372,7 @@ func (this *QListView) Setwrapping(args ...interface{}) () {
 }
 
 // indexAt(const class QPoint &)
-func (this *QListView) Indexat(args ...interface{}) (ret interface{}) {
+func (this *QListView) IndexAt(args ...interface{}) (ret interface{}) {
   // indexAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -397,7 +404,7 @@ func (this *QListView) Indexat(args ...interface{}) (ret interface{}) {
 }
 
 // setWordWrap(_Bool)
-func (this *QListView) Setwordwrap(args ...interface{}) () {
+func (this *QListView) SetWordWrap(args ...interface{}) () {
   // setWordWrap(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -421,7 +428,7 @@ func (this *QListView) Setwordwrap(args ...interface{}) () {
 }
 
 // visualRect(const class QModelIndex &)
-func (this *QListView) Visualrect(args ...interface{}) (ret interface{}) {
+func (this *QListView) VisualRect(args ...interface{}) (ret interface{}) {
   // visualRect(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -474,7 +481,7 @@ func (this *QListView) Movement(args ...interface{}) () {
 }
 
 // clearPropertyFlags()
-func (this *QListView) Clearpropertyflags(args ...interface{}) () {
+func (this *QListView) ClearPropertyFlags(args ...interface{}) () {
   // clearPropertyFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -516,7 +523,7 @@ func (this *QListView) Reset(args ...interface{}) () {
 }
 
 // gridSize()
-func (this *QListView) Gridsize(args ...interface{}) (ret interface{}) {
+func (this *QListView) GridSize(args ...interface{}) (ret interface{}) {
   // gridSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -574,7 +581,7 @@ func (this *QListView) Spacing(args ...interface{}) (ret interface{}) {
 }
 
 // setRootIndex(const class QModelIndex &)
-func (this *QListView) Setrootindex(args ...interface{}) () {
+func (this *QListView) SetRootIndex(args ...interface{}) () {
   // setRootIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -598,7 +605,7 @@ func (this *QListView) Setrootindex(args ...interface{}) () {
 }
 
 // resizeMode()
-func (this *QListView) Resizemode(args ...interface{}) () {
+func (this *QListView) ResizeMode(args ...interface{}) () {
   // resizeMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -619,7 +626,7 @@ func (this *QListView) Resizemode(args ...interface{}) () {
 }
 
 // setBatchSize(int)
-func (this *QListView) Setbatchsize(args ...interface{}) () {
+func (this *QListView) SetBatchSize(args ...interface{}) () {
   // setBatchSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -643,7 +650,7 @@ func (this *QListView) Setbatchsize(args ...interface{}) () {
 }
 
 // setGridSize(const class QSize &)
-func (this *QListView) Setgridsize(args ...interface{}) () {
+func (this *QListView) SetGridSize(args ...interface{}) () {
   // setGridSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -667,7 +674,7 @@ func (this *QListView) Setgridsize(args ...interface{}) () {
 }
 
 // isRowHidden(int)
-func (this *QListView) Isrowhidden(args ...interface{}) (ret interface{}) {
+func (this *QListView) IsRowHidden(args ...interface{}) (ret interface{}) {
   // isRowHidden(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -699,7 +706,7 @@ func (this *QListView) Isrowhidden(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QListView) Metaobject(args ...interface{}) () {
+func (this *QListView) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -720,7 +727,7 @@ func (this *QListView) Metaobject(args ...interface{}) () {
 }
 
 // ~QListView()
-func (this *QListView) Freeqlistview(args ...interface{}) () {
+func (this *QListView) Free(args ...interface{}) () {
   // ~QListView()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -732,7 +739,10 @@ func (this *QListView) Freeqlistview(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListViewD0Ev
     // invoke: void ~QListView()
-    C.C_ZN9QListViewD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QListViewD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QListView", "~QListView", args)
   }
@@ -762,7 +772,7 @@ func (this *QListView) Flow(args ...interface{}) () {
 }
 
 // uniformItemSizes()
-func (this *QListView) Uniformitemsizes(args ...interface{}) (ret interface{}) {
+func (this *QListView) UniformItemSizes(args ...interface{}) (ret interface{}) {
   // uniformItemSizes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -791,7 +801,7 @@ func (this *QListView) Uniformitemsizes(args ...interface{}) (ret interface{}) {
 }
 
 // setUniformItemSizes(_Bool)
-func (this *QListView) Setuniformitemsizes(args ...interface{}) () {
+func (this *QListView) SetUniformItemSizes(args ...interface{}) () {
   // setUniformItemSizes(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -815,7 +825,7 @@ func (this *QListView) Setuniformitemsizes(args ...interface{}) () {
 }
 
 // setRowHidden(int, _Bool)
-func (this *QListView) Setrowhidden(args ...interface{}) () {
+func (this *QListView) SetRowHidden(args ...interface{}) () {
   // setRowHidden(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -842,7 +852,7 @@ func (this *QListView) Setrowhidden(args ...interface{}) () {
 }
 
 // isSelectionRectVisible()
-func (this *QListView) Isselectionrectvisible(args ...interface{}) (ret interface{}) {
+func (this *QListView) IsSelectionRectVisible(args ...interface{}) (ret interface{}) {
   // isSelectionRectVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -871,7 +881,7 @@ func (this *QListView) Isselectionrectvisible(args ...interface{}) (ret interfac
 }
 
 // setSelectionRectVisible(_Bool)
-func (this *QListView) Setselectionrectvisible(args ...interface{}) () {
+func (this *QListView) SetSelectionRectVisible(args ...interface{}) () {
   // setSelectionRectVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -895,7 +905,7 @@ func (this *QListView) Setselectionrectvisible(args ...interface{}) () {
 }
 
 // modelColumn()
-func (this *QListView) Modelcolumn(args ...interface{}) (ret interface{}) {
+func (this *QListView) ModelColumn(args ...interface{}) (ret interface{}) {
   // modelColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

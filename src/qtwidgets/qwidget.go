@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qwidget.h
 // dst-file: /src/widgets/qwidget.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -480,6 +481,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QWidget)=1
@@ -499,7 +501,7 @@ type QWidgetData struct {
 }
 
 // setWindowIconText(const class QString &)
-func (this *QWidget) Setwindowicontext(args ...interface{}) () {
+func (this *QWidget) SetWindowIconText(args ...interface{}) () {
   // setWindowIconText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -544,7 +546,7 @@ func (this *QWidget) Show(args ...interface{}) () {
 }
 
 // hasFocus()
-func (this *QWidget) Hasfocus(args ...interface{}) (ret interface{}) {
+func (this *QWidget) HasFocus(args ...interface{}) (ret interface{}) {
   // hasFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -573,7 +575,7 @@ func (this *QWidget) Hasfocus(args ...interface{}) (ret interface{}) {
 }
 
 // insertAction(class QAction *, class QAction *)
-func (this *QWidget) Insertaction(args ...interface{}) () {
+func (this *QWidget) InsertAction(args ...interface{}) () {
   // insertAction(class QAction *, class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -657,7 +659,7 @@ func (this *QWidget) Actions(args ...interface{}) () {
 }
 
 // setStyle(class QStyle *)
-func (this *QWidget) Setstyle(args ...interface{}) () {
+func (this *QWidget) SetStyle(args ...interface{}) () {
   // setStyle(class QStyle *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -681,7 +683,7 @@ func (this *QWidget) Setstyle(args ...interface{}) () {
 }
 
 // keyboardGrabber()
-func (this *QWidget) Keyboardgrabber_S(args ...interface{}) (ret interface{}) {
+func (this *QWidget) KeyboardGrabber_s(args ...interface{}) (ret interface{}) {
   // keyboardGrabber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -710,7 +712,7 @@ func (this *QWidget) Keyboardgrabber_S(args ...interface{}) (ret interface{}) {
 }
 
 // setHidden(_Bool)
-func (this *QWidget) Sethidden(args ...interface{}) () {
+func (this *QWidget) SetHidden(args ...interface{}) () {
   // setHidden(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -734,7 +736,7 @@ func (this *QWidget) Sethidden(args ...interface{}) () {
 }
 
 // childAt(int, int)
-func (this *QWidget) Childat(args ...interface{}) (ret interface{}) {
+func (this *QWidget) ChildAt(args ...interface{}) (ret interface{}) {
   // childAt(int, int)
   // childAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -786,7 +788,7 @@ func (this *QWidget) Childat(args ...interface{}) (ret interface{}) {
 }
 
 // focusWidget()
-func (this *QWidget) Focuswidget(args ...interface{}) (ret interface{}) {
+func (this *QWidget) FocusWidget(args ...interface{}) (ret interface{}) {
   // focusWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -815,7 +817,7 @@ func (this *QWidget) Focuswidget(args ...interface{}) (ret interface{}) {
 }
 
 // minimumHeight()
-func (this *QWidget) Minimumheight(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MinimumHeight(args ...interface{}) (ret interface{}) {
   // minimumHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -873,7 +875,7 @@ func (this *QWidget) Font(args ...interface{}) (ret interface{}) {
 }
 
 // setLayout(class QLayout *)
-func (this *QWidget) Setlayout(args ...interface{}) () {
+func (this *QWidget) SetLayout(args ...interface{}) () {
   // setLayout(class QLayout *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -926,7 +928,7 @@ func (this *QWidget) Layout(args ...interface{}) (ret interface{}) {
 }
 
 // activateWindow()
-func (this *QWidget) Activatewindow(args ...interface{}) () {
+func (this *QWidget) ActivateWindow(args ...interface{}) () {
   // activateWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -947,7 +949,7 @@ func (this *QWidget) Activatewindow(args ...interface{}) () {
 }
 
 // unsetLayoutDirection()
-func (this *QWidget) Unsetlayoutdirection(args ...interface{}) () {
+func (this *QWidget) UnsetLayoutDirection(args ...interface{}) () {
   // unsetLayoutDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -968,7 +970,7 @@ func (this *QWidget) Unsetlayoutdirection(args ...interface{}) () {
 }
 
 // isEnabled()
-func (this *QWidget) Isenabled(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsEnabled(args ...interface{}) (ret interface{}) {
   // isEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -997,7 +999,7 @@ func (this *QWidget) Isenabled(args ...interface{}) (ret interface{}) {
 }
 
 // contextMenuPolicy()
-func (this *QWidget) Contextmenupolicy(args ...interface{}) () {
+func (this *QWidget) ContextMenuPolicy(args ...interface{}) () {
   // contextMenuPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1018,7 +1020,7 @@ func (this *QWidget) Contextmenupolicy(args ...interface{}) () {
 }
 
 // setWindowFilePath(const class QString &)
-func (this *QWidget) Setwindowfilepath(args ...interface{}) () {
+func (this *QWidget) SetWindowFilePath(args ...interface{}) () {
   // setWindowFilePath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1042,7 +1044,7 @@ func (this *QWidget) Setwindowfilepath(args ...interface{}) () {
 }
 
 // accessibleName()
-func (this *QWidget) Accessiblename(args ...interface{}) (ret interface{}) {
+func (this *QWidget) AccessibleName(args ...interface{}) (ret interface{}) {
   // accessibleName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1100,7 +1102,7 @@ func (this *QWidget) Window(args ...interface{}) (ret interface{}) {
 }
 
 // internalWinId()
-func (this *QWidget) Internalwinid(args ...interface{}) () {
+func (this *QWidget) InternalWinId(args ...interface{}) () {
   // internalWinId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1121,7 +1123,7 @@ func (this *QWidget) Internalwinid(args ...interface{}) () {
 }
 
 // setWindowTitle(const class QString &)
-func (this *QWidget) Setwindowtitle(args ...interface{}) () {
+func (this *QWidget) SetWindowTitle(args ...interface{}) () {
   // setWindowTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1145,7 +1147,7 @@ func (this *QWidget) Setwindowtitle(args ...interface{}) () {
 }
 
 // mouseGrabber()
-func (this *QWidget) Mousegrabber_S(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MouseGrabber_s(args ...interface{}) (ret interface{}) {
   // mouseGrabber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1174,7 +1176,7 @@ func (this *QWidget) Mousegrabber_S(args ...interface{}) (ret interface{}) {
 }
 
 // isModal()
-func (this *QWidget) Ismodal(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsModal(args ...interface{}) (ret interface{}) {
   // isModal()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1203,7 +1205,7 @@ func (this *QWidget) Ismodal(args ...interface{}) (ret interface{}) {
 }
 
 // foregroundRole()
-func (this *QWidget) Foregroundrole(args ...interface{}) () {
+func (this *QWidget) ForegroundRole(args ...interface{}) () {
   // foregroundRole()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1224,7 +1226,7 @@ func (this *QWidget) Foregroundrole(args ...interface{}) () {
 }
 
 // setShortcutAutoRepeat(int, _Bool)
-func (this *QWidget) Setshortcutautorepeat(args ...interface{}) () {
+func (this *QWidget) SetShortcutAutoRepeat(args ...interface{}) () {
   // setShortcutAutoRepeat(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1251,7 +1253,7 @@ func (this *QWidget) Setshortcutautorepeat(args ...interface{}) () {
 }
 
 // setGraphicsEffect(class QGraphicsEffect *)
-func (this *QWidget) Setgraphicseffect(args ...interface{}) () {
+func (this *QWidget) SetGraphicsEffect(args ...interface{}) () {
   // setGraphicsEffect(class QGraphicsEffect *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1275,7 +1277,7 @@ func (this *QWidget) Setgraphicseffect(args ...interface{}) () {
 }
 
 // setAccessibleName(const class QString &)
-func (this *QWidget) Setaccessiblename(args ...interface{}) () {
+func (this *QWidget) SetAccessibleName(args ...interface{}) () {
   // setAccessibleName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1299,7 +1301,7 @@ func (this *QWidget) Setaccessiblename(args ...interface{}) () {
 }
 
 // setMinimumHeight(int)
-func (this *QWidget) Setminimumheight(args ...interface{}) () {
+func (this *QWidget) SetMinimumHeight(args ...interface{}) () {
   // setMinimumHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1323,7 +1325,7 @@ func (this *QWidget) Setminimumheight(args ...interface{}) () {
 }
 
 // mapToParent(const class QPoint &)
-func (this *QWidget) Maptoparent(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MapToParent(args ...interface{}) (ret interface{}) {
   // mapToParent(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1355,7 +1357,7 @@ func (this *QWidget) Maptoparent(args ...interface{}) (ret interface{}) {
 }
 
 // setGeometry(int, int, int, int)
-func (this *QWidget) Setgeometry(args ...interface{}) () {
+func (this *QWidget) SetGeometry(args ...interface{}) () {
   // setGeometry(int, int, int, int)
   // setGeometry(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1426,7 +1428,7 @@ func (this *QWidget) Pos(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QWidget) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QWidget) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1455,7 +1457,7 @@ func (this *QWidget) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // windowType()
-func (this *QWidget) Windowtype(args ...interface{}) () {
+func (this *QWidget) WindowType(args ...interface{}) () {
   // windowType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1476,7 +1478,7 @@ func (this *QWidget) Windowtype(args ...interface{}) () {
 }
 
 // removeAction(class QAction *)
-func (this *QWidget) Removeaction(args ...interface{}) () {
+func (this *QWidget) RemoveAction(args ...interface{}) () {
   // removeAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1500,7 +1502,7 @@ func (this *QWidget) Removeaction(args ...interface{}) () {
 }
 
 // grabMouse()
-func (this *QWidget) Grabmouse(args ...interface{}) () {
+func (this *QWidget) GrabMouse(args ...interface{}) () {
   // grabMouse()
   // grabMouse(const class QCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1530,7 +1532,7 @@ func (this *QWidget) Grabmouse(args ...interface{}) () {
 }
 
 // frameGeometry()
-func (this *QWidget) Framegeometry(args ...interface{}) (ret interface{}) {
+func (this *QWidget) FrameGeometry(args ...interface{}) (ret interface{}) {
   // frameGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1559,7 +1561,7 @@ func (this *QWidget) Framegeometry(args ...interface{}) (ret interface{}) {
 }
 
 // setWindowRole(const class QString &)
-func (this *QWidget) Setwindowrole(args ...interface{}) () {
+func (this *QWidget) SetWindowRole(args ...interface{}) () {
   // setWindowRole(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1640,7 +1642,7 @@ func (this *QWidget) Repaint(args ...interface{}) () {
 }
 
 // inputMethodHints()
-func (this *QWidget) Inputmethodhints(args ...interface{}) () {
+func (this *QWidget) InputMethodHints(args ...interface{}) () {
   // inputMethodHints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1661,7 +1663,7 @@ func (this *QWidget) Inputmethodhints(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QWidget) Metaobject(args ...interface{}) () {
+func (this *QWidget) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1682,7 +1684,7 @@ func (this *QWidget) Metaobject(args ...interface{}) () {
 }
 
 // topLevelWidget()
-func (this *QWidget) Toplevelwidget(args ...interface{}) (ret interface{}) {
+func (this *QWidget) TopLevelWidget(args ...interface{}) (ret interface{}) {
   // topLevelWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1711,7 +1713,7 @@ func (this *QWidget) Toplevelwidget(args ...interface{}) (ret interface{}) {
 }
 
 // releaseMouse()
-func (this *QWidget) Releasemouse(args ...interface{}) () {
+func (this *QWidget) ReleaseMouse(args ...interface{}) () {
   // releaseMouse()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1732,7 +1734,7 @@ func (this *QWidget) Releasemouse(args ...interface{}) () {
 }
 
 // setLocale(const class QLocale &)
-func (this *QWidget) Setlocale(args ...interface{}) () {
+func (this *QWidget) SetLocale(args ...interface{}) () {
   // setLocale(const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1756,7 +1758,7 @@ func (this *QWidget) Setlocale(args ...interface{}) () {
 }
 
 // contentsRect()
-func (this *QWidget) Contentsrect(args ...interface{}) (ret interface{}) {
+func (this *QWidget) ContentsRect(args ...interface{}) (ret interface{}) {
   // contentsRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1785,7 +1787,7 @@ func (this *QWidget) Contentsrect(args ...interface{}) (ret interface{}) {
 }
 
 // focusPolicy()
-func (this *QWidget) Focuspolicy(args ...interface{}) () {
+func (this *QWidget) FocusPolicy(args ...interface{}) () {
   // focusPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1806,7 +1808,7 @@ func (this *QWidget) Focuspolicy(args ...interface{}) () {
 }
 
 // isVisibleTo(const class QWidget *)
-func (this *QWidget) Isvisibleto(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsVisibleTo(args ...interface{}) (ret interface{}) {
   // isVisibleTo(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1838,7 +1840,7 @@ func (this *QWidget) Isvisibleto(args ...interface{}) (ret interface{}) {
 }
 
 // updatesEnabled()
-func (this *QWidget) Updatesenabled(args ...interface{}) (ret interface{}) {
+func (this *QWidget) UpdatesEnabled(args ...interface{}) (ret interface{}) {
   // updatesEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1867,7 +1869,7 @@ func (this *QWidget) Updatesenabled(args ...interface{}) (ret interface{}) {
 }
 
 // windowState()
-func (this *QWidget) Windowstate(args ...interface{}) () {
+func (this *QWidget) WindowState(args ...interface{}) () {
   // windowState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1888,7 +1890,7 @@ func (this *QWidget) Windowstate(args ...interface{}) () {
 }
 
 // isWindowModified()
-func (this *QWidget) Iswindowmodified(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsWindowModified(args ...interface{}) (ret interface{}) {
   // isWindowModified()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1917,7 +1919,7 @@ func (this *QWidget) Iswindowmodified(args ...interface{}) (ret interface{}) {
 }
 
 // devType()
-func (this *QWidget) Devtype(args ...interface{}) (ret interface{}) {
+func (this *QWidget) DevType(args ...interface{}) (ret interface{}) {
   // devType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1946,7 +1948,7 @@ func (this *QWidget) Devtype(args ...interface{}) (ret interface{}) {
 }
 
 // clearFocus()
-func (this *QWidget) Clearfocus(args ...interface{}) () {
+func (this *QWidget) ClearFocus(args ...interface{}) () {
   // clearFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1967,7 +1969,7 @@ func (this *QWidget) Clearfocus(args ...interface{}) () {
 }
 
 // setStyleSheet(const class QString &)
-func (this *QWidget) Setstylesheet(args ...interface{}) () {
+func (this *QWidget) SetStyleSheet(args ...interface{}) () {
   // setStyleSheet(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1991,7 +1993,7 @@ func (this *QWidget) Setstylesheet(args ...interface{}) () {
 }
 
 // setMaximumHeight(int)
-func (this *QWidget) Setmaximumheight(args ...interface{}) () {
+func (this *QWidget) SetMaximumHeight(args ...interface{}) () {
   // setMaximumHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2068,7 +2070,7 @@ func (this *QWidget) Grab(args ...interface{}) (ret interface{}) {
 }
 
 // maximumSize()
-func (this *QWidget) Maximumsize(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MaximumSize(args ...interface{}) (ret interface{}) {
   // maximumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2126,7 +2128,7 @@ func (this *QWidget) Locale(args ...interface{}) (ret interface{}) {
 }
 
 // minimumSize()
-func (this *QWidget) Minimumsize(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MinimumSize(args ...interface{}) (ret interface{}) {
   // minimumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2155,7 +2157,7 @@ func (this *QWidget) Minimumsize(args ...interface{}) (ret interface{}) {
 }
 
 // windowFilePath()
-func (this *QWidget) Windowfilepath(args ...interface{}) (ret interface{}) {
+func (this *QWidget) WindowFilePath(args ...interface{}) (ret interface{}) {
   // windowFilePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2184,7 +2186,7 @@ func (this *QWidget) Windowfilepath(args ...interface{}) (ret interface{}) {
 }
 
 // setStatusTip(const class QString &)
-func (this *QWidget) Setstatustip(args ...interface{}) () {
+func (this *QWidget) SetStatusTip(args ...interface{}) () {
   // setStatusTip(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2208,7 +2210,7 @@ func (this *QWidget) Setstatustip(args ...interface{}) () {
 }
 
 // focusProxy()
-func (this *QWidget) Focusproxy(args ...interface{}) (ret interface{}) {
+func (this *QWidget) FocusProxy(args ...interface{}) (ret interface{}) {
   // focusProxy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2237,7 +2239,7 @@ func (this *QWidget) Focusproxy(args ...interface{}) (ret interface{}) {
 }
 
 // createWinId()
-func (this *QWidget) Createwinid(args ...interface{}) () {
+func (this *QWidget) CreateWinId(args ...interface{}) () {
   // createWinId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2258,7 +2260,7 @@ func (this *QWidget) Createwinid(args ...interface{}) () {
 }
 
 // paintEngine()
-func (this *QWidget) Paintengine(args ...interface{}) (ret interface{}) {
+func (this *QWidget) PaintEngine(args ...interface{}) (ret interface{}) {
   // paintEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2287,7 +2289,7 @@ func (this *QWidget) Paintengine(args ...interface{}) (ret interface{}) {
 }
 
 // saveGeometry()
-func (this *QWidget) Savegeometry(args ...interface{}) (ret interface{}) {
+func (this *QWidget) SaveGeometry(args ...interface{}) (ret interface{}) {
   // saveGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2316,7 +2318,7 @@ func (this *QWidget) Savegeometry(args ...interface{}) (ret interface{}) {
 }
 
 // backingStore()
-func (this *QWidget) Backingstore(args ...interface{}) (ret interface{}) {
+func (this *QWidget) BackingStore(args ...interface{}) (ret interface{}) {
   // backingStore()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2345,7 +2347,7 @@ func (this *QWidget) Backingstore(args ...interface{}) (ret interface{}) {
 }
 
 // setToolTipDuration(int)
-func (this *QWidget) Settooltipduration(args ...interface{}) () {
+func (this *QWidget) SetToolTipDuration(args ...interface{}) () {
   // setToolTipDuration(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2448,7 +2450,7 @@ func (this *QWidget) Hide(args ...interface{}) () {
 }
 
 // windowTitle()
-func (this *QWidget) Windowtitle(args ...interface{}) (ret interface{}) {
+func (this *QWidget) WindowTitle(args ...interface{}) (ret interface{}) {
   // windowTitle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2477,7 +2479,7 @@ func (this *QWidget) Windowtitle(args ...interface{}) (ret interface{}) {
 }
 
 // setFocusProxy(class QWidget *)
-func (this *QWidget) Setfocusproxy(args ...interface{}) () {
+func (this *QWidget) SetFocusProxy(args ...interface{}) () {
   // setFocusProxy(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2501,7 +2503,7 @@ func (this *QWidget) Setfocusproxy(args ...interface{}) () {
 }
 
 // setParent(class QWidget *)
-func (this *QWidget) Setparent(args ...interface{}) () {
+func (this *QWidget) SetParent(args ...interface{}) () {
   // setParent(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2525,7 +2527,7 @@ func (this *QWidget) Setparent(args ...interface{}) () {
 }
 
 // sizePolicy()
-func (this *QWidget) Sizepolicy(args ...interface{}) (ret interface{}) {
+func (this *QWidget) SizePolicy(args ...interface{}) (ret interface{}) {
   // sizePolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2554,7 +2556,7 @@ func (this *QWidget) Sizepolicy(args ...interface{}) (ret interface{}) {
 }
 
 // visibleRegion()
-func (this *QWidget) Visibleregion(args ...interface{}) (ret interface{}) {
+func (this *QWidget) VisibleRegion(args ...interface{}) (ret interface{}) {
   // visibleRegion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2583,7 +2585,7 @@ func (this *QWidget) Visibleregion(args ...interface{}) (ret interface{}) {
 }
 
 // windowFlags()
-func (this *QWidget) Windowflags(args ...interface{}) () {
+func (this *QWidget) WindowFlags(args ...interface{}) () {
   // windowFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2604,7 +2606,7 @@ func (this *QWidget) Windowflags(args ...interface{}) () {
 }
 
 // setContentsMargins(int, int, int, int)
-func (this *QWidget) Setcontentsmargins(args ...interface{}) () {
+func (this *QWidget) SetContentsMargins(args ...interface{}) () {
   // setContentsMargins(int, int, int, int)
   // setContentsMargins(const class QMargins &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2646,7 +2648,7 @@ func (this *QWidget) Setcontentsmargins(args ...interface{}) () {
 }
 
 // graphicsEffect()
-func (this *QWidget) Graphicseffect(args ...interface{}) () {
+func (this *QWidget) GraphicsEffect(args ...interface{}) () {
   // graphicsEffect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2667,7 +2669,7 @@ func (this *QWidget) Graphicseffect(args ...interface{}) () {
 }
 
 // mapFromParent(const class QPoint &)
-func (this *QWidget) Mapfromparent(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MapFromParent(args ...interface{}) (ret interface{}) {
   // mapFromParent(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2699,7 +2701,7 @@ func (this *QWidget) Mapfromparent(args ...interface{}) (ret interface{}) {
 }
 
 // windowRole()
-func (this *QWidget) Windowrole(args ...interface{}) (ret interface{}) {
+func (this *QWidget) WindowRole(args ...interface{}) (ret interface{}) {
   // windowRole()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2757,7 +2759,7 @@ func (this *QWidget) Style(args ...interface{}) (ret interface{}) {
 }
 
 // toolTip()
-func (this *QWidget) Tooltip(args ...interface{}) (ret interface{}) {
+func (this *QWidget) ToolTip(args ...interface{}) (ret interface{}) {
   // toolTip()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2786,7 +2788,7 @@ func (this *QWidget) Tooltip(args ...interface{}) (ret interface{}) {
 }
 
 // maximumWidth()
-func (this *QWidget) Maximumwidth(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MaximumWidth(args ...interface{}) (ret interface{}) {
   // maximumWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2815,7 +2817,7 @@ func (this *QWidget) Maximumwidth(args ...interface{}) (ret interface{}) {
 }
 
 // isEnabledToTLW()
-func (this *QWidget) Isenabledtotlw(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsEnabledToTLW(args ...interface{}) (ret interface{}) {
   // isEnabledToTLW()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2844,7 +2846,7 @@ func (this *QWidget) Isenabledtotlw(args ...interface{}) (ret interface{}) {
 }
 
 // windowIcon()
-func (this *QWidget) Windowicon(args ...interface{}) (ret interface{}) {
+func (this *QWidget) WindowIcon(args ...interface{}) (ret interface{}) {
   // windowIcon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2873,7 +2875,7 @@ func (this *QWidget) Windowicon(args ...interface{}) (ret interface{}) {
 }
 
 // isMinimized()
-func (this *QWidget) Isminimized(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsMinimized(args ...interface{}) (ret interface{}) {
   // isMinimized()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2952,7 +2954,7 @@ func (this *QWidget) Raise(args ...interface{}) () {
 }
 
 // stackUnder(class QWidget *)
-func (this *QWidget) Stackunder(args ...interface{}) () {
+func (this *QWidget) StackUnder(args ...interface{}) () {
   // stackUnder(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2976,7 +2978,7 @@ func (this *QWidget) Stackunder(args ...interface{}) () {
 }
 
 // parentWidget()
-func (this *QWidget) Parentwidget(args ...interface{}) (ret interface{}) {
+func (this *QWidget) ParentWidget(args ...interface{}) (ret interface{}) {
   // parentWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3005,7 +3007,7 @@ func (this *QWidget) Parentwidget(args ...interface{}) (ret interface{}) {
 }
 
 // effectiveWinId()
-func (this *QWidget) Effectivewinid(args ...interface{}) () {
+func (this *QWidget) EffectiveWinId(args ...interface{}) () {
   // effectiveWinId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3026,7 +3028,7 @@ func (this *QWidget) Effectivewinid(args ...interface{}) () {
 }
 
 // setToolTip(const class QString &)
-func (this *QWidget) Settooltip(args ...interface{}) () {
+func (this *QWidget) SetToolTip(args ...interface{}) () {
   // setToolTip(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3050,7 +3052,7 @@ func (this *QWidget) Settooltip(args ...interface{}) () {
 }
 
 // setSizePolicy(class QSizePolicy)
-func (this *QWidget) Setsizepolicy(args ...interface{}) () {
+func (this *QWidget) SetSizePolicy(args ...interface{}) () {
   // setSizePolicy(class QSizePolicy)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3103,7 +3105,7 @@ func (this *QWidget) Geometry(args ...interface{}) (ret interface{}) {
 }
 
 // windowHandle()
-func (this *QWidget) Windowhandle(args ...interface{}) (ret interface{}) {
+func (this *QWidget) WindowHandle(args ...interface{}) (ret interface{}) {
   // windowHandle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3132,7 +3134,7 @@ func (this *QWidget) Windowhandle(args ...interface{}) (ret interface{}) {
 }
 
 // setAcceptDrops(_Bool)
-func (this *QWidget) Setacceptdrops(args ...interface{}) () {
+func (this *QWidget) SetAcceptDrops(args ...interface{}) () {
   // setAcceptDrops(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3156,7 +3158,7 @@ func (this *QWidget) Setacceptdrops(args ...interface{}) () {
 }
 
 // isEnabledTo(const class QWidget *)
-func (this *QWidget) Isenabledto(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsEnabledTo(args ...interface{}) (ret interface{}) {
   // isEnabledTo(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3188,7 +3190,7 @@ func (this *QWidget) Isenabledto(args ...interface{}) (ret interface{}) {
 }
 
 // isVisible()
-func (this *QWidget) Isvisible(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsVisible(args ...interface{}) (ret interface{}) {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3217,7 +3219,7 @@ func (this *QWidget) Isvisible(args ...interface{}) (ret interface{}) {
 }
 
 // setWindowModified(_Bool)
-func (this *QWidget) Setwindowmodified(args ...interface{}) () {
+func (this *QWidget) SetWindowModified(args ...interface{}) () {
   // setWindowModified(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3270,7 +3272,7 @@ func (this *QWidget) Size(args ...interface{}) (ret interface{}) {
 }
 
 // setMaximumWidth(int)
-func (this *QWidget) Setmaximumwidth(args ...interface{}) () {
+func (this *QWidget) SetMaximumWidth(args ...interface{}) () {
   // setMaximumWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3294,7 +3296,7 @@ func (this *QWidget) Setmaximumwidth(args ...interface{}) () {
 }
 
 // addAction(class QAction *)
-func (this *QWidget) Addaction(args ...interface{}) () {
+func (this *QWidget) AddAction(args ...interface{}) () {
   // addAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3318,7 +3320,7 @@ func (this *QWidget) Addaction(args ...interface{}) () {
 }
 
 // normalGeometry()
-func (this *QWidget) Normalgeometry(args ...interface{}) (ret interface{}) {
+func (this *QWidget) NormalGeometry(args ...interface{}) (ret interface{}) {
   // normalGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3347,7 +3349,7 @@ func (this *QWidget) Normalgeometry(args ...interface{}) (ret interface{}) {
 }
 
 // setMinimumSize(int, int)
-func (this *QWidget) Setminimumsize(args ...interface{}) () {
+func (this *QWidget) SetMinimumSize(args ...interface{}) () {
   // setMinimumSize(int, int)
   // setMinimumSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3383,7 +3385,7 @@ func (this *QWidget) Setminimumsize(args ...interface{}) () {
 }
 
 // heightForWidth(int)
-func (this *QWidget) Heightforwidth(args ...interface{}) (ret interface{}) {
+func (this *QWidget) HeightForWidth(args ...interface{}) (ret interface{}) {
   // heightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3415,7 +3417,7 @@ func (this *QWidget) Heightforwidth(args ...interface{}) (ret interface{}) {
 }
 
 // setPalette(const class QPalette &)
-func (this *QWidget) Setpalette(args ...interface{}) () {
+func (this *QWidget) SetPalette(args ...interface{}) () {
   // setPalette(const class QPalette &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3439,7 +3441,7 @@ func (this *QWidget) Setpalette(args ...interface{}) () {
 }
 
 // isAncestorOf(const class QWidget *)
-func (this *QWidget) Isancestorof(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsAncestorOf(args ...interface{}) (ret interface{}) {
   // isAncestorOf(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3471,7 +3473,7 @@ func (this *QWidget) Isancestorof(args ...interface{}) (ret interface{}) {
 }
 
 // clearMask()
-func (this *QWidget) Clearmask(args ...interface{}) () {
+func (this *QWidget) ClearMask(args ...interface{}) () {
   // clearMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3492,7 +3494,7 @@ func (this *QWidget) Clearmask(args ...interface{}) () {
 }
 
 // setWindowOpacity(qreal)
-func (this *QWidget) Setwindowopacity(args ...interface{}) () {
+func (this *QWidget) SetWindowOpacity(args ...interface{}) () {
   // setWindowOpacity(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3516,7 +3518,7 @@ func (this *QWidget) Setwindowopacity(args ...interface{}) () {
 }
 
 // isActiveWindow()
-func (this *QWidget) Isactivewindow(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsActiveWindow(args ...interface{}) (ret interface{}) {
   // isActiveWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3545,7 +3547,7 @@ func (this *QWidget) Isactivewindow(args ...interface{}) (ret interface{}) {
 }
 
 // setFont(const class QFont &)
-func (this *QWidget) Setfont(args ...interface{}) () {
+func (this *QWidget) SetFont(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3569,7 +3571,7 @@ func (this *QWidget) Setfont(args ...interface{}) () {
 }
 
 // setAccessibleDescription(const class QString &)
-func (this *QWidget) Setaccessibledescription(args ...interface{}) () {
+func (this *QWidget) SetAccessibleDescription(args ...interface{}) () {
   // setAccessibleDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3593,7 +3595,7 @@ func (this *QWidget) Setaccessibledescription(args ...interface{}) () {
 }
 
 // setMaximumSize(const class QSize &)
-func (this *QWidget) Setmaximumsize(args ...interface{}) () {
+func (this *QWidget) SetMaximumSize(args ...interface{}) () {
   // setMaximumSize(const class QSize &)
   // setMaximumSize(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3629,7 +3631,7 @@ func (this *QWidget) Setmaximumsize(args ...interface{}) () {
 }
 
 // unsetLocale()
-func (this *QWidget) Unsetlocale(args ...interface{}) () {
+func (this *QWidget) UnsetLocale(args ...interface{}) () {
   // unsetLocale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3650,7 +3652,7 @@ func (this *QWidget) Unsetlocale(args ...interface{}) () {
 }
 
 // autoFillBackground()
-func (this *QWidget) Autofillbackground(args ...interface{}) (ret interface{}) {
+func (this *QWidget) AutoFillBackground(args ...interface{}) (ret interface{}) {
   // autoFillBackground()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3679,7 +3681,7 @@ func (this *QWidget) Autofillbackground(args ...interface{}) (ret interface{}) {
 }
 
 // unsetCursor()
-func (this *QWidget) Unsetcursor(args ...interface{}) () {
+func (this *QWidget) UnsetCursor(args ...interface{}) () {
   // unsetCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3700,7 +3702,7 @@ func (this *QWidget) Unsetcursor(args ...interface{}) () {
 }
 
 // winId()
-func (this *QWidget) Winid(args ...interface{}) () {
+func (this *QWidget) WinId(args ...interface{}) () {
   // winId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3721,7 +3723,7 @@ func (this *QWidget) Winid(args ...interface{}) () {
 }
 
 // layoutDirection()
-func (this *QWidget) Layoutdirection(args ...interface{}) () {
+func (this *QWidget) LayoutDirection(args ...interface{}) () {
   // layoutDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3742,7 +3744,7 @@ func (this *QWidget) Layoutdirection(args ...interface{}) () {
 }
 
 // setShortcutEnabled(int, _Bool)
-func (this *QWidget) Setshortcutenabled(args ...interface{}) () {
+func (this *QWidget) SetShortcutEnabled(args ...interface{}) () {
   // setShortcutEnabled(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3769,7 +3771,7 @@ func (this *QWidget) Setshortcutenabled(args ...interface{}) () {
 }
 
 // sizeIncrement()
-func (this *QWidget) Sizeincrement(args ...interface{}) (ret interface{}) {
+func (this *QWidget) SizeIncrement(args ...interface{}) (ret interface{}) {
   // sizeIncrement()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3798,7 +3800,7 @@ func (this *QWidget) Sizeincrement(args ...interface{}) (ret interface{}) {
 }
 
 // setMouseTracking(_Bool)
-func (this *QWidget) Setmousetracking(args ...interface{}) () {
+func (this *QWidget) SetMouseTracking(args ...interface{}) () {
   // setMouseTracking(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3822,7 +3824,7 @@ func (this *QWidget) Setmousetracking(args ...interface{}) () {
 }
 
 // whatsThis()
-func (this *QWidget) Whatsthis(args ...interface{}) (ret interface{}) {
+func (this *QWidget) WhatsThis(args ...interface{}) (ret interface{}) {
   // whatsThis()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3880,7 +3882,7 @@ func (this *QWidget) Width(args ...interface{}) (ret interface{}) {
 }
 
 // childrenRect()
-func (this *QWidget) Childrenrect(args ...interface{}) (ret interface{}) {
+func (this *QWidget) ChildrenRect(args ...interface{}) (ret interface{}) {
   // childrenRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3909,7 +3911,7 @@ func (this *QWidget) Childrenrect(args ...interface{}) (ret interface{}) {
 }
 
 // windowIconText()
-func (this *QWidget) Windowicontext(args ...interface{}) (ret interface{}) {
+func (this *QWidget) WindowIconText(args ...interface{}) (ret interface{}) {
   // windowIconText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3938,7 +3940,7 @@ func (this *QWidget) Windowicontext(args ...interface{}) (ret interface{}) {
 }
 
 // toolTipDuration()
-func (this *QWidget) Tooltipduration(args ...interface{}) (ret interface{}) {
+func (this *QWidget) ToolTipDuration(args ...interface{}) (ret interface{}) {
   // toolTipDuration()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3967,7 +3969,7 @@ func (this *QWidget) Tooltipduration(args ...interface{}) (ret interface{}) {
 }
 
 // setEnabled(_Bool)
-func (this *QWidget) Setenabled(args ...interface{}) () {
+func (this *QWidget) SetEnabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3991,7 +3993,7 @@ func (this *QWidget) Setenabled(args ...interface{}) () {
 }
 
 // showMaximized()
-func (this *QWidget) Showmaximized(args ...interface{}) () {
+func (this *QWidget) ShowMaximized(args ...interface{}) () {
   // showMaximized()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4012,7 +4014,7 @@ func (this *QWidget) Showmaximized(args ...interface{}) () {
 }
 
 // ensurePolished()
-func (this *QWidget) Ensurepolished(args ...interface{}) () {
+func (this *QWidget) EnsurePolished(args ...interface{}) () {
   // ensurePolished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4033,7 +4035,7 @@ func (this *QWidget) Ensurepolished(args ...interface{}) () {
 }
 
 // statusTip()
-func (this *QWidget) Statustip(args ...interface{}) (ret interface{}) {
+func (this *QWidget) StatusTip(args ...interface{}) (ret interface{}) {
   // statusTip()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4062,7 +4064,7 @@ func (this *QWidget) Statustip(args ...interface{}) (ret interface{}) {
 }
 
 // acceptDrops()
-func (this *QWidget) Acceptdrops(args ...interface{}) (ret interface{}) {
+func (this *QWidget) AcceptDrops(args ...interface{}) (ret interface{}) {
   // acceptDrops()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4091,7 +4093,7 @@ func (this *QWidget) Acceptdrops(args ...interface{}) (ret interface{}) {
 }
 
 // isFullScreen()
-func (this *QWidget) Isfullscreen(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsFullScreen(args ...interface{}) (ret interface{}) {
   // isFullScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4120,7 +4122,7 @@ func (this *QWidget) Isfullscreen(args ...interface{}) (ret interface{}) {
 }
 
 // nextInFocusChain()
-func (this *QWidget) Nextinfocuschain(args ...interface{}) (ret interface{}) {
+func (this *QWidget) NextInFocusChain(args ...interface{}) (ret interface{}) {
   // nextInFocusChain()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4149,7 +4151,7 @@ func (this *QWidget) Nextinfocuschain(args ...interface{}) (ret interface{}) {
 }
 
 // styleSheet()
-func (this *QWidget) Stylesheet(args ...interface{}) (ret interface{}) {
+func (this *QWidget) StyleSheet(args ...interface{}) (ret interface{}) {
   // styleSheet()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4178,7 +4180,7 @@ func (this *QWidget) Stylesheet(args ...interface{}) (ret interface{}) {
 }
 
 // setSizeIncrement(const class QSize &)
-func (this *QWidget) Setsizeincrement(args ...interface{}) () {
+func (this *QWidget) SetSizeIncrement(args ...interface{}) () {
   // setSizeIncrement(const class QSize &)
   // setSizeIncrement(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -4214,7 +4216,7 @@ func (this *QWidget) Setsizeincrement(args ...interface{}) () {
 }
 
 // grabKeyboard()
-func (this *QWidget) Grabkeyboard(args ...interface{}) () {
+func (this *QWidget) GrabKeyboard(args ...interface{}) () {
   // grabKeyboard()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4235,7 +4237,7 @@ func (this *QWidget) Grabkeyboard(args ...interface{}) () {
 }
 
 // mapTo(const class QWidget *, const class QPoint &)
-func (this *QWidget) Mapto(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MapTo(args ...interface{}) (ret interface{}) {
   // mapTo(const class QWidget *, const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4306,7 +4308,7 @@ func (this *QWidget) Resize(args ...interface{}) () {
 }
 
 // setFocus()
-func (this *QWidget) Setfocus(args ...interface{}) () {
+func (this *QWidget) SetFocus(args ...interface{}) () {
   // setFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4327,7 +4329,7 @@ func (this *QWidget) Setfocus(args ...interface{}) () {
 }
 
 // mapFromGlobal(const class QPoint &)
-func (this *QWidget) Mapfromglobal(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MapFromGlobal(args ...interface{}) (ret interface{}) {
   // mapFromGlobal(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4359,7 +4361,7 @@ func (this *QWidget) Mapfromglobal(args ...interface{}) (ret interface{}) {
 }
 
 // frameSize()
-func (this *QWidget) Framesize(args ...interface{}) (ret interface{}) {
+func (this *QWidget) FrameSize(args ...interface{}) (ret interface{}) {
   // frameSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4388,7 +4390,7 @@ func (this *QWidget) Framesize(args ...interface{}) (ret interface{}) {
 }
 
 // releaseShortcut(int)
-func (this *QWidget) Releaseshortcut(args ...interface{}) () {
+func (this *QWidget) ReleaseShortcut(args ...interface{}) () {
   // releaseShortcut(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4412,7 +4414,7 @@ func (this *QWidget) Releaseshortcut(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QWidget) Minimumsizehint(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MinimumSizeHint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4441,7 +4443,7 @@ func (this *QWidget) Minimumsizehint(args ...interface{}) (ret interface{}) {
 }
 
 // isHidden()
-func (this *QWidget) Ishidden(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsHidden(args ...interface{}) (ret interface{}) {
   // isHidden()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4470,7 +4472,7 @@ func (this *QWidget) Ishidden(args ...interface{}) (ret interface{}) {
 }
 
 // hasHeightForWidth()
-func (this *QWidget) Hasheightforwidth(args ...interface{}) (ret interface{}) {
+func (this *QWidget) HasHeightForWidth(args ...interface{}) (ret interface{}) {
   // hasHeightForWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4499,7 +4501,7 @@ func (this *QWidget) Hasheightforwidth(args ...interface{}) (ret interface{}) {
 }
 
 // setFixedSize(const class QSize &)
-func (this *QWidget) Setfixedsize(args ...interface{}) () {
+func (this *QWidget) SetFixedSize(args ...interface{}) () {
   // setFixedSize(const class QSize &)
   // setFixedSize(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -4535,7 +4537,7 @@ func (this *QWidget) Setfixedsize(args ...interface{}) () {
 }
 
 // setTabOrder(class QWidget *, class QWidget *)
-func (this *QWidget) Settaborder_S(args ...interface{}) () {
+func (this *QWidget) SetTabOrder_s(args ...interface{}) () {
   // setTabOrder(class QWidget *, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4562,7 +4564,7 @@ func (this *QWidget) Settaborder_S(args ...interface{}) () {
 }
 
 // setWindowIcon(const class QIcon &)
-func (this *QWidget) Setwindowicon(args ...interface{}) () {
+func (this *QWidget) SetWindowIcon(args ...interface{}) () {
   // setWindowIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4586,7 +4588,7 @@ func (this *QWidget) Setwindowicon(args ...interface{}) () {
 }
 
 // isLeftToRight()
-func (this *QWidget) Islefttoright(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsLeftToRight(args ...interface{}) (ret interface{}) {
   // isLeftToRight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4615,7 +4617,7 @@ func (this *QWidget) Islefttoright(args ...interface{}) (ret interface{}) {
 }
 
 // isRightToLeft()
-func (this *QWidget) Isrighttoleft(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsRightToLeft(args ...interface{}) (ret interface{}) {
   // isRightToLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4644,7 +4646,7 @@ func (this *QWidget) Isrighttoleft(args ...interface{}) (ret interface{}) {
 }
 
 // setVisible(_Bool)
-func (this *QWidget) Setvisible(args ...interface{}) () {
+func (this *QWidget) SetVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4668,7 +4670,7 @@ func (this *QWidget) Setvisible(args ...interface{}) () {
 }
 
 // setCursor(const class QCursor &)
-func (this *QWidget) Setcursor(args ...interface{}) () {
+func (this *QWidget) SetCursor(args ...interface{}) () {
   // setCursor(const class QCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4692,7 +4694,7 @@ func (this *QWidget) Setcursor(args ...interface{}) () {
 }
 
 // setFixedWidth(int)
-func (this *QWidget) Setfixedwidth(args ...interface{}) () {
+func (this *QWidget) SetFixedWidth(args ...interface{}) () {
   // setFixedWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4716,7 +4718,7 @@ func (this *QWidget) Setfixedwidth(args ...interface{}) () {
 }
 
 // mapFrom(const class QWidget *, const class QPoint &)
-func (this *QWidget) Mapfrom(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MapFrom(args ...interface{}) (ret interface{}) {
   // mapFrom(const class QWidget *, const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4751,7 +4753,7 @@ func (this *QWidget) Mapfrom(args ...interface{}) (ret interface{}) {
 }
 
 // isWindow()
-func (this *QWidget) Iswindow(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsWindow(args ...interface{}) (ret interface{}) {
   // isWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4809,7 +4811,7 @@ func (this *QWidget) Close(args ...interface{}) (ret interface{}) {
 }
 
 // fontMetrics()
-func (this *QWidget) Fontmetrics(args ...interface{}) (ret interface{}) {
+func (this *QWidget) FontMetrics(args ...interface{}) (ret interface{}) {
   // fontMetrics()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4838,7 +4840,7 @@ func (this *QWidget) Fontmetrics(args ...interface{}) (ret interface{}) {
 }
 
 // contentsMargins()
-func (this *QWidget) Contentsmargins(args ...interface{}) (ret interface{}) {
+func (this *QWidget) ContentsMargins(args ...interface{}) (ret interface{}) {
   // contentsMargins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4867,7 +4869,7 @@ func (this *QWidget) Contentsmargins(args ...interface{}) (ret interface{}) {
 }
 
 // ~QWidget()
-func (this *QWidget) Freeqwidget(args ...interface{}) () {
+func (this *QWidget) Free(args ...interface{}) () {
   // ~QWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4879,7 +4881,10 @@ func (this *QWidget) Freeqwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWidgetD0Ev
     // invoke: void ~QWidget()
-    C.C_ZN7QWidgetD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QWidgetD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QWidget", "~QWidget", args)
   }
@@ -4888,7 +4893,7 @@ func (this *QWidget) Freeqwidget(args ...interface{}) () {
 }
 
 // setUpdatesEnabled(_Bool)
-func (this *QWidget) Setupdatesenabled(args ...interface{}) () {
+func (this *QWidget) SetUpdatesEnabled(args ...interface{}) () {
   // setUpdatesEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4912,7 +4917,7 @@ func (this *QWidget) Setupdatesenabled(args ...interface{}) () {
 }
 
 // showMinimized()
-func (this *QWidget) Showminimized(args ...interface{}) () {
+func (this *QWidget) ShowMinimized(args ...interface{}) () {
   // showMinimized()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4933,7 +4938,7 @@ func (this *QWidget) Showminimized(args ...interface{}) () {
 }
 
 // childrenRegion()
-func (this *QWidget) Childrenregion(args ...interface{}) (ret interface{}) {
+func (this *QWidget) ChildrenRegion(args ...interface{}) (ret interface{}) {
   // childrenRegion()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4962,7 +4967,7 @@ func (this *QWidget) Childrenregion(args ...interface{}) (ret interface{}) {
 }
 
 // windowModality()
-func (this *QWidget) Windowmodality(args ...interface{}) () {
+func (this *QWidget) WindowModality(args ...interface{}) () {
   // windowModality()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4983,7 +4988,7 @@ func (this *QWidget) Windowmodality(args ...interface{}) () {
 }
 
 // fontInfo()
-func (this *QWidget) Fontinfo(args ...interface{}) (ret interface{}) {
+func (this *QWidget) FontInfo(args ...interface{}) (ret interface{}) {
   // fontInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5012,7 +5017,7 @@ func (this *QWidget) Fontinfo(args ...interface{}) (ret interface{}) {
 }
 
 // releaseKeyboard()
-func (this *QWidget) Releasekeyboard(args ...interface{}) () {
+func (this *QWidget) ReleaseKeyboard(args ...interface{}) () {
   // releaseKeyboard()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5033,7 +5038,7 @@ func (this *QWidget) Releasekeyboard(args ...interface{}) () {
 }
 
 // previousInFocusChain()
-func (this *QWidget) Previousinfocuschain(args ...interface{}) (ret interface{}) {
+func (this *QWidget) PreviousInFocusChain(args ...interface{}) (ret interface{}) {
   // previousInFocusChain()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5062,7 +5067,7 @@ func (this *QWidget) Previousinfocuschain(args ...interface{}) (ret interface{})
 }
 
 // showFullScreen()
-func (this *QWidget) Showfullscreen(args ...interface{}) () {
+func (this *QWidget) ShowFullScreen(args ...interface{}) () {
   // showFullScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5083,7 +5088,7 @@ func (this *QWidget) Showfullscreen(args ...interface{}) () {
 }
 
 // baseSize()
-func (this *QWidget) Basesize(args ...interface{}) (ret interface{}) {
+func (this *QWidget) BaseSize(args ...interface{}) (ret interface{}) {
   // baseSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5112,7 +5117,7 @@ func (this *QWidget) Basesize(args ...interface{}) (ret interface{}) {
 }
 
 // hasMouseTracking()
-func (this *QWidget) Hasmousetracking(args ...interface{}) (ret interface{}) {
+func (this *QWidget) HasMouseTracking(args ...interface{}) (ret interface{}) {
   // hasMouseTracking()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5141,7 +5146,7 @@ func (this *QWidget) Hasmousetracking(args ...interface{}) (ret interface{}) {
 }
 
 // restoreGeometry(const class QByteArray &)
-func (this *QWidget) Restoregeometry(args ...interface{}) (ret interface{}) {
+func (this *QWidget) RestoreGeometry(args ...interface{}) (ret interface{}) {
   // restoreGeometry(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5173,7 +5178,7 @@ func (this *QWidget) Restoregeometry(args ...interface{}) (ret interface{}) {
 }
 
 // setDisabled(_Bool)
-func (this *QWidget) Setdisabled(args ...interface{}) () {
+func (this *QWidget) SetDisabled(args ...interface{}) () {
   // setDisabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5197,7 +5202,7 @@ func (this *QWidget) Setdisabled(args ...interface{}) () {
 }
 
 // showNormal()
-func (this *QWidget) Shownormal(args ...interface{}) () {
+func (this *QWidget) ShowNormal(args ...interface{}) () {
   // showNormal()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5218,7 +5223,7 @@ func (this *QWidget) Shownormal(args ...interface{}) () {
 }
 
 // setFixedHeight(int)
-func (this *QWidget) Setfixedheight(args ...interface{}) () {
+func (this *QWidget) SetFixedHeight(args ...interface{}) () {
   // setFixedHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5242,7 +5247,7 @@ func (this *QWidget) Setfixedheight(args ...interface{}) () {
 }
 
 // setBaseSize(int, int)
-func (this *QWidget) Setbasesize(args ...interface{}) () {
+func (this *QWidget) SetBaseSize(args ...interface{}) () {
   // setBaseSize(int, int)
   // setBaseSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -5278,7 +5283,7 @@ func (this *QWidget) Setbasesize(args ...interface{}) () {
 }
 
 // setAutoFillBackground(_Bool)
-func (this *QWidget) Setautofillbackground(args ...interface{}) () {
+func (this *QWidget) SetAutoFillBackground(args ...interface{}) () {
   // setAutoFillBackground(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5302,7 +5307,7 @@ func (this *QWidget) Setautofillbackground(args ...interface{}) () {
 }
 
 // updateGeometry()
-func (this *QWidget) Updategeometry(args ...interface{}) () {
+func (this *QWidget) UpdateGeometry(args ...interface{}) () {
   // updateGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5323,7 +5328,7 @@ func (this *QWidget) Updategeometry(args ...interface{}) () {
 }
 
 // minimumWidth()
-func (this *QWidget) Minimumwidth(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MinimumWidth(args ...interface{}) (ret interface{}) {
   // minimumWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5352,7 +5357,7 @@ func (this *QWidget) Minimumwidth(args ...interface{}) (ret interface{}) {
 }
 
 // maximumHeight()
-func (this *QWidget) Maximumheight(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MaximumHeight(args ...interface{}) (ret interface{}) {
   // maximumHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5438,7 +5443,7 @@ func (this *QWidget) Update(args ...interface{}) () {
 }
 
 // adjustSize()
-func (this *QWidget) Adjustsize(args ...interface{}) () {
+func (this *QWidget) AdjustSize(args ...interface{}) () {
   // adjustSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5459,7 +5464,7 @@ func (this *QWidget) Adjustsize(args ...interface{}) () {
 }
 
 // graphicsProxyWidget()
-func (this *QWidget) Graphicsproxywidget(args ...interface{}) () {
+func (this *QWidget) GraphicsProxyWidget(args ...interface{}) () {
   // graphicsProxyWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5480,7 +5485,7 @@ func (this *QWidget) Graphicsproxywidget(args ...interface{}) () {
 }
 
 // isTopLevel()
-func (this *QWidget) Istoplevel(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsTopLevel(args ...interface{}) (ret interface{}) {
   // isTopLevel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5509,7 +5514,7 @@ func (this *QWidget) Istoplevel(args ...interface{}) (ret interface{}) {
 }
 
 // setMask(const class QRegion &)
-func (this *QWidget) Setmask(args ...interface{}) () {
+func (this *QWidget) SetMask(args ...interface{}) () {
   // setMask(const class QRegion &)
   // setMask(const class QBitmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -5542,7 +5547,7 @@ func (this *QWidget) Setmask(args ...interface{}) () {
 }
 
 // isMaximized()
-func (this *QWidget) Ismaximized(args ...interface{}) (ret interface{}) {
+func (this *QWidget) IsMaximized(args ...interface{}) (ret interface{}) {
   // isMaximized()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5592,7 +5597,7 @@ func (this *QWidget) Lower(args ...interface{}) () {
 }
 
 // mapToGlobal(const class QPoint &)
-func (this *QWidget) Maptoglobal(args ...interface{}) (ret interface{}) {
+func (this *QWidget) MapToGlobal(args ...interface{}) (ret interface{}) {
   // mapToGlobal(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5624,7 +5629,7 @@ func (this *QWidget) Maptoglobal(args ...interface{}) (ret interface{}) {
 }
 
 // setMinimumWidth(int)
-func (this *QWidget) Setminimumwidth(args ...interface{}) () {
+func (this *QWidget) SetMinimumWidth(args ...interface{}) () {
   // setMinimumWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5648,7 +5653,7 @@ func (this *QWidget) Setminimumwidth(args ...interface{}) () {
 }
 
 // getContentsMargins(int *, int *, int *, int *)
-func (this *QWidget) Getcontentsmargins(args ...interface{}) () {
+func (this *QWidget) GetContentsMargins(args ...interface{}) () {
   // getContentsMargins(int *, int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5681,7 +5686,7 @@ func (this *QWidget) Getcontentsmargins(args ...interface{}) () {
 }
 
 // underMouse()
-func (this *QWidget) Undermouse(args ...interface{}) (ret interface{}) {
+func (this *QWidget) UnderMouse(args ...interface{}) (ret interface{}) {
   // underMouse()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5739,7 +5744,7 @@ func (this *QWidget) Mask(args ...interface{}) (ret interface{}) {
 }
 
 // windowOpacity()
-func (this *QWidget) Windowopacity(args ...interface{}) (ret interface{}) {
+func (this *QWidget) WindowOpacity(args ...interface{}) (ret interface{}) {
   // windowOpacity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5797,7 +5802,7 @@ func (this *QWidget) Height(args ...interface{}) (ret interface{}) {
 }
 
 // nativeParentWidget()
-func (this *QWidget) Nativeparentwidget(args ...interface{}) (ret interface{}) {
+func (this *QWidget) NativeParentWidget(args ...interface{}) (ret interface{}) {
   // nativeParentWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5826,7 +5831,7 @@ func (this *QWidget) Nativeparentwidget(args ...interface{}) (ret interface{}) {
 }
 
 // accessibleDescription()
-func (this *QWidget) Accessibledescription(args ...interface{}) (ret interface{}) {
+func (this *QWidget) AccessibleDescription(args ...interface{}) (ret interface{}) {
   // accessibleDescription()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5876,7 +5881,7 @@ func (this *QWidget) Y(args ...interface{}) () {
 }
 
 // backgroundRole()
-func (this *QWidget) Backgroundrole(args ...interface{}) () {
+func (this *QWidget) BackgroundRole(args ...interface{}) () {
   // backgroundRole()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5939,7 +5944,7 @@ func (this *QWidget) Scroll(args ...interface{}) () {
 }
 
 // setWhatsThis(const class QString &)
-func (this *QWidget) Setwhatsthis(args ...interface{}) () {
+func (this *QWidget) SetWhatsThis(args ...interface{}) () {
   // setWhatsThis(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

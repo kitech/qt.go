@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qmenu.h
 // dst-file: /src/widgets/qmenu.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -132,6 +133,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMenu)=1
@@ -145,7 +147,7 @@ type QMenu struct {
 }
 
 // addAction(const class QString &)
-func (this *QMenu) Addaction(args ...interface{}) (ret interface{}) {
+func (this *QMenu) AddAction(args ...interface{}) (ret interface{}) {
   // addAction(const class QString &)
   // addAction(const class QString &, const class QObject *, const char *, const class QKeySequence &)
   // addAction(const class QIcon &, const class QString &)
@@ -256,7 +258,7 @@ func (this *QMenu) Addaction(args ...interface{}) (ret interface{}) {
 }
 
 // setTitle(const class QString &)
-func (this *QMenu) Settitle(args ...interface{}) () {
+func (this *QMenu) SetTitle(args ...interface{}) () {
   // setTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -280,7 +282,7 @@ func (this *QMenu) Settitle(args ...interface{}) () {
 }
 
 // actionAt(const class QPoint &)
-func (this *QMenu) Actionat(args ...interface{}) (ret interface{}) {
+func (this *QMenu) ActionAt(args ...interface{}) (ret interface{}) {
   // actionAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -312,7 +314,7 @@ func (this *QMenu) Actionat(args ...interface{}) (ret interface{}) {
 }
 
 // toolTipsVisible()
-func (this *QMenu) Tooltipsvisible(args ...interface{}) (ret interface{}) {
+func (this *QMenu) ToolTipsVisible(args ...interface{}) (ret interface{}) {
   // toolTipsVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -341,7 +343,7 @@ func (this *QMenu) Tooltipsvisible(args ...interface{}) (ret interface{}) {
 }
 
 // setSeparatorsCollapsible(_Bool)
-func (this *QMenu) Setseparatorscollapsible(args ...interface{}) () {
+func (this *QMenu) SetSeparatorsCollapsible(args ...interface{}) () {
   // setSeparatorsCollapsible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -365,7 +367,7 @@ func (this *QMenu) Setseparatorscollapsible(args ...interface{}) () {
 }
 
 // menuAction()
-func (this *QMenu) Menuaction(args ...interface{}) (ret interface{}) {
+func (this *QMenu) MenuAction(args ...interface{}) (ret interface{}) {
   // menuAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -394,7 +396,7 @@ func (this *QMenu) Menuaction(args ...interface{}) (ret interface{}) {
 }
 
 // activeAction()
-func (this *QMenu) Activeaction(args ...interface{}) (ret interface{}) {
+func (this *QMenu) ActiveAction(args ...interface{}) (ret interface{}) {
   // activeAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -423,7 +425,7 @@ func (this *QMenu) Activeaction(args ...interface{}) (ret interface{}) {
 }
 
 // addSeparator()
-func (this *QMenu) Addseparator(args ...interface{}) (ret interface{}) {
+func (this *QMenu) AddSeparator(args ...interface{}) (ret interface{}) {
   // addSeparator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -452,7 +454,7 @@ func (this *QMenu) Addseparator(args ...interface{}) (ret interface{}) {
 }
 
 // setTearOffEnabled(_Bool)
-func (this *QMenu) Settearoffenabled(args ...interface{}) () {
+func (this *QMenu) SetTearOffEnabled(args ...interface{}) () {
   // setTearOffEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -476,7 +478,7 @@ func (this *QMenu) Settearoffenabled(args ...interface{}) () {
 }
 
 // setActiveAction(class QAction *)
-func (this *QMenu) Setactiveaction(args ...interface{}) () {
+func (this *QMenu) SetActiveAction(args ...interface{}) () {
   // setActiveAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -500,7 +502,7 @@ func (this *QMenu) Setactiveaction(args ...interface{}) () {
 }
 
 // defaultAction()
-func (this *QMenu) Defaultaction(args ...interface{}) (ret interface{}) {
+func (this *QMenu) DefaultAction(args ...interface{}) (ret interface{}) {
   // defaultAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -529,7 +531,7 @@ func (this *QMenu) Defaultaction(args ...interface{}) (ret interface{}) {
 }
 
 // isEmpty()
-func (this *QMenu) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QMenu) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -558,7 +560,7 @@ func (this *QMenu) Isempty(args ...interface{}) (ret interface{}) {
 }
 
 // insertSection(class QAction *, const class QString &)
-func (this *QMenu) Insertsection(args ...interface{}) (ret interface{}) {
+func (this *QMenu) InsertSection(args ...interface{}) (ret interface{}) {
   // insertSection(class QAction *, const class QString &)
   // insertSection(class QAction *, const class QIcon &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -616,7 +618,7 @@ func (this *QMenu) Insertsection(args ...interface{}) (ret interface{}) {
 }
 
 // setIcon(const class QIcon &)
-func (this *QMenu) Seticon(args ...interface{}) () {
+func (this *QMenu) SetIcon(args ...interface{}) () {
   // setIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -640,7 +642,7 @@ func (this *QMenu) Seticon(args ...interface{}) () {
 }
 
 // isTearOffEnabled()
-func (this *QMenu) Istearoffenabled(args ...interface{}) (ret interface{}) {
+func (this *QMenu) IsTearOffEnabled(args ...interface{}) (ret interface{}) {
   // isTearOffEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -669,7 +671,7 @@ func (this *QMenu) Istearoffenabled(args ...interface{}) (ret interface{}) {
 }
 
 // addMenu(const class QString &)
-func (this *QMenu) Addmenu(args ...interface{}) (ret interface{}) {
+func (this *QMenu) AddMenu(args ...interface{}) (ret interface{}) {
   // addMenu(const class QString &)
   // addMenu(const class QIcon &, const class QString &)
   // addMenu(class QMenu *)
@@ -787,7 +789,7 @@ func (this *QMenu) Exec(args ...interface{}) (ret interface{}) {
 }
 
 // addSection(const class QString &)
-func (this *QMenu) Addsection(args ...interface{}) (ret interface{}) {
+func (this *QMenu) AddSection(args ...interface{}) (ret interface{}) {
   // addSection(const class QString &)
   // addSection(const class QIcon &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -868,7 +870,7 @@ func (this *QMenu) Title(args ...interface{}) (ret interface{}) {
 }
 
 // setDefaultAction(class QAction *)
-func (this *QMenu) Setdefaultaction(args ...interface{}) () {
+func (this *QMenu) SetDefaultAction(args ...interface{}) () {
   // setDefaultAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -892,7 +894,7 @@ func (this *QMenu) Setdefaultaction(args ...interface{}) () {
 }
 
 // insertMenu(class QAction *, class QMenu *)
-func (this *QMenu) Insertmenu(args ...interface{}) (ret interface{}) {
+func (this *QMenu) InsertMenu(args ...interface{}) (ret interface{}) {
   // insertMenu(class QAction *, class QMenu *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -927,7 +929,7 @@ func (this *QMenu) Insertmenu(args ...interface{}) (ret interface{}) {
 }
 
 // isTearOffMenuVisible()
-func (this *QMenu) Istearoffmenuvisible(args ...interface{}) (ret interface{}) {
+func (this *QMenu) IsTearOffMenuVisible(args ...interface{}) (ret interface{}) {
   // isTearOffMenuVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -985,7 +987,7 @@ func (this *QMenu) Icon(args ...interface{}) (ret interface{}) {
 }
 
 // setNoReplayFor(class QWidget *)
-func (this *QMenu) Setnoreplayfor(args ...interface{}) () {
+func (this *QMenu) SetNoReplayFor(args ...interface{}) () {
   // setNoReplayFor(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1009,7 +1011,7 @@ func (this *QMenu) Setnoreplayfor(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QMenu) Metaobject(args ...interface{}) () {
+func (this *QMenu) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1030,7 +1032,7 @@ func (this *QMenu) Metaobject(args ...interface{}) () {
 }
 
 // sizeHint()
-func (this *QMenu) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QMenu) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1080,7 +1082,7 @@ func (this *QMenu) Clear(args ...interface{}) () {
 }
 
 // insertSeparator(class QAction *)
-func (this *QMenu) Insertseparator(args ...interface{}) (ret interface{}) {
+func (this *QMenu) InsertSeparator(args ...interface{}) (ret interface{}) {
   // insertSeparator(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1139,7 +1141,7 @@ func (this *QMenu) Popup(args ...interface{}) () {
 }
 
 // setToolTipsVisible(_Bool)
-func (this *QMenu) Settooltipsvisible(args ...interface{}) () {
+func (this *QMenu) SetToolTipsVisible(args ...interface{}) () {
   // setToolTipsVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1163,7 +1165,7 @@ func (this *QMenu) Settooltipsvisible(args ...interface{}) () {
 }
 
 // ~QMenu()
-func (this *QMenu) Freeqmenu(args ...interface{}) () {
+func (this *QMenu) Free(args ...interface{}) () {
   // ~QMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1175,7 +1177,10 @@ func (this *QMenu) Freeqmenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QMenuD0Ev
     // invoke: void ~QMenu()
-    C.C_ZN5QMenuD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN5QMenuD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMenu", "~QMenu", args)
   }
@@ -1184,6 +1189,9 @@ func (this *QMenu) Freeqmenu(args ...interface{}) () {
 }
 
 // QMenu(class QWidget *)
+func GcfreeQMenu(this *QMenu) {
+  qtrt.UniverseFree(this)
+}
 func NewQMenu(args ...interface{}) *QMenu {
   // QMenu(class QWidget *)
   // QMenu(const class QString &, class QWidget *)
@@ -1206,7 +1214,9 @@ func NewQMenu(args ...interface{}) *QMenu {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QMenuC2EP7QWidget(arg0)
-    return &QMenu{Qclsinst:qthis}
+    this := &QMenu{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMenu)
+    return this
   case 1:
     // invoke: _ZN5QMenuC1ERK7QStringP7QWidget
     // invoke: void QMenu(const class QString &, class QWidget *)
@@ -1217,7 +1227,9 @@ func NewQMenu(args ...interface{}) *QMenu {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QMenuC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QMenu{Qclsinst:qthis}
+    this := &QMenu{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMenu)
+    return this
   default:
     qtrt.ErrorResolve("QMenu", "QMenu", args)
   }
@@ -1226,7 +1238,7 @@ func NewQMenu(args ...interface{}) *QMenu {
 }
 
 // platformMenu()
-func (this *QMenu) Platformmenu(args ...interface{}) () {
+func (this *QMenu) PlatformMenu(args ...interface{}) () {
   // platformMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1247,7 +1259,7 @@ func (this *QMenu) Platformmenu(args ...interface{}) () {
 }
 
 // separatorsCollapsible()
-func (this *QMenu) Separatorscollapsible(args ...interface{}) (ret interface{}) {
+func (this *QMenu) SeparatorsCollapsible(args ...interface{}) (ret interface{}) {
   // separatorsCollapsible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1276,7 +1288,7 @@ func (this *QMenu) Separatorscollapsible(args ...interface{}) (ret interface{}) 
 }
 
 // actionGeometry(class QAction *)
-func (this *QMenu) Actiongeometry(args ...interface{}) (ret interface{}) {
+func (this *QMenu) ActionGeometry(args ...interface{}) (ret interface{}) {
   // actionGeometry(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1308,7 +1320,7 @@ func (this *QMenu) Actiongeometry(args ...interface{}) (ret interface{}) {
 }
 
 // hideTearOffMenu()
-func (this *QMenu) Hidetearoffmenu(args ...interface{}) () {
+func (this *QMenu) HideTearOffMenu(args ...interface{}) () {
   // hideTearOffMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

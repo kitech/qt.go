@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qline.h
 // dst-file: /src/core/qline.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -144,6 +145,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QLine)=16
@@ -275,7 +277,7 @@ func (this *QLine) Y1(args ...interface{}) (ret interface{}) {
 }
 
 // setP2(const class QPoint &)
-func (this *QLine) Setp2(args ...interface{}) () {
+func (this *QLine) SetP2(args ...interface{}) () {
   // setP2(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -328,7 +330,7 @@ func (this *QLine) X1(args ...interface{}) (ret interface{}) {
 }
 
 // setLine(int, int, int, int)
-func (this *QLine) Setline(args ...interface{}) () {
+func (this *QLine) SetLine(args ...interface{}) () {
   // setLine(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -390,7 +392,7 @@ func (this *QLine) X2(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QLine) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QLine) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -448,6 +450,9 @@ func (this *QLine) P1(args ...interface{}) (ret interface{}) {
 }
 
 // QLine(int, int, int, int)
+func GcfreeQLine(this *QLine) {
+  qtrt.UniverseFree(this)
+}
 func NewQLine(args ...interface{}) *QLine {
   // QLine(int, int, int, int)
   // QLine(const class QPoint &, const class QPoint &)
@@ -481,7 +486,9 @@ func NewQLine(args ...interface{}) *QLine {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QLineC2Eiiii(arg0, arg1, arg2, arg3)
-    return &QLine{Qclsinst:qthis}
+    this := &QLine{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLine)
+    return this
   case 1:
     // invoke: _ZN5QLineC1ERK6QPointS2_
     // invoke: void QLine(const class QPoint &, const class QPoint &)
@@ -492,14 +499,18 @@ func NewQLine(args ...interface{}) *QLine {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QLineC2ERK6QPointS2_(arg0, arg1)
-    return &QLine{Qclsinst:qthis}
+    this := &QLine{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLine)
+    return this
   case 2:
     // invoke: _ZN5QLineC1Ev
     // invoke: void QLine()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QLineC2Ev()
-    return &QLine{Qclsinst:qthis}
+    this := &QLine{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLine)
+    return this
   default:
     qtrt.ErrorResolve("QLine", "QLine", args)
   }
@@ -589,7 +600,7 @@ func (this *QLine) Translated(args ...interface{}) (ret interface{}) {
 }
 
 // setP1(const class QPoint &)
-func (this *QLine) Setp1(args ...interface{}) () {
+func (this *QLine) SetP1(args ...interface{}) () {
   // setP1(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -649,7 +660,7 @@ func (this *QLine) Translate(args ...interface{}) () {
 }
 
 // setPoints(const class QPoint &, const class QPoint &)
-func (this *QLine) Setpoints(args ...interface{}) () {
+func (this *QLine) SetPoints(args ...interface{}) () {
   // setPoints(const class QPoint &, const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -676,7 +687,7 @@ func (this *QLine) Setpoints(args ...interface{}) () {
 }
 
 // setAngle(qreal)
-func (this *QLineF) Setangle(args ...interface{}) () {
+func (this *QLineF) SetAngle(args ...interface{}) () {
   // setAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -700,7 +711,7 @@ func (this *QLineF) Setangle(args ...interface{}) () {
 }
 
 // fromPolar(qreal, qreal)
-func (this *QLineF) Frompolar_S(args ...interface{}) (ret interface{}) {
+func (this *QLineF) FromPolar_s(args ...interface{}) (ret interface{}) {
   // fromPolar(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -764,7 +775,7 @@ func (this *QLineF) Y1(args ...interface{}) (ret interface{}) {
 }
 
 // setP1(const class QPointF &)
-func (this *QLineF) Setp1(args ...interface{}) () {
+func (this *QLineF) SetP1(args ...interface{}) () {
   // setP1(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -817,7 +828,7 @@ func (this *QLineF) Y2(args ...interface{}) (ret interface{}) {
 }
 
 // normalVector()
-func (this *QLineF) Normalvector(args ...interface{}) (ret interface{}) {
+func (this *QLineF) NormalVector(args ...interface{}) (ret interface{}) {
   // normalVector()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -919,7 +930,7 @@ func (this *QLineF) Intersect(args ...interface{}) () {
 }
 
 // setLine(qreal, qreal, qreal, qreal)
-func (this *QLineF) Setline(args ...interface{}) () {
+func (this *QLineF) SetLine(args ...interface{}) () {
   // setLine(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -988,7 +999,7 @@ func (this *QLineF) Translate(args ...interface{}) () {
 }
 
 // setP2(const class QPointF &)
-func (this *QLineF) Setp2(args ...interface{}) () {
+func (this *QLineF) SetP2(args ...interface{}) () {
   // setP2(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1012,7 +1023,7 @@ func (this *QLineF) Setp2(args ...interface{}) () {
 }
 
 // unitVector()
-func (this *QLineF) Unitvector(args ...interface{}) (ret interface{}) {
+func (this *QLineF) UnitVector(args ...interface{}) (ret interface{}) {
   // unitVector()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1041,7 +1052,7 @@ func (this *QLineF) Unitvector(args ...interface{}) (ret interface{}) {
 }
 
 // angleTo(const class QLineF &)
-func (this *QLineF) Angleto(args ...interface{}) (ret interface{}) {
+func (this *QLineF) AngleTo(args ...interface{}) (ret interface{}) {
   // angleTo(const class QLineF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1189,7 +1200,7 @@ func (this *QLineF) X1(args ...interface{}) (ret interface{}) {
 }
 
 // setPoints(const class QPointF &, const class QPointF &)
-func (this *QLineF) Setpoints(args ...interface{}) () {
+func (this *QLineF) SetPoints(args ...interface{}) () {
   // setPoints(const class QPointF &, const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1216,7 +1227,7 @@ func (this *QLineF) Setpoints(args ...interface{}) () {
 }
 
 // setLength(qreal)
-func (this *QLineF) Setlength(args ...interface{}) () {
+func (this *QLineF) SetLength(args ...interface{}) () {
   // setLength(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1298,7 +1309,7 @@ func (this *QLineF) P1(args ...interface{}) (ret interface{}) {
 }
 
 // pointAt(qreal)
-func (this *QLineF) Pointat(args ...interface{}) (ret interface{}) {
+func (this *QLineF) PointAt(args ...interface{}) (ret interface{}) {
   // pointAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1330,7 +1341,7 @@ func (this *QLineF) Pointat(args ...interface{}) (ret interface{}) {
 }
 
 // toLine()
-func (this *QLineF) Toline(args ...interface{}) (ret interface{}) {
+func (this *QLineF) ToLine(args ...interface{}) (ret interface{}) {
   // toLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1359,7 +1370,7 @@ func (this *QLineF) Toline(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QLineF) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QLineF) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1469,6 +1480,9 @@ func (this *QLineF) Translated(args ...interface{}) (ret interface{}) {
 }
 
 // QLineF(qreal, qreal, qreal, qreal)
+func GcfreeQLineF(this *QLineF) {
+  qtrt.UniverseFree(this)
+}
 func NewQLineF(args ...interface{}) *QLineF {
   // QLineF(qreal, qreal, qreal, qreal)
   // QLineF(const class QLine &)
@@ -1505,7 +1519,9 @@ func NewQLineF(args ...interface{}) *QLineF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QLineFC2Edddd(arg0, arg1, arg2, arg3)
-    return &QLineF{Qclsinst:qthis}
+    this := &QLineF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLineF)
+    return this
   case 1:
     // invoke: _ZN6QLineFC1ERK5QLine
     // invoke: void QLineF(const class QLine &)
@@ -1514,7 +1530,9 @@ func NewQLineF(args ...interface{}) *QLineF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QLineFC2ERK5QLine(arg0)
-    return &QLineF{Qclsinst:qthis}
+    this := &QLineF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLineF)
+    return this
   case 2:
     // invoke: _ZN6QLineFC1ERK7QPointFS2_
     // invoke: void QLineF(const class QPointF &, const class QPointF &)
@@ -1525,14 +1543,18 @@ func NewQLineF(args ...interface{}) *QLineF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QLineFC2ERK7QPointFS2_(arg0, arg1)
-    return &QLineF{Qclsinst:qthis}
+    this := &QLineF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLineF)
+    return this
   case 3:
     // invoke: _ZN6QLineFC1Ev
     // invoke: void QLineF()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QLineFC2Ev()
-    return &QLineF{Qclsinst:qthis}
+    this := &QLineF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLineF)
+    return this
   default:
     qtrt.ErrorResolve("QLineF", "QLineF", args)
   }

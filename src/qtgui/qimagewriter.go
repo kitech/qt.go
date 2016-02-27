@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qimagewriter.h
 // dst-file: /src/gui/qimagewriter.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -106,6 +107,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QImageWriter)=8
@@ -115,7 +117,7 @@ type QImageWriter struct {
 }
 
 // setCompression(int)
-func (this *QImageWriter) Setcompression(args ...interface{}) () {
+func (this *QImageWriter) SetCompression(args ...interface{}) () {
   // setCompression(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -139,7 +141,7 @@ func (this *QImageWriter) Setcompression(args ...interface{}) () {
 }
 
 // canWrite()
-func (this *QImageWriter) Canwrite(args ...interface{}) (ret interface{}) {
+func (this *QImageWriter) CanWrite(args ...interface{}) (ret interface{}) {
   // canWrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -168,7 +170,7 @@ func (this *QImageWriter) Canwrite(args ...interface{}) (ret interface{}) {
 }
 
 // supportedMimeTypes()
-func (this *QImageWriter) Supportedmimetypes_S(args ...interface{}) () {
+func (this *QImageWriter) SupportedMimeTypes_s(args ...interface{}) () {
   // supportedMimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -189,7 +191,7 @@ func (this *QImageWriter) Supportedmimetypes_S(args ...interface{}) () {
 }
 
 // subType()
-func (this *QImageWriter) Subtype(args ...interface{}) (ret interface{}) {
+func (this *QImageWriter) SubType(args ...interface{}) (ret interface{}) {
   // subType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -218,7 +220,7 @@ func (this *QImageWriter) Subtype(args ...interface{}) (ret interface{}) {
 }
 
 // setOptimizedWrite(_Bool)
-func (this *QImageWriter) Setoptimizedwrite(args ...interface{}) () {
+func (this *QImageWriter) SetOptimizedWrite(args ...interface{}) () {
   // setOptimizedWrite(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -242,6 +244,9 @@ func (this *QImageWriter) Setoptimizedwrite(args ...interface{}) () {
 }
 
 // QImageWriter(const class QString &, const class QByteArray &)
+func GcfreeQImageWriter(this *QImageWriter) {
+  qtrt.UniverseFree(this)
+}
 func NewQImageWriter(args ...interface{}) *QImageWriter {
   // QImageWriter(const class QString &, const class QByteArray &)
   // QImageWriter(class QIODevice *, const class QByteArray &)
@@ -269,7 +274,9 @@ func NewQImageWriter(args ...interface{}) *QImageWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QImageWriterC2ERK7QStringRK10QByteArray(arg0, arg1)
-    return &QImageWriter{Qclsinst:qthis}
+    this := &QImageWriter{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQImageWriter)
+    return this
   case 1:
     // invoke: _ZN12QImageWriterC1EP9QIODeviceRK10QByteArray
     // invoke: void QImageWriter(class QIODevice *, const class QByteArray &)
@@ -280,14 +287,18 @@ func NewQImageWriter(args ...interface{}) *QImageWriter {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QImageWriterC2EP9QIODeviceRK10QByteArray(arg0, arg1)
-    return &QImageWriter{Qclsinst:qthis}
+    this := &QImageWriter{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQImageWriter)
+    return this
   case 2:
     // invoke: _ZN12QImageWriterC1Ev
     // invoke: void QImageWriter()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QImageWriterC2Ev()
-    return &QImageWriter{Qclsinst:qthis}
+    this := &QImageWriter{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQImageWriter)
+    return this
   default:
     qtrt.ErrorResolve("QImageWriter", "QImageWriter", args)
   }
@@ -325,7 +336,7 @@ func (this *QImageWriter) Quality(args ...interface{}) (ret interface{}) {
 }
 
 // setDescription(const class QString &)
-func (this *QImageWriter) Setdescription(args ...interface{}) () {
+func (this *QImageWriter) SetDescription(args ...interface{}) () {
   // setDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,7 +389,7 @@ func (this *QImageWriter) Compression(args ...interface{}) (ret interface{}) {
 }
 
 // setFormat(const class QByteArray &)
-func (this *QImageWriter) Setformat(args ...interface{}) () {
+func (this *QImageWriter) SetFormat(args ...interface{}) () {
   // setFormat(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -434,7 +445,7 @@ func (this *QImageWriter) Write(args ...interface{}) (ret interface{}) {
 }
 
 // setDevice(class QIODevice *)
-func (this *QImageWriter) Setdevice(args ...interface{}) () {
+func (this *QImageWriter) SetDevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -458,7 +469,7 @@ func (this *QImageWriter) Setdevice(args ...interface{}) () {
 }
 
 // setSubType(const class QByteArray &)
-func (this *QImageWriter) Setsubtype(args ...interface{}) () {
+func (this *QImageWriter) SetSubType(args ...interface{}) () {
   // setSubType(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -503,7 +514,7 @@ func (this *QImageWriter) Transformation(args ...interface{}) () {
 }
 
 // supportedImageFormats()
-func (this *QImageWriter) Supportedimageformats_S(args ...interface{}) () {
+func (this *QImageWriter) SupportedImageFormats_s(args ...interface{}) () {
   // supportedImageFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -524,7 +535,7 @@ func (this *QImageWriter) Supportedimageformats_S(args ...interface{}) () {
 }
 
 // setProgressiveScanWrite(_Bool)
-func (this *QImageWriter) Setprogressivescanwrite(args ...interface{}) () {
+func (this *QImageWriter) SetProgressiveScanWrite(args ...interface{}) () {
   // setProgressiveScanWrite(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -577,7 +588,7 @@ func (this *QImageWriter) Description(args ...interface{}) (ret interface{}) {
 }
 
 // errorString()
-func (this *QImageWriter) Errorstring(args ...interface{}) (ret interface{}) {
+func (this *QImageWriter) ErrorString(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -656,7 +667,7 @@ func (this *QImageWriter) Error(args ...interface{}) () {
 }
 
 // fileName()
-func (this *QImageWriter) Filename(args ...interface{}) (ret interface{}) {
+func (this *QImageWriter) FileName(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -685,7 +696,7 @@ func (this *QImageWriter) Filename(args ...interface{}) (ret interface{}) {
 }
 
 // setGamma(float)
-func (this *QImageWriter) Setgamma(args ...interface{}) () {
+func (this *QImageWriter) SetGamma(args ...interface{}) () {
   // setGamma(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -738,7 +749,7 @@ func (this *QImageWriter) Device(args ...interface{}) (ret interface{}) {
 }
 
 // supportedSubTypes()
-func (this *QImageWriter) Supportedsubtypes(args ...interface{}) () {
+func (this *QImageWriter) SupportedSubTypes(args ...interface{}) () {
   // supportedSubTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -759,7 +770,7 @@ func (this *QImageWriter) Supportedsubtypes(args ...interface{}) () {
 }
 
 // optimizedWrite()
-func (this *QImageWriter) Optimizedwrite(args ...interface{}) (ret interface{}) {
+func (this *QImageWriter) OptimizedWrite(args ...interface{}) (ret interface{}) {
   // optimizedWrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -788,7 +799,7 @@ func (this *QImageWriter) Optimizedwrite(args ...interface{}) (ret interface{}) 
 }
 
 // progressiveScanWrite()
-func (this *QImageWriter) Progressivescanwrite(args ...interface{}) (ret interface{}) {
+func (this *QImageWriter) ProgressiveScanWrite(args ...interface{}) (ret interface{}) {
   // progressiveScanWrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -817,7 +828,7 @@ func (this *QImageWriter) Progressivescanwrite(args ...interface{}) (ret interfa
 }
 
 // setText(const class QString &, const class QString &)
-func (this *QImageWriter) Settext(args ...interface{}) () {
+func (this *QImageWriter) SetText(args ...interface{}) () {
   // setText(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -844,7 +855,7 @@ func (this *QImageWriter) Settext(args ...interface{}) () {
 }
 
 // setFileName(const class QString &)
-func (this *QImageWriter) Setfilename(args ...interface{}) () {
+func (this *QImageWriter) SetFileName(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -868,7 +879,7 @@ func (this *QImageWriter) Setfilename(args ...interface{}) () {
 }
 
 // setQuality(int)
-func (this *QImageWriter) Setquality(args ...interface{}) () {
+func (this *QImageWriter) SetQuality(args ...interface{}) () {
   // setQuality(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -892,7 +903,7 @@ func (this *QImageWriter) Setquality(args ...interface{}) () {
 }
 
 // ~QImageWriter()
-func (this *QImageWriter) Freeqimagewriter(args ...interface{}) () {
+func (this *QImageWriter) Free(args ...interface{}) () {
   // ~QImageWriter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -904,7 +915,10 @@ func (this *QImageWriter) Freeqimagewriter(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QImageWriterD0Ev
     // invoke: void ~QImageWriter()
-    C.C_ZN12QImageWriterD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QImageWriterD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QImageWriter", "~QImageWriter", args)
   }

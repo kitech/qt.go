@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qstyleditemdelegate.h
 // dst-file: /src/widgets/qstyleditemdelegate.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -66,6 +67,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStyledItemDelegate)=1
@@ -75,7 +77,7 @@ type QStyledItemDelegate struct {
 }
 
 // itemEditorFactory()
-func (this *QStyledItemDelegate) Itemeditorfactory(args ...interface{}) (ret interface{}) {
+func (this *QStyledItemDelegate) ItemEditorFactory(args ...interface{}) (ret interface{}) {
   // itemEditorFactory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -104,7 +106,7 @@ func (this *QStyledItemDelegate) Itemeditorfactory(args ...interface{}) (ret int
 }
 
 // createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QStyledItemDelegate) Createeditor(args ...interface{}) (ret interface{}) {
+func (this *QStyledItemDelegate) CreateEditor(args ...interface{}) (ret interface{}) {
   // createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -142,7 +144,7 @@ func (this *QStyledItemDelegate) Createeditor(args ...interface{}) (ret interfac
 }
 
 // updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QStyledItemDelegate) Updateeditorgeometry(args ...interface{}) () {
+func (this *QStyledItemDelegate) UpdateEditorGeometry(args ...interface{}) () {
   // updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -172,6 +174,9 @@ func (this *QStyledItemDelegate) Updateeditorgeometry(args ...interface{}) () {
 }
 
 // QStyledItemDelegate(class QObject *)
+func GcfreeQStyledItemDelegate(this *QStyledItemDelegate) {
+  qtrt.UniverseFree(this)
+}
 func NewQStyledItemDelegate(args ...interface{}) *QStyledItemDelegate {
   // QStyledItemDelegate(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -190,7 +195,9 @@ func NewQStyledItemDelegate(args ...interface{}) *QStyledItemDelegate {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QStyledItemDelegateC2EP7QObject(arg0)
-    return &QStyledItemDelegate{Qclsinst:qthis}
+    this := &QStyledItemDelegate{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStyledItemDelegate)
+    return this
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "QStyledItemDelegate", args)
   }
@@ -229,7 +236,7 @@ func (this *QStyledItemDelegate) Paint(args ...interface{}) () {
 }
 
 // setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
-func (this *QStyledItemDelegate) Setmodeldata(args ...interface{}) () {
+func (this *QStyledItemDelegate) SetModelData(args ...interface{}) () {
   // setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -259,7 +266,7 @@ func (this *QStyledItemDelegate) Setmodeldata(args ...interface{}) () {
 }
 
 // displayText(const class QVariant &, const class QLocale &)
-func (this *QStyledItemDelegate) Displaytext(args ...interface{}) (ret interface{}) {
+func (this *QStyledItemDelegate) DisplayText(args ...interface{}) (ret interface{}) {
   // displayText(const class QVariant &, const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -294,7 +301,7 @@ func (this *QStyledItemDelegate) Displaytext(args ...interface{}) (ret interface
 }
 
 // setEditorData(class QWidget *, const class QModelIndex &)
-func (this *QStyledItemDelegate) Seteditordata(args ...interface{}) () {
+func (this *QStyledItemDelegate) SetEditorData(args ...interface{}) () {
   // setEditorData(class QWidget *, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -321,7 +328,7 @@ func (this *QStyledItemDelegate) Seteditordata(args ...interface{}) () {
 }
 
 // ~QStyledItemDelegate()
-func (this *QStyledItemDelegate) Freeqstyleditemdelegate(args ...interface{}) () {
+func (this *QStyledItemDelegate) Free(args ...interface{}) () {
   // ~QStyledItemDelegate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -333,7 +340,10 @@ func (this *QStyledItemDelegate) Freeqstyleditemdelegate(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QStyledItemDelegateD0Ev
     // invoke: void ~QStyledItemDelegate()
-    C.C_ZN19QStyledItemDelegateD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QStyledItemDelegateD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "~QStyledItemDelegate", args)
   }
@@ -342,7 +352,7 @@ func (this *QStyledItemDelegate) Freeqstyleditemdelegate(args ...interface{}) ()
 }
 
 // sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QStyledItemDelegate) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QStyledItemDelegate) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -377,7 +387,7 @@ func (this *QStyledItemDelegate) Sizehint(args ...interface{}) (ret interface{})
 }
 
 // metaObject()
-func (this *QStyledItemDelegate) Metaobject(args ...interface{}) () {
+func (this *QStyledItemDelegate) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -398,7 +408,7 @@ func (this *QStyledItemDelegate) Metaobject(args ...interface{}) () {
 }
 
 // setItemEditorFactory(class QItemEditorFactory *)
-func (this *QStyledItemDelegate) Setitemeditorfactory(args ...interface{}) () {
+func (this *QStyledItemDelegate) SetItemEditorFactory(args ...interface{}) () {
   // setItemEditorFactory(class QItemEditorFactory *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

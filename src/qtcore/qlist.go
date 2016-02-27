@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qlist.h
 // dst-file: /src/core/qlist.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -74,6 +75,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QListData)=8
@@ -342,7 +344,7 @@ func (this *QListData) Erase(args ...interface{}) (ret interface{}) {
 }
 
 // isEmpty()
-func (this *QListData) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QListData) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -403,7 +405,7 @@ func (this *QListData) At(args ...interface{}) (ret interface{}) {
 }
 
 // detach_grow(int *, int)
-func (this *QListData) Detach_Grow(args ...interface{}) () {
+func (this *QListData) Detach_grow(args ...interface{}) () {
   // detach_grow(int *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

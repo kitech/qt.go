@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qrasterwindow.h
 // dst-file: /src/gui/qrasterwindow.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -44,6 +45,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QRasterWindow)=1
@@ -53,7 +55,7 @@ type QRasterWindow struct {
 }
 
 // metaObject()
-func (this *QRasterWindow) Metaobject(args ...interface{}) () {
+func (this *QRasterWindow) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -74,6 +76,9 @@ func (this *QRasterWindow) Metaobject(args ...interface{}) () {
 }
 
 // QRasterWindow(class QWindow *)
+func GcfreeQRasterWindow(this *QRasterWindow) {
+  qtrt.UniverseFree(this)
+}
 func NewQRasterWindow(args ...interface{}) *QRasterWindow {
   // QRasterWindow(class QWindow *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -92,7 +97,9 @@ func NewQRasterWindow(args ...interface{}) *QRasterWindow {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QRasterWindowC2EP7QWindow(arg0)
-    return &QRasterWindow{Qclsinst:qthis}
+    this := &QRasterWindow{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRasterWindow)
+    return this
   default:
     qtrt.ErrorResolve("QRasterWindow", "QRasterWindow", args)
   }

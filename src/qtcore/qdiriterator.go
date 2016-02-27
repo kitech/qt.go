@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qdiriterator.h
 // dst-file: /src/core/qdiriterator.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -52,6 +53,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDirIterator)=1
@@ -61,7 +63,7 @@ type QDirIterator struct {
 }
 
 // ~QDirIterator()
-func (this *QDirIterator) Freeqdiriterator(args ...interface{}) () {
+func (this *QDirIterator) Free(args ...interface{}) () {
   // ~QDirIterator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -73,7 +75,10 @@ func (this *QDirIterator) Freeqdiriterator(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QDirIteratorD0Ev
     // invoke: void ~QDirIterator()
-    C.C_ZN12QDirIteratorD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QDirIteratorD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDirIterator", "~QDirIterator", args)
   }
@@ -82,7 +87,7 @@ func (this *QDirIterator) Freeqdiriterator(args ...interface{}) () {
 }
 
 // filePath()
-func (this *QDirIterator) Filepath(args ...interface{}) (ret interface{}) {
+func (this *QDirIterator) FilePath(args ...interface{}) (ret interface{}) {
   // filePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -140,7 +145,7 @@ func (this *QDirIterator) Next(args ...interface{}) (ret interface{}) {
 }
 
 // hasNext()
-func (this *QDirIterator) Hasnext(args ...interface{}) (ret interface{}) {
+func (this *QDirIterator) HasNext(args ...interface{}) (ret interface{}) {
   // hasNext()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -198,7 +203,7 @@ func (this *QDirIterator) Path(args ...interface{}) (ret interface{}) {
 }
 
 // fileInfo()
-func (this *QDirIterator) Fileinfo(args ...interface{}) (ret interface{}) {
+func (this *QDirIterator) FileInfo(args ...interface{}) (ret interface{}) {
   // fileInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -227,7 +232,7 @@ func (this *QDirIterator) Fileinfo(args ...interface{}) (ret interface{}) {
 }
 
 // fileName()
-func (this *QDirIterator) Filename(args ...interface{}) (ret interface{}) {
+func (this *QDirIterator) FileName(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

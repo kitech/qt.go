@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -60,6 +61,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSplashScreen)=1
@@ -144,7 +146,7 @@ func (this *QSplashScreen) Finish(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QSplashScreen) Metaobject(args ...interface{}) () {
+func (this *QSplashScreen) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -165,7 +167,7 @@ func (this *QSplashScreen) Metaobject(args ...interface{}) () {
 }
 
 // setPixmap(const class QPixmap &)
-func (this *QSplashScreen) Setpixmap(args ...interface{}) () {
+func (this *QSplashScreen) SetPixmap(args ...interface{}) () {
   // setPixmap(const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -189,7 +191,7 @@ func (this *QSplashScreen) Setpixmap(args ...interface{}) () {
 }
 
 // clearMessage()
-func (this *QSplashScreen) Clearmessage(args ...interface{}) () {
+func (this *QSplashScreen) ClearMessage(args ...interface{}) () {
   // clearMessage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,7 +241,7 @@ func (this *QSplashScreen) Message(args ...interface{}) (ret interface{}) {
 }
 
 // showMessage(const class QString &, int, const class QColor &)
-func (this *QSplashScreen) Showmessage(args ...interface{}) () {
+func (this *QSplashScreen) ShowMessage(args ...interface{}) () {
   // showMessage(const class QString &, int, const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -269,7 +271,7 @@ func (this *QSplashScreen) Showmessage(args ...interface{}) () {
 }
 
 // ~QSplashScreen()
-func (this *QSplashScreen) Freeqsplashscreen(args ...interface{}) () {
+func (this *QSplashScreen) Free(args ...interface{}) () {
   // ~QSplashScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -281,7 +283,10 @@ func (this *QSplashScreen) Freeqsplashscreen(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QSplashScreenD0Ev
     // invoke: void ~QSplashScreen()
-    C.C_ZN13QSplashScreenD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QSplashScreenD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QSplashScreen", "~QSplashScreen", args)
   }

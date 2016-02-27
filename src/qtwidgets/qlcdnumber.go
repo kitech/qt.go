@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -86,6 +87,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QLCDNumber)=1
@@ -96,7 +98,7 @@ type QLCDNumber struct {
 }
 
 // setSmallDecimalPoint(_Bool)
-func (this *QLCDNumber) Setsmalldecimalpoint(args ...interface{}) () {
+func (this *QLCDNumber) SetSmallDecimalPoint(args ...interface{}) () {
   // setSmallDecimalPoint(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -120,7 +122,7 @@ func (this *QLCDNumber) Setsmalldecimalpoint(args ...interface{}) () {
 }
 
 // setDecMode()
-func (this *QLCDNumber) Setdecmode(args ...interface{}) () {
+func (this *QLCDNumber) SetDecMode(args ...interface{}) () {
   // setDecMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -141,7 +143,7 @@ func (this *QLCDNumber) Setdecmode(args ...interface{}) () {
 }
 
 // smallDecimalPoint()
-func (this *QLCDNumber) Smalldecimalpoint(args ...interface{}) (ret interface{}) {
+func (this *QLCDNumber) SmallDecimalPoint(args ...interface{}) (ret interface{}) {
   // smallDecimalPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -170,7 +172,7 @@ func (this *QLCDNumber) Smalldecimalpoint(args ...interface{}) (ret interface{})
 }
 
 // setHexMode()
-func (this *QLCDNumber) Sethexmode(args ...interface{}) () {
+func (this *QLCDNumber) SetHexMode(args ...interface{}) () {
   // setHexMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -191,7 +193,7 @@ func (this *QLCDNumber) Sethexmode(args ...interface{}) () {
 }
 
 // ~QLCDNumber()
-func (this *QLCDNumber) Freeqlcdnumber(args ...interface{}) () {
+func (this *QLCDNumber) Free(args ...interface{}) () {
   // ~QLCDNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -203,7 +205,10 @@ func (this *QLCDNumber) Freeqlcdnumber(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QLCDNumberD0Ev
     // invoke: void ~QLCDNumber()
-    C.C_ZN10QLCDNumberD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QLCDNumberD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QLCDNumber", "~QLCDNumber", args)
   }
@@ -212,7 +217,7 @@ func (this *QLCDNumber) Freeqlcdnumber(args ...interface{}) () {
 }
 
 // segmentStyle()
-func (this *QLCDNumber) Segmentstyle(args ...interface{}) () {
+func (this *QLCDNumber) SegmentStyle(args ...interface{}) () {
   // segmentStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -233,6 +238,9 @@ func (this *QLCDNumber) Segmentstyle(args ...interface{}) () {
 }
 
 // QLCDNumber(uint, class QWidget *)
+func GcfreeQLCDNumber(this *QLCDNumber) {
+  qtrt.UniverseFree(this)
+}
 func NewQLCDNumber(args ...interface{}) *QLCDNumber {
   // QLCDNumber(uint, class QWidget *)
   // QLCDNumber(class QWidget *)
@@ -257,7 +265,9 @@ func NewQLCDNumber(args ...interface{}) *QLCDNumber {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QLCDNumberC2EjP7QWidget(arg0, arg1)
-    return &QLCDNumber{Qclsinst:qthis}
+    this := &QLCDNumber{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLCDNumber)
+    return this
   case 1:
     // invoke: _ZN10QLCDNumberC1EP7QWidget
     // invoke: void QLCDNumber(class QWidget *)
@@ -266,7 +276,9 @@ func NewQLCDNumber(args ...interface{}) *QLCDNumber {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QLCDNumberC2EP7QWidget(arg0)
-    return &QLCDNumber{Qclsinst:qthis}
+    this := &QLCDNumber{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLCDNumber)
+    return this
   default:
     qtrt.ErrorResolve("QLCDNumber", "QLCDNumber", args)
   }
@@ -275,7 +287,7 @@ func NewQLCDNumber(args ...interface{}) *QLCDNumber {
 }
 
 // intValue()
-func (this *QLCDNumber) Intvalue(args ...interface{}) (ret interface{}) {
+func (this *QLCDNumber) IntValue(args ...interface{}) (ret interface{}) {
   // intValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -304,7 +316,7 @@ func (this *QLCDNumber) Intvalue(args ...interface{}) (ret interface{}) {
 }
 
 // digitCount()
-func (this *QLCDNumber) Digitcount(args ...interface{}) (ret interface{}) {
+func (this *QLCDNumber) DigitCount(args ...interface{}) (ret interface{}) {
   // digitCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -333,7 +345,7 @@ func (this *QLCDNumber) Digitcount(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QLCDNumber) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QLCDNumber) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -362,7 +374,7 @@ func (this *QLCDNumber) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // setOctMode()
-func (this *QLCDNumber) Setoctmode(args ...interface{}) () {
+func (this *QLCDNumber) SetOctMode(args ...interface{}) () {
   // setOctMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -383,7 +395,7 @@ func (this *QLCDNumber) Setoctmode(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QLCDNumber) Metaobject(args ...interface{}) () {
+func (this *QLCDNumber) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -404,7 +416,7 @@ func (this *QLCDNumber) Metaobject(args ...interface{}) () {
 }
 
 // setBinMode()
-func (this *QLCDNumber) Setbinmode(args ...interface{}) () {
+func (this *QLCDNumber) SetBinMode(args ...interface{}) () {
   // setBinMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -454,7 +466,7 @@ func (this *QLCDNumber) Value(args ...interface{}) (ret interface{}) {
 }
 
 // setDigitCount(int)
-func (this *QLCDNumber) Setdigitcount(args ...interface{}) () {
+func (this *QLCDNumber) SetDigitCount(args ...interface{}) () {
   // setDigitCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -499,7 +511,7 @@ func (this *QLCDNumber) Mode(args ...interface{}) () {
 }
 
 // checkOverflow(int)
-func (this *QLCDNumber) Checkoverflow(args ...interface{}) (ret interface{}) {
+func (this *QLCDNumber) CheckOverflow(args ...interface{}) (ret interface{}) {
   // checkOverflow(int)
   // checkOverflow(double)
   var vtys = make(map[int32]map[int32]reflect.Type)

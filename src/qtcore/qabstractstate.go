@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -48,6 +49,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractState)=1
@@ -118,7 +120,7 @@ func (this *QAbstractState) Active(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QAbstractState) Metaobject(args ...interface{}) () {
+func (this *QAbstractState) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -139,7 +141,7 @@ func (this *QAbstractState) Metaobject(args ...interface{}) () {
 }
 
 // parentState()
-func (this *QAbstractState) Parentstate(args ...interface{}) (ret interface{}) {
+func (this *QAbstractState) ParentState(args ...interface{}) (ret interface{}) {
   // parentState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -168,7 +170,7 @@ func (this *QAbstractState) Parentstate(args ...interface{}) (ret interface{}) {
 }
 
 // ~QAbstractState()
-func (this *QAbstractState) Freeqabstractstate(args ...interface{}) () {
+func (this *QAbstractState) Free(args ...interface{}) () {
   // ~QAbstractState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -180,7 +182,10 @@ func (this *QAbstractState) Freeqabstractstate(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QAbstractStateD0Ev
     // invoke: void ~QAbstractState()
-    C.C_ZN14QAbstractStateD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QAbstractStateD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractState", "~QAbstractState", args)
   }

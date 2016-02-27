@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -70,6 +71,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFrame)=1
@@ -79,7 +81,7 @@ type QFrame struct {
 }
 
 // frameStyle()
-func (this *QFrame) Framestyle(args ...interface{}) (ret interface{}) {
+func (this *QFrame) FrameStyle(args ...interface{}) (ret interface{}) {
   // frameStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -108,7 +110,7 @@ func (this *QFrame) Framestyle(args ...interface{}) (ret interface{}) {
 }
 
 // ~QFrame()
-func (this *QFrame) Freeqframe(args ...interface{}) () {
+func (this *QFrame) Free(args ...interface{}) () {
   // ~QFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -120,7 +122,10 @@ func (this *QFrame) Freeqframe(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QFrameD0Ev
     // invoke: void ~QFrame()
-    C.C_ZN6QFrameD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN6QFrameD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFrame", "~QFrame", args)
   }
@@ -129,7 +134,7 @@ func (this *QFrame) Freeqframe(args ...interface{}) () {
 }
 
 // frameWidth()
-func (this *QFrame) Framewidth(args ...interface{}) (ret interface{}) {
+func (this *QFrame) FrameWidth(args ...interface{}) (ret interface{}) {
   // frameWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -158,7 +163,7 @@ func (this *QFrame) Framewidth(args ...interface{}) (ret interface{}) {
 }
 
 // setLineWidth(int)
-func (this *QFrame) Setlinewidth(args ...interface{}) () {
+func (this *QFrame) SetLineWidth(args ...interface{}) () {
   // setLineWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,7 +187,7 @@ func (this *QFrame) Setlinewidth(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QFrame) Metaobject(args ...interface{}) () {
+func (this *QFrame) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -203,7 +208,7 @@ func (this *QFrame) Metaobject(args ...interface{}) () {
 }
 
 // setFrameStyle(int)
-func (this *QFrame) Setframestyle(args ...interface{}) () {
+func (this *QFrame) SetFrameStyle(args ...interface{}) () {
   // setFrameStyle(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -227,7 +232,7 @@ func (this *QFrame) Setframestyle(args ...interface{}) () {
 }
 
 // frameRect()
-func (this *QFrame) Framerect(args ...interface{}) (ret interface{}) {
+func (this *QFrame) FrameRect(args ...interface{}) (ret interface{}) {
   // frameRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -256,7 +261,7 @@ func (this *QFrame) Framerect(args ...interface{}) (ret interface{}) {
 }
 
 // frameShadow()
-func (this *QFrame) Frameshadow(args ...interface{}) () {
+func (this *QFrame) FrameShadow(args ...interface{}) () {
   // frameShadow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -277,7 +282,7 @@ func (this *QFrame) Frameshadow(args ...interface{}) () {
 }
 
 // setFrameRect(const class QRect &)
-func (this *QFrame) Setframerect(args ...interface{}) () {
+func (this *QFrame) SetFrameRect(args ...interface{}) () {
   // setFrameRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -301,7 +306,7 @@ func (this *QFrame) Setframerect(args ...interface{}) () {
 }
 
 // midLineWidth()
-func (this *QFrame) Midlinewidth(args ...interface{}) (ret interface{}) {
+func (this *QFrame) MidLineWidth(args ...interface{}) (ret interface{}) {
   // midLineWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -330,7 +335,7 @@ func (this *QFrame) Midlinewidth(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QFrame) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QFrame) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -359,7 +364,7 @@ func (this *QFrame) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // frameShape()
-func (this *QFrame) Frameshape(args ...interface{}) () {
+func (this *QFrame) FrameShape(args ...interface{}) () {
   // frameShape()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -380,7 +385,7 @@ func (this *QFrame) Frameshape(args ...interface{}) () {
 }
 
 // setMidLineWidth(int)
-func (this *QFrame) Setmidlinewidth(args ...interface{}) () {
+func (this *QFrame) SetMidLineWidth(args ...interface{}) () {
   // setMidLineWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -404,7 +409,7 @@ func (this *QFrame) Setmidlinewidth(args ...interface{}) () {
 }
 
 // lineWidth()
-func (this *QFrame) Linewidth(args ...interface{}) (ret interface{}) {
+func (this *QFrame) LineWidth(args ...interface{}) (ret interface{}) {
   // lineWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qabstractitemdelegate.h
 // dst-file: /src/widgets/qabstractitemdelegate.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -64,6 +65,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractItemDelegate)=1
@@ -76,7 +78,7 @@ type QAbstractItemDelegate struct {
 }
 
 // createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QAbstractItemDelegate) Createeditor(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemDelegate) CreateEditor(args ...interface{}) (ret interface{}) {
   // createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -114,7 +116,7 @@ func (this *QAbstractItemDelegate) Createeditor(args ...interface{}) (ret interf
 }
 
 // updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QAbstractItemDelegate) Updateeditorgeometry(args ...interface{}) () {
+func (this *QAbstractItemDelegate) UpdateEditorGeometry(args ...interface{}) () {
   // updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -144,7 +146,7 @@ func (this *QAbstractItemDelegate) Updateeditorgeometry(args ...interface{}) () 
 }
 
 // setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
-func (this *QAbstractItemDelegate) Setmodeldata(args ...interface{}) () {
+func (this *QAbstractItemDelegate) SetModelData(args ...interface{}) () {
   // setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -174,7 +176,7 @@ func (this *QAbstractItemDelegate) Setmodeldata(args ...interface{}) () {
 }
 
 // destroyEditor(class QWidget *, const class QModelIndex &)
-func (this *QAbstractItemDelegate) Destroyeditor(args ...interface{}) () {
+func (this *QAbstractItemDelegate) DestroyEditor(args ...interface{}) () {
   // destroyEditor(class QWidget *, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -201,6 +203,9 @@ func (this *QAbstractItemDelegate) Destroyeditor(args ...interface{}) () {
 }
 
 // QAbstractItemDelegate(class QObject *)
+func GcfreeQAbstractItemDelegate(this *QAbstractItemDelegate) {
+  qtrt.UniverseFree(this)
+}
 func NewQAbstractItemDelegate(args ...interface{}) *QAbstractItemDelegate {
   // QAbstractItemDelegate(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -219,7 +224,9 @@ func NewQAbstractItemDelegate(args ...interface{}) *QAbstractItemDelegate {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QAbstractItemDelegateC2EP7QObject(arg0)
-    return &QAbstractItemDelegate{Qclsinst:qthis}
+    this := &QAbstractItemDelegate{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAbstractItemDelegate)
+    return this
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "QAbstractItemDelegate", args)
   }
@@ -228,7 +235,7 @@ func NewQAbstractItemDelegate(args ...interface{}) *QAbstractItemDelegate {
 }
 
 // editorEvent(class QEvent *, class QAbstractItemModel *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QAbstractItemDelegate) Editorevent(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemDelegate) EditorEvent(args ...interface{}) (ret interface{}) {
   // editorEvent(class QEvent *, class QAbstractItemModel *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -269,7 +276,7 @@ func (this *QAbstractItemDelegate) Editorevent(args ...interface{}) (ret interfa
 }
 
 // setEditorData(class QWidget *, const class QModelIndex &)
-func (this *QAbstractItemDelegate) Seteditordata(args ...interface{}) () {
+func (this *QAbstractItemDelegate) SetEditorData(args ...interface{}) () {
   // setEditorData(class QWidget *, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -296,7 +303,7 @@ func (this *QAbstractItemDelegate) Seteditordata(args ...interface{}) () {
 }
 
 // paintingRoles()
-func (this *QAbstractItemDelegate) Paintingroles(args ...interface{}) () {
+func (this *QAbstractItemDelegate) PaintingRoles(args ...interface{}) () {
   // paintingRoles()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -317,7 +324,7 @@ func (this *QAbstractItemDelegate) Paintingroles(args ...interface{}) () {
 }
 
 // helpEvent(class QHelpEvent *, class QAbstractItemView *, const class QStyleOptionViewItem &, const class QModelIndex &)
-func (this *QAbstractItemDelegate) Helpevent(args ...interface{}) (ret interface{}) {
+func (this *QAbstractItemDelegate) HelpEvent(args ...interface{}) (ret interface{}) {
   // helpEvent(class QHelpEvent *, class QAbstractItemView *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -358,7 +365,7 @@ func (this *QAbstractItemDelegate) Helpevent(args ...interface{}) (ret interface
 }
 
 // metaObject()
-func (this *QAbstractItemDelegate) Metaobject(args ...interface{}) () {
+func (this *QAbstractItemDelegate) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -379,7 +386,7 @@ func (this *QAbstractItemDelegate) Metaobject(args ...interface{}) () {
 }
 
 // ~QAbstractItemDelegate()
-func (this *QAbstractItemDelegate) Freeqabstractitemdelegate(args ...interface{}) () {
+func (this *QAbstractItemDelegate) Free(args ...interface{}) () {
   // ~QAbstractItemDelegate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -391,7 +398,10 @@ func (this *QAbstractItemDelegate) Freeqabstractitemdelegate(args ...interface{}
   case 0:
     // invoke: _ZN21QAbstractItemDelegateD0Ev
     // invoke: void ~QAbstractItemDelegate()
-    C.C_ZN21QAbstractItemDelegateD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN21QAbstractItemDelegateD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "~QAbstractItemDelegate", args)
   }

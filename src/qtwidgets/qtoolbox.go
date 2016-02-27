@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -86,6 +87,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QToolBox)=1
@@ -96,7 +98,7 @@ type QToolBox struct {
 }
 
 // setItemText(int, const class QString &)
-func (this *QToolBox) Setitemtext(args ...interface{}) () {
+func (this *QToolBox) SetItemText(args ...interface{}) () {
   // setItemText(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -123,7 +125,7 @@ func (this *QToolBox) Setitemtext(args ...interface{}) () {
 }
 
 // itemIcon(int)
-func (this *QToolBox) Itemicon(args ...interface{}) (ret interface{}) {
+func (this *QToolBox) ItemIcon(args ...interface{}) (ret interface{}) {
   // itemIcon(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -155,7 +157,7 @@ func (this *QToolBox) Itemicon(args ...interface{}) (ret interface{}) {
 }
 
 // setItemEnabled(int, _Bool)
-func (this *QToolBox) Setitemenabled(args ...interface{}) () {
+func (this *QToolBox) SetItemEnabled(args ...interface{}) () {
   // setItemEnabled(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,7 +184,7 @@ func (this *QToolBox) Setitemenabled(args ...interface{}) () {
 }
 
 // setCurrentIndex(int)
-func (this *QToolBox) Setcurrentindex(args ...interface{}) () {
+func (this *QToolBox) SetCurrentIndex(args ...interface{}) () {
   // setCurrentIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -206,7 +208,7 @@ func (this *QToolBox) Setcurrentindex(args ...interface{}) () {
 }
 
 // currentWidget()
-func (this *QToolBox) Currentwidget(args ...interface{}) (ret interface{}) {
+func (this *QToolBox) CurrentWidget(args ...interface{}) (ret interface{}) {
   // currentWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -235,7 +237,7 @@ func (this *QToolBox) Currentwidget(args ...interface{}) (ret interface{}) {
 }
 
 // ~QToolBox()
-func (this *QToolBox) Freeqtoolbox(args ...interface{}) () {
+func (this *QToolBox) Free(args ...interface{}) () {
   // ~QToolBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -247,7 +249,10 @@ func (this *QToolBox) Freeqtoolbox(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolBoxD0Ev
     // invoke: void ~QToolBox()
-    C.C_ZN8QToolBoxD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN8QToolBoxD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QToolBox", "~QToolBox", args)
   }
@@ -256,7 +261,7 @@ func (this *QToolBox) Freeqtoolbox(args ...interface{}) () {
 }
 
 // setCurrentWidget(class QWidget *)
-func (this *QToolBox) Setcurrentwidget(args ...interface{}) () {
+func (this *QToolBox) SetCurrentWidget(args ...interface{}) () {
   // setCurrentWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -280,7 +285,7 @@ func (this *QToolBox) Setcurrentwidget(args ...interface{}) () {
 }
 
 // indexOf(class QWidget *)
-func (this *QToolBox) Indexof(args ...interface{}) (ret interface{}) {
+func (this *QToolBox) IndexOf(args ...interface{}) (ret interface{}) {
   // indexOf(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -373,7 +378,7 @@ func (this *QToolBox) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // setItemToolTip(int, const class QString &)
-func (this *QToolBox) Setitemtooltip(args ...interface{}) () {
+func (this *QToolBox) SetItemToolTip(args ...interface{}) () {
   // setItemToolTip(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -400,7 +405,7 @@ func (this *QToolBox) Setitemtooltip(args ...interface{}) () {
 }
 
 // setItemIcon(int, const class QIcon &)
-func (this *QToolBox) Setitemicon(args ...interface{}) () {
+func (this *QToolBox) SetItemIcon(args ...interface{}) () {
   // setItemIcon(int, const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -427,7 +432,7 @@ func (this *QToolBox) Setitemicon(args ...interface{}) () {
 }
 
 // insertItem(int, class QWidget *, const class QIcon &, const class QString &)
-func (this *QToolBox) Insertitem(args ...interface{}) (ret interface{}) {
+func (this *QToolBox) InsertItem(args ...interface{}) (ret interface{}) {
   // insertItem(int, class QWidget *, const class QIcon &, const class QString &)
   // insertItem(int, class QWidget *, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -491,7 +496,7 @@ func (this *QToolBox) Insertitem(args ...interface{}) (ret interface{}) {
 }
 
 // addItem(class QWidget *, const class QIcon &, const class QString &)
-func (this *QToolBox) Additem(args ...interface{}) (ret interface{}) {
+func (this *QToolBox) AddItem(args ...interface{}) (ret interface{}) {
   // addItem(class QWidget *, const class QIcon &, const class QString &)
   // addItem(class QWidget *, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -549,7 +554,7 @@ func (this *QToolBox) Additem(args ...interface{}) (ret interface{}) {
 }
 
 // removeItem(int)
-func (this *QToolBox) Removeitem(args ...interface{}) () {
+func (this *QToolBox) RemoveItem(args ...interface{}) () {
   // removeItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -573,7 +578,7 @@ func (this *QToolBox) Removeitem(args ...interface{}) () {
 }
 
 // itemText(int)
-func (this *QToolBox) Itemtext(args ...interface{}) (ret interface{}) {
+func (this *QToolBox) ItemText(args ...interface{}) (ret interface{}) {
   // itemText(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -605,7 +610,7 @@ func (this *QToolBox) Itemtext(args ...interface{}) (ret interface{}) {
 }
 
 // itemToolTip(int)
-func (this *QToolBox) Itemtooltip(args ...interface{}) (ret interface{}) {
+func (this *QToolBox) ItemToolTip(args ...interface{}) (ret interface{}) {
   // itemToolTip(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -637,7 +642,7 @@ func (this *QToolBox) Itemtooltip(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QToolBox) Metaobject(args ...interface{}) () {
+func (this *QToolBox) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -658,7 +663,7 @@ func (this *QToolBox) Metaobject(args ...interface{}) () {
 }
 
 // currentIndex()
-func (this *QToolBox) Currentindex(args ...interface{}) (ret interface{}) {
+func (this *QToolBox) CurrentIndex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -687,7 +692,7 @@ func (this *QToolBox) Currentindex(args ...interface{}) (ret interface{}) {
 }
 
 // isItemEnabled(int)
-func (this *QToolBox) Isitemenabled(args ...interface{}) (ret interface{}) {
+func (this *QToolBox) IsItemEnabled(args ...interface{}) (ret interface{}) {
   // isItemEnabled(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

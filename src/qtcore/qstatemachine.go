@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -82,6 +83,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStateMachine)=1
@@ -94,7 +96,7 @@ type QStateMachine struct {
 }
 
 // defaultAnimations()
-func (this *QStateMachine) Defaultanimations(args ...interface{}) () {
+func (this *QStateMachine) DefaultAnimations(args ...interface{}) () {
   // defaultAnimations()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -115,7 +117,7 @@ func (this *QStateMachine) Defaultanimations(args ...interface{}) () {
 }
 
 // globalRestorePolicy()
-func (this *QStateMachine) Globalrestorepolicy(args ...interface{}) () {
+func (this *QStateMachine) GlobalRestorePolicy(args ...interface{}) () {
   // globalRestorePolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -136,7 +138,7 @@ func (this *QStateMachine) Globalrestorepolicy(args ...interface{}) () {
 }
 
 // addDefaultAnimation(class QAbstractAnimation *)
-func (this *QStateMachine) Adddefaultanimation(args ...interface{}) () {
+func (this *QStateMachine) AddDefaultAnimation(args ...interface{}) () {
   // addDefaultAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -160,7 +162,7 @@ func (this *QStateMachine) Adddefaultanimation(args ...interface{}) () {
 }
 
 // clearError()
-func (this *QStateMachine) Clearerror(args ...interface{}) () {
+func (this *QStateMachine) ClearError(args ...interface{}) () {
   // clearError()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -181,7 +183,7 @@ func (this *QStateMachine) Clearerror(args ...interface{}) () {
 }
 
 // isAnimated()
-func (this *QStateMachine) Isanimated(args ...interface{}) (ret interface{}) {
+func (this *QStateMachine) IsAnimated(args ...interface{}) (ret interface{}) {
   // isAnimated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -210,7 +212,7 @@ func (this *QStateMachine) Isanimated(args ...interface{}) (ret interface{}) {
 }
 
 // addState(class QAbstractState *)
-func (this *QStateMachine) Addstate(args ...interface{}) () {
+func (this *QStateMachine) AddState(args ...interface{}) () {
   // addState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -234,7 +236,7 @@ func (this *QStateMachine) Addstate(args ...interface{}) () {
 }
 
 // eventFilter(class QObject *, class QEvent *)
-func (this *QStateMachine) Eventfilter(args ...interface{}) (ret interface{}) {
+func (this *QStateMachine) EventFilter(args ...interface{}) (ret interface{}) {
   // eventFilter(class QObject *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -290,7 +292,7 @@ func (this *QStateMachine) Start(args ...interface{}) () {
 }
 
 // cancelDelayedEvent(int)
-func (this *QStateMachine) Canceldelayedevent(args ...interface{}) (ret interface{}) {
+func (this *QStateMachine) CancelDelayedEvent(args ...interface{}) (ret interface{}) {
   // cancelDelayedEvent(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -322,7 +324,7 @@ func (this *QStateMachine) Canceldelayedevent(args ...interface{}) (ret interfac
 }
 
 // setRunning(_Bool)
-func (this *QStateMachine) Setrunning(args ...interface{}) () {
+func (this *QStateMachine) SetRunning(args ...interface{}) () {
   // setRunning(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -346,7 +348,7 @@ func (this *QStateMachine) Setrunning(args ...interface{}) () {
 }
 
 // removeState(class QAbstractState *)
-func (this *QStateMachine) Removestate(args ...interface{}) () {
+func (this *QStateMachine) RemoveState(args ...interface{}) () {
   // removeState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -370,7 +372,7 @@ func (this *QStateMachine) Removestate(args ...interface{}) () {
 }
 
 // errorString()
-func (this *QStateMachine) Errorstring(args ...interface{}) (ret interface{}) {
+func (this *QStateMachine) ErrorString(args ...interface{}) (ret interface{}) {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -420,7 +422,7 @@ func (this *QStateMachine) Stop(args ...interface{}) () {
 }
 
 // setAnimated(_Bool)
-func (this *QStateMachine) Setanimated(args ...interface{}) () {
+func (this *QStateMachine) SetAnimated(args ...interface{}) () {
   // setAnimated(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -444,7 +446,7 @@ func (this *QStateMachine) Setanimated(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QStateMachine) Metaobject(args ...interface{}) () {
+func (this *QStateMachine) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -486,7 +488,7 @@ func (this *QStateMachine) Configuration(args ...interface{}) () {
 }
 
 // isRunning()
-func (this *QStateMachine) Isrunning(args ...interface{}) (ret interface{}) {
+func (this *QStateMachine) IsRunning(args ...interface{}) (ret interface{}) {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -515,7 +517,7 @@ func (this *QStateMachine) Isrunning(args ...interface{}) (ret interface{}) {
 }
 
 // ~QStateMachine()
-func (this *QStateMachine) Freeqstatemachine(args ...interface{}) () {
+func (this *QStateMachine) Free(args ...interface{}) () {
   // ~QStateMachine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -527,7 +529,10 @@ func (this *QStateMachine) Freeqstatemachine(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStateMachineD0Ev
     // invoke: void ~QStateMachine()
-    C.C_ZN13QStateMachineD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QStateMachineD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStateMachine", "~QStateMachine", args)
   }
@@ -536,6 +541,9 @@ func (this *QStateMachine) Freeqstatemachine(args ...interface{}) () {
 }
 
 // QStateMachine(class QObject *)
+func GcfreeQStateMachine(this *QStateMachine) {
+  qtrt.UniverseFree(this)
+}
 func NewQStateMachine(args ...interface{}) *QStateMachine {
   // QStateMachine(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -554,7 +562,9 @@ func NewQStateMachine(args ...interface{}) *QStateMachine {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QStateMachineC2EP7QObject(arg0)
-    return &QStateMachine{Qclsinst:qthis}
+    this := &QStateMachine{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStateMachine)
+    return this
   default:
     qtrt.ErrorResolve("QStateMachine", "QStateMachine", args)
   }
@@ -563,7 +573,7 @@ func NewQStateMachine(args ...interface{}) *QStateMachine {
 }
 
 // postDelayedEvent(class QEvent *, int)
-func (this *QStateMachine) Postdelayedevent(args ...interface{}) (ret interface{}) {
+func (this *QStateMachine) PostDelayedEvent(args ...interface{}) (ret interface{}) {
   // postDelayedEvent(class QEvent *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -619,7 +629,7 @@ func (this *QStateMachine) Error(args ...interface{}) () {
 }
 
 // removeDefaultAnimation(class QAbstractAnimation *)
-func (this *QStateMachine) Removedefaultanimation(args ...interface{}) () {
+func (this *QStateMachine) RemoveDefaultAnimation(args ...interface{}) () {
   // removeDefaultAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

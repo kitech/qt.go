@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qoffscreensurface.h
 // dst-file: /src/gui/qoffscreensurface.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -68,6 +69,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QOffscreenSurface)=1
@@ -78,6 +80,9 @@ type QOffscreenSurface struct {
 }
 
 // QOffscreenSurface(class QScreen *)
+func GcfreeQOffscreenSurface(this *QOffscreenSurface) {
+  qtrt.UniverseFree(this)
+}
 func NewQOffscreenSurface(args ...interface{}) *QOffscreenSurface {
   // QOffscreenSurface(class QScreen *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,7 +101,9 @@ func NewQOffscreenSurface(args ...interface{}) *QOffscreenSurface {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QOffscreenSurfaceC2EP7QScreen(arg0)
-    return &QOffscreenSurface{Qclsinst:qthis}
+    this := &QOffscreenSurface{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOffscreenSurface)
+    return this
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "QOffscreenSurface", args)
   }
@@ -105,7 +112,7 @@ func NewQOffscreenSurface(args ...interface{}) *QOffscreenSurface {
 }
 
 // surfaceType()
-func (this *QOffscreenSurface) Surfacetype(args ...interface{}) () {
+func (this *QOffscreenSurface) SurfaceType(args ...interface{}) () {
   // surfaceType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -155,7 +162,7 @@ func (this *QOffscreenSurface) Size(args ...interface{}) (ret interface{}) {
 }
 
 // setScreen(class QScreen *)
-func (this *QOffscreenSurface) Setscreen(args ...interface{}) () {
+func (this *QOffscreenSurface) SetScreen(args ...interface{}) () {
   // setScreen(class QScreen *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,7 +186,7 @@ func (this *QOffscreenSurface) Setscreen(args ...interface{}) () {
 }
 
 // setFormat(const class QSurfaceFormat &)
-func (this *QOffscreenSurface) Setformat(args ...interface{}) () {
+func (this *QOffscreenSurface) SetFormat(args ...interface{}) () {
   // setFormat(const class QSurfaceFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -295,7 +302,7 @@ func (this *QOffscreenSurface) Handle(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QOffscreenSurface) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QOffscreenSurface) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -353,7 +360,7 @@ func (this *QOffscreenSurface) Screen(args ...interface{}) (ret interface{}) {
 }
 
 // ~QOffscreenSurface()
-func (this *QOffscreenSurface) Freeqoffscreensurface(args ...interface{}) () {
+func (this *QOffscreenSurface) Free(args ...interface{}) () {
   // ~QOffscreenSurface()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -365,7 +372,10 @@ func (this *QOffscreenSurface) Freeqoffscreensurface(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOffscreenSurfaceD0Ev
     // invoke: void ~QOffscreenSurface()
-    C.C_ZN17QOffscreenSurfaceD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN17QOffscreenSurfaceD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "~QOffscreenSurface", args)
   }
@@ -374,7 +384,7 @@ func (this *QOffscreenSurface) Freeqoffscreensurface(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QOffscreenSurface) Metaobject(args ...interface{}) () {
+func (this *QOffscreenSurface) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -395,7 +405,7 @@ func (this *QOffscreenSurface) Metaobject(args ...interface{}) () {
 }
 
 // requestedFormat()
-func (this *QOffscreenSurface) Requestedformat(args ...interface{}) (ret interface{}) {
+func (this *QOffscreenSurface) RequestedFormat(args ...interface{}) (ret interface{}) {
   // requestedFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

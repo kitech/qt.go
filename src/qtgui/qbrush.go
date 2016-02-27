@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qbrush.h
 // dst-file: /src/gui/qbrush.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -170,6 +171,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QRadialGradient)=1
@@ -209,7 +211,7 @@ type QLinearGradient struct {
 }
 
 // centerRadius()
-func (this *QRadialGradient) Centerradius(args ...interface{}) (ret interface{}) {
+func (this *QRadialGradient) CenterRadius(args ...interface{}) (ret interface{}) {
   // centerRadius()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -238,7 +240,7 @@ func (this *QRadialGradient) Centerradius(args ...interface{}) (ret interface{})
 }
 
 // setFocalPoint(const class QPointF &)
-func (this *QRadialGradient) Setfocalpoint(args ...interface{}) () {
+func (this *QRadialGradient) SetFocalPoint(args ...interface{}) () {
   // setFocalPoint(const class QPointF &)
   // setFocalPoint(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -274,7 +276,7 @@ func (this *QRadialGradient) Setfocalpoint(args ...interface{}) () {
 }
 
 // setRadius(qreal)
-func (this *QRadialGradient) Setradius(args ...interface{}) () {
+func (this *QRadialGradient) SetRadius(args ...interface{}) () {
   // setRadius(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -298,7 +300,7 @@ func (this *QRadialGradient) Setradius(args ...interface{}) () {
 }
 
 // focalPoint()
-func (this *QRadialGradient) Focalpoint(args ...interface{}) (ret interface{}) {
+func (this *QRadialGradient) FocalPoint(args ...interface{}) (ret interface{}) {
   // focalPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -327,6 +329,9 @@ func (this *QRadialGradient) Focalpoint(args ...interface{}) (ret interface{}) {
 }
 
 // QRadialGradient(qreal, qreal, qreal, qreal, qreal)
+func GcfreeQRadialGradient(this *QRadialGradient) {
+  qtrt.UniverseFree(this)
+}
 func NewQRadialGradient(args ...interface{}) *QRadialGradient {
   // QRadialGradient(qreal, qreal, qreal, qreal, qreal)
   // QRadialGradient()
@@ -387,14 +392,18 @@ func NewQRadialGradient(args ...interface{}) *QRadialGradient {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QRadialGradientC2Eddddd(arg0, arg1, arg2, arg3, arg4)
-    return &QRadialGradient{Qclsinst:qthis}
+    this := &QRadialGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRadialGradient)
+    return this
   case 1:
     // invoke: _ZN15QRadialGradientC1Ev
     // invoke: void QRadialGradient()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QRadialGradientC2Ev()
-    return &QRadialGradient{Qclsinst:qthis}
+    this := &QRadialGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRadialGradient)
+    return this
   case 2:
     // invoke: _ZN15QRadialGradientC1ERK7QPointFdS2_
     // invoke: void QRadialGradient(const class QPointF &, qreal, const class QPointF &)
@@ -407,7 +416,9 @@ func NewQRadialGradient(args ...interface{}) *QRadialGradient {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QRadialGradientC2ERK7QPointFdS2_(arg0, arg1, arg2)
-    return &QRadialGradient{Qclsinst:qthis}
+    this := &QRadialGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRadialGradient)
+    return this
   case 3:
     // invoke: _ZN15QRadialGradientC1ERK7QPointFdS2_d
     // invoke: void QRadialGradient(const class QPointF &, qreal, const class QPointF &, qreal)
@@ -422,7 +433,9 @@ func NewQRadialGradient(args ...interface{}) *QRadialGradient {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QRadialGradientC2ERK7QPointFdS2_d(arg0, arg1, arg2, arg3)
-    return &QRadialGradient{Qclsinst:qthis}
+    this := &QRadialGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRadialGradient)
+    return this
   case 4:
     // invoke: _ZN15QRadialGradientC1Edddddd
     // invoke: void QRadialGradient(qreal, qreal, qreal, qreal, qreal, qreal)
@@ -441,7 +454,9 @@ func NewQRadialGradient(args ...interface{}) *QRadialGradient {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QRadialGradientC2Edddddd(arg0, arg1, arg2, arg3, arg4, arg5)
-    return &QRadialGradient{Qclsinst:qthis}
+    this := &QRadialGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRadialGradient)
+    return this
   case 5:
     // invoke: _ZN15QRadialGradientC1ERK7QPointFd
     // invoke: void QRadialGradient(const class QPointF &, qreal)
@@ -452,7 +467,9 @@ func NewQRadialGradient(args ...interface{}) *QRadialGradient {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QRadialGradientC2ERK7QPointFd(arg0, arg1)
-    return &QRadialGradient{Qclsinst:qthis}
+    this := &QRadialGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRadialGradient)
+    return this
   case 6:
     // invoke: _ZN15QRadialGradientC1Eddd
     // invoke: void QRadialGradient(qreal, qreal, qreal)
@@ -465,7 +482,9 @@ func NewQRadialGradient(args ...interface{}) *QRadialGradient {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QRadialGradientC2Eddd(arg0, arg1, arg2)
-    return &QRadialGradient{Qclsinst:qthis}
+    this := &QRadialGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQRadialGradient)
+    return this
   default:
     qtrt.ErrorResolve("QRadialGradient", "QRadialGradient", args)
   }
@@ -474,7 +493,7 @@ func NewQRadialGradient(args ...interface{}) *QRadialGradient {
 }
 
 // setCenter(const class QPointF &)
-func (this *QRadialGradient) Setcenter(args ...interface{}) () {
+func (this *QRadialGradient) SetCenter(args ...interface{}) () {
   // setCenter(const class QPointF &)
   // setCenter(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -510,7 +529,7 @@ func (this *QRadialGradient) Setcenter(args ...interface{}) () {
 }
 
 // setCenterRadius(qreal)
-func (this *QRadialGradient) Setcenterradius(args ...interface{}) () {
+func (this *QRadialGradient) SetCenterRadius(args ...interface{}) () {
   // setCenterRadius(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -563,7 +582,7 @@ func (this *QRadialGradient) Radius(args ...interface{}) (ret interface{}) {
 }
 
 // setFocalRadius(qreal)
-func (this *QRadialGradient) Setfocalradius(args ...interface{}) () {
+func (this *QRadialGradient) SetFocalRadius(args ...interface{}) () {
   // setFocalRadius(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -587,7 +606,7 @@ func (this *QRadialGradient) Setfocalradius(args ...interface{}) () {
 }
 
 // focalRadius()
-func (this *QRadialGradient) Focalradius(args ...interface{}) (ret interface{}) {
+func (this *QRadialGradient) FocalRadius(args ...interface{}) (ret interface{}) {
   // focalRadius()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -645,6 +664,9 @@ func (this *QRadialGradient) Center(args ...interface{}) (ret interface{}) {
 }
 
 // QConicalGradient(qreal, qreal, qreal)
+func GcfreeQConicalGradient(this *QConicalGradient) {
+  qtrt.UniverseFree(this)
+}
 func NewQConicalGradient(args ...interface{}) *QConicalGradient {
   // QConicalGradient(qreal, qreal, qreal)
   // QConicalGradient(const class QPointF &, qreal)
@@ -675,7 +697,9 @@ func NewQConicalGradient(args ...interface{}) *QConicalGradient {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QConicalGradientC2Eddd(arg0, arg1, arg2)
-    return &QConicalGradient{Qclsinst:qthis}
+    this := &QConicalGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQConicalGradient)
+    return this
   case 1:
     // invoke: _ZN16QConicalGradientC1ERK7QPointFd
     // invoke: void QConicalGradient(const class QPointF &, qreal)
@@ -686,14 +710,18 @@ func NewQConicalGradient(args ...interface{}) *QConicalGradient {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QConicalGradientC2ERK7QPointFd(arg0, arg1)
-    return &QConicalGradient{Qclsinst:qthis}
+    this := &QConicalGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQConicalGradient)
+    return this
   case 2:
     // invoke: _ZN16QConicalGradientC1Ev
     // invoke: void QConicalGradient()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QConicalGradientC2Ev()
-    return &QConicalGradient{Qclsinst:qthis}
+    this := &QConicalGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQConicalGradient)
+    return this
   default:
     qtrt.ErrorResolve("QConicalGradient", "QConicalGradient", args)
   }
@@ -702,7 +730,7 @@ func NewQConicalGradient(args ...interface{}) *QConicalGradient {
 }
 
 // setCenter(const class QPointF &)
-func (this *QConicalGradient) Setcenter(args ...interface{}) () {
+func (this *QConicalGradient) SetCenter(args ...interface{}) () {
   // setCenter(const class QPointF &)
   // setCenter(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -796,7 +824,7 @@ func (this *QConicalGradient) Center(args ...interface{}) (ret interface{}) {
 }
 
 // setAngle(qreal)
-func (this *QConicalGradient) Setangle(args ...interface{}) () {
+func (this *QConicalGradient) SetAngle(args ...interface{}) () {
   // setAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -820,7 +848,7 @@ func (this *QConicalGradient) Setangle(args ...interface{}) () {
 }
 
 // setTexture(const class QPixmap &)
-func (this *QBrush) Settexture(args ...interface{}) () {
+func (this *QBrush) SetTexture(args ...interface{}) () {
   // setTexture(const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -844,7 +872,7 @@ func (this *QBrush) Settexture(args ...interface{}) () {
 }
 
 // setTransform(const class QTransform &)
-func (this *QBrush) Settransform(args ...interface{}) () {
+func (this *QBrush) SetTransform(args ...interface{}) () {
   // setTransform(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -868,7 +896,7 @@ func (this *QBrush) Settransform(args ...interface{}) () {
 }
 
 // setMatrix(const class QMatrix &)
-func (this *QBrush) Setmatrix(args ...interface{}) () {
+func (this *QBrush) SetMatrix(args ...interface{}) () {
   // setMatrix(const class QMatrix &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -892,7 +920,7 @@ func (this *QBrush) Setmatrix(args ...interface{}) () {
 }
 
 // isOpaque()
-func (this *QBrush) Isopaque(args ...interface{}) (ret interface{}) {
+func (this *QBrush) IsOpaque(args ...interface{}) (ret interface{}) {
   // isOpaque()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1000,7 +1028,7 @@ func (this *QBrush) Gradient(args ...interface{}) (ret interface{}) {
 }
 
 // textureImage()
-func (this *QBrush) Textureimage(args ...interface{}) (ret interface{}) {
+func (this *QBrush) TextureImage(args ...interface{}) (ret interface{}) {
   // textureImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1140,6 +1168,9 @@ func (this *QBrush) Swap(args ...interface{}) () {
 }
 
 // QBrush()
+func GcfreeQBrush(this *QBrush) {
+  qtrt.UniverseFree(this)
+}
 func NewQBrush(args ...interface{}) *QBrush {
   // QBrush()
   // QBrush(const class QPixmap &)
@@ -1171,7 +1202,9 @@ func NewQBrush(args ...interface{}) *QBrush {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QBrushC2Ev()
-    return &QBrush{Qclsinst:qthis}
+    this := &QBrush{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBrush)
+    return this
   case 1:
     // invoke: _ZN6QBrushC1ERK7QPixmap
     // invoke: void QBrush(const class QPixmap &)
@@ -1180,7 +1213,9 @@ func NewQBrush(args ...interface{}) *QBrush {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QBrushC2ERK7QPixmap(arg0)
-    return &QBrush{Qclsinst:qthis}
+    this := &QBrush{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBrush)
+    return this
   case 2:
     // invoke: _ZN6QBrushC1ERKS_
     // invoke: void QBrush(const class QBrush &)
@@ -1189,7 +1224,9 @@ func NewQBrush(args ...interface{}) *QBrush {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QBrushC2ERKS_(arg0)
-    return &QBrush{Qclsinst:qthis}
+    this := &QBrush{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBrush)
+    return this
   case 3:
     // invoke: _ZN6QBrushC1ERK6QImage
     // invoke: void QBrush(const class QImage &)
@@ -1198,7 +1235,9 @@ func NewQBrush(args ...interface{}) *QBrush {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QBrushC2ERK6QImage(arg0)
-    return &QBrush{Qclsinst:qthis}
+    this := &QBrush{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBrush)
+    return this
   case 4:
     // invoke: _ZN6QBrushC1ERK6QColorRK7QPixmap
     // invoke: void QBrush(const class QColor &, const class QPixmap &)
@@ -1209,7 +1248,9 @@ func NewQBrush(args ...interface{}) *QBrush {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QBrushC2ERK6QColorRK7QPixmap(arg0, arg1)
-    return &QBrush{Qclsinst:qthis}
+    this := &QBrush{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBrush)
+    return this
   case 5:
     // invoke: _ZN6QBrushC1ERK9QGradient
     // invoke: void QBrush(const class QGradient &)
@@ -1218,7 +1259,9 @@ func NewQBrush(args ...interface{}) *QBrush {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QBrushC2ERK9QGradient(arg0)
-    return &QBrush{Qclsinst:qthis}
+    this := &QBrush{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBrush)
+    return this
   default:
     qtrt.ErrorResolve("QBrush", "QBrush", args)
   }
@@ -1227,7 +1270,7 @@ func NewQBrush(args ...interface{}) *QBrush {
 }
 
 // isDetached()
-func (this *QBrush) Isdetached(args ...interface{}) (ret interface{}) {
+func (this *QBrush) IsDetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1256,7 +1299,7 @@ func (this *QBrush) Isdetached(args ...interface{}) (ret interface{}) {
 }
 
 // setTextureImage(const class QImage &)
-func (this *QBrush) Settextureimage(args ...interface{}) () {
+func (this *QBrush) SetTextureImage(args ...interface{}) () {
   // setTextureImage(const class QImage &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1280,7 +1323,7 @@ func (this *QBrush) Settextureimage(args ...interface{}) () {
 }
 
 // ~QBrush()
-func (this *QBrush) Freeqbrush(args ...interface{}) () {
+func (this *QBrush) Free(args ...interface{}) () {
   // ~QBrush()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1292,7 +1335,10 @@ func (this *QBrush) Freeqbrush(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QBrushD0Ev
     // invoke: void ~QBrush()
-    C.C_ZN6QBrushD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN6QBrushD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QBrush", "~QBrush", args)
   }
@@ -1301,7 +1347,7 @@ func (this *QBrush) Freeqbrush(args ...interface{}) () {
 }
 
 // setColor(const class QColor &)
-func (this *QBrush) Setcolor(args ...interface{}) () {
+func (this *QBrush) SetColor(args ...interface{}) () {
   // setColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1325,7 +1371,7 @@ func (this *QBrush) Setcolor(args ...interface{}) () {
 }
 
 // interpolationMode()
-func (this *QGradient) Interpolationmode(args ...interface{}) () {
+func (this *QGradient) InterpolationMode(args ...interface{}) () {
   // interpolationMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1346,6 +1392,9 @@ func (this *QGradient) Interpolationmode(args ...interface{}) () {
 }
 
 // QGradient()
+func GcfreeQGradient(this *QGradient) {
+  qtrt.UniverseFree(this)
+}
 func NewQGradient(args ...interface{}) *QGradient {
   // QGradient()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1361,7 +1410,9 @@ func NewQGradient(args ...interface{}) *QGradient {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QGradientC2Ev()
-    return &QGradient{Qclsinst:qthis}
+    this := &QGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGradient)
+    return this
   default:
     qtrt.ErrorResolve("QGradient", "QGradient", args)
   }
@@ -1370,7 +1421,7 @@ func NewQGradient(args ...interface{}) *QGradient {
 }
 
 // setColorAt(qreal, const class QColor &)
-func (this *QGradient) Setcolorat(args ...interface{}) () {
+func (this *QGradient) SetColorAt(args ...interface{}) () {
   // setColorAt(qreal, const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1418,7 +1469,7 @@ func (this *QGradient) Stops(args ...interface{}) () {
 }
 
 // coordinateMode()
-func (this *QGradient) Coordinatemode(args ...interface{}) () {
+func (this *QGradient) CoordinateMode(args ...interface{}) () {
   // coordinateMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1510,7 +1561,7 @@ func (this *QLinearGradient) Start(args ...interface{}) (ret interface{}) {
 }
 
 // finalStop()
-func (this *QLinearGradient) Finalstop(args ...interface{}) (ret interface{}) {
+func (this *QLinearGradient) FinalStop(args ...interface{}) (ret interface{}) {
   // finalStop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1539,7 +1590,7 @@ func (this *QLinearGradient) Finalstop(args ...interface{}) (ret interface{}) {
 }
 
 // setFinalStop(qreal, qreal)
-func (this *QLinearGradient) Setfinalstop(args ...interface{}) () {
+func (this *QLinearGradient) SetFinalStop(args ...interface{}) () {
   // setFinalStop(qreal, qreal)
   // setFinalStop(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1575,7 +1626,7 @@ func (this *QLinearGradient) Setfinalstop(args ...interface{}) () {
 }
 
 // setStart(const class QPointF &)
-func (this *QLinearGradient) Setstart(args ...interface{}) () {
+func (this *QLinearGradient) SetStart(args ...interface{}) () {
   // setStart(const class QPointF &)
   // setStart(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1611,6 +1662,9 @@ func (this *QLinearGradient) Setstart(args ...interface{}) () {
 }
 
 // QLinearGradient()
+func GcfreeQLinearGradient(this *QLinearGradient) {
+  qtrt.UniverseFree(this)
+}
 func NewQLinearGradient(args ...interface{}) *QLinearGradient {
   // QLinearGradient()
   // QLinearGradient(qreal, qreal, qreal, qreal)
@@ -1636,7 +1690,9 @@ func NewQLinearGradient(args ...interface{}) *QLinearGradient {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QLinearGradientC2Ev()
-    return &QLinearGradient{Qclsinst:qthis}
+    this := &QLinearGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLinearGradient)
+    return this
   case 1:
     // invoke: _ZN15QLinearGradientC1Edddd
     // invoke: void QLinearGradient(qreal, qreal, qreal, qreal)
@@ -1651,7 +1707,9 @@ func NewQLinearGradient(args ...interface{}) *QLinearGradient {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QLinearGradientC2Edddd(arg0, arg1, arg2, arg3)
-    return &QLinearGradient{Qclsinst:qthis}
+    this := &QLinearGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLinearGradient)
+    return this
   case 2:
     // invoke: _ZN15QLinearGradientC1ERK7QPointFS2_
     // invoke: void QLinearGradient(const class QPointF &, const class QPointF &)
@@ -1662,7 +1720,9 @@ func NewQLinearGradient(args ...interface{}) *QLinearGradient {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QLinearGradientC2ERK7QPointFS2_(arg0, arg1)
-    return &QLinearGradient{Qclsinst:qthis}
+    this := &QLinearGradient{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQLinearGradient)
+    return this
   default:
     qtrt.ErrorResolve("QLinearGradient", "QLinearGradient", args)
   }

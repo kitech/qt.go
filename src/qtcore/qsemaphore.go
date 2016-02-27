@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -52,6 +53,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSemaphore)=8
@@ -90,7 +92,7 @@ func (this *QSemaphore) Available(args ...interface{}) (ret interface{}) {
 }
 
 // ~QSemaphore()
-func (this *QSemaphore) Freeqsemaphore(args ...interface{}) () {
+func (this *QSemaphore) Free(args ...interface{}) () {
   // ~QSemaphore()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -102,7 +104,10 @@ func (this *QSemaphore) Freeqsemaphore(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QSemaphoreD0Ev
     // invoke: void ~QSemaphore()
-    C.C_ZN10QSemaphoreD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QSemaphoreD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QSemaphore", "~QSemaphore", args)
   }
@@ -135,7 +140,7 @@ func (this *QSemaphore) Acquire(args ...interface{}) () {
 }
 
 // tryAcquire(int)
-func (this *QSemaphore) Tryacquire(args ...interface{}) (ret interface{}) {
+func (this *QSemaphore) TryAcquire(args ...interface{}) (ret interface{}) {
   // tryAcquire(int)
   // tryAcquire(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -211,6 +216,9 @@ func (this *QSemaphore) Release(args ...interface{}) () {
 }
 
 // QSemaphore(int)
+func GcfreeQSemaphore(this *QSemaphore) {
+  qtrt.UniverseFree(this)
+}
 func NewQSemaphore(args ...interface{}) *QSemaphore {
   // QSemaphore(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -229,7 +237,9 @@ func NewQSemaphore(args ...interface{}) *QSemaphore {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QSemaphoreC2Ei(arg0)
-    return &QSemaphore{Qclsinst:qthis}
+    this := &QSemaphore{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSemaphore)
+    return this
   default:
     qtrt.ErrorResolve("QSemaphore", "QSemaphore", args)
   }

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -92,6 +93,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractSlider)=1
@@ -107,7 +109,7 @@ type QAbstractSlider struct {
 }
 
 // setTracking(_Bool)
-func (this *QAbstractSlider) Settracking(args ...interface{}) () {
+func (this *QAbstractSlider) SetTracking(args ...interface{}) () {
   // setTracking(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -152,7 +154,7 @@ func (this *QAbstractSlider) Orientation(args ...interface{}) () {
 }
 
 // invertedControls()
-func (this *QAbstractSlider) Invertedcontrols(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) InvertedControls(args ...interface{}) (ret interface{}) {
   // invertedControls()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -181,7 +183,7 @@ func (this *QAbstractSlider) Invertedcontrols(args ...interface{}) (ret interfac
 }
 
 // singleStep()
-func (this *QAbstractSlider) Singlestep(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) SingleStep(args ...interface{}) (ret interface{}) {
   // singleStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,7 +241,7 @@ func (this *QAbstractSlider) Minimum(args ...interface{}) (ret interface{}) {
 }
 
 // setSliderDown(_Bool)
-func (this *QAbstractSlider) Setsliderdown(args ...interface{}) () {
+func (this *QAbstractSlider) SetSliderDown(args ...interface{}) () {
   // setSliderDown(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -263,7 +265,7 @@ func (this *QAbstractSlider) Setsliderdown(args ...interface{}) () {
 }
 
 // ~QAbstractSlider()
-func (this *QAbstractSlider) Freeqabstractslider(args ...interface{}) () {
+func (this *QAbstractSlider) Free(args ...interface{}) () {
   // ~QAbstractSlider()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -275,7 +277,10 @@ func (this *QAbstractSlider) Freeqabstractslider(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSliderD0Ev
     // invoke: void ~QAbstractSlider()
-    C.C_ZN15QAbstractSliderD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QAbstractSliderD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractSlider", "~QAbstractSlider", args)
   }
@@ -284,7 +289,7 @@ func (this *QAbstractSlider) Freeqabstractslider(args ...interface{}) () {
 }
 
 // pageStep()
-func (this *QAbstractSlider) Pagestep(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) PageStep(args ...interface{}) (ret interface{}) {
   // pageStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -313,7 +318,7 @@ func (this *QAbstractSlider) Pagestep(args ...interface{}) (ret interface{}) {
 }
 
 // setInvertedControls(_Bool)
-func (this *QAbstractSlider) Setinvertedcontrols(args ...interface{}) () {
+func (this *QAbstractSlider) SetInvertedControls(args ...interface{}) () {
   // setInvertedControls(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -337,7 +342,7 @@ func (this *QAbstractSlider) Setinvertedcontrols(args ...interface{}) () {
 }
 
 // setPageStep(int)
-func (this *QAbstractSlider) Setpagestep(args ...interface{}) () {
+func (this *QAbstractSlider) SetPageStep(args ...interface{}) () {
   // setPageStep(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -361,7 +366,7 @@ func (this *QAbstractSlider) Setpagestep(args ...interface{}) () {
 }
 
 // isSliderDown()
-func (this *QAbstractSlider) Issliderdown(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) IsSliderDown(args ...interface{}) (ret interface{}) {
   // isSliderDown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -390,7 +395,7 @@ func (this *QAbstractSlider) Issliderdown(args ...interface{}) (ret interface{})
 }
 
 // setSingleStep(int)
-func (this *QAbstractSlider) Setsinglestep(args ...interface{}) () {
+func (this *QAbstractSlider) SetSingleStep(args ...interface{}) () {
   // setSingleStep(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -414,7 +419,7 @@ func (this *QAbstractSlider) Setsinglestep(args ...interface{}) () {
 }
 
 // hasTracking()
-func (this *QAbstractSlider) Hastracking(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) HasTracking(args ...interface{}) (ret interface{}) {
   // hasTracking()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -443,7 +448,7 @@ func (this *QAbstractSlider) Hastracking(args ...interface{}) (ret interface{}) 
 }
 
 // setMaximum(int)
-func (this *QAbstractSlider) Setmaximum(args ...interface{}) () {
+func (this *QAbstractSlider) SetMaximum(args ...interface{}) () {
   // setMaximum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -467,7 +472,7 @@ func (this *QAbstractSlider) Setmaximum(args ...interface{}) () {
 }
 
 // setValue(int)
-func (this *QAbstractSlider) Setvalue(args ...interface{}) () {
+func (this *QAbstractSlider) SetValue(args ...interface{}) () {
   // setValue(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -491,7 +496,7 @@ func (this *QAbstractSlider) Setvalue(args ...interface{}) () {
 }
 
 // invertedAppearance()
-func (this *QAbstractSlider) Invertedappearance(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) InvertedAppearance(args ...interface{}) (ret interface{}) {
   // invertedAppearance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -520,7 +525,7 @@ func (this *QAbstractSlider) Invertedappearance(args ...interface{}) (ret interf
 }
 
 // sliderPosition()
-func (this *QAbstractSlider) Sliderposition(args ...interface{}) (ret interface{}) {
+func (this *QAbstractSlider) SliderPosition(args ...interface{}) (ret interface{}) {
   // sliderPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -549,7 +554,7 @@ func (this *QAbstractSlider) Sliderposition(args ...interface{}) (ret interface{
 }
 
 // setRange(int, int)
-func (this *QAbstractSlider) Setrange(args ...interface{}) () {
+func (this *QAbstractSlider) SetRange(args ...interface{}) () {
   // setRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -576,7 +581,7 @@ func (this *QAbstractSlider) Setrange(args ...interface{}) () {
 }
 
 // setInvertedAppearance(_Bool)
-func (this *QAbstractSlider) Setinvertedappearance(args ...interface{}) () {
+func (this *QAbstractSlider) SetInvertedAppearance(args ...interface{}) () {
   // setInvertedAppearance(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -600,7 +605,7 @@ func (this *QAbstractSlider) Setinvertedappearance(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QAbstractSlider) Metaobject(args ...interface{}) () {
+func (this *QAbstractSlider) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -621,6 +626,9 @@ func (this *QAbstractSlider) Metaobject(args ...interface{}) () {
 }
 
 // QAbstractSlider(class QWidget *)
+func GcfreeQAbstractSlider(this *QAbstractSlider) {
+  qtrt.UniverseFree(this)
+}
 func NewQAbstractSlider(args ...interface{}) *QAbstractSlider {
   // QAbstractSlider(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -639,7 +647,9 @@ func NewQAbstractSlider(args ...interface{}) *QAbstractSlider {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QAbstractSliderC2EP7QWidget(arg0)
-    return &QAbstractSlider{Qclsinst:qthis}
+    this := &QAbstractSlider{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAbstractSlider)
+    return this
   default:
     qtrt.ErrorResolve("QAbstractSlider", "QAbstractSlider", args)
   }
@@ -706,7 +716,7 @@ func (this *QAbstractSlider) Value(args ...interface{}) (ret interface{}) {
 }
 
 // setSliderPosition(int)
-func (this *QAbstractSlider) Setsliderposition(args ...interface{}) () {
+func (this *QAbstractSlider) SetSliderPosition(args ...interface{}) () {
   // setSliderPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -730,7 +740,7 @@ func (this *QAbstractSlider) Setsliderposition(args ...interface{}) () {
 }
 
 // setMinimum(int)
-func (this *QAbstractSlider) Setminimum(args ...interface{}) () {
+func (this *QAbstractSlider) SetMinimum(args ...interface{}) () {
   // setMinimum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qimage.h
 // dst-file: /src/gui/qimage.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -184,6 +185,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QImage)=32
@@ -252,7 +254,7 @@ func (this *QImage) Load(args ...interface{}) (ret interface{}) {
 }
 
 // toImageFormat(class QPixelFormat)
-func (this *QImage) Toimageformat_S(args ...interface{}) () {
+func (this *QImage) ToImageFormat_s(args ...interface{}) () {
   // toImageFormat(class QPixelFormat)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -369,7 +371,7 @@ func (this *QImage) Offset(args ...interface{}) (ret interface{}) {
 }
 
 // constScanLine(int)
-func (this *QImage) Constscanline(args ...interface{}) (ret interface{}) {
+func (this *QImage) ConstScanLine(args ...interface{}) (ret interface{}) {
   // constScanLine(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -430,7 +432,7 @@ func (this *QImage) Height(args ...interface{}) (ret interface{}) {
 }
 
 // fromData(const uchar *, int, const char *)
-func (this *QImage) Fromdata_S(args ...interface{}) (ret interface{}) {
+func (this *QImage) FromData_s(args ...interface{}) (ret interface{}) {
   // fromData(const uchar *, int, const char *)
   // fromData(const class QByteArray &, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -494,7 +496,7 @@ func (this *QImage) Fromdata_S(args ...interface{}) (ret interface{}) {
 }
 
 // scanLine(int)
-func (this *QImage) Scanline(args ...interface{}) (ret interface{}) {
+func (this *QImage) ScanLine(args ...interface{}) (ret interface{}) {
   // scanLine(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -526,7 +528,7 @@ func (this *QImage) Scanline(args ...interface{}) (ret interface{}) {
 }
 
 // byteCount()
-func (this *QImage) Bytecount(args ...interface{}) (ret interface{}) {
+func (this *QImage) ByteCount(args ...interface{}) (ret interface{}) {
   // byteCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -555,7 +557,7 @@ func (this *QImage) Bytecount(args ...interface{}) (ret interface{}) {
 }
 
 // cacheKey()
-func (this *QImage) Cachekey(args ...interface{}) (ret interface{}) {
+func (this *QImage) CacheKey(args ...interface{}) (ret interface{}) {
   // cacheKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -584,7 +586,7 @@ func (this *QImage) Cachekey(args ...interface{}) (ret interface{}) {
 }
 
 // setColorCount(int)
-func (this *QImage) Setcolorcount(args ...interface{}) () {
+func (this *QImage) SetColorCount(args ...interface{}) () {
   // setColorCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -608,7 +610,7 @@ func (this *QImage) Setcolorcount(args ...interface{}) () {
 }
 
 // constBits()
-func (this *QImage) Constbits(args ...interface{}) (ret interface{}) {
+func (this *QImage) ConstBits(args ...interface{}) (ret interface{}) {
   // constBits()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -637,7 +639,7 @@ func (this *QImage) Constbits(args ...interface{}) (ret interface{}) {
 }
 
 // trueMatrix(const class QMatrix &, int, int)
-func (this *QImage) Truematrix_S(args ...interface{}) (ret interface{}) {
+func (this *QImage) TrueMatrix_s(args ...interface{}) (ret interface{}) {
   // trueMatrix(const class QMatrix &, int, int)
   // trueMatrix(const class QTransform &, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -719,7 +721,7 @@ func (this *QImage) Detach(args ...interface{}) () {
 }
 
 // paintEngine()
-func (this *QImage) Paintengine(args ...interface{}) (ret interface{}) {
+func (this *QImage) PaintEngine(args ...interface{}) (ret interface{}) {
   // paintEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -777,7 +779,7 @@ func (this *QImage) Size(args ...interface{}) (ret interface{}) {
 }
 
 // devType()
-func (this *QImage) Devtype(args ...interface{}) (ret interface{}) {
+func (this *QImage) DevType(args ...interface{}) (ret interface{}) {
   // devType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -922,7 +924,7 @@ func (this *QImage) Valid(args ...interface{}) (ret interface{}) {
 }
 
 // setDevicePixelRatio(qreal)
-func (this *QImage) Setdevicepixelratio(args ...interface{}) () {
+func (this *QImage) SetDevicePixelRatio(args ...interface{}) () {
   // setDevicePixelRatio(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -946,7 +948,7 @@ func (this *QImage) Setdevicepixelratio(args ...interface{}) () {
 }
 
 // textKeys()
-func (this *QImage) Textkeys(args ...interface{}) () {
+func (this *QImage) TextKeys(args ...interface{}) () {
   // textKeys()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -967,7 +969,7 @@ func (this *QImage) Textkeys(args ...interface{}) () {
 }
 
 // setOffset(const class QPoint &)
-func (this *QImage) Setoffset(args ...interface{}) () {
+func (this *QImage) SetOffset(args ...interface{}) () {
   // setOffset(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1161,7 +1163,7 @@ func (this *QImage) Swap(args ...interface{}) () {
 }
 
 // isDetached()
-func (this *QImage) Isdetached(args ...interface{}) (ret interface{}) {
+func (this *QImage) IsDetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1190,7 +1192,7 @@ func (this *QImage) Isdetached(args ...interface{}) (ret interface{}) {
 }
 
 // alphaChannel()
-func (this *QImage) Alphachannel(args ...interface{}) (ret interface{}) {
+func (this *QImage) AlphaChannel(args ...interface{}) (ret interface{}) {
   // alphaChannel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1219,7 +1221,7 @@ func (this *QImage) Alphachannel(args ...interface{}) (ret interface{}) {
 }
 
 // setPixel(int, int, uint)
-func (this *QImage) Setpixel(args ...interface{}) () {
+func (this *QImage) SetPixel(args ...interface{}) () {
   // setPixel(int, int, uint)
   // setPixel(const class QPoint &, uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1261,7 +1263,7 @@ func (this *QImage) Setpixel(args ...interface{}) () {
 }
 
 // setDotsPerMeterY(int)
-func (this *QImage) Setdotspermetery(args ...interface{}) () {
+func (this *QImage) SetDotsPerMeterY(args ...interface{}) () {
   // setDotsPerMeterY(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1306,7 +1308,7 @@ func (this *QImage) Format(args ...interface{}) () {
 }
 
 // hasAlphaChannel()
-func (this *QImage) Hasalphachannel(args ...interface{}) (ret interface{}) {
+func (this *QImage) HasAlphaChannel(args ...interface{}) (ret interface{}) {
   // hasAlphaChannel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1335,7 +1337,7 @@ func (this *QImage) Hasalphachannel(args ...interface{}) (ret interface{}) {
 }
 
 // bitPlaneCount()
-func (this *QImage) Bitplanecount(args ...interface{}) (ret interface{}) {
+func (this *QImage) BitPlaneCount(args ...interface{}) (ret interface{}) {
   // bitPlaneCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1364,7 +1366,7 @@ func (this *QImage) Bitplanecount(args ...interface{}) (ret interface{}) {
 }
 
 // pixelFormat()
-func (this *QImage) Pixelformat(args ...interface{}) (ret interface{}) {
+func (this *QImage) PixelFormat(args ...interface{}) (ret interface{}) {
   // pixelFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1393,7 +1395,7 @@ func (this *QImage) Pixelformat(args ...interface{}) (ret interface{}) {
 }
 
 // rgbSwapped()
-func (this *QImage) Rgbswapped(args ...interface{}) (ret interface{}) {
+func (this *QImage) RgbSwapped(args ...interface{}) (ret interface{}) {
   // rgbSwapped()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1422,7 +1424,7 @@ func (this *QImage) Rgbswapped(args ...interface{}) (ret interface{}) {
 }
 
 // isGrayscale()
-func (this *QImage) Isgrayscale(args ...interface{}) (ret interface{}) {
+func (this *QImage) IsGrayscale(args ...interface{}) (ret interface{}) {
   // isGrayscale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1451,7 +1453,7 @@ func (this *QImage) Isgrayscale(args ...interface{}) (ret interface{}) {
 }
 
 // createHeuristicMask(_Bool)
-func (this *QImage) Createheuristicmask(args ...interface{}) (ret interface{}) {
+func (this *QImage) CreateHeuristicMask(args ...interface{}) (ret interface{}) {
   // createHeuristicMask(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1483,7 +1485,7 @@ func (this *QImage) Createheuristicmask(args ...interface{}) (ret interface{}) {
 }
 
 // bytesPerLine()
-func (this *QImage) Bytesperline(args ...interface{}) (ret interface{}) {
+func (this *QImage) BytesPerLine(args ...interface{}) (ret interface{}) {
   // bytesPerLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1570,7 +1572,7 @@ func (this *QImage) Copy(args ...interface{}) (ret interface{}) {
 }
 
 // dotsPerMeterY()
-func (this *QImage) Dotspermetery(args ...interface{}) (ret interface{}) {
+func (this *QImage) DotsPerMeterY(args ...interface{}) (ret interface{}) {
   // dotsPerMeterY()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1599,7 +1601,7 @@ func (this *QImage) Dotspermetery(args ...interface{}) (ret interface{}) {
 }
 
 // dotsPerMeterX()
-func (this *QImage) Dotspermeterx(args ...interface{}) (ret interface{}) {
+func (this *QImage) DotsPerMeterX(args ...interface{}) (ret interface{}) {
   // dotsPerMeterX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1657,7 +1659,7 @@ func (this *QImage) Rect(args ...interface{}) (ret interface{}) {
 }
 
 // setDotsPerMeterX(int)
-func (this *QImage) Setdotspermeterx(args ...interface{}) () {
+func (this *QImage) SetDotsPerMeterX(args ...interface{}) () {
   // setDotsPerMeterX(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1681,7 +1683,7 @@ func (this *QImage) Setdotspermeterx(args ...interface{}) () {
 }
 
 // setAlphaChannel(const class QImage &)
-func (this *QImage) Setalphachannel(args ...interface{}) () {
+func (this *QImage) SetAlphaChannel(args ...interface{}) () {
   // setAlphaChannel(const class QImage &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1705,7 +1707,7 @@ func (this *QImage) Setalphachannel(args ...interface{}) () {
 }
 
 // setColor(int, QRgb)
-func (this *QImage) Setcolor(args ...interface{}) () {
+func (this *QImage) SetColor(args ...interface{}) () {
   // setColor(int, QRgb)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1732,7 +1734,7 @@ func (this *QImage) Setcolor(args ...interface{}) () {
 }
 
 // devicePixelRatio()
-func (this *QImage) Devicepixelratio(args ...interface{}) (ret interface{}) {
+func (this *QImage) DevicePixelRatio(args ...interface{}) (ret interface{}) {
   // devicePixelRatio()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1761,7 +1763,7 @@ func (this *QImage) Devicepixelratio(args ...interface{}) (ret interface{}) {
 }
 
 // loadFromData(const uchar *, int, const char *)
-func (this *QImage) Loadfromdata(args ...interface{}) (ret interface{}) {
+func (this *QImage) LoadFromData(args ...interface{}) (ret interface{}) {
   // loadFromData(const uchar *, int, const char *)
   // loadFromData(const class QByteArray &, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1825,7 +1827,7 @@ func (this *QImage) Loadfromdata(args ...interface{}) (ret interface{}) {
 }
 
 // setText(const class QString &, const class QString &)
-func (this *QImage) Settext(args ...interface{}) () {
+func (this *QImage) SetText(args ...interface{}) () {
   // setText(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1852,7 +1854,7 @@ func (this *QImage) Settext(args ...interface{}) () {
 }
 
 // allGray()
-func (this *QImage) Allgray(args ...interface{}) (ret interface{}) {
+func (this *QImage) AllGray(args ...interface{}) (ret interface{}) {
   // allGray()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1881,7 +1883,7 @@ func (this *QImage) Allgray(args ...interface{}) (ret interface{}) {
 }
 
 // colorCount()
-func (this *QImage) Colorcount(args ...interface{}) (ret interface{}) {
+func (this *QImage) ColorCount(args ...interface{}) (ret interface{}) {
   // colorCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1910,7 +1912,7 @@ func (this *QImage) Colorcount(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QImage) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QImage) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1968,7 +1970,7 @@ func (this *QImage) Depth(args ...interface{}) (ret interface{}) {
 }
 
 // ~QImage()
-func (this *QImage) Freeqimage(args ...interface{}) () {
+func (this *QImage) Free(args ...interface{}) () {
   // ~QImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1980,7 +1982,10 @@ func (this *QImage) Freeqimage(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QImageD0Ev
     // invoke: void ~QImage()
-    C.C_ZN6QImageD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN6QImageD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QImage", "~QImage", args)
   }
@@ -1989,7 +1994,7 @@ func (this *QImage) Freeqimage(args ...interface{}) () {
 }
 
 // pixelIndex(int, int)
-func (this *QImage) Pixelindex(args ...interface{}) (ret interface{}) {
+func (this *QImage) PixelIndex(args ...interface{}) (ret interface{}) {
   // pixelIndex(int, int)
   // pixelIndex(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2074,7 +2079,7 @@ func (this *QImage) Fill(args ...interface{}) () {
 }
 
 // colorTable()
-func (this *QImage) Colortable(args ...interface{}) () {
+func (this *QImage) ColorTable(args ...interface{}) () {
   // colorTable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2095,6 +2100,9 @@ func (this *QImage) Colortable(args ...interface{}) () {
 }
 
 // QImage()
+func GcfreeQImage(this *QImage) {
+  qtrt.UniverseFree(this)
+}
 func NewQImage(args ...interface{}) *QImage {
   // QImage()
   // QImage(const class QString &, const char *)
@@ -2117,7 +2125,9 @@ func NewQImage(args ...interface{}) *QImage {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QImageC2Ev()
-    return &QImage{Qclsinst:qthis}
+    this := &QImage{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQImage)
+    return this
   case 1:
     // invoke: _ZN6QImageC1ERK7QStringPKc
     // invoke: void QImage(const class QString &, const char *)
@@ -2130,7 +2140,9 @@ func NewQImage(args ...interface{}) *QImage {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QImageC2ERK7QStringPKc(arg0, arg1)
-    return &QImage{Qclsinst:qthis}
+    this := &QImage{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQImage)
+    return this
   case 2:
     // invoke: _ZN6QImageC1ERKS_
     // invoke: void QImage(const class QImage &)
@@ -2139,7 +2151,9 @@ func NewQImage(args ...interface{}) *QImage {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QImageC2ERKS_(arg0)
-    return &QImage{Qclsinst:qthis}
+    this := &QImage{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQImage)
+    return this
   default:
     qtrt.ErrorResolve("QImage", "QImage", args)
   }

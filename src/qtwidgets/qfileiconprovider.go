@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qfileiconprovider.h
 // dst-file: /src/widgets/qfileiconprovider.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -52,6 +53,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFileIconProvider)=1
@@ -61,7 +63,7 @@ type QFileIconProvider struct {
 }
 
 // ~QFileIconProvider()
-func (this *QFileIconProvider) Freeqfileiconprovider(args ...interface{}) () {
+func (this *QFileIconProvider) Free(args ...interface{}) () {
   // ~QFileIconProvider()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -73,7 +75,10 @@ func (this *QFileIconProvider) Freeqfileiconprovider(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QFileIconProviderD0Ev
     // invoke: void ~QFileIconProvider()
-    C.C_ZN17QFileIconProviderD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN17QFileIconProviderD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFileIconProvider", "~QFileIconProvider", args)
   }
@@ -82,6 +87,9 @@ func (this *QFileIconProvider) Freeqfileiconprovider(args ...interface{}) () {
 }
 
 // QFileIconProvider()
+func GcfreeQFileIconProvider(this *QFileIconProvider) {
+  qtrt.UniverseFree(this)
+}
 func NewQFileIconProvider(args ...interface{}) *QFileIconProvider {
   // QFileIconProvider()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,7 +105,9 @@ func NewQFileIconProvider(args ...interface{}) *QFileIconProvider {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QFileIconProviderC2Ev()
-    return &QFileIconProvider{Qclsinst:qthis}
+    this := &QFileIconProvider{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFileIconProvider)
+    return this
   default:
     qtrt.ErrorResolve("QFileIconProvider", "QFileIconProvider", args)
   }

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qgraphicslayout.h
 // dst-file: /src/widgets/qgraphicslayout.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -64,6 +65,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsLayout)=1
@@ -73,7 +75,7 @@ type QGraphicsLayout struct {
 }
 
 // updateGeometry()
-func (this *QGraphicsLayout) Updategeometry(args ...interface{}) () {
+func (this *QGraphicsLayout) UpdateGeometry(args ...interface{}) () {
   // updateGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -115,7 +117,7 @@ func (this *QGraphicsLayout) Activate(args ...interface{}) () {
 }
 
 // isActivated()
-func (this *QGraphicsLayout) Isactivated(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayout) IsActivated(args ...interface{}) (ret interface{}) {
   // isActivated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -165,7 +167,7 @@ func (this *QGraphicsLayout) Invalidate(args ...interface{}) () {
 }
 
 // getContentsMargins(qreal *, qreal *, qreal *, qreal *)
-func (this *QGraphicsLayout) Getcontentsmargins(args ...interface{}) () {
+func (this *QGraphicsLayout) GetContentsMargins(args ...interface{}) () {
   // getContentsMargins(qreal *, qreal *, qreal *, qreal *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -198,7 +200,7 @@ func (this *QGraphicsLayout) Getcontentsmargins(args ...interface{}) () {
 }
 
 // setContentsMargins(qreal, qreal, qreal, qreal)
-func (this *QGraphicsLayout) Setcontentsmargins(args ...interface{}) () {
+func (this *QGraphicsLayout) SetContentsMargins(args ...interface{}) () {
   // setContentsMargins(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -231,7 +233,7 @@ func (this *QGraphicsLayout) Setcontentsmargins(args ...interface{}) () {
 }
 
 // ~QGraphicsLayout()
-func (this *QGraphicsLayout) Freeqgraphicslayout(args ...interface{}) () {
+func (this *QGraphicsLayout) Free(args ...interface{}) () {
   // ~QGraphicsLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -243,7 +245,10 @@ func (this *QGraphicsLayout) Freeqgraphicslayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsLayoutD0Ev
     // invoke: void ~QGraphicsLayout()
-    C.C_ZN15QGraphicsLayoutD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QGraphicsLayoutD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "~QGraphicsLayout", args)
   }
@@ -252,7 +257,7 @@ func (this *QGraphicsLayout) Freeqgraphicslayout(args ...interface{}) () {
 }
 
 // setInstantInvalidatePropagation(_Bool)
-func (this *QGraphicsLayout) Setinstantinvalidatepropagation_S(args ...interface{}) () {
+func (this *QGraphicsLayout) SetInstantInvalidatePropagation_s(args ...interface{}) () {
   // setInstantInvalidatePropagation(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -276,7 +281,7 @@ func (this *QGraphicsLayout) Setinstantinvalidatepropagation_S(args ...interface
 }
 
 // instantInvalidatePropagation()
-func (this *QGraphicsLayout) Instantinvalidatepropagation_S(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLayout) InstantInvalidatePropagation_s(args ...interface{}) (ret interface{}) {
   // instantInvalidatePropagation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -305,7 +310,7 @@ func (this *QGraphicsLayout) Instantinvalidatepropagation_S(args ...interface{})
 }
 
 // widgetEvent(class QEvent *)
-func (this *QGraphicsLayout) Widgetevent(args ...interface{}) () {
+func (this *QGraphicsLayout) WidgetEvent(args ...interface{}) () {
   // widgetEvent(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -329,6 +334,9 @@ func (this *QGraphicsLayout) Widgetevent(args ...interface{}) () {
 }
 
 // QGraphicsLayout(class QGraphicsLayoutItem *)
+func GcfreeQGraphicsLayout(this *QGraphicsLayout) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsLayout(args ...interface{}) *QGraphicsLayout {
   // QGraphicsLayout(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -347,7 +355,9 @@ func NewQGraphicsLayout(args ...interface{}) *QGraphicsLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(arg0)
-    return &QGraphicsLayout{Qclsinst:qthis}
+    this := &QGraphicsLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsLayout)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "QGraphicsLayout", args)
   }

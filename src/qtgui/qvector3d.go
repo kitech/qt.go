@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qvector3d.h
 // dst-file: /src/gui/qvector3d.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -104,6 +105,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QVector3D)=12
@@ -113,7 +115,7 @@ type QVector3D struct {
 }
 
 // crossProduct(const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) Crossproduct_S(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) CrossProduct_s(args ...interface{}) (ret interface{}) {
   // crossProduct(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -148,7 +150,7 @@ func (this *QVector3D) Crossproduct_S(args ...interface{}) (ret interface{}) {
 }
 
 // toVector2D()
-func (this *QVector3D) Tovector2D(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) ToVector2D(args ...interface{}) (ret interface{}) {
   // toVector2D()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -177,7 +179,7 @@ func (this *QVector3D) Tovector2D(args ...interface{}) (ret interface{}) {
 }
 
 // distanceToPlane(const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) Distancetoplane(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) DistanceToPlane(args ...interface{}) (ret interface{}) {
   // distanceToPlane(const class QVector3D &, const class QVector3D &)
   // distanceToPlane(const class QVector3D &, const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -235,7 +237,7 @@ func (this *QVector3D) Distancetoplane(args ...interface{}) (ret interface{}) {
 }
 
 // toVector4D()
-func (this *QVector3D) Tovector4D(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) ToVector4D(args ...interface{}) (ret interface{}) {
   // toVector4D()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -264,7 +266,7 @@ func (this *QVector3D) Tovector4D(args ...interface{}) (ret interface{}) {
 }
 
 // dotProduct(const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) Dotproduct_S(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) DotProduct_s(args ...interface{}) (ret interface{}) {
   // dotProduct(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -320,7 +322,7 @@ func (this *QVector3D) Normalize(args ...interface{}) () {
 }
 
 // toPointF()
-func (this *QVector3D) Topointf(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) ToPointF(args ...interface{}) (ret interface{}) {
   // toPointF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -349,7 +351,7 @@ func (this *QVector3D) Topointf(args ...interface{}) (ret interface{}) {
 }
 
 // lengthSquared()
-func (this *QVector3D) Lengthsquared(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) LengthSquared(args ...interface{}) (ret interface{}) {
   // lengthSquared()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,7 +380,7 @@ func (this *QVector3D) Lengthsquared(args ...interface{}) (ret interface{}) {
 }
 
 // normal(const class QVector3D &, const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) Normal_S(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) Normal_s(args ...interface{}) (ret interface{}) {
   // normal(const class QVector3D &, const class QVector3D &, const class QVector3D &)
   // normal(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -436,6 +438,9 @@ func (this *QVector3D) Normal_S(args ...interface{}) (ret interface{}) {
 }
 
 // QVector3D(const class QPointF &)
+func GcfreeQVector3D(this *QVector3D) {
+  qtrt.UniverseFree(this)
+}
 func NewQVector3D(args ...interface{}) *QVector3D {
   // QVector3D(const class QPointF &)
   // QVector3D()
@@ -474,14 +479,18 @@ func NewQVector3D(args ...interface{}) *QVector3D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2ERK7QPointF(arg0)
-    return &QVector3D{Qclsinst:qthis}
+    this := &QVector3D{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQVector3D)
+    return this
   case 1:
     // invoke: _ZN9QVector3DC1Ev
     // invoke: void QVector3D()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2Ev()
-    return &QVector3D{Qclsinst:qthis}
+    this := &QVector3D{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQVector3D)
+    return this
   case 2:
     // invoke: _ZN9QVector3DC1ERK9QVector2D
     // invoke: void QVector3D(const class QVector2D &)
@@ -490,7 +499,9 @@ func NewQVector3D(args ...interface{}) *QVector3D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2ERK9QVector2D(arg0)
-    return &QVector3D{Qclsinst:qthis}
+    this := &QVector3D{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQVector3D)
+    return this
   case 3:
     // invoke: _ZN9QVector3DC1ERK6QPoint
     // invoke: void QVector3D(const class QPoint &)
@@ -499,7 +510,9 @@ func NewQVector3D(args ...interface{}) *QVector3D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2ERK6QPoint(arg0)
-    return &QVector3D{Qclsinst:qthis}
+    this := &QVector3D{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQVector3D)
+    return this
   case 4:
     // invoke: _ZN9QVector3DC1Efff
     // invoke: void QVector3D(float, float, float)
@@ -512,7 +525,9 @@ func NewQVector3D(args ...interface{}) *QVector3D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2Efff(arg0, arg1, arg2)
-    return &QVector3D{Qclsinst:qthis}
+    this := &QVector3D{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQVector3D)
+    return this
   case 5:
     // invoke: _ZN9QVector3DC1ERK9QVector4D
     // invoke: void QVector3D(const class QVector4D &)
@@ -521,7 +536,9 @@ func NewQVector3D(args ...interface{}) *QVector3D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2ERK9QVector4D(arg0)
-    return &QVector3D{Qclsinst:qthis}
+    this := &QVector3D{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQVector3D)
+    return this
   case 6:
     // invoke: _ZN9QVector3DC1ERK9QVector2Df
     // invoke: void QVector3D(const class QVector2D &, float)
@@ -532,7 +549,9 @@ func NewQVector3D(args ...interface{}) *QVector3D {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QVector3DC2ERK9QVector2Df(arg0, arg1)
-    return &QVector3D{Qclsinst:qthis}
+    this := &QVector3D{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQVector3D)
+    return this
   default:
     qtrt.ErrorResolve("QVector3D", "QVector3D", args)
   }
@@ -591,7 +610,7 @@ func (this *QVector3D) X(args ...interface{}) () {
 }
 
 // setX(float)
-func (this *QVector3D) Setx(args ...interface{}) () {
+func (this *QVector3D) SetX(args ...interface{}) () {
   // setX(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -615,7 +634,7 @@ func (this *QVector3D) Setx(args ...interface{}) () {
 }
 
 // setY(float)
-func (this *QVector3D) Sety(args ...interface{}) () {
+func (this *QVector3D) SetY(args ...interface{}) () {
   // setY(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -639,7 +658,7 @@ func (this *QVector3D) Sety(args ...interface{}) () {
 }
 
 // setZ(float)
-func (this *QVector3D) Setz(args ...interface{}) () {
+func (this *QVector3D) SetZ(args ...interface{}) () {
   // setZ(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -663,7 +682,7 @@ func (this *QVector3D) Setz(args ...interface{}) () {
 }
 
 // toPoint()
-func (this *QVector3D) Topoint(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) ToPoint(args ...interface{}) (ret interface{}) {
   // toPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -730,7 +749,7 @@ func (this *QVector3D) Unproject(args ...interface{}) (ret interface{}) {
 }
 
 // distanceToLine(const class QVector3D &, const class QVector3D &)
-func (this *QVector3D) Distancetoline(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) DistanceToLine(args ...interface{}) (ret interface{}) {
   // distanceToLine(const class QVector3D &, const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -803,7 +822,7 @@ func (this *QVector3D) Project(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QVector3D) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -861,7 +880,7 @@ func (this *QVector3D) Length(args ...interface{}) (ret interface{}) {
 }
 
 // distanceToPoint(const class QVector3D &)
-func (this *QVector3D) Distancetopoint(args ...interface{}) (ret interface{}) {
+func (this *QVector3D) DistanceToPoint(args ...interface{}) (ret interface{}) {
   // distanceToPoint(const class QVector3D &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

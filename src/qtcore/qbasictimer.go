@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qbasictimer.h
 // dst-file: /src/core/qbasictimer.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -50,6 +51,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QBasicTimer)=4
@@ -107,6 +109,9 @@ func (this *QBasicTimer) Start(args ...interface{}) () {
 }
 
 // QBasicTimer()
+func GcfreeQBasicTimer(this *QBasicTimer) {
+  qtrt.UniverseFree(this)
+}
 func NewQBasicTimer(args ...interface{}) *QBasicTimer {
   // QBasicTimer()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -122,7 +127,9 @@ func NewQBasicTimer(args ...interface{}) *QBasicTimer {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QBasicTimerC2Ev()
-    return &QBasicTimer{Qclsinst:qthis}
+    this := &QBasicTimer{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQBasicTimer)
+    return this
   default:
     qtrt.ErrorResolve("QBasicTimer", "QBasicTimer", args)
   }
@@ -131,7 +138,7 @@ func NewQBasicTimer(args ...interface{}) *QBasicTimer {
 }
 
 // ~QBasicTimer()
-func (this *QBasicTimer) Freeqbasictimer(args ...interface{}) () {
+func (this *QBasicTimer) Free(args ...interface{}) () {
   // ~QBasicTimer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -143,7 +150,10 @@ func (this *QBasicTimer) Freeqbasictimer(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QBasicTimerD0Ev
     // invoke: void ~QBasicTimer()
-    C.C_ZN11QBasicTimerD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QBasicTimerD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QBasicTimer", "~QBasicTimer", args)
   }
@@ -152,7 +162,7 @@ func (this *QBasicTimer) Freeqbasictimer(args ...interface{}) () {
 }
 
 // timerId()
-func (this *QBasicTimer) Timerid(args ...interface{}) (ret interface{}) {
+func (this *QBasicTimer) TimerId(args ...interface{}) (ret interface{}) {
   // timerId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -181,7 +191,7 @@ func (this *QBasicTimer) Timerid(args ...interface{}) (ret interface{}) {
 }
 
 // isActive()
-func (this *QBasicTimer) Isactive(args ...interface{}) (ret interface{}) {
+func (this *QBasicTimer) IsActive(args ...interface{}) (ret interface{}) {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

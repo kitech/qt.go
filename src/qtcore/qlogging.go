@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qlogging.h
 // dst-file: /src/core/qlogging.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -88,6 +89,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMessageLogContext)=32
@@ -127,6 +129,9 @@ func (this *QMessageLogContext) Copy(args ...interface{}) () {
 }
 
 // QMessageLogContext(const char *, int, const char *, const char *)
+func GcfreeQMessageLogContext(this *QMessageLogContext) {
+  qtrt.UniverseFree(this)
+}
 func NewQMessageLogContext(args ...interface{}) *QMessageLogContext {
   // QMessageLogContext(const char *, int, const char *, const char *)
   // QMessageLogContext()
@@ -162,14 +167,18 @@ func NewQMessageLogContext(args ...interface{}) *QMessageLogContext {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QMessageLogContextC2EPKciS1_S1_(arg0, arg1, arg2, arg3)
-    return &QMessageLogContext{Qclsinst:qthis}
+    this := &QMessageLogContext{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMessageLogContext)
+    return this
   case 1:
     // invoke: _ZN18QMessageLogContextC1Ev
     // invoke: void QMessageLogContext()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QMessageLogContextC2Ev()
-    return &QMessageLogContext{Qclsinst:qthis}
+    this := &QMessageLogContext{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMessageLogContext)
+    return this
   default:
     qtrt.ErrorResolve("QMessageLogContext", "QMessageLogContext", args)
   }
@@ -460,6 +469,9 @@ func (this *QMessageLogger) Fatal(args ...interface{}) () {
 }
 
 // QMessageLogger()
+func GcfreeQMessageLogger(this *QMessageLogger) {
+  qtrt.UniverseFree(this)
+}
 func NewQMessageLogger(args ...interface{}) *QMessageLogger {
   // QMessageLogger()
   // QMessageLogger(const char *, int, const char *)
@@ -486,7 +498,9 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QMessageLoggerC2Ev()
-    return &QMessageLogger{Qclsinst:qthis}
+    this := &QMessageLogger{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMessageLogger)
+    return this
   case 1:
     // invoke: _ZN14QMessageLoggerC1EPKciS1_
     // invoke: void QMessageLogger(const char *, int, const char *)
@@ -503,7 +517,9 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QMessageLoggerC2EPKciS1_(arg0, arg1, arg2)
-    return &QMessageLogger{Qclsinst:qthis}
+    this := &QMessageLogger{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMessageLogger)
+    return this
   case 2:
     // invoke: _ZN14QMessageLoggerC1EPKciS1_S1_
     // invoke: void QMessageLogger(const char *, int, const char *, const char *)
@@ -524,7 +540,9 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QMessageLoggerC2EPKciS1_S1_(arg0, arg1, arg2, arg3)
-    return &QMessageLogger{Qclsinst:qthis}
+    this := &QMessageLogger{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMessageLogger)
+    return this
   default:
     qtrt.ErrorResolve("QMessageLogger", "QMessageLogger", args)
   }
@@ -533,7 +551,7 @@ func NewQMessageLogger(args ...interface{}) *QMessageLogger {
 }
 
 // noDebug(const char *, ...)
-func (this *QMessageLogger) Nodebug(args ...interface{}) () {
+func (this *QMessageLogger) NoDebug(args ...interface{}) () {
   // noDebug(const char *, ...)
   // noDebug()
   var vtys = make(map[int32]map[int32]reflect.Type)

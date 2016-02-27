@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qpixmapcache.h
 // dst-file: /src/gui/qpixmapcache.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -58,6 +59,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPixmapCache)=1
@@ -67,7 +69,7 @@ type QPixmapCache struct {
 }
 
 // insert(const class QString &, const class QPixmap &)
-func (this *QPixmapCache) Insert_S(args ...interface{}) (ret interface{}) {
+func (this *QPixmapCache) Insert_s(args ...interface{}) (ret interface{}) {
   // insert(const class QString &, const class QPixmap &)
   // insert(const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -111,7 +113,7 @@ func (this *QPixmapCache) Insert_S(args ...interface{}) (ret interface{}) {
 }
 
 // cacheLimit()
-func (this *QPixmapCache) Cachelimit_S(args ...interface{}) (ret interface{}) {
+func (this *QPixmapCache) CacheLimit_s(args ...interface{}) (ret interface{}) {
   // cacheLimit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -140,7 +142,7 @@ func (this *QPixmapCache) Cachelimit_S(args ...interface{}) (ret interface{}) {
 }
 
 // clear()
-func (this *QPixmapCache) Clear_S(args ...interface{}) () {
+func (this *QPixmapCache) Clear_s(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -161,7 +163,7 @@ func (this *QPixmapCache) Clear_S(args ...interface{}) () {
 }
 
 // remove(const class QString &)
-func (this *QPixmapCache) Remove_S(args ...interface{}) () {
+func (this *QPixmapCache) Remove_s(args ...interface{}) () {
   // remove(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -185,7 +187,7 @@ func (this *QPixmapCache) Remove_S(args ...interface{}) () {
 }
 
 // setCacheLimit(int)
-func (this *QPixmapCache) Setcachelimit_S(args ...interface{}) () {
+func (this *QPixmapCache) SetCacheLimit_s(args ...interface{}) () {
   // setCacheLimit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -209,7 +211,7 @@ func (this *QPixmapCache) Setcachelimit_S(args ...interface{}) () {
 }
 
 // find(const class QString &)
-func (this *QPixmapCache) Find_S(args ...interface{}) (ret interface{}) {
+func (this *QPixmapCache) Find_s(args ...interface{}) (ret interface{}) {
   // find(const class QString &)
   // find(const class QString &, class QPixmap &)
   // find(const class QString &, class QPixmap *)

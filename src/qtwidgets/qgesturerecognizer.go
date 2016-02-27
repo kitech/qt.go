@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qgesturerecognizer.h
 // dst-file: /src/widgets/qgesturerecognizer.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -52,6 +53,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGestureRecognizer)=8
@@ -85,7 +87,7 @@ func (this *QGestureRecognizer) Reset(args ...interface{}) () {
 }
 
 // ~QGestureRecognizer()
-func (this *QGestureRecognizer) Freeqgesturerecognizer(args ...interface{}) () {
+func (this *QGestureRecognizer) Free(args ...interface{}) () {
   // ~QGestureRecognizer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,7 +99,10 @@ func (this *QGestureRecognizer) Freeqgesturerecognizer(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QGestureRecognizerD0Ev
     // invoke: void ~QGestureRecognizer()
-    C.C_ZN18QGestureRecognizerD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN18QGestureRecognizerD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGestureRecognizer", "~QGestureRecognizer", args)
   }
@@ -138,7 +143,7 @@ func (this *QGestureRecognizer) Create(args ...interface{}) (ret interface{}) {
 }
 
 // registerRecognizer(class QGestureRecognizer *)
-func (this *QGestureRecognizer) Registerrecognizer_S(args ...interface{}) () {
+func (this *QGestureRecognizer) RegisterRecognizer_s(args ...interface{}) () {
   // registerRecognizer(class QGestureRecognizer *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,6 +167,9 @@ func (this *QGestureRecognizer) Registerrecognizer_S(args ...interface{}) () {
 }
 
 // QGestureRecognizer()
+func GcfreeQGestureRecognizer(this *QGestureRecognizer) {
+  qtrt.UniverseFree(this)
+}
 func NewQGestureRecognizer(args ...interface{}) *QGestureRecognizer {
   // QGestureRecognizer()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -177,7 +185,9 @@ func NewQGestureRecognizer(args ...interface{}) *QGestureRecognizer {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QGestureRecognizerC2Ev()
-    return &QGestureRecognizer{Qclsinst:qthis}
+    this := &QGestureRecognizer{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGestureRecognizer)
+    return this
   default:
     qtrt.ErrorResolve("QGestureRecognizer", "QGestureRecognizer", args)
   }

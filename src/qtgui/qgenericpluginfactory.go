@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qgenericpluginfactory.h
 // dst-file: /src/gui/qgenericpluginfactory.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -44,6 +45,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGenericPluginFactory)=1
@@ -53,7 +55,7 @@ type QGenericPluginFactory struct {
 }
 
 // keys()
-func (this *QGenericPluginFactory) Keys_S(args ...interface{}) () {
+func (this *QGenericPluginFactory) Keys_s(args ...interface{}) () {
   // keys()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -74,7 +76,7 @@ func (this *QGenericPluginFactory) Keys_S(args ...interface{}) () {
 }
 
 // create(const class QString &, const class QString &)
-func (this *QGenericPluginFactory) Create_S(args ...interface{}) (ret interface{}) {
+func (this *QGenericPluginFactory) Create_s(args ...interface{}) (ret interface{}) {
   // create(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

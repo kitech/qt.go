@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -72,6 +73,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGroupBox)=1
@@ -83,7 +85,7 @@ type QGroupBox struct {
 }
 
 // ~QGroupBox()
-func (this *QGroupBox) Freeqgroupbox(args ...interface{}) () {
+func (this *QGroupBox) Free(args ...interface{}) () {
   // ~QGroupBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -95,7 +97,10 @@ func (this *QGroupBox) Freeqgroupbox(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGroupBoxD0Ev
     // invoke: void ~QGroupBox()
-    C.C_ZN9QGroupBoxD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QGroupBoxD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGroupBox", "~QGroupBox", args)
   }
@@ -104,7 +109,7 @@ func (this *QGroupBox) Freeqgroupbox(args ...interface{}) () {
 }
 
 // setTitle(const class QString &)
-func (this *QGroupBox) Settitle(args ...interface{}) () {
+func (this *QGroupBox) SetTitle(args ...interface{}) () {
   // setTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -128,7 +133,7 @@ func (this *QGroupBox) Settitle(args ...interface{}) () {
 }
 
 // isCheckable()
-func (this *QGroupBox) Ischeckable(args ...interface{}) (ret interface{}) {
+func (this *QGroupBox) IsCheckable(args ...interface{}) (ret interface{}) {
   // isCheckable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -178,7 +183,7 @@ func (this *QGroupBox) Alignment(args ...interface{}) () {
 }
 
 // setFlat(_Bool)
-func (this *QGroupBox) Setflat(args ...interface{}) () {
+func (this *QGroupBox) SetFlat(args ...interface{}) () {
   // setFlat(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -202,6 +207,9 @@ func (this *QGroupBox) Setflat(args ...interface{}) () {
 }
 
 // QGroupBox(class QWidget *)
+func GcfreeQGroupBox(this *QGroupBox) {
+  qtrt.UniverseFree(this)
+}
 func NewQGroupBox(args ...interface{}) *QGroupBox {
   // QGroupBox(class QWidget *)
   // QGroupBox(const class QString &, class QWidget *)
@@ -224,7 +232,9 @@ func NewQGroupBox(args ...interface{}) *QGroupBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QGroupBoxC2EP7QWidget(arg0)
-    return &QGroupBox{Qclsinst:qthis}
+    this := &QGroupBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGroupBox)
+    return this
   case 1:
     // invoke: _ZN9QGroupBoxC1ERK7QStringP7QWidget
     // invoke: void QGroupBox(const class QString &, class QWidget *)
@@ -235,7 +245,9 @@ func NewQGroupBox(args ...interface{}) *QGroupBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QGroupBoxC2ERK7QStringP7QWidget(arg0, arg1)
-    return &QGroupBox{Qclsinst:qthis}
+    this := &QGroupBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGroupBox)
+    return this
   default:
     qtrt.ErrorResolve("QGroupBox", "QGroupBox", args)
   }
@@ -273,7 +285,7 @@ func (this *QGroupBox) Title(args ...interface{}) (ret interface{}) {
 }
 
 // isChecked()
-func (this *QGroupBox) Ischecked(args ...interface{}) (ret interface{}) {
+func (this *QGroupBox) IsChecked(args ...interface{}) (ret interface{}) {
   // isChecked()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -302,7 +314,7 @@ func (this *QGroupBox) Ischecked(args ...interface{}) (ret interface{}) {
 }
 
 // setAlignment(int)
-func (this *QGroupBox) Setalignment(args ...interface{}) () {
+func (this *QGroupBox) SetAlignment(args ...interface{}) () {
   // setAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -326,7 +338,7 @@ func (this *QGroupBox) Setalignment(args ...interface{}) () {
 }
 
 // setChecked(_Bool)
-func (this *QGroupBox) Setchecked(args ...interface{}) () {
+func (this *QGroupBox) SetChecked(args ...interface{}) () {
   // setChecked(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -350,7 +362,7 @@ func (this *QGroupBox) Setchecked(args ...interface{}) () {
 }
 
 // setCheckable(_Bool)
-func (this *QGroupBox) Setcheckable(args ...interface{}) () {
+func (this *QGroupBox) SetCheckable(args ...interface{}) () {
   // setCheckable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -374,7 +386,7 @@ func (this *QGroupBox) Setcheckable(args ...interface{}) () {
 }
 
 // isFlat()
-func (this *QGroupBox) Isflat(args ...interface{}) (ret interface{}) {
+func (this *QGroupBox) IsFlat(args ...interface{}) (ret interface{}) {
   // isFlat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -403,7 +415,7 @@ func (this *QGroupBox) Isflat(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QGroupBox) Metaobject(args ...interface{}) () {
+func (this *QGroupBox) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -424,7 +436,7 @@ func (this *QGroupBox) Metaobject(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QGroupBox) Minimumsizehint(args ...interface{}) (ret interface{}) {
+func (this *QGroupBox) MinimumSizeHint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

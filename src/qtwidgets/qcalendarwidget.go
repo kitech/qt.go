@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qcalendarwidget.h
 // dst-file: /src/widgets/qcalendarwidget.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -118,6 +119,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCalendarWidget)=1
@@ -131,7 +133,7 @@ type QCalendarWidget struct {
 }
 
 // horizontalHeaderFormat()
-func (this *QCalendarWidget) Horizontalheaderformat(args ...interface{}) () {
+func (this *QCalendarWidget) HorizontalHeaderFormat(args ...interface{}) () {
   // horizontalHeaderFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -152,7 +154,7 @@ func (this *QCalendarWidget) Horizontalheaderformat(args ...interface{}) () {
 }
 
 // setMaximumDate(const class QDate &)
-func (this *QCalendarWidget) Setmaximumdate(args ...interface{}) () {
+func (this *QCalendarWidget) SetMaximumDate(args ...interface{}) () {
   // setMaximumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -176,7 +178,7 @@ func (this *QCalendarWidget) Setmaximumdate(args ...interface{}) () {
 }
 
 // headerTextFormat()
-func (this *QCalendarWidget) Headertextformat(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) HeaderTextFormat(args ...interface{}) (ret interface{}) {
   // headerTextFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -205,7 +207,7 @@ func (this *QCalendarWidget) Headertextformat(args ...interface{}) (ret interfac
 }
 
 // showSelectedDate()
-func (this *QCalendarWidget) Showselecteddate(args ...interface{}) () {
+func (this *QCalendarWidget) ShowSelectedDate(args ...interface{}) () {
   // showSelectedDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -226,7 +228,7 @@ func (this *QCalendarWidget) Showselecteddate(args ...interface{}) () {
 }
 
 // setGridVisible(_Bool)
-func (this *QCalendarWidget) Setgridvisible(args ...interface{}) () {
+func (this *QCalendarWidget) SetGridVisible(args ...interface{}) () {
   // setGridVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -250,7 +252,7 @@ func (this *QCalendarWidget) Setgridvisible(args ...interface{}) () {
 }
 
 // setDateEditAcceptDelay(int)
-func (this *QCalendarWidget) Setdateeditacceptdelay(args ...interface{}) () {
+func (this *QCalendarWidget) SetDateEditAcceptDelay(args ...interface{}) () {
   // setDateEditAcceptDelay(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -274,7 +276,7 @@ func (this *QCalendarWidget) Setdateeditacceptdelay(args ...interface{}) () {
 }
 
 // setDateRange(const class QDate &, const class QDate &)
-func (this *QCalendarWidget) Setdaterange(args ...interface{}) () {
+func (this *QCalendarWidget) SetDateRange(args ...interface{}) () {
   // setDateRange(const class QDate &, const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -301,7 +303,7 @@ func (this *QCalendarWidget) Setdaterange(args ...interface{}) () {
 }
 
 // isDateEditEnabled()
-func (this *QCalendarWidget) Isdateeditenabled(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) IsDateEditEnabled(args ...interface{}) (ret interface{}) {
   // isDateEditEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -330,7 +332,7 @@ func (this *QCalendarWidget) Isdateeditenabled(args ...interface{}) (ret interfa
 }
 
 // ~QCalendarWidget()
-func (this *QCalendarWidget) Freeqcalendarwidget(args ...interface{}) () {
+func (this *QCalendarWidget) Free(args ...interface{}) () {
   // ~QCalendarWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -342,7 +344,10 @@ func (this *QCalendarWidget) Freeqcalendarwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidgetD0Ev
     // invoke: void ~QCalendarWidget()
-    C.C_ZN15QCalendarWidgetD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QCalendarWidgetD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QCalendarWidget", "~QCalendarWidget", args)
   }
@@ -351,7 +356,7 @@ func (this *QCalendarWidget) Freeqcalendarwidget(args ...interface{}) () {
 }
 
 // dateTextFormat(const class QDate &)
-func (this *QCalendarWidget) Datetextformat(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) DateTextFormat(args ...interface{}) (ret interface{}) {
   // dateTextFormat(const class QDate &)
   // dateTextFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -389,7 +394,7 @@ func (this *QCalendarWidget) Datetextformat(args ...interface{}) (ret interface{
 }
 
 // isNavigationBarVisible()
-func (this *QCalendarWidget) Isnavigationbarvisible(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) IsNavigationBarVisible(args ...interface{}) (ret interface{}) {
   // isNavigationBarVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -418,7 +423,7 @@ func (this *QCalendarWidget) Isnavigationbarvisible(args ...interface{}) (ret in
 }
 
 // firstDayOfWeek()
-func (this *QCalendarWidget) Firstdayofweek(args ...interface{}) () {
+func (this *QCalendarWidget) FirstDayOfWeek(args ...interface{}) () {
   // firstDayOfWeek()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -439,7 +444,7 @@ func (this *QCalendarWidget) Firstdayofweek(args ...interface{}) () {
 }
 
 // monthShown()
-func (this *QCalendarWidget) Monthshown(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) MonthShown(args ...interface{}) (ret interface{}) {
   // monthShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -468,7 +473,7 @@ func (this *QCalendarWidget) Monthshown(args ...interface{}) (ret interface{}) {
 }
 
 // setNavigationBarVisible(_Bool)
-func (this *QCalendarWidget) Setnavigationbarvisible(args ...interface{}) () {
+func (this *QCalendarWidget) SetNavigationBarVisible(args ...interface{}) () {
   // setNavigationBarVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -492,7 +497,7 @@ func (this *QCalendarWidget) Setnavigationbarvisible(args ...interface{}) () {
 }
 
 // showNextYear()
-func (this *QCalendarWidget) Shownextyear(args ...interface{}) () {
+func (this *QCalendarWidget) ShowNextYear(args ...interface{}) () {
   // showNextYear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -513,7 +518,7 @@ func (this *QCalendarWidget) Shownextyear(args ...interface{}) () {
 }
 
 // setMinimumDate(const class QDate &)
-func (this *QCalendarWidget) Setminimumdate(args ...interface{}) () {
+func (this *QCalendarWidget) SetMinimumDate(args ...interface{}) () {
   // setMinimumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -537,7 +542,7 @@ func (this *QCalendarWidget) Setminimumdate(args ...interface{}) () {
 }
 
 // yearShown()
-func (this *QCalendarWidget) Yearshown(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) YearShown(args ...interface{}) (ret interface{}) {
   // yearShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -566,7 +571,7 @@ func (this *QCalendarWidget) Yearshown(args ...interface{}) (ret interface{}) {
 }
 
 // setHeaderTextFormat(const class QTextCharFormat &)
-func (this *QCalendarWidget) Setheadertextformat(args ...interface{}) () {
+func (this *QCalendarWidget) SetHeaderTextFormat(args ...interface{}) () {
   // setHeaderTextFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -590,7 +595,7 @@ func (this *QCalendarWidget) Setheadertextformat(args ...interface{}) () {
 }
 
 // verticalHeaderFormat()
-func (this *QCalendarWidget) Verticalheaderformat(args ...interface{}) () {
+func (this *QCalendarWidget) VerticalHeaderFormat(args ...interface{}) () {
   // verticalHeaderFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -611,7 +616,7 @@ func (this *QCalendarWidget) Verticalheaderformat(args ...interface{}) () {
 }
 
 // minimumDate()
-func (this *QCalendarWidget) Minimumdate(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) MinimumDate(args ...interface{}) (ret interface{}) {
   // minimumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -640,7 +645,7 @@ func (this *QCalendarWidget) Minimumdate(args ...interface{}) (ret interface{}) 
 }
 
 // sizeHint()
-func (this *QCalendarWidget) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -669,7 +674,7 @@ func (this *QCalendarWidget) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // setSelectedDate(const class QDate &)
-func (this *QCalendarWidget) Setselecteddate(args ...interface{}) () {
+func (this *QCalendarWidget) SetSelectedDate(args ...interface{}) () {
   // setSelectedDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -693,7 +698,7 @@ func (this *QCalendarWidget) Setselecteddate(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QCalendarWidget) Metaobject(args ...interface{}) () {
+func (this *QCalendarWidget) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -714,7 +719,7 @@ func (this *QCalendarWidget) Metaobject(args ...interface{}) () {
 }
 
 // selectionMode()
-func (this *QCalendarWidget) Selectionmode(args ...interface{}) () {
+func (this *QCalendarWidget) SelectionMode(args ...interface{}) () {
   // selectionMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -735,7 +740,7 @@ func (this *QCalendarWidget) Selectionmode(args ...interface{}) () {
 }
 
 // setCurrentPage(int, int)
-func (this *QCalendarWidget) Setcurrentpage(args ...interface{}) () {
+func (this *QCalendarWidget) SetCurrentPage(args ...interface{}) () {
   // setCurrentPage(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -762,7 +767,7 @@ func (this *QCalendarWidget) Setcurrentpage(args ...interface{}) () {
 }
 
 // setDateTextFormat(const class QDate &, const class QTextCharFormat &)
-func (this *QCalendarWidget) Setdatetextformat(args ...interface{}) () {
+func (this *QCalendarWidget) SetDateTextFormat(args ...interface{}) () {
   // setDateTextFormat(const class QDate &, const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -789,7 +794,7 @@ func (this *QCalendarWidget) Setdatetextformat(args ...interface{}) () {
 }
 
 // selectedDate()
-func (this *QCalendarWidget) Selecteddate(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) SelectedDate(args ...interface{}) (ret interface{}) {
   // selectedDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -818,7 +823,7 @@ func (this *QCalendarWidget) Selecteddate(args ...interface{}) (ret interface{})
 }
 
 // maximumDate()
-func (this *QCalendarWidget) Maximumdate(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) MaximumDate(args ...interface{}) (ret interface{}) {
   // maximumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -847,7 +852,7 @@ func (this *QCalendarWidget) Maximumdate(args ...interface{}) (ret interface{}) 
 }
 
 // minimumSizeHint()
-func (this *QCalendarWidget) Minimumsizehint(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) MinimumSizeHint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -876,7 +881,7 @@ func (this *QCalendarWidget) Minimumsizehint(args ...interface{}) (ret interface
 }
 
 // showPreviousMonth()
-func (this *QCalendarWidget) Showpreviousmonth(args ...interface{}) () {
+func (this *QCalendarWidget) ShowPreviousMonth(args ...interface{}) () {
   // showPreviousMonth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -897,7 +902,7 @@ func (this *QCalendarWidget) Showpreviousmonth(args ...interface{}) () {
 }
 
 // dateEditAcceptDelay()
-func (this *QCalendarWidget) Dateeditacceptdelay(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) DateEditAcceptDelay(args ...interface{}) (ret interface{}) {
   // dateEditAcceptDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -926,7 +931,7 @@ func (this *QCalendarWidget) Dateeditacceptdelay(args ...interface{}) (ret inter
 }
 
 // showPreviousYear()
-func (this *QCalendarWidget) Showpreviousyear(args ...interface{}) () {
+func (this *QCalendarWidget) ShowPreviousYear(args ...interface{}) () {
   // showPreviousYear()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -947,7 +952,7 @@ func (this *QCalendarWidget) Showpreviousyear(args ...interface{}) () {
 }
 
 // isGridVisible()
-func (this *QCalendarWidget) Isgridvisible(args ...interface{}) (ret interface{}) {
+func (this *QCalendarWidget) IsGridVisible(args ...interface{}) (ret interface{}) {
   // isGridVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -976,7 +981,7 @@ func (this *QCalendarWidget) Isgridvisible(args ...interface{}) (ret interface{}
 }
 
 // setDateEditEnabled(_Bool)
-func (this *QCalendarWidget) Setdateeditenabled(args ...interface{}) () {
+func (this *QCalendarWidget) SetDateEditEnabled(args ...interface{}) () {
   // setDateEditEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1000,6 +1005,9 @@ func (this *QCalendarWidget) Setdateeditenabled(args ...interface{}) () {
 }
 
 // QCalendarWidget(class QWidget *)
+func GcfreeQCalendarWidget(this *QCalendarWidget) {
+  qtrt.UniverseFree(this)
+}
 func NewQCalendarWidget(args ...interface{}) *QCalendarWidget {
   // QCalendarWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1018,7 +1026,9 @@ func NewQCalendarWidget(args ...interface{}) *QCalendarWidget {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QCalendarWidgetC2EP7QWidget(arg0)
-    return &QCalendarWidget{Qclsinst:qthis}
+    this := &QCalendarWidget{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCalendarWidget)
+    return this
   default:
     qtrt.ErrorResolve("QCalendarWidget", "QCalendarWidget", args)
   }
@@ -1027,7 +1037,7 @@ func NewQCalendarWidget(args ...interface{}) *QCalendarWidget {
 }
 
 // showNextMonth()
-func (this *QCalendarWidget) Shownextmonth(args ...interface{}) () {
+func (this *QCalendarWidget) ShowNextMonth(args ...interface{}) () {
   // showNextMonth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1048,7 +1058,7 @@ func (this *QCalendarWidget) Shownextmonth(args ...interface{}) () {
 }
 
 // showToday()
-func (this *QCalendarWidget) Showtoday(args ...interface{}) () {
+func (this *QCalendarWidget) ShowToday(args ...interface{}) () {
   // showToday()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -84,6 +85,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStyleHints)=1
@@ -98,7 +100,7 @@ type QStyleHints struct {
 }
 
 // setFocusOnTouchRelease()
-func (this *QStyleHints) Setfocusontouchrelease(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) SetFocusOnTouchRelease(args ...interface{}) (ret interface{}) {
   // setFocusOnTouchRelease()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -127,7 +129,7 @@ func (this *QStyleHints) Setfocusontouchrelease(args ...interface{}) (ret interf
 }
 
 // startDragDistance()
-func (this *QStyleHints) Startdragdistance(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) StartDragDistance(args ...interface{}) (ret interface{}) {
   // startDragDistance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -156,7 +158,7 @@ func (this *QStyleHints) Startdragdistance(args ...interface{}) (ret interface{}
 }
 
 // keyboardAutoRepeatRate()
-func (this *QStyleHints) Keyboardautorepeatrate(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) KeyboardAutoRepeatRate(args ...interface{}) (ret interface{}) {
   // keyboardAutoRepeatRate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -185,7 +187,7 @@ func (this *QStyleHints) Keyboardautorepeatrate(args ...interface{}) (ret interf
 }
 
 // passwordMaskDelay()
-func (this *QStyleHints) Passwordmaskdelay(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) PasswordMaskDelay(args ...interface{}) (ret interface{}) {
   // passwordMaskDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -214,7 +216,7 @@ func (this *QStyleHints) Passwordmaskdelay(args ...interface{}) (ret interface{}
 }
 
 // setMouseDoubleClickInterval(int)
-func (this *QStyleHints) Setmousedoubleclickinterval(args ...interface{}) () {
+func (this *QStyleHints) SetMouseDoubleClickInterval(args ...interface{}) () {
   // setMouseDoubleClickInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -238,7 +240,7 @@ func (this *QStyleHints) Setmousedoubleclickinterval(args ...interface{}) () {
 }
 
 // cursorFlashTime()
-func (this *QStyleHints) Cursorflashtime(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) CursorFlashTime(args ...interface{}) (ret interface{}) {
   // cursorFlashTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -267,7 +269,7 @@ func (this *QStyleHints) Cursorflashtime(args ...interface{}) (ret interface{}) 
 }
 
 // mousePressAndHoldInterval()
-func (this *QStyleHints) Mousepressandholdinterval(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) MousePressAndHoldInterval(args ...interface{}) (ret interface{}) {
   // mousePressAndHoldInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -296,7 +298,7 @@ func (this *QStyleHints) Mousepressandholdinterval(args ...interface{}) (ret int
 }
 
 // startDragVelocity()
-func (this *QStyleHints) Startdragvelocity(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) StartDragVelocity(args ...interface{}) (ret interface{}) {
   // startDragVelocity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -325,7 +327,7 @@ func (this *QStyleHints) Startdragvelocity(args ...interface{}) (ret interface{}
 }
 
 // useRtlExtensions()
-func (this *QStyleHints) Usertlextensions(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) UseRtlExtensions(args ...interface{}) (ret interface{}) {
   // useRtlExtensions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -354,7 +356,7 @@ func (this *QStyleHints) Usertlextensions(args ...interface{}) (ret interface{})
 }
 
 // setKeyboardInputInterval(int)
-func (this *QStyleHints) Setkeyboardinputinterval(args ...interface{}) () {
+func (this *QStyleHints) SetKeyboardInputInterval(args ...interface{}) () {
   // setKeyboardInputInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,7 +380,7 @@ func (this *QStyleHints) Setkeyboardinputinterval(args ...interface{}) () {
 }
 
 // tabFocusBehavior()
-func (this *QStyleHints) Tabfocusbehavior(args ...interface{}) () {
+func (this *QStyleHints) TabFocusBehavior(args ...interface{}) () {
   // tabFocusBehavior()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -399,7 +401,7 @@ func (this *QStyleHints) Tabfocusbehavior(args ...interface{}) () {
 }
 
 // setStartDragTime(int)
-func (this *QStyleHints) Setstartdragtime(args ...interface{}) () {
+func (this *QStyleHints) SetStartDragTime(args ...interface{}) () {
   // setStartDragTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -423,7 +425,7 @@ func (this *QStyleHints) Setstartdragtime(args ...interface{}) () {
 }
 
 // setCursorFlashTime(int)
-func (this *QStyleHints) Setcursorflashtime(args ...interface{}) () {
+func (this *QStyleHints) SetCursorFlashTime(args ...interface{}) () {
   // setCursorFlashTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -447,7 +449,7 @@ func (this *QStyleHints) Setcursorflashtime(args ...interface{}) () {
 }
 
 // fontSmoothingGamma()
-func (this *QStyleHints) Fontsmoothinggamma(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) FontSmoothingGamma(args ...interface{}) (ret interface{}) {
   // fontSmoothingGamma()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -476,7 +478,7 @@ func (this *QStyleHints) Fontsmoothinggamma(args ...interface{}) (ret interface{
 }
 
 // setStartDragDistance(int)
-func (this *QStyleHints) Setstartdragdistance(args ...interface{}) () {
+func (this *QStyleHints) SetStartDragDistance(args ...interface{}) () {
   // setStartDragDistance(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -500,7 +502,7 @@ func (this *QStyleHints) Setstartdragdistance(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QStyleHints) Metaobject(args ...interface{}) () {
+func (this *QStyleHints) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -521,7 +523,7 @@ func (this *QStyleHints) Metaobject(args ...interface{}) () {
 }
 
 // keyboardInputInterval()
-func (this *QStyleHints) Keyboardinputinterval(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) KeyboardInputInterval(args ...interface{}) (ret interface{}) {
   // keyboardInputInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -550,7 +552,7 @@ func (this *QStyleHints) Keyboardinputinterval(args ...interface{}) (ret interfa
 }
 
 // showIsFullScreen()
-func (this *QStyleHints) Showisfullscreen(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) ShowIsFullScreen(args ...interface{}) (ret interface{}) {
   // showIsFullScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -579,7 +581,7 @@ func (this *QStyleHints) Showisfullscreen(args ...interface{}) (ret interface{})
 }
 
 // startDragTime()
-func (this *QStyleHints) Startdragtime(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) StartDragTime(args ...interface{}) (ret interface{}) {
   // startDragTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -608,7 +610,7 @@ func (this *QStyleHints) Startdragtime(args ...interface{}) (ret interface{}) {
 }
 
 // singleClickActivation()
-func (this *QStyleHints) Singleclickactivation(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) SingleClickActivation(args ...interface{}) (ret interface{}) {
   // singleClickActivation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -637,7 +639,7 @@ func (this *QStyleHints) Singleclickactivation(args ...interface{}) (ret interfa
 }
 
 // passwordMaskCharacter()
-func (this *QStyleHints) Passwordmaskcharacter(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) PasswordMaskCharacter(args ...interface{}) (ret interface{}) {
   // passwordMaskCharacter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -666,7 +668,7 @@ func (this *QStyleHints) Passwordmaskcharacter(args ...interface{}) (ret interfa
 }
 
 // mouseDoubleClickInterval()
-func (this *QStyleHints) Mousedoubleclickinterval(args ...interface{}) (ret interface{}) {
+func (this *QStyleHints) MouseDoubleClickInterval(args ...interface{}) (ret interface{}) {
   // mouseDoubleClickInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

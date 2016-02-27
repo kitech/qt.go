@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qtextcursor.h
 // dst-file: /src/gui/qtextcursor.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -174,6 +175,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextCursor)=1
@@ -183,7 +185,7 @@ type QTextCursor struct {
 }
 
 // isCopyOf(const class QTextCursor &)
-func (this *QTextCursor) Iscopyof(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) IsCopyOf(args ...interface{}) (ret interface{}) {
   // isCopyOf(const class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -215,7 +217,7 @@ func (this *QTextCursor) Iscopyof(args ...interface{}) (ret interface{}) {
 }
 
 // insertText(const class QString &, const class QTextCharFormat &)
-func (this *QTextCursor) Inserttext(args ...interface{}) () {
+func (this *QTextCursor) InsertText(args ...interface{}) () {
   // insertText(const class QString &, const class QTextCharFormat &)
   // insertText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -251,7 +253,7 @@ func (this *QTextCursor) Inserttext(args ...interface{}) () {
 }
 
 // atStart()
-func (this *QTextCursor) Atstart(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) AtStart(args ...interface{}) (ret interface{}) {
   // atStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -309,7 +311,7 @@ func (this *QTextCursor) Selection(args ...interface{}) (ret interface{}) {
 }
 
 // insertFrame(const class QTextFrameFormat &)
-func (this *QTextCursor) Insertframe(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) InsertFrame(args ...interface{}) (ret interface{}) {
   // insertFrame(const class QTextFrameFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -341,7 +343,7 @@ func (this *QTextCursor) Insertframe(args ...interface{}) (ret interface{}) {
 }
 
 // insertHtml(const class QString &)
-func (this *QTextCursor) Inserthtml(args ...interface{}) () {
+func (this *QTextCursor) InsertHtml(args ...interface{}) () {
   // insertHtml(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -365,7 +367,7 @@ func (this *QTextCursor) Inserthtml(args ...interface{}) () {
 }
 
 // deleteChar()
-func (this *QTextCursor) Deletechar(args ...interface{}) () {
+func (this *QTextCursor) DeleteChar(args ...interface{}) () {
   // deleteChar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -386,7 +388,7 @@ func (this *QTextCursor) Deletechar(args ...interface{}) () {
 }
 
 // endEditBlock()
-func (this *QTextCursor) Endeditblock(args ...interface{}) () {
+func (this *QTextCursor) EndEditBlock(args ...interface{}) () {
   // endEditBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -407,7 +409,7 @@ func (this *QTextCursor) Endeditblock(args ...interface{}) () {
 }
 
 // atBlockEnd()
-func (this *QTextCursor) Atblockend(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) AtBlockEnd(args ...interface{}) (ret interface{}) {
   // atBlockEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -436,7 +438,7 @@ func (this *QTextCursor) Atblockend(args ...interface{}) (ret interface{}) {
 }
 
 // selectionStart()
-func (this *QTextCursor) Selectionstart(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) SelectionStart(args ...interface{}) (ret interface{}) {
   // selectionStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -465,7 +467,7 @@ func (this *QTextCursor) Selectionstart(args ...interface{}) (ret interface{}) {
 }
 
 // selectionEnd()
-func (this *QTextCursor) Selectionend(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) SelectionEnd(args ...interface{}) (ret interface{}) {
   // selectionEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -494,6 +496,9 @@ func (this *QTextCursor) Selectionend(args ...interface{}) (ret interface{}) {
 }
 
 // QTextCursor(class QTextDocument *)
+func GcfreeQTextCursor(this *QTextCursor) {
+  qtrt.UniverseFree(this)
+}
 func NewQTextCursor(args ...interface{}) *QTextCursor {
   // QTextCursor(class QTextDocument *)
   // QTextCursor(const class QTextCursor &)
@@ -523,7 +528,9 @@ func NewQTextCursor(args ...interface{}) *QTextCursor {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextCursorC2EP13QTextDocument(arg0)
-    return &QTextCursor{Qclsinst:qthis}
+    this := &QTextCursor{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextCursor)
+    return this
   case 1:
     // invoke: _ZN11QTextCursorC1ERKS_
     // invoke: void QTextCursor(const class QTextCursor &)
@@ -532,7 +539,9 @@ func NewQTextCursor(args ...interface{}) *QTextCursor {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextCursorC2ERKS_(arg0)
-    return &QTextCursor{Qclsinst:qthis}
+    this := &QTextCursor{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextCursor)
+    return this
   case 2:
     // invoke: _ZN11QTextCursorC1EP10QTextFrame
     // invoke: void QTextCursor(class QTextFrame *)
@@ -541,14 +550,18 @@ func NewQTextCursor(args ...interface{}) *QTextCursor {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextCursorC2EP10QTextFrame(arg0)
-    return &QTextCursor{Qclsinst:qthis}
+    this := &QTextCursor{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextCursor)
+    return this
   case 3:
     // invoke: _ZN11QTextCursorC1Ev
     // invoke: void QTextCursor()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextCursorC2Ev()
-    return &QTextCursor{Qclsinst:qthis}
+    this := &QTextCursor{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextCursor)
+    return this
   case 4:
     // invoke: _ZN11QTextCursorC1ERK10QTextBlock
     // invoke: void QTextCursor(const class QTextBlock &)
@@ -557,7 +570,9 @@ func NewQTextCursor(args ...interface{}) *QTextCursor {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QTextCursorC2ERK10QTextBlock(arg0)
-    return &QTextCursor{Qclsinst:qthis}
+    this := &QTextCursor{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextCursor)
+    return this
   default:
     qtrt.ErrorResolve("QTextCursor", "QTextCursor", args)
   }
@@ -566,7 +581,7 @@ func NewQTextCursor(args ...interface{}) *QTextCursor {
 }
 
 // currentTable()
-func (this *QTextCursor) Currenttable(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) CurrentTable(args ...interface{}) (ret interface{}) {
   // currentTable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -595,7 +610,7 @@ func (this *QTextCursor) Currenttable(args ...interface{}) (ret interface{}) {
 }
 
 // setKeepPositionOnInsert(_Bool)
-func (this *QTextCursor) Setkeeppositiononinsert(args ...interface{}) () {
+func (this *QTextCursor) SetKeepPositionOnInsert(args ...interface{}) () {
   // setKeepPositionOnInsert(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -619,7 +634,7 @@ func (this *QTextCursor) Setkeeppositiononinsert(args ...interface{}) () {
 }
 
 // clearSelection()
-func (this *QTextCursor) Clearselection(args ...interface{}) () {
+func (this *QTextCursor) ClearSelection(args ...interface{}) () {
   // clearSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -640,7 +655,7 @@ func (this *QTextCursor) Clearselection(args ...interface{}) () {
 }
 
 // atBlockStart()
-func (this *QTextCursor) Atblockstart(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) AtBlockStart(args ...interface{}) (ret interface{}) {
   // atBlockStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -669,7 +684,7 @@ func (this *QTextCursor) Atblockstart(args ...interface{}) (ret interface{}) {
 }
 
 // setVerticalMovementX(int)
-func (this *QTextCursor) Setverticalmovementx(args ...interface{}) () {
+func (this *QTextCursor) SetVerticalMovementX(args ...interface{}) () {
   // setVerticalMovementX(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -693,7 +708,7 @@ func (this *QTextCursor) Setverticalmovementx(args ...interface{}) () {
 }
 
 // deletePreviousChar()
-func (this *QTextCursor) Deletepreviouschar(args ...interface{}) () {
+func (this *QTextCursor) DeletePreviousChar(args ...interface{}) () {
   // deletePreviousChar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -714,7 +729,7 @@ func (this *QTextCursor) Deletepreviouschar(args ...interface{}) () {
 }
 
 // mergeCharFormat(const class QTextCharFormat &)
-func (this *QTextCursor) Mergecharformat(args ...interface{}) () {
+func (this *QTextCursor) MergeCharFormat(args ...interface{}) () {
   // mergeCharFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -738,7 +753,7 @@ func (this *QTextCursor) Mergecharformat(args ...interface{}) () {
 }
 
 // setVisualNavigation(_Bool)
-func (this *QTextCursor) Setvisualnavigation(args ...interface{}) () {
+func (this *QTextCursor) SetVisualNavigation(args ...interface{}) () {
   // setVisualNavigation(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -762,7 +777,7 @@ func (this *QTextCursor) Setvisualnavigation(args ...interface{}) () {
 }
 
 // mergeBlockCharFormat(const class QTextCharFormat &)
-func (this *QTextCursor) Mergeblockcharformat(args ...interface{}) () {
+func (this *QTextCursor) MergeBlockCharFormat(args ...interface{}) () {
   // mergeBlockCharFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -786,7 +801,7 @@ func (this *QTextCursor) Mergeblockcharformat(args ...interface{}) () {
 }
 
 // beginEditBlock()
-func (this *QTextCursor) Begineditblock(args ...interface{}) () {
+func (this *QTextCursor) BeginEditBlock(args ...interface{}) () {
   // beginEditBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -807,7 +822,7 @@ func (this *QTextCursor) Begineditblock(args ...interface{}) () {
 }
 
 // charFormat()
-func (this *QTextCursor) Charformat(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) CharFormat(args ...interface{}) (ret interface{}) {
   // charFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -836,7 +851,7 @@ func (this *QTextCursor) Charformat(args ...interface{}) (ret interface{}) {
 }
 
 // currentList()
-func (this *QTextCursor) Currentlist(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) CurrentList(args ...interface{}) (ret interface{}) {
   // currentList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -865,7 +880,7 @@ func (this *QTextCursor) Currentlist(args ...interface{}) (ret interface{}) {
 }
 
 // blockFormat()
-func (this *QTextCursor) Blockformat(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) BlockFormat(args ...interface{}) (ret interface{}) {
   // blockFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -918,7 +933,7 @@ func (this *QTextCursor) Swap(args ...interface{}) () {
 }
 
 // positionInBlock()
-func (this *QTextCursor) Positioninblock(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) PositionInBlock(args ...interface{}) (ret interface{}) {
   // positionInBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -976,7 +991,7 @@ func (this *QTextCursor) Document(args ...interface{}) (ret interface{}) {
 }
 
 // hasSelection()
-func (this *QTextCursor) Hasselection(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) HasSelection(args ...interface{}) (ret interface{}) {
   // hasSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1005,7 +1020,7 @@ func (this *QTextCursor) Hasselection(args ...interface{}) (ret interface{}) {
 }
 
 // mergeBlockFormat(const class QTextBlockFormat &)
-func (this *QTextCursor) Mergeblockformat(args ...interface{}) () {
+func (this *QTextCursor) MergeBlockFormat(args ...interface{}) () {
   // mergeBlockFormat(const class QTextBlockFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1029,7 +1044,7 @@ func (this *QTextCursor) Mergeblockformat(args ...interface{}) () {
 }
 
 // insertFragment(const class QTextDocumentFragment &)
-func (this *QTextCursor) Insertfragment(args ...interface{}) () {
+func (this *QTextCursor) InsertFragment(args ...interface{}) () {
   // insertFragment(const class QTextDocumentFragment &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1053,7 +1068,7 @@ func (this *QTextCursor) Insertfragment(args ...interface{}) () {
 }
 
 // setCharFormat(const class QTextCharFormat &)
-func (this *QTextCursor) Setcharformat(args ...interface{}) () {
+func (this *QTextCursor) SetCharFormat(args ...interface{}) () {
   // setCharFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1077,7 +1092,7 @@ func (this *QTextCursor) Setcharformat(args ...interface{}) () {
 }
 
 // ~QTextCursor()
-func (this *QTextCursor) Freeqtextcursor(args ...interface{}) () {
+func (this *QTextCursor) Free(args ...interface{}) () {
   // ~QTextCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1089,7 +1104,10 @@ func (this *QTextCursor) Freeqtextcursor(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextCursorD0Ev
     // invoke: void ~QTextCursor()
-    C.C_ZN11QTextCursorD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QTextCursorD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTextCursor", "~QTextCursor", args)
   }
@@ -1098,7 +1116,7 @@ func (this *QTextCursor) Freeqtextcursor(args ...interface{}) () {
 }
 
 // blockCharFormat()
-func (this *QTextCursor) Blockcharformat(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) BlockCharFormat(args ...interface{}) (ret interface{}) {
   // blockCharFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1127,7 +1145,7 @@ func (this *QTextCursor) Blockcharformat(args ...interface{}) (ret interface{}) 
 }
 
 // selectedTableCells(int *, int *, int *, int *)
-func (this *QTextCursor) Selectedtablecells(args ...interface{}) () {
+func (this *QTextCursor) SelectedTableCells(args ...interface{}) () {
   // selectedTableCells(int *, int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1160,7 +1178,7 @@ func (this *QTextCursor) Selectedtablecells(args ...interface{}) () {
 }
 
 // blockNumber()
-func (this *QTextCursor) Blocknumber(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) BlockNumber(args ...interface{}) (ret interface{}) {
   // blockNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1189,7 +1207,7 @@ func (this *QTextCursor) Blocknumber(args ...interface{}) (ret interface{}) {
 }
 
 // selectedText()
-func (this *QTextCursor) Selectedtext(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) SelectedText(args ...interface{}) (ret interface{}) {
   // selectedText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1218,7 +1236,7 @@ func (this *QTextCursor) Selectedtext(args ...interface{}) (ret interface{}) {
 }
 
 // setBlockFormat(const class QTextBlockFormat &)
-func (this *QTextCursor) Setblockformat(args ...interface{}) () {
+func (this *QTextCursor) SetBlockFormat(args ...interface{}) () {
   // setBlockFormat(const class QTextBlockFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1242,7 +1260,7 @@ func (this *QTextCursor) Setblockformat(args ...interface{}) () {
 }
 
 // insertList(const class QTextListFormat &)
-func (this *QTextCursor) Insertlist(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) InsertList(args ...interface{}) (ret interface{}) {
   // insertList(const class QTextListFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1274,7 +1292,7 @@ func (this *QTextCursor) Insertlist(args ...interface{}) (ret interface{}) {
 }
 
 // visualNavigation()
-func (this *QTextCursor) Visualnavigation(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) VisualNavigation(args ...interface{}) (ret interface{}) {
   // visualNavigation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1303,7 +1321,7 @@ func (this *QTextCursor) Visualnavigation(args ...interface{}) (ret interface{})
 }
 
 // insertBlock(const class QTextBlockFormat &)
-func (this *QTextCursor) Insertblock(args ...interface{}) () {
+func (this *QTextCursor) InsertBlock(args ...interface{}) () {
   // insertBlock(const class QTextBlockFormat &)
   // insertBlock()
   // insertBlock(const class QTextBlockFormat &, const class QTextCharFormat &)
@@ -1345,7 +1363,7 @@ func (this *QTextCursor) Insertblock(args ...interface{}) () {
 }
 
 // currentFrame()
-func (this *QTextCursor) Currentframe(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) CurrentFrame(args ...interface{}) (ret interface{}) {
   // currentFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1374,7 +1392,7 @@ func (this *QTextCursor) Currentframe(args ...interface{}) (ret interface{}) {
 }
 
 // setBlockCharFormat(const class QTextCharFormat &)
-func (this *QTextCursor) Setblockcharformat(args ...interface{}) () {
+func (this *QTextCursor) SetBlockCharFormat(args ...interface{}) () {
   // setBlockCharFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1398,7 +1416,7 @@ func (this *QTextCursor) Setblockcharformat(args ...interface{}) () {
 }
 
 // columnNumber()
-func (this *QTextCursor) Columnnumber(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) ColumnNumber(args ...interface{}) (ret interface{}) {
   // columnNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1427,7 +1445,7 @@ func (this *QTextCursor) Columnnumber(args ...interface{}) (ret interface{}) {
 }
 
 // insertImage(const class QTextImageFormat &)
-func (this *QTextCursor) Insertimage(args ...interface{}) () {
+func (this *QTextCursor) InsertImage(args ...interface{}) () {
   // insertImage(const class QTextImageFormat &)
   // insertImage(const class QImage &, const class QString &)
   // insertImage(const class QString &)
@@ -1472,7 +1490,7 @@ func (this *QTextCursor) Insertimage(args ...interface{}) () {
 }
 
 // keepPositionOnInsert()
-func (this *QTextCursor) Keeppositiononinsert(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) KeepPositionOnInsert(args ...interface{}) (ret interface{}) {
   // keepPositionOnInsert()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1501,7 +1519,7 @@ func (this *QTextCursor) Keeppositiononinsert(args ...interface{}) (ret interfac
 }
 
 // joinPreviousEditBlock()
-func (this *QTextCursor) Joinpreviouseditblock(args ...interface{}) () {
+func (this *QTextCursor) JoinPreviousEditBlock(args ...interface{}) () {
   // joinPreviousEditBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1522,7 +1540,7 @@ func (this *QTextCursor) Joinpreviouseditblock(args ...interface{}) () {
 }
 
 // atEnd()
-func (this *QTextCursor) Atend(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) AtEnd(args ...interface{}) (ret interface{}) {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1551,7 +1569,7 @@ func (this *QTextCursor) Atend(args ...interface{}) (ret interface{}) {
 }
 
 // insertTable(int, int)
-func (this *QTextCursor) Inserttable(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) InsertTable(args ...interface{}) (ret interface{}) {
   // insertTable(int, int)
   // insertTable(int, int, const class QTextTableFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1638,7 +1656,7 @@ func (this *QTextCursor) Anchor(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QTextCursor) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1667,7 +1685,7 @@ func (this *QTextCursor) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // verticalMovementX()
-func (this *QTextCursor) Verticalmovementx(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) VerticalMovementX(args ...interface{}) (ret interface{}) {
   // verticalMovementX()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1696,7 +1714,7 @@ func (this *QTextCursor) Verticalmovementx(args ...interface{}) (ret interface{}
 }
 
 // removeSelectedText()
-func (this *QTextCursor) Removeselectedtext(args ...interface{}) () {
+func (this *QTextCursor) RemoveSelectedText(args ...interface{}) () {
   // removeSelectedText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1717,7 +1735,7 @@ func (this *QTextCursor) Removeselectedtext(args ...interface{}) () {
 }
 
 // createList(const class QTextListFormat &)
-func (this *QTextCursor) Createlist(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) CreateList(args ...interface{}) (ret interface{}) {
   // createList(const class QTextListFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1778,7 +1796,7 @@ func (this *QTextCursor) Position(args ...interface{}) (ret interface{}) {
 }
 
 // hasComplexSelection()
-func (this *QTextCursor) Hascomplexselection(args ...interface{}) (ret interface{}) {
+func (this *QTextCursor) HasComplexSelection(args ...interface{}) (ret interface{}) {
   // hasComplexSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

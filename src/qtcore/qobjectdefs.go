@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qobjectdefs.h
 // dst-file: /src/core/qobjectdefs.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -124,6 +125,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMetaObject::Connection)=8
@@ -151,7 +153,7 @@ type QGenericArgument struct {
 }
 
 // ~Connection()
-func (this *QMetaObject__Connection) Freeqmetaobject__Connection(args ...interface{}) () {
+func (this *QMetaObject__Connection) Free(args ...interface{}) () {
   // ~Connection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -163,7 +165,10 @@ func (this *QMetaObject__Connection) Freeqmetaobject__Connection(args ...interfa
   case 0:
     // invoke: _ZN11QMetaObject10ConnectionD0Ev
     // invoke: void ~Connection()
-    C.C_ZN11QMetaObject10ConnectionD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QMetaObject10ConnectionD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMetaObject::Connection", "~Connection", args)
   }
@@ -172,6 +177,9 @@ func (this *QMetaObject__Connection) Freeqmetaobject__Connection(args ...interfa
 }
 
 // Connection()
+func GcfreeQMetaObject__Connection(this *QMetaObject__Connection) {
+  qtrt.UniverseFree(this)
+}
 func NewQMetaObject__Connection(args ...interface{}) *QMetaObject__Connection {
   // Connection()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -187,7 +195,9 @@ func NewQMetaObject__Connection(args ...interface{}) *QMetaObject__Connection {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QMetaObject10ConnectionC2Ev()
-    return &QMetaObject__Connection{Qclsinst:qthis}
+    this := &QMetaObject__Connection{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMetaObject__Connection)
+    return this
   default:
     qtrt.ErrorResolve("QMetaObject::Connection", "Connection", args)
   }
@@ -196,6 +206,9 @@ func NewQMetaObject__Connection(args ...interface{}) *QMetaObject__Connection {
 }
 
 // QGenericReturnArgument(const char *, void *)
+func GcfreeQGenericReturnArgument(this *QGenericReturnArgument) {
+  qtrt.UniverseFree(this)
+}
 func NewQGenericReturnArgument(args ...interface{}) *QGenericReturnArgument {
   // QGenericReturnArgument(const char *, void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -219,7 +232,9 @@ func NewQGenericReturnArgument(args ...interface{}) *QGenericReturnArgument {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN22QGenericReturnArgumentC2EPKcPv(arg0, arg1)
-    return &QGenericReturnArgument{Qclsinst:qthis}
+    this := &QGenericReturnArgument{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGenericReturnArgument)
+    return this
   default:
     qtrt.ErrorResolve("QGenericReturnArgument", "QGenericReturnArgument", args)
   }
@@ -228,7 +243,7 @@ func NewQGenericReturnArgument(args ...interface{}) *QGenericReturnArgument {
 }
 
 // activate(class QObject *, const struct QMetaObject *, int, void **)
-func (this *QMetaObject) Activate_S(args ...interface{}) () {
+func (this *QMetaObject) Activate_s(args ...interface{}) () {
   // activate(class QObject *, const struct QMetaObject *, int, void **)
   // activate(class QObject *, int, void **)
   // activate(class QObject *, int, int, void **)
@@ -294,7 +309,7 @@ func (this *QMetaObject) Activate_S(args ...interface{}) () {
 }
 
 // indexOfMethod(const char *)
-func (this *QMetaObject) Indexofmethod(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) IndexOfMethod(args ...interface{}) (ret interface{}) {
   // indexOfMethod(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -328,7 +343,7 @@ func (this *QMetaObject) Indexofmethod(args ...interface{}) (ret interface{}) {
 }
 
 // disconnectOne(const class QObject *, int, const class QObject *, int)
-func (this *QMetaObject) Disconnectone_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) DisconnectOne_s(args ...interface{}) (ret interface{}) {
   // disconnectOne(const class QObject *, int, const class QObject *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -369,7 +384,7 @@ func (this *QMetaObject) Disconnectone_S(args ...interface{}) (ret interface{}) 
 }
 
 // indexOfProperty(const char *)
-func (this *QMetaObject) Indexofproperty(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) IndexOfProperty(args ...interface{}) (ret interface{}) {
   // indexOfProperty(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -403,7 +418,7 @@ func (this *QMetaObject) Indexofproperty(args ...interface{}) (ret interface{}) 
 }
 
 // connect(const class QObject *, int, const class QObject *, int, int, int *)
-func (this *QMetaObject) Connect_S(args ...interface{}) () {
+func (this *QMetaObject) Connect_s(args ...interface{}) () {
   // connect(const class QObject *, int, const class QObject *, int, int, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -442,7 +457,7 @@ func (this *QMetaObject) Connect_S(args ...interface{}) () {
 }
 
 // propertyOffset()
-func (this *QMetaObject) Propertyoffset(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) PropertyOffset(args ...interface{}) (ret interface{}) {
   // propertyOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -471,7 +486,7 @@ func (this *QMetaObject) Propertyoffset(args ...interface{}) (ret interface{}) {
 }
 
 // connectSlotsByName(class QObject *)
-func (this *QMetaObject) Connectslotsbyname_S(args ...interface{}) () {
+func (this *QMetaObject) ConnectSlotsByName_s(args ...interface{}) () {
   // connectSlotsByName(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -495,7 +510,7 @@ func (this *QMetaObject) Connectslotsbyname_S(args ...interface{}) () {
 }
 
 // indexOfConstructor(const char *)
-func (this *QMetaObject) Indexofconstructor(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) IndexOfConstructor(args ...interface{}) (ret interface{}) {
   // indexOfConstructor(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -529,7 +544,7 @@ func (this *QMetaObject) Indexofconstructor(args ...interface{}) (ret interface{
 }
 
 // methodCount()
-func (this *QMetaObject) Methodcount(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) MethodCount(args ...interface{}) (ret interface{}) {
   // methodCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -558,7 +573,7 @@ func (this *QMetaObject) Methodcount(args ...interface{}) (ret interface{}) {
 }
 
 // disconnect(const class QObject *, int, const class QObject *, int)
-func (this *QMetaObject) Disconnect_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) Disconnect_s(args ...interface{}) (ret interface{}) {
   // disconnect(const class QObject *, int, const class QObject *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -599,7 +614,7 @@ func (this *QMetaObject) Disconnect_S(args ...interface{}) (ret interface{}) {
 }
 
 // methodOffset()
-func (this *QMetaObject) Methodoffset(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) MethodOffset(args ...interface{}) (ret interface{}) {
   // methodOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -628,7 +643,7 @@ func (this *QMetaObject) Methodoffset(args ...interface{}) (ret interface{}) {
 }
 
 // normalizedType(const char *)
-func (this *QMetaObject) Normalizedtype_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) NormalizedType_s(args ...interface{}) (ret interface{}) {
   // normalizedType(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -662,7 +677,7 @@ func (this *QMetaObject) Normalizedtype_S(args ...interface{}) (ret interface{})
 }
 
 // indexOfEnumerator(const char *)
-func (this *QMetaObject) Indexofenumerator(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) IndexOfEnumerator(args ...interface{}) (ret interface{}) {
   // indexOfEnumerator(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -696,7 +711,7 @@ func (this *QMetaObject) Indexofenumerator(args ...interface{}) (ret interface{}
 }
 
 // checkConnectArgs(const char *, const char *)
-func (this *QMetaObject) Checkconnectargs_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) CheckConnectArgs_s(args ...interface{}) (ret interface{}) {
   // checkConnectArgs(const char *, const char *)
   // checkConnectArgs(const class QMetaMethod &, const class QMetaMethod &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -755,7 +770,7 @@ func (this *QMetaObject) Checkconnectargs_S(args ...interface{}) (ret interface{
 }
 
 // indexOfSlot(const char *)
-func (this *QMetaObject) Indexofslot(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) IndexOfSlot(args ...interface{}) (ret interface{}) {
   // indexOfSlot(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -821,7 +836,7 @@ func (this *QMetaObject) Method(args ...interface{}) (ret interface{}) {
 }
 
 // indexOfClassInfo(const char *)
-func (this *QMetaObject) Indexofclassinfo(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) IndexOfClassInfo(args ...interface{}) (ret interface{}) {
   // indexOfClassInfo(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -855,7 +870,7 @@ func (this *QMetaObject) Indexofclassinfo(args ...interface{}) (ret interface{})
 }
 
 // userProperty()
-func (this *QMetaObject) Userproperty(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) UserProperty(args ...interface{}) (ret interface{}) {
   // userProperty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -916,7 +931,7 @@ func (this *QMetaObject) Enumerator(args ...interface{}) (ret interface{}) {
 }
 
 // classInfoOffset()
-func (this *QMetaObject) Classinfooffset(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) ClassInfoOffset(args ...interface{}) (ret interface{}) {
   // classInfoOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -945,7 +960,7 @@ func (this *QMetaObject) Classinfooffset(args ...interface{}) (ret interface{}) 
 }
 
 // indexOfSignal(const char *)
-func (this *QMetaObject) Indexofsignal(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) IndexOfSignal(args ...interface{}) (ret interface{}) {
   // indexOfSignal(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -979,7 +994,7 @@ func (this *QMetaObject) Indexofsignal(args ...interface{}) (ret interface{}) {
 }
 
 // enumeratorCount()
-func (this *QMetaObject) Enumeratorcount(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) EnumeratorCount(args ...interface{}) (ret interface{}) {
   // enumeratorCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1008,7 +1023,7 @@ func (this *QMetaObject) Enumeratorcount(args ...interface{}) (ret interface{}) 
 }
 
 // enumeratorOffset()
-func (this *QMetaObject) Enumeratoroffset(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) EnumeratorOffset(args ...interface{}) (ret interface{}) {
   // enumeratorOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1037,7 +1052,7 @@ func (this *QMetaObject) Enumeratoroffset(args ...interface{}) (ret interface{})
 }
 
 // classInfoCount()
-func (this *QMetaObject) Classinfocount(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) ClassInfoCount(args ...interface{}) (ret interface{}) {
   // classInfoCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1066,7 +1081,7 @@ func (this *QMetaObject) Classinfocount(args ...interface{}) (ret interface{}) {
 }
 
 // constructorCount()
-func (this *QMetaObject) Constructorcount(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) ConstructorCount(args ...interface{}) (ret interface{}) {
   // constructorCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1095,7 +1110,7 @@ func (this *QMetaObject) Constructorcount(args ...interface{}) (ret interface{})
 }
 
 // classInfo(int)
-func (this *QMetaObject) Classinfo(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) ClassInfo(args ...interface{}) (ret interface{}) {
   // classInfo(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1127,7 +1142,7 @@ func (this *QMetaObject) Classinfo(args ...interface{}) (ret interface{}) {
 }
 
 // className()
-func (this *QMetaObject) Classname(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) ClassName(args ...interface{}) (ret interface{}) {
   // className()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1205,7 +1220,7 @@ func (this *QMetaObject) Cast(args ...interface{}) (ret interface{}) {
 }
 
 // normalizedSignature(const char *)
-func (this *QMetaObject) Normalizedsignature_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) NormalizedSignature_s(args ...interface{}) (ret interface{}) {
   // normalizedSignature(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1239,7 +1254,7 @@ func (this *QMetaObject) Normalizedsignature_S(args ...interface{}) (ret interfa
 }
 
 // superClass()
-func (this *QMetaObject) Superclass(args ...interface{}) () {
+func (this *QMetaObject) SuperClass(args ...interface{}) () {
   // superClass()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1324,7 +1339,7 @@ func (this *QMetaObject) Property(args ...interface{}) (ret interface{}) {
 }
 
 // propertyCount()
-func (this *QMetaObject) Propertycount(args ...interface{}) (ret interface{}) {
+func (this *QMetaObject) PropertyCount(args ...interface{}) (ret interface{}) {
   // propertyCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1353,6 +1368,9 @@ func (this *QMetaObject) Propertycount(args ...interface{}) (ret interface{}) {
 }
 
 // QGenericArgument(const char *, const void *)
+func GcfreeQGenericArgument(this *QGenericArgument) {
+  qtrt.UniverseFree(this)
+}
 func NewQGenericArgument(args ...interface{}) *QGenericArgument {
   // QGenericArgument(const char *, const void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1376,7 +1394,9 @@ func NewQGenericArgument(args ...interface{}) *QGenericArgument {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QGenericArgumentC2EPKcPKv(arg0, arg1)
-    return &QGenericArgument{Qclsinst:qthis}
+    this := &QGenericArgument{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGenericArgument)
+    return this
   default:
     qtrt.ErrorResolve("QGenericArgument", "QGenericArgument", args)
   }

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qabstractnativeeventfilter.h
 // dst-file: /src/core/qabstractnativeeventfilter.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -42,6 +43,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QAbstractNativeEventFilter)=16
@@ -51,7 +53,7 @@ type QAbstractNativeEventFilter struct {
 }
 
 // ~QAbstractNativeEventFilter()
-func (this *QAbstractNativeEventFilter) Freeqabstractnativeeventfilter(args ...interface{}) () {
+func (this *QAbstractNativeEventFilter) Free(args ...interface{}) () {
   // ~QAbstractNativeEventFilter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -63,7 +65,10 @@ func (this *QAbstractNativeEventFilter) Freeqabstractnativeeventfilter(args ...i
   case 0:
     // invoke: _ZN26QAbstractNativeEventFilterD0Ev
     // invoke: void ~QAbstractNativeEventFilter()
-    C.C_ZN26QAbstractNativeEventFilterD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN26QAbstractNativeEventFilterD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractNativeEventFilter", "~QAbstractNativeEventFilter", args)
   }
@@ -72,6 +77,9 @@ func (this *QAbstractNativeEventFilter) Freeqabstractnativeeventfilter(args ...i
 }
 
 // QAbstractNativeEventFilter()
+func GcfreeQAbstractNativeEventFilter(this *QAbstractNativeEventFilter) {
+  qtrt.UniverseFree(this)
+}
 func NewQAbstractNativeEventFilter(args ...interface{}) *QAbstractNativeEventFilter {
   // QAbstractNativeEventFilter()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -87,7 +95,9 @@ func NewQAbstractNativeEventFilter(args ...interface{}) *QAbstractNativeEventFil
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QAbstractNativeEventFilterC2Ev()
-    return &QAbstractNativeEventFilter{Qclsinst:qthis}
+    this := &QAbstractNativeEventFilter{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAbstractNativeEventFilter)
+    return this
   default:
     qtrt.ErrorResolve("QAbstractNativeEventFilter", "QAbstractNativeEventFilter", args)
   }

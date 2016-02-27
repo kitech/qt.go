@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qpolygon.h
 // dst-file: /src/gui/qpolygon.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -122,6 +123,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPolygon)=1
@@ -201,7 +203,7 @@ func (this *QPolygon) Subtracted(args ...interface{}) (ret interface{}) {
 }
 
 // boundingRect()
-func (this *QPolygon) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QPolygon) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -262,6 +264,9 @@ func (this *QPolygon) Intersected(args ...interface{}) (ret interface{}) {
 }
 
 // QPolygon(const class QRect &, _Bool)
+func GcfreeQPolygon(this *QPolygon) {
+  qtrt.UniverseFree(this)
+}
 func NewQPolygon(args ...interface{}) *QPolygon {
   // QPolygon(const class QRect &, _Bool)
   // QPolygon(const class QPolygon &)
@@ -295,7 +300,9 @@ func NewQPolygon(args ...interface{}) *QPolygon {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPolygonC2ERK5QRectb(arg0, arg1)
-    return &QPolygon{Qclsinst:qthis}
+    this := &QPolygon{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPolygon)
+    return this
   case 1:
     // invoke: _ZN8QPolygonC1ERKS_
     // invoke: void QPolygon(const class QPolygon &)
@@ -304,7 +311,9 @@ func NewQPolygon(args ...interface{}) *QPolygon {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPolygonC2ERKS_(arg0)
-    return &QPolygon{Qclsinst:qthis}
+    this := &QPolygon{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPolygon)
+    return this
   case 2:
     // invoke: _ZN8QPolygonC1EiPKi
     // invoke: void QPolygon(int, const int *)
@@ -315,7 +324,9 @@ func NewQPolygon(args ...interface{}) *QPolygon {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPolygonC2EiPKi(arg0, arg1)
-    return &QPolygon{Qclsinst:qthis}
+    this := &QPolygon{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPolygon)
+    return this
   case 3:
     // invoke: _ZN8QPolygonC1Ei
     // invoke: void QPolygon(int)
@@ -324,14 +335,18 @@ func NewQPolygon(args ...interface{}) *QPolygon {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPolygonC2Ei(arg0)
-    return &QPolygon{Qclsinst:qthis}
+    this := &QPolygon{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPolygon)
+    return this
   case 4:
     // invoke: _ZN8QPolygonC1Ev
     // invoke: void QPolygon()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPolygonC2Ev()
-    return &QPolygon{Qclsinst:qthis}
+    this := &QPolygon{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPolygon)
+    return this
   default:
     qtrt.ErrorResolve("QPolygon", "QPolygon", args)
   }
@@ -340,7 +355,7 @@ func NewQPolygon(args ...interface{}) *QPolygon {
 }
 
 // setPoint(int, const class QPoint &)
-func (this *QPolygon) Setpoint(args ...interface{}) () {
+func (this *QPolygon) SetPoint(args ...interface{}) () {
   // setPoint(int, const class QPoint &)
   // setPoint(int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -446,7 +461,7 @@ func (this *QPolygon) Swap(args ...interface{}) () {
 }
 
 // putPoints(int, int, const int *)
-func (this *QPolygon) Putpoints(args ...interface{}) () {
+func (this *QPolygon) PutPoints(args ...interface{}) () {
   // putPoints(int, int, const int *)
   // putPoints(int, int, const class QPolygon &, int)
   // putPoints(int, int, int, int, ...)
@@ -600,7 +615,7 @@ func (this *QPolygon) Translate(args ...interface{}) () {
 }
 
 // setPoints(int, int, int, ...)
-func (this *QPolygon) Setpoints(args ...interface{}) () {
+func (this *QPolygon) SetPoints(args ...interface{}) () {
   // setPoints(int, int, int, ...)
   // setPoints(int, const int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -642,7 +657,7 @@ func (this *QPolygon) Setpoints(args ...interface{}) () {
 }
 
 // ~QPolygon()
-func (this *QPolygon) Freeqpolygon(args ...interface{}) () {
+func (this *QPolygon) Free(args ...interface{}) () {
   // ~QPolygon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -654,7 +669,10 @@ func (this *QPolygon) Freeqpolygon(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPolygonD0Ev
     // invoke: void ~QPolygon()
-    C.C_ZN8QPolygonD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN8QPolygonD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPolygon", "~QPolygon", args)
   }
@@ -727,7 +745,7 @@ func (this *QPolygonF) Subtracted(args ...interface{}) (ret interface{}) {
 }
 
 // boundingRect()
-func (this *QPolygonF) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QPolygonF) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -788,7 +806,7 @@ func (this *QPolygonF) Intersected(args ...interface{}) (ret interface{}) {
 }
 
 // ~QPolygonF()
-func (this *QPolygonF) Freeqpolygonf(args ...interface{}) () {
+func (this *QPolygonF) Free(args ...interface{}) () {
   // ~QPolygonF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -800,7 +818,10 @@ func (this *QPolygonF) Freeqpolygonf(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QPolygonFD0Ev
     // invoke: void ~QPolygonF()
-    C.C_ZN9QPolygonFD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QPolygonFD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPolygonF", "~QPolygonF", args)
   }
@@ -809,6 +830,9 @@ func (this *QPolygonF) Freeqpolygonf(args ...interface{}) () {
 }
 
 // QPolygonF(const class QRectF &)
+func GcfreeQPolygonF(this *QPolygonF) {
+  qtrt.UniverseFree(this)
+}
 func NewQPolygonF(args ...interface{}) *QPolygonF {
   // QPolygonF(const class QRectF &)
   // QPolygonF(const class QPolygonF &)
@@ -838,7 +862,9 @@ func NewQPolygonF(args ...interface{}) *QPolygonF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPolygonFC2ERK6QRectF(arg0)
-    return &QPolygonF{Qclsinst:qthis}
+    this := &QPolygonF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPolygonF)
+    return this
   case 1:
     // invoke: _ZN9QPolygonFC1ERKS_
     // invoke: void QPolygonF(const class QPolygonF &)
@@ -847,14 +873,18 @@ func NewQPolygonF(args ...interface{}) *QPolygonF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPolygonFC2ERKS_(arg0)
-    return &QPolygonF{Qclsinst:qthis}
+    this := &QPolygonF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPolygonF)
+    return this
   case 2:
     // invoke: _ZN9QPolygonFC1Ev
     // invoke: void QPolygonF()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPolygonFC2Ev()
-    return &QPolygonF{Qclsinst:qthis}
+    this := &QPolygonF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPolygonF)
+    return this
   case 3:
     // invoke: _ZN9QPolygonFC1Ei
     // invoke: void QPolygonF(int)
@@ -863,7 +893,9 @@ func NewQPolygonF(args ...interface{}) *QPolygonF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPolygonFC2Ei(arg0)
-    return &QPolygonF{Qclsinst:qthis}
+    this := &QPolygonF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPolygonF)
+    return this
   case 4:
     // invoke: _ZN9QPolygonFC1ERK8QPolygon
     // invoke: void QPolygonF(const class QPolygon &)
@@ -872,7 +904,9 @@ func NewQPolygonF(args ...interface{}) *QPolygonF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QPolygonFC2ERK8QPolygon(arg0)
-    return &QPolygonF{Qclsinst:qthis}
+    this := &QPolygonF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPolygonF)
+    return this
   default:
     qtrt.ErrorResolve("QPolygonF", "QPolygonF", args)
   }
@@ -881,7 +915,7 @@ func NewQPolygonF(args ...interface{}) *QPolygonF {
 }
 
 // isClosed()
-func (this *QPolygonF) Isclosed(args ...interface{}) (ret interface{}) {
+func (this *QPolygonF) IsClosed(args ...interface{}) (ret interface{}) {
   // isClosed()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -934,7 +968,7 @@ func (this *QPolygonF) Swap(args ...interface{}) () {
 }
 
 // toPolygon()
-func (this *QPolygonF) Topolygon(args ...interface{}) (ret interface{}) {
+func (this *QPolygonF) ToPolygon(args ...interface{}) (ret interface{}) {
   // toPolygon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

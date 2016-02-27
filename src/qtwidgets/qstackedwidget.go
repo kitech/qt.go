@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qstackedwidget.h
 // dst-file: /src/widgets/qstackedwidget.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -68,6 +69,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStackedWidget)=1
@@ -79,7 +81,7 @@ type QStackedWidget struct {
 }
 
 // setCurrentIndex(int)
-func (this *QStackedWidget) Setcurrentindex(args ...interface{}) () {
+func (this *QStackedWidget) SetCurrentIndex(args ...interface{}) () {
   // setCurrentIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -103,7 +105,7 @@ func (this *QStackedWidget) Setcurrentindex(args ...interface{}) () {
 }
 
 // currentWidget()
-func (this *QStackedWidget) Currentwidget(args ...interface{}) (ret interface{}) {
+func (this *QStackedWidget) CurrentWidget(args ...interface{}) (ret interface{}) {
   // currentWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -132,6 +134,9 @@ func (this *QStackedWidget) Currentwidget(args ...interface{}) (ret interface{})
 }
 
 // QStackedWidget(class QWidget *)
+func GcfreeQStackedWidget(this *QStackedWidget) {
+  qtrt.UniverseFree(this)
+}
 func NewQStackedWidget(args ...interface{}) *QStackedWidget {
   // QStackedWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -150,7 +155,9 @@ func NewQStackedWidget(args ...interface{}) *QStackedWidget {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QStackedWidgetC2EP7QWidget(arg0)
-    return &QStackedWidget{Qclsinst:qthis}
+    this := &QStackedWidget{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStackedWidget)
+    return this
   default:
     qtrt.ErrorResolve("QStackedWidget", "QStackedWidget", args)
   }
@@ -159,7 +166,7 @@ func NewQStackedWidget(args ...interface{}) *QStackedWidget {
 }
 
 // setCurrentWidget(class QWidget *)
-func (this *QStackedWidget) Setcurrentwidget(args ...interface{}) () {
+func (this *QStackedWidget) SetCurrentWidget(args ...interface{}) () {
   // setCurrentWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -183,7 +190,7 @@ func (this *QStackedWidget) Setcurrentwidget(args ...interface{}) () {
 }
 
 // removeWidget(class QWidget *)
-func (this *QStackedWidget) Removewidget(args ...interface{}) () {
+func (this *QStackedWidget) RemoveWidget(args ...interface{}) () {
   // removeWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,7 +246,7 @@ func (this *QStackedWidget) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // indexOf(class QWidget *)
-func (this *QStackedWidget) Indexof(args ...interface{}) (ret interface{}) {
+func (this *QStackedWidget) IndexOf(args ...interface{}) (ret interface{}) {
   // indexOf(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -271,7 +278,7 @@ func (this *QStackedWidget) Indexof(args ...interface{}) (ret interface{}) {
 }
 
 // insertWidget(int, class QWidget *)
-func (this *QStackedWidget) Insertwidget(args ...interface{}) (ret interface{}) {
+func (this *QStackedWidget) InsertWidget(args ...interface{}) (ret interface{}) {
   // insertWidget(int, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,7 +313,7 @@ func (this *QStackedWidget) Insertwidget(args ...interface{}) (ret interface{}) 
 }
 
 // addWidget(class QWidget *)
-func (this *QStackedWidget) Addwidget(args ...interface{}) (ret interface{}) {
+func (this *QStackedWidget) AddWidget(args ...interface{}) (ret interface{}) {
   // addWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -338,7 +345,7 @@ func (this *QStackedWidget) Addwidget(args ...interface{}) (ret interface{}) {
 }
 
 // ~QStackedWidget()
-func (this *QStackedWidget) Freeqstackedwidget(args ...interface{}) () {
+func (this *QStackedWidget) Free(args ...interface{}) () {
   // ~QStackedWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -350,7 +357,10 @@ func (this *QStackedWidget) Freeqstackedwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QStackedWidgetD0Ev
     // invoke: void ~QStackedWidget()
-    C.C_ZN14QStackedWidgetD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QStackedWidgetD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStackedWidget", "~QStackedWidget", args)
   }
@@ -388,7 +398,7 @@ func (this *QStackedWidget) Count(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QStackedWidget) Metaobject(args ...interface{}) () {
+func (this *QStackedWidget) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -409,7 +419,7 @@ func (this *QStackedWidget) Metaobject(args ...interface{}) () {
 }
 
 // currentIndex()
-func (this *QStackedWidget) Currentindex(args ...interface{}) (ret interface{}) {
+func (this *QStackedWidget) CurrentIndex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

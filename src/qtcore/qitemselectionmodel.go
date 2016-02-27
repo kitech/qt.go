@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -134,6 +135,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QItemSelection)=1
@@ -213,6 +215,9 @@ func (this *QItemSelection) Indexes(args ...interface{}) () {
 }
 
 // QItemSelection(const class QModelIndex &, const class QModelIndex &)
+func GcfreeQItemSelection(this *QItemSelection) {
+  qtrt.UniverseFree(this)
+}
 func NewQItemSelection(args ...interface{}) *QItemSelection {
   // QItemSelection(const class QModelIndex &, const class QModelIndex &)
   // QItemSelection()
@@ -236,14 +241,18 @@ func NewQItemSelection(args ...interface{}) *QItemSelection {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QItemSelectionC2ERK11QModelIndexS2_(arg0, arg1)
-    return &QItemSelection{Qclsinst:qthis}
+    this := &QItemSelection{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQItemSelection)
+    return this
   case 1:
     // invoke: _ZN14QItemSelectionC1Ev
     // invoke: void QItemSelection()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QItemSelectionC2Ev()
-    return &QItemSelection{Qclsinst:qthis}
+    this := &QItemSelection{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQItemSelection)
+    return this
   default:
     qtrt.ErrorResolve("QItemSelection", "QItemSelection", args)
   }
@@ -252,7 +261,7 @@ func NewQItemSelection(args ...interface{}) *QItemSelection {
 }
 
 // split(const class QItemSelectionRange &, const class QItemSelectionRange &, class QItemSelection *)
-func (this *QItemSelection) Split_S(args ...interface{}) () {
+func (this *QItemSelection) Split_s(args ...interface{}) () {
   // split(const class QItemSelectionRange &, const class QItemSelectionRange &, class QItemSelection *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -309,7 +318,7 @@ func (this *QItemSelection) Select_(args ...interface{}) () {
 }
 
 // topLeft()
-func (this *QItemSelectionRange) Topleft(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionRange) TopLeft(args ...interface{}) (ret interface{}) {
   // topLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -425,7 +434,7 @@ func (this *QItemSelectionRange) Bottom(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QItemSelectionRange) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionRange) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -538,6 +547,9 @@ func (this *QItemSelectionRange) Contains(args ...interface{}) (ret interface{})
 }
 
 // QItemSelectionRange(const class QModelIndex &)
+func GcfreeQItemSelectionRange(this *QItemSelectionRange) {
+  qtrt.UniverseFree(this)
+}
 func NewQItemSelectionRange(args ...interface{}) *QItemSelectionRange {
   // QItemSelectionRange(const class QModelIndex &)
   // QItemSelectionRange()
@@ -565,14 +577,18 @@ func NewQItemSelectionRange(args ...interface{}) *QItemSelectionRange {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionRangeC2ERK11QModelIndex(arg0)
-    return &QItemSelectionRange{Qclsinst:qthis}
+    this := &QItemSelectionRange{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQItemSelectionRange)
+    return this
   case 1:
     // invoke: _ZN19QItemSelectionRangeC1Ev
     // invoke: void QItemSelectionRange()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionRangeC2Ev()
-    return &QItemSelectionRange{Qclsinst:qthis}
+    this := &QItemSelectionRange{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQItemSelectionRange)
+    return this
   case 2:
     // invoke: _ZN19QItemSelectionRangeC1ERK11QModelIndexS2_
     // invoke: void QItemSelectionRange(const class QModelIndex &, const class QModelIndex &)
@@ -583,7 +599,9 @@ func NewQItemSelectionRange(args ...interface{}) *QItemSelectionRange {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionRangeC2ERK11QModelIndexS2_(arg0, arg1)
-    return &QItemSelectionRange{Qclsinst:qthis}
+    this := &QItemSelectionRange{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQItemSelectionRange)
+    return this
   case 3:
     // invoke: _ZN19QItemSelectionRangeC1ERKS_
     // invoke: void QItemSelectionRange(const class QItemSelectionRange &)
@@ -592,7 +610,9 @@ func NewQItemSelectionRange(args ...interface{}) *QItemSelectionRange {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionRangeC2ERKS_(arg0)
-    return &QItemSelectionRange{Qclsinst:qthis}
+    this := &QItemSelectionRange{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQItemSelectionRange)
+    return this
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "QItemSelectionRange", args)
   }
@@ -651,7 +671,7 @@ func (this *QItemSelectionRange) Width(args ...interface{}) (ret interface{}) {
 }
 
 // bottomRight()
-func (this *QItemSelectionRange) Bottomright(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionRange) BottomRight(args ...interface{}) (ret interface{}) {
   // bottomRight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -680,7 +700,7 @@ func (this *QItemSelectionRange) Bottomright(args ...interface{}) (ret interface
 }
 
 // isEmpty()
-func (this *QItemSelectionRange) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionRange) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -881,7 +901,7 @@ func (this *QItemSelectionModel) Selection(args ...interface{}) (ret interface{}
 }
 
 // isColumnSelected(int, const class QModelIndex &)
-func (this *QItemSelectionModel) Iscolumnselected(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) IsColumnSelected(args ...interface{}) (ret interface{}) {
   // isColumnSelected(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -916,7 +936,7 @@ func (this *QItemSelectionModel) Iscolumnselected(args ...interface{}) (ret inte
 }
 
 // selectedColumns(int)
-func (this *QItemSelectionModel) Selectedcolumns(args ...interface{}) () {
+func (this *QItemSelectionModel) SelectedColumns(args ...interface{}) () {
   // selectedColumns(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -940,7 +960,7 @@ func (this *QItemSelectionModel) Selectedcolumns(args ...interface{}) () {
 }
 
 // clearSelection()
-func (this *QItemSelectionModel) Clearselection(args ...interface{}) () {
+func (this *QItemSelectionModel) ClearSelection(args ...interface{}) () {
   // clearSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -961,7 +981,7 @@ func (this *QItemSelectionModel) Clearselection(args ...interface{}) () {
 }
 
 // ~QItemSelectionModel()
-func (this *QItemSelectionModel) Freeqitemselectionmodel(args ...interface{}) () {
+func (this *QItemSelectionModel) Free(args ...interface{}) () {
   // ~QItemSelectionModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -973,7 +993,10 @@ func (this *QItemSelectionModel) Freeqitemselectionmodel(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QItemSelectionModelD0Ev
     // invoke: void ~QItemSelectionModel()
-    C.C_ZN19QItemSelectionModelD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QItemSelectionModelD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "~QItemSelectionModel", args)
   }
@@ -982,7 +1005,7 @@ func (this *QItemSelectionModel) Freeqitemselectionmodel(args ...interface{}) ()
 }
 
 // isSelected(const class QModelIndex &)
-func (this *QItemSelectionModel) Isselected(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) IsSelected(args ...interface{}) (ret interface{}) {
   // isSelected(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1014,7 +1037,7 @@ func (this *QItemSelectionModel) Isselected(args ...interface{}) (ret interface{
 }
 
 // rowIntersectsSelection(int, const class QModelIndex &)
-func (this *QItemSelectionModel) Rowintersectsselection(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) RowIntersectsSelection(args ...interface{}) (ret interface{}) {
   // rowIntersectsSelection(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1049,6 +1072,9 @@ func (this *QItemSelectionModel) Rowintersectsselection(args ...interface{}) (re
 }
 
 // QItemSelectionModel(class QAbstractItemModel *, class QObject *)
+func GcfreeQItemSelectionModel(this *QItemSelectionModel) {
+  qtrt.UniverseFree(this)
+}
 func NewQItemSelectionModel(args ...interface{}) *QItemSelectionModel {
   // QItemSelectionModel(class QAbstractItemModel *, class QObject *)
   // QItemSelectionModel(class QAbstractItemModel *)
@@ -1073,7 +1099,9 @@ func NewQItemSelectionModel(args ...interface{}) *QItemSelectionModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionModelC2EP18QAbstractItemModelP7QObject(arg0, arg1)
-    return &QItemSelectionModel{Qclsinst:qthis}
+    this := &QItemSelectionModel{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQItemSelectionModel)
+    return this
   case 1:
     // invoke: _ZN19QItemSelectionModelC1EP18QAbstractItemModel
     // invoke: void QItemSelectionModel(class QAbstractItemModel *)
@@ -1082,7 +1110,9 @@ func NewQItemSelectionModel(args ...interface{}) *QItemSelectionModel {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QItemSelectionModelC2EP18QAbstractItemModel(arg0)
-    return &QItemSelectionModel{Qclsinst:qthis}
+    this := &QItemSelectionModel{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQItemSelectionModel)
+    return this
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "QItemSelectionModel", args)
   }
@@ -1091,7 +1121,7 @@ func NewQItemSelectionModel(args ...interface{}) *QItemSelectionModel {
 }
 
 // clearCurrentIndex()
-func (this *QItemSelectionModel) Clearcurrentindex(args ...interface{}) () {
+func (this *QItemSelectionModel) ClearCurrentIndex(args ...interface{}) () {
   // clearCurrentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1112,7 +1142,7 @@ func (this *QItemSelectionModel) Clearcurrentindex(args ...interface{}) () {
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QItemSelectionModel) Setmodel(args ...interface{}) () {
+func (this *QItemSelectionModel) SetModel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1136,7 +1166,7 @@ func (this *QItemSelectionModel) Setmodel(args ...interface{}) () {
 }
 
 // isRowSelected(int, const class QModelIndex &)
-func (this *QItemSelectionModel) Isrowselected(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) IsRowSelected(args ...interface{}) (ret interface{}) {
   // isRowSelected(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1192,7 +1222,7 @@ func (this *QItemSelectionModel) Reset(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QItemSelectionModel) Metaobject(args ...interface{}) () {
+func (this *QItemSelectionModel) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1234,7 +1264,7 @@ func (this *QItemSelectionModel) Clear(args ...interface{}) () {
 }
 
 // selectedIndexes()
-func (this *QItemSelectionModel) Selectedindexes(args ...interface{}) () {
+func (this *QItemSelectionModel) SelectedIndexes(args ...interface{}) () {
   // selectedIndexes()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1255,7 +1285,7 @@ func (this *QItemSelectionModel) Selectedindexes(args ...interface{}) () {
 }
 
 // columnIntersectsSelection(int, const class QModelIndex &)
-func (this *QItemSelectionModel) Columnintersectsselection(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) ColumnIntersectsSelection(args ...interface{}) (ret interface{}) {
   // columnIntersectsSelection(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1290,7 +1320,7 @@ func (this *QItemSelectionModel) Columnintersectsselection(args ...interface{}) 
 }
 
 // currentIndex()
-func (this *QItemSelectionModel) Currentindex(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) CurrentIndex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1319,7 +1349,7 @@ func (this *QItemSelectionModel) Currentindex(args ...interface{}) (ret interfac
 }
 
 // selectedRows(int)
-func (this *QItemSelectionModel) Selectedrows(args ...interface{}) () {
+func (this *QItemSelectionModel) SelectedRows(args ...interface{}) () {
   // selectedRows(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1364,7 +1394,7 @@ func (this *QItemSelectionModel) Model(args ...interface{}) () {
 }
 
 // hasSelection()
-func (this *QItemSelectionModel) Hasselection(args ...interface{}) (ret interface{}) {
+func (this *QItemSelectionModel) HasSelection(args ...interface{}) (ret interface{}) {
   // hasSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

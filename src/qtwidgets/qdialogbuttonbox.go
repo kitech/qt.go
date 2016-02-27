@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qdialogbuttonbox.h
 // dst-file: /src/widgets/qdialogbuttonbox.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -66,6 +67,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDialogButtonBox)=1
@@ -100,7 +102,7 @@ func (this *QDialogButtonBox) Orientation(args ...interface{}) () {
 }
 
 // centerButtons()
-func (this *QDialogButtonBox) Centerbuttons(args ...interface{}) (ret interface{}) {
+func (this *QDialogButtonBox) CenterButtons(args ...interface{}) (ret interface{}) {
   // centerButtons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -129,7 +131,7 @@ func (this *QDialogButtonBox) Centerbuttons(args ...interface{}) (ret interface{
 }
 
 // setCenterButtons(_Bool)
-func (this *QDialogButtonBox) Setcenterbuttons(args ...interface{}) () {
+func (this *QDialogButtonBox) SetCenterButtons(args ...interface{}) () {
   // setCenterButtons(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -153,7 +155,7 @@ func (this *QDialogButtonBox) Setcenterbuttons(args ...interface{}) () {
 }
 
 // removeButton(class QAbstractButton *)
-func (this *QDialogButtonBox) Removebutton(args ...interface{}) () {
+func (this *QDialogButtonBox) RemoveButton(args ...interface{}) () {
   // removeButton(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -177,6 +179,9 @@ func (this *QDialogButtonBox) Removebutton(args ...interface{}) () {
 }
 
 // QDialogButtonBox(class QWidget *)
+func GcfreeQDialogButtonBox(this *QDialogButtonBox) {
+  qtrt.UniverseFree(this)
+}
 func NewQDialogButtonBox(args ...interface{}) *QDialogButtonBox {
   // QDialogButtonBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -195,7 +200,9 @@ func NewQDialogButtonBox(args ...interface{}) *QDialogButtonBox {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QDialogButtonBoxC2EP7QWidget(arg0)
-    return &QDialogButtonBox{Qclsinst:qthis}
+    this := &QDialogButtonBox{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDialogButtonBox)
+    return this
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "QDialogButtonBox", args)
   }
@@ -204,7 +211,7 @@ func NewQDialogButtonBox(args ...interface{}) *QDialogButtonBox {
 }
 
 // buttonRole(class QAbstractButton *)
-func (this *QDialogButtonBox) Buttonrole(args ...interface{}) () {
+func (this *QDialogButtonBox) ButtonRole(args ...interface{}) () {
   // buttonRole(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -249,7 +256,7 @@ func (this *QDialogButtonBox) Buttons(args ...interface{}) () {
 }
 
 // ~QDialogButtonBox()
-func (this *QDialogButtonBox) Freeqdialogbuttonbox(args ...interface{}) () {
+func (this *QDialogButtonBox) Free(args ...interface{}) () {
   // ~QDialogButtonBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -261,7 +268,10 @@ func (this *QDialogButtonBox) Freeqdialogbuttonbox(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QDialogButtonBoxD0Ev
     // invoke: void ~QDialogButtonBox()
-    C.C_ZN16QDialogButtonBoxD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN16QDialogButtonBoxD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "~QDialogButtonBox", args)
   }
@@ -270,7 +280,7 @@ func (this *QDialogButtonBox) Freeqdialogbuttonbox(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QDialogButtonBox) Metaobject(args ...interface{}) () {
+func (this *QDialogButtonBox) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -291,7 +301,7 @@ func (this *QDialogButtonBox) Metaobject(args ...interface{}) () {
 }
 
 // standardButtons()
-func (this *QDialogButtonBox) Standardbuttons(args ...interface{}) () {
+func (this *QDialogButtonBox) StandardButtons(args ...interface{}) () {
   // standardButtons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -333,7 +343,7 @@ func (this *QDialogButtonBox) Clear(args ...interface{}) () {
 }
 
 // standardButton(class QAbstractButton *)
-func (this *QDialogButtonBox) Standardbutton(args ...interface{}) () {
+func (this *QDialogButtonBox) StandardButton(args ...interface{}) () {
   // standardButton(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

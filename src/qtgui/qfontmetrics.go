@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qfontmetrics.h
 // dst-file: /src/gui/qfontmetrics.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -168,6 +169,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFontMetrics)=1
@@ -183,7 +185,7 @@ type QFontMetricsF struct {
 }
 
 // ~QFontMetrics()
-func (this *QFontMetrics) Freeqfontmetrics(args ...interface{}) () {
+func (this *QFontMetrics) Free(args ...interface{}) () {
   // ~QFontMetrics()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -195,7 +197,10 @@ func (this *QFontMetrics) Freeqfontmetrics(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QFontMetricsD0Ev
     // invoke: void ~QFontMetrics()
-    C.C_ZN12QFontMetricsD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QFontMetricsD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFontMetrics", "~QFontMetrics", args)
   }
@@ -303,7 +308,7 @@ func (this *QFontMetrics) Size(args ...interface{}) (ret interface{}) {
 }
 
 // leftBearing(class QChar)
-func (this *QFontMetrics) Leftbearing(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) LeftBearing(args ...interface{}) (ret interface{}) {
   // leftBearing(class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -335,7 +340,7 @@ func (this *QFontMetrics) Leftbearing(args ...interface{}) (ret interface{}) {
 }
 
 // minRightBearing()
-func (this *QFontMetrics) Minrightbearing(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) MinRightBearing(args ...interface{}) (ret interface{}) {
   // minRightBearing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -364,7 +369,7 @@ func (this *QFontMetrics) Minrightbearing(args ...interface{}) (ret interface{})
 }
 
 // boundingRect(int, int, int, int, int, const class QString &, int, int *)
-func (this *QFontMetrics) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect(int, int, int, int, int, const class QString &, int, int *)
   // boundingRect(const class QRect &, int, const class QString &, int, int *)
   // boundingRect(class QChar)
@@ -480,6 +485,9 @@ func (this *QFontMetrics) Boundingrect(args ...interface{}) (ret interface{}) {
 }
 
 // QFontMetrics(const class QFont &)
+func GcfreeQFontMetrics(this *QFontMetrics) {
+  qtrt.UniverseFree(this)
+}
 func NewQFontMetrics(args ...interface{}) *QFontMetrics {
   // QFontMetrics(const class QFont &)
   // QFontMetrics(const class QFont &, class QPaintDevice *)
@@ -505,7 +513,9 @@ func NewQFontMetrics(args ...interface{}) *QFontMetrics {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QFontMetricsC2ERK5QFont(arg0)
-    return &QFontMetrics{Qclsinst:qthis}
+    this := &QFontMetrics{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFontMetrics)
+    return this
   case 1:
     // invoke: _ZN12QFontMetricsC1ERK5QFontP12QPaintDevice
     // invoke: void QFontMetrics(const class QFont &, class QPaintDevice *)
@@ -516,7 +526,9 @@ func NewQFontMetrics(args ...interface{}) *QFontMetrics {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QFontMetricsC2ERK5QFontP12QPaintDevice(arg0, arg1)
-    return &QFontMetrics{Qclsinst:qthis}
+    this := &QFontMetrics{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFontMetrics)
+    return this
   case 2:
     // invoke: _ZN12QFontMetricsC1ERKS_
     // invoke: void QFontMetrics(const class QFontMetrics &)
@@ -525,7 +537,9 @@ func NewQFontMetrics(args ...interface{}) *QFontMetrics {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QFontMetricsC2ERKS_(arg0)
-    return &QFontMetrics{Qclsinst:qthis}
+    this := &QFontMetrics{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFontMetrics)
+    return this
   default:
     qtrt.ErrorResolve("QFontMetrics", "QFontMetrics", args)
   }
@@ -563,7 +577,7 @@ func (this *QFontMetrics) Leading(args ...interface{}) (ret interface{}) {
 }
 
 // tightBoundingRect(const class QString &)
-func (this *QFontMetrics) Tightboundingrect(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) TightBoundingRect(args ...interface{}) (ret interface{}) {
   // tightBoundingRect(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -694,7 +708,7 @@ func (this *QFontMetrics) Swap(args ...interface{}) () {
 }
 
 // lineSpacing()
-func (this *QFontMetrics) Linespacing(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) LineSpacing(args ...interface{}) (ret interface{}) {
   // lineSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -723,7 +737,7 @@ func (this *QFontMetrics) Linespacing(args ...interface{}) (ret interface{}) {
 }
 
 // underlinePos()
-func (this *QFontMetrics) Underlinepos(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) UnderlinePos(args ...interface{}) (ret interface{}) {
   // underlinePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -752,7 +766,7 @@ func (this *QFontMetrics) Underlinepos(args ...interface{}) (ret interface{}) {
 }
 
 // charWidth(const class QString &, int)
-func (this *QFontMetrics) Charwidth(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) CharWidth(args ...interface{}) (ret interface{}) {
   // charWidth(const class QString &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -787,7 +801,7 @@ func (this *QFontMetrics) Charwidth(args ...interface{}) (ret interface{}) {
 }
 
 // maxWidth()
-func (this *QFontMetrics) Maxwidth(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) MaxWidth(args ...interface{}) (ret interface{}) {
   // maxWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -816,7 +830,7 @@ func (this *QFontMetrics) Maxwidth(args ...interface{}) (ret interface{}) {
 }
 
 // minLeftBearing()
-func (this *QFontMetrics) Minleftbearing(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) MinLeftBearing(args ...interface{}) (ret interface{}) {
   // minLeftBearing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -845,7 +859,7 @@ func (this *QFontMetrics) Minleftbearing(args ...interface{}) (ret interface{}) 
 }
 
 // inFont(class QChar)
-func (this *QFontMetrics) Infont(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) InFont(args ...interface{}) (ret interface{}) {
   // inFont(class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -906,7 +920,7 @@ func (this *QFontMetrics) Descent(args ...interface{}) (ret interface{}) {
 }
 
 // averageCharWidth()
-func (this *QFontMetrics) Averagecharwidth(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) AverageCharWidth(args ...interface{}) (ret interface{}) {
   // averageCharWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -935,7 +949,7 @@ func (this *QFontMetrics) Averagecharwidth(args ...interface{}) (ret interface{}
 }
 
 // overlinePos()
-func (this *QFontMetrics) Overlinepos(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) OverlinePos(args ...interface{}) (ret interface{}) {
   // overlinePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -964,7 +978,7 @@ func (this *QFontMetrics) Overlinepos(args ...interface{}) (ret interface{}) {
 }
 
 // strikeOutPos()
-func (this *QFontMetrics) Strikeoutpos(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) StrikeOutPos(args ...interface{}) (ret interface{}) {
   // strikeOutPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -993,7 +1007,7 @@ func (this *QFontMetrics) Strikeoutpos(args ...interface{}) (ret interface{}) {
 }
 
 // xHeight()
-func (this *QFontMetrics) Xheight(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) XHeight(args ...interface{}) (ret interface{}) {
   // xHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1022,7 +1036,7 @@ func (this *QFontMetrics) Xheight(args ...interface{}) (ret interface{}) {
 }
 
 // inFontUcs4(uint)
-func (this *QFontMetrics) Infontucs4(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) InFontUcs4(args ...interface{}) (ret interface{}) {
   // inFontUcs4(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1054,7 +1068,7 @@ func (this *QFontMetrics) Infontucs4(args ...interface{}) (ret interface{}) {
 }
 
 // lineWidth()
-func (this *QFontMetrics) Linewidth(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) LineWidth(args ...interface{}) (ret interface{}) {
   // lineWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1083,7 +1097,7 @@ func (this *QFontMetrics) Linewidth(args ...interface{}) (ret interface{}) {
 }
 
 // rightBearing(class QChar)
-func (this *QFontMetrics) Rightbearing(args ...interface{}) (ret interface{}) {
+func (this *QFontMetrics) RightBearing(args ...interface{}) (ret interface{}) {
   // rightBearing(class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1115,7 +1129,7 @@ func (this *QFontMetrics) Rightbearing(args ...interface{}) (ret interface{}) {
 }
 
 // boundingRect(const class QString &)
-func (this *QFontMetricsF) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect(const class QString &)
   // boundingRect(const class QRectF &, int, const class QString &, int, int *)
   // boundingRect(class QChar)
@@ -1292,7 +1306,7 @@ func (this *QFontMetricsF) Size(args ...interface{}) (ret interface{}) {
 }
 
 // leftBearing(class QChar)
-func (this *QFontMetricsF) Leftbearing(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) LeftBearing(args ...interface{}) (ret interface{}) {
   // leftBearing(class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1324,7 +1338,7 @@ func (this *QFontMetricsF) Leftbearing(args ...interface{}) (ret interface{}) {
 }
 
 // minRightBearing()
-func (this *QFontMetricsF) Minrightbearing(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) MinRightBearing(args ...interface{}) (ret interface{}) {
   // minRightBearing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1382,7 +1396,7 @@ func (this *QFontMetricsF) Descent(args ...interface{}) (ret interface{}) {
 }
 
 // ~QFontMetricsF()
-func (this *QFontMetricsF) Freeqfontmetricsf(args ...interface{}) () {
+func (this *QFontMetricsF) Free(args ...interface{}) () {
   // ~QFontMetricsF()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1394,7 +1408,10 @@ func (this *QFontMetricsF) Freeqfontmetricsf(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QFontMetricsFD0Ev
     // invoke: void ~QFontMetricsF()
-    C.C_ZN13QFontMetricsFD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QFontMetricsFD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFontMetricsF", "~QFontMetricsF", args)
   }
@@ -1403,7 +1420,7 @@ func (this *QFontMetricsF) Freeqfontmetricsf(args ...interface{}) () {
 }
 
 // tightBoundingRect(const class QString &)
-func (this *QFontMetricsF) Tightboundingrect(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) TightBoundingRect(args ...interface{}) (ret interface{}) {
   // tightBoundingRect(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1508,7 +1525,7 @@ func (this *QFontMetricsF) Swap(args ...interface{}) () {
 }
 
 // lineSpacing()
-func (this *QFontMetricsF) Linespacing(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) LineSpacing(args ...interface{}) (ret interface{}) {
   // lineSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1537,6 +1554,9 @@ func (this *QFontMetricsF) Linespacing(args ...interface{}) (ret interface{}) {
 }
 
 // QFontMetricsF(const class QFont &)
+func GcfreeQFontMetricsF(this *QFontMetricsF) {
+  qtrt.UniverseFree(this)
+}
 func NewQFontMetricsF(args ...interface{}) *QFontMetricsF {
   // QFontMetricsF(const class QFont &)
   // QFontMetricsF(const class QFontMetrics &)
@@ -1565,7 +1585,9 @@ func NewQFontMetricsF(args ...interface{}) *QFontMetricsF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QFontMetricsFC2ERK5QFont(arg0)
-    return &QFontMetricsF{Qclsinst:qthis}
+    this := &QFontMetricsF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFontMetricsF)
+    return this
   case 1:
     // invoke: _ZN13QFontMetricsFC1ERK12QFontMetrics
     // invoke: void QFontMetricsF(const class QFontMetrics &)
@@ -1574,7 +1596,9 @@ func NewQFontMetricsF(args ...interface{}) *QFontMetricsF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QFontMetricsFC2ERK12QFontMetrics(arg0)
-    return &QFontMetricsF{Qclsinst:qthis}
+    this := &QFontMetricsF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFontMetricsF)
+    return this
   case 2:
     // invoke: _ZN13QFontMetricsFC1ERK5QFontP12QPaintDevice
     // invoke: void QFontMetricsF(const class QFont &, class QPaintDevice *)
@@ -1585,7 +1609,9 @@ func NewQFontMetricsF(args ...interface{}) *QFontMetricsF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QFontMetricsFC2ERK5QFontP12QPaintDevice(arg0, arg1)
-    return &QFontMetricsF{Qclsinst:qthis}
+    this := &QFontMetricsF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFontMetricsF)
+    return this
   case 3:
     // invoke: _ZN13QFontMetricsFC1ERKS_
     // invoke: void QFontMetricsF(const class QFontMetricsF &)
@@ -1594,7 +1620,9 @@ func NewQFontMetricsF(args ...interface{}) *QFontMetricsF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QFontMetricsFC2ERKS_(arg0)
-    return &QFontMetricsF{Qclsinst:qthis}
+    this := &QFontMetricsF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFontMetricsF)
+    return this
   default:
     qtrt.ErrorResolve("QFontMetricsF", "QFontMetricsF", args)
   }
@@ -1603,7 +1631,7 @@ func NewQFontMetricsF(args ...interface{}) *QFontMetricsF {
 }
 
 // underlinePos()
-func (this *QFontMetricsF) Underlinepos(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) UnderlinePos(args ...interface{}) (ret interface{}) {
   // underlinePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1632,7 +1660,7 @@ func (this *QFontMetricsF) Underlinepos(args ...interface{}) (ret interface{}) {
 }
 
 // maxWidth()
-func (this *QFontMetricsF) Maxwidth(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) MaxWidth(args ...interface{}) (ret interface{}) {
   // maxWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1661,7 +1689,7 @@ func (this *QFontMetricsF) Maxwidth(args ...interface{}) (ret interface{}) {
 }
 
 // minLeftBearing()
-func (this *QFontMetricsF) Minleftbearing(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) MinLeftBearing(args ...interface{}) (ret interface{}) {
   // minLeftBearing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1690,7 +1718,7 @@ func (this *QFontMetricsF) Minleftbearing(args ...interface{}) (ret interface{})
 }
 
 // inFont(class QChar)
-func (this *QFontMetricsF) Infont(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) InFont(args ...interface{}) (ret interface{}) {
   // inFont(class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1722,7 +1750,7 @@ func (this *QFontMetricsF) Infont(args ...interface{}) (ret interface{}) {
 }
 
 // averageCharWidth()
-func (this *QFontMetricsF) Averagecharwidth(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) AverageCharWidth(args ...interface{}) (ret interface{}) {
   // averageCharWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1751,7 +1779,7 @@ func (this *QFontMetricsF) Averagecharwidth(args ...interface{}) (ret interface{
 }
 
 // overlinePos()
-func (this *QFontMetricsF) Overlinepos(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) OverlinePos(args ...interface{}) (ret interface{}) {
   // overlinePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1780,7 +1808,7 @@ func (this *QFontMetricsF) Overlinepos(args ...interface{}) (ret interface{}) {
 }
 
 // strikeOutPos()
-func (this *QFontMetricsF) Strikeoutpos(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) StrikeOutPos(args ...interface{}) (ret interface{}) {
   // strikeOutPos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1809,7 +1837,7 @@ func (this *QFontMetricsF) Strikeoutpos(args ...interface{}) (ret interface{}) {
 }
 
 // xHeight()
-func (this *QFontMetricsF) Xheight(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) XHeight(args ...interface{}) (ret interface{}) {
   // xHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1867,7 +1895,7 @@ func (this *QFontMetricsF) Leading(args ...interface{}) (ret interface{}) {
 }
 
 // inFontUcs4(uint)
-func (this *QFontMetricsF) Infontucs4(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) InFontUcs4(args ...interface{}) (ret interface{}) {
   // inFontUcs4(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1899,7 +1927,7 @@ func (this *QFontMetricsF) Infontucs4(args ...interface{}) (ret interface{}) {
 }
 
 // lineWidth()
-func (this *QFontMetricsF) Linewidth(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) LineWidth(args ...interface{}) (ret interface{}) {
   // lineWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1928,7 +1956,7 @@ func (this *QFontMetricsF) Linewidth(args ...interface{}) (ret interface{}) {
 }
 
 // rightBearing(class QChar)
-func (this *QFontMetricsF) Rightbearing(args ...interface{}) (ret interface{}) {
+func (this *QFontMetricsF) RightBearing(args ...interface{}) (ret interface{}) {
   // rightBearing(class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

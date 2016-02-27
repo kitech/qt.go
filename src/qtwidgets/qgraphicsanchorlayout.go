@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qgraphicsanchorlayout.h
 // dst-file: /src/widgets/qgraphicsanchorlayout.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -78,6 +79,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsAnchorLayout)=1
@@ -93,7 +95,7 @@ type QGraphicsAnchor struct {
 }
 
 // setSpacing(qreal)
-func (this *QGraphicsAnchorLayout) Setspacing(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) SetSpacing(args ...interface{}) () {
   // setSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,7 +119,7 @@ func (this *QGraphicsAnchorLayout) Setspacing(args ...interface{}) () {
 }
 
 // ~QGraphicsAnchorLayout()
-func (this *QGraphicsAnchorLayout) Freeqgraphicsanchorlayout(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) Free(args ...interface{}) () {
   // ~QGraphicsAnchorLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -129,7 +131,10 @@ func (this *QGraphicsAnchorLayout) Freeqgraphicsanchorlayout(args ...interface{}
   case 0:
     // invoke: _ZN21QGraphicsAnchorLayoutD0Ev
     // invoke: void ~QGraphicsAnchorLayout()
-    C.C_ZN21QGraphicsAnchorLayoutD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN21QGraphicsAnchorLayoutD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "~QGraphicsAnchorLayout", args)
   }
@@ -138,7 +143,7 @@ func (this *QGraphicsAnchorLayout) Freeqgraphicsanchorlayout(args ...interface{}
 }
 
 // itemAt(int)
-func (this *QGraphicsAnchorLayout) Itemat(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) ItemAt(args ...interface{}) () {
   // itemAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,7 +167,7 @@ func (this *QGraphicsAnchorLayout) Itemat(args ...interface{}) () {
 }
 
 // horizontalSpacing()
-func (this *QGraphicsAnchorLayout) Horizontalspacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsAnchorLayout) HorizontalSpacing(args ...interface{}) (ret interface{}) {
   // horizontalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -191,7 +196,7 @@ func (this *QGraphicsAnchorLayout) Horizontalspacing(args ...interface{}) (ret i
 }
 
 // setGeometry(const class QRectF &)
-func (this *QGraphicsAnchorLayout) Setgeometry(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) SetGeometry(args ...interface{}) () {
   // setGeometry(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -265,7 +270,7 @@ func (this *QGraphicsAnchorLayout) Count(args ...interface{}) (ret interface{}) 
 }
 
 // setVerticalSpacing(qreal)
-func (this *QGraphicsAnchorLayout) Setverticalspacing(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) SetVerticalSpacing(args ...interface{}) () {
   // setVerticalSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -289,7 +294,7 @@ func (this *QGraphicsAnchorLayout) Setverticalspacing(args ...interface{}) () {
 }
 
 // verticalSpacing()
-func (this *QGraphicsAnchorLayout) Verticalspacing(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsAnchorLayout) VerticalSpacing(args ...interface{}) (ret interface{}) {
   // verticalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -318,7 +323,7 @@ func (this *QGraphicsAnchorLayout) Verticalspacing(args ...interface{}) (ret int
 }
 
 // removeAt(int)
-func (this *QGraphicsAnchorLayout) Removeat(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) RemoveAt(args ...interface{}) () {
   // removeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -342,6 +347,9 @@ func (this *QGraphicsAnchorLayout) Removeat(args ...interface{}) () {
 }
 
 // QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
+func GcfreeQGraphicsAnchorLayout(this *QGraphicsAnchorLayout) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsAnchorLayout(args ...interface{}) *QGraphicsAnchorLayout {
   // QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -360,7 +368,9 @@ func NewQGraphicsAnchorLayout(args ...interface{}) *QGraphicsAnchorLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem(arg0)
-    return &QGraphicsAnchorLayout{Qclsinst:qthis}
+    this := &QGraphicsAnchorLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsAnchorLayout)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "QGraphicsAnchorLayout", args)
   }
@@ -369,7 +379,7 @@ func NewQGraphicsAnchorLayout(args ...interface{}) *QGraphicsAnchorLayout {
 }
 
 // setHorizontalSpacing(qreal)
-func (this *QGraphicsAnchorLayout) Sethorizontalspacing(args ...interface{}) () {
+func (this *QGraphicsAnchorLayout) SetHorizontalSpacing(args ...interface{}) () {
   // setHorizontalSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -393,7 +403,7 @@ func (this *QGraphicsAnchorLayout) Sethorizontalspacing(args ...interface{}) () 
 }
 
 // setSpacing(qreal)
-func (this *QGraphicsAnchor) Setspacing(args ...interface{}) () {
+func (this *QGraphicsAnchor) SetSpacing(args ...interface{}) () {
   // setSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -417,7 +427,7 @@ func (this *QGraphicsAnchor) Setspacing(args ...interface{}) () {
 }
 
 // sizePolicy()
-func (this *QGraphicsAnchor) Sizepolicy(args ...interface{}) () {
+func (this *QGraphicsAnchor) SizePolicy(args ...interface{}) () {
   // sizePolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -438,7 +448,7 @@ func (this *QGraphicsAnchor) Sizepolicy(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QGraphicsAnchor) Metaobject(args ...interface{}) () {
+func (this *QGraphicsAnchor) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -488,7 +498,7 @@ func (this *QGraphicsAnchor) Spacing(args ...interface{}) (ret interface{}) {
 }
 
 // unsetSpacing()
-func (this *QGraphicsAnchor) Unsetspacing(args ...interface{}) () {
+func (this *QGraphicsAnchor) UnsetSpacing(args ...interface{}) () {
   // unsetSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -509,7 +519,7 @@ func (this *QGraphicsAnchor) Unsetspacing(args ...interface{}) () {
 }
 
 // ~QGraphicsAnchor()
-func (this *QGraphicsAnchor) Freeqgraphicsanchor(args ...interface{}) () {
+func (this *QGraphicsAnchor) Free(args ...interface{}) () {
   // ~QGraphicsAnchor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -521,7 +531,10 @@ func (this *QGraphicsAnchor) Freeqgraphicsanchor(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsAnchorD0Ev
     // invoke: void ~QGraphicsAnchor()
-    C.C_ZN15QGraphicsAnchorD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QGraphicsAnchorD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsAnchor", "~QGraphicsAnchor", args)
   }

@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qtreeview.h
 // dst-file: /src/widgets/qtreeview.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -166,6 +167,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTreeView)=1
@@ -177,7 +179,7 @@ type QTreeView struct {
 }
 
 // keyboardSearch(const class QString &)
-func (this *QTreeView) Keyboardsearch(args ...interface{}) () {
+func (this *QTreeView) KeyboardSearch(args ...interface{}) () {
   // keyboardSearch(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -201,7 +203,7 @@ func (this *QTreeView) Keyboardsearch(args ...interface{}) () {
 }
 
 // setColumnWidth(int, int)
-func (this *QTreeView) Setcolumnwidth(args ...interface{}) () {
+func (this *QTreeView) SetColumnWidth(args ...interface{}) () {
   // setColumnWidth(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -228,6 +230,9 @@ func (this *QTreeView) Setcolumnwidth(args ...interface{}) () {
 }
 
 // QTreeView(class QWidget *)
+func GcfreeQTreeView(this *QTreeView) {
+  qtrt.UniverseFree(this)
+}
 func NewQTreeView(args ...interface{}) *QTreeView {
   // QTreeView(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -246,7 +251,9 @@ func NewQTreeView(args ...interface{}) *QTreeView {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTreeViewC2EP7QWidget(arg0)
-    return &QTreeView{Qclsinst:qthis}
+    this := &QTreeView{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTreeView)
+    return this
   default:
     qtrt.ErrorResolve("QTreeView", "QTreeView", args)
   }
@@ -255,7 +262,7 @@ func NewQTreeView(args ...interface{}) *QTreeView {
 }
 
 // setHeaderHidden(_Bool)
-func (this *QTreeView) Setheaderhidden(args ...interface{}) () {
+func (this *QTreeView) SetHeaderHidden(args ...interface{}) () {
   // setHeaderHidden(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -279,7 +286,7 @@ func (this *QTreeView) Setheaderhidden(args ...interface{}) () {
 }
 
 // expandsOnDoubleClick()
-func (this *QTreeView) Expandsondoubleclick(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) ExpandsOnDoubleClick(args ...interface{}) (ret interface{}) {
   // expandsOnDoubleClick()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -308,7 +315,7 @@ func (this *QTreeView) Expandsondoubleclick(args ...interface{}) (ret interface{
 }
 
 // isExpanded(const class QModelIndex &)
-func (this *QTreeView) Isexpanded(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) IsExpanded(args ...interface{}) (ret interface{}) {
   // isExpanded(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -340,7 +347,7 @@ func (this *QTreeView) Isexpanded(args ...interface{}) (ret interface{}) {
 }
 
 // setFirstColumnSpanned(int, const class QModelIndex &, _Bool)
-func (this *QTreeView) Setfirstcolumnspanned(args ...interface{}) () {
+func (this *QTreeView) SetFirstColumnSpanned(args ...interface{}) () {
   // setFirstColumnSpanned(int, const class QModelIndex &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -370,7 +377,7 @@ func (this *QTreeView) Setfirstcolumnspanned(args ...interface{}) () {
 }
 
 // resetIndentation()
-func (this *QTreeView) Resetindentation(args ...interface{}) () {
+func (this *QTreeView) ResetIndentation(args ...interface{}) () {
   // resetIndentation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -391,7 +398,7 @@ func (this *QTreeView) Resetindentation(args ...interface{}) () {
 }
 
 // indexAbove(const class QModelIndex &)
-func (this *QTreeView) Indexabove(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) IndexAbove(args ...interface{}) (ret interface{}) {
   // indexAbove(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -423,7 +430,7 @@ func (this *QTreeView) Indexabove(args ...interface{}) (ret interface{}) {
 }
 
 // uniformRowHeights()
-func (this *QTreeView) Uniformrowheights(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) UniformRowHeights(args ...interface{}) (ret interface{}) {
   // uniformRowHeights()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -452,7 +459,7 @@ func (this *QTreeView) Uniformrowheights(args ...interface{}) (ret interface{}) 
 }
 
 // setRootIsDecorated(_Bool)
-func (this *QTreeView) Setrootisdecorated(args ...interface{}) () {
+func (this *QTreeView) SetRootIsDecorated(args ...interface{}) () {
   // setRootIsDecorated(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -476,7 +483,7 @@ func (this *QTreeView) Setrootisdecorated(args ...interface{}) () {
 }
 
 // setSelectionModel(class QItemSelectionModel *)
-func (this *QTreeView) Setselectionmodel(args ...interface{}) () {
+func (this *QTreeView) SetSelectionModel(args ...interface{}) () {
   // setSelectionModel(class QItemSelectionModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -500,7 +507,7 @@ func (this *QTreeView) Setselectionmodel(args ...interface{}) () {
 }
 
 // setExpandsOnDoubleClick(_Bool)
-func (this *QTreeView) Setexpandsondoubleclick(args ...interface{}) () {
+func (this *QTreeView) SetExpandsOnDoubleClick(args ...interface{}) () {
   // setExpandsOnDoubleClick(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -524,7 +531,7 @@ func (this *QTreeView) Setexpandsondoubleclick(args ...interface{}) () {
 }
 
 // isFirstColumnSpanned(int, const class QModelIndex &)
-func (this *QTreeView) Isfirstcolumnspanned(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) IsFirstColumnSpanned(args ...interface{}) (ret interface{}) {
   // isFirstColumnSpanned(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -559,7 +566,7 @@ func (this *QTreeView) Isfirstcolumnspanned(args ...interface{}) (ret interface{
 }
 
 // metaObject()
-func (this *QTreeView) Metaobject(args ...interface{}) () {
+func (this *QTreeView) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -609,7 +616,7 @@ func (this *QTreeView) Header(args ...interface{}) (ret interface{}) {
 }
 
 // doItemsLayout()
-func (this *QTreeView) Doitemslayout(args ...interface{}) () {
+func (this *QTreeView) DoItemsLayout(args ...interface{}) () {
   // doItemsLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -630,7 +637,7 @@ func (this *QTreeView) Doitemslayout(args ...interface{}) () {
 }
 
 // resizeColumnToContents(int)
-func (this *QTreeView) Resizecolumntocontents(args ...interface{}) () {
+func (this *QTreeView) ResizeColumnToContents(args ...interface{}) () {
   // resizeColumnToContents(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -654,7 +661,7 @@ func (this *QTreeView) Resizecolumntocontents(args ...interface{}) () {
 }
 
 // columnAt(int)
-func (this *QTreeView) Columnat(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) ColumnAt(args ...interface{}) (ret interface{}) {
   // columnAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -686,7 +693,7 @@ func (this *QTreeView) Columnat(args ...interface{}) (ret interface{}) {
 }
 
 // setAllColumnsShowFocus(_Bool)
-func (this *QTreeView) Setallcolumnsshowfocus(args ...interface{}) () {
+func (this *QTreeView) SetAllColumnsShowFocus(args ...interface{}) () {
   // setAllColumnsShowFocus(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -710,7 +717,7 @@ func (this *QTreeView) Setallcolumnsshowfocus(args ...interface{}) () {
 }
 
 // showColumn(int)
-func (this *QTreeView) Showcolumn(args ...interface{}) () {
+func (this *QTreeView) ShowColumn(args ...interface{}) () {
   // showColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -734,7 +741,7 @@ func (this *QTreeView) Showcolumn(args ...interface{}) () {
 }
 
 // setExpanded(const class QModelIndex &, _Bool)
-func (this *QTreeView) Setexpanded(args ...interface{}) () {
+func (this *QTreeView) SetExpanded(args ...interface{}) () {
   // setExpanded(const class QModelIndex &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -761,7 +768,7 @@ func (this *QTreeView) Setexpanded(args ...interface{}) () {
 }
 
 // setRowHidden(int, const class QModelIndex &, _Bool)
-func (this *QTreeView) Setrowhidden(args ...interface{}) () {
+func (this *QTreeView) SetRowHidden(args ...interface{}) () {
   // setRowHidden(int, const class QModelIndex &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -791,7 +798,7 @@ func (this *QTreeView) Setrowhidden(args ...interface{}) () {
 }
 
 // itemsExpandable()
-func (this *QTreeView) Itemsexpandable(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) ItemsExpandable(args ...interface{}) (ret interface{}) {
   // itemsExpandable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -820,7 +827,7 @@ func (this *QTreeView) Itemsexpandable(args ...interface{}) (ret interface{}) {
 }
 
 // isHeaderHidden()
-func (this *QTreeView) Isheaderhidden(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) IsHeaderHidden(args ...interface{}) (ret interface{}) {
   // isHeaderHidden()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -849,7 +856,7 @@ func (this *QTreeView) Isheaderhidden(args ...interface{}) (ret interface{}) {
 }
 
 // setUniformRowHeights(_Bool)
-func (this *QTreeView) Setuniformrowheights(args ...interface{}) () {
+func (this *QTreeView) SetUniformRowHeights(args ...interface{}) () {
   // setUniformRowHeights(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -873,7 +880,7 @@ func (this *QTreeView) Setuniformrowheights(args ...interface{}) () {
 }
 
 // sortByColumn(int)
-func (this *QTreeView) Sortbycolumn(args ...interface{}) () {
+func (this *QTreeView) SortByColumn(args ...interface{}) () {
   // sortByColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -926,7 +933,7 @@ func (this *QTreeView) Indentation(args ...interface{}) (ret interface{}) {
 }
 
 // selectAll()
-func (this *QTreeView) Selectall(args ...interface{}) () {
+func (this *QTreeView) SelectAll(args ...interface{}) () {
   // selectAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -947,7 +954,7 @@ func (this *QTreeView) Selectall(args ...interface{}) () {
 }
 
 // setTreePosition(int)
-func (this *QTreeView) Settreeposition(args ...interface{}) () {
+func (this *QTreeView) SetTreePosition(args ...interface{}) () {
   // setTreePosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -971,7 +978,7 @@ func (this *QTreeView) Settreeposition(args ...interface{}) () {
 }
 
 // autoExpandDelay()
-func (this *QTreeView) Autoexpanddelay(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) AutoExpandDelay(args ...interface{}) (ret interface{}) {
   // autoExpandDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1000,7 +1007,7 @@ func (this *QTreeView) Autoexpanddelay(args ...interface{}) (ret interface{}) {
 }
 
 // allColumnsShowFocus()
-func (this *QTreeView) Allcolumnsshowfocus(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) AllColumnsShowFocus(args ...interface{}) (ret interface{}) {
   // allColumnsShowFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1029,7 +1036,7 @@ func (this *QTreeView) Allcolumnsshowfocus(args ...interface{}) (ret interface{}
 }
 
 // isAnimated()
-func (this *QTreeView) Isanimated(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) IsAnimated(args ...interface{}) (ret interface{}) {
   // isAnimated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1058,7 +1065,7 @@ func (this *QTreeView) Isanimated(args ...interface{}) (ret interface{}) {
 }
 
 // setColumnHidden(int, _Bool)
-func (this *QTreeView) Setcolumnhidden(args ...interface{}) () {
+func (this *QTreeView) SetColumnHidden(args ...interface{}) () {
   // setColumnHidden(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1085,7 +1092,7 @@ func (this *QTreeView) Setcolumnhidden(args ...interface{}) () {
 }
 
 // isColumnHidden(int)
-func (this *QTreeView) Iscolumnhidden(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) IsColumnHidden(args ...interface{}) (ret interface{}) {
   // isColumnHidden(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1117,7 +1124,7 @@ func (this *QTreeView) Iscolumnhidden(args ...interface{}) (ret interface{}) {
 }
 
 // visualRect(const class QModelIndex &)
-func (this *QTreeView) Visualrect(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) VisualRect(args ...interface{}) (ret interface{}) {
   // visualRect(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1149,7 +1156,7 @@ func (this *QTreeView) Visualrect(args ...interface{}) (ret interface{}) {
 }
 
 // indexAt(const class QPoint &)
-func (this *QTreeView) Indexat(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) IndexAt(args ...interface{}) (ret interface{}) {
   // indexAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1205,7 +1212,7 @@ func (this *QTreeView) Collapse(args ...interface{}) () {
 }
 
 // isSortingEnabled()
-func (this *QTreeView) Issortingenabled(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) IsSortingEnabled(args ...interface{}) (ret interface{}) {
   // isSortingEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1234,7 +1241,7 @@ func (this *QTreeView) Issortingenabled(args ...interface{}) (ret interface{}) {
 }
 
 // setRootIndex(const class QModelIndex &)
-func (this *QTreeView) Setrootindex(args ...interface{}) () {
+func (this *QTreeView) SetRootIndex(args ...interface{}) () {
   // setRootIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1279,7 +1286,7 @@ func (this *QTreeView) Reset(args ...interface{}) () {
 }
 
 // treePosition()
-func (this *QTreeView) Treeposition(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) TreePosition(args ...interface{}) (ret interface{}) {
   // treePosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1308,7 +1315,7 @@ func (this *QTreeView) Treeposition(args ...interface{}) (ret interface{}) {
 }
 
 // rootIsDecorated()
-func (this *QTreeView) Rootisdecorated(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) RootIsDecorated(args ...interface{}) (ret interface{}) {
   // rootIsDecorated()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1337,7 +1344,7 @@ func (this *QTreeView) Rootisdecorated(args ...interface{}) (ret interface{}) {
 }
 
 // setSortingEnabled(_Bool)
-func (this *QTreeView) Setsortingenabled(args ...interface{}) () {
+func (this *QTreeView) SetSortingEnabled(args ...interface{}) () {
   // setSortingEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1361,7 +1368,7 @@ func (this *QTreeView) Setsortingenabled(args ...interface{}) () {
 }
 
 // expandToDepth(int)
-func (this *QTreeView) Expandtodepth(args ...interface{}) () {
+func (this *QTreeView) ExpandToDepth(args ...interface{}) () {
   // expandToDepth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1385,7 +1392,7 @@ func (this *QTreeView) Expandtodepth(args ...interface{}) () {
 }
 
 // setAutoExpandDelay(int)
-func (this *QTreeView) Setautoexpanddelay(args ...interface{}) () {
+func (this *QTreeView) SetAutoExpandDelay(args ...interface{}) () {
   // setAutoExpandDelay(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1409,7 +1416,7 @@ func (this *QTreeView) Setautoexpanddelay(args ...interface{}) () {
 }
 
 // collapseAll()
-func (this *QTreeView) Collapseall(args ...interface{}) () {
+func (this *QTreeView) CollapseAll(args ...interface{}) () {
   // collapseAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1430,7 +1437,7 @@ func (this *QTreeView) Collapseall(args ...interface{}) () {
 }
 
 // wordWrap()
-func (this *QTreeView) Wordwrap(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) WordWrap(args ...interface{}) (ret interface{}) {
   // wordWrap()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1459,7 +1466,7 @@ func (this *QTreeView) Wordwrap(args ...interface{}) (ret interface{}) {
 }
 
 // hideColumn(int)
-func (this *QTreeView) Hidecolumn(args ...interface{}) () {
+func (this *QTreeView) HideColumn(args ...interface{}) () {
   // hideColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1483,7 +1490,7 @@ func (this *QTreeView) Hidecolumn(args ...interface{}) () {
 }
 
 // ~QTreeView()
-func (this *QTreeView) Freeqtreeview(args ...interface{}) () {
+func (this *QTreeView) Free(args ...interface{}) () {
   // ~QTreeView()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1495,7 +1502,10 @@ func (this *QTreeView) Freeqtreeview(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTreeViewD0Ev
     // invoke: void ~QTreeView()
-    C.C_ZN9QTreeViewD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QTreeViewD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTreeView", "~QTreeView", args)
   }
@@ -1504,7 +1514,7 @@ func (this *QTreeView) Freeqtreeview(args ...interface{}) () {
 }
 
 // setWordWrap(_Bool)
-func (this *QTreeView) Setwordwrap(args ...interface{}) () {
+func (this *QTreeView) SetWordWrap(args ...interface{}) () {
   // setWordWrap(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1528,7 +1538,7 @@ func (this *QTreeView) Setwordwrap(args ...interface{}) () {
 }
 
 // isRowHidden(int, const class QModelIndex &)
-func (this *QTreeView) Isrowhidden(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) IsRowHidden(args ...interface{}) (ret interface{}) {
   // isRowHidden(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1563,7 +1573,7 @@ func (this *QTreeView) Isrowhidden(args ...interface{}) (ret interface{}) {
 }
 
 // expandAll()
-func (this *QTreeView) Expandall(args ...interface{}) () {
+func (this *QTreeView) ExpandAll(args ...interface{}) () {
   // expandAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1584,7 +1594,7 @@ func (this *QTreeView) Expandall(args ...interface{}) () {
 }
 
 // columnViewportPosition(int)
-func (this *QTreeView) Columnviewportposition(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) ColumnViewportPosition(args ...interface{}) (ret interface{}) {
   // columnViewportPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1616,7 +1626,7 @@ func (this *QTreeView) Columnviewportposition(args ...interface{}) (ret interfac
 }
 
 // setIndentation(int)
-func (this *QTreeView) Setindentation(args ...interface{}) () {
+func (this *QTreeView) SetIndentation(args ...interface{}) () {
   // setIndentation(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1640,7 +1650,7 @@ func (this *QTreeView) Setindentation(args ...interface{}) () {
 }
 
 // setModel(class QAbstractItemModel *)
-func (this *QTreeView) Setmodel(args ...interface{}) () {
+func (this *QTreeView) SetModel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1664,7 +1674,7 @@ func (this *QTreeView) Setmodel(args ...interface{}) () {
 }
 
 // setAnimated(_Bool)
-func (this *QTreeView) Setanimated(args ...interface{}) () {
+func (this *QTreeView) SetAnimated(args ...interface{}) () {
   // setAnimated(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1688,7 +1698,7 @@ func (this *QTreeView) Setanimated(args ...interface{}) () {
 }
 
 // indexBelow(const class QModelIndex &)
-func (this *QTreeView) Indexbelow(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) IndexBelow(args ...interface{}) (ret interface{}) {
   // indexBelow(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1744,7 +1754,7 @@ func (this *QTreeView) Expand(args ...interface{}) () {
 }
 
 // setItemsExpandable(_Bool)
-func (this *QTreeView) Setitemsexpandable(args ...interface{}) () {
+func (this *QTreeView) SetItemsExpandable(args ...interface{}) () {
   // setItemsExpandable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1768,7 +1778,7 @@ func (this *QTreeView) Setitemsexpandable(args ...interface{}) () {
 }
 
 // columnWidth(int)
-func (this *QTreeView) Columnwidth(args ...interface{}) (ret interface{}) {
+func (this *QTreeView) ColumnWidth(args ...interface{}) (ret interface{}) {
   // columnWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1800,7 +1810,7 @@ func (this *QTreeView) Columnwidth(args ...interface{}) (ret interface{}) {
 }
 
 // setHeader(class QHeaderView *)
-func (this *QTreeView) Setheader(args ...interface{}) () {
+func (this *QTreeView) SetHeader(args ...interface{}) () {
   // setHeader(class QHeaderView *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

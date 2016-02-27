@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qrunnable.h
 // dst-file: /src/core/qrunnable.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -42,6 +43,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QRunnable)=16
@@ -51,7 +53,7 @@ type QRunnable struct {
 }
 
 // setAutoDelete(_Bool)
-func (this *QRunnable) Setautodelete(args ...interface{}) () {
+func (this *QRunnable) SetAutoDelete(args ...interface{}) () {
   // setAutoDelete(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -75,7 +77,7 @@ func (this *QRunnable) Setautodelete(args ...interface{}) () {
 }
 
 // autoDelete()
-func (this *QRunnable) Autodelete(args ...interface{}) (ret interface{}) {
+func (this *QRunnable) AutoDelete(args ...interface{}) (ret interface{}) {
   // autoDelete()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

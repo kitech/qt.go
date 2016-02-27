@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qprogressbar.h
 // dst-file: /src/widgets/qprogressbar.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -90,6 +91,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QProgressBar)=1
@@ -150,7 +152,7 @@ func (this *QProgressBar) Text(args ...interface{}) (ret interface{}) {
 }
 
 // isTextVisible()
-func (this *QProgressBar) Istextvisible(args ...interface{}) (ret interface{}) {
+func (this *QProgressBar) IsTextVisible(args ...interface{}) (ret interface{}) {
   // isTextVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,6 +181,9 @@ func (this *QProgressBar) Istextvisible(args ...interface{}) (ret interface{}) {
 }
 
 // QProgressBar(class QWidget *)
+func GcfreeQProgressBar(this *QProgressBar) {
+  qtrt.UniverseFree(this)
+}
 func NewQProgressBar(args ...interface{}) *QProgressBar {
   // QProgressBar(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -197,7 +202,9 @@ func NewQProgressBar(args ...interface{}) *QProgressBar {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QProgressBarC2EP7QWidget(arg0)
-    return &QProgressBar{Qclsinst:qthis}
+    this := &QProgressBar{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQProgressBar)
+    return this
   default:
     qtrt.ErrorResolve("QProgressBar", "QProgressBar", args)
   }
@@ -256,7 +263,7 @@ func (this *QProgressBar) Alignment(args ...interface{}) () {
 }
 
 // textDirection()
-func (this *QProgressBar) Textdirection(args ...interface{}) () {
+func (this *QProgressBar) TextDirection(args ...interface{}) () {
   // textDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -277,7 +284,7 @@ func (this *QProgressBar) Textdirection(args ...interface{}) () {
 }
 
 // resetFormat()
-func (this *QProgressBar) Resetformat(args ...interface{}) () {
+func (this *QProgressBar) ResetFormat(args ...interface{}) () {
   // resetFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -298,7 +305,7 @@ func (this *QProgressBar) Resetformat(args ...interface{}) () {
 }
 
 // ~QProgressBar()
-func (this *QProgressBar) Freeqprogressbar(args ...interface{}) () {
+func (this *QProgressBar) Free(args ...interface{}) () {
   // ~QProgressBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -310,7 +317,10 @@ func (this *QProgressBar) Freeqprogressbar(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBarD0Ev
     // invoke: void ~QProgressBar()
-    C.C_ZN12QProgressBarD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QProgressBarD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QProgressBar", "~QProgressBar", args)
   }
@@ -319,7 +329,7 @@ func (this *QProgressBar) Freeqprogressbar(args ...interface{}) () {
 }
 
 // setFormat(const class QString &)
-func (this *QProgressBar) Setformat(args ...interface{}) () {
+func (this *QProgressBar) SetFormat(args ...interface{}) () {
   // setFormat(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -343,7 +353,7 @@ func (this *QProgressBar) Setformat(args ...interface{}) () {
 }
 
 // setMaximum(int)
-func (this *QProgressBar) Setmaximum(args ...interface{}) () {
+func (this *QProgressBar) SetMaximum(args ...interface{}) () {
   // setMaximum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -367,7 +377,7 @@ func (this *QProgressBar) Setmaximum(args ...interface{}) () {
 }
 
 // setValue(int)
-func (this *QProgressBar) Setvalue(args ...interface{}) () {
+func (this *QProgressBar) SetValue(args ...interface{}) () {
   // setValue(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -420,7 +430,7 @@ func (this *QProgressBar) Format(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QProgressBar) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QProgressBar) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -449,7 +459,7 @@ func (this *QProgressBar) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // setRange(int, int)
-func (this *QProgressBar) Setrange(args ...interface{}) () {
+func (this *QProgressBar) SetRange(args ...interface{}) () {
   // setRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -497,7 +507,7 @@ func (this *QProgressBar) Reset(args ...interface{}) () {
 }
 
 // setInvertedAppearance(_Bool)
-func (this *QProgressBar) Setinvertedappearance(args ...interface{}) () {
+func (this *QProgressBar) SetInvertedAppearance(args ...interface{}) () {
   // setInvertedAppearance(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -521,7 +531,7 @@ func (this *QProgressBar) Setinvertedappearance(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QProgressBar) Metaobject(args ...interface{}) () {
+func (this *QProgressBar) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -542,7 +552,7 @@ func (this *QProgressBar) Metaobject(args ...interface{}) () {
 }
 
 // setTextVisible(_Bool)
-func (this *QProgressBar) Settextvisible(args ...interface{}) () {
+func (this *QProgressBar) SetTextVisible(args ...interface{}) () {
   // setTextVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -566,7 +576,7 @@ func (this *QProgressBar) Settextvisible(args ...interface{}) () {
 }
 
 // minimumSizeHint()
-func (this *QProgressBar) Minimumsizehint(args ...interface{}) (ret interface{}) {
+func (this *QProgressBar) MinimumSizeHint(args ...interface{}) (ret interface{}) {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -653,7 +663,7 @@ func (this *QProgressBar) Value(args ...interface{}) (ret interface{}) {
 }
 
 // invertedAppearance()
-func (this *QProgressBar) Invertedappearance(args ...interface{}) (ret interface{}) {
+func (this *QProgressBar) InvertedAppearance(args ...interface{}) (ret interface{}) {
   // invertedAppearance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -682,7 +692,7 @@ func (this *QProgressBar) Invertedappearance(args ...interface{}) (ret interface
 }
 
 // setMinimum(int)
-func (this *QProgressBar) Setminimum(args ...interface{}) () {
+func (this *QProgressBar) SetMinimum(args ...interface{}) () {
   // setMinimum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qcursor.h
 // dst-file: /src/gui/qcursor.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -72,6 +73,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCursor)=8
@@ -110,7 +112,7 @@ func (this *QCursor) Pixmap(args ...interface{}) (ret interface{}) {
 }
 
 // setPos(class QScreen *, int, int)
-func (this *QCursor) Setpos_S(args ...interface{}) () {
+func (this *QCursor) SetPos_s(args ...interface{}) () {
   // setPos(class QScreen *, int, int)
   // setPos(class QScreen *, const class QPoint &)
   // setPos(int, int)
@@ -202,7 +204,7 @@ func (this *QCursor) Mask(args ...interface{}) (ret interface{}) {
 }
 
 // pos()
-func (this *QCursor) Pos_S(args ...interface{}) (ret interface{}) {
+func (this *QCursor) Pos_s(args ...interface{}) (ret interface{}) {
   // pos()
   // pos(const class QScreen *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -248,7 +250,7 @@ func (this *QCursor) Pos_S(args ...interface{}) (ret interface{}) {
 }
 
 // hotSpot()
-func (this *QCursor) Hotspot(args ...interface{}) (ret interface{}) {
+func (this *QCursor) HotSpot(args ...interface{}) (ret interface{}) {
   // hotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,7 +308,7 @@ func (this *QCursor) Bitmap(args ...interface{}) (ret interface{}) {
 }
 
 // ~QCursor()
-func (this *QCursor) Freeqcursor(args ...interface{}) () {
+func (this *QCursor) Free(args ...interface{}) () {
   // ~QCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -318,7 +320,10 @@ func (this *QCursor) Freeqcursor(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QCursorD0Ev
     // invoke: void ~QCursor()
-    C.C_ZN7QCursorD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN7QCursorD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QCursor", "~QCursor", args)
   }
@@ -348,6 +353,9 @@ func (this *QCursor) Shape(args ...interface{}) () {
 }
 
 // QCursor(const class QBitmap &, const class QBitmap &, int, int)
+func GcfreeQCursor(this *QCursor) {
+  qtrt.UniverseFree(this)
+}
 func NewQCursor(args ...interface{}) *QCursor {
   // QCursor(const class QBitmap &, const class QBitmap &, int, int)
   // QCursor(const class QPixmap &, int, int)
@@ -385,7 +393,9 @@ func NewQCursor(args ...interface{}) *QCursor {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QCursorC2ERK7QBitmapS2_ii(arg0, arg1, arg2, arg3)
-    return &QCursor{Qclsinst:qthis}
+    this := &QCursor{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCursor)
+    return this
   case 1:
     // invoke: _ZN7QCursorC1ERK7QPixmapii
     // invoke: void QCursor(const class QPixmap &, int, int)
@@ -398,7 +408,9 @@ func NewQCursor(args ...interface{}) *QCursor {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QCursorC2ERK7QPixmapii(arg0, arg1, arg2)
-    return &QCursor{Qclsinst:qthis}
+    this := &QCursor{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCursor)
+    return this
   case 2:
     // invoke: _ZN7QCursorC1ERKS_
     // invoke: void QCursor(const class QCursor &)
@@ -407,14 +419,18 @@ func NewQCursor(args ...interface{}) *QCursor {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QCursorC2ERKS_(arg0)
-    return &QCursor{Qclsinst:qthis}
+    this := &QCursor{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCursor)
+    return this
   case 3:
     // invoke: _ZN7QCursorC1Ev
     // invoke: void QCursor()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN7QCursorC2Ev()
-    return &QCursor{Qclsinst:qthis}
+    this := &QCursor{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCursor)
+    return this
   default:
     qtrt.ErrorResolve("QCursor", "QCursor", args)
   }

@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -66,6 +67,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextList)=1
@@ -75,7 +77,7 @@ type QTextList struct {
 }
 
 // itemText(const class QTextBlock &)
-func (this *QTextList) Itemtext(args ...interface{}) (ret interface{}) {
+func (this *QTextList) ItemText(args ...interface{}) (ret interface{}) {
   // itemText(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -136,7 +138,7 @@ func (this *QTextList) Count(args ...interface{}) (ret interface{}) {
 }
 
 // setFormat(const class QTextListFormat &)
-func (this *QTextList) Setformat(args ...interface{}) () {
+func (this *QTextList) SetFormat(args ...interface{}) () {
   // setFormat(const class QTextListFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -213,7 +215,7 @@ func (this *QTextList) Remove(args ...interface{}) () {
 }
 
 // itemNumber(const class QTextBlock &)
-func (this *QTextList) Itemnumber(args ...interface{}) (ret interface{}) {
+func (this *QTextList) ItemNumber(args ...interface{}) (ret interface{}) {
   // itemNumber(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -301,7 +303,7 @@ func (this *QTextList) Add(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QTextList) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QTextList) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -330,7 +332,7 @@ func (this *QTextList) Isempty(args ...interface{}) (ret interface{}) {
 }
 
 // removeItem(int)
-func (this *QTextList) Removeitem(args ...interface{}) () {
+func (this *QTextList) RemoveItem(args ...interface{}) () {
   // removeItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -354,7 +356,7 @@ func (this *QTextList) Removeitem(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QTextList) Metaobject(args ...interface{}) () {
+func (this *QTextList) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -375,7 +377,7 @@ func (this *QTextList) Metaobject(args ...interface{}) () {
 }
 
 // ~QTextList()
-func (this *QTextList) Freeqtextlist(args ...interface{}) () {
+func (this *QTextList) Free(args ...interface{}) () {
   // ~QTextList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -387,7 +389,10 @@ func (this *QTextList) Freeqtextlist(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextListD0Ev
     // invoke: void ~QTextList()
-    C.C_ZN9QTextListD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QTextListD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTextList", "~QTextList", args)
   }
@@ -396,6 +401,9 @@ func (this *QTextList) Freeqtextlist(args ...interface{}) () {
 }
 
 // QTextList(class QTextDocument *)
+func GcfreeQTextList(this *QTextList) {
+  qtrt.UniverseFree(this)
+}
 func NewQTextList(args ...interface{}) *QTextList {
   // QTextList(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -414,7 +422,9 @@ func NewQTextList(args ...interface{}) *QTextList {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QTextListC2EP13QTextDocument(arg0)
-    return &QTextList{Qclsinst:qthis}
+    this := &QTextList{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextList)
+    return this
   default:
     qtrt.ErrorResolve("QTextList", "QTextList", args)
   }

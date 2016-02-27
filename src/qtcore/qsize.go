@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qsize.h
 // dst-file: /src/core/qsize.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -102,6 +103,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSize)=8
@@ -117,7 +119,7 @@ type QSizeF struct {
 }
 
 // boundedTo(const class QSize &)
-func (this *QSize) Boundedto(args ...interface{}) (ret interface{}) {
+func (this *QSize) BoundedTo(args ...interface{}) (ret interface{}) {
   // boundedTo(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -149,6 +151,9 @@ func (this *QSize) Boundedto(args ...interface{}) (ret interface{}) {
 }
 
 // QSize(int, int)
+func GcfreeQSize(this *QSize) {
+  qtrt.UniverseFree(this)
+}
 func NewQSize(args ...interface{}) *QSize {
   // QSize(int, int)
   // QSize()
@@ -172,14 +177,18 @@ func NewQSize(args ...interface{}) *QSize {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QSizeC2Eii(arg0, arg1)
-    return &QSize{Qclsinst:qthis}
+    this := &QSize{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSize)
+    return this
   case 1:
     // invoke: _ZN5QSizeC1Ev
     // invoke: void QSize()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QSizeC2Ev()
-    return &QSize{Qclsinst:qthis}
+    this := &QSize{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSize)
+    return this
   default:
     qtrt.ErrorResolve("QSize", "QSize", args)
   }
@@ -246,7 +255,7 @@ func (this *QSize) Width(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QSize) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QSize) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -325,7 +334,7 @@ func (this *QSize) Height(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QSize) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QSize) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -354,7 +363,7 @@ func (this *QSize) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // expandedTo(const class QSize &)
-func (this *QSize) Expandedto(args ...interface{}) (ret interface{}) {
+func (this *QSize) ExpandedTo(args ...interface{}) (ret interface{}) {
   // expandedTo(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -386,7 +395,7 @@ func (this *QSize) Expandedto(args ...interface{}) (ret interface{}) {
 }
 
 // isEmpty()
-func (this *QSize) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QSize) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -457,7 +466,7 @@ func (this *QSize) Rheight(args ...interface{}) () {
 }
 
 // setWidth(int)
-func (this *QSize) Setwidth(args ...interface{}) () {
+func (this *QSize) SetWidth(args ...interface{}) () {
   // setWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -481,7 +490,7 @@ func (this *QSize) Setwidth(args ...interface{}) () {
 }
 
 // setHeight(int)
-func (this *QSize) Setheight(args ...interface{}) () {
+func (this *QSize) SetHeight(args ...interface{}) () {
   // setHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -555,7 +564,7 @@ func (this *QSizeF) Transposed(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QSizeF) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QSizeF) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -584,7 +593,7 @@ func (this *QSizeF) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // isValid()
-func (this *QSizeF) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QSizeF) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -613,7 +622,7 @@ func (this *QSizeF) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // boundedTo(const class QSizeF &)
-func (this *QSizeF) Boundedto(args ...interface{}) (ret interface{}) {
+func (this *QSizeF) BoundedTo(args ...interface{}) (ret interface{}) {
   // boundedTo(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -666,7 +675,7 @@ func (this *QSizeF) Transpose(args ...interface{}) () {
 }
 
 // expandedTo(const class QSizeF &)
-func (this *QSizeF) Expandedto(args ...interface{}) (ret interface{}) {
+func (this *QSizeF) ExpandedTo(args ...interface{}) (ret interface{}) {
   // expandedTo(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -756,6 +765,9 @@ func (this *QSizeF) Width(args ...interface{}) (ret interface{}) {
 }
 
 // QSizeF()
+func GcfreeQSizeF(this *QSizeF) {
+  qtrt.UniverseFree(this)
+}
 func NewQSizeF(args ...interface{}) *QSizeF {
   // QSizeF()
   // QSizeF(const class QSize &)
@@ -778,7 +790,9 @@ func NewQSizeF(args ...interface{}) *QSizeF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QSizeFC2Ev()
-    return &QSizeF{Qclsinst:qthis}
+    this := &QSizeF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSizeF)
+    return this
   case 1:
     // invoke: _ZN6QSizeFC1ERK5QSize
     // invoke: void QSizeF(const class QSize &)
@@ -787,7 +801,9 @@ func NewQSizeF(args ...interface{}) *QSizeF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QSizeFC2ERK5QSize(arg0)
-    return &QSizeF{Qclsinst:qthis}
+    this := &QSizeF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSizeF)
+    return this
   case 2:
     // invoke: _ZN6QSizeFC1Edd
     // invoke: void QSizeF(qreal, qreal)
@@ -798,7 +814,9 @@ func NewQSizeF(args ...interface{}) *QSizeF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QSizeFC2Edd(arg0, arg1)
-    return &QSizeF{Qclsinst:qthis}
+    this := &QSizeF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSizeF)
+    return this
   default:
     qtrt.ErrorResolve("QSizeF", "QSizeF", args)
   }
@@ -807,7 +825,7 @@ func NewQSizeF(args ...interface{}) *QSizeF {
 }
 
 // isEmpty()
-func (this *QSizeF) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QSizeF) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -836,7 +854,7 @@ func (this *QSizeF) Isempty(args ...interface{}) (ret interface{}) {
 }
 
 // setHeight(qreal)
-func (this *QSizeF) Setheight(args ...interface{}) () {
+func (this *QSizeF) SetHeight(args ...interface{}) () {
   // setHeight(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -881,7 +899,7 @@ func (this *QSizeF) Rheight(args ...interface{}) () {
 }
 
 // setWidth(qreal)
-func (this *QSizeF) Setwidth(args ...interface{}) () {
+func (this *QSizeF) SetWidth(args ...interface{}) () {
   // setWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -905,7 +923,7 @@ func (this *QSizeF) Setwidth(args ...interface{}) () {
 }
 
 // toSize()
-func (this *QSizeF) Tosize(args ...interface{}) (ret interface{}) {
+func (this *QSizeF) ToSize(args ...interface{}) (ret interface{}) {
   // toSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

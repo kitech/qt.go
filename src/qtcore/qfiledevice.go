@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qfiledevice.h
 // dst-file: /src/core/qfiledevice.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -70,6 +71,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFileDevice)=1
@@ -190,7 +192,7 @@ func (this *QFileDevice) Seek(args ...interface{}) (ret interface{}) {
 }
 
 // isSequential()
-func (this *QFileDevice) Issequential(args ...interface{}) (ret interface{}) {
+func (this *QFileDevice) IsSequential(args ...interface{}) (ret interface{}) {
   // isSequential()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -248,7 +250,7 @@ func (this *QFileDevice) Size(args ...interface{}) (ret interface{}) {
 }
 
 // unsetError()
-func (this *QFileDevice) Unseterror(args ...interface{}) () {
+func (this *QFileDevice) UnsetError(args ...interface{}) () {
   // unsetError()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -298,7 +300,7 @@ func (this *QFileDevice) Handle(args ...interface{}) (ret interface{}) {
 }
 
 // fileName()
-func (this *QFileDevice) Filename(args ...interface{}) (ret interface{}) {
+func (this *QFileDevice) FileName(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -327,7 +329,7 @@ func (this *QFileDevice) Filename(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QFileDevice) Metaobject(args ...interface{}) () {
+func (this *QFileDevice) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -435,7 +437,7 @@ func (this *QFileDevice) Unmap(args ...interface{}) (ret interface{}) {
 }
 
 // atEnd()
-func (this *QFileDevice) Atend(args ...interface{}) (ret interface{}) {
+func (this *QFileDevice) AtEnd(args ...interface{}) (ret interface{}) {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -464,7 +466,7 @@ func (this *QFileDevice) Atend(args ...interface{}) (ret interface{}) {
 }
 
 // ~QFileDevice()
-func (this *QFileDevice) Freeqfiledevice(args ...interface{}) () {
+func (this *QFileDevice) Free(args ...interface{}) () {
   // ~QFileDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -476,7 +478,10 @@ func (this *QFileDevice) Freeqfiledevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDeviceD0Ev
     // invoke: void ~QFileDevice()
-    C.C_ZN11QFileDeviceD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QFileDeviceD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFileDevice", "~QFileDevice", args)
   }

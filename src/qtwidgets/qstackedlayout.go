@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qstackedlayout.h
 // dst-file: /src/widgets/qstackedlayout.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -86,6 +87,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QStackedLayout)=1
@@ -97,7 +99,7 @@ type QStackedLayout struct {
 }
 
 // addWidget(class QWidget *)
-func (this *QStackedLayout) Addwidget(args ...interface{}) (ret interface{}) {
+func (this *QStackedLayout) AddWidget(args ...interface{}) (ret interface{}) {
   // addWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -129,7 +131,7 @@ func (this *QStackedLayout) Addwidget(args ...interface{}) (ret interface{}) {
 }
 
 // setCurrentIndex(int)
-func (this *QStackedLayout) Setcurrentindex(args ...interface{}) () {
+func (this *QStackedLayout) SetCurrentIndex(args ...interface{}) () {
   // setCurrentIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -153,7 +155,7 @@ func (this *QStackedLayout) Setcurrentindex(args ...interface{}) () {
 }
 
 // currentWidget()
-func (this *QStackedLayout) Currentwidget(args ...interface{}) (ret interface{}) {
+func (this *QStackedLayout) CurrentWidget(args ...interface{}) (ret interface{}) {
   // currentWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,7 +184,7 @@ func (this *QStackedLayout) Currentwidget(args ...interface{}) (ret interface{})
 }
 
 // setGeometry(const class QRect &)
-func (this *QStackedLayout) Setgeometry(args ...interface{}) () {
+func (this *QStackedLayout) SetGeometry(args ...interface{}) () {
   // setGeometry(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -206,7 +208,7 @@ func (this *QStackedLayout) Setgeometry(args ...interface{}) () {
 }
 
 // ~QStackedLayout()
-func (this *QStackedLayout) Freeqstackedlayout(args ...interface{}) () {
+func (this *QStackedLayout) Free(args ...interface{}) () {
   // ~QStackedLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -218,7 +220,10 @@ func (this *QStackedLayout) Freeqstackedlayout(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QStackedLayoutD0Ev
     // invoke: void ~QStackedLayout()
-    C.C_ZN14QStackedLayoutD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN14QStackedLayoutD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QStackedLayout", "~QStackedLayout", args)
   }
@@ -227,7 +232,7 @@ func (this *QStackedLayout) Freeqstackedlayout(args ...interface{}) () {
 }
 
 // setCurrentWidget(class QWidget *)
-func (this *QStackedLayout) Setcurrentwidget(args ...interface{}) () {
+func (this *QStackedLayout) SetCurrentWidget(args ...interface{}) () {
   // setCurrentWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -283,7 +288,7 @@ func (this *QStackedLayout) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // addItem(class QLayoutItem *)
-func (this *QStackedLayout) Additem(args ...interface{}) () {
+func (this *QStackedLayout) AddItem(args ...interface{}) () {
   // addItem(class QLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -307,7 +312,7 @@ func (this *QStackedLayout) Additem(args ...interface{}) () {
 }
 
 // takeAt(int)
-func (this *QStackedLayout) Takeat(args ...interface{}) (ret interface{}) {
+func (this *QStackedLayout) TakeAt(args ...interface{}) (ret interface{}) {
   // takeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -339,7 +344,7 @@ func (this *QStackedLayout) Takeat(args ...interface{}) (ret interface{}) {
 }
 
 // insertWidget(int, class QWidget *)
-func (this *QStackedLayout) Insertwidget(args ...interface{}) (ret interface{}) {
+func (this *QStackedLayout) InsertWidget(args ...interface{}) (ret interface{}) {
   // insertWidget(int, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -374,6 +379,9 @@ func (this *QStackedLayout) Insertwidget(args ...interface{}) (ret interface{}) 
 }
 
 // QStackedLayout()
+func GcfreeQStackedLayout(this *QStackedLayout) {
+  qtrt.UniverseFree(this)
+}
 func NewQStackedLayout(args ...interface{}) *QStackedLayout {
   // QStackedLayout()
   // QStackedLayout(class QLayout *)
@@ -395,7 +403,9 @@ func NewQStackedLayout(args ...interface{}) *QStackedLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QStackedLayoutC2Ev()
-    return &QStackedLayout{Qclsinst:qthis}
+    this := &QStackedLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStackedLayout)
+    return this
   case 1:
     // invoke: _ZN14QStackedLayoutC1EP7QLayout
     // invoke: void QStackedLayout(class QLayout *)
@@ -404,7 +414,9 @@ func NewQStackedLayout(args ...interface{}) *QStackedLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QStackedLayoutC2EP7QLayout(arg0)
-    return &QStackedLayout{Qclsinst:qthis}
+    this := &QStackedLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStackedLayout)
+    return this
   case 2:
     // invoke: _ZN14QStackedLayoutC1EP7QWidget
     // invoke: void QStackedLayout(class QWidget *)
@@ -413,7 +425,9 @@ func NewQStackedLayout(args ...interface{}) *QStackedLayout {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QStackedLayoutC2EP7QWidget(arg0)
-    return &QStackedLayout{Qclsinst:qthis}
+    this := &QStackedLayout{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQStackedLayout)
+    return this
   default:
     qtrt.ErrorResolve("QStackedLayout", "QStackedLayout", args)
   }
@@ -422,7 +436,7 @@ func NewQStackedLayout(args ...interface{}) *QStackedLayout {
 }
 
 // sizeHint()
-func (this *QStackedLayout) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QStackedLayout) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -451,7 +465,7 @@ func (this *QStackedLayout) Sizehint(args ...interface{}) (ret interface{}) {
 }
 
 // stackingMode()
-func (this *QStackedLayout) Stackingmode(args ...interface{}) () {
+func (this *QStackedLayout) StackingMode(args ...interface{}) () {
   // stackingMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -501,7 +515,7 @@ func (this *QStackedLayout) Count(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QStackedLayout) Metaobject(args ...interface{}) () {
+func (this *QStackedLayout) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -522,7 +536,7 @@ func (this *QStackedLayout) Metaobject(args ...interface{}) () {
 }
 
 // hasHeightForWidth()
-func (this *QStackedLayout) Hasheightforwidth(args ...interface{}) (ret interface{}) {
+func (this *QStackedLayout) HasHeightForWidth(args ...interface{}) (ret interface{}) {
   // hasHeightForWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -551,7 +565,7 @@ func (this *QStackedLayout) Hasheightforwidth(args ...interface{}) (ret interfac
 }
 
 // itemAt(int)
-func (this *QStackedLayout) Itemat(args ...interface{}) (ret interface{}) {
+func (this *QStackedLayout) ItemAt(args ...interface{}) (ret interface{}) {
   // itemAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -583,7 +597,7 @@ func (this *QStackedLayout) Itemat(args ...interface{}) (ret interface{}) {
 }
 
 // minimumSize()
-func (this *QStackedLayout) Minimumsize(args ...interface{}) (ret interface{}) {
+func (this *QStackedLayout) MinimumSize(args ...interface{}) (ret interface{}) {
   // minimumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -612,7 +626,7 @@ func (this *QStackedLayout) Minimumsize(args ...interface{}) (ret interface{}) {
 }
 
 // heightForWidth(int)
-func (this *QStackedLayout) Heightforwidth(args ...interface{}) (ret interface{}) {
+func (this *QStackedLayout) HeightForWidth(args ...interface{}) (ret interface{}) {
   // heightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -644,7 +658,7 @@ func (this *QStackedLayout) Heightforwidth(args ...interface{}) (ret interface{}
 }
 
 // currentIndex()
-func (this *QStackedLayout) Currentindex(args ...interface{}) (ret interface{}) {
+func (this *QStackedLayout) CurrentIndex(args ...interface{}) (ret interface{}) {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

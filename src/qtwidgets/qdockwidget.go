@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qdockwidget.h
 // dst-file: /src/widgets/qdockwidget.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -64,6 +65,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QDockWidget)=1
@@ -78,7 +80,7 @@ type QDockWidget struct {
 }
 
 // setWidget(class QWidget *)
-func (this *QDockWidget) Setwidget(args ...interface{}) () {
+func (this *QDockWidget) SetWidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -102,7 +104,7 @@ func (this *QDockWidget) Setwidget(args ...interface{}) () {
 }
 
 // isFloating()
-func (this *QDockWidget) Isfloating(args ...interface{}) (ret interface{}) {
+func (this *QDockWidget) IsFloating(args ...interface{}) (ret interface{}) {
   // isFloating()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -131,7 +133,7 @@ func (this *QDockWidget) Isfloating(args ...interface{}) (ret interface{}) {
 }
 
 // toggleViewAction()
-func (this *QDockWidget) Toggleviewaction(args ...interface{}) (ret interface{}) {
+func (this *QDockWidget) ToggleViewAction(args ...interface{}) (ret interface{}) {
   // toggleViewAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -189,7 +191,7 @@ func (this *QDockWidget) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // setTitleBarWidget(class QWidget *)
-func (this *QDockWidget) Settitlebarwidget(args ...interface{}) () {
+func (this *QDockWidget) SetTitleBarWidget(args ...interface{}) () {
   // setTitleBarWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -213,7 +215,7 @@ func (this *QDockWidget) Settitlebarwidget(args ...interface{}) () {
 }
 
 // ~QDockWidget()
-func (this *QDockWidget) Freeqdockwidget(args ...interface{}) () {
+func (this *QDockWidget) Free(args ...interface{}) () {
   // ~QDockWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -225,7 +227,10 @@ func (this *QDockWidget) Freeqdockwidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDockWidgetD0Ev
     // invoke: void ~QDockWidget()
-    C.C_ZN11QDockWidgetD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QDockWidgetD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDockWidget", "~QDockWidget", args)
   }
@@ -234,7 +239,7 @@ func (this *QDockWidget) Freeqdockwidget(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QDockWidget) Metaobject(args ...interface{}) () {
+func (this *QDockWidget) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -255,7 +260,7 @@ func (this *QDockWidget) Metaobject(args ...interface{}) () {
 }
 
 // allowedAreas()
-func (this *QDockWidget) Allowedareas(args ...interface{}) () {
+func (this *QDockWidget) AllowedAreas(args ...interface{}) () {
   // allowedAreas()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -276,7 +281,7 @@ func (this *QDockWidget) Allowedareas(args ...interface{}) () {
 }
 
 // titleBarWidget()
-func (this *QDockWidget) Titlebarwidget(args ...interface{}) (ret interface{}) {
+func (this *QDockWidget) TitleBarWidget(args ...interface{}) (ret interface{}) {
   // titleBarWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -305,7 +310,7 @@ func (this *QDockWidget) Titlebarwidget(args ...interface{}) (ret interface{}) {
 }
 
 // setFloating(_Bool)
-func (this *QDockWidget) Setfloating(args ...interface{}) () {
+func (this *QDockWidget) SetFloating(args ...interface{}) () {
   // setFloating(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qpainterpath.h
 // dst-file: /src/gui/qpainterpath.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -204,6 +205,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPainterPath)=1
@@ -219,7 +221,7 @@ type QPainterPathStroker struct {
 }
 
 // addRect(const class QRectF &)
-func (this *QPainterPath) Addrect(args ...interface{}) () {
+func (this *QPainterPath) AddRect(args ...interface{}) () {
   // addRect(const class QRectF &)
   // addRect(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -261,7 +263,7 @@ func (this *QPainterPath) Addrect(args ...interface{}) () {
 }
 
 // controlPointRect()
-func (this *QPainterPath) Controlpointrect(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) ControlPointRect(args ...interface{}) (ret interface{}) {
   // controlPointRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -290,7 +292,7 @@ func (this *QPainterPath) Controlpointrect(args ...interface{}) (ret interface{}
 }
 
 // moveTo(qreal, qreal)
-func (this *QPainterPath) Moveto(args ...interface{}) () {
+func (this *QPainterPath) MoveTo(args ...interface{}) () {
   // moveTo(qreal, qreal)
   // moveTo(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -326,7 +328,7 @@ func (this *QPainterPath) Moveto(args ...interface{}) () {
 }
 
 // lineTo(const class QPointF &)
-func (this *QPainterPath) Lineto(args ...interface{}) () {
+func (this *QPainterPath) LineTo(args ...interface{}) () {
   // lineTo(const class QPointF &)
   // lineTo(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -411,7 +413,7 @@ func (this *QPainterPath) Intersects(args ...interface{}) (ret interface{}) {
 }
 
 // elementCount()
-func (this *QPainterPath) Elementcount(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) ElementCount(args ...interface{}) (ret interface{}) {
   // elementCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -440,7 +442,7 @@ func (this *QPainterPath) Elementcount(args ...interface{}) (ret interface{}) {
 }
 
 // closeSubpath()
-func (this *QPainterPath) Closesubpath(args ...interface{}) () {
+func (this *QPainterPath) CloseSubpath(args ...interface{}) () {
   // closeSubpath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -461,7 +463,7 @@ func (this *QPainterPath) Closesubpath(args ...interface{}) () {
 }
 
 // toSubpathPolygons(const class QTransform &)
-func (this *QPainterPath) Tosubpathpolygons(args ...interface{}) () {
+func (this *QPainterPath) ToSubpathPolygons(args ...interface{}) () {
   // toSubpathPolygons(const class QTransform &)
   // toSubpathPolygons(const class QMatrix &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -494,6 +496,9 @@ func (this *QPainterPath) Tosubpathpolygons(args ...interface{}) () {
 }
 
 // QPainterPath(const class QPointF &)
+func GcfreeQPainterPath(this *QPainterPath) {
+  qtrt.UniverseFree(this)
+}
 func NewQPainterPath(args ...interface{}) *QPainterPath {
   // QPainterPath(const class QPointF &)
   // QPainterPath()
@@ -517,14 +522,18 @@ func NewQPainterPath(args ...interface{}) *QPainterPath {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QPainterPathC2ERK7QPointF(arg0)
-    return &QPainterPath{Qclsinst:qthis}
+    this := &QPainterPath{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPainterPath)
+    return this
   case 1:
     // invoke: _ZN12QPainterPathC1Ev
     // invoke: void QPainterPath()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QPainterPathC2Ev()
-    return &QPainterPath{Qclsinst:qthis}
+    this := &QPainterPath{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPainterPath)
+    return this
   case 2:
     // invoke: _ZN12QPainterPathC1ERKS_
     // invoke: void QPainterPath(const class QPainterPath &)
@@ -533,7 +542,9 @@ func NewQPainterPath(args ...interface{}) *QPainterPath {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QPainterPathC2ERKS_(arg0)
-    return &QPainterPath{Qclsinst:qthis}
+    this := &QPainterPath{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPainterPath)
+    return this
   default:
     qtrt.ErrorResolve("QPainterPath", "QPainterPath", args)
   }
@@ -542,7 +553,7 @@ func NewQPainterPath(args ...interface{}) *QPainterPath {
 }
 
 // angleAtPercent(qreal)
-func (this *QPainterPath) Angleatpercent(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) AngleAtPercent(args ...interface{}) (ret interface{}) {
   // angleAtPercent(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -574,7 +585,7 @@ func (this *QPainterPath) Angleatpercent(args ...interface{}) (ret interface{}) 
 }
 
 // addEllipse(const class QRectF &)
-func (this *QPainterPath) Addellipse(args ...interface{}) () {
+func (this *QPainterPath) AddEllipse(args ...interface{}) () {
   // addEllipse(const class QRectF &)
   // addEllipse(const class QPointF &, qreal, qreal)
   // addEllipse(qreal, qreal, qreal, qreal)
@@ -631,7 +642,7 @@ func (this *QPainterPath) Addellipse(args ...interface{}) () {
 }
 
 // quadTo(const class QPointF &, const class QPointF &)
-func (this *QPainterPath) Quadto(args ...interface{}) () {
+func (this *QPainterPath) QuadTo(args ...interface{}) () {
   // quadTo(const class QPointF &, const class QPointF &)
   // quadTo(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -676,7 +687,7 @@ func (this *QPainterPath) Quadto(args ...interface{}) () {
 }
 
 // fillRule()
-func (this *QPainterPath) Fillrule(args ...interface{}) () {
+func (this *QPainterPath) FillRule(args ...interface{}) () {
   // fillRule()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -831,7 +842,7 @@ func (this *QPainterPath) Contains(args ...interface{}) (ret interface{}) {
 }
 
 // setElementPositionAt(int, qreal, qreal)
-func (this *QPainterPath) Setelementpositionat(args ...interface{}) () {
+func (this *QPainterPath) SetElementPositionAt(args ...interface{}) () {
   // setElementPositionAt(int, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -861,7 +872,7 @@ func (this *QPainterPath) Setelementpositionat(args ...interface{}) () {
 }
 
 // ~QPainterPath()
-func (this *QPainterPath) Freeqpainterpath(args ...interface{}) () {
+func (this *QPainterPath) Free(args ...interface{}) () {
   // ~QPainterPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -873,7 +884,10 @@ func (this *QPainterPath) Freeqpainterpath(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPainterPathD0Ev
     // invoke: void ~QPainterPath()
-    C.C_ZN12QPainterPathD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QPainterPathD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPainterPath", "~QPainterPath", args)
   }
@@ -906,7 +920,7 @@ func (this *QPainterPath) Swap(args ...interface{}) () {
 }
 
 // toFillPolygons(const class QMatrix &)
-func (this *QPainterPath) Tofillpolygons(args ...interface{}) () {
+func (this *QPainterPath) ToFillPolygons(args ...interface{}) () {
   // toFillPolygons(const class QMatrix &)
   // toFillPolygons(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -939,7 +953,7 @@ func (this *QPainterPath) Tofillpolygons(args ...interface{}) () {
 }
 
 // isEmpty()
-func (this *QPainterPath) Isempty(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) IsEmpty(args ...interface{}) (ret interface{}) {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -968,7 +982,7 @@ func (this *QPainterPath) Isempty(args ...interface{}) (ret interface{}) {
 }
 
 // addRegion(const class QRegion &)
-func (this *QPainterPath) Addregion(args ...interface{}) () {
+func (this *QPainterPath) AddRegion(args ...interface{}) () {
   // addRegion(const class QRegion &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -992,7 +1006,7 @@ func (this *QPainterPath) Addregion(args ...interface{}) () {
 }
 
 // addPath(const class QPainterPath &)
-func (this *QPainterPath) Addpath(args ...interface{}) () {
+func (this *QPainterPath) AddPath(args ...interface{}) () {
   // addPath(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1016,7 +1030,7 @@ func (this *QPainterPath) Addpath(args ...interface{}) () {
 }
 
 // addPolygon(const class QPolygonF &)
-func (this *QPainterPath) Addpolygon(args ...interface{}) () {
+func (this *QPainterPath) AddPolygon(args ...interface{}) () {
   // addPolygon(const class QPolygonF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1040,7 +1054,7 @@ func (this *QPainterPath) Addpolygon(args ...interface{}) () {
 }
 
 // arcTo(const class QRectF &, qreal, qreal)
-func (this *QPainterPath) Arcto(args ...interface{}) () {
+func (this *QPainterPath) ArcTo(args ...interface{}) () {
   // arcTo(const class QRectF &, qreal, qreal)
   // arcTo(qreal, qreal, qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1094,7 +1108,7 @@ func (this *QPainterPath) Arcto(args ...interface{}) () {
 }
 
 // slopeAtPercent(qreal)
-func (this *QPainterPath) Slopeatpercent(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) SlopeAtPercent(args ...interface{}) (ret interface{}) {
   // slopeAtPercent(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1126,7 +1140,7 @@ func (this *QPainterPath) Slopeatpercent(args ...interface{}) (ret interface{}) 
 }
 
 // addText(const class QPointF &, const class QFont &, const class QString &)
-func (this *QPainterPath) Addtext(args ...interface{}) () {
+func (this *QPainterPath) AddText(args ...interface{}) () {
   // addText(const class QPointF &, const class QFont &, const class QString &)
   // addText(qreal, qreal, const class QFont &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1174,7 +1188,7 @@ func (this *QPainterPath) Addtext(args ...interface{}) () {
 }
 
 // addRoundRect(qreal, qreal, qreal, qreal, int, int)
-func (this *QPainterPath) Addroundrect(args ...interface{}) () {
+func (this *QPainterPath) AddRoundRect(args ...interface{}) () {
   // addRoundRect(qreal, qreal, qreal, qreal, int, int)
   // addRoundRect(const class QRectF &, int, int)
   // addRoundRect(qreal, qreal, qreal, qreal, int)
@@ -1261,7 +1275,7 @@ func (this *QPainterPath) Addroundrect(args ...interface{}) () {
 }
 
 // elementAt(int)
-func (this *QPainterPath) Elementat(args ...interface{}) () {
+func (this *QPainterPath) ElementAt(args ...interface{}) () {
   // elementAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1285,7 +1299,7 @@ func (this *QPainterPath) Elementat(args ...interface{}) () {
 }
 
 // connectPath(const class QPainterPath &)
-func (this *QPainterPath) Connectpath(args ...interface{}) () {
+func (this *QPainterPath) ConnectPath(args ...interface{}) () {
   // connectPath(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1309,7 +1323,7 @@ func (this *QPainterPath) Connectpath(args ...interface{}) () {
 }
 
 // boundingRect()
-func (this *QPainterPath) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1338,7 +1352,7 @@ func (this *QPainterPath) Boundingrect(args ...interface{}) (ret interface{}) {
 }
 
 // cubicTo(const class QPointF &, const class QPointF &, const class QPointF &)
-func (this *QPainterPath) Cubicto(args ...interface{}) () {
+func (this *QPainterPath) CubicTo(args ...interface{}) () {
   // cubicTo(const class QPointF &, const class QPointF &, const class QPointF &)
   // cubicTo(qreal, qreal, qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1392,7 +1406,7 @@ func (this *QPainterPath) Cubicto(args ...interface{}) () {
 }
 
 // toReversed()
-func (this *QPainterPath) Toreversed(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) ToReversed(args ...interface{}) (ret interface{}) {
   // toReversed()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1421,7 +1435,7 @@ func (this *QPainterPath) Toreversed(args ...interface{}) (ret interface{}) {
 }
 
 // subtractedInverted(const class QPainterPath &)
-func (this *QPainterPath) Subtractedinverted(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) SubtractedInverted(args ...interface{}) (ret interface{}) {
   // subtractedInverted(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1453,7 +1467,7 @@ func (this *QPainterPath) Subtractedinverted(args ...interface{}) (ret interface
 }
 
 // toFillPolygon(const class QMatrix &)
-func (this *QPainterPath) Tofillpolygon(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) ToFillPolygon(args ...interface{}) (ret interface{}) {
   // toFillPolygon(const class QMatrix &)
   // toFillPolygon(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1534,7 +1548,7 @@ func (this *QPainterPath) Subtracted(args ...interface{}) (ret interface{}) {
 }
 
 // pointAtPercent(qreal)
-func (this *QPainterPath) Pointatpercent(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) PointAtPercent(args ...interface{}) (ret interface{}) {
   // pointAtPercent(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1598,7 +1612,7 @@ func (this *QPainterPath) United(args ...interface{}) (ret interface{}) {
 }
 
 // currentPosition()
-func (this *QPainterPath) Currentposition(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) CurrentPosition(args ...interface{}) (ret interface{}) {
   // currentPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1737,7 +1751,7 @@ func (this *QPainterPath) Simplified(args ...interface{}) (ret interface{}) {
 }
 
 // arcMoveTo(const class QRectF &, qreal)
-func (this *QPainterPath) Arcmoveto(args ...interface{}) () {
+func (this *QPainterPath) ArcMoveTo(args ...interface{}) () {
   // arcMoveTo(const class QRectF &, qreal)
   // arcMoveTo(qreal, qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1785,7 +1799,7 @@ func (this *QPainterPath) Arcmoveto(args ...interface{}) () {
 }
 
 // percentAtLength(qreal)
-func (this *QPainterPath) Percentatlength(args ...interface{}) (ret interface{}) {
+func (this *QPainterPath) PercentAtLength(args ...interface{}) (ret interface{}) {
   // percentAtLength(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1817,7 +1831,7 @@ func (this *QPainterPath) Percentatlength(args ...interface{}) (ret interface{})
 }
 
 // createStroke(const class QPainterPath &)
-func (this *QPainterPathStroker) Createstroke(args ...interface{}) (ret interface{}) {
+func (this *QPainterPathStroker) CreateStroke(args ...interface{}) (ret interface{}) {
   // createStroke(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1849,7 +1863,7 @@ func (this *QPainterPathStroker) Createstroke(args ...interface{}) (ret interfac
 }
 
 // dashPattern()
-func (this *QPainterPathStroker) Dashpattern(args ...interface{}) () {
+func (this *QPainterPathStroker) DashPattern(args ...interface{}) () {
   // dashPattern()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1870,7 +1884,7 @@ func (this *QPainterPathStroker) Dashpattern(args ...interface{}) () {
 }
 
 // miterLimit()
-func (this *QPainterPathStroker) Miterlimit(args ...interface{}) (ret interface{}) {
+func (this *QPainterPathStroker) MiterLimit(args ...interface{}) (ret interface{}) {
   // miterLimit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1899,6 +1913,9 @@ func (this *QPainterPathStroker) Miterlimit(args ...interface{}) (ret interface{
 }
 
 // QPainterPathStroker(const class QPen &)
+func GcfreeQPainterPathStroker(this *QPainterPathStroker) {
+  qtrt.UniverseFree(this)
+}
 func NewQPainterPathStroker(args ...interface{}) *QPainterPathStroker {
   // QPainterPathStroker(const class QPen &)
   // QPainterPathStroker()
@@ -1919,14 +1936,18 @@ func NewQPainterPathStroker(args ...interface{}) *QPainterPathStroker {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QPainterPathStrokerC2ERK4QPen(arg0)
-    return &QPainterPathStroker{Qclsinst:qthis}
+    this := &QPainterPathStroker{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPainterPathStroker)
+    return this
   case 1:
     // invoke: _ZN19QPainterPathStrokerC1Ev
     // invoke: void QPainterPathStroker()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QPainterPathStrokerC2Ev()
-    return &QPainterPathStroker{Qclsinst:qthis}
+    this := &QPainterPathStroker{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPainterPathStroker)
+    return this
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "QPainterPathStroker", args)
   }
@@ -1935,7 +1956,7 @@ func NewQPainterPathStroker(args ...interface{}) *QPainterPathStroker {
 }
 
 // setMiterLimit(qreal)
-func (this *QPainterPathStroker) Setmiterlimit(args ...interface{}) () {
+func (this *QPainterPathStroker) SetMiterLimit(args ...interface{}) () {
   // setMiterLimit(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1959,7 +1980,7 @@ func (this *QPainterPathStroker) Setmiterlimit(args ...interface{}) () {
 }
 
 // dashOffset()
-func (this *QPainterPathStroker) Dashoffset(args ...interface{}) (ret interface{}) {
+func (this *QPainterPathStroker) DashOffset(args ...interface{}) (ret interface{}) {
   // dashOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1988,7 +2009,7 @@ func (this *QPainterPathStroker) Dashoffset(args ...interface{}) (ret interface{
 }
 
 // curveThreshold()
-func (this *QPainterPathStroker) Curvethreshold(args ...interface{}) (ret interface{}) {
+func (this *QPainterPathStroker) CurveThreshold(args ...interface{}) (ret interface{}) {
   // curveThreshold()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2017,7 +2038,7 @@ func (this *QPainterPathStroker) Curvethreshold(args ...interface{}) (ret interf
 }
 
 // joinStyle()
-func (this *QPainterPathStroker) Joinstyle(args ...interface{}) () {
+func (this *QPainterPathStroker) JoinStyle(args ...interface{}) () {
   // joinStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2038,7 +2059,7 @@ func (this *QPainterPathStroker) Joinstyle(args ...interface{}) () {
 }
 
 // setDashOffset(qreal)
-func (this *QPainterPathStroker) Setdashoffset(args ...interface{}) () {
+func (this *QPainterPathStroker) SetDashOffset(args ...interface{}) () {
   // setDashOffset(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2091,7 +2112,7 @@ func (this *QPainterPathStroker) Width(args ...interface{}) (ret interface{}) {
 }
 
 // setCurveThreshold(qreal)
-func (this *QPainterPathStroker) Setcurvethreshold(args ...interface{}) () {
+func (this *QPainterPathStroker) SetCurveThreshold(args ...interface{}) () {
   // setCurveThreshold(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2115,7 +2136,7 @@ func (this *QPainterPathStroker) Setcurvethreshold(args ...interface{}) () {
 }
 
 // ~QPainterPathStroker()
-func (this *QPainterPathStroker) Freeqpainterpathstroker(args ...interface{}) () {
+func (this *QPainterPathStroker) Free(args ...interface{}) () {
   // ~QPainterPathStroker()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2127,7 +2148,10 @@ func (this *QPainterPathStroker) Freeqpainterpathstroker(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QPainterPathStrokerD0Ev
     // invoke: void ~QPainterPathStroker()
-    C.C_ZN19QPainterPathStrokerD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QPainterPathStrokerD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "~QPainterPathStroker", args)
   }
@@ -2136,7 +2160,7 @@ func (this *QPainterPathStroker) Freeqpainterpathstroker(args ...interface{}) ()
 }
 
 // capStyle()
-func (this *QPainterPathStroker) Capstyle(args ...interface{}) () {
+func (this *QPainterPathStroker) CapStyle(args ...interface{}) () {
   // capStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2157,7 +2181,7 @@ func (this *QPainterPathStroker) Capstyle(args ...interface{}) () {
 }
 
 // setWidth(qreal)
-func (this *QPainterPathStroker) Setwidth(args ...interface{}) () {
+func (this *QPainterPathStroker) SetWidth(args ...interface{}) () {
   // setWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

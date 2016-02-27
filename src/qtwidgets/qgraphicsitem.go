@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qgraphicsitem.h
 // dst-file: /src/widgets/qgraphicsitem.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -694,6 +695,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsTextItem)=1
@@ -815,7 +817,7 @@ func (this *QGraphicsTextItem) Contains(args ...interface{}) (ret interface{}) {
 }
 
 // boundingRect()
-func (this *QGraphicsTextItem) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsTextItem) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -844,7 +846,7 @@ func (this *QGraphicsTextItem) Boundingrect(args ...interface{}) (ret interface{
 }
 
 // setPlainText(const class QString &)
-func (this *QGraphicsTextItem) Setplaintext(args ...interface{}) () {
+func (this *QGraphicsTextItem) SetPlainText(args ...interface{}) () {
   // setPlainText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -868,7 +870,7 @@ func (this *QGraphicsTextItem) Setplaintext(args ...interface{}) () {
 }
 
 // setHtml(const class QString &)
-func (this *QGraphicsTextItem) Sethtml(args ...interface{}) () {
+func (this *QGraphicsTextItem) SetHtml(args ...interface{}) () {
   // setHtml(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -892,7 +894,7 @@ func (this *QGraphicsTextItem) Sethtml(args ...interface{}) () {
 }
 
 // setTabChangesFocus(_Bool)
-func (this *QGraphicsTextItem) Settabchangesfocus(args ...interface{}) () {
+func (this *QGraphicsTextItem) SetTabChangesFocus(args ...interface{}) () {
   // setTabChangesFocus(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -916,7 +918,7 @@ func (this *QGraphicsTextItem) Settabchangesfocus(args ...interface{}) () {
 }
 
 // setDocument(class QTextDocument *)
-func (this *QGraphicsTextItem) Setdocument(args ...interface{}) () {
+func (this *QGraphicsTextItem) SetDocument(args ...interface{}) () {
   // setDocument(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -940,7 +942,7 @@ func (this *QGraphicsTextItem) Setdocument(args ...interface{}) () {
 }
 
 // setOpenExternalLinks(_Bool)
-func (this *QGraphicsTextItem) Setopenexternallinks(args ...interface{}) () {
+func (this *QGraphicsTextItem) SetOpenExternalLinks(args ...interface{}) () {
   // setOpenExternalLinks(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -993,7 +995,7 @@ func (this *QGraphicsTextItem) Font(args ...interface{}) (ret interface{}) {
 }
 
 // setDefaultTextColor(const class QColor &)
-func (this *QGraphicsTextItem) Setdefaulttextcolor(args ...interface{}) () {
+func (this *QGraphicsTextItem) SetDefaultTextColor(args ...interface{}) () {
   // setDefaultTextColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1017,7 +1019,7 @@ func (this *QGraphicsTextItem) Setdefaulttextcolor(args ...interface{}) () {
 }
 
 // openExternalLinks()
-func (this *QGraphicsTextItem) Openexternallinks(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsTextItem) OpenExternalLinks(args ...interface{}) (ret interface{}) {
   // openExternalLinks()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1046,7 +1048,7 @@ func (this *QGraphicsTextItem) Openexternallinks(args ...interface{}) (ret inter
 }
 
 // setTextCursor(const class QTextCursor &)
-func (this *QGraphicsTextItem) Settextcursor(args ...interface{}) () {
+func (this *QGraphicsTextItem) SetTextCursor(args ...interface{}) () {
   // setTextCursor(const class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1070,7 +1072,7 @@ func (this *QGraphicsTextItem) Settextcursor(args ...interface{}) () {
 }
 
 // toPlainText()
-func (this *QGraphicsTextItem) Toplaintext(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsTextItem) ToPlainText(args ...interface{}) (ret interface{}) {
   // toPlainText()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1099,7 +1101,7 @@ func (this *QGraphicsTextItem) Toplaintext(args ...interface{}) (ret interface{}
 }
 
 // tabChangesFocus()
-func (this *QGraphicsTextItem) Tabchangesfocus(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsTextItem) TabChangesFocus(args ...interface{}) (ret interface{}) {
   // tabChangesFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1128,7 +1130,7 @@ func (this *QGraphicsTextItem) Tabchangesfocus(args ...interface{}) (ret interfa
 }
 
 // textCursor()
-func (this *QGraphicsTextItem) Textcursor(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsTextItem) TextCursor(args ...interface{}) (ret interface{}) {
   // textCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1187,6 +1189,9 @@ func (this *QGraphicsTextItem) Paint(args ...interface{}) () {
 }
 
 // QGraphicsTextItem(class QGraphicsItem *)
+func GcfreeQGraphicsTextItem(this *QGraphicsTextItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsTextItem(args ...interface{}) *QGraphicsTextItem {
   // QGraphicsTextItem(class QGraphicsItem *)
   // QGraphicsTextItem(const class QString &, class QGraphicsItem *)
@@ -1209,7 +1214,9 @@ func NewQGraphicsTextItem(args ...interface{}) *QGraphicsTextItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsTextItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsTextItem{Qclsinst:qthis}
+    this := &QGraphicsTextItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsTextItem)
+    return this
   case 1:
     // invoke: _ZN17QGraphicsTextItemC1ERK7QStringP13QGraphicsItem
     // invoke: void QGraphicsTextItem(const class QString &, class QGraphicsItem *)
@@ -1220,7 +1227,9 @@ func NewQGraphicsTextItem(args ...interface{}) *QGraphicsTextItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsTextItemC2ERK7QStringP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsTextItem{Qclsinst:qthis}
+    this := &QGraphicsTextItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsTextItem)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "QGraphicsTextItem", args)
   }
@@ -1258,7 +1267,7 @@ func (this *QGraphicsTextItem) Type_(args ...interface{}) (ret interface{}) {
 }
 
 // textInteractionFlags()
-func (this *QGraphicsTextItem) Textinteractionflags(args ...interface{}) () {
+func (this *QGraphicsTextItem) TextInteractionFlags(args ...interface{}) () {
   // textInteractionFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1279,7 +1288,7 @@ func (this *QGraphicsTextItem) Textinteractionflags(args ...interface{}) () {
 }
 
 // toHtml()
-func (this *QGraphicsTextItem) Tohtml(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsTextItem) ToHtml(args ...interface{}) (ret interface{}) {
   // toHtml()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1308,7 +1317,7 @@ func (this *QGraphicsTextItem) Tohtml(args ...interface{}) (ret interface{}) {
 }
 
 // adjustSize()
-func (this *QGraphicsTextItem) Adjustsize(args ...interface{}) () {
+func (this *QGraphicsTextItem) AdjustSize(args ...interface{}) () {
   // adjustSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1329,7 +1338,7 @@ func (this *QGraphicsTextItem) Adjustsize(args ...interface{}) () {
 }
 
 // ~QGraphicsTextItem()
-func (this *QGraphicsTextItem) Freeqgraphicstextitem(args ...interface{}) () {
+func (this *QGraphicsTextItem) Free(args ...interface{}) () {
   // ~QGraphicsTextItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1341,7 +1350,10 @@ func (this *QGraphicsTextItem) Freeqgraphicstextitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsTextItemD0Ev
     // invoke: void ~QGraphicsTextItem()
-    C.C_ZN17QGraphicsTextItemD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN17QGraphicsTextItemD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "~QGraphicsTextItem", args)
   }
@@ -1350,7 +1362,7 @@ func (this *QGraphicsTextItem) Freeqgraphicstextitem(args ...interface{}) () {
 }
 
 // setTextWidth(qreal)
-func (this *QGraphicsTextItem) Settextwidth(args ...interface{}) () {
+func (this *QGraphicsTextItem) SetTextWidth(args ...interface{}) () {
   // setTextWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1374,7 +1386,7 @@ func (this *QGraphicsTextItem) Settextwidth(args ...interface{}) () {
 }
 
 // isObscuredBy(const class QGraphicsItem *)
-func (this *QGraphicsTextItem) Isobscuredby(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsTextItem) IsObscuredBy(args ...interface{}) (ret interface{}) {
   // isObscuredBy(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1435,7 +1447,7 @@ func (this *QGraphicsTextItem) Document(args ...interface{}) (ret interface{}) {
 }
 
 // opaqueArea()
-func (this *QGraphicsTextItem) Opaquearea(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsTextItem) OpaqueArea(args ...interface{}) (ret interface{}) {
   // opaqueArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1464,7 +1476,7 @@ func (this *QGraphicsTextItem) Opaquearea(args ...interface{}) (ret interface{})
 }
 
 // defaultTextColor()
-func (this *QGraphicsTextItem) Defaulttextcolor(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsTextItem) DefaultTextColor(args ...interface{}) (ret interface{}) {
   // defaultTextColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1493,7 +1505,7 @@ func (this *QGraphicsTextItem) Defaulttextcolor(args ...interface{}) (ret interf
 }
 
 // metaObject()
-func (this *QGraphicsTextItem) Metaobject(args ...interface{}) () {
+func (this *QGraphicsTextItem) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1543,7 +1555,7 @@ func (this *QGraphicsTextItem) Shape(args ...interface{}) (ret interface{}) {
 }
 
 // setFont(const class QFont &)
-func (this *QGraphicsTextItem) Setfont(args ...interface{}) () {
+func (this *QGraphicsTextItem) SetFont(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1567,7 +1579,7 @@ func (this *QGraphicsTextItem) Setfont(args ...interface{}) () {
 }
 
 // textWidth()
-func (this *QGraphicsTextItem) Textwidth(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsTextItem) TextWidth(args ...interface{}) (ret interface{}) {
   // textWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1596,7 +1608,7 @@ func (this *QGraphicsTextItem) Textwidth(args ...interface{}) (ret interface{}) 
 }
 
 // boundingRect()
-func (this *QGraphicsPixmapItem) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsPixmapItem) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1625,7 +1637,7 @@ func (this *QGraphicsPixmapItem) Boundingrect(args ...interface{}) (ret interfac
 }
 
 // setPixmap(const class QPixmap &)
-func (this *QGraphicsPixmapItem) Setpixmap(args ...interface{}) () {
+func (this *QGraphicsPixmapItem) SetPixmap(args ...interface{}) () {
   // setPixmap(const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1678,7 +1690,7 @@ func (this *QGraphicsPixmapItem) Shape(args ...interface{}) (ret interface{}) {
 }
 
 // transformationMode()
-func (this *QGraphicsPixmapItem) Transformationmode(args ...interface{}) () {
+func (this *QGraphicsPixmapItem) TransformationMode(args ...interface{}) () {
   // transformationMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1760,7 +1772,7 @@ func (this *QGraphicsPixmapItem) Contains(args ...interface{}) (ret interface{})
 }
 
 // shapeMode()
-func (this *QGraphicsPixmapItem) Shapemode(args ...interface{}) () {
+func (this *QGraphicsPixmapItem) ShapeMode(args ...interface{}) () {
   // shapeMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1811,7 +1823,7 @@ func (this *QGraphicsPixmapItem) Paint(args ...interface{}) () {
 }
 
 // setOffset(const class QPointF &)
-func (this *QGraphicsPixmapItem) Setoffset(args ...interface{}) () {
+func (this *QGraphicsPixmapItem) SetOffset(args ...interface{}) () {
   // setOffset(const class QPointF &)
   // setOffset(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1876,7 +1888,7 @@ func (this *QGraphicsPixmapItem) Type_(args ...interface{}) (ret interface{}) {
 }
 
 // ~QGraphicsPixmapItem()
-func (this *QGraphicsPixmapItem) Freeqgraphicspixmapitem(args ...interface{}) () {
+func (this *QGraphicsPixmapItem) Free(args ...interface{}) () {
   // ~QGraphicsPixmapItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1888,7 +1900,10 @@ func (this *QGraphicsPixmapItem) Freeqgraphicspixmapitem(args ...interface{}) ()
   case 0:
     // invoke: _ZN19QGraphicsPixmapItemD0Ev
     // invoke: void ~QGraphicsPixmapItem()
-    C.C_ZN19QGraphicsPixmapItemD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN19QGraphicsPixmapItemD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "~QGraphicsPixmapItem", args)
   }
@@ -1926,6 +1941,9 @@ func (this *QGraphicsPixmapItem) Offset(args ...interface{}) (ret interface{}) {
 }
 
 // QGraphicsPixmapItem(class QGraphicsItem *)
+func GcfreeQGraphicsPixmapItem(this *QGraphicsPixmapItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsPixmapItem(args ...interface{}) *QGraphicsPixmapItem {
   // QGraphicsPixmapItem(class QGraphicsItem *)
   // QGraphicsPixmapItem(const class QPixmap &, class QGraphicsItem *)
@@ -1948,7 +1966,9 @@ func NewQGraphicsPixmapItem(args ...interface{}) *QGraphicsPixmapItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QGraphicsPixmapItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsPixmapItem{Qclsinst:qthis}
+    this := &QGraphicsPixmapItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsPixmapItem)
+    return this
   case 1:
     // invoke: _ZN19QGraphicsPixmapItemC1ERK7QPixmapP13QGraphicsItem
     // invoke: void QGraphicsPixmapItem(const class QPixmap &, class QGraphicsItem *)
@@ -1959,7 +1979,9 @@ func NewQGraphicsPixmapItem(args ...interface{}) *QGraphicsPixmapItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN19QGraphicsPixmapItemC2ERK7QPixmapP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsPixmapItem{Qclsinst:qthis}
+    this := &QGraphicsPixmapItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsPixmapItem)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "QGraphicsPixmapItem", args)
   }
@@ -1968,7 +1990,7 @@ func NewQGraphicsPixmapItem(args ...interface{}) *QGraphicsPixmapItem {
 }
 
 // isObscuredBy(const class QGraphicsItem *)
-func (this *QGraphicsPixmapItem) Isobscuredby(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsPixmapItem) IsObscuredBy(args ...interface{}) (ret interface{}) {
   // isObscuredBy(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2000,7 +2022,7 @@ func (this *QGraphicsPixmapItem) Isobscuredby(args ...interface{}) (ret interfac
 }
 
 // opaqueArea()
-func (this *QGraphicsPixmapItem) Opaquearea(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsPixmapItem) OpaqueArea(args ...interface{}) (ret interface{}) {
   // opaqueArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2029,7 +2051,7 @@ func (this *QGraphicsPixmapItem) Opaquearea(args ...interface{}) (ret interface{
 }
 
 // opaqueArea()
-func (this *QGraphicsRectItem) Opaquearea(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsRectItem) OpaqueArea(args ...interface{}) (ret interface{}) {
   // opaqueArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2058,7 +2080,7 @@ func (this *QGraphicsRectItem) Opaquearea(args ...interface{}) (ret interface{})
 }
 
 // boundingRect()
-func (this *QGraphicsRectItem) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsRectItem) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2207,6 +2229,9 @@ func (this *QGraphicsRectItem) Shape(args ...interface{}) (ret interface{}) {
 }
 
 // QGraphicsRectItem(class QGraphicsItem *)
+func GcfreeQGraphicsRectItem(this *QGraphicsRectItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsRectItem(args ...interface{}) *QGraphicsRectItem {
   // QGraphicsRectItem(class QGraphicsItem *)
   // QGraphicsRectItem(const class QRectF &, class QGraphicsItem *)
@@ -2236,7 +2261,9 @@ func NewQGraphicsRectItem(args ...interface{}) *QGraphicsRectItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsRectItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsRectItem{Qclsinst:qthis}
+    this := &QGraphicsRectItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsRectItem)
+    return this
   case 1:
     // invoke: _ZN17QGraphicsRectItemC1ERK6QRectFP13QGraphicsItem
     // invoke: void QGraphicsRectItem(const class QRectF &, class QGraphicsItem *)
@@ -2247,7 +2274,9 @@ func NewQGraphicsRectItem(args ...interface{}) *QGraphicsRectItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsRectItemC2ERK6QRectFP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsRectItem{Qclsinst:qthis}
+    this := &QGraphicsRectItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsRectItem)
+    return this
   case 2:
     // invoke: _ZN17QGraphicsRectItemC1EddddP13QGraphicsItem
     // invoke: void QGraphicsRectItem(qreal, qreal, qreal, qreal, class QGraphicsItem *)
@@ -2264,7 +2293,9 @@ func NewQGraphicsRectItem(args ...interface{}) *QGraphicsRectItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsRectItemC2EddddP13QGraphicsItem(arg0, arg1, arg2, arg3, arg4)
-    return &QGraphicsRectItem{Qclsinst:qthis}
+    this := &QGraphicsRectItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsRectItem)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "QGraphicsRectItem", args)
   }
@@ -2273,7 +2304,7 @@ func NewQGraphicsRectItem(args ...interface{}) *QGraphicsRectItem {
 }
 
 // ~QGraphicsRectItem()
-func (this *QGraphicsRectItem) Freeqgraphicsrectitem(args ...interface{}) () {
+func (this *QGraphicsRectItem) Free(args ...interface{}) () {
   // ~QGraphicsRectItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2285,7 +2316,10 @@ func (this *QGraphicsRectItem) Freeqgraphicsrectitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsRectItemD0Ev
     // invoke: void ~QGraphicsRectItem()
-    C.C_ZN17QGraphicsRectItemD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN17QGraphicsRectItemD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "~QGraphicsRectItem", args)
   }
@@ -2294,7 +2328,7 @@ func (this *QGraphicsRectItem) Freeqgraphicsrectitem(args ...interface{}) () {
 }
 
 // isObscuredBy(const class QGraphicsItem *)
-func (this *QGraphicsRectItem) Isobscuredby(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsRectItem) IsObscuredBy(args ...interface{}) (ret interface{}) {
   // isObscuredBy(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2326,7 +2360,7 @@ func (this *QGraphicsRectItem) Isobscuredby(args ...interface{}) (ret interface{
 }
 
 // setRect(const class QRectF &)
-func (this *QGraphicsRectItem) Setrect(args ...interface{}) () {
+func (this *QGraphicsRectItem) SetRect(args ...interface{}) () {
   // setRect(const class QRectF &)
   // setRect(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2397,7 +2431,7 @@ func (this *QGraphicsRectItem) Rect(args ...interface{}) (ret interface{}) {
 }
 
 // opaqueArea()
-func (this *QGraphicsEllipseItem) Opaquearea(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsEllipseItem) OpaqueArea(args ...interface{}) (ret interface{}) {
   // opaqueArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2426,7 +2460,7 @@ func (this *QGraphicsEllipseItem) Opaquearea(args ...interface{}) (ret interface
 }
 
 // boundingRect()
-func (this *QGraphicsEllipseItem) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsEllipseItem) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2455,7 +2489,7 @@ func (this *QGraphicsEllipseItem) Boundingrect(args ...interface{}) (ret interfa
 }
 
 // spanAngle()
-func (this *QGraphicsEllipseItem) Spanangle(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsEllipseItem) SpanAngle(args ...interface{}) (ret interface{}) {
   // spanAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2545,7 +2579,7 @@ func (this *QGraphicsEllipseItem) Contains(args ...interface{}) (ret interface{}
 }
 
 // setSpanAngle(int)
-func (this *QGraphicsEllipseItem) Setspanangle(args ...interface{}) () {
+func (this *QGraphicsEllipseItem) SetSpanAngle(args ...interface{}) () {
   // setSpanAngle(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2569,7 +2603,7 @@ func (this *QGraphicsEllipseItem) Setspanangle(args ...interface{}) () {
 }
 
 // setRect(const class QRectF &)
-func (this *QGraphicsEllipseItem) Setrect(args ...interface{}) () {
+func (this *QGraphicsEllipseItem) SetRect(args ...interface{}) () {
   // setRect(const class QRectF &)
   // setRect(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2611,7 +2645,7 @@ func (this *QGraphicsEllipseItem) Setrect(args ...interface{}) () {
 }
 
 // setStartAngle(int)
-func (this *QGraphicsEllipseItem) Setstartangle(args ...interface{}) () {
+func (this *QGraphicsEllipseItem) SetStartAngle(args ...interface{}) () {
   // setStartAngle(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2694,7 +2728,7 @@ func (this *QGraphicsEllipseItem) Shape(args ...interface{}) (ret interface{}) {
 }
 
 // ~QGraphicsEllipseItem()
-func (this *QGraphicsEllipseItem) Freeqgraphicsellipseitem(args ...interface{}) () {
+func (this *QGraphicsEllipseItem) Free(args ...interface{}) () {
   // ~QGraphicsEllipseItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2706,7 +2740,10 @@ func (this *QGraphicsEllipseItem) Freeqgraphicsellipseitem(args ...interface{}) 
   case 0:
     // invoke: _ZN20QGraphicsEllipseItemD0Ev
     // invoke: void ~QGraphicsEllipseItem()
-    C.C_ZN20QGraphicsEllipseItemD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN20QGraphicsEllipseItemD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "~QGraphicsEllipseItem", args)
   }
@@ -2715,7 +2752,7 @@ func (this *QGraphicsEllipseItem) Freeqgraphicsellipseitem(args ...interface{}) 
 }
 
 // startAngle()
-func (this *QGraphicsEllipseItem) Startangle(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsEllipseItem) StartAngle(args ...interface{}) (ret interface{}) {
   // startAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2744,7 +2781,7 @@ func (this *QGraphicsEllipseItem) Startangle(args ...interface{}) (ret interface
 }
 
 // isObscuredBy(const class QGraphicsItem *)
-func (this *QGraphicsEllipseItem) Isobscuredby(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsEllipseItem) IsObscuredBy(args ...interface{}) (ret interface{}) {
   // isObscuredBy(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2776,6 +2813,9 @@ func (this *QGraphicsEllipseItem) Isobscuredby(args ...interface{}) (ret interfa
 }
 
 // QGraphicsEllipseItem(class QGraphicsItem *)
+func GcfreeQGraphicsEllipseItem(this *QGraphicsEllipseItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsEllipseItem(args ...interface{}) *QGraphicsEllipseItem {
   // QGraphicsEllipseItem(class QGraphicsItem *)
   // QGraphicsEllipseItem(qreal, qreal, qreal, qreal, class QGraphicsItem *)
@@ -2805,7 +2845,9 @@ func NewQGraphicsEllipseItem(args ...interface{}) *QGraphicsEllipseItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QGraphicsEllipseItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsEllipseItem{Qclsinst:qthis}
+    this := &QGraphicsEllipseItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsEllipseItem)
+    return this
   case 1:
     // invoke: _ZN20QGraphicsEllipseItemC1EddddP13QGraphicsItem
     // invoke: void QGraphicsEllipseItem(qreal, qreal, qreal, qreal, class QGraphicsItem *)
@@ -2822,7 +2864,9 @@ func NewQGraphicsEllipseItem(args ...interface{}) *QGraphicsEllipseItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QGraphicsEllipseItemC2EddddP13QGraphicsItem(arg0, arg1, arg2, arg3, arg4)
-    return &QGraphicsEllipseItem{Qclsinst:qthis}
+    this := &QGraphicsEllipseItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsEllipseItem)
+    return this
   case 2:
     // invoke: _ZN20QGraphicsEllipseItemC1ERK6QRectFP13QGraphicsItem
     // invoke: void QGraphicsEllipseItem(const class QRectF &, class QGraphicsItem *)
@@ -2833,7 +2877,9 @@ func NewQGraphicsEllipseItem(args ...interface{}) *QGraphicsEllipseItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QGraphicsEllipseItemC2ERK6QRectFP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsEllipseItem{Qclsinst:qthis}
+    this := &QGraphicsEllipseItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsEllipseItem)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "QGraphicsEllipseItem", args)
   }
@@ -2871,7 +2917,7 @@ func (this *QGraphicsEllipseItem) Rect(args ...interface{}) (ret interface{}) {
 }
 
 // opaqueArea()
-func (this *QGraphicsPolygonItem) Opaquearea(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsPolygonItem) OpaqueArea(args ...interface{}) (ret interface{}) {
   // opaqueArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2900,7 +2946,7 @@ func (this *QGraphicsPolygonItem) Opaquearea(args ...interface{}) (ret interface
 }
 
 // boundingRect()
-func (this *QGraphicsPolygonItem) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsPolygonItem) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2929,7 +2975,7 @@ func (this *QGraphicsPolygonItem) Boundingrect(args ...interface{}) (ret interfa
 }
 
 // setPolygon(const class QPolygonF &)
-func (this *QGraphicsPolygonItem) Setpolygon(args ...interface{}) () {
+func (this *QGraphicsPolygonItem) SetPolygon(args ...interface{}) () {
   // setPolygon(const class QPolygonF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3102,6 +3148,9 @@ func (this *QGraphicsPolygonItem) Shape(args ...interface{}) (ret interface{}) {
 }
 
 // QGraphicsPolygonItem(const class QPolygonF &, class QGraphicsItem *)
+func GcfreeQGraphicsPolygonItem(this *QGraphicsPolygonItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsPolygonItem(args ...interface{}) *QGraphicsPolygonItem {
   // QGraphicsPolygonItem(const class QPolygonF &, class QGraphicsItem *)
   // QGraphicsPolygonItem(class QGraphicsItem *)
@@ -3126,7 +3175,9 @@ func NewQGraphicsPolygonItem(args ...interface{}) *QGraphicsPolygonItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QGraphicsPolygonItemC2ERK9QPolygonFP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsPolygonItem{Qclsinst:qthis}
+    this := &QGraphicsPolygonItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsPolygonItem)
+    return this
   case 1:
     // invoke: _ZN20QGraphicsPolygonItemC1EP13QGraphicsItem
     // invoke: void QGraphicsPolygonItem(class QGraphicsItem *)
@@ -3135,7 +3186,9 @@ func NewQGraphicsPolygonItem(args ...interface{}) *QGraphicsPolygonItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QGraphicsPolygonItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsPolygonItem{Qclsinst:qthis}
+    this := &QGraphicsPolygonItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsPolygonItem)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "QGraphicsPolygonItem", args)
   }
@@ -3144,7 +3197,7 @@ func NewQGraphicsPolygonItem(args ...interface{}) *QGraphicsPolygonItem {
 }
 
 // ~QGraphicsPolygonItem()
-func (this *QGraphicsPolygonItem) Freeqgraphicspolygonitem(args ...interface{}) () {
+func (this *QGraphicsPolygonItem) Free(args ...interface{}) () {
   // ~QGraphicsPolygonItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3156,7 +3209,10 @@ func (this *QGraphicsPolygonItem) Freeqgraphicspolygonitem(args ...interface{}) 
   case 0:
     // invoke: _ZN20QGraphicsPolygonItemD0Ev
     // invoke: void ~QGraphicsPolygonItem()
-    C.C_ZN20QGraphicsPolygonItemD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN20QGraphicsPolygonItemD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "~QGraphicsPolygonItem", args)
   }
@@ -3165,7 +3221,7 @@ func (this *QGraphicsPolygonItem) Freeqgraphicspolygonitem(args ...interface{}) 
 }
 
 // isObscuredBy(const class QGraphicsItem *)
-func (this *QGraphicsPolygonItem) Isobscuredby(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsPolygonItem) IsObscuredBy(args ...interface{}) (ret interface{}) {
   // isObscuredBy(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3197,7 +3253,7 @@ func (this *QGraphicsPolygonItem) Isobscuredby(args ...interface{}) (ret interfa
 }
 
 // fillRule()
-func (this *QGraphicsPolygonItem) Fillrule(args ...interface{}) () {
+func (this *QGraphicsPolygonItem) FillRule(args ...interface{}) () {
   // fillRule()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3218,7 +3274,7 @@ func (this *QGraphicsPolygonItem) Fillrule(args ...interface{}) () {
 }
 
 // opaqueArea()
-func (this *QGraphicsPathItem) Opaquearea(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsPathItem) OpaqueArea(args ...interface{}) (ret interface{}) {
   // opaqueArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3247,7 +3303,7 @@ func (this *QGraphicsPathItem) Opaquearea(args ...interface{}) (ret interface{})
 }
 
 // ~QGraphicsPathItem()
-func (this *QGraphicsPathItem) Freeqgraphicspathitem(args ...interface{}) () {
+func (this *QGraphicsPathItem) Free(args ...interface{}) () {
   // ~QGraphicsPathItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3259,7 +3315,10 @@ func (this *QGraphicsPathItem) Freeqgraphicspathitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsPathItemD0Ev
     // invoke: void ~QGraphicsPathItem()
-    C.C_ZN17QGraphicsPathItemD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN17QGraphicsPathItemD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "~QGraphicsPathItem", args)
   }
@@ -3268,7 +3327,7 @@ func (this *QGraphicsPathItem) Freeqgraphicspathitem(args ...interface{}) () {
 }
 
 // boundingRect()
-func (this *QGraphicsPathItem) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsPathItem) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3297,7 +3356,7 @@ func (this *QGraphicsPathItem) Boundingrect(args ...interface{}) (ret interface{
 }
 
 // isObscuredBy(const class QGraphicsItem *)
-func (this *QGraphicsPathItem) Isobscuredby(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsPathItem) IsObscuredBy(args ...interface{}) (ret interface{}) {
   // isObscuredBy(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3449,7 +3508,7 @@ func (this *QGraphicsPathItem) Path(args ...interface{}) (ret interface{}) {
 }
 
 // setPath(const class QPainterPath &)
-func (this *QGraphicsPathItem) Setpath(args ...interface{}) () {
+func (this *QGraphicsPathItem) SetPath(args ...interface{}) () {
   // setPath(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3473,6 +3532,9 @@ func (this *QGraphicsPathItem) Setpath(args ...interface{}) () {
 }
 
 // QGraphicsPathItem(const class QPainterPath &, class QGraphicsItem *)
+func GcfreeQGraphicsPathItem(this *QGraphicsPathItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsPathItem(args ...interface{}) *QGraphicsPathItem {
   // QGraphicsPathItem(const class QPainterPath &, class QGraphicsItem *)
   // QGraphicsPathItem(class QGraphicsItem *)
@@ -3497,7 +3559,9 @@ func NewQGraphicsPathItem(args ...interface{}) *QGraphicsPathItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsPathItemC2ERK12QPainterPathP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsPathItem{Qclsinst:qthis}
+    this := &QGraphicsPathItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsPathItem)
+    return this
   case 1:
     // invoke: _ZN17QGraphicsPathItemC1EP13QGraphicsItem
     // invoke: void QGraphicsPathItem(class QGraphicsItem *)
@@ -3506,7 +3570,9 @@ func NewQGraphicsPathItem(args ...interface{}) *QGraphicsPathItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsPathItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsPathItem{Qclsinst:qthis}
+    this := &QGraphicsPathItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsPathItem)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "QGraphicsPathItem", args)
   }
@@ -3544,7 +3610,7 @@ func (this *QGraphicsPathItem) Type_(args ...interface{}) (ret interface{}) {
 }
 
 // opaqueArea()
-func (this *QGraphicsLineItem) Opaquearea(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLineItem) OpaqueArea(args ...interface{}) (ret interface{}) {
   // opaqueArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3573,7 +3639,7 @@ func (this *QGraphicsLineItem) Opaquearea(args ...interface{}) (ret interface{})
 }
 
 // boundingRect()
-func (this *QGraphicsLineItem) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLineItem) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3692,7 +3758,7 @@ func (this *QGraphicsLineItem) Shape(args ...interface{}) (ret interface{}) {
 }
 
 // ~QGraphicsLineItem()
-func (this *QGraphicsLineItem) Freeqgraphicslineitem(args ...interface{}) () {
+func (this *QGraphicsLineItem) Free(args ...interface{}) () {
   // ~QGraphicsLineItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3704,7 +3770,10 @@ func (this *QGraphicsLineItem) Freeqgraphicslineitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QGraphicsLineItemD0Ev
     // invoke: void ~QGraphicsLineItem()
-    C.C_ZN17QGraphicsLineItemD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN17QGraphicsLineItemD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "~QGraphicsLineItem", args)
   }
@@ -3713,6 +3782,9 @@ func (this *QGraphicsLineItem) Freeqgraphicslineitem(args ...interface{}) () {
 }
 
 // QGraphicsLineItem(class QGraphicsItem *)
+func GcfreeQGraphicsLineItem(this *QGraphicsLineItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsLineItem(args ...interface{}) *QGraphicsLineItem {
   // QGraphicsLineItem(class QGraphicsItem *)
   // QGraphicsLineItem(const class QLineF &, class QGraphicsItem *)
@@ -3742,7 +3814,9 @@ func NewQGraphicsLineItem(args ...interface{}) *QGraphicsLineItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsLineItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsLineItem{Qclsinst:qthis}
+    this := &QGraphicsLineItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsLineItem)
+    return this
   case 1:
     // invoke: _ZN17QGraphicsLineItemC1ERK6QLineFP13QGraphicsItem
     // invoke: void QGraphicsLineItem(const class QLineF &, class QGraphicsItem *)
@@ -3753,7 +3827,9 @@ func NewQGraphicsLineItem(args ...interface{}) *QGraphicsLineItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsLineItemC2ERK6QLineFP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsLineItem{Qclsinst:qthis}
+    this := &QGraphicsLineItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsLineItem)
+    return this
   case 2:
     // invoke: _ZN17QGraphicsLineItemC1EddddP13QGraphicsItem
     // invoke: void QGraphicsLineItem(qreal, qreal, qreal, qreal, class QGraphicsItem *)
@@ -3770,7 +3846,9 @@ func NewQGraphicsLineItem(args ...interface{}) *QGraphicsLineItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN17QGraphicsLineItemC2EddddP13QGraphicsItem(arg0, arg1, arg2, arg3, arg4)
-    return &QGraphicsLineItem{Qclsinst:qthis}
+    this := &QGraphicsLineItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsLineItem)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "QGraphicsLineItem", args)
   }
@@ -3838,7 +3916,7 @@ func (this *QGraphicsLineItem) Pen(args ...interface{}) (ret interface{}) {
 }
 
 // setPen(const class QPen &)
-func (this *QGraphicsLineItem) Setpen(args ...interface{}) () {
+func (this *QGraphicsLineItem) SetPen(args ...interface{}) () {
   // setPen(const class QPen &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3862,7 +3940,7 @@ func (this *QGraphicsLineItem) Setpen(args ...interface{}) () {
 }
 
 // setLine(const class QLineF &)
-func (this *QGraphicsLineItem) Setline(args ...interface{}) () {
+func (this *QGraphicsLineItem) SetLine(args ...interface{}) () {
   // setLine(const class QLineF &)
   // setLine(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3933,7 +4011,7 @@ func (this *QGraphicsLineItem) Line(args ...interface{}) (ret interface{}) {
 }
 
 // isObscuredBy(const class QGraphicsItem *)
-func (this *QGraphicsLineItem) Isobscuredby(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsLineItem) IsObscuredBy(args ...interface{}) (ret interface{}) {
   // isObscuredBy(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3965,7 +4043,7 @@ func (this *QGraphicsLineItem) Isobscuredby(args ...interface{}) (ret interface{
 }
 
 // opaqueArea()
-func (this *QGraphicsItemGroup) Opaquearea(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemGroup) OpaqueArea(args ...interface{}) (ret interface{}) {
   // opaqueArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3994,7 +4072,7 @@ func (this *QGraphicsItemGroup) Opaquearea(args ...interface{}) (ret interface{}
 }
 
 // addToGroup(class QGraphicsItem *)
-func (this *QGraphicsItemGroup) Addtogroup(args ...interface{}) () {
+func (this *QGraphicsItemGroup) AddToGroup(args ...interface{}) () {
   // addToGroup(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4018,6 +4096,9 @@ func (this *QGraphicsItemGroup) Addtogroup(args ...interface{}) () {
 }
 
 // QGraphicsItemGroup(class QGraphicsItem *)
+func GcfreeQGraphicsItemGroup(this *QGraphicsItemGroup) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsItemGroup(args ...interface{}) *QGraphicsItemGroup {
   // QGraphicsItemGroup(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -4036,7 +4117,9 @@ func NewQGraphicsItemGroup(args ...interface{}) *QGraphicsItemGroup {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QGraphicsItemGroupC2EP13QGraphicsItem(arg0)
-    return &QGraphicsItemGroup{Qclsinst:qthis}
+    this := &QGraphicsItemGroup{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsItemGroup)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "QGraphicsItemGroup", args)
   }
@@ -4045,7 +4128,7 @@ func NewQGraphicsItemGroup(args ...interface{}) *QGraphicsItemGroup {
 }
 
 // boundingRect()
-func (this *QGraphicsItemGroup) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemGroup) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4074,7 +4157,7 @@ func (this *QGraphicsItemGroup) Boundingrect(args ...interface{}) (ret interface
 }
 
 // removeFromGroup(class QGraphicsItem *)
-func (this *QGraphicsItemGroup) Removefromgroup(args ...interface{}) () {
+func (this *QGraphicsItemGroup) RemoveFromGroup(args ...interface{}) () {
   // removeFromGroup(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4098,7 +4181,7 @@ func (this *QGraphicsItemGroup) Removefromgroup(args ...interface{}) () {
 }
 
 // isObscuredBy(const class QGraphicsItem *)
-func (this *QGraphicsItemGroup) Isobscuredby(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItemGroup) IsObscuredBy(args ...interface{}) (ret interface{}) {
   // isObscuredBy(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4189,7 +4272,7 @@ func (this *QGraphicsItemGroup) Type_(args ...interface{}) (ret interface{}) {
 }
 
 // ~QGraphicsItemGroup()
-func (this *QGraphicsItemGroup) Freeqgraphicsitemgroup(args ...interface{}) () {
+func (this *QGraphicsItemGroup) Free(args ...interface{}) () {
   // ~QGraphicsItemGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4201,7 +4284,10 @@ func (this *QGraphicsItemGroup) Freeqgraphicsitemgroup(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QGraphicsItemGroupD0Ev
     // invoke: void ~QGraphicsItemGroup()
-    C.C_ZN18QGraphicsItemGroupD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN18QGraphicsItemGroupD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "~QGraphicsItemGroup", args)
   }
@@ -4210,7 +4296,7 @@ func (this *QGraphicsItemGroup) Freeqgraphicsitemgroup(args ...interface{}) () {
 }
 
 // opaqueArea()
-func (this *QAbstractGraphicsShapeItem) Opaquearea(args ...interface{}) (ret interface{}) {
+func (this *QAbstractGraphicsShapeItem) OpaqueArea(args ...interface{}) (ret interface{}) {
   // opaqueArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4239,7 +4325,7 @@ func (this *QAbstractGraphicsShapeItem) Opaquearea(args ...interface{}) (ret int
 }
 
 // isObscuredBy(const class QGraphicsItem *)
-func (this *QAbstractGraphicsShapeItem) Isobscuredby(args ...interface{}) (ret interface{}) {
+func (this *QAbstractGraphicsShapeItem) IsObscuredBy(args ...interface{}) (ret interface{}) {
   // isObscuredBy(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4329,7 +4415,7 @@ func (this *QAbstractGraphicsShapeItem) Brush(args ...interface{}) (ret interfac
 }
 
 // setPen(const class QPen &)
-func (this *QAbstractGraphicsShapeItem) Setpen(args ...interface{}) () {
+func (this *QAbstractGraphicsShapeItem) SetPen(args ...interface{}) () {
   // setPen(const class QPen &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4353,7 +4439,7 @@ func (this *QAbstractGraphicsShapeItem) Setpen(args ...interface{}) () {
 }
 
 // setBrush(const class QBrush &)
-func (this *QAbstractGraphicsShapeItem) Setbrush(args ...interface{}) () {
+func (this *QAbstractGraphicsShapeItem) SetBrush(args ...interface{}) () {
   // setBrush(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4377,7 +4463,7 @@ func (this *QAbstractGraphicsShapeItem) Setbrush(args ...interface{}) () {
 }
 
 // ~QAbstractGraphicsShapeItem()
-func (this *QAbstractGraphicsShapeItem) Freeqabstractgraphicsshapeitem(args ...interface{}) () {
+func (this *QAbstractGraphicsShapeItem) Free(args ...interface{}) () {
   // ~QAbstractGraphicsShapeItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4389,7 +4475,10 @@ func (this *QAbstractGraphicsShapeItem) Freeqabstractgraphicsshapeitem(args ...i
   case 0:
     // invoke: _ZN26QAbstractGraphicsShapeItemD0Ev
     // invoke: void ~QAbstractGraphicsShapeItem()
-    C.C_ZN26QAbstractGraphicsShapeItemD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN26QAbstractGraphicsShapeItemD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "~QAbstractGraphicsShapeItem", args)
   }
@@ -4398,6 +4487,9 @@ func (this *QAbstractGraphicsShapeItem) Freeqabstractgraphicsshapeitem(args ...i
 }
 
 // QAbstractGraphicsShapeItem(class QGraphicsItem *)
+func GcfreeQAbstractGraphicsShapeItem(this *QAbstractGraphicsShapeItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQAbstractGraphicsShapeItem(args ...interface{}) *QAbstractGraphicsShapeItem {
   // QAbstractGraphicsShapeItem(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -4416,7 +4508,9 @@ func NewQAbstractGraphicsShapeItem(args ...interface{}) *QAbstractGraphicsShapeI
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN26QAbstractGraphicsShapeItemC2EP13QGraphicsItem(arg0)
-    return &QAbstractGraphicsShapeItem{Qclsinst:qthis}
+    this := &QAbstractGraphicsShapeItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQAbstractGraphicsShapeItem)
+    return this
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "QAbstractGraphicsShapeItem", args)
   }
@@ -4446,7 +4540,7 @@ func (this *QGraphicsItem) Show(args ...interface{}) () {
 }
 
 // hasFocus()
-func (this *QGraphicsItem) Hasfocus(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) HasFocus(args ...interface{}) (ret interface{}) {
   // hasFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4475,7 +4569,7 @@ func (this *QGraphicsItem) Hasfocus(args ...interface{}) (ret interface{}) {
 }
 
 // setGroup(class QGraphicsItemGroup *)
-func (this *QGraphicsItem) Setgroup(args ...interface{}) () {
+func (this *QGraphicsItem) SetGroup(args ...interface{}) () {
   // setGroup(class QGraphicsItemGroup *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4499,7 +4593,7 @@ func (this *QGraphicsItem) Setgroup(args ...interface{}) () {
 }
 
 // handlesChildEvents()
-func (this *QGraphicsItem) Handleschildevents(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) HandlesChildEvents(args ...interface{}) (ret interface{}) {
   // handlesChildEvents()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4557,7 +4651,7 @@ func (this *QGraphicsItem) Shape(args ...interface{}) (ret interface{}) {
 }
 
 // isPanel()
-func (this *QGraphicsItem) Ispanel(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsPanel(args ...interface{}) (ret interface{}) {
   // isPanel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4618,7 +4712,7 @@ func (this *QGraphicsItem) Data(args ...interface{}) (ret interface{}) {
 }
 
 // parentItem()
-func (this *QGraphicsItem) Parentitem(args ...interface{}) () {
+func (this *QGraphicsItem) ParentItem(args ...interface{}) () {
   // parentItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4639,7 +4733,7 @@ func (this *QGraphicsItem) Parentitem(args ...interface{}) () {
 }
 
 // childrenBoundingRect()
-func (this *QGraphicsItem) Childrenboundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) ChildrenBoundingRect(args ...interface{}) (ret interface{}) {
   // childrenBoundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4689,7 +4783,7 @@ func (this *QGraphicsItem) Group(args ...interface{}) () {
 }
 
 // isEnabled()
-func (this *QGraphicsItem) Isenabled(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsEnabled(args ...interface{}) (ret interface{}) {
   // isEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4739,7 +4833,7 @@ func (this *QGraphicsItem) Window(args ...interface{}) () {
 }
 
 // setBoundingRegionGranularity(qreal)
-func (this *QGraphicsItem) Setboundingregiongranularity(args ...interface{}) () {
+func (this *QGraphicsItem) SetBoundingRegionGranularity(args ...interface{}) () {
   // setBoundingRegionGranularity(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4763,7 +4857,7 @@ func (this *QGraphicsItem) Setboundingregiongranularity(args ...interface{}) () 
 }
 
 // setRotation(qreal)
-func (this *QGraphicsItem) Setrotation(args ...interface{}) () {
+func (this *QGraphicsItem) SetRotation(args ...interface{}) () {
   // setRotation(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4787,7 +4881,7 @@ func (this *QGraphicsItem) Setrotation(args ...interface{}) () {
 }
 
 // commonAncestorItem(const class QGraphicsItem *)
-func (this *QGraphicsItem) Commonancestoritem(args ...interface{}) () {
+func (this *QGraphicsItem) CommonAncestorItem(args ...interface{}) () {
   // commonAncestorItem(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4811,7 +4905,7 @@ func (this *QGraphicsItem) Commonancestoritem(args ...interface{}) () {
 }
 
 // mapToItem(const class QGraphicsItem *, const class QPolygonF &)
-func (this *QGraphicsItem) Maptoitem(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) MapToItem(args ...interface{}) (ret interface{}) {
   // mapToItem(const class QGraphicsItem *, const class QPolygonF &)
   // mapToItem(const class QGraphicsItem *, const class QRectF &)
   // mapToItem(const class QGraphicsItem *, const class QPainterPath &)
@@ -4958,7 +5052,7 @@ func (this *QGraphicsItem) Maptoitem(args ...interface{}) (ret interface{}) {
 }
 
 // toGraphicsObject()
-func (this *QGraphicsItem) Tographicsobject(args ...interface{}) () {
+func (this *QGraphicsItem) ToGraphicsObject(args ...interface{}) () {
   // toGraphicsObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -4979,7 +5073,7 @@ func (this *QGraphicsItem) Tographicsobject(args ...interface{}) () {
 }
 
 // acceptedMouseButtons()
-func (this *QGraphicsItem) Acceptedmousebuttons(args ...interface{}) () {
+func (this *QGraphicsItem) AcceptedMouseButtons(args ...interface{}) () {
   // acceptedMouseButtons()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5000,7 +5094,7 @@ func (this *QGraphicsItem) Acceptedmousebuttons(args ...interface{}) () {
 }
 
 // setGraphicsEffect(class QGraphicsEffect *)
-func (this *QGraphicsItem) Setgraphicseffect(args ...interface{}) () {
+func (this *QGraphicsItem) SetGraphicsEffect(args ...interface{}) () {
   // setGraphicsEffect(class QGraphicsEffect *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5024,7 +5118,7 @@ func (this *QGraphicsItem) Setgraphicseffect(args ...interface{}) () {
 }
 
 // mapToParent(qreal, qreal, qreal, qreal)
-func (this *QGraphicsItem) Maptoparent(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) MapToParent(args ...interface{}) (ret interface{}) {
   // mapToParent(qreal, qreal, qreal, qreal)
   // mapToParent(const class QPointF &)
   // mapToParent(qreal, qreal)
@@ -5153,7 +5247,7 @@ func (this *QGraphicsItem) Maptoparent(args ...interface{}) (ret interface{}) {
 }
 
 // setTransformOriginPoint(const class QPointF &)
-func (this *QGraphicsItem) Settransformoriginpoint(args ...interface{}) () {
+func (this *QGraphicsItem) SetTransformOriginPoint(args ...interface{}) () {
   // setTransformOriginPoint(const class QPointF &)
   // setTransformOriginPoint(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -5189,7 +5283,7 @@ func (this *QGraphicsItem) Settransformoriginpoint(args ...interface{}) () {
 }
 
 // deviceTransform(const class QTransform &)
-func (this *QGraphicsItem) Devicetransform(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) DeviceTransform(args ...interface{}) (ret interface{}) {
   // deviceTransform(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5250,7 +5344,7 @@ func (this *QGraphicsItem) Rotation(args ...interface{}) (ret interface{}) {
 }
 
 // effectiveOpacity()
-func (this *QGraphicsItem) Effectiveopacity(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) EffectiveOpacity(args ...interface{}) (ret interface{}) {
   // effectiveOpacity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5279,7 +5373,7 @@ func (this *QGraphicsItem) Effectiveopacity(args ...interface{}) (ret interface{
 }
 
 // focusScopeItem()
-func (this *QGraphicsItem) Focusscopeitem(args ...interface{}) () {
+func (this *QGraphicsItem) FocusScopeItem(args ...interface{}) () {
   // focusScopeItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5300,7 +5394,7 @@ func (this *QGraphicsItem) Focusscopeitem(args ...interface{}) () {
 }
 
 // inputMethodHints()
-func (this *QGraphicsItem) Inputmethodhints(args ...interface{}) () {
+func (this *QGraphicsItem) InputMethodHints(args ...interface{}) () {
   // inputMethodHints()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5321,7 +5415,7 @@ func (this *QGraphicsItem) Inputmethodhints(args ...interface{}) () {
 }
 
 // panelModality()
-func (this *QGraphicsItem) Panelmodality(args ...interface{}) () {
+func (this *QGraphicsItem) PanelModality(args ...interface{}) () {
   // panelModality()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5342,7 +5436,7 @@ func (this *QGraphicsItem) Panelmodality(args ...interface{}) () {
 }
 
 // topLevelWidget()
-func (this *QGraphicsItem) Toplevelwidget(args ...interface{}) () {
+func (this *QGraphicsItem) TopLevelWidget(args ...interface{}) () {
   // topLevelWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5363,7 +5457,7 @@ func (this *QGraphicsItem) Toplevelwidget(args ...interface{}) () {
 }
 
 // isVisibleTo(const class QGraphicsItem *)
-func (this *QGraphicsItem) Isvisibleto(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsVisibleTo(args ...interface{}) (ret interface{}) {
   // isVisibleTo(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5395,7 +5489,7 @@ func (this *QGraphicsItem) Isvisibleto(args ...interface{}) (ret interface{}) {
 }
 
 // setAcceptDrops(_Bool)
-func (this *QGraphicsItem) Setacceptdrops(args ...interface{}) () {
+func (this *QGraphicsItem) SetAcceptDrops(args ...interface{}) () {
   // setAcceptDrops(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5419,7 +5513,7 @@ func (this *QGraphicsItem) Setacceptdrops(args ...interface{}) () {
 }
 
 // clearFocus()
-func (this *QGraphicsItem) Clearfocus(args ...interface{}) () {
+func (this *QGraphicsItem) ClearFocus(args ...interface{}) () {
   // clearFocus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5440,7 +5534,7 @@ func (this *QGraphicsItem) Clearfocus(args ...interface{}) () {
 }
 
 // filtersChildEvents()
-func (this *QGraphicsItem) Filterschildevents(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) FiltersChildEvents(args ...interface{}) (ret interface{}) {
   // filtersChildEvents()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5490,7 +5584,7 @@ func (this *QGraphicsItem) X(args ...interface{}) () {
 }
 
 // setTransform(const class QTransform &, _Bool)
-func (this *QGraphicsItem) Settransform(args ...interface{}) () {
+func (this *QGraphicsItem) SetTransform(args ...interface{}) () {
   // setTransform(const class QTransform &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5517,7 +5611,7 @@ func (this *QGraphicsItem) Settransform(args ...interface{}) () {
 }
 
 // stackBefore(const class QGraphicsItem *)
-func (this *QGraphicsItem) Stackbefore(args ...interface{}) () {
+func (this *QGraphicsItem) StackBefore(args ...interface{}) () {
   // stackBefore(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5541,7 +5635,7 @@ func (this *QGraphicsItem) Stackbefore(args ...interface{}) () {
 }
 
 // setAcceptHoverEvents(_Bool)
-func (this *QGraphicsItem) Setaccepthoverevents(args ...interface{}) () {
+func (this *QGraphicsItem) SetAcceptHoverEvents(args ...interface{}) () {
   // setAcceptHoverEvents(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5565,7 +5659,7 @@ func (this *QGraphicsItem) Setaccepthoverevents(args ...interface{}) () {
 }
 
 // focusProxy()
-func (this *QGraphicsItem) Focusproxy(args ...interface{}) () {
+func (this *QGraphicsItem) FocusProxy(args ...interface{}) () {
   // focusProxy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5586,7 +5680,7 @@ func (this *QGraphicsItem) Focusproxy(args ...interface{}) () {
 }
 
 // mapFromParent(const class QPainterPath &)
-func (this *QGraphicsItem) Mapfromparent(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) MapFromParent(args ...interface{}) (ret interface{}) {
   // mapFromParent(const class QPainterPath &)
   // mapFromParent(const class QRectF &)
   // mapFromParent(qreal, qreal, qreal, qreal)
@@ -5715,7 +5809,7 @@ func (this *QGraphicsItem) Mapfromparent(args ...interface{}) (ret interface{}) 
 }
 
 // scenePos()
-func (this *QGraphicsItem) Scenepos(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) ScenePos(args ...interface{}) (ret interface{}) {
   // scenePos()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5744,7 +5838,7 @@ func (this *QGraphicsItem) Scenepos(args ...interface{}) (ret interface{}) {
 }
 
 // setPos(qreal, qreal)
-func (this *QGraphicsItem) Setpos(args ...interface{}) () {
+func (this *QGraphicsItem) SetPos(args ...interface{}) () {
   // setPos(qreal, qreal)
   // setPos(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -5859,7 +5953,7 @@ func (this *QGraphicsItem) Matrix(args ...interface{}) (ret interface{}) {
 }
 
 // isSelected()
-func (this *QGraphicsItem) Isselected(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsSelected(args ...interface{}) (ret interface{}) {
   // isSelected()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5888,7 +5982,7 @@ func (this *QGraphicsItem) Isselected(args ...interface{}) (ret interface{}) {
 }
 
 // moveBy(qreal, qreal)
-func (this *QGraphicsItem) Moveby(args ...interface{}) () {
+func (this *QGraphicsItem) MoveBy(args ...interface{}) () {
   // moveBy(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5915,7 +6009,7 @@ func (this *QGraphicsItem) Moveby(args ...interface{}) () {
 }
 
 // setFocusProxy(class QGraphicsItem *)
-func (this *QGraphicsItem) Setfocusproxy(args ...interface{}) () {
+func (this *QGraphicsItem) SetFocusProxy(args ...interface{}) () {
   // setFocusProxy(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5939,7 +6033,7 @@ func (this *QGraphicsItem) Setfocusproxy(args ...interface{}) () {
 }
 
 // itemTransform(const class QGraphicsItem *, _Bool *)
-func (this *QGraphicsItem) Itemtransform(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) ItemTransform(args ...interface{}) (ret interface{}) {
   // itemTransform(const class QGraphicsItem *, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -5974,7 +6068,7 @@ func (this *QGraphicsItem) Itemtransform(args ...interface{}) (ret interface{}) 
 }
 
 // mapRectToParent(const class QRectF &)
-func (this *QGraphicsItem) Maprecttoparent(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) MapRectToParent(args ...interface{}) (ret interface{}) {
   // mapRectToParent(const class QRectF &)
   // mapRectToParent(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -6032,7 +6126,7 @@ func (this *QGraphicsItem) Maprecttoparent(args ...interface{}) (ret interface{}
 }
 
 // isBlockedByModalPanel(class QGraphicsItem **)
-func (this *QGraphicsItem) Isblockedbymodalpanel(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsBlockedByModalPanel(args ...interface{}) (ret interface{}) {
   // isBlockedByModalPanel(class QGraphicsItem **)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6064,7 +6158,7 @@ func (this *QGraphicsItem) Isblockedbymodalpanel(args ...interface{}) (ret inter
 }
 
 // graphicsEffect()
-func (this *QGraphicsItem) Graphicseffect(args ...interface{}) () {
+func (this *QGraphicsItem) GraphicsEffect(args ...interface{}) () {
   // graphicsEffect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6085,7 +6179,7 @@ func (this *QGraphicsItem) Graphicseffect(args ...interface{}) () {
 }
 
 // childItems()
-func (this *QGraphicsItem) Childitems(args ...interface{}) () {
+func (this *QGraphicsItem) ChildItems(args ...interface{}) () {
   // childItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6106,7 +6200,7 @@ func (this *QGraphicsItem) Childitems(args ...interface{}) () {
 }
 
 // isClipped()
-func (this *QGraphicsItem) Isclipped(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsClipped(args ...interface{}) (ret interface{}) {
   // isClipped()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6135,7 +6229,7 @@ func (this *QGraphicsItem) Isclipped(args ...interface{}) (ret interface{}) {
 }
 
 // toolTip()
-func (this *QGraphicsItem) Tooltip(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) ToolTip(args ...interface{}) (ret interface{}) {
   // toolTip()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6164,7 +6258,7 @@ func (this *QGraphicsItem) Tooltip(args ...interface{}) (ret interface{}) {
 }
 
 // ~QGraphicsItem()
-func (this *QGraphicsItem) Freeqgraphicsitem(args ...interface{}) () {
+func (this *QGraphicsItem) Free(args ...interface{}) () {
   // ~QGraphicsItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6176,7 +6270,10 @@ func (this *QGraphicsItem) Freeqgraphicsitem(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsItemD0Ev
     // invoke: void ~QGraphicsItem()
-    C.C_ZN13QGraphicsItemD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN13QGraphicsItemD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsItem", "~QGraphicsItem", args)
   }
@@ -6185,7 +6282,7 @@ func (this *QGraphicsItem) Freeqgraphicsitem(args ...interface{}) () {
 }
 
 // isActive()
-func (this *QGraphicsItem) Isactive(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsActive(args ...interface{}) (ret interface{}) {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6214,7 +6311,7 @@ func (this *QGraphicsItem) Isactive(args ...interface{}) (ret interface{}) {
 }
 
 // setFiltersChildEvents(_Bool)
-func (this *QGraphicsItem) Setfilterschildevents(args ...interface{}) () {
+func (this *QGraphicsItem) SetFiltersChildEvents(args ...interface{}) () {
   // setFiltersChildEvents(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6238,7 +6335,7 @@ func (this *QGraphicsItem) Setfilterschildevents(args ...interface{}) () {
 }
 
 // opaqueArea()
-func (this *QGraphicsItem) Opaquearea(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) OpaqueArea(args ...interface{}) (ret interface{}) {
   // opaqueArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6291,7 +6388,7 @@ func (this *QGraphicsItem) Advance(args ...interface{}) () {
 }
 
 // setToolTip(const class QString &)
-func (this *QGraphicsItem) Settooltip(args ...interface{}) () {
+func (this *QGraphicsItem) SetToolTip(args ...interface{}) () {
   // setToolTip(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6315,7 +6412,7 @@ func (this *QGraphicsItem) Settooltip(args ...interface{}) () {
 }
 
 // mapToScene(const class QPolygonF &)
-func (this *QGraphicsItem) Maptoscene(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) MapToScene(args ...interface{}) (ret interface{}) {
   // mapToScene(const class QPolygonF &)
   // mapToScene(const class QRectF &)
   // mapToScene(const class QPointF &)
@@ -6444,7 +6541,7 @@ func (this *QGraphicsItem) Maptoscene(args ...interface{}) (ret interface{}) {
 }
 
 // setHandlesChildEvents(_Bool)
-func (this *QGraphicsItem) Sethandleschildevents(args ...interface{}) () {
+func (this *QGraphicsItem) SetHandlesChildEvents(args ...interface{}) () {
   // setHandlesChildEvents(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6468,7 +6565,7 @@ func (this *QGraphicsItem) Sethandleschildevents(args ...interface{}) () {
 }
 
 // transformOriginPoint()
-func (this *QGraphicsItem) Transformoriginpoint(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) TransformOriginPoint(args ...interface{}) (ret interface{}) {
   // transformOriginPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6526,7 +6623,7 @@ func (this *QGraphicsItem) Pos(args ...interface{}) (ret interface{}) {
 }
 
 // mapRectToScene(const class QRectF &)
-func (this *QGraphicsItem) Maprecttoscene(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) MapRectToScene(args ...interface{}) (ret interface{}) {
   // mapRectToScene(const class QRectF &)
   // mapRectToScene(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -6584,7 +6681,7 @@ func (this *QGraphicsItem) Maprecttoscene(args ...interface{}) (ret interface{})
 }
 
 // ungrabMouse()
-func (this *QGraphicsItem) Ungrabmouse(args ...interface{}) () {
+func (this *QGraphicsItem) UngrabMouse(args ...interface{}) () {
   // ungrabMouse()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6605,7 +6702,7 @@ func (this *QGraphicsItem) Ungrabmouse(args ...interface{}) () {
 }
 
 // isObscured(qreal, qreal, qreal, qreal)
-func (this *QGraphicsItem) Isobscured(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsObscured(args ...interface{}) (ret interface{}) {
   // isObscured(qreal, qreal, qreal, qreal)
   // isObscured(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -6663,7 +6760,7 @@ func (this *QGraphicsItem) Isobscured(args ...interface{}) (ret interface{}) {
 }
 
 // setSelected(_Bool)
-func (this *QGraphicsItem) Setselected(args ...interface{}) () {
+func (this *QGraphicsItem) SetSelected(args ...interface{}) () {
   // setSelected(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6687,7 +6784,7 @@ func (this *QGraphicsItem) Setselected(args ...interface{}) () {
 }
 
 // mapFromScene(const class QPolygonF &)
-func (this *QGraphicsItem) Mapfromscene(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) MapFromScene(args ...interface{}) (ret interface{}) {
   // mapFromScene(const class QPolygonF &)
   // mapFromScene(const class QRectF &)
   // mapFromScene(qreal, qreal, qreal, qreal)
@@ -6837,7 +6934,7 @@ func (this *QGraphicsItem) Scene(args ...interface{}) () {
 }
 
 // isAncestorOf(const class QGraphicsItem *)
-func (this *QGraphicsItem) Isancestorof(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsAncestorOf(args ...interface{}) (ret interface{}) {
   // isAncestorOf(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6869,7 +6966,7 @@ func (this *QGraphicsItem) Isancestorof(args ...interface{}) (ret interface{}) {
 }
 
 // topLevelItem()
-func (this *QGraphicsItem) Toplevelitem(args ...interface{}) () {
+func (this *QGraphicsItem) TopLevelItem(args ...interface{}) () {
   // topLevelItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6911,7 +7008,7 @@ func (this *QGraphicsItem) Panel(args ...interface{}) () {
 }
 
 // unsetCursor()
-func (this *QGraphicsItem) Unsetcursor(args ...interface{}) () {
+func (this *QGraphicsItem) UnsetCursor(args ...interface{}) () {
   // unsetCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -6953,7 +7050,7 @@ func (this *QGraphicsItem) Transformations(args ...interface{}) () {
 }
 
 // mapRectFromScene(const class QRectF &)
-func (this *QGraphicsItem) Maprectfromscene(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) MapRectFromScene(args ...interface{}) (ret interface{}) {
   // mapRectFromScene(const class QRectF &)
   // mapRectFromScene(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -7072,7 +7169,7 @@ func (this *QGraphicsItem) Transform(args ...interface{}) (ret interface{}) {
 }
 
 // ungrabKeyboard()
-func (this *QGraphicsItem) Ungrabkeyboard(args ...interface{}) () {
+func (this *QGraphicsItem) UngrabKeyboard(args ...interface{}) () {
   // ungrabKeyboard()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7093,7 +7190,7 @@ func (this *QGraphicsItem) Ungrabkeyboard(args ...interface{}) () {
 }
 
 // installSceneEventFilter(class QGraphicsItem *)
-func (this *QGraphicsItem) Installsceneeventfilter(args ...interface{}) () {
+func (this *QGraphicsItem) InstallSceneEventFilter(args ...interface{}) () {
   // installSceneEventFilter(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7117,7 +7214,7 @@ func (this *QGraphicsItem) Installsceneeventfilter(args ...interface{}) () {
 }
 
 // acceptHoverEvents()
-func (this *QGraphicsItem) Accepthoverevents(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) AcceptHoverEvents(args ...interface{}) (ret interface{}) {
   // acceptHoverEvents()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7146,7 +7243,7 @@ func (this *QGraphicsItem) Accepthoverevents(args ...interface{}) (ret interface
 }
 
 // mapRectToItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
-func (this *QGraphicsItem) Maprecttoitem(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) MapRectToItem(args ...interface{}) (ret interface{}) {
   // mapRectToItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
   // mapRectToItem(const class QGraphicsItem *, const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -7210,7 +7307,7 @@ func (this *QGraphicsItem) Maprecttoitem(args ...interface{}) (ret interface{}) 
 }
 
 // mapFromItem(const class QGraphicsItem *, qreal, qreal)
-func (this *QGraphicsItem) Mapfromitem(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) MapFromItem(args ...interface{}) (ret interface{}) {
   // mapFromItem(const class QGraphicsItem *, qreal, qreal)
   // mapFromItem(const class QGraphicsItem *, const class QPointF &)
   // mapFromItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
@@ -7357,6 +7454,9 @@ func (this *QGraphicsItem) Mapfromitem(args ...interface{}) (ret interface{}) {
 }
 
 // QGraphicsItem(class QGraphicsItem *)
+func GcfreeQGraphicsItem(this *QGraphicsItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsItem(args ...interface{}) *QGraphicsItem {
   // QGraphicsItem(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -7375,7 +7475,9 @@ func NewQGraphicsItem(args ...interface{}) *QGraphicsItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN13QGraphicsItemC2EPS_(arg0)
-    return &QGraphicsItem{Qclsinst:qthis}
+    this := &QGraphicsItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsItem)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsItem", "QGraphicsItem", args)
   }
@@ -7413,7 +7515,7 @@ func (this *QGraphicsItem) Type_(args ...interface{}) (ret interface{}) {
 }
 
 // setEnabled(_Bool)
-func (this *QGraphicsItem) Setenabled(args ...interface{}) () {
+func (this *QGraphicsItem) SetEnabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7437,7 +7539,7 @@ func (this *QGraphicsItem) Setenabled(args ...interface{}) () {
 }
 
 // grabMouse()
-func (this *QGraphicsItem) Grabmouse(args ...interface{}) () {
+func (this *QGraphicsItem) GrabMouse(args ...interface{}) () {
   // grabMouse()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7458,7 +7560,7 @@ func (this *QGraphicsItem) Grabmouse(args ...interface{}) () {
 }
 
 // setActive(_Bool)
-func (this *QGraphicsItem) Setactive(args ...interface{}) () {
+func (this *QGraphicsItem) SetActive(args ...interface{}) () {
   // setActive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7482,7 +7584,7 @@ func (this *QGraphicsItem) Setactive(args ...interface{}) () {
 }
 
 // isObscuredBy(const class QGraphicsItem *)
-func (this *QGraphicsItem) Isobscuredby(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsObscuredBy(args ...interface{}) (ret interface{}) {
   // isObscuredBy(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7514,7 +7616,7 @@ func (this *QGraphicsItem) Isobscuredby(args ...interface{}) (ret interface{}) {
 }
 
 // acceptDrops()
-func (this *QGraphicsItem) Acceptdrops(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) AcceptDrops(args ...interface{}) (ret interface{}) {
   // acceptDrops()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7543,7 +7645,7 @@ func (this *QGraphicsItem) Acceptdrops(args ...interface{}) (ret interface{}) {
 }
 
 // setParentItem(class QGraphicsItem *)
-func (this *QGraphicsItem) Setparentitem(args ...interface{}) () {
+func (this *QGraphicsItem) SetParentItem(args ...interface{}) () {
   // setParentItem(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7567,7 +7669,7 @@ func (this *QGraphicsItem) Setparentitem(args ...interface{}) () {
 }
 
 // ensureVisible(qreal, qreal, qreal, qreal, int, int)
-func (this *QGraphicsItem) Ensurevisible(args ...interface{}) () {
+func (this *QGraphicsItem) EnsureVisible(args ...interface{}) () {
   // ensureVisible(qreal, qreal, qreal, qreal, int, int)
   // ensureVisible(const class QRectF &, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -7621,7 +7723,7 @@ func (this *QGraphicsItem) Ensurevisible(args ...interface{}) () {
 }
 
 // grabKeyboard()
-func (this *QGraphicsItem) Grabkeyboard(args ...interface{}) () {
+func (this *QGraphicsItem) GrabKeyboard(args ...interface{}) () {
   // grabKeyboard()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7642,7 +7744,7 @@ func (this *QGraphicsItem) Grabkeyboard(args ...interface{}) () {
 }
 
 // parentObject()
-func (this *QGraphicsItem) Parentobject(args ...interface{}) () {
+func (this *QGraphicsItem) ParentObject(args ...interface{}) () {
   // parentObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7663,7 +7765,7 @@ func (this *QGraphicsItem) Parentobject(args ...interface{}) () {
 }
 
 // isUnderMouse()
-func (this *QGraphicsItem) Isundermouse(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsUnderMouse(args ...interface{}) (ret interface{}) {
   // isUnderMouse()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7692,7 +7794,7 @@ func (this *QGraphicsItem) Isundermouse(args ...interface{}) (ret interface{}) {
 }
 
 // parentWidget()
-func (this *QGraphicsItem) Parentwidget(args ...interface{}) () {
+func (this *QGraphicsItem) ParentWidget(args ...interface{}) () {
   // parentWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7713,7 +7815,7 @@ func (this *QGraphicsItem) Parentwidget(args ...interface{}) () {
 }
 
 // setZValue(qreal)
-func (this *QGraphicsItem) Setzvalue(args ...interface{}) () {
+func (this *QGraphicsItem) SetZValue(args ...interface{}) () {
   // setZValue(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7737,7 +7839,7 @@ func (this *QGraphicsItem) Setzvalue(args ...interface{}) () {
 }
 
 // setMatrix(const class QMatrix &, _Bool)
-func (this *QGraphicsItem) Setmatrix(args ...interface{}) () {
+func (this *QGraphicsItem) SetMatrix(args ...interface{}) () {
   // setMatrix(const class QMatrix &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7793,7 +7895,7 @@ func (this *QGraphicsItem) Cursor(args ...interface{}) (ret interface{}) {
 }
 
 // zValue()
-func (this *QGraphicsItem) Zvalue(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) ZValue(args ...interface{}) (ret interface{}) {
   // zValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7822,7 +7924,7 @@ func (this *QGraphicsItem) Zvalue(args ...interface{}) (ret interface{}) {
 }
 
 // setVisible(_Bool)
-func (this *QGraphicsItem) Setvisible(args ...interface{}) () {
+func (this *QGraphicsItem) SetVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7846,7 +7948,7 @@ func (this *QGraphicsItem) Setvisible(args ...interface{}) () {
 }
 
 // resetMatrix()
-func (this *QGraphicsItem) Resetmatrix(args ...interface{}) () {
+func (this *QGraphicsItem) ResetMatrix(args ...interface{}) () {
   // resetMatrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7867,7 +7969,7 @@ func (this *QGraphicsItem) Resetmatrix(args ...interface{}) () {
 }
 
 // sceneTransform()
-func (this *QGraphicsItem) Scenetransform(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) SceneTransform(args ...interface{}) (ret interface{}) {
   // sceneTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7896,7 +7998,7 @@ func (this *QGraphicsItem) Scenetransform(args ...interface{}) (ret interface{})
 }
 
 // isWindow()
-func (this *QGraphicsItem) Iswindow(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsWindow(args ...interface{}) (ret interface{}) {
   // isWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -7925,7 +8027,7 @@ func (this *QGraphicsItem) Iswindow(args ...interface{}) (ret interface{}) {
 }
 
 // mapRectFromParent(const class QRectF &)
-func (this *QGraphicsItem) Maprectfromparent(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) MapRectFromParent(args ...interface{}) (ret interface{}) {
   // mapRectFromParent(const class QRectF &)
   // mapRectFromParent(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -7983,7 +8085,7 @@ func (this *QGraphicsItem) Maprectfromparent(args ...interface{}) (ret interface
 }
 
 // setScale(qreal)
-func (this *QGraphicsItem) Setscale(args ...interface{}) () {
+func (this *QGraphicsItem) SetScale(args ...interface{}) () {
   // setScale(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8007,7 +8109,7 @@ func (this *QGraphicsItem) Setscale(args ...interface{}) () {
 }
 
 // isWidget()
-func (this *QGraphicsItem) Iswidget(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsWidget(args ...interface{}) (ret interface{}) {
   // isWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8036,7 +8138,7 @@ func (this *QGraphicsItem) Iswidget(args ...interface{}) (ret interface{}) {
 }
 
 // resetTransform()
-func (this *QGraphicsItem) Resettransform(args ...interface{}) () {
+func (this *QGraphicsItem) ResetTransform(args ...interface{}) () {
   // resetTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8057,7 +8159,7 @@ func (this *QGraphicsItem) Resettransform(args ...interface{}) () {
 }
 
 // sceneBoundingRect()
-func (this *QGraphicsItem) Sceneboundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) SceneBoundingRect(args ...interface{}) (ret interface{}) {
   // sceneBoundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8086,7 +8188,7 @@ func (this *QGraphicsItem) Sceneboundingrect(args ...interface{}) (ret interface
 }
 
 // setOpacity(qreal)
-func (this *QGraphicsItem) Setopacity(args ...interface{}) () {
+func (this *QGraphicsItem) SetOpacity(args ...interface{}) () {
   // setOpacity(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8110,7 +8212,7 @@ func (this *QGraphicsItem) Setopacity(args ...interface{}) () {
 }
 
 // focusItem()
-func (this *QGraphicsItem) Focusitem(args ...interface{}) () {
+func (this *QGraphicsItem) FocusItem(args ...interface{}) () {
   // focusItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8131,7 +8233,7 @@ func (this *QGraphicsItem) Focusitem(args ...interface{}) () {
 }
 
 // hasCursor()
-func (this *QGraphicsItem) Hascursor(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) HasCursor(args ...interface{}) (ret interface{}) {
   // hasCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8160,7 +8262,7 @@ func (this *QGraphicsItem) Hascursor(args ...interface{}) (ret interface{}) {
 }
 
 // setAcceptTouchEvents(_Bool)
-func (this *QGraphicsItem) Setaccepttouchevents(args ...interface{}) () {
+func (this *QGraphicsItem) SetAcceptTouchEvents(args ...interface{}) () {
   // setAcceptTouchEvents(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8184,7 +8286,7 @@ func (this *QGraphicsItem) Setaccepttouchevents(args ...interface{}) () {
 }
 
 // setData(int, const class QVariant &)
-func (this *QGraphicsItem) Setdata(args ...interface{}) () {
+func (this *QGraphicsItem) SetData(args ...interface{}) () {
   // setData(int, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8240,7 +8342,7 @@ func (this *QGraphicsItem) Opacity(args ...interface{}) (ret interface{}) {
 }
 
 // isVisible()
-func (this *QGraphicsItem) Isvisible(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) IsVisible(args ...interface{}) (ret interface{}) {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8311,7 +8413,7 @@ func (this *QGraphicsItem) Update(args ...interface{}) () {
 }
 
 // mapRectFromItem(const class QGraphicsItem *, const class QRectF &)
-func (this *QGraphicsItem) Maprectfromitem(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) MapRectFromItem(args ...interface{}) (ret interface{}) {
   // mapRectFromItem(const class QGraphicsItem *, const class QRectF &)
   // mapRectFromItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -8375,7 +8477,7 @@ func (this *QGraphicsItem) Maprectfromitem(args ...interface{}) (ret interface{}
 }
 
 // setX(qreal)
-func (this *QGraphicsItem) Setx(args ...interface{}) () {
+func (this *QGraphicsItem) SetX(args ...interface{}) () {
   // setX(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8399,7 +8501,7 @@ func (this *QGraphicsItem) Setx(args ...interface{}) () {
 }
 
 // setY(qreal)
-func (this *QGraphicsItem) Sety(args ...interface{}) () {
+func (this *QGraphicsItem) SetY(args ...interface{}) () {
   // setY(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8423,7 +8525,7 @@ func (this *QGraphicsItem) Sety(args ...interface{}) () {
 }
 
 // setCursor(const class QCursor &)
-func (this *QGraphicsItem) Setcursor(args ...interface{}) () {
+func (this *QGraphicsItem) SetCursor(args ...interface{}) () {
   // setCursor(const class QCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8447,7 +8549,7 @@ func (this *QGraphicsItem) Setcursor(args ...interface{}) () {
 }
 
 // boundingRegionGranularity()
-func (this *QGraphicsItem) Boundingregiongranularity(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) BoundingRegionGranularity(args ...interface{}) (ret interface{}) {
   // boundingRegionGranularity()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8476,7 +8578,7 @@ func (this *QGraphicsItem) Boundingregiongranularity(args ...interface{}) (ret i
 }
 
 // removeSceneEventFilter(class QGraphicsItem *)
-func (this *QGraphicsItem) Removesceneeventfilter(args ...interface{}) () {
+func (this *QGraphicsItem) RemoveSceneEventFilter(args ...interface{}) () {
   // removeSceneEventFilter(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8500,7 +8602,7 @@ func (this *QGraphicsItem) Removesceneeventfilter(args ...interface{}) () {
 }
 
 // acceptTouchEvents()
-func (this *QGraphicsItem) Accepttouchevents(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) AcceptTouchEvents(args ...interface{}) (ret interface{}) {
   // acceptTouchEvents()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8529,7 +8631,7 @@ func (this *QGraphicsItem) Accepttouchevents(args ...interface{}) (ret interface
 }
 
 // sceneMatrix()
-func (this *QGraphicsItem) Scenematrix(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) SceneMatrix(args ...interface{}) (ret interface{}) {
   // sceneMatrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8558,7 +8660,7 @@ func (this *QGraphicsItem) Scenematrix(args ...interface{}) (ret interface{}) {
 }
 
 // cacheMode()
-func (this *QGraphicsItem) Cachemode(args ...interface{}) () {
+func (this *QGraphicsItem) CacheMode(args ...interface{}) () {
   // cacheMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8600,7 +8702,7 @@ func (this *QGraphicsItem) Flags(args ...interface{}) () {
 }
 
 // clipPath()
-func (this *QGraphicsItem) Clippath(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) ClipPath(args ...interface{}) (ret interface{}) {
   // clipPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8680,7 +8782,7 @@ func (this *QGraphicsItem) Scroll(args ...interface{}) () {
 }
 
 // boundingRegion(const class QTransform &)
-func (this *QGraphicsItem) Boundingregion(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsItem) BoundingRegion(args ...interface{}) (ret interface{}) {
   // boundingRegion(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8712,7 +8814,7 @@ func (this *QGraphicsItem) Boundingregion(args ...interface{}) (ret interface{})
 }
 
 // ~QGraphicsObject()
-func (this *QGraphicsObject) Freeqgraphicsobject(args ...interface{}) () {
+func (this *QGraphicsObject) Free(args ...interface{}) () {
   // ~QGraphicsObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8724,7 +8826,10 @@ func (this *QGraphicsObject) Freeqgraphicsobject(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsObjectD0Ev
     // invoke: void ~QGraphicsObject()
-    C.C_ZN15QGraphicsObjectD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QGraphicsObjectD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsObject", "~QGraphicsObject", args)
   }
@@ -8733,6 +8838,9 @@ func (this *QGraphicsObject) Freeqgraphicsobject(args ...interface{}) () {
 }
 
 // QGraphicsObject(class QGraphicsItem *)
+func GcfreeQGraphicsObject(this *QGraphicsObject) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsObject(args ...interface{}) *QGraphicsObject {
   // QGraphicsObject(class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -8751,7 +8859,9 @@ func NewQGraphicsObject(args ...interface{}) *QGraphicsObject {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN15QGraphicsObjectC2EP13QGraphicsItem(arg0)
-    return &QGraphicsObject{Qclsinst:qthis}
+    this := &QGraphicsObject{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsObject)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsObject", "QGraphicsObject", args)
   }
@@ -8760,7 +8870,7 @@ func NewQGraphicsObject(args ...interface{}) *QGraphicsObject {
 }
 
 // metaObject()
-func (this *QGraphicsObject) Metaobject(args ...interface{}) () {
+func (this *QGraphicsObject) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8781,7 +8891,7 @@ func (this *QGraphicsObject) Metaobject(args ...interface{}) () {
 }
 
 // opaqueArea()
-func (this *QGraphicsSimpleTextItem) Opaquearea(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSimpleTextItem) OpaqueArea(args ...interface{}) (ret interface{}) {
   // opaqueArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8810,7 +8920,7 @@ func (this *QGraphicsSimpleTextItem) Opaquearea(args ...interface{}) (ret interf
 }
 
 // ~QGraphicsSimpleTextItem()
-func (this *QGraphicsSimpleTextItem) Freeqgraphicssimpletextitem(args ...interface{}) () {
+func (this *QGraphicsSimpleTextItem) Free(args ...interface{}) () {
   // ~QGraphicsSimpleTextItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8822,7 +8932,10 @@ func (this *QGraphicsSimpleTextItem) Freeqgraphicssimpletextitem(args ...interfa
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItemD0Ev
     // invoke: void ~QGraphicsSimpleTextItem()
-    C.C_ZN23QGraphicsSimpleTextItemD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN23QGraphicsSimpleTextItemD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "~QGraphicsSimpleTextItem", args)
   }
@@ -8831,7 +8944,7 @@ func (this *QGraphicsSimpleTextItem) Freeqgraphicssimpletextitem(args ...interfa
 }
 
 // boundingRect()
-func (this *QGraphicsSimpleTextItem) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSimpleTextItem) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8889,7 +9002,7 @@ func (this *QGraphicsSimpleTextItem) Text(args ...interface{}) (ret interface{})
 }
 
 // setText(const class QString &)
-func (this *QGraphicsSimpleTextItem) Settext(args ...interface{}) () {
+func (this *QGraphicsSimpleTextItem) SetText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -8945,7 +9058,7 @@ func (this *QGraphicsSimpleTextItem) Contains(args ...interface{}) (ret interfac
 }
 
 // isObscuredBy(const class QGraphicsItem *)
-func (this *QGraphicsSimpleTextItem) Isobscuredby(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsSimpleTextItem) IsObscuredBy(args ...interface{}) (ret interface{}) {
   // isObscuredBy(const class QGraphicsItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -9036,6 +9149,9 @@ func (this *QGraphicsSimpleTextItem) Shape(args ...interface{}) (ret interface{}
 }
 
 // QGraphicsSimpleTextItem(class QGraphicsItem *)
+func GcfreeQGraphicsSimpleTextItem(this *QGraphicsSimpleTextItem) {
+  qtrt.UniverseFree(this)
+}
 func NewQGraphicsSimpleTextItem(args ...interface{}) *QGraphicsSimpleTextItem {
   // QGraphicsSimpleTextItem(class QGraphicsItem *)
   // QGraphicsSimpleTextItem(const class QString &, class QGraphicsItem *)
@@ -9058,7 +9174,9 @@ func NewQGraphicsSimpleTextItem(args ...interface{}) *QGraphicsSimpleTextItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QGraphicsSimpleTextItemC2EP13QGraphicsItem(arg0)
-    return &QGraphicsSimpleTextItem{Qclsinst:qthis}
+    this := &QGraphicsSimpleTextItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsSimpleTextItem)
+    return this
   case 1:
     // invoke: _ZN23QGraphicsSimpleTextItemC1ERK7QStringP13QGraphicsItem
     // invoke: void QGraphicsSimpleTextItem(const class QString &, class QGraphicsItem *)
@@ -9069,7 +9187,9 @@ func NewQGraphicsSimpleTextItem(args ...interface{}) *QGraphicsSimpleTextItem {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN23QGraphicsSimpleTextItemC2ERK7QStringP13QGraphicsItem(arg0, arg1)
-    return &QGraphicsSimpleTextItem{Qclsinst:qthis}
+    this := &QGraphicsSimpleTextItem{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQGraphicsSimpleTextItem)
+    return this
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "QGraphicsSimpleTextItem", args)
   }
@@ -9078,7 +9198,7 @@ func NewQGraphicsSimpleTextItem(args ...interface{}) *QGraphicsSimpleTextItem {
 }
 
 // setFont(const class QFont &)
-func (this *QGraphicsSimpleTextItem) Setfont(args ...interface{}) () {
+func (this *QGraphicsSimpleTextItem) SetFont(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

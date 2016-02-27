@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -150,6 +151,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QApplication)=1
@@ -160,7 +162,7 @@ type QApplication struct {
 }
 
 // activePopupWidget()
-func (this *QApplication) Activepopupwidget_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) ActivePopupWidget_s(args ...interface{}) (ret interface{}) {
   // activePopupWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -189,7 +191,7 @@ func (this *QApplication) Activepopupwidget_S(args ...interface{}) (ret interfac
 }
 
 // closeAllWindows()
-func (this *QApplication) Closeallwindows_S(args ...interface{}) () {
+func (this *QApplication) CloseAllWindows_s(args ...interface{}) () {
   // closeAllWindows()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -210,7 +212,7 @@ func (this *QApplication) Closeallwindows_S(args ...interface{}) () {
 }
 
 // startDragDistance()
-func (this *QApplication) Startdragdistance_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) StartDragDistance_s(args ...interface{}) (ret interface{}) {
   // startDragDistance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -239,7 +241,7 @@ func (this *QApplication) Startdragdistance_S(args ...interface{}) (ret interfac
 }
 
 // wheelScrollLines()
-func (this *QApplication) Wheelscrolllines_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) WheelScrollLines_s(args ...interface{}) (ret interface{}) {
   // wheelScrollLines()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -268,7 +270,7 @@ func (this *QApplication) Wheelscrolllines_S(args ...interface{}) (ret interface
 }
 
 // setColorSpec(int)
-func (this *QApplication) Setcolorspec_S(args ...interface{}) () {
+func (this *QApplication) SetColorSpec_s(args ...interface{}) () {
   // setColorSpec(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -292,7 +294,7 @@ func (this *QApplication) Setcolorspec_S(args ...interface{}) () {
 }
 
 // autoSipEnabled()
-func (this *QApplication) Autosipenabled(args ...interface{}) (ret interface{}) {
+func (this *QApplication) AutoSipEnabled(args ...interface{}) (ret interface{}) {
   // autoSipEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -321,7 +323,7 @@ func (this *QApplication) Autosipenabled(args ...interface{}) (ret interface{}) 
 }
 
 // setStyle(const class QString &)
-func (this *QApplication) Setstyle_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) SetStyle_s(args ...interface{}) (ret interface{}) {
   // setStyle(const class QString &)
   // setStyle(class QStyle *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -397,7 +399,7 @@ func (this *QApplication) Notify(args ...interface{}) (ret interface{}) {
 }
 
 // focusWidget()
-func (this *QApplication) Focuswidget_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) FocusWidget_s(args ...interface{}) (ret interface{}) {
   // focusWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -426,7 +428,7 @@ func (this *QApplication) Focuswidget_S(args ...interface{}) (ret interface{}) {
 }
 
 // allWidgets()
-func (this *QApplication) Allwidgets_S(args ...interface{}) () {
+func (this *QApplication) AllWidgets_s(args ...interface{}) () {
   // allWidgets()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -447,7 +449,7 @@ func (this *QApplication) Allwidgets_S(args ...interface{}) () {
 }
 
 // widgetAt(int, int)
-func (this *QApplication) Widgetat_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) WidgetAt_s(args ...interface{}) (ret interface{}) {
   // widgetAt(int, int)
   // widgetAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -499,7 +501,7 @@ func (this *QApplication) Widgetat_S(args ...interface{}) (ret interface{}) {
 }
 
 // aboutQt()
-func (this *QApplication) Aboutqt_S(args ...interface{}) () {
+func (this *QApplication) AboutQt_s(args ...interface{}) () {
   // aboutQt()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -520,7 +522,7 @@ func (this *QApplication) Aboutqt_S(args ...interface{}) () {
 }
 
 // setPalette(const class QPalette &, const char *)
-func (this *QApplication) Setpalette_S(args ...interface{}) () {
+func (this *QApplication) SetPalette_s(args ...interface{}) () {
   // setPalette(const class QPalette &, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -549,7 +551,7 @@ func (this *QApplication) Setpalette_S(args ...interface{}) () {
 }
 
 // palette(const char *)
-func (this *QApplication) Palette_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) Palette_s(args ...interface{}) (ret interface{}) {
   // palette(const char *)
   // palette(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -600,7 +602,7 @@ func (this *QApplication) Palette_S(args ...interface{}) (ret interface{}) {
 }
 
 // font()
-func (this *QApplication) Font_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) Font_s(args ...interface{}) (ret interface{}) {
   // font()
   // font(const char *)
   // font(const class QWidget *)
@@ -665,7 +667,7 @@ func (this *QApplication) Font_S(args ...interface{}) (ret interface{}) {
 }
 
 // setDoubleClickInterval(int)
-func (this *QApplication) Setdoubleclickinterval_S(args ...interface{}) () {
+func (this *QApplication) SetDoubleClickInterval_s(args ...interface{}) () {
   // setDoubleClickInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -689,7 +691,7 @@ func (this *QApplication) Setdoubleclickinterval_S(args ...interface{}) () {
 }
 
 // topLevelWidgets()
-func (this *QApplication) Toplevelwidgets_S(args ...interface{}) () {
+func (this *QApplication) TopLevelWidgets_s(args ...interface{}) () {
   // topLevelWidgets()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -710,7 +712,7 @@ func (this *QApplication) Toplevelwidgets_S(args ...interface{}) () {
 }
 
 // desktop()
-func (this *QApplication) Desktop_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) Desktop_s(args ...interface{}) (ret interface{}) {
   // desktop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -739,7 +741,7 @@ func (this *QApplication) Desktop_S(args ...interface{}) (ret interface{}) {
 }
 
 // beep()
-func (this *QApplication) Beep_S(args ...interface{}) () {
+func (this *QApplication) Beep_s(args ...interface{}) () {
   // beep()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -760,7 +762,7 @@ func (this *QApplication) Beep_S(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QApplication) Metaobject(args ...interface{}) () {
+func (this *QApplication) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -781,7 +783,7 @@ func (this *QApplication) Metaobject(args ...interface{}) () {
 }
 
 // setCursorFlashTime(int)
-func (this *QApplication) Setcursorflashtime_S(args ...interface{}) () {
+func (this *QApplication) SetCursorFlashTime_s(args ...interface{}) () {
   // setCursorFlashTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -805,7 +807,7 @@ func (this *QApplication) Setcursorflashtime_S(args ...interface{}) () {
 }
 
 // activeWindow()
-func (this *QApplication) Activewindow_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) ActiveWindow_s(args ...interface{}) (ret interface{}) {
   // activeWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -834,7 +836,7 @@ func (this *QApplication) Activewindow_S(args ...interface{}) (ret interface{}) 
 }
 
 // topLevelAt(const class QPoint &)
-func (this *QApplication) Toplevelat_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) TopLevelAt_s(args ...interface{}) (ret interface{}) {
   // topLevelAt(const class QPoint &)
   // topLevelAt(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -886,7 +888,7 @@ func (this *QApplication) Toplevelat_S(args ...interface{}) (ret interface{}) {
 }
 
 // fontMetrics()
-func (this *QApplication) Fontmetrics_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) FontMetrics_s(args ...interface{}) (ret interface{}) {
   // fontMetrics()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -915,7 +917,7 @@ func (this *QApplication) Fontmetrics_S(args ...interface{}) (ret interface{}) {
 }
 
 // setKeyboardInputInterval(int)
-func (this *QApplication) Setkeyboardinputinterval_S(args ...interface{}) () {
+func (this *QApplication) SetKeyboardInputInterval_s(args ...interface{}) () {
   // setKeyboardInputInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -939,7 +941,7 @@ func (this *QApplication) Setkeyboardinputinterval_S(args ...interface{}) () {
 }
 
 // colorSpec()
-func (this *QApplication) Colorspec_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) ColorSpec_s(args ...interface{}) (ret interface{}) {
   // colorSpec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -968,7 +970,7 @@ func (this *QApplication) Colorspec_S(args ...interface{}) (ret interface{}) {
 }
 
 // style()
-func (this *QApplication) Style_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) Style_s(args ...interface{}) (ret interface{}) {
   // style()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -997,7 +999,7 @@ func (this *QApplication) Style_S(args ...interface{}) (ret interface{}) {
 }
 
 // alert(class QWidget *, int)
-func (this *QApplication) Alert_S(args ...interface{}) () {
+func (this *QApplication) Alert_s(args ...interface{}) () {
   // alert(class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1024,7 +1026,7 @@ func (this *QApplication) Alert_S(args ...interface{}) () {
 }
 
 // activeModalWidget()
-func (this *QApplication) Activemodalwidget_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) ActiveModalWidget_s(args ...interface{}) (ret interface{}) {
   // activeModalWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1053,7 +1055,7 @@ func (this *QApplication) Activemodalwidget_S(args ...interface{}) (ret interfac
 }
 
 // styleSheet()
-func (this *QApplication) Stylesheet(args ...interface{}) (ret interface{}) {
+func (this *QApplication) StyleSheet(args ...interface{}) (ret interface{}) {
   // styleSheet()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1082,7 +1084,7 @@ func (this *QApplication) Stylesheet(args ...interface{}) (ret interface{}) {
 }
 
 // windowIcon()
-func (this *QApplication) Windowicon_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) WindowIcon_s(args ...interface{}) (ret interface{}) {
   // windowIcon()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1111,7 +1113,7 @@ func (this *QApplication) Windowicon_S(args ...interface{}) (ret interface{}) {
 }
 
 // cursorFlashTime()
-func (this *QApplication) Cursorflashtime_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) CursorFlashTime_s(args ...interface{}) (ret interface{}) {
   // cursorFlashTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1140,7 +1142,7 @@ func (this *QApplication) Cursorflashtime_S(args ...interface{}) (ret interface{
 }
 
 // setGlobalStrut(const class QSize &)
-func (this *QApplication) Setglobalstrut_S(args ...interface{}) () {
+func (this *QApplication) SetGlobalStrut_s(args ...interface{}) () {
   // setGlobalStrut(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1164,7 +1166,7 @@ func (this *QApplication) Setglobalstrut_S(args ...interface{}) () {
 }
 
 // setActiveWindow(class QWidget *)
-func (this *QApplication) Setactivewindow_S(args ...interface{}) () {
+func (this *QApplication) SetActiveWindow_s(args ...interface{}) () {
   // setActiveWindow(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1188,7 +1190,7 @@ func (this *QApplication) Setactivewindow_S(args ...interface{}) () {
 }
 
 // ~QApplication()
-func (this *QApplication) Freeqapplication(args ...interface{}) () {
+func (this *QApplication) Free(args ...interface{}) () {
   // ~QApplication()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1200,7 +1202,10 @@ func (this *QApplication) Freeqapplication(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplicationD0Ev
     // invoke: void ~QApplication()
-    C.C_ZN12QApplicationD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QApplicationD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QApplication", "~QApplication", args)
   }
@@ -1209,7 +1214,7 @@ func (this *QApplication) Freeqapplication(args ...interface{}) () {
 }
 
 // globalStrut()
-func (this *QApplication) Globalstrut_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) GlobalStrut_s(args ...interface{}) (ret interface{}) {
   // globalStrut()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1238,7 +1243,7 @@ func (this *QApplication) Globalstrut_S(args ...interface{}) (ret interface{}) {
 }
 
 // setStartDragDistance(int)
-func (this *QApplication) Setstartdragdistance_S(args ...interface{}) () {
+func (this *QApplication) SetStartDragDistance_s(args ...interface{}) () {
   // setStartDragDistance(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1262,7 +1267,7 @@ func (this *QApplication) Setstartdragdistance_S(args ...interface{}) () {
 }
 
 // setWheelScrollLines(int)
-func (this *QApplication) Setwheelscrolllines_S(args ...interface{}) () {
+func (this *QApplication) SetWheelScrollLines_s(args ...interface{}) () {
   // setWheelScrollLines(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1286,7 +1291,7 @@ func (this *QApplication) Setwheelscrolllines_S(args ...interface{}) () {
 }
 
 // keyboardInputInterval()
-func (this *QApplication) Keyboardinputinterval_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) KeyboardInputInterval_s(args ...interface{}) (ret interface{}) {
   // keyboardInputInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1315,7 +1320,7 @@ func (this *QApplication) Keyboardinputinterval_S(args ...interface{}) (ret inte
 }
 
 // setStartDragTime(int)
-func (this *QApplication) Setstartdragtime_S(args ...interface{}) () {
+func (this *QApplication) SetStartDragTime_s(args ...interface{}) () {
   // setStartDragTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1339,6 +1344,9 @@ func (this *QApplication) Setstartdragtime_S(args ...interface{}) () {
 }
 
 // QApplication(int &, char **, int)
+func GcfreeQApplication(this *QApplication) {
+  qtrt.UniverseFree(this)
+}
 func NewQApplication(args ...interface{}) *QApplication {
   // QApplication(int &, char **, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1365,7 +1373,9 @@ func NewQApplication(args ...interface{}) *QApplication {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QApplicationC2ERiPPci(arg0, arg1, arg2)
-    return &QApplication{Qclsinst:qthis}
+    this := &QApplication{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQApplication)
+    return this
   default:
     qtrt.ErrorResolve("QApplication", "QApplication", args)
   }
@@ -1374,7 +1384,7 @@ func NewQApplication(args ...interface{}) *QApplication {
 }
 
 // startDragTime()
-func (this *QApplication) Startdragtime_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) StartDragTime_s(args ...interface{}) (ret interface{}) {
   // startDragTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1403,7 +1413,7 @@ func (this *QApplication) Startdragtime_S(args ...interface{}) (ret interface{})
 }
 
 // setWindowIcon(const class QIcon &)
-func (this *QApplication) Setwindowicon_S(args ...interface{}) () {
+func (this *QApplication) SetWindowIcon_s(args ...interface{}) () {
   // setWindowIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1427,7 +1437,7 @@ func (this *QApplication) Setwindowicon_S(args ...interface{}) () {
 }
 
 // setAutoSipEnabled(const _Bool)
-func (this *QApplication) Setautosipenabled(args ...interface{}) () {
+func (this *QApplication) SetAutoSipEnabled(args ...interface{}) () {
   // setAutoSipEnabled(const _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1451,7 +1461,7 @@ func (this *QApplication) Setautosipenabled(args ...interface{}) () {
 }
 
 // setStyleSheet(const class QString &)
-func (this *QApplication) Setstylesheet(args ...interface{}) () {
+func (this *QApplication) SetStyleSheet(args ...interface{}) () {
   // setStyleSheet(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1475,7 +1485,7 @@ func (this *QApplication) Setstylesheet(args ...interface{}) () {
 }
 
 // exec()
-func (this *QApplication) Exec_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) Exec_s(args ...interface{}) (ret interface{}) {
   // exec()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1504,7 +1514,7 @@ func (this *QApplication) Exec_S(args ...interface{}) (ret interface{}) {
 }
 
 // setFont(const class QFont &, const char *)
-func (this *QApplication) Setfont_S(args ...interface{}) () {
+func (this *QApplication) SetFont_s(args ...interface{}) () {
   // setFont(const class QFont &, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1533,7 +1543,7 @@ func (this *QApplication) Setfont_S(args ...interface{}) () {
 }
 
 // doubleClickInterval()
-func (this *QApplication) Doubleclickinterval_S(args ...interface{}) (ret interface{}) {
+func (this *QApplication) DoubleClickInterval_s(args ...interface{}) (ret interface{}) {
   // doubleClickInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

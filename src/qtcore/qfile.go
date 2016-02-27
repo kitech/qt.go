@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qfile.h
 // dst-file: /src/core/qfile.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -98,6 +99,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QFile)=1
@@ -107,7 +109,7 @@ type QFile struct {
 }
 
 // rename(const class QString &, const class QString &)
-func (this *QFile) Rename_S(args ...interface{}) (ret interface{}) {
+func (this *QFile) Rename_s(args ...interface{}) (ret interface{}) {
   // rename(const class QString &, const class QString &)
   // rename(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -159,7 +161,7 @@ func (this *QFile) Rename_S(args ...interface{}) (ret interface{}) {
 }
 
 // exists(const class QString &)
-func (this *QFile) Exists_S(args ...interface{}) (ret interface{}) {
+func (this *QFile) Exists_s(args ...interface{}) (ret interface{}) {
   // exists(const class QString &)
   // exists()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -205,7 +207,7 @@ func (this *QFile) Exists_S(args ...interface{}) (ret interface{}) {
 }
 
 // symLinkTarget()
-func (this *QFile) Symlinktarget(args ...interface{}) (ret interface{}) {
+func (this *QFile) SymLinkTarget(args ...interface{}) (ret interface{}) {
   // symLinkTarget()
   // symLinkTarget(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -280,7 +282,7 @@ func (this *QFile) Size(args ...interface{}) (ret interface{}) {
 }
 
 // encodeName(const class QString &)
-func (this *QFile) Encodename_S(args ...interface{}) (ret interface{}) {
+func (this *QFile) EncodeName_s(args ...interface{}) (ret interface{}) {
   // encodeName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -312,7 +314,7 @@ func (this *QFile) Encodename_S(args ...interface{}) (ret interface{}) {
 }
 
 // decodeName(const class QByteArray &)
-func (this *QFile) Decodename_S(args ...interface{}) (ret interface{}) {
+func (this *QFile) DecodeName_s(args ...interface{}) (ret interface{}) {
   // decodeName(const class QByteArray &)
   // decodeName(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -363,6 +365,9 @@ func (this *QFile) Decodename_S(args ...interface{}) (ret interface{}) {
 }
 
 // QFile(const class QString &, class QObject *)
+func GcfreeQFile(this *QFile) {
+  qtrt.UniverseFree(this)
+}
 func NewQFile(args ...interface{}) *QFile {
   // QFile(const class QString &, class QObject *)
   // QFile()
@@ -392,14 +397,18 @@ func NewQFile(args ...interface{}) *QFile {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFileC2ERK7QStringP7QObject(arg0, arg1)
-    return &QFile{Qclsinst:qthis}
+    this := &QFile{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFile)
+    return this
   case 1:
     // invoke: _ZN5QFileC1Ev
     // invoke: void QFile()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFileC2Ev()
-    return &QFile{Qclsinst:qthis}
+    this := &QFile{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFile)
+    return this
   case 2:
     // invoke: _ZN5QFileC1EP7QObject
     // invoke: void QFile(class QObject *)
@@ -408,7 +417,9 @@ func NewQFile(args ...interface{}) *QFile {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFileC2EP7QObject(arg0)
-    return &QFile{Qclsinst:qthis}
+    this := &QFile{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFile)
+    return this
   case 3:
     // invoke: _ZN5QFileC1ERK7QString
     // invoke: void QFile(const class QString &)
@@ -417,7 +428,9 @@ func NewQFile(args ...interface{}) *QFile {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN5QFileC2ERK7QString(arg0)
-    return &QFile{Qclsinst:qthis}
+    this := &QFile{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQFile)
+    return this
   default:
     qtrt.ErrorResolve("QFile", "QFile", args)
   }
@@ -426,7 +439,7 @@ func NewQFile(args ...interface{}) *QFile {
 }
 
 // fileName()
-func (this *QFile) Filename(args ...interface{}) (ret interface{}) {
+func (this *QFile) FileName(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -507,7 +520,7 @@ func (this *QFile) Link(args ...interface{}) (ret interface{}) {
 }
 
 // copy(const class QString &, const class QString &)
-func (this *QFile) Copy_S(args ...interface{}) (ret interface{}) {
+func (this *QFile) Copy_s(args ...interface{}) (ret interface{}) {
   // copy(const class QString &, const class QString &)
   // copy(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -641,7 +654,7 @@ func (this *QFile) Permissions(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QFile) Metaobject(args ...interface{}) () {
+func (this *QFile) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -662,7 +675,7 @@ func (this *QFile) Metaobject(args ...interface{}) () {
 }
 
 // ~QFile()
-func (this *QFile) Freeqfile(args ...interface{}) () {
+func (this *QFile) Free(args ...interface{}) () {
   // ~QFile()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -674,7 +687,10 @@ func (this *QFile) Freeqfile(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QFileD0Ev
     // invoke: void ~QFile()
-    C.C_ZN5QFileD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN5QFileD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QFile", "~QFile", args)
   }
@@ -683,7 +699,7 @@ func (this *QFile) Freeqfile(args ...interface{}) () {
 }
 
 // setFileName(const class QString &)
-func (this *QFile) Setfilename(args ...interface{}) () {
+func (this *QFile) SetFileName(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -707,7 +723,7 @@ func (this *QFile) Setfilename(args ...interface{}) () {
 }
 
 // remove(const class QString &)
-func (this *QFile) Remove_S(args ...interface{}) (ret interface{}) {
+func (this *QFile) Remove_s(args ...interface{}) (ret interface{}) {
   // remove(const class QString &)
   // remove()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -753,7 +769,7 @@ func (this *QFile) Remove_S(args ...interface{}) (ret interface{}) {
 }
 
 // readLink(const class QString &)
-func (this *QFile) Readlink_S(args ...interface{}) (ret interface{}) {
+func (this *QFile) ReadLink_s(args ...interface{}) (ret interface{}) {
   // readLink(const class QString &)
   // readLink()
   var vtys = make(map[int32]map[int32]reflect.Type)

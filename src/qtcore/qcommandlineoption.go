@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -68,6 +69,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QCommandLineOption)=1
@@ -77,7 +79,7 @@ type QCommandLineOption struct {
 }
 
 // setDescription(const class QString &)
-func (this *QCommandLineOption) Setdescription(args ...interface{}) () {
+func (this *QCommandLineOption) SetDescription(args ...interface{}) () {
   // setDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -101,7 +103,7 @@ func (this *QCommandLineOption) Setdescription(args ...interface{}) () {
 }
 
 // defaultValues()
-func (this *QCommandLineOption) Defaultvalues(args ...interface{}) () {
+func (this *QCommandLineOption) DefaultValues(args ...interface{}) () {
   // defaultValues()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -151,6 +153,9 @@ func (this *QCommandLineOption) Description(args ...interface{}) (ret interface{
 }
 
 // QCommandLineOption(const class QStringList &, const class QString &, const class QString &, const class QString &)
+func GcfreeQCommandLineOption(this *QCommandLineOption) {
+  qtrt.UniverseFree(this)
+}
 func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
   // QCommandLineOption(const class QStringList &, const class QString &, const class QString &, const class QString &)
   // QCommandLineOption(const class QStringList &)
@@ -193,7 +198,9 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERK11QStringListRK7QStringS5_S5_(arg0, arg1, arg2, arg3)
-    return &QCommandLineOption{Qclsinst:qthis}
+    this := &QCommandLineOption{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCommandLineOption)
+    return this
   case 1:
     // invoke: _ZN18QCommandLineOptionC1ERK11QStringList
     // invoke: void QCommandLineOption(const class QStringList &)
@@ -202,7 +209,9 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERK11QStringList(arg0)
-    return &QCommandLineOption{Qclsinst:qthis}
+    this := &QCommandLineOption{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCommandLineOption)
+    return this
   case 2:
     // invoke: _ZN18QCommandLineOptionC1ERKS_
     // invoke: void QCommandLineOption(const class QCommandLineOption &)
@@ -211,7 +220,9 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERKS_(arg0)
-    return &QCommandLineOption{Qclsinst:qthis}
+    this := &QCommandLineOption{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCommandLineOption)
+    return this
   case 3:
     // invoke: _ZN18QCommandLineOptionC1ERK7QString
     // invoke: void QCommandLineOption(const class QString &)
@@ -220,7 +231,9 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERK7QString(arg0)
-    return &QCommandLineOption{Qclsinst:qthis}
+    this := &QCommandLineOption{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCommandLineOption)
+    return this
   case 4:
     // invoke: _ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_
     // invoke: void QCommandLineOption(const class QString &, const class QString &, const class QString &, const class QString &)
@@ -235,7 +248,9 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN18QCommandLineOptionC2ERK7QStringS2_S2_S2_(arg0, arg1, arg2, arg3)
-    return &QCommandLineOption{Qclsinst:qthis}
+    this := &QCommandLineOption{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQCommandLineOption)
+    return this
   default:
     qtrt.ErrorResolve("QCommandLineOption", "QCommandLineOption", args)
   }
@@ -244,7 +259,7 @@ func NewQCommandLineOption(args ...interface{}) *QCommandLineOption {
 }
 
 // setDefaultValue(const class QString &)
-func (this *QCommandLineOption) Setdefaultvalue(args ...interface{}) () {
+func (this *QCommandLineOption) SetDefaultValue(args ...interface{}) () {
   // setDefaultValue(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -268,7 +283,7 @@ func (this *QCommandLineOption) Setdefaultvalue(args ...interface{}) () {
 }
 
 // ~QCommandLineOption()
-func (this *QCommandLineOption) Freeqcommandlineoption(args ...interface{}) () {
+func (this *QCommandLineOption) Free(args ...interface{}) () {
   // ~QCommandLineOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -280,7 +295,10 @@ func (this *QCommandLineOption) Freeqcommandlineoption(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QCommandLineOptionD0Ev
     // invoke: void ~QCommandLineOption()
-    C.C_ZN18QCommandLineOptionD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN18QCommandLineOptionD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QCommandLineOption", "~QCommandLineOption", args)
   }
@@ -289,7 +307,7 @@ func (this *QCommandLineOption) Freeqcommandlineoption(args ...interface{}) () {
 }
 
 // setDefaultValues(const class QStringList &)
-func (this *QCommandLineOption) Setdefaultvalues(args ...interface{}) () {
+func (this *QCommandLineOption) SetDefaultValues(args ...interface{}) () {
   // setDefaultValues(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -313,7 +331,7 @@ func (this *QCommandLineOption) Setdefaultvalues(args ...interface{}) () {
 }
 
 // setValueName(const class QString &)
-func (this *QCommandLineOption) Setvaluename(args ...interface{}) () {
+func (this *QCommandLineOption) SetValueName(args ...interface{}) () {
   // setValueName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -358,7 +376,7 @@ func (this *QCommandLineOption) Names(args ...interface{}) () {
 }
 
 // valueName()
-func (this *QCommandLineOption) Valuename(args ...interface{}) (ret interface{}) {
+func (this *QCommandLineOption) ValueName(args ...interface{}) (ret interface{}) {
   // valueName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

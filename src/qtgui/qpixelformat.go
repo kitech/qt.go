@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qpixelformat.h
 // dst-file: /src/gui/qpixelformat.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -86,6 +87,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPixelFormat)=8
@@ -95,7 +97,7 @@ type QPixelFormat struct {
 }
 
 // yuvLayout()
-func (this *QPixelFormat) Yuvlayout(args ...interface{}) () {
+func (this *QPixelFormat) YuvLayout(args ...interface{}) () {
   // yuvLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -116,7 +118,7 @@ func (this *QPixelFormat) Yuvlayout(args ...interface{}) () {
 }
 
 // yellowSize()
-func (this *QPixelFormat) Yellowsize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) YellowSize(args ...interface{}) (ret interface{}) {
   // yellowSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -145,7 +147,7 @@ func (this *QPixelFormat) Yellowsize(args ...interface{}) (ret interface{}) {
 }
 
 // alphaPosition()
-func (this *QPixelFormat) Alphaposition(args ...interface{}) () {
+func (this *QPixelFormat) AlphaPosition(args ...interface{}) () {
   // alphaPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -166,7 +168,7 @@ func (this *QPixelFormat) Alphaposition(args ...interface{}) () {
 }
 
 // cyanSize()
-func (this *QPixelFormat) Cyansize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) CyanSize(args ...interface{}) (ret interface{}) {
   // cyanSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -195,7 +197,7 @@ func (this *QPixelFormat) Cyansize(args ...interface{}) (ret interface{}) {
 }
 
 // lightnessSize()
-func (this *QPixelFormat) Lightnesssize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) LightnessSize(args ...interface{}) (ret interface{}) {
   // lightnessSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -224,7 +226,7 @@ func (this *QPixelFormat) Lightnesssize(args ...interface{}) (ret interface{}) {
 }
 
 // brightnessSize()
-func (this *QPixelFormat) Brightnesssize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) BrightnessSize(args ...interface{}) (ret interface{}) {
   // brightnessSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -253,6 +255,9 @@ func (this *QPixelFormat) Brightnesssize(args ...interface{}) (ret interface{}) 
 }
 
 // QPixelFormat()
+func GcfreeQPixelFormat(this *QPixelFormat) {
+  qtrt.UniverseFree(this)
+}
 func NewQPixelFormat(args ...interface{}) *QPixelFormat {
   // QPixelFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -268,7 +273,9 @@ func NewQPixelFormat(args ...interface{}) *QPixelFormat {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QPixelFormatC2Ev()
-    return &QPixelFormat{Qclsinst:qthis}
+    this := &QPixelFormat{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPixelFormat)
+    return this
   default:
     qtrt.ErrorResolve("QPixelFormat", "QPixelFormat", args)
   }
@@ -277,7 +284,7 @@ func NewQPixelFormat(args ...interface{}) *QPixelFormat {
 }
 
 // bitsPerPixel()
-func (this *QPixelFormat) Bitsperpixel(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) BitsPerPixel(args ...interface{}) (ret interface{}) {
   // bitsPerPixel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,7 +313,7 @@ func (this *QPixelFormat) Bitsperpixel(args ...interface{}) (ret interface{}) {
 }
 
 // blackSize()
-func (this *QPixelFormat) Blacksize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) BlackSize(args ...interface{}) (ret interface{}) {
   // blackSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -335,7 +342,7 @@ func (this *QPixelFormat) Blacksize(args ...interface{}) (ret interface{}) {
 }
 
 // redSize()
-func (this *QPixelFormat) Redsize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) RedSize(args ...interface{}) (ret interface{}) {
   // redSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -364,7 +371,7 @@ func (this *QPixelFormat) Redsize(args ...interface{}) (ret interface{}) {
 }
 
 // byteOrder()
-func (this *QPixelFormat) Byteorder(args ...interface{}) () {
+func (this *QPixelFormat) ByteOrder(args ...interface{}) () {
   // byteOrder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -385,7 +392,7 @@ func (this *QPixelFormat) Byteorder(args ...interface{}) () {
 }
 
 // typeInterpretation()
-func (this *QPixelFormat) Typeinterpretation(args ...interface{}) () {
+func (this *QPixelFormat) TypeInterpretation(args ...interface{}) () {
   // typeInterpretation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -406,7 +413,7 @@ func (this *QPixelFormat) Typeinterpretation(args ...interface{}) () {
 }
 
 // channelCount()
-func (this *QPixelFormat) Channelcount(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) ChannelCount(args ...interface{}) (ret interface{}) {
   // channelCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -435,7 +442,7 @@ func (this *QPixelFormat) Channelcount(args ...interface{}) (ret interface{}) {
 }
 
 // alphaSize()
-func (this *QPixelFormat) Alphasize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) AlphaSize(args ...interface{}) (ret interface{}) {
   // alphaSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -464,7 +471,7 @@ func (this *QPixelFormat) Alphasize(args ...interface{}) (ret interface{}) {
 }
 
 // hueSize()
-func (this *QPixelFormat) Huesize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) HueSize(args ...interface{}) (ret interface{}) {
   // hueSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -493,7 +500,7 @@ func (this *QPixelFormat) Huesize(args ...interface{}) (ret interface{}) {
 }
 
 // saturationSize()
-func (this *QPixelFormat) Saturationsize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) SaturationSize(args ...interface{}) (ret interface{}) {
   // saturationSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -522,7 +529,7 @@ func (this *QPixelFormat) Saturationsize(args ...interface{}) (ret interface{}) 
 }
 
 // magentaSize()
-func (this *QPixelFormat) Magentasize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) MagentaSize(args ...interface{}) (ret interface{}) {
   // magentaSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -572,7 +579,7 @@ func (this *QPixelFormat) Premultiplied(args ...interface{}) () {
 }
 
 // subEnum()
-func (this *QPixelFormat) Subenum(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) SubEnum(args ...interface{}) (ret interface{}) {
   // subEnum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -601,7 +608,7 @@ func (this *QPixelFormat) Subenum(args ...interface{}) (ret interface{}) {
 }
 
 // greenSize()
-func (this *QPixelFormat) Greensize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) GreenSize(args ...interface{}) (ret interface{}) {
   // greenSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -630,7 +637,7 @@ func (this *QPixelFormat) Greensize(args ...interface{}) (ret interface{}) {
 }
 
 // colorModel()
-func (this *QPixelFormat) Colormodel(args ...interface{}) () {
+func (this *QPixelFormat) ColorModel(args ...interface{}) () {
   // colorModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -651,7 +658,7 @@ func (this *QPixelFormat) Colormodel(args ...interface{}) () {
 }
 
 // alphaUsage()
-func (this *QPixelFormat) Alphausage(args ...interface{}) () {
+func (this *QPixelFormat) AlphaUsage(args ...interface{}) () {
   // alphaUsage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -672,7 +679,7 @@ func (this *QPixelFormat) Alphausage(args ...interface{}) () {
 }
 
 // blueSize()
-func (this *QPixelFormat) Bluesize(args ...interface{}) (ret interface{}) {
+func (this *QPixelFormat) BlueSize(args ...interface{}) (ret interface{}) {
   // blueSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

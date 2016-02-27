@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qopenglversionfunctions.h
 // dst-file: /src/gui/qopenglversionfunctions.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -50,6 +51,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QOpenGLVersionFunctionsBackend)=1
@@ -71,6 +73,9 @@ type QOpenGLVersionStatus struct {
 }
 
 // QOpenGLVersionFunctionsBackend(class QOpenGLContext *)
+func GcfreeQOpenGLVersionFunctionsBackend(this *QOpenGLVersionFunctionsBackend) {
+  qtrt.UniverseFree(this)
+}
 func NewQOpenGLVersionFunctionsBackend(args ...interface{}) *QOpenGLVersionFunctionsBackend {
   // QOpenGLVersionFunctionsBackend(class QOpenGLContext *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -89,7 +94,9 @@ func NewQOpenGLVersionFunctionsBackend(args ...interface{}) *QOpenGLVersionFunct
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN30QOpenGLVersionFunctionsBackendC2EP14QOpenGLContext(arg0)
-    return &QOpenGLVersionFunctionsBackend{Qclsinst:qthis}
+    this := &QOpenGLVersionFunctionsBackend{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLVersionFunctionsBackend)
+    return this
   default:
     qtrt.ErrorResolve("QOpenGLVersionFunctionsBackend", "QOpenGLVersionFunctionsBackend", args)
   }
@@ -98,7 +105,7 @@ func NewQOpenGLVersionFunctionsBackend(args ...interface{}) *QOpenGLVersionFunct
 }
 
 // d_func()
-func (this *QAbstractOpenGLFunctions) D_Func(args ...interface{}) () {
+func (this *QAbstractOpenGLFunctions) D_func(args ...interface{}) () {
   // d_func()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -119,7 +126,7 @@ func (this *QAbstractOpenGLFunctions) D_Func(args ...interface{}) () {
 }
 
 // ~QAbstractOpenGLFunctions()
-func (this *QAbstractOpenGLFunctions) Freeqabstractopenglfunctions(args ...interface{}) () {
+func (this *QAbstractOpenGLFunctions) Free(args ...interface{}) () {
   // ~QAbstractOpenGLFunctions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -131,7 +138,10 @@ func (this *QAbstractOpenGLFunctions) Freeqabstractopenglfunctions(args ...inter
   case 0:
     // invoke: _ZN24QAbstractOpenGLFunctionsD0Ev
     // invoke: void ~QAbstractOpenGLFunctions()
-    C.C_ZN24QAbstractOpenGLFunctionsD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN24QAbstractOpenGLFunctionsD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QAbstractOpenGLFunctions", "~QAbstractOpenGLFunctions", args)
   }
@@ -140,7 +150,7 @@ func (this *QAbstractOpenGLFunctions) Freeqabstractopenglfunctions(args ...inter
 }
 
 // initializeOpenGLFunctions()
-func (this *QAbstractOpenGLFunctions) Initializeopenglfunctions(args ...interface{}) (ret interface{}) {
+func (this *QAbstractOpenGLFunctions) InitializeOpenGLFunctions(args ...interface{}) (ret interface{}) {
   // initializeOpenGLFunctions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -169,6 +179,9 @@ func (this *QAbstractOpenGLFunctions) Initializeopenglfunctions(args ...interfac
 }
 
 // QOpenGLVersionStatus()
+func GcfreeQOpenGLVersionStatus(this *QOpenGLVersionStatus) {
+  qtrt.UniverseFree(this)
+}
 func NewQOpenGLVersionStatus(args ...interface{}) *QOpenGLVersionStatus {
   // QOpenGLVersionStatus()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -184,7 +197,9 @@ func NewQOpenGLVersionStatus(args ...interface{}) *QOpenGLVersionStatus {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN20QOpenGLVersionStatusC2Ev()
-    return &QOpenGLVersionStatus{Qclsinst:qthis}
+    this := &QOpenGLVersionStatus{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQOpenGLVersionStatus)
+    return this
   default:
     qtrt.ErrorResolve("QOpenGLVersionStatus", "QOpenGLVersionStatus", args)
   }

@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -106,6 +107,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMetaType)=80
@@ -115,7 +117,7 @@ type QMetaType struct {
 }
 
 // load(class QDataStream &, int, void *)
-func (this *QMetaType) Load_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Load_s(args ...interface{}) (ret interface{}) {
   // load(class QDataStream &, int, void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -153,7 +155,7 @@ func (this *QMetaType) Load_S(args ...interface{}) (ret interface{}) {
 }
 
 // registerNormalizedTypedef(const ::QByteArray &, int)
-func (this *QMetaType) Registernormalizedtypedef_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) RegisterNormalizedTypedef_s(args ...interface{}) (ret interface{}) {
   // registerNormalizedTypedef(const ::QByteArray &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -188,7 +190,7 @@ func (this *QMetaType) Registernormalizedtypedef_S(args ...interface{}) (ret int
 }
 
 // compare(const void *, const void *, int, int *)
-func (this *QMetaType) Compare_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Compare_s(args ...interface{}) (ret interface{}) {
   // compare(const void *, const void *, int, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -229,7 +231,7 @@ func (this *QMetaType) Compare_S(args ...interface{}) (ret interface{}) {
 }
 
 // typeName(int)
-func (this *QMetaType) Typename_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) TypeName_s(args ...interface{}) (ret interface{}) {
   // typeName(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -261,6 +263,9 @@ func (this *QMetaType) Typename_S(args ...interface{}) (ret interface{}) {
 }
 
 // QMetaType(const int)
+func GcfreeQMetaType(this *QMetaType) {
+  qtrt.UniverseFree(this)
+}
 func NewQMetaType(args ...interface{}) *QMetaType {
   // QMetaType(const int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -279,7 +284,9 @@ func NewQMetaType(args ...interface{}) *QMetaType {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMetaTypeC2Ei(arg0)
-    return &QMetaType{Qclsinst:qthis}
+    this := &QMetaType{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMetaType)
+    return this
   default:
     qtrt.ErrorResolve("QMetaType", "QMetaType", args)
   }
@@ -288,7 +295,7 @@ func NewQMetaType(args ...interface{}) *QMetaType {
 }
 
 // isRegistered(int)
-func (this *QMetaType) Isregistered_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) IsRegistered_s(args ...interface{}) (ret interface{}) {
   // isRegistered(int)
   // isRegistered()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -334,7 +341,7 @@ func (this *QMetaType) Isregistered_S(args ...interface{}) (ret interface{}) {
 }
 
 // unregisterType(int)
-func (this *QMetaType) Unregistertype_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) UnregisterType_s(args ...interface{}) (ret interface{}) {
   // unregisterType(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -366,7 +373,7 @@ func (this *QMetaType) Unregistertype_S(args ...interface{}) (ret interface{}) {
 }
 
 // typeFlags(int)
-func (this *QMetaType) Typeflags_S(args ...interface{}) () {
+func (this *QMetaType) TypeFlags_s(args ...interface{}) () {
   // typeFlags(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -390,7 +397,7 @@ func (this *QMetaType) Typeflags_S(args ...interface{}) () {
 }
 
 // create(int, const void *)
-func (this *QMetaType) Create_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Create_s(args ...interface{}) (ret interface{}) {
   // create(int, const void *)
   // create(const void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -442,7 +449,7 @@ func (this *QMetaType) Create_S(args ...interface{}) (ret interface{}) {
 }
 
 // construct(int, void *, const void *)
-func (this *QMetaType) Construct_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Construct_s(args ...interface{}) (ret interface{}) {
   // construct(int, void *, const void *)
   // construct(void *, const void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -500,7 +507,7 @@ func (this *QMetaType) Construct_S(args ...interface{}) (ret interface{}) {
 }
 
 // hasRegisteredDebugStreamOperator(int)
-func (this *QMetaType) Hasregistereddebugstreamoperator_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) HasRegisteredDebugStreamOperator_s(args ...interface{}) (ret interface{}) {
   // hasRegisteredDebugStreamOperator(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -532,7 +539,7 @@ func (this *QMetaType) Hasregistereddebugstreamoperator_S(args ...interface{}) (
 }
 
 // destroy(int, void *)
-func (this *QMetaType) Destroy_S(args ...interface{}) () {
+func (this *QMetaType) Destroy_s(args ...interface{}) () {
   // destroy(int, void *)
   // destroy(void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -568,7 +575,7 @@ func (this *QMetaType) Destroy_S(args ...interface{}) () {
 }
 
 // save(class QDataStream &, int, const void *)
-func (this *QMetaType) Save_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Save_s(args ...interface{}) (ret interface{}) {
   // save(class QDataStream &, int, const void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -606,7 +613,7 @@ func (this *QMetaType) Save_S(args ...interface{}) (ret interface{}) {
 }
 
 // type(const char *)
-func (this *QMetaType) Type_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Type_s(args ...interface{}) (ret interface{}) {
   // type(const char *)
   // type(const ::QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -657,7 +664,7 @@ func (this *QMetaType) Type_S(args ...interface{}) (ret interface{}) {
 }
 
 // ~QMetaType()
-func (this *QMetaType) Freeqmetatype(args ...interface{}) () {
+func (this *QMetaType) Free(args ...interface{}) () {
   // ~QMetaType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -669,7 +676,10 @@ func (this *QMetaType) Freeqmetatype(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QMetaTypeD0Ev
     // invoke: void ~QMetaType()
-    C.C_ZN9QMetaTypeD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN9QMetaTypeD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMetaType", "~QMetaType", args)
   }
@@ -678,7 +688,7 @@ func (this *QMetaType) Freeqmetatype(args ...interface{}) () {
 }
 
 // hasRegisteredComparators(int)
-func (this *QMetaType) Hasregisteredcomparators_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) HasRegisteredComparators_s(args ...interface{}) (ret interface{}) {
   // hasRegisteredComparators(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -710,7 +720,7 @@ func (this *QMetaType) Hasregisteredcomparators_S(args ...interface{}) (ret inte
 }
 
 // isValid()
-func (this *QMetaType) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -739,7 +749,7 @@ func (this *QMetaType) Isvalid(args ...interface{}) (ret interface{}) {
 }
 
 // equals(const void *, const void *, int, int *)
-func (this *QMetaType) Equals_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Equals_s(args ...interface{}) (ret interface{}) {
   // equals(const void *, const void *, int, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -780,7 +790,7 @@ func (this *QMetaType) Equals_S(args ...interface{}) (ret interface{}) {
 }
 
 // convert(const void *, int, void *, int)
-func (this *QMetaType) Convert_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) Convert_s(args ...interface{}) (ret interface{}) {
   // convert(const void *, int, void *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -821,7 +831,7 @@ func (this *QMetaType) Convert_S(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QMetaType) Metaobject(args ...interface{}) () {
+func (this *QMetaType) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -842,7 +852,7 @@ func (this *QMetaType) Metaobject(args ...interface{}) () {
 }
 
 // debugStream(class QDebug &, const void *, int)
-func (this *QMetaType) Debugstream_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) DebugStream_s(args ...interface{}) (ret interface{}) {
   // debugStream(class QDebug &, const void *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -880,7 +890,7 @@ func (this *QMetaType) Debugstream_S(args ...interface{}) (ret interface{}) {
 }
 
 // metaObjectForType(int)
-func (this *QMetaType) Metaobjectfortype_S(args ...interface{}) () {
+func (this *QMetaType) MetaObjectForType_s(args ...interface{}) () {
   // metaObjectForType(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -940,7 +950,7 @@ func (this *QMetaType) Destruct(args ...interface{}) () {
 }
 
 // hasRegisteredConverterFunction(int, int)
-func (this *QMetaType) Hasregisteredconverterfunction_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) HasRegisteredConverterFunction_s(args ...interface{}) (ret interface{}) {
   // hasRegisteredConverterFunction(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -996,7 +1006,7 @@ func (this *QMetaType) Flags(args ...interface{}) () {
 }
 
 // registerTypedef(const char *, int)
-func (this *QMetaType) Registertypedef_S(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) RegisterTypedef_s(args ...interface{}) (ret interface{}) {
   // registerTypedef(const char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1033,7 +1043,7 @@ func (this *QMetaType) Registertypedef_S(args ...interface{}) (ret interface{}) 
 }
 
 // sizeOf()
-func (this *QMetaType) Sizeof(args ...interface{}) (ret interface{}) {
+func (this *QMetaType) SizeOf(args ...interface{}) (ret interface{}) {
   // sizeOf()
   // sizeOf(int)
   var vtys = make(map[int32]map[int32]reflect.Type)

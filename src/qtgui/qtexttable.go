@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qtexttable.h
 // dst-file: /src/gui/qtexttable.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -116,6 +117,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextTableCell)=16
@@ -131,6 +133,9 @@ type QTextTable struct {
 }
 
 // QTextTableCell(const class QTextTableCell &)
+func GcfreeQTextTableCell(this *QTextTableCell) {
+  qtrt.UniverseFree(this)
+}
 func NewQTextTableCell(args ...interface{}) *QTextTableCell {
   // QTextTableCell(const class QTextTableCell &)
   // QTextTableCell()
@@ -151,14 +156,18 @@ func NewQTextTableCell(args ...interface{}) *QTextTableCell {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QTextTableCellC2ERKS_(arg0)
-    return &QTextTableCell{Qclsinst:qthis}
+    this := &QTextTableCell{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextTableCell)
+    return this
   case 1:
     // invoke: _ZN14QTextTableCellC1Ev
     // invoke: void QTextTableCell()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN14QTextTableCellC2Ev()
-    return &QTextTableCell{Qclsinst:qthis}
+    this := &QTextTableCell{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextTableCell)
+    return this
   default:
     qtrt.ErrorResolve("QTextTableCell", "QTextTableCell", args)
   }
@@ -167,7 +176,7 @@ func NewQTextTableCell(args ...interface{}) *QTextTableCell {
 }
 
 // rowSpan()
-func (this *QTextTableCell) Rowspan(args ...interface{}) (ret interface{}) {
+func (this *QTextTableCell) RowSpan(args ...interface{}) (ret interface{}) {
   // rowSpan()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -196,7 +205,7 @@ func (this *QTextTableCell) Rowspan(args ...interface{}) (ret interface{}) {
 }
 
 // firstCursorPosition()
-func (this *QTextTableCell) Firstcursorposition(args ...interface{}) (ret interface{}) {
+func (this *QTextTableCell) FirstCursorPosition(args ...interface{}) (ret interface{}) {
   // firstCursorPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -254,7 +263,7 @@ func (this *QTextTableCell) Format(args ...interface{}) (ret interface{}) {
 }
 
 // setFormat(const class QTextCharFormat &)
-func (this *QTextTableCell) Setformat(args ...interface{}) () {
+func (this *QTextTableCell) SetFormat(args ...interface{}) () {
   // setFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -278,7 +287,7 @@ func (this *QTextTableCell) Setformat(args ...interface{}) () {
 }
 
 // isValid()
-func (this *QTextTableCell) Isvalid(args ...interface{}) (ret interface{}) {
+func (this *QTextTableCell) IsValid(args ...interface{}) (ret interface{}) {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -328,7 +337,7 @@ func (this *QTextTableCell) Begin(args ...interface{}) () {
 }
 
 // lastCursorPosition()
-func (this *QTextTableCell) Lastcursorposition(args ...interface{}) (ret interface{}) {
+func (this *QTextTableCell) LastCursorPosition(args ...interface{}) (ret interface{}) {
   // lastCursorPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -357,7 +366,7 @@ func (this *QTextTableCell) Lastcursorposition(args ...interface{}) (ret interfa
 }
 
 // tableCellFormatIndex()
-func (this *QTextTableCell) Tablecellformatindex(args ...interface{}) (ret interface{}) {
+func (this *QTextTableCell) TableCellFormatIndex(args ...interface{}) (ret interface{}) {
   // tableCellFormatIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -415,7 +424,7 @@ func (this *QTextTableCell) Column(args ...interface{}) (ret interface{}) {
 }
 
 // columnSpan()
-func (this *QTextTableCell) Columnspan(args ...interface{}) (ret interface{}) {
+func (this *QTextTableCell) ColumnSpan(args ...interface{}) (ret interface{}) {
   // columnSpan()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -465,7 +474,7 @@ func (this *QTextTableCell) End(args ...interface{}) () {
 }
 
 // lastPosition()
-func (this *QTextTableCell) Lastposition(args ...interface{}) (ret interface{}) {
+func (this *QTextTableCell) LastPosition(args ...interface{}) (ret interface{}) {
   // lastPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -494,7 +503,7 @@ func (this *QTextTableCell) Lastposition(args ...interface{}) (ret interface{}) 
 }
 
 // firstPosition()
-func (this *QTextTableCell) Firstposition(args ...interface{}) (ret interface{}) {
+func (this *QTextTableCell) FirstPosition(args ...interface{}) (ret interface{}) {
   // firstPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -552,7 +561,7 @@ func (this *QTextTableCell) Row(args ...interface{}) (ret interface{}) {
 }
 
 // appendRows(int)
-func (this *QTextTable) Appendrows(args ...interface{}) () {
+func (this *QTextTable) AppendRows(args ...interface{}) () {
   // appendRows(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -576,7 +585,7 @@ func (this *QTextTable) Appendrows(args ...interface{}) () {
 }
 
 // ~QTextTable()
-func (this *QTextTable) Freeqtexttable(args ...interface{}) () {
+func (this *QTextTable) Free(args ...interface{}) () {
   // ~QTextTable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -588,7 +597,10 @@ func (this *QTextTable) Freeqtexttable(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextTableD0Ev
     // invoke: void ~QTextTable()
-    C.C_ZN10QTextTableD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QTextTableD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTextTable", "~QTextTable", args)
   }
@@ -597,7 +609,7 @@ func (this *QTextTable) Freeqtexttable(args ...interface{}) () {
 }
 
 // splitCell(int, int, int, int)
-func (this *QTextTable) Splitcell(args ...interface{}) () {
+func (this *QTextTable) SplitCell(args ...interface{}) () {
   // splitCell(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -659,7 +671,7 @@ func (this *QTextTable) Rows(args ...interface{}) (ret interface{}) {
 }
 
 // cellAt(const class QTextCursor &)
-func (this *QTextTable) Cellat(args ...interface{}) (ret interface{}) {
+func (this *QTextTable) CellAt(args ...interface{}) (ret interface{}) {
   // cellAt(const class QTextCursor &)
   // cellAt(int, int)
   // cellAt(int)
@@ -728,7 +740,7 @@ func (this *QTextTable) Cellat(args ...interface{}) (ret interface{}) {
 }
 
 // setFormat(const class QTextTableFormat &)
-func (this *QTextTable) Setformat(args ...interface{}) () {
+func (this *QTextTable) SetFormat(args ...interface{}) () {
   // setFormat(const class QTextTableFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -781,7 +793,7 @@ func (this *QTextTable) Format(args ...interface{}) (ret interface{}) {
 }
 
 // removeRows(int, int)
-func (this *QTextTable) Removerows(args ...interface{}) () {
+func (this *QTextTable) RemoveRows(args ...interface{}) () {
   // removeRows(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -837,7 +849,7 @@ func (this *QTextTable) Columns(args ...interface{}) (ret interface{}) {
 }
 
 // appendColumns(int)
-func (this *QTextTable) Appendcolumns(args ...interface{}) () {
+func (this *QTextTable) AppendColumns(args ...interface{}) () {
   // appendColumns(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -861,7 +873,7 @@ func (this *QTextTable) Appendcolumns(args ...interface{}) () {
 }
 
 // insertRows(int, int)
-func (this *QTextTable) Insertrows(args ...interface{}) () {
+func (this *QTextTable) InsertRows(args ...interface{}) () {
   // insertRows(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -888,7 +900,7 @@ func (this *QTextTable) Insertrows(args ...interface{}) () {
 }
 
 // mergeCells(int, int, int, int)
-func (this *QTextTable) Mergecells(args ...interface{}) () {
+func (this *QTextTable) MergeCells(args ...interface{}) () {
   // mergeCells(int, int, int, int)
   // mergeCells(const class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -957,7 +969,7 @@ func (this *QTextTable) Resize(args ...interface{}) () {
 }
 
 // rowStart(const class QTextCursor &)
-func (this *QTextTable) Rowstart(args ...interface{}) (ret interface{}) {
+func (this *QTextTable) RowStart(args ...interface{}) (ret interface{}) {
   // rowStart(const class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -989,7 +1001,7 @@ func (this *QTextTable) Rowstart(args ...interface{}) (ret interface{}) {
 }
 
 // metaObject()
-func (this *QTextTable) Metaobject(args ...interface{}) () {
+func (this *QTextTable) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1010,6 +1022,9 @@ func (this *QTextTable) Metaobject(args ...interface{}) () {
 }
 
 // QTextTable(class QTextDocument *)
+func GcfreeQTextTable(this *QTextTable) {
+  qtrt.UniverseFree(this)
+}
 func NewQTextTable(args ...interface{}) *QTextTable {
   // QTextTable(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1028,7 +1043,9 @@ func NewQTextTable(args ...interface{}) *QTextTable {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QTextTableC2EP13QTextDocument(arg0)
-    return &QTextTable{Qclsinst:qthis}
+    this := &QTextTable{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextTable)
+    return this
   default:
     qtrt.ErrorResolve("QTextTable", "QTextTable", args)
   }
@@ -1037,7 +1054,7 @@ func NewQTextTable(args ...interface{}) *QTextTable {
 }
 
 // rowEnd(const class QTextCursor &)
-func (this *QTextTable) Rowend(args ...interface{}) (ret interface{}) {
+func (this *QTextTable) RowEnd(args ...interface{}) (ret interface{}) {
   // rowEnd(const class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1069,7 +1086,7 @@ func (this *QTextTable) Rowend(args ...interface{}) (ret interface{}) {
 }
 
 // insertColumns(int, int)
-func (this *QTextTable) Insertcolumns(args ...interface{}) () {
+func (this *QTextTable) InsertColumns(args ...interface{}) () {
   // insertColumns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1096,7 +1113,7 @@ func (this *QTextTable) Insertcolumns(args ...interface{}) () {
 }
 
 // removeColumns(int, int)
-func (this *QTextTable) Removecolumns(args ...interface{}) () {
+func (this *QTextTable) RemoveColumns(args ...interface{}) () {
   // removeColumns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

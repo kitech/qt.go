@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qscrollarea.h
 // dst-file: /src/widgets/qscrollarea.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -68,6 +69,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QScrollArea)=1
@@ -77,7 +79,7 @@ type QScrollArea struct {
 }
 
 // ensureWidgetVisible(class QWidget *, int, int)
-func (this *QScrollArea) Ensurewidgetvisible(args ...interface{}) () {
+func (this *QScrollArea) EnsureWidgetVisible(args ...interface{}) () {
   // ensureWidgetVisible(class QWidget *, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -107,6 +109,9 @@ func (this *QScrollArea) Ensurewidgetvisible(args ...interface{}) () {
 }
 
 // QScrollArea(class QWidget *)
+func GcfreeQScrollArea(this *QScrollArea) {
+  qtrt.UniverseFree(this)
+}
 func NewQScrollArea(args ...interface{}) *QScrollArea {
   // QScrollArea(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -125,7 +130,9 @@ func NewQScrollArea(args ...interface{}) *QScrollArea {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QScrollAreaC2EP7QWidget(arg0)
-    return &QScrollArea{Qclsinst:qthis}
+    this := &QScrollArea{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQScrollArea)
+    return this
   default:
     qtrt.ErrorResolve("QScrollArea", "QScrollArea", args)
   }
@@ -134,7 +141,7 @@ func NewQScrollArea(args ...interface{}) *QScrollArea {
 }
 
 // ~QScrollArea()
-func (this *QScrollArea) Freeqscrollarea(args ...interface{}) () {
+func (this *QScrollArea) Free(args ...interface{}) () {
   // ~QScrollArea()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -146,7 +153,10 @@ func (this *QScrollArea) Freeqscrollarea(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QScrollAreaD0Ev
     // invoke: void ~QScrollArea()
-    C.C_ZN11QScrollAreaD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QScrollAreaD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QScrollArea", "~QScrollArea", args)
   }
@@ -155,7 +165,7 @@ func (this *QScrollArea) Freeqscrollarea(args ...interface{}) () {
 }
 
 // setWidget(class QWidget *)
-func (this *QScrollArea) Setwidget(args ...interface{}) () {
+func (this *QScrollArea) SetWidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,7 +189,7 @@ func (this *QScrollArea) Setwidget(args ...interface{}) () {
 }
 
 // focusNextPrevChild(_Bool)
-func (this *QScrollArea) Focusnextprevchild(args ...interface{}) (ret interface{}) {
+func (this *QScrollArea) FocusNextPrevChild(args ...interface{}) (ret interface{}) {
   // focusNextPrevChild(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -232,7 +242,7 @@ func (this *QScrollArea) Alignment(args ...interface{}) () {
 }
 
 // widgetResizable()
-func (this *QScrollArea) Widgetresizable(args ...interface{}) (ret interface{}) {
+func (this *QScrollArea) WidgetResizable(args ...interface{}) (ret interface{}) {
   // widgetResizable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -261,7 +271,7 @@ func (this *QScrollArea) Widgetresizable(args ...interface{}) (ret interface{}) 
 }
 
 // setWidgetResizable(_Bool)
-func (this *QScrollArea) Setwidgetresizable(args ...interface{}) () {
+func (this *QScrollArea) SetWidgetResizable(args ...interface{}) () {
   // setWidgetResizable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -314,7 +324,7 @@ func (this *QScrollArea) Widget(args ...interface{}) (ret interface{}) {
 }
 
 // ensureVisible(int, int, int, int)
-func (this *QScrollArea) Ensurevisible(args ...interface{}) () {
+func (this *QScrollArea) EnsureVisible(args ...interface{}) () {
   // ensureVisible(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -347,7 +357,7 @@ func (this *QScrollArea) Ensurevisible(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QScrollArea) Metaobject(args ...interface{}) () {
+func (this *QScrollArea) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -368,7 +378,7 @@ func (this *QScrollArea) Metaobject(args ...interface{}) () {
 }
 
 // takeWidget()
-func (this *QScrollArea) Takewidget(args ...interface{}) (ret interface{}) {
+func (this *QScrollArea) TakeWidget(args ...interface{}) (ret interface{}) {
   // takeWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -397,7 +407,7 @@ func (this *QScrollArea) Takewidget(args ...interface{}) (ret interface{}) {
 }
 
 // sizeHint()
-func (this *QScrollArea) Sizehint(args ...interface{}) (ret interface{}) {
+func (this *QScrollArea) SizeHint(args ...interface{}) (ret interface{}) {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

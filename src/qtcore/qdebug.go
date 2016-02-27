@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qdebug.h
 // dst-file: /src/core/qdebug.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -84,6 +85,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QNoDebug)=1
@@ -105,7 +107,7 @@ type QDebug struct {
 }
 
 // maybeSpace()
-func (this *QNoDebug) Maybespace(args ...interface{}) (ret interface{}) {
+func (this *QNoDebug) MaybeSpace(args ...interface{}) (ret interface{}) {
   // maybeSpace()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -250,7 +252,7 @@ func (this *QNoDebug) Noquote(args ...interface{}) (ret interface{}) {
 }
 
 // maybeQuote(const char)
-func (this *QNoDebug) Maybequote(args ...interface{}) (ret interface{}) {
+func (this *QNoDebug) MaybeQuote(args ...interface{}) (ret interface{}) {
   // maybeQuote(const char)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -282,6 +284,9 @@ func (this *QNoDebug) Maybequote(args ...interface{}) (ret interface{}) {
 }
 
 // QDebugStateSaver(class QDebug &)
+func GcfreeQDebugStateSaver(this *QDebugStateSaver) {
+  qtrt.UniverseFree(this)
+}
 func NewQDebugStateSaver(args ...interface{}) *QDebugStateSaver {
   // QDebugStateSaver(class QDebug &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -300,7 +305,9 @@ func NewQDebugStateSaver(args ...interface{}) *QDebugStateSaver {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN16QDebugStateSaverC2ER6QDebug(arg0)
-    return &QDebugStateSaver{Qclsinst:qthis}
+    this := &QDebugStateSaver{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDebugStateSaver)
+    return this
   default:
     qtrt.ErrorResolve("QDebugStateSaver", "QDebugStateSaver", args)
   }
@@ -309,7 +316,7 @@ func NewQDebugStateSaver(args ...interface{}) *QDebugStateSaver {
 }
 
 // ~QDebugStateSaver()
-func (this *QDebugStateSaver) Freeqdebugstatesaver(args ...interface{}) () {
+func (this *QDebugStateSaver) Free(args ...interface{}) () {
   // ~QDebugStateSaver()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -321,7 +328,10 @@ func (this *QDebugStateSaver) Freeqdebugstatesaver(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QDebugStateSaverD0Ev
     // invoke: void ~QDebugStateSaver()
-    C.C_ZN16QDebugStateSaverD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN16QDebugStateSaverD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDebugStateSaver", "~QDebugStateSaver", args)
   }
@@ -330,7 +340,7 @@ func (this *QDebugStateSaver) Freeqdebugstatesaver(args ...interface{}) () {
 }
 
 // ~QDebug()
-func (this *QDebug) Freeqdebug(args ...interface{}) () {
+func (this *QDebug) Free(args ...interface{}) () {
   // ~QDebug()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -342,7 +352,10 @@ func (this *QDebug) Freeqdebug(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebugD0Ev
     // invoke: void ~QDebug()
-    C.C_ZN6QDebugD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN6QDebugD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QDebug", "~QDebug", args)
   }
@@ -380,7 +393,7 @@ func (this *QDebug) Space(args ...interface{}) (ret interface{}) {
 }
 
 // setAutoInsertSpaces(_Bool)
-func (this *QDebug) Setautoinsertspaces(args ...interface{}) () {
+func (this *QDebug) SetAutoInsertSpaces(args ...interface{}) () {
   // setAutoInsertSpaces(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -404,7 +417,7 @@ func (this *QDebug) Setautoinsertspaces(args ...interface{}) () {
 }
 
 // autoInsertSpaces()
-func (this *QDebug) Autoinsertspaces(args ...interface{}) (ret interface{}) {
+func (this *QDebug) AutoInsertSpaces(args ...interface{}) (ret interface{}) {
   // autoInsertSpaces()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -462,7 +475,7 @@ func (this *QDebug) Nospace(args ...interface{}) (ret interface{}) {
 }
 
 // resetFormat()
-func (this *QDebug) Resetformat(args ...interface{}) (ret interface{}) {
+func (this *QDebug) ResetFormat(args ...interface{}) (ret interface{}) {
   // resetFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -573,6 +586,9 @@ func (this *QDebug) Quote(args ...interface{}) (ret interface{}) {
 }
 
 // QDebug(const class QDebug &)
+func GcfreeQDebug(this *QDebug) {
+  qtrt.UniverseFree(this)
+}
 func NewQDebug(args ...interface{}) *QDebug {
   // QDebug(const class QDebug &)
   // QDebug(enum QtMsgType)
@@ -600,7 +616,9 @@ func NewQDebug(args ...interface{}) *QDebug {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QDebugC2ERKS_(arg0)
-    return &QDebug{Qclsinst:qthis}
+    this := &QDebug{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDebug)
+    return this
   case 1:
     // invoke: _ZN6QDebugC1E9QtMsgType
     // invoke: void QDebug(enum QtMsgType)
@@ -609,7 +627,9 @@ func NewQDebug(args ...interface{}) *QDebug {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QDebugC2E9QtMsgType(arg0)
-    return &QDebug{Qclsinst:qthis}
+    this := &QDebug{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDebug)
+    return this
   case 2:
     // invoke: _ZN6QDebugC1EP7QString
     // invoke: void QDebug(class QString *)
@@ -618,7 +638,9 @@ func NewQDebug(args ...interface{}) *QDebug {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QDebugC2EP7QString(arg0)
-    return &QDebug{Qclsinst:qthis}
+    this := &QDebug{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDebug)
+    return this
   case 3:
     // invoke: _ZN6QDebugC1EP9QIODevice
     // invoke: void QDebug(class QIODevice *)
@@ -627,7 +649,9 @@ func NewQDebug(args ...interface{}) *QDebug {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN6QDebugC2EP9QIODevice(arg0)
-    return &QDebug{Qclsinst:qthis}
+    this := &QDebug{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQDebug)
+    return this
   default:
     qtrt.ErrorResolve("QDebug", "QDebug", args)
   }
@@ -636,7 +660,7 @@ func NewQDebug(args ...interface{}) *QDebug {
 }
 
 // maybeSpace()
-func (this *QDebug) Maybespace(args ...interface{}) (ret interface{}) {
+func (this *QDebug) MaybeSpace(args ...interface{}) (ret interface{}) {
   // maybeSpace()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -665,7 +689,7 @@ func (this *QDebug) Maybespace(args ...interface{}) (ret interface{}) {
 }
 
 // maybeQuote(char)
-func (this *QDebug) Maybequote(args ...interface{}) (ret interface{}) {
+func (this *QDebug) MaybeQuote(args ...interface{}) (ret interface{}) {
   // maybeQuote(char)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

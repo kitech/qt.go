@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -140,6 +141,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QGraphicsWidget)=1
@@ -151,7 +153,7 @@ type QGraphicsWidget struct {
 }
 
 // boundingRect()
-func (this *QGraphicsWidget) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsWidget) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -180,7 +182,7 @@ func (this *QGraphicsWidget) Boundingrect(args ...interface{}) (ret interface{})
 }
 
 // setLayout(class QGraphicsLayout *)
-func (this *QGraphicsWidget) Setlayout(args ...interface{}) () {
+func (this *QGraphicsWidget) SetLayout(args ...interface{}) () {
   // setLayout(class QGraphicsLayout *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -225,7 +227,7 @@ func (this *QGraphicsWidget) Actions(args ...interface{}) () {
 }
 
 // setStyle(class QStyle *)
-func (this *QGraphicsWidget) Setstyle(args ...interface{}) () {
+func (this *QGraphicsWidget) SetStyle(args ...interface{}) () {
   // setStyle(class QStyle *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -278,7 +280,7 @@ func (this *QGraphicsWidget) Shape(args ...interface{}) (ret interface{}) {
 }
 
 // windowFrameGeometry()
-func (this *QGraphicsWidget) Windowframegeometry(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsWidget) WindowFrameGeometry(args ...interface{}) (ret interface{}) {
   // windowFrameGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -307,7 +309,7 @@ func (this *QGraphicsWidget) Windowframegeometry(args ...interface{}) (ret inter
 }
 
 // focusWidget()
-func (this *QGraphicsWidget) Focuswidget(args ...interface{}) () {
+func (this *QGraphicsWidget) FocusWidget(args ...interface{}) () {
   // focusWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -407,7 +409,7 @@ func (this *QGraphicsWidget) Layout(args ...interface{}) () {
 }
 
 // unsetLayoutDirection()
-func (this *QGraphicsWidget) Unsetlayoutdirection(args ...interface{}) () {
+func (this *QGraphicsWidget) UnsetLayoutDirection(args ...interface{}) () {
   // unsetLayoutDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -428,7 +430,7 @@ func (this *QGraphicsWidget) Unsetlayoutdirection(args ...interface{}) () {
 }
 
 // insertAction(class QAction *, class QAction *)
-func (this *QGraphicsWidget) Insertaction(args ...interface{}) () {
+func (this *QGraphicsWidget) InsertAction(args ...interface{}) () {
   // insertAction(class QAction *, class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -455,7 +457,7 @@ func (this *QGraphicsWidget) Insertaction(args ...interface{}) () {
 }
 
 // unsetWindowFrameMargins()
-func (this *QGraphicsWidget) Unsetwindowframemargins(args ...interface{}) () {
+func (this *QGraphicsWidget) UnsetWindowFrameMargins(args ...interface{}) () {
   // unsetWindowFrameMargins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -476,7 +478,7 @@ func (this *QGraphicsWidget) Unsetwindowframemargins(args ...interface{}) () {
 }
 
 // setShortcutAutoRepeat(int, _Bool)
-func (this *QGraphicsWidget) Setshortcutautorepeat(args ...interface{}) () {
+func (this *QGraphicsWidget) SetShortcutAutoRepeat(args ...interface{}) () {
   // setShortcutAutoRepeat(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -503,7 +505,7 @@ func (this *QGraphicsWidget) Setshortcutautorepeat(args ...interface{}) () {
 }
 
 // setGeometry(const class QRectF &)
-func (this *QGraphicsWidget) Setgeometry(args ...interface{}) () {
+func (this *QGraphicsWidget) SetGeometry(args ...interface{}) () {
   // setGeometry(const class QRectF &)
   // setGeometry(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -545,7 +547,7 @@ func (this *QGraphicsWidget) Setgeometry(args ...interface{}) () {
 }
 
 // windowType()
-func (this *QGraphicsWidget) Windowtype(args ...interface{}) () {
+func (this *QGraphicsWidget) WindowType(args ...interface{}) () {
   // windowType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -566,7 +568,7 @@ func (this *QGraphicsWidget) Windowtype(args ...interface{}) () {
 }
 
 // removeAction(class QAction *)
-func (this *QGraphicsWidget) Removeaction(args ...interface{}) () {
+func (this *QGraphicsWidget) RemoveAction(args ...interface{}) () {
   // removeAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -590,7 +592,7 @@ func (this *QGraphicsWidget) Removeaction(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QGraphicsWidget) Metaobject(args ...interface{}) () {
+func (this *QGraphicsWidget) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -611,7 +613,7 @@ func (this *QGraphicsWidget) Metaobject(args ...interface{}) () {
 }
 
 // focusPolicy()
-func (this *QGraphicsWidget) Focuspolicy(args ...interface{}) () {
+func (this *QGraphicsWidget) FocusPolicy(args ...interface{}) () {
   // focusPolicy()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -632,7 +634,7 @@ func (this *QGraphicsWidget) Focuspolicy(args ...interface{}) () {
 }
 
 // paintWindowFrame(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
-func (this *QGraphicsWidget) Paintwindowframe(args ...interface{}) () {
+func (this *QGraphicsWidget) PaintWindowFrame(args ...interface{}) () {
   // paintWindowFrame(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -720,7 +722,7 @@ func (this *QGraphicsWidget) Palette(args ...interface{}) (ret interface{}) {
 }
 
 // windowTitle()
-func (this *QGraphicsWidget) Windowtitle(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsWidget) WindowTitle(args ...interface{}) (ret interface{}) {
   // windowTitle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -749,7 +751,7 @@ func (this *QGraphicsWidget) Windowtitle(args ...interface{}) (ret interface{}) 
 }
 
 // windowFlags()
-func (this *QGraphicsWidget) Windowflags(args ...interface{}) () {
+func (this *QGraphicsWidget) WindowFlags(args ...interface{}) () {
   // windowFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -770,7 +772,7 @@ func (this *QGraphicsWidget) Windowflags(args ...interface{}) () {
 }
 
 // setContentsMargins(qreal, qreal, qreal, qreal)
-func (this *QGraphicsWidget) Setcontentsmargins(args ...interface{}) () {
+func (this *QGraphicsWidget) SetContentsMargins(args ...interface{}) () {
   // setContentsMargins(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -803,7 +805,7 @@ func (this *QGraphicsWidget) Setcontentsmargins(args ...interface{}) () {
 }
 
 // adjustSize()
-func (this *QGraphicsWidget) Adjustsize(args ...interface{}) () {
+func (this *QGraphicsWidget) AdjustSize(args ...interface{}) () {
   // adjustSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -824,7 +826,7 @@ func (this *QGraphicsWidget) Adjustsize(args ...interface{}) () {
 }
 
 // windowFrameRect()
-func (this *QGraphicsWidget) Windowframerect(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsWidget) WindowFrameRect(args ...interface{}) (ret interface{}) {
   // windowFrameRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -853,7 +855,7 @@ func (this *QGraphicsWidget) Windowframerect(args ...interface{}) (ret interface
 }
 
 // getWindowFrameMargins(qreal *, qreal *, qreal *, qreal *)
-func (this *QGraphicsWidget) Getwindowframemargins(args ...interface{}) () {
+func (this *QGraphicsWidget) GetWindowFrameMargins(args ...interface{}) () {
   // getWindowFrameMargins(qreal *, qreal *, qreal *, qreal *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -886,7 +888,7 @@ func (this *QGraphicsWidget) Getwindowframemargins(args ...interface{}) () {
 }
 
 // addAction(class QAction *)
-func (this *QGraphicsWidget) Addaction(args ...interface{}) () {
+func (this *QGraphicsWidget) AddAction(args ...interface{}) () {
   // addAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -910,7 +912,7 @@ func (this *QGraphicsWidget) Addaction(args ...interface{}) () {
 }
 
 // setAutoFillBackground(_Bool)
-func (this *QGraphicsWidget) Setautofillbackground(args ...interface{}) () {
+func (this *QGraphicsWidget) SetAutoFillBackground(args ...interface{}) () {
   // setAutoFillBackground(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -934,7 +936,7 @@ func (this *QGraphicsWidget) Setautofillbackground(args ...interface{}) () {
 }
 
 // setPalette(const class QPalette &)
-func (this *QGraphicsWidget) Setpalette(args ...interface{}) () {
+func (this *QGraphicsWidget) SetPalette(args ...interface{}) () {
   // setPalette(const class QPalette &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -958,7 +960,7 @@ func (this *QGraphicsWidget) Setpalette(args ...interface{}) () {
 }
 
 // ~QGraphicsWidget()
-func (this *QGraphicsWidget) Freeqgraphicswidget(args ...interface{}) () {
+func (this *QGraphicsWidget) Free(args ...interface{}) () {
   // ~QGraphicsWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -970,7 +972,10 @@ func (this *QGraphicsWidget) Freeqgraphicswidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidgetD0Ev
     // invoke: void ~QGraphicsWidget()
-    C.C_ZN15QGraphicsWidgetD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN15QGraphicsWidgetD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "~QGraphicsWidget", args)
   }
@@ -979,7 +984,7 @@ func (this *QGraphicsWidget) Freeqgraphicswidget(args ...interface{}) () {
 }
 
 // isActiveWindow()
-func (this *QGraphicsWidget) Isactivewindow(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsWidget) IsActiveWindow(args ...interface{}) (ret interface{}) {
   // isActiveWindow()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1037,7 +1042,7 @@ func (this *QGraphicsWidget) Size(args ...interface{}) (ret interface{}) {
 }
 
 // autoFillBackground()
-func (this *QGraphicsWidget) Autofillbackground(args ...interface{}) (ret interface{}) {
+func (this *QGraphicsWidget) AutoFillBackground(args ...interface{}) (ret interface{}) {
   // autoFillBackground()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1066,7 +1071,7 @@ func (this *QGraphicsWidget) Autofillbackground(args ...interface{}) (ret interf
 }
 
 // layoutDirection()
-func (this *QGraphicsWidget) Layoutdirection(args ...interface{}) () {
+func (this *QGraphicsWidget) LayoutDirection(args ...interface{}) () {
   // layoutDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1087,7 +1092,7 @@ func (this *QGraphicsWidget) Layoutdirection(args ...interface{}) () {
 }
 
 // setShortcutEnabled(int, _Bool)
-func (this *QGraphicsWidget) Setshortcutenabled(args ...interface{}) () {
+func (this *QGraphicsWidget) SetShortcutEnabled(args ...interface{}) () {
   // setShortcutEnabled(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1238,7 +1243,7 @@ func (this *QGraphicsWidget) Resize(args ...interface{}) () {
 }
 
 // releaseShortcut(int)
-func (this *QGraphicsWidget) Releaseshortcut(args ...interface{}) () {
+func (this *QGraphicsWidget) ReleaseShortcut(args ...interface{}) () {
   // releaseShortcut(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1262,7 +1267,7 @@ func (this *QGraphicsWidget) Releaseshortcut(args ...interface{}) () {
 }
 
 // setTabOrder(class QGraphicsWidget *, class QGraphicsWidget *)
-func (this *QGraphicsWidget) Settaborder_S(args ...interface{}) () {
+func (this *QGraphicsWidget) SetTabOrder_s(args ...interface{}) () {
   // setTabOrder(class QGraphicsWidget *, class QGraphicsWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1289,7 +1294,7 @@ func (this *QGraphicsWidget) Settaborder_S(args ...interface{}) () {
 }
 
 // setWindowTitle(const class QString &)
-func (this *QGraphicsWidget) Setwindowtitle(args ...interface{}) () {
+func (this *QGraphicsWidget) SetWindowTitle(args ...interface{}) () {
   // setWindowTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1313,7 +1318,7 @@ func (this *QGraphicsWidget) Setwindowtitle(args ...interface{}) () {
 }
 
 // setWindowFrameMargins(qreal, qreal, qreal, qreal)
-func (this *QGraphicsWidget) Setwindowframemargins(args ...interface{}) () {
+func (this *QGraphicsWidget) SetWindowFrameMargins(args ...interface{}) () {
   // setWindowFrameMargins(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1346,7 +1351,7 @@ func (this *QGraphicsWidget) Setwindowframemargins(args ...interface{}) () {
 }
 
 // getContentsMargins(qreal *, qreal *, qreal *, qreal *)
-func (this *QGraphicsWidget) Getcontentsmargins(args ...interface{}) () {
+func (this *QGraphicsWidget) GetContentsMargins(args ...interface{}) () {
   // getContentsMargins(qreal *, qreal *, qreal *, qreal *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1379,7 +1384,7 @@ func (this *QGraphicsWidget) Getcontentsmargins(args ...interface{}) () {
 }
 
 // setFont(const class QFont &)
-func (this *QGraphicsWidget) Setfont(args ...interface{}) () {
+func (this *QGraphicsWidget) SetFont(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

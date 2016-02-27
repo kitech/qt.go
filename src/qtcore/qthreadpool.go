@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qthreadpool.h
 // dst-file: /src/core/qthreadpool.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -70,6 +71,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QThreadPool)=1
@@ -79,7 +81,7 @@ type QThreadPool struct {
 }
 
 // setExpiryTimeout(int)
-func (this *QThreadPool) Setexpirytimeout(args ...interface{}) () {
+func (this *QThreadPool) SetExpiryTimeout(args ...interface{}) () {
   // setExpiryTimeout(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -103,7 +105,7 @@ func (this *QThreadPool) Setexpirytimeout(args ...interface{}) () {
 }
 
 // reserveThread()
-func (this *QThreadPool) Reservethread(args ...interface{}) () {
+func (this *QThreadPool) ReserveThread(args ...interface{}) () {
   // reserveThread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -148,6 +150,9 @@ func (this *QThreadPool) Cancel(args ...interface{}) () {
 }
 
 // QThreadPool(class QObject *)
+func GcfreeQThreadPool(this *QThreadPool) {
+  qtrt.UniverseFree(this)
+}
 func NewQThreadPool(args ...interface{}) *QThreadPool {
   // QThreadPool(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -166,7 +171,9 @@ func NewQThreadPool(args ...interface{}) *QThreadPool {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN11QThreadPoolC2EP7QObject(arg0)
-    return &QThreadPool{Qclsinst:qthis}
+    this := &QThreadPool{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQThreadPool)
+    return this
   default:
     qtrt.ErrorResolve("QThreadPool", "QThreadPool", args)
   }
@@ -175,7 +182,7 @@ func NewQThreadPool(args ...interface{}) *QThreadPool {
 }
 
 // waitForDone(int)
-func (this *QThreadPool) Waitfordone(args ...interface{}) (ret interface{}) {
+func (this *QThreadPool) WaitForDone(args ...interface{}) (ret interface{}) {
   // waitForDone(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -234,7 +241,7 @@ func (this *QThreadPool) Start(args ...interface{}) () {
 }
 
 // activeThreadCount()
-func (this *QThreadPool) Activethreadcount(args ...interface{}) (ret interface{}) {
+func (this *QThreadPool) ActiveThreadCount(args ...interface{}) (ret interface{}) {
   // activeThreadCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -263,7 +270,7 @@ func (this *QThreadPool) Activethreadcount(args ...interface{}) (ret interface{}
 }
 
 // setMaxThreadCount(int)
-func (this *QThreadPool) Setmaxthreadcount(args ...interface{}) () {
+func (this *QThreadPool) SetMaxThreadCount(args ...interface{}) () {
   // setMaxThreadCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -287,7 +294,7 @@ func (this *QThreadPool) Setmaxthreadcount(args ...interface{}) () {
 }
 
 // ~QThreadPool()
-func (this *QThreadPool) Freeqthreadpool(args ...interface{}) () {
+func (this *QThreadPool) Free(args ...interface{}) () {
   // ~QThreadPool()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -299,7 +306,10 @@ func (this *QThreadPool) Freeqthreadpool(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QThreadPoolD0Ev
     // invoke: void ~QThreadPool()
-    C.C_ZN11QThreadPoolD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QThreadPoolD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QThreadPool", "~QThreadPool", args)
   }
@@ -308,7 +318,7 @@ func (this *QThreadPool) Freeqthreadpool(args ...interface{}) () {
 }
 
 // globalInstance()
-func (this *QThreadPool) Globalinstance_S(args ...interface{}) (ret interface{}) {
+func (this *QThreadPool) GlobalInstance_s(args ...interface{}) (ret interface{}) {
   // globalInstance()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -337,7 +347,7 @@ func (this *QThreadPool) Globalinstance_S(args ...interface{}) (ret interface{})
 }
 
 // metaObject()
-func (this *QThreadPool) Metaobject(args ...interface{}) () {
+func (this *QThreadPool) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -379,7 +389,7 @@ func (this *QThreadPool) Clear(args ...interface{}) () {
 }
 
 // releaseThread()
-func (this *QThreadPool) Releasethread(args ...interface{}) () {
+func (this *QThreadPool) ReleaseThread(args ...interface{}) () {
   // releaseThread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -400,7 +410,7 @@ func (this *QThreadPool) Releasethread(args ...interface{}) () {
 }
 
 // tryStart(class QRunnable *)
-func (this *QThreadPool) Trystart(args ...interface{}) (ret interface{}) {
+func (this *QThreadPool) TryStart(args ...interface{}) (ret interface{}) {
   // tryStart(class QRunnable *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -432,7 +442,7 @@ func (this *QThreadPool) Trystart(args ...interface{}) (ret interface{}) {
 }
 
 // maxThreadCount()
-func (this *QThreadPool) Maxthreadcount(args ...interface{}) (ret interface{}) {
+func (this *QThreadPool) MaxThreadCount(args ...interface{}) (ret interface{}) {
   // maxThreadCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -461,7 +471,7 @@ func (this *QThreadPool) Maxthreadcount(args ...interface{}) (ret interface{}) {
 }
 
 // expiryTimeout()
-func (this *QThreadPool) Expirytimeout(args ...interface{}) (ret interface{}) {
+func (this *QThreadPool) ExpiryTimeout(args ...interface{}) (ret interface{}) {
   // expiryTimeout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

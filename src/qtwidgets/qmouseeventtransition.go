@@ -1,6 +1,6 @@
 package qtwidgets
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtWidgets/qmouseeventtransition.h
 // dst-file: /src/widgets/qmouseeventtransition.go
 //
@@ -17,6 +17,7 @@ package qtwidgets
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 import "qtgui"
@@ -56,6 +57,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMouseEventTransition)=1
@@ -65,7 +67,7 @@ type QMouseEventTransition struct {
 }
 
 // metaObject()
-func (this *QMouseEventTransition) Metaobject(args ...interface{}) () {
+func (this *QMouseEventTransition) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -86,7 +88,7 @@ func (this *QMouseEventTransition) Metaobject(args ...interface{}) () {
 }
 
 // setHitTestPath(const class QPainterPath &)
-func (this *QMouseEventTransition) Sethittestpath(args ...interface{}) () {
+func (this *QMouseEventTransition) SetHitTestPath(args ...interface{}) () {
   // setHitTestPath(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -110,7 +112,7 @@ func (this *QMouseEventTransition) Sethittestpath(args ...interface{}) () {
 }
 
 // modifierMask()
-func (this *QMouseEventTransition) Modifiermask(args ...interface{}) () {
+func (this *QMouseEventTransition) ModifierMask(args ...interface{}) () {
   // modifierMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -131,7 +133,7 @@ func (this *QMouseEventTransition) Modifiermask(args ...interface{}) () {
 }
 
 // hitTestPath()
-func (this *QMouseEventTransition) Hittestpath(args ...interface{}) (ret interface{}) {
+func (this *QMouseEventTransition) HitTestPath(args ...interface{}) (ret interface{}) {
   // hitTestPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -160,7 +162,7 @@ func (this *QMouseEventTransition) Hittestpath(args ...interface{}) (ret interfa
 }
 
 // ~QMouseEventTransition()
-func (this *QMouseEventTransition) Freeqmouseeventtransition(args ...interface{}) () {
+func (this *QMouseEventTransition) Free(args ...interface{}) () {
   // ~QMouseEventTransition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -172,7 +174,10 @@ func (this *QMouseEventTransition) Freeqmouseeventtransition(args ...interface{}
   case 0:
     // invoke: _ZN21QMouseEventTransitionD0Ev
     // invoke: void ~QMouseEventTransition()
-    C.C_ZN21QMouseEventTransitionD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN21QMouseEventTransitionD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "~QMouseEventTransition", args)
   }
@@ -202,6 +207,9 @@ func (this *QMouseEventTransition) Button(args ...interface{}) () {
 }
 
 // QMouseEventTransition(class QState *)
+func GcfreeQMouseEventTransition(this *QMouseEventTransition) {
+  qtrt.UniverseFree(this)
+}
 func NewQMouseEventTransition(args ...interface{}) *QMouseEventTransition {
   // QMouseEventTransition(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -220,7 +228,9 @@ func NewQMouseEventTransition(args ...interface{}) *QMouseEventTransition {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN21QMouseEventTransitionC2EP6QState(arg0)
-    return &QMouseEventTransition{Qclsinst:qthis}
+    this := &QMouseEventTransition{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMouseEventTransition)
+    return this
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "QMouseEventTransition", args)
   }

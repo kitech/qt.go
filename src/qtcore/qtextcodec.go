@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qtextcodec.h
 // dst-file: /src/core/qtextcodec.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -94,6 +95,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QTextEncoder)=1
@@ -115,6 +117,9 @@ type QTextDecoder struct {
 }
 
 // QTextEncoder(const class QTextCodec *)
+func GcfreeQTextEncoder(this *QTextEncoder) {
+  qtrt.UniverseFree(this)
+}
 func NewQTextEncoder(args ...interface{}) *QTextEncoder {
   // QTextEncoder(const class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -133,7 +138,9 @@ func NewQTextEncoder(args ...interface{}) *QTextEncoder {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QTextEncoderC2EPK10QTextCodec(arg0)
-    return &QTextEncoder{Qclsinst:qthis}
+    this := &QTextEncoder{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextEncoder)
+    return this
   default:
     qtrt.ErrorResolve("QTextEncoder", "QTextEncoder", args)
   }
@@ -142,7 +149,7 @@ func NewQTextEncoder(args ...interface{}) *QTextEncoder {
 }
 
 // hasFailure()
-func (this *QTextEncoder) Hasfailure(args ...interface{}) (ret interface{}) {
+func (this *QTextEncoder) HasFailure(args ...interface{}) (ret interface{}) {
   // hasFailure()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -171,7 +178,7 @@ func (this *QTextEncoder) Hasfailure(args ...interface{}) (ret interface{}) {
 }
 
 // fromUnicode(const class QChar *, int)
-func (this *QTextEncoder) Fromunicode(args ...interface{}) (ret interface{}) {
+func (this *QTextEncoder) FromUnicode(args ...interface{}) (ret interface{}) {
   // fromUnicode(const class QChar *, int)
   // fromUnicode(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -223,7 +230,7 @@ func (this *QTextEncoder) Fromunicode(args ...interface{}) (ret interface{}) {
 }
 
 // ~QTextEncoder()
-func (this *QTextEncoder) Freeqtextencoder(args ...interface{}) () {
+func (this *QTextEncoder) Free(args ...interface{}) () {
   // ~QTextEncoder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -235,7 +242,10 @@ func (this *QTextEncoder) Freeqtextencoder(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTextEncoderD0Ev
     // invoke: void ~QTextEncoder()
-    C.C_ZN12QTextEncoderD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QTextEncoderD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTextEncoder", "~QTextEncoder", args)
   }
@@ -244,7 +254,7 @@ func (this *QTextEncoder) Freeqtextencoder(args ...interface{}) () {
 }
 
 // setCodecForLocale(class QTextCodec *)
-func (this *QTextCodec) Setcodecforlocale_S(args ...interface{}) () {
+func (this *QTextCodec) SetCodecForLocale_s(args ...interface{}) () {
   // setCodecForLocale(class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -268,7 +278,7 @@ func (this *QTextCodec) Setcodecforlocale_S(args ...interface{}) () {
 }
 
 // codecForName(const class QByteArray &)
-func (this *QTextCodec) Codecforname_S(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) CodecForName_s(args ...interface{}) (ret interface{}) {
   // codecForName(const class QByteArray &)
   // codecForName(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -319,7 +329,7 @@ func (this *QTextCodec) Codecforname_S(args ...interface{}) (ret interface{}) {
 }
 
 // canEncode(class QChar)
-func (this *QTextCodec) Canencode(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) CanEncode(args ...interface{}) (ret interface{}) {
   // canEncode(class QChar)
   // canEncode(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -368,7 +378,7 @@ func (this *QTextCodec) Canencode(args ...interface{}) (ret interface{}) {
 }
 
 // codecForLocale()
-func (this *QTextCodec) Codecforlocale_S(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) CodecForLocale_s(args ...interface{}) (ret interface{}) {
   // codecForLocale()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -397,7 +407,7 @@ func (this *QTextCodec) Codecforlocale_S(args ...interface{}) (ret interface{}) 
 }
 
 // codecForHtml(const class QByteArray &)
-func (this *QTextCodec) Codecforhtml_S(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) CodecForHtml_s(args ...interface{}) (ret interface{}) {
   // codecForHtml(const class QByteArray &)
   // codecForHtml(const class QByteArray &, class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -449,7 +459,7 @@ func (this *QTextCodec) Codecforhtml_S(args ...interface{}) (ret interface{}) {
 }
 
 // availableCodecs()
-func (this *QTextCodec) Availablecodecs_S(args ...interface{}) () {
+func (this *QTextCodec) AvailableCodecs_s(args ...interface{}) () {
   // availableCodecs()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -470,7 +480,7 @@ func (this *QTextCodec) Availablecodecs_S(args ...interface{}) () {
 }
 
 // codecForUtfText(const class QByteArray &, class QTextCodec *)
-func (this *QTextCodec) Codecforutftext_S(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) CodecForUtfText_s(args ...interface{}) (ret interface{}) {
   // codecForUtfText(const class QByteArray &, class QTextCodec *)
   // codecForUtfText(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -522,7 +532,7 @@ func (this *QTextCodec) Codecforutftext_S(args ...interface{}) (ret interface{})
 }
 
 // availableMibs()
-func (this *QTextCodec) Availablemibs_S(args ...interface{}) () {
+func (this *QTextCodec) AvailableMibs_s(args ...interface{}) () {
   // availableMibs()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -543,7 +553,7 @@ func (this *QTextCodec) Availablemibs_S(args ...interface{}) () {
 }
 
 // fromUnicode(const class QString &)
-func (this *QTextCodec) Fromunicode(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) FromUnicode(args ...interface{}) (ret interface{}) {
   // fromUnicode(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -596,7 +606,7 @@ func (this *QTextCodec) Aliases(args ...interface{}) () {
 }
 
 // codecForMib(int)
-func (this *QTextCodec) Codecformib_S(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) CodecForMib_s(args ...interface{}) (ret interface{}) {
   // codecForMib(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -628,7 +638,7 @@ func (this *QTextCodec) Codecformib_S(args ...interface{}) (ret interface{}) {
 }
 
 // toUnicode(const class QByteArray &)
-func (this *QTextCodec) Tounicode(args ...interface{}) (ret interface{}) {
+func (this *QTextCodec) ToUnicode(args ...interface{}) (ret interface{}) {
   // toUnicode(const class QByteArray &)
   // toUnicode(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -679,6 +689,9 @@ func (this *QTextCodec) Tounicode(args ...interface{}) (ret interface{}) {
 }
 
 // QTextDecoder(const class QTextCodec *)
+func GcfreeQTextDecoder(this *QTextDecoder) {
+  qtrt.UniverseFree(this)
+}
 func NewQTextDecoder(args ...interface{}) *QTextDecoder {
   // QTextDecoder(const class QTextCodec *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -697,7 +710,9 @@ func NewQTextDecoder(args ...interface{}) *QTextDecoder {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN12QTextDecoderC2EPK10QTextCodec(arg0)
-    return &QTextDecoder{Qclsinst:qthis}
+    this := &QTextDecoder{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQTextDecoder)
+    return this
   default:
     qtrt.ErrorResolve("QTextDecoder", "QTextDecoder", args)
   }
@@ -706,7 +721,7 @@ func NewQTextDecoder(args ...interface{}) *QTextDecoder {
 }
 
 // hasFailure()
-func (this *QTextDecoder) Hasfailure(args ...interface{}) (ret interface{}) {
+func (this *QTextDecoder) HasFailure(args ...interface{}) (ret interface{}) {
   // hasFailure()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -735,7 +750,7 @@ func (this *QTextDecoder) Hasfailure(args ...interface{}) (ret interface{}) {
 }
 
 // ~QTextDecoder()
-func (this *QTextDecoder) Freeqtextdecoder(args ...interface{}) () {
+func (this *QTextDecoder) Free(args ...interface{}) () {
   // ~QTextDecoder()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -747,7 +762,10 @@ func (this *QTextDecoder) Freeqtextdecoder(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTextDecoderD0Ev
     // invoke: void ~QTextDecoder()
-    C.C_ZN12QTextDecoderD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN12QTextDecoderD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QTextDecoder", "~QTextDecoder", args)
   }
@@ -756,7 +774,7 @@ func (this *QTextDecoder) Freeqtextdecoder(args ...interface{}) () {
 }
 
 // toUnicode(const class QByteArray &)
-func (this *QTextDecoder) Tounicode(args ...interface{}) (ret interface{}) {
+func (this *QTextDecoder) ToUnicode(args ...interface{}) (ret interface{}) {
   // toUnicode(const class QByteArray &)
   // toUnicode(const char *, int)
   // toUnicode(class QString *, const char *, int)

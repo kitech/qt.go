@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -72,6 +73,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QInputMethod)=1
@@ -137,7 +139,7 @@ func (this *QInputMethod) Locale(args ...interface{}) (ret interface{}) {
 }
 
 // setInputItemRectangle(const class QRectF &)
-func (this *QInputMethod) Setinputitemrectangle(args ...interface{}) () {
+func (this *QInputMethod) SetInputItemRectangle(args ...interface{}) () {
   // setInputItemRectangle(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -182,7 +184,7 @@ func (this *QInputMethod) Hide(args ...interface{}) () {
 }
 
 // cursorRectangle()
-func (this *QInputMethod) Cursorrectangle(args ...interface{}) (ret interface{}) {
+func (this *QInputMethod) CursorRectangle(args ...interface{}) (ret interface{}) {
   // cursorRectangle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -211,7 +213,7 @@ func (this *QInputMethod) Cursorrectangle(args ...interface{}) (ret interface{})
 }
 
 // inputItemRectangle()
-func (this *QInputMethod) Inputitemrectangle(args ...interface{}) (ret interface{}) {
+func (this *QInputMethod) InputItemRectangle(args ...interface{}) (ret interface{}) {
   // inputItemRectangle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -240,7 +242,7 @@ func (this *QInputMethod) Inputitemrectangle(args ...interface{}) (ret interface
 }
 
 // isAnimating()
-func (this *QInputMethod) Isanimating(args ...interface{}) (ret interface{}) {
+func (this *QInputMethod) IsAnimating(args ...interface{}) (ret interface{}) {
   // isAnimating()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -269,7 +271,7 @@ func (this *QInputMethod) Isanimating(args ...interface{}) (ret interface{}) {
 }
 
 // inputDirection()
-func (this *QInputMethod) Inputdirection(args ...interface{}) () {
+func (this *QInputMethod) InputDirection(args ...interface{}) () {
   // inputDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -290,7 +292,7 @@ func (this *QInputMethod) Inputdirection(args ...interface{}) () {
 }
 
 // setInputItemTransform(const class QTransform &)
-func (this *QInputMethod) Setinputitemtransform(args ...interface{}) () {
+func (this *QInputMethod) SetInputItemTransform(args ...interface{}) () {
   // setInputItemTransform(const class QTransform &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -314,7 +316,7 @@ func (this *QInputMethod) Setinputitemtransform(args ...interface{}) () {
 }
 
 // keyboardRectangle()
-func (this *QInputMethod) Keyboardrectangle(args ...interface{}) (ret interface{}) {
+func (this *QInputMethod) KeyboardRectangle(args ...interface{}) (ret interface{}) {
   // keyboardRectangle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -364,7 +366,7 @@ func (this *QInputMethod) Reset(args ...interface{}) () {
 }
 
 // metaObject()
-func (this *QInputMethod) Metaobject(args ...interface{}) () {
+func (this *QInputMethod) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -385,7 +387,7 @@ func (this *QInputMethod) Metaobject(args ...interface{}) () {
 }
 
 // inputItemTransform()
-func (this *QInputMethod) Inputitemtransform(args ...interface{}) (ret interface{}) {
+func (this *QInputMethod) InputItemTransform(args ...interface{}) (ret interface{}) {
   // inputItemTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -414,7 +416,7 @@ func (this *QInputMethod) Inputitemtransform(args ...interface{}) (ret interface
 }
 
 // isVisible()
-func (this *QInputMethod) Isvisible(args ...interface{}) (ret interface{}) {
+func (this *QInputMethod) IsVisible(args ...interface{}) (ret interface{}) {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -464,7 +466,7 @@ func (this *QInputMethod) Commit(args ...interface{}) () {
 }
 
 // setVisible(_Bool)
-func (this *QInputMethod) Setvisible(args ...interface{}) () {
+func (this *QInputMethod) SetVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

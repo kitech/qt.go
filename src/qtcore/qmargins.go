@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qmargins.h
 // dst-file: /src/core/qmargins.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -86,6 +87,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QMarginsF)=32
@@ -159,7 +161,7 @@ func (this *QMarginsF) Bottom(args ...interface{}) (ret interface{}) {
 }
 
 // setBottom(qreal)
-func (this *QMarginsF) Setbottom(args ...interface{}) () {
+func (this *QMarginsF) SetBottom(args ...interface{}) () {
   // setBottom(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -212,7 +214,7 @@ func (this *QMarginsF) Top(args ...interface{}) (ret interface{}) {
 }
 
 // toMargins()
-func (this *QMarginsF) Tomargins(args ...interface{}) (ret interface{}) {
+func (this *QMarginsF) ToMargins(args ...interface{}) (ret interface{}) {
   // toMargins()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -241,7 +243,7 @@ func (this *QMarginsF) Tomargins(args ...interface{}) (ret interface{}) {
 }
 
 // setRight(qreal)
-func (this *QMarginsF) Setright(args ...interface{}) () {
+func (this *QMarginsF) SetRight(args ...interface{}) () {
   // setRight(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -265,7 +267,7 @@ func (this *QMarginsF) Setright(args ...interface{}) () {
 }
 
 // setTop(qreal)
-func (this *QMarginsF) Settop(args ...interface{}) () {
+func (this *QMarginsF) SetTop(args ...interface{}) () {
   // setTop(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -289,7 +291,7 @@ func (this *QMarginsF) Settop(args ...interface{}) () {
 }
 
 // isNull()
-func (this *QMarginsF) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QMarginsF) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -318,7 +320,7 @@ func (this *QMarginsF) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // setLeft(qreal)
-func (this *QMarginsF) Setleft(args ...interface{}) () {
+func (this *QMarginsF) SetLeft(args ...interface{}) () {
   // setLeft(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -342,6 +344,9 @@ func (this *QMarginsF) Setleft(args ...interface{}) () {
 }
 
 // QMarginsF()
+func GcfreeQMarginsF(this *QMarginsF) {
+  qtrt.UniverseFree(this)
+}
 func NewQMarginsF(args ...interface{}) *QMarginsF {
   // QMarginsF()
   // QMarginsF(qreal, qreal, qreal, qreal)
@@ -366,7 +371,9 @@ func NewQMarginsF(args ...interface{}) *QMarginsF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMarginsFC2Ev()
-    return &QMarginsF{Qclsinst:qthis}
+    this := &QMarginsF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMarginsF)
+    return this
   case 1:
     // invoke: _ZN9QMarginsFC1Edddd
     // invoke: void QMarginsF(qreal, qreal, qreal, qreal)
@@ -381,7 +388,9 @@ func NewQMarginsF(args ...interface{}) *QMarginsF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMarginsFC2Edddd(arg0, arg1, arg2, arg3)
-    return &QMarginsF{Qclsinst:qthis}
+    this := &QMarginsF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMarginsF)
+    return this
   case 2:
     // invoke: _ZN9QMarginsFC1ERK8QMargins
     // invoke: void QMarginsF(const class QMargins &)
@@ -390,7 +399,9 @@ func NewQMarginsF(args ...interface{}) *QMarginsF {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN9QMarginsFC2ERK8QMargins(arg0)
-    return &QMarginsF{Qclsinst:qthis}
+    this := &QMarginsF{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMarginsF)
+    return this
   default:
     qtrt.ErrorResolve("QMarginsF", "QMarginsF", args)
   }
@@ -486,7 +497,7 @@ func (this *QMargins) Bottom(args ...interface{}) (ret interface{}) {
 }
 
 // setBottom(int)
-func (this *QMargins) Setbottom(args ...interface{}) () {
+func (this *QMargins) SetBottom(args ...interface{}) () {
   // setBottom(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -510,7 +521,7 @@ func (this *QMargins) Setbottom(args ...interface{}) () {
 }
 
 // setRight(int)
-func (this *QMargins) Setright(args ...interface{}) () {
+func (this *QMargins) SetRight(args ...interface{}) () {
   // setRight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -534,7 +545,7 @@ func (this *QMargins) Setright(args ...interface{}) () {
 }
 
 // setTop(int)
-func (this *QMargins) Settop(args ...interface{}) () {
+func (this *QMargins) SetTop(args ...interface{}) () {
   // setTop(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -558,7 +569,7 @@ func (this *QMargins) Settop(args ...interface{}) () {
 }
 
 // isNull()
-func (this *QMargins) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QMargins) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -587,6 +598,9 @@ func (this *QMargins) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // QMargins()
+func GcfreeQMargins(this *QMargins) {
+  qtrt.UniverseFree(this)
+}
 func NewQMargins(args ...interface{}) *QMargins {
   // QMargins()
   // QMargins(int, int, int, int)
@@ -608,7 +622,9 @@ func NewQMargins(args ...interface{}) *QMargins {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QMarginsC2Ev()
-    return &QMargins{Qclsinst:qthis}
+    this := &QMargins{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMargins)
+    return this
   case 1:
     // invoke: _ZN8QMarginsC1Eiiii
     // invoke: void QMargins(int, int, int, int)
@@ -623,7 +639,9 @@ func NewQMargins(args ...interface{}) *QMargins {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QMarginsC2Eiiii(arg0, arg1, arg2, arg3)
-    return &QMargins{Qclsinst:qthis}
+    this := &QMargins{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQMargins)
+    return this
   default:
     qtrt.ErrorResolve("QMargins", "QMargins", args)
   }
@@ -632,7 +650,7 @@ func NewQMargins(args ...interface{}) *QMargins {
 }
 
 // setLeft(int)
-func (this *QMargins) Setleft(args ...interface{}) () {
+func (this *QMargins) SetLeft(args ...interface{}) () {
   // setLeft(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

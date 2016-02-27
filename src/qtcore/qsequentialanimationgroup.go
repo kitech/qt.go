@@ -1,6 +1,6 @@
 package qtcore
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.go
 //
@@ -17,6 +17,7 @@ package qtcore
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 // <= use block end
 
@@ -52,6 +53,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QSequentialAnimationGroup)=1
@@ -62,7 +64,7 @@ type QSequentialAnimationGroup struct {
 }
 
 // metaObject()
-func (this *QSequentialAnimationGroup) Metaobject(args ...interface{}) () {
+func (this *QSequentialAnimationGroup) MetaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -83,7 +85,7 @@ func (this *QSequentialAnimationGroup) Metaobject(args ...interface{}) () {
 }
 
 // insertPause(int, int)
-func (this *QSequentialAnimationGroup) Insertpause(args ...interface{}) (ret interface{}) {
+func (this *QSequentialAnimationGroup) InsertPause(args ...interface{}) (ret interface{}) {
   // insertPause(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -118,7 +120,7 @@ func (this *QSequentialAnimationGroup) Insertpause(args ...interface{}) (ret int
 }
 
 // addPause(int)
-func (this *QSequentialAnimationGroup) Addpause(args ...interface{}) (ret interface{}) {
+func (this *QSequentialAnimationGroup) AddPause(args ...interface{}) (ret interface{}) {
   // addPause(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -150,7 +152,7 @@ func (this *QSequentialAnimationGroup) Addpause(args ...interface{}) (ret interf
 }
 
 // ~QSequentialAnimationGroup()
-func (this *QSequentialAnimationGroup) Freeqsequentialanimationgroup(args ...interface{}) () {
+func (this *QSequentialAnimationGroup) Free(args ...interface{}) () {
   // ~QSequentialAnimationGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,7 +164,10 @@ func (this *QSequentialAnimationGroup) Freeqsequentialanimationgroup(args ...int
   case 0:
     // invoke: _ZN25QSequentialAnimationGroupD0Ev
     // invoke: void ~QSequentialAnimationGroup()
-    C.C_ZN25QSequentialAnimationGroupD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN25QSequentialAnimationGroupD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "~QSequentialAnimationGroup", args)
   }
@@ -171,6 +176,9 @@ func (this *QSequentialAnimationGroup) Freeqsequentialanimationgroup(args ...int
 }
 
 // QSequentialAnimationGroup(class QObject *)
+func GcfreeQSequentialAnimationGroup(this *QSequentialAnimationGroup) {
+  qtrt.UniverseFree(this)
+}
 func NewQSequentialAnimationGroup(args ...interface{}) *QSequentialAnimationGroup {
   // QSequentialAnimationGroup(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -189,7 +197,9 @@ func NewQSequentialAnimationGroup(args ...interface{}) *QSequentialAnimationGrou
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN25QSequentialAnimationGroupC2EP7QObject(arg0)
-    return &QSequentialAnimationGroup{Qclsinst:qthis}
+    this := &QSequentialAnimationGroup{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQSequentialAnimationGroup)
+    return this
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "QSequentialAnimationGroup", args)
   }
@@ -227,7 +237,7 @@ func (this *QSequentialAnimationGroup) Duration(args ...interface{}) (ret interf
 }
 
 // currentAnimation()
-func (this *QSequentialAnimationGroup) Currentanimation(args ...interface{}) () {
+func (this *QSequentialAnimationGroup) CurrentAnimation(args ...interface{}) () {
   // currentAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

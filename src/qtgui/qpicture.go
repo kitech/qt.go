@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qpicture.h
 // dst-file: /src/gui/qpicture.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -144,6 +145,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QPictureIO)=8
@@ -159,7 +161,7 @@ type QPicture struct {
 }
 
 // setParameters(const char *)
-func (this *QPictureIO) Setparameters(args ...interface{}) () {
+func (this *QPictureIO) SetParameters(args ...interface{}) () {
   // setParameters(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -185,6 +187,9 @@ func (this *QPictureIO) Setparameters(args ...interface{}) () {
 }
 
 // QPictureIO(const class QString &, const char *)
+func GcfreeQPictureIO(this *QPictureIO) {
+  qtrt.UniverseFree(this)
+}
 func NewQPictureIO(args ...interface{}) *QPictureIO {
   // QPictureIO(const class QString &, const char *)
   // QPictureIO(class QIODevice *, const char *)
@@ -214,7 +219,9 @@ func NewQPictureIO(args ...interface{}) *QPictureIO {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QPictureIOC2ERK7QStringPKc(arg0, arg1)
-    return &QPictureIO{Qclsinst:qthis}
+    this := &QPictureIO{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPictureIO)
+    return this
   case 1:
     // invoke: _ZN10QPictureIOC1EP9QIODevicePKc
     // invoke: void QPictureIO(class QIODevice *, const char *)
@@ -227,14 +234,18 @@ func NewQPictureIO(args ...interface{}) *QPictureIO {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QPictureIOC2EP9QIODevicePKc(arg0, arg1)
-    return &QPictureIO{Qclsinst:qthis}
+    this := &QPictureIO{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPictureIO)
+    return this
   case 2:
     // invoke: _ZN10QPictureIOC1Ev
     // invoke: void QPictureIO()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN10QPictureIOC2Ev()
-    return &QPictureIO{Qclsinst:qthis}
+    this := &QPictureIO{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPictureIO)
+    return this
   default:
     qtrt.ErrorResolve("QPictureIO", "QPictureIO", args)
   }
@@ -243,7 +254,7 @@ func NewQPictureIO(args ...interface{}) *QPictureIO {
 }
 
 // ~QPictureIO()
-func (this *QPictureIO) Freeqpictureio(args ...interface{}) () {
+func (this *QPictureIO) Free(args ...interface{}) () {
   // ~QPictureIO()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -255,7 +266,10 @@ func (this *QPictureIO) Freeqpictureio(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QPictureIOD0Ev
     // invoke: void ~QPictureIO()
-    C.C_ZN10QPictureIOD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN10QPictureIOD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPictureIO", "~QPictureIO", args)
   }
@@ -293,7 +307,7 @@ func (this *QPictureIO) Quality(args ...interface{}) (ret interface{}) {
 }
 
 // setDescription(const class QString &)
-func (this *QPictureIO) Setdescription(args ...interface{}) () {
+func (this *QPictureIO) SetDescription(args ...interface{}) () {
   // setDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -346,7 +360,7 @@ func (this *QPictureIO) Parameters(args ...interface{}) (ret interface{}) {
 }
 
 // setFormat(const char *)
-func (this *QPictureIO) Setformat(args ...interface{}) () {
+func (this *QPictureIO) SetFormat(args ...interface{}) () {
   // setFormat(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -372,7 +386,7 @@ func (this *QPictureIO) Setformat(args ...interface{}) () {
 }
 
 // ioDevice()
-func (this *QPictureIO) Iodevice(args ...interface{}) (ret interface{}) {
+func (this *QPictureIO) IoDevice(args ...interface{}) (ret interface{}) {
   // ioDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -401,7 +415,7 @@ func (this *QPictureIO) Iodevice(args ...interface{}) (ret interface{}) {
 }
 
 // setPicture(const class QPicture &)
-func (this *QPictureIO) Setpicture(args ...interface{}) () {
+func (this *QPictureIO) SetPicture(args ...interface{}) () {
   // setPicture(const class QPicture &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -425,7 +439,7 @@ func (this *QPictureIO) Setpicture(args ...interface{}) () {
 }
 
 // setStatus(int)
-func (this *QPictureIO) Setstatus(args ...interface{}) () {
+func (this *QPictureIO) SetStatus(args ...interface{}) () {
   // setStatus(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -478,7 +492,7 @@ func (this *QPictureIO) Write(args ...interface{}) (ret interface{}) {
 }
 
 // outputFormats()
-func (this *QPictureIO) Outputformats_S(args ...interface{}) () {
+func (this *QPictureIO) OutputFormats_s(args ...interface{}) () {
   // outputFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -499,7 +513,7 @@ func (this *QPictureIO) Outputformats_S(args ...interface{}) () {
 }
 
 // pictureFormat(const class QString &)
-func (this *QPictureIO) Pictureformat_S(args ...interface{}) (ret interface{}) {
+func (this *QPictureIO) PictureFormat_s(args ...interface{}) (ret interface{}) {
   // pictureFormat(const class QString &)
   // pictureFormat(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -693,7 +707,7 @@ func (this *QPictureIO) Read(args ...interface{}) (ret interface{}) {
 }
 
 // fileName()
-func (this *QPictureIO) Filename(args ...interface{}) (ret interface{}) {
+func (this *QPictureIO) FileName(args ...interface{}) (ret interface{}) {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -722,7 +736,7 @@ func (this *QPictureIO) Filename(args ...interface{}) (ret interface{}) {
 }
 
 // setGamma(float)
-func (this *QPictureIO) Setgamma(args ...interface{}) () {
+func (this *QPictureIO) SetGamma(args ...interface{}) () {
   // setGamma(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -746,7 +760,7 @@ func (this *QPictureIO) Setgamma(args ...interface{}) () {
 }
 
 // inputFormats()
-func (this *QPictureIO) Inputformats_S(args ...interface{}) () {
+func (this *QPictureIO) InputFormats_s(args ...interface{}) () {
   // inputFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -767,7 +781,7 @@ func (this *QPictureIO) Inputformats_S(args ...interface{}) () {
 }
 
 // setIODevice(class QIODevice *)
-func (this *QPictureIO) Setiodevice(args ...interface{}) () {
+func (this *QPictureIO) SetIODevice(args ...interface{}) () {
   // setIODevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -791,7 +805,7 @@ func (this *QPictureIO) Setiodevice(args ...interface{}) () {
 }
 
 // setFileName(const class QString &)
-func (this *QPictureIO) Setfilename(args ...interface{}) () {
+func (this *QPictureIO) SetFileName(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -815,7 +829,7 @@ func (this *QPictureIO) Setfilename(args ...interface{}) () {
 }
 
 // setQuality(int)
-func (this *QPictureIO) Setquality(args ...interface{}) () {
+func (this *QPictureIO) SetQuality(args ...interface{}) () {
   // setQuality(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -927,7 +941,7 @@ func (this *QPicture) Load(args ...interface{}) (ret interface{}) {
 }
 
 // boundingRect()
-func (this *QPicture) Boundingrect(args ...interface{}) (ret interface{}) {
+func (this *QPicture) BoundingRect(args ...interface{}) (ret interface{}) {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -956,7 +970,7 @@ func (this *QPicture) Boundingrect(args ...interface{}) (ret interface{}) {
 }
 
 // ~QPicture()
-func (this *QPicture) Freeqpicture(args ...interface{}) () {
+func (this *QPicture) Free(args ...interface{}) () {
   // ~QPicture()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -968,7 +982,10 @@ func (this *QPicture) Freeqpicture(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPictureD0Ev
     // invoke: void ~QPicture()
-    C.C_ZN8QPictureD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN8QPictureD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QPicture", "~QPicture", args)
   }
@@ -977,6 +994,9 @@ func (this *QPicture) Freeqpicture(args ...interface{}) () {
 }
 
 // QPicture(int)
+func GcfreeQPicture(this *QPicture) {
+  qtrt.UniverseFree(this)
+}
 func NewQPicture(args ...interface{}) *QPicture {
   // QPicture(int)
   // QPicture(const class QPicture &)
@@ -998,7 +1018,9 @@ func NewQPicture(args ...interface{}) *QPicture {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPictureC2Ei(arg0)
-    return &QPicture{Qclsinst:qthis}
+    this := &QPicture{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPicture)
+    return this
   case 1:
     // invoke: _ZN8QPictureC1ERKS_
     // invoke: void QPicture(const class QPicture &)
@@ -1007,7 +1029,9 @@ func NewQPicture(args ...interface{}) *QPicture {
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
     qthis = C.C_ZN8QPictureC2ERKS_(arg0)
-    return &QPicture{Qclsinst:qthis}
+    this := &QPicture{Qclsinst:qthis}
+    runtime.SetFinalizer(this, GcfreeQPicture)
+    return this
   default:
     qtrt.ErrorResolve("QPicture", "QPicture", args)
   }
@@ -1016,7 +1040,7 @@ func NewQPicture(args ...interface{}) *QPicture {
 }
 
 // paintEngine()
-func (this *QPicture) Paintengine(args ...interface{}) (ret interface{}) {
+func (this *QPicture) PaintEngine(args ...interface{}) (ret interface{}) {
   // paintEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1074,7 +1098,7 @@ func (this *QPicture) Size(args ...interface{}) (ret interface{}) {
 }
 
 // outputFormatList()
-func (this *QPicture) Outputformatlist_S(args ...interface{}) () {
+func (this *QPicture) OutputFormatList_s(args ...interface{}) () {
   // outputFormatList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1095,7 +1119,7 @@ func (this *QPicture) Outputformatlist_S(args ...interface{}) () {
 }
 
 // setBoundingRect(const class QRect &)
-func (this *QPicture) Setboundingrect(args ...interface{}) () {
+func (this *QPicture) SetBoundingRect(args ...interface{}) () {
   // setBoundingRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1119,7 +1143,7 @@ func (this *QPicture) Setboundingrect(args ...interface{}) () {
 }
 
 // outputFormats()
-func (this *QPicture) Outputformats_S(args ...interface{}) () {
+func (this *QPicture) OutputFormats_s(args ...interface{}) () {
   // outputFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1164,7 +1188,7 @@ func (this *QPicture) Swap(args ...interface{}) () {
 }
 
 // pictureFormat(const class QString &)
-func (this *QPicture) Pictureformat_S(args ...interface{}) (ret interface{}) {
+func (this *QPicture) PictureFormat_s(args ...interface{}) (ret interface{}) {
   // pictureFormat(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1255,7 +1279,7 @@ func (this *QPicture) Save(args ...interface{}) (ret interface{}) {
 }
 
 // setData(const char *, uint)
-func (this *QPicture) Setdata(args ...interface{}) () {
+func (this *QPicture) SetData(args ...interface{}) () {
   // setData(const char *, uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1284,7 +1308,7 @@ func (this *QPicture) Setdata(args ...interface{}) () {
 }
 
 // isDetached()
-func (this *QPicture) Isdetached(args ...interface{}) (ret interface{}) {
+func (this *QPicture) IsDetached(args ...interface{}) (ret interface{}) {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1345,7 +1369,7 @@ func (this *QPicture) Play(args ...interface{}) (ret interface{}) {
 }
 
 // inputFormats()
-func (this *QPicture) Inputformats_S(args ...interface{}) () {
+func (this *QPicture) InputFormats_s(args ...interface{}) () {
   // inputFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1366,7 +1390,7 @@ func (this *QPicture) Inputformats_S(args ...interface{}) () {
 }
 
 // inputFormatList()
-func (this *QPicture) Inputformatlist_S(args ...interface{}) () {
+func (this *QPicture) InputFormatList_s(args ...interface{}) () {
   // inputFormatList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1437,7 +1461,7 @@ func (this *QPicture) Data(args ...interface{}) (ret interface{}) {
 }
 
 // isNull()
-func (this *QPicture) Isnull(args ...interface{}) (ret interface{}) {
+func (this *QPicture) IsNull(args ...interface{}) (ret interface{}) {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1466,7 +1490,7 @@ func (this *QPicture) Isnull(args ...interface{}) (ret interface{}) {
 }
 
 // devType()
-func (this *QPicture) Devtype(args ...interface{}) (ret interface{}) {
+func (this *QPicture) DevType(args ...interface{}) (ret interface{}) {
   // devType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

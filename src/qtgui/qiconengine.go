@@ -1,6 +1,6 @@
 package qtgui
 // auto generated, do not modify.
-// created: Sat Feb 20 11:35:41 2016
+// created: Sat Feb 27 18:05:15 2016
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.go
 //
@@ -17,6 +17,7 @@ package qtgui
 import "fmt"
 import "reflect"
 import "unsafe"
+import "runtime"
 import "qtrt"
 import "qtcore"
 // <= use block end
@@ -52,6 +53,7 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+  if false {reflect.TypeOf(runtime.Version)}
 }
 
 // class sizeof(QIconEngine)=8
@@ -61,7 +63,7 @@ type QIconEngine struct {
 }
 
 // iconName()
-func (this *QIconEngine) Iconname(args ...interface{}) (ret interface{}) {
+func (this *QIconEngine) IconName(args ...interface{}) (ret interface{}) {
   // iconName()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -154,7 +156,7 @@ func (this *QIconEngine) Read(args ...interface{}) (ret interface{}) {
 }
 
 // virtual_hook(int, void *)
-func (this *QIconEngine) Virtual_Hook(args ...interface{}) () {
+func (this *QIconEngine) Virtual_hook(args ...interface{}) () {
   // virtual_hook(int, void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -210,7 +212,7 @@ func (this *QIconEngine) Key(args ...interface{}) (ret interface{}) {
 }
 
 // ~QIconEngine()
-func (this *QIconEngine) Freeqiconengine(args ...interface{}) () {
+func (this *QIconEngine) Free(args ...interface{}) () {
   // ~QIconEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -222,7 +224,10 @@ func (this *QIconEngine) Freeqiconengine(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QIconEngineD0Ev
     // invoke: void ~QIconEngine()
-    C.C_ZN11QIconEngineD2Ev(this.Qclsinst)
+    if this != nil && this.Qclsinst != nil {
+      C.C_ZN11QIconEngineD2Ev(this.Qclsinst)
+      this.Qclsinst = nil
+    }
   default:
     qtrt.ErrorResolve("QIconEngine", "~QIconEngine", args)
   }
