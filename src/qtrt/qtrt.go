@@ -27,6 +27,7 @@ func SymbolResolve(args []interface{}, vtys map[int32]map[int32]reflect.Type) in
 		vty := vtys[int32(symidx)]
 		pnum := len(vty)
 
+		// TODO maybe have default values
 		if argc != pnum {
 			continue
 		}
@@ -62,6 +63,10 @@ func SymbolResolve(args []interface{}, vtys map[int32]map[int32]reflect.Type) in
 	}
 
 	return -1
+}
+
+func FillDefaultValues(args []interface{}, dvals []interface{}) []interface{} {
+	return args
 }
 
 // 参数个数匹配
@@ -107,7 +112,7 @@ func canHandyConvert(from reflect.Type, to reflect.Type) bool {
 	default:
 	}
 
-	fmt.Println(strings.Join(infos, ", "))
+	log.Println(strings.Join(infos, ", "))
 
 	//
 	switch {
